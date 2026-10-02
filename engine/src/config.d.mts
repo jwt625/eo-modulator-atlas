@@ -8,6 +8,7 @@ export interface ParsedConfig {
   raw: {
     id: string; title?: string; paper_id?: string; validation_status?: string;
     chain?: string[]; targets?: Record<string, unknown>[];
+    optics?: { metal_in_window?: 'reject' | 'absent' | 'pec_scalar'; [key: string]: unknown };
     provenance?: Record<string, { class: string; locator?: string; citation?: string; note?: string }>;
     missing?: unknown[]; limitations?: string[];
   };

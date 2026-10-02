@@ -217,5 +217,7 @@ export function opticalOptions(raw) {
   if (!Number.isInteger(modeIndex) || modeIndex < 0 || modeIndex > 4) fail('optics.mode_index', 'expected an integer from 0 to 4');
   oneOf(o.group_index_from, ['fixed', 'finite_difference_wavelength'], 'optics.group_index_from');
   if (o.group_index_from === 'fixed') number(o.ng_fixed, 'optics.ng_fixed', true);
-  return { polarization, lambda0Um: o.wavelength_nm / 1000, modeIndex };
+  const metal = o.metal_in_window === undefined ? 'reject'
+    : oneOf(o.metal_in_window, ['reject', 'absent', 'pec_scalar'], 'optics.metal_in_window');
+  return { polarization, lambda0Um: o.wavelength_nm / 1000, modeIndex, metal };
 }

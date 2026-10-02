@@ -158,12 +158,20 @@ Inputs and numerical controls:
 - Optical boundaries are zero-field Dirichlet on the window; scalar slab tests
   use lower-level APIs with Neumann side boundaries. Optical mesh defaults use
   core edge λ/(22 nmax), far edge λ/8 and grading 0.25, scaled by `meshScale`.
-  A conductor actually inside the optical mesh is unsupported even if a real
-  index is supplied; an off-window conductor does not require an optical index.
+  `optics.metal_in_window` explicitly chooses `reject` (default), `absent`, or
+  `pec_scalar`. Reject errors on conductors inside the optical mesh; an off-window
+  conductor needs no optical index. Absent removes the electrode from the optical
+  model, leaving the underlying dielectric. PEC removes conductor triangles and
+  applies scalar E-form Dirichlet / H-form natural boundary conditions. The PEC
+  condition is physically exact only on horizontal faces; the result discloses
+  the valid-face fraction. These are sensitivity limits, not bounds on real-metal
+  behaviour; neither computes absorption or plasmonic modes. No metal index is
+  invented or used for these limits. The RF electrostatic geometry is unchanged.
 - Named library materials supply dispersion slopes anchored to configured indices,
   or library indices if omitted. Out-of-range library evaluation errors in the
   optical solve. Custom constant indices have no material dispersion. This
-  existing scalar model needs E2 review; it is not a vector/metal solver.
+  scalar model is not a vector/real-metal solver. Its forms are exact only at
+  horizontal interfaces; TM's lateral gradient uses eps_zz as an approximation.
 - `line.loading.type` may be `none` or `periodic_t_rail`. Periodic inputs require
   positive period and loaded length (no greater than period), an existing
   unloaded section and an existing loaded section; null/absent loaded section
@@ -180,6 +188,16 @@ Result and target semantics:
   time and `targets`. Physical arrays/fields are not serialized by this runner.
 - Electrostatic metrics: C′ and C₀′ in pF/m, L′ in nH/m, static section nRF and Z₀.
   The optional optical stage adds scalar effective index and group index.
+- Optical diagnostics report selected `modeIndex`, `converged`, E/H `form`,
+  `labels`, `limitations`, `metal` (policy, in-mesh/omitted electrodes, excluded
+  triangle count, PEC face lengths/fraction), and `boundaryMarginFraction`
+  (`marginUm`, selected-mode `value`). The latter is the fraction of squared
+  scalar mode amplitude in triangles near Dirichlet window sides; default margin
+  is 10% of the shorter window side. It is not a power-confinement metric or a
+  convergence proof. No universal pass threshold is imposed: compare expanded
+  windows for truncation convergence. Labels and limitations also enter top-level
+  `warnings`, including when a metal option is explicitly chosen with no metal in
+  the window. Physical field arrays are not included in the runner result.
 - `targetSummary` reports total/evaluated/passed/failed separately. Missing
   predictions are `actual: null`, `status: not_evaluated`, with an explicit reason.
 - A target needs finite `value` and nonnegative `tol_abs` and/or `tol_rel`.
@@ -197,6 +215,10 @@ Result and target semantics:
   code is not evidence of literature reproduction.
 
 ## Changelog
+- 2026-10-02 E2i.1: YAML/schema/runner support for explicit scalar optical metal
+  policies and selected-mode diagnostics, carrying all E2 limitations to the
+  browser/CLI. Default rejection unchanged. EO-overlap and RF-line modules remain
+  separate APIs; neither stage is automatically executed by `runCrossSection`.
 - 2026-10-01 draft 0
 - 2026-10-01 draft 1 (E1/U1): documented the implemented cross-section subset,
   validation/resource controls, loading semantics and honest target eligibility;

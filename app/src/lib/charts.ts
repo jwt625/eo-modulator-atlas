@@ -12,7 +12,7 @@ import {
 	type Metric,
 	countBy
 } from './logic';
-import { paretoFront } from './logic';
+import { paretoFront, lossComparisonExclusion } from './logic';
 import type { Device, Paper, Qual } from './types';
 import type { View } from './logic';
 
@@ -38,6 +38,7 @@ export interface Omitted {
 	invalid: number;
 	nonpositive: number;
 	uncertain: number;
+	incomparable: number;
 }
 
 export type Getter = (d: Device, p: Paper) => Metric;
@@ -47,7 +48,7 @@ const MODEL_BASES = new Set(['simulated', 'predicted', 'design_target']);
 /** Build plotted points; values that are not reported are omitted (never plotted at 0) and counted. */
 export function buildPoints(devices: Device[], papers: Map<string, Paper>, gx: Getter, gy: Getter, panel = 0, axes: { xLog?: boolean; yLog?: boolean } = {}): { pts: Pt[]; omitted: Omitted } {
 	const pts: Pt[] = [];
-	const om: Omitted = { total: devices.length, plotted: 0, missingX: 0, missingY: 0, missingBoth: 0, invalid: 0, nonpositive: 0, uncertain: 0 };
+	const om: Omitted = { total: devices.length, plotted: 0, missingX: 0, missingY: 0, missingBoth: 0, invalid: 0, nonpositive: 0, uncertain: 0, incomparable: 0 };
 	for (const d of devices) {
 		const p = papers.get(d.paper_id);
 		if (!p) { om.invalid++; continue; }
@@ -58,6 +59,7 @@ export function buildPoints(devices: Device[], papers: Map<string, Paper>, gx: G
 		else if (y.v === null) om.missingY++;
 		if (x.v === null || y.v === null) continue;
 		if (!Number.isFinite(x.v) || !Number.isFinite(y.v)) { om.invalid++; continue; }
+		if (lossComparisonExclusion(d, x.field) || lossComparisonExclusion(d, y.field)) { om.incomparable++; continue; }
 		if (x.boundUnresolved || y.boundUnresolved) { om.uncertain++; continue; }
 		if ((axes.xLog && x.v <= 0) || (axes.yLog && y.v <= 0)) { om.nonpositive++; continue; }
 		let voltage = [x.field, y.field].find(f => f?.startsWith('vpi'));

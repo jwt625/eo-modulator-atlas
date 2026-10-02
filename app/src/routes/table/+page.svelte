@@ -22,7 +22,9 @@
 
 	const sorted = $derived.by(() => {
 		if (!view || !a) return [] as { paper: Paper; rep: Device }[];
-		const base = view.papers.map((p) => ({ paper: p, rep: view.reps.get(p.paper_id) as Device }));
+		// A filter can leave only statistical samples. Keep the paper inspectable
+		// with a labelled preview; do not promote that sample to a representative.
+		const base = view.papers.map((p) => ({ paper: p, rep: view.reps.get(p.paper_id) ?? view.devices.find(d => d.paper_id === p.paper_id)! }));
 		return sortRows(base, tableState.sort, (r, key) => sortValue(a, key, r.paper, r.rep));
 	});
 
@@ -31,10 +33,11 @@
 		const out: Row[] = [];
 		const open = new Set(tableState.expanded);
 		for (const r of sorted) {
-			out.push({ kind: 'paper', paper: r.paper, dev: r.rep, dim: false, isRep: true });
+			const repId = view.reps.get(r.paper.paper_id)?.device_id;
+			out.push({ kind: 'paper', paper: r.paper, dev: r.rep, dim: false, isRep: repId === r.rep.device_id });
 			if (open.has(r.paper.paper_id)) {
 				for (const d of idx.devsByPaper.get(r.paper.paper_id) ?? []) {
-					out.push({ kind: 'device', paper: r.paper, dev: d, dim: !view.matched.has(d.device_id), isRep: d.device_id === r.rep.device_id });
+					out.push({ kind: 'device', paper: r.paper, dev: d, dim: !view.matched.has(d.device_id), isRep: d.device_id === repId });
 				}
 			}
 		}
@@ -65,6 +68,10 @@
 	}
 
 	function cell(id: string, r: Row): Cell {
+		if (r.kind === 'paper' && !r.isRep && id === 'paper') return {
+			text: `${r.paper.label} · sample`,
+			tip: 'Only statistical samples match. This is a sample preview, not a representative device; expand to inspect all samples.'
+		};
 		if (r.kind === 'device' && id === 'paper') {
 			return { text: r.dev.device_label, tip: `${r.dev.device_id}${r.isRep ? '\nrepresentative device' : ''}` };
 		}

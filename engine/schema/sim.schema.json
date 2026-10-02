@@ -73,6 +73,11 @@
     "optics": {
       "type": "object",
       "properties": {
+        "metal_in_window": {
+          "enum": ["reject", "absent", "pec_scalar"],
+          "default": "reject",
+          "description": "Explicit scalar optical metal policy. Absent and PEC are sensitivity limits, not real-metal loss models."
+        },
         "wavelength_nm": {
           "type": "number",
           "exclusiveMinimum": 0

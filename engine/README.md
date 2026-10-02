@@ -11,12 +11,21 @@ Implemented stages:
 - Conforming triangle meshing in JavaScript (not a WASM backend).
 - Anisotropic P1 electrostatic FEM, terminal-charge and energy capacitance,
   vacuum capacitance and quasi-TEM section estimates of L′, nRF and Z₀.
-- Scalar E/H optical FEM and finite-difference group index for dielectric windows.
+- Scalar E/H optical FEM and finite-difference group index, with explicit metal
+  sensitivity options and window-edge diagnostics.
 
-RF loss, EO overlap, periodic-cell ABCD and traveling-wave EO response are not
-implemented. `line`/`sweep` inputs are preserved for these future stages. A
-requested optical solve that intersects a conductor without a supported optical
-model errors explicitly. The current Chen input has this condition.
+EO overlap (`eo-overlap.mjs`) and uniform RF line/loss (`rf-line.mjs`) are separate
+audited modules; they are not yet wired into the shared runner. Periodic-cell
+ABCD and traveling-wave EO response remain future work. `line`/`sweep` inputs do
+not cause these stages to execute automatically.
+
+Metal in the optical window is rejected by default, including for the unchanged
+Chen config. Explicit YAML `optics.metal_in_window: absent` or `pec_scalar`
+enables an E2 sensitivity model. These do not model real-metal absorption or
+bound a real-metal solution. The browser/CLI result carries the policy, omitted
+or excluded metal, PEC face validity, scalar limitations and selected-mode
+window-margin diagnostic. Expand the window to check convergence; a small
+margin fraction alone does not establish it. See `sims/SPEC.md` for the contract.
 
 Capacitance uses **one volt of full terminal voltage difference**. The solved
 half-domain energy is doubled for mirror symmetry, then C′ = 2W′/V²; no separate

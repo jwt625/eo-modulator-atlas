@@ -7,6 +7,8 @@ import {
 	fmt,
 	ilF2f,
 	ilOnchip,
+	isStatisticalReplicate,
+	lossComparisonExclusion,
 	lengthMm,
 	maxBaud,
 	maxRate,
@@ -90,6 +92,8 @@ export const NUMERIC_METRIC: Record<string, (d: Device) => Metric> = {
 function metricTip(a: Atlas, id: string, d: Device, m: Metric): string {
 	const parts: string[] = [];
 	if (m.note) parts.push(m.note);
+	const exclusion = lossComparisonExclusion(d, m.field);
+	if (exclusion) parts.push(exclusion);
 	if (m.modelled) parts.push('includes simulated, predicted or design-target inputs');
 	if (m.qual) parts.push(qualWord(m.qual));
 	if (m.basis) parts.push(`basis: ${BASIS_TIP[m.basis] ?? m.basis}`);
@@ -211,11 +215,14 @@ export function sortValue(a: Atlas, id: string, p: Paper, d: Device): SortVal {
 	// Sort keys come from the shareable URL; a stale or edited key must not break the table.
 	if (!COLS.some((c) => c.id === id)) return null;
 	const fn = NUMERIC_METRIC[id];
-	if (fn) return fn(d).v;
+	if (fn) {
+		const m = fn(d);
+		return isStatisticalReplicate(d) || lossComparisonExclusion(d, m.field) ? null : m.v;
+	}
 	switch (id) {
 		case 'paper': return p.label.toLowerCase();
 		case 'year': return p.year;
-		case 'complete': return d.derived.completeness.value;
+		case 'complete': return isStatisticalReplicate(d) ? null : d.derived.completeness.value;
 		case 'sim': return p.has_sim ? 1 : 0;
 		case 'grade': return p.repro_grade;
 		case 'device': return d.device_label.toLowerCase();
@@ -238,7 +245,7 @@ export function tableCsv(a: Atlas, columns: ColDef[], rows: { kind: 'paper' | 'd
 		if (c.num && c.unit) header.push(`${c.label} qualifier`, `${c.label} basis`, `${c.label} context`);
 	}
 	const lines = rows.map(r => {
-		const out = [r.kind === 'paper' ? 'paper (representative)' : r.isRep ? 'device (representative)' : 'device', r.paper.paper_id, r.dev.device_id, String(!r.dim), r.dev.vpi_convention ?? ''];
+		const out = [r.kind === 'paper' ? r.isRep ? 'paper (representative)' : 'paper (sample preview)' : r.isRep ? 'device (representative)' : 'device', r.paper.paper_id, r.dev.device_id, String(!r.dim), r.dev.vpi_convention ?? ''];
 		for (const c of columns) {
 			const x: Cell = r.kind === 'device' && c.id === 'paper' ? { text: r.dev.device_label }
 				: r.kind === 'device' && c.level === 'paper' ? { text: '' } : cellFor(a, c.id, r.paper, r.dev);

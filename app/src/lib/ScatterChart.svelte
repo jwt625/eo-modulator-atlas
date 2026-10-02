@@ -237,7 +237,7 @@
 <section class="panel" aria-label={`Chart ${letter}`}>
 	<header>
 		<span class="letter" title={desc}>{letter}</span>
-		<span class="badge num" title="{omitted.plotted} of {omitted.total} records plotted. Missing: x {omitted.missingX}, y {omitted.missingY}, both {omitted.missingBoth}. Nonpositive on log axes: {omitted.nonpositive}. Indeterminate bounds: {omitted.uncertain}. Invalid values or paper: {omitted.invalid}.">
+		<span class="badge num" title="{omitted.plotted} of {omitted.total} records plotted. Missing: x {omitted.missingX}, y {omitted.missingY}, both {omitted.missingBoth}. Nonpositive on log axes: {omitted.nonpositive}. Indeterminate bounds: {omitted.uncertain}. Incomparable loss scope or samples: {omitted.incomparable}. Invalid values or paper: {omitted.invalid}.">
 			{omitted.plotted}/{omitted.total}
 		</span>
 		<div class="grow"></div>

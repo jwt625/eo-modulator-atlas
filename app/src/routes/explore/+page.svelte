@@ -115,13 +115,15 @@
 			</span>
 		</div>
 		<div class="scroll">
-			<p class="comparison-note">Bounds remain visible as arrows. Dashed frontiers exclude bounds, approximations and modelled axes, and separate voltage conventions and DC/RF sources. Material summaries use unqualified, non-modelled values only when one known voltage context is present; labels show summary/total counts. Wavelength and measurement methods may still differ—inspect the evidence before comparing devices.</p>
+			<p class="comparison-note">Statistical samples are excluded from headline selection; statistical and phase-only loss records are excluded from loss comparisons and remain available in the table. Bounds remain visible as arrows. Dashed frontiers exclude bounds, approximations and modelled axes, and separate voltage conventions and DC/RF sources. Material summaries use unqualified, non-modelled values only when one known voltage context is present; labels show summary/total counts. Wavelength and measurement methods may still differ—inspect the evidence before comparing devices.</p>
 			{#if store.error}
 				<div class="msg">Failed to load data: {store.error}</div>
 			{:else if !view}
 				<div class="msg"><span class="spinner"></span></div>
 			{:else if !view.papers.length}
 				<div class="msg"><span>No devices match the filters.</span><button onclick={resetFilters} title="Clear all filters">Reset filters</button></div>
+			{:else if !devs.length && !filters.allDevices}
+				<div class="msg"><span>Only statistical samples match; no headline device is selected.</span><button onclick={() => (filters.allDevices = true)}>Show all records</button></div>
 			{:else}
 				<div class="grid">
 					<ScatterChart letter="a" desc="Vpi*L against 3 dB bandwidth; dashed nominal frontiers exclude qualified/modelled axes and separate voltage contexts" panels={[{ pts: A.pts, yTitle: 'Vpi*L (V*cm)' }]} xTitle="3 dB bandwidth (GHz)" bind:xLog={aX} bind:yLog={aY} omitted={A.omitted} frontier />
@@ -156,7 +158,7 @@
 						xTitle="Publication year"
 						allowX={false}
 						bind:yLog={eY}
-						omitted={{ total: Ebaud.omitted.total + Erate.omitted.total, plotted: Ebaud.omitted.plotted + Erate.omitted.plotted, missingX: Ebaud.omitted.missingX + Erate.omitted.missingX, missingY: Ebaud.omitted.missingY + Erate.omitted.missingY, missingBoth: Ebaud.omitted.missingBoth + Erate.omitted.missingBoth, invalid: Ebaud.omitted.invalid + Erate.omitted.invalid, nonpositive: Ebaud.omitted.nonpositive + Erate.omitted.nonpositive, uncertain: Ebaud.omitted.uncertain + Erate.omitted.uncertain }}
+						omitted={{ total: Ebaud.omitted.total + Erate.omitted.total, plotted: Ebaud.omitted.plotted + Erate.omitted.plotted, missingX: Ebaud.omitted.missingX + Erate.omitted.missingX, missingY: Ebaud.omitted.missingY + Erate.omitted.missingY, missingBoth: Ebaud.omitted.missingBoth + Erate.omitted.missingBoth, invalid: Ebaud.omitted.invalid + Erate.omitted.invalid, nonpositive: Ebaud.omitted.nonpositive + Erate.omitted.nonpositive, uncertain: Ebaud.omitted.uncertain + Erate.omitted.uncertain, incomparable: Ebaud.omitted.incomparable + Erate.omitted.incomparable }}
 						xDtick={years.dtick}
 					/>
 					<ScatterChart letter="f" desc="3 dB bandwidth against active length" panels={[{ pts: F.pts, yTitle: '3 dB bandwidth (GHz)' }]} xTitle="Active length (mm)" bind:xLog={fX} bind:yLog={fY} omitted={F.omitted} />

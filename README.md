@@ -87,13 +87,17 @@ gates cover parallel plates, differential/half-domain capacitance, anisotropic
 rotation, TE/TM slab modes and waveguide group index. CLI results go to stdout;
 browser results stay in memory. Do not commit solver outputs.
 
-EO overlap, RF loss, the periodic loaded-line model and EO response remain pending.
+EO overlap and uniform RF loss now have separate tested modules; their shared
+runner integration remains pending. Periodic loaded-line and EO-response stages
+remain unimplemented.
 A cross-section's RF index and impedance are not the effective values of a
 periodically loaded device. Such targets are reported as `not_evaluated`.
 The Chen config remains `unvalidated`. Its optical window intersects gold, so
-`--optical` currently stops with an explicit unsupported-material error; it does
-not substitute an invented optical index. Tests of the optical solver use
-dielectric slab fixtures.
+`--optical` stops by default with an explicit unsupported-material error. Session
+YAML may explicitly select `optics.metal_in_window: absent` or `pec_scalar` to
+explore scalar sensitivity limits. Outputs disclose the policy, scalar limits,
+PEC face validity and window-edge diagnostic. Neither limit predicts real-metal
+absorption or establishes literature reproduction.
 
 Incomplete drafts such as Deng 2026 can display their geometry, missing inputs
 and provenance while Run stays disabled. Previewing a draft does not supply
@@ -113,15 +117,17 @@ fixed group index are excluded from prediction comparisons. Each mesh has an
 
 ## Next work
 
-1. Add metal-aware/vector optical handling and explicit EO drive/arm conventions.
-2. Implement EO overlap, RF loss and periodic-cell/EO-response stages with analytic gates.
-3. Continue the remaining priority-1 batches, merging only reviewed rows.
-4. Complete literature regressions and independent evidence audits.
+1. Integrate explicit EO arm/voltage and RF loss/sweep contracts into the shared runner.
+2. Implement periodic-cell/EO-response stages and quantify scalar/vector limitations.
+3. Reconcile generated rankings with sample/loss-scope guards before merging reviewed batches.
+4. Continue ingestion, literature convergence studies and independent audits.
 
 Current work and remaining phases are recorded in [DevLog-000](DevLog/DevLog-000-plan.md)
 and [DevLog-002](DevLog/DevLog-002-work-plan-and-ownership.md).
 E1/U1 progress, final checks and handoff: [DevLog-003](DevLog/DevLog-003-cross-section-progress.md).
 Standalone cache migration, staged SOH references and next task ownership:
 [DevLog-006](DevLog/DevLog-006-standalone-continuation.md).
+Latest audit corrections, sample guards and optical runner integration:
+[DevLog-011](DevLog/DevLog-011-audit-corrections-and-integration.md).
 Read [WORKBOARD.md](WORKBOARD.md) and the active claims under
 `coordination/claims/` before starting concurrent work.

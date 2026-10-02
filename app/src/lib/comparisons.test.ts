@@ -28,6 +28,48 @@ function device(): Device {
   return d;
 }
 
+describe('statistical samples and loss scope', () => {
+  it('keeps samples inspectable without selecting them as headline devices', () => {
+    const sample = device(); sample.device_id = 'sample'; sample.tags = ['statistical_replicate'];
+    sample.derived.completeness.value = 1; sample.derived.fom!.value = 1e6;
+    const headline = device(); headline.device_id = 'headline'; headline.derived.completeness.value = 0.1;
+    for (const mode of ['default', 'lowest_vpil', 'highest_bw', 'highest_fom', 'lowest_vpi_il'] as const) {
+      expect(pickRep([sample, headline], mode)?.device_id).toBe('headline');
+      expect(pickRep([sample], mode)).toBeNull();
+    }
+    const one = { ...atlas, devices: [sample], papers: atlas.papers.filter(p => p.paper_id === sample.paper_id) };
+    const view = applyFilters(one, defaultFilters(), buildIndex(one));
+    expect(view.devices).toHaveLength(1);
+    expect(view.papers).toHaveLength(1);
+    expect(view.reps.size).toBe(0);
+  });
+  it('retains sample values and uncertainty context in cells/CSV while sorting them last', () => {
+    const sample = device(); sample.tags = ['statistical_replicate']; sample.il_onchip_db = 0.01;
+    const p = papers.get(sample.paper_id)!;
+    expect(metricCell(atlas, 'il_onchip', sample).num).toBe(0.01);
+    expect(metricCell(atlas, 'il_onchip', sample).tip).toContain('inspect its uncertainty');
+    expect(sortValue(atlas, 'il_onchip', p, sample)).toBeNull();
+    expect(sortValue(atlas, 'fom', p, sample)).toBeNull();
+    const csv = tableCsv(atlas, COLS.filter(c => c.id === 'il_onchip'), [{ kind: 'paper', paper: p, dev: sample, dim: false, isRep: false }]);
+    expect(csv).toContain('paper (sample preview)');
+    expect(csv).toContain('0.01');
+    expect(csv).not.toContain('paper (representative)');
+  });
+  it('counts loss-scope omissions without omitting unrelated plotted measurements', () => {
+    const whole = device(); whole.device_id = 'whole';
+    const phase = device(); phase.device_id = 'phase'; phase.tags = ['phase_only_loss'];
+    const sample = device(); sample.device_id = 'sample'; sample.tags = ['statistical_replicate'];
+    for (const loss of [gIl, gVpiIl]) {
+      const chart = buildPoints([whole, phase, sample], papers, gVpil, loss);
+      expect(chart.pts.map(p => p.id)).toEqual(['whole']);
+      expect(chart.omitted.incomparable).toBe(2);
+    }
+    expect(buildPoints([phase, sample], papers, gVpil, gBw).pts).toHaveLength(2);
+    expect(sortValue(atlas, 'vpi_il', papers.get(phase.paper_id)!, phase)).toBeNull();
+    expect(metricCell(atlas, 'il_onchip', phase).tip).toContain('Phase-shifter-only');
+  });
+});
+
 describe('qualified derived comparisons', () => {
   it('inverts denominator bounds and combines aligned directions for FOM', () => {
     const d = device();
@@ -84,7 +126,7 @@ describe('chart validity and summary scope', () => {
     const ds = Array.from({ length: 5 }, (_, i) => ({ ...device(), device_id: String(i) }));
     const values = [null, 0, NaN, 3, null];
     const result = buildPoints(ds, papers, d => metric(values[Number(d.device_id)]), d => metric(d.device_id === '4' ? null : 2), 0, { xLog: true });
-    expect(result.omitted).toEqual({ total: 5, plotted: 1, missingX: 1, missingY: 0, missingBoth: 1, nonpositive: 1, invalid: 1, uncertain: 0 });
+    expect(result.omitted).toEqual({ total: 5, plotted: 1, missingX: 1, missingY: 0, missingBoth: 1, nonpositive: 1, invalid: 1, uncertain: 0, incomparable: 0 });
   });
   it('bases modelled markers on the plotted metrics and derived inputs', () => {
     const d = device(); d.is_sim = true; // an unrelated headline is modelled

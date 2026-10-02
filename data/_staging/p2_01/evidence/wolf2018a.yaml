@@ -65,13 +65,6 @@ entries:
   locator: pp.4-5, Eqs. (1)-(3); p.14, Fig. 1
   note: MZM transmission maximum-to-minimum voltage with opposite arm phase shifts; no per-arm conversion.
 - device_id: wolf2018a-static
-  field: vpil_dc_vcm
-  value: 0.1
-  unit: V*cm
-  basis: derived
-  locator: p.5, first paragraph; p.14, Fig. 1(c)
-  note: Authors report V mm; divided by ten to express V cm.
-- device_id: wolf2018a-static
   field: bias_for_vpi_v
   value: 2
   unit: V
@@ -84,7 +77,8 @@ entries:
   unit: dB
   basis: derived
   locator: p.5, loss discussion
-  note: Approximate remainder after subtracting other loss contributions from total loss.
+  note: Authors approximate the remainder using 20 dB total-loss equality; the stated total is at least 20
+    dB.
 - device_id: wolf2018a-static
   field: il_fiber_to_fiber_db
   value: 20
@@ -92,13 +86,6 @@ entries:
   basis: measured
   locator: p.5, loss discussion
   note: Paper says 20 dB or more for this device generation; inclusive bound retained in notes.
-- device_id: wolf2018a-static
-  field: prop_loss_db_per_cm
-  value: 73
-  unit: dB/cm
-  basis: derived
-  locator: p.5, loss discussion
-  note: Authors derive 7.3 dB/mm from approximate phase loss; converted to dB/cm.
 - device_id: wolf2018a-static
   field: extinction_ratio_db
   value: 14
@@ -133,7 +120,8 @@ entries:
   unit: GHz
   basis: measured
   locator: p.7, bandwidth discussion; p.16, Fig. 3(c)
-  note: Six-decibel EOE response drop; gate field 0.1 V/nm; not a three-decibel response entry.
+  note: Detected RF spectral power falls fourfold; authors equate this with halved optical modulation power
+    and photocurrent amplitude.
 - device_id: wolf2018a-gated
   field: drive_vpp_v
   value: 1.4
@@ -186,4 +174,46 @@ entries:
   unit: ''
   basis: measured
   locator: pp.6,8-9; pp.15,17, Figs. 2,4
-derived: []
+- device_id: wolf2018a-static
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.4; p.14, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: wolf2018a-gated
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.4; p.14, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: wolf2018a-ungated
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.4; p.14, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+derived:
+- device_id: wolf2018a-static
+  field: vpil_dc_vcm
+  value: 0.1
+  unit: V*cm
+  basis: derived
+  locator: p.5, first paragraph; p.14, Fig. 1(c)
+  formula: 1 V mm / 10 = 0.1 V cm; authors p.5; unit conversion only
+  inputs:
+  - reported U_pi L = 1 V mm
+- device_id: wolf2018a-static
+  field: prop_loss_db_per_cm
+  value: 73
+  unit: dB/cm
+  basis: derived
+  locator: p.5, loss discussion
+  formula: 7.3 dB/mm * 10 mm/cm = 73 dB/cm; authors p.5; unit conversion only
+  inputs:
+  - reported propagation loss approximately 7.3 dB/mm

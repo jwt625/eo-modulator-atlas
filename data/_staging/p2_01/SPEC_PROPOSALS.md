@@ -30,3 +30,10 @@ Updated 2026-10-02. Coordinate with schema/D2/U2 owners before changes.
 
 Current rows use existing fields and factual notes. These proposals do not claim
 schema approval and do not authorize edits to another agent's owned files.
+
+2026-10-02 U2c follow-up: existing free-form tags now include `phase_only_loss`
+for the 18 phase-loss rows and `statistical_replicate` for the 16 Table 1 samples.
+App selection excludes replicates; loss sorting/plots omit these samples and
+phase-only scope from whole-modulator comparisons while retaining cells/exports.
+D2 must mirror the guard in Python-generated rankings before canonical merging;
+this does not replace the structured uncertainty/scope proposals above.

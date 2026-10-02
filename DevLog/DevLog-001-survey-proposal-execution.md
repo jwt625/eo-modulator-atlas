@@ -13,6 +13,8 @@ agent claims, start with [DevLog-002](DevLog-002-work-plan-and-ownership.md) and
 [WORKBOARD](../WORKBOARD.md).
 Standalone migration and the current ingestion/review queue continue in
 [DevLog-006](DevLog-006-standalone-continuation.md).
+Audit corrections and shared optical integration continue in
+[DevLog-011](DevLog-011-audit-corrections-and-integration.md).
 
 Companion to DevLog-000 (plan/decisions/TODO). This log captures the material that
 led to DevLog-000: what existed before, the full structured proposal, the user's

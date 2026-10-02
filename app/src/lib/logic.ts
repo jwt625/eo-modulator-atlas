@@ -192,10 +192,20 @@ export function metricValue(d: Device, key: string): number | null {
 
 // ---------- representative device ----------
 
+/** Replicates stay inspectable, but do not stand in for a paper's headline device. */
+export const isStatisticalReplicate = (d: Device): boolean => d.tags.includes('statistical_replicate');
+
+export function lossComparisonExclusion(d: Device, field: string | null): string | null {
+	if (!['il_onchip_db', 'il_fiber_to_fiber_db', 'vpi_il_vdb', 'fom', 'il_rf_total_db'].includes(field ?? '')) return null;
+	if (isStatisticalReplicate(d)) return 'Statistical loss sample: inspect its uncertainty; excluded from loss rankings and summary comparisons.';
+	if (d.tags.includes('phase_only_loss') && field !== 'il_fiber_to_fiber_db' && field !== 'il_rf_total_db') return 'Phase-shifter-only loss: excluded from comparisons with whole-modulator loss.';
+	return null;
+}
+
 type RepKey = [number, number, number, string];
 
 function repKey(d: Device): RepKey {
-	const fom = d.derived.fom?.value;
+	const fom = lossComparisonExclusion(d, 'fom') ? null : d.derived.fom?.value;
 	const vp = d.vpil_best?.value;
 	return [-d.derived.completeness.value, -(fom ?? -Infinity), vp ?? Infinity, d.device_id];
 }
@@ -210,14 +220,15 @@ function cmpKeys(a: RepKey, b: RepKey): number {
 }
 
 export function pickRep(devs: Device[], mode: RepMode): Device | null {
+	devs = devs.filter(d => !isStatisticalReplicate(d));
 	if (!devs.length) return null;
 	const def = [...devs].sort((a, b) => cmpKeys(repKey(a), repKey(b)))[0];
 	if (mode === 'default') return def;
 	const metric: Record<Exclude<RepMode, 'default'>, [(d: Device) => number | null, boolean]> = {
 		lowest_vpil: [(d) => d.vpil_best?.value ?? null, false],
 		highest_bw: [(d) => (typeof d.bw3db_ghz === 'number' ? d.bw3db_ghz : null), true],
-		highest_fom: [(d) => d.derived.fom?.value ?? null, true],
-		lowest_vpi_il: [(d) => d.derived.vpi_il_vdb?.value ?? null, false]
+		highest_fom: [(d) => lossComparisonExclusion(d, 'fom') ? null : d.derived.fom?.value ?? null, true],
+		lowest_vpi_il: [(d) => lossComparisonExclusion(d, 'vpi_il_vdb') ? null : d.derived.vpi_il_vdb?.value ?? null, false]
 	};
 	const [f, hi] = metric[mode];
 	const cand = devs.filter((d) => f(d) !== null);

@@ -54,8 +54,16 @@ export function runCrossSection(text, { section: name = 'geometry', optical = fa
     }
     if (!base.converged) throw new Error('Optical mode solve did not converge');
     metrics.n_eff = base.neff[modeIndex];
-    opticalResult = { nNodes: model.mesh.nNodes, nTris: model.mesh.nTris, iterations: base.iterations, form: base.form };
-    warnings.push('scalar_optical_not_full_vector');
+    opticalResult = {
+      nNodes: model.mesh.nNodes, nTris: model.mesh.nTris, iterations: base.iterations,
+      form: base.form, modeIndex, converged: base.converged,
+      metal: base.metal, labels: base.labels, limitations: base.limitations,
+      boundaryMarginFraction: {
+        marginUm: base.boundaryMarginFraction.marginUm,
+        value: base.boundaryMarginFraction.perMode[modeIndex]
+      }
+    };
+    warnings.push(...base.labels, ...base.limitations);
     stages.push('optical_mode');
   }
   for (const [k, v] of Object.entries(metrics)) if (!Number.isFinite(v) || v <= 0) throw new Error(`Nonphysical result for ${k}: ${v}`);
@@ -67,6 +75,6 @@ export function runCrossSection(text, { section: name = 'geometry', optical = fa
   return { id: config.raw.id, section: name, scope: 'cross_section', stages, metrics, targets,
     targetSummary,
     pendingStages: (config.raw.chain ?? []).filter((s) => !stages.includes(s)),
-    warnings, meshScale, electrostatics: { ...es.stats, energyChargeRelativeError: Math.abs(es.capacitance.energy - es.capacitance.charge) / es.cPul },
+    warnings: [...new Set(warnings)], meshScale, electrostatics: { ...es.stats, energyChargeRelativeError: Math.abs(es.capacitance.energy - es.capacitance.charge) / es.cPul },
     optical: opticalResult, elapsed_ms: performance.now() - started };
 }

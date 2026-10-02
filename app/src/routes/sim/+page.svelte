@@ -116,7 +116,7 @@
           {#if busy}<button onclick={cancel}>Cancel</button>{/if}
           <span role="status">{#if busy}<span class="spinner"></span> {/if}{progress}</span>
         </div>
-        {#if optical}<p class="muted">The scalar optical solver requires dielectric material throughout the optical window. Metal inside that window is unsupported; a failed requested stage stops the run.</p>{/if}
+        {#if optical}<p class="muted">Optical metal policy: <strong>{parsed.config?.raw.optics?.metal_in_window ?? 'reject'}</strong>. Metal in the window is rejected by default. Explicit YAML options <code>optics.metal_in_window: absent</code> or <code>pec_scalar</code> test scalar sensitivity limits; neither predicts real-metal absorption. A failed requested stage stops the run.</p>{/if}
         {#if error}<p class="error" role="alert">{error}</p>{/if}
       </section>
       <section class="outputs">
@@ -126,6 +126,13 @@
           <p>{result.id} · {result.section} · {fmt(result.elapsed_ms / 1000)} s</p>
           <div class="metrics">{#each Object.entries(result.metrics) as [key, value]}<div><span>{labels[key] ?? key}</span><strong class="num" data-metric={key} data-value={value}>{fmt(value, 5)}</strong></div>{/each}</div>
           <p class="muted">{result.electrostatics.nNodes.toLocaleString()} nodes · {result.electrostatics.nTris.toLocaleString()} triangles · charge/energy relative difference {fmt(result.electrostatics.energyChargeRelativeError)}</p>
+          {#if result.optical}
+            <p class="muted" data-optical-policy={result.optical.metal?.policy}>Optical model: {result.optical.form}-form scalar mode {result.optical.modeIndex}; metal policy {result.optical.metal?.policy ?? 'reject'}.</p>
+            <p class="muted">Window-edge diagnostic: {fmt(100 * result.optical.boundaryMarginFraction.value)}% of the squared scalar mode lies within {fmt(result.optical.boundaryMarginFraction.marginUm)} µm of a Dirichlet boundary. This is a truncation indicator; expand the window to check convergence.</p>
+            {#if result.optical.metal?.pecFaces}
+              <p class="muted">Scalar PEC is exact on horizontal faces only: {fmt(100 * result.optical.metal.pecFaces.validFaceFraction)}% of the modelled metal perimeter is horizontal.</p>
+            {/if}
+          {/if}
           <h3>Paper targets</h3>
           <p class="target-summary">{result.targetSummary.evaluated} of {result.targetSummary.total} targets evaluated · {result.targetSummary.passed} passed · {result.targetSummary.failed} failed</p>
           <p class="muted">Pass/fail applies only to an independently evaluated metric. “Not evaluated” is never counted as a pass.</p>

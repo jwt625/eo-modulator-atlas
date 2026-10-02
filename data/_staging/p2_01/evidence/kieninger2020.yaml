@@ -20,12 +20,6 @@ entries:
   locator: p.4, section 3
   note: Reported active phase-shifter length; micrometres converted to millimetres.
 - device_id: kieninger2020-best-dc
-  field: electrode_metal
-  value: aluminum
-  unit: ''
-  basis: design_target
-  locator: pp.2-3, Fig. 1
-- device_id: kieninger2020-best-dc
   field: substrate
   value: silicon-on-insulator
   unit: ''
@@ -47,7 +41,8 @@ entries:
 - device_id: kieninger2020-best-dc
   field: epitaxy_or_stack
   value: Silicon rails approximately 240 nm wide and 220 nm high; optical slot approximately 130 nm; 2 um buried
-    oxide; 3 um top oxide locally opened for JRD1.
+    oxide; 3 um top oxide locally opened for JRD1. Aluminum is stated for top pads and vias; bottom GSG metal
+    is unspecified.
   unit: ''
   basis: design_target
   locator: pp.2-3, Fig. 1
@@ -71,13 +66,6 @@ entries:
   basis: derived
   locator: pp.3-4, Figs. 1-2
   note: MZM transmission maximum-to-minimum voltage with opposite arm phase shifts; no per-arm conversion.
-- device_id: kieninger2020-best-dc
-  field: vpil_dc_vcm
-  value: 0.041
-  unit: V*cm
-  basis: derived
-  locator: p.4, section 3
-  note: Authors report V mm; divided by ten to express V cm.
 - device_id: kieninger2020-system-dc
   field: drive
   value: push_pull
@@ -159,7 +147,8 @@ entries:
   unit: V
   basis: derived
   locator: pp.7-8, section 5
-  note: Authors double 0.72 Vpp matched-load equivalent through open-end reflection; effective device voltage.
+  note: 'For 100 GBd PAM4 only: authors double 0.72 Vpp after probe loss via open-end reflection; OOK amplitude
+    unstated.'
 - device_id: kieninger2020-open-ended
   field: max_baud_gbd
   value: 100
@@ -241,13 +230,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 1, MZM 1; p.5, Eq. (1)
   note: Wavelength mean 0.75 dB; standard deviation 0.13 dB; de-embedded by authors.
-- device_id: kieninger2020-die1-mzm1
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die1-mzm2
   field: drive
   value: push_pull
@@ -283,13 +265,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 1, MZM 2; p.5, Eq. (1)
   note: Wavelength mean 0.74 dB; standard deviation 0.30 dB; de-embedded by authors.
-- device_id: kieninger2020-die1-mzm2
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die1-mzm3
   field: drive
   value: push_pull
@@ -325,13 +300,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 1, MZM 3; p.5, Eq. (1)
   note: Wavelength mean 0.48 dB; standard deviation 0.16 dB; de-embedded by authors.
-- device_id: kieninger2020-die1-mzm3
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die1-mzm4
   field: drive
   value: push_pull
@@ -367,13 +335,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 1, MZM 4; p.5, Eq. (1)
   note: Wavelength mean 0.55 dB; standard deviation 0.08 dB; de-embedded by authors.
-- device_id: kieninger2020-die1-mzm4
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die2-mzm1
   field: drive
   value: push_pull
@@ -409,13 +370,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 2, MZM 1; p.5, Eq. (1)
   note: Wavelength mean 1.78 dB; standard deviation 0.12 dB; de-embedded by authors.
-- device_id: kieninger2020-die2-mzm1
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die2-mzm2
   field: drive
   value: push_pull
@@ -451,13 +405,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 2, MZM 2; p.5, Eq. (1)
   note: Wavelength mean 1.83 dB; standard deviation 0.25 dB; de-embedded by authors.
-- device_id: kieninger2020-die2-mzm2
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die2-mzm3
   field: drive
   value: push_pull
@@ -493,13 +440,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 2, MZM 3; p.5, Eq. (1)
   note: Wavelength mean 0.41 dB; standard deviation 0.14 dB; de-embedded by authors.
-- device_id: kieninger2020-die2-mzm3
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die2-mzm4
   field: drive
   value: push_pull
@@ -535,13 +475,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 2, MZM 4; p.5, Eq. (1)
   note: Wavelength mean 0.46 dB; standard deviation 0.07 dB; de-embedded by authors.
-- device_id: kieninger2020-die2-mzm4
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die3-mzm1
   field: drive
   value: push_pull
@@ -577,13 +510,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 3, MZM 1; p.5, Eq. (1)
   note: Wavelength mean 0.51 dB; standard deviation 0.28 dB; de-embedded by authors.
-- device_id: kieninger2020-die3-mzm1
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die3-mzm2
   field: drive
   value: push_pull
@@ -619,13 +545,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 3, MZM 2; p.5, Eq. (1)
   note: Wavelength mean 0.53 dB; standard deviation 0.19 dB; de-embedded by authors.
-- device_id: kieninger2020-die3-mzm2
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die3-mzm3
   field: drive
   value: push_pull
@@ -661,13 +580,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 3, MZM 3; p.5, Eq. (1)
   note: Wavelength mean 0.03 dB; standard deviation 0.31 dB; de-embedded by authors.
-- device_id: kieninger2020-die3-mzm3
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die3-mzm4
   field: drive
   value: push_pull
@@ -703,13 +615,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 3, MZM 4; p.5, Eq. (1)
   note: Wavelength mean 0.21 dB; standard deviation 0.32 dB; de-embedded by authors.
-- device_id: kieninger2020-die3-mzm4
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die4-mzm1
   field: drive
   value: push_pull
@@ -745,13 +650,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 4, MZM 1; p.5, Eq. (1)
   note: Wavelength mean 0.64 dB; standard deviation 0.13 dB; de-embedded by authors.
-- device_id: kieninger2020-die4-mzm1
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die4-mzm2
   field: drive
   value: push_pull
@@ -787,13 +685,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 4, MZM 2; p.5, Eq. (1)
   note: Wavelength mean 0.70 dB; standard deviation 0.25 dB; de-embedded by authors.
-- device_id: kieninger2020-die4-mzm2
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die4-mzm3
   field: drive
   value: push_pull
@@ -829,13 +720,6 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 4, MZM 3; p.5, Eq. (1)
   note: Wavelength mean 0.01 dB; standard deviation 0.36 dB; de-embedded by authors.
-- device_id: kieninger2020-die4-mzm3
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
 - device_id: kieninger2020-die4-mzm4
   field: drive
   value: push_pull
@@ -871,11 +755,181 @@ entries:
   basis: derived
   locator: p.10, Table 1, Die 4, MZM 4; p.5, Eq. (1)
   note: Wavelength mean 0.30 dB; standard deviation 0.28 dB; de-embedded by authors.
+- device_id: kieninger2020-best-dc
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-system-dc
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-system-loss-ungated
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-open-ended
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-terminated
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die1-mzm1
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die1-mzm2
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die1-mzm3
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die1-mzm4
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die2-mzm1
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die2-mzm2
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die2-mzm3
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die2-mzm4
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die3-mzm1
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die3-mzm2
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die3-mzm3
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die3-mzm4
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die4-mzm1
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die4-mzm2
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die4-mzm3
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
 - device_id: kieninger2020-die4-mzm4
-  field: extinction_ratio_db
-  value: 30
-  unit: dB
-  basis: measured
-  locator: p.5, section 4; Fig. 3
-  note: Text describes approximately 30 dB as consistent across all investigated devices.
-derived: []
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+derived:
+- device_id: kieninger2020-best-dc
+  field: vpil_dc_vcm
+  value: 0.041
+  unit: V*cm
+  basis: derived
+  locator: p.4, section 3
+  formula: 0.41 V mm / 10 = 0.041 V cm; authors p.4, section 3; unit conversion only
+  inputs:
+  - reported U_pi L = 0.41 V mm

@@ -1,8 +1,8 @@
 # Claim: codex-main
 
 - Agent: Codex in the conversation that inspected the repository on 2026-10-01
-- Task IDs: C0, E1, U1, U2a, R0, D1.12
-- Status: R0 complete; E1/U1/U2a and D1.12 ready_for_review; coordination, shared E1 contract and D1.12 corrections retained
+- Task IDs: C0, E1, U1, U2a, R0, D1.12, U2c, E2i.1
+- Status: D1.12 corrections, U2c and E2i.1 ready_for_review; earlier handoffs retained
 - Updated: 2026-10-02
 - Active checkout: standalone `jwt625/eo-modulator-atlas`, baseline `3602290`
 - Migration/ingestion progress: `DevLog/DevLog-006-standalone-continuation.md`
@@ -55,7 +55,7 @@ Generated local verification outputs: `app/build/`, `app/.svelte-kit/`,
 - No claim on downloader/merge/extraction scripts or distillation skill policy work (D0).
 - No claim on EO overlap, RF loss, loaded-line/EO response implementation (E2–E4).
 - No claim on full-vector/metal optical modelling after E1's baseline handoff (E2).
-- U2 work is limited to the U2a scope below; broader representatives/filter semantics remain a later tranche.
+- U2 work is limited to U2a and the new U2c scope below; broader representative semantics remain with the D2 interface follow-up.
 - No independent audit claim. The implementation author cannot satisfy Q1/Q2 by self-review.
 
 ## Current work
@@ -115,4 +115,47 @@ R0 is complete. D1.12 is ready for review: 2 papers, 24 measurement-condition
 rows, 5 organizations, 153 evidence entries; dry-run merge has zero conflicts and
 errors. These rows do not imply 24 unique devices. Retain owned batch/reference
 paths for review corrections and source-version/supplement follow-up. Proposed
-D1.13–D1.14 batches remain unclaimed. The data lane's recorded pause is preserved.
+D1.13 was subsequently delivered by claude-wave; D1.14 remains unclaimed. The
+data lane's recorded pause is preserved.
+
+## New follow-ups after wave integration (2026-10-02)
+
+Baseline `73f8439` fast-forwarded from origin after checking a clean worktree.
+The claude-wave claim releases its implementation files. Sequential scope:
+
+1. D1.12: existing staging/reference paths, audit F1–F17 dispositions; never edit
+   the independent audit or merge canonical data. Resolve numerical corrections
+   and metadata consistency, document remaining schema/D2 decisions.
+2. U2c: `app/src/lib/logic.ts`, `charts.ts`, `columns.ts`, `ScatterChart.svelte`,
+   `app/src/routes/table/+page.svelte`, `app/src/routes/explore/+page.svelte`,
+   `app/src/lib/comparisons.test.ts`, `app/scripts/smoke.mjs`.
+   Protect statistical loss samples from representative/ranking use while keeping
+   their measurements inspectable. No Python-view or canonical-data edits.
+3. E2i.1: `engine/src/config.mjs`, `config.d.mts`, `run.mjs`, `run.d.mts`,
+   `engine/schema/sim.schema.json`, `engine/tests/config.test.mjs`, new
+   `engine/tests/optical-runner.test.mjs`, `sims/SPEC.md`, `engine/README.md`,
+   `app/src/routes/sim/+page.svelte` (optical policy/diagnostic disclosure only).
+   Implement DevLog-007 P1/P2/P5/P8 for the optical-metal option and diagnostics.
+   No EO-overlap/RF-line pipeline stage or paper-config edits in this tranche.
+
+Progress: `DevLog/DevLog-011-audit-corrections-and-integration.md` plus workboard.
+Do not rewrite other owners' handoff logs or independent audit assertions.
+The rotation-sense and scalar vertical-wall todo tests remain outside this scope.
+
+Handoff: all three follow-ups ready_for_review. Joint staged merge clean; 102
+engine tests pass with 2 pre-existing todo cases, 26 app and 28 Python tests pass,
+type check clean, root and subdirectory browser smoke pass. Canonical data and
+paper inputs unchanged. Retain D1.12 paths for review corrections. U2c app paths
+are released to named successors; shared E1 config/runner/schema/SPEC remain
+coordinated here for E2i.2/E3i. This is not an independent audit acceptance.
+
+## Continuation claim: complete executable EO/RF stages (2026-10-02)
+
+User requested going as far as possible, beyond the earlier tranche boundary.
+Claim E2i.2, E3i and U3 integration for these stages, then assess E4 using the
+working pipeline. Own shared config/runner/schema/SPEC, CLI, simulation worker
+and page, browser smoke and new runner integration fixtures/tests. Also claim
+released `engine/src/materials.mjs`, `eo-overlap.mjs` and the rotation regression
+for Q2 F6 correction. Independent audit assertions are retained; resolving an
+assertion does not constitute independent acceptance. No other active data-lane
+paths are taken over. Progress: DevLog-012.

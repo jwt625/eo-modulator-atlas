@@ -70,6 +70,31 @@ try {
   }
   console.log('PASS dashboard/table/explore/about render');
 
+  // Synthetic browser fixture for the all-sample state; canonical files remain untouched.
+  const sampleAtlas = JSON.parse(await readFile(new URL('../static/data/atlas.json', import.meta.url), 'utf8'));
+  const samplePaper = sampleAtlas.papers.find(p => p.paper_id === 'chen2022');
+  const sample = sampleAtlas.devices.find(d => d.device_id === 'chen2022-a');
+  sample.paper_id = samplePaper.paper_id = 'synthetic-loss-samples';
+  sample.device_id = 'synthetic-loss-sample-a'; sample.device_label = 'Synthetic sample';
+  samplePaper.label = 'Synthetic samples'; samplePaper.title = 'Synthetic loss sample fixture';
+  samplePaper.n_devices = 1; samplePaper.device_ids = [sample.device_id];
+  sample.tags = ['statistical_replicate', 'phase_only_loss'];
+  sample.il_onchip_db = 0.01; sample.qualifiers = {}; sample.evidence = {};
+  sampleAtlas.papers = [samplePaper]; sampleAtlas.devices = [sample];
+  await page.route('**/data/atlas.json', route => route.fulfill({ json: sampleAtlas }));
+  await page.goto(url('table'));
+  await page.getByText('Synthetic samples · sample', { exact: true }).waitFor();
+  await page.locator('main tbody tr').getByText('0.01', { exact: true }).waitFor();
+  await page.goto(url('explore'));
+  await page.getByText('Only statistical samples match; no headline device is selected.', { exact: true }).waitFor();
+  assert.equal(await page.locator('.js-plotly-plot').count(), 0, 'no representative plot for sample-only records');
+  await page.getByRole('button', { name: 'Show all records', exact: true }).click();
+  const lossBadge = page.locator('[aria-label="Chart b"] .badge');
+  await lossBadge.waitFor();
+  assert.match(await lossBadge.getAttribute('title'), /Incomparable loss scope or samples: 1/);
+  await page.unroute('**/data/atlas.json');
+  console.log('PASS sample-only table preview without promoting a sample to a headline device');
+
   await page.goto(url('table'));
   const tableRows = page.locator('main tbody tr');
   await until(async () => await tableRows.count() > 0, 'table records loaded');
@@ -219,6 +244,23 @@ try {
   await runButton.click(); await complete();
   assert.match(await page.locator('.target-summary').innerText(), /1 of 2 targets evaluated · 0 passed · 1 failed/);
   console.log('PASS retry, optical browser/Node agreement and failed-target display');
+
+  for (const policy of ['absent', 'pec_scalar']) {
+    const input = parseConfig(analytic).raw;
+    input.geometry.optical_window.x_um = [-1, 1]; // synthetic fixture: optical window includes plates
+    input.optics.metal_in_window = policy;
+    const yaml = JSON.stringify(input);
+    const nodeResult = runCrossSection(yaml, { optical: true });
+    await editor.fill(yaml);
+    await runButton.click(); await complete();
+    await page.locator(`[data-optical-policy="${policy}"]`).waitFor();
+    await page.getByText(/Window-edge diagnostic:/).waitFor();
+    const actual = Number(await page.locator('[data-metric="n_eff"]').getAttribute('data-value'));
+    assert.ok(Math.abs(actual - nodeResult.metrics.n_eff) < 1e-8);
+    if (policy === 'pec_scalar') await page.getByText(/Scalar PEC is exact on horizontal faces only: 0%/).waitFor();
+    await screenshot(`sim-optical-${policy}`);
+  }
+  console.log('PASS explicit optical policies, limitations and browser/Node diagnostics');
 
   await page.goto(url('sim?id=unknown-config'));
   await page.getByText('The requested config is not in this atlas.').waitFor();
