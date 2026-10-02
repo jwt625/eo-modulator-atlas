@@ -1,19 +1,29 @@
 # Workboard
 
-Updated 2026-10-01. Detailed scope, dependencies and acceptance checks:
+Updated 2026-10-02. Detailed scope, dependencies and acceptance checks:
 [DevLog-002](DevLog/DevLog-002-work-plan-and-ownership.md).
 
-**Current claims:** `codex-main` holds C0, the E1 contract and U2a comparison correctness; E1/U1 are
-`ready_for_review` with successor file releases recorded in its claim.
+Development continues in standalone `jwt625/eo-modulator-atlas`.
+[DevLog-006](DevLog/DevLog-006-standalone-continuation.md) records cache migration
+and the next ingestion tranche. Public cache policy: metadata tracked;
+PDFs/text/figures local and ignored.
+
+**Current claims:** `codex-main` holds coordination, the E1 contract and D1.12
+review corrections. E1/U1/U2a and D1.12 are `ready_for_review`; R0 migration is
+complete. Successor app/engine file releases are recorded in its claim.
 `claude-data-lane` owns D0,
 D1.01–D1.11, D2 and Q1. Progress: [E1/U1](DevLog/DevLog-003-cross-section-progress.md)
 and [data lane](DevLog/DevLog-004-data-lane-progress.md). Current canonical snapshot:
-8 papers / 16 devices / 19 organizations after p1_01. Other tranches remain
-unassigned. No implicit delegation.
+15 papers / 28 device rows / 27 organizations after p1_01/03/09; generated view
+matches. New p2_01 adds 2 papers / 24 measurement rows in staging, pending Q1/D2.
+Other tranches remain unassigned. No implicit delegation.
 
 | ID | Tranche | State | Owner | Dependency / handoff |
 |---|---|---|---|---|
 | C0 | Work plan, claims, current-state record | complete | codex-main | This board + detailed plan + claim file |
+| R0 | Standalone checkout and local cache migration | complete | codex-main | 726 artifacts including 39 PDFs hash-verified and ignored; environment checks pass |
+| D1.12 | Priority-2 batch p2_01 (Kieninger 2020, Wolf 2018a) | ready_for_review | codex-main | 2 papers / 24 measurement rows / 153 evidence entries; dry-run clean; independent Q1 before D2 |
+| D1.13–D1.14 | Further SOH / silicon / resonant coverage | proposed, unclaimed | unassigned | Candidate pairings and review gates in DevLog-006; claim paths before prefetch |
 | D0 | Ingestion tooling and policy alignment | implementation reported complete | claude-data-lane | DevLog-004 records lock/breaker tests; single prefetch owner retained |
 | D1.01–D1.11 | Priority-1 paper batches, one claim per batch | paused by user 2026-10-01 ~20:50; p1_01/03/09 integrated; p1_02/04 distilled, unaudited; p1_05..08/10/11 prefetched | claude-data-lane | See DevLog-004 TODO; max 3 concurrent; Q1 corrections before D2 |
 | D2 | Canonical data integration and view refresh | paused; canonical = 15 papers / 28 devices / 27 orgs | claude-data-lane | Serial merges; p1_02 and p1_04 await Q1 |
@@ -23,10 +33,11 @@ unassigned. No implicit delegation.
 | E4 | Periodic loaded line and traveling-wave EO response | waiting | unassigned | E2 + E3; loading/reference-plane contract |
 | E5 | Paper regressions and convergence studies | waiting | unassigned | E2–E4 + reviewed paper inputs |
 | U1 | Browser cross-section simulator and current app baseline | ready_for_review | codex-main | Root/base-path Chrome and narrow viewport pass; incomplete drafts preview safely |
-| U2a | Comparison correctness: bounds, plot validity, export context | in progress | codex-main | Approximately 20-minute block; DevLog-005 plan and exact file claim |
-| U2b | Remaining representative/filter/navigation and usability audit | waiting for U2a file release | unassigned | Coordinate generated-view contracts with D2; no overlapping app writes |
+| U2a | Comparison correctness: bounds, plot validity, export context | ready_for_review | codex-main | 15 unit tests/type check, root/base-path smoke pass; DevLog-005 handoff |
+| U2b | Remaining representative/filter/navigation and usability audit | ready to claim | unassigned | U2a files released; coordinate generated-view contracts with D2 |
 | U3 | Full-chain results and reproduction scorecard | waiting | unassigned | U1 files released; still needs E4/E5 contract |
 | Q1 | Independent pilot/batch evidence audit | claimed (fresh-context auditors, read-only) | claude-data-lane | Read-only inputs; write audit report only |
+| Q1-p2_01 | Independent D1.12 evidence audit | ready to claim | unassigned | Audit PDFs, loss samples and conditions; write separate report, no canonical edits |
 | Q2 | Independent numerical review | review ready; final gate waits | unassigned | E1 diff; later E2–E5; separate audit files |
 | R1 | Release integration, second audit, public packaging | waiting | unassigned | Accepted D/E/U tranches; rights policy review |
 

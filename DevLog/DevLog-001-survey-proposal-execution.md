@@ -11,6 +11,8 @@ authors: Claude (at Wentao Jiang's request)
 Historical execution record. For current categories, tranches, dependencies and
 agent claims, start with [DevLog-002](DevLog-002-work-plan-and-ownership.md) and
 [WORKBOARD](../WORKBOARD.md).
+Standalone migration and the current ingestion/review queue continue in
+[DevLog-006](DevLog-006-standalone-continuation.md).
 
 Companion to DevLog-000 (plan/decisions/TODO). This log captures the material that
 led to DevLog-000: what existed before, the full structured proposal, the user's

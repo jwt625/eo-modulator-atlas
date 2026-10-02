@@ -1,0 +1,1030 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          2
+        ]
+      ],
+      "date-time": "2026-06-02T03:07:03Z",
+      "timestamp": 1780369623250,
+      "version": "3.54.1"
+    },
+    "reference-count": 73,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              4,
+              3
+            ]
+          ],
+          "date-time": "2018-04-03T00:00:00Z",
+          "timestamp": 1522713600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              4,
+              3
+            ]
+          ],
+          "date-time": "2018-04-03T00:00:00Z",
+          "timestamp": 1522713600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Sci Rep"
+    ],
+    "DOI": "10.1038/s41598-017-19061-8",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          2,
+          1
+        ]
+      ],
+      "date-time": "2018-02-01T16:37:02Z",
+      "timestamp": 1517503022000
+    },
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 104,
+    "title": [
+      "Silicon-Organic Hybrid (SOH) Mach-Zehnder Modulators for 100 Gbit/s on-off Keying"
+    ],
+    "prefix": "10.1038",
+    "volume": "8",
+    "author": [
+      {
+        "given": "Stefan",
+        "family": "Wolf",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4712-3548",
+        "authenticated-orcid": false,
+        "given": "Heiner",
+        "family": "Zwickel",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wladislaw",
+        "family": "Hartmann",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Matthias",
+        "family": "Lauermann",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yasar",
+        "family": "Kutuvantavida",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Clemens",
+        "family": "Kieninger",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lars",
+        "family": "Altenhain",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Rolf",
+        "family": "Schmid",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9990-2618",
+        "authenticated-orcid": false,
+        "given": "Jingdong",
+        "family": "Luo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-9219-7749",
+        "authenticated-orcid": false,
+        "given": "Alex K.-Y.",
+        "family": "Jen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sebastian",
+        "family": "Randel",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wolfgang",
+        "family": "Freude",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Christian",
+        "family": "Koos",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          4,
+          3
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "19061_CR1",
+        "unstructured": "Cisco. Cisco Visual Networking Index: Forecast and Methodology, 2015–2020, (2016)."
+      },
+      {
+        "key": "19061_CR2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Raybon, G. et al. Single carrier high symbol rate transmitter for data rates up to 1.0 Tb/s. In Optical Fiber Communication Conference (OFC), Th3A.2 (2016).",
+        "DOI": "10.1364/OFC.2016.Th3A.2"
+      },
+      {
+        "key": "19061_CR3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Schuh, K. et al. Single carrier 1.2 Tbit/S transmission over 300 km with PM-64 QAM at 100 GBaud. In Optical Fiber Communication Conference (OFC), Th5B.5 (2017).",
+        "DOI": "10.1364/OFC.2017.Th5B.5"
+      },
+      {
+        "key": "19061_CR4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jiang, J. et al. 100Gb/s Ethernet chipsets in 65nm CMOS technology. In IEEE International Solid-State Circuits Conference (ISSCC), 120–122 (2013).",
+        "DOI": "10.1109/ISSCC.2013.6487663"
+      },
+      {
+        "key": "19061_CR5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kuchta, D. M. Directly modulated VCSELs at ≥50 Gb/s for short reach data communications. In IEEE Optical Interconnects Conference (OI), MD1 (2016).",
+        "DOI": "10.1109/OIC.2016.7483031"
+      },
+      {
+        "key": "19061_CR6",
+        "unstructured": "Mekis, A. et al. High-speed silicon photonics optical transceivers. In IEEE Summer Topicals Meeting Series (SUM), 23–24 (2015)."
+      },
+      {
+        "key": "19061_CR7",
+        "unstructured": "Ambrosia, J. D. & Kipp, S. G. The 2015 Ethernet roadmap. Ethernet Alliance White Paper (2015)."
+      },
+      {
+        "key": "19061_CR8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yichuan, Y. et al. 80 Gb/s ETDM transmitter with a traveling-wave electroabsorption modulator. In Optical Fiber Communication Conference (OFC), OWE1 (2005).",
+        "DOI": "10.1109/OFC.2005.192726"
+      },
+      {
+        "key": "19061_CR9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lange, S. et al. Low switching voltage InP-based travelling wave electrode Mach-Zehnder modulator monolithically integrated with DFB-laser for 60 Gb/s NRZ. In Optical Fiber Communication Conference (OFC), Th4E.1 (2015).",
+        "DOI": "10.1364/OFC.2015.Th4E.1"
+      },
+      {
+        "key": "19061_CR10",
+        "doi-asserted-by": "publisher",
+        "first-page": "1866",
+        "DOI": "10.1049/el.2016.2987",
+        "volume": "52",
+        "author": "Y Ogiso",
+        "year": "2016",
+        "unstructured": "Ogiso, Y. et al. 100 Gb/s and 2 V Vπ InP Mach-Zehnder modulator with an n-i-p-n heterostructure. Electron. Lett. 52, 1866–1867 (2016).",
+        "journal-title": "Electron. Lett."
+      },
+      {
+        "key": "19061_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lange, S. et al. 100 GBd intensity modulation and direct detection with an InP-based monolithic DFB laser Mach-Zehnder modulator. In Optical Fiber Communication Conference (OFC), Th5C.5 (2017).",
+        "DOI": "10.1364/OFC.2017.Th5C.5"
+      },
+      {
+        "key": "19061_CR12",
+        "doi-asserted-by": "publisher",
+        "first-page": "22224",
+        "DOI": "10.1364/OE.20.022224",
+        "volume": "20",
+        "author": "D Feng",
+        "year": "2012",
+        "unstructured": "Feng, D. et al. High speed GeSi electro-absorption modulator at1550 nm wavelength on SOI waveguide. Opt. Express 20, 22224–22232 (2012).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Srinivasan, A. et al. 50Gb/s C-band GeSi waveguide electro-absorption modulator. In Optical Fiber Communication Conference (OFC), Tu3D.7 (2016).",
+        "DOI": "10.1364/OFC.2016.Tu3D.7"
+      },
+      {
+        "key": "19061_CR14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Verbist, J. et al. First Real-time 100-Gb/s NRZ-OOK transmission over 2 km with a silicon photonic electro-absorption modulator. In Optical Fiber Communication Conference (OFC), Th5C.4 (2017).",
+        "DOI": "10.1364/OFC.2017.Th5C.4"
+      },
+      {
+        "key": "19061_CR15",
+        "doi-asserted-by": "publisher",
+        "first-page": "4839",
+        "DOI": "10.1364/OL.39.004839",
+        "volume": "39",
+        "author": "H Xu",
+        "year": "2014",
+        "unstructured": "Xu, H. et al. High-speed silicon modulator with band equalization. Opt. Lett. 39, 4839–4842 (2014).",
+        "journal-title": "Opt. Lett."
+      },
+      {
+        "key": "19061_CR16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xiao, X. et al. Substrate removed silicon Mach-Zehnder modulator for high baud rate optical intensity modulations. In Optical Fiber Communication Conference (OFC), Th4H.5 (2016).",
+        "DOI": "10.1364/OFC.2016.Th4H.5"
+      },
+      {
+        "key": "19061_CR17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xiao, X. et al. High speed silicon photonic modulators. In Optical Fiber Communication Conference (OFC), Tu2H.1 (2017).",
+        "DOI": "10.1364/OFC.2017.Tu2H.1"
+      },
+      {
+        "key": "19061_CR18",
+        "doi-asserted-by": "publisher",
+        "first-page": "1762",
+        "DOI": "10.1364/OE.25.001762",
+        "volume": "25",
+        "author": "C Hoessbacher",
+        "year": "2017",
+        "unstructured": "Hoessbacher, C. et al. Plasmonic modulator with >170 GHz bandwidth demonstrated at 100 GBd NRZ. Opt. Express 25, 1762–1768 (2017).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR19",
+        "doi-asserted-by": "publisher",
+        "first-page": "256",
+        "DOI": "10.1109/JLT.2015.2499763",
+        "volume": "34",
+        "author": "C Koos",
+        "year": "2017",
+        "unstructured": "Koos, C. et al. Silicon-organic hybrid (SOH) and plasmonic-organic hybrid (POH)integration. J. Lightw. Technol. 34, 256–268 (2017).",
+        "journal-title": "J. Lightw. Technol."
+      },
+      {
+        "key": "19061_CR20",
+        "doi-asserted-by": "publisher",
+        "first-page": "1210",
+        "DOI": "10.1109/JLT.2015.2394211",
+        "volume": "33",
+        "author": "M Lauermann",
+        "year": "2015",
+        "unstructured": "Lauermann, M. et al. 40 GBd 16QAM signaling at 160 Gb/s in a silicon-organic hybrid modulator. J. Lightw. Technol. 33, 1210–1216 (2015).",
+        "journal-title": "J. Lightw. Technol."
+      },
+      {
+        "key": "19061_CR21",
+        "doi-asserted-by": "publisher",
+        "first-page": "9389",
+        "DOI": "10.1364/OE.24.009389",
+        "volume": "24",
+        "author": "M Lauermann",
+        "year": "2016",
+        "unstructured": "Lauermann, M. et al. Generation of 64 GBd 4ASK signals using a silicon-organic hybrid modulator at 80 °C. Opt. Express 24, 9389–9396 (2016).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/lsa.2014.54",
+        "volume": "3",
+        "author": "L Alloatti",
+        "year": "2014",
+        "unstructured": "Alloatti, L. et al. 100 GHz silicon–organic hybrid modulator. Light Sci. Appl. 3, e173 (2014).",
+        "journal-title": "Light Sci. Appl."
+      },
+      {
+        "key": "19061_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "2726",
+        "DOI": "10.1109/JLT.2014.2321498",
+        "volume": "32",
+        "author": "R Palmer",
+        "year": "2014",
+        "unstructured": "Palmer, R. et al. High-speed, low drive-voltage silicon-organic hybrid modulator dased on a dinary-chromophore electro-optic material. J. Lightw. Technol. 32, 2726–2734 (2014).",
+        "journal-title": "J. Lightw. Technol."
+      },
+      {
+        "key": "19061_CR24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/lsa.2015.28",
+        "volume": "4",
+        "author": "S Koeber",
+        "year": "2015",
+        "unstructured": "Koeber, S. et al. Femtojoule electro-optic modulation using a silicon–organic hybrid device. Light Sci. Appl. 4, e255 (2015).",
+        "journal-title": "Light Sci. Appl."
+      },
+      {
+        "key": "19061_CR25",
+        "doi-asserted-by": "publisher",
+        "first-page": "1425",
+        "DOI": "10.1109/JLT.2015.2394511",
+        "volume": "33",
+        "author": "S Wolf",
+        "year": "2015",
+        "unstructured": "Wolf, S. et al. DAC-less amplifier-less generation and transmission of QAM signals using sub-volt silicon-organic hybrid modulators. J. Lightw. Technol. 33, 1425–1432 (2015).",
+        "journal-title": "J. Lightw. Technol."
+      },
+      {
+        "key": "19061_CR26",
+        "doi-asserted-by": "publisher",
+        "first-page": "29927",
+        "DOI": "10.1364/OE.22.029927",
+        "volume": "22",
+        "author": "M Lauermann",
+        "year": "2014",
+        "unstructured": "Lauermann, M. et al. Low-power silicon-organic hybrid (SOH) modulators for advanced modulation formats. Opt. Express 22, 29927–29936 (2014).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR27",
+        "doi-asserted-by": "publisher",
+        "first-page": "15359",
+        "DOI": "10.1364/OE.20.015359",
+        "volume": "20",
+        "author": "J Pfeifle",
+        "year": "2012",
+        "unstructured": "Pfeifle, J., Alloatti, L., Freude, W., Leuthold, J. & Koos, C. Silicon-organic hybrid phase shifter based on a slot waveguide with a liquid-crystal cladding. Opt. Express 20, 15359–15376 (2012).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR28",
+        "doi-asserted-by": "publisher",
+        "first-page": "11841",
+        "DOI": "10.1364/OE.19.011841",
+        "volume": "19",
+        "author": "L Alloatti",
+        "year": "2011",
+        "unstructured": "Alloatti, L. et al. 42.7 Gbit/s electro-optic modulator in silicon technology. Opt. Express 19, 11841–11851 (2011).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hartmann, W. et al. 100 Gbit/s OOK using a silicon-organic hybrid (SOH) modulator. In European Conference on Optical Communication (ECOC), PDP.1.4 (2015).",
+        "DOI": "10.1109/ECOC.2015.7341678"
+      },
+      {
+        "key": "19061_CR30",
+        "doi-asserted-by": "publisher",
+        "first-page": "23784",
+        "DOI": "10.1364/OE.25.023784",
+        "volume": "25",
+        "author": "H Zwickel",
+        "year": "2017",
+        "unstructured": "Zwickel, H. et al. Silicon-organic hybrid (SOH) modulators for intensity-modulation / direct-detection links with line rates of up to 120 Gbit/s. Opt. Express 25, 23784–23800 (2017).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR31",
+        "doi-asserted-by": "publisher",
+        "first-page": "6600907",
+        "DOI": "10.1109/JPHOT.2013.2258142",
+        "volume": "5",
+        "author": "R Palmer",
+        "year": "2013",
+        "unstructured": "Palmer, R. et al. Silicon-organic hybrid MZI modulator generating OOK, BPSK and 8-ASK signals for up to 84 Gbit/s. IEEE Photon. J. 5, 6600907 (2013).",
+        "journal-title": "IEEE Photon. J."
+      },
+      {
+        "key": "19061_CR32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wolf, S. et al. Coherent modulation up to 100 GBd 16QAM using silicon-organic hybrid (SOH) devices. Opt. Express 26, 220–232 (2018).",
+        "DOI": "10.1364/OE.26.000220"
+      },
+      {
+        "key": "19061_CR33",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kieninger, C. et al. Record-high in-device electro-optic coefficient of 359 pm/V in a silicon-organic hybrid (SOH) modulator. In Conference on Lasers and Electro-Optics (CLEO), STu3N (2017).",
+        "DOI": "10.1364/CLEO_SI.2017.STu3N.2"
+      },
+      {
+        "key": "19061_CR34",
+        "doi-asserted-by": "publisher",
+        "first-page": "25",
+        "DOI": "10.1021/cr9000429",
+        "volume": "110",
+        "author": "LR Dalton",
+        "year": "2010",
+        "unstructured": "Dalton, L. R., Sullivan, P. A. & Bale, D. H. Electric field poled organic electro-optic materials: state of the art and future prospects. Chem. Rev. 110, 25–55 (2010).",
+        "journal-title": "Chem. Rev."
+      },
+      {
+        "key": "19061_CR35",
+        "doi-asserted-by": "publisher",
+        "first-page": "768",
+        "DOI": "10.1364/OE.25.000768",
+        "volume": "25",
+        "author": "H Sato",
+        "year": "2017",
+        "unstructured": "Sato, H. et al. Low driving voltage mach-zehnder interference modulator constructed from an electro-optic polymer on ultra-thin silicon with a broadband operation. Opt. Express 25, 768–775 (2017).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR36",
+        "doi-asserted-by": "publisher",
+        "first-page": "229",
+        "DOI": "10.1038/nphoton.2014.9",
+        "volume": "8",
+        "author": "A Melikyan",
+        "year": "2014",
+        "unstructured": "Melikyan, A. et al. High-speed plasmonic phase modulators. Nat. Photonics 8, 229–233, https://doi.org/10.1038/nphoton.2014.9 (2014).",
+        "journal-title": "Nat. Photonics"
+      },
+      {
+        "key": "19061_CR37",
+        "doi-asserted-by": "publisher",
+        "first-page": "9938",
+        "DOI": "10.1364/OE.23.009938",
+        "volume": "23",
+        "author": "A Melikyan",
+        "year": "2015",
+        "unstructured": "Melikyan, A. et al. Plasmonic-organic hybrid (POH) modulators for OOK and BPSK signaling at 40 Gbit/s. Opt. Express 23, 9938–9946 (2015).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR38",
+        "doi-asserted-by": "publisher",
+        "first-page": "525",
+        "DOI": "10.1038/nphoton.2015.127",
+        "volume": "9",
+        "author": "C Haffner",
+        "year": "2015",
+        "unstructured": "Haffner, C. et al. All-plasmonic mach–zehnder modulator enabling optical high-speed communication at the microscale. Nat. Photonics 9, 525–528, https://doi.org/10.1038/nphoton.2015.127 (2015).",
+        "journal-title": "Nat. Photonics"
+      },
+      {
+        "key": "19061_CR39",
+        "doi-asserted-by": "publisher",
+        "first-page": "51104",
+        "DOI": "10.1063/1.4817255",
+        "volume": "103",
+        "author": "L Alloatti",
+        "year": "2013",
+        "unstructured": "Alloatti, L. et al. Optical absorption in silicon layers in the presence of charge inversion/accumulation or ion implantation. Appl. Phys. Lett. 103, 51104 (2013).",
+        "journal-title": "Appl. Phys. Lett."
+      },
+      {
+        "key": "19061_CR40",
+        "doi-asserted-by": "publisher",
+        "first-page": "20353",
+        "DOI": "10.1039/c2jm33979j",
+        "volume": "22",
+        "author": "S Huang",
+        "year": "2012",
+        "unstructured": "Huang, S. et al. Enhanced temporal stability of a highly efficient guest–host electro-optic polymer through a barrier layer assisted poling process. J. Mater. Chem. 22, 20353–20357 (2012).",
+        "journal-title": "J. Mater. Chem."
+      },
+      {
+        "key": "19061_CR41",
+        "doi-asserted-by": "publisher",
+        "first-page": "27725",
+        "DOI": "10.1364/OE.22.027725",
+        "volume": "22",
+        "author": "Y Jouane",
+        "year": "2014",
+        "unstructured": "Jouane, Y. et al. Unprecedented highest electro-optic coefficient of 226 pm/V for electro-optic polymer/TiO2 multilayer slot waveguide modulators. Opt. Express 22, 27725–27732 (2014).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR42",
+        "unstructured": "Petousi, D. et al. High-speed monolithically integrated silicon photonic transmitters in 0.25 μm BiCMOS platform. In European Conference on Optical Communication (ECOC), 604–606 (2016)."
+      },
+      {
+        "key": "19061_CR43",
+        "unstructured": "Ishikura, N. et al. Transmission characteristics of 32-Gbaud PDM IQ monolithic silicon modulator operating with 2-VPPD drive voltage. In European Conference and Exhibition on Optical Communication (ECOC), W.2.E.4 (2016)."
+      },
+      {
+        "key": "19061_CR44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/ncomms10864",
+        "volume": "7",
+        "author": "D Korn",
+        "year": "2016",
+        "unstructured": "Korn, D. et al. Lasing in silicon–organic hybrid waveguides. Nat. Commun. 7, 10864, https://doi.org/10.1038/ncomms10864 (2016).",
+        "journal-title": "Nat. Commun."
+      },
+      {
+        "key": "19061_CR45",
+        "doi-asserted-by": "publisher",
+        "first-page": "2627",
+        "DOI": "10.1364/OE.25.002627",
+        "volume": "25",
+        "author": "W Heni",
+        "year": "2017",
+        "unstructured": "Heni, W. et al. Nonlinearities of organic electro-optic materials in nanoscale slots and implications for the optimum modulator design. Opt. Express 25, 2627–2653 (2017).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR46",
+        "doi-asserted-by": "publisher",
+        "first-page": "3934",
+        "DOI": "10.1109/JLT.2013.2276740",
+        "volume": "31",
+        "author": "B Snyder",
+        "year": "2013",
+        "unstructured": "Snyder, B., Corbett, B. & O’Brien, P. Hybrid integration of the wavelength-tunable laser with a silicon photonic integrated circuit. J. Lightw. Technol. 31, 3934–3942 (2013).",
+        "journal-title": "J. Lightw. Technol."
+      },
+      {
+        "key": "19061_CR47",
+        "doi-asserted-by": "publisher",
+        "first-page": "17667",
+        "DOI": "10.1364/OE.20.017667",
+        "volume": "20",
+        "author": "N Lindenmann",
+        "year": "2012",
+        "unstructured": "Lindenmann, N. et al. Photonic wire bonding: a novel concept for chip-scale interconnects. Opt. Express 20, 17667–17677 (2012).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR48",
+        "doi-asserted-by": "publisher",
+        "first-page": "755",
+        "DOI": "10.1109/JLT.2014.2373051",
+        "volume": "33",
+        "author": "N Lindenmann",
+        "year": "2015",
+        "unstructured": "Lindenmann, N. et al. Connecting silicon photonic circuits to multicore fibers by photonic wire bonding. J. Lightw. Technol. 33, 755–760 (2015).",
+        "journal-title": "J. Lightw. Technol."
+      },
+      {
+        "key": "19061_CR49",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Billah, M. R. et al. Multi-chip integration of lasers and silicon photonics by photonic wire bonding. In Conference on Lasers and Electro-Optics (CLEO), STu2F.2 (2015).",
+        "DOI": "10.1364/CLEO_SI.2015.STu2F.2"
+      },
+      {
+        "key": "19061_CR50",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Billah, M. R. et al. 8-channel 448 Gbit/s silicon photonic transmitter enabled by photonic wire bonding. In Optical Fiber Communication Conference (OFC), Th5D.6 (2017).",
+        "DOI": "10.1364/OFC.2017.Th5D.6"
+      },
+      {
+        "key": "19061_CR51",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dietrich, P.-I. C. et al. Lenses for low-loss chip-to-fiber and fiber-to-fiber coupling fabricated by 3D direct-write lithography. In Conference on Lasers and Electro-Optics (CLEO), SM1G.4 (2016).",
+        "DOI": "10.1364/CLEO_SI.2016.SM1G.4"
+      },
+      {
+        "key": "19061_CR52",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Freude, W. et al. Quality metrics for optical signals: eye diagram, Q-factor, OSNR, EVM and BER. In 14th International Conference on Transparent Optical Networks (ICTON), Mo.B1.5 (2012).",
+        "DOI": "10.1109/ICTON.2012.6254380"
+      },
+      {
+        "key": "19061_CR53",
+        "doi-asserted-by": "publisher",
+        "first-page": "48",
+        "DOI": "10.1109/MCOM.2010.5434378",
+        "volume": "48",
+        "author": "F Chang",
+        "year": "2010",
+        "unstructured": "Chang, F., Onohara, K. & Mizuochi, T. Forward error correction for 100 G transport networks. Commun. Mag. IEEE 48, 48–55 (2010).",
+        "journal-title": "Commun. Mag. IEEE"
+      },
+      {
+        "key": "19061_CR54",
+        "doi-asserted-by": "publisher",
+        "first-page": "298",
+        "DOI": "10.1109/68.986792",
+        "volume": "14",
+        "author": "H Kim",
+        "year": "2002",
+        "unstructured": "Kim, H. & Gnauck, A. H. Chirp characteristics of dual-drive mach-zehnder modulator with a finite DC extinction ratio. IEEE Photon. Technol. Lett. 14, 298–300 (2002).",
+        "journal-title": "IEEE Photon. Technol. Lett."
+      },
+      {
+        "key": "19061_CR55",
+        "doi-asserted-by": "publisher",
+        "first-page": "87",
+        "DOI": "10.1109/50.3969",
+        "volume": "6",
+        "author": "F Koyama",
+        "year": "1988",
+        "unstructured": "Koyama, F. & Oga, K. Frequency chirping in external modulators. J Lightw. Technol. 6, 87–93 (1988).",
+        "journal-title": "J Lightw. Technol."
+      },
+      {
+        "key": "19061_CR56",
+        "doi-asserted-by": "publisher",
+        "first-page": "936",
+        "DOI": "10.1109/LPT.2012.2191149",
+        "volume": "24",
+        "author": "L Chen",
+        "year": "2012",
+        "unstructured": "Chen, L., Dong, P. & Chen, Y.-K. Chirp and dispersion tolerance of a single-drive push-pull silicon modulator at 28 Gb/s. IEEE Photon. Technol. Lett. 24, 936–938 (2012).",
+        "journal-title": "IEEE Photon. Technol. Lett."
+      },
+      {
+        "key": "19061_CR57",
+        "doi-asserted-by": "publisher",
+        "first-page": "104003",
+        "DOI": "10.1088/1464-4258/10/10/104003",
+        "volume": "10",
+        "author": "D Janner",
+        "year": "2008",
+        "unstructured": "Janner, D., Tulli, D., Belmonte, M. & Pruneri, V. Waveguide electro-optic modulation in micro-engineered LiNbO3. J. Opt. A Pure Appl. Opt. 10, 104003 (2008).",
+        "journal-title": "J. Opt. A Pure Appl. Opt."
+      },
+      {
+        "key": "#cr-split#-19061_CR58.1",
+        "unstructured": "Strasser, M. M., Pfennigbauer, M., Pauer, M. & Winzer, P. J. Experimental verification of optimum filter bandwidths in direct-detection (N)RZ receivers limited by optical noise. In LEOS 2001"
+      },
+      {
+        "key": "#cr-split#-19061_CR58.2",
+        "unstructured": "14th Annual Meeting of the IEEE Lasers and Electro-Optics Society, 485-486 (2001)."
+      },
+      {
+        "key": "19061_CR59",
+        "unstructured": "Mellanox. OpenOptics Design Guide. Available at: www.openopticsmsa.org/pdf/Open_Optics_Design_Guide.pdf."
+      },
+      {
+        "key": "19061_CR60",
+        "unstructured": "Wang, Z. & Ghiasi, A. FEC tradeoffs and analyses for 100G optical networking. IEEE 802.3bm (2012)."
+      },
+      {
+        "key": "19061_CR61",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bauwelinck, J. et al. On-chip transmitter and receiver front-ends for ultra- broadband wired and optical-fiber communications. In Optical Fiber Communication Conference (OFC), Tu3B.1 (2016).",
+        "DOI": "10.1364/OFC.2016.Tu3B.1"
+      },
+      {
+        "key": "19061_CR62",
+        "doi-asserted-by": "publisher",
+        "first-page": "12222",
+        "DOI": "10.1364/OE.20.012222",
+        "volume": "20",
+        "author": "JS Orcutt",
+        "year": "2012",
+        "unstructured": "Orcutt, J. S. et al. Open foundry platform for high-performance electronic-photonic integration. Opt. Express 20, 12222–12232 (2012).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR63",
+        "doi-asserted-by": "publisher",
+        "first-page": "534",
+        "DOI": "10.1038/nature16454",
+        "volume": "528",
+        "author": "C Sun",
+        "year": "2015",
+        "unstructured": "Sun, C. et al. Single-chip microprocessor that communicates directly using light. Nature 528, 534–538 (2015).",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "19061_CR64",
+        "doi-asserted-by": "publisher",
+        "first-page": "577",
+        "DOI": "10.1109/LPT.2014.2385671",
+        "volume": "27",
+        "author": "DM Kuchta",
+        "year": "2015",
+        "unstructured": "Kuchta, D. M. et al. A 71-Gb/s NRZ modulated 850-nm VCSEL-based optical link. IEEE Photon. Technol. Lett. 27, 577–580 (2015).",
+        "journal-title": "IEEE Photon. Technol. Lett."
+      },
+      {
+        "key": "19061_CR65",
+        "doi-asserted-by": "publisher",
+        "first-page": "243311",
+        "DOI": "10.1063/1.3453659",
+        "volume": "96",
+        "author": "S Huang",
+        "year": "2010",
+        "unstructured": "Huang, S. et al. Highly efficient electro-optic polymers through improved poling using a thin TiO2-modified transparent electrode. Appl. Phys. Lett. 96, 243311 (2010).",
+        "journal-title": "Appl. Phys. Lett."
+      },
+      {
+        "key": "19061_CR66",
+        "doi-asserted-by": "publisher",
+        "first-page": "511",
+        "DOI": "10.1038/nphoton.2010.167",
+        "volume": "4",
+        "author": "D Liang",
+        "year": "2010",
+        "unstructured": "Liang, D. & Bowers, J. E. Recent progress in lasers on silicon. Nat. Photonics 4, 511–517, https://doi.org/10.1038/nphoton.2010.167 (2010).",
+        "journal-title": "Nat. Photonics"
+      },
+      {
+        "key": "19061_CR67",
+        "doi-asserted-by": "crossref",
+        "unstructured": "De Valicourt, G., Verdier, A., Brenot, R., Chen, Y.-K. & Dong, P. Integrated ultra-wide band wavelength-tunable hybrid external cavity silicon-based laser. In Optical Fiber Communication Conference (OFC), Th5C.6 (2017).",
+        "DOI": "10.1364/OFC.2017.Th5C.6"
+      },
+      {
+        "key": "19061_CR68",
+        "doi-asserted-by": "publisher",
+        "first-page": "19020",
+        "DOI": "10.1364/OE.24.019020",
+        "volume": "24",
+        "author": "F Qiu",
+        "year": "2016",
+        "unstructured": "Qiu, F. & Yokoyama, S. Efficiently poled electro-optic polymer modulators. Opt. Express 24, 19020–19025 (2016).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR69",
+        "doi-asserted-by": "publisher",
+        "first-page": "28643",
+        "DOI": "10.1364/OE.25.028643",
+        "volume": "25",
+        "author": "H Miura",
+        "year": "2017",
+        "unstructured": "Miura, H. et al. High thermal stability 40 GHz electro-optic polymer modulators. Opt. Express 25, 28643–28649 (2017).",
+        "journal-title": "Opt. Express"
+      },
+      {
+        "key": "19061_CR70",
+        "doi-asserted-by": "publisher",
+        "first-page": "951",
+        "DOI": "10.1039/C1JM14254B",
+        "volume": "22",
+        "author": "Z Shi",
+        "year": "2012",
+        "unstructured": "Shi, Z. et al. Achieving excellent electro-optic activity and thermal stability in poled polymers through an expeditious crosslinking process. J. Mater. Chem. C 22, 951–959 (2012).",
+        "journal-title": "J. Mater. Chem. C"
+      },
+      {
+        "key": "19061_CR71",
+        "doi-asserted-by": "publisher",
+        "first-page": "1325",
+        "DOI": "10.3390/polym3031325",
+        "volume": "3",
+        "author": "L Dalton",
+        "year": "2011",
+        "unstructured": "Dalton, L. & Benight, S. Theory-guided design of organic electro-optic materials and devices. Polymers 3, 1325–1351 (2011).",
+        "journal-title": "Polymers"
+      },
+      {
+        "key": "19061_CR72",
+        "doi-asserted-by": "publisher",
+        "first-page": "661",
+        "DOI": "10.1021/am800197j",
+        "volume": "1",
+        "author": "M Klinger",
+        "year": "2009",
+        "unstructured": "Klinger, M., Tolbod, L. P., Gothelf, K. V. & Ogilby, P. R. Effect of polymer cross-links on oxygen diffusion in glassy PMMA films. ACS Appl. Mater. Interfaces 1, 661–667 (2009).",
+        "journal-title": "ACS Appl. Mater. Interfaces"
+      }
+    ],
+    "container-title": [
+      "Scientific Reports"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.nature.com/articles/s41598-017-19061-8",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41598-017-19061-8.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41598-017-19061-8.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          30
+        ]
+      ],
+      "date-time": "2025-06-30T12:09:05Z",
+      "timestamp": 1751285345000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.nature.com/articles/s41598-017-19061-8"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          4,
+          3
+        ]
+      ]
+    },
+    "references-count": 73,
+    "journal-issue": {
+      "issue": "1",
+      "published-online": {
+        "date-parts": [
+          [
+            2018,
+            12
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "19061"
+    ],
+    "URL": "https://doi.org/10.1038/s41598-017-19061-8",
+    "relation": {},
+    "ISSN": [
+      "2045-2322"
+    ],
+    "issn-type": [
+      {
+        "value": "2045-2322",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          4,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "5 October 2017",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "19 December 2017",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "3 April 2018",
+        "order": 3,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "The authors declare no competing interests.",
+        "order": 1,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Competing Interests"
+        }
+      }
+    ],
+    "article-number": "2598"
+  }
+}

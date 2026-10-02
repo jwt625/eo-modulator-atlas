@@ -1,7 +1,7 @@
 ---
 title: EO atlas - U2a comparison correctness
 date: 2026-10-01
-status: in_progress
+status: ready_for_review
 owner: codex-main
 tasks: [U2a]
 ---
@@ -35,6 +35,38 @@ canonical integration and generated views; no subagents launched.
 
 ## Checks and handoff
 
-Pending implementation and verification. U2b will cover the remaining
-representative-ranking, measured-only semantics, URL/back and mobile usability
-work; changes to Python-derived views require coordinated ownership with D2.
+Implementation was included in the initial public spin-off commit `3602290`.
+Final standalone verification completed 2026-10-02:
+
+- Fixed categorical x=0 exclusion and made nonpositive filtering depend on each
+  axis scale; missing, invalid and unresolved-bound omissions are counted.
+- Derived qualifiers propagate numerator/denominator bounds. Opposing directions
+  or incompatible approximate/bounded inputs show as nominal/indeterminate and
+  are omitted from comparisons needing a resolved bound.
+- Nominal frontiers exclude qualified/modelled points and separate known voltage
+  conventions and DC/RF contexts. Material statistics require one known context
+  and eligible points; bound-only groups do not acquire fake zeros.
+- Plot/tooltip basis follows the plotted fields. CSV includes device identity,
+  filter-match status, voltage convention and per-field qualifier, basis and
+  context. Expand-all ignores single-device papers.
+- App unit tests: **15 passed**, including 10 comparison regressions. Svelte and
+  TypeScript check: **0 errors, 0 warnings**. Engine tests: **20 passed**. Python
+  tests: **28 passed**; canonical database validation: **0 errors**.
+- Production builds and full browser smoke pass at `/` and `/eo-atlas`, including
+  table expansion/search/empty state, qualified CSV download, restored material
+  chart, worker execution/cancellation/error recovery and narrow viewport.
+  Root production build restored after subdirectory verification.
+- Visually inspected table/comparison screenshots in ignored `logs/u2a/`.
+  Material chart has data and scoped statistics; table qualifiers remain visible.
+  Wide-table scrolling is expected; mobile table/filter usability remains U2b.
+
+An earlier browser run timed out waiting for the Chen optional-optical rejection,
+after passing U2a checks. Both standalone deployment-path suites pass that case
+without a source change. The failure is unreproduced; no root-cause fix is claimed.
+
+U2a is **ready for independent review**, not independently accepted. Its app file
+claim is released for a named U2b successor; coordinate any review corrections.
+U2b covers representative ranking, measured-only semantics, URL/back and mobile
+table/filter usability. Python-generated fields still use their existing
+qualifier/ranking rules; reconcile that contract with D2 before editing
+`build_views.py` or the atlas. The existing FOM formula was not redesigned here.

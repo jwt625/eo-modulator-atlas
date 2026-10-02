@@ -1,8 +1,8 @@
 # EO Modulator Atlas
 
 A traceable literature database and static browser explorer for electro-optic
-modulators. The integrated atlas contains **8 papers, 16 devices and 19 organizations**
-after p1_01 (2026-10-01); the candidate index contains 198 records and distillation
+modulators. The integrated atlas contains **15 papers, 28 device rows and 27 organizations**
+after p1_01/03/09 (checked 2026-10-02); the candidate index contains 198 records and distillation
 is continuing. Each reported metric has an evidence
 locator and basis. Missing values stay empty.
 
@@ -121,5 +121,7 @@ fixed group index are excluded from prediction comparisons. Each mesh has an
 Current work and remaining phases are recorded in [DevLog-000](DevLog/DevLog-000-plan.md)
 and [DevLog-002](DevLog/DevLog-002-work-plan-and-ownership.md).
 E1/U1 progress, final checks and handoff: [DevLog-003](DevLog/DevLog-003-cross-section-progress.md).
+Standalone cache migration, staged SOH references and next task ownership:
+[DevLog-006](DevLog/DevLog-006-standalone-continuation.md).
 Read [WORKBOARD.md](WORKBOARD.md) and the active claims under
 `coordination/claims/` before starting concurrent work.

@@ -1,9 +1,11 @@
 # Claim: codex-main
 
 - Agent: Codex in the conversation that inspected the repository on 2026-10-01
-- Task IDs: C0, E1, U1, U2a
-- Status: U2a in_progress; E1/U1 ready_for_review; C0 and shared E1 contract maintenance retained
-- Updated: 2026-10-01
+- Task IDs: C0, E1, U1, U2a, R0, D1.12
+- Status: R0 complete; E1/U1/U2a and D1.12 ready_for_review; coordination, shared E1 contract and D1.12 corrections retained
+- Updated: 2026-10-02
+- Active checkout: standalone `jwt625/eo-modulator-atlas`, baseline `3602290`
+- Migration/ingestion progress: `DevLog/DevLog-006-standalone-continuation.md`
 - Progress/handoff: `DevLog/DevLog-003-cross-section-progress.md`
 
 ## Implementation write paths
@@ -45,7 +47,7 @@ U1 app integration:
 Generated local verification outputs: `app/build/`, `app/.svelte-kit/`,
 `app/static/sims/`, `logs/`. No solver output is to be committed.
 
-## Explicit exclusions
+## Explicit exclusions (except the D1.12 staging scope below)
 
 - No paper distillation, candidate changes or edits to `data/*.csv`,
   `data/evidence/`, `data/schema/`, `data/_staging/p1_*/` or reference caches.
@@ -61,8 +63,10 @@ Generated local verification outputs: `app/build/`, `app/.svelte-kit/`,
 E1/U1 implementation and author checks are finished; see DevLog-003 for exact
 commands, 20 engine / 5 app / 28 Python passing tests, both browser deployment
 paths and the cross-agent follow-up register. Q2 remains unassigned and must
-independently review the numerical baseline. U2a claimed for the user's next
-approximately 20-minute work block; plan and live notes in DevLog-005.
+independently review the numerical baseline. U2a is ready for review with 15 app
+tests and both browser deployment paths passing; final handoff in DevLog-005.
+Standalone migration and p2_01 distillation are recorded in DevLog-006. No
+independent audit is claimed.
 
 ## U2a claim: comparison correctness (2026-10-01)
 
@@ -86,8 +90,29 @@ interface follow-up instead of overwriting that lane's generated view.
   `app/src/lib/sim.worker.ts`, `CrossSection.svelte`, `ScoreCard.svelte`.
 - U2: `app/src/lib/logic.test.ts` and the narrow header changes in
   `app/src/routes/+layout.svelte`.
+- U2b (2026-10-02): all U2a app paths listed above, including comparison helpers,
+  charts, tooltips, table/explore routes, comparison tests and browser smoke.
+  Retain regression coverage and coordinate any U2a review corrections.
 
 Release does not assign a successor or assert independent acceptance. Retain
 existing tests and coordinate review fixes if a new owner has claimed a file.
 Shared config/runner/schema/SPEC maintenance and coordination docs remain with
 codex-main until a specific interface handoff is recorded.
+
+## Standalone migration and D1.12 claim
+
+User explicitly requested continuation in the standalone repository. R0 owns
+local-only transfer into `references/*/{source.pdf,text.md,figures/}` without
+overwriting public source metadata, and DevLog-006 plus coordination updates.
+
+D1.12 owns `data/_staging/p2_01/`, its manifest
+`data/_staging/batches/p2_01.csv`, and `references/kieninger2020/` and
+`references/wolf2018a/` metadata/cache. These priority-2 papers are outside the
+data lane's p1 batches. Acquisition uses serialized prefetch; rows/evidence stay
+staged for independent review. No canonical data, schema or tooling writes.
+
+R0 is complete. D1.12 is ready for review: 2 papers, 24 measurement-condition
+rows, 5 organizations, 153 evidence entries; dry-run merge has zero conflicts and
+errors. These rows do not imply 24 unique devices. Retain owned batch/reference
+paths for review corrections and source-version/supplement follow-up. Proposed
+D1.13–D1.14 batches remain unclaimed. The data lane's recorded pause is preserved.
