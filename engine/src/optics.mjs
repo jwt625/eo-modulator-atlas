@@ -5,15 +5,45 @@
 // dispersion relations):
 //   form 'E'  (quasi-TE, psi = E_x):    -lap psi - k0^2 n^2 psi = -beta^2 psi
 //   form 'H'  (quasi-TM, psi = H_x):     div(n^-2 grad psi) + k0^2 psi = beta^2 n^-2 psi
-// Quasi-TE uses the lab-frame n_xx component of each material, quasi-TM uses n_yy.
+// Quasi-TE uses the lab-frame n_xx component of each material. Quasi-TM uses eps_yy in the mass term (E_y = beta H_x /
+// (omega eps0 eps_yy)) and, since 2026-10-02 (E2, Q2 finding F3), eps_zz (propagation axis) in the gradient term
+// (E_z = (1/(i omega eps0 eps_zz)) d(H_x)/dy); for isotropic or n_yy = n_zz materials this is the previous equation.
+//
+// SCALAR-FORM LIMITATION (Q2 finding F1; machine-readable flag `scalar_forms_exact_only_at_horizontal_interfaces` in
+// result.limitations). Both forms are exact for interfaces whose normal is the film normal y (horizontal interfaces; slab
+// tests). At VERTICAL interfaces (normal x) the roles are swapped: form E enforces continuity of psi = E_x, but E_x is the
+// field component NORMAL to such a wall (physical D_x continuity makes E_x jump by the permittivity ratio), so form E there
+// reproduces the physical TANGENTIAL-field (quasi-TM-like) result; form H (psi = H_x, continuous n^-2 d_n psi) reproduces
+// the physical NORMAL-field (quasi-TE-like) result. Illustration for a laterally stratified slab (core 2.2 / clad 1.45,
+// 0.6 um wide, 1.55 um): engine TE 2.02960 vs physical E-normal 1.94848, engine TM 1.94839 vs physical E-tangential 2.02969.
+// This is a pure vertical-wall upper-limit illustration, not a rib number; rib sidewalls mix both interface types and the
+// resulting error in n_eff and in the Pockels power weight psi^2 is unquantified without a vector reference.
 // License: GPL-3.0-or-later.
 
 import { assemble, restrictMatrix, triangleGeometry } from './fem.mjs';
 import { buildPattern, ndOrder, SparseCholesky, jacobiEigen, matVec } from './sparse.mjs';
 import { CrossSection } from './section.mjs';
-import { epsOptLab, opticalIndexAt } from './materials.mjs';
+import { epsOptLab, opticalIndexAt, libraryIndex } from './materials.mjs';
 
 export const OPTICAL_LABELS = ['scalar_optical_not_full_vector'];
+/** Machine-readable limitation codes carried in every solveModesAt result (and downstream EO results). */
+export const OPTICAL_LIMITATIONS = Object.freeze(['scalar_forms_exact_only_at_horizontal_interfaces', 'scalar_tm_lateral_gradient_uses_eps_zz_approximation']);
+
+/**
+ * Handling of a conductor that intersects the optical window (E2 model option; opt-in).
+ *  - 'reject' (default): throw. The scalar solver has no metal model and no metal index is ever invented.
+ *  - 'absent': the conductor is NOT part of the optical model; its footprint takes the underlying
+ *    dielectric region. Limit "metal optically absent". Result label optical_metal_absent_limit.
+ *  - 'pec_scalar': conductor triangles are removed and the metal surface is treated as a perfect electric
+ *    conductor in the scalar equation (quasi-TE form E: psi = 0 on the metal boundary; quasi-TM form H:
+ *    natural zero-normal-derivative). Exact only on faces whose normal is the film normal (horizontal faces);
+ *    other faces violate the scalar derivation. Limit "metal ideal". Label optical_metal_pec_scalar_approximation.
+ * Neither option is a real-metal result. They bracket it only to the extent that a real conductor lies between
+ * "absent" and "ideal"; the difference of the two solves is the sensitivity of the mode to the metal.
+ */
+export const METAL_POLICIES = ['reject', 'absent', 'pec_scalar'];
+const METAL_LABELS = { absent: 'optical_metal_absent_limit', pec_scalar: 'optical_metal_pec_scalar_approximation' };
+const OFFDIAG_TOL = 1e-9; // relative to the largest diagonal entry; rotation by multiples of 90 deg is diagonal to round-off
 
 /**
  * Build the optical sub-model (window mesh) of a cross-section.
@@ -21,11 +51,14 @@ export const OPTICAL_LABELS = ['scalar_optical_not_full_vector'];
  */
 export function buildOpticalModel(section, mats, opts) {
   const { window: win, polarization, lambda0Um } = opts;
+  const metalPolicy = opts.metal ?? 'reject';
+  if (!METAL_POLICIES.includes(metalPolicy)) throw new Error(`optical: metal policy must be one of ${METAL_POLICIES.join(', ')}; got ${metalPolicy}`);
+  if (polarization !== 'TE' && polarization !== 'TM') throw new Error(`optical: polarization must be TE or TM; got ${polarization}`);
   const g = section.geom;
   const wnd = win ?? g.optical_window;
   if (!wnd) throw new Error(`cross-section ${section.name}: optical_window is required for the optical mode stage`);
   const regions = [...g.regions.map((r) => ({ name: r.name, material: r.material, poly: r.poly }))];
-  for (const e of g.electrodes) regions.push({ name: `electrode:${e.name}`, material: e.material, poly: e.poly });
+  if (metalPolicy !== 'absent') for (const e of g.electrodes) regions.push({ name: `electrode:${e.name}`, material: e.material, poly: e.poly });
   const geomOpt = {
     symmetry: 'none',
     mirror_x_um: 0,
@@ -42,6 +75,7 @@ export function buildOpticalModel(section, mats, opts) {
   const regionN0 = regions.map((r) => {
     const m = mats[r.material];
     if (!m) throw new Error(`optical: unknown material ${r.material}`);
+    if (metalPolicy === 'pec_scalar' && m.conductor) return null; // no optical index for metal, ever
     const e = epsOptLab(m, lambda0Um, lambda0Um);
     return e ? Math.sqrt(e[comp]) : null;
   });
@@ -70,23 +104,58 @@ export function buildOpticalModel(section, mats, opts) {
   mesh.rect = os.rect;
   const geo = triangleGeometry(mesh);
   const pat = buildPattern(mesh.nNodes, mesh.tri);
-  return { section, os, mats, mesh, geo, pat, regions, polarization, lambda0Um, window: wnd, boundary: opts.boundary ?? {}, nMax, coreNames: core.map((c) => c.name), coreEdge, maxEdge };
+  // conductors actually present in the optical mesh (mesh membership, not bounding boxes)
+  const usedRegions = new Set(mesh.triRegion);
+  const metalNames = regions.filter((r, i) => mats[r.material]?.conductor && usedRegions.has(i)).map((r) => r.name);
+  const omittedMetal = metalPolicy === 'absent' ? g.electrodes.filter((e) => polygonBBoxHits(e.poly, wnd)).map((e) => `electrode:${e.name}`) : [];
+  const metal = { policy: metalPolicy, inMesh: metalNames, omittedFromModel: omittedMetal, labels: METAL_LABELS[metalPolicy] ? [METAL_LABELS[metalPolicy]] : [] };
+  return { section, os, mats, mesh, geo, pat, regions, polarization, lambda0Um, window: wnd, boundary: opts.boundary ?? {}, nMax, coreNames: core.map((c) => c.name), coreEdge, maxEdge, metal };
 }
 
-/** Per-triangle n^2 for a wavelength. */
-export function n2Triangles(model, lambdaUm) {
-  const comp = model.polarization === 'TM' ? 4 : 0;
+function polygonBBoxHits(poly, w) {
+  const xs = poly.map((p) => p[0]), ys = poly.map((p) => p[1]);
+  return Math.max(...xs) >= w.x[0] && Math.min(...xs) <= w.x[1] && Math.max(...ys) >= w.y[0] && Math.min(...ys) <= w.y[1];
+}
+
+/**
+ * Conductors whose bounding box meets a window (cheap pre-check; the solver itself uses mesh membership).
+ * @returns {string[]} electrode names
+ */
+export function metalInWindow(section, win = null) {
+  const w = win ?? section.geom.optical_window;
+  if (!w) throw new Error(`cross-section ${section.name}: optical_window is required`);
+  return section.geom.electrodes.filter((e) => polygonBBoxHits(e.poly, w)).map((e) => e.name);
+}
+
+/** Library dispersion validity at the anchor wavelength (materials.mjs checks only the evaluation wavelength). */
+function assertAnchorInRange(m, lambda0Um) {
+  if (!m.dispersionKey) return;
+  for (const comp of ['n', 'n_o', 'n_e']) {
+    const l = libraryIndex(m.dispersionKey, comp, lambda0Um);
+    if (l && !l.inRange) throw new Error(`optical: material ${m.name} dispersion anchor wavelength ${lambda0Um} um is outside the library validity range`);
+  }
+}
+
+/** Per-triangle n^2 for a wavelength. Conductor triangles (policy pec_scalar only) carry 0 and are excluded from the mode equation. */
+export function n2Triangles(model, lambdaUm, compOverride = null) {
+  const comp = compOverride ?? (model.polarization === 'TM' ? 4 : 0);
   const used = new Set(model.mesh.triRegion);
   const per = model.regions.map((r, i) => {
     // Off-window electrodes need no optical index. A metal actually present in
     // the window still fails explicitly: this scalar solver cannot model it.
     if (!used.has(i)) return null;
     const m = model.mats[r.material];
-    if (m.conductor) throw new Error(`optical: conductor ${r.material} intersects the optical window; metal optical modes are unsupported`);
+    if (m.conductor) {
+      if (model.metal?.policy === 'pec_scalar') return 0;
+      throw new Error(`optical: conductor ${r.material} intersects the optical window; metal optical modes are unsupported (opt in with metal policy 'absent' or 'pec_scalar' to bracket the metal explicitly)`);
+    }
+    assertAnchorInRange(m, model.lambda0Um);
     const index = opticalIndexAt(m, lambdaUm, model.lambda0Um);
     if (index && !index.inRange) throw new Error(`optical: material ${r.material} dispersion is out of range at ${lambdaUm} um`);
     const e = epsOptLab(m, lambdaUm, model.lambda0Um);
     if (!e) throw new Error(`material ${r.material} has no optical index`);
+    const dmax = Math.max(e[0], e[4], e[8]);
+    for (const k of [1, 2, 3, 5, 6, 7]) if (Math.abs(e[k]) > OFFDIAG_TOL * dmax) throw new Error(`optical: material ${r.material} has an off-diagonal lab-frame permittivity (crystal rotation not a multiple of 90 deg); the scalar solver would silently ignore it`);
     if (!Number.isFinite(e[comp]) || e[comp] <= 0) throw new Error(`material ${r.material} has no finite positive optical permittivity`);
     return e[comp];
   });
@@ -105,21 +174,28 @@ function dot(a, b) {
  * Solve for the guided modes at one wavelength.
  * @returns {{neff:number[], psi:Float64Array[], theta:number[], iterations:number, form:string, warm:any}}
  */
-export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm = null, tol = 1e-11, maxIter = 120 } = {}) {
+export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm = null, tol = 1e-11, maxIter = 120, marginUm = null } = {}) {
   const { mesh, geo, pat } = model;
   const pol = model.polarization;
   const useForm = form ?? (pol === 'TM' ? 'H' : 'E');
   const k0 = (2 * Math.PI) / lambdaUm;
   const n2 = n2Triangles(model, lambdaUm);
+  // quasi-TM gradient coefficient uses eps_zz (lab index 8); mass term and spectrum bound use eps_yy (= n2)
+  const n2z = useForm === 'H' ? n2Triangles(model, lambdaUm, 8) : null;
   const nT = mesh.nTris;
   let nMax2 = 0;
   for (const v of n2) if (v > nMax2) nMax2 = v;
+  // triangles removed from the equation (conductor under policy pec_scalar)
+  const excluded = new Uint8Array(nT);
+  let nExcluded = 0;
+  for (let t = 0; t < nT; t++) if (n2[t] === 0) { excluded[t] = 1; nExcluded++; }
   let cTri, mA, mB;
   if (useForm === 'E') {
     cTri = new Float64Array(3 * nT);
     mA = new Float64Array(nT);
     mB = new Float64Array(nT).fill(1);
     for (let t = 0; t < nT; t++) {
+      if (excluded[t]) { mB[t] = 0; continue; }
       cTri[3 * t] = 1;
       cTri[3 * t + 2] = 1;
       mA[t] = -k0 * k0 * n2[t];
@@ -129,8 +205,9 @@ export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm 
     mA = new Float64Array(nT).fill(-k0 * k0);
     mB = new Float64Array(nT);
     for (let t = 0; t < nT; t++) {
-      cTri[3 * t] = 1 / n2[t];
-      cTri[3 * t + 2] = 1 / n2[t];
+      if (excluded[t]) { mA[t] = 0; continue; }
+      cTri[3 * t] = 1 / n2z[t];
+      cTri[3 * t + 2] = 1 / n2z[t];
       mB[t] = 1 / n2[t];
     }
   }
@@ -147,6 +224,15 @@ export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm 
     const x = mesh.x[i],
       y = mesh.y[i];
     if ((side('left') && Math.abs(x - rect.x0) < tolx) || (side('right') && Math.abs(x - rect.x1) < tolx) || (side('bottom') && Math.abs(y - rect.y0) < tolx) || (side('top') && Math.abs(y - rect.y1) < tolx)) isFree[i] = 0;
+  }
+  let pecFaces = null;
+  if (nExcluded) {
+    // nodes touched only by removed triangles carry no equation; for the E form every node on the
+    // metal boundary is Dirichlet (PEC, E tangential = 0); the H form keeps them free (natural Neumann).
+    const touchedLive = new Uint8Array(mesh.nNodes), touchedDead = new Uint8Array(mesh.nNodes);
+    for (let t = 0; t < nT; t++) for (let a = 0; a < 3; a++) (excluded[t] ? touchedDead : touchedLive)[mesh.tri[3 * t + a]] = 1;
+    for (let i = 0; i < mesh.nNodes; i++) if (touchedDead[i] && (!touchedLive[i] || useForm === 'E')) isFree[i] = 0;
+    pecFaces = pecFaceSummary(mesh, excluded);
   }
   const sub = restrictMatrix(pat, Afull, isFree);
   const nf = sub.nf;
@@ -300,7 +386,50 @@ export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm 
     for (let i = 0; i < full.length; i++) full[i] *= sg / mx;
     psi.push(full);
   }
-  return { neff, psi, theta: Array.from(theta).slice(0, numModes), iterations: iters, converged, form: useForm, n2, k0, lambdaUm, warm: { X, nf, perm }, labels: OPTICAL_LABELS };
+  const margin = marginUm ?? 0.1 * Math.min(rect.x1 - rect.x0, rect.y1 - rect.y0);
+  const boundaryMarginFraction = psi.map((f) => marginFraction(mesh, geo, f, rect, side, margin, excluded));
+  const labels = [...OPTICAL_LABELS, ...(model.metal?.labels ?? [])];
+  const limitations = OPTICAL_LIMITATIONS.filter((c) => useForm === 'H' || c !== 'scalar_tm_lateral_gradient_uses_eps_zz_approximation');
+  const metal = model.metal ? { ...model.metal, excludedTriangles: nExcluded, pecFaces } : null;
+  return { neff, psi, theta: Array.from(theta).slice(0, numModes), iterations: iters, converged, form: useForm, n2, excluded, k0, lambdaUm, warm: { X, nf, perm }, labels, limitations,
+    metal, boundaryMarginFraction: { marginUm: margin, perMode: boundaryMarginFraction } };
+}
+
+/** Fraction of integral psi^2 in triangles whose centroid lies within `margin` of a Dirichlet window side (leakage/truncation diagnostic). */
+function marginFraction(mesh, geo, f, rect, isDirichletSide, margin, excluded) {
+  const tri = triIntegralSquare(mesh, geo, f);
+  let tot = 0, inMargin = 0;
+  for (let t = 0; t < mesh.nTris; t++) {
+    if (excluded[t]) continue;
+    const a = mesh.tri[3 * t], b = mesh.tri[3 * t + 1], c = mesh.tri[3 * t + 2];
+    const cx = (mesh.x[a] + mesh.x[b] + mesh.x[c]) / 3, cy = (mesh.y[a] + mesh.y[b] + mesh.y[c]) / 3;
+    tot += tri[t];
+    if ((isDirichletSide('left') && cx - rect.x0 < margin) || (isDirichletSide('right') && rect.x1 - cx < margin) || (isDirichletSide('bottom') && cy - rect.y0 < margin) || (isDirichletSide('top') && rect.y1 - cy < margin)) inMargin += tri[t];
+  }
+  return tot > 0 ? inMargin / tot : NaN;
+}
+
+/** Length (um) of removed-metal faces by orientation: horizontal (normal along the film normal y) is the only orientation where the scalar PEC condition is exact. */
+function pecFaceSummary(mesh, excluded) {
+  const edges = new Map();
+  for (let t = 0; t < mesh.nTris; t++)
+    for (let e = 0; e < 3; e++) {
+      const u = mesh.tri[3 * t + e], v = mesh.tri[3 * t + (e + 1) % 3];
+      const key = u < v ? `${u}_${v}` : `${v}_${u}`;
+      const rec = edges.get(key) ?? { u, v, dead: 0, live: 0 };
+      rec[excluded[t] ? 'dead' : 'live']++;
+      edges.set(key, rec);
+    }
+  let horizontal = 0, vertical = 0, oblique = 0;
+  for (const { u, v, dead, live } of edges.values()) {
+    if (!dead || !live) continue;
+    const dx = Math.abs(mesh.x[u] - mesh.x[v]), dy = Math.abs(mesh.y[u] - mesh.y[v]), len = Math.hypot(dx, dy);
+    if (dy <= 1e-6 * len) horizontal += len;
+    else if (dx <= 1e-6 * len) vertical += len;
+    else oblique += len;
+  }
+  const total = horizontal + vertical + oblique;
+  return { horizontalUm: horizontal, verticalUm: vertical, obliqueUm: oblique, validFaceFraction: total > 0 ? horizontal / total : NaN };
 }
 
 /** Group index by central finite difference of n_eff(lambda) with material dispersion included. */

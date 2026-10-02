@@ -162,6 +162,17 @@ export function derivedMetric(d: Device, key: 'vpil_dc_vcm_derived' | 'vpi_il_vd
 	return { v: x.value, qual, derived: true, basis: 'derived', field: key, boundUnresolved, note, modelled };
 }
 
+/** Display strings for a derived value, from the same bound propagation as the table and charts. */
+export function derivedDisplay(d: Device, key: 'vpil_dc_vcm_derived' | 'vpi_il_vdb' | 'fom' | 'il_rf_total_db'): { text: string; qual: string; note: string } | null {
+	const m = derivedMetric(d, key);
+	if (m.v === null) return null;
+	return {
+		text: `${qualPrefix(m.qual)}${fmt(m.v)}${m.boundUnresolved ? ' (nominal)' : ''}`,
+		qual: m.boundUnresolved ? 'nominal only; inputs do not determine a single bound' : qualWord(m.qual),
+		note: m.note ?? ''
+	};
+}
+
 export function metricValue(d: Device, key: string): number | null {
 	switch (key) {
 		case 'vpil': return vpil(d).v;
@@ -411,6 +422,17 @@ export function fromHash(hash: string): { filters: Filters; extras: HashExtras }
 		})
 		.filter((k) => k.key);
 	return { filters: f, extras: { sort } };
+}
+
+/**
+ * State to adopt when the URL hash changed outside the app (pasted link, edited address bar,
+ * history entry). Returns null when the hash already describes the current state, so applying it
+ * and writing it back cannot loop. A hash without sort keys keeps the current sort.
+ */
+export function stateFromHashChange(hash: string, filters: Filters, sort: SortKey[]): { filters: Filters; sort: SortKey[] } | null {
+	const next = fromHash(hash);
+	const nextSort = next.extras.sort.length ? next.extras.sort : sort;
+	return toHash(next.filters, { sort: nextSort }) === toHash(filters, { sort }) ? null : { filters: next.filters, sort: nextSort };
 }
 
 // ---------- CSV ----------

@@ -104,7 +104,8 @@ function metricTip(a: Atlas, id: string, d: Device, m: Metric): string {
 	}
 	if (id === 'vpil' || id === 'vpi') {
 		if (d.vpi_convention) parts.push(`convention: ${enumLabel(a, 'vpi_convention', d.vpi_convention)}`);
-		if (id === 'vpi' && m.field === 'vpi_rf_v' && typeof d.vpi_rf_freq_ghz === 'number') parts.push(`at ${fmt(d.vpi_rf_freq_ghz)} GHz`);
+		// An RF-derived voltage is a different quantity from a DC one; say so, with its frequency or that it is missing.
+		if (m.field === 'vpi_rf_v' || m.field === 'vpil_rf_vcm') parts.push(typeof d.vpi_rf_freq_ghz === 'number' ? `RF value at ${fmt(d.vpi_rf_freq_ghz)} GHz` : 'RF value; frequency not stated');
 	}
 	if (id === 'bw3db') {
 		if (typeof d.bw_measured_to_ghz === 'number') {
@@ -121,7 +122,7 @@ function metricTip(a: Atlas, id: string, d: Device, m: Metric): string {
 		if (d.il_onchip_includes) parts.push(`includes: ${d.il_onchip_includes}`);
 		if (d.il_onchip_excludes) parts.push(`excludes: ${d.il_onchip_excludes}`);
 	}
-	if (id === 'rf_loss' && typeof d.rf_loss_freq_ghz === 'number') parts.push(`at ${fmt(d.rf_loss_freq_ghz)} GHz`);
+	if (id === 'rf_loss') parts.push(typeof d.rf_loss_freq_ghz === 'number' ? `at ${fmt(d.rf_loss_freq_ghz)} GHz` : 'frequency not stated');
 	if (id === 'fom' && d.derived.fom?.rf_corrected) parts.push(typeof d.rf_loss_freq_ghz === 'number' ? `RF correction uses loss at ${fmt(d.rf_loss_freq_ghz)} GHz` : 'RF correction uses loss with unspecified frequency');
 	if (id === 'rate') {
 		if (d.modulation_format) parts.push(`format: ${d.modulation_format}`);
@@ -207,6 +208,8 @@ export function cellFor(a: Atlas, id: string, p: Paper, d: Device): Cell {
 }
 
 export function sortValue(a: Atlas, id: string, p: Paper, d: Device): SortVal {
+	// Sort keys come from the shareable URL; a stale or edited key must not break the table.
+	if (!COLS.some((c) => c.id === id)) return null;
 	const fn = NUMERIC_METRIC[id];
 	if (fn) return fn(d).v;
 	switch (id) {

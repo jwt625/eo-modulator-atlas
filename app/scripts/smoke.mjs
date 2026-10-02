@@ -100,6 +100,56 @@ try {
   await screenshot('table-qualified');
   await page.getByPlaceholder('Search', { exact: true }).fill('no-paper-matches-this');
   await page.getByText('No rows match the filters.', { exact: true }).waitFor();
+  await page.getByRole('button', { name: 'Reset filters', exact: true }).click();
+  await until(async () => await tableRows.count() === collapsedCount, 'reset restores every paper');
+
+  // URL state: a hash changed outside the app is adopted rather than overwritten; stale keys cannot break the table.
+  await page.evaluate(() => { location.hash = 'q=chen2022&sort=vpil:asc'; });
+  await until(async () => await tableRows.count() === 1, 'hash change applied to the filters');
+  assert.equal(await page.getByPlaceholder('Search', { exact: true }).inputValue(), 'chen2022');
+  assert.match(await page.evaluate(() => location.hash), /q=chen2022/);
+  await page.goto(url('about'));
+  await page.goto(url('table#sort=no-such-column:asc'));
+  await until(async () => await tableRows.count() === collapsedCount, 'stale sort key ignored');
+  await page.goto(url('about'));
+  await page.goto(url('table#q=ogiso2024'));
+  await until(async () => await tableRows.count() === 1, 'search from shared URL');
+  await tableRows.first().click();
+  await page.locator('.drawer').waitFor();
+  assert.match(await page.locator('.drawer').innerText(), />29\.8/, 'drawer shows the propagated FOM lower bound, not an approximation');
+  assert.doesNotMatch(await page.locator('.drawer').innerText(), /~29\.8/);
+  await page.keyboard.press('Escape');
+  await page.goto(url('about'));
+  await page.goto(url('explore#q=no-paper-matches-this'));
+  await page.getByText('No devices match the filters.', { exact: true }).waitFor();
+  await page.getByRole('button', { name: 'Reset filters', exact: true }).click();
+  await page.locator('.js-plotly-plot').first().waitFor();
+  console.log('PASS URL hash adoption, stale sort key, reset from empty states and drawer bound agreement');
+
+  // Narrow viewport: filters collapse above the content and the drawer covers the page.
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(url('table'));
+  await until(async () => await tableRows.count() > 0, 'narrow table loaded');
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'table page overflows narrow viewport');
+  assert.ok(await page.locator('main .scroller').evaluate(el => el.clientWidth >= 380), 'table is squeezed by the filter column');
+  assert.equal(await page.locator('aside .scroll').isVisible(), false, 'filters start collapsed');
+  await page.getByRole('button', { name: 'Filters', exact: false }).click();
+  assert.ok(await page.locator('aside .scroll').isVisible());
+  await page.getByPlaceholder('Search', { exact: true }).fill('ogiso2024');
+  await until(async () => await tableRows.count() === 1, 'narrow search applied');
+  await page.getByRole('button', { name: /^Filters/ }).click();
+  await screenshot('table-mobile');
+  await tableRows.first().click();
+  await page.locator('.drawer').waitFor();
+  assert.ok(await page.locator('.drawer').evaluate(el => el.getBoundingClientRect().width >= 380), 'drawer unusably narrow');
+  await screenshot('drawer-mobile');
+  await page.goto(url('explore'));
+  await page.locator('.js-plotly-plot').first().waitFor();
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'explore overflows narrow viewport');
+  assert.ok(await page.locator('main .main').evaluate(el => el.clientWidth >= 380), 'explore is squeezed by the filter column');
+  await page.setViewportSize({ width: 1440, height: 1050 });
+  console.log('PASS narrow-viewport table, filters, drawer and explore layout');
+
   await page.goto(url('explore'));
   const materialChart = page.locator('[aria-label="Chart c"] .js-plotly-plot');
   await until(() => materialChart.evaluate(el => (el.data ?? []).some(t => t.customdata?.length)), 'material summary has real points');

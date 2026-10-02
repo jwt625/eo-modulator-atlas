@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { filters, store, ui } from '../../lib/state.svelte';
+	import { filters, resetFilters, store, ui } from '../../lib/state.svelte';
 	import { applyFilters, chartDevices, enumLabel } from '../../lib/logic';
 	import {
 		buildPoints,
@@ -120,6 +120,8 @@
 				<div class="msg">Failed to load data: {store.error}</div>
 			{:else if !view}
 				<div class="msg"><span class="spinner"></span></div>
+			{:else if !view.papers.length}
+				<div class="msg"><span>No devices match the filters.</span><button onclick={resetFilters} title="Clear all filters">Reset filters</button></div>
 			{:else}
 				<div class="grid">
 					<ScatterChart letter="a" desc="Vpi*L against 3 dB bandwidth; dashed nominal frontiers exclude qualified/modelled axes and separate voltage contexts" panels={[{ pts: A.pts, yTitle: 'Vpi*L (V*cm)' }]} xTitle="3 dB bandwidth (GHz)" bind:xLog={aX} bind:yLog={aY} omitted={A.omitted} frontier />
@@ -187,6 +189,12 @@
 	.side {
 		min-height: 0;
 	}
+	@media (max-width: 720px) {
+		.page {
+			grid-template-columns: minmax(0, 1fr);
+			grid-template-rows: auto minmax(0, 1fr);
+		}
+	}
 	.main {
 		display: flex;
 		flex-direction: column;
@@ -247,6 +255,8 @@
 		color: var(--ink-3);
 		display: flex;
 		justify-content: center;
+		align-items: center;
+		gap: 10px;
 	}
 	@media (max-width: 1100px) {
 		.grid,

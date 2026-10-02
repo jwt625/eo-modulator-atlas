@@ -1,0 +1,838 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     30
+    ]
+   ],
+   "date-time": "2026-09-30T22:30:09Z",
+   "timestamp": 1790807409355,
+   "version": "4.1.0"
+  },
+  "reference-count": 67,
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "issue": "42",
+  "content-domain": {
+   "domain": [
+    "www.science.org"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Sci. Adv."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     20
+    ]
+   ]
+  },
+  "DOI": "10.1126/sciadv.adi5339",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     20
+    ]
+   ],
+   "date-time": "2023-10-20T13:58:51Z",
+   "timestamp": 1697810331000
+  },
+  "update-policy": "https://doi.org/10.34133/aaas_crossmark",
+  "source": "Crossref",
+  "is-referenced-by-count": 186,
+  "title": [
+   "Slow-light silicon modulator with 110-GHz bandwidth"
+  ],
+  "prefix": "10.1126",
+  "volume": "9",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0009-4746-7007",
+    "authenticated-orcid": true,
+    "given": "Changhao",
+    "family": "Han",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0005-3856-7488",
+    "authenticated-orcid": true,
+    "given": "Zhao",
+    "family": "Zheng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5429-8661",
+    "authenticated-orcid": true,
+    "given": "Haowen",
+    "family": "Shu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     },
+     {
+      "name": "Peng Cheng Laboratory, Shenzhen 518055, China."
+     },
+     {
+      "name": "Frontiers Science Center for Nano-optoelectronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0491-4649",
+    "authenticated-orcid": true,
+    "given": "Ming",
+    "family": "Jin",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8168-5034",
+    "authenticated-orcid": true,
+    "given": "Jun",
+    "family": "Qin",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Information and Communication Systems, Ministry of Information Industry, Beijing Information Science and Technology University, Beijing 100192, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ruixuan",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuansheng",
+    "family": "Tao",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bitao",
+    "family": "Shen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bowen",
+    "family": "Bai",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Fenghe",
+    "family": "Yang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Zhang Jiang Laboratory, Shanghai 201210, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yimeng",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Haoyu",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1465-8116",
+    "authenticated-orcid": true,
+    "given": "Feifan",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0008-8958-4917",
+    "authenticated-orcid": true,
+    "given": "Zixuan",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shaohua",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     },
+     {
+      "name": "Peng Cheng Laboratory, Shenzhen 518055, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0200-0798",
+    "authenticated-orcid": true,
+    "given": "Chao",
+    "family": "Peng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     },
+     {
+      "name": "Peng Cheng Laboratory, Shenzhen 518055, China."
+     },
+     {
+      "name": "Frontiers Science Center for Nano-optoelectronics, Peking University, Beijing 100871, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-8206-2544",
+    "authenticated-orcid": true,
+    "given": "Xingjun",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics, Peking University, Beijing 100871, China."
+     },
+     {
+      "name": "Peng Cheng Laboratory, Shenzhen 518055, China."
+     },
+     {
+      "name": "Frontiers Science Center for Nano-optoelectronics, Peking University, Beijing 100871, China."
+     },
+     {
+      "name": "Peking University Yangtze Delta Institute of Optoelectronics, Nantong 226010, China."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "221",
+  "reference": [
+   {
+    "key": "e_1_3_2_2_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature02310"
+   },
+   {
+    "key": "e_1_3_2_3_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.5.001354"
+   },
+   {
+    "key": "e_1_3_2_4_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0504-5"
+   },
+   {
+    "key": "e_1_3_2_5_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2017.93"
+   },
+   {
+    "key": "e_1_3_2_6_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-021-03259-y"
+   },
+   {
+    "key": "e_1_3_2_7_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-022-04415-8"
+   },
+   {
+    "key": "e_1_3_2_8_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-022-04579-3"
+   },
+   {
+    "key": "e_1_3_2_9_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-018-0242-0"
+   },
+   {
+    "key": "e_1_3_2_10_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2010.179"
+   },
+   {
+    "key": "e_1_3_2_11_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2013-0016"
+   },
+   {
+    "key": "e_1_3_2_12_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.411122"
+   },
+   {
+    "key": "e_1_3_2_13_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1117/1.AP.3.2.024003"
+   },
+   {
+    "key": "e_1_3_2_14_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2008.99"
+   },
+   {
+    "key": "e_1_3_2_15_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.006663"
+   },
+   {
+    "key": "e_1_3_2_16_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.23.014263"
+   },
+   {
+    "key": "e_1_3_2_17_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.24.019467"
+   },
+   {
+    "key": "e_1_3_2_18_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2014.2323954"
+   },
+   {
+    "key": "e_1_3_2_19_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.6.000109"
+   },
+   {
+    "key": "e_1_3_2_20_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2013.2238625"
+   },
+   {
+    "key": "e_1_3_2_21_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.442699"
+   },
+   {
+    "key": "e_1_3_2_22_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.396815"
+   },
+   {
+    "key": "e_1_3_2_23_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "A. Mohammadi Z.\u00a0Zheng J.\u00a0Lin M.\u00a0M.\u00a0Rad X.\u00a0Zhang L.\u00a0A.\u00a0Rusch W.\u00a0Shi Segmented silicon photonic modulator with a 67-GHz bandwidth for high-speed signaling. Optical Fiber Communications Conference (OFC) Technical Digest Series (Optical Publishing Group San Diego California United States 2022) paper Th3C.1.",
+    "DOI": "10.1364/OFC.2022.Th3C.1"
+   },
+   {
+    "key": "e_1_3_2_24_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.460602"
+   },
+   {
+    "key": "e_1_3_2_25_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature10067"
+   },
+   {
+    "key": "e_1_3_2_26_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-017-0071-6"
+   },
+   {
+    "key": "e_1_3_2_27_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2017.120"
+   },
+   {
+    "key": "e_1_3_2_28_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "e_1_3_2_29_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0378-6"
+   },
+   {
+    "key": "e_1_3_2_30_2",
+    "first-page": "1",
+    "article-title": "High-performance coherent optical modulators based on thin-film lithium niobate platform",
+    "volume": "11",
+    "author": "Xu M.",
+    "year": "2020",
+    "unstructured": "M.\u00a0Xu, M.\u00a0He, H.\u00a0Zhang, J.\u00a0Jian, Y.\u00a0Pan, X.\u00a0Liu, L.\u00a0Chen, X.\u00a0Meng, H.\u00a0Chen, Z.\u00a0Li, X.\u00a0Xiao, S.\u00a0Yu, S.\u00a0Yu, X.\u00a0Cai, High-performance coherent optical modulators based on thin-film lithium niobate platform. Nat. Commun. 11, 1\u20137 (2020).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "e_1_3_2_31_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.415762"
+   },
+   {
+    "key": "e_1_3_2_32_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.448617"
+   },
+   {
+    "key": "e_1_3_2_33_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.1077446"
+   },
+   {
+    "key": "e_1_3_2_34_2",
+    "first-page": "1",
+    "article-title": "High-temperature-resistant silicon-polymer hybrid modulator operating at up to 200 Gbits-1 for energy-efficient datacentres and harsh-environment applications",
+    "volume": "11",
+    "author": "Lu G. W.",
+    "year": "2020",
+    "unstructured": "G. W.\u00a0Lu, J.\u00a0Hong, F.\u00a0Qiu, A. M.\u00a0Spring, T.\u00a0Kashino, J.\u00a0Oshima, M.\u00a0Ozawa, H.\u00a0Nawata, S.\u00a0Yokoyama, High-temperature-resistant silicon-polymer hybrid modulator operating at up to 200 Gbits-1 for energy-efficient datacentres and harsh-environment applications. Nat. Commun. 11, 1\u20139 (2020).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "e_1_3_2_35_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/lsa.2014.54"
+   },
+   {
+    "key": "e_1_3_2_36_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.5.000739"
+   },
+   {
+    "key": "e_1_3_2_37_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2014.9"
+   },
+   {
+    "key": "e_1_3_2_38_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2015.127"
+   },
+   {
+    "key": "e_1_3_2_39_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0031-4"
+   },
+   {
+    "key": "e_1_3_2_40_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0475-6"
+   },
+   {
+    "key": "e_1_3_2_41_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.aan5953"
+   },
+   {
+    "key": "e_1_3_2_42_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature03569"
+   },
+   {
+    "key": "e_1_3_2_43_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.15.003140"
+   },
+   {
+    "key": "e_1_3_2_44_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature04210"
+   },
+   {
+    "key": "e_1_3_2_45_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2008.146"
+   },
+   {
+    "key": "e_1_3_2_46_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2018.2878327"
+   },
+   {
+    "key": "e_1_3_2_47_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2020.2978793"
+   },
+   {
+    "key": "e_1_3_2_48_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2020.3026957"
+   },
+   {
+    "key": "e_1_3_2_49_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JQE.1987.1073206"
+   },
+   {
+    "key": "e_1_3_2_50_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2019.2897555"
+   },
+   {
+    "key": "e_1_3_2_51_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.84.195119"
+   },
+   {
+    "key": "e_1_3_2_52_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.20.015945"
+   },
+   {
+    "key": "e_1_3_2_53_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.113.037401"
+   },
+   {
+    "key": "e_1_3_2_54_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.41.003872"
+   },
+   {
+    "key": "e_1_3_2_55_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-019-1664-7"
+   },
+   {
+    "key": "e_1_3_2_56_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.455074"
+   },
+   {
+    "key": "e_1_3_2_57_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.scib.2021.10.020"
+   },
+   {
+    "key": "e_1_3_2_58_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41565-020-0773-7"
+   },
+   {
+    "key": "e_1_3_2_59_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevD.13.3398"
+   },
+   {
+    "key": "e_1_3_2_60_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.24.000711"
+   },
+   {
+    "key": "e_1_3_2_61_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/JOSAB.21.001665"
+   },
+   {
+    "key": "e_1_3_2_62_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2008.139"
+   },
+   {
+    "key": "e_1_3_2_63_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.382620"
+   },
+   {
+    "key": "e_1_3_2_64_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JPHOT.2018.2792535"
+   },
+   {
+    "key": "e_1_3_2_65_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.20.00A293"
+   },
+   {
+    "key": "e_1_3_2_66_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "G. Ghione Semiconductor Devices for High-Speed Optoelectronics (Cambridge University Press Cambridge 2010) vol. 116.",
+    "DOI": "10.1017/CBO9780511635595"
+   },
+   {
+    "key": "e_1_3_2_67_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.19.021989"
+   },
+   {
+    "key": "e_1_3_2_68_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.416155"
+   }
+  ],
+  "container-title": [
+   "Science Advances"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.science.org/doi/pdf/10.1126/sciadv.adi5339",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     1,
+     9
+    ]
+   ],
+   "date-time": "2024-01-09T16:28:46Z",
+   "timestamp": 1704817726000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.science.org/doi/10.1126/sciadv.adi5339"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     20
+    ]
+   ]
+  },
+  "references-count": 67,
+  "journal-issue": {
+   "issue": "42",
+   "published-print": {
+    "date-parts": [
+     [
+      2023,
+      10,
+      20
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1126/sciadv.adi5339"
+  ],
+  "URL": "https://doi.org/10.1126/sciadv.adi5339",
+  "relation": {},
+  "ISSN": [
+   "2375-2548"
+  ],
+  "issn-type": [
+   {
+    "value": "2375-2548",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     20
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2023-05-03",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2023-09-19",
+    "order": 1,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2023-10-20",
+    "order": 2,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ],
+  "article-number": "eadi5339"
+ }
+}

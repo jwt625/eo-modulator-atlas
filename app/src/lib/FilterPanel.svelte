@@ -1,7 +1,7 @@
 
 <script lang="ts">
-	import { filters, resetFilters, store } from './state.svelte';
-	import { countBy } from './logic';
+	import { filters, resetFilters, store, tableState } from './state.svelte';
+	import { countBy, stateFromHashChange } from './logic';
 	import type { RepMode } from './types';
 
 	let { charts = false, nShown = 0 }: { charts?: boolean; nShown?: number } = $props();
@@ -27,6 +27,20 @@
 			qLocal = filters.q;
 		}
 	});
+
+	// A hash changed outside the app (pasted share link, edited address bar, history entry) is adopted
+	// instead of being overwritten by the previous state.
+	function onHashChange(e: HashChangeEvent) {
+		// Use the event's URL: the router and the layout's write-back may already have restored the old hash.
+		const next = stateFromHashChange(new URL(e.newURL).hash, filters, tableState.sort);
+		if (!next) return;
+		clearTimeout(timer);
+		Object.assign(filters, next.filters);
+		tableState.sort = next.sort;
+	}
+
+	// Below 720 px the panel is a collapsed bar above the content.
+	let mobileOpen = $state(false);
 
 	const open = $state<Record<string, boolean>>({ search: true, device: true, paper: true, flags: true, view: true });
 
@@ -111,10 +125,15 @@
 	</div>
 {/snippet}
 
-<aside>
+<svelte:window onhashchange={onHashChange} />
+
+<aside class:mopen={mobileOpen}>
 	<div class="top">
 		<span class="muted num" title="Rows passing the filters">{nShown} shown</span>
-		<button onclick={resetFilters} disabled={!active} title="Clear all filters">Reset</button>
+		<span class="tb">
+			<button class="mtoggle" onclick={() => (mobileOpen = !mobileOpen)} aria-expanded={mobileOpen} title="Show or hide the filters">Filters{active ? ' *' : ''}</button>
+			<button onclick={resetFilters} disabled={!active} title="Clear all filters">Reset</button>
+		</span>
 	</div>
 	<div class="scroll">
 		{#snippet searchBody()}
@@ -149,7 +168,7 @@
 		{@render group('paper', 'Paper', paperBody)}
 
 		{#snippet flagBody()}
-			<label class="row" title="Hide devices whose Vpi, bandwidth or loss is simulated, predicted or a design target">
+			<label class="row" title="Hide devices whose Vpi, bandwidth or insertion loss is simulated, predicted or a design target. Figure-extracted and author-estimated values are kept.">
 				<input type="checkbox" checked={filters.measuredOnly} onchange={(e) => (filters.measuredOnly = e.currentTarget.checked)} />
 				<span class="lbl">Measured only</span>
 			</label>
@@ -204,6 +223,30 @@
 		overflow-y: auto;
 		flex: 1;
 		min-height: 0;
+	}
+	.tb {
+		display: flex;
+		gap: 4px;
+	}
+	.mtoggle {
+		display: none;
+	}
+	@media (max-width: 720px) {
+		aside {
+			height: auto;
+			border-right: 0;
+			border-bottom: 1px solid var(--border);
+		}
+		.mtoggle {
+			display: inline-block;
+		}
+		.scroll {
+			display: none;
+		}
+		aside.mopen .scroll {
+			display: block;
+			max-height: 55vh;
+		}
 	}
 	section {
 		border-bottom: 1px solid var(--border);

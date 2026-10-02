@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import atlasJson from '../../static/data/atlas.json';
 import type { Atlas, Device } from './types';
-import { derivedMetric, vpil, type Metric } from './logic';
+import { applyFilters, buildIndex, defaultFilters, derivedDisplay, derivedMetric, pickRep, sortRows, stateFromHashChange, toHash, vpil, type Metric } from './logic';
 import { buildPoints, gBw, gIl, gVpiIl, gVpil, groupStats, nominalFrontiers, type Pt } from './charts';
-import { COLS, metricCell, tableCsv } from './columns';
+import { COLS, metricCell, sortValue, tableCsv } from './columns';
 
 const atlas = atlasJson as unknown as Atlas;
 const papers = new Map(atlas.papers.map(p => [p.paper_id, p]));
@@ -123,5 +123,82 @@ describe('CSV comparison context', () => {
     expect(csv).toContain('at 67 GHz');
     expect(csv).toContain('indeterminate,derived,');
     expect(csv).toContain('source:');
+  });
+});
+
+describe('U2b: detail drawer and table agree on derived bounds', () => {
+  it('shows the propagated bound, not the generated first-input qualifier', () => {
+    const d = atlas.devices.find(d => d.device_id === 'ogiso2024-a')!;
+    // Bandwidth lower bound and on-chip loss upper bound both make the FOM a lower bound.
+    expect(d.derived.fom?.qualifier).toBeUndefined(); // generated view carries no direction for FOM
+    expect(derivedDisplay(d, 'fom')?.text).toBe('>29.8');
+    expect(derivedDisplay(d, 'fom')?.text).toBe(metricCell(atlas, 'fom', d).text);
+    expect(derivedDisplay(d, 'vpi_il_vdb')?.text).toBe(metricCell(atlas, 'vpi_il', d).text);
+  });
+  it('flags inputs that do not determine one bound and omits absent derived values', () => {
+    const chen = atlas.devices.find(d => d.device_id === 'chen2022-c')!;
+    expect(derivedDisplay(chen, 'fom')?.text).toMatch(/\(nominal\)$/);
+    expect(derivedDisplay(chen, 'fom')?.qual).toContain('single bound');
+    expect(derivedDisplay(atlas.devices.find(d => d.device_id === 'deng2026-a')!, 'fom')).toBeNull();
+  });
+});
+
+describe('U2b: URL state', () => {
+  it('adopts a hash that differs from the current state and keeps sort when the hash has none', () => {
+    const sort = [{ key: 'year', dir: 'desc' as const }];
+    const next = stateFromHashChange('#m=barium_titanate&mo=1', defaultFilters(), sort);
+    expect(next?.filters.materials).toEqual(['barium_titanate']);
+    expect(next?.filters.measuredOnly).toBe(true);
+    expect(next?.sort).toEqual(sort);
+    expect(stateFromHashChange('#m=barium_titanate&sort=vpil:asc', defaultFilters(), sort)?.sort).toEqual([{ key: 'vpil', dir: 'asc' }]);
+  });
+  it('is idempotent for the hash the app itself wrote, so adopting it cannot loop', () => {
+    const f = { ...defaultFilters(), q: 'ogiso', measuredOnly: true, rep: 'highest_bw' as const };
+    const sort = [{ key: 'vpil', dir: 'asc' as const }];
+    expect(stateFromHashChange(`#${toHash(f, { sort })}`, f, sort)).toBeNull();
+    expect(stateFromHashChange('', defaultFilters(), [])).toBeNull();
+  });
+  it('does not break sorting on a stale or edited sort key', () => {
+    const d = atlas.devices[0];
+    const p = papers.get(d.paper_id)!;
+    expect(() => sortValue(atlas, 'no-such-column', p, d)).not.toThrow();
+    expect(sortValue(atlas, 'no-such-column', p, d)).toBeNull();
+    const rows = [{ p, d }, { p, d }];
+    expect(sortRows(rows, [{ key: 'no-such-column', dir: 'asc' }], (r, k) => sortValue(atlas, k, r.p, r.d))).toHaveLength(2);
+  });
+});
+
+describe('U2b: representative and measured-only semantics', () => {
+  function pair() {
+    const measured = device(); measured.device_id = 'x-measured'; measured.paper_id = 'chen2022';
+    measured.derived.completeness = { value: 3 / 7, reported: ['vpi', 'bw3db', 'il_onchip'], missing: [], unit: 'fraction' };
+    const modelled = device(); modelled.device_id = 'x-sim'; modelled.paper_id = 'chen2022';
+    modelled.is_sim = true; modelled.measured_only = false; modelled.vpi_basis = 'simulated'; modelled.headline_basis = { ...modelled.headline_basis, vpi: 'simulated' };
+    modelled.derived.completeness = { value: 4 / 7, reported: ['vpi', 'bw3db', 'il_onchip', 'rf_loss'], missing: [], unit: 'fraction' };
+    measured.measured_only = true;
+    return { measured, modelled };
+  }
+  it('ranks completeness before basis unless measured-only removes the modelled device (documented departure)', () => {
+    const { measured, modelled } = pair();
+    expect(pickRep([measured, modelled], 'default')?.device_id).toBe('x-sim');
+    const a2 = { ...atlas, papers: atlas.papers.filter(p => p.paper_id === 'chen2022'), devices: [measured, modelled] } as Atlas;
+    const view = applyFilters(a2, { ...defaultFilters(), measuredOnly: true }, buildIndex(a2));
+    expect(view.reps.get('chen2022')?.device_id).toBe('x-measured');
+    expect(view.devices.map(d => d.device_id)).toEqual(['x-measured']);
+  });
+});
+
+describe('U2b: RF context disclosure', () => {
+  it('states the frequency of an RF loss, or that it is missing', () => {
+    const d = device(); d.rf_loss_db_per_cm = 3; d.rf_loss_freq_ghz = 50;
+    expect(metricCell(atlas, 'rf_loss', d).tip).toContain('at 50 GHz');
+    d.rf_loss_freq_ghz = null;
+    expect(metricCell(atlas, 'rf_loss', d).tip).toContain('frequency not stated');
+  });
+  it('marks an RF-sourced Vpi and its frequency', () => {
+    const d = device(); d.vpi_dc_v = null; d.vpi_rf_v = 2.5; d.vpi_rf_freq_ghz = 1;
+    expect(metricCell(atlas, 'vpi', d).tip).toContain('RF value at 1 GHz');
+    d.vpi_rf_freq_ghz = null;
+    expect(metricCell(atlas, 'vpi', d).tip).toContain('RF value; frequency not stated');
   });
 });

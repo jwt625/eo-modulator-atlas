@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { link } from './paths';
 	import { store, ui } from './state.svelte';
-	import { BASIS_MARK, BASIS_TIP, EM_DASH, enumLabel, fmt, qualPrefix, qualWord } from './logic';
+	import { BASIS_MARK, BASIS_TIP, EM_DASH, derivedDisplay, enumLabel, qualPrefix, qualWord } from './logic';
 	import type { Device } from './types';
 
 	const a = $derived(store.atlas);
@@ -45,15 +45,16 @@
 		for (const k of ['vpil_dc_vcm_derived', 'il_rf_total_db', 'vpi_il_vdb', 'fom'] as const) {
 			const x = dev.derived[k];
 			if (!x) continue;
-			const q = x.qualifier ? qualPrefix(x.qualifier) : x.qualifiers?.length ? '~' : '';
+			// Same bound propagation as the table and charts (not the generated first-input qualifier).
+			const shown = derivedDisplay(dev, k);
 			out.push({
 				key: k,
 				label: labels[k],
-				v: `${q}${fmt(x.value)}`,
+				v: shown?.text ?? EM_DASH,
 				unit: x.unit,
 				formula: x.formula,
-				warn: [x.warning, x.qualifiers?.length ? `inputs with qualifiers: ${x.qualifiers.join(', ')}` : ''].filter(Boolean).join('; '),
-				q: x.qualifier ? qualWord(x.qualifier) : ''
+				warn: [x.warning, shown?.note].filter(Boolean).join('; '),
+				q: shown?.qual ?? ''
 			});
 		}
 		return out;
@@ -114,7 +115,7 @@
 				<table>
 					<tbody>
 						{#each derivedRows as r (r.key)}
-							<tr title="{r.formula}{r.warn ? '\n' + r.warn : ''}">
+							<tr title="{[r.formula, r.q, r.warn].filter(Boolean).join('\n')}">
 								<td class="f">{r.label}</td>
 								<td class="v num"><i>{r.v}</i></td>
 								<td class="u">{r.unit}</td>
@@ -303,5 +304,18 @@
 	.foot {
 		margin-top: 10px;
 		font-size: 10px;
+	}
+	@media (max-width: 720px) {
+		.drawer {
+			width: 100%;
+			border-left: 0;
+		}
+		.meta {
+			grid-template-columns: 76px 1fr;
+		}
+		.e {
+			font-size: 10px;
+			word-break: break-word;
+		}
 	}
 </style>

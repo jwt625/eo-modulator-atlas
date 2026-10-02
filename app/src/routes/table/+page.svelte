@@ -1,7 +1,7 @@
 
 <script lang="ts">
 	import { link } from '../../lib/paths';
-	import { filters, store, tableState, ui } from '../../lib/state.svelte';
+	import { filters, resetFilters, store, tableState, ui } from '../../lib/state.svelte';
 	import { applyFilters, cycleSort, sortRows, BASIS_MARK, BASIS_TIP } from '../../lib/logic';
 	import { COLS, cellFor, sortValue, tableCsv, type Cell } from '../../lib/columns';
 	import FilterPanel from '../../lib/FilterPanel.svelte';
@@ -197,7 +197,7 @@
 						{/each}
 					</tbody>
 				</table>
-				{#if !rows.length}<div class="msg">No rows match the filters.</div>{/if}
+				{#if !rows.length}<div class="msg"><span>No rows match the filters.</span><button onclick={resetFilters} title="Clear all filters">Reset filters</button></div>{/if}
 			{/if}
 		</div>
 		<Drawer />
@@ -212,6 +212,12 @@
 	}
 	.side {
 		min-height: 0;
+	}
+	@media (max-width: 720px) {
+		.page {
+			grid-template-columns: minmax(0, 1fr);
+			grid-template-rows: auto minmax(0, 1fr);
+		}
 	}
 	.main {
 		position: relative;
@@ -231,8 +237,12 @@
 		flex: none;
 		height: 36px;
 	}
+	.tools button {
+		white-space: nowrap;
+	}
 	.grow {
 		flex: 1;
+		min-width: 0;
 	}
 	.legend {
 		display: flex;
@@ -418,5 +428,7 @@
 		color: var(--ink-3);
 		display: flex;
 		justify-content: center;
+		align-items: center;
+		gap: 10px;
 	}
 </style>
