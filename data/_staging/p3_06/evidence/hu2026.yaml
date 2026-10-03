@@ -1,0 +1,310 @@
+paper_id: hu2026
+verified_on: '2026-10-02'
+source_files:
+- references/hu2026/text.md
+- references/hu2026/crossref.json
+- references/hu2026/source.json
+- references/hu2026/figures/page_29.png
+- references/hu2026/figures/page_31.png
+- references/hu2026/figures/page_32.png
+- references/hu2026/figures/page_33.png
+entries:
+- device_id: hu2026-a
+  field: wavelength_nm
+  value: 1315
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.31, Fig. 3(b)
+  note: Resonance near 1315 nm in the bias sweep; S21 and eye wavelengths not stated (64 GBd test at 1313.56 nm, p.45 Fig. S6).
+- device_id: hu2026-a
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: design_target
+  locator: p.10; p.12; p.39
+  note: Doped-region length 40 um used as L in the Vpi*L formula; ring radius 8 um.
+- device_id: hu2026-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.9, Sec. 2; p.19, Methods
+  note: 220 nm SOI.
+- device_id: hu2026-a
+  field: rib_width_nm
+  value: 420
+  unit: nm
+  basis: design_target
+  locator: p.9, Sec. 2
+  note: 420 nm wide, 220 nm thick rib.
+- device_id: hu2026-a
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: design_target
+  locator: p.9, Sec. 2
+  note: 70 nm slab; connected to a 220 nm slab inside and outside the ring (two trenches).
+- device_id: hu2026-a
+  field: substrate
+  value: 220 nm silicon-on-insulator, 12-inch wafer
+  unit: ''
+  basis: design_target
+  locator: p.19, Methods
+  note: BOX thickness not stated.
+- device_id: hu2026-a
+  field: epitaxy_or_stack
+  value: Lateral pn junction in a 420 nm x 220 nm Si rib with 70 nm slab; narrow trench formed by 220 nm slabs inside and outside the ring; heavy doping (two doping layers in the core; levels not stated);
+    ring radius 8 um; 40 um doped length; tungsten heater (about 54 ohm)
+  unit: ''
+  basis: design_target
+  locator: p.9-10, Sec. 2; p.19, Methods; p.11-12
+  note: Doping concentrations not given in the preprint or its SI text.
+- device_id: hu2026-a
+  field: optical_input_power_dbm
+  value: -3.01
+  unit: dBm
+  basis: derived
+  locator: p.20, Methods
+  note: Coupled power into the bus waveguide limited to 500 uW during S21 measurement; 10log10(0.5 mW).
+- device_id: hu2026-a
+  field: vpil_dc_vcm
+  value: 0.57
+  unit: V*cm
+  basis: derived
+  locator: p.1; p.6; p.12; p.53
+  note: Authors' formula VpiL = FSR*L/(2*dlambda/dV) with FSR 7 nm, L 40 um, 24.5 pm/V; stated as about 0.57 V cm.
+- device_id: hu2026-a
+  field: drive_vpp_v
+  value: 0.43
+  unit: V
+  basis: author_estimate
+  locator: p.6; p.14-15; p.32, Fig. 4(e)
+  note: Swing at DUT estimated by cable attenuation factor (Fig. S10); 0.56 Vpp for 80 Gb/s NRZ, 0.73 Vpp for PAM4 and 180 GBd NRZ.
+- device_id: hu2026-a
+  field: bw3db_ghz
+  value: 83
+  unit: GHz
+  basis: measured
+  locator: p.13; p.31, Fig. 3(d-e)
+  note: 0 V bias at the 6 dB IL operating point (die 5); 97 GHz at 5 dB and more than 110 GHz at 4 dB.
+- device_id: hu2026-a
+  field: il_onchip_db
+  value: 1
+  unit: dB
+  basis: measured
+  locator: p.11; p.31, Fig. 3(a)
+  note: Average off-resonance loss of one MRM, from comparing the MRM spectrum with a grating-coupler pair.
+- device_id: hu2026-a
+  field: extinction_ratio_db
+  value: 49
+  unit: dB
+  basis: measured
+  locator: p.11; p.31, Fig. 3(a)
+  note: Static (DC) ER of the 0 V spectrum; wafer range 26.7 to 48.4 dB (p.42, Fig. S4).
+- device_id: hu2026-a
+  field: max_baud_gbd
+  value: 180
+  unit: GBd
+  basis: measured
+  locator: p.16; p.32, Fig. 4(h)
+  note: 180 GBd NRZ eye at 0.73 Vpp with 16-tap FFE (SNR 3.45 dB); eye opening only, no BER.
+- device_id: hu2026-a
+  field: modulation_format
+  value: NRZ 32 Gb/s error-free (BER below 1e-12) over 2 km SSMF at 0.43 Vpp, no DSP; NRZ 80 Gb/s error-free with 3-tap FFE (0.56 Vpp); PAM4 64 and 128 GT/s eyes without equalization (TDECQ 1.87 and 2.66
+    dB); 128 and 140 GBd PAM4 and 180 GBd NRZ eyes with 16-tap FFE at 0.73 Vpp
+  unit: ''
+  basis: measured
+  locator: p.6; p.15-16; p.32, Fig. 4(e-j); p.47, Fig. S8
+  note: Zero electrical bias and no driver. Text on p.16 lists PCIe Ebit as 0.97, 0.49, 0.78 pJ/bit; Methods and abstract give fJ/bit.
+- device_id: hu2026-a
+  field: max_line_rate_gbps
+  value: 280
+  unit: Gb/s
+  basis: measured
+  locator: p.2, abstract; p.16; p.32, Fig. 4(j)
+  note: 140 GBd PAM4 eye at 0.73 Vpp, TDECQ 4.85 dB; 16-tap FFE.
+- device_id: hu2026-a
+  field: energy_per_bit_fj
+  value: 0.97
+  unit: fJ/bit
+  basis: derived
+  locator: p.2, abstract; p.22, Methods
+  note: Authors' Eb formula with Cj 21 fF at 0.43 Vpp, NRZ; modulator only; 0.78 fJ/bit at 0.73 Vpp PAM4.
+- device_id: hu2026-a
+  field: capacitance_ff
+  value: 21
+  unit: fF
+  basis: simulated
+  locator: p.22, Methods; p.39, Fig. S2
+  note: Cj about 21 fF at 0 V from Sentaurus Device; main text says estimated.
+- device_id: hu2026-a
+  field: q_loaded
+  value: 1500
+  unit: '1'
+  basis: measured
+  locator: p.11; p.31, Fig. 3(a)
+  note: Extracted from the low-power transmission spectrum; simulated 974 (p.41).
+- device_id: hu2026-a
+  field: fsr_nm
+  value: 7
+  unit: nm
+  basis: measured
+  locator: p.11; p.31, Fig. 3(a)
+  note: FSR about 7 nm near 1315 nm.
+- device_id: hu2026-a
+  field: tuning_nm_per_v
+  value: 0.0245
+  unit: nm/V
+  basis: measured
+  locator: p.11; p.31, Fig. 3(b)
+  note: Average resonance shift 24.5 pm/V for 0 to -4 V; simulated 24.8 pm/V; wafer range 22.8 to 25.5 pm/V (p.42-43).
+- device_id: hu2026-b
+  field: wavelength_nm
+  value: 1315
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.31, Fig. 3(b)
+  note: Resonance near 1315 nm in the bias sweep; S21 and eye wavelengths not stated (64 GBd test at 1313.56 nm, p.45 Fig. S6).
+- device_id: hu2026-b
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: design_target
+  locator: p.10; p.12; p.39
+  note: Doped-region length 40 um used as L in the Vpi*L formula; ring radius 8 um.
+- device_id: hu2026-b
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.9, Sec. 2; p.19, Methods
+  note: 220 nm SOI.
+- device_id: hu2026-b
+  field: rib_width_nm
+  value: 420
+  unit: nm
+  basis: design_target
+  locator: p.9, Sec. 2
+  note: 420 nm wide, 220 nm thick rib.
+- device_id: hu2026-b
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: design_target
+  locator: p.9, Sec. 2
+  note: 70 nm slab; connected to a 220 nm slab inside and outside the ring (two trenches).
+- device_id: hu2026-b
+  field: substrate
+  value: 220 nm silicon-on-insulator, 12-inch wafer
+  unit: ''
+  basis: design_target
+  locator: p.19, Methods
+  note: BOX thickness not stated.
+- device_id: hu2026-b
+  field: epitaxy_or_stack
+  value: Lateral pn junction in a 420 nm x 220 nm Si rib with 70 nm slab; narrow trench formed by 220 nm slabs inside and outside the ring; heavy doping (two doping layers in the core; levels not stated);
+    ring radius 8 um; 40 um doped length; tungsten heater (about 54 ohm)
+  unit: ''
+  basis: design_target
+  locator: p.9-10, Sec. 2; p.19, Methods; p.11-12
+  note: Doping concentrations not given in the preprint or its SI text.
+- device_id: hu2026-b
+  field: optical_input_power_dbm
+  value: -3.01
+  unit: dBm
+  basis: derived
+  locator: p.20, Methods
+  note: Coupled power into the bus waveguide limited to 500 uW during S21 measurement; 10log10(0.5 mW).
+- device_id: hu2026-b
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: author_estimate
+  locator: p.17, Sec. 2; p.33, Fig. 5(b)
+  note: 2 Vpp RF at -3 V bias; Fig. 5 caption says 1 Vpp; swing at DUT estimated by cable attenuation factor (Fig. S10).
+- device_id: hu2026-b
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.13; p.31, Fig. 3(d,f)
+  note: 'More than 110 GHz at -3 V for 4, 5, 6 dB operating points; wafer map at 6 dB: all dies 108.7 GHz or more.'
+- device_id: hu2026-b
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.20, Methods
+  note: Keysight N5290A with N4372E 110 GHz lightwave component analyzer.
+- device_id: hu2026-b
+  field: max_baud_gbd
+  value: 200
+  unit: GBd
+  basis: measured
+  locator: p.17; p.33, Fig. 5(c)
+  note: 200 GBd NRZ open eye (SNR 3.28 dB BtB, 3.23 dB over 2 km).
+- device_id: hu2026-b
+  field: modulation_format
+  value: NRZ 200 GBd (200 Gb/s, SNR 3.28 dB BtB); PAM4 180 GBd (360 Gb/s, TDECQ 3.37 dB BtB); PAM6 155 GBd (400 Gb/s, RoP 5.75 dBm BtB; Methods p.21 says the 155 GBd eye is barely discernible, no BER);
+    eyes BtB and over 2 km SSMF, with DSP at transmitter and receiver
+  unit: ''
+  basis: measured
+  locator: p.17; p.33, Fig. 5(c)
+  note: Eye diagrams only; no BER for 400 Gb/s. Main text p.17 says open eye; Methods p.21 says barely discernible. AWG about 55 GHz limited.
+- device_id: hu2026-b
+  field: max_line_rate_gbps
+  value: 400
+  unit: Gb/s
+  basis: measured
+  locator: p.2, abstract; p.17; p.33, Fig. 5(c)
+  note: 155 GBd PAM6 eye only, no BER; Methods p.21 calls the 155 GBd eye barely discernible, main text p.17 says open.
+- device_id: hu2026-b
+  field: energy_per_bit_fj
+  value: 2.89
+  unit: fJ/bit
+  basis: derived
+  locator: p.22, Methods
+  note: Authors' Eb formula for PAM6 at 2 Vpp with Cj 16 fF at -3 V; NRZ 16 fJ/bit, PAM4 4.44 fJ/bit.
+- device_id: hu2026-b
+  field: capacitance_ff
+  value: 16
+  unit: fF
+  basis: simulated
+  locator: p.22, Methods; p.39, Fig. S2
+  note: Cj about 16 fF at -3 V; simulated, main text says estimated.
+- device_id: hu2026-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.31, Fig. 3(d)
+  note: Normalized EO response; reference frequency of the 3 dB drop not stated.
+- device_id: hu2026-a
+  field: vpi_convention
+  value: resonance_tuning_derived
+  unit: ''
+  basis: derived
+  locator: p.12
+  note: 'Vpi*L = FSR*L/(2*dlambda/dV): resonance-shift definition, no phase-shifter Vpi reported.'
+- device_id: hu2026-a
+  field: band
+  value: o_band
+  unit: ''
+  basis: derived
+  locator: p.31, Fig. 3(a-b); p.21
+  note: Spectra at 1290-1330 nm; O-band laser (EXFO T200S-O).
+- device_id: hu2026-b
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.31, Fig. 3(d)
+  note: Normalized EO response; reference frequency not stated.
+- device_id: hu2026-b
+  field: band
+  value: o_band
+  unit: ''
+  basis: derived
+  locator: p.31, Fig. 3; p.21
+  note: O-band operation.
+derived: []

@@ -1,0 +1,334 @@
+paper_id: montifiore2026
+verified_on: '2026-10-02'
+source_files:
+- references/montifiore2026/text.md
+- references/montifiore2026/crossref.json
+- references/montifiore2026/figures/page_03.png
+- references/montifiore2026/figures/page_04.png
+- references/montifiore2026/figures/page_05.png
+- references/montifiore2026/figures/page_06.png
+- references/montifiore2026/figures/page_07.png
+entries:
+- device_id: montifiore2026-a
+  field: wavelength_nm
+  value: 532
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. 2
+- device_id: montifiore2026-a
+  field: length_mm
+  value: 50
+  unit: mm
+  basis: design_target
+  locator: p.2 Sec. 1
+  note: 5 cm coil PZT actuator in one arm
+- device_id: montifiore2026-a
+  field: vpi_dc_v
+  value: 2.8
+  unit: V
+  basis: measured
+  locator: p.4 Sec. 2; Fig. 3(a)
+  note: static PZT tuning curve, single arm actuated
+- device_id: montifiore2026-a
+  field: vpil_dc_vcm
+  value: 14.0
+  unit: V*cm
+  basis: derived
+  locator: p.4 Sec. 2
+  note: stated alongside Vpi 2.8 V; equals 2.8 V x 5 cm coil length
+- device_id: montifiore2026-a
+  field: bw3db_ghz
+  value: 0.0004
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; Fig. 3(b)
+  note: DC to 0.4 MHz
+- device_id: montifiore2026-a
+  field: bw6db_ghz
+  value: 0.0006
+  unit: GHz
+  basis: measured
+  locator: p.4 Fig. 3(b)
+  note: 6 dB cutoff 0.6 MHz
+- device_id: montifiore2026-a
+  field: extinction_ratio_db
+  value: 21.5
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. 2; Fig. 3(a)
+  note: static extinction at 532 nm
+- device_id: montifiore2026-a
+  field: prop_loss_db_per_cm
+  value: 0.24
+  unit: dB/cm
+  basis: measured
+  locator: p.4 Sec. 2
+  note: stated optical loss of the coil MZM waveguide
+- device_id: montifiore2026-a
+  field: capacitance_ff
+  value: 19000000
+  unit: fF
+  basis: measured
+  locator: p.4 Sec. 2
+  note: 19 nF PZT actuator capacitance
+- device_id: montifiore2026-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(a)
+  note: cross-section schematic
+- device_id: montifiore2026-a
+  field: cladding
+  value: SiO2 upper and lower cladding
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(a)
+- device_id: montifiore2026-a
+  field: electrode_metal
+  value: platinum
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: platinum electrodes on the PZT actuator
+- device_id: montifiore2026-a
+  field: epitaxy_or_stack
+  value: Si3N4 core 20 nm thick x 2 um wide in SiO2 upper and lower cladding on Si; back-end PZT actuator with Pt electrodes offset 0-5 um from the core
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2; Fig. 2(a)
+- device_id: montifiore2026-b
+  field: wavelength_nm
+  value: 493
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.5 Fig. 4
+- device_id: montifiore2026-b
+  field: length_mm
+  value: 50
+  unit: mm
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: 5 cm long actuator
+- device_id: montifiore2026-b
+  field: vpi_dc_v
+  value: 2.8
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.2 Sec. 1
+- device_id: montifiore2026-b
+  field: bw3db_ghz
+  value: 0.00016
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.5 Fig. 4(a) legend
+  note: 3 dB cutoff 0.16 MHz
+- device_id: montifiore2026-b
+  field: bw6db_ghz
+  value: 0.0004
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.5 Fig. 4(a) legend
+  note: 6 dB cutoff 0.4 MHz
+- device_id: montifiore2026-b
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(a)
+  note: cross-section schematic
+- device_id: montifiore2026-b
+  field: cladding
+  value: SiO2 upper and lower cladding
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(a)
+- device_id: montifiore2026-b
+  field: electrode_metal
+  value: platinum
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: platinum electrodes on the PZT actuator
+- device_id: montifiore2026-b
+  field: epitaxy_or_stack
+  value: Si3N4 core 20 nm thick x 2 um wide in SiO2 upper and lower cladding on Si; back-end PZT actuator with Pt electrodes offset 0-5 um from the core
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2; Fig. 2(a)
+- device_id: montifiore2026-c
+  field: wavelength_nm
+  value: 493
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.5 Sec. 2
+- device_id: montifiore2026-c
+  field: vpi_dc_v
+  value: 20.7
+  unit: V
+  basis: derived
+  locator: p.5 Sec. 2
+  note: stated as corresponding to the 0.92 GHz/V tuning; derivation not given
+- device_id: montifiore2026-c
+  field: vpil_dc_vcm
+  value: 9.75
+  unit: V*cm
+  basis: derived
+  locator: p.5 Sec. 2
+  note: stated V_pi L
+- device_id: montifiore2026-c
+  field: bw3db_ghz
+  value: 0.0026
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.6 Fig. 5(d)
+  note: DC to 2.6 MHz at quadrature, biased above the hysteresis region
+- device_id: montifiore2026-c
+  field: bw6db_ghz
+  value: 0.0034
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. 2; Fig. 5(d)
+- device_id: montifiore2026-c
+  field: extinction_ratio_db
+  value: 18.7
+  unit: dB
+  basis: measured
+  locator: p.5 text; p.6 Fig. 5(a)
+  note: resonance extinction, critically coupled
+- device_id: montifiore2026-c
+  field: prop_loss_db_per_cm
+  value: 0.24
+  unit: dB/cm
+  basis: measured
+  locator: p.5 text; p.6 Fig. 5(a)
+  note: alpha 24 dB/m in Fig. 5(a)
+- device_id: montifiore2026-c
+  field: q_loaded
+  value: 1900000
+  unit: '1'
+  basis: measured
+  locator: p.5 text; p.6 Fig. 5(a)
+  note: Q_L 1.9 million
+- device_id: montifiore2026-c
+  field: tuning_nm_per_v
+  value: 0.00075
+  unit: nm/V
+  basis: measured
+  locator: p.5 text; p.6 Fig. 5(c)
+  note: 0.92 GHz/V = 0.75 pm/V, linear region
+- device_id: montifiore2026-c
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(a)
+  note: cross-section schematic
+- device_id: montifiore2026-c
+  field: cladding
+  value: SiO2 upper and lower cladding
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(a)
+- device_id: montifiore2026-c
+  field: electrode_metal
+  value: platinum
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: platinum electrodes on the PZT actuator
+- device_id: montifiore2026-c
+  field: epitaxy_or_stack
+  value: Si3N4 core 20 nm thick x 2 um wide in SiO2 upper and lower cladding on Si; back-end PZT actuator with Pt electrodes offset 0-5 um from the core
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2; Fig. 2(a)
+- device_id: montifiore2026-d
+  field: wavelength_nm
+  value: 780
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.6 Sec. 2
+- device_id: montifiore2026-d
+  field: vpi_dc_v
+  value: 18.8
+  unit: V
+  basis: derived
+  locator: p.6 Sec. 2
+  note: stated as corresponding to the 1.01 GHz/V tuning; derivation not given
+- device_id: montifiore2026-d
+  field: vpil_dc_vcm
+  value: 8.86
+  unit: V*cm
+  basis: derived
+  locator: p.6 Sec. 2
+  note: stated V_pi L
+- device_id: montifiore2026-d
+  field: bw3db_ghz
+  value: 0.01
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.7 Fig. 6(d)
+  note: DC to 10 MHz
+- device_id: montifiore2026-d
+  field: bw6db_ghz
+  value: 0.012
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.7 Fig. 6(d) legend
+  note: 6 dB cutoff 12 MHz
+- device_id: montifiore2026-d
+  field: extinction_ratio_db
+  value: 12.1
+  unit: dB
+  basis: measured
+  locator: p.6 text; p.7 Fig. 6(a)
+  note: resonance extinction, slightly under-coupled
+- device_id: montifiore2026-d
+  field: prop_loss_db_per_cm
+  value: 0.27
+  unit: dB/cm
+  basis: measured
+  locator: p.6 text; p.7 Fig. 6(a)
+  note: alpha 27 dB/m in Fig. 6(a)
+- device_id: montifiore2026-d
+  field: q_loaded
+  value: 700000
+  unit: '1'
+  basis: measured
+  locator: p.6 text; p.7 Fig. 6(a)
+  note: Q_L 0.7 million
+- device_id: montifiore2026-d
+  field: tuning_nm_per_v
+  value: 0.0021
+  unit: nm/V
+  basis: measured
+  locator: p.6 text; p.7 Fig. 6(c)
+  note: 1.01 GHz/V = 2.1 pm/V, linear region
+- device_id: montifiore2026-d
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(a)
+  note: cross-section schematic
+- device_id: montifiore2026-d
+  field: cladding
+  value: SiO2 upper and lower cladding
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(a)
+- device_id: montifiore2026-d
+  field: electrode_metal
+  value: platinum
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: platinum electrodes on the PZT actuator
+- device_id: montifiore2026-d
+  field: epitaxy_or_stack
+  value: Si3N4 core 120 nm thick x 900 nm wide in SiO2 upper and lower cladding on Si; back-end PZT actuator with Pt electrodes offset 0-5 um from the core
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2; Fig. 2(a)
+derived: []

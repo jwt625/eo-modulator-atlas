@@ -1,0 +1,348 @@
+paper_id: steckler2025
+verified_on: '2026-10-02'
+source_files:
+- references/steckler2025/text.md
+- references/steckler2025/crossref.json
+- references/steckler2025/figures/page_03.png
+- references/steckler2025/figures/page_04.png
+entries:
+- device_id: steckler2025-a
+  field: wavelength_nm
+  value: 1580
+  unit: nm
+  basis: measured
+  locator: p.3 Sec. Characterization; Fig. 3(f)
+  note: most dynamic measurements at 1580 nm
+- device_id: steckler2025-a
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. Characterization; Fig. 3(b)
+- device_id: steckler2025-a
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.5 Sec. Characterization; Fig. 3(f)
+  note: approx; about 100 GHz at -3 V
+- device_id: steckler2025-a
+  field: il_onchip_db
+  value: 10
+  unit: dB
+  basis: measured
+  locator: p.3 Sec. Characterization; Fig. 3(b)
+  note: approx; at 1580 nm
+- device_id: steckler2025-a
+  field: extinction_ratio_db
+  value: 4.7
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. Characterization; Fig. 3(b)
+  note: static, -3 V, at 1575 nm
+- device_id: steckler2025-a
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 4 caption; p.8 Methods
+  note: nominal AWG output, NRZ PRBS 2^7-1
+- device_id: steckler2025-a
+  field: capacitance_ff
+  value: 16.3
+  unit: fF
+  basis: measured
+  locator: p.5 Sec. Characterization
+  note: junction capacitance from electrical small-signal measurement; R 40.2 ohm
+- device_id: steckler2025-a
+  field: modulation_format
+  value: NRZ-OOK; eye diagrams at 120, 140 and 160 Gbit/s (1575 nm)
+  unit: ''
+  basis: measured
+  locator: p.5 Fig. 4; p.7 Fig. 6
+- device_id: steckler2025-a
+  field: max_line_rate_gbps
+  value: 160
+  unit: Gb/s
+  basis: measured
+  locator: p.5 Fig. 4(a); p.8 Table 1
+  note: eye at 160 Gbit/s with 16-tap equalizer; abstract claims open eyes at 140 Gbit/s
+- device_id: steckler2025-a
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2(a) caption p.4
+  note: 400 nm thick selectively grown Ge/GeSi layer
+- device_id: steckler2025-a
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2 caption p.4
+  note: Ge/GeSi fin width, chosen for ER/IL trade-off
+- device_id: steckler2025-a
+  field: slab_thickness_nm
+  value: 30
+  unit: nm
+  basis: design_target
+  locator: p.2; Fig. 1(c) p.3
+  note: Si under the Ge/GeSi thinned from 220 nm to 30 nm
+- device_id: steckler2025-a
+  field: electrode_metal
+  value: AlCu (five-layer BEOL) with W plugs; NiPt silicide contacts
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 1(a,b)
+- device_id: steckler2025-a
+  field: substrate
+  value: SOI, 220 nm Si waveguide layer on buried oxide (BOX thickness not stated)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(c) caption
+- device_id: steckler2025-a
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2 caption p.4
+  note: SiO2 window and overfill around the fin
+- device_id: steckler2025-a
+  field: epitaxy_or_stack
+  value: 400 nm GeSi (16 Si delta layers of 2 monolayers, 750 C anneal, about 1% Si) on 30 nm Si; lateral in-situ doped Si n=p=1E18 cm^-3, n+=p+ >5E19 cm^-3
+  unit: ''
+  basis: design_target
+  locator: p.2; Fig. 1(b) caption p.3; Fig. 2 caption p.4
+- device_id: steckler2025-b
+  field: wavelength_nm
+  value: 1580
+  unit: nm
+  basis: measured
+  locator: p.3 Sec. Characterization; Fig. 3(e)
+  note: most dynamic measurements at 1580 nm
+- device_id: steckler2025-b
+  field: length_mm
+  value: 0.02
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. Characterization; Fig. 3(a)
+- device_id: steckler2025-b
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.5 Sec. Characterization; Fig. 3(e)
+  note: 'paper: exceeds 110 GHz at -3 V; no 3 dB crossing within the sweep'
+- device_id: steckler2025-b
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.8 Methods S-parameter measurements
+  note: 110 GHz LCA, 100 MHz to 110 GHz
+- device_id: steckler2025-b
+  field: il_onchip_db
+  value: 9
+  unit: dB
+  basis: measured
+  locator: p.3 Sec. Characterization; Fig. 3(a)
+  note: approx; at 1580 nm
+- device_id: steckler2025-b
+  field: extinction_ratio_db
+  value: 2.3
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. Characterization; Fig. 3(a)
+  note: static, -3 V, at 1575 nm
+- device_id: steckler2025-b
+  field: capacitance_ff
+  value: 7.88
+  unit: fF
+  basis: measured
+  locator: p.5 Sec. Characterization
+  note: junction capacitance from electrical small-signal measurement; R 84.8 ohm
+- device_id: steckler2025-b
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2(a) caption p.4
+  note: 400 nm thick selectively grown Ge/GeSi layer
+- device_id: steckler2025-b
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2 caption p.4
+  note: Ge/GeSi fin width, chosen for ER/IL trade-off
+- device_id: steckler2025-b
+  field: slab_thickness_nm
+  value: 30
+  unit: nm
+  basis: design_target
+  locator: p.2; Fig. 1(c) p.3
+  note: Si under the Ge/GeSi thinned from 220 nm to 30 nm
+- device_id: steckler2025-b
+  field: electrode_metal
+  value: AlCu (five-layer BEOL) with W plugs; NiPt silicide contacts
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 1(a,b)
+- device_id: steckler2025-b
+  field: substrate
+  value: SOI, 220 nm Si waveguide layer on buried oxide (BOX thickness not stated)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(c) caption
+- device_id: steckler2025-b
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2 caption p.4
+  note: SiO2 window and overfill around the fin
+- device_id: steckler2025-b
+  field: epitaxy_or_stack
+  value: 400 nm GeSi (16 Si delta layers of 2 monolayers, 750 C anneal, about 1% Si) on 30 nm Si; lateral in-situ doped Si n=p=1E18 cm^-3, n+=p+ >5E19 cm^-3
+  unit: ''
+  basis: design_target
+  locator: p.2; Fig. 1(b) caption p.3; Fig. 2 caption p.4
+- device_id: steckler2025-c
+  field: wavelength_nm
+  value: 1635
+  unit: nm
+  basis: measured
+  locator: p.4 Sec. Characterization; Fig. 3(b)
+  note: approx; wavelength of maximum static ER
+- device_id: steckler2025-c
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. Characterization; Fig. 3(b)
+- device_id: steckler2025-c
+  field: extinction_ratio_db
+  value: 9
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. Characterization; Fig. 3(b)
+  note: approx; static ER at -3 V
+- device_id: steckler2025-c
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2(a) caption p.4
+  note: 400 nm thick selectively grown Ge/GeSi layer
+- device_id: steckler2025-c
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2 caption p.4
+  note: Ge/GeSi fin width, chosen for ER/IL trade-off
+- device_id: steckler2025-c
+  field: slab_thickness_nm
+  value: 30
+  unit: nm
+  basis: design_target
+  locator: p.2; Fig. 1(c) p.3
+  note: Si under the Ge/GeSi thinned from 220 nm to 30 nm
+- device_id: steckler2025-c
+  field: electrode_metal
+  value: AlCu (five-layer BEOL) with W plugs; NiPt silicide contacts
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 1(a,b)
+- device_id: steckler2025-c
+  field: substrate
+  value: SOI, 220 nm Si waveguide layer on buried oxide (BOX thickness not stated)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(c) caption
+- device_id: steckler2025-c
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2 caption p.4
+  note: SiO2 window and overfill around the fin
+- device_id: steckler2025-c
+  field: epitaxy_or_stack
+  value: 400 nm Ge on 30 nm Si; lateral in-situ doped Si n=p=1E18 cm^-3, n+=p+ >5E19 cm^-3
+  unit: ''
+  basis: design_target
+  locator: p.2; Fig. 1(b) caption p.3; Fig. 2 caption p.4
+- device_id: steckler2025-d
+  field: wavelength_nm
+  value: 1635
+  unit: nm
+  basis: measured
+  locator: p.4 Sec. Characterization; Fig. 3(a)
+  note: approx; wavelength of maximum static ER
+- device_id: steckler2025-d
+  field: length_mm
+  value: 0.02
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. Characterization; Fig. 3(a)
+- device_id: steckler2025-d
+  field: extinction_ratio_db
+  value: 5
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. Characterization; Fig. 3(a)
+  note: approx; static ER at -3 V
+- device_id: steckler2025-d
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2(a) caption p.4
+  note: 400 nm thick selectively grown Ge/GeSi layer
+- device_id: steckler2025-d
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2 caption p.4
+  note: Ge/GeSi fin width, chosen for ER/IL trade-off
+- device_id: steckler2025-d
+  field: slab_thickness_nm
+  value: 30
+  unit: nm
+  basis: design_target
+  locator: p.2; Fig. 1(c) p.3
+  note: Si under the Ge/GeSi thinned from 220 nm to 30 nm
+- device_id: steckler2025-d
+  field: electrode_metal
+  value: AlCu (five-layer BEOL) with W plugs; NiPt silicide contacts
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 1(a,b)
+- device_id: steckler2025-d
+  field: substrate
+  value: SOI, 220 nm Si waveguide layer on buried oxide (BOX thickness not stated)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(c) caption
+- device_id: steckler2025-d
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. Platform; Fig. 2 caption p.4
+  note: SiO2 window and overfill around the fin
+- device_id: steckler2025-d
+  field: epitaxy_or_stack
+  value: 400 nm Ge on 30 nm Si; lateral in-situ doped Si n=p=1E18 cm^-3, n+=p+ >5E19 cm^-3
+  unit: ''
+  basis: design_target
+  locator: p.2; Fig. 1(b) caption p.3; Fig. 2 caption p.4
+derived:
+- device_id: steckler2025-a
+  field: max_baud_gbd
+  value: 160
+  formula: 'NRZ: baud rate = bit rate'
+  inputs:
+  - max_line_rate_gbps

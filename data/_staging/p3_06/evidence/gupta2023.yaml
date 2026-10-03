@@ -1,0 +1,365 @@
+paper_id: gupta2023
+verified_on: '2026-10-02'
+source_files:
+- references/gupta2023/text.md
+- references/gupta2023/crossref.json
+- references/gupta2023/source.json
+- references/gupta2023/figures/page_05.png
+- references/gupta2023/figures/page_06.png
+entries:
+- device_id: gupta2023-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5, Sec. V-A; p.6, Sec. V-B
+  note: TE-polarized light; DFB centered at 1550 nm for the DC maps, external 1550 nm laser for IL and EO.
+- device_id: gupta2023-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. III
+  note: Wide gold traces with air bridges contacting p-doped sections.
+- device_id: gupta2023-a
+  field: substrate
+  value: semi-insulating Fe-doped InP
+  unit: ''
+  basis: design_target
+  locator: p.1, Fig. 1; p.2
+  note: Fig. 1 label Fe-InP substrate.
+- device_id: gupta2023-a
+  field: waveguide_orientation
+  value: '[1-10]'
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II
+  note: Orientation changed from [110] to [1-10] so Pockels and quantum-confined Stark effects add for TE.
+- device_id: gupta2023-a
+  field: epitaxy_or_stack
+  value: 20-period InGaAsP/InP MQW phase-modulator stack (butt-joint regrown with i-InP) on semi-insulating InP; p-i-n sections alternate with intrinsic sections; Q1.06 InGaAsP passive waveguide layers;
+    absorption edge set away from 1550 nm
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II; p.1, Fig. 1-2
+  note: Well and barrier thicknesses and doping levels not stated.
+- device_id: gupta2023-a
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: design_target
+  locator: p.1, abstract; p.5, Fig. 11; p.6, Sec. V-B
+  note: Traveling-wave electrode length.
+- device_id: gupta2023-a
+  field: vpi_dc_v
+  value: 1.4
+  unit: V
+  basis: measured
+  locator: p.1, abstract; p.5, Fig. 12(a)
+  note: Read along NW-SE diagonal of the (I,U) ER map at -10 V; arrow spans about 1 V per port, so diagonal length.
+- device_id: gupta2023-a
+  field: vpil_dc_vcm
+  value: 0.7
+  unit: V*cm
+  basis: derived
+  locator: p.5, Sec. V-A
+  note: Authors translate 1.4 V on 5 mm to 0.7 V cm; inherits the two-port diagonal Vpi definition.
+- device_id: gupta2023-a
+  field: bias_for_vpi_v
+  value: -10
+  unit: V
+  basis: measured
+  locator: p.5, Sec. V-A; Fig. 12(a)
+  note: Reverse bias of both diodes at which Vpi was read.
+- device_id: gupta2023-a
+  field: il_fiber_to_fiber_db
+  value: 12.5
+  unit: dB
+  basis: measured
+  locator: p.5, Sec. V-A; p.7, Sec. VI
+  note: 4 dB SSC coupling (fiber-fiber reference; one or both facets not stated), 4 dB MQW propagation, 3 dB butt joints, about 1.5 dB passives.
+- device_id: gupta2023-a
+  field: extinction_ratio_db
+  value: 31
+  unit: dB
+  basis: measured
+  locator: p.5, Sec. V-A; Fig. 12(b)
+  note: Static ER up to 31 dB with fiber coupling and external PD; 20 dB with the integrated PD (substrate mode limited).
+- device_id: gupta2023-a
+  field: drive_vpp_v
+  value: 1.4
+  unit: V
+  basis: measured
+  locator: p.6, Sec. V-C
+  note: 0.5 V pattern generator output boosted to 1.4 Vpp by a 66 GHz amplifier; DC bias 10 V.
+- device_id: gupta2023-a
+  field: max_baud_gbd
+  value: 80
+  unit: GBd
+  basis: measured
+  locator: p.1, abstract; p.6, Fig. 15
+  note: 80 Gb/s NRZ eye (SNR 4, ER 8 dB) through a MUX.
+- device_id: gupta2023-a
+  field: modulation_format
+  value: NRZ 64 Gb/s (SNR 5, ER 9.3 dB) and 80 Gb/s (SNR 4, ER 8 dB) optical eyes; PAM4 24 GBd (SNR 2.2, ER 5.5 dB, 3-bit 32 GBd DAC)
+  unit: ''
+  basis: measured
+  locator: p.6, Sec. V-C; Fig. 15
+  note: No pre-distortion or post-processing; eye diagrams only, no BER.
+- device_id: gupta2023-a
+  field: max_line_rate_gbps
+  value: 80
+  unit: Gb/s
+  basis: measured
+  locator: p.1, abstract; p.6, Fig. 15
+  note: NRZ eye.
+- device_id: gupta2023-a
+  field: bw3db_ghz
+  value: 32
+  unit: GHz
+  basis: measured
+  locator: p.6, Sec. V-B; p.6, Fig. 14
+  note: Small-signal EO, input light 1550 nm, VNA with lightwave component analyzer.
+- device_id: gupta2023-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5, Sec. V-A; p.6, Sec. V-B
+  note: TE-polarized light; DFB centered at 1550 nm for the DC maps, external 1550 nm laser for IL and EO.
+- device_id: gupta2023-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. III
+  note: Wide gold traces with air bridges contacting p-doped sections.
+- device_id: gupta2023-b
+  field: substrate
+  value: semi-insulating Fe-doped InP
+  unit: ''
+  basis: design_target
+  locator: p.1, Fig. 1; p.2
+  note: Fig. 1 label Fe-InP substrate.
+- device_id: gupta2023-b
+  field: waveguide_orientation
+  value: '[1-10]'
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II
+  note: Orientation changed from [110] to [1-10] so Pockels and quantum-confined Stark effects add for TE.
+- device_id: gupta2023-b
+  field: epitaxy_or_stack
+  value: 20-period InGaAsP/InP MQW phase-modulator stack (butt-joint regrown with i-InP) on semi-insulating InP; p-i-n sections alternate with intrinsic sections; Q1.06 InGaAsP passive waveguide layers;
+    absorption edge set away from 1550 nm
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II; p.1, Fig. 1-2
+  note: Well and barrier thicknesses and doping levels not stated.
+- device_id: gupta2023-b
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.1, abstract; p.5, Fig. 11; p.6, Sec. V-B
+  note: Traveling-wave electrode length.
+- device_id: gupta2023-b
+  field: bw3db_ghz
+  value: 34
+  unit: GHz
+  basis: measured
+  locator: p.6, Sec. V-B; p.6, Fig. 14
+  note: Small-signal EO, input light 1550 nm, VNA with lightwave component analyzer.
+- device_id: gupta2023-c
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5, Sec. V-A; p.6, Sec. V-B
+  note: TE-polarized light; DFB centered at 1550 nm for the DC maps, external 1550 nm laser for IL and EO.
+- device_id: gupta2023-c
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. III
+  note: Wide gold traces with air bridges contacting p-doped sections.
+- device_id: gupta2023-c
+  field: substrate
+  value: semi-insulating Fe-doped InP
+  unit: ''
+  basis: design_target
+  locator: p.1, Fig. 1; p.2
+  note: Fig. 1 label Fe-InP substrate.
+- device_id: gupta2023-c
+  field: waveguide_orientation
+  value: '[1-10]'
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II
+  note: Orientation changed from [110] to [1-10] so Pockels and quantum-confined Stark effects add for TE.
+- device_id: gupta2023-c
+  field: epitaxy_or_stack
+  value: 20-period InGaAsP/InP MQW phase-modulator stack (butt-joint regrown with i-InP) on semi-insulating InP; p-i-n sections alternate with intrinsic sections; Q1.06 InGaAsP passive waveguide layers;
+    absorption edge set away from 1550 nm
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II; p.1, Fig. 1-2
+  note: Well and barrier thicknesses and doping levels not stated.
+- device_id: gupta2023-c
+  field: length_mm
+  value: 3
+  unit: mm
+  basis: design_target
+  locator: p.1, abstract; p.5, Fig. 11; p.6, Sec. V-B
+  note: Traveling-wave electrode length.
+- device_id: gupta2023-c
+  field: bw3db_ghz
+  value: 42
+  unit: GHz
+  basis: measured
+  locator: p.6, Sec. V-B; p.6, Fig. 14
+  note: Small-signal EO, input light 1550 nm, VNA with lightwave component analyzer.
+- device_id: gupta2023-d
+  field: wavelength_nm
+  value: 1530
+  unit: nm
+  basis: measured
+  locator: p.5, Sec. V-A; Fig. 12(c)
+  note: External laser (TE) and external PD.
+- device_id: gupta2023-d
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. III
+  note: Wide gold traces with air bridges contacting p-doped sections.
+- device_id: gupta2023-d
+  field: substrate
+  value: semi-insulating Fe-doped InP
+  unit: ''
+  basis: design_target
+  locator: p.1, Fig. 1; p.2
+  note: Fig. 1 label Fe-InP substrate.
+- device_id: gupta2023-d
+  field: waveguide_orientation
+  value: '[1-10]'
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II
+  note: Orientation changed from [110] to [1-10] so Pockels and quantum-confined Stark effects add for TE.
+- device_id: gupta2023-d
+  field: epitaxy_or_stack
+  value: 20-period InGaAsP/InP MQW phase-modulator stack (butt-joint regrown with i-InP) on semi-insulating InP; p-i-n sections alternate with intrinsic sections; Q1.06 InGaAsP passive waveguide layers;
+    absorption edge set away from 1550 nm
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II; p.1, Fig. 1-2
+  note: Well and barrier thicknesses and doping levels not stated.
+- device_id: gupta2023-d
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: design_target
+  locator: p.1, abstract; p.5, Fig. 11; p.6, Sec. V-B
+  note: Traveling-wave electrode length.
+- device_id: gupta2023-d
+  field: vpi_dc_v
+  value: 1.2
+  unit: V
+  basis: measured
+  locator: p.5, Sec. V-A; Fig. 12(c)
+  note: Half-wave voltage at 1530 nm input; bias not stated; same diagonal-arrow definition as gupta2023-a (Fig. 12(c)).
+- device_id: gupta2023-e
+  field: wavelength_nm
+  value: 1570
+  unit: nm
+  basis: measured
+  locator: p.5, Sec. V-A; Fig. 12(d)
+  note: External laser (TE) and external PD.
+- device_id: gupta2023-e
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. III
+  note: Wide gold traces with air bridges contacting p-doped sections.
+- device_id: gupta2023-e
+  field: substrate
+  value: semi-insulating Fe-doped InP
+  unit: ''
+  basis: design_target
+  locator: p.1, Fig. 1; p.2
+  note: Fig. 1 label Fe-InP substrate.
+- device_id: gupta2023-e
+  field: waveguide_orientation
+  value: '[1-10]'
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II
+  note: Orientation changed from [110] to [1-10] so Pockels and quantum-confined Stark effects add for TE.
+- device_id: gupta2023-e
+  field: epitaxy_or_stack
+  value: 20-period InGaAsP/InP MQW phase-modulator stack (butt-joint regrown with i-InP) on semi-insulating InP; p-i-n sections alternate with intrinsic sections; Q1.06 InGaAsP passive waveguide layers;
+    absorption edge set away from 1550 nm
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. II; p.1, Fig. 1-2
+  note: Well and barrier thicknesses and doping levels not stated.
+- device_id: gupta2023-e
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: design_target
+  locator: p.1, abstract; p.5, Fig. 11; p.6, Sec. V-B
+  note: Traveling-wave electrode length.
+- device_id: gupta2023-e
+  field: vpi_dc_v
+  value: 1.7
+  unit: V
+  basis: measured
+  locator: p.5, Sec. V-A; Fig. 12(d)
+  note: Half-wave voltage at 1570 nm input; bias not stated; same diagonal-arrow definition as gupta2023-a (Fig. 12(d)).
+- device_id: gupta2023-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.3, Sec. III
+  note: Authors state both arms modulate equally in antiphase from a single-ended 50 ohm line feed.
+- device_id: gupta2023-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: measured
+  locator: p.5, Sec. V-A
+  note: Vpi read along the NW-SE diagonal of the ER map for push-pull operation.
+- device_id: gupta2023-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.6, Fig. 14
+  note: Normalized EO curve; reference frequency not stated.
+- device_id: gupta2023-b
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.6, Fig. 14
+  note: Normalized EO curve; reference frequency not stated.
+- device_id: gupta2023-c
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.6, Fig. 14
+  note: Normalized EO curve; reference frequency not stated.
+- device_id: gupta2023-a
+  field: electrode_type
+  value: tw_cps
+  unit: ''
+  basis: design_target
+  locator: p.1; p.2, Sec. III
+  note: Coplanar-strip traveling-wave electrodes periodically contacting the p-doped sections via air bridges.
+derived: []

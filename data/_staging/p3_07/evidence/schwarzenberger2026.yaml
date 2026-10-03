@@ -1,0 +1,185 @@
+paper_id: schwarzenberger2026
+verified_on: '2026-10-02'
+source_files:
+- references/schwarzenberger2026/text.md
+- references/schwarzenberger2026/source.pdf
+- references/schwarzenberger2026/crossref.json
+- references/schwarzenberger2026/source.json
+- references/schwarzenberger2026/figures/page_06.png
+- references/schwarzenberger2026/figures/page_07.png
+- references/schwarzenberger2026/figures/page_09.png
+entries:
+- device_id: schwarzenberger2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6 Fig. 3(a) caption; p.6 text
+  note: Targeted center wavelength for IL and ER; data experiment used 1556 nm (p.8)
+- device_id: schwarzenberger2026-a
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.2; p.6
+  note: Phase-shifter sections 280 um long
+- device_id: schwarzenberger2026-a
+  field: vpi_dc_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.6 Sec. III
+  note: Measured after deposition and poling; MZM push-pull; frequency and wavelength not stated
+- device_id: schwarzenberger2026-a
+  field: bw3db_ghz
+  value: 74
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.8; p.6 Fig. 3(c)
+  note: From the 10 GHz moving-average EO transfer function
+- device_id: schwarzenberger2026-a
+  field: bw3db_reference_freq_ghz
+  value: 7.0e-05
+  unit: GHz
+  basis: measured
+  locator: p.6 Fig. 3(c) caption; p.7
+  note: EO response normalized to its value at 70 kHz
+- device_id: schwarzenberger2026-a
+  field: bw6db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.8
+  note: Beyond 110 GHz, equal to the measurement range
+- device_id: schwarzenberger2026-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2 Sec. I; p.8; p.6 Fig. 3(c)
+  note: Measurement range 110 GHz, no 6 dB crossing observed
+- device_id: schwarzenberger2026-a
+  field: il_onchip_db
+  value: 2.7
+  unit: dB
+  basis: measured
+  locator: p.6 Fig. 3(a), Sec. III; p.7 Table I
+  note: Grating-coupler influence removed with an on-chip reference structure
+- device_id: schwarzenberger2026-a
+  field: extinction_ratio_db
+  value: 38
+  unit: dB
+  basis: measured
+  locator: p.6 Fig. 3(a), Sec. III
+  note: Static ER from the transmission spectrum fringes near 1550 nm
+- device_id: schwarzenberger2026-a
+  field: z0_ohm
+  value: 49.2
+  unit: ohm
+  basis: simulated
+  locator: p.6 Eq. (2) text
+  note: Real part of the line impedance from the field simulation; frequency not stated
+- device_id: schwarzenberger2026-a
+  field: rib_width_nm
+  value: 240
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. III; p.4 Fig. 2 caption
+  note: Targeted rail width; TEM about 250 nm at the base, about 230 nm in caption
+- device_id: schwarzenberger2026-a
+  field: slab_thickness_nm
+  value: 75
+  unit: nm
+  basis: measured
+  locator: p.4 Fig. 2(a) caption; p.5
+  note: TEM of a raw device; targeted 90 nm
+- device_id: schwarzenberger2026-a
+  field: sidewall_angle_deg
+  value: 10
+  unit: deg
+  basis: measured
+  locator: p.4 Fig. 2(a) caption; p.5
+  note: TEM, angle to the wafer-surface normal
+- device_id: schwarzenberger2026-a
+  field: electrode_gap_um
+  value: 15
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. II
+  note: Gap between the three aluminum GSG strips; contains the 5 um oxide opening
+- device_id: schwarzenberger2026-a
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. II
+  note: Conductivity 3.7e7 S/m
+- device_id: schwarzenberger2026-a
+  field: substrate
+  value: silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. III; p.3 Fig. 1(c)
+- device_id: schwarzenberger2026-a
+  field: cladding
+  value: SOXD-100 organic electro-optic material in a local opening of the top oxide (TOX); not encapsulated or cross-linked
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. II; p.5
+- device_id: schwarzenberger2026-a
+  field: epitaxy_or_stack
+  value: 'Silicon slot waveguide on SOI: rails nominally 240 nm wide and 220 nm high, slot 160 nm, slab 90 nm (design); TEM of a raw device gives rail height 205 nm, rail width 250 nm at the BOX interface
+    (caption: about 230 nm), slab 75 nm, slot 130 nm at the base and about 160 nm average, sidewall angle about 10 deg, about 220 nm deep trench into the BOX; rails weakly n-doped (width of weakly doped
+    region 340 nm), n+ and n++ slabs and contacts; SOXD-100 organic electro-optic material (index 1.8) deposited into a 5 um wide top-oxide opening; arm length imbalance 40 um; 320 um long RF line; push-pull
+    poling via floating ground electrodes'
+  unit: ''
+  basis: design_target
+  locator: p.2-5; p.4 Fig. 2(a); p.7
+- device_id: schwarzenberger2026-a
+  field: max_baud_gbd
+  value: 204
+  unit: GBd
+  basis: measured
+  locator: p.1 abstract; p.9 Fig. 5(a)
+  note: PAM4, BER below the 20 percent SD-FEC limit
+- device_id: schwarzenberger2026-a
+  field: modulation_format
+  value: PAM4 up to 204 GBd (408 Gbit/s) and 192 GBd (384 Gbit/s); PAM6 up to 176 GBd (455 Gbit/s), highest below the 20 percent SD-FEC limit 180 GBd (465 Gbit/s) or 184 GBd (476 Gbit/s) as stated in different
+    places; PAM8 176 GBd (528 Gbit/s); all measured BER below the 20 percent SD-FEC limit at the quoted maxima
+  unit: ''
+  basis: measured
+  locator: p.8-9 Sec. IV; p.9 Fig. 5; p.11 Summary
+- device_id: schwarzenberger2026-a
+  field: max_line_rate_gbps
+  value: 528
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.9
+  note: 176 GBd PAM8, BER 3.4e-2 below the 20 percent SD-FEC limit
+- device_id: schwarzenberger2026-a
+  field: max_net_rate_gbps
+  value: 412.5
+  unit: Gb/s
+  basis: derived
+  locator: p.9 Fig. 5(c); p.9 Sec. IV
+  note: Authors compute net rate from FEC implementations (ref. 59); 160 GBd PAM8, line rate 480 Gbit/s
+- device_id: schwarzenberger2026-a
+  field: driver
+  value: Keysight M8199B AWG (80 GHz 6 dB bandwidth) with SHF T850B RF amplifier, 20 cm cable, 110 GHz MPI Titan probe, 50 ohm termination, MMSE predistortion; Finisar BPDV4120R 90 GHz photodiode behind
+    an EDFA; Keysight UXR1104A 256 GSa/s oscilloscope
+  unit: ''
+  basis: measured
+  locator: p.8 Sec. IV; p.8 Fig. 4(a)
+derived:
+- device_id: schwarzenberger2026-a
+  field: vpil_dc_vcm
+  value: 0.067
+  formula: 0.67 V*mm / (10 mm/cm); reported 0.67 V*mm (p.1 abstract, p.6)
+  inputs:
+  - 0.67 V*mm
+- device_id: schwarzenberger2026-a
+  field: prop_loss_db_per_cm
+  value: 32
+  formula: 3.2 dB/mm x 10 mm/cm; authors state 3.2 dB/mm by dividing the 0.9 dB phase-shifter loss by the 0.28 mm length
+  inputs:
+  - 3.2 dB/mm (p.7)

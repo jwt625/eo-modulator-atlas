@@ -1,2 +1,8 @@
 org_name,org_type,country,region,parent_org,notes
 University of Washington,university,US,north_america,,"Seattle, Washington; Department of Chemistry; Ummethala p.1 affiliation 5. Same org as staged in p2_01 (identical type/country/region); not in canonical data."
+Peking University,university,CN,east_asia,,"Beijing; affiliations 1 (State Key Laboratory of Advanced Optical Communication Systems and Networks, School of Electronics) and 5 (Frontiers Science Center for Nano-optoelectronics); han2023 p.1"
+Beijing Information Science and Technology University,university,CN,east_asia,,"Beijing; affiliation 3 (Key Laboratory of Information and Communication Systems, Ministry of Information Industry); han2023 p.1"
+Peng Cheng Laboratory,research_institute,CN,east_asia,,Shenzhen; affiliation 2; han2023 p.1
+Zhangjiang Laboratory,research_institute,CN,east_asia,,Shanghai; affiliation 4; han2023 p.1
+Peking University Yangtze Delta Institute of Optoelectronics,research_institute,CN,east_asia,Peking University,Nantong; affiliation 6; han2023 p.1
+CompoundTek Pte,foundry,SG,southeast_asia,,"Named in Methods (p.14) as fabricating the 200 mm SOI wafer run; paper gives no address, country entered from outside the paper"

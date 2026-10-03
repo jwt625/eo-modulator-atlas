@@ -1,0 +1,241 @@
+paper_id: zwickel2020
+verified_on: '2026-10-02'
+source_files:
+- references/zwickel2020/text.md
+- references/zwickel2020/source.pdf
+- references/zwickel2020/crossref.json
+- references/zwickel2020/source.json
+- references/zwickel2020/figures/page_09.png
+- references/zwickel2020/figures/page_11.png
+- references/zwickel2020/figures/page_13.png
+- references/zwickel2020/figures/page_19.png
+entries:
+- device_id: zwickel2020-gate0
+  field: length_mm
+  value: 0.75
+  unit: mm
+  basis: design_target
+  locator: p.12 Sec. 4; p.13 Fig. 5 caption
+  note: 750 um-long modulator terminated with 50 ohm
+- device_id: zwickel2020-gate0
+  field: eo_material
+  value: eo_polymer
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2
+  note: Inferred from the SOH platform (organic EO cladding); no EO material is named for these devices.
+- device_id: zwickel2020-gate0
+  field: bw3db_ghz
+  value: 3
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.13 Fig. 5(b)
+  note: 3 dB EOE bandwidth marker, about 2-4 GHz over three repeats
+- device_id: zwickel2020-gate0
+  field: bw3db_reference_freq_ghz
+  value: 0.04
+  unit: GHz
+  basis: measured
+  locator: p.13 Eq. (21) text
+  note: Reference frequency 2*pi*40 MHz, chosen as small as the VNA allows
+- device_id: zwickel2020-gate0
+  field: bw6db_ghz
+  value: 5
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.13 Fig. 5(b)
+  note: 6 dB EOE bandwidth marker, about 4-6.5 GHz over three repeats
+- device_id: zwickel2020-gate0
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: derived
+  locator: p.9 Sec. 3; Fig. 3(a)
+  note: Authors state the ideal high-frequency real value sqrt(L'/(C'S+C'TL)) is about 50 ohm; no frequency given; measured Re Z0 varies with gate.
+- device_id: zwickel2020-gate0
+  field: rf_loss_freq_ghz
+  value: 50
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.11 Fig. 4
+  note: Reading frequency chosen for the figure read-out
+- device_id: zwickel2020-gate0
+  field: ng_opt
+  value: 3.2
+  unit: '1'
+  basis: simulated
+  locator: p.12 Sec. 4
+  note: Group index from a numerical mode solver
+- device_id: zwickel2020-gate0
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.7 Sec. 3
+  note: BOX thickness of the devices used
+- device_id: zwickel2020-gate0
+  field: substrate
+  value: silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.1 Sec. 1; p.7 Sec. 3
+- device_id: zwickel2020-gate0
+  field: epitaxy_or_stack
+  value: 'Silicon slot waveguide on SOI: device layer 220 nm, slot 120 nm, 3 um buried oxide; two-level doped slabs; coplanar GSG line; organic EO material in the slot (not named for these devices); de-embedding
+    used a second device 500 um long'
+  unit: ''
+  basis: design_target
+  locator: p.7 Sec. 3; p.8 Fig. 2
+- device_id: zwickel2020-gate300
+  field: length_mm
+  value: 0.75
+  unit: mm
+  basis: design_target
+  locator: p.12 Sec. 4; p.13 Fig. 5 caption
+  note: 750 um-long modulator terminated with 50 ohm
+- device_id: zwickel2020-gate300
+  field: eo_material
+  value: eo_polymer
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2
+  note: Inferred from the SOH platform (organic EO cladding); no EO material is named for these devices.
+- device_id: zwickel2020-gate300
+  field: bw3db_ghz
+  value: 20
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.13 Fig. 5(b)
+  note: 3 dB EOE bandwidth marker, about 18-21 GHz over three repeats
+- device_id: zwickel2020-gate300
+  field: bw3db_reference_freq_ghz
+  value: 0.04
+  unit: GHz
+  basis: measured
+  locator: p.13 Eq. (21) text
+  note: Reference frequency 2*pi*40 MHz, chosen as small as the VNA allows
+- device_id: zwickel2020-gate300
+  field: bw6db_ghz
+  value: 50
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.13 Fig. 5(b)
+  note: 6 dB EOE bandwidth marker, about 40-52 GHz over three repeats
+- device_id: zwickel2020-gate300
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: derived
+  locator: p.9 Sec. 3; Fig. 3(a)
+  note: Authors state the ideal high-frequency real value sqrt(L'/(C'S+C'TL)) is about 50 ohm; no frequency given; measured Re Z0 varies with gate.
+- device_id: zwickel2020-gate300
+  field: rf_loss_freq_ghz
+  value: 50
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.11 Fig. 4
+  note: Reading frequency chosen for the figure read-out
+- device_id: zwickel2020-gate300
+  field: ng_opt
+  value: 3.2
+  unit: '1'
+  basis: simulated
+  locator: p.12 Sec. 4
+  note: Group index from a numerical mode solver
+- device_id: zwickel2020-gate300
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.7 Sec. 3
+  note: BOX thickness of the devices used
+- device_id: zwickel2020-gate300
+  field: substrate
+  value: silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.1 Sec. 1; p.7 Sec. 3
+- device_id: zwickel2020-gate300
+  field: epitaxy_or_stack
+  value: 'Silicon slot waveguide on SOI: device layer 220 nm, slot 120 nm, 3 um buried oxide; two-level doped slabs; coplanar GSG line; organic EO material in the slot (not named for these devices); de-embedding
+    used a second device 500 um long'
+  unit: ''
+  basis: design_target
+  locator: p.7 Sec. 3; p.8 Fig. 2
+- device_id: zwickel2020-design-1mm
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.19 Sec. 5.2
+  note: Example device length
+- device_id: zwickel2020-design-1mm
+  field: eo_material
+  value: eo_polymer
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2
+  note: Inferred from the SOH platform (organic EO cladding); no EO material is named for these devices.
+- device_id: zwickel2020-design-1mm
+  field: bw6db_ghz
+  value: 114
+  unit: GHz
+  basis: simulated
+  locator: p.19 Sec. 5.2
+  note: Model prediction with G'S 102 S/m, C'S about 100 pF/m, Table 1 line parameters
+- device_id: zwickel2020-design-1mm
+  field: rib_width_nm
+  value: 240
+  unit: nm
+  basis: design_target
+  locator: p.19 Sec. 5.2
+  note: Rail width of the example geometry
+- device_id: zwickel2020-design-1mm
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: design_target
+  locator: p.19 Sec. 5.2; p.20 Fig. 10
+  note: Slab height
+- device_id: zwickel2020-design-1mm
+  field: epitaxy_or_stack
+  value: 'Design example (no fabricated device): slot 200 nm, slab 70 nm, rail width 240 nm, rail height 240 nm in the text and 220 nm in the Fig. 10 caption; slab conductance 102 S/m, slot capacitance
+    about 100 pF/m (parallel-plate estimate), line parameters from Table 1'
+  unit: ''
+  basis: design_target
+  locator: p.19-20 Sec. 5.2; Fig. 10
+  note: Rail height 240 nm in text, 220 nm in caption
+- device_id: zwickel2020-design-0p5mm
+  field: length_mm
+  value: 0.5
+  unit: mm
+  basis: design_target
+  locator: p.21 Sec. 5.2; p.22-23 Summary
+  note: Example length of the projected design
+- device_id: zwickel2020-design-0p5mm
+  field: eo_material
+  value: eo_polymer
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2
+  note: Inferred from the SOH platform (organic EO cladding); no EO material is named for these devices.
+- device_id: zwickel2020-design-0p5mm
+  field: bw6db_ghz
+  value: 100
+  unit: GHz
+  basis: predicted
+  locator: p.21 Fig. 11; p.22-23 Summary
+  note: 6 dB EOE bandwidth above 100 GHz with excess loss below 0.1 dB
+derived:
+- device_id: zwickel2020-gate0
+  field: rf_loss_db_per_cm
+  value: 17
+  formula: 8.686 dB/Np x alpha[1/mm] x 10 mm/cm; alpha about 0.2 1/mm at 50 GHz read from Fig. 4
+  inputs:
+  - alpha ~ 0.2 1/mm (p.11 Fig. 4)
+- device_id: zwickel2020-gate300
+  field: rf_loss_db_per_cm
+  value: 59
+  formula: 8.686 dB/Np x alpha[1/mm] x 10 mm/cm; alpha about 0.68 1/mm at 50 GHz read from Fig. 4
+  inputs:
+  - alpha ~ 0.68 1/mm (p.11 Fig. 4)
