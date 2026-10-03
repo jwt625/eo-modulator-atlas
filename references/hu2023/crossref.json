@@ -1,0 +1,722 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     21
+    ]
+   ],
+   "date-time": "2026-08-21T15:09:09Z",
+   "timestamp": 1787324949091,
+   "version": "build-2736575974"
+  },
+  "reference-count": 36,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       9,
+       23
+      ]
+     ],
+     "date-time": "2023-09-23T00:00:00Z",
+     "timestamp": 1695427200000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       9,
+       23
+      ]
+     ],
+     "date-time": "2023-09-23T00:00:00Z",
+     "timestamp": 1695427200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Commun Eng"
+  ],
+  "DOI": "10.1038/s44172-023-00115-x",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     9,
+     23
+    ]
+   ],
+   "date-time": "2023-09-23T03:02:02Z",
+   "timestamp": 1695438122000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 32,
+  "title": [
+   "300-Gbps optical interconnection using neural-network based silicon microring modulator"
+  ],
+  "prefix": "10.1038",
+  "volume": "2",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3859-1558",
+    "authenticated-orcid": false,
+    "given": "Fangchen",
+    "family": "Hu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuguang",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hongguang",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhongya",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sizhe",
+    "family": "Xing",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5478-3704",
+    "authenticated-orcid": false,
+    "given": "Jianyang",
+    "family": "Shi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-8041-1608",
+    "authenticated-orcid": false,
+    "given": "Junwen",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xi",
+    "family": "Xiao",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4966-3844",
+    "authenticated-orcid": false,
+    "given": "Nan",
+    "family": "Chi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhixue",
+    "family": "He",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shaohua",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2023,
+     9,
+     23
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "115_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "372",
+    "DOI": "10.1038/s41586-020-2685-y",
+    "volume": "585",
+    "author": "R Shnaiderman",
+    "year": "2020",
+    "unstructured": "Shnaiderman, R. et al. A submicrometre silicon-on-insulator resonator for ultrasound detection. Nature 585, 372\u2013378 (2020).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "115_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "671",
+    "DOI": "10.1038/nature05147",
+    "volume": "443",
+    "author": "T Aoki",
+    "year": "2006",
+    "unstructured": "Aoki, T. et al. Observation of strong coupling between one atom and a monolithic microresonator. Nature 443, 671\u2013674 (2006).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "115_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "457",
+    "DOI": "10.1038/s41586-022-04579-3",
+    "volume": "605",
+    "author": "H Shu",
+    "year": "2022",
+    "unstructured": "Shu, H. et al. Microcomb-driven silicon photonic systems. Nature 605, 457\u2013463 (2022).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "115_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "95",
+    "DOI": "10.1109/JSTQE.2013.2278885",
+    "volume": "19",
+    "author": "G Li",
+    "year": "2013",
+    "unstructured": "Li, G. et al. Ring resonator modulators in silicon for interchip photonic links. IEEE J. Sel. Top. Quantum Electron. 19, 95\u2013113 (2013).",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "115_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "194",
+    "DOI": "10.1109/JSTQE.2016.2582345",
+    "volume": "22",
+    "author": "AH Ahmed",
+    "year": "2016",
+    "unstructured": "Ahmed, A. H., Sharkia, A., Casper, B., Mirabbasi, S. & Shekhar, S. Silicon-photonics microring links for datacenters\u2014challenges and opportunities. IEEE J. Sel. Top. Quantum Electron. 22, 194\u2013203 (2016).",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "115_CR6",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Bahadori, M. & Bergman, K. Low-Power Optical Interconnects based on Resonant Silicon Photonic Devices: Recent Advances and Challenges. In Proceedings of the 2018 on Great Lakes Symposium on VLSI 305\u2013310 (Association for Computing Machinery, Chicago, IL, USA, 2018).",
+    "DOI": "10.1145/3194554.3194606"
+   },
+   {
+    "key": "115_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "518",
+    "DOI": "10.1038/nphoton.2010.179",
+    "volume": "4",
+    "author": "GT Reed",
+    "year": "2010",
+    "unstructured": "Reed, G. T., Mashanovich, G., Gardes, F. Y. & Thomson, D. J. Silicon optical modulators. Nat. Photonics 4, 518\u2013526 (2010).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "115_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "1127",
+    "DOI": "10.1364/PRJ.441791",
+    "volume": "10",
+    "author": "Y Zhang",
+    "year": "2022",
+    "unstructured": "Zhang, Y. et al. 240 Gb/s optical transmission based on an ultrafast silicon microring modulator. Photon. Res. 10, 1127\u20131133 (2022).",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "key": "115_CR9",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Sakib, M. et al. A 240 Gb/s PAM4 Silicon Micro-Ring Optical Modulator. In 2022 Optical Fiber Communications Conference and Exhibition (OFC). 01-03 (2022).",
+    "DOI": "10.1364/OFC.2022.M2D.4"
+   },
+   {
+    "key": "115_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "110",
+    "DOI": "10.1109/JLT.2018.2878327",
+    "volume": "37",
+    "author": "J Sun",
+    "year": "2019",
+    "unstructured": "Sun, J. et al. A 128 Gb/s PAM4 silicon microring modulator with integrated thermo-optic resonance tuning. J. Lightwave Technol. 37, 110\u2013115 (2019).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "115_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "25672",
+    "DOI": "10.1364/OE.461594",
+    "volume": "30",
+    "author": "J Liu",
+    "year": "2022",
+    "unstructured": "Liu, J. et al. Ultrahigh extinction ratio silicon micro-ring modulator by MDM resonance for high speed PAM-4 and PAM-8 signaling. Opt. Express 30, 25672\u201325684 (2022).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "115_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "24190",
+    "DOI": "10.1364/OE.26.024190",
+    "volume": "26",
+    "author": "PJ Winzer",
+    "year": "2018",
+    "unstructured": "Winzer, P. J., Neilson, D. T. & Chraplyvy, A. R. Fiber-optic transmission and networking: the previous 20 and the next 20 years [Invited]. Opt. Express 26, 24190\u201324239 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "115_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "4106",
+    "DOI": "10.1109/JLT.2018.2861710",
+    "volume": "36",
+    "author": "G Chen",
+    "year": "2018",
+    "unstructured": "Chen, G. et al. Machine learning adaptive receiver for PAM-4 modulated optical interconnection based on silicon microring modulator. J. Lightwave Technol. 36, 4106\u20134113 (2018).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "115_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "4943",
+    "DOI": "10.1109/JLT.2017.2766187",
+    "volume": "35",
+    "author": "TC Tzu",
+    "year": "2017",
+    "unstructured": "Tzu, T. C. et al. Equalization of PAM-4 signal generated by silicon microring modulator for 64-Gbit/s transmission. J. Lightwave Technol. 35, 4943\u20134948 (2017).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "115_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "9431",
+    "DOI": "10.1364/OE.14.009431",
+    "volume": "14",
+    "author": "Q Xu",
+    "year": "2006",
+    "unstructured": "Xu, Q., Schmidt, B., Shakya, J. & Lipson, M. Cascaded silicon micro-ring modulators for WDM optical interconnection. Opt. Express 14, 9431\u20139436 (2006).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "115_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "430",
+    "DOI": "10.1364/OE.15.000430",
+    "volume": "15",
+    "author": "Q Xu",
+    "year": "2007",
+    "unstructured": "Xu, Q., Manipatruni, S., Schmidt, B., Shakya, J. & Lipson, M. 12.5 Gbit/s carrier-injection-based silicon micro-ring silicon modulators. Opt. Express 15, 430\u2013436 (2007).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "115_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "131",
+    "DOI": "10.1109/JLT.2019.2938731",
+    "volume": "38",
+    "author": "H Li",
+    "year": "2020",
+    "unstructured": "Li, H. et al. A 112 Gb/s PAM4 silicon photonics transmitter with microring modulator and CMOS driver. J. Lightwave Technol. 38, 131\u2013138 (2020).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "115_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "A106",
+    "DOI": "10.1364/PRJ.456772",
+    "volume": "10",
+    "author": "Y Shi",
+    "year": "2022",
+    "unstructured": "Shi, Y. et al. Silicon photonics for high-capacity data communications. Photon. Res. 10, A106\u2013A134 (2022).",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "key": "115_CR19",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Seimetz, M. High-order modulation for optical fiber transmission. Vol. 143 (Springer, Berlin, 2009).",
+    "DOI": "10.1007/978-3-540-93771-5_6"
+   },
+   {
+    "key": "115_CR20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17516-7",
+    "volume": "11",
+    "author": "Q Fan",
+    "year": "2020",
+    "unstructured": "Fan, Q., Zhou, G., Gui, T., Lu, C. & Lau, A. P. T. Advancing theoretical understanding and practical performance of signal processing for nonlinear optical communications through machine learning. Nat. Commun. 11, 3694 (2020).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "115_CR21",
+    "doi-asserted-by": "publisher",
+    "first-page": "77",
+    "DOI": "10.1109/MWC.2019.1800447",
+    "volume": "26",
+    "author": "H He",
+    "year": "2019",
+    "unstructured": "He, H. et al. Model-driven deep learning for physical layer communications. IEEE Wirel. Commun. 26, 77\u201383 (2019).",
+    "journal-title": "IEEE Wirel. Commun."
+   },
+   {
+    "key": "115_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "eaay7120",
+    "DOI": "10.1126/scirobotics.aay7120",
+    "volume": "4",
+    "author": "D Gunning",
+    "year": "2019",
+    "unstructured": "Gunning, D. et al. XAI-Explainable artificial intelligence. Sci. Robot. 4, eaay7120 (2019).",
+    "journal-title": "Sci. Robot."
+   },
+   {
+    "key": "115_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "280",
+    "DOI": "10.1109/JSAC.2020.3036950",
+    "volume": "39",
+    "author": "C H\u00e4ger",
+    "year": "2021",
+    "unstructured": "H\u00e4ger, C. & Pfister, H. D. Physics-based deep learning for fiber-optic communication systems. IEEE J Sel Areas Commun. 39, 280\u2013294 (2021).",
+    "journal-title": "IEEE J Sel Areas Commun."
+   },
+   {
+    "key": "115_CR24",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Reed, G. T. & Knights, A. P. Silicon photonics: an introduction (John Wiley & Sons, Chichester, 2004).",
+    "DOI": "10.1002/0470014180"
+   },
+   {
+    "key": "115_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "660",
+    "DOI": "10.1364/OE.15.000660",
+    "volume": "15",
+    "author": "A Liu",
+    "year": "2007",
+    "unstructured": "Liu, A. et al. High-speed optical modulation based on carrier depletion in a silicon waveguide. Opt. Express 15, 660\u2013668 (2007).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "115_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "998",
+    "DOI": "10.1109/50.588673",
+    "volume": "15",
+    "author": "BE Little",
+    "year": "1997",
+    "unstructured": "Little, B. E., Chu, S. T., Haus, H. A., Foresi, J. & Laine, J. P. Microring resonator channel dropping filters. J. Lightwave Technol. 15, 998\u20131005 (1997).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "115_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "8762",
+    "DOI": "10.1364/OE.23.008762",
+    "volume": "23",
+    "author": "J Rhim",
+    "year": "2015",
+    "unstructured": "Rhim, J., Ban, Y., Yu, B.-M., Lee, J.-M. & Choi, W.-Y. Verilog-A behavioral model for resonance-modulated silicon micro-ring modulator. Opt. Express 23, 8762\u20138772 (2015).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "115_CR28",
+    "unstructured": "Campello, J. Practical bit loading for DMT. In 1999 IEEE International Conference on Communications (Cat. No. 99CH36311). 801\u2013805 vol. 802 (IEEE, 1999)."
+   },
+   {
+    "key": "115_CR29",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Levin, H. E. A complete and optimal data allocation method for practical discrete multitone systems. In GLOBECOM'01. IEEE Global Telecommunications Conference (Cat. No.01CH37270). 369\u2013374 vol. 361. (IEEE, 2001).",
+    "DOI": "10.1109/GLOCOM.2001.965141"
+   },
+   {
+    "key": "115_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "377",
+    "DOI": "10.1109/78.554302",
+    "volume": "45",
+    "author": "RD Nowak",
+    "year": "1997",
+    "unstructured": "Nowak, R. D. & Veen, B. D. V. Volterra filter equalization: a fixed point approach. IEEE Trans Signal Process 45, 377\u2013388 (1997).",
+    "journal-title": "IEEE Trans Signal Process"
+   },
+   {
+    "key": "115_CR31",
+    "doi-asserted-by": "publisher",
+    "first-page": "3",
+    "DOI": "10.1145/272991.272995",
+    "volume": "8",
+    "author": "M Matsumoto",
+    "year": "1998",
+    "unstructured": "Matsumoto, M. & Nishimura, T. Mersenne twister: a 623-dimensionally equidistributed uniform pseudo-random number generator. ACM Trans. Model. Comput. Simul. 8, 3\u201330 (1998).",
+    "journal-title": "ACM Trans. Model. Comput. Simul."
+   },
+   {
+    "key": "115_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "5",
+    "DOI": "10.1109/35.54342",
+    "volume": "28",
+    "author": "JAC Bingham",
+    "year": "1990",
+    "unstructured": "Bingham, J. A. C. Multicarrier modulation for data transmission: an idea whose time has come. IEEE Commun. Mag. 28, 5\u201314 (1990).",
+    "journal-title": "IEEE Commun. Mag."
+   },
+   {
+    "key": "115_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "1581",
+    "DOI": "10.1364/PRJ.424934",
+    "volume": "9",
+    "author": "F Hu",
+    "year": "2021",
+    "unstructured": "Hu, F. et al. Si-substrate LEDs with multiple superlattice interlayers for beyond 24 Gbps visible light communication. Photon. Res. 9, 1581\u20131591 (2021).",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "key": "115_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "857",
+    "DOI": "10.1109/JLT.2020.3009952",
+    "volume": "39",
+    "author": "J Zhou",
+    "year": "2021",
+    "unstructured": "Zhou, J., Wang, J., Zhu, L. & Zhang, Q. Silicon photonics for 100Gbaud. J. Lightwave Technol. 39, 857\u2013867 (2021).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "115_CR35",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Shafik, R. A., Rahman, M. S. & Islam, A. R. On the extended relationships among EVM, BER and SNR as performance metrics. In 2006 International Conference on Electrical and Computer Engineering. 408\u2013411 (IEEE, 2006).",
+    "DOI": "10.1109/ICECE.2006.355657"
+   },
+   {
+    "key": "115_CR36",
+    "unstructured": "Levin, H. E. & Gleason, J. P. Method for allocating data in a data communication system. US Patent No. 5,852,633., 22 Dec. (1998)."
+   }
+  ],
+  "container-title": [
+   "Communications Engineering"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s44172-023-00115-x.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s44172-023-00115-x",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s44172-023-00115-x.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     10,
+     28
+    ]
+   ],
+   "date-time": "2024-10-28T16:32:37Z",
+   "timestamp": 1730133157000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s44172-023-00115-x"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     9,
+     23
+    ]
+   ]
+  },
+  "references-count": 36,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2023,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "115"
+  ],
+  "URL": "https://doi.org/10.1038/s44172-023-00115-x",
+  "relation": {},
+  "ISSN": [
+   "2731-3395"
+  ],
+  "issn-type": [
+   {
+    "value": "2731-3395",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     9,
+     23
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "23 November 2022",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "6 September 2023",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "23 September 2023",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ],
+  "article-number": "67"
+ }
+}

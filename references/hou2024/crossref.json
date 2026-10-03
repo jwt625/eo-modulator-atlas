@@ -1,0 +1,542 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     4,
+     22
+    ]
+   ],
+   "date-time": "2026-04-22T07:10:32Z",
+   "timestamp": 1776841832201,
+   "version": "3.51.2"
+  },
+  "reference-count": 46,
+  "publisher": "Wiley",
+  "issue": "8",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       6,
+       22
+      ]
+     ],
+     "date-time": "2023-06-22T00:00:00Z",
+     "timestamp": 1687392000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://creativecommons.org/licenses/by/4.0/"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001843",
+    "name": "Science and Engineering Research Board",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "2020YFB1807300"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2020YFB1807300"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001843",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Advanced Photonics Research"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2023,
+     8
+    ]
+   ]
+  },
+  "DOI": "10.1002/adpr.202300169",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     24
+    ]
+   ],
+   "date-time": "2023-06-24T18:36:09Z",
+   "timestamp": 1687631769000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 12,
+  "title": [
+   "Improving Linewidth and Extinction Ratio Performances of Lithium Niobate Ring Modulator Using Ring\u2010Pair Structure"
+  ],
+  "prefix": "10.1002",
+  "volume": "4",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-0488-8142",
+    "authenticated-orcid": false,
+    "given": "Songyan",
+    "family": "Hou",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Guangzhou Institute of Technology Xidian University  Guangzhou 510555 China"
+     },
+     {
+      "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, Xidian University School of Microelectronics, Xidian University  Xi'an 710071 China"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Hao",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Radar Imaging and Microwave Photonics Ministry of Education College of Electronic and Information Engineering Nanjing University of Aeronautics and Astronautics  Nanjing 211106 China"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Weichuan",
+    "family": "Xing",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangzhou Institute of Technology Xidian University  Guangzhou 510555 China"
+     },
+     {
+      "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, Xidian University School of Microelectronics, Xidian University  Xi'an 710071 China"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Zhihong",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangzhou Institute of Technology Xidian University  Guangzhou 510555 China"
+     },
+     {
+      "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, Xidian University School of Microelectronics, Xidian University  Xi'an 710071 China"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Jincheng",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangzhou Institute of Technology Xidian University  Guangzhou 510555 China"
+     },
+     {
+      "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, Xidian University School of Microelectronics, Xidian University  Xi'an 710071 China"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Yue",
+    "family": "Hao",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangzhou Institute of Technology Xidian University  Guangzhou 510555 China"
+     },
+     {
+      "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, Xidian University School of Microelectronics, Xidian University  Xi'an 710071 China"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     22
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_9_2_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2010.179"
+   },
+   {
+    "key": "e_1_2_9_3_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2017.2647779"
+   },
+   {
+    "key": "e_1_2_9_4_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.411024"
+   },
+   {
+    "key": "e_1_2_9_5_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2011.121"
+   },
+   {
+    "key": "e_1_2_9_6_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-021-24809-y"
+   },
+   {
+    "key": "e_1_2_9_7_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.403931"
+   },
+   {
+    "key": "e_1_2_9_8_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.455198"
+   },
+   {
+    "key": "e_1_2_9_9_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.41.004739"
+   },
+   {
+    "key": "e_1_2_9_10_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2021.3066203"
+   },
+   {
+    "key": "e_1_2_9_11_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5087862"
+   },
+   {
+    "key": "e_1_2_9_12_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/2944.826874"
+   },
+   {
+    "key": "e_1_2_9_13_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202000088"
+   },
+   {
+    "key": "e_1_2_9_14_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0031-4"
+   },
+   {
+    "key": "e_1_2_9_15_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202200059"
+   },
+   {
+    "key": "e_1_2_9_16_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.1c00383"
+   },
+   {
+    "key": "e_1_2_9_17_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202100789"
+   },
+   {
+    "key": "e_1_2_9_18_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202208113"
+   },
+   {
+    "key": "e_1_2_9_19_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.201806452"
+   },
+   {
+    "key": "e_1_2_9_20_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adpr.202200216"
+   },
+   {
+    "key": "e_1_2_9_21_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adpr.202200050"
+   },
+   {
+    "key": "e_1_2_9_22_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.1c00935"
+   },
+   {
+    "key": "e_1_2_9_23_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "e_1_2_9_24_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-019-1008-7"
+   },
+   {
+    "key": "e_1_2_9_25_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0037771"
+   },
+   {
+    "key": "e_1_2_9_26_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202100529"
+   },
+   {
+    "key": "e_1_2_9_27_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.383450"
+   },
+   {
+    "key": "e_1_2_9_28_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.395305"
+   },
+   {
+    "key": "e_1_2_9_29_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/s11433-021-1854-2"
+   },
+   {
+    "key": "e_1_2_9_30_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17950-7"
+   },
+   {
+    "key": "e_1_2_9_31_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17806-0"
+   },
+   {
+    "key": "e_1_2_9_32_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.201100035"
+   },
+   {
+    "key": "e_1_2_9_33_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.201700256"
+   },
+   {
+    "key": "e_1_2_9_34_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adpr.202300045"
+   },
+   {
+    "key": "e_1_2_9_35_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adpr.202200233"
+   },
+   {
+    "key": "e_1_2_9_36_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adpr.202100262"
+   },
+   {
+    "key": "e_1_2_9_37_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0378-6"
+   },
+   {
+    "key": "e_1_2_9_38_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.14.009431"
+   },
+   {
+    "key": "e_1_2_9_39_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2021.3134221"
+   },
+   {
+    "key": "e_1_2_9_40_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-018-0275-4"
+   },
+   {
+    "key": "e_1_2_9_41_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.430438"
+   },
+   {
+    "key": "e_1_2_9_42_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.447695"
+   },
+   {
+    "key": "e_1_2_9_43_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.482635"
+   },
+   {
+    "key": "e_1_2_9_44_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-019-47231-3"
+   },
+   {
+    "key": "e_1_2_9_45_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.6.001455"
+   },
+   {
+    "key": "e_1_2_9_46_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.1.000112"
+   },
+   {
+    "key": "e_1_2_9_47_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.23.022746"
+   }
+  ],
+  "container-title": [
+   "Advanced Photonics Research"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adpr.202300169",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     6
+    ]
+   ],
+   "date-time": "2025-10-06T08:38:04Z",
+   "timestamp": 1759739884000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adpr.202300169"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     22
+    ]
+   ]
+  },
+  "references-count": 46,
+  "journal-issue": {
+   "issue": "8",
+   "published-print": {
+    "date-parts": [
+     [
+      2023,
+      8
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1002/adpr.202300169"
+  ],
+  "URL": "https://doi.org/10.1002/adpr.202300169",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "2699-9293",
+   "2699-9293"
+  ],
+  "issn-type": [
+   {
+    "value": "2699-9293",
+    "type": "print"
+   },
+   {
+    "value": "2699-9293",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     22
+    ]
+   ]
+  },
+  "article-number": "2300169"
+ }
+}

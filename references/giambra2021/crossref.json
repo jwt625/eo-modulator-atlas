@@ -1,0 +1,1752 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     30
+    ]
+   ],
+   "date-time": "2026-09-30T19:08:06Z",
+   "timestamp": 1790795286668,
+   "version": "4.1.0"
+  },
+  "reference-count": 125,
+  "publisher": "American Chemical Society (ACS)",
+  "issue": "2",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2021,
+       2,
+       1
+      ]
+     ],
+     "date-time": "2021-02-01T00:00:00Z",
+     "timestamp": 1612137600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100000266",
+    "name": "Engineering and Physical Sciences Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EP/K01711X/1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EP/K01711X/1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000266",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000266",
+    "name": "Engineering and Physical Sciences Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EP/K017144/1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EP/K017144/1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000266",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000266",
+    "name": "Engineering and Physical Sciences Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EP/L016087/1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EP/L016087/1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000266",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "HETERO2D",
+    "award": [
+     "319277"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "319277"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "GSYNCOR",
+    "award": [
+     "842251"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "842251"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "European Union Graphene Flagship"
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2021,
+     2,
+     23
+    ]
+   ]
+  },
+  "DOI": "10.1021/acsnano.0c09758",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2021,
+     2,
+     2
+    ]
+   ],
+   "date-time": "2021-02-02T14:34:04Z",
+   "timestamp": 1612276444000
+  },
+  "page": "3171-3187",
+  "source": "Crossref",
+  "is-referenced-by-count": 127,
+  "title": [
+   "Wafer-Scale Integration of Graphene-Based Photonic\nDevices"
+  ],
+  "prefix": "10.1021",
+  "volume": "15",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-1566-2395",
+    "authenticated-orcid": true,
+    "given": "Marco\nA.",
+    "family": "Giambra",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Photonic Networks and Technologies Lab, CNIT , Via G. Moruzzi 1 , ,",
+      "place": [
+       "Pisa, Italy, 56124"
+      ]
+     },
+     {
+      "name": "INPHOTEC , Via G. Moruzzi 1 , ,",
+      "place": [
+       "Pisa, Italy, 56124"
+      ]
+     },
+     {
+      "name": "Center for Nanotechnology Innovation @NEST - Istituto Italiano di Tecnologia , Piazza San Silvestro 12 , ,",
+      "place": [
+       "Pisa, Italy, I-56127"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6263-4250",
+    "authenticated-orcid": true,
+    "given": "Vaidotas",
+    "family": "Mis\u030ceikis",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Center for Nanotechnology Innovation @NEST - Istituto Italiano di Tecnologia , Piazza San Silvestro 12 , ,",
+      "place": [
+       "Pisa, Italy, I-56127"
+      ]
+     },
+     {
+      "name": "Graphene Labs, Istituto Italiano di Tecnologia , Via Morego 30 , ,",
+      "place": [
+       "Genova, Italy, 16163"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4289-907X",
+    "authenticated-orcid": true,
+    "given": "Sergio",
+    "family": "Pezzini",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Center for Nanotechnology Innovation @NEST - Istituto Italiano di Tecnologia , Piazza San Silvestro 12 , ,",
+      "place": [
+       "Pisa, Italy, I-56127"
+      ]
+     },
+     {
+      "name": "Graphene Labs, Istituto Italiano di Tecnologia , Via Morego 30 , ,",
+      "place": [
+       "Genova, Italy, 16163"
+      ]
+     },
+     {
+      "name": "NEST, Scuola Normale Superiore and Istituto Nanoscienze-CNR , Piazza San Silvestro 12 , ,",
+      "place": [
+       "Pisa, Italy, I-56127"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Simone",
+    "family": "Marconi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Scuola Superiore Sant\u2019Anna , , Via G. Moruzzi 1 , ,",
+      "place": [
+       "Pisa, Italy, 56124"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alberto",
+    "family": "Montanaro",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonic Networks and Technologies Lab, CNIT , Via G. Moruzzi 1 , ,",
+      "place": [
+       "Pisa, Italy, 56124"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1142-0441",
+    "authenticated-orcid": true,
+    "given": "Filippo",
+    "family": "Fabbri",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Center for Nanotechnology Innovation @NEST - Istituto Italiano di Tecnologia , Piazza San Silvestro 12 , ,",
+      "place": [
+       "Pisa, Italy, I-56127"
+      ]
+     },
+     {
+      "name": "Graphene Labs, Istituto Italiano di Tecnologia , Via Morego 30 , ,",
+      "place": [
+       "Genova, Italy, 16163"
+      ]
+     },
+     {
+      "name": "NEST, Scuola Normale Superiore and Istituto Nanoscienze-CNR , Piazza San Silvestro 12 , ,",
+      "place": [
+       "Pisa, Italy, I-56127"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Vito",
+    "family": "Sorianello",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonic Networks and Technologies Lab, CNIT , Via G. Moruzzi 1 , ,",
+      "place": [
+       "Pisa, Italy, 56124"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0907-9993",
+    "authenticated-orcid": true,
+    "given": "Andrea C.",
+    "family": "Ferrari",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Cambridge University , , 9 J.J. Thompson , ,",
+      "place": [
+       "Cambridge, U.K."
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8134-7633",
+    "authenticated-orcid": true,
+    "given": "Camilla",
+    "family": "Coletti",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Center for Nanotechnology Innovation @NEST - Istituto Italiano di Tecnologia , Piazza San Silvestro 12 , ,",
+      "place": [
+       "Pisa, Italy, I-56127"
+      ]
+     },
+     {
+      "name": "Graphene Labs, Istituto Italiano di Tecnologia , Via Morego 30 , ,",
+      "place": [
+       "Genova, Italy, 16163"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Marco",
+    "family": "Romagnoli",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonic Networks and Technologies Lab, CNIT , Via G. Moruzzi 1 , ,",
+      "place": [
+       "Pisa, Italy, 56124"
+      ]
+     },
+     {
+      "name": "INPHOTEC , Via G. Moruzzi 1 , ,",
+      "place": [
+       "Pisa, Italy, 56124"
+      ]
+     },
+     {
+      "name": "CamGraPhiC , Via Moruzzi 1 , ,",
+      "place": [
+       "Pisa, Italy, 56124"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "316",
+  "published-online": {
+   "date-parts": [
+    [
+     2021,
+     2,
+     1
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "2026081810212837600_cit1",
+    "doi-asserted-by": "publisher",
+    "first-page": "611",
+    "DOI": "10.1038/nphoton.2010.186",
+    "article-title": "Graphene Photonics and Optoelectronics",
+    "volume": "4",
+    "author": "Bonaccorso",
+    "year": "2010",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2026081810212837600_cit2",
+    "doi-asserted-by": "publisher",
+    "first-page": "392",
+    "DOI": "10.1038/s41578-018-0040-9",
+    "article-title": "Graphene-Based Integrated Photonics\nfor Next-Generation\nDatacom and Telecom",
+    "volume": "3",
+    "author": "Romagnoli",
+    "year": "2018",
+    "journal-title": "Nat. Rev. Mater."
+   },
+   {
+    "key": "2026081810212837600_cit3",
+    "doi-asserted-by": "publisher",
+    "first-page": "780",
+    "DOI": "10.1038/nnano.2014.215",
+    "article-title": "Photodetectors Based\non Graphene, Other Two-Dimensional\nMaterials and Hybrid Systems",
+    "volume": "9",
+    "author": "Koppens",
+    "year": "2014",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2026081810212837600_cit4",
+    "doi-asserted-by": "publisher",
+    "first-page": "4598",
+    "DOI": "10.1039/C4NR01600A",
+    "article-title": "Science and Technology\nRoadmap for Graphene,\nRelated Two-Dimensional Crystals, and Hybrid Systems",
+    "volume": "7",
+    "author": "Ferrari",
+    "year": "2015",
+    "journal-title": "Nanoscale"
+   },
+   {
+    "key": "2026081810212837600_cit5",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Romagnoli, M.\n          \n          Graphene Photonics\nfor Optical Communications. In Optical Fiber\nCommunication Conference (OFC); OSA: Washington, DC, 2019; p M3D.3.",
+    "DOI": "10.1364/OFC.2019.M3D.3"
+   },
+   {
+    "key": "2026081810212837600_cit6",
+    "doi-asserted-by": "crossref",
+    "first-page": "1",
+    "DOI": "10.1117/12.2509232",
+    "article-title": "Graphene Photonics\nfor Optical Communications",
+    "volume-title": "Broadband Access\nCommunication Technologies XIII",
+    "author": "Romagnoli",
+    "year": "2019"
+   },
+   {
+    "key": "2026081810212837600_cit7",
+    "unstructured": "Cisco\n          . Cisco Annual Internet Report (2018\u20132023). https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.pdf (accessed 2020-03-09)."
+   },
+   {
+    "key": "2026081810212837600_cit8",
+    "unstructured": "Evans, D.\n          \n          The Internet of\nThings How the Next Evolution of the Internet Is Changing Everything. https://www.cisco.com/c/dam/en_us/about/ac79/docs/innov/IoT_IBSG_0411FINAL.pdf (accessed 2011-04)."
+   },
+   {
+    "key": "2026081810212837600_cit9",
+    "unstructured": "International Telecommunication\nUnion\n          . Definitions of World\nTelecommunication/Ict Indicators. https://www.itu.int/ITU-D/ict/material/TelecomICT_Indicators_Definition_March2010_for_web.pdf (accessed 2010-03)."
+   },
+   {
+    "key": "2026081810212837600_cit10",
+    "unstructured": "Next Generation Mobile Networks\nAlliance\n          . Next Generation Mobile\n5G White Paper. https://www.ngmn.org/wp-content/uploads/NGMN_5G_White_Paper_V1_0.pdf (accessed 2015-02-17)."
+   },
+   {
+    "key": "2026081810212837600_cit11",
+    "unstructured": "Ericsson Mobility\nReport. Available at: https://www.ericsson.com/49da93/assets/local/mobility-report/documents/2020/june2020-ericsson-mobility-report.pdf (accessed 2020-03)."
+   },
+   {
+    "key": "2026081810212837600_cit12",
+    "unstructured": "How the Internet\nCan Cope with the Explosion of Demand for \u201cRight\nNow\u201d Data during the Coronavirus Outbreak\n          https://spectrum.ieee.org/tech-talk/telecom/internet/everyone-staying-home-because-of-covid19-is-targeting-the-internets-biggest-weak-spot (accessed 2020-03-23)."
+   },
+   {
+    "key": "2026081810212837600_cit13",
+    "doi-asserted-by": "crossref",
+    "unstructured": "2020\n          Ethernet Roadmap\n          https://ethernetalliance.org/technology/2020-roadmap/ (accessed 2020-02-14).",
+    "DOI": "10.1016/S1464-2859(20)30420-X"
+   },
+   {
+    "key": "2026081810212837600_cit14",
+    "doi-asserted-by": "publisher",
+    "first-page": "3",
+    "DOI": "10.3389/fphy.2015.00037",
+    "article-title": "Silicon\nPhotonic Integration in Telecommunications",
+    "volume": "3",
+    "author": "Doerr",
+    "year": "2015",
+    "journal-title": "Front. Phys."
+   },
+   {
+    "key": "2026081810212837600_cit15",
+    "doi-asserted-by": "publisher",
+    "first-page": "201",
+    "DOI": "10.1364/PRJ.7.000201",
+    "article-title": "Coupling Strategies for Silicon Photonics\nIntegrated\nChips",
+    "volume": "7",
+    "author": "Marchetti",
+    "year": "2019",
+    "journal-title": "Photonics Res."
+   },
+   {
+    "key": "2026081810212837600_cit16",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Selvaraja, S. K.; De Heyn, P.; Winroth, G.; Ong, P.; Lepage, G.; Cailler, C.; Rigny, A.; Bourdelle, K. K.; Bogaerts, W.; Van Thourhout, D.; Van Campenhout, J.; Absil, P.\n          Highly Uniform and Low-Loss Passive\nSilicon Photonics Devices Using a 300mm CMOS Platform. In Optical Fiber Communication Conference; OSA: Washington, DC, 2014; p Th2A.33.",
+    "DOI": "10.1364/OFC.2014.Th2A.33"
+   },
+   {
+    "key": "2026081810212837600_cit17",
+    "unstructured": "Yariv, A.; Yeh, P.\n          Photonics: Optical\nElectronics in Modern Communications; Oxford\nseries in electrical and computer engineering; Oxford University Press: New York, 2007."
+   },
+   {
+    "key": "2026081810212837600_cit18",
+    "unstructured": "PSM4MSAGroup\n          . 100G PSM4MSA Specification. http://psm4.org/100G-PSM4-Specification-2.0.pdf (accessed 2014-09-15)."
+   },
+   {
+    "key": "2026081810212837600_cit19",
+    "unstructured": "Petrilla, J.; Cole, C.; King, J.; Lewis, D.; Hiramoto, K.; Tsumura, E.\n          100G CWDM4MSA Specifications. http://www.cwdm4-msa.org/files/CWDM4_MSA_Technical_Spec_1p0.pdf (accessed 2014-08-27)."
+   },
+   {
+    "key": "2026081810212837600_cit20",
+    "doi-asserted-by": "publisher",
+    "first-page": "1166",
+    "DOI": "10.1109/JPROC.2009.2014298",
+    "article-title": "Device Requirements\nfor Optical Interconnects to Silicon Chips",
+    "volume": "97",
+    "author": "Miller",
+    "year": "2009",
+    "journal-title": "Proc. IEEE"
+   },
+   {
+    "key": "2026081810212837600_cit21",
+    "doi-asserted-by": "publisher",
+    "first-page": "1272",
+    "DOI": "10.1587/transcom.E97.B.1272",
+    "article-title": "The\nRole of Photonics in Future Computing and Data Centers",
+    "volume": "E97.B",
+    "author": "Yoo",
+    "year": "2014",
+    "journal-title": "IEICE Trans. Commun."
+   },
+   {
+    "key": "2026081810212837600_cit22",
+    "volume-title": "Optical Interconnects\nfor Data Centers",
+    "author": "Tekin",
+    "year": "2016"
+   },
+   {
+    "key": "2026081810212837600_cit23",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1007/978-1-4419-9106-5",
+    "volume-title": "Silicon-on-Insulator\nTechnology: Materials to VLSI",
+    "author": "Colinge",
+    "year": "2004"
+   },
+   {
+    "key": "2026081810212837600_cit24",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1364/OFC.2015.Th4E.3",
+    "article-title": "Low Loss InP C-Band\nIQ Modulator with 40 GHz Bandwidth and 1.5V V\u03c0",
+    "author": "Letal",
+    "year": "2015",
+    "journal-title": "In 2015 Optical Fiber Communications Conference and Exhibition\n(OFC)"
+   },
+   {
+    "key": "2026081810212837600_cit25",
+    "doi-asserted-by": "publisher",
+    "first-page": "2291",
+    "DOI": "10.1109/JPROC.2018.2866391",
+    "article-title": "Silicon Photonics in\nOptical Coherent Systems",
+    "volume": "106",
+    "author": "Doerr",
+    "year": "2018",
+    "journal-title": "Proc. IEEE"
+   },
+   {
+    "key": "2026081810212837600_cit26",
+    "doi-asserted-by": "publisher",
+    "first-page": "2158",
+    "DOI": "10.1109/JPROC.2018.2877636",
+    "article-title": "High-Speed\nSilicon Photonics Modulators",
+    "volume": "106",
+    "author": "Witzens",
+    "year": "2018",
+    "journal-title": "Proc. IEEE"
+   },
+   {
+    "key": "2026081810212837600_cit27",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1049/PBTE060E",
+    "volume-title": "Understanding Telecommunications\nBusiness; Telecommunications",
+    "author": "Valdar",
+    "year": "2015"
+   },
+   {
+    "key": "2026081810212837600_cit28",
+    "doi-asserted-by": "publisher",
+    "first-page": "125",
+    "DOI": "10.1109/LPT.2019.2960238",
+    "article-title": "An Experimental\nDemonstration of 160-Gbit/s PAM-4 Using a Silicon Micro-Ring Modulator",
+    "volume": "32",
+    "author": "Tong",
+    "year": "2020",
+    "journal-title": "IEEE Photonics Technol. Lett."
+   },
+   {
+    "key": "2026081810212837600_cit29",
+    "doi-asserted-by": "publisher",
+    "first-page": "90",
+    "DOI": "10.1109/JLT.2017.2775630",
+    "article-title": "Real-Time\n100 Gb/s NRZ and EDB Transmission with a GeSi Electroabsorption Modulator\nfor Short-Reach Optical Interconnects",
+    "volume": "36",
+    "author": "Verbist",
+    "year": "2018",
+    "journal-title": "J. Lightwave\nTechnol."
+   },
+   {
+    "key": "2026081810212837600_cit30",
+    "doi-asserted-by": "publisher",
+    "first-page": "119",
+    "DOI": "10.2528/PIER19102405",
+    "article-title": "Modulation on Silicon for Datacom: Past, Present, And Future (Invited\nReview)",
+    "volume": "166",
+    "author": "Wang",
+    "year": "2019",
+    "journal-title": "Prog. Electromagn. Res."
+   },
+   {
+    "key": "2026081810212837600_cit31",
+    "doi-asserted-by": "publisher",
+    "first-page": "050901",
+    "DOI": "10.1063/1.5087862",
+    "article-title": "Past, Present, and Future of InP-Based\nPhotonic Integration",
+    "volume": "4",
+    "author": "Smit",
+    "year": "2019",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "2026081810212837600_cit32",
+    "unstructured": "Yole Developpement. Silicon Photonics and\nPhotonic Integrated Circuits\n2019 by Yole Developpement. https://www.slideshare.net/Yole_Developpement/silicon-photonics-and-photonic-integrated-circuits-2019-by-yole-dveloppement (accessed 2019-04-25)."
+   },
+   {
+    "key": "2026081810212837600_cit33",
+    "unstructured": "Comparison\nbetween InP and Silicon Photonics. https://www.phiconference.com/market/comparison-between-inp-and-silicon-photonics/ (accessed 2015-06-17)."
+   },
+   {
+    "key": "2026081810212837600_cit34",
+    "doi-asserted-by": "publisher",
+    "first-page": "6478",
+    "DOI": "10.1364/OE.23.006478",
+    "article-title": "Design Optimization of Single and\nDouble Layer Graphene Phase Modulators in SOI",
+    "volume": "23",
+    "author": "Sorianello",
+    "year": "2015",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026081810212837600_cit35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.1500222",
+    "article-title": "Ultrahigh-Mobility\nGraphene Devices\nfrom Chemical Vapor Deposition on Reusable Copper",
+    "volume": "1",
+    "author": "Banszerus",
+    "year": "2015",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "2026081810212837600_cit36",
+    "doi-asserted-by": "publisher",
+    "first-page": "5387",
+    "DOI": "10.1038/s41467-018-07558-3",
+    "article-title": "Cleaning Interfaces in Layered Materials Heterostructures",
+    "volume": "9",
+    "author": "Purdie",
+    "year": "2018",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026081810212837600_cit37",
+    "doi-asserted-by": "publisher",
+    "first-page": "8926",
+    "DOI": "10.1021/acsnano.9b02621",
+    "article-title": "High-Mobility, Wet-Transferred\nGraphene Grown by Chemical Vapor Deposition",
+    "volume": "13",
+    "author": "De\nFazio",
+    "year": "2019",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "2026081810212837600_cit38",
+    "doi-asserted-by": "publisher",
+    "first-page": "041003",
+    "DOI": "10.1088/2053-1583/aba645",
+    "article-title": "High-Quality Electrical Transport\nUsing Scalable CVD Graphene",
+    "volume": "7",
+    "author": "Pezzini",
+    "year": "2020",
+    "journal-title": "2D Mater."
+   },
+   {
+    "key": "2026081810212837600_cit39",
+    "article-title": "Extraordinary\nHigh Room-Temperature\nCarrier Mobility in Graphene-WSe$_2$ Heterostructures",
+    "volume-title": "arXiv:1909.09523",
+    "author": "Banszerus"
+   },
+   {
+    "key": "2026081810212837600_cit40",
+    "doi-asserted-by": "publisher",
+    "first-page": "1387",
+    "DOI": "10.1021/acs.nanolett.5b04840",
+    "article-title": "Ballistic Transport\nExceeding 28 Mm in CVD Grown Graphene",
+    "volume": "16",
+    "author": "Banszerus",
+    "year": "2016",
+    "journal-title": "Nano\nLett."
+   },
+   {
+    "key": "2026081810212837600_cit41",
+    "doi-asserted-by": "publisher",
+    "first-page": "666",
+    "DOI": "10.1126/science.1102896",
+    "article-title": "Electric Field Effect\nin Atomically Thin Carbon Films",
+    "volume": "306",
+    "author": "Novoselov",
+    "year": "2004",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026081810212837600_cit42",
+    "doi-asserted-by": "publisher",
+    "first-page": "206",
+    "DOI": "10.1126/science.1152793",
+    "article-title": "Gate-Variable\nOptical Transitions\nin Graphene",
+    "volume": "320",
+    "author": "Wang",
+    "year": "2008",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026081810212837600_cit43",
+    "doi-asserted-by": "publisher",
+    "first-page": "085432",
+    "DOI": "10.1103/PhysRevB.78.085432",
+    "article-title": "Optical\nConductivity of Graphene\nin the Visible Region of the Spectrum",
+    "volume": "78",
+    "author": "Stauber",
+    "year": "2008",
+    "journal-title": "Phys.\nRev. B: Condens. Matter Mater. Phys."
+   },
+   {
+    "key": "2026081810212837600_cit44",
+    "doi-asserted-by": "publisher",
+    "first-page": "111110",
+    "DOI": "10.1063/1.4752435",
+    "article-title": "Optical Absorption\nin Graphene Integrated on Silicon Waveguides",
+    "volume": "101",
+    "author": "Li",
+    "year": "2012",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026081810212837600_cit45",
+    "doi-asserted-by": "publisher",
+    "first-page": "1482",
+    "DOI": "10.1021/nl204202k",
+    "article-title": "Double-Layer\nGraphene Optical Modulator",
+    "volume": "12",
+    "author": "Liu",
+    "year": "2012",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit46",
+    "doi-asserted-by": "publisher",
+    "first-page": "64",
+    "DOI": "10.1038/nature10067",
+    "article-title": "A Graphene-Based Broadband Optical\nModulator",
+    "volume": "474",
+    "author": "Liu",
+    "year": "2011",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2026081810212837600_cit47",
+    "doi-asserted-by": "publisher",
+    "first-page": "20145",
+    "DOI": "10.1364/OE.27.020145",
+    "article-title": "High-Speed\nDouble Layer Graphene Electro-Absorption Modulator on SOI Waveguide",
+    "volume": "27",
+    "author": "Giambra",
+    "year": "2019",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026081810212837600_cit48",
+    "doi-asserted-by": "publisher",
+    "first-page": "A34",
+    "DOI": "10.1364/PRJ.2.000A34",
+    "article-title": "Graphene-Based Optical Phase Modulation of Waveguide\nTransverse Electric Modes",
+    "volume": "2",
+    "author": "Midrio",
+    "year": "2014",
+    "journal-title": "Photonics Res."
+   },
+   {
+    "key": "2026081810212837600_cit49",
+    "doi-asserted-by": "publisher",
+    "first-page": "40",
+    "DOI": "10.1038/s41566-017-0071-6",
+    "article-title": "Graphene-Silicon\nPhase Modulators\nwith Gigahertz Bandwidth",
+    "volume": "12",
+    "author": "Sorianello",
+    "year": "2018",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2026081810212837600_cit50",
+    "doi-asserted-by": "publisher",
+    "first-page": "762",
+    "DOI": "10.1364/PRJ.5.000762",
+    "article-title": "Capacitive Actuation and Switching\nof Add-Drop Graphene-Silicon\nMicro-Ring Filters",
+    "volume": "5",
+    "author": "Cassese",
+    "year": "2017",
+    "journal-title": "Photonics Res."
+   },
+   {
+    "key": "2026081810212837600_cit51",
+    "doi-asserted-by": "publisher",
+    "first-page": "4688",
+    "DOI": "10.1021/nl202318u",
+    "article-title": "Hot\nCarrier Transport and Photocurrent Response in Graphene",
+    "volume": "11",
+    "author": "Song",
+    "year": "2011",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit52",
+    "doi-asserted-by": "publisher",
+    "first-page": "7632",
+    "DOI": "10.1021/acs.nanolett.9b02238",
+    "article-title": "Waveguide-Integrated,\nPlasmonic Enhanced Graphene Photodetectors",
+    "volume": "19",
+    "author": "Muench",
+    "year": "2019",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit53",
+    "doi-asserted-by": "publisher",
+    "first-page": "7288",
+    "DOI": "10.1021/acs.nanolett.5b02368",
+    "article-title": "High-Responsivity Graphene-Boron Nitride Photodetector\nand Autocorrelator in a Silicon Photonic Integrated Circuit",
+    "volume": "15",
+    "author": "Shiue",
+    "year": "2015",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit54",
+    "doi-asserted-by": "publisher",
+    "first-page": "11190",
+    "DOI": "10.1021/acsnano.0c02738",
+    "article-title": "Ultrafast, Zero-Bias, Graphene Photodetectors\nwith Polymeric Gate Dielectric on Passive Photonic Waveguides",
+    "volume": "14",
+    "author": "Mis\u030ceikis",
+    "year": "2020",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "2026081810212837600_cit55",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1038/s41467-021-21137-z",
+    "article-title": "Photo Thermal Effect Graphene Detector\nFeaturing 105 Gbit S-1 NRZ and 120 Gbit s-1 PAM4 Direct Detection",
+    "volume-title": "arXiv:2006.01481",
+    "author": "Marconi"
+   },
+   {
+    "key": "2026081810212837600_cit56",
+    "doi-asserted-by": "publisher",
+    "first-page": "511",
+    "DOI": "10.1038/nphoton.2015.122",
+    "article-title": "Graphene Electro-Optic\nModulator with 30 GHz Bandwidth",
+    "volume": "9",
+    "author": "Phare",
+    "year": "2015",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2026081810212837600_cit57",
+    "doi-asserted-by": "publisher",
+    "first-page": "4600",
+    "DOI": "10.1109/JLT.2006.885782",
+    "article-title": "Silicon Photonics",
+    "volume": "24",
+    "author": "Jalali",
+    "year": "2006",
+    "journal-title": "J. Lightwave\nTechnol."
+   },
+   {
+    "key": "2026081810212837600_cit58",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1201/9781315157009",
+    "volume-title": "Handbook of Optoelectronics",
+    "author": "Dakin",
+    "year": "2017"
+   },
+   {
+    "key": "2026081810212837600_cit59",
+    "volume-title": "Lightwave Technology:\nComponents and Devices",
+    "author": "Agrawal",
+    "year": "2004"
+   },
+   {
+    "key": "2026081810212837600_cit60",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1017/CBO9781316084168",
+    "volume-title": "Silicon Photonics\nDesign: From Devices to Systems",
+    "author": "Chrostowski",
+    "year": "2015"
+   },
+   {
+    "key": "2026081810212837600_cit61",
+    "doi-asserted-by": "publisher",
+    "first-page": "561",
+    "DOI": "10.1063/1.555624",
+    "article-title": "Refractive\nIndex of Silicon and Germanium and Its Wavelength and Temperature\nDerivatives",
+    "volume": "9",
+    "author": "Li",
+    "year": "1980",
+    "journal-title": "J. Phys. Chem. Ref. Data"
+   },
+   {
+    "key": "2026081810212837600_cit62",
+    "unstructured": "Horizon 2020 - Work Programme 2016 - 2017. https://ec.europa.eu/research/participants/data/ref/h2020/other/wp/2016-2017/annexes/h2020-wp1617-annex-ga_en.pdf (accessed 2017-04-24)."
+   },
+   {
+    "key": "2026081810212837600_cit63",
+    "doi-asserted-by": "publisher",
+    "first-page": "2751",
+    "DOI": "10.1021/nl204481s",
+    "article-title": "Chemical Vapor Deposition-Derived\nGraphene with Electrical Performance\nof Exfoliated Graphene",
+    "volume": "12",
+    "author": "Petrone",
+    "year": "2012",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit64",
+    "doi-asserted-by": "publisher",
+    "first-page": "2057",
+    "DOI": "10.1039/C5CS00542F",
+    "article-title": "Direct Preparation\nof High Quality Graphene on Dielectric\nSubstrates",
+    "volume": "45",
+    "author": "Chen",
+    "year": "2016",
+    "journal-title": "Chem. Soc. Rev."
+   },
+   {
+    "key": "2026081810212837600_cit65",
+    "doi-asserted-by": "publisher",
+    "first-page": "1904906",
+    "DOI": "10.1002/smll.201904906",
+    "article-title": "Wafer-Scale Synthesis\nof Graphene\non Sapphire: Toward Fab-Compatible Graphene",
+    "volume": "15",
+    "author": "Mishra",
+    "year": "2019",
+    "journal-title": "Small"
+   },
+   {
+    "key": "2026081810212837600_cit66",
+    "doi-asserted-by": "publisher",
+    "first-page": "286",
+    "DOI": "10.1126/science.1252268",
+    "article-title": "Wafer-Scale Growth\nof Single-Crystal Monolayer Graphene on Reusable\nHydrogen-Terminated Germanium",
+    "volume": "344",
+    "author": "Lee",
+    "year": "2014",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026081810212837600_cit67",
+    "doi-asserted-by": "publisher",
+    "first-page": "33786",
+    "DOI": "10.1021/acsami.6b11397",
+    "article-title": "Metal-Free CVD Graphene Synthesis\non 200 mm Ge/Si(001) Substrates",
+    "volume": "8",
+    "author": "Lukosius",
+    "year": "2016",
+    "journal-title": "ACS Appl. Mater.\nInterfaces"
+   },
+   {
+    "key": "2026081810212837600_cit68",
+    "doi-asserted-by": "publisher",
+    "first-page": "33083",
+    "DOI": "10.1021/acsami.6b11701",
+    "article-title": "Investigating the CVD Synthesis of\nGraphene on Ge(100): Toward Layer-by-Layer Growth",
+    "volume": "8",
+    "author": "Scaparro",
+    "year": "2016",
+    "journal-title": "ACS Appl. Mater. Interfaces"
+   },
+   {
+    "key": "2026081810212837600_cit69",
+    "doi-asserted-by": "publisher",
+    "first-page": "1312",
+    "DOI": "10.1126/science.1171245",
+    "article-title": "Large-Area Synthesis\nof High-Quality and Uniform Graphene Films on Copper Foils",
+    "volume": "324",
+    "author": "Li",
+    "year": "2009",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026081810212837600_cit70",
+    "doi-asserted-by": "publisher",
+    "first-page": "564",
+    "DOI": "10.1016/S1369-7021(13)70014-2",
+    "article-title": "Production and Processing of Graphene and 2D Crystals",
+    "volume": "15",
+    "author": "Bonaccorso",
+    "year": "2012",
+    "journal-title": "Mater. Today"
+   },
+   {
+    "key": "2026081810212837600_cit71",
+    "doi-asserted-by": "publisher",
+    "first-page": "022001",
+    "DOI": "10.1088/2053-1583/ab1e0a",
+    "article-title": "Production and Processing of Graphene and Related\nMaterials",
+    "volume": "7",
+    "author": "Backes",
+    "year": "2020",
+    "journal-title": "2D Mater."
+   },
+   {
+    "key": "2026081810212837600_cit72",
+    "doi-asserted-by": "publisher",
+    "first-page": "30",
+    "DOI": "10.1021/nl801827v",
+    "article-title": "Large Area, Few-Layer\nGraphene Films\non Arbitrary Substrates by Chemical Vapor Deposition",
+    "volume": "9",
+    "author": "Reina",
+    "year": "2009",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit73",
+    "doi-asserted-by": "publisher",
+    "first-page": "9927",
+    "DOI": "10.1021/nn203700w",
+    "article-title": "Electrochemical Delamination of CVD-Grown\nGraphene Film: Toward the Recyclable Use of Copper Catalyst",
+    "volume": "5",
+    "author": "Wang",
+    "year": "2011",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "2026081810212837600_cit74",
+    "doi-asserted-by": "publisher",
+    "first-page": "699",
+    "DOI": "10.1038/ncomms1702",
+    "article-title": "Repeated Growth and Bubbling Transfer of Graphene with\nMillimetre-Size Single-Crystal Grains Using Platinum",
+    "volume": "3",
+    "author": "Gao",
+    "year": "2012",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026081810212837600_cit75",
+    "doi-asserted-by": "publisher",
+    "first-page": "33072",
+    "DOI": "10.1021/acsami.6b11685",
+    "article-title": "Catalyst Interface\nEngineering for Improved 2D Film Lift-Off and Transfer",
+    "volume": "8",
+    "author": "Wang",
+    "year": "2016",
+    "journal-title": "ACS Appl. Mater. Interfaces"
+   },
+   {
+    "key": "2026081810212837600_cit76",
+    "doi-asserted-by": "publisher",
+    "first-page": "021004",
+    "DOI": "10.1088/2053-1583/aa5481",
+    "article-title": "Deterministic Patterned Growth of\nHigh-Mobility Large-Crystal Graphene: A Path towards Wafer Scale Integration",
+    "volume": "4",
+    "author": "Miseikis",
+    "year": "2017",
+    "journal-title": "2D Mater."
+   },
+   {
+    "key": "2026081810212837600_cit77",
+    "doi-asserted-by": "publisher",
+    "first-page": "031009",
+    "DOI": "10.1088/2053-1583/ab89e5",
+    "article-title": "Excellent Electronic Transport in Heterostructures\nof Graphene and Monoisotopic Boron-Nitride Grown at Atmospheric Pressure",
+    "volume": "7",
+    "author": "Sonntag",
+    "year": "2020",
+    "journal-title": "2D Mater."
+   },
+   {
+    "key": "2026081810212837600_cit78",
+    "doi-asserted-by": "publisher",
+    "first-page": "2328",
+    "DOI": "10.1021/acs.chemmater.8b04196",
+    "article-title": "Do-It-Yourself Transfer of Large-Area\nGraphene Using an Office Laminator and Water",
+    "volume": "31",
+    "author": "Shivayogimath",
+    "year": "2019",
+    "journal-title": "Chem. Mater."
+   },
+   {
+    "key": "2026081810212837600_cit79",
+    "doi-asserted-by": "publisher",
+    "first-page": "014006",
+    "DOI": "10.1088/2053-1583/2/1/014006",
+    "article-title": "Rapid CVD Growth of Millimetre-Sized\nSingle Crystal Graphene Using a Cold-Wall Reactor",
+    "volume": "2",
+    "author": "Miseikis",
+    "year": "2015",
+    "journal-title": "2D Mater."
+   },
+   {
+    "key": "2026081810212837600_cit80",
+    "doi-asserted-by": "publisher",
+    "first-page": "3444",
+    "DOI": "10.1038/s41467-018-05846-6",
+    "article-title": "Nanophotonic Pockels Modulators on\na Silicon Nitride Platform",
+    "volume": "9",
+    "author": "Alexander",
+    "year": "2018",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026081810212837600_cit81",
+    "doi-asserted-by": "publisher",
+    "first-page": "053033",
+    "DOI": "10.1088/1367-2630/aabec7",
+    "article-title": "Theory of High-Order Harmonic Generation\nfor Gapless Graphene",
+    "volume": "20",
+    "author": "Zurro\u0301n",
+    "year": "2018",
+    "journal-title": "New J. Phys."
+   },
+   {
+    "key": "2026081810212837600_cit82",
+    "doi-asserted-by": "publisher",
+    "first-page": "15292",
+    "DOI": "10.1364/OE.22.015292",
+    "article-title": "Graphene Based Low\nInsertion Loss Electro-Absorption Modulator on\nSOI Waveguide",
+    "volume": "22",
+    "author": "Mohsin",
+    "year": "2014",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026081810212837600_cit83",
+    "doi-asserted-by": "publisher",
+    "first-page": "720",
+    "DOI": "10.1126/science.1243879",
+    "article-title": "The Role of Surface Oxygen in the\nGrowth of Large Single-Crystal Graphene on Copper",
+    "volume": "342",
+    "author": "Hao",
+    "year": "2013",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026081810212837600_cit84",
+    "doi-asserted-by": "publisher",
+    "first-page": "3531",
+    "DOI": "10.1002/adma.201101570",
+    "article-title": "Inking Elastomeric\nStamps with Micro-Patterned, Single Layer Graphene to Create High-Performance\nOFETs",
+    "volume": "23",
+    "author": "Kang",
+    "year": "2011",
+    "journal-title": "Adv. Mater."
+   },
+   {
+    "key": "2026081810212837600_cit85",
+    "unstructured": "SYLGARDTM 184 Silicone Elastomer\nKit Technical Data Sheet. https://www.dow.com/en-us/document-viewer.html?ramdomVar=577327118110380375&docPath=/content/dam/dcc/documents/en-us/productdatasheet/11/11-31/11-3184-sylgard-184-elastomer.pdf (accessed 2019-05-18)."
+   },
+   {
+    "key": "2026081810212837600_cit86",
+    "unstructured": "Polymer Properties\nDatabase\n          http://polymerdatabase.com/polymerphysics/PolymerTgC.html."
+   },
+   {
+    "key": "2026081810212837600_cit87",
+    "doi-asserted-by": "publisher",
+    "first-page": "190",
+    "DOI": "10.1038/nature12763",
+    "article-title": "Face-to-Face Transfer of Wafer-Scale Graphene Films",
+    "volume": "505",
+    "author": "Gao",
+    "year": "2014",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2026081810212837600_cit88",
+    "doi-asserted-by": "publisher",
+    "first-page": "035004",
+    "DOI": "10.1088/2053-1583/aa780d",
+    "article-title": "Direct Transfer of\nWafer-Scale Graphene Films",
+    "volume": "4",
+    "author": "Kim",
+    "year": "2017",
+    "journal-title": "2D Mater."
+   },
+   {
+    "key": "2026081810212837600_cit89",
+    "doi-asserted-by": "publisher",
+    "first-page": "3572",
+    "DOI": "10.1021/nl101832y",
+    "article-title": "Silicon Nitride Gate\nDielectrics and Band Gap Engineering in Graphene Layers",
+    "volume": "10",
+    "author": "Zhu",
+    "year": "2010",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit90",
+    "doi-asserted-by": "publisher",
+    "first-page": "3406",
+    "DOI": "10.1364/AO.22.003406",
+    "article-title": "Measurement of a Gaussian Laser Beam Diameter through\nthe Direct Inversion of Knife-Edge Data",
+    "volume": "22",
+    "author": "Khosrofian",
+    "year": "1983",
+    "journal-title": "Appl.\nOpt."
+   },
+   {
+    "key": "2026081810212837600_cit91",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1038/s41467-021-22687-y",
+    "article-title": "Graphene Overcoats for Ultra-High\nStorage Density Magnetic Media",
+    "volume-title": "arXiv:1906.00338",
+    "author": "Dwivedi"
+   },
+   {
+    "key": "2026081810212837600_cit92",
+    "unstructured": "Single Layer h-BN\n(Boron Nitride) Film Grown on Copper Foil: 2\u201d\nx 1\n          https://graphene-supermarket.com/Single-layer-h-BN-Boron-Nitride-film-grown-in-copper-foil-2-x-1.html (accessed 2020-06-15)."
+   },
+   {
+    "key": "2026081810212837600_cit93",
+    "doi-asserted-by": "publisher",
+    "first-page": "187401",
+    "DOI": "10.1103/PhysRevLett.97.187401",
+    "article-title": "Raman Spectrum of\nGraphene and Graphene Layers",
+    "volume": "97",
+    "author": "Ferrari",
+    "year": "2006",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "2026081810212837600_cit94",
+    "doi-asserted-by": "publisher",
+    "first-page": "235",
+    "DOI": "10.1038/nnano.2013.46",
+    "article-title": "Raman Spectroscopy\nas a Versatile Tool for Studying\nthe Properties of Graphene",
+    "volume": "8",
+    "author": "Ferrari",
+    "year": "2013",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2026081810212837600_cit95",
+    "doi-asserted-by": "publisher",
+    "first-page": "3190",
+    "DOI": "10.1021/nl201432g",
+    "article-title": "Quantifying Defects\nin Graphene via Raman Spectroscopy at Different Excitation\nEnergies",
+    "volume": "11",
+    "author": "Canc\u0327ado",
+    "year": "2011",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit96",
+    "doi-asserted-by": "publisher",
+    "first-page": "3868",
+    "DOI": "10.1021/nl101399r",
+    "article-title": "On Resonant Scatterers\nas a Factor Limiting Carrier Mobility in Graphene",
+    "volume": "10",
+    "author": "Ni",
+    "year": "2010",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit97",
+    "doi-asserted-by": "publisher",
+    "first-page": "236805",
+    "DOI": "10.1103/PhysRevLett.102.236805",
+    "article-title": "Defect\nScattering in Graphene",
+    "volume": "102",
+    "author": "Chen",
+    "year": "2009",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "2026081810212837600_cit98",
+    "doi-asserted-by": "publisher",
+    "first-page": "233108",
+    "DOI": "10.1063/1.2818692",
+    "article-title": "Raman Fingerprint\nof Charged Impurities in Graphene",
+    "volume": "91",
+    "author": "Casiraghi",
+    "year": "2007",
+    "journal-title": "Appl. Phys.\nLett."
+   },
+   {
+    "key": "2026081810212837600_cit99",
+    "doi-asserted-by": "publisher",
+    "first-page": "210",
+    "DOI": "10.1038/nnano.2008.67",
+    "article-title": "Monitoring\nDopants\nby Raman Scattering in an Electrochemically Top-Gated Graphene Transistor",
+    "volume": "3",
+    "author": "Das",
+    "year": "2008",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2026081810212837600_cit100",
+    "doi-asserted-by": "publisher",
+    "first-page": "165413",
+    "DOI": "10.1103/PhysRevB.80.165413",
+    "article-title": "Electron-Electron\nInteractions and Doping Dependence of the Two-Phonon Raman Intensity\nin Graphene",
+    "volume": "80",
+    "author": "Basko",
+    "year": "2009",
+    "journal-title": "Phys. Rev. B: Condens. Matter Mater.\nPhys."
+   },
+   {
+    "key": "2026081810212837600_cit101",
+    "doi-asserted-by": "publisher",
+    "first-page": "7432",
+    "DOI": "10.1021/nn502676g",
+    "article-title": "Doping Dependence\nof the Raman Spectrum of Defected Graphene",
+    "volume": "8",
+    "author": "Bruna",
+    "year": "2014",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "2026081810212837600_cit102",
+    "doi-asserted-by": "publisher",
+    "first-page": "205433",
+    "DOI": "10.1103/PhysRevB.79.205433",
+    "article-title": "Uniaxial Strain\nin Graphene by Raman\nSpectroscopy: G Peak Splitting, Gru\u0308neisen Parameters, and Sample\nOrientation",
+    "volume": "79",
+    "author": "Mohiuddin",
+    "year": "2009",
+    "journal-title": "Phys. Rev. B: Condens. Matter Mater.\nPhys."
+   },
+   {
+    "key": "2026081810212837600_cit103",
+    "doi-asserted-by": "publisher",
+    "first-page": "155502",
+    "DOI": "10.1103/PhysRevLett.106.155502",
+    "article-title": "Strain-Dependent\nSplitting\nof the Double-Resonance Raman Scattering Band in Graphene",
+    "volume": "106",
+    "author": "Yoon",
+    "year": "2011",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "2026081810212837600_cit104",
+    "doi-asserted-by": "publisher",
+    "first-page": "617",
+    "DOI": "10.1021/nl203359n",
+    "article-title": "Raman Spectroscopy\nof Graphene and Bilayer under Biaxial Strain: Bubbles and Balloons",
+    "volume": "12",
+    "author": "Zabel",
+    "year": "2012",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026081810212837600_cit105",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1103/PhysRevLett.93.185503",
+    "article-title": "Kohn Anomalies\nand Electron-Phonon Interactions in\nGraphite",
+    "volume": "93",
+    "author": "Piscanec",
+    "year": "2004",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "2026081810212837600_cit106",
+    "doi-asserted-by": "publisher",
+    "first-page": "198",
+    "DOI": "10.1038/nmat1846",
+    "article-title": "Breakdown\nof the Adiabatic Born-Oppenheimer Approximation in Graphene",
+    "volume": "6",
+    "author": "Pisana",
+    "year": "2007",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "2026081810212837600_cit107",
+    "doi-asserted-by": "publisher",
+    "first-page": "37",
+    "DOI": "10.1038/nnano.2015.242",
+    "article-title": "Quantum Emission\nfrom Hexagonal Boron Nitride Monolayers",
+    "volume": "11",
+    "author": "Tran",
+    "year": "2016",
+    "journal-title": "Nat.\nNanotechnol."
+   },
+   {
+    "key": "2026081810212837600_cit108",
+    "doi-asserted-by": "publisher",
+    "first-page": "1024",
+    "DOI": "10.1038/ncomms2022",
+    "article-title": "Optical Separation\nof Mechanical Strain from Charge Doping in Graphene",
+    "volume": "3",
+    "author": "Lee",
+    "year": "2012",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026081810212837600_cit109",
+    "doi-asserted-by": "publisher",
+    "first-page": "8429",
+    "DOI": "10.1038/ncomms9429",
+    "article-title": "Raman Spectroscopy\nas Probe of Nanometre-Scale\nStrain Variations in Graphene",
+    "volume": "6",
+    "author": "Neumann",
+    "year": "2015",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026081810212837600_cit110",
+    "doi-asserted-by": "publisher",
+    "first-page": "041019",
+    "DOI": "10.1103/PhysRevX.4.041019",
+    "article-title": "Random Strain Fluctuations\nas Dominant Disorder Source\nfor High-Quality On-Substrate Graphene Devices",
+    "volume": "4",
+    "author": "Couto",
+    "year": "2014",
+    "journal-title": "Phys. Rev. X"
+   },
+   {
+    "key": "2026081810212837600_cit111",
+    "doi-asserted-by": "publisher",
+    "first-page": "145",
+    "DOI": "10.1016/0038-1101(72)90048-2",
+    "article-title": "Models for Contacts to Planar Devices",
+    "volume": "15",
+    "author": "Berger",
+    "year": "1972",
+    "journal-title": "Solid-State Electron."
+   },
+   {
+    "key": "2026081810212837600_cit112",
+    "doi-asserted-by": "publisher",
+    "first-page": "614",
+    "DOI": "10.1126/science.1244358",
+    "article-title": "One-Dimensional Electrical Contact\nto a Two-Dimensional Material",
+    "volume": "342",
+    "author": "Wang",
+    "year": "2013",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026081810212837600_cit113",
+    "doi-asserted-by": "publisher",
+    "first-page": "012004",
+    "DOI": "10.1088/1742-6596/129/1/012004",
+    "article-title": "Optical Properties of Graphene",
+    "volume": "129",
+    "author": "Falkovsky",
+    "year": "2008",
+    "journal-title": "J. Phys. Conf. Ser."
+   },
+   {
+    "key": "2026081810212837600_cit114",
+    "doi-asserted-by": "publisher",
+    "first-page": "062107",
+    "DOI": "10.1063/1.3077021",
+    "article-title": "Realization\nof a High Mobility Dual-Gated Graphene Field-Effect Transistor with\nAl2O3 Dielectric",
+    "volume": "94",
+    "author": "Kim",
+    "year": "2009",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026081810212837600_cit115",
+    "doi-asserted-by": "publisher",
+    "first-page": "121402",
+    "DOI": "10.1103/PhysRevB.78.121402",
+    "article-title": "Evidence of\nthe Role of Contacts on the Observed Electron-Hole Asymmetry in Graphene",
+    "volume": "78",
+    "author": "Huard",
+    "year": "2008",
+    "journal-title": "Phys. Rev. B: Condens. Matter Mater. Phys."
+   },
+   {
+    "key": "2026081810212837600_cit116",
+    "doi-asserted-by": "publisher",
+    "first-page": "486",
+    "DOI": "10.1038/nnano.2008.172",
+    "article-title": "Contact and Edge Effects in Graphene Devices",
+    "volume": "3",
+    "author": "Lee",
+    "year": "2008",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2026081810212837600_cit117",
+    "doi-asserted-by": "publisher",
+    "first-page": "420",
+    "DOI": "10.1109/JRPROC.1954.274680",
+    "article-title": "Resistivity Measurements on Germanium for Transistors",
+    "volume": "42",
+    "author": "Valdes",
+    "year": "1954",
+    "journal-title": "Proc. IRE"
+   },
+   {
+    "key": "2026081810212837600_cit118",
+    "doi-asserted-by": "publisher",
+    "first-page": "064302",
+    "DOI": "10.1063/1.2891452",
+    "article-title": "Dyadic Green\u2019s Functions and Guided Surface\nWaves for a Surface Conductivity Model of Graphene",
+    "volume": "103",
+    "author": "Hanson",
+    "year": "2008",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026081810212837600_cit119",
+    "volume-title": "Fundamentals of Electric\nCircuits",
+    "author": "Alexander",
+    "year": "2008"
+   },
+   {
+    "key": "2026081810212837600_cit120",
+    "doi-asserted-by": "publisher",
+    "first-page": "505",
+    "DOI": "10.1038/nnano.2009.177",
+    "article-title": "Measurement of the\nQuantum Capacitance of Graphene",
+    "volume": "4",
+    "author": "Xia",
+    "year": "2009",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2026081810212837600_cit121",
+    "volume-title": "Design of Integrated\nCircuits for Optical Communications",
+    "author": "Razavi",
+    "year": "2012"
+   },
+   {
+    "key": "2026081810212837600_cit122",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1364/OFC.2020.M4H.3",
+    "article-title": "A 400 Gb/s\nO-Band WDM (8 \u00d7 50 Gb/s) Silicon Photonic Ring Modulator-Based\nTransceiver",
+    "author": "Pitris",
+    "year": "2020",
+    "journal-title": "In 2020 Optical Fiber Communications\nConference and Exhibition (OFC)"
+   },
+   {
+    "key": "2026081810212837600_cit123",
+    "doi-asserted-by": "publisher",
+    "first-page": "24",
+    "DOI": "10.3390/photonics6010024",
+    "article-title": "Recent Progress\non Ge/SiGe Quantum Well Optical Modulators, Detectors, and Emitters\nfor Optical Interconnects",
+    "volume": "6",
+    "author": "Chaisakul",
+    "year": "2019",
+    "journal-title": "Photonics"
+   },
+   {
+    "key": "2026081810212837600_cit124",
+    "volume-title": "Optical Microresonators",
+    "author": "Heebner",
+    "year": "2008"
+   },
+   {
+    "key": "2026081810212837600_cit125",
+    "doi-asserted-by": "publisher",
+    "first-page": "161",
+    "DOI": "10.1021/nl203249a",
+    "article-title": "Synthesis of Monolayer\nHexagonal Boron Nitride on Cu Foil Using Chemical Vapor Deposition",
+    "volume": "12",
+    "author": "Kim",
+    "year": "2012",
+    "journal-title": "Nano Lett."
+   }
+  ],
+  "container-title": [
+   "ACS Nano"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsnano.0c09758",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "unspecified"
+   },
+   {
+    "URL": "https://pubs.acs.org/ancac3/article-pdf/15/2/3171/16504515/nn0c09758.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://pubs.acs.org/ancac3/article-pdf/15/2/3171/16504515/nn0c09758.pdf",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     18
+    ]
+   ],
+   "date-time": "2026-08-18T16:11:08Z",
+   "timestamp": 1787069468000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.acs.org/ancac3/article/15/2/3171/1552099/Wafer-Scale-Integration-of-Graphene-Based-Photonic"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     2,
+     1
+    ]
+   ]
+  },
+  "references-count": 125,
+  "journal-issue": {
+   "issue": "2",
+   "published-online": {
+    "date-parts": [
+     [
+      2021,
+      2,
+      1
+     ]
+    ]
+   },
+   "published-print": {
+    "date-parts": [
+     [
+      2021,
+      2,
+      23
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1021/acsnano.0c09758",
+  "relation": {},
+  "ISSN": [
+   "1936-0851",
+   "1936-086X"
+  ],
+  "issn-type": [
+   {
+    "value": "1936-0851",
+    "type": "print"
+   },
+   {
+    "value": "1936-086X",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2021,
+     2,
+     1
+    ]
+   ]
+  }
+ }
+}

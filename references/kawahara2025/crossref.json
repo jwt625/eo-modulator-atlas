@@ -1,0 +1,500 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     5
+    ]
+   ],
+   "date-time": "2026-01-05T22:20:13Z",
+   "timestamp": 1767651613146,
+   "version": "3.48.0"
+  },
+  "reference-count": 37,
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "issue": "2: 3-D Horizons in Photonics",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       3,
+       1
+      ]
+     ],
+     "date-time": "2026-03-01T00:00:00Z",
+     "timestamp": 1772323200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+   }
+  ],
+  "funder": [
+   {
+    "name": "JSPS KAKENHI",
+    "award": [
+     "25K23449"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "25K23449"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "JSPS KAKENHI",
+    "award": [
+     "23KJ0988"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "23KJ0988"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "JSPS KAKENHI",
+    "award": [
+     "25H00852"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "25H00852"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "GMO Internet Foundation"
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "IEEE J. Select. Topics Quantum Electron."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     3
+    ]
+   ]
+  },
+  "DOI": "10.1109/jstqe.2025.3640645",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     5
+    ]
+   ],
+   "date-time": "2025-12-05T18:37:55Z",
+   "timestamp": 1764959875000
+  },
+  "page": "1-11",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+   "High-Efficiency Compact Optical Transmitter With a Total Bit Energy of 0.78 pJ/Bit Including Silicon Slow-Light Modulator and Open-Collector Current-Mode Driver"
+  ],
+  "prefix": "10.1109",
+  "volume": "32",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-1542-057X",
+    "authenticated-orcid": false,
+    "given": "Keisuke",
+    "family": "Kawahara",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Yokohama National University, Yokohama, Japan"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Tai",
+    "family": "Tsuchizawa",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "National Institute of Advanced Industrial Science and Technology (AIST), Tsukuba, Japan"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3701-7319",
+    "authenticated-orcid": false,
+    "given": "Noritsugu",
+    "family": "Yamamoto",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "National Institute of Advanced Industrial Science and Technology (AIST), Tsukuba, Japan"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2218-3912",
+    "authenticated-orcid": false,
+    "given": "Yuriko",
+    "family": "Maegami",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "National Institute of Advanced Industrial Science and Technology (AIST), Tsukuba, Japan"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8355-7060",
+    "authenticated-orcid": false,
+    "given": "Koji",
+    "family": "Yamada",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "National Institute of Advanced Industrial Science and Technology (AIST), Tsukuba, Japan"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5183-9725",
+    "authenticated-orcid": false,
+    "given": "Shinsuke",
+    "family": "Hara",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "National Institute of Information and Communications Technology (NICT), Koganei, Japan"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Toshihiko",
+    "family": "Baba",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Yokohama National University, Yokohama, Japan"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "member": "263",
+  "reference": [
+   {
+    "key": "ref1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/CloudCom.2010.69"
+   },
+   {
+    "year": "2024",
+    "key": "ref2",
+    "article-title": "Generational Growth: AI, data centers and the coming US power demand surge"
+   },
+   {
+    "year": "2024",
+    "key": "ref3",
+    "article-title": "400G, 800G, and Terabit Pluggable Optics: What you need to know"
+   },
+   {
+    "key": "ref4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202301028"
+   },
+   {
+    "key": "ref5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.optlastec.2021.107376"
+   },
+   {
+    "key": "ref6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-44750-0"
+   },
+   {
+    "key": "ref7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jssc.2023.3344072"
+   },
+   {
+    "key": "ref8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.23919/ofc49934.2023.10116163"
+   },
+   {
+    "key": "ref9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2023.3291704"
+   },
+   {
+    "key": "ref10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OFC.2023.W3D.5"
+   },
+   {
+    "key": "ref11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2021.3079801"
+   },
+   {
+    "key": "ref12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2018.2799004"
+   },
+   {
+    "key": "ref13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2015.2470524"
+   },
+   {
+    "key": "ref14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ACCESS.2024.3396877"
+   },
+   {
+    "key": "ref15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/iscas46773.2023.10181563"
+   },
+   {
+    "key": "ref16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.469556"
+   },
+   {
+    "key": "ref17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41928-023-01048-1"
+   },
+   {
+    "key": "ref18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.411122"
+   },
+   {
+    "key": "ref19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/SiRF56960.2023.10046278"
+   },
+   {
+    "key": "ref20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2021.3134874"
+   },
+   {
+    "key": "ref21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/CLEO_SI.2021.SW2C.4"
+   },
+   {
+    "key": "ref22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/isscc19947.2020.9062992"
+   },
+   {
+    "key": "ref23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.19.013000"
+   },
+   {
+    "key": "ref24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2020.3026957"
+   },
+   {
+    "key": "ref25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.531372"
+   },
+   {
+    "key": "ref26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2021.3133668"
+   },
+   {
+    "key": "ref27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.3.001060"
+   },
+   {
+    "key": "ref28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JMW.2025.3576358"
+   },
+   {
+    "key": "ref29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2012.2188779"
+   },
+   {
+    "key": "ref30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "ref31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1587/transele.2023MMP0006"
+   },
+   {
+    "key": "ref32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2019.2941013"
+   },
+   {
+    "key": "ref33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TMTT.2023.3305150"
+   },
+   {
+    "key": "ref34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2006.872878"
+   },
+   {
+    "key": "ref35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/CLEO-PR62338.2022.10432251"
+   },
+   {
+    "key": "ref36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2013.2265193"
+   },
+   {
+    "key": "ref37",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2019.2933286"
+   }
+  ],
+  "container-title": [
+   "IEEE Journal of Selected Topics in Quantum Electronics"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "http://xplorestaging.ieee.org/ielx8/2944/11142678/11278607.pdf?arnumber=11278607",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     5
+    ]
+   ],
+   "date-time": "2026-01-05T21:27:07Z",
+   "timestamp": 1767648427000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://ieeexplore.ieee.org/document/11278607/"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     3
+    ]
+   ]
+  },
+  "references-count": 37,
+  "journal-issue": {
+   "issue": "2: 3-D Horizons in Photonics"
+  },
+  "URL": "https://doi.org/10.1109/jstqe.2025.3640645",
+  "relation": {},
+  "ISSN": [
+   "1077-260X",
+   "1558-4542"
+  ],
+  "issn-type": [
+   {
+    "type": "print",
+    "value": "1077-260X"
+   },
+   {
+    "type": "electronic",
+    "value": "1558-4542"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     3
+    ]
+   ]
+  }
+ }
+}

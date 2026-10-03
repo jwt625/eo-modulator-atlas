@@ -1,0 +1,1429 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     30
+    ]
+   ],
+   "date-time": "2026-09-30T19:08:07Z",
+   "timestamp": 1790795287012,
+   "version": "4.1.0"
+  },
+  "reference-count": 50,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "4",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       2,
+       24
+      ]
+     ],
+     "date-time": "2020-02-24T00:00:00Z",
+     "timestamp": 1582502400000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "http://www.springer.com/tdm"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       2,
+       24
+      ]
+     ],
+     "date-time": "2020-02-24T00:00:00Z",
+     "timestamp": 1582502400000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://www.springer.com/tdm"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100000015",
+    "name": "U.S. Department of Energy",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE-SC0019443"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE-SC0019443"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000015",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000015",
+    "name": "U.S. Department of Energy",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE-SC0019443"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE-SC0019443"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000015",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000015",
+    "name": "U.S. Department of Energy",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE-SC0019443"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE-SC0019443"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000015",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000015",
+    "name": "U.S. Department of Energy",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE-SC0019443"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE-SC0019443"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000015",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000015",
+    "name": "U.S. Department of Energy",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE-SC0019443"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE-SC0019443"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000015",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000015",
+    "name": "U.S. Department of Energy",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE-SC0019443"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE-SC0019443"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000015",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "United States Department of Defense | Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "HR001110720034"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "HR001110720034"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "United States Department of Defense | Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA8650-16-7643"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA8650-16-7643"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "United States Department of Defense | Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "HR001110720034"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "HR001110720034"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "United States Department of Defense | Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA8650-16-7643"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA8650-16-7643"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000181",
+    "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-18-1-0379"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-18-1-0379"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000181",
+    "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-16-1-0031"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-16-1-0031"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000181",
+    "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-16-1-0347"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-16-1-0347"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000181",
+    "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-16-1-0347"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-16-1-0347"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000181",
+    "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-16-1-0031"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-16-1-0031"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000181",
+    "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-18-1-0379"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-18-1-0379"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000006",
+    "name": "United States Department of Defense | United States Navy | Office of Naval Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "N00014-16-1-2219"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "N00014-16-1-2219"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000006",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000006",
+    "name": "United States Department of Defense | United States Navy | Office of Naval Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "N00014-16-1-2219"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "N00014-16-1-2219"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000006",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000104",
+    "name": "National Aeronautics and Space Administration",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "NNX16AD16G"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "NNX16AD16G"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000104",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000104",
+    "name": "National Aeronautics and Space Administration",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "NNX16AD16G"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "NNX16AD16G"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000104",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000001",
+    "name": "National Science Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EFMA 1741693"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EFMA 1741693"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000001",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000001",
+    "name": "National Science Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EFMA 1741693"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EFMA 1741693"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000001",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat. Photonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2020,
+     4
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41566-020-0590-4",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2020,
+     2,
+     24
+    ]
+   ],
+   "date-time": "2020-02-24T12:07:26Z",
+   "timestamp": 1582546046000
+  },
+  "page": "256-262",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 219,
+  "title": [
+   "Low-loss composite photonic platform based on 2D semiconductor monolayers"
+  ],
+  "prefix": "10.1038",
+  "volume": "14",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-1884-2882",
+    "authenticated-orcid": false,
+    "given": "Ipshita",
+    "family": "Datta",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sang Hoon",
+    "family": "Chae",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2782-6438",
+    "authenticated-orcid": false,
+    "given": "Gaurang R.",
+    "family": "Bhatt",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mohammad Amin",
+    "family": "Tadayon",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2345-6735",
+    "authenticated-orcid": false,
+    "given": "Baichang",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yiling",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chibeom",
+    "family": "Park",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0511-1442",
+    "authenticated-orcid": false,
+    "given": "Jiwoong",
+    "family": "Park",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Linyou",
+    "family": "Cao",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "D. N.",
+    "family": "Basov",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8084-3301",
+    "authenticated-orcid": false,
+    "given": "James",
+    "family": "Hone",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2903-3765",
+    "authenticated-orcid": false,
+    "given": "Michal",
+    "family": "Lipson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2020,
+     2,
+     24
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "590_CR1",
+    "doi-asserted-by": "crossref",
+    "first-page": "611",
+    "DOI": "10.1038/nphoton.2010.186",
+    "volume": "4",
+    "author": "F Bonaccorso",
+    "year": "2010",
+    "unstructured": "Bonaccorso, F., Sun, Z., Hasan, T. & Ferrari, A. C. Graphene photonics and optoelectronics. Nat. Photon. 4, 611\u2013622 (2010).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "590_CR2",
+    "doi-asserted-by": "crossref",
+    "first-page": "699",
+    "DOI": "10.1038/nnano.2012.193",
+    "volume": "7",
+    "author": "QH Wang",
+    "year": "2012",
+    "unstructured": "Wang, Q. H., Kalantar-Zadeh, K., Kis, A., Coleman, J. N. & Strano, M. S. Electronics and optoelectronics of two-dimensional transition metal dichalcogenides. Nat. Nanotechnol. 7, 699\u2013712 (2012).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "590_CR3",
+    "doi-asserted-by": "crossref",
+    "first-page": "10741",
+    "DOI": "10.1021/nn403738b",
+    "volume": "7",
+    "author": "EJG Santos",
+    "year": "2013",
+    "unstructured": "Santos, E. J. G. & Kaxiras, E. Electrically driven tuning of the dielectric constant in MoS2 layers. ACS Nano 7, 10741\u201310746 (2013).",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "590_CR4",
+    "doi-asserted-by": "crossref",
+    "first-page": "899",
+    "DOI": "10.1038/nphoton.2014.271",
+    "volume": "8",
+    "author": "F Xia",
+    "year": "2014",
+    "unstructured": "Xia, F., Wang, H., Xiao, D., Dubey, M. & Ramasubramaniam, A. Two-dimensional material nanophotonics. Nat. Photon. 8, 899\u2013907 (2014).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "590_CR5",
+    "doi-asserted-by": "crossref",
+    "first-page": "268",
+    "DOI": "10.1038/nnano.2014.26",
+    "volume": "9",
+    "author": "JS Ross",
+    "year": "2014",
+    "unstructured": "Ross, J. S. et al. Electrically tunable excitonic light-emitting diodes based on monolayer WSe2 p\u2013n junctions. Nat. Nanotechnol. 9, 268\u2013272 (2014).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "590_CR6",
+    "doi-asserted-by": "crossref",
+    "first-page": "1102",
+    "DOI": "10.1021/nn500064s",
+    "volume": "8",
+    "author": "D Jariwala",
+    "year": "2014",
+    "unstructured": "Jariwala, D., Sangwan, V. K., Lauhon, L. J., Marks, T. J. & Hersam, M. C. Emerging device applications for semiconducting two-dimensional transition metal dichalcogenides. ACS Nano 8, 1102\u20131120 (2014).",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "590_CR7",
+    "doi-asserted-by": "crossref",
+    "first-page": "7003",
+    "DOI": "10.1021/nl503312x",
+    "volume": "14",
+    "author": "S Schwarz",
+    "year": "2014",
+    "unstructured": "Schwarz, S. et al. Two-dimensional metal\u2013chalcogenide films in tunable optical microcavities. Nano Lett. 14, 7003\u20137008 (2014).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "590_CR8",
+    "doi-asserted-by": "crossref",
+    "first-page": "4598",
+    "DOI": "10.1039/C4NR01600A",
+    "volume": "7",
+    "author": "AC Ferrari",
+    "year": "2015",
+    "unstructured": "Ferrari, A. C. et al. Science and technology roadmap for graphene, related two-dimensional crystals, and hybrid systems. Nanoscale 7, 4598\u20134810 (2015).",
+    "journal-title": "Nanoscale"
+   },
+   {
+    "key": "590_CR9",
+    "doi-asserted-by": "crossref",
+    "first-page": "78",
+    "DOI": "10.3390/app6030078",
+    "volume": "6",
+    "author": "A Pospischil",
+    "year": "2016",
+    "unstructured": "Pospischil, A. & Mueller, T. Optoelectronic devices based on atomically thin transition metal dichalcogenides. Appl. Sci. 6, 78 (2016).",
+    "journal-title": "Appl. Sci."
+   },
+   {
+    "key": "590_CR10",
+    "doi-asserted-by": "crossref",
+    "first-page": "216",
+    "DOI": "10.1038/nphoton.2015.282",
+    "volume": "10",
+    "author": "KF Mak",
+    "year": "2016",
+    "unstructured": "Mak, K. F. & Shan, J. Photonics and optoelectronics of 2D semiconductor transition metal dichalcogenides. Nat. Photon. 10, 216\u2013226 (2016).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "590_CR11",
+    "doi-asserted-by": "crossref",
+    "first-page": "1309",
+    "DOI": "10.1515/nanoph-2016-0160",
+    "volume": "6",
+    "author": "J Xiao",
+    "year": "2017",
+    "unstructured": "Xiao, J., Zhao, M., Wang, Y. & Zhang, X. Excitons in atomically thin 2D semiconductors and their applications. Nanophotonics 6, 1309\u20131328 (2017).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "590_CR12",
+    "doi-asserted-by": "crossref",
+    "first-page": "17033",
+    "DOI": "10.1038/natrevmats.2017.33",
+    "volume": "2",
+    "author": "S Manzeli",
+    "year": "2017",
+    "unstructured": "Manzeli, S., Ovchinnikov, D., Pasquier, D., Yazyev, O. V. & Kis, A. 2D transition metal dichalcogenides. Nat. Rev. Mater. 2, 17033 (2017).",
+    "journal-title": "Nat. Rev. Mater."
+   },
+   {
+    "key": "590_CR13",
+    "doi-asserted-by": "crossref",
+    "first-page": "479",
+    "DOI": "10.1515/nanoph-2015-0030",
+    "volume": "6",
+    "author": "M Bernardi",
+    "year": "2016",
+    "unstructured": "Bernardi, M., Ataca, C., Palummo, M. & Grossman, J. C. Optical and electronic properties of two-dimensional layered materials. Nanophotonics 6, 479\u2013493 (2016).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "590_CR14",
+    "doi-asserted-by": "crossref",
+    "first-page": "1124",
+    "DOI": "10.1038/nnano.2017.209",
+    "volume": "12",
+    "author": "Y-Q Bie",
+    "year": "2017",
+    "unstructured": "Bie, Y.-Q. et al. A MoTe2-based light-emitting diode and photodetector for silicon photonic integrated circuits. Nat. Nanotechnol. 12, 1124\u20131129 (2017).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "590_CR15",
+    "doi-asserted-by": "crossref",
+    "first-page": "1077",
+    "DOI": "10.1038/nmat5017",
+    "volume": "16",
+    "author": "DN Basov",
+    "year": "2017",
+    "unstructured": "Basov, D. N., Averitt, R. D. & Hsieh, D. Towards properties on demand in quantum materials. Nat. Mater. 16, 1077\u20131088 (2017).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "590_CR16",
+    "doi-asserted-by": "crossref",
+    "first-page": "392\u2013414",
+    "DOI": "10.1038/s41578-018-0040-9",
+    "volume": "3",
+    "author": "M Romagnoli",
+    "year": "2018",
+    "unstructured": "Romagnoli, M. et al. Graphene-based integrated photonics for next-generation datacom and telecom. Nat. Rev. Mater. 3, 392\u2013414 (2018).",
+    "journal-title": "Nat. Rev. Mater."
+   },
+   {
+    "key": "590_CR17",
+    "doi-asserted-by": "crossref",
+    "first-page": "421",
+    "DOI": "10.1038/nphoton.2017.98",
+    "volume": "11",
+    "author": "A Woessner",
+    "year": "2017",
+    "unstructured": "Woessner, A. et al. Electrical 2\u03c0 phase control of infrared light in a 350\u2009nm footprint using graphene plasmons. Nat. Photon. 11, 421\u2013424 (2017).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "590_CR18",
+    "doi-asserted-by": "crossref",
+    "first-page": "4393",
+    "DOI": "10.1021/acs.nanolett.5b00630",
+    "volume": "15",
+    "author": "Y Ding",
+    "year": "2015",
+    "unstructured": "Ding, Y. et al. Effective electro-optical modulation with high extinction ratio by a graphene\u2013silicon microring resonator. Nano Lett. 15, 4393\u20134400 (2015).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "590_CR19",
+    "doi-asserted-by": "crossref",
+    "first-page": "40",
+    "DOI": "10.1038/s41566-017-0071-6",
+    "volume": "12",
+    "author": "V Sorianello",
+    "year": "2018",
+    "unstructured": "Sorianello, V. et al. Graphene\u2013silicon phase modulators with gigahertz bandwidth. Nat. Photon. 12, 40\u201344 (2018).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "590_CR20",
+    "doi-asserted-by": "crossref",
+    "first-page": "511",
+    "DOI": "10.1038/nphoton.2015.122",
+    "volume": "9",
+    "author": "CT Phare",
+    "year": "2015",
+    "unstructured": "Phare, C. T., Lee, Y.-H. D., Cardenas, J. & Lipson, M. Graphene electro-optic modulator with 30\u2009GHz bandwidth. Nat. Photon. 9, 511\u2013514 (2015).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "590_CR21",
+    "volume": "4",
+    "author": "JS Ross",
+    "year": "2013",
+    "unstructured": "Ross, J. S. et al. Electrical control of neutral and charged excitons in a monolayer semiconductor. Nat. Commun. 4, 1474 (2013).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "590_CR22",
+    "doi-asserted-by": "crossref",
+    "first-page": "126802",
+    "DOI": "10.1103/PhysRevLett.115.126802",
+    "volume": "115",
+    "author": "A Chernikov",
+    "year": "2015",
+    "unstructured": "Chernikov, A. et al. Electrical tuning of exciton binding energies in monolayer WS2. Phys. Rev. Lett. 115, 126802 (2015).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "590_CR23",
+    "doi-asserted-by": "crossref",
+    "first-page": "021001",
+    "DOI": "10.1103/RevModPhys.90.021001",
+    "volume": "90",
+    "author": "G Wang",
+    "year": "2018",
+    "unstructured": "Wang, G. et al. Colloquium: excitons in atomically thin transition metal dichalcogenides. Rev. Mod. Phys. 90, 021001 (2018).",
+    "journal-title": "Rev. Mod. Phys."
+   },
+   {
+    "key": "590_CR24",
+    "doi-asserted-by": "crossref",
+    "first-page": "207",
+    "DOI": "10.1038/nmat3505",
+    "volume": "12",
+    "author": "KF Mak",
+    "year": "2013",
+    "unstructured": "Mak, K. F. et al. Tightly bound trions in monolayer MoS2. Nat. Mater. 12, 207\u2013211 (2013).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "590_CR25",
+    "doi-asserted-by": "crossref",
+    "first-page": "3613",
+    "DOI": "10.1021/acs.nanolett.7b00768",
+    "volume": "17",
+    "author": "Y Yu",
+    "year": "2017",
+    "unstructured": "Yu, Y. et al. Giant gating tunability of optical refractive index in transition metal dichalcogenide monolayers. Nano Lett. 17, 3613\u20133618 (2017).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "590_CR26",
+    "doi-asserted-by": "crossref",
+    "first-page": "21595",
+    "DOI": "10.1364/OE.19.021595",
+    "volume": "19",
+    "author": "JK Doylend",
+    "year": "2011",
+    "unstructured": "Doylend, J. K. et al. Two-dimensional free-space beam steering with an optical phased array on silicon-on-insulator. Opt. Express 19, 21595\u201321604 (2011).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "590_CR27",
+    "doi-asserted-by": "crossref",
+    "first-page": "195",
+    "DOI": "10.1038/nature11727",
+    "volume": "493",
+    "author": "J Sun",
+    "year": "2013",
+    "unstructured": "Sun, J., Timurdogan, E., Yaacobi, A., Hosseini, E. S. & Watts, M. R. Large-scale nanophotonic phased array. Nature 493, 195\u2013199 (2013).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "590_CR28",
+    "doi-asserted-by": "crossref",
+    "first-page": "441",
+    "DOI": "10.1038/nphoton.2017.93",
+    "volume": "11",
+    "author": "Y Shen",
+    "year": "2017",
+    "unstructured": "Shen, Y. et al. Deep learning with coherent nanophotonic circuits. Nat. Photon. 11, 441\u2013446 (2017).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "590_CR29",
+    "doi-asserted-by": "crossref",
+    "first-page": "656",
+    "DOI": "10.1038/nature14417",
+    "volume": "520",
+    "author": "K Kang",
+    "year": "2015",
+    "unstructured": "Kang, K. et al. High-mobility three-atom-thick semiconducting films with wafer-scale homogeneity. Nature 520, 656\u2013660 (2015).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "590_CR30",
+    "doi-asserted-by": "crossref",
+    "first-page": "5218",
+    "DOI": "10.1021/nl302389d",
+    "volume": "12",
+    "author": "D Braga",
+    "year": "2012",
+    "unstructured": "Braga, D., Guti\u00e9rrez Lezama, I., Berger, H. & Morpurgo, A. F. Quantitative determination of the band gap of WS2 with ambipolar ionic liquid-gated transistors. Nano Lett. 12, 5218\u20135223 (2012).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "590_CR31",
+    "doi-asserted-by": "crossref",
+    "first-page": "205422",
+    "DOI": "10.1103/PhysRevB.90.205422",
+    "volume": "90",
+    "author": "Y Li",
+    "year": "2014",
+    "unstructured": "Li, Y. et al. Measurement of the optical dielectric function of monolayer transition-metal dichalcogenides: MoS2, MoSe2, WS2, and WSe2. Phys. Rev. B 90, 205422 (2014).",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "590_CR32",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1038/srep43037",
+    "volume": "7",
+    "author": "JT Mlack",
+    "year": "2017",
+    "unstructured": "Mlack, J. T. et al. Transfer of monolayer TMD WS2 and Raman study of substrate effects. Sci. Rep. 7, 43037 (2017).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "590_CR33",
+    "doi-asserted-by": "crossref",
+    "first-page": "2911",
+    "DOI": "10.1364/OE.20.002911",
+    "volume": "20",
+    "author": "S Akiyama",
+    "year": "2012",
+    "unstructured": "Akiyama, S. et al. 12.5-Gb/s operation with 0.29-V\u2009cm V\n\u03c0L using silicon Mach\u2013Zehnder modulator based-on forward-biased pin diode. Opt. Express 20, 2911\u20132923 (2012).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "590_CR34",
+    "doi-asserted-by": "crossref",
+    "first-page": "615",
+    "DOI": "10.1038/nature02310",
+    "volume": "427",
+    "author": "A Liu",
+    "year": "2004",
+    "unstructured": "Liu, A. et al. A high-speed silicon optical modulator based on a metal\u2013oxide\u2013semiconductor capacitor. Nature 427, 615\u2013618 (2004).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "590_CR35",
+    "doi-asserted-by": "crossref",
+    "first-page": "334",
+    "DOI": "10.1364/OE.16.000334",
+    "volume": "16",
+    "author": "D Marris-Morini",
+    "year": "2008",
+    "unstructured": "Marris-Morini, D. et al. Low loss and high speed silicon optical modulator based on a lateral carrier depletion structure. Opt. Express 16, 334\u2013339 (2008).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "590_CR36",
+    "doi-asserted-by": "crossref",
+    "first-page": "4116",
+    "DOI": "10.1364/OE.21.004116",
+    "volume": "21",
+    "author": "X Xiao",
+    "year": "2013",
+    "unstructured": "Xiao, X. et al. High-speed, low-loss silicon Mach\u2013Zehnder modulators with doping optimization. Opt. Express 21, 4116\u20134125 (2013).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "590_CR37",
+    "doi-asserted-by": "crossref",
+    "first-page": "123",
+    "DOI": "10.1109/JQE.1987.1073206",
+    "volume": "23",
+    "author": "R Soref",
+    "year": "1987",
+    "unstructured": "Soref, R. & Bennett, B. Electrooptical effects in silicon. IEEE J. Quantum Electron. 23, 123\u2013129 (1987).",
+    "journal-title": "IEEE J. Quantum Electron."
+   },
+   {
+    "key": "590_CR38",
+    "doi-asserted-by": "crossref",
+    "first-page": "045422",
+    "DOI": "10.1103/PhysRevB.90.045422",
+    "volume": "90",
+    "author": "Z Jin",
+    "year": "2014",
+    "unstructured": "Jin, Z., Li, X., Mullen, J. T. & Kim, K. W. Intrinsic transport properties of electrons and holes in monolayer transition-metal dichalcogenides. Phys. Rev. B 90, 045422 (2014).",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "590_CR39",
+    "doi-asserted-by": "crossref",
+    "first-page": "13169",
+    "DOI": "10.1021/acs.jpcc.5b02950",
+    "volume": "119",
+    "author": "FA Rasmussen",
+    "year": "2015",
+    "unstructured": "Rasmussen, F. A. & Thygesen, K. S. Computational 2D materials database: electronic structure of transition-metal dichalcogenides and oxides. J. Phys. Chem. C 119, 13169\u201313183 (2015).",
+    "journal-title": "J. Phys. Chem. C"
+   },
+   {
+    "key": "590_CR40",
+    "doi-asserted-by": "crossref",
+    "first-page": "101\u2013104",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages. Nature 562, 101\u2013104 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "590_CR41",
+    "doi-asserted-by": "crossref",
+    "first-page": "1547",
+    "DOI": "10.1364/OE.26.001547",
+    "volume": "26",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C., Zhang, M., Stern, B., Lipson, M. & Lon\u010dar, M. Nanophotonic lithium niobate electro-optic modulators. Opt. Express 26, 1547\u20131555 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "590_CR42",
+    "doi-asserted-by": "crossref",
+    "first-page": "10487",
+    "DOI": "10.1364/OE.22.010487",
+    "volume": "22",
+    "author": "NC Harris",
+    "year": "2014",
+    "unstructured": "Harris, N. C. et al. Efficient, compact and low loss thermo-optic phase shifter in silicon. Opt. Express 22, 10487\u201310493 (2014).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "590_CR43",
+    "doi-asserted-by": "crossref",
+    "first-page": "1383",
+    "DOI": "10.1364/OME.4.001383",
+    "volume": "4",
+    "author": "A Masood",
+    "year": "2014",
+    "unstructured": "Masood, A. et al. Fabrication and characterization of CMOS-compatible integrated tungsten heaters for thermo-optic tuning in silicon photonics devices. Opt. Mater. Express 4, 1383\u20131388 (2014).",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "590_CR44",
+    "doi-asserted-by": "crossref",
+    "first-page": "3",
+    "DOI": "10.1364/OPTICA.7.000003",
+    "volume": "7",
+    "author": "SA Miller",
+    "year": "2020",
+    "unstructured": "Miller, S. A. et al. Large-scale optical phased array using a low-power multi-pass silicon photonic platform. Optica 7, 3\u20136 (2020).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "590_CR45",
+    "doi-asserted-by": "crossref",
+    "first-page": "200",
+    "DOI": "10.1038/nphoton.2017.14",
+    "volume": "11",
+    "author": "E Timurdogan",
+    "year": "2017",
+    "unstructured": "Timurdogan, E., Poulton, C. V., Byrd, M. J. & Watts, M. R. Electric field-induced second-order nonlinear optical effects in silicon waveguides. Nat. Photon. 11, 200\u2013206 (2017).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "590_CR46",
+    "doi-asserted-by": "crossref",
+    "first-page": "739",
+    "DOI": "10.1364/OPTICA.5.000739",
+    "volume": "5",
+    "author": "C Kieninger",
+    "year": "2018",
+    "unstructured": "Kieninger, C. et al. Ultra-high electro-optic activity demonstrated in a silicon\u2013organic hybrid modulator. Optica 5, 739\u2013748 (2018).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "590_CR47",
+    "doi-asserted-by": "crossref",
+    "first-page": "5235",
+    "DOI": "10.1021/nn400971k",
+    "volume": "7",
+    "author": "AL El\u00edas",
+    "year": "2013",
+    "unstructured": "El\u00edas, A. L. et al. Controlled synthesis and transfer of large-area WS2 sheets: from single layer to few layers. ACS Nano 7, 5235\u20135242 (2013).",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "590_CR48",
+    "volume": "6",
+    "author": "KM McCreary",
+    "year": "2016",
+    "unstructured": "McCreary, K. M., Hanbicki, A. T., Jernigan, G. G., Culbertson, J. C. & Jonker, B. T. Synthesis of large-area WS2 monolayers with exceptional photoluminescence. Sci. Rep. 6, 19159 (2016).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "590_CR49",
+    "doi-asserted-by": "crossref",
+    "first-page": "12588",
+    "DOI": "10.1021/am502565z",
+    "volume": "6",
+    "author": "J Lee",
+    "year": "2014",
+    "unstructured": "Lee, J. et al. Crack-release transfer method of wafer-scale grown graphene onto large-area substrates. ACS Appl. Mater. Interfaces 6, 12588\u201312593 (2014).",
+    "journal-title": "ACS Appl. Mater. Interfaces"
+   },
+   {
+    "key": "590_CR50",
+    "doi-asserted-by": "crossref",
+    "first-page": "486",
+    "DOI": "10.1038/nphoton.2017.122",
+    "volume": "11",
+    "author": "J-H Han",
+    "year": "2017",
+    "unstructured": "Han, J.-H. et al. Efficient low-loss InGaAsP/Si hybrid MOS optical modulator. Nat. Photon. 11, 486\u2013490 (2017).",
+    "journal-title": "Nat. Photon."
+   }
+  ],
+  "container-title": [
+   "Nature Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "http://www.nature.com/articles/s41566-020-0590-4.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "http://www.nature.com/articles/s41566-020-0590-4",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "http://www.nature.com/articles/s41566-020-0590-4.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2023,
+     5,
+     20
+    ]
+   ],
+   "date-time": "2023-05-20T18:06:36Z",
+   "timestamp": 1684605996000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41566-020-0590-4"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     2,
+     24
+    ]
+   ]
+  },
+  "references-count": 50,
+  "journal-issue": {
+   "issue": "4",
+   "published-print": {
+    "date-parts": [
+     [
+      2020,
+      4
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "590"
+  ],
+  "URL": "https://doi.org/10.1038/s41566-020-0590-4",
+  "relation": {},
+  "ISSN": [
+   "1749-4885",
+   "1749-4893"
+  ],
+  "issn-type": [
+   {
+    "value": "1749-4885",
+    "type": "print"
+   },
+   {
+    "value": "1749-4893",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     2,
+     24
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "10 July 2019",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "15 January 2020",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "24 February 2020",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "M.L., J.H., I.D., S.C., G.R.B. and D.N.B are named inventors on US provisional patent application 16/282,013 regarding the technology reported in this article.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ]
+ }
+}

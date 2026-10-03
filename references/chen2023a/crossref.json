@@ -1,0 +1,468 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     5
+    ]
+   ],
+   "date-time": "2026-09-05T17:24:08Z",
+   "timestamp": 1788629048932,
+   "version": "build-2803163510"
+  },
+  "reference-count": 32,
+  "publisher": "Wiley",
+  "issue": "11",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       10,
+       2
+      ]
+     ],
+     "date-time": "2023-10-02T00:00:00Z",
+     "timestamp": 1696204800000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100012166",
+    "name": "National Key Research and Development Program of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "2019YFB2203702"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2019YFB2203702"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100012166",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "onlinelibrary.wiley.com"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Laser &amp;amp; Photonics Reviews"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2023,
+     11
+    ]
+   ]
+  },
+  "DOI": "10.1002/lpor.202200927",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     3
+    ]
+   ],
+   "date-time": "2023-10-03T06:19:34Z",
+   "timestamp": 1696313974000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 58,
+  "title": [
+   "High\u2010Efficiency Electro\u2010Optic Modulator on Thin\u2010Film Lithium Niobate with High\u2010Permittivity Cladding"
+  ],
+  "prefix": "10.1002",
+  "volume": "17",
+  "author": [
+   {
+    "given": "Nuo",
+    "family": "Chen",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "College of Information Science and Electronic Engineering Zhejiang University  Hangzhou 310027 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kangping",
+    "family": "Lou",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "College of Information Science and Electronic Engineering Zhejiang University  Hangzhou 310027 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yalong",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "College of Information Science and Electronic Engineering Zhejiang University  Hangzhou 310027 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xuanjian",
+    "family": "He",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "College of Information Science and Electronic Engineering Zhejiang University  Hangzhou 310027 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tao",
+    "family": "Chu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "College of Information Science and Electronic Engineering Zhejiang University  Hangzhou 310027 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     2
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_8_1_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.411024"
+   },
+   {
+    "key": "e_1_2_8_2_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.200810073"
+   },
+   {
+    "key": "e_1_2_8_3_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/BF00614817"
+   },
+   {
+    "key": "e_1_2_8_4_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.201700256"
+   },
+   {
+    "key": "e_1_2_8_5_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202000088"
+   },
+   {
+    "key": "e_1_2_8_6_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.415762"
+   },
+   {
+    "key": "e_1_2_8_7_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "e_1_2_8_8_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2020-0013"
+   },
+   {
+    "key": "e_1_2_8_9_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.442091"
+   },
+   {
+    "key": "e_1_2_8_10_1",
+    "volume": "4",
+    "author": "Chen G.",
+    "year": "2022",
+    "journal-title": "Adv. Photonics"
+   },
+   {
+    "key": "e_1_2_8_11_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0048712"
+   },
+   {
+    "key": "e_1_2_8_12_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.024190"
+   },
+   {
+    "key": "e_1_2_8_13_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/micronano.2015.42"
+   },
+   {
+    "key": "e_1_2_8_14_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5086276"
+   },
+   {
+    "key": "e_1_2_8_15_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.abb8375"
+   },
+   {
+    "key": "e_1_2_8_16_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/2944.826874"
+   },
+   {
+    "key": "e_1_2_8_17_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.6.000380"
+   },
+   {
+    "key": "e_1_2_8_18_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.014810"
+   },
+   {
+    "key": "e_1_2_8_19_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.396335"
+   },
+   {
+    "key": "e_1_2_8_20_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2023.3268605"
+   },
+   {
+    "key": "e_1_2_8_21_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adpr.202200216"
+   },
+   {
+    "key": "e_1_2_8_22_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0378-6"
+   },
+   {
+    "key": "e_1_2_8_23_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.381892"
+   },
+   {
+    "key": "e_1_2_8_24_1",
+    "first-page": "27",
+    "volume": "2",
+    "author": "Mao D.",
+    "year": "2021",
+    "journal-title": "IEEE J. Sel. Top. Quant."
+   },
+   {
+    "key": "e_1_2_8_25_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.449172"
+   },
+   {
+    "key": "e_1_2_8_26_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.27.018731"
+   },
+   {
+    "key": "e_1_2_8_27_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5100525"
+   },
+   {
+    "key": "e_1_2_8_28_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.425181"
+   },
+   {
+    "key": "e_1_2_8_29_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.414250"
+   },
+   {
+    "key": "e_1_2_8_30_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.419597"
+   },
+   {
+    "key": "e_1_2_8_31_1",
+    "unstructured": "A.Peczek C.Mai G.Winzer L.Zimmermann inIEEE 33rd International Conference on Microelectronic Test Structures (ICMTS) Edinburgh UK2020."
+   },
+   {
+    "key": "e_1_2_8_32_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17806-0"
+   }
+  ],
+  "container-title": [
+   "Laser &amp; Photonics Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/lpor.202200927",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     2,
+     13
+    ]
+   ],
+   "date-time": "2024-02-13T12:45:30Z",
+   "timestamp": 1707828330000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://onlinelibrary.wiley.com/doi/10.1002/lpor.202200927"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     2
+    ]
+   ]
+  },
+  "references-count": 32,
+  "journal-issue": {
+   "issue": "11",
+   "published-print": {
+    "date-parts": [
+     [
+      2023,
+      11
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1002/lpor.202200927"
+  ],
+  "URL": "https://doi.org/10.1002/lpor.202200927",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "1863-8880",
+   "1863-8899"
+  ],
+  "issn-type": [
+   {
+    "value": "1863-8880",
+    "type": "print"
+   },
+   {
+    "value": "1863-8899",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     10,
+     2
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2022-12-01",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2023-10-02",
+    "order": 2,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ],
+  "article-number": "2200927"
+ }
+}

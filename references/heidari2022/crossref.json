@@ -1,0 +1,449 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     30
+    ]
+   ],
+   "date-time": "2026-09-30T19:10:13Z",
+   "timestamp": 1790795413035,
+   "version": "4.1.0"
+  },
+  "reference-count": 20,
+  "publisher": "Wiley",
+  "issue": "17",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       3,
+       17
+      ]
+     ],
+     "date-time": "2022-03-17T00:00:00Z",
+     "timestamp": 1647475200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://creativecommons.org/licenses/by/4.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       3,
+       17
+      ]
+     ],
+     "date-time": "2022-03-17T00:00:00Z",
+     "timestamp": 1647475200000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+   }
+  ],
+  "funder": [
+   {
+    "name": "AFOSR PECASE Award",
+    "award": [
+     "(FA9550-20-1-0193)"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "(FA9550-20-1-0193)"
+      ]
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nanophotonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2022,
+     9
+    ]
+   ]
+  },
+  "DOI": "10.1515/nanoph-2021-0797",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2022,
+     3,
+     19
+    ]
+   ],
+   "date-time": "2022-03-19T14:02:00Z",
+   "timestamp": 1647698520000
+  },
+  "page": "4011-4016",
+  "source": "Crossref",
+  "is-referenced-by-count": 51,
+  "title": [
+   "Integrated ultra\u2010high\u2010performance graphene optical modulator"
+  ],
+  "prefix": "10.1002",
+  "volume": "11",
+  "author": [
+   {
+    "given": "Elham",
+    "family": "Heidari",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Microelectronics Research Center Electrical and Computer Engineering Department University of Texas at Austin Austin TX 78758 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9998-3830",
+    "authenticated-orcid": false,
+    "given": "Hamed",
+    "family": "Dalir",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering George Washington University Washington, DC 20052 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Farzad Mokhtari",
+    "family": "Koushyar",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Microelectronics Research Center Electrical and Computer Engineering Department University of Texas at Austin Austin TX 78758 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Behrouz Movahhed",
+    "family": "Nouri",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering George Washington University Washington, DC 20052 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chandraman",
+    "family": "Patil",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering George Washington University Washington, DC 20052 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mario",
+    "family": "Miscuglio",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering George Washington University Washington, DC 20052 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Deji",
+    "family": "Akinwande",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Microelectronics Research Center Electrical and Computer Engineering Department University of Texas at Austin Austin TX 78758 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Volker J.",
+    "family": "Sorger",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering George Washington University Washington, DC 20052 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2022,
+     3,
+     17
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_8_2_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0001942"
+   },
+   {
+    "key": "e_1_2_8_3_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/530144a"
+   },
+   {
+    "key": "e_1_2_8_4_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep37419"
+   },
+   {
+    "key": "e_1_2_8_5_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.19.002401"
+   },
+   {
+    "key": "e_1_2_8_6_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/nn300989g"
+   },
+   {
+    "key": "e_1_2_8_7_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.5.001354"
+   },
+   {
+    "key": "e_1_2_8_8_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nnano.2007.300"
+   },
+   {
+    "key": "e_1_2_8_9_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2010.179"
+   },
+   {
+    "key": "e_1_2_8_10_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.15.005851"
+   },
+   {
+    "key": "e_1_2_8_11_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.15.000660"
+   },
+   {
+    "key": "e_1_2_8_12_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586\u2010018\u20100551\u2010y"
+   },
+   {
+    "key": "e_1_2_8_13_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2015.122"
+   },
+   {
+    "key": "e_1_2_8_14_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.6b00398"
+   },
+   {
+    "key": "e_1_2_8_15_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586\u2010019\u20101573\u20109"
+   },
+   {
+    "key": "e_1_2_8_16_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature10680"
+   },
+   {
+    "key": "e_1_2_8_17_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature11458"
+   },
+   {
+    "key": "e_1_2_8_18_2",
+    "volume-title": "Optical Waves in Layered Media",
+    "author": "Yeh P.",
+    "year": "2005"
+   },
+   {
+    "key": "e_1_2_8_19_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.7567/apex.7.022102"
+   },
+   {
+    "key": "e_1_2_8_20_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph\u20102020\u20100437"
+   },
+   {
+    "key": "e_1_2_8_21_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.1152793"
+   }
+  ],
+  "container-title": [
+   "Nanophotonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1515/nanoph-2021-0797",
+    "content-type": "application/xml",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1515/nanoph-2021-0797",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1515/nanoph-2021-0797",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     24
+    ]
+   ],
+   "date-time": "2026-03-24T09:32:14Z",
+   "timestamp": 1774344734000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://onlinelibrary.wiley.com/doi/10.1515/nanoph-2021-0797"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     3,
+     17
+    ]
+   ]
+  },
+  "references-count": 20,
+  "journal-issue": {
+   "issue": "17",
+   "published-print": {
+    "date-parts": [
+     [
+      2022,
+      9
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1515/nanoph-2021-0797"
+  ],
+  "URL": "https://doi.org/10.1515/nanoph-2021-0797",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "2192-8614",
+   "2192-8614"
+  ],
+  "issn-type": [
+   {
+    "value": "2192-8614",
+    "type": "print"
+   },
+   {
+    "value": "2192-8614",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     3,
+     17
+    ]
+   ]
+  }
+ }
+}
