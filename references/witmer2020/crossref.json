@@ -1,0 +1,1221 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     24
+    ]
+   ],
+   "date-time": "2026-03-24T21:02:00Z",
+   "timestamp": 1774386120742,
+   "version": "3.50.1"
+  },
+  "reference-count": 70,
+  "publisher": "IOP Publishing",
+  "issue": "3",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       4,
+       27
+      ]
+     ],
+     "date-time": "2020-04-27T00:00:00Z",
+     "timestamp": 1587945600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://publishingsupport.iopscience.iop.org/iop-standard/v1"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       4,
+       27
+      ]
+     ],
+     "date-time": "2020-04-27T00:00:00Z",
+     "timestamp": 1587945600000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://iopscience.iop.org/info/page/text-and-data-mining"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100000181",
+    "name": "Air Force Office of Scientific Research",
+    "doi-asserted-by": "crossref",
+    "award": [
+     "MURI No. FA9550-17-1-0002"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "MURI No. FA9550-17-1-0002"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "crossref"
+     }
+    ]
+   },
+   {
+    "name": "National Science Foundation",
+    "award": [
+     "ECCS-1542152"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "ECCS-1542152"
+      ]
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000183",
+    "name": "Army Research Office",
+    "doi-asserted-by": "crossref",
+    "award": [
+     "CQTS"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "CQTS"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000183",
+      "id-type": "DOI",
+      "asserted-by": "crossref"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "iopscience.iop.org"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Quantum Sci. Technol."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2020,
+     7,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1088/2058-9565/ab7eed",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2020,
+     3,
+     11
+    ]
+   ],
+   "date-time": "2020-03-11T18:15:28Z",
+   "timestamp": 1583950528000
+  },
+  "page": "034004",
+  "update-policy": "https://doi.org/10.1088/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 35,
+  "title": [
+   "A silicon\u2010organic hybrid platform for quantum microwave-to-optical transduction"
+  ],
+  "prefix": "10.1088",
+  "volume": "5",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-5935-7982",
+    "authenticated-orcid": false,
+    "given": "Jeremy D",
+    "family": "Witmer",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-8132-7336",
+    "authenticated-orcid": false,
+    "given": "Timothy P",
+    "family": "McKenna",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Patricio",
+    "family": "Arrangoiz-Arriola",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6739-6247",
+    "authenticated-orcid": false,
+    "given": "Rapha\u00ebl",
+    "family": "Van Laer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5764-8540",
+    "authenticated-orcid": false,
+    "given": "E",
+    "family": "Alex Wollack",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Francis",
+    "family": "Lin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Alex K-Y",
+    "family": "Jen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Jingdong",
+    "family": "Luo",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6176-1274",
+    "authenticated-orcid": false,
+    "given": "Amir H",
+    "family": "Safavi-Naeini",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "member": "266",
+  "published-online": {
+   "date-parts": [
+    [
+     2020,
+     4,
+     27
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "qstab7eedbib1",
+    "doi-asserted-by": "publisher",
+    "first-page": "1169",
+    "DOI": "10.1126/science.1231930",
+    "type": "journal-article",
+    "volume": "339",
+    "author": "Devoret",
+    "year": "2013",
+    "journal-title": "Science"
+   },
+   {
+    "key": "qstab7eedbib2",
+    "doi-asserted-by": "publisher",
+    "first-page": "10",
+    "DOI": "10.1088/1361-6633/aa7e1a",
+    "type": "journal-article",
+    "volume": "80",
+    "author": "Wendin",
+    "year": "2017",
+    "journal-title": "Rep. Prog. Phys."
+   },
+   {
+    "key": "qstab7eedbib3",
+    "doi-asserted-by": "publisher",
+    "first-page": "1023",
+    "DOI": "10.1038/nature07127",
+    "type": "journal-article",
+    "volume": "453",
+    "author": "Kimble",
+    "year": "2008",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "qstab7eedbib4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2058-9565/ab788a",
+    "type": "journal-article",
+    "volume": "5",
+    "author": "Lauk",
+    "year": "2020",
+    "journal-title": "Quantum Sci. Techol."
+   },
+   {
+    "key": "qstab7eedbib5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/qute.201900077",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Lambert",
+    "year": "2020",
+    "journal-title": "Adv. Quantum. Technol."
+   },
+   {
+    "key": "qstab7eedbib6",
+    "doi-asserted-by": "publisher",
+    "first-page": "321",
+    "DOI": "10.1038/nphys2911",
+    "type": "journal-article",
+    "volume": "10",
+    "author": "Andrews",
+    "year": "2014",
+    "journal-title": "Nat. Phys."
+   },
+   {
+    "key": "qstab7eedbib7",
+    "doi-asserted-by": "publisher",
+    "first-page": "81",
+    "DOI": "10.1038/nature13029",
+    "type": "journal-article",
+    "volume": "507",
+    "author": "Bagci",
+    "year": "2014",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "qstab7eedbib8",
+    "doi-asserted-by": "publisher",
+    "first-page": "69",
+    "DOI": "10.1038/s41567-019-0673-7",
+    "type": "journal-article",
+    "volume": "16",
+    "author": "Forsch",
+    "year": "2020",
+    "journal-title": "Nat. Phys."
+   },
+   {
+    "key": "qstab7eedbib9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.4955408",
+    "type": "journal-article",
+    "volume": "109",
+    "author": "Vainsencher",
+    "year": "2016",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "qstab7eedbib10",
+    "doi-asserted-by": "publisher",
+    "first-page": "346",
+    "DOI": "10.1038/nphoton.2016.46",
+    "type": "journal-article",
+    "volume": "10",
+    "author": "Balram",
+    "year": "2016",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "qstab7eedbib11",
+    "doi-asserted-by": "publisher",
+    "first-page": "1166",
+    "DOI": "10.1038/s41467-020-14863-3",
+    "type": "journal-article",
+    "volume": "11",
+    "author": "Jiang",
+    "year": "2020",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "qstab7eedbib12",
+    "doi-asserted-by": "publisher",
+    "first-page": "1498",
+    "DOI": "10.1364/optica.6.001498",
+    "type": "journal-article",
+    "volume": "6",
+    "author": "Shao",
+    "year": "2019",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "qstab7eedbib13",
+    "doi-asserted-by": "publisher",
+    "first-page": "597",
+    "DOI": "10.1364/optica.3.000597",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Rueda",
+    "year": "2016",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "qstab7eedbib14",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1126/sciadv.aar4994",
+    "type": "journal-article",
+    "volume": "4",
+    "author": "Fan",
+    "year": "2018",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "qstab7eedbib15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/physrevb.93.174427",
+    "type": "journal-article",
+    "volume": "93",
+    "author": "Hisatomi",
+    "year": "2016",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "qstab7eedbib16",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1103/physreva.99.023832",
+    "type": "journal-article",
+    "volume": "99",
+    "author": "Vogt",
+    "year": "2019",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "qstab7eedbib17",
+    "doi-asserted-by": "publisher",
+    "first-page": "93201",
+    "DOI": "10.1103/physrevlett.120.093201",
+    "type": "journal-article",
+    "volume": "120",
+    "author": "Han",
+    "year": "2018",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "qstab7eedbib18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/physreva.100.033807",
+    "type": "journal-article",
+    "volume": "100",
+    "author": "Fernandez-Gonzalvo",
+    "year": "2019",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "qstab7eedbib19",
+    "doi-asserted-by": "publisher",
+    "first-page": "1038",
+    "DOI": "10.1038/s41567-018-0210-0",
+    "type": "journal-article",
+    "volume": "14",
+    "author": "Higginbotham",
+    "year": "2018",
+    "journal-title": "Nat. Phys."
+   },
+   {
+    "key": "qstab7eedbib20",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1038/srep46313",
+    "type": "journal-article",
+    "volume": "7",
+    "author": "Witmer",
+    "year": "2017",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "qstab7eedbib21",
+    "doi-asserted-by": "publisher",
+    "first-page": "1304",
+    "DOI": "10.1109/jproc.2009.2016849",
+    "type": "journal-article",
+    "volume": "97",
+    "author": "Leuthold",
+    "year": "2009",
+    "journal-title": "Proc. IEEE"
+   },
+   {
+    "key": "qstab7eedbib22",
+    "doi-asserted-by": "publisher",
+    "first-page": "114",
+    "DOI": "10.1109/jstqe.2013.2271846",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Leuthold",
+    "year": "2013",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "qstab7eedbib23",
+    "doi-asserted-by": "publisher",
+    "first-page": "256",
+    "DOI": "10.1109/jlt.2015.2499763",
+    "type": "journal-article",
+    "volume": "34",
+    "author": "Koos",
+    "year": "2016",
+    "journal-title": "J. Light. Technol."
+   },
+   {
+    "key": "qstab7eedbib24",
+    "doi-asserted-by": "publisher",
+    "first-page": "25",
+    "DOI": "10.1021/cr9000429",
+    "type": "journal-article",
+    "volume": "110",
+    "author": "Dalton",
+    "year": "2010",
+    "journal-title": "Chem. Rev."
+   },
+   {
+    "key": "qstab7eedbib25",
+    "doi-asserted-by": "publisher",
+    "first-page": "739",
+    "DOI": "10.1364/optica.5.000739",
+    "type": "journal-article",
+    "volume": "5",
+    "author": "Kieninger",
+    "year": "2018",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "qstab7eedbib26",
+    "doi-asserted-by": "publisher",
+    "first-page": "191",
+    "DOI": "10.1007/bf00614817",
+    "type": "journal-article",
+    "volume": "37",
+    "author": "Weis",
+    "year": "1985",
+    "journal-title": "Appl. Phys. A"
+   },
+   {
+    "key": "qstab7eedbib27",
+    "doi-asserted-by": "publisher",
+    "first-page": "13219",
+    "DOI": "10.1364/oe.21.013219",
+    "type": "journal-article",
+    "volume": "21",
+    "author": "Korn",
+    "year": "2013",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "qstab7eedbib28",
+    "doi-asserted-by": "publisher",
+    "first-page": "5",
+    "DOI": "10.1038/lsa.2014.54",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Alloatti",
+    "year": "2014",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "qstab7eedbib29",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1038/s41598-017-19061-8",
+    "type": "journal-article",
+    "volume": "8",
+    "author": "Wolf",
+    "year": "2018",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "qstab7eedbib30",
+    "doi-asserted-by": "publisher",
+    "first-page": "28643",
+    "DOI": "10.1364/oe.25.028643",
+    "type": "journal-article",
+    "volume": "25",
+    "author": "Miura",
+    "year": "2017",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "qstab7eedbib31",
+    "doi-asserted-by": "publisher",
+    "first-page": "1703",
+    "DOI": "10.1049/el.2016.1406",
+    "type": "journal-article",
+    "volume": "52",
+    "author": "Park",
+    "year": "2016",
+    "journal-title": "Electron. Lett."
+   },
+   {
+    "key": "qstab7eedbib32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3467847",
+    "type": "journal-article",
+    "volume": "97",
+    "author": "Greenlee",
+    "year": "2010",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "qstab7eedbib33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/physreva.81.063837",
+    "type": "journal-article",
+    "volume": "81",
+    "author": "Tsang",
+    "year": "2010",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "qstab7eedbib34",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1103/physreva.84.043845",
+    "type": "journal-article",
+    "volume": "84",
+    "author": "Tsang",
+    "year": "2011",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "qstab7eedbib35",
+    "doi-asserted-by": "publisher",
+    "first-page": "1391",
+    "DOI": "10.1103/revmodphys.86.1391",
+    "type": "journal-article",
+    "volume": "86",
+    "author": "Aspelmeyer",
+    "year": "2014",
+    "journal-title": "Rev. Mod. Phys."
+   },
+   {
+    "key": "qstab7eedbib36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/1367-2630/13/1/013017",
+    "type": "journal-article",
+    "volume": "13",
+    "author": "Safavi-Naeini",
+    "year": "2011",
+    "journal-title": "New J. Phys."
+   },
+   {
+    "key": "qstab7eedbib37",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/1367-2630/14/10/105010",
+    "type": "journal-article",
+    "volume": "14",
+    "author": "Wang",
+    "year": "2012",
+    "journal-title": "New J. Phys."
+   },
+   {
+    "key": "qstab7eedbib38",
+    "author": "Joannopoulos",
+    "year": "2008",
+    "edition": "2nd edn",
+    "type": "book"
+   },
+   {
+    "key": "qstab7eedbib39",
+    "doi-asserted-by": "publisher",
+    "first-page": "20353",
+    "DOI": "10.1039/c2jm33979j",
+    "type": "journal-article",
+    "volume": "22",
+    "author": "Huang",
+    "year": "2012",
+    "journal-title": "J. Mater. Chem."
+   },
+   {
+    "key": "qstab7eedbib40",
+    "doi-asserted-by": "publisher",
+    "first-page": "2627",
+    "DOI": "10.1364/oe.25.002627",
+    "type": "journal-article",
+    "volume": "25",
+    "author": "Heni",
+    "year": "2017",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "qstab7eedbib41",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1063/1.2965809",
+    "type": "journal-article",
+    "volume": "93",
+    "author": "Chen",
+    "year": "2008",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "qstab7eedbib42",
+    "author": "Zhang",
+    "year": "2015",
+    "type": "conference-proceedings"
+   },
+   {
+    "key": "qstab7eedbib43",
+    "doi-asserted-by": "publisher",
+    "first-page": "2047",
+    "DOI": "10.1364/ol.38.002047",
+    "type": "journal-article",
+    "volume": "38",
+    "author": "Degallaix",
+    "year": "2013",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "qstab7eedbib44",
+    "doi-asserted-by": "publisher",
+    "first-page": "5876",
+    "DOI": "10.1364/oe.24.005876",
+    "type": "journal-article",
+    "volume": "24",
+    "author": "Witmer",
+    "year": "2016",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "qstab7eedbib45",
+    "doi-asserted-by": "publisher",
+    "first-page": "12",
+    "DOI": "10.1063/1.3107263",
+    "type": "journal-article",
+    "volume": "94",
+    "author": "Deotare",
+    "year": "2009",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "qstab7eedbib46",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1103/physrevlett.115.063601",
+    "type": "journal-article",
+    "volume": "115",
+    "author": "Goban",
+    "year": "2015",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "qstab7eedbib47",
+    "doi-asserted-by": "publisher",
+    "first-page": "L93",
+    "DOI": "10.1002/lpor.201400113",
+    "type": "journal-article",
+    "volume": "8",
+    "author": "Benedikovic",
+    "year": "2014",
+    "journal-title": "Laser Photon. Rev."
+   },
+   {
+    "key": "qstab7eedbib48",
+    "doi-asserted-by": "publisher",
+    "first-page": "28782",
+    "DOI": "10.1364/oe.27.028782",
+    "type": "journal-article",
+    "volume": "27",
+    "author": "McKenna",
+    "year": "2019",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "qstab7eedbib49",
+    "doi-asserted-by": "publisher",
+    "first-page": "10",
+    "DOI": "10.1109/75.752108",
+    "type": "journal-article",
+    "volume": "9",
+    "author": "Wu",
+    "year": "1999",
+    "journal-title": "IEEE Microw. Guid. Wave Lett."
+   },
+   {
+    "key": "qstab7eedbib50",
+    "doi-asserted-by": "publisher",
+    "first-page": "412",
+    "DOI": "10.1103/physrev.111.412",
+    "type": "journal-article",
+    "volume": "111",
+    "author": "Mattis",
+    "year": "1958",
+    "journal-title": "Phys. Rev."
+   },
+   {
+    "key": "qstab7eedbib51",
+    "article-title": "Quasiparticle dynamics in aluminium superconducting microwave resonators",
+    "author": "de Visser",
+    "year": "2014",
+    "type": "other"
+   },
+   {
+    "key": "qstab7eedbib52",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/physrevapplied.6.014013",
+    "type": "journal-article",
+    "volume": "6",
+    "author": "Dieterle",
+    "year": "2016",
+    "journal-title": "Phys. Rev. Appl."
+   },
+   {
+    "key": "qstab7eedbib53",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1103/physreva.96.043808",
+    "type": "journal-article",
+    "volume": "96",
+    "author": "Soltani",
+    "year": "2017",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "qstab7eedbib54",
+    "author": "Bartholomew",
+    "year": "2019",
+    "type": "preprint"
+   },
+   {
+    "key": "qstab7eedbib55",
+    "doi-asserted-by": "publisher",
+    "first-page": "1559",
+    "DOI": "10.1103/physrevlett.28.1559",
+    "type": "journal-article",
+    "volume": "28",
+    "author": "Owen",
+    "year": "1972",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "qstab7eedbib56",
+    "doi-asserted-by": "publisher",
+    "first-page": "169",
+    "DOI": "10.1146/annurev-conmatphys-020911-125022",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Zmuidzinas",
+    "year": "2012",
+    "journal-title": "Annu. Rev. Condens. Matter Phys."
+   },
+   {
+    "key": "qstab7eedbib57",
+    "doi-asserted-by": "publisher",
+    "first-page": "27",
+    "DOI": "10.1103/physrevlett.19.27",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Rothwarf",
+    "year": "1967",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "qstab7eedbib58",
+    "doi-asserted-by": "publisher",
+    "first-page": "4854",
+    "DOI": "10.1103/physrevb.14.4854",
+    "type": "journal-article",
+    "volume": "14",
+    "author": "Kaplan",
+    "year": "1976",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "qstab7eedbib59",
+    "doi-asserted-by": "publisher",
+    "first-page": "99",
+    "DOI": "10.1063/1.3638063",
+    "type": "journal-article",
+    "volume": "99",
+    "author": "Barends",
+    "year": "2011",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "qstab7eedbib60",
+    "doi-asserted-by": "publisher",
+    "first-page": "989",
+    "DOI": "10.1109/tasc.2003.814121",
+    "type": "journal-article",
+    "volume": "13",
+    "author": "Lang",
+    "year": "2003",
+    "journal-title": "IEEE Trans. Appl. Supercond."
+   },
+   {
+    "key": "qstab7eedbib61",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1103/physrevapplied.5.044004",
+    "type": "journal-article",
+    "volume": "5",
+    "author": "Samkharadze",
+    "year": "2016",
+    "journal-title": "Phys. Rev. Appl."
+   },
+   {
+    "key": "qstab7eedbib62",
+    "doi-asserted-by": "publisher",
+    "first-page": "44",
+    "DOI": "10.1088/0957-4484/21/44/445202",
+    "type": "journal-article",
+    "volume": "21",
+    "author": "Annunziata",
+    "year": "2010",
+    "journal-title": "Nanotechnology"
+   },
+   {
+    "key": "qstab7eedbib63",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/physrevlett.122.010504",
+    "type": "journal-article",
+    "volume": "122",
+    "author": "Hazard",
+    "year": "2019",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "qstab7eedbib64",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5053461",
+    "type": "journal-article",
+    "volume": "113",
+    "author": "Shearrow",
+    "year": "2018",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "qstab7eedbib65",
+    "doi-asserted-by": "publisher",
+    "first-page": "9",
+    "DOI": "10.1088/1361-6668/aa7ce3",
+    "type": "journal-article",
+    "volume": "30",
+    "author": "Yemane",
+    "year": "2017",
+    "journal-title": "Supercond. Sci. Technol."
+   },
+   {
+    "key": "qstab7eedbib66",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1103/physrevlett.109.137002",
+    "type": "journal-article",
+    "volume": "109",
+    "author": "Masluk",
+    "year": "2012",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "qstab7eedbib67",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1103/physrevlett.109.137003",
+    "type": "journal-article",
+    "volume": "109",
+    "author": "Bell",
+    "year": "2012",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "qstab7eedbib68",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1038/ncomms12396",
+    "type": "journal-article",
+    "volume": "7",
+    "author": "Fink",
+    "year": "2016",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "qstab7eedbib69",
+    "doi-asserted-by": "publisher",
+    "first-page": "1419",
+    "DOI": "10.1109/4.792620",
+    "type": "journal-article",
+    "volume": "34",
+    "author": "Mohan",
+    "year": "1999",
+    "journal-title": "IEEE J. Solid-State Circuits"
+   },
+   {
+    "key": "qstab7eedbib70",
+    "article-title": "Nanofabrication for On-Chip Optical Levitation, Atom-Trapping, and Superconducting Quantum Circuits",
+    "author": "Norte",
+    "year": "2015",
+    "type": "other"
+   }
+  ],
+  "container-title": [
+   "Quantum Science and Technology"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed",
+    "content-type": "text/html",
+    "content-version": "am",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed/pdf",
+    "content-type": "application/pdf",
+    "content-version": "am",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed/pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed/pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed/pdf",
+    "content-type": "application/pdf",
+    "content-version": "am",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed/pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed/pdf",
+    "content-type": "application/pdf",
+    "content-version": "am",
+    "intended-application": "similarity-checking"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed/pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed/pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     17
+    ]
+   ],
+   "date-time": "2026-01-17T15:33:47Z",
+   "timestamp": 1768664027000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://iopscience.iop.org/article/10.1088/2058-9565/ab7eed"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     4,
+     27
+    ]
+   ]
+  },
+  "references-count": 70,
+  "journal-issue": {
+   "issue": "3",
+   "published-online": {
+    "date-parts": [
+     [
+      2020,
+      4,
+      27
+     ]
+    ]
+   },
+   "published-print": {
+    "date-parts": [
+     [
+      2020,
+      7,
+      1
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1088/2058-9565/ab7eed",
+  "relation": {},
+  "ISSN": [
+   "2058-9565"
+  ],
+  "issn-type": [
+   {
+    "value": "2058-9565",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     4,
+     27
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "A silicon\u2010organic hybrid platform for quantum microwave-to-optical transduction",
+    "name": "article_title",
+    "label": "Article Title"
+   },
+   {
+    "value": "Quantum Science and Technology",
+    "name": "journal_title",
+    "label": "Journal Title"
+   },
+   {
+    "value": "paper",
+    "name": "article_type",
+    "label": "Article Type"
+   },
+   {
+    "value": "\u00a9 2020 IOP Publishing Ltd. All rights, including for text and data mining, AI training, and similar technologies, are reserved.",
+    "name": "copyright_information",
+    "label": "Copyright Information"
+   },
+   {
+    "value": "2019-12-21",
+    "name": "date_received",
+    "label": "Date Received",
+    "group": {
+     "name": "publication_dates",
+     "label": "Publication dates"
+    }
+   },
+   {
+    "value": "2020-03-11",
+    "name": "date_accepted",
+    "label": "Date Accepted",
+    "group": {
+     "name": "publication_dates",
+     "label": "Publication dates"
+    }
+   },
+   {
+    "value": "2020-04-27",
+    "name": "date_epub",
+    "label": "Online publication date",
+    "group": {
+     "name": "publication_dates",
+     "label": "Publication dates"
+    }
+   }
+  ]
+ }
+}

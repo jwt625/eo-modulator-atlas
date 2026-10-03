@@ -1,0 +1,493 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     2,
+     20
+    ]
+   ],
+   "date-time": "2026-02-20T18:32:36Z",
+   "timestamp": 1771612356674,
+   "version": "3.50.1"
+  },
+  "reference-count": 36,
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "issue": "8",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       15
+      ]
+     ],
+     "date-time": "2024-04-15T00:00:00Z",
+     "timestamp": 1713139200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       15
+      ]
+     ],
+     "date-time": "2024-04-15T00:00:00Z",
+     "timestamp": 1713139200000
+    },
+    "content-version": "am",
+    "delay-in-days": 0,
+    "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       15
+      ]
+     ],
+     "date-time": "2024-04-15T00:00:00Z",
+     "timestamp": 1713139200000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       15
+      ]
+     ],
+     "date-time": "2024-04-15T00:00:00Z",
+     "timestamp": 1713139200000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   }
+  ],
+  "funder": [
+   {
+    "name": "Air Force Office of Sponsored Research",
+    "award": [
+     "FA9550-17-1-0076"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-17-1-0076"
+      ]
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "HR00112110001"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "HR00112110001"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100008982",
+    "name": "National Science Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EECS-2014109"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EECS-2014109"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100008982",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "J. Lightwave Technol."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     15
+    ]
+   ]
+  },
+  "DOI": "10.1109/jlt.2023.3345350",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     12,
+     21
+    ]
+   ],
+   "date-time": "2023-12-21T19:49:18Z",
+   "timestamp": 1703188158000
+  },
+  "page": "2868-2879",
+  "source": "Crossref",
+  "is-referenced-by-count": 9,
+  "title": [
+   "Optical Linearization of Silicon Photonic Ring-Assisted Mach-Zehnder Modulator"
+  ],
+  "prefix": "10.1109",
+  "volume": "42",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-1138-6442",
+    "authenticated-orcid": false,
+    "given": "Md Jubayer",
+    "family": "Shawon",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, University of Delaware, Newark, DE, USA"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5080-917X",
+    "authenticated-orcid": false,
+    "given": "Vishal",
+    "family": "Saxena",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, University of Delaware, Newark, DE, USA"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "member": "263",
+  "reference": [
+   {
+    "key": "ref1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2003.822245"
+   },
+   {
+    "key": "ref2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/wmcas.2017.8070697"
+   },
+   {
+    "key": "ref3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ofc.2021.tu5f.5"
+   },
+   {
+    "key": "ref4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TMTT.2022.3218051"
+   },
+   {
+    "key": "ref5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2020.3038448"
+   },
+   {
+    "key": "ref6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TCSI.2010.2055353"
+   },
+   {
+    "key": "ref7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.21.022549"
+   },
+   {
+    "key": "ref8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.3.001483"
+   },
+   {
+    "key": "ref9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/cleo_at.2022.jw3b.187"
+   },
+   {
+    "key": "ref10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2020.2971094"
+   },
+   {
+    "key": "ref11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OFC.2023.Th1A.2"
+   },
+   {
+    "key": "ref12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2011.2176314"
+   },
+   {
+    "key": "ref13",
+    "first-page": "275",
+    "article-title": "Morton photonics inc., west friendship, md 21794",
+    "volume-title": "Proc. Microw. Photon. Int. Topical Meeting",
+    "author": "Morton",
+    "year": "2013"
+   },
+   {
+    "key": "ref14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/MWSCAS.2018.8623835"
+   },
+   {
+    "key": "ref15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.ijleo.2012.07.039"
+   },
+   {
+    "key": "ref16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TCSII.2014.2387682"
+   },
+   {
+    "key": "ref17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1017/cbo9780511536632"
+   },
+   {
+    "key": "ref18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.42.000851"
+   },
+   {
+    "key": "ref19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3990/1.9789036528603"
+   },
+   {
+    "key": "ref20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1049/el:19941422"
+   },
+   {
+    "key": "ref21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2022.3222131"
+   },
+   {
+    "key": "ref22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TCSI.2020.2983303"
+   },
+   {
+    "key": "ref23",
+    "article-title": "Accurate and rapid measurement of IP2 and IP3",
+    "volume-title": "Designers Guide Community",
+    "author": "Kundert",
+    "year": "2002"
+   },
+   {
+    "key": "ref24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2018.2795582"
+   },
+   {
+    "key": "ref25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2019.2908784"
+   },
+   {
+    "key": "ref26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/AVFOP.2013.6661595"
+   },
+   {
+    "key": "ref27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JPHOT.2015.2438445"
+   },
+   {
+    "issue": "12",
+    "key": "ref28",
+    "doi-asserted-by": "crossref",
+    "first-page": "1483",
+    "DOI": "10.1364/OPTICA.3.001483",
+    "article-title": "Ultralinear heterogeneously integrated ring-assisted MachZehnder interferometer modulator on silicon",
+    "volume": "3",
+    "author": "Zhang",
+    "year": "2016",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "ref29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.24.024641"
+   },
+   {
+    "key": "ref30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2019.2913638"
+   },
+   {
+    "key": "ref31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TMTT.2019.2941204"
+   },
+   {
+    "key": "ref32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2020.3038448"
+   },
+   {
+    "key": "ref33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1117/12.2546601"
+   },
+   {
+    "key": "ref34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2014.2328997"
+   },
+   {
+    "key": "ref35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2012.2184261"
+   },
+   {
+    "key": "ref36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2013.2285184"
+   }
+  ],
+  "container-title": [
+   "Journal of Lightwave Technology"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://ieeexplore.ieee.org/ielam/50/10488024/10368281-aam.pdf",
+    "content-type": "application/pdf",
+    "content-version": "am",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "http://xplorestaging.ieee.org/ielx7/50/10488024/10368281.pdf?arnumber=10368281",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     2
+    ]
+   ],
+   "date-time": "2024-04-02T18:54:30Z",
+   "timestamp": 1712084070000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://ieeexplore.ieee.org/document/10368281/"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     15
+    ]
+   ]
+  },
+  "references-count": 36,
+  "journal-issue": {
+   "issue": "8"
+  },
+  "URL": "https://doi.org/10.1109/jlt.2023.3345350",
+  "relation": {},
+  "ISSN": [
+   "0733-8724",
+   "1558-2213"
+  ],
+  "issn-type": [
+   {
+    "value": "0733-8724",
+    "type": "print"
+   },
+   {
+    "value": "1558-2213",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     15
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,1210 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     1
+    ]
+   ],
+   "date-time": "2026-10-01T00:19:02Z",
+   "timestamp": 1790813942919,
+   "version": "4.1.0"
+  },
+  "reference-count": 53,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       11,
+       17
+      ]
+     ],
+     "date-time": "2022-11-17T00:00:00Z",
+     "timestamp": 1668643200000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       11,
+       17
+      ]
+     ],
+     "date-time": "2022-11-17T00:00:00Z",
+     "timestamp": 1668643200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001348",
+    "name": "Agency for Science, Technology and Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "Central research fund"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "Central research fund"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001348",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "Harvard Quantum Initiative"
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "United States Department of Defense | Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "HR0011-20-C-0137"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "HR0011-20-C-0137"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "United States Department of Defense | Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "HR0011-20-C-0137"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "HR0011-20-C-0137"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000015",
+    "name": "U.S. Department of Energy",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE-SC0020376"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE-SC0020376"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000015",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000015",
+    "name": "U.S. Department of Energy",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE-SC0020376"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE-SC0020376"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000015",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000038",
+    "name": "Gouvernement du Canada | Natural Sciences and Engineering Research Council of Canada",
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "id": "10.13039/501100000038",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100006602",
+    "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Research Laboratory",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-21-1-0056"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-21-1-0056"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100006602",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100006602",
+    "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Research Laboratory",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-21-1-0056"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-21-1-0056"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100006602",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000001",
+    "name": "National Science Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EEC-1941583"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EEC-1941583"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000001",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000183",
+    "name": "United States Department of Defense | United States Army | U.S. Army Research, Development and Engineering Command | Army Research Office",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "W911NF2010248"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "W911NF2010248"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000183",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Light Sci Appl"
+  ],
+  "DOI": "10.1038/s41377-022-01029-7",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2022,
+     11,
+     17
+    ]
+   ],
+   "date-time": "2022-11-17T03:03:08Z",
+   "timestamp": 1668654188000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 82,
+  "title": [
+   "Spectral control of nonclassical light pulses using an integrated thin-film lithium niobate modulator"
+  ],
+  "prefix": "10.1038",
+  "volume": "11",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-0210-1860",
+    "authenticated-orcid": false,
+    "given": "Di",
+    "family": "Zhu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Changchen",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mengjie",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0615-7848",
+    "authenticated-orcid": false,
+    "given": "Linbo",
+    "family": "Shao",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0127-1959",
+    "authenticated-orcid": false,
+    "given": "Yaowen",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9596-1407",
+    "authenticated-orcid": false,
+    "given": "C. J.",
+    "family": "Xin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-8711-6505",
+    "authenticated-orcid": false,
+    "given": "Matthew",
+    "family": "Yeh",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Soumya",
+    "family": "Ghosh",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Lingyan",
+    "family": "He",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Christian",
+    "family": "Reimer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Neil",
+    "family": "Sinclair",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Franco N. C.",
+    "family": "Wong",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mian",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5029-5017",
+    "authenticated-orcid": false,
+    "given": "Marko",
+    "family": "Lon\u010dar",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2022,
+     11,
+     17
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "1029_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "264",
+    "DOI": "10.1038/nature02054",
+    "volume": "426",
+    "author": "JL O\u2019Brien",
+    "year": "2003",
+    "unstructured": "O\u2019Brien, J. L. et al. Demonstration of an all-optical quantum controlled-NOT gate. Nature 426, 264\u2013267 (2003).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "1029_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "135",
+    "DOI": "10.1103/RevModPhys.79.135",
+    "volume": "79",
+    "author": "P Kok",
+    "year": "2007",
+    "unstructured": "Kok, P. et al. Linear optical quantum computing with photonic qubits. Rev. Mod. Phys. 79, 135\u2013174 (2007).",
+    "journal-title": "Rev. Mod. Phys."
+   },
+   {
+    "key": "1029_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "622",
+    "DOI": "10.1038/nature22986",
+    "volume": "546",
+    "author": "M Kues",
+    "year": "2017",
+    "unstructured": "Kues, M. et al. On-chip generation of high-dimensional entangled quantum states and their coherent control. Nature 546, 622\u2013626 (2017).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "1029_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "8",
+    "DOI": "10.1364/OPTICA.4.000008",
+    "volume": "4",
+    "author": "JM Lukens",
+    "year": "2017",
+    "unstructured": "Lukens, J. M. & Lougovski, P. Frequency-encoded photonic qubits for scalable quantum information processing. Optica 4, 8\u201316 (2017).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1029_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "053603",
+    "DOI": "10.1103/PhysRevLett.113.053603",
+    "volume": "113",
+    "author": "N Sinclair",
+    "year": "2014",
+    "unstructured": "Sinclair, N. et al. Spectral multiplexing for scalable quantum photonics using an atomic frequency comb quantum memory and feed-forward control. Phys. Rev. Lett. 113, 053603 (2014).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "1029_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "083601",
+    "DOI": "10.1103/PhysRevLett.119.083601",
+    "volume": "119",
+    "author": "MG Puigibert",
+    "year": "2017",
+    "unstructured": "Puigibert, M. G. et al. Heralded single photons based on spectral multiplexing and feed-forward control. Phys. Rev. Lett. 119, 083601 (2017).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "1029_CR7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-018-03254-4",
+    "volume": "9",
+    "author": "C Joshi",
+    "year": "2018",
+    "unstructured": "Joshi, C. et al. Frequency multiplexing for quasi-deterministic heralded single-photon sources. Nat. Commun. 9, 847 (2018).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "1029_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "4337",
+    "DOI": "10.1103/PhysRevLett.75.4337",
+    "volume": "75",
+    "author": "PG Kwiat",
+    "year": "1995",
+    "unstructured": "Kwiat, P. G. et al. New high-intensity source of polarization-entangled photon Pairs. Phys. Rev. Lett. 75, 4337\u20134341 (1995).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "1029_CR9",
+    "doi-asserted-by": "publisher",
+    "first-page": "231106",
+    "DOI": "10.1063/1.4937374",
+    "volume": "107",
+    "author": "ZZ Yan",
+    "year": "2015",
+    "unstructured": "Yan, Z. Z. et al. Generation of heralded single photons beyond 1100 nm by spontaneous four-wave mixing in a side-stressed femtosecond laser-written waveguide. Appl. Phys. Lett. 107, 231106 (2015).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "1029_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "631",
+    "DOI": "10.1038/nphoton.2016.186",
+    "volume": "10",
+    "author": "I Aharonovich",
+    "year": "2016",
+    "unstructured": "Aharonovich, I., Englund, D. & Toth, M. Solid-state single-photon emitters. Nat. Photonics 10, 631\u2013641 (2016).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "1023",
+    "DOI": "10.1038/nature07127",
+    "volume": "453",
+    "author": "HJ Kimble",
+    "year": "2008",
+    "unstructured": "Kimble, H. J. The quantum internet. Nature 453, 1023\u20131030 (2008).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "1029_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "706",
+    "DOI": "10.1038/nphoton.2009.231",
+    "volume": "3",
+    "author": "AI Lvovsky",
+    "year": "2009",
+    "unstructured": "Lvovsky, A. I., Sanders, B. C. & Tittel, W. Optical quantum memory. Nat. Photonics 3, 706\u2013714 (2009).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "516",
+    "DOI": "10.1038/s41566-018-0232-2",
+    "volume": "12",
+    "author": "DD Awschalom",
+    "year": "2018",
+    "unstructured": "Awschalom, D. D. et al. Quantum technologies with optically interfaced solid-state spins. Nat. Photonics 12, 516\u2013527 (2018).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "32",
+    "DOI": "10.1063/PT.3.1786",
+    "volume": "65",
+    "author": "M Raymer",
+    "year": "2012",
+    "unstructured": "Raymer, M. & Srinivasan, K. Manipulating the color and shape of single photons. Phys. Today 65, 32 (2012).",
+    "journal-title": "Phys. Today"
+   },
+   {
+    "key": "1029_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "9131",
+    "DOI": "10.1364/OPEX.13.009131",
+    "volume": "13",
+    "author": "CJ McKinstrie",
+    "year": "2005",
+    "unstructured": "McKinstrie, C. J. et al. Translation of quantum states by four-wave mixing in fibers. Opt. Express 13, 9131\u20139142 (2005).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "1029_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "563",
+    "DOI": "10.1364/OPTICA.6.000563",
+    "volume": "6",
+    "author": "A Singh",
+    "year": "2019",
+    "unstructured": "Singh, A. et al. Quantum frequency conversion of a quantum dot single-photon source on a nanophotonic chip. Optica 6, 563\u2013569 (2019).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1029_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "406",
+    "DOI": "10.1038/nphoton.2016.64",
+    "volume": "10",
+    "author": "Q Li",
+    "year": "2016",
+    "unstructured": "Li, Q., Davan\u00e7o, M. & Srinivasan, K. Efficient and low-noise single-photon-level frequency conversion interfaces using silicon nanophotonics. Nat. Photonics 10, 406\u2013414 (2016).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "1476",
+    "DOI": "10.1364/OL.15.001476",
+    "volume": "15",
+    "author": "P Kumar",
+    "year": "1990",
+    "unstructured": "Kumar, P. Quantum frequency conversion. Opt. Lett. 15, 1476\u20131478 (1990).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "1029_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "363",
+    "DOI": "10.1038/nphoton.2013.47",
+    "volume": "7",
+    "author": "J Lavoie",
+    "year": "2013",
+    "unstructured": "Lavoie, J. et al. Spectral compression of single photons. Nat. Photonics 7, 363\u2013366 (2013).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "147404",
+    "DOI": "10.1103/PhysRevLett.109.147404",
+    "volume": "109",
+    "author": "S Zaske",
+    "year": "2012",
+    "unstructured": "Zaske, S. et al. Visible-to-telecom quantum frequency conversion of light from a single quantum emitter. Phys. Rev. Lett. 109, 147404 (2012).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "1029_CR21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/ncomms14288",
+    "volume": "8",
+    "author": "M Allgaier",
+    "year": "2017",
+    "unstructured": "Allgaier, M. et al. Highly efficient frequency conversion with bandwidth compression of quantum light. Nat. Commun. 8, 14288 (2017).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "1029_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "e1501223",
+    "DOI": "10.1126/sciadv.1501223",
+    "volume": "2",
+    "author": "N Matsuda",
+    "year": "2016",
+    "unstructured": "Matsuda, N. Deterministic reshaping of single-photon spectra using cross-phase modulation. Sci. Adv. 2, e1501223 (2016).",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "1029_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "766",
+    "DOI": "10.1038/nphoton.2016.206",
+    "volume": "10",
+    "author": "LR Fan",
+    "year": "2016",
+    "unstructured": "Fan, L. R. et al. Integrated optomechanical single-photon frequency shifter. Nat. Photonics 10, 766\u2013770 (2016).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "323",
+    "DOI": "10.1038/s41566-019-0375-9",
+    "volume": "13",
+    "author": "LR Fan",
+    "year": "2019",
+    "unstructured": "Fan, L. R. et al. Spectrotemporal shaping of itinerant photons via distributed nanomechanics. Nat. Photonics 13, 323\u2013327 (2019).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "53",
+    "DOI": "10.1038/nphoton.2016.228",
+    "volume": "11",
+    "author": "M Karpi\u0144ski",
+    "year": "2017",
+    "unstructured": "Karpi\u0144ski, M. et al. Bandwidth manipulation of quantum light by an electro-optic time lens. Nat. Photonics 11, 53\u201357 (2017).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "023601",
+    "DOI": "10.1103/PhysRevLett.118.023601",
+    "volume": "118",
+    "author": "LJ Wright",
+    "year": "2017",
+    "unstructured": "Wright, L. J. et al. Spectral shearing of quantum light pulses by electro-optic phase modulation. Phys. Rev. Lett. 118, 023601 (2017).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "1029_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "2000150",
+    "DOI": "10.1002/qute.202000150",
+    "volume": "4",
+    "author": "M Karpi\u0144ski",
+    "year": "2021",
+    "unstructured": "Karpi\u0144ski, M. et al. Control and measurement of quantum light pulses for quantum information science and technology. Adv. Quantum Technol. 4, 2000150 (2021).",
+    "journal-title": "Adv. Quantum Technol."
+   },
+   {
+    "key": "1029_CR28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41534-019-0137-z",
+    "volume": "5",
+    "author": "HH Lu",
+    "year": "2019",
+    "unstructured": "Lu, H. H. et al. A controlled-NOT gate for frequency-bin qubits. npj Quantum Inf. 5, 24 (2019).",
+    "journal-title": "npj Quantum Inf."
+   },
+   {
+    "key": "1029_CR29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-020-79511-8",
+    "volume": "11",
+    "author": "CC Chen",
+    "year": "2021",
+    "unstructured": "Chen, C. C. et al. Single-photon frequency shifting with a quadrature phase-shift keying modulator. Sci. Rep. 11, 300 (2021).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "1029_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "242",
+    "DOI": "10.1364/AOP.411024",
+    "volume": "13",
+    "author": "D Zhu",
+    "year": "2021",
+    "unstructured": "Zhu, D. et al. Integrated photonics on thin-film lithium niobate. Adv. Opt. Photonics 13, 242\u2013352 (2021).",
+    "journal-title": "Adv. Opt. Photonics"
+   },
+   {
+    "key": "1029_CR31",
+    "doi-asserted-by": "publisher",
+    "first-page": "652",
+    "DOI": "10.1364/OPTICA.415762",
+    "volume": "8",
+    "author": "M Zhang",
+    "year": "2021",
+    "unstructured": "Zhang, M. et al. Integrated lithium niobate electro-optic modulators: when performance meets scalability. Optica 8, 652\u2013667 (2021).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1029_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "2100789",
+    "DOI": "10.1002/adom.202100789",
+    "volume": "9",
+    "author": "S Saravi",
+    "year": "2021",
+    "unstructured": "Saravi, S., Pertsch, T. & Setzpfandt, F. Lithium niobate on insulator: an emerging platform for integrated quantum photonics. Adv. Optical Mater. 9, 2100789 (2021).",
+    "journal-title": "Adv. Optical Mater."
+   },
+   {
+    "key": "1029_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "287",
+    "DOI": "10.1063/1.1754753",
+    "volume": "9",
+    "author": "MA Duguay",
+    "year": "1966",
+    "unstructured": "Duguay, M. A., Hargrove, L. E. & Jefferts, K. B. Optical frequency translation of mode\u2010locked laser pulses. Appl. Phys. Lett. 9, 287\u2013290 (1966).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "1029_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "1951",
+    "DOI": "10.1109/3.301659",
+    "volume": "30",
+    "author": "BH Kolner",
+    "year": "1994",
+    "unstructured": "Kolner, B. H. Space-time duality and the theory of temporal imaging. IEEE J. Quantum Electron. 30, 1951\u20131963 (1994).",
+    "journal-title": "IEEE J. Quantum Electron."
+   },
+   {
+    "key": "1029_CR35",
+    "doi-asserted-by": "publisher",
+    "first-page": "274",
+    "DOI": "10.1364/AOP.5.000274",
+    "volume": "5",
+    "author": "R Salem",
+    "year": "2013",
+    "unstructured": "Salem, R., Foster, M. A. & Gaeta, A. L. Application of space\u2013time duality to ultrahigh-speed optical signal processing. Adv. Opt. Photonics 5, 274\u2013317 (2013).",
+    "journal-title": "Adv. Opt. Photonics"
+   },
+   {
+    "key": "1029_CR36",
+    "doi-asserted-by": "publisher",
+    "first-page": "7300",
+    "DOI": "10.1364/OE.25.007300",
+    "volume": "25",
+    "author": "CC Chen",
+    "year": "2017",
+    "unstructured": "Chen, C. C. et al. Efficient generation and characterization of spectrally factorable biphotons. Opt. Express 25, 7300\u20137312 (2017).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "1029_CR37",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Yu, M. J. et al. Femtosecond pulse generation via an integrated electro-optic time lens. Print at https://doi.org/10.48550/arXiv.2112.09204 (2021).",
+    "DOI": "10.48550/arXiv.2112.09204"
+   },
+   {
+    "key": "1029_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "889",
+    "DOI": "10.1109/LPT.2019.2911876",
+    "volume": "31",
+    "author": "TH Ren",
+    "year": "2019",
+    "unstructured": "Ren, T. H. et al. An integrated low-voltage broadband lithium niobate phase modulator. IEEE Photonics Technol. Lett. 31, 889\u2013892 (2019).",
+    "journal-title": "IEEE Photonics Technol. Lett."
+   },
+   {
+    "key": "1029_CR39",
+    "doi-asserted-by": "publisher",
+    "first-page": "2873",
+    "DOI": "10.1364/OL.34.002873",
+    "volume": "34",
+    "author": "M Avenhaus",
+    "year": "2009",
+    "unstructured": "Avenhaus, M. et al. Fiber-assisted single-photon spectrograph. Opt. Lett. 34, 2873\u20132875 (2009).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "1029_CR40",
+    "doi-asserted-by": "publisher",
+    "first-page": "234003",
+    "DOI": "10.1063/5.0011077",
+    "volume": "116",
+    "author": "F So\u015bnicki",
+    "year": "2020",
+    "unstructured": "So\u015bnicki, F. et al. Aperiodic electro-optic time lens for spectral manipulation of single-photon pulses. Appl. Phys. Lett. 116, 234003 (2020).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "1029_CR41",
+    "doi-asserted-by": "publisher",
+    "first-page": "357",
+    "DOI": "10.1364/OPTICA.416155",
+    "volume": "8",
+    "author": "P Kharel",
+    "year": "2021",
+    "unstructured": "Kharel, P. et al. Breaking voltage\u2013bandwidth limits in integrated lithium niobate modulators using micro-structured electrodes. Optica 8, 357\u2013363 (2021).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1029_CR42",
+    "doi-asserted-by": "publisher",
+    "first-page": "587",
+    "DOI": "10.1038/s41586-021-03999-x",
+    "volume": "599",
+    "author": "YW Hu",
+    "year": "2021",
+    "unstructured": "Hu, Y. W. et al. On-chip electro-optic frequency shifters and beam splitters. Nature 599, 587\u2013593 (2021).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "1029_CR43",
+    "doi-asserted-by": "publisher",
+    "first-page": "1455",
+    "DOI": "10.1364/OPTICA.5.001455",
+    "volume": "5",
+    "author": "HH Lu",
+    "year": "2018",
+    "unstructured": "Lu, H. H. et al. Quantum interference and correlation control of frequency-bin qubits. Optica 5, 1455\u20131460 (2018).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1029_CR44",
+    "doi-asserted-by": "publisher",
+    "first-page": "2760",
+    "DOI": "10.1364/OL.43.002760",
+    "volume": "43",
+    "author": "P Imany",
+    "year": "2018",
+    "unstructured": "Imany, P. et al. Frequency-domain Hong\u2013Ou\u2013Mandel interference with linear optics. Opt. Lett. 43, 2760\u20132763 (2018).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "1029_CR45",
+    "doi-asserted-by": "publisher",
+    "first-page": "183601",
+    "DOI": "10.1103/PhysRevLett.127.183601",
+    "volume": "127",
+    "author": "UA Javid",
+    "year": "2021",
+    "unstructured": "Javid, U. A. et al. Ultrabroadband entangled photons on a nanophotonic chip. Phys. Rev. Lett. 127, 183601 (2021).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "1029_CR46",
+    "doi-asserted-by": "publisher",
+    "first-page": "221102",
+    "DOI": "10.1063/1.5054865",
+    "volume": "113",
+    "author": "S Aghaeimeibodi",
+    "year": "2018",
+    "unstructured": "Aghaeimeibodi, S. et al. Integration of quantum dots with lithium niobate photonics. Appl. Phys. Lett. 113, 221102 (2018).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "1029_CR47",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-021-27205-8",
+    "volume": "12",
+    "author": "E Lomonte",
+    "year": "2021",
+    "unstructured": "Lomonte, E. et al. Single-photon detection and cryogenic reconfigurability in lithium niobate nanophotonic circuits. Nat. Commun. 12, 6847 (2021).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "1029_CR48",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Dutta, S. et al. An atomic frequency comb memory in rare-earth doped thin-film lithium niobate. Print at https://arxiv.org/abs/2111.01942 (2021).",
+    "DOI": "10.21203/rs.3.rs-1527671/v1"
+   },
+   {
+    "key": "1029_CR49",
+    "doi-asserted-by": "publisher",
+    "first-page": "250",
+    "DOI": "10.1038/s41566-020-0589-x",
+    "volume": "14",
+    "author": "B Korzh",
+    "year": "2020",
+    "unstructured": "Korzh, B. et al. Demonstration of sub-3 Ps temporal resolution with a superconducting nanowire single-photon detector. Nat. Photonics 14, 250\u2013255 (2020).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "1029_CR50",
+    "doi-asserted-by": "publisher",
+    "first-page": "103602",
+    "DOI": "10.1103/PhysRevLett.112.103602",
+    "volume": "112",
+    "author": "TM Zhao",
+    "year": "2014",
+    "unstructured": "Zhao, T. M. et al. Entangling different-color photons via time-resolved measurement and active feed forward. Phys. Rev. Lett. 112, 103602 (2014).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "1029_CR51",
+    "first-page": "041017",
+    "volume": "5",
+    "author": "B Brecht",
+    "year": "2015",
+    "unstructured": "Brecht, B. et al. Photon temporal modes: a complete framework for quantum information science. Phys. Rev. X 5, 041017 (2015).",
+    "journal-title": "Phys. Rev. X"
+   },
+   {
+    "key": "1029_CR52",
+    "doi-asserted-by": "publisher",
+    "first-page": "1478",
+    "DOI": "10.1364/OL.418996",
+    "volume": "46",
+    "author": "P Ying",
+    "year": "2021",
+    "unstructured": "Ying, P. et al. Low-loss edge-coupling thin-film lithium niobate modulator with an efficient phase shifter. Opt. Lett. 46, 1478\u20131481 (2021).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "1029_CR53",
+    "doi-asserted-by": "publisher",
+    "first-page": "1536",
+    "DOI": "10.1364/OPTICA.4.001536",
+    "volume": "4",
+    "author": "M Zhang",
+    "year": "2017",
+    "unstructured": "Zhang, M. et al. Monolithic ultra-high-Q lithium niobate microring resonator. Optica 4, 1536\u20131537 (2017).",
+    "journal-title": "Optica"
+   }
+  ],
+  "container-title": [
+   "Light: Science &amp; Applications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41377-022-01029-7.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41377-022-01029-7",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41377-022-01029-7.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2022,
+     11,
+     18
+    ]
+   ],
+   "date-time": "2022-11-18T06:03:58Z",
+   "timestamp": 1668751438000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41377-022-01029-7"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     11,
+     17
+    ]
+   ]
+  },
+  "references-count": 53,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2022,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "1029"
+  ],
+  "URL": "https://doi.org/10.1038/s41377-022-01029-7",
+  "relation": {
+   "has-preprint": [
+    {
+     "id-type": "doi",
+     "id": "10.21203/rs.3.rs-1795626/v1",
+     "asserted-by": "object"
+    }
+   ]
+  },
+  "ISSN": [
+   "2047-7538"
+  ],
+  "issn-type": [
+   {
+    "value": "2047-7538",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     11,
+     17
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "25 June 2022",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "30 October 2022",
+    "order": 2,
+    "name": "revised",
+    "label": "Revised",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "31 October 2022",
+    "order": 3,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "17 November 2022",
+    "order": 4,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "M.Z., L.H., C.R., and M.L. are involved in developing lithium niobate technologies at HyperLight Corporation.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Conflict of interest"
+    }
+   }
+  ],
+  "article-number": "327"
+ }
+}

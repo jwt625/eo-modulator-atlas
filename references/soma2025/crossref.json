@@ -1,0 +1,965 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     7
+    ]
+   ],
+   "date-time": "2026-09-07T19:36:51Z",
+   "timestamp": 1788809811865,
+   "version": "build-2803163510"
+  },
+  "reference-count": 59,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "11",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       9,
+       10
+      ]
+     ],
+     "date-time": "2025-09-10T00:00:00Z",
+     "timestamp": 1757462400000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       9,
+       10
+      ]
+     ],
+     "date-time": "2025-09-10T00:00:00Z",
+     "timestamp": 1757462400000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001691",
+    "name": "MEXT | Japan Society for the Promotion of Science",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "JP23H05444"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "JP23H05444"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001691",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001691",
+    "name": "MEXT | Japan Society for the Promotion of Science",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "JP24KJ0557"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "JP24KJ0557"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001691",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat. Nanotechnol."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     11
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41565-025-02000-4",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     9,
+     10
+    ]
+   ],
+   "date-time": "2025-09-10T09:03:57Z",
+   "timestamp": 1757495037000
+  },
+  "page": "1625-1632",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 20,
+  "title": [
+   "Subvolt high-speed free-space modulator with electro-optic metasurface"
+  ],
+  "prefix": "10.1038",
+  "volume": "20",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-9960-9937",
+    "authenticated-orcid": false,
+    "given": "Go",
+    "family": "Soma",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0006-4141-0438",
+    "authenticated-orcid": false,
+    "given": "Koto",
+    "family": "Ariu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0006-6509-0707",
+    "authenticated-orcid": false,
+    "given": "Seidai",
+    "family": "Karakida",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0002-7617-5686",
+    "authenticated-orcid": false,
+    "given": "Yusuke",
+    "family": "Tsubai",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Takuo",
+    "family": "Tanemura",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     9,
+     10
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "2000_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "333",
+    "DOI": "10.1126/science.1210713",
+    "volume": "334",
+    "author": "N Yu",
+    "year": "2011",
+    "unstructured": "Yu, N. et al. Light propagation with phase discontinuities: generalized laws of reflection and refraction. Science 334, 333\u2013337 (2011).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2000_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "816",
+    "DOI": "10.1021/acsphotonics.3c00457",
+    "volume": "11",
+    "author": "AI Kuznetsov",
+    "year": "2024",
+    "unstructured": "Kuznetsov, A. I. et al. Roadmap for optical metasurfaces. ACS Photon. 11, 816\u2013865 (2024).",
+    "journal-title": "ACS Photon."
+   },
+   {
+    "key": "2000_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "220",
+    "DOI": "10.1038/s41565-017-0034-6",
+    "volume": "13",
+    "author": "WT Chen",
+    "year": "2018",
+    "unstructured": "Chen, W. T. et al. A broadband achromatic metalens for focusing and imaging in the visible. Nat. Nanotechnol. 13, 220\u2013226 (2018).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2000_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "227",
+    "DOI": "10.1038/s41565-017-0052-4",
+    "volume": "13",
+    "author": "S Wang",
+    "year": "2018",
+    "unstructured": "Wang, S. et al. A broadband achromatic metalens in the visible. Nat. Nanotechnol. 13, 227\u2013232 (2018).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2000_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "eaax1839",
+    "DOI": "10.1126/science.aax1839",
+    "volume": "365",
+    "author": "NA Rubin",
+    "year": "2019",
+    "unstructured": "Rubin, N. A. et al. Matrix Fourier optics enables a compact full-Stokes polarization camera. Science 365, eaax1839 (2019).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2000_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "1596",
+    "DOI": "10.1364/OPTICA.444255",
+    "volume": "8",
+    "author": "M Miyata",
+    "year": "2021",
+    "unstructured": "Miyata, M., Nemoto, N., Shikama, K., Kobayashi, F. & Hashimoto, T. Full-color-sorting metalenses for high-sensitivity image sensors. Optica 8, 1596\u20131604 (2021).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2000_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "113901",
+    "DOI": "10.1103/PhysRevLett.118.113901",
+    "volume": "118",
+    "author": "JP Balthasar Mueller",
+    "year": "2017",
+    "unstructured": "Balthasar Mueller, J. P., Rubin, N. A., Devlin, R. C., Groever, B. & Capasso, F. Metasurface polarization optics: independent phase control of arbitrary orthogonal states of polarization. Phys. Rev. Lett. 118, 113901 (2017).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "2000_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "294",
+    "DOI": "10.1126/science.ade5140",
+    "volume": "379",
+    "author": "B Xiong",
+    "year": "2023",
+    "unstructured": "Xiong, B. et al. Breaking the limitation of polarization multiplexing in optical metasurfaces with engineered noise. Science 379, 294\u2013299 (2023).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2000_CR9",
+    "doi-asserted-by": "publisher",
+    "first-page": "791",
+    "DOI": "10.1038/s41586-024-07386-0",
+    "volume": "629",
+    "author": "M Gopakumar",
+    "year": "2024",
+    "unstructured": "Gopakumar, M. et al. Full-colour 3D holographic augmented-reality displays with metasurface waveguides. Nature 629, 791\u2013797 (2024).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2000_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "929",
+    "DOI": "10.1021/acsphotonics.1c01744",
+    "volume": "9",
+    "author": "J Oh",
+    "year": "2022",
+    "unstructured": "Oh, J. et al. Adjoint-optimized metasurfaces for compact mode-division multiplexing. ACS Photon. 9, 929\u2013937 (2022).",
+    "journal-title": "ACS Photon."
+   },
+   {
+    "key": "2000_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "604",
+    "DOI": "10.1364/OPTICA.484318",
+    "volume": "10",
+    "author": "G Soma",
+    "year": "2023",
+    "unstructured": "Soma, G. et al. Compact and scalable polarimetric self-coherent receiver using a dielectric metasurface. Optica 10, 604\u2013611 (2023).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2000_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "4013",
+    "DOI": "10.1109/JLT.2024.3374336",
+    "volume": "42",
+    "author": "K Komatsu",
+    "year": "2024",
+    "unstructured": "Komatsu, K. et al. Scalable multi-core dual-polarization coherent receiver using a metasurface optical hybrid. J. Light. Technol. 42, 4013\u20134022 (2024).",
+    "journal-title": "J. Light. Technol."
+   },
+   {
+    "key": "2000_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "1087",
+    "DOI": "10.1126/science.aaw6747",
+    "volume": "364",
+    "author": "S-Q Li",
+    "year": "2019",
+    "unstructured": "Li, S.-Q. et al. Phase-only transmissive spatial light modulator based on tunable dielectric metasurface. Science 364, 1087\u20131090 (2019).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2000_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "257",
+    "DOI": "10.1126/science.aax5961",
+    "volume": "365",
+    "author": "AL Holsteen",
+    "year": "2019",
+    "unstructured": "Holsteen, A. L., Cihan, A. F. & Brongersma, M. L. Temporal color mixing and dynamic beam shaping with silicon metasurfaces. Science 365, 257\u2013260 (2019).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2000_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "661",
+    "DOI": "10.1038/s41565-021-00881-9",
+    "volume": "16",
+    "author": "Y Zhang",
+    "year": "2021",
+    "unstructured": "Zhang, Y. et al. Electrically reconfigurable non-volatile metasurface using low-loss optical phase-change material. Nat. Nanotechnol. 16, 661\u2013666 (2021).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2000_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "eaat3100",
+    "DOI": "10.1126/science.aat3100",
+    "volume": "364",
+    "author": "AM Shaltout",
+    "year": "2019",
+    "unstructured": "Shaltout, A. M., Shalaev, V. M. & Brongersma, M. L. Spatiotemporal light control with active metasurfaces. Science 364, eaat3100 (2019).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2000_CR17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-019-11598-8",
+    "volume": "10",
+    "author": "PC Wu",
+    "year": "2019",
+    "unstructured": "Wu, P. C. et al. Dynamic beam steering with all-dielectric electro-optic III\u2013V multiple-quantum-well metasurfaces. Nat. Commun. 10, 3654 (2019).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2000_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "69",
+    "DOI": "10.1038/s41565-020-00787-y",
+    "volume": "16",
+    "author": "J Park",
+    "year": "2021",
+    "unstructured": "Park, J. et al. All-solid-state spatial light modulator with independent phase and amplitude control for three-dimensional LiDAR applications. Nat. Nanotechnol. 16, 69\u201376 (2021).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2000_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "834",
+    "DOI": "10.1038/s41566-022-01086-9",
+    "volume": "16",
+    "author": "CL Panuski",
+    "year": "2022",
+    "unstructured": "Panuski, C. L. et al. A full degree-of-freedom spatiotemporal light modulator. Nat. Photon. 16, 834\u2013842 (2022).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "2000_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "1491",
+    "DOI": "10.1038/s41565-024-01728-9",
+    "volume": "19",
+    "author": "J Sisler",
+    "year": "2024",
+    "unstructured": "Sisler, J. et al. Electrically tunable space-time metasurfaces at optical frequencies. Nat. Nanotechnol. 19, 1491\u20131498 (2024).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2000_CR21",
+    "doi-asserted-by": "publisher",
+    "first-page": "116",
+    "DOI": "10.1016/j.optcom.2015.04.058",
+    "volume": "352",
+    "author": "F Ren",
+    "year": "2015",
+    "unstructured": "Ren, F. et al. Surface-normal plasmonic modulator using sub-wavelength metal grating on electro-optic polymer thin film. Opt. Commun. 352, 116\u2013120 (2015).",
+    "journal-title": "Opt. Commun."
+   },
+   {
+    "key": "2000_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "30304",
+    "DOI": "10.1364/OE.25.030304",
+    "volume": "25",
+    "author": "J Zhang",
+    "year": "2017",
+    "unstructured": "Zhang, J., Kosugi, Y., Otomo, A., Nakano, Y. & Tanemura, T. Active metasurface modulator with electro-optic polymer using bimodal plasmonic resonance. Opt. Express 25, 30304\u201330311 (2017).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2000_CR23",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Miyano, H. et al. Dimerized plasmonic-organic grating for high-speed metasurface modulator. In OptoElectronics and Communications Conference/International Conference on Photonics in Switching and Computing TuD3-2 (IEEE, 2022).",
+    "DOI": "10.23919/OECC/PSC53152.2022.9849960"
+   },
+   {
+    "key": "2000_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "9982",
+    "DOI": "10.1021/acs.nanolett.2c03539",
+    "volume": "22",
+    "author": "X Sun",
+    "year": "2022",
+    "unstructured": "Sun, X. et al. Manipulating dual bound states in the continuum for efficient spatial light modulator. Nano Lett. 22, 9982\u20139989 (2022).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2000_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "121304",
+    "DOI": "10.1063/5.0173216",
+    "volume": "8",
+    "author": "J Zhang",
+    "year": "2023",
+    "unstructured": "Zhang, J. et al. High-speed metasurface modulator using perfectly absorptive bimodal plasmonic resonance. APL Photon. 8, 121304 (2023).",
+    "journal-title": "APL Photon."
+   },
+   {
+    "key": "2000_CR26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-023-01255-7",
+    "volume": "12",
+    "author": "L Zhang",
+    "year": "2023",
+    "unstructured": "Zhang, L. et al. Plasmonic metafibers electro-optic modulators. Light Sci. Appl. 12, 198 (2023).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "2000_CR27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-021-26035-y",
+    "volume": "12",
+    "author": "I-C Benea-Chelmus",
+    "year": "2021",
+    "unstructured": "Benea-Chelmus, I.-C. et al. Electro-optic spatial light modulator from an engineered organic layer. Nat. Commun. 12, 5928 (2021).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2000_CR28",
+    "doi-asserted-by": "publisher",
+    "first-page": "25543",
+    "DOI": "10.1364/OE.434480",
+    "volume": "29",
+    "author": "X Sun",
+    "year": "2021",
+    "unstructured": "Sun, X. et al. Electro-optic polymer and silicon nitride hybrid spatial light modulators based on a metasurface. Opt. Express 29, 25543\u201325551 (2021).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2000_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "2893",
+    "DOI": "10.1364/PRJ.476688",
+    "volume": "10",
+    "author": "X Sun",
+    "year": "2022",
+    "unstructured": "Sun, X. & Qiu, F. Polarization independent high-speed spatial modulators based on an electro-optic polymer and silicon hybrid metasurface. Photon. Res. 10, 2893 (2022).",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "key": "2000_CR30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-022-30451-z",
+    "volume": "13",
+    "author": "I-C Benea-Chelmus",
+    "year": "2022",
+    "unstructured": "Benea-Chelmus, I.-C. et al. Gigahertz free-space electro-optic modulators based on Mie resonances. Nat. Commun. 13, 3170 (2022).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2000_CR31",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Ogasawara, M. et al. Electro-optic polymer surface-normal modulator using silicon high-contrast grating resonator. In Conference on Lasers and Electro-Optics JTh2A.48 (2019).",
+    "DOI": "10.1364/CLEO_AT.2019.JTh2A.48"
+   },
+   {
+    "key": "2000_CR32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-45544-0",
+    "volume": "15",
+    "author": "T Zheng",
+    "year": "2024",
+    "unstructured": "Zheng, T., Gu, Y., Kwon, H., Roberts, G. & Faraon, A. Dynamic light manipulation via silicon-organic slot metasurfaces. Nat. Commun. 15, 1557 (2024).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2000_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "20160595",
+    "DOI": "10.1587/elex.13.20160595",
+    "volume": "13",
+    "author": "Y Kosugi",
+    "year": "2016",
+    "unstructured": "Kosugi, Y., Yamada, T., Otomo, A., Nakano, Y. & Tanemura, T. Surface-normal electro-optic-polymer modulator with silicon subwavelength grating. IEICE Electron. Express 13, 20160595\u201320160595 (2016).",
+    "journal-title": "IEICE Electron. Express"
+   },
+   {
+    "key": "2000_CR34",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Fukui, T. et al. 17\u2009GHz lossless InP-membrane active metasurface. Preprint at https://doi.org/10.48550/arXiv.2505.07072 (2025).",
+    "DOI": "10.48550/arXiv.2505.07072"
+   },
+   {
+    "key": "2000_CR35",
+    "doi-asserted-by": "publisher",
+    "first-page": "11407",
+    "DOI": "10.1039/D2NR02979K",
+    "volume": "14",
+    "author": "C Damgaard-Carstensen",
+    "year": "2022",
+    "unstructured": "Damgaard-Carstensen, C., Thomaschewski, M. & Bozhevolnyi, S. I. Electro-optic metasurface-based free-space modulators. Nanoscale 14, 11407\u201311414 (2022).",
+    "journal-title": "Nanoscale"
+   },
+   {
+    "key": "2000_CR36",
+    "doi-asserted-by": "publisher",
+    "first-page": "2953",
+    "DOI": "10.1515/nanoph-2023-0042",
+    "volume": "12",
+    "author": "C Damgaard-Carstensen",
+    "year": "2023",
+    "unstructured": "Damgaard-Carstensen, C. & Bozhevolnyi, S. I. Nonlocal electro-optic metasurfaces for free-space light modulation. Nanophotonics 12, 2953\u20132962 (2023).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "2000_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "11999",
+    "DOI": "10.1021/acsnano.4c17030",
+    "volume": "19",
+    "author": "C Damgaard-Carstensen",
+    "year": "2025",
+    "unstructured": "Damgaard-Carstensen, C., Yezekyan, T., Brongersma, M. L. & Bozhevolnyi, S. I. Highly efficient, tunable, electro-optic, reflective metasurfaces based on quasi-bound states in the continuum. ACS Nano 19, 11999\u201312006 (2025).",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "2000_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "3004",
+    "DOI": "10.1021/acsphotonics.1c00935",
+    "volume": "8",
+    "author": "H Weigand",
+    "year": "2021",
+    "unstructured": "Weigand, H. et al. Enhanced electro-optic modulation in resonant metasurfaces of lithium niobate. ACS Photon. 8, 3004\u20133009 (2021).",
+    "journal-title": "ACS Photon."
+   },
+   {
+    "key": "2000_CR39",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Trajtenberg-Mills, S. et al. LNoS: lithium niobate on silicon spatial light modulator. Preprint at https://doi.org/10.48550/arXiv.2402.14608 (2024).",
+    "DOI": "10.48550/arXiv.2402.14608"
+   },
+   {
+    "key": "2000_CR40",
+    "doi-asserted-by": "publisher",
+    "first-page": "7000",
+    "DOI": "10.1038/s41467-025-62072-7",
+    "volume": "16",
+    "author": "A Di Francescantonio",
+    "year": "2025",
+    "unstructured": "Di Francescantonio, A. et al. Efficient GHz electro-optical modulation with a nonlocal lithium niobate metasurface in the linear and nonlinear regime. Nat. Commun. 16, 7000 (2025).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2000_CR41",
+    "doi-asserted-by": "publisher",
+    "first-page": "114928",
+    "DOI": "10.1016/j.optmat.2024.114928",
+    "volume": "148",
+    "author": "Y Ju",
+    "year": "2024",
+    "unstructured": "Ju, Y., Zhang, W., Zhao, Y., Deng, X. & Zuo, H. Polarization independent lithium niobate electro-optic modulator based on guided mode resonance. Opt. Mater. 148, 114928 (2024).",
+    "journal-title": "Opt. Mater."
+   },
+   {
+    "key": "2000_CR42",
+    "doi-asserted-by": "publisher",
+    "first-page": "2000623",
+    "DOI": "10.1002/adom.202000623",
+    "volume": "8",
+    "author": "A Karvounis",
+    "year": "2020",
+    "unstructured": "Karvounis, A. et al. Electro-optic metasurfaces based on barium titanate nanoparticle films. Adv. Opt. Mater. 8, 2000623 (2020).",
+    "journal-title": "Adv. Opt. Mater."
+   },
+   {
+    "key": "2000_CR43",
+    "doi-asserted-by": "publisher",
+    "first-page": "5536",
+    "DOI": "10.1021/acs.nanolett.4c00711",
+    "volume": "24",
+    "author": "HC Weigand",
+    "year": "2024",
+    "unstructured": "Weigand, H. C. et al. Nanoimprinting solution-derived barium titanate for electro-optic metasurfaces. Nano Lett. 24, 5536\u20135542 (2024).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2000_CR44",
+    "doi-asserted-by": "publisher",
+    "first-page": "605",
+    "DOI": "10.1021/acsphotonics.1c01582",
+    "volume": "9",
+    "author": "A Weiss",
+    "year": "2022",
+    "unstructured": "Weiss, A. et al. Tunable metasurface using thin-film lithium niobate in the telecom regime. ACS Photon. 9, 605\u2013612 (2022).",
+    "journal-title": "ACS Photon."
+   },
+   {
+    "key": "2000_CR45",
+    "doi-asserted-by": "publisher",
+    "first-page": "1157",
+    "DOI": "10.1515/nanoph-2017-0127",
+    "volume": "7",
+    "author": "AC Overvig",
+    "year": "2018",
+    "unstructured": "Overvig, A. C., Shrestha, S. & Yu, N. Dimerized high contrast gratings. Nanophotonics 7, 1157\u20131168 (2018).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "2000_CR46",
+    "doi-asserted-by": "publisher",
+    "first-page": "243304",
+    "DOI": "10.1063/1.4884829",
+    "volume": "104",
+    "author": "W Jin",
+    "year": "2014",
+    "unstructured": "Jin, W. et al. Benzocyclobutene barrier layer for suppressing conductance in nonlinear optical devices during electric field poling. Appl. Phys. Lett. 104, 243304 (2014).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2000_CR47",
+    "doi-asserted-by": "publisher",
+    "first-page": "739",
+    "DOI": "10.1364/OPTICA.5.000739",
+    "volume": "5",
+    "author": "C Kieninger",
+    "year": "2018",
+    "unstructured": "Kieninger, C. et al. Ultra-high electro-optic activity demonstrated in a silicon-organic hybrid modulator. Optica 5, 739\u2013748 (2018).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2000_CR48",
+    "doi-asserted-by": "publisher",
+    "first-page": "085426",
+    "DOI": "10.1103/PhysRevB.109.085426",
+    "volume": "109",
+    "author": "K Sun",
+    "year": "2024",
+    "unstructured": "Sun, K., Wang, W. & Han, Z. High-Q resonances in periodic photonic structures. Phys. Rev. B 109, 085426 (2024).",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "2000_CR49",
+    "doi-asserted-by": "publisher",
+    "first-page": "193903",
+    "DOI": "10.1103/PhysRevLett.121.193903",
+    "volume": "121",
+    "author": "K Koshelev",
+    "year": "2018",
+    "unstructured": "Koshelev, K., Lepeshov, S., Liu, M., Bogdanov, A. & Kivshar, Y. Asymmetric metasurfaces with high-Q resonances governed by bound states in the continuum. Phys. Rev. Lett. 121, 193903 (2018).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "2000_CR50",
+    "unstructured": "Joannopoulos, J. D., Johnson, S. G., Winn, J. N. & Meade, R. D. Photonic Crystals: Molding the Flow of Light\u2014Second Edition (Princeton Univ. Press, 2008)."
+   },
+   {
+    "key": "2000_CR51",
+    "doi-asserted-by": "publisher",
+    "first-page": "S48",
+    "DOI": "10.1109/MCOM.2010.5434378",
+    "volume": "48",
+    "author": "F Chang",
+    "year": "2010",
+    "unstructured": "Chang, F., Onohara, K. & Mizuochi, T. Forward error correction for 100 G transport networks. IEEE Commun. Mag. 48, S48\u2013S55 (2010).",
+    "journal-title": "IEEE Commun. Mag."
+   },
+   {
+    "key": "2000_CR52",
+    "doi-asserted-by": "publisher",
+    "first-page": "359",
+    "DOI": "10.1016/j.scib.2021.10.020",
+    "volume": "67",
+    "author": "Z Chen",
+    "year": "2022",
+    "unstructured": "Chen, Z. et al. Observation of miniaturized bound states in the continuum with ultra-high quality factors. Sci. Bull. 67, 359\u2013366 (2022).",
+    "journal-title": "Sci. Bull."
+   },
+   {
+    "key": "2000_CR53",
+    "doi-asserted-by": "publisher",
+    "first-page": "1290",
+    "DOI": "10.1038/s41565-024-01697-z",
+    "volume": "19",
+    "author": "V Dolia",
+    "year": "2024",
+    "unstructured": "Dolia, V. et al. Very-large-scale-integrated high quality factor nanoantenna pixels. Nat. Nanotechnol. 19, 1290\u20131298 (2024).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "2000_CR54",
+    "doi-asserted-by": "publisher",
+    "first-page": "1749",
+    "DOI": "10.1109/JLT.2022.3149372",
+    "volume": "40",
+    "author": "N Ledentsov",
+    "year": "2022",
+    "unstructured": "Ledentsov, N. et al. High speed VCSEL technology and applications. J. Light. Technol. 40, 1749\u20131763 (2022).",
+    "journal-title": "J. Light. Technol."
+   },
+   {
+    "key": "2000_CR55",
+    "doi-asserted-by": "publisher",
+    "first-page": "7238",
+    "DOI": "10.1364/OL.541473",
+    "volume": "49",
+    "author": "C Ren",
+    "year": "2024",
+    "unstructured": "Ren, C., Komatsu, K., Soma, G., Nakano, Y. & Tanemura, T. Metasurface-based functional optical splitter for a spatially parallelized dual-polarization coherent modulator. Opt. Lett. 49, 7238\u20137241 (2024).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "2000_CR56",
+    "doi-asserted-by": "publisher",
+    "first-page": "971",
+    "DOI": "10.1364/OPTICA.523421",
+    "volume": "11",
+    "author": "R Morita",
+    "year": "2024",
+    "unstructured": "Morita, R. et al. High-speed high-power free-space optical communication via directly modulated watt-class photonic-crystal surface-emitting lasers. Optica 11, 971 (2024).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2000_CR57",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Hammond, S. R., Elder, D. L. & Johnson, L. E. Plasmonic organic hybrid electro-optic modulators as a platform for process optimization towards extraordinary nonlinearity and exceptional stability enabling commercial applications. Proc. SPIE 12418, Organic Photonic Materials and Devices XXV 1241807 (SPIE, 2023).",
+    "DOI": "10.1117/12.2650803"
+   },
+   {
+    "key": "2000_CR58",
+    "doi-asserted-by": "publisher",
+    "first-page": "1408",
+    "DOI": "10.1021/acs.chemmater.9b03725",
+    "volume": "32",
+    "author": "H Xu",
+    "year": "2020",
+    "unstructured": "Xu, H. et al. Ultrahigh electro-optic coefficients, high index of refraction, and long-term stability from Diels\u2013Alder cross-linkable binary molecular glasses. Chem. Mater. 32, 1408\u20131421 (2020).",
+    "journal-title": "Chem. Mater."
+   },
+   {
+    "key": "2000_CR59",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Soma, G. et al. Subvolt high-speed free-space modulator with electro-optic metasurface. Figshare https://doi.org/10.6084/m9.figshare.28281509 (2025).",
+    "DOI": "10.6084/m9.figshare.28281509"
+   }
+  ],
+  "container-title": [
+   "Nature Nanotechnology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41565-025-02000-4.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41565-025-02000-4",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41565-025-02000-4.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     17
+    ]
+   ],
+   "date-time": "2025-11-17T13:04:57Z",
+   "timestamp": 1763384697000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41565-025-02000-4"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     9,
+     10
+    ]
+   ]
+  },
+  "references-count": 59,
+  "journal-issue": {
+   "issue": "11",
+   "published-print": {
+    "date-parts": [
+     [
+      2025,
+      11
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "2000"
+  ],
+  "URL": "https://doi.org/10.1038/s41565-025-02000-4",
+  "relation": {},
+  "ISSN": [
+   "1748-3387",
+   "1748-3395"
+  ],
+  "issn-type": [
+   {
+    "value": "1748-3387",
+    "type": "print"
+   },
+   {
+    "value": "1748-3395",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     9,
+     10
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "27 January 2025",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "17 July 2025",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "10 September 2025",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "G.S. and T.T. are listed as inventors in a patent application related to this work, filed by the University of Tokyo, application number 2025-41949. The remaining authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ]
+ }
+}

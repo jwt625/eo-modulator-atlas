@@ -1,0 +1,1000 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     25
+    ]
+   ],
+   "date-time": "2026-09-25T13:39:40Z",
+   "timestamp": 1790343580313,
+   "version": "4.1.0"
+  },
+  "reference-count": 54,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       5,
+       9
+      ]
+     ],
+     "date-time": "2024-05-09T00:00:00Z",
+     "timestamp": 1715212800000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       5,
+       9
+      ]
+     ],
+     "date-time": "2024-05-09T00:00:00Z",
+     "timestamp": 1715212800000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001863",
+    "name": "New Energy and Industrial Technology Development Organization",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "JPNP16007"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "JPNP16007"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001863",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100003382",
+    "name": "MEXT | JST | Core Research for Evolutional Science and Technology",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "JPMJCR2004"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "JPMJCR2004"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100003382",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002241",
+    "name": "MEXT | Japan Science and Technology Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "JPMJMI20A1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "JPMJMI20A1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002241",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat Commun"
+  ],
+  "DOI": "10.1038/s41467-024-47893-2",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     9
+    ]
+   ],
+   "date-time": "2024-05-09T10:02:28Z",
+   "timestamp": 1715248948000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 34,
+  "title": [
+   "Nonvolatile optical phase shift in ferroelectric hafnium zirconium oxide"
+  ],
+  "prefix": "10.1038",
+  "volume": "15",
+  "author": [
+   {
+    "given": "Kazuma",
+    "family": "Taki",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Naoki",
+    "family": "Sekine",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kouhei",
+    "family": "Watanabe",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1309-1418",
+    "authenticated-orcid": false,
+    "given": "Yuto",
+    "family": "Miyatake",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tomohiro",
+    "family": "Akazawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hiroya",
+    "family": "Sakumoto",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4206-8698",
+    "authenticated-orcid": false,
+    "given": "Kasidit",
+    "family": "Toprasertpong",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shinichi",
+    "family": "Takagi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9852-1474",
+    "authenticated-orcid": false,
+    "given": "Mitsuru",
+    "family": "Takenaka",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     9
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "47893_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "4374",
+    "DOI": "10.1109/JLT.2021.3066203",
+    "volume": "39",
+    "author": "SY Siew",
+    "year": "2021",
+    "unstructured": "Siew, S. Y. et al. Review of silicon photonics technology and platform development. J. Lightwave Technol. 39, 4374\u20134389 (2021).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "47893_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "13106",
+    "DOI": "10.1364/OE.26.013106",
+    "volume": "26",
+    "author": "V Stojanovi\u0107",
+    "year": "2018",
+    "unstructured": "Stojanovi\u0107, V. et al. Monolithic silicon-photonic platforms in state-of-the-art CMOS SOI processes [Invited]. Opt. Express 26, 13106 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "47893_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "207",
+    "DOI": "10.1038/s41586-020-2764-0",
+    "volume": "586",
+    "author": "W Bogaerts",
+    "year": "2020",
+    "unstructured": "Bogaerts, W. et al. Programmable photonic circuits. Nature 586, 207\u2013216 (2020).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "47893_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "837",
+    "DOI": "10.1038/s41928-021-00661-2",
+    "volume": "4",
+    "author": "C Huang",
+    "year": "2021",
+    "unstructured": "Huang, C. et al. A silicon photonic\u2013electronic neural network for fibre nonlinearity compensation. Nat. Electron. 4, 837\u2013844 (2021).",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "key": "47893_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "102",
+    "DOI": "10.1038/s41566-020-00754-y",
+    "volume": "15",
+    "author": "BJ Shastri",
+    "year": "2021",
+    "unstructured": "Shastri, B. J. et al. Photonics for artificial intelligence and neuromorphic computing. Nat. Photonics 15, 102\u2013114 (2021).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "441",
+    "DOI": "10.1038/nphoton.2017.93",
+    "volume": "11",
+    "author": "Y Shen",
+    "year": "2017",
+    "unstructured": "Shen, Y. et al. Deep learning with coherent nanophotonic circuits. Nat. Photonics 11, 441\u2013446 (2017).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "534",
+    "DOI": "10.1038/s41566-018-0236-y",
+    "volume": "12",
+    "author": "X Qiang",
+    "year": "2018",
+    "unstructured": "Qiang, X. et al. Large-scale silicon quantum photonics implementing arbitrary two-qubit processing. Nat. Photonics 12, 534\u2013539 (2018).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "253",
+    "DOI": "10.1038/s41586-022-04415-8",
+    "volume": "603",
+    "author": "X Zhang",
+    "year": "2022",
+    "unstructured": "Zhang, X., Kwon, K., Henriksson, J., Luo, J. & Wu, M. C. A large-scale microelectromechanical-systems-based silicon photonics LiDAR. Nature 603, 253\u2013258 (2022).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "47893_CR9",
+    "doi-asserted-by": "publisher",
+    "first-page": "1474",
+    "DOI": "10.1109/JLT.2019.2892752",
+    "volume": "37",
+    "author": "M Takenaka",
+    "year": "2019",
+    "unstructured": "Takenaka, M. et al. III\u2013V/Si Hybrid MOS optical phase shifter for Si photonic integrated circuits. J. Lightwave Technol. 37, 1474\u20131483 (2019).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "47893_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "486",
+    "DOI": "10.1038/nphoton.2017.122",
+    "volume": "11",
+    "author": "J-H Han",
+    "year": "2017",
+    "unstructured": "Han, J.-H. et al. Efficient low-loss InGaAsP/Si hybrid MOS optical modulator. Nat. Photonics 11, 486\u2013490 (2017).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "5671",
+    "DOI": "10.1364/OL.436288",
+    "volume": "46",
+    "author": "P Edinger",
+    "year": "2021",
+    "unstructured": "Edinger, P. et al. Silicon photonic microelectromechanical phase shifters for scalable programmable photonics. Opt. Lett. 46, 5671\u20135674 (2021).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "47893_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "491",
+    "DOI": "10.1038/s41566-022-01003-0",
+    "volume": "16",
+    "author": "J Geler-Kremer",
+    "year": "2022",
+    "unstructured": "Geler-Kremer, J. et al. A ferroelectric multilevel nonvolatile photonic phase shifter. Nat. Photonics 16, 491\u2013497 (2022).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "42",
+    "DOI": "10.1038/s41563-018-0208-0",
+    "volume": "18",
+    "author": "S Abel",
+    "year": "2019",
+    "unstructured": "Abel, S. et al. Large Pockels effect in micro- and nanostructured barium titanate integrated on silicon. Nat. Mater. 18, 42\u201347 (2019).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "47893_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages. Nature 562, 101\u2013104 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "47893_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "volume": "13",
+    "author": "M He",
+    "year": "2019",
+    "unstructured": "He, M. et al. High-performance hybrid silicon and lithium niobate Mach\u2013Zehnder modulators for 100 Gbit s\u22121 and beyond. Nat. Photonics 13, 359\u2013364 (2019).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1002/adfm.202002447",
+    "volume": "30",
+    "author": "M Delaney",
+    "year": "2020",
+    "unstructured": "Delaney, M., Zeimpekis, I., Lawson, D., Hewak, D. W. & Muskens, O. L. A new family of ultralow loss reversible phase-change materials for photonic integrated circuits: Sb2S3 and Sb2Se3. Adv. Funct. Mater. 30, 1\u201310 (2020).",
+    "journal-title": "Adv. Funct. Mater."
+   },
+   {
+    "key": "47893_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "2106",
+    "DOI": "10.1109/TED.2023.3235865",
+    "volume": "70",
+    "author": "Y Miyatake",
+    "year": "2023",
+    "unstructured": "Miyatake, Y. et al. Proposal of low-loss nonvolatile mid-infrared optical phase shifter based on Ge2Sb2Te3S2. IEEE Trans. Electron Devices 70, 2106\u20132112 (2023).",
+    "journal-title": "IEEE Trans. Electron Devices"
+   },
+   {
+    "key": "47893_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "40",
+    "DOI": "10.1038/s41566-017-0071-6",
+    "volume": "12",
+    "author": "V Sorianello",
+    "year": "2018",
+    "unstructured": "Sorianello, V. et al. Graphene\u2013silicon phase modulators with gigahertz bandwidth. Nat. Photonics 12, 40\u201344 (2018).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "256",
+    "DOI": "10.1038/s41566-020-0590-4",
+    "volume": "14",
+    "author": "I Datta",
+    "year": "2020",
+    "unstructured": "Datta, I. et al. Low-loss composite photonic platform based on 2D semiconductor monolayers. Nat. Photonics 14, 256\u2013262 (2020).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "59",
+    "DOI": "10.1038/s41566-021-00903-x",
+    "volume": "16",
+    "author": "M Dong",
+    "year": "2021",
+    "unstructured": "Dong, M. et al. High-speed programmable photonic circuits in a cryogenically compatible, visible\u2013near-infrared 200 mm CMOS architecture. Nat. Photonics 16, 59\u201365 (2021).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR21",
+    "doi-asserted-by": "publisher",
+    "first-page": "6100708",
+    "DOI": "10.1109/JSTQE.2020.2975669",
+    "volume": "26",
+    "author": "A Ribeiro",
+    "year": "2020",
+    "unstructured": "Ribeiro, A. et al. Column-row addressing of thermo-optic phase shifters for controlling large silicon photonic circuits. IEEE J. Sel. Top. Quantum Electron. 26, 6100708 (2020).",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "47893_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "eaau5759",
+    "DOI": "10.1126/sciadv.aau5759",
+    "volume": "5",
+    "author": "C R\u00edos",
+    "year": "2019",
+    "unstructured": "R\u00edos, C. et al. In-memory computing on a photonic platform. Sci. Adv. 5, eaau5759 (2019).",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "47893_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "102903",
+    "DOI": "10.1063/1.3634052",
+    "volume": "99",
+    "author": "TS B\u00f6scke",
+    "year": "2011",
+    "unstructured": "B\u00f6scke, T. S., M\u00fcller, J., Br\u00e4uhaus, D., Schr\u00f6der, U. & B\u00f6ttger, U. Ferroelectricity in hafnium oxide thin films. Appl. Phys. Lett. 99, 102903 (2011).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "47893_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "112901",
+    "DOI": "10.1063/1.3636417",
+    "volume": "99",
+    "author": "J M\u00fcller",
+    "year": "2011",
+    "unstructured": "M\u00fcller, J. et al. Ferroelectric Zr0.5Hf0.5O2 thin films fornonvolatile memory applications. Appl. Phys. Lett. 99, 112901 (2011).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "47893_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "4318",
+    "DOI": "10.1021/nl302049k",
+    "volume": "12",
+    "author": "J M\u00fcller",
+    "year": "2012",
+    "unstructured": "M\u00fcller, J. et al. Ferroelectricity in simple binary ZrO2 and HfO2. Nano Lett. 12, 4318\u20134323 (2012).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "47893_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "588",
+    "DOI": "10.1038/s41928-020-00492-7",
+    "volume": "3",
+    "author": "AI Khan",
+    "year": "2020",
+    "unstructured": "Khan, A. I., Keshavarzi, A. & Datta, S. The future of ferroelectric field-effect transistor technology. Nat. Electron. 3, 588\u2013597 (2020).",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "key": "47893_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "795",
+    "DOI": "10.1557/mrc.2018.175",
+    "volume": "8",
+    "author": "MH Park",
+    "year": "2018",
+    "unstructured": "Park, M. H., Lee, Y. H., Mikolajick, T., Schroeder, U. & Hwang, C. S. Review and perspective on ferroelectric HfO2-based thin films for memory applications. MRS Commun. 8, 795\u2013808 (2018).",
+    "journal-title": "MRS Commun."
+   },
+   {
+    "key": "47893_CR28",
+    "doi-asserted-by": "publisher",
+    "first-page": "070905",
+    "DOI": "10.35848/1347-4065/ac087d",
+    "volume": "60",
+    "author": "S Kondo",
+    "year": "2021",
+    "unstructured": "Kondo, S. et al. Linear electro-optic effect in ferroelectric HfO2-based epitaxial thin films. Jpn. J. Appl. Phys. 60, 070905 (2021).",
+    "journal-title": "Jpn. J. Appl. Phys."
+   },
+   {
+    "key": "47893_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "SFFB13",
+    "DOI": "10.35848/1347-4065/ac17e0",
+    "volume": "60",
+    "author": "S Kondo",
+    "year": "2021",
+    "unstructured": "Kondo, S. et al. Influence of orientation on the electro-optic effect in epitaxial Y-doped HfO2 ferroelectric thin films. Jpn. J. Appl. Phys. 60, SFFB13 (2021).",
+    "journal-title": "Jpn. J. Appl. Phys."
+   },
+   {
+    "key": "47893_CR30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.107.045140",
+    "volume": "107",
+    "author": "A El Boutaybi",
+    "year": "2023",
+    "unstructured": "El Boutaybi, A. et al. Electro-optic properties of ZrO2, HfO2, and LiNbO3 ferroelectric phases: A comparative density functional study. Phys. Rev. B Condens. Matter 107, 045140 (2023).",
+    "journal-title": "Phys. Rev. B Condens. Matter"
+   },
+   {
+    "key": "47893_CR31",
+    "doi-asserted-by": "publisher",
+    "first-page": "04FB01",
+    "DOI": "10.7567/JJAP.57.04FB01",
+    "volume": "57",
+    "author": "S Migita",
+    "year": "2018",
+    "unstructured": "Migita, S. et al. Polarization switching behavior of Hf\u2013Zr\u2013O ferroelectric ultrathin films studied through coercive field characteristics. Jpn. J. Appl. Phys. 57, 04FB01 (2018).",
+    "journal-title": "Jpn. J. Appl. Phys."
+   },
+   {
+    "key": "47893_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "947",
+    "DOI": "10.1109/JEDS.2022.3214299",
+    "volume": "10",
+    "author": "H-H Chen",
+    "year": "2022",
+    "unstructured": "Chen, H.-H. et al. Ferroelectric polarization enhancement in hafnium-based oxides through capping layer engineering. IEEE J. Electron Devices Soc. 10, 947\u2013952 (2022).",
+    "journal-title": "IEEE J. Electron Devices Soc."
+   },
+   {
+    "key": "47893_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "022903",
+    "DOI": "10.1063/1.4973928",
+    "volume": "110",
+    "author": "A Pal",
+    "year": "2017",
+    "unstructured": "Pal, A. et al. Enhancing ferroelectricity in dopant-free hafnium oxide. Appl. Phys. Lett. 110, 022903 (2017).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "47893_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "242901",
+    "DOI": "10.1063/1.4995619",
+    "volume": "111",
+    "author": "SJ Kim",
+    "year": "2017",
+    "unstructured": "Kim, S. J. et al. Large ferroelectric polarization of TiN/Hf0.5Zr0.5O2/TiN capacitors due to stress-induced crystallization at low thermal budget. Appl. Phys. Lett. 111, 242901 (2017).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "47893_CR35",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Trentzsch, M. et al. A 28nm HKMG super low power embedded NVM technology based on ferroelectric FETs. in 2016 IEEE International Electron Devices Meeting (IEDM) 11.5.1\u201311.5.4 (IEEE, 2016).",
+    "DOI": "10.1109/IEDM.2016.7838397"
+   },
+   {
+    "key": "47893_CR36",
+    "doi-asserted-by": "publisher",
+    "first-page": "23",
+    "DOI": "10.1111/jmi.12065",
+    "volume": "252",
+    "author": "D Viladot",
+    "year": "2013",
+    "unstructured": "Viladot, D. et al. Orientation and phase mapping in the transmission electron microscope using precession-assisted diffraction spot recognition: state-of-the-art results. J. Microsc. 252, 23\u201334 (2013).",
+    "journal-title": "J. Microsc."
+   },
+   {
+    "key": "47893_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "1095",
+    "DOI": "10.1038/s41563-018-0196-0",
+    "volume": "17",
+    "author": "Y Wei",
+    "year": "2018",
+    "unstructured": "Wei, Y. et al. A rhombohedral ferroelectric phase in epitaxially strained Hf0.5Zr0.5O2 thin films. Nat. Mater. 17, 1095\u20131100 (2018).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "47893_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "1588",
+    "DOI": "10.1109/LED.2020.3019265",
+    "volume": "41",
+    "author": "K Toprasertpong",
+    "year": "2020",
+    "unstructured": "Toprasertpong, K. et al. Improved ferroelectric/semiconductor interface properties in Hf0.5Zr0.5O2 ferroelectric FETs by low-temperature annealing. IEEE Electron Device Lett. 41, 1588\u20131591 (2020).",
+    "journal-title": "IEEE Electron Device Lett."
+   },
+   {
+    "key": "47893_CR39",
+    "doi-asserted-by": "publisher",
+    "first-page": "51137",
+    "DOI": "10.1021/acsami.2c15369",
+    "volume": "14",
+    "author": "K Toprasertpong",
+    "year": "2022",
+    "unstructured": "Toprasertpong, K. et al. Low operating voltage, improved breakdown tolerance, and high endurance in Hf0.5Zr0.5O2 ferroelectric capacitors achieved by thickness scaling down to 4 nm for embedded ferroelectric memory. ACS Appl. Mater. Interfaces 14, 51137\u201351148 (2022).",
+    "journal-title": "ACS Appl. Mater. Interfaces"
+   },
+   {
+    "key": "47893_CR40",
+    "doi-asserted-by": "publisher",
+    "first-page": "192903",
+    "DOI": "10.1063/1.4902072",
+    "volume": "105",
+    "author": "HJ Kim",
+    "year": "2014",
+    "unstructured": "Kim, H. J. et al. Grain size engineering for ferroelectric Hf0.5Zr0.5O2 films by an insertion of Al2O3 interlayer. Appl. Phys. Lett. 105, 192903 (2014).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "47893_CR41",
+    "doi-asserted-by": "publisher",
+    "first-page": "2100837",
+    "DOI": "10.1002/aelm.202100837",
+    "volume": "8",
+    "author": "T Ali",
+    "year": "2022",
+    "unstructured": "Ali, T. et al. Tuning hybrid ferroelectric and antiferroelectric stacks for low power FeFET and FeRAM applications by using laminated HSO and HZO films. Adv. Electron. Mater. 8, 2100837 (2022).",
+    "journal-title": "Adv. Electron. Mater."
+   },
+   {
+    "key": "47893_CR42",
+    "doi-asserted-by": "publisher",
+    "first-page": "223",
+    "DOI": "10.1038/s41551-020-0516-y",
+    "volume": "4",
+    "author": "A Mohanty",
+    "year": "2020",
+    "unstructured": "Mohanty, A. et al. Reconfigurable nanophotonic silicon probes for sub-millisecond deep-brain optical stimulation. Nat. Biomed. Eng. 4, 223\u2013231 (2020).",
+    "journal-title": "Nat. Biomed. Eng."
+   },
+   {
+    "key": "47893_CR43",
+    "doi-asserted-by": "publisher",
+    "first-page": "25827",
+    "DOI": "10.1364/OE.23.025827",
+    "volume": "23",
+    "author": "CJ Kr\u00fcckel",
+    "year": "2015",
+    "unstructured": "Kr\u00fcckel, C. J. et al. Linear and nonlinear characterization of low-stress high-confinement silicon-rich nitride waveguides. Opt. Express 23, 25827\u201325837 (2015).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "47893_CR44",
+    "doi-asserted-by": "publisher",
+    "first-page": "064084",
+    "DOI": "10.1103/PhysRevApplied.18.064084",
+    "volume": "18",
+    "author": "V Mikheev",
+    "year": "2022",
+    "unstructured": "Mikheev, V., Kondratyuk, E. & Chouprik, A. Retention Model and Express Retention Test of Ferroelectric HfO2-Based Memory. Phys. Rev. Appl. 18, 064084 (2022).",
+    "journal-title": "Phys. Rev. Appl."
+   },
+   {
+    "key": "47893_CR45",
+    "doi-asserted-by": "publisher",
+    "first-page": "1701258",
+    "DOI": "10.1002/admi.201701258",
+    "volume": "5",
+    "author": "ED Grimley",
+    "year": "2018",
+    "unstructured": "Grimley, E. D., Schenk, T., Mikolajick, T., Schroeder, U. & LeBeau, J. M. Atomic structure of domain and interphase boundaries in ferroelectric HfO2. Adv. Mater. Interfaces 5, 1701258 (2018).",
+    "journal-title": "Adv. Mater. Interfaces"
+   },
+   {
+    "key": "47893_CR46",
+    "doi-asserted-by": "publisher",
+    "first-page": "1227",
+    "DOI": "10.1109/LED.2022.3184316",
+    "volume": "43",
+    "author": "Z Li",
+    "year": "2022",
+    "unstructured": "Li, Z. et al. A 3D vertical-channel ferroelectric/anti-ferroelectric FET with indium oxide. IEEE Electron Device Lett. 43, 1227\u20131230 (2022).",
+    "journal-title": "IEEE Electron Device Lett."
+   },
+   {
+    "key": "47893_CR47",
+    "doi-asserted-by": "publisher",
+    "first-page": "720",
+    "DOI": "10.1063/1.1657458",
+    "volume": "40",
+    "author": "M DiDomenico Jr",
+    "year": "1969",
+    "unstructured": "DiDomenico, M. Jr & Wemple, S. H. Oxygen-octahedra ferroelectrics. I. Theory of electro-optical and nonlinear optical effects. J. Appl. Phys. 40, 720\u2013734 (1969).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "47893_CR48",
+    "doi-asserted-by": "publisher",
+    "first-page": "4467",
+    "DOI": "10.1063/1.359477",
+    "volume": "77",
+    "author": "H \u00c5hlfeldt",
+    "year": "1995",
+    "unstructured": "\u00c5hlfeldt, H., Webj\u00f6rn, J., Thomas, P. A. & Teat, S. J. Structural and optical properties of annealed proton\u2010exchanged waveguides in z\u2010cut LiTaO3. J. Appl. Phys. 77, 4467\u20134476 (1995).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "47893_CR49",
+    "doi-asserted-by": "publisher",
+    "first-page": "3759",
+    "DOI": "10.1364/AO.40.003759",
+    "volume": "40",
+    "author": "H Hu",
+    "year": "2001",
+    "unstructured": "Hu, H. et al. Extraordinary refractive-index increase in lithium niobate caused by low-dose ion implantation. Appl. Opt. 40, 3759\u20133761 (2001).",
+    "journal-title": "Appl. Opt."
+   },
+   {
+    "key": "47893_CR50",
+    "doi-asserted-by": "publisher",
+    "first-page": "5442",
+    "DOI": "10.1016/j.tsf.2010.04.012",
+    "volume": "518",
+    "author": "WT Tang",
+    "year": "2010",
+    "unstructured": "Tang, W. T. et al. Synthesis and characterization of HfO2 and ZrO2 thin films deposited by plasma assisted reactive pulsed laser deposition at low temperature. Thin Solid Films 518, 5442\u20135446 (2010).",
+    "journal-title": "Thin Solid Films"
+   },
+   {
+    "key": "47893_CR51",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/lsa.2014.54",
+    "volume": "3",
+    "author": "L Alloatti",
+    "year": "2014",
+    "unstructured": "Alloatti, L. et al. 100 GHz silicon\u2013organic hybrid modulator. Light Sci. Appl. 3, e173 (2014).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "47893_CR52",
+    "doi-asserted-by": "publisher",
+    "first-page": "229",
+    "DOI": "10.1038/nphoton.2014.9",
+    "volume": "8",
+    "author": "A Melikyan",
+    "year": "2014",
+    "unstructured": "Melikyan, A. et al. High-speed plasmonic phase modulators. Nat. Photonics 8, 229\u2013233 (2014).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "47893_CR53",
+    "doi-asserted-by": "publisher",
+    "first-page": "262904",
+    "DOI": "10.1063/5.0035100",
+    "volume": "117",
+    "author": "M Materano",
+    "year": "2020",
+    "unstructured": "Materano, M. et al. Polarization switching in thin doped HfO2 ferroelectric layers. Appl. Phys. Lett. 117, 262904 (2020).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "47893_CR54",
+    "doi-asserted-by": "publisher",
+    "first-page": "3792",
+    "DOI": "10.1021/acsami.6b13866",
+    "volume": "9",
+    "author": "H Mulaosmanovic",
+    "year": "2017",
+    "unstructured": "Mulaosmanovic, H. et al. Switching Kinetics in Nanoscale Hafnium Oxide Based Ferroelectric Field-Effect Transistors. ACS Appl. Mater. Interfaces 9, 3792\u20133798 (2017).",
+    "journal-title": "ACS Appl. Mater. Interfaces"
+   }
+  ],
+  "container-title": [
+   "Nature Communications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41467-024-47893-2.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-024-47893-2",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-024-47893-2.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     9
+    ]
+   ],
+   "date-time": "2024-05-09T10:02:40Z",
+   "timestamp": 1715248960000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41467-024-47893-2"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     9
+    ]
+   ]
+  },
+  "references-count": 54,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2024,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "47893"
+  ],
+  "URL": "https://doi.org/10.1038/s41467-024-47893-2",
+  "relation": {},
+  "ISSN": [
+   "2041-1723"
+  ],
+  "issn-type": [
+   {
+    "value": "2041-1723",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     9
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "29 February 2024",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "16 April 2024",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "9 May 2024",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ],
+  "article-number": "3549"
+ }
+}

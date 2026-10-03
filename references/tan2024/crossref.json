@@ -1,0 +1,656 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     22
+    ]
+   ],
+   "date-time": "2026-09-22T14:07:28Z",
+   "timestamp": 1790086048621,
+   "version": "4.0.1"
+  },
+  "reference-count": 41,
+  "publisher": "American Chemical Society (ACS)",
+  "issue": "5",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       12
+      ]
+     ],
+     "date-time": "2024-04-12T00:00:00Z",
+     "timestamp": 1712880000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       12
+      ]
+     ],
+     "date-time": "2024-04-12T00:00:00Z",
+     "timestamp": 1712880000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       12
+      ]
+     ],
+     "date-time": "2024-04-12T00:00:00Z",
+     "timestamp": 1712880000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-045"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100010663",
+    "name": "H2020 European Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "899824"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "899824"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100010663",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "ACS Photonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     15
+    ]
+   ]
+  },
+  "DOI": "10.1021/acsphotonics.3c01869",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     12
+    ]
+   ],
+   "date-time": "2024-04-12T11:24:48Z",
+   "timestamp": 1712921088000
+  },
+  "page": "1920-1927",
+  "source": "Crossref",
+  "is-referenced-by-count": 56,
+  "title": [
+   "Micro-transfer Printed Thin Film Lithium Niobate (TFLN)-on-Silicon Ring Modulator"
+  ],
+  "prefix": "10.1021",
+  "volume": "11",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-2009-8266",
+    "authenticated-orcid": true,
+    "given": "Ying",
+    "family": "Tan",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Photonics Research Group, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     },
+     {
+      "name": "IMEC, Kapeldreef 75, Heverlee 3001, Belgium"
+     },
+     {
+      "name": "NB Photonics, Ghent University, Ghent 9052, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shengpu",
+    "family": "Niu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IDLab, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Maximilien",
+    "family": "Billet",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonics Research Group, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     },
+     {
+      "name": "IMEC, Kapeldreef 75, Heverlee 3001, Belgium"
+     },
+     {
+      "name": "NB Photonics, Ghent University, Ghent 9052, Belgium"
+     },
+     {
+      "name": "OPERA-Photonique CP 194/5, Universit\u00e9 Libre de Bruxelles (ULB), 1050 Bruxelles, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nishant",
+    "family": "Singh",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IDLab, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Margot",
+    "family": "Niels",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonics Research Group, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     },
+     {
+      "name": "NB Photonics, Ghent University, Ghent 9052, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tom",
+    "family": "Vanackere",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonics Research Group, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     },
+     {
+      "name": "IMEC, Kapeldreef 75, Heverlee 3001, Belgium"
+     },
+     {
+      "name": "NB Photonics, Ghent University, Ghent 9052, Belgium"
+     },
+     {
+      "name": "OPERA-Photonique CP 194/5, Universit\u00e9 Libre de Bruxelles (ULB), 1050 Bruxelles, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Joris",
+    "family": "Van Kerrebrouck",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IDLab, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4667-5092",
+    "authenticated-orcid": true,
+    "given": "Gunther",
+    "family": "Roelkens",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonics Research Group, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     },
+     {
+      "name": "IMEC, Kapeldreef 75, Heverlee 3001, Belgium"
+     },
+     {
+      "name": "NB Photonics, Ghent University, Ghent 9052, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bart",
+    "family": "Kuyken",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonics Research Group, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     },
+     {
+      "name": "IMEC, Kapeldreef 75, Heverlee 3001, Belgium"
+     },
+     {
+      "name": "NB Photonics, Ghent University, Ghent 9052, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0111-431X",
+    "authenticated-orcid": true,
+    "given": "Dries",
+    "family": "Van Thourhout",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonics Research Group, Department of information Technology (INTEC), Ghent University - imec, Ghent 9052, Belgium"
+     },
+     {
+      "name": "IMEC, Kapeldreef 75, Heverlee 3001, Belgium"
+     },
+     {
+      "name": "NB Photonics, Ghent University, Ghent 9052, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "316",
+  "published-online": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     12
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "ref1/cit1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.411024"
+   },
+   {
+    "key": "ref2/cit2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.201700256"
+   },
+   {
+    "key": "ref3/cit3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0034-4885/56/3/001"
+   },
+   {
+    "key": "ref4/cit4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.abj4396"
+   },
+   {
+    "key": "ref5/cit5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.415762"
+   },
+   {
+    "key": "ref6/cit6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1117/1.AP.4.3.034003"
+   },
+   {
+    "key": "ref7/cit7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "ref8/cit8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2020.3044648"
+   },
+   {
+    "key": "ref9/cit9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0378-6"
+   },
+   {
+    "key": "ref10/cit10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17806-0"
+   },
+   {
+    "key": "ref11/cit11",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Ghosh, S.; Yegnanarayanan, S.; Ricci, M.; Kharas, D.; Juodawlkis, P. Low-Loss Thin Film Lithium Niobate Bonded on Silicon Nitride Waveguides. In  2020 Conference on Lasers and Electro-Optics (CLEO); IEEE 2020; pp 1\u20132.",
+    "DOI": "10.1364/CLEO_SI.2020.STh1F.1"
+   },
+   {
+    "key": "ref12/cit12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.023728"
+   },
+   {
+    "key": "ref13/cit13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2022.3222686"
+   },
+   {
+    "key": "ref14/cit14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/bs.semsem.2018.08.001"
+   },
+   {
+    "key": "ref15/cit15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.4.001536"
+   },
+   {
+    "key": "ref16/cit16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3788/COL202119.060010"
+   },
+   {
+    "key": "ref17/cit17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0142232"
+   },
+   {
+    "key": "ref18/cit18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202208113"
+   },
+   {
+    "key": "ref19/cit19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.42.000803"
+   },
+   {
+    "key": "ref20/cit20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.486944"
+   },
+   {
+    "key": "ref21/cit21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-023-39047-7"
+   },
+   {
+    "key": "ref22/cit22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.418996"
+   },
+   {
+    "key": "ref23/cit23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AO.395897"
+   },
+   {
+    "key": "ref24/cit24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OME.509531"
+   },
+   {
+    "key": "ref25/cit25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JPROC.2018.2858542"
+   },
+   {
+    "key": "ref26/cit26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2022.3222686"
+   },
+   {
+    "key": "ref27/cit27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0960-1317/11/4/311"
+   },
+   {
+    "key": "ref28/cit28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.023728"
+   },
+   {
+    "key": "ref29/cit29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.1.000112"
+   },
+   {
+    "key": "ref30/cit30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.23.013255"
+   },
+   {
+    "key": "ref31/cit31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/IPRSN.2022.IM3B.6"
+   },
+   {
+    "key": "ref32/cit32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OME.474200"
+   },
+   {
+    "key": "ref33/cit33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ECOC48923.2020.9333415"
+   },
+   {
+    "key": "ref34/cit34",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Vanackere, T.; Vandekerckhove, T.; Bogaert, L.; Billet, M.; Poelman, S.; Cuyvers, S.; Kerrebrouck, J. V.; Moerman, A.; Caytan, O.; Lemey, S.; Torfs, G.; Roelkens, G.; Clemmen, S.; Kuyken, B. High-Speed Lithium Niobate Modulator on Silicon Nitride Using Micro-Transfer Printing In  2023 Conference on Lasers and Electro-Optics (CLEO) IEEE 2023.",
+    "DOI": "10.1364/CLEO_SI.2023.STh1R.1"
+   },
+   {
+    "key": "ref35/cit35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OME.494038"
+   },
+   {
+    "key": "ref36/cit36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.201100017"
+   },
+   {
+    "key": "ref37/cit37",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature03569"
+   },
+   {
+    "key": "ref38/cit38",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Amberg, P.; Chang, E.; Liu, F.; Lexau, J.; Zheng, X.; Li, G.; Shubin, I.; Cunningham, J. E.; Krishnamoorthy, A. V.; Ho, R. A Sub-400 fJ/Bit Thermal Tuner for Optical Resonant Ring Modulators in 40 Nm CMOS. In  2012 IEEE Asian Solid State Circuits Conference (A-SSCC); IEEE 2012; pp 29\u201332. 10.1109/IPEC.2012.6522615.",
+    "DOI": "10.1109/IPEC.2012.6522615"
+   },
+   {
+    "key": "ref39/cit39",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Ban, Y.; Verbist, J.; Vanhoecke, M.; Bauwelinck, J.; Verheyen, P.; Lardenois, S.; Pantouvaki, M.; Van Campenhout, J. Low-Voltage 60Gb/s NRZ and 100Gb/s PAM4 O-Band Silicon Ring Modulator. In  2019 IEEE Optical Interconnects Conference (OI); IEEE 2019; pp 1\u20132. 10.1109/OIC.2019.8714384.",
+    "DOI": "10.1109/OIC.2019.8714384"
+   },
+   {
+    "key": "ref40/cit40",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.20.004032"
+   },
+   {
+    "key": "ref41/cit41",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.36.001119"
+   }
+  ],
+  "container-title": [
+   "ACS Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.3c01869",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "unspecified"
+   },
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.3c01869",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     5,
+     15
+    ]
+   ],
+   "date-time": "2024-05-15T09:14:20Z",
+   "timestamp": 1715764460000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.acs.org/doi/10.1021/acsphotonics.3c01869"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     12
+    ]
+   ]
+  },
+  "references-count": 41,
+  "journal-issue": {
+   "issue": "5",
+   "published-print": {
+    "date-parts": [
+     [
+      2024,
+      5,
+      15
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1021/acsphotonics.3c01869"
+  ],
+  "URL": "https://doi.org/10.1021/acsphotonics.3c01869",
+  "relation": {},
+  "ISSN": [
+   "2330-4022",
+   "2330-4022"
+  ],
+  "issn-type": [
+   {
+    "value": "2330-4022",
+    "type": "print"
+   },
+   {
+    "value": "2330-4022",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     12
+    ]
+   ]
+  }
+ }
+}
