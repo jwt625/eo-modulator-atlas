@@ -1,6 +1,6 @@
 # Paper retrieval inbox
 
-Current list: [2020–2026 retrieval requests](../../data/_staging/discovery_2026_10_02/RETRIEVAL_REQUESTS.md).
+Current lists: [2020–2026 retrieval requests](../../data/_staging/discovery_2026_10_02/RETRIEVAL_REQUESTS.md) and the [continuation list](../../data/_staging/discovery_2026_10_02/RETRIEVAL_REQUESTS_CONTINUATION.md) (2026-10-03).
 
 Use the exact `<paper_id>.pdf` names in that list. Supporting information can be
 saved as `<paper_id>_supplement.pdf`, and published data as `<paper_id>_data.zip`.

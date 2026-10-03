@@ -1,6 +1,6 @@
 # Raw materials to retrieve — 2026-10-02
 
-34 main-paper requests remain in this pass. Start with the first ten; the rest are ordered below. This is a selected working list, not every uncached paper in the entire repository.
+34 main-paper requests were open at the start of this pass; as of 2026-10-03 two (`han2023`, `li2022b`) have preprints cached and the rest are unchanged (see also the continuation list). Start with the first ten; the rest are ordered below. This is a selected working list, not every uncached paper in the entire repository.
 
 Save files in `references/_inbox/` using the exact names below. An author-accepted manuscript is useful if the final article is unavailable; tell me which version it is. For any listed paper, include published supporting information as `<paper_id>_supplement.pdf` and a published dataset or source-data archive as `<paper_id>_data.zip` when available. A main PDF alone is still useful.
 
@@ -28,7 +28,7 @@ The browser-copy link is a primary publisher, university, author or repository r
 [Slow-light silicon modulator with 110-GHz bandwidth](https://doi.org/10.1126/sciadv.adi5339)
 
 - Save as: `han2023.pdf`
-- Access: FAILED status=403 type=text/html; charset=UTF-8 bytes=5602; not a complete PDF. Record it in needs_download.md and move on (no workarounds).
+- Access: publisher download blocked (403). 2026-10-03 update: the arXiv v1 preprint (2302.03652v1) is cached and staged in p2_02; still needed: the Science Advances version of record and Supplementary Materials, to check the preprint numbers (notably the BER/FEC statement).
 - [Primary browser-copy route](https://www.science.org/doi/pdf/10.1126/sciadv.adi5339)
 - Needed for: Unblocks the already-staged p2_02 slow-light silicon comparison; need primary text and Supplementary Materials.
 
@@ -146,7 +146,7 @@ The browser-copy link is a primary publisher, university, author or repository r
 [High modulation efficiency and large bandwidth thin-film lithium niobate modulator for visible light](https://doi.org/10.1364/OE.469065)
 
 - Save as: `li2022b.pdf`
-- Access: No downloadable open primary-source PDF located in this search pass.
+- Access: 2026-10-03 update: the arXiv v1 preprint (2202.13323v1) is cached and staged in p3_01; the Optics Express version of record is optional, for a version check.
 - Needed for: Full primary text is required before extracting geometry, measurements and evidence; title/abstract alone is insufficient.
 
 ### 16. chen2023 (2023)

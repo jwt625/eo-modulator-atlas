@@ -1,5 +1,7 @@
 # Manual downloads (paywalled or not accessible)
 
+**2026-10-03 update:** a ranked [continuation list](_staging/discovery_2026_10_02/RETRIEVAL_REQUESTS_CONTINUATION.md) covers 163 newly discovered papers.
+
 **2026-10-02 update:** use the [current 2020–2026 retrieval list](_staging/discovery_2026_10_02/RETRIEVAL_REQUESTS.md),
 which removes recovered papers and adds author/group discoveries. The entries
 below are the historical list; some have now been cached. Pre-2020 requests
