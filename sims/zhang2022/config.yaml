@@ -1,0 +1,121 @@
+schema: eo-atlas.sim/v1
+id: zhang2022-a
+paper_id: zhang2022
+device_id: zhang2022-a
+title: Zhang 2022, 5.8 mm uniform TFLN MZM with Cu G-S-G line on silicon (push-pull arms), mmWave-optic
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+# Conventions follow sims/chen2022/config.yaml and sims/liu2021/config.yaml.
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand waveguide in x. Signal electrode centre (mirror plane) at x = -12.5 um; LEFT waveguide at x = -25 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm. Waveguides assumed centred in the 5 um gaps.
+# The 10.8 mm variant (zhang2022-b) shares this cross-section; only line.length_mm differs.
+optics:
+  wavelength_nm: 1579
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  silicon: {n: 3.476, eps_r: 11.7}
+  copper: {conductor: true, sigma_Sm: 5.8e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-300, 250], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-300, 250], y_um: [-250, 120]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-300, 250], y_um: [-502, -2]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-300, 250], y_um: [-2, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-300, 250], y_um: [0, 0.3]}}
+    - {name: cladding, material: silicon_dioxide, rect: {x_um: [-300, 250], y_um: [0.3, 1.7]}}
+    - {name: ln_rib_r, material: lithium_niobate, polygon_um: [[-0.7092, 0.3], [0.7092, 0.3], [0.6, 0.6], [-0.6, 0.6]]}
+    - {name: ln_rib_l, material: lithium_niobate, polygon_um: [[-25.7092, 0.3], [-24.2908, 0.3], [-24.4, 0.6], [-25.6, 0.6]]}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-22.5, -2.5], y_um: [0.3, 1.1]}, material: copper}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [2.5, 102.5], y_um: [0.3, 1.1]}, material: copper}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-127.5, -27.5], y_um: [0.3, 1.1]}, material: copper}
+  optical_window: {x_um: [-2.4, 2.4], y_um: [-1.5, 1.5]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 5.8
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-ended G-S-G probe on the centre line; push-pull arises from the arm placement (see provenance)
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 325, n_points: 325}
+alt_geometries: {}
+
+targets:
+  - {metric: vpi_l_dc_vcm, value: 2.3, tol_rel: 0.15, source: {device_id: zhang2022-a, field: vpil_dc_vcm, comparable: false, note: "NON-COMPARABLE until sidewall angle, ground width and LN constants are known; 2.67 V cm at 1 GHz is the other quoted number"}}
+  - {metric: z0_ohm, at_ghz: 250, value: 41.5, tol_abs: 2.0, source: {device_id: zhang2022-a, field: z0_ohm, note: "text value 41.5 ohm; Fig. 2(b) measured markers read about 43.4 ohm at 250 GHz, inside the +/- 2 ohm band"}}
+  - {metric: ng_opt, value: 2.26, tol_abs: 0.05, source: {device_id: zhang2022-a, field: ng_opt, comparable: false, note: "paper-simulated (Lumerical MODE); sidewall angle is a placeholder and LN indices are UNVERIFIED"}}
+  - {metric: rf_loss_db_per_cm, at_ghz: 250, value: 13, tol_rel: 0.2, source: {device_id: zhang2022-a, field: rf_loss_db_per_cm}}
+  - {metric: bw3db_ghz, value: 170, tol_rel: 0.15, source: {device_id: zhang2022-a, field: bw3db_ghz}}
+  - {metric: bw6db_ghz, value: 295, tol_rel: 0.15, source: {device_id: zhang2022-a, field: bw6db_ghz}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: figure_digitized, locator: "p.5 Fig. 4(a) inset", note: "carrier of the example OSA spectrum read at about 1579 nm (axis 1577-1582 nm; sidebands about 2 nm away, consistent with 250 GHz); the text states only the 1500-1630 nm tunable laser, L-band, and no wavelength per data point"}
+  optics.polarization: {class: paper_exact, locator: "p.5 Sec. 3.C (TE mode excitation; p.3 TE modes with r33)"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.26 (simulated, Fig. 2(a)); engine derives it and compares as a target"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.4 Sec. 3.A (x-cut)", note: "x-cut stated; propagation along y is a project_inference from the standard x-cut convention"}
+  materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder 43/28 (SPEC.md example values); the paper states no RF permittivity"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values); the paper states no Pockels coefficients"}
+  materials.silicon_dioxide: {class: unknown, note: "UNVERIFIED placeholder n = 1.444, eps_r = 3.9; the paper states neither"}
+  materials.silicon.eps_r: {class: unknown, note: "UNVERIFIED placeholder 11.7; the paper states no silicon constants"}
+  materials.air: {class: standard_reference, citation: "vacuum-like ambient n = 1, eps_r = 1"}
+  materials.copper.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder 5.8e7 S/m bulk copper; film conductivity not stated; the 30 nm gold cap is ignored"}
+  line.length_mm: {class: paper_exact, locator: "p.2 Sec. 1; p.6 Sec. 3.C (5.8 mm headline device)"}
+  line.source_ohm: {class: project_inference, note: "VNA / probe 50 ohm assumed; p.3 Sec. 2 uses Z_C = 50 ohm for source and termination"}
+  line.load_ohm: {class: paper_exact, locator: "p.6 Sec. 3.C (50 ohm load on the output probe)"}
+  line.differential: {class: project_inference, note: "x-cut G-S-G with one arm per gap (Fig. 1(b)); drive single-ended, arms push-pull by geometry; the paper never states the drive"}
+  line.conductor_loss_model: {class: project_inference, note: "paper fits alpha_c = 0.42 dB/cm/GHz^0.5 and alpha_d = 0.025 dB/cm/GHz (Fig. 3(b)); loss model left to the engine"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.4 Sec. 3.A (500 um silicon; clipped to the domain)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.4 Sec. 3.A (2 um thermal oxide)"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.4 Sec. 3.A (600 nm film, 300 nm etch, 300 nm slab)"}
+  geometry.regions.ln_rib_r: {class: unknown, locator: "p.4 Sec. 3.A (1.2 um top width, 300 nm height); Fig. 1(c) sketch", note: "top width and height are paper_exact; sidewall angle is not stated and 70 deg is an UNVERIFIED placeholder so the polygon loads (tilted wall in the sketch, not to scale)"}
+  geometry.regions.ln_rib_l: {class: project_inference, note: "mirror image of the right-hand rib about x = -12.5 um; centred in the left gap"}
+  geometry.regions.cladding: {class: project_inference, locator: "p.4 Sec. 3.A (0.6 um PECVD silica); Fig. 1(c)", note: "flat top at electrode top + 0.6 um = 1.7 um (Fig. 1(c) draws silica above the Cu); conformal profile not given; RF eps_r 5.5 inferred by the authors (p.3) but not applied here because the material table keeps one SiO2"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.4 Sec. 3.A (20 um signal, 5 um gap, 800 nm Cu + 30 nm Au)", note: "bottom on the LN slab top (Fig. 1(c)); the 30 nm gold cap is ignored"}
+  geometry.electrodes.ground_r: {class: unknown, locator: "Fig. 1(e)", note: "ground width is not stated; 100 um is an UNVERIFIED placeholder so the geometry loads; inner edge 2.5 um from the right waveguide axis (5 um gap, waveguide assumed centred, project_inference)"}
+  geometry.electrodes.ground_l: {class: unknown, note: "mirror of ground_r; same UNVERIFIED 100 um placeholder width"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 2.4 um, just inside the 2.5 um electrode edge (a conductor in the window is unsupported)"}
+  geometry.domain: {class: project_inference, note: "lateral -300..250 um, vertical -250..120 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - "rib sidewall angle (70 deg placeholder)"
+  - "ground electrode width (100 um placeholder)"
+  - "waveguide position inside the 5 um gap (assumed centred)"
+  - "LN refractive indices, RF permittivity and Pockels coefficients, SiO2 and Si constants, copper conductivity (UNVERIFIED placeholders)"
+  - "RF permittivity of the PECVD cladding as a separate material (authors infer 5.5 from measurements, p.3)"
+  - "exact measurement wavelength per data point (1579 nm is one example spectrum, Fig. 4(a) inset)"
+  - "temperature"
+  - "silicon substrate resistivity"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "PECVD cladding modelled as a flat layer to electrode top + 0.6 um; its RF permittivity (5.5 inferred by the authors) is not applied"
+  - "Silicon is lossless in the model; the dielectric loss tangent 0.012 the authors extract is not an input"
+  - "EO response above 100 GHz needs the dispersive RF line and probe launch, which this static 2D cut does not contain"
+  - "The 30 nm gold cap on the copper is ignored"
+  - "Vpi*L 2.3 V cm (DC) vs 2.67 V cm (1 GHz) quoted by the authors; the DC value is used as the target"

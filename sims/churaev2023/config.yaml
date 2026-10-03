@@ -1,0 +1,108 @@
+# STATUS: record of disclosed geometry and provenance for ONE phase-modulator cross-section. NOT RUNNABLE as written: the paper states no RF permittivity or
+# Pockels coefficients for LN, no RF permittivity for SiO2, Si3N4 or Si and no gold conductivity. They are omitted on purpose (see `missing`); none was filled from memory.
+# Optical refractive indices are left to the engine's verified dispersion library (named materials carry no `n` here).
+#
+# Coordinate frame: x lateral, y film normal up, z propagation. x = 0 at the optical axis of the Si3N4 strip; y = 0 at the LN bottom (top of the SiO2 interlayer).
+# Single phase section (single-arm device, one waveguide between two electrodes): signal on the right, ground on the left, weights 1 / 0 so the full
+# 1 V falls across the 6 um gap. Convention matches the paper's per-phase-section Vpi*L (device churaev2023-a, vpi_convention per_arm_phase_shifter).
+# Device churaev2023-a (38 percent LN participation, 6 um gap). Variant churaev2023-b (52 percent, 5.5 um gap, narrower Si3N4) is not covered: its Si3N4 width is not stated.
+schema: eo-atlas.sim/v1
+id: churaev2023-a
+paper_id: churaev2023
+device_id: churaev2023-a
+title: Churaev 2023, 4 mm single-arm hybrid LN-on-Si3N4 phase modulator cross-section (600 nm Si3N4 strip under 300 nm x-cut LN, 6 um electrode gap)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap]
+
+optics:
+  wavelength_nm: 1550              # NOT stated for the Vpi measurement; paper quotes the 12 percent design participation at 1550 nm (p.3). See provenance.
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    # n_o, n_e: engine library; RF eps_r and Pockels tensor not stated in the paper (omitted, see missing)
+  silicon_nitride: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon_dioxide: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon: {}                      # optical n from engine library; RF eps_r and resistivity not stated (omitted)
+  gold: {conductor: true}          # conductivity not stated (omitted); Fig. 1g caption shows gold, text also allows tungsten
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-60, 60], y_um: [-40, 30]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-60, 60], y_um: [-40, 30]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-60, 60], y_um: [-40, -4.1]}}
+    - {name: oxide, material: silicon_dioxide, rect: {x_um: [-60, 60], y_um: [-4.1, 0]}}
+    - {name: sin_core, material: silicon_nitride, rect: {x_um: [-0.765, 0.765], y_um: [-0.7, -0.1]}}
+    - {name: ln_film, material: lithium_niobate, rect: {x_um: [-60, 60], y_um: [0, 0.3]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [3, 23], y_um: [0.3, 0.9]}, material: gold}
+    - {name: ground, role: ground, weight: 0.0, rect: {x_um: [-23, -3], y_um: [0.3, 0.9]}, material: gold}
+  optical_window: {x_um: [-2.9, 2.9], y_um: [-2.0, 1.2]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+line:
+  length_mm: 4
+  conductor_loss_model: none        # DC device: no RF line parameters are reported
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+
+targets:
+  # Measured (devices.csv row churaev2023-a): 22 V x 0.4 cm, single-arm phase modulator
+  - {metric: vpi_l_dc_vcm, value: 8.8, tol_rel: 0.15, source: {device_id: churaev2023-a, field: vpil_dc_vcm}}
+  # Paper's own FEM of the drawn geometry (Fig. 1i label); compare as a cross-solver reference, not as a measurement
+  - {metric: vpi_l_dc_vcm, value: 8.2, tol_rel: 0.10, source: {paper_id: churaev2023, locator: "p.2 Fig. 1i label", basis: simulated, note: "FEM of the 38 percent participation, 6 um gap geometry"}}
+  # Not a target (no region argument in SPEC): LN optical participation 38 percent (p.2 Fig. 1h legend, Fig. 1i caption), 12 percent for the 950 nm Si3N4 design (p.3)
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: project_inference, locator: "not stated for Vpi; p.3 (participation quoted at 1550 nm)", note: "C-band 1550 nm assumed"}
+  optics.polarization: {class: project_inference, note: "TE assumed; LN participation and r33 coupling imply the TE mode with x-cut LN; paper does not name the polarization for the EO measurement"}
+  optics.group_index_from: {class: project_inference, note: "no group index reported for these devices; engine finite difference"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.7 Methods (x-cut LNOI, NanoLN)", note: "propagation along crystal y is project_inference (not stated)"}
+  geometry.regions.ln_film: {class: paper_exact, locator: "p.7 Methods, Waveguide geometry (300 nm LN)", note: "unetched in the modulation section; slab etched below 50 nm only at the chip edges and tapers (p.7)"}
+  geometry.regions.sin_core: {class: figure_digitized, locator: "p.7 Methods (600 nm Si3N4); p.2 Fig. 1i", note: "thickness 600 nm from text; width 1.5 um digitized from the Fig. 1i FEM drawing by anchoring on the stated 6 um gap (98 px against 385 px, about 64 px/um); text only gives the range 1.0-2.0 um. CONFLICT: the drawing's own 1 um scale bar gives a 4.0 um gap, a 1.0 um strip and about 0.4 um strip height, so the drawing contradicts the stated 6 um gap and 600 nm thickness; the strip width could be 1.0-1.5 um"}
+  geometry.regions.oxide: {class: project_inference, locator: "p.3 Sec. Results (4 um wet thermal SiO2); p.7 Methods (interlayer about 100 nm)", note: "Si3N4 assumed embedded in the 4 um thermal oxide with its top flush with the oxide surface (Damascene) and the 100 nm interlayer on top; Si top at y = -4.1 um"}
+  geometry.regions.substrate: {class: project_inference, locator: "p.3 Sec. Results (100 mm Si wafer)", note: "region clipped to the domain; resistivity not stated"}
+  geometry.regions.ambient: {class: project_inference, locator: "p.2 Fig. 1b, 1i", note: "no top cladding drawn above the LN and electrodes; text does not state it"}
+  geometry.electrodes.signal: {class: project_inference, locator: "p.3 Sec. Results (6 um gap); p.2 Fig. 1i", note: "inner edge 3 um from the axis (gap 6 um from the text, waveguide assumed centred); width 20 um is an assumption (drawing cropped, not stated); thickness 0.6 um is figure_digitized from Fig. 1i (40 px at 64 px/um, anchored on the stated 6 um gap; the drawing's 1 um scale bar would give about 0.4 um)"}
+  geometry.electrodes.ground: {class: project_inference, locator: "p.3 Sec. Results; p.2 Fig. 1i", note: "mirror of the signal electrode; same assumptions"}
+  geometry.optical_window: {class: project_inference, note: "crop between the electrodes; window truncation not studied"}
+  geometry.domain: {class: project_inference, note: "lateral +-60 um, vertical -40..30 um; the real chip is hundreds of um thick; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+  line.length_mm: {class: paper_exact, locator: "p.3 Sec. Results; p.2 Fig. 1h (4 mm phase modulators)"}
+  line.differential: {class: project_inference, note: "single-arm phase modulator: one gap carries the full voltage"}
+
+missing:
+  - "lithium_niobate RF permittivity (anisotropic) and Pockels tensor (not stated; omitted, not filled from memory)"
+  - "silicon_nitride, silicon_dioxide, silicon RF permittivity; silicon resistivity (not stated)"
+  - "gold (or tungsten) conductivity and the actual metal of this device (not stated per device)"
+  - "measurement wavelength (not stated; 1550 nm assumed)"
+  - "electrode width and thickness (not stated; Fig. 1i drawing only, cropped)"
+  - "Si3N4 strip width of the fabricated device (range 1.0-2.0 um stated; 1.5 um from the drawing anchored on the 6 um gap, 1.0 um if the drawing's 1 um scale bar is used)"
+  - "consistent scale of the Fig. 1i drawing: the scale bar contradicts the stated 6 um gap and 600 nm Si3N4 thickness (see sin_core provenance)"
+  - "whether the 100 nm SiO2 interlayer lies between the Si3N4 and LN in the paper's FEM drawing (Fig. 1i shows the Si3N4 touching the LN; Methods give about 100 nm)"
+  - "SiO2 interlayer refractive index (library value used by the engine)"
+  - "propagation direction on the x-cut film (assumed y)"
+  - "RF line behaviour (no S21, Z0 or n_RF reported; electrode type lumped vs traveling-wave not stated)"
+  - "Supplementary Information section IV (loss and VpiL trade-off simulations) not in the cache"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Config is not runnable until RF permittivities and Pockels coefficients are supplied from a verified source; the engine rejects dielectrics without eps_r by design"
+  - "Single phase section only; the device is an MZI-measured single-arm phase modulator and the second arm is not modelled"
+  - "Electrodes drawn 20 um wide and the domain truncated at +-60 um; paper does not give electrode width"
+  - "Interlayer placement follows the Methods text and differs from the Fig. 1i drawing; the simulated 8.2 V cm target is for the drawn geometry"
+  - "Optical participation (38 percent) cannot be expressed as a target (no region argument)"

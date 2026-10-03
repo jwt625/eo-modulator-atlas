@@ -1,0 +1,162 @@
+paper_id: churaev2023
+verified_on: '2026-10-02'
+source_files:
+- references/churaev2023/text.md
+- references/churaev2023/crossref.json
+- references/churaev2023/figures/page_02.png
+- references/churaev2023/figures/img_p02_19.png
+entries:
+- device_id: churaev2023-a
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. Results; p.2 Fig. 1h caption
+  note: phase modulator length
+- device_id: churaev2023-a
+  field: vpi_dc_v
+  value: 22
+  unit: V
+  basis: measured
+  locator: p.3 Sec. Results; p.2 Fig. 1h
+  note: single phase modulator in an MZI; wavelength and bias not stated; Fig. 1h half-wave minimum read near 22 V
+- device_id: churaev2023-a
+  field: vpil_dc_vcm
+  value: 8.8
+  unit: V*cm
+  basis: derived
+  locator: p.3 Sec. Results; p.6 Conclusion; p.2 Fig. 1h label
+  note: authors state approximately 8.8 V cm, i.e. 22 V x 0.4 cm; single-arm
+- device_id: churaev2023-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.7 Methods, Waveguide geometry
+  note: x-cut LNOI from NanoLN
+- device_id: churaev2023-a
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. Results; p.2 Fig. 1i caption
+  note: electrode-electrode gap
+- device_id: churaev2023-a
+  field: electrode_metal
+  value: tungsten or gold (not stated per device)
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Results; p.7 Methods
+  note: 'text: either tungsten or gold electrodes; Fig. 1g caption shows gold; Methods describe sputtered tungsten'
+- device_id: churaev2023-a
+  field: substrate
+  value: silicon (100 mm wafer, 4 um wet thermal SiO2)
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Results
+- device_id: churaev2023-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.7 Methods, Waveguide geometry
+- device_id: churaev2023-a
+  field: epitaxy_or_stack
+  value: x-cut LN 300 nm / SiO2 interlayer about 100 nm / Si3N4 600 nm (wafer D8812, high-participation) embedded in thermal SiO2 on Si; Al2O3 few nm ALD bond interface; waveguide width 1.0-2.0 um (value
+    for this device not stated); electrodes on LN
+  unit: ''
+  basis: design_target
+  locator: p.7 Methods, Waveguide geometry; p.3 Sec. Results
+  note: interlayer about 100 nm remaining after CMP (p.7)
+- device_id: churaev2023-b
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.2 Fig. 1h panel label L = 0.4 cm; Fig. 1h caption
+  note: same panel as device a
+- device_id: churaev2023-b
+  field: vpil_dc_vcm
+  value: 5.6
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.2 Fig. 1h label; p.3 Sec. Results
+  note: figure label 5.6 V cm; text says approximately 6 V cm for the red curve
+- device_id: churaev2023-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.7 Methods, Waveguide geometry
+- device_id: churaev2023-b
+  field: electrode_gap_um
+  value: 5.5
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. Results
+  note: 'text: electrode distance decreased down to 5.5 um'
+- device_id: churaev2023-b
+  field: electrode_metal
+  value: tungsten or gold (not stated per device)
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Results; p.7 Methods
+- device_id: churaev2023-b
+  field: substrate
+  value: silicon (100 mm wafer, 4 um wet thermal SiO2)
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Results
+- device_id: churaev2023-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.7 Methods, Waveguide geometry
+- device_id: churaev2023-b
+  field: epitaxy_or_stack
+  value: x-cut LN 300 nm / SiO2 interlayer about 100 nm / Si3N4 600 nm (wafer D8812, high-participation) embedded in thermal SiO2 on Si; Al2O3 few nm ALD bond interface; waveguide width 1.0-2.0 um (narrower
+    than device a, value not stated); electrodes on LN
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Results; p.7 Methods
+  note: narrower Si3N4 width raises LN participation to 52 percent at the expense of optical loss (SI section IV, not read)
+- device_id: churaev2023-c
+  field: wavelength_nm
+  value: 1552
+  unit: nm
+  basis: measured
+  locator: p.6 Fig. 4c caption
+  note: central wavelength of the generated EO comb; pump resonantly in C-band (p.5)
+- device_id: churaev2023-c
+  field: prop_loss_db_per_cm
+  value: 0.085
+  unit: dB/cm
+  basis: derived
+  locator: p.3 Sec. Results
+  note: best-resonance value (Q up to 4.5e6, quoted for 21 GHz rings and 50 GHz dimers); resonance wavelength not stated; 1552 nm is comb centre
+- device_id: churaev2023-c
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.7 Methods, Waveguide geometry
+- device_id: churaev2023-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.7 Methods, Waveguide geometry
+- device_id: churaev2023-c
+  field: substrate
+  value: silicon (100 mm wafer, 4 um wet thermal SiO2)
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Results
+- device_id: churaev2023-c
+  field: epitaxy_or_stack
+  value: x-cut LN 300 nm / SiO2 interlayer about 100 nm / Si3N4 950 nm (wafer D67b01, low-participation) in thermal SiO2 on Si; LN mode participation 12 percent at 1550 nm
+  unit: ''
+  basis: design_target
+  locator: p.7 Methods; p.3 Sec. Results
+derived: []

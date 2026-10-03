@@ -1,0 +1,110 @@
+schema: eo-atlas.sim/v1
+id: qi2024-d
+paper_id: qi2024
+device_id: qi2024-d
+title: Qi 2024, 12.917 mm silica-rib-loaded TFLN MZM on silicon with Ti/Au G-S-G line (no LN etching), push-pull arms assumed
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+# Conventions follow sims/chen2022/config.yaml and sims/liu2021/config.yaml.
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand silica rib in x. Signal electrode centre at x = -13.5 um; LEFT rib at x = -27 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm. Ribs assumed centred in the 7 um gaps.
+# Config is for the Vpi-measured 12.917 mm device; the 3, 5 and 8 mm devices share this cross-section (only line.length_mm differs).
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  silicon: {n: 3.476, eps_r: 11.7}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-300, 270], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-300, 270], y_um: [-250, 120]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-300, 270], y_um: [-528, -3]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-300, 270], y_um: [-3, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-300, 270], y_um: [0, 0.3]}}
+    - {name: silica_rib_r, material: silicon_dioxide, rect: {x_um: [-1, 1], y_um: [0.3, 0.7]}}
+    - {name: silica_rib_l, material: silicon_dioxide, rect: {x_um: [-28, -26], y_um: [0.3, 0.7]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-23.5, -3.5], y_um: [0.3, 1.1]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [3.5, 153.5], y_um: [0.3, 1.1]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-180.5, -30.5], y_um: [0.3, 1.1]}, material: gold}
+  optical_window: {x_um: [-3.4, 3.4], y_um: [-1.5, 1.5]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 12.917
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-ended G-S-G probe on the centre line; push-pull arises from the arm placement (see provenance)
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 120, n_points: 240}
+alt_geometries: {}
+
+targets:
+  - {metric: vpi_l_dc_vcm, value: 2.53, tol_rel: 0.15, source: {device_id: qi2024-d, field: vpil_dc_vcm, comparable: false, note: "NON-COMPARABLE with UNVERIFIED LN constants; the arm drive convention is not stated"}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: project_inference, locator: "p.5 Sec. 3 (CW light near 1550 nm)", note: "nominal wavelength"}
+  optics.polarization: {class: paper_exact, locator: "p.5 Sec. 3 (TE mode excited by 3-paddle polarization controller)"}
+  optics.group_index_from: {class: project_inference, note: "design simulation plots Fig. 3(c) show group index near 2.3 versus frequency but no number is quoted; engine derives it"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.5 Sec. 3 (x-cut TFLN)", note: "x-cut stated; propagation along y is a project_inference from the standard x-cut convention"}
+  materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder 43/28 (SPEC.md example values); the paper states no RF permittivity"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values); the paper states no Pockels coefficients"}
+  materials.silicon_dioxide: {class: unknown, note: "UNVERIFIED placeholder n = 1.444, eps_r = 3.9; the paper states neither"}
+  materials.silicon.eps_r: {class: unknown, note: "UNVERIFIED placeholder 11.7; the paper states no silicon constants"}
+  materials.air: {class: standard_reference, citation: "vacuum-like ambient n = 1, eps_r = 1"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder 4.1e7 S/m bulk gold; the 100 nm Ti adhesion layer is ignored and film conductivity is not stated"}
+  line.length_mm: {class: paper_exact, locator: "p.5 Sec. 3; p.6 Fig. 4(e) (12.917 mm)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm VNA / probe; p.5 Sec. 3 uses a pair of probes and a 50 ohm load"}
+  line.load_ohm: {class: paper_exact, locator: "p.5 Sec. 3 (50 ohm load)"}
+  line.differential: {class: project_inference, note: "G-S-G with one arm per gap (Fig. 4(b)); the paper does not state push-pull; Vpi convention unspecified"}
+  line.conductor_loss_model: {class: project_inference, note: "no RF loss coefficient stated"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.5 Sec. 3 (525 um silicon; clipped to the domain)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.4-5 Sec. 3 (3 um silica buried layer)"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.4-5 Sec. 3 (300 nm x-cut TFLN, not etched)"}
+  geometry.regions.silica_rib_r: {class: paper_exact, locator: "p.4 Sec. 3 (w_rib = 2 um, h_rib = 400 nm); p.5 (fully etched PECVD silica)", note: "rectangular profile per Fig. 2(A) and Fig. 4(A); sidewall slope not stated"}
+  geometry.regions.silica_rib_l: {class: project_inference, note: "mirror of the right rib about x = -13.5 um; centred in the left gap"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.4 Sec. 3 (ws = 20 um, g = 7 um, h_elec = 800 nm)", note: "bottom on the LN slab top (Fig. 2(A)); the 100 nm Ti layer is lumped into the 800 nm gold-like conductor"}
+  geometry.electrodes.ground_r: {class: paper_exact, locator: "p.4 Sec. 3 (wg = 150 um)", note: "inner edge 3.5 um from the right rib axis (rib assumed centred in the 7 um gap, Fig. 2(A))"}
+  geometry.electrodes.ground_l: {class: project_inference, locator: "Fig. 4(B)", note: "second ground assumed the same 150 um; GSG layout with S between two grounds read from the microscope image"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 3.4 um, just inside the 3.5 um electrode edge"}
+  geometry.domain: {class: project_inference, note: "lateral -300..270 um, vertical -250..120 um"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - "rib position inside the 7 um gap (assumed centred)"
+  - "silica rib sidewall slope"
+  - "arm drive convention (push-pull assumed from geometry)"
+  - "LN refractive indices, RF permittivity and Pockels coefficients, SiO2 and Si constants, metal conductivities (UNVERIFIED placeholders)"
+  - "Ti adhesion layer treatment"
+  - "temperature"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Ti 100 nm / Au 700 nm stack entered as one 800 nm gold-conductor block"
+  - "Optical overlap needs a PECVD silica index; the placeholder SiO2 index is used for both rib and BOX"
+  - "Targets are Vpi*L only; bandwidth (3 mm: > 110 GHz) belongs to the 3 mm variant and cannot be compared without the loaded-line stage"

@@ -1,0 +1,157 @@
+paper_id: celik2022
+verified_on: '2026-10-02'
+source_files:
+- references/celik2022/text.md
+- references/celik2022/crossref.json
+- references/celik2022/figures/page_04.png
+- references/celik2022/figures/page_07.png
+entries:
+- device_id: celik2022-a
+  field: wavelength_nm
+  value: 780
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. Device overview; p.6 Sec. Electro-optic MZI
+  note: rubidium transition; directional couplers centered at 780 nm
+- device_id: celik2022-a
+  field: length_mm
+  value: 3
+  unit: mm
+  basis: design_target
+  locator: p.5 Sec. Optical design and fabrication; p.7 Fig. 4 caption
+  note: EO modulation region; a 1 mm device is pictured for clarity (p.5)
+- device_id: celik2022-a
+  field: vpi_dc_v
+  value: 4.2
+  unit: V
+  basis: measured
+  locator: p.6 Sec. Electro-optic MZI; p.7 Fig. 4(c)
+  note: bias-voltage sweep of bar-arm transmission
+- device_id: celik2022-a
+  field: vpil_dc_vcm
+  value: 1.26
+  unit: V*cm
+  basis: derived
+  locator: p.6 Sec. Electro-optic MZI
+  note: stated by authors from 4.2 V and 3 mm
+- device_id: celik2022-a
+  field: bw3db_ghz
+  value: 2.7
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. Electro-optic MZI; p.7 Fig. 4(d)
+  note: VNA S21; flat plateau from 100 kHz; RC-limited per authors
+- device_id: celik2022-a
+  field: extinction_ratio_db
+  value: 27
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. Electro-optic MZI; p.7 Fig. 4(c)
+  note: static; reduced at higher voltages; 27 dB at negative bias
+- device_id: celik2022-a
+  field: prop_loss_db_per_cm
+  value: 1.6
+  unit: dB/cm
+  basis: derived
+  locator: p.5 Sec. Optical design and fabrication; p.1 abstract
+  note: authors convert ring intrinsic Q of 4.4e5 at 780 nm (TE) to loss; formula not given
+- device_id: celik2022-a
+  field: eo_film_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Optical design
+  note: total LN thickness tLN
+- device_id: celik2022-a
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Optical design
+  note: top width wtop
+- device_id: celik2022-a
+  field: slab_thickness_nm
+  value: 100
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Optical design
+  note: tslab
+- device_id: celik2022-a
+  field: electrode_thickness_um
+  value: 0.2
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Optical design and fabrication
+  note: Al evaporated at 45 degrees for sidewall coverage
+- device_id: celik2022-a
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Device overview; p.5
+- device_id: celik2022-a
+  field: cladding
+  value: SiO2 750 nm (PECVD, annealed 500 C); trenches open to the LN
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Optical design; p.3 Sec. Device overview
+- device_id: celik2022-a
+  field: substrate
+  value: C-cut sapphire
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Optical design
+- device_id: celik2022-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Optical design and fabrication
+  note: MgO-doped LN film
+- device_id: celik2022-a
+  field: waveguide_orientation
+  value: propagation along crystal y
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. Electro-optic MZI, Eq. (1)
+  note: modes propagate along y-hat in the EO perturbation theory; bends sweep the crystal angle
+- device_id: celik2022-a
+  field: epitaxy_or_stack
+  value: MgO-doped x-cut LN 200 nm (100 nm slab, 800 nm top width ridge) on C-cut sapphire; 750 nm SiO2 cladding with trenches; 200 nm Al electrodes
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Optical design
+- device_id: celik2022-a
+  field: electrode_type
+  value: lumped
+  unit: ''
+  basis: derived
+  locator: p.6 Sec. Electro-optic MZI
+  note: authors model the EO response with an RC circuit (50 ohm, about 20 ohm electrode resistance); not called lumped in the text
+- device_id: celik2022-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. Device overview
+  note: GSG probe feeds both arms in a push-pull configuration
+- device_id: celik2022-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.5-6 Sec. Electro-optic MZI
+  note: Eq. phase difference = 2 dn k0 V L (push-pull factor 2); convention not named by authors
+derived:
+- device_id: celik2022-a
+  field: etch_depth_nm
+  value: 100
+  formula: eo_film_thickness_nm - slab_thickness_nm
+  inputs:
+  - eo_film_thickness_nm
+  - slab_thickness_nm
+- device_id: celik2022-a
+  field: optical_input_power_dbm
+  value: 0
+  formula: 10*log10(1 mW / 1 mW); paper states 1 mW of optical power travelling in the waveguides during EO measurements (p.6)
+  inputs: []

@@ -1,0 +1,711 @@
+paper_id: liu2023
+verified_on: '2026-10-02'
+source_files:
+- references/liu2023/text.md
+- references/liu2023/crossref.json
+- references/liu2023/figures/page_06.png
+- references/liu2023/figures/page_07.png
+entries:
+- device_id: liu2023-a
+  field: wavelength_nm
+  value: 1531
+  unit: nm
+  basis: simulated
+  locator: p.5 Sec. Structure
+  note: central wavelength of the channel's MWG from 3D-FDTD design; operating wavelength is tuned to the FP resonance and not stated
+- device_id: liu2023-a
+  field: length_mm
+  value: 0.1
+  unit: mm
+  basis: design_target
+  locator: p.2 Introduction; p.5 Sec. Structure
+  note: about 100 um equivalent modulation region (Lwg = 20 um between the MWG reflectors)
+- device_id: liu2023-a
+  field: tuning_nm_per_v
+  value: 0.0096
+  unit: nm/V
+  basis: measured
+  locator: p.7 Sec. Characterization
+  note: 9.6 pm/V; paper reports one value for 'the modulators', channel not specified
+- device_id: liu2023-a
+  field: q_loaded
+  value: 5450
+  unit: '1'
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: FP-cavity Q from transmission notches; approximate
+- device_id: liu2023-a
+  field: fsr_nm
+  value: 7
+  unit: nm
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: approximately 7 nm for each cavity
+- device_id: liu2023-a
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: static ER of the cavity resonance, all channels greater than 20 dB
+- device_id: liu2023-a
+  field: bw3db_ghz
+  value: 36
+  unit: GHz
+  basis: derived
+  locator: p.7 Sec. Experiments of data transmissions
+  note: photon-lifetime limit BW = f0/Q from the measured Q; not a measured EO response
+- device_id: liu2023-a
+  field: capacitance_ff
+  value: 21.1
+  unit: fF
+  basis: author_estimate
+  locator: p.7 Sec. Experiments of data transmissions
+  note: approximately 21.1 fF per FP-cavity modulator; method not stated
+- device_id: liu2023-a
+  field: energy_per_bit_fj
+  value: 11.9
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.7 Sec. Experiments of data transmissions; p.8 Discussion
+  note: estimated for data up to 80 Gb/s at 1.5 Vpp; consistent with C*Vpp^2/4 (not stated by authors)
+- device_id: liu2023-a
+  field: drive_vpp_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.7 Sec. Experiments of data transmissions
+  note: Vpp applied to the probe for 80 Gb/s OOK; 1.8 V at 40 Gb/s (p.8 Methods)
+- device_id: liu2023-a
+  field: max_baud_gbd
+  value: 80
+  unit: GBd
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5(e-h)
+  note: 80 Gb/s OOK, signal distorted by RF amplifier/cable limits (p.7)
+- device_id: liu2023-a
+  field: modulation_format
+  value: OOK 40 and 80 Gb/s (dynamic ER at 40 Gb/s given); PAM4 100 Gb/s (50 GBd), eye open
+  unit: ''
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5
+  note: each channel measured individually
+- device_id: liu2023-a
+  field: max_line_rate_gbps
+  value: 100
+  unit: Gb/s
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5
+- device_id: liu2023-a
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure; p.5 Sec. Characterization
+  note: x-cut NANOLN LNOI
+- device_id: liu2023-a
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure; p.8 Methods
+  note: open regions; narrow trenches etch about 180 nm (lag effect, Fig. 3e)
+- device_id: liu2023-a
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure
+  note: effective MWG waveguide width W; top width wtop not stated
+- device_id: liu2023-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Structure
+  note: G-S separation d chosen to avoid metal absorption in the MWG area
+- device_id: liu2023-a
+  field: electrode_thickness_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.8 Methods
+  note: Au; plus 10 nm Ti
+- device_id: liu2023-a
+  field: electrode_metal
+  value: gold (10 nm titanium adhesion)
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods
+- device_id: liu2023-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Characterization
+  note: buried oxide of the LNOI wafer
+- device_id: liu2023-a
+  field: cladding
+  value: air
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Structure
+  note: air up-cladding
+- device_id: liu2023-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Structure
+- device_id: liu2023-a
+  field: epitaxy_or_stack
+  value: x-cut LN 400 nm on 3 um buried oxide (NANOLN LNOI); 200 nm ridge etch; sidewall 30 deg from vertical; MWG period 427/434/441/448 nm; filter N = 450, corrugation 640 nm; cavity reflectors N = 180,
+    corrugation 600 nm; air up-cladding
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. Structure; p.8 Methods
+  note: periods set the four channel center wavelengths
+- device_id: liu2023-a
+  field: il_onchip_db
+  value: 0.4
+  unit: dB
+  basis: measured
+  locator: p.7 Sec. Characterization; Fig. 4(b)
+  note: excess loss read from Fig. 4(b) for this channel's filter-plus-modulator path; normalization not stated
+- device_id: liu2023-b
+  field: wavelength_nm
+  value: 1551
+  unit: nm
+  basis: simulated
+  locator: p.5 Sec. Structure
+  note: central wavelength of the channel's MWG from 3D-FDTD design; operating wavelength is tuned to the FP resonance and not stated
+- device_id: liu2023-b
+  field: length_mm
+  value: 0.1
+  unit: mm
+  basis: design_target
+  locator: p.2 Introduction; p.5 Sec. Structure
+  note: about 100 um equivalent modulation region (Lwg = 20 um between the MWG reflectors)
+- device_id: liu2023-b
+  field: tuning_nm_per_v
+  value: 0.0096
+  unit: nm/V
+  basis: measured
+  locator: p.7 Sec. Characterization
+  note: 9.6 pm/V; paper reports one value for 'the modulators', channel not specified
+- device_id: liu2023-b
+  field: q_loaded
+  value: 6160
+  unit: '1'
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: FP-cavity Q from transmission notches; approximate
+- device_id: liu2023-b
+  field: fsr_nm
+  value: 7
+  unit: nm
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: approximately 7 nm for each cavity
+- device_id: liu2023-b
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: static ER of the cavity resonance, all channels greater than 20 dB
+- device_id: liu2023-b
+  field: bw3db_ghz
+  value: 31
+  unit: GHz
+  basis: derived
+  locator: p.7 Sec. Experiments of data transmissions
+  note: photon-lifetime limit BW = f0/Q from the measured Q; not a measured EO response
+- device_id: liu2023-b
+  field: capacitance_ff
+  value: 21.1
+  unit: fF
+  basis: author_estimate
+  locator: p.7 Sec. Experiments of data transmissions
+  note: approximately 21.1 fF per FP-cavity modulator; method not stated
+- device_id: liu2023-b
+  field: energy_per_bit_fj
+  value: 11.9
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.7 Sec. Experiments of data transmissions; p.8 Discussion
+  note: estimated for data up to 80 Gb/s at 1.5 Vpp; consistent with C*Vpp^2/4 (not stated by authors)
+- device_id: liu2023-b
+  field: drive_vpp_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.7 Sec. Experiments of data transmissions
+  note: Vpp applied to the probe for 80 Gb/s OOK; 1.8 V at 40 Gb/s (p.8 Methods)
+- device_id: liu2023-b
+  field: max_baud_gbd
+  value: 80
+  unit: GBd
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5(e-h)
+  note: 80 Gb/s OOK, signal distorted by RF amplifier/cable limits (p.7)
+- device_id: liu2023-b
+  field: modulation_format
+  value: OOK 40 and 80 Gb/s (dynamic ER at 40 Gb/s given); PAM4 100 Gb/s (50 GBd), eye open
+  unit: ''
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5
+  note: each channel measured individually
+- device_id: liu2023-b
+  field: max_line_rate_gbps
+  value: 100
+  unit: Gb/s
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5
+- device_id: liu2023-b
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure; p.5 Sec. Characterization
+  note: x-cut NANOLN LNOI
+- device_id: liu2023-b
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure; p.8 Methods
+  note: open regions; narrow trenches etch about 180 nm (lag effect, Fig. 3e)
+- device_id: liu2023-b
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure
+  note: effective MWG waveguide width W; top width wtop not stated
+- device_id: liu2023-b
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Structure
+  note: G-S separation d chosen to avoid metal absorption in the MWG area
+- device_id: liu2023-b
+  field: electrode_thickness_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.8 Methods
+  note: Au; plus 10 nm Ti
+- device_id: liu2023-b
+  field: electrode_metal
+  value: gold (10 nm titanium adhesion)
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods
+- device_id: liu2023-b
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Characterization
+  note: buried oxide of the LNOI wafer
+- device_id: liu2023-b
+  field: cladding
+  value: air
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Structure
+  note: air up-cladding
+- device_id: liu2023-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Structure
+- device_id: liu2023-b
+  field: epitaxy_or_stack
+  value: x-cut LN 400 nm on 3 um buried oxide (NANOLN LNOI); 200 nm ridge etch; sidewall 30 deg from vertical; MWG period 427/434/441/448 nm; filter N = 450, corrugation 640 nm; cavity reflectors N = 180,
+    corrugation 600 nm; air up-cladding
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. Structure; p.8 Methods
+  note: periods set the four channel center wavelengths
+- device_id: liu2023-c
+  field: wavelength_nm
+  value: 1571
+  unit: nm
+  basis: simulated
+  locator: p.5 Sec. Structure
+  note: central wavelength of the channel's MWG from 3D-FDTD design; operating wavelength is tuned to the FP resonance and not stated
+- device_id: liu2023-c
+  field: length_mm
+  value: 0.1
+  unit: mm
+  basis: design_target
+  locator: p.2 Introduction; p.5 Sec. Structure
+  note: about 100 um equivalent modulation region (Lwg = 20 um between the MWG reflectors)
+- device_id: liu2023-c
+  field: tuning_nm_per_v
+  value: 0.0096
+  unit: nm/V
+  basis: measured
+  locator: p.7 Sec. Characterization
+  note: 9.6 pm/V; paper reports one value for 'the modulators', channel not specified
+- device_id: liu2023-c
+  field: q_loaded
+  value: 6180
+  unit: '1'
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: FP-cavity Q from transmission notches; approximate
+- device_id: liu2023-c
+  field: fsr_nm
+  value: 7
+  unit: nm
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: approximately 7 nm for each cavity
+- device_id: liu2023-c
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: static ER of the cavity resonance, all channels greater than 20 dB
+- device_id: liu2023-c
+  field: bw3db_ghz
+  value: 31
+  unit: GHz
+  basis: derived
+  locator: p.7 Sec. Experiments of data transmissions
+  note: photon-lifetime limit BW = f0/Q from the measured Q; not a measured EO response
+- device_id: liu2023-c
+  field: capacitance_ff
+  value: 21.1
+  unit: fF
+  basis: author_estimate
+  locator: p.7 Sec. Experiments of data transmissions
+  note: approximately 21.1 fF per FP-cavity modulator; method not stated
+- device_id: liu2023-c
+  field: energy_per_bit_fj
+  value: 11.9
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.7 Sec. Experiments of data transmissions; p.8 Discussion
+  note: estimated for data up to 80 Gb/s at 1.5 Vpp; consistent with C*Vpp^2/4 (not stated by authors)
+- device_id: liu2023-c
+  field: drive_vpp_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.7 Sec. Experiments of data transmissions
+  note: Vpp applied to the probe for 80 Gb/s OOK; 1.8 V at 40 Gb/s (p.8 Methods)
+- device_id: liu2023-c
+  field: max_baud_gbd
+  value: 80
+  unit: GBd
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5(e-h)
+  note: 80 Gb/s OOK, signal distorted by RF amplifier/cable limits (p.7)
+- device_id: liu2023-c
+  field: modulation_format
+  value: OOK 40 and 80 Gb/s (dynamic ER at 40 Gb/s given); PAM4 100 Gb/s (50 GBd), eye open
+  unit: ''
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5
+  note: each channel measured individually
+- device_id: liu2023-c
+  field: max_line_rate_gbps
+  value: 100
+  unit: Gb/s
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5
+- device_id: liu2023-c
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure; p.5 Sec. Characterization
+  note: x-cut NANOLN LNOI
+- device_id: liu2023-c
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure; p.8 Methods
+  note: open regions; narrow trenches etch about 180 nm (lag effect, Fig. 3e)
+- device_id: liu2023-c
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure
+  note: effective MWG waveguide width W; top width wtop not stated
+- device_id: liu2023-c
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Structure
+  note: G-S separation d chosen to avoid metal absorption in the MWG area
+- device_id: liu2023-c
+  field: electrode_thickness_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.8 Methods
+  note: Au; plus 10 nm Ti
+- device_id: liu2023-c
+  field: electrode_metal
+  value: gold (10 nm titanium adhesion)
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods
+- device_id: liu2023-c
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Characterization
+  note: buried oxide of the LNOI wafer
+- device_id: liu2023-c
+  field: cladding
+  value: air
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Structure
+  note: air up-cladding
+- device_id: liu2023-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Structure
+- device_id: liu2023-c
+  field: epitaxy_or_stack
+  value: x-cut LN 400 nm on 3 um buried oxide (NANOLN LNOI); 200 nm ridge etch; sidewall 30 deg from vertical; MWG period 427/434/441/448 nm; filter N = 450, corrugation 640 nm; cavity reflectors N = 180,
+    corrugation 600 nm; air up-cladding
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. Structure; p.8 Methods
+  note: periods set the four channel center wavelengths
+- device_id: liu2023-d
+  field: wavelength_nm
+  value: 1591
+  unit: nm
+  basis: simulated
+  locator: p.5 Sec. Structure
+  note: central wavelength of the channel's MWG from 3D-FDTD design; operating wavelength is tuned to the FP resonance and not stated
+- device_id: liu2023-d
+  field: length_mm
+  value: 0.1
+  unit: mm
+  basis: design_target
+  locator: p.2 Introduction; p.5 Sec. Structure
+  note: about 100 um equivalent modulation region (Lwg = 20 um between the MWG reflectors)
+- device_id: liu2023-d
+  field: tuning_nm_per_v
+  value: 0.0096
+  unit: nm/V
+  basis: measured
+  locator: p.7 Sec. Characterization
+  note: 9.6 pm/V; paper reports one value for 'the modulators', channel not specified
+- device_id: liu2023-d
+  field: q_loaded
+  value: 6450
+  unit: '1'
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: FP-cavity Q from transmission notches; approximate
+- device_id: liu2023-d
+  field: fsr_nm
+  value: 7
+  unit: nm
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: approximately 7 nm for each cavity
+- device_id: liu2023-d
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. Characterization; Fig. 4(b)
+  note: static ER of the cavity resonance, all channels greater than 20 dB
+- device_id: liu2023-d
+  field: bw3db_ghz
+  value: 29
+  unit: GHz
+  basis: derived
+  locator: p.7 Sec. Experiments of data transmissions
+  note: photon-lifetime limit BW = f0/Q from the measured Q; not a measured EO response
+- device_id: liu2023-d
+  field: capacitance_ff
+  value: 21.1
+  unit: fF
+  basis: author_estimate
+  locator: p.7 Sec. Experiments of data transmissions
+  note: approximately 21.1 fF per FP-cavity modulator; method not stated
+- device_id: liu2023-d
+  field: energy_per_bit_fj
+  value: 11.9
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.7 Sec. Experiments of data transmissions; p.8 Discussion
+  note: estimated for data up to 80 Gb/s at 1.5 Vpp; consistent with C*Vpp^2/4 (not stated by authors)
+- device_id: liu2023-d
+  field: drive_vpp_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.7 Sec. Experiments of data transmissions
+  note: Vpp applied to the probe for 80 Gb/s OOK; 1.8 V at 40 Gb/s (p.8 Methods)
+- device_id: liu2023-d
+  field: max_baud_gbd
+  value: 80
+  unit: GBd
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5(e-h)
+  note: 80 Gb/s OOK, signal distorted by RF amplifier/cable limits (p.7)
+- device_id: liu2023-d
+  field: modulation_format
+  value: OOK 40 and 80 Gb/s; PAM4 100 Gb/s (50 GBd) eye degraded (grating coupler and EDFA roll-off near 1600 nm)
+  unit: ''
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5
+  note: each channel measured individually
+- device_id: liu2023-d
+  field: max_line_rate_gbps
+  value: 80
+  unit: Gb/s
+  basis: measured
+  locator: p.7 Sec. Experiments; Fig. 5
+- device_id: liu2023-d
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure; p.5 Sec. Characterization
+  note: x-cut NANOLN LNOI
+- device_id: liu2023-d
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure; p.8 Methods
+  note: open regions; narrow trenches etch about 180 nm (lag effect, Fig. 3e)
+- device_id: liu2023-d
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. Structure
+  note: effective MWG waveguide width W; top width wtop not stated
+- device_id: liu2023-d
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Structure
+  note: G-S separation d chosen to avoid metal absorption in the MWG area
+- device_id: liu2023-d
+  field: electrode_thickness_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.8 Methods
+  note: Au; plus 10 nm Ti
+- device_id: liu2023-d
+  field: electrode_metal
+  value: gold (10 nm titanium adhesion)
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods
+- device_id: liu2023-d
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. Characterization
+  note: buried oxide of the LNOI wafer
+- device_id: liu2023-d
+  field: cladding
+  value: air
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Structure
+  note: air up-cladding
+- device_id: liu2023-d
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Structure
+- device_id: liu2023-d
+  field: epitaxy_or_stack
+  value: x-cut LN 400 nm on 3 um buried oxide (NANOLN LNOI); 200 nm ridge etch; sidewall 30 deg from vertical; MWG period 427/434/441/448 nm; filter N = 450, corrugation 640 nm; cavity reflectors N = 180,
+    corrugation 600 nm; air up-cladding
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. Structure; p.8 Methods
+  note: periods set the four channel center wavelengths
+- device_id: liu2023-d
+  field: il_onchip_db
+  value: 0.8
+  unit: dB
+  basis: measured
+  locator: p.7 Sec. Characterization; Fig. 4(b)
+  note: excess loss read from Fig. 4(b) for this channel's filter-plus-modulator path; normalization not stated
+derived:
+- device_id: liu2023-a
+  field: slab_thickness_nm
+  value: 200
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: liu2023-b
+  field: slab_thickness_nm
+  value: 200
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: liu2023-c
+  field: slab_thickness_nm
+  value: 200
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: liu2023-d
+  field: slab_thickness_nm
+  value: 200
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: liu2023-a
+  field: sidewall_angle_deg
+  value: 60
+  formula: 90 - 30 (authors state 30 deg relative to the vertical axis, p.4)
+  inputs:
+  - 'sidewall angle from vertical: 30 deg (p.4 Sec. Structure)'
+- device_id: liu2023-b
+  field: sidewall_angle_deg
+  value: 60
+  formula: 90 - 30 (authors state 30 deg relative to the vertical axis, p.4)
+  inputs:
+  - 'sidewall angle from vertical: 30 deg (p.4 Sec. Structure)'
+- device_id: liu2023-c
+  field: sidewall_angle_deg
+  value: 60
+  formula: 90 - 30 (authors state 30 deg relative to the vertical axis, p.4)
+  inputs:
+  - 'sidewall angle from vertical: 30 deg (p.4 Sec. Structure)'
+- device_id: liu2023-d
+  field: sidewall_angle_deg
+  value: 60
+  formula: 90 - 30 (authors state 30 deg relative to the vertical axis, p.4)
+  inputs:
+  - 'sidewall angle from vertical: 30 deg (p.4 Sec. Structure)'

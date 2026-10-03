@@ -1,0 +1,116 @@
+schema: eo-atlas.sim/v1
+id: wang2022a-a
+paper_id: wang2022a
+device_id: wang2022a-a
+title: Wang 2022a, 12 mm GSG traveling-wave section of the DP-IQ TFLN modulator on silicon (push-pull arms), one MZM cross-section
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+# Conventions follow sims/chen2022/config.yaml and sims/liu2021/config.yaml.
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand waveguide in x. Signal electrode centre (mirror plane) at x = -22.5 um; LEFT waveguide at x = -45 um.
+# One G-S-G cut of the 1.2 cm GSGSG line (the I and Q MZMs share the middle ground in the real layout, which the cut does not represent).
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm. Waveguides assumed centred in the 5 um gaps.
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  silicon: {n: 3.476, eps_r: 11.7}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-250, 200], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-250, 200], y_um: [-250, 120]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-250, 200], y_um: [-504.7, -4.7]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-250, 200], y_um: [-4.7, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-250, 200], y_um: [0, 0.24]}}
+    - {name: cladding, material: silicon_dioxide, rect: {x_um: [-250, 200], y_um: [0.24, 3.44]}}
+    - {name: ln_rib_r, material: lithium_niobate, polygon_um: [[-0.8446, 0.24], [0.8446, 0.24], [0.75, 0.5], [-0.75, 0.5]]}
+    - {name: ln_rib_l, material: lithium_niobate, polygon_um: [[-45.8446, 0.24], [-44.1554, 0.24], [-44.25, 0.5], [-45.75, 0.5]]}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-42.5, -2.5], y_um: [0.24, 1.44]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [2.5, 52.5], y_um: [0.24, 1.44]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-97.5, -47.5], y_um: [0.24, 1.44]}, material: gold}
+  optical_window: {x_um: [-2.4, 2.4], y_um: [-1.5, 1.5]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 12
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 38
+  differential: false              # single-ended G-S-G probe on the centre line; push-pull arises from the arm placement (see provenance)
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
+alt_geometries: {}
+
+targets:
+  - {metric: vpi_l_dc_vcm, value: 2.6, tol_rel: 0.15, source: {device_id: wang2022a-a, field: vpil_dc_vcm, comparable: false, note: "NON-COMPARABLE until LN constants, rib width definition and the cladding stack are known"}}
+  - {metric: eo_rolloff_db, at_ghz: 67, value: -5, tol_abs: 1.0, source: {device_id: wang2022a-a, field: eo_rolloff_db, comparable: false, note: "includes RF probe effects; reference frequency not stated"}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: project_inference, locator: "p.3 Sec. 2 (polarization ER measured at 1550 nm)", note: "1550 nm assumed for the Vpi sweep; its wavelength is not stated"}
+  optics.polarization: {class: paper_exact, locator: "p.3 Sec. 2 (polarization-maintaining fibre ensures TE coupling)"}
+  optics.group_index_from: {class: project_inference, note: "no group index is quoted; engine derives it"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 Sec. 2 (X-cut)", note: "x-cut stated; propagation along y is a project_inference from the standard x-cut convention"}
+  materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder 43/28 (SPEC.md example values); the paper states no RF permittivity"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values); the paper states no Pockels coefficients"}
+  materials.silicon_dioxide: {class: unknown, note: "UNVERIFIED placeholder n = 1.444, eps_r = 3.9; the paper states neither"}
+  materials.silicon.eps_r: {class: unknown, note: "UNVERIFIED placeholder 11.7; the paper states no silicon constants"}
+  materials.air: {class: standard_reference, citation: "vacuum-like ambient n = 1, eps_r = 1"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder 4.1e7 S/m bulk gold; film conductivity not stated"}
+  line.length_mm: {class: paper_exact, locator: "p.2 Sec. 2 (1.2 cm GSGSG traveling-wave electrode)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm assumed; RF probe and amplifier source impedance not stated"}
+  line.load_ohm: {class: paper_exact, locator: "p.3 Sec. 2 (38 ohm termination resistor)", note: "38 ohm termination resistor stated for the packaged chip, placed at the end of the electrode"}
+  line.differential: {class: project_inference, note: "G-S-G with one arm per gap (Fig. 1(b)); the paper says push-pull mode (p.2) but not the drive form"}
+  line.conductor_loss_model: {class: project_inference, note: "no RF loss coefficient stated"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.2 Sec. 2 (500 um silicon; clipped to the domain)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.2 Sec. 2 (4.7 um buried oxide)"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.2 Sec. 2 (500 nm film, 260 nm etch)", note: "slab 240 nm = 500 - 260"}
+  geometry.regions.cladding: {class: project_inference, locator: "p.2 Sec. 2 step (ix); Fig. 1(b)", note: "2 um SiO2 over the whole chip; flat top at electrode top + 2 um = 3.44 um assumed; the 900 nm PECVD SiO2 (etched away except under Ti heaters) and the 3.2 um SiON are not modelled"}
+  geometry.regions.ln_rib_r: {class: project_inference, locator: "p.2 Sec. 2 (W = 1.5 um, 70 deg, 260 nm); Fig. 1(b)", note: "whether W is the top or bottom width is not stated; taken as top width"}
+  geometry.regions.ln_rib_l: {class: project_inference, note: "mirror image of the right-hand rib about x = -22.5 um"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.2 Sec. 2 (WS = 40 um, H = 1200 nm, G = 5 um)", note: "bottom on the LN slab top (Fig. 1(b))"}
+  geometry.electrodes.ground_r: {class: paper_exact, locator: "p.2 Sec. 2 (WG = 50 um)", note: "inner edge 2.5 um from the right waveguide axis (waveguide assumed centred in the 5 um gap)"}
+  geometry.electrodes.ground_l: {class: project_inference, note: "mirror of ground_r about the signal centre"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 2.4 um, just inside the 2.5 um electrode edge"}
+  geometry.domain: {class: project_inference, note: "lateral -250..200 um, vertical -250..120 um"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - "whether W = 1.5 um is the rib top or bottom width"
+  - "waveguide position inside the 5 um gap (assumed centred)"
+  - "cladding stack and reference surface in the modulation section (900 nm SiO2, 3.2 um SiON, 2 um SiO2)"
+  - "wavelength of the Vpi sweep (1550 nm assumed)"
+  - "LN refractive indices, RF permittivity and Pockels coefficients, SiO2 and Si constants, gold conductivity (UNVERIFIED placeholders)"
+  - "which MZM Fig. 3(b) shows"
+  - "RF characteristic impedance and effective index (not reported)"
+  - "temperature"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "One G-S-G cut of a GSGSG line; shared middle ground of the I and Q MZMs is not represented"
+  - "Cladding modelled as a flat layer to electrode top + 2 um (reference surface not stated)"
+  - "The stated 38 ohm termination is entered as load_ohm; the 50 ohm source impedance is assumed (project_inference)"
+  - "S21 in Fig. 3(c) includes RF probes; target is non-comparable"

@@ -1,0 +1,10 @@
+org_name,org_type,country,region,parent_org,notes
+International Business Machines Corporation Research Zurich,company,CH,europe,,"Affiliation 'IBM Research - Europe, Zurich', Rüschlikon address in the paper; acronym expanded per schema convention"
+Université Libre de Bruxelles,university,BE,europe,,Brussels address in the paper (OPERA-Photonique; Laboratoire d'Information Quantique)
+"Chongqing United Microelectronics Center Co., Ltd",company,CN,east_asia,,Chongqing address in the paper; source of the Si/SiN photonics PDK used
+Sun Yat-sen University,university,CN,east_asia,,Guangzhou address in the paper
+Stanford University,university,US,north_america,,"Ginzton Laboratory, Stanford address in the paper"
+Flux Photonics Inc.,company,US,north_america,,"Pacifica, CA address in the paper"
+"NTT Research, Inc.",company,US,north_america,,"Sunnyvale, CA address in the paper"
+Stanford Nano Shared Facilities,facility,US,north_america,Stanford University,"Named in the acknowledgements; host institution not stated as such in the paper, country from the Stanford name"
+Stanford Nanofabrication Facility,facility,US,north_america,Stanford University,"Named in the acknowledgements; host institution not stated as such in the paper, country from the Stanford name"

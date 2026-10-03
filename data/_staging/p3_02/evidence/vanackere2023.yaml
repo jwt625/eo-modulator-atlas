@@ -1,0 +1,174 @@
+paper_id: vanackere2023
+verified_on: '2026-10-02'
+source_files:
+- references/vanackere2023/text.md
+- references/vanackere2023/crossref.json
+- references/vanackere2023/figures/page_03.png
+- references/vanackere2023/figures/page_05.png
+- references/vanackere2023/figures/page_06.png
+entries:
+- device_id: vanackere2023-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.4 Sec. IV (CW laser at 1550 nm); p.3 Sec. II
+  note: laser setting for the EO measurements; ER quoted near 1550 nm
+- device_id: vanackere2023-a
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. I; p.4 Sec. IV
+  note: device (coupon) length; electrode length not stated separately
+- device_id: vanackere2023-a
+  field: vpi_dc_v
+  value: 14.8
+  unit: V
+  basis: measured
+  locator: p.4 Sec. IV; p.5 Fig. 2(b)
+  note: voltage sweep at the quadrature point; MZM in push-pull; drive polarity of the low-speed sweep not stated
+- device_id: vanackere2023-a
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. IV; p.6 Fig. 4(b)
+  note: 3 dB bandwidth exceeding 50 GHz, limited by the measurement equipment; plot normalized near 0 dB at low frequency
+- device_id: vanackere2023-a
+  field: bw_measured_to_ghz
+  value: 55
+  unit: GHz
+  basis: measured
+  locator: p.6 Fig. 4 caption
+  note: trace hits the VNA noise floor around 55 GHz (plot ends at 55 GHz)
+- device_id: vanackere2023-a
+  field: il_onchip_db
+  value: 3.3
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. IV; p.6 Conclusions
+  note: 2.7 dB coupon excess plus 0.6 dB for two MMIs
+- device_id: vanackere2023-a
+  field: extinction_ratio_db
+  value: 39
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. IV; p.5 Fig. 2(a)
+  note: static, wavelength sweep of the imbalanced MZI near 1550 nm
+- device_id: vanackere2023-a
+  field: z0_ohm
+  value: 100
+  unit: ohm
+  basis: measured
+  locator: p.4 Sec. IV; p.5 Fig. 3(a)
+  note: differential-mode impedance close to the 100 ohm design target; Fig. 3(a) rises from about 100 to about 150 ohm by 60 GHz
+- device_id: vanackere2023-a
+  field: rf_loss_db_per_cm
+  value: 20
+  unit: dB/cm
+  basis: measured
+  locator: p.4 Sec. IV; p.5 Fig. 3(a)
+  note: around 2 dB/mm at frequencies over 10 GHz; attributed to ohmic substrate loss; Fig. 3(a) reaches about 3 dB/mm near 60 GHz
+- device_id: vanackere2023-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II
+  note: x-cut LN slab on top of the SiN strip
+- device_id: vanackere2023-a
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. II
+  note: gap between electrodes on both sides of each waveguide (COMSOL optimum)
+- device_id: vanackere2023-a
+  field: signal_width_um
+  value: 35
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. II
+  note: stated as electrode width (CST design for 100 ohm differential); which electrodes it applies to is not stated
+- device_id: vanackere2023-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. II; p.4 Sec. II
+  note: Au; plus 15 nm Ti adhesion
+- device_id: vanackere2023-a
+  field: electrode_metal
+  value: gold (15 nm titanium adhesion)
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II
+- device_id: vanackere2023-a
+  field: buffer_oxide_um
+  value: 3.3
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. II
+  note: buried oxide thickness chosen for velocity matching; reference plane (below the SiN) not stated
+- device_id: vanackere2023-a
+  field: substrate
+  value: silicon (resistivity not stated; substrate ohmic loss reported)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. IV
+  note: authors suggest high-resistivity silicon would avoid the loss
+- device_id: vanackere2023-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II
+- device_id: vanackere2023-a
+  field: epitaxy_or_stack
+  value: x-cut LN slab 300 nm on SiN strip 300 nm thick x 1 um wide; Ti 15 nm / Au 1 um electrodes on both sides of each waveguide; LN coupon 2 mm x 30 um with 45 um long bilinear tapers
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II; p.4 Sec. III
+- device_id: vanackere2023-a
+  field: max_baud_gbd
+  value: 70
+  unit: GBd
+  basis: measured
+  locator: p.5 Sec. IV; p.6 Fig. 5(b)
+  note: NRZ, 1 bit per symbol
+- device_id: vanackere2023-a
+  field: modulation_format
+  value: NRZ (raised cosine), 56 and 70 Gb/s eyes, BER below KP4-FEC after equalization of the electrical drive chain
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. IV; p.6 Fig. 5
+- device_id: vanackere2023-a
+  field: max_line_rate_gbps
+  value: 70
+  unit: Gb/s
+  basis: measured
+  locator: p.5 Sec. IV; p.6 Fig. 5(b)
+  note: NRZ; laser output power 20 mW
+- device_id: vanackere2023-a
+  field: drive_vpp_v
+  value: 4.4
+  unit: V
+  basis: author_estimate
+  locator: p.5 Sec. IV
+  note: 4.4 V peak-to-peak input signal at 56 Gb/s; authors estimate the resulting dynamic ER as 3.7 dB
+- device_id: vanackere2023-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II
+  note: MZM stated to be in a push-pull configuration; high-speed drive is a differential AWG signal
+- device_id: vanackere2023-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Sec. IV
+  note: authors compare 14.8 V over 2 mm with 3.0 V cm for the push-pull MZM; convention not otherwise stated
+derived: []

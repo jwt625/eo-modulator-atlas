@@ -1,0 +1,504 @@
+paper_id: qi2024
+verified_on: '2026-10-02'
+source_files:
+- references/qi2024/text.md
+- references/qi2024/figures/page_06.png
+- references/qi2024/figures/img_p04_1.png
+- references/qi2024/crossref.json
+entries:
+- device_id: qi2024-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: CW light near 1550 nm
+- device_id: qi2024-a
+  field: length_mm
+  value: 3
+  unit: mm
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.5 Sec. 3; Fig. 4(c); p.7 Table 1
+  note: flat EO response above -3 dB; over 110 GHz
+- device_id: qi2024-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 3; Fig. 4(c)
+  note: sweep range per text; Fig. 4(c) axis extends to about 120 GHz
+- device_id: qi2024-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: x-cut TFLN, customized wafer
+- device_id: qi2024-a
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: silica rib width (the LN is not etched)
+- device_id: qi2024-a
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: LN slab, unetched
+- device_id: qi2024-a
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: g
+- device_id: qi2024-a
+  field: signal_width_um
+  value: 20
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: ground width 150 um
+- device_id: qi2024-a
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 100 nm Ti plus 700 nm Au
+- device_id: qi2024-a
+  field: electrode_metal
+  value: titanium 100 nm / gold 700 nm
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+- device_id: qi2024-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.4-5 Sec. 3
+  note: silica buried layer
+- device_id: qi2024-a
+  field: substrate
+  value: silicon 525 um
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-a
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: air superstrate over silica rib and LN slab
+- device_id: qi2024-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-a
+  field: epitaxy_or_stack
+  value: PECVD SiO2 rib 2 um wide x 400 nm high on 300 nm LN slab on 3 um SiO2 on Si
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. 3
+  note: rib fully etched by RIE; LN not etched
+- device_id: qi2024-a
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. 3
+  note: Vpi convention not stated
+- device_id: qi2024-a
+  field: bw3db_reference
+  value: 1ghz
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. 3
+  note: 3 dB drop relative to 1 GHz
+- device_id: qi2024-a
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. 3
+  note: near 1550 nm per authors; band is derived from the wavelength
+- device_id: qi2024-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: CW light near 1550 nm
+- device_id: qi2024-b
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-b
+  field: bw3db_ghz
+  value: 94.171
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 3; Fig. 4(c)
+  note: 3 dB crossing relative to 1 GHz
+- device_id: qi2024-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: x-cut TFLN, customized wafer
+- device_id: qi2024-b
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: silica rib width (the LN is not etched)
+- device_id: qi2024-b
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: LN slab, unetched
+- device_id: qi2024-b
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: g
+- device_id: qi2024-b
+  field: signal_width_um
+  value: 20
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: ground width 150 um
+- device_id: qi2024-b
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 100 nm Ti plus 700 nm Au
+- device_id: qi2024-b
+  field: electrode_metal
+  value: titanium 100 nm / gold 700 nm
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+- device_id: qi2024-b
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.4-5 Sec. 3
+  note: silica buried layer
+- device_id: qi2024-b
+  field: substrate
+  value: silicon 525 um
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-b
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: air superstrate over silica rib and LN slab
+- device_id: qi2024-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-b
+  field: epitaxy_or_stack
+  value: PECVD SiO2 rib 2 um wide x 400 nm high on 300 nm LN slab on 3 um SiO2 on Si
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. 3
+  note: rib fully etched by RIE; LN not etched
+- device_id: qi2024-b
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. 3
+  note: Vpi convention not stated
+- device_id: qi2024-b
+  field: bw3db_reference
+  value: 1ghz
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. 3
+  note: 3 dB drop relative to 1 GHz
+- device_id: qi2024-b
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. 3
+  note: near 1550 nm per authors; band is derived from the wavelength
+- device_id: qi2024-c
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: CW light near 1550 nm
+- device_id: qi2024-c
+  field: length_mm
+  value: 8
+  unit: mm
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-c
+  field: bw3db_ghz
+  value: 80.661
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 3; Fig. 4(c)
+  note: 3 dB crossing relative to 1 GHz
+- device_id: qi2024-c
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: x-cut TFLN, customized wafer
+- device_id: qi2024-c
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: silica rib width (the LN is not etched)
+- device_id: qi2024-c
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: LN slab, unetched
+- device_id: qi2024-c
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: g
+- device_id: qi2024-c
+  field: signal_width_um
+  value: 20
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: ground width 150 um
+- device_id: qi2024-c
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 100 nm Ti plus 700 nm Au
+- device_id: qi2024-c
+  field: electrode_metal
+  value: titanium 100 nm / gold 700 nm
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+- device_id: qi2024-c
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.4-5 Sec. 3
+  note: silica buried layer
+- device_id: qi2024-c
+  field: substrate
+  value: silicon 525 um
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-c
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: air superstrate over silica rib and LN slab
+- device_id: qi2024-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-c
+  field: epitaxy_or_stack
+  value: PECVD SiO2 rib 2 um wide x 400 nm high on 300 nm LN slab on 3 um SiO2 on Si
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. 3
+  note: rib fully etched by RIE; LN not etched
+- device_id: qi2024-c
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. 3
+  note: Vpi convention not stated
+- device_id: qi2024-c
+  field: bw3db_reference
+  value: 1ghz
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. 3
+  note: 3 dB drop relative to 1 GHz
+- device_id: qi2024-c
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. 3
+  note: near 1550 nm per authors; band is derived from the wavelength
+- device_id: qi2024-d
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: CW light near 1550 nm
+- device_id: qi2024-d
+  field: length_mm
+  value: 12.917
+  unit: mm
+  basis: design_target
+  locator: p.5 Sec. 3; Fig. 4(e)
+- device_id: qi2024-d
+  field: vpi_dc_v
+  value: 1.96
+  unit: V
+  basis: measured
+  locator: p.6 Sec. 3; Fig. 4(e)
+  note: measured at 5 kHz
+- device_id: qi2024-d
+  field: vpil_dc_vcm
+  value: 2.53
+  unit: V*cm
+  basis: measured
+  locator: p.1 abstract; p.6 Sec. 3
+  note: 1.96 V x 1.2917 cm = 2.53
+- device_id: qi2024-d
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: x-cut TFLN, customized wafer
+- device_id: qi2024-d
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: silica rib width (the LN is not etched)
+- device_id: qi2024-d
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: LN slab, unetched
+- device_id: qi2024-d
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: g
+- device_id: qi2024-d
+  field: signal_width_um
+  value: 20
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: ground width 150 um
+- device_id: qi2024-d
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 100 nm Ti plus 700 nm Au
+- device_id: qi2024-d
+  field: electrode_metal
+  value: titanium 100 nm / gold 700 nm
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+- device_id: qi2024-d
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.4-5 Sec. 3
+  note: silica buried layer
+- device_id: qi2024-d
+  field: substrate
+  value: silicon 525 um
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-d
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: air superstrate over silica rib and LN slab
+- device_id: qi2024-d
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: qi2024-d
+  field: epitaxy_or_stack
+  value: PECVD SiO2 rib 2 um wide x 400 nm high on 300 nm LN slab on 3 um SiO2 on Si
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. 3
+  note: rib fully etched by RIE; LN not etched
+- device_id: qi2024-d
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. 3
+  note: Vpi convention not stated
+- device_id: qi2024-d
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. 3
+  note: near 1550 nm per authors; band is derived from the wavelength
+derived: []

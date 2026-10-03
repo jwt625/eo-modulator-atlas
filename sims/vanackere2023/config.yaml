@@ -1,0 +1,104 @@
+# STATUS: record of disclosed geometry and provenance for ONE phase-section cross-section of the GSSG push-pull MZM. NOT RUNNABLE as written: the paper states no
+# RF permittivity or Pockels coefficients for LN, no RF permittivity for SiN, SiO2 or Si and no gold conductivity. They are omitted on purpose (see `missing`);
+# none was filled from memory. Optical refractive indices are left to the engine's verified dispersion library.
+#
+# Coordinate frame: x lateral, y film normal up, z propagation. x = 0 at the optical axis of the SiN strip; y = 0 at the LN bottom (SiN top).
+# One phase section: ground electrode on the left, signal on the right, weights 0 / 1 (1 V across the 6 um gap). The paper's simulated VpiL of 6.0 V cm is for this
+# single phase section; the MZM in push-pull is 3.0 V cm (p.3). The GSSG layout (spacing between S+ and S-, ground widths) is not dimensioned, so the two-arm
+# differential cross-section is not modelled.
+schema: eo-atlas.sim/v1
+id: vanackere2023-a
+paper_id: vanackere2023
+device_id: vanackere2023-a
+title: Vanackere 2023, 2 mm micro-transfer-printed LN-on-SiN phase-section cross-section (300 nm SiN strip 1 um wide under 300 nm x-cut LN, 6 um electrode gap)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap]
+
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    # n_o, n_e: engine library; RF eps_r and Pockels tensor not stated in the paper (omitted, see missing)
+  silicon_nitride: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon_dioxide: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon: {}                      # RF eps_r and resistivity not stated (omitted)
+  gold: {conductor: true}          # conductivity not stated (omitted); 15 nm Ti adhesion layer not modelled
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-60, 60], y_um: [-40, 30]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-60, 60], y_um: [-40, 30]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-60, 60], y_um: [-40, -3.6]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-60, 60], y_um: [-3.6, 0]}}
+    - {name: sin_core, material: silicon_nitride, rect: {x_um: [-0.5, 0.5], y_um: [-0.3, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-60, 60], y_um: [0, 0.3]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [3, 38], y_um: [0.3, 1.3]}, material: gold}
+    - {name: ground, role: ground, weight: 0.0, rect: {x_um: [-38, -3], y_um: [0.3, 1.3]}, material: gold}
+  optical_window: {x_um: [-2.9, 2.9], y_um: [-2.0, 1.2]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+line:
+  length_mm: 2
+  conductor_loss_model: skin_effect_wheeler   # paper reports about 2 dB/mm dominated by substrate ohmic loss, not representable here
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+
+targets:
+  # Paper's own COMSOL result for a single phase section (p.3 Sec. II); compare as a cross-solver reference, not as a measurement
+  - {metric: vpi_l_dc_vcm, value: 6.0, tol_rel: 0.10, source: {paper_id: vanackere2023, locator: "p.3 Sec. II; p.4 Sec. IV", basis: simulated, note: "per single phase section; 3.0 V cm for the push-pull MZM; measured 14.8 V x 0.2 cm = 2.96 V cm is for the MZM and is not a target here"}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.3 Sec. II (TE mode at 1550 nm); p.4 Sec. IV (CW source 1550 nm)"}
+  optics.polarization: {class: paper_exact, locator: "p.3 Sec. II (fundamental TE mode)"}
+  optics.group_index_from: {class: project_inference, note: "paper plots a target optical group index as a line in Fig. 3(b) without a number; engine finite difference"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.3 Sec. II (x-cut LN)", note: "propagation along crystal y is project_inference (not stated)"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.3 Sec. II (300 nm slab of x-cut LN on top); Fig. 1(a) caption", note: "unetched slab within the coupon"}
+  geometry.regions.sin_core: {class: paper_exact, locator: "p.3 Sec. II (300 nm thick SiN strip, 1 um wide); Fig. 1(a) caption", note: "flush with the LN bottom per the Fig. 1(a) inset (no interlayer drawn)"}
+  geometry.regions.box: {class: project_inference, locator: "p.4 Sec. II (oxide thickness 3.3 um)", note: "3.3 um measured below the SiN bottom (Si top at y = -3.6 um); reference plane of the stated thickness is not given; SiN assumed embedded in oxide up to the LN"}
+  geometry.regions.substrate: {class: project_inference, locator: "p.4 Sec. IV (substrate ohmic loss, high-resistivity Si suggested)", note: "silicon resistivity not stated; region clipped to the domain"}
+  geometry.regions.ambient: {class: figure_digitized, locator: "p.3 Fig. 1(a) inset", note: "no top cladding drawn above the LN and Au"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.3 Sec. II (1 um Au, gap 6 um); p.4 Sec. II (electrode width 35 um)", note: "inner edge 3 um from the axis (waveguide assumed centred in the 6 um gap); width 35 um as stated, Ti 15 nm not modelled"}
+  geometry.electrodes.ground: {class: project_inference, locator: "p.4 Sec. II (electrode width 35 um)", note: "mirror of the signal electrode; paper does not say the ground width equals 35 um"}
+  geometry.optical_window: {class: project_inference, note: "crop between the electrodes"}
+  geometry.domain: {class: project_inference, note: "lateral +-60 um, vertical -40..30 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+  line.length_mm: {class: paper_exact, locator: "p.3 Sec. I; p.4 Sec. IV (2 mm)"}
+  line.differential: {class: project_inference, note: "single phase section carrying the full voltage across the gap, matching the paper's per-phase-section VpiL; the real device is driven differentially (GSSG)"}
+  line.conductor_loss_model: {class: project_inference, note: "paper's loss is mostly substrate ohmic; engine skin-effect model will not reproduce it"}
+
+missing:
+  - "lithium_niobate RF permittivity (anisotropic) and Pockels tensor (not stated; omitted, not filled from memory)"
+  - "silicon_nitride, silicon_dioxide, silicon RF permittivity; silicon resistivity (not stated)"
+  - "gold conductivity (not stated)"
+  - "spacing between the S+ and S- electrodes and ground widths of the GSSG line (Fig. 1(a) schematic only, not dimensioned)"
+  - "waveguide position within the 6 um gap (assumed centred)"
+  - "reference plane of the 3.3 um oxide thickness"
+  - "propagation direction on the x-cut film (assumed y)"
+  - "SiO2 beneath/around the SiN and its relation to the LN (inset shows oxide beside the SiN, no interlayer)"
+  - "RF loss from substrate ohmic loss (about 2 dB/mm measured, mechanism in Supplementary Information, not in the cache)"
+  - "Ti adhesion layer (15 nm) electrical properties"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Config is not runnable until RF permittivities and Pockels coefficients are supplied from a verified source; the engine rejects dielectrics without eps_r by design"
+  - "Single phase section only; the GSSG two-arm differential push-pull layout is not dimensioned in the paper and is not modelled"
+  - "RF stages (Z0, n_RF, loss, EO response) are not in the chain: the line is a GSSG differential line and the cross-section here is one phase section"
+  - "Substrate ohmic RF loss (the dominant measured loss) is not representable without the silicon resistivity"
+  - "Tapers and the 2.7 dB coupon excess loss are outside the cross-section model"
