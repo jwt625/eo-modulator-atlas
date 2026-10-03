@@ -1,0 +1,206 @@
+paper_id: lee2020
+verified_on: '2026-10-02'
+source_files:
+- references/lee2020/text.md
+- references/lee2020/crossref.json
+- references/lee2020/figures/page_04.png
+- references/lee2020/figures/page_05.png
+- references/lee2020/figures/page_17.png
+entries:
+- device_id: lee2020-a
+  field: length_mm
+  value: 0.005
+  unit: mm
+  basis: measured
+  locator: p.3 Fig. 1 caption; p.13 Sec. 2.3
+  note: graphene capacitor 5 um long around the ring arc
+- device_id: lee2020-a
+  field: capacitance_ff
+  value: 9
+  unit: fF
+  basis: author_estimate
+  locator: p.3; p.7
+  note: about 9 fF; C 1.85 fF/um at 4.9 K x 5 um; capacitance changes under 5% from 293 K to 1.5 K
+- device_id: lee2020-a
+  field: rib_width_nm
+  value: 1300
+  unit: nm
+  basis: measured
+  locator: p.2; p.12 Sec. 2.1
+  note: Si3N4 waveguide width 1.3 um
+- device_id: lee2020-a
+  field: buffer_oxide_um
+  value: 4.3
+  unit: um
+  basis: measured
+  locator: p.12 Sec. 2.1
+  note: 4.3 um thermal SiO2
+- device_id: lee2020-a
+  field: electrode_metal
+  value: Cr/Pd/Au 1 nm/45 nm/55 nm
+  unit: ''
+  basis: measured
+  locator: p.13 Sec. 2.3
+  note: Cr/Pd/Au lift-off
+- device_id: lee2020-a
+  field: substrate
+  value: 330 nm LPCVD Si3N4 on 4.3 um thermal SiO2 on silicon
+  unit: ''
+  basis: measured
+  locator: p.12 Sec. 2.1
+  note: LPCVD Si3N4 330 nm on thermal oxide on Si
+- device_id: lee2020-a
+  field: cladding
+  value: PECVD SiO2 planarized by CMP; 40 nm Al2O3 over the top graphene
+  unit: ''
+  basis: measured
+  locator: p.13-14 Sec. 2.3
+  note: PECVD SiO2 planarized by CMP; 40 nm Al2O3 top clad
+- device_id: lee2020-a
+  field: epitaxy_or_stack
+  value: Si3N4 ring (1.3 um x 330 nm, radius 40 um, bus gap about 180 nm); CVD graphene / 30 nm ALD Al2O3 / CVD graphene capacitor 5 um long on the ring arc; electrodes 0.45 um from waveguide
+  unit: ''
+  basis: measured
+  locator: p.2-3, p.12-14; Fig. 1
+  note: ring radius 40 um; gap about 180 nm; electrodes 0.45 um from waveguide; 30 nm Al2O3 gate
+- device_id: lee2020-a
+  field: bw3db_reference_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.4
+  note: curves normalized to the response at 1 MHz before single-pole fit
+- device_id: lee2020-a
+  field: bw3db_ghz
+  value: 14.7
+  unit: GHz
+  basis: derived
+  locator: abstract p.1; p.4; Fig. 3 (4.9 K panel)
+  note: 3 dB point of single-pole fit of S21; raw trace crosses -3 dB near 12-13 GHz (approximate figure reading)
+- device_id: lee2020-a
+  field: drive_vpp_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.4; Fig. 3 caption
+  note: 13.5 dBm RF, Vpp 3 V, -9 V DC bias
+- device_id: lee2020-b
+  field: length_mm
+  value: 0.005
+  unit: mm
+  basis: measured
+  locator: p.3 Fig. 1 caption; p.13 Sec. 2.3
+  note: graphene capacitor 5 um long around the ring arc
+- device_id: lee2020-b
+  field: capacitance_ff
+  value: 9
+  unit: fF
+  basis: author_estimate
+  locator: p.3; p.7
+  note: about 9 fF; C 1.85 fF/um at 4.9 K x 5 um; capacitance changes under 5% from 293 K to 1.5 K
+- device_id: lee2020-b
+  field: rib_width_nm
+  value: 1300
+  unit: nm
+  basis: measured
+  locator: p.2; p.12 Sec. 2.1
+  note: Si3N4 waveguide width 1.3 um
+- device_id: lee2020-b
+  field: buffer_oxide_um
+  value: 4.3
+  unit: um
+  basis: measured
+  locator: p.12 Sec. 2.1
+  note: 4.3 um thermal SiO2
+- device_id: lee2020-b
+  field: electrode_metal
+  value: Cr/Pd/Au 1 nm/45 nm/55 nm
+  unit: ''
+  basis: measured
+  locator: p.13 Sec. 2.3
+  note: Cr/Pd/Au lift-off
+- device_id: lee2020-b
+  field: substrate
+  value: 330 nm LPCVD Si3N4 on 4.3 um thermal SiO2 on silicon
+  unit: ''
+  basis: measured
+  locator: p.12 Sec. 2.1
+  note: LPCVD Si3N4 330 nm on thermal oxide on Si
+- device_id: lee2020-b
+  field: cladding
+  value: PECVD SiO2 planarized by CMP; 40 nm Al2O3 over the top graphene
+  unit: ''
+  basis: measured
+  locator: p.13-14 Sec. 2.3
+  note: PECVD SiO2 planarized by CMP; 40 nm Al2O3 top clad
+- device_id: lee2020-b
+  field: epitaxy_or_stack
+  value: Si3N4 ring (1.3 um x 330 nm, radius 40 um, bus gap about 180 nm); CVD graphene / 30 nm ALD Al2O3 / CVD graphene capacitor 5 um long on the ring arc; electrodes 0.45 um from waveguide
+  unit: ''
+  basis: measured
+  locator: p.2-3, p.12-14; Fig. 1
+  note: ring radius 40 um; gap about 180 nm; electrodes 0.45 um from waveguide; 30 nm Al2O3 gate
+- device_id: lee2020-b
+  field: bw3db_reference_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.4
+  note: curves normalized to the response at 1 MHz before single-pole fit
+- device_id: lee2020-b
+  field: wavelength_nm
+  value: 1586.2
+  unit: nm
+  basis: measured
+  locator: p.3; Fig. 2(a)
+  note: resonance 'around 1,586.2 nm'; approx qualifier applied
+- device_id: lee2020-b
+  field: bw3db_ghz
+  value: 12.6
+  unit: GHz
+  basis: derived
+  locator: abstract p.1; p.4; Fig. 3 (293 K panel)
+  note: 3 dB point of single-pole fit of S21; raw trace and fit meet near 12.6 GHz
+- device_id: lee2020-b
+  field: drive_vpp_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.4; Fig. 3 caption
+  note: 13.5 dBm RF, Vpp 3 V, -9 V DC bias
+- device_id: lee2020-b
+  field: extinction_ratio_db
+  value: 7
+  unit: dB
+  basis: measured
+  locator: p.3-4; Fig. 2(a)
+  note: change of resonance transmission over 9 V; 'more than 7 dB'
+- device_id: lee2020-b
+  field: q_loaded
+  value: 3700
+  unit: '1'
+  basis: measured
+  locator: p.4; Fig. 2(b)
+  note: about 3700 at 9 V (about 3500 at 0 V)
+- device_id: lee2020-b
+  field: max_baud_gbd
+  value: 20
+  unit: GBd
+  basis: measured
+  locator: p.15 Methods; Fig. S2 (p.17)
+  note: NRZ at 20 Gb/s
+- device_id: lee2020-b
+  field: max_line_rate_gbps
+  value: 20
+  unit: Gb/s
+  basis: measured
+  locator: Fig. S2 (p.17)
+  note: eye diagrams 5, 10, 15, 17.5, 20 Gb/s
+- device_id: lee2020-b
+  field: modulation_format
+  value: NRZ, PRBS 2^9-1, 5 to 20 Gb/s; calculated BER 7.4e-4 at 20 Gb/s (from eye Q)
+  unit: ''
+  basis: measured
+  locator: p.15 Methods; Fig. S2 (p.17)
+  note: BER 0.5 erfc(Q/sqrt2); 7.4e-4 at 20 Gb/s
+derived: []

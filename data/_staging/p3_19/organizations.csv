@@ -1,0 +1,12 @@
+org_name,org_type,country,region,parent_org,notes
+National Institute of Information and Communications Technology,research_institute,JP,east_asia,,"Kobe, Hyogo; affiliation 2 in fukui2025 p.1; paper writes the full name only"
+d.lab,facility,JP,east_asia,The University of Tokyo,"Cleanroom facilities of d.lab in the University of Tokyo (fukui2025 acknowledgements, p.8); country from host institution"
+Takeda Sentanchi Super Cleanroom,facility,JP,east_asia,The University of Tokyo,soma2025 acknowledgements (p.12) write 'Takeda Cleanroom' with the Nanofabrication Platform Center of the School of Engineering; name matched to batch p3_08; country from host institution
+Harvard University,university,US,north_america,,"Cambridge, MA; John A. Paulson School of Engineering and Applied Sciences; sun2026a p.1"
+Center for Nanoscale Systems,facility,US,north_america,Harvard University,sun2026a acknowledgements (p.16): work performed in part at the Harvard University Center for Nanoscale Systems; country from host institution
+"La Luce Cristallina, Inc.",company,US,north_america,,"Austin, Texas; affiliation 3 in sun2026a p.1"
+Graz University of Technology,university,AT,europe,,Graz; Institute of Experimental Physics; affiliation 4 in sun2026a p.1
+"University of California, Irvine",university,US,north_america,,"Irvine, California; Department of Materials Science and Engineering and Department of Physics and Astronomy; affiliations 6 and 9 in sun2026a p.1"
+Irvine Materials Research Institute,facility,US,north_america,"University of California, Irvine",affiliation 10 in sun2026a p.1; shared materials characterization centre of the host university
+The University of Texas at Austin,university,US,north_america,,"Austin, Texas; Department of Physics; affiliation 7 in sun2026a p.1"
+Monarch Quantum,company,US,north_america,,"San Diego, California; affiliation 8 in sun2026a p.1"

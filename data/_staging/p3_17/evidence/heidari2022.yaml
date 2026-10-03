@@ -1,0 +1,79 @@
+paper_id: heidari2022
+verified_on: '2026-10-02'
+source_files:
+- references/heidari2022/text.md
+- references/heidari2022/crossref.json
+- references/heidari2022/source.json
+- references/heidari2022/figures/page_02.png
+- references/heidari2022/figures/page_04.png
+entries:
+- device_id: heidari2022-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3; Fig. 3(b)
+  note: DFB laser at 1550 nm for S21
+- device_id: heidari2022-a
+  field: bw3db_ghz
+  value: 60
+  unit: GHz
+  basis: measured
+  locator: p.3; Fig. 3(c) p.4
+  note: optical 3 dB (electrical 6 dB); normalized response, reference level not stated
+- device_id: heidari2022-a
+  field: il_onchip_db
+  value: 0.7
+  unit: dB
+  basis: simulated
+  locator: p.3
+  note: simulation estimate for the on-chip integrated device
+- device_id: heidari2022-a
+  field: energy_per_bit_fj
+  value: 2.25
+  unit: fJ/bit
+  basis: derived
+  locator: abstract p.1; p.3
+  note: authors' 0.25*C*V^2 with C 27 fF, 0.57 V swing
+- device_id: heidari2022-a
+  field: capacitance_ff
+  value: 27
+  unit: fF
+  basis: author_estimate
+  locator: p.3
+  note: value assumed by the authors, extraction not described
+- device_id: heidari2022-a
+  field: rib_width_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: a-Si waveguide width
+- device_id: heidari2022-a
+  field: electrode_metal
+  value: Pd/Au (10 nm / 90 nm)
+  basis: measured
+  locator: p.2
+- device_id: heidari2022-a
+  field: substrate
+  value: InP substrate with 33-pair Nb2O5/SiO2 bottom DBR
+  basis: measured
+  locator: p.2
+  note: Fig. 1(d) labels 16.5 pairs
+- device_id: heidari2022-a
+  field: cladding
+  value: 20-layer Si/SiO2 quarter-wave top DBR; 20 nm ALD Al2O3 layer
+  basis: measured
+  locator: p.2
+- device_id: heidari2022-a
+  field: epitaxy_or_stack
+  value: bottom DBR / SLG / 20 nm Al2O3 / SLG / a-Si waveguide 600 nm x 445 nm (PECVD) / top DBR; wet-transferred CVD graphene
+  basis: measured
+  locator: p.2; Fig. 1 p.2
+derived:
+- device_id: heidari2022-a
+  field: energy_per_bit_fj_check
+  value: 2.19
+  formula: 0.25*C*V^2 with C = 27 fF, V = 0.57 V (p.3)
+  inputs:
+  - capacitance_ff

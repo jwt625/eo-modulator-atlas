@@ -1,0 +1,452 @@
+paper_id: navarro2026
+verified_on: '2026-10-02'
+source_files:
+- references/navarro2026/text.md
+- references/navarro2026/source.json
+- references/navarro2026/figures/page_26.png
+entries:
+- device_id: navarro2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: simulated
+  locator: Table 1 p.15; p.8 Fig. 1
+  note: simulation wavelength 1.55 um
+- device_id: navarro2026-a
+  field: length_mm
+  value: 0.143
+  unit: mm
+  basis: simulated
+  locator: Table 1 p.15
+  note: minimum modulation length for pi phase shift
+- device_id: navarro2026-a
+  field: vpil_dc_vcm
+  value: 0.0887
+  unit: V*cm
+  basis: simulated
+  locator: Table 1 p.15
+  note: VpiL as tabulated; Vpi alone not stated
+- device_id: navarro2026-a
+  field: bw3db_ghz
+  value: 6.5
+  unit: GHz
+  basis: simulated
+  locator: Table 1 p.15; p.17; Fig. 4(b) p.26
+  note: RC electrical 3 dB bandwidth, first-order low-pass model
+- device_id: navarro2026-a
+  field: il_onchip_db
+  value: 0.84
+  unit: dB
+  basis: simulated
+  locator: Table 1 p.15
+  note: IL = MPA x L, graphene-induced modal attenuation over the DSLG section
+- device_id: navarro2026-a
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.6; p.8 Fig. 1; p.28
+  note: Si3N4 core width, single-mode TE; core height 400 nm
+- device_id: navarro2026-a
+  field: electrode_metal
+  value: Au (edges at least 1.2 um from the core)
+  basis: design_target
+  locator: p.6; p.29 Fig. 7
+- device_id: navarro2026-a
+  field: substrate
+  value: 2 um SiO2 buried oxide (BOX)
+  basis: design_target
+  locator: p.8 Fig. 1 caption
+- device_id: navarro2026-a
+  field: cladding
+  value: air upper cladding; 300 nm Si3N4 capping layer on the core top
+  basis: design_target
+  locator: p.8 Fig. 1; p.11
+- device_id: navarro2026-a
+  field: epitaxy_or_stack
+  value: hBN-encapsulated SLG / 20 nm HfO2 (er 20) / SLG on 800 nm x 400 nm Si3N4 core; 300 nm Si3N4 capping layer on the core top; gated length about 2 um, ungated about 1 um
+  basis: design_target
+  locator: p.6-9; p.11; p.26 Fig. 4
+- device_id: navarro2026-a
+  field: vpi_convention
+  value: mzm_single_arm
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: SA = single-arm MZI, PP = push-pull MZI per Table 1 caption
+- device_id: navarro2026-a
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: authors label scheme SA or PP; mapping to the drive enum is ours
+- device_id: navarro2026-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: simulated
+  locator: Table 1 p.15; p.8 Fig. 1
+  note: simulation wavelength 1.55 um
+- device_id: navarro2026-b
+  field: length_mm
+  value: 0.096
+  unit: mm
+  basis: simulated
+  locator: Table 1 p.15
+  note: minimum modulation length for pi phase shift
+- device_id: navarro2026-b
+  field: vpil_dc_vcm
+  value: 0.0704
+  unit: V*cm
+  basis: simulated
+  locator: Table 1 p.15
+  note: VpiL as tabulated; Vpi alone not stated
+- device_id: navarro2026-b
+  field: bw3db_ghz
+  value: 6.5
+  unit: GHz
+  basis: simulated
+  locator: Table 1 p.15; p.17; Fig. 4(b) p.26
+  note: RC electrical 3 dB bandwidth, first-order low-pass model
+- device_id: navarro2026-b
+  field: il_onchip_db
+  value: 0.55
+  unit: dB
+  basis: simulated
+  locator: Table 1 p.15
+  note: IL = MPA x L, graphene-induced modal attenuation over the DSLG section
+- device_id: navarro2026-b
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.6; p.8 Fig. 1; p.28
+  note: Si3N4 core width, single-mode TE; core height 400 nm
+- device_id: navarro2026-b
+  field: electrode_metal
+  value: Au (edges at least 1.2 um from the core)
+  basis: design_target
+  locator: p.6; p.29 Fig. 7
+- device_id: navarro2026-b
+  field: substrate
+  value: 2 um SiO2 buried oxide (BOX)
+  basis: design_target
+  locator: p.8 Fig. 1 caption
+- device_id: navarro2026-b
+  field: cladding
+  value: air upper cladding; 300 nm Si3N4 capping layer on the core top
+  basis: design_target
+  locator: p.8 Fig. 1; p.11
+- device_id: navarro2026-b
+  field: epitaxy_or_stack
+  value: hBN-encapsulated SLG / 20 nm HfO2 (er 20) / SLG on 800 nm x 400 nm Si3N4 core; 300 nm Si3N4 capping layer on the core top; gated length about 2 um, ungated about 1 um
+  basis: design_target
+  locator: p.6-9; p.11; p.26 Fig. 4
+- device_id: navarro2026-b
+  field: vpi_convention
+  value: mzm_single_arm
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: SA = single-arm MZI, PP = push-pull MZI per Table 1 caption
+- device_id: navarro2026-b
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: authors label scheme SA or PP; mapping to the drive enum is ours
+- device_id: navarro2026-c
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: simulated
+  locator: Table 1 p.15; p.8 Fig. 1
+  note: simulation wavelength 1.55 um
+- device_id: navarro2026-c
+  field: length_mm
+  value: 0.048
+  unit: mm
+  basis: simulated
+  locator: Table 1 p.15
+  note: minimum modulation length for pi phase shift
+- device_id: navarro2026-c
+  field: vpil_dc_vcm
+  value: 0.0704
+  unit: V*cm
+  basis: simulated
+  locator: Table 1 p.15
+  note: VpiL as tabulated; Vpi alone not stated
+- device_id: navarro2026-c
+  field: bw3db_ghz
+  value: 6.5
+  unit: GHz
+  basis: simulated
+  locator: Table 1 p.15; p.17; Fig. 4(b) p.26
+  note: RC electrical 3 dB bandwidth, first-order low-pass model
+- device_id: navarro2026-c
+  field: il_onchip_db
+  value: 0.28
+  unit: dB
+  basis: simulated
+  locator: Table 1 p.15
+  note: IL = MPA x L, graphene-induced modal attenuation over the DSLG section
+- device_id: navarro2026-c
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.6; p.8 Fig. 1; p.28
+  note: Si3N4 core width, single-mode TE; core height 400 nm
+- device_id: navarro2026-c
+  field: electrode_metal
+  value: Au (edges at least 1.2 um from the core)
+  basis: design_target
+  locator: p.6; p.29 Fig. 7
+- device_id: navarro2026-c
+  field: substrate
+  value: 2 um SiO2 buried oxide (BOX)
+  basis: design_target
+  locator: p.8 Fig. 1 caption
+- device_id: navarro2026-c
+  field: cladding
+  value: air upper cladding; 300 nm Si3N4 capping layer on the core top
+  basis: design_target
+  locator: p.8 Fig. 1; p.11
+- device_id: navarro2026-c
+  field: epitaxy_or_stack
+  value: hBN-encapsulated SLG / 20 nm HfO2 (er 20) / SLG on 800 nm x 400 nm Si3N4 core; 300 nm Si3N4 capping layer on the core top; gated length about 2 um, ungated about 1 um
+  basis: design_target
+  locator: p.6-9; p.11; p.26 Fig. 4
+- device_id: navarro2026-c
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: SA = single-arm MZI, PP = push-pull MZI per Table 1 caption
+- device_id: navarro2026-c
+  field: drive
+  value: push_pull
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: authors label scheme SA or PP; mapping to the drive enum is ours
+- device_id: navarro2026-d
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: simulated
+  locator: Table 1 p.15; p.8 Fig. 1
+  note: simulation wavelength 1.55 um
+- device_id: navarro2026-d
+  field: length_mm
+  value: 0.383
+  unit: mm
+  basis: simulated
+  locator: Table 1 p.15
+  note: minimum modulation length for pi phase shift
+- device_id: navarro2026-d
+  field: vpil_dc_vcm
+  value: 0.1348
+  unit: V*cm
+  basis: simulated
+  locator: Table 1 p.15
+  note: VpiL as tabulated; Vpi alone not stated
+- device_id: navarro2026-d
+  field: bw3db_ghz
+  value: 15.2
+  unit: GHz
+  basis: simulated
+  locator: Table 1 p.15; p.17; Fig. 4(b) p.26
+  note: RC electrical 3 dB bandwidth, first-order low-pass model
+- device_id: navarro2026-d
+  field: il_onchip_db
+  value: 2.3
+  unit: dB
+  basis: simulated
+  locator: Table 1 p.15
+  note: IL = MPA x L, graphene-induced modal attenuation over the DSLG section
+- device_id: navarro2026-d
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.6; p.8 Fig. 1; p.28
+  note: Si3N4 core width, single-mode TE; core height 400 nm
+- device_id: navarro2026-d
+  field: electrode_metal
+  value: Au (edges at least 1.2 um from the core)
+  basis: design_target
+  locator: p.6; p.29 Fig. 7
+- device_id: navarro2026-d
+  field: substrate
+  value: 2 um SiO2 buried oxide (BOX)
+  basis: design_target
+  locator: p.8 Fig. 1 caption
+- device_id: navarro2026-d
+  field: cladding
+  value: air upper cladding; 300 nm Si3N4 capping layer on the core top
+  basis: design_target
+  locator: p.8 Fig. 1; p.11
+- device_id: navarro2026-d
+  field: epitaxy_or_stack
+  value: hBN-encapsulated SLG / 20 nm Al2O3 (er 8) / SLG on 800 nm x 400 nm Si3N4 core; 300 nm Si3N4 capping layer on the core top; gated length about 2 um, ungated about 1 um
+  basis: design_target
+  locator: p.6-9; p.11; p.26 Fig. 4
+- device_id: navarro2026-d
+  field: vpi_convention
+  value: mzm_single_arm
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: SA = single-arm MZI, PP = push-pull MZI per Table 1 caption
+- device_id: navarro2026-d
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: authors label scheme SA or PP; mapping to the drive enum is ours
+- device_id: navarro2026-e
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: simulated
+  locator: Table 1 p.15; p.8 Fig. 1
+  note: simulation wavelength 1.55 um
+- device_id: navarro2026-e
+  field: length_mm
+  value: 0.164
+  unit: mm
+  basis: simulated
+  locator: Table 1 p.15
+  note: minimum modulation length for pi phase shift
+- device_id: navarro2026-e
+  field: vpil_dc_vcm
+  value: 0.1004
+  unit: V*cm
+  basis: simulated
+  locator: Table 1 p.15
+  note: VpiL as tabulated; Vpi alone not stated
+- device_id: navarro2026-e
+  field: bw3db_ghz
+  value: 15.2
+  unit: GHz
+  basis: simulated
+  locator: Table 1 p.15; p.17; Fig. 4(b) p.26
+  note: RC electrical 3 dB bandwidth, first-order low-pass model
+- device_id: navarro2026-e
+  field: il_onchip_db
+  value: 0.94
+  unit: dB
+  basis: simulated
+  locator: Table 1 p.15
+  note: IL = MPA x L, graphene-induced modal attenuation over the DSLG section
+- device_id: navarro2026-e
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.6; p.8 Fig. 1; p.28
+  note: Si3N4 core width, single-mode TE; core height 400 nm
+- device_id: navarro2026-e
+  field: electrode_metal
+  value: Au (edges at least 1.2 um from the core)
+  basis: design_target
+  locator: p.6; p.29 Fig. 7
+- device_id: navarro2026-e
+  field: substrate
+  value: 2 um SiO2 buried oxide (BOX)
+  basis: design_target
+  locator: p.8 Fig. 1 caption
+- device_id: navarro2026-e
+  field: cladding
+  value: air upper cladding; 300 nm Si3N4 capping layer on the core top
+  basis: design_target
+  locator: p.8 Fig. 1; p.11
+- device_id: navarro2026-e
+  field: epitaxy_or_stack
+  value: hBN-encapsulated SLG / 20 nm Al2O3 (er 8) / SLG on 800 nm x 400 nm Si3N4 core; 300 nm Si3N4 capping layer on the core top; gated length about 2 um, ungated about 1 um
+  basis: design_target
+  locator: p.6-9; p.11; p.26 Fig. 4
+- device_id: navarro2026-e
+  field: vpi_convention
+  value: mzm_single_arm
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: SA = single-arm MZI, PP = push-pull MZI per Table 1 caption
+- device_id: navarro2026-e
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: authors label scheme SA or PP; mapping to the drive enum is ours
+- device_id: navarro2026-f
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: simulated
+  locator: Table 1 p.15; p.8 Fig. 1
+  note: simulation wavelength 1.55 um
+- device_id: navarro2026-f
+  field: length_mm
+  value: 0.082
+  unit: mm
+  basis: simulated
+  locator: Table 1 p.15
+  note: minimum modulation length for pi phase shift
+- device_id: navarro2026-f
+  field: vpil_dc_vcm
+  value: 0.1004
+  unit: V*cm
+  basis: simulated
+  locator: Table 1 p.15
+  note: VpiL as tabulated; Vpi alone not stated
+- device_id: navarro2026-f
+  field: bw3db_ghz
+  value: 15.2
+  unit: GHz
+  basis: simulated
+  locator: Table 1 p.15; p.17; Fig. 4(b) p.26
+  note: RC electrical 3 dB bandwidth, first-order low-pass model
+- device_id: navarro2026-f
+  field: il_onchip_db
+  value: 0.47
+  unit: dB
+  basis: simulated
+  locator: Table 1 p.15
+  note: IL = MPA x L, graphene-induced modal attenuation over the DSLG section
+- device_id: navarro2026-f
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.6; p.8 Fig. 1; p.28
+  note: Si3N4 core width, single-mode TE; core height 400 nm
+- device_id: navarro2026-f
+  field: electrode_metal
+  value: Au (edges at least 1.2 um from the core)
+  basis: design_target
+  locator: p.6; p.29 Fig. 7
+- device_id: navarro2026-f
+  field: substrate
+  value: 2 um SiO2 buried oxide (BOX)
+  basis: design_target
+  locator: p.8 Fig. 1 caption
+- device_id: navarro2026-f
+  field: cladding
+  value: air upper cladding; 300 nm Si3N4 capping layer on the core top
+  basis: design_target
+  locator: p.8 Fig. 1; p.11
+- device_id: navarro2026-f
+  field: epitaxy_or_stack
+  value: hBN-encapsulated SLG / 20 nm Al2O3 (er 8) / SLG on 800 nm x 400 nm Si3N4 core; 300 nm Si3N4 capping layer on the core top; gated length about 2 um, ungated about 1 um
+  basis: design_target
+  locator: p.6-9; p.11; p.26 Fig. 4
+- device_id: navarro2026-f
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: SA = single-arm MZI, PP = push-pull MZI per Table 1 caption
+- device_id: navarro2026-f
+  field: drive
+  value: push_pull
+  basis: derived
+  locator: Table 1 p.15; p.16
+  note: authors label scheme SA or PP; mapping to the drive enum is ours
+derived: []

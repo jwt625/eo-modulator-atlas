@@ -1,0 +1,291 @@
+paper_id: johnson2025
+verified_on: '2026-10-02'
+source_files:
+- references/johnson2025/text.md
+- references/johnson2025/source.json
+- references/johnson2025/figures/page_02.png
+- references/johnson2025/figures/page_03.png
+entries:
+- device_id: johnson2025-200g-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.2, Link Testing
+  note: Link test illumination 1310 nm (Santec TSL-570); Vpi wavelength not stated; only 1290 nm is tied to a Vpi calculation (p.2)
+- device_id: johnson2025-200g-a
+  field: max_baud_gbd
+  value: 112
+  unit: GBd
+  basis: measured
+  locator: p.3, Link Testing
+  note: 112 GBd PAM4, PRBS13Q, SER about 1e-2 below SD-FEC threshold (p.3)
+- device_id: johnson2025-200g-a
+  field: modulation_format
+  value: PAM4 (PRBS13Q), 224 Gb/s; FFE 35 taps, CTLE, TDECQ equalizer
+  basis: measured
+  locator: p.3, Link Testing; Table 2
+  note: PRBS13Q PAM4 with 35-tap FFE, 2-level CTLE, TDECQ equalizer; Tx0 on 200G-A at 1.0-1.8 Vppd (Figs. 4, 5), Tx3 at 1.8 Vppd
+- device_id: johnson2025-200g-a
+  field: max_line_rate_gbps
+  value: 224
+  unit: Gb/s
+  basis: measured
+  locator: p.3, Link Testing
+  note: 224G stated as 112 GBd PAM4
+- device_id: johnson2025-200g-a
+  field: drive_vpp_v
+  value: 1.29
+  unit: V
+  basis: derived
+  locator: p.3, below Table 2
+  note: 1.8 Vppd driver swing minus 2.88 dB probe and cable loss at 56 GHz gives 1.29 Vppd at the modulator (authors)
+- device_id: johnson2025-200g-a
+  field: driver
+  value: Keysight M8050 BERT (M8042A pattern generator, M8059A remote head), 67 GHz probe; no driver amplifier
+  basis: measured
+  locator: p.2-3, Link Testing
+  note: Keysight M8050 BERT with M8042A pattern generator, M8059A remote head, 67 GHz probe, 1.85 mm cabling; PDFA restores receiver signal
+- device_id: johnson2025-200g-a
+  field: length_mm
+  value: 0.4
+  unit: mm
+  basis: design_target
+  locator: p.1, PIC Fabrication
+  note: Phase-shifter length 400 um for the 1.6T DR8 (200G/lambda) PIC; 400G/lambda design is shorter, value not stated
+- device_id: johnson2025-200g-a
+  field: vpi_dc_v
+  value: 2.13
+  unit: V
+  basis: measured
+  locator: p.2, Table 1
+  note: Vpi,diff mean plus-minus spread over channels; low-frequency over-modulation method, 100 kHz differential triangle wave, grating couplers ; 2.13 +/- 0.12 V
+- device_id: johnson2025-200g-a
+  field: epitaxy_or_stack
+  value: 'Slot waveguide: slot 160 nm, rail 240 nm, PDK-standard rib and slab thicknesses; multi-level n-doped silicon strip electrodes (no gate bias); multi-layer metal stack, on-die 100 ohm differential termination; Selerion-HTX OEO (n 1.9 stated for the VpiL relation); ALD encapsulation'
+  basis: measured
+  locator: p.1, PIC Fabrication; p.2
+  note: Slot 160 nm, rail 240 nm; n 1.9 on p.2
+- device_id: johnson2025-200g-b
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.2, Link Testing
+  note: Link test illumination 1310 nm (Santec TSL-570); Vpi wavelength not stated; only 1290 nm is tied to a Vpi calculation (p.2)
+- device_id: johnson2025-200g-b
+  field: max_baud_gbd
+  value: 112
+  unit: GBd
+  basis: measured
+  locator: p.3, Link Testing
+  note: 112 GBd PAM4, PRBS13Q, SER about 1e-2 below SD-FEC threshold (p.3)
+- device_id: johnson2025-200g-b
+  field: modulation_format
+  value: PAM4 (PRBS13Q), 224 Gb/s; FFE 35 taps, CTLE, TDECQ equalizer
+  basis: measured
+  locator: p.3, Link Testing; Table 2
+  note: PRBS13Q PAM4 with 35-tap FFE, 2-level CTLE, TDECQ equalizer; 200-B Tx2 and Tx3 at 1.8 Vppd
+- device_id: johnson2025-200g-b
+  field: max_line_rate_gbps
+  value: 224
+  unit: Gb/s
+  basis: measured
+  locator: p.3, Link Testing
+  note: 224G stated as 112 GBd PAM4
+- device_id: johnson2025-200g-b
+  field: drive_vpp_v
+  value: 1.29
+  unit: V
+  basis: derived
+  locator: p.3, below Table 2
+  note: 1.8 Vppd driver swing minus 2.88 dB probe and cable loss at 56 GHz gives 1.29 Vppd at the modulator (authors)
+- device_id: johnson2025-200g-b
+  field: driver
+  value: Keysight M8050 BERT (M8042A pattern generator, M8059A remote head), 67 GHz probe; no driver amplifier
+  basis: measured
+  locator: p.2-3, Link Testing
+  note: Keysight M8050 BERT with M8042A pattern generator, M8059A remote head, 67 GHz probe, 1.85 mm cabling; PDFA restores receiver signal
+- device_id: johnson2025-200g-b
+  field: length_mm
+  value: 0.4
+  unit: mm
+  basis: design_target
+  locator: p.1, PIC Fabrication
+  note: Phase-shifter length 400 um for the 1.6T DR8 (200G/lambda) PIC; 400G/lambda design is shorter, value not stated
+- device_id: johnson2025-200g-b
+  field: vpi_dc_v
+  value: 2.33
+  unit: V
+  basis: measured
+  locator: p.2, Table 1
+  note: Vpi,diff mean plus-minus spread over channels; low-frequency over-modulation method, 100 kHz differential triangle wave, grating couplers ; 2.33 +/- 0.15 V
+- device_id: johnson2025-200g-b
+  field: bw3db_ghz
+  value: 84.7
+  unit: GHz
+  basis: measured
+  locator: p.2, Table 1; Fig. 2
+  note: 2-port N4372 110 GHz analyser, single arm; Fig. 2 relative to 1 GHz, Table 1 reference presumed same; Fig. 2 trace 200-B Tx3
+- device_id: johnson2025-200g-b
+  field: epitaxy_or_stack
+  value: 'Slot waveguide: slot 160 nm, rail 240 nm, PDK-standard rib and slab thicknesses; multi-level n-doped silicon strip electrodes (no gate bias); multi-layer metal stack, on-die 100 ohm differential termination; Selerion-HTX OEO (n 1.9 stated for the VpiL relation); ALD encapsulation'
+  basis: measured
+  locator: p.1, PIC Fabrication; p.2
+  note: Slot 160 nm, rail 240 nm; n 1.9 on p.2
+- device_id: johnson2025-200g-c
+  field: length_mm
+  value: 0.4
+  unit: mm
+  basis: design_target
+  locator: p.1, PIC Fabrication
+  note: Phase-shifter length 400 um for the 1.6T DR8 (200G/lambda) PIC; 400G/lambda design is shorter, value not stated
+- device_id: johnson2025-200g-c
+  field: vpi_dc_v
+  value: 2.46
+  unit: V
+  basis: measured
+  locator: p.2, Table 1
+  note: Vpi,diff mean plus-minus spread over channels; low-frequency over-modulation method, 100 kHz differential triangle wave, grating couplers ; 2.46 +/- 0.63 V
+- device_id: johnson2025-200g-c
+  field: bw3db_ghz
+  value: 84.6
+  unit: GHz
+  basis: measured
+  locator: p.2, Table 1; Fig. 2
+  note: 2-port N4372 110 GHz analyser, single arm; Fig. 2 relative to 1 GHz, Table 1 reference presumed same; no trace shown
+- device_id: johnson2025-200g-c
+  field: epitaxy_or_stack
+  value: 'Slot waveguide: slot 160 nm, rail 240 nm, PDK-standard rib and slab thicknesses; multi-level n-doped silicon strip electrodes (no gate bias); multi-layer metal stack, on-die 100 ohm differential termination; Selerion-HTX OEO (n 1.9 stated for the VpiL relation); ALD encapsulation'
+  basis: measured
+  locator: p.1, PIC Fabrication; p.2
+  note: Slot 160 nm, rail 240 nm; n 1.9 on p.2
+- device_id: johnson2025-400g-a
+  field: vpi_dc_v
+  value: 6.74
+  unit: V
+  basis: measured
+  locator: p.2, Table 1
+  note: Vpi,diff mean plus-minus spread over channels; low-frequency over-modulation method, 100 kHz differential triangle wave, grating couplers ; 6.74 +/- 0.40 V
+- device_id: johnson2025-400g-a
+  field: bw3db_ghz
+  value: 109
+  unit: GHz
+  basis: measured
+  locator: p.2, Table 1; Fig. 2
+  note: 2-port N4372 110 GHz analyser, single arm; Fig. 2 relative to 1 GHz, Table 1 reference presumed same; Fig. 2 trace 400-A Tx1
+- device_id: johnson2025-400g-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2, Modulator Characterization; Fig. 2
+  note: Analyser range 110 GHz; 109 GHz mean crossing lies at the instrument limit
+- device_id: johnson2025-400g-a
+  field: epitaxy_or_stack
+  value: 'Slot waveguide: slot 160 nm, rail 240 nm, PDK-standard rib and slab thicknesses; multi-level n-doped silicon strip electrodes (no gate bias); multi-layer metal stack, on-die 100 ohm differential termination; Selerion-HTX OEO (n 1.9 stated for the VpiL relation); ALD encapsulation'
+  basis: measured
+  locator: p.1, PIC Fabrication; p.2
+  note: Same slot 160 nm and rail 240 nm as the 200G design; phase shifter shorter, length not stated
+- device_id: johnson2025-400g-b
+  field: vpi_dc_v
+  value: 7.5
+  unit: V
+  basis: measured
+  locator: p.2, Table 1
+  note: Vpi,diff mean plus-minus spread over channels; low-frequency over-modulation method, 100 kHz differential triangle wave, grating couplers ; 7.5 +/- 1.8 V
+- device_id: johnson2025-400g-b
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2, Table 1
+  note: Table 1 lists > 110 GHz; bound entered as 110 with gt
+- device_id: johnson2025-400g-b
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2, Modulator Characterization; Fig. 2
+  note: Analyser range 110 GHz; no 3 dB crossing reported
+- device_id: johnson2025-400g-b
+  field: epitaxy_or_stack
+  value: 'Slot waveguide: slot 160 nm, rail 240 nm, PDK-standard rib and slab thicknesses; multi-level n-doped silicon strip electrodes (no gate bias); multi-layer metal stack, on-die 100 ohm differential termination; Selerion-HTX OEO (n 1.9 stated for the VpiL relation); ALD encapsulation'
+  basis: measured
+  locator: p.1, PIC Fabrication; p.2
+  note: Same slot 160 nm and rail 240 nm as the 200G design; phase shifter shorter, length not stated
+- device_id: johnson2025-200g-best
+  field: length_mm
+  value: 0.4
+  unit: mm
+  basis: design_target
+  locator: p.1, PIC Fabrication
+  note: Phase-shifter length 400 um for the 1.6T DR8 (200G/lambda) PIC; 400G/lambda design is shorter, value not stated
+- device_id: johnson2025-200g-best
+  field: wavelength_nm
+  value: 1290
+  unit: nm
+  basis: author_estimate
+  locator: p.2, below Eq. (1)
+  note: 1290 nm is the 'measurement wavelength' used in the authors' r33 calculation; differs from the 1310 nm link wavelength
+- device_id: johnson2025-200g-best
+  field: vpi_dc_v
+  value: 1.57
+  unit: V
+  basis: measured
+  locator: p.2, text below Table 1
+  note: Best Vpi,diff on a single channel; which PIC is not stated
+- device_id: johnson2025-200g-best
+  field: epitaxy_or_stack
+  value: 'Slot waveguide: slot 160 nm, rail 240 nm, PDK-standard rib and slab thicknesses; multi-level n-doped silicon strip electrodes (no gate bias); multi-layer metal stack, on-die 100 ohm differential termination; Selerion-HTX OEO (n 1.9 stated for the VpiL relation); ALD encapsulation'
+  basis: measured
+  locator: p.1, PIC Fabrication; p.2
+  note: Slot 160 nm, rail 240 nm; n 1.9, Gamma 0.14 on p.2
+- device_id: johnson2025-200g-design
+  field: length_mm
+  value: 0.4
+  unit: mm
+  basis: design_target
+  locator: p.1, PIC Fabrication
+  note: Phase-shifter length 400 um for the 1.6T DR8 (200G/lambda) PIC; 400G/lambda design is shorter, value not stated
+- device_id: johnson2025-200g-design
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: design_target
+  locator: p.2, text below Table 1
+  note: Design insertion loss quoted at 1310 nm
+- device_id: johnson2025-200g-design
+  field: vpi_dc_v
+  value: 2.08
+  unit: V
+  basis: design_target
+  locator: p.2, text below Table 1
+  note: Modulators on the 200G/lambda PIC designed for differential Vpi 2.08 V
+- device_id: johnson2025-200g-design
+  field: bw3db_ghz
+  value: 80.3
+  unit: GHz
+  basis: design_target
+  locator: p.2, text below Table 1
+  note: Designed 3 dB bandwidth 80.3 GHz; reference not stated; not a measured value
+- device_id: johnson2025-200g-design
+  field: epitaxy_or_stack
+  value: 'Slot waveguide: slot 160 nm, rail 240 nm, PDK-standard rib and slab thicknesses; multi-level n-doped silicon strip electrodes (no gate bias); multi-layer metal stack, on-die 100 ohm differential termination; Selerion-HTX OEO (n 1.9 stated for the VpiL relation); ALD encapsulation'
+  basis: measured
+  locator: p.1, PIC Fabrication; p.2
+  note: Slot 160 nm, rail 240 nm
+- device_id: johnson2025-400g-design
+  field: vpi_dc_v
+  value: 5.52
+  unit: V
+  basis: design_target
+  locator: p.2, text after the SEPP paragraph
+  note: Higher design Vpi,diff 5.52 V because of the shorter phase shifter; similar efficiency of about 0.5 V.mm
+- device_id: johnson2025-400g-design
+  field: epitaxy_or_stack
+  value: 'Slot waveguide: slot 160 nm, rail 240 nm, PDK-standard rib and slab thicknesses; multi-level n-doped silicon strip electrodes (no gate bias); multi-layer metal stack, on-die 100 ohm differential termination; Selerion-HTX OEO (n 1.9 stated for the VpiL relation); ALD encapsulation'
+  basis: measured
+  locator: p.1, PIC Fabrication; p.2
+  note: Slot 160 nm, rail 240 nm
+derived: []

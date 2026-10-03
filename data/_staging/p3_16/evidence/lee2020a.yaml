@@ -1,0 +1,169 @@
+paper_id: lee2020a
+verified_on: '2026-10-02'
+source_files:
+- references/lee2020a/text.md
+- references/lee2020a/figures/page_05.png
+- references/lee2020a/figures/page_07.png
+entries:
+- device_id: lee2020a-a
+  field: length_mm
+  value: 0.1
+  unit: mm
+  basis: measured
+  locator: p.3 Fig. 2 caption
+  note: 100 um long and 1.3 um wide capacitor
+- device_id: lee2020a-a
+  field: bw3db_ghz
+  value: 3.92
+  unit: GHz
+  basis: derived
+  locator: p.4-5; Fig. 3(c)
+  note: mean over 32 devices of single-pole fit time constants
+- device_id: lee2020a-a
+  field: drive_vpp_v
+  value: 6
+  unit: V
+  basis: measured
+  locator: p.5; Fig. 4 caption
+  note: NRZ PRBS 2^9-1 at Vpp = 6 V
+- device_id: lee2020a-a
+  field: il_onchip_db
+  value: 7
+  unit: dB
+  basis: measured
+  locator: p.7; Fig. 5(c) caption
+  note: authors state 5 dB modulation with 7 dB IL; read from model curve agreeing with data, static sweep 0 to -17 V
+- device_id: lee2020a-a
+  field: extinction_ratio_db
+  value: 5
+  unit: dB
+  basis: measured
+  locator: p.7; Fig. 5(c) caption
+  note: modulation of 5 dB for current device; model curve agrees with data, static sweep about 17 V
+- device_id: lee2020a-a
+  field: energy_per_bit_fj
+  value: 1600
+  unit: fJ/bit
+  basis: derived
+  locator: p.5-6
+  note: about 1.6 pJ/bit from E = C Vpp^2/4
+- device_id: lee2020a-a
+  field: capacitance_ff
+  value: 180
+  unit: fF
+  basis: author_estimate
+  locator: p.6
+  note: small device capacitance of around 180 fF
+- device_id: lee2020a-a
+  field: max_baud_gbd
+  value: 7
+  unit: GBd
+  basis: measured
+  locator: p.5; Fig. 4
+  note: 7 Gbit/s NRZ
+- device_id: lee2020a-a
+  field: max_line_rate_gbps
+  value: 7
+  unit: Gb/s
+  basis: measured
+  locator: p.5; Fig. 4
+  note: 7 Gbit/s per modulator; 210 Gbit/s aggregate over 30 devices
+- device_id: lee2020a-a
+  field: modulation_format
+  value: NRZ, PRBS 2^9-1, 7 Gbit/s per modulator (BER below HD-FEC 3.8e-3 for 30 of 32 devices)
+  unit: ''
+  basis: measured
+  locator: p.5; Fig. 4 caption
+  note: BER below 3.8e-3 for 30 of 32 devices
+- device_id: lee2020a-a
+  field: rib_width_nm
+  value: 1300
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1 caption
+  note: waveguide 1.3 um wide
+- device_id: lee2020a-a
+  field: buffer_oxide_um
+  value: 4.3
+  unit: um
+  basis: measured
+  locator: p.3
+  note: 4.3 um thermal SiO2
+- device_id: lee2020a-a
+  field: electrode_metal
+  value: Cr/Pd/Au 1 nm/45 nm/50 nm
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 2 caption
+  note: Cr/Pd/Au 1 nm/45 nm/50 nm
+- device_id: lee2020a-a
+  field: substrate
+  value: 330 nm LPCVD Si3N4 on 4.3 um thermal SiO2 on silicon
+  unit: ''
+  basis: measured
+  locator: p.3
+  note: 330 nm LPCVD Si3N4 on 4.3 um thermal SiO2 on Si
+- device_id: lee2020a-a
+  field: cladding
+  value: PECVD SiO2 planarized by CMP; 10 nm ALD Al2O3 under bottom graphene; 30 nm Al2O3 gate; 30 nm Al2O3 over top graphene
+  unit: ''
+  basis: measured
+  locator: p.2-4; Fig. 5 caption
+  note: 10 nm / 30 nm / 30 nm Al2O3
+- device_id: lee2020a-a
+  field: epitaxy_or_stack
+  value: Si3N4 waveguide 1.3 um x 330 nm; CVD graphene (Grolltex) / 30 nm ALD Al2O3 / CVD graphene capacitor 1.3 um wide, 100 um long directly on the waveguide; electrodes 1.2 um from waveguide
+  unit: ''
+  basis: measured
+  locator: p.2-3; Fig. 1, Fig. 5 caption
+  note: electrodes 1.2 um from waveguide
+- device_id: lee2020a-b
+  field: il_onchip_db
+  value: 1
+  unit: dB
+  basis: simulated
+  locator: p.7; Fig. 5(c) caption
+  note: optimized HfO2 design, purple curve
+- device_id: lee2020a-b
+  field: extinction_ratio_db
+  value: 15
+  unit: dB
+  basis: simulated
+  locator: p.7; Fig. 5(c) caption
+  note: modulation depth before breakdown
+- device_id: lee2020a-b
+  field: rib_width_nm
+  value: 1300
+  unit: nm
+  basis: design_target
+  locator: p.2, p.7
+  note: waveguide width unchanged, 1.3 um
+- device_id: lee2020a-b
+  field: buffer_oxide_um
+  value: 4.3
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: 4.3 um thermal SiO2, unchanged
+- device_id: lee2020a-b
+  field: substrate
+  value: 330 nm LPCVD Si3N4 on 4.3 um thermal SiO2 on silicon
+  unit: ''
+  basis: design_target
+  locator: p.3
+  note: unchanged substrate
+- device_id: lee2020a-b
+  field: cladding
+  value: HfO2 gate dielectric 45 nm (simulated design); other layers as in Fig. 5(a)
+  unit: ''
+  basis: simulated
+  locator: p.7; Fig. 5(a)
+  note: gate thickness increased from 30 nm to 45 nm
+- device_id: lee2020a-b
+  field: epitaxy_or_stack
+  value: same Si3N4 waveguide and capacitor width as the fabricated device with 45 nm HfO2 gate (kappa-enhanced) and electrodes 1.0 um from the waveguide (Fig. 5(a))
+  unit: ''
+  basis: simulated
+  locator: p.7; Fig. 5(a)
+  note: electrodes 1.0 um vs 1.2 um for the fabricated device
+derived: []

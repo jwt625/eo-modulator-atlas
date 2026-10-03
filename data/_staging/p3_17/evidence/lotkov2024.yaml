@@ -1,0 +1,117 @@
+paper_id: lotkov2024
+verified_on: '2026-10-02'
+source_files:
+- references/lotkov2024/text.md
+- references/lotkov2024/source.json
+- references/lotkov2024/figures/page_03.png
+- references/lotkov2024/figures/page_04.png
+entries:
+- device_id: lotkov2024-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3 (Electro-optic efficiency); Fig. 3(a)
+  note: fixed wavelength for DC amplitude modulation
+- device_id: lotkov2024-a
+  field: length_mm
+  value: 0.0093
+  unit: mm
+  basis: measured
+  locator: abstract p.1; p.1
+- device_id: lotkov2024-a
+  field: bw3db_ghz
+  value: 1.05
+  unit: GHz
+  basis: measured
+  locator: p.4; Fig. 4(d)
+  note: from fit of the response at 1550 nm; normalized S21
+- device_id: lotkov2024-a
+  field: bw6db_ghz
+  value: 2.3
+  unit: GHz
+  basis: measured
+  locator: p.4; Fig. 4(d)
+  note: from fit of the response
+- device_id: lotkov2024-a
+  field: il_onchip_db
+  value: 5.7
+  unit: dB
+  basis: measured
+  locator: abstract p.1; conclusion p.4
+  note: at -7 V; p.3 also gives 6.3 dB and on-chip IL 14.6 dB; scope of 5.7 dB undefined
+- device_id: lotkov2024-a
+  field: il_onchip_includes
+  value: 'scope not defined by the authors: abstract and conclusion call 5.7 dB (at -7 V) the insertion loss of the 9.3 um hybrid modulator'
+  basis: measured
+  locator: p.3; conclusion p.4
+  note: scope not defined by the authors; 5.7 dB called insertion loss of the modulator in abstract and conclusion
+- device_id: lotkov2024-a
+  field: il_onchip_excludes
+  value: not stated; the paper calls 14.6 dB the on-chip IL (p.3) and gives 6.3 dB for the TM hybrid modulator; relation between 5.7, 6.3 and 14.6 dB not defined by the authors
+  basis: measured
+  locator: p.3
+  note: paper labels 14.6 dB on-chip IL (p.3); exclusions for 5.7 and 6.3 dB not stated
+- device_id: lotkov2024-a
+  field: prop_loss_db_per_cm
+  value: 6400
+  unit: dB/cm
+  basis: measured
+  locator: p.3; Fig. 3(b)
+  note: plasmonic section 0.64 dB/um from cutback slope, converted
+- device_id: lotkov2024-a
+  field: extinction_ratio_db
+  value: 1.5
+  unit: dB
+  basis: measured
+  locator: conclusion p.4; p.3; Fig. 3(c)
+  note: static, at +/-12 V; 0.85 dB at +/-7 V
+- device_id: lotkov2024-a
+  field: capacitance_ff
+  value: 400
+  unit: fF
+  basis: measured
+  locator: p.4
+  note: calculated value from SEM geometry is 162 fF
+- device_id: lotkov2024-a
+  field: eo_film_thickness_nm
+  value: 20
+  unit: nm
+  basis: design_target
+  locator: p.2; Fig. 1(a)
+  note: ITO film, modeled as 1 nm accumulation layer plus 19 nm bulk
+- device_id: lotkov2024-a
+  field: rib_width_nm
+  value: 2900
+  unit: nm
+  basis: design_target
+  locator: p.1
+  note: Si3N4 ridge width; height 300 nm
+- device_id: lotkov2024-a
+  field: electrode_metal
+  value: Ti/Al
+  basis: measured
+  locator: p.2; Methods p.5
+  note: thicknesses not stated
+- device_id: lotkov2024-a
+  field: substrate
+  value: Si wafer with 2.8 um thermal SiO2; 300 nm LPCVD Si3N4
+  basis: measured
+  locator: Methods p.4-5
+- device_id: lotkov2024-a
+  field: cladding
+  value: air top cladding
+  basis: measured
+  locator: p.2
+- device_id: lotkov2024-a
+  field: epitaxy_or_stack
+  value: 300 nm x 2900 nm Si3N4 ridge / 20 nm ITO (IBAD) / 20 nm ALD Al2O3 / Ti/Al plasmonic top electrode; 9.3 um hybrid section
+  basis: measured
+  locator: p.2; Fig. 1(d) p.2; Methods p.4
+derived:
+- device_id: lotkov2024-a
+  field: bw3db_ghz_check
+  value: 1.37
+  formula: 1/(2*pi*R*C) with calculated R = 717 Ohm, C = 162 fF (p.4)
+  inputs:
+  - capacitance_ff

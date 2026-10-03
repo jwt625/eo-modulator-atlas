@@ -1,0 +1,14 @@
+org_name,org_type,country,region,parent_org,notes
+Georgia Institute of Technology,university,US,north_america,,"Atlanta, GA; Department of Electrical and Computer Engineering (taghavi2022a); page-1 affiliation labels are swapped in the arXiv text, assignment follows Crossref"
+Institute for Electronics and Nanotechnology,facility,US,north_america,Georgia Institute of Technology,"Paper writes 'Georgia Tech IEN' (NNCI member, acknowledgements: work performed in part there); expansion of the acronym and host institution entered from outside the paper"
+University of British Columbia,university,CA,north_america,,"Vancouver, BC; Department of Electrical and Computer Engineering (also Quantum Matter Institute)"
+Dream Photonics Inc.,company,CA,north_america,,"Vancouver, BC"
+"Polaris Electro-Optics, Inc.",company,US,north_america,,"Broomfield, CO address in taghavi2024; written without Inc. there"
+NLM Photonics,company,US,north_america,,"Seattle, WA (4000 Mason Road); name as printed on page 1"
+Enosemi Inc,company,US,north_america,,"Seattle, WA; affiliation line adds 'acquired by AMD'; name as printed on page 1"
+Advanced Micro Foundry,foundry,SG,southeast_asia,,Singapore; named as fabricating the silicon PICs (O-band GP v4.5 platform); country not given in johnson2025 (same entry as other staged batches)
+Stanford University,university,US,north_america,,"Ginzton Laboratory, Stanford address in the paper"
+Stanford Nano Shared Facilities,facility,US,north_america,Stanford University,"Named in the acknowledgements; host institution not stated as such in the paper, country from the Stanford name"
+Stanford Nanofabrication Facility,facility,US,north_america,Stanford University,"Named in the acknowledgements; host institution not stated as such in the paper, country from the Stanford name"
+University of Washington,university,US,north_america,,"Seattle, Washington; Department of Materials Science and Engineering (witmer2020 affiliation 2)"
+City University of Hong Kong,university,HK,east_asia,,Hong Kong SAR; Department of Chemistry (witmer2020 affiliation 3)

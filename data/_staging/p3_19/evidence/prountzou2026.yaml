@@ -1,0 +1,191 @@
+paper_id: prountzou2026
+verified_on: '2026-10-02'
+source_files:
+- references/prountzou2026/text.md
+- references/prountzou2026/figures/page_09.png
+- references/prountzou2026/figures/page_12.png
+entries:
+- device_id: prountzou2026-a
+  field: wavelength_nm
+  value: 783.6
+  unit: nm
+  basis: measured
+  locator: p.12 Fig. 4a legend; p.6
+  note: optimal operating wavelength, same as the FEM optimum quoted in the text
+- device_id: prountzou2026-a
+  field: length_mm
+  value: 0.05
+  unit: mm
+  basis: design_target
+  locator: p.6
+  note: 50x50 um2 footprint stated for both architectures
+- device_id: prountzou2026-a
+  field: bw3db_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.12; Fig. 4a
+  note: 3 dB drop near 1 MHz at 1.5 V; reference level not stated (response peaks near 0.1-0.2 MHz in Fig. 4a)
+- device_id: prountzou2026-a
+  field: bw_measured_to_ghz
+  value: 0.005
+  unit: GHz
+  basis: measured
+  locator: p.12; Fig. 4a
+  note: frequency sweep up to 5 MHz; embedded response stable up to 5 MHz
+- device_id: prountzou2026-a
+  field: q_loaded
+  value: 200
+  unit: '1'
+  basis: measured
+  locator: p.10; Fig. 3a
+  note: Fano fit, linewidth 4 nm; simulated 207
+- device_id: prountzou2026-a
+  field: drive_vpp_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.9 Fig. 3 caption; p.11
+  note: paper writes amplitude 1.5 V and defines dT/T with Vpp; the two are not distinguished
+- device_id: prountzou2026-a
+  field: slab_thickness_nm
+  value: 45
+  unit: nm
+  basis: design_target
+  locator: p.16
+  note: residual BTO layer under the pillars, approximately
+- device_id: prountzou2026-a
+  field: electrode_thickness_um
+  value: 0.1
+  unit: um
+  basis: design_target
+  locator: p.15-16
+  note: 100 nm sputtered ITO top and bottom electrodes
+- device_id: prountzou2026-a
+  field: electrode_metal
+  value: indium tin oxide (ITO)
+  unit: ''
+  basis: design_target
+  locator: p.15-16
+  note: bottom and top electrodes
+- device_id: prountzou2026-a
+  field: substrate
+  value: fused quartz, 1 mm
+  unit: ''
+  basis: design_target
+  locator: p.15
+  note: ITO sputtered on the quartz
+- device_id: prountzou2026-a
+  field: cladding
+  value: SiO2 spin-on glass etched back to the pillar height; 20 nm ALD AlOx
+  unit: ''
+  basis: design_target
+  locator: p.6; p.15-16; Fig. 1c
+  note: AlOx isolates BTO from the top ITO
+- device_id: prountzou2026-a
+  field: crystal_cut
+  value: polycrystalline BTO, randomly oriented grains
+  unit: ''
+  basis: measured
+  locator: p.2
+  note: solution-derived, annealed 800 C for 2 h
+- device_id: prountzou2026-a
+  field: epitaxy_or_stack
+  value: fused quartz / ITO 100 nm / residual BTO about 45 nm with BTO nanopillars (radius 125 nm, period 500 nm, height about 260 nm; sol-gel, soft-NIL, 800 C anneal) / SiO2 spin-on glass etched to pillar
+    height / AlOx 20 nm / ITO 100 nm
+  unit: ''
+  basis: design_target
+  locator: p.10; p.15-16; Fig. 1c
+  note: pillar height approximate; volumetric shrinkage limits filling factor to 0.5
+- device_id: prountzou2026-b
+  field: wavelength_nm
+  value: 768.6
+  unit: nm
+  basis: measured
+  locator: p.12 Fig. 4a legend; p.6
+  note: optimal operating wavelength, same as the FEM optimum quoted in the text
+- device_id: prountzou2026-b
+  field: length_mm
+  value: 0.05
+  unit: mm
+  basis: design_target
+  locator: p.6
+  note: 50x50 um2 footprint stated for both architectures
+- device_id: prountzou2026-b
+  field: bw3db_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.12; Fig. 4a
+  note: 3 dB drop near 1 MHz at 1.5 V; reference level not stated (response peaks near 0.1-0.2 MHz in Fig. 4a)
+- device_id: prountzou2026-b
+  field: bw_measured_to_ghz
+  value: 0.005
+  unit: GHz
+  basis: measured
+  locator: p.12; Fig. 4a
+  note: frequency sweep up to 5 MHz
+- device_id: prountzou2026-b
+  field: q_loaded
+  value: 115
+  unit: '1'
+  basis: measured
+  locator: p.10; Fig. 3b
+  note: Fano fit, approximately 115, linewidth 6.5 nm; simulated 204
+- device_id: prountzou2026-b
+  field: drive_vpp_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.9 Fig. 3 caption; p.11
+  note: paper writes amplitude 1.5 V and defines dT/T with Vpp; the two are not distinguished
+- device_id: prountzou2026-b
+  field: slab_thickness_nm
+  value: 55
+  unit: nm
+  basis: design_target
+  locator: p.16
+  note: residual BTO layer under the pillars, approximately
+- device_id: prountzou2026-b
+  field: electrode_thickness_um
+  value: 0.1
+  unit: um
+  basis: design_target
+  locator: p.15-16
+  note: 100 nm sputtered ITO top and bottom electrodes
+- device_id: prountzou2026-b
+  field: electrode_metal
+  value: indium tin oxide (ITO)
+  unit: ''
+  basis: design_target
+  locator: p.15-16
+  note: bottom and top electrodes
+- device_id: prountzou2026-b
+  field: substrate
+  value: fused quartz, 500 um
+  unit: ''
+  basis: design_target
+  locator: p.15
+  note: ITO sputtered on the quartz
+- device_id: prountzou2026-b
+  field: cladding
+  value: 20 nm ALD AlOx, no SiO2 capping layer; ITO conformal on top
+  unit: ''
+  basis: design_target
+  locator: p.6; p.15-16; Fig. 1e
+  note: AlOx isolates BTO from the top ITO
+- device_id: prountzou2026-b
+  field: crystal_cut
+  value: polycrystalline BTO, randomly oriented grains
+  unit: ''
+  basis: measured
+  locator: p.2
+  note: solution-derived, annealed 800 C for 2 h
+- device_id: prountzou2026-b
+  field: epitaxy_or_stack
+  value: fused quartz / ITO 100 nm / residual BTO about 55 nm with BTO nanopillars (radius 100 nm, period 450 nm, height about 225 nm; sol-gel, soft-NIL, 800 C anneal) / AlOx 20 nm (ALD) / ITO 100 nm conformal
+  unit: ''
+  basis: design_target
+  locator: p.10; p.15-16; Fig. 1e
+  note: pillar height approximate; volumetric shrinkage limits filling factor to 0.5
+derived: []

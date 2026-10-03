@@ -1,0 +1,199 @@
+paper_id: sun2026a
+verified_on: '2026-10-02'
+source_files:
+- references/sun2026a/text.md
+- references/sun2026a/figures/page_08.png
+- references/sun2026a/figures/page_09.png
+entries:
+- device_id: sun2026a-a
+  field: wavelength_nm
+  value: 1579.2
+  unit: nm
+  basis: measured
+  locator: p.8; Fig. 3e caption
+  note: zero-bias resonance-dip wavelength used as operating wavelength
+- device_id: sun2026a-a
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: measured
+  locator: p.7
+  note: 2 mm x 2 mm metasurface side
+- device_id: sun2026a-a
+  field: q_loaded
+  value: 1370
+  unit: '1'
+  basis: measured
+  locator: p.7; Fig. 3b (p.8)
+  note: Fano fits, about 1370
+- device_id: sun2026a-a
+  field: tuning_nm_per_v
+  value: 0.057
+  unit: nm/V
+  basis: derived
+  locator: p.7; Fig. 3b (p.8)
+  note: S_exp = |d lambda_res / dV| about 0.057 nm/V extracted from Fig. 3b
+- device_id: sun2026a-a
+  field: eo_film_thickness_nm
+  value: 280
+  unit: nm
+  basis: measured
+  locator: p.5; p.13 Methods
+  note: spectroscopic ellipsometry; nominal deposition 300 nm
+- device_id: sun2026a-a
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.6
+  note: gap between 1 um wide interdigitated gold electrodes at 8 um pitch
+- device_id: sun2026a-a
+  field: electrode_thickness_um
+  value: 0.24
+  unit: um
+  basis: design_target
+  locator: p.6; Supp. Note 2 (p.25)
+  note: gold, 2 mm device; the high-speed devices use 55 nm
+- device_id: sun2026a-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.6
+  note: interdigitated electrodes from coplanar-waveguide pads
+- device_id: sun2026a-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.5
+  note: 3 um SiO2 between the STO/BTO and the silicon substrate
+- device_id: sun2026a-a
+  field: substrate
+  value: silicon (BTO / SrTiO3 / SiO2 / Si multilayer from Soitec SOI)
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 Methods
+  note: top Si oxidized through the STO layer and merged with the buried oxide
+- device_id: sun2026a-a
+  field: crystal_cut
+  value: 'a-oriented BTO film: c axis in plane, two orthogonal domain types'
+  unit: ''
+  basis: measured
+  locator: p.5; Supp. Fig. S1 (p.38)
+  note: XRD peak at the a-axis position
+- device_id: sun2026a-a
+  field: waveguide_orientation
+  value: x-polarized normal incidence; static field along x in the active region; ferroelectric polarization directions at 45 deg to x; electrode pattern at 45 deg to chip edge
+  unit: ''
+  basis: measured
+  locator: p.5-6; Supp. Note 2 (p.25)
+  note: free-space propagation along z
+- device_id: sun2026a-a
+  field: epitaxy_or_stack
+  value: Si / 3 um SiO2 / 6.4 nm SrTiO3 (MBE) / 280 nm BaTiO3 (off-axis RF sputtered, 700 C) / TiO2 nanopillars (200 nm cubes, ALD damascene, Px 990 nm, Py 865 nm) with 1 um wide gold interdigitated electrodes
+    at 8 um pitch
+  unit: ''
+  basis: design_target
+  locator: p.5-6; p.12-13 Methods; Supp. Note 2 (p.25)
+  note: electrode thickness 240 nm for this device
+- device_id: sun2026a-b
+  field: length_mm
+  value: 0.3
+  unit: mm
+  basis: measured
+  locator: p.2; p.10
+  note: 0.3 mm x 0.3 mm metasurface side
+- device_id: sun2026a-b
+  field: bw3db_ghz
+  value: 0.8
+  unit: GHz
+  basis: measured
+  locator: p.9 Fig. 4d; p.10
+  note: VNA EO S21, 3 dB crossing observed; normalized to the low-frequency level
+- device_id: sun2026a-b
+  field: q_loaded
+  value: 1320
+  unit: '1'
+  basis: measured
+  locator: p.9 Fig. 4c; p.10; Table 1 (p.11)
+  note: Fano fits, about 1320
+- device_id: sun2026a-b
+  field: tuning_nm_per_v
+  value: 0.071
+  unit: nm/V
+  basis: derived
+  locator: p.10
+  note: S_exp about 0.071 nm/V evaluated at 100 V
+- device_id: sun2026a-b
+  field: capacitance_ff
+  value: 4330
+  unit: fF
+  basis: author_estimate
+  locator: Supp. Note 7 (p.34)
+  note: 'lumped estimate 4.33 pF: 0.11 pF per gap times 39 gaps, from permittivity and BTO thickness'
+- device_id: sun2026a-b
+  field: eo_film_thickness_nm
+  value: 280
+  unit: nm
+  basis: measured
+  locator: p.5; p.13 Methods
+  note: spectroscopic ellipsometry; same BTO design as the 2 mm device, different wafer
+- device_id: sun2026a-b
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.6
+  note: gap between 1 um wide interdigitated gold electrodes at 8 um pitch
+- device_id: sun2026a-b
+  field: electrode_thickness_um
+  value: 0.055
+  unit: um
+  basis: design_target
+  locator: p.9 Fig. 4 caption; Supp. Note 2 (p.25)
+  note: gold, 55 nm for the high-speed devices
+- device_id: sun2026a-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.6
+  note: interdigitated electrodes from coplanar-waveguide pads
+- device_id: sun2026a-b
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.5
+  note: 3 um SiO2 between the STO/BTO and the silicon substrate
+- device_id: sun2026a-b
+  field: substrate
+  value: silicon (BTO / SrTiO3 / SiO2 / Si multilayer from Soitec SOI)
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 Methods
+  note: device from a different wafer than the 2 mm device
+- device_id: sun2026a-b
+  field: crystal_cut
+  value: 'a-oriented BTO film: c axis in plane, two orthogonal domain types'
+  unit: ''
+  basis: measured
+  locator: p.5; Supp. Fig. S1 (p.38)
+  note: XRD peak at the a-axis position
+- device_id: sun2026a-b
+  field: waveguide_orientation
+  value: x-polarized normal incidence; static field along x in the active region; ferroelectric polarization directions at 45 deg to x; electrode pattern at 45 deg to chip edge
+  unit: ''
+  basis: measured
+  locator: p.5-6; Supp. Note 2 (p.25)
+  note: free-space propagation along z
+- device_id: sun2026a-b
+  field: epitaxy_or_stack
+  value: Si / 3 um SiO2 / 6.4 nm SrTiO3 (MBE) / 280 nm BaTiO3 (off-axis RF sputtered, 700 C) / TiO2 nanopillars (200 nm cubes, ALD damascene, Px 990 nm, Py 865 nm) with 1 um wide gold interdigitated electrodes
+    at 8 um pitch
+  unit: ''
+  basis: design_target
+  locator: p.5-6; p.12-13 Methods; Supp. Note 2 (p.25)
+  note: electrode thickness 55 nm for this device
+derived: []

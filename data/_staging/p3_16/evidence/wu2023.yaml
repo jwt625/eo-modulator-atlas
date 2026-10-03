@@ -1,0 +1,344 @@
+paper_id: wu2023
+verified_on: '2026-10-02'
+source_files:
+- references/wu2023/text.md
+- references/wu2023/figures/page_07.png
+- references/wu2023/figures/page_10.png
+entries:
+- device_id: wu2023-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6-7, Sec. 2.3; Fig. 4(d)
+  note: ER quoted at 1550 nm; IL is peak transmission of each curve, wavelength not stated; sweep 1530-1580 nm
+- device_id: wu2023-a
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.2, Sec. 2.1
+  note: nominal width 500 nm
+- device_id: wu2023-a
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2.1
+  note: 70 nm Si slab on one side of the rib
+- device_id: wu2023-a
+  field: electrode_metal
+  value: Ti/TiN/W damascene contacts; Cu metal-1 routing
+  unit: ''
+  basis: measured
+  locator: p.4, Sec. 2.1; Fig. 1
+  note: Ti/TiN/W damascene for contacts; Cu-oxide metal-1 module
+- device_id: wu2023-a
+  field: substrate
+  value: 300 mm SOI wafer, 220 nm Si on 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2.1
+  note: 300 mm SOI, 220 nm crystalline Si, 2 um BOX
+- device_id: wu2023-a
+  field: cladding
+  value: Al2O3 capping on graphene (ALD, thickness not stated) under PMD oxide
+  unit: ''
+  basis: measured
+  locator: p.3-4, Sec. 2.1; Fig. 2(h)
+  note: Al2O3 capping layer thickness not stated
+- device_id: wu2023-a
+  field: epitaxy_or_stack
+  value: single-layer CVD graphene on 5 nm thermally grown gate oxide on doped Si rib waveguide (graphene-oxide-semiconductor); 6-inch graphene transferred to wafer center; 250 nm diameter damascene edge contacts to graphene; p++ Si contacts
+  unit: ''
+  basis: measured
+  locator: p.2-4, Sec. 2.1; Fig. 1, Fig. 2(h)
+  note: 5 nm thermal gate oxide; Graphenea CVD graphene; 250 nm contact holes; p++ Si per Fig. 1 caption
+- device_id: wu2023-a
+  field: length_mm
+  value: 0.025
+  unit: mm
+  basis: measured
+  locator: p.6-7, Sec. 2.3; Table 2
+  note: active length
+- device_id: wu2023-a
+  field: il_onchip_db
+  value: 2.1
+  unit: dB
+  basis: measured
+  locator: p.7, Table 2 (wafer D)
+  note: mean of unbiased devices; grating coupler loss excluded via reference waveguide
+- device_id: wu2023-a
+  field: extinction_ratio_db
+  value: 1.2
+  unit: dB
+  basis: measured
+  locator: p.7, Table 2 (wafer D); Fig. 4(d)
+  note: static ER at 6 Vpp drive, 1550 nm
+- device_id: wu2023-a
+  field: bw3db_ghz
+  value: 15.1
+  unit: GHz
+  basis: measured
+  locator: p.10, Table 3; Fig. 5(b)
+  note: measured EO bandwidth, wafer D, mean
+- device_id: wu2023-a
+  field: capacitance_ff
+  value: 26.7
+  unit: fF
+  basis: derived
+  locator: p.10, Table 3; Fig. 5(c,d)
+  note: C_gos extracted by fitting S11 to equivalent circuit
+- device_id: wu2023-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6-7, Sec. 2.3; Fig. 4(d)
+  note: ER quoted at 1550 nm; IL is peak transmission of each curve, wavelength not stated; sweep 1530-1580 nm
+- device_id: wu2023-b
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.2, Sec. 2.1
+  note: nominal width 500 nm
+- device_id: wu2023-b
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2.1
+  note: 70 nm Si slab on one side of the rib
+- device_id: wu2023-b
+  field: electrode_metal
+  value: Ti/TiN/W damascene contacts; Cu metal-1 routing
+  unit: ''
+  basis: measured
+  locator: p.4, Sec. 2.1; Fig. 1
+  note: Ti/TiN/W damascene for contacts; Cu-oxide metal-1 module
+- device_id: wu2023-b
+  field: substrate
+  value: 300 mm SOI wafer, 220 nm Si on 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2.1
+  note: 300 mm SOI, 220 nm crystalline Si, 2 um BOX
+- device_id: wu2023-b
+  field: cladding
+  value: Al2O3 capping on graphene (ALD, thickness not stated) under PMD oxide
+  unit: ''
+  basis: measured
+  locator: p.3-4, Sec. 2.1; Fig. 2(h)
+  note: Al2O3 capping layer thickness not stated
+- device_id: wu2023-b
+  field: epitaxy_or_stack
+  value: single-layer CVD graphene on 5 nm thermally grown gate oxide on doped Si rib waveguide (graphene-oxide-semiconductor); 6-inch graphene transferred to wafer center; 250 nm diameter damascene edge contacts to graphene; p++ Si contacts
+  unit: ''
+  basis: measured
+  locator: p.2-4, Sec. 2.1; Fig. 1, Fig. 2(h)
+  note: 5 nm thermal gate oxide; Graphenea CVD graphene; 250 nm contact holes; p++ Si per Fig. 1 caption
+- device_id: wu2023-b
+  field: length_mm
+  value: 0.05
+  unit: mm
+  basis: measured
+  locator: p.6-7, Sec. 2.3; Table 2
+  note: active length
+- device_id: wu2023-b
+  field: il_onchip_db
+  value: 4.4
+  unit: dB
+  basis: measured
+  locator: p.7, Table 2 (wafer D)
+  note: mean of unbiased devices; grating coupler loss excluded via reference waveguide
+- device_id: wu2023-b
+  field: extinction_ratio_db
+  value: 2.5
+  unit: dB
+  basis: measured
+  locator: p.7, Table 2 (wafer D); Fig. 4(d)
+  note: static ER at 6 Vpp drive, 1550 nm
+- device_id: wu2023-b
+  field: bw3db_ghz
+  value: 14.1
+  unit: GHz
+  basis: measured
+  locator: p.10, Table 3; Fig. 5(b)
+  note: measured EO bandwidth, wafer D, mean
+- device_id: wu2023-b
+  field: capacitance_ff
+  value: 62.1
+  unit: fF
+  basis: derived
+  locator: p.10, Table 3; Fig. 5(c,d)
+  note: C_gos extracted by fitting S11 to equivalent circuit
+- device_id: wu2023-c
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6-7, Sec. 2.3; Fig. 4(d)
+  note: ER quoted at 1550 nm; IL is peak transmission of each curve, wavelength not stated; sweep 1530-1580 nm
+- device_id: wu2023-c
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.2, Sec. 2.1
+  note: nominal width 500 nm
+- device_id: wu2023-c
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2.1
+  note: 70 nm Si slab on one side of the rib
+- device_id: wu2023-c
+  field: electrode_metal
+  value: Ti/TiN/W damascene contacts; Cu metal-1 routing
+  unit: ''
+  basis: measured
+  locator: p.4, Sec. 2.1; Fig. 1
+  note: Ti/TiN/W damascene for contacts; Cu-oxide metal-1 module
+- device_id: wu2023-c
+  field: substrate
+  value: 300 mm SOI wafer, 220 nm Si on 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2.1
+  note: 300 mm SOI, 220 nm crystalline Si, 2 um BOX
+- device_id: wu2023-c
+  field: cladding
+  value: Al2O3 capping on graphene (ALD, thickness not stated) under PMD oxide
+  unit: ''
+  basis: measured
+  locator: p.3-4, Sec. 2.1; Fig. 2(h)
+  note: Al2O3 capping layer thickness not stated
+- device_id: wu2023-c
+  field: epitaxy_or_stack
+  value: single-layer CVD graphene on 5 nm thermally grown gate oxide on doped Si rib waveguide (graphene-oxide-semiconductor); 6-inch graphene transferred to wafer center; 250 nm diameter damascene edge contacts to graphene; p++ Si contacts
+  unit: ''
+  basis: measured
+  locator: p.2-4, Sec. 2.1; Fig. 1, Fig. 2(h)
+  note: 5 nm thermal gate oxide; Graphenea CVD graphene; 250 nm contact holes; p++ Si per Fig. 1 caption
+- device_id: wu2023-c
+  field: length_mm
+  value: 0.075
+  unit: mm
+  basis: measured
+  locator: p.6-7, Sec. 2.3; Table 2
+  note: active length
+- device_id: wu2023-c
+  field: il_onchip_db
+  value: 6.8
+  unit: dB
+  basis: measured
+  locator: p.7, Table 2 (wafer D)
+  note: mean of unbiased devices; grating coupler loss excluded via reference waveguide
+- device_id: wu2023-c
+  field: extinction_ratio_db
+  value: 3.7
+  unit: dB
+  basis: measured
+  locator: p.7, Table 2 (wafer D); Fig. 4(d)
+  note: static ER at 6 Vpp drive, 1550 nm
+- device_id: wu2023-c
+  field: bw3db_ghz
+  value: 12.6
+  unit: GHz
+  basis: measured
+  locator: p.10, Table 3; Fig. 5(b)
+  note: measured EO bandwidth, wafer D, mean
+- device_id: wu2023-c
+  field: capacitance_ff
+  value: 102.8
+  unit: fF
+  basis: derived
+  locator: p.10, Table 3; Fig. 5(c,d)
+  note: C_gos extracted by fitting S11 to equivalent circuit
+- device_id: wu2023-d
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6-7, Sec. 2.3; Fig. 4(d)
+  note: ER quoted at 1550 nm; IL is peak transmission of each curve, wavelength not stated; sweep 1530-1580 nm
+- device_id: wu2023-d
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.2, Sec. 2.1
+  note: nominal width 500 nm
+- device_id: wu2023-d
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2.1
+  note: 70 nm Si slab on one side of the rib
+- device_id: wu2023-d
+  field: electrode_metal
+  value: Ti/TiN/W damascene contacts; Cu metal-1 routing
+  unit: ''
+  basis: measured
+  locator: p.4, Sec. 2.1; Fig. 1
+  note: Ti/TiN/W damascene for contacts; Cu-oxide metal-1 module
+- device_id: wu2023-d
+  field: substrate
+  value: 300 mm SOI wafer, 220 nm Si on 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2.1
+  note: 300 mm SOI, 220 nm crystalline Si, 2 um BOX
+- device_id: wu2023-d
+  field: cladding
+  value: Al2O3 capping on graphene (ALD, thickness not stated) under PMD oxide
+  unit: ''
+  basis: measured
+  locator: p.3-4, Sec. 2.1; Fig. 2(h)
+  note: Al2O3 capping layer thickness not stated
+- device_id: wu2023-d
+  field: epitaxy_or_stack
+  value: single-layer CVD graphene on 5 nm thermally grown gate oxide on doped Si rib waveguide (graphene-oxide-semiconductor); 6-inch graphene transferred to wafer center; 250 nm diameter damascene edge contacts to graphene; p++ Si contacts
+  unit: ''
+  basis: measured
+  locator: p.2-4, Sec. 2.1; Fig. 1, Fig. 2(h)
+  note: 5 nm thermal gate oxide; Graphenea CVD graphene; 250 nm contact holes; p++ Si per Fig. 1 caption
+- device_id: wu2023-d
+  field: length_mm
+  value: 0.1
+  unit: mm
+  basis: measured
+  locator: p.6-7, Sec. 2.3; Table 2
+  note: active length
+- device_id: wu2023-d
+  field: il_onchip_db
+  value: 8.8
+  unit: dB
+  basis: measured
+  locator: p.7, Table 2 (wafer D)
+  note: mean of unbiased devices; grating coupler loss excluded via reference waveguide
+- device_id: wu2023-d
+  field: extinction_ratio_db
+  value: 5
+  unit: dB
+  basis: measured
+  locator: p.7, Table 2 (wafer D); Fig. 4(d)
+  note: static ER at 6 Vpp drive, 1550 nm
+- device_id: wu2023-d
+  field: bw3db_ghz
+  value: 11.2
+  unit: GHz
+  basis: measured
+  locator: p.10, Table 3; Fig. 5(b)
+  note: measured EO bandwidth, wafer D, mean
+- device_id: wu2023-d
+  field: capacitance_ff
+  value: 139.2
+  unit: fF
+  basis: derived
+  locator: p.10, Table 3; Fig. 5(c,d)
+  note: C_gos extracted by fitting S11 to equivalent circuit
+derived: []

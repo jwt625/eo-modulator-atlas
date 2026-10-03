@@ -1,0 +1,83 @@
+paper_id: taghavi2022a
+verified_on: '2026-10-02'
+source_files:
+- references/taghavi2022a/text.md
+- references/taghavi2022a/crossref.json
+- references/taghavi2022a/source.json
+- references/taghavi2022a/figures/page_12.png
+- references/taghavi2022a/figures/page_13.png
+entries:
+- device_id: taghavi2022a-a
+  field: wavelength_nm
+  value: 1620
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.12, Fig. 11
+  note: Fig. 11 axis spans 1619-1621.5 nm with nulls near 1619.55 and 1620.9 nm; text states no operating wavelength
+- device_id: taghavi2022a-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: measured
+  locator: p.12, Fig. 11 caption
+  note: 1 mm arm length; Table 1 (p.5) lists a 0.5 mm arm for the model; the poling-current area on p.12 implies 3 mm
+- device_id: taghavi2022a-a
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.12, text above Fig. 12; Fig. 11
+  note: ER > 20 dB attributed to directional couplers; spectrum recorded at 0 V and 1 V; static inferred from the transmission spectra
+- device_id: taghavi2022a-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: measured
+  locator: p.7, 3.1 Device
+  note: 250 nm / 3 um BOX SOI chip
+- device_id: taghavi2022a-a
+  field: substrate
+  value: SOI chip, 250 nm silicon device layer on 3 um buried oxide
+  basis: measured
+  locator: p.7, 3.1 Device
+  note: SOI chip 250 nm / 3 um BOX
+- device_id: taghavi2022a-a
+  field: cladding
+  value: SEO125B electro-optic polymer (Soluxra), about 450 nm over the chip; 5 nm ALD TiO2 on slot sidewalls
+  basis: measured
+  locator: p.10, 3.2 Material
+  note: Rotating-bubble spin coating gives about 450 nm EOP on top; SEO125B at 6.72 wt percent diluted about 1.5x; 5 nm TiO2 (Fig. 8)
+- device_id: taghavi2022a-a
+  field: electrode_metal
+  value: copper (250 nm on 10 nm titanium adhesion, contact pads; sputtered Cu air bridges)
+  basis: measured
+  locator: p.8, 3.1 Device
+  note: Contact pads Ti 10 nm then Cu 250 nm by e-beam evaporation; air bridge by Cu sputtering
+- device_id: taghavi2022a-a
+  field: epitaxy_or_stack
+  value: 40 nm vertical slot between two 250 nm wide, 250 nm high silicon rails (Table 1); 50 nm pedestal named in the poling paragraph; 5 nm TiO2 (ALD, 150 C) on all surfaces including the slot; air-bridge interconnects over the waveguide (1.3 um MaN 2410 reflow support); tunable directional couplers protected by FoX; lightly doped silicon
+  basis: measured
+  locator: p.5 Table 1; p.7-8; p.11 Fig. 9
+  note: Slot 40 nm, rail width 250 nm each, height 250 nm, TiO2 5 nm; 50 nm pedestal on p.11
+- device_id: taghavi2022a-sim
+  field: vpil_dc_vcm
+  value: 0.035
+  unit: V*cm
+  basis: simulated
+  locator: p.14, Section 4; p.14 Conclusion
+  note: COMSOL electrostatic and electric simulation predicts VpiL about 0.35 V.mm with carefully doped Si; converted to V*cm
+- device_id: taghavi2022a-sim
+  field: bw3db_ghz
+  value: 39
+  unit: GHz
+  basis: simulated
+  locator: p.14, Section 4; p.14 Conclusion
+  note: Predicted 39 GHz bandwidth for doped Si; reference frequency, load and length not stated
+derived:
+- device_id: taghavi2022a-a
+  field: vpi_dc_v
+  value: 4.79
+  formula: Vpi = FSR / (2 * dlambda_per_V) = 1.15 nm / (2 * 0.12 nm/V), VpiL about 4.8 V.mm at 1 mm; render reading of the nulls (about 1.3 nm) gives about 5.4 V.mm; not in the CSV because the abstract bound VpiL below 1.2 V.mm contradicts it (factor 4.0) and convention and drive are unstated
+  inputs:
+  - FSR 1.15 nm (Fig. 11)
+  - shift 120 pm per 1 V (Fig. 11)

@@ -1,0 +1,183 @@
+paper_id: luan2026a
+verified_on: '2026-10-02'
+source_files:
+- references/luan2026a/text.md
+- references/luan2026a/figures/page_04.png
+- references/luan2026a/figures/page_05.png
+entries:
+- device_id: luan2026a-a
+  field: rib_width_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.2; Sec. II
+  note: 250 nm waveguide width on each side of the 50 nm slot (design)
+- device_id: luan2026a-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.6, Methods
+  note: 2 um SiO2 buried layer
+- device_id: luan2026a-a
+  field: electrode_metal
+  value: Ni/Au 10 nm/100 nm
+  unit: ''
+  basis: measured
+  locator: p.6, Methods
+  note: 10 nm Ni and 100 nm Au, e-beam evaporation, lift-off
+- device_id: luan2026a-a
+  field: substrate
+  value: commercial high-resistivity SOI, 220 nm Si on 2 um SiO2 BOX
+  unit: ''
+  basis: measured
+  locator: p.4, p.6
+  note: high-resistivity SOI, 220 nm Si, 2 um BOX
+- device_id: luan2026a-a
+  field: cladding
+  value: 35 nm ALD Al2O3 gate dielectric (1 nm Al seed); top Al2O3 opened over grating and pads
+  unit: ''
+  basis: measured
+  locator: p.6, Methods
+  note: 35 nm Al2O3 by ALD at 200 C; design section states 50 nm dielectric (Fig. 2(b)), Methods 35 nm
+- device_id: luan2026a-a
+  field: epitaxy_or_stack
+  value: double-layer single-layer CVD graphene with 110 nm partial overlap over a 50 nm air slot between two 250 nm wide Si strips (220 nm Si); 5-7 nm Al2O3 spacer; PECVD SiO2 planarized by CMP; electrode-to-waveguide distance 700 nm; lumped electrodes, graphene-metal overlap 700 nm
+  unit: ''
+  basis: measured
+  locator: p.2-4, p.6; Fig. 1, Fig. 2
+  note: graphene overlap 110 nm; electrode distance 700 nm
+- device_id: luan2026a-a
+  field: length_mm
+  value: 0.006
+  unit: mm
+  basis: measured
+  locator: p.2, p.6
+  note: compact 6 um graphene length; device-specific length not separately stated
+- device_id: luan2026a-a
+  field: wavelength_nm
+  value: 2000
+  unit: nm
+  basis: measured
+  locator: p.4-5
+  note: DFB laser at 2000 nm for S21 and static band characterization
+- device_id: luan2026a-a
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.2 Introduction; p.5; Fig. 3(d)
+  note: beyond 40 GHz, bound; setup limited
+- device_id: luan2026a-a
+  field: bw_measured_to_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(d)
+  note: 20-40 GHz via OSA sideband method
+- device_id: luan2026a-a
+  field: il_onchip_db
+  value: 0.6
+  unit: dB
+  basis: measured
+  locator: p.2, Introduction
+  note: low insertion loss of 0.6 dB at 2 um; definition not stated
+- device_id: luan2026a-a
+  field: max_line_rate_gbps
+  value: 25
+  unit: Gb/s
+  basis: measured
+  locator: p.5; Fig. 3(e)
+  note: open eye at 25 Gbit/s, photodetector limited
+- device_id: luan2026a-a
+  field: modulation_format
+  value: NRZ, PRBS 2^15-1, 25 Gbit/s open eye (photodetector limited)
+  unit: ''
+  basis: measured
+  locator: p.5
+  note: NRZ eye with PRBS 2^15-1
+- device_id: luan2026a-b
+  field: rib_width_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.2; Sec. II
+  note: 250 nm waveguide width on each side of the 50 nm slot (design)
+- device_id: luan2026a-b
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.6, Methods
+  note: 2 um SiO2 buried layer
+- device_id: luan2026a-b
+  field: electrode_metal
+  value: Ni/Au 10 nm/100 nm
+  unit: ''
+  basis: measured
+  locator: p.6, Methods
+  note: 10 nm Ni and 100 nm Au, e-beam evaporation, lift-off
+- device_id: luan2026a-b
+  field: substrate
+  value: commercial high-resistivity SOI, 220 nm Si on 2 um SiO2 BOX
+  unit: ''
+  basis: measured
+  locator: p.4, p.6
+  note: high-resistivity SOI, 220 nm Si, 2 um BOX
+- device_id: luan2026a-b
+  field: cladding
+  value: 35 nm ALD Al2O3 gate dielectric (1 nm Al seed); top Al2O3 opened over grating and pads
+  unit: ''
+  basis: measured
+  locator: p.6, Methods
+  note: 35 nm Al2O3 by ALD at 200 C; design section states 50 nm dielectric (Fig. 2(b)), Methods 35 nm
+- device_id: luan2026a-b
+  field: epitaxy_or_stack
+  value: double-layer single-layer CVD graphene with 110 nm partial overlap over a 50 nm air slot between two 250 nm wide Si strips (220 nm Si); 5-7 nm Al2O3 spacer; PECVD SiO2 planarized by CMP; electrode-to-waveguide distance 700 nm; lumped electrodes, graphene-metal overlap 700 nm
+  unit: ''
+  basis: measured
+  locator: p.2-4, p.6; Fig. 1, Fig. 2
+  note: graphene overlap 110 nm; electrode distance 700 nm
+- device_id: luan2026a-b
+  field: length_mm
+  value: 0.006
+  unit: mm
+  basis: measured
+  locator: p.2, p.6
+  note: compact 6 um graphene length; device-specific length not separately stated
+- device_id: luan2026a-b
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: p.2 Introduction; p.5; Fig. 4(d)
+  note: beyond 70 GHz, bound; VNA limited
+- device_id: luan2026a-b
+  field: bw_measured_to_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 4(d)
+  note: 70 GHz VNA and photodetector
+- device_id: luan2026a-b
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.5
+  note: paper writes amplified to "2-V" without "Vpp"; entered as 2 V
+- device_id: luan2026a-b
+  field: max_line_rate_gbps
+  value: 50
+  unit: Gb/s
+  basis: measured
+  locator: p.5; Fig. 4(e)
+  note: open eye at 50 Gbit/s, setup limited
+- device_id: luan2026a-b
+  field: modulation_format
+  value: NRZ, PRBS 2^15-1, 50 Gbit/s open eye (setup limited)
+  unit: ''
+  basis: measured
+  locator: p.5
+  note: NRZ eye with PRBS 2^15-1
+derived: []
