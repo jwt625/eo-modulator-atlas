@@ -1,0 +1,9 @@
+org_name,org_type,country,region,parent_org,notes
+City University of Hong Kong,university,HK,east_asia,,"Kowloon, Hong Kong; Department of Electrical Engineering and State Key Laboratory of Terahertz and Millimeter Waves"
+The Hong Kong University of Science and Technology,university,HK,east_asia,,Parent of the fabrication facility named in the chen2024 acknowledgements (paper writes HKUST; acronym expanded); not an author affiliation
+Nanosystem Fabrication Facility,facility,HK,east_asia,The Hong Kong University of Science and Technology,Acknowledged for device fabrication in chen2024 (paper writes Nanosystem Fabrication Facility (CWB) of HKUST); country from host institution
+Harvard University,university,US,north_america,,"Cambridge, MA; John A. Paulson School of Engineering and Applied Sciences"
+Center for Nanoscale Systems,facility,US,north_america,Harvard University,Acknowledgements: device fabrication performed at the center for nanoscale systems (CNS) at Harvard University; country from host institution
+Freedom Photonics,company,US,north_america,,"41 Aero Camino, Goleta, CA; name as written in the affiliation"
+Nokia Bell Labs,company,US,north_america,,"Murray Hill, NJ"
+FIRST cleanroom of ETH Zurich,facility,CH,europe,ETH Zurich,Cleanroom named in acknowledgements as written in the paper (acronym not expanded there); country from host institution

@@ -1,0 +1,308 @@
+paper_id: sabatti2024
+verified_on: '2026-10-02'
+source_files:
+- references/sabatti2024/text.md
+- references/sabatti2024/figures/page_02.png
+- references/sabatti2024/figures/page_03.png
+- references/sabatti2024/crossref.json
+- references/sabatti2024/source.json
+entries:
+- device_id: sabatti2024-fh
+  field: length_mm
+  value: 7.3
+  unit: mm
+  basis: design_target
+  locator: p.2 Sec. 3B
+  note: stated as the length of the MZI modulator; electrode length not separately stated
+- device_id: sabatti2024-fh
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: optimal ground-signal gap from the authors FEM index/impedance matching study
+- device_id: sabatti2024-fh
+  field: signal_width_um
+  value: 30
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: signal electrode width from the same study
+- device_id: sabatti2024-fh
+  field: electrode_thickness_um
+  value: 0.85
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: 850 nm Au
+- device_id: sabatti2024-fh
+  field: electrode_metal
+  value: Au (5 nm Cr adhesion)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: e-beam evaporation, direct laser writing lift-off
+- device_id: sabatti2024-fh
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 5A; Fig. 2(b)
+  note: nominal 300 nm 5 percent MgO-doped LN; measured 304-312 nm across the device region
+- device_id: sabatti2024-fh
+  field: etch_depth_nm
+  value: 235
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: stated with the PPLN waveguide design; optical layer defined in one etch step, MZI-section etch
+    not separately stated
+- device_id: sabatti2024-fh
+  field: rib_width_nm
+  value: 1150
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: PPLN-waveguide top width design value from Sec. 2, applied to the MZM rows
+- device_id: sabatti2024-fh
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: 2 um SiO2 insulation layer
+- device_id: sabatti2024-fh
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: silicon handle
+- device_id: sabatti2024-fh
+  field: epitaxy_or_stack
+  value: 300 nm 5% MgO-doped LN on 2 um SiO2 on Si handle
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: commercial thin-film wafer
+- device_id: sabatti2024-fh
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: coplanar waveguide electrodes in a push-pull configuration
+- device_id: sabatti2024-fh
+  field: wavelength_nm
+  value: 1536
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 3A; Fig. 2(a)
+  note: fundamental harmonic operating wavelength
+- device_id: sabatti2024-fh
+  field: vpi_dc_v
+  value: 2.5
+  unit: V
+  basis: measured
+  locator: p.2 Sec. 3B; Fig. 3(b)
+  note: low-frequency voltage sweep, electrodes not terminated
+- device_id: sabatti2024-fh
+  field: bw3db_ghz
+  value: 60
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. 3B; Sec. 4; Fig. 3(c)
+  note: 'authors: FH bandwidth beyond setup capability; conclusion states 60 GHz; no crossing seen'
+- device_id: sabatti2024-fh
+  field: bw_measured_to_ghz
+  value: 60
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. 3B; Fig. 3(c)
+  note: VNA sweep 20 MHz to 60 GHz
+- device_id: sabatti2024-fh
+  field: extinction_ratio_db
+  value: 23
+  unit: dB
+  basis: measured
+  locator: p.2 Sec. 3B; Fig. 3(b)
+  note: static ER of the fundamental
+- device_id: sabatti2024-fh
+  field: n_rf
+  value: 2.17
+  unit: '1'
+  basis: simulated
+  locator: p.2 Sec. 2
+  note: FEM, microwave index at 50 GHz
+- device_id: sabatti2024-fh
+  field: ng_opt
+  value: 2.19
+  unit: '1'
+  basis: simulated
+  locator: p.2 Sec. 2
+  note: FEM, group index at the FH wavelength
+- device_id: sabatti2024-fh
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2, 3B
+  note: authors state push-pull CPW electrodes and a single Vpi for the MZI; convention label is ours
+- device_id: sabatti2024-sh
+  field: length_mm
+  value: 7.3
+  unit: mm
+  basis: design_target
+  locator: p.2 Sec. 3B
+  note: stated as the length of the MZI modulator; electrode length not separately stated
+- device_id: sabatti2024-sh
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: optimal ground-signal gap from the authors FEM index/impedance matching study
+- device_id: sabatti2024-sh
+  field: signal_width_um
+  value: 30
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: signal electrode width from the same study
+- device_id: sabatti2024-sh
+  field: electrode_thickness_um
+  value: 0.85
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: 850 nm Au
+- device_id: sabatti2024-sh
+  field: electrode_metal
+  value: Au (5 nm Cr adhesion)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: e-beam evaporation, direct laser writing lift-off
+- device_id: sabatti2024-sh
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 5A; Fig. 2(b)
+  note: nominal 300 nm 5 percent MgO-doped LN; measured 304-312 nm across the device region
+- device_id: sabatti2024-sh
+  field: etch_depth_nm
+  value: 235
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: stated with the PPLN waveguide design; optical layer defined in one etch step, MZI-section etch
+    not separately stated
+- device_id: sabatti2024-sh
+  field: rib_width_nm
+  value: 1150
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: PPLN-waveguide top width design value from Sec. 2, applied to the MZM rows
+- device_id: sabatti2024-sh
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: 2 um SiO2 insulation layer
+- device_id: sabatti2024-sh
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: silicon handle
+- device_id: sabatti2024-sh
+  field: epitaxy_or_stack
+  value: 300 nm 5% MgO-doped LN on 2 um SiO2 on Si handle
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 5A
+  note: commercial thin-film wafer
+- device_id: sabatti2024-sh
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: coplanar waveguide electrodes in a push-pull configuration
+- device_id: sabatti2024-sh
+  field: wavelength_nm
+  value: 768
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 3A; Fig. 2(a)
+  note: second harmonic of the 1536 nm modulated signal
+- device_id: sabatti2024-sh
+  field: vpi_dc_v
+  value: 2.5
+  unit: V
+  basis: measured
+  locator: p.2 Sec. 3B; Fig. 3(b)
+  note: 'authors: Vpi of FH and upconverted signal is 2.5 V; SH curve in Fig. 3(b) overlaps FH squared'
+- device_id: sabatti2024-sh
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. 3B; p.4 Sec. 4; abstract; Fig. 3(c)
+  note: Authors' claim, attributed to VNA noise floor (p.3) or photodiode range (p.4); SH trace dips to
+    about -3.9 dB near 36 GHz.
+- device_id: sabatti2024-sh
+  field: bw_measured_to_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. 3B; Fig. 3(c)
+  note: VNA sweep 20 MHz to 60 GHz; the 768 nm (SH) trace ends at 40 GHz, only the FH trace continues
+    to 60 GHz.
+- device_id: sabatti2024-sh
+  field: extinction_ratio_db
+  value: 46
+  unit: dB
+  basis: measured
+  locator: p.2 Sec. 3B; Fig. 3(b)
+  note: static ER of the second harmonic, doubled in dB
+- device_id: sabatti2024-sh
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2, 3B
+  note: authors state push-pull CPW electrodes and a single Vpi for the MZI; convention label is ours
+- device_id: sabatti2024-fh
+  field: bw3db_reference
+  value: other
+  unit: ''
+  basis: derived
+  locator: Fig. 3(c); p.3 Sec. 3B
+  note: Trace normalized to 0 dB at the first sweep point; the text does not state the reference.
+- device_id: sabatti2024-fh
+  field: bw3db_reference_freq_ghz
+  value: 0.02
+  unit: GHz
+  basis: derived
+  locator: p.3 Sec. 3B; Fig. 3(c)
+  note: Sweep starts at 20 MHz; first point of the trace sits at 0 dB.
+- device_id: sabatti2024-sh
+  field: bw3db_reference
+  value: other
+  unit: ''
+  basis: derived
+  locator: Fig. 3(c); p.3 Sec. 3B
+  note: Trace normalized to 0 dB at the first sweep point; the text does not state the reference.
+- device_id: sabatti2024-sh
+  field: bw3db_reference_freq_ghz
+  value: 0.02
+  unit: GHz
+  basis: derived
+  locator: p.3 Sec. 3B; Fig. 3(c)
+  note: Sweep starts at 20 MHz; first point of the trace sits at 0 dB.
+derived: []

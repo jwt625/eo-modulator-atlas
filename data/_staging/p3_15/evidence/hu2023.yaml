@@ -1,0 +1,142 @@
+paper_id: hu2023
+verified_on: '2026-10-02'
+source_files:
+- references/hu2023/text.md
+- references/hu2023/source.json
+- references/hu2023/crossref.json
+- references/hu2023/figures/page_03.png
+- references/hu2023/figures/img_p08_1.png
+- references/hu2023/figures/img_p10_1.png
+entries:
+- device_id: hu2023-a
+  field: wavelength_nm
+  value: 1312.0
+  unit: nm
+  basis: measured
+  locator: p.8, Fig. 5(a); p.12 Methods
+  note: Laser wavelength of the optimized operating point.
+- device_id: hu2023-a
+  field: vpil_dc_vcm
+  value: 0.8
+  unit: V*cm
+  basis: author_estimate
+  locator: p.3, Design of the Si-MRM
+  note: Stated as 'as high as 0.8 V cm' without data, bias or definition; deferred to Ref. [34]; not tied
+    to the -0.9 V point.
+- device_id: hu2023-a
+  field: bw3db_ghz
+  value: 42.5
+  unit: GHz
+  basis: measured
+  locator: p.8, Fig. 5(b)
+  note: System link response at -0.9 V; text says approximately 42.5 GHz.
+- device_id: hu2023-a
+  field: fsr_nm
+  value: 7
+  unit: nm
+  basis: measured
+  locator: p.3
+  note: Measured FSR near 1310 nm.
+- device_id: hu2023-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: derived
+  locator: p.3, Fig. 1(b)
+  note: 150 nm etch plus 70 nm slab; text wording '220-nm width' read as thickness.
+- device_id: hu2023-a
+  field: etch_depth_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: ''
+- device_id: hu2023-a
+  field: rib_width_nm
+  value: 420
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Ring and bus waveguide width.
+- device_id: hu2023-a
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: ''
+- device_id: hu2023-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: 2 um buried oxide.
+- device_id: hu2023-a
+  field: substrate
+  value: SOI with 2 um buried oxide (standard CMOS process, foundry not named)
+  unit: ''
+  basis: design_target
+  locator: p.3
+  note: ''
+- device_id: hu2023-a
+  field: epitaxy_or_stack
+  value: Lateral P-N junction in the racetrack ring (doping about 3e18 cm^-3), P+/N+ contacts; ring radius
+    8 um; 5 um coupling straight; 280 nm gap to bus; TiN heater with 0.1 nm/mW
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1
+  note: Junction length and doping profile not given.
+- device_id: hu2023-a
+  field: drive_vpp_v
+  value: 0.6
+  unit: V
+  basis: derived
+  locator: p.8, Fig. 5 caption; p.9, Fig. 6
+  note: Vpp stated for bias and wavelength scans and the transient; the 302 Gb/s DMT run states none,
+    so 0.6 V is carried over.
+- device_id: hu2023-a
+  field: max_baud_gbd
+  value: 60
+  unit: GBd
+  basis: measured
+  locator: p.10, Fig. 7(b)
+  note: BPL-DMT, back-to-back.
+- device_id: hu2023-a
+  field: modulation_format
+  value: BPL-DMT, 256 subcarriers; 302 Gb/s back-to-back at 60 GBaud; 300 Gb/s over 1 km SSMF; Bi-GRU
+    equalizer; BER under the 20% SD-FEC threshold 2e-2
+  unit: ''
+  basis: measured
+  locator: p.10-11, Fig. 7
+  note: ''
+- device_id: hu2023-a
+  field: max_line_rate_gbps
+  value: 302
+  unit: Gb/s
+  basis: measured
+  locator: p.10-11, Fig. 7(b)
+  note: Back-to-back; after removing 8 zero-padded subcarriers.
+- device_id: hu2023-b
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: author_estimate
+  locator: p.1 abstract; p.2; p.3
+  note: Authors' optical (peaking-enhanced) -3 dB bandwidth beyond 67 GHz at 32 GHz detuning; no S21 or
+    measurement range shown.
+- device_id: hu2023-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.8, Fig. 5(b)
+  note: Authors do not state the reference; Fig. 5(b) response is normalized at the 1 GHz plot start.
+- device_id: hu2023-b
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.1; p.3
+  note: Authors do not state the reference frequency of the over 67 GHz optical bandwidth.
+derived: []

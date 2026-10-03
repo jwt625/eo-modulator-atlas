@@ -1,0 +1,315 @@
+paper_id: sia2022
+verified_on: '2026-10-02'
+source_files:
+- references/sia2022/text.md
+- references/sia2022/source.json
+- references/sia2022/figures/page_04.png
+- references/sia2022/figures/page_05.png
+entries:
+- device_id: sia2022-a
+  field: wavelength_nm
+  value: 1970
+  unit: nm
+  basis: measured
+  locator: p.3, Fig. 4(a); p.4
+  note: Operating wavelength stated as about 1970 nm.
+- device_id: sia2022-a
+  field: bias_for_vpi_v
+  value: -1
+  unit: V
+  basis: measured
+  locator: p.4, Fig. 4(d); p.5
+  note: Reverse bias magnitude as quoted by the authors.
+- device_id: sia2022-a
+  field: vpil_dc_vcm
+  value: 0.7
+  unit: V*cm
+  basis: measured
+  locator: p.1 abstract; p.4, Fig. 4(d)
+  note: Lower end of the stated 0.70 to 1.25 V cm range, at Vbias = 1 V.
+- device_id: sia2022-a
+  field: bw3db_ghz
+  value: 16.2
+  unit: GHz
+  basis: measured
+  locator: p.5, Fig. 6
+  note: Crossing of -3 dB observed at 16.2 GHz.
+- device_id: sia2022-a
+  field: bw_measured_to_ghz
+  value: 17.5
+  unit: GHz
+  basis: measured
+  locator: p.4; p.5, Fig. 6
+  note: Measurement limited by the 17.5 GHz photodetector.
+- device_id: sia2022-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: 220 nm SOI.
+- device_id: sia2022-a
+  field: rib_width_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: Rib and strip waveguide width 0.6 um; rib height stated as 0.09 um.
+- device_id: sia2022-a
+  field: epitaxy_or_stack
+  value: Racetrack phase shifter with lateral P-N junction, P and N doping about 5e17 cm^-3 at the rib
+    center, P++/N++ 1.0 um from the center; 90 nm rib height (as stated), 10 um wide rib over 30 um taper;
+    overcoupled racetrack (gap 0.2 um, 2.25 um straight)
+  unit: ''
+  basis: design_target
+  locator: p.2-3
+  note: Slab thickness not separately stated.
+- device_id: sia2022-a
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.2; p.4
+  note: Only the racetrack phase shifter on one arm is biased and driven; the authors do not state a drive
+    scheme.
+- device_id: sia2022-a
+  field: extinction_ratio_db
+  value: 21.5
+  unit: dB
+  basis: measured
+  locator: p.3, Fig. 4(a)
+  note: Static ER of the resonance near 1970 nm at Vbias = 0 V.
+- device_id: sia2022-a
+  field: fsr_nm
+  value: 7.7
+  unit: nm
+  basis: measured
+  locator: p.3, Fig. 4(a)
+  note: At Vbias = 0 V.
+- device_id: sia2022-b
+  field: wavelength_nm
+  value: 1970
+  unit: nm
+  basis: measured
+  locator: p.3, Fig. 4(a); p.4
+  note: Operating wavelength stated as about 1970 nm.
+- device_id: sia2022-b
+  field: bias_for_vpi_v
+  value: -3
+  unit: V
+  basis: measured
+  locator: p.4, Fig. 4(d); p.5
+  note: Reverse bias magnitude as quoted by the authors.
+- device_id: sia2022-b
+  field: vpil_dc_vcm
+  value: 0.8
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(d)
+  note: Read from the Fig. 4(d) marker at 3 V (about 0.795).
+- device_id: sia2022-b
+  field: bw3db_ghz
+  value: 17.5
+  unit: GHz
+  basis: measured
+  locator: p.4; p.5, Fig. 6
+  note: No -3 dB crossing within the measured range; photodetector-limited.
+- device_id: sia2022-b
+  field: bw_measured_to_ghz
+  value: 17.5
+  unit: GHz
+  basis: measured
+  locator: p.4; p.5, Fig. 6
+  note: Measurement limited by the 17.5 GHz photodetector.
+- device_id: sia2022-b
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: 220 nm SOI.
+- device_id: sia2022-b
+  field: rib_width_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: Rib and strip waveguide width 0.6 um; rib height stated as 0.09 um.
+- device_id: sia2022-b
+  field: epitaxy_or_stack
+  value: Racetrack phase shifter with lateral P-N junction, P and N doping about 5e17 cm^-3 at the rib
+    center, P++/N++ 1.0 um from the center; 90 nm rib height (as stated), 10 um wide rib over 30 um taper;
+    overcoupled racetrack (gap 0.2 um, 2.25 um straight)
+  unit: ''
+  basis: design_target
+  locator: p.2-3
+  note: Slab thickness not separately stated.
+- device_id: sia2022-b
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.2; p.4
+  note: Only the racetrack phase shifter on one arm is biased and driven; the authors do not state a drive
+    scheme.
+- device_id: sia2022-c
+  field: wavelength_nm
+  value: 1970
+  unit: nm
+  basis: measured
+  locator: p.3, Fig. 4(a); p.4
+  note: Operating wavelength stated as about 1970 nm.
+- device_id: sia2022-c
+  field: bias_for_vpi_v
+  value: -5
+  unit: V
+  basis: measured
+  locator: p.4, Fig. 4(d); p.5
+  note: Reverse bias magnitude as quoted by the authors.
+- device_id: sia2022-c
+  field: vpil_dc_vcm
+  value: 0.93
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(d)
+  note: Read from the Fig. 4(d) marker at 5 V.
+- device_id: sia2022-c
+  field: bw3db_ghz
+  value: 17.5
+  unit: GHz
+  basis: author_estimate
+  locator: p.4
+  note: Authors' conclusion that bandwidth exceeds 17.5 GHz above 3 V; no spectrum shown at this bias.
+- device_id: sia2022-c
+  field: bw_measured_to_ghz
+  value: 17.5
+  unit: GHz
+  basis: measured
+  locator: p.4; p.5, Fig. 6
+  note: Measurement limited by the 17.5 GHz photodetector.
+- device_id: sia2022-c
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: 220 nm SOI.
+- device_id: sia2022-c
+  field: rib_width_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: Rib and strip waveguide width 0.6 um; rib height stated as 0.09 um.
+- device_id: sia2022-c
+  field: epitaxy_or_stack
+  value: Racetrack phase shifter with lateral P-N junction, P and N doping about 5e17 cm^-3 at the rib
+    center, P++/N++ 1.0 um from the center; 90 nm rib height (as stated), 10 um wide rib over 30 um taper;
+    overcoupled racetrack (gap 0.2 um, 2.25 um straight)
+  unit: ''
+  basis: design_target
+  locator: p.2-3
+  note: Slab thickness not separately stated.
+- device_id: sia2022-c
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.2; p.4
+  note: Only the racetrack phase shifter on one arm is biased and driven; the authors do not state a drive
+    scheme.
+- device_id: sia2022-d
+  field: wavelength_nm
+  value: 1970
+  unit: nm
+  basis: measured
+  locator: p.3, Fig. 4(a); p.4
+  note: Operating wavelength stated as about 1970 nm.
+- device_id: sia2022-d
+  field: bias_for_vpi_v
+  value: -7
+  unit: V
+  basis: measured
+  locator: p.4, Fig. 4(d); p.5
+  note: Reverse bias magnitude as quoted by the authors.
+- device_id: sia2022-d
+  field: vpil_dc_vcm
+  value: 1.13
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(d)
+  note: Read from the Fig. 4(d) marker at 7 V (about 1.125).
+- device_id: sia2022-d
+  field: bw3db_ghz
+  value: 17.5
+  unit: GHz
+  basis: author_estimate
+  locator: p.4
+  note: Authors' conclusion that bandwidth exceeds 17.5 GHz above 3 V; no spectrum shown at this bias.
+- device_id: sia2022-d
+  field: bw_measured_to_ghz
+  value: 17.5
+  unit: GHz
+  basis: measured
+  locator: p.4; p.5, Fig. 6
+  note: Measurement limited by the 17.5 GHz photodetector.
+- device_id: sia2022-d
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: 220 nm SOI.
+- device_id: sia2022-d
+  field: rib_width_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: Rib and strip waveguide width 0.6 um; rib height stated as 0.09 um.
+- device_id: sia2022-d
+  field: epitaxy_or_stack
+  value: Racetrack phase shifter with lateral P-N junction, P and N doping about 5e17 cm^-3 at the rib
+    center, P++/N++ 1.0 um from the center; 90 nm rib height (as stated), 10 um wide rib over 30 um taper;
+    overcoupled racetrack (gap 0.2 um, 2.25 um straight)
+  unit: ''
+  basis: design_target
+  locator: p.2-3
+  note: Slab thickness not separately stated.
+- device_id: sia2022-d
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.2; p.4
+  note: Only the racetrack phase shifter on one arm is biased and driven; the authors do not state a drive
+    scheme.
+- device_id: sia2022-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.5, Fig. 6
+  note: Fig. 6 response normalized near its lowest frequency (about 1.5 GHz); authors state no reference.
+- device_id: sia2022-b
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.5, Fig. 6
+  note: Fig. 6 response normalized near its lowest frequency (about 1.5 GHz); authors state no reference.
+- device_id: sia2022-c
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.5, Fig. 6
+  note: Fig. 6 response normalized near its lowest frequency (about 1.5 GHz); authors state no reference.
+- device_id: sia2022-d
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.5, Fig. 6
+  note: Fig. 6 response normalized near its lowest frequency (about 1.5 GHz); authors state no reference.
+derived: []

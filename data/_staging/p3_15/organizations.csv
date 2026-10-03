@@ -1,0 +1,21 @@
+org_name,org_type,country,region,parent_org,notes
+Oregon State University,university,US,north_america,,"Corvallis, Oregon; School of Electrical Engineering and Computer Science; cleanroom (Materials Synthesis and Characterization Facility) used for the TCO gate processing; hsu2024 p.1, p.12"
+Baylor University,university,US,north_america,,"Waco, Texas; Department of Electrical and Computer Engineering; hsu2024 p.1"
+Intel Corporation,company,US,north_america,,"Santa Clara, California; photonics fab fabricated the passive Si microring on 300 mm SOI; hsu2024 p.1, p.6"
+Fudan University,university,CN,east_asia,,"Shanghai; Key Laboratory for Information Science of Electromagnetic Waves (MoE), affiliation 1; hu2023 p.1"
+China Information and Communication Technologies Group Corporation,company,CN,east_asia,,Wuhan; State Key Laboratory of Optical Communication Technologies and Networks and National Information Optoelectronics Innovation Center; paper writes 'China Information Communication Technologies Group Corporation'; hu2023 p.1
+Peng Cheng Laboratory,research_institute,CN,east_asia,,Shenzhen; affiliation 4; hu2023 p.1
+Shanghai Jiao Tong University,university,CN,east_asia,,Shanghai; State Key Laboratory of Advanced Optical Communication Systems and Networks; shen2021 p.1
+Harbin Institute of Technology (Shenzhen),university,CN,east_asia,,Shenzhen; Department of Electronic and Information Engineering; shen2021 p.1
+Advanced Micro Foundry,foundry,SG,southeast_asia,,"Singapore; named as fabricating the silicon devices (shen2021 p.2, yue2023 high-speed device p.11); country from the text, address not given"
+Hewlett Packard Enterprise,company,US,north_america,,"Milpitas, California; Hewlett Packard Labs (Large-Scale Integrated Photonics group); huang2026a p.1"
+Texas A&M University,university,US,north_america,,"College Station, Texas; Department of Electrical and Computer Engineering; huang2026a p.1"
+Semiconductor Manufacturing International Corporation,foundry,CN,east_asia,,"Named as fabricating the low-speed silicon DDMZM (yue2023 p.8, p.15); location not given in the paper, country entered from outside the paper"
+Yokohama National University,university,JP,east_asia,,"Yokohama, Kanagawa; Department of Electrical and Computer Engineering; kawahara2025 p.1"
+National Institute of Advanced Industrial Science and Technology,research_institute,JP,east_asia,,"Tsukuba, Ibaraki; paper abbreviation AIST; fabricated the 300 mm SOI photonic chip; kawahara2025 p.1, p.4"
+National Institute of Information and Communications Technology,research_institute,JP,east_asia,,"Koganei, Tokyo; paper abbreviation NICT; kawahara2025 p.1"
+IHP - Leibniz-Institut für innovative Mikroelektronik,research_institute,DE,europe,,Fabricated the SG13G2 130 nm BiCMOS driver; kawahara2025 p.4 writes 'Leibniz Institute for High Performance Microelectronics (IHP)'; same entry name as other staged batches
+Nanyang Technological University,university,SG,southeast_asia,,Singapore; School of Electrical and Electronic Engineering and Temasek Laboratories; sia2022 p.1
+University of Southampton,university,GB,europe,,Southampton; Optoelectronics Research Centre; sia2022 p.1
+Hainan Normal University,university,CN,east_asia,,Haikou; School of Physics and Electronic Engineering; sia2022 p.1
+CompoundTek Pte,foundry,SG,southeast_asia,,Singapore; author affiliation of K. S. Ang (sia2022 p.1); not named as fabricator in sia2022; same entry as other staged batches

@@ -1,0 +1,203 @@
+paper_id: yue2023
+verified_on: '2026-10-02'
+source_files:
+- references/yue2023/text.md
+- references/yue2023/source.json
+- references/yue2023/figures/page_11.png
+- references/yue2023/figures/page_14.png
+entries:
+- device_id: yue2023-a
+  field: length_mm
+  value: 3
+  unit: mm
+  basis: design_target
+  locator: p.9; p.15
+  note: Each phase shifter 3 mm, 91% fill factor.
+- device_id: yue2023-a
+  field: il_onchip_db
+  value: 4
+  unit: dB
+  basis: measured
+  locator: p.9; p.15
+  note: Device insertion loss; grating couplers (4.1 dB each) listed separately.
+- device_id: yue2023-a
+  field: extinction_ratio_db
+  value: 2.29
+  unit: dB
+  basis: measured
+  locator: p.11, Fig. 6
+  note: Dynamic ER of the 90 GBd eye at EF = 0.75 (eye-diagram annotation).
+- device_id: yue2023-a
+  field: drive_vpp_v
+  value: 3.6
+  unit: V
+  basis: measured
+  locator: p.10
+  note: High-speed phase shifter drive; low-speed shifter 2.7 Vpp at EF 0.75.
+- device_id: yue2023-a
+  field: max_baud_gbd
+  value: 90
+  unit: GBd
+  basis: measured
+  locator: p.11, Fig. 6
+  note: Largest open-eye OOK baud rate in the low-speed experiment (EF = 0.75).
+- device_id: yue2023-a
+  field: modulation_format
+  value: OOK, no DSP; open eyes 30 GBd (EF 0), 60 GBd (EF 0.36), 80 GBd (EF 0.61), 90 GBd (EF 0.75)
+  unit: ''
+  basis: measured
+  locator: p.10-11, Fig. 6
+  note: Eye diagrams on a digital serial analyzer.
+- device_id: yue2023-a
+  field: max_line_rate_gbps
+  value: 90
+  unit: Gb/s
+  basis: derived
+  locator: p.11, Fig. 6
+  note: OOK carries 1 bit per symbol; the paper quotes baud only.
+- device_id: yue2023-a
+  field: rib_width_nm
+  value: 450
+  unit: nm
+  basis: design_target
+  locator: p.9
+  note: ''
+- device_id: yue2023-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.15
+  note: Gap between signal and ground lines.
+- device_id: yue2023-a
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.15
+  note: ''
+- device_id: yue2023-a
+  field: substrate
+  value: silicon-on-insulator (Semiconductor Manufacturing International Corporation CMOS process)
+  unit: ''
+  basis: design_target
+  locator: p.8; p.15
+  note: ''
+- device_id: yue2023-a
+  field: epitaxy_or_stack
+  value: Two identical lateral PN carrier-depletion phase shifters (junction offset 50 nm towards N),
+    intrinsic gaps at 91% fill factor, heavily doped regions 750 nm from the waveguide edge, 50 um arm
+    path difference
+  unit: ''
+  basis: design_target
+  locator: p.9; p.15
+  note: ''
+- device_id: yue2023-b
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.11; p.15
+  note: Each phase shifter 1 mm.
+- device_id: yue2023-b
+  field: il_onchip_db
+  value: 3.1
+  unit: dB
+  basis: measured
+  locator: p.12; p.16
+  note: Device insertion loss; grating couplers (3.8 dB each) listed separately.
+- device_id: yue2023-b
+  field: extinction_ratio_db
+  value: 1.89
+  unit: dB
+  basis: measured
+  locator: p.13; p.14, Fig. 9
+  note: Dynamic ER of the 128 GBd eye at EF = 0.5.
+- device_id: yue2023-b
+  field: drive_vpp_v
+  value: 5
+  unit: V
+  basis: measured
+  locator: p.13
+  note: High-speed phase shifter drive; low-speed shifter 2.5 Vpp.
+- device_id: yue2023-b
+  field: max_baud_gbd
+  value: 128
+  unit: GBd
+  basis: measured
+  locator: p.13-14, Fig. 9(b)
+  note: Test-system limited.
+- device_id: yue2023-b
+  field: modulation_format
+  value: OOK, no DSP; EF 0 open eyes up to 100 GBd; EF 0.5 open eyes 90 to 128 GBd
+  unit: ''
+  basis: measured
+  locator: p.13-14, Fig. 9
+  note: Eye diagrams on a digital serial analyzer.
+- device_id: yue2023-b
+  field: max_line_rate_gbps
+  value: 128
+  unit: Gb/s
+  basis: derived
+  locator: p.14, Fig. 9
+  note: OOK carries 1 bit per symbol; the paper quotes baud only.
+- device_id: yue2023-b
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.16
+  note: ''
+- device_id: yue2023-b
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: design_target
+  locator: p.16
+  note: ''
+- device_id: yue2023-b
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: derived
+  locator: p.15
+  note: 'Inferred: the high-speed electrode is stated to be equivalent in size to the low-speed one (3
+    mm SMIC device).'
+- device_id: yue2023-b
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: derived
+  locator: p.15
+  note: 'Inferred: the high-speed electrode is stated to be equivalent in size to the low-speed one (3
+    mm SMIC device).'
+- device_id: yue2023-b
+  field: substrate
+  value: silicon-on-insulator (Advanced Micro Foundry)
+  unit: ''
+  basis: design_target
+  locator: p.11; p.15
+  note: ''
+- device_id: yue2023-b
+  field: epitaxy_or_stack
+  value: Two identical lateral PN carrier-depletion phase shifters centered in the waveguide, heavily
+    doped regions 700 nm from the waveguide edge, on-chip terminators 2 x 50 ohm in parallel
+  unit: ''
+  basis: design_target
+  locator: p.16
+  note: ''
+- device_id: yue2023-a
+  field: drive
+  value: dual_drive
+  unit: ''
+  basis: design_target
+  locator: p.1 abstract
+  note: Dual-drive Mach-Zehnder modulator with two phase shifters driven at different amplitudes.
+- device_id: yue2023-b
+  field: drive
+  value: dual_drive
+  unit: ''
+  basis: design_target
+  locator: p.1 abstract
+  note: Dual-drive Mach-Zehnder modulator with two phase shifters driven at different amplitudes.
+derived: []
