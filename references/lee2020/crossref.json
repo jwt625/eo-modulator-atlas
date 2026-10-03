@@ -1,0 +1,646 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     30
+    ]
+   ],
+   "date-time": "2026-09-30T07:08:06Z",
+   "timestamp": 1790752086118,
+   "version": "4.1.0"
+  },
+  "reference-count": 29,
+  "publisher": "Wiley",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       9,
+       25
+      ]
+     ],
+     "date-time": "2020-09-25T00:00:00Z",
+     "timestamp": 1600992000000
+    },
+    "content-version": "am",
+    "delay-in-days": 0,
+    "URL": "http://creativecommons.org/licenses/by/4.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       9,
+       25
+      ]
+     ],
+     "date-time": "2020-09-25T00:00:00Z",
+     "timestamp": 1600992000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://creativecommons.org/licenses/by/4.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       9,
+       25
+      ]
+     ],
+     "date-time": "2020-09-25T00:00:00Z",
+     "timestamp": 1600992000000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100000181",
+    "name": "Air Force Office of Scientific Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550\u201018\u20101\u20100379"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550\u201018\u20101\u20100379"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000104",
+    "name": "National Aeronautics and Space Administration",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "NNX16AD16G"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "NNX16AD16G"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000104",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100006394",
+    "name": "Air Force Materiel Command",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA8650\u201018\u20101\u20107815"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA8650\u201018\u20101\u20107815"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100006394",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000006",
+    "name": "Office of Naval Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "N00014\u201016\u20101\u20102219"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "N00014\u201016\u20101\u20102219"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000006",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000001",
+    "name": "National Science Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "UTA16\u2010000936"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "UTA16\u2010000936"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000001",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "HR001110720034"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "HR001110720034"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nanophotonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2021,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1515/nanoph-2020-0363",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2020,
+     9,
+     28
+    ]
+   ],
+   "date-time": "2020-09-28T08:29:41Z",
+   "timestamp": 1601281781000
+  },
+  "page": "99-104",
+  "source": "Crossref",
+  "is-referenced-by-count": 50,
+  "title": [
+   "High\u2010performance integrated graphene electro\u2010optic modulator at cryogenic temperature"
+  ],
+  "prefix": "10.1002",
+  "volume": "10",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-8040-3576",
+    "authenticated-orcid": false,
+    "given": "Brian S.",
+    "family": "Lee",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering Columbia University New York NY 10027 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bumho",
+    "family": "Kim",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Mechanical Engineering Columbia University New York NY 10027 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1474-5938",
+    "authenticated-orcid": false,
+    "given": "Alexandre P.",
+    "family": "Freitas",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Electrical and Computer Engineering University of Campinas Campinas\u2010SP 13083\u2010970 Brazil"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Aseema",
+    "family": "Mohanty",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering Columbia University New York NY 10027 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yibo",
+    "family": "Zhu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Mechanical Engineering Columbia University New York NY 10027 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Gaurang R.",
+    "family": "Bhatt",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering Columbia University New York NY 10027 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "James",
+    "family": "Hone",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Mechanical Engineering Columbia University New York NY 10027 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Michal",
+    "family": "Lipson",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering Columbia University New York NY 10027 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2020,
+     9,
+     25
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_11_2_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598\u2010020\u201065971\u20105"
+   },
+   {
+    "key": "e_1_2_11_3_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "A.Youssefi I.Shomroni Y. J.Joshi et al. \u201cCryogenic electro\u2010optic interconnect for superconducting devices \u201darXiv preprint arXiv:2004.04705 2020.",
+    "DOI": "10.1038/s41928-021-00570-4"
+   },
+   {
+    "key": "e_1_2_11_4_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467\u2010017\u201001905\u20106"
+   },
+   {
+    "key": "e_1_2_11_5_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/OMN.2016.7565856"
+   },
+   {
+    "key": "e_1_2_11_6_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/ncomms13575"
+   },
+   {
+    "key": "e_1_2_11_7_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/tasc.2013.2244634"
+   },
+   {
+    "key": "e_1_2_11_8_2",
+    "article-title": "\u201cHigh data rate optical inter\u2010satellite links,\u201d",
+    "volume": "10",
+    "author": "Lange R.",
+    "year": "2009",
+    "journal-title": "Eur. Conf. Opt. Commun.(ECOC 2009), Vienna, Austria, Paper"
+   },
+   {
+    "key": "e_1_2_11_9_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/maes.2008.4607894"
+   },
+   {
+    "key": "e_1_2_11_10_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.4.000374"
+   },
+   {
+    "key": "e_1_2_11_11_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/0011\u20102275(74)90206\u20109"
+   },
+   {
+    "key": "e_1_2_11_12_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5120046"
+   },
+   {
+    "key": "e_1_2_11_13_2",
+    "unstructured": "F.Eltes G. E.Villarreal\u2010Garcia D.Caimi et al. \u201cAn integrated optical modulator operating at cryogenic temperatures \u201dNat. Mater. pp.1\u20135 2020 https://doi.org/10.1038/s41563\u2010020\u20100725\u20105."
+   },
+   {
+    "key": "e_1_2_11_14_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.1152793"
+   },
+   {
+    "key": "e_1_2_11_15_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphys989"
+   },
+   {
+    "key": "e_1_2_11_16_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/physrevlett.101.096802"
+   },
+   {
+    "key": "e_1_2_11_17_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nnano.2008.58"
+   },
+   {
+    "key": "e_1_2_11_18_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/physrevb.80.235402"
+   },
+   {
+    "key": "e_1_2_11_19_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/physrevb.77.195415"
+   },
+   {
+    "key": "e_1_2_11_20_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature10067"
+   },
+   {
+    "key": "e_1_2_11_21_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/68.992585"
+   },
+   {
+    "key": "e_1_2_11_22_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2015.122"
+   },
+   {
+    "key": "e_1_2_11_23_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.201100017"
+   },
+   {
+    "key": "e_1_2_11_24_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nmat3757"
+   },
+   {
+    "key": "e_1_2_11_25_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1209/0295\u20105075/84/38002"
+   },
+   {
+    "key": "e_1_2_11_26_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1405826"
+   },
+   {
+    "key": "e_1_2_11_27_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/1361\u20106528/aa6537"
+   },
+   {
+    "key": "e_1_2_11_28_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "S.Vaziri V.Chen L.Cai et al. \u201cUltrahigh doping of Graphene using flame\u2010deposited MoO3 \u201dIEEE Electron Device Lett 2020 https://doi.org/10.1109/LED.2020.3018485.",
+    "DOI": "10.1109/LED.2020.3018485"
+   },
+   {
+    "key": "e_1_2_11_29_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/nn405834b"
+   },
+   {
+    "key": "e_1_2_11_30_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1116/1.4769207"
+   }
+  ],
+  "container-title": [
+   "Nanophotonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.degruyter.com/view/journals/nanoph/10/1/article-p99.xml",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1515/nanoph-2020-0363",
+    "content-type": "application/xml",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1515/nanoph-2020-0363",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1515/nanoph-2020-0363",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1515/nanoph-2020-0363",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     24
+    ]
+   ],
+   "date-time": "2026-03-24T09:47:12Z",
+   "timestamp": 1774345632000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://onlinelibrary.wiley.com/doi/10.1515/nanoph-2020-0363"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     9,
+     25
+    ]
+   ]
+  },
+  "references-count": 29,
+  "journal-issue": {
+   "issue": "1",
+   "published-print": {
+    "date-parts": [
+     [
+      2021,
+      1
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1515/nanoph-2020-0363"
+  ],
+  "URL": "https://doi.org/10.1515/nanoph-2020-0363",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "2192-8614",
+   "2192-8614"
+  ],
+  "issn-type": [
+   {
+    "value": "2192-8614",
+    "type": "print"
+   },
+   {
+    "value": "2192-8614",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     9,
+     25
+    ]
+   ]
+  }
+ }
+}

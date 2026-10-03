@@ -1,0 +1,934 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     22
+    ]
+   ],
+   "date-time": "2026-09-22T14:07:04Z",
+   "timestamp": 1790086024571,
+   "version": "4.0.1"
+  },
+  "reference-count": 71,
+  "publisher": "American Chemical Society (ACS)",
+  "issue": "9",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       8,
+       20
+      ]
+     ],
+     "date-time": "2024-08-20T00:00:00Z",
+     "timestamp": 1724112000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       8,
+       20
+      ]
+     ],
+     "date-time": "2024-08-20T00:00:00Z",
+     "timestamp": 1724112000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       8,
+       20
+      ]
+     ],
+     "date-time": "2024-08-20T00:00:00Z",
+     "timestamp": 1724112000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-045"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100008398",
+    "name": "Villum Fonden",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "37417"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "37417"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100008398",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100006754",
+    "name": "Army Research Laboratory",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "W911NF2120099"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "W911NF2120099"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100006754",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100006754",
+    "name": "Army Research Laboratory",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "W911NF2220127"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "W911NF2220127"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100006754",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000038",
+    "name": "Natural Sciences and Engineering Research Council of Canada",
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "id": "10.13039/501100000038",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000078",
+    "name": "Division of Materials Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "1747426"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "1747426"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000078",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "ACS Photonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2024,
+     9,
+     18
+    ]
+   ]
+  },
+  "DOI": "10.1021/acsphotonics.4c01138",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2024,
+     8,
+     20
+    ]
+   ],
+   "date-time": "2024-08-20T09:32:33Z",
+   "timestamp": 1724146353000
+  },
+  "page": "3860-3869",
+  "source": "Crossref",
+  "is-referenced-by-count": 14,
+  "title": [
+   "Photonic Crystal Cavity IQ Modulators in Thin-Film Lithium Niobate"
+  ],
+  "prefix": "10.1021",
+  "volume": "11",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0009-5849-780X",
+    "authenticated-orcid": true,
+    "given": "Hugo",
+    "family": "Larocque",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Dashiell L. P.",
+    "family": "Vitullo",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "DEVCOM Army Research Laboratory, Adelphi, Maryland 20783-1193, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alexander",
+    "family": "Sludds",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hamed",
+    "family": "Sattari",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Centre Suisse d\u2019Electronique et de Microtechnique (CSEM), 2000 Neuch\u00e2tel, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ian",
+    "family": "Christen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Gregory",
+    "family": "Choong",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Centre Suisse d\u2019Electronique et de Microtechnique (CSEM), 2000 Neuch\u00e2tel, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Iv\u00e1n",
+    "family": "Prieto",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Centre Suisse d\u2019Electronique et de Microtechnique (CSEM), 2000 Neuch\u00e2tel, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jacopo",
+    "family": "Leo",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Centre Suisse d\u2019Electronique et de Microtechnique (CSEM), 2000 Neuch\u00e2tel, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Homa",
+    "family": "Zarebidaki",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Centre Suisse d\u2019Electronique et de Microtechnique (CSEM), 2000 Neuch\u00e2tel, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sanjaya",
+    "family": "Lohani",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, University of Illinois\u2500Chicago, Chicago, Illinois 60607, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Brian T.",
+    "family": "Kirby",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "DEVCOM Army Research Laboratory, Adelphi, Maryland 20783-1193, United States"
+     },
+     {
+      "name": "Tulane University, New Orleans, Louisiana 70118, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "\u00d6ney",
+    "family": "Soykal",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "DEVCOM Army Research Laboratory, Adelphi, Maryland 20783-1193, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mo",
+    "family": "Soltani",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Raytheon BBN Technologies, Cambridge, Massachusetts 02138, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Amir H.",
+    "family": "Ghadimi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Centre Suisse d\u2019Electronique et de Microtechnique (CSEM), 2000 Neuch\u00e2tel, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1043-3489",
+    "authenticated-orcid": true,
+    "given": "Dirk R.",
+    "family": "Englund",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, United States"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mikkel",
+    "family": "Heuck",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Photonics Engineering, Technical University of Denmark, 2800 Kgs. Lyngby, Denmark"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "316",
+  "published-online": {
+   "date-parts": [
+    [
+     2024,
+     8,
+     20
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "ref1/cit1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Novack, A.; Streshinsky, M.; Huynh, T. In  A Silicon Photonic Transceiver and Hybrid Tunable Laser for 64 Gbaud Coherent Communication, Optical Fiber Communication Conference Postdeadline Papers; Optica Publishing Group, 2018.",
+    "DOI": "10.1364/OFC.2018.Th4D.4"
+   },
+   {
+    "key": "ref2/cit2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0048712"
+   },
+   {
+    "key": "ref3/cit3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature02310"
+   },
+   {
+    "key": "ref4/cit4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature03569"
+   },
+   {
+    "key": "ref5/cit5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2010.179"
+   },
+   {
+    "key": "ref6/cit6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/ncomms5008"
+   },
+   {
+    "key": "ref7/cit7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2017.122"
+   },
+   {
+    "key": "ref8/cit8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2017.120"
+   },
+   {
+    "key": "ref9/cit9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.463722"
+   },
+   {
+    "key": "ref10/cit10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/nl3011885"
+   },
+   {
+    "key": "ref11/cit11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "ref12/cit12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-018-0208-0"
+   },
+   {
+    "key": "ref13/cit13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17806-0"
+   },
+   {
+    "key": "ref14/cit14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.416155"
+   },
+   {
+    "key": "ref15/cit15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.449691"
+   },
+   {
+    "key": "ref16/cit16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-021-03268-x"
+   },
+   {
+    "key": "ref17/cit17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-018-0310-5"
+   },
+   {
+    "key": "ref18/cit18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.abq8271"
+   },
+   {
+    "key": "ref19/cit19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2014.57"
+   },
+   {
+    "key": "ref20/cit20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-023-01244-7"
+   },
+   {
+    "key": "ref21/cit21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-024-07078-9"
+   },
+   {
+    "key": "ref22/cit22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-021-27205-8"
+   },
+   {
+    "key": "ref23/cit23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41928-021-00570-4"
+   },
+   {
+    "key": "ref24/cit24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.001547"
+   },
+   {
+    "key": "ref25/cit25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.464650"
+   },
+   {
+    "key": "ref26/cit26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17950-7"
+   },
+   {
+    "key": "ref27/cit27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.1c00383"
+   },
+   {
+    "key": "ref28/cit28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.aar4994"
+   },
+   {
+    "key": "ref29/cit29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.397235"
+   },
+   {
+    "key": "ref30/cit30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.397513"
+   },
+   {
+    "key": "ref31/cit31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-023-37513-w"
+   },
+   {
+    "key": "ref32/cit32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.124.160501"
+   },
+   {
+    "key": "ref33/cit33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41534-022-00604-5"
+   },
+   {
+    "key": "ref34/cit34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AO.30.003133"
+   },
+   {
+    "key": "ref35/cit35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.37.001178"
+   },
+   {
+    "key": "ref36/cit36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.489504"
+   },
+   {
+    "key": "ref37/cit37",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3429125"
+   },
+   {
+    "key": "ref38/cit38",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JQE.2004.834773"
+   },
+   {
+    "key": "ref39/cit39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.20.00A293"
+   },
+   {
+    "key": "ref40/cit40",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2017.2647779"
+   },
+   {
+    "key": "ref41/cit41",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.6.000860"
+   },
+   {
+    "key": "ref42/cit42",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.448617"
+   },
+   {
+    "key": "ref43/cit43",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.adj5438"
+   },
+   {
+    "key": "ref44/cit44",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-023-05724-2"
+   },
+   {
+    "key": "ref45/cit45",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-022-01059-y"
+   },
+   {
+    "key": "ref46/cit46",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.420250"
+   },
+   {
+    "key": "ref47/cit47",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-023-01227-8"
+   },
+   {
+    "key": "ref48/cit48",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nmat1994"
+   },
+   {
+    "key": "ref49/cit49",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.470596"
+   },
+   {
+    "key": "ref50/cit50",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.502142"
+   },
+   {
+    "key": "ref51/cit51",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-022-01086-9"
+   },
+   {
+    "key": "ref52/cit52",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Bente, I.; Bankwitz, R.; Br\u00fcckerhoff-Pl\u00fcckelmann, F.; Jo, S.; Lenzini, F.; Pernice, W. In  Monolithic Integration of Lithium Niobate and Chalcogenide Phase-Change Material for Neuromorphic Computing, CLEO 2023 Technical Digest Series; Optica Publishing Group, 2023.",
+    "DOI": "10.1364/CLEO_AT.2023.JW2A.138"
+   },
+   {
+    "key": "ref53/cit53",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s42005-020-00412-3"
+   },
+   {
+    "key": "ref54/cit54",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3262961"
+   },
+   {
+    "key": "ref55/cit55",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.19.012480"
+   },
+   {
+    "key": "ref56/cit56",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.22.028623"
+   },
+   {
+    "key": "ref57/cit57",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.24.023481"
+   },
+   {
+    "key": "ref58/cit58",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.43.004429"
+   },
+   {
+    "key": "ref59/cit59",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Yin, B.; Gevorgyan, H.; Onural, D.; Khilo, A.; Popovi\u0107, M. A.; Stojanovi\u0107, V. M. In  Electronic-Photonic Cryogenic Egress Link, ESSCIRC 2021\u2500IEEE 47th European Solid State Circuits Conference (ESSCIRC); IEEE, 2021; pp 51\u201354.",
+    "DOI": "10.1109/ESSCIRC53450.2021.9567813"
+   },
+   {
+    "key": "ref60/cit60",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.414702"
+   },
+   {
+    "key": "ref61/cit61",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.507536"
+   },
+   {
+    "key": "ref62/cit62",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.418877"
+   },
+   {
+    "key": "ref63/cit63",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.5.001438"
+   },
+   {
+    "key": "ref64/cit64",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.7.000040"
+   },
+   {
+    "key": "ref65/cit65",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/JOSAB.13.002513"
+   },
+   {
+    "key": "ref66/cit66",
+    "unstructured": "Christen, I.; Sutula, M.; Propson, T.; Sattari, H.; Choong, G.; Panuski, C.; Melville, A.; Mallek, J.; Hamilton, S.; Dixon, P. B.; Menssen, A. J.; Braje, D.; Ghadimi, A. H.; Englund, D. An Integrated Photonic Engine for Programmable Atomic Control. 2022, arXiv:2208.06732. arXiv.org e-Printarchive. https://arxiv.org/abs/2208.06732. (accessed August 8, 2024)."
+   },
+   {
+    "key": "ref67/cit67",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2022.3219379"
+   },
+   {
+    "key": "ref68/cit68",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2632-2153/ab9a21"
+   },
+   {
+    "key": "ref69/cit69",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/1367-2630/ace6c8"
+   },
+   {
+    "key": "ref70/cit70",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevApplied.13.044013"
+   },
+   {
+    "key": "ref71/cit71",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-20417-4"
+   }
+  ],
+  "container-title": [
+   "ACS Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.4c01138",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "unspecified"
+   },
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.4c01138",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     9,
+     18
+    ]
+   ],
+   "date-time": "2024-09-18T08:18:37Z",
+   "timestamp": 1726647517000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.acs.org/doi/10.1021/acsphotonics.4c01138"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     8,
+     20
+    ]
+   ]
+  },
+  "references-count": 71,
+  "journal-issue": {
+   "issue": "9",
+   "published-print": {
+    "date-parts": [
+     [
+      2024,
+      9,
+      18
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1021/acsphotonics.4c01138"
+  ],
+  "URL": "https://doi.org/10.1021/acsphotonics.4c01138",
+  "relation": {},
+  "ISSN": [
+   "2330-4022",
+   "2330-4022"
+  ],
+  "issn-type": [
+   {
+    "value": "2330-4022",
+    "type": "print"
+   },
+   {
+    "value": "2330-4022",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     8,
+     20
+    ]
+   ]
+  }
+ }
+}

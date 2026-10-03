@@ -1,0 +1,2664 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     9
+    ]
+   ],
+   "date-time": "2026-09-09T19:07:55Z",
+   "timestamp": 1788980875463,
+   "version": "build-2803163510"
+  },
+  "reference-count": 242,
+  "publisher": "AIP Publishing",
+  "issue": "3",
+  "funder": [
+   {
+    "DOI": "10.13039/501100001348",
+    "name": "A*STAR White Space Fund-National Semiconductor Translation and Innovation Centre (NSTIC) of Singapore",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "M24W1NS003"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "M24W1NS003"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001348",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001459",
+    "name": "Ministry of Education - Singapore",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "T2EP50224-0037"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "T2EP50224-0037"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001459",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "pubs.aip.org"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1063/5.0325359",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     8
+    ]
+   ],
+   "date-time": "2026-09-08T12:57:16Z",
+   "timestamp": 1788872236000
+  },
+  "update-policy": "https://doi.org/10.1063/aip-crossmark-policy-page",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Integrated photonic devices in thin-film barium titanate: Opportunities and challenges"
+  ],
+  "prefix": "10.1063",
+  "volume": "13",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-6973-8674",
+    "authenticated-orcid": false,
+    "given": "Hong-Lin",
+    "family": "Lin",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, National University of Singapore 1 , 4 Engineering Drive 3, 117583",
+      "place": [
+       "Singapore"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0006-0884-9596",
+    "authenticated-orcid": false,
+    "given": "Minghao",
+    "family": "Shang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, National University of Singapore 1 , 4 Engineering Drive 3, 117583",
+      "place": [
+       "Singapore"
+      ]
+     },
+     {
+      "name": "National Laboratory of Solid State Microstructures, School of Physics, School of Electronic Science and Engineering, National Key Laboratory of Microwave Photonics and Collaborative Innovation Center of Advanced Microstructures, Nanjing University 2 , Nanjing 210093,",
+      "place": [
+       "China"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0001-3745-0609",
+    "authenticated-orcid": false,
+    "given": "Yuhui",
+    "family": "Yin",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, National University of Singapore 1 , 4 Engineering Drive 3, 117583",
+      "place": [
+       "Singapore"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1208-4259",
+    "authenticated-orcid": false,
+    "given": "Wujie",
+    "family": "Fu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, National University of Singapore 1 , 4 Engineering Drive 3, 117583",
+      "place": [
+       "Singapore"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7395-8453",
+    "authenticated-orcid": false,
+    "given": "Luo",
+    "family": "Qi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, National University of Singapore 1 , 4 Engineering Drive 3, 117583",
+      "place": [
+       "Singapore"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9090-9626",
+    "authenticated-orcid": false,
+    "given": "Aaron J.",
+    "family": "Danner",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, National University of Singapore 1 , 4 Engineering Drive 3, 117583",
+      "place": [
+       "Singapore"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "317",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     8
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "2026090914312215500_c1",
+    "doi-asserted-by": "publisher",
+    "first-page": "157",
+    "DOI": "10.1109/JLT.2015.2463719",
+    "article-title": "Fundamentals of coherent optical fiber communications",
+    "volume": "34",
+    "year": "2016",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2026090914312215500_c2",
+    "doi-asserted-by": "publisher",
+    "first-page": "57",
+    "DOI": "10.1109/COMST.2016.2603518",
+    "article-title": "Optical communication in space: Challenges and mitigation techniques",
+    "volume": "19",
+    "year": "2017",
+    "journal-title": "IEEE Commun. Surv. Tutorials"
+   },
+   {
+    "key": "2026090914312215500_c3",
+    "doi-asserted-by": "publisher",
+    "first-page": "38",
+    "DOI": "10.1109/MCOMSTD.2017.1700017",
+    "article-title": "Multi-core fiber technology: Next generation optical communication strategy",
+    "volume": "1",
+    "year": "2017",
+    "journal-title": "IEEE Commun. Stand. Mag."
+   },
+   {
+    "key": "2026090914312215500_c4",
+    "doi-asserted-by": "publisher",
+    "first-page": "27",
+    "DOI": "10.1038/s44310-024-00024-7",
+    "article-title": "Silicon photonics for high-speed communications and photonic signal processing",
+    "volume": "1",
+    "year": "2024",
+    "journal-title": "npj Nanophotonics"
+   },
+   {
+    "key": "2026090914312215500_c5",
+    "doi-asserted-by": "publisher",
+    "first-page": "6",
+    "DOI": "10.1109/JLT.2019.2943251",
+    "article-title": "Miniaturized silicon photonics devices for integrated optical signal processors",
+    "volume": "38",
+    "year": "2020",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2026090914312215500_c6",
+    "doi-asserted-by": "publisher",
+    "first-page": "190",
+    "DOI": "10.1038/nphoton.2015.281",
+    "article-title": "A fully reconfigurable photonic integrated signal processor",
+    "volume": "10",
+    "year": "2016",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2026090914312215500_c7",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JQE.2025.3592448",
+    "article-title": "High magnitude spin-dependent shift and field enhancement in BaTiO3-based plasmonics for quantum photonic applications",
+    "volume": "61",
+    "year": "2025",
+    "journal-title": "IEEE J. Quantum Electron."
+   },
+   {
+    "key": "2026090914312215500_c8",
+    "doi-asserted-by": "publisher",
+    "first-page": "331",
+    "DOI": "10.3390/photonics9050331",
+    "article-title": "Advancement in silicon integrated photonics technologies for sensing applications in near-infrared and mid-infrared region: A review",
+    "volume": "9",
+    "year": "2022",
+    "journal-title": "Photonics"
+   },
+   {
+    "key": "2026090914312215500_c9",
+    "doi-asserted-by": "publisher",
+    "first-page": "368",
+    "DOI": "10.1038/s41586-025-08854-x",
+    "article-title": "Universal photonic artificial intelligence acceleration",
+    "volume": "640",
+    "year": "2025",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2026090914312215500_c10",
+    "doi-asserted-by": "publisher",
+    "first-page": "339",
+    "DOI": "10.1515/nanoph-2018-0183",
+    "article-title": "Intelligent nanophotonics: Merging photonics and artificial intelligence at the nanoscale",
+    "volume": "8",
+    "year": "2018",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "2026090914312215500_c11",
+    "doi-asserted-by": "publisher",
+    "first-page": "2758",
+    "DOI": "10.1109/COMST.2018.2839672",
+    "article-title": "Survey of photonic and plasmonic interconnect technologies for intra-datacenter and high-performance computing communications",
+    "volume": "20",
+    "year": "2018",
+    "journal-title": "IEEE Commun. Surv. Tutorials"
+   },
+   {
+    "key": "2026090914312215500_c12",
+    "doi-asserted-by": "publisher",
+    "first-page": "2",
+    "DOI": "10.1016/j.yofte.2017.12.007",
+    "article-title": "Silicon photonic terabit/s network-on-chip for datacenter interconnection",
+    "volume": "44",
+    "year": "2018",
+    "journal-title": "Opt. Fiber Technol."
+   },
+   {
+    "key": "2026090914312215500_c13",
+    "doi-asserted-by": "publisher",
+    "first-page": "102",
+    "DOI": "10.1038/s41566-020-00754-y",
+    "article-title": "Photonics for artificial intelligence and neuromorphic computing",
+    "volume": "15",
+    "year": "2021",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2026090914312215500_c14",
+    "doi-asserted-by": "publisher",
+    "first-page": "e08029",
+    "DOI": "10.1002/adma.202508029",
+    "article-title": "Integrated neuromorphic photonic computing for ai acceleration: Emerging devices, network architectures, and future paradigms",
+    "year": "2025",
+    "journal-title": "Adv. Mater."
+   },
+   {
+    "key": "2026090914312215500_c15",
+    "doi-asserted-by": "publisher",
+    "first-page": "4404",
+    "DOI": "10.1109/JLT.2025.3537286",
+    "article-title": "Ultra-efficient Si3N4 MZIs with BaTiO3 as weight elements for neuromorphic photonics",
+    "volume": "43",
+    "year": "2025",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2026090914312215500_c16",
+    "doi-asserted-by": "publisher",
+    "first-page": "1688",
+    "DOI": "10.1109/JSTQE.2006.884089",
+    "article-title": "Development of CMOS-compatible integrated silicon photonics devices",
+    "volume": "12",
+    "year": "2006",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "2026090914312215500_c17",
+    "doi-asserted-by": "publisher",
+    "first-page": "13106",
+    "DOI": "10.1364/OE.26.013106",
+    "article-title": "Monolithic silicon-photonic platforms in state-of-the-art CMOS SOI processes [Invited]",
+    "volume": "26",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c18",
+    "doi-asserted-by": "publisher",
+    "first-page": "13430",
+    "DOI": "10.1364/OE.27.013430",
+    "article-title": "Low-power thermo-optic silicon modulator for large-scale photonic integrated systems",
+    "volume": "27",
+    "year": "2019",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c19",
+    "doi-asserted-by": "publisher",
+    "first-page": "39947",
+    "DOI": "10.1364/OE.574838",
+    "article-title": "Efficient thermo-optic phase shifters for photonic integrated circuits based on 500-nm-thick silicon on insulator",
+    "volume": "33",
+    "year": "2025",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c20",
+    "doi-asserted-by": "publisher",
+    "first-page": "044001",
+    "DOI": "10.1117/1.APN.3.4.044001",
+    "article-title": "Silicon thermo-optic phase shifters: A review of configurations and optimization strategies",
+    "volume": "3",
+    "year": "2024",
+    "journal-title": "Adv. Photonics Nexus"
+   },
+   {
+    "key": "2026090914312215500_c21",
+    "doi-asserted-by": "publisher",
+    "first-page": "26332",
+    "DOI": "10.1364/OE.24.026332",
+    "article-title": "Simplified modeling and optimization of silicon modulators based on free-carrier plasma dispersion effect",
+    "volume": "24",
+    "year": "2016",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c22",
+    "doi-asserted-by": "publisher",
+    "first-page": "977",
+    "DOI": "10.1109/TCAD.2019.2907907",
+    "article-title": "Modeling and analysis of optical modulators based on free-carrier plasma dispersion effect",
+    "volume": "39",
+    "year": "2020",
+    "journal-title": "IEEE Trans. Comput. Aided Des. Integr. Circuits Syst."
+   },
+   {
+    "key": "2026090914312215500_c23",
+    "doi-asserted-by": "publisher",
+    "first-page": "021311",
+    "DOI": "10.1063/5.0083083",
+    "article-title": "Pockels modulation in integrated nanophotonics",
+    "volume": "9",
+    "year": "2022",
+    "journal-title": "Appl. Phys. Rev."
+   },
+   {
+    "key": "2026090914312215500_c24",
+    "doi-asserted-by": "publisher",
+    "first-page": "2400624",
+    "DOI": "10.1002/lpor.202400624",
+    "article-title": "Recent progress in electro-optic modulators: Physical phenomenon, structures properties, and integration strategy",
+    "volume": "19",
+    "year": "2025",
+    "journal-title": "Laser Photonics Rev."
+   },
+   {
+    "key": "2026090914312215500_c25",
+    "doi-asserted-by": "publisher",
+    "first-page": "242",
+    "DOI": "10.1364/AOP.411024",
+    "article-title": "Integrated photonics on thin-film lithium niobate",
+    "volume": "13",
+    "year": "2021",
+    "journal-title": "Adv. Opt. Photonics"
+   },
+   {
+    "key": "2026090914312215500_c26",
+    "doi-asserted-by": "publisher",
+    "first-page": "1287",
+    "DOI": "10.1515/nanoph-2020-0013",
+    "article-title": "Integrated lithium niobate photonics",
+    "volume": "9",
+    "year": "2020",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "2026090914312215500_c27",
+    "doi-asserted-by": "publisher",
+    "first-page": "034003",
+    "DOI": "10.1117/1.AP.4.3.034003",
+    "article-title": "Advances in lithium niobate photonics: Development status and perspectives",
+    "volume": "4",
+    "year": "2022",
+    "journal-title": "Adv. Photonics"
+   },
+   {
+    "key": "2026090914312215500_c28",
+    "doi-asserted-by": "publisher",
+    "first-page": "2001249",
+    "DOI": "10.1002/adom.202001249",
+    "article-title": "Barium titanate nanostructures and thin films for photonics",
+    "volume": "8",
+    "year": "2020",
+    "journal-title": "Adv. Opt. Mater."
+   },
+   {
+    "key": "2026090914312215500_c29",
+    "doi-asserted-by": "publisher",
+    "first-page": "030804",
+    "DOI": "10.1116/6.0000923",
+    "article-title": "Epitaxial integration of BaTiO3 on Si for electro-optic applications",
+    "volume": "39",
+    "year": "2021",
+    "journal-title": "J. Vac. Sci. Technol., A"
+   },
+   {
+    "key": "2026090914312215500_c30",
+    "doi-asserted-by": "publisher",
+    "first-page": "5941",
+    "DOI": "10.1103/PhysRevB.50.5941",
+    "article-title": "Dielectric, elastic, piezoelectric, electro-optic, and elasto-optic tensors of BaTiO3 crystals",
+    "volume": "50",
+    "year": "1994",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "2026090914312215500_c31",
+    "doi-asserted-by": "publisher",
+    "first-page": "779",
+    "DOI": "10.1038/s41563-022-01266-6",
+    "article-title": "Enabling ultra-low-voltage switching in BaTiO3",
+    "volume": "21",
+    "year": "2022",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "2026090914312215500_c32",
+    "doi-asserted-by": "publisher",
+    "first-page": "eadz2553",
+    "DOI": "10.1126/sciadv.adz2553",
+    "article-title": "Single-crystalline BaTiO3-based ferroelectric capacitive memory via membrane transfer",
+    "volume": "11",
+    "year": "2025",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "2026090914312215500_c33",
+    "doi-asserted-by": "publisher",
+    "first-page": "1375",
+    "DOI": "10.1063/1.1498151",
+    "article-title": "Ferroelectric BaTiO3 thin-film optical waveguide modulators",
+    "volume": "81",
+    "year": "2002",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c34",
+    "doi-asserted-by": "publisher",
+    "first-page": "152",
+    "DOI": "10.1364/OME.474245",
+    "article-title": "Characterization of electro-optic coefficients r13, r23 and r33 in single crystalline BaTiO3 thin films",
+    "volume": "13",
+    "year": "2023",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2026090914312215500_c35",
+    "doi-asserted-by": "publisher",
+    "first-page": "42",
+    "DOI": "10.1038/s41563-018-0208-0",
+    "article-title": "Large Pockels effect in micro- and nanostructured barium titanate integrated on silicon",
+    "volume": "18",
+    "year": "2019",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "2026090914312215500_c36",
+    "doi-asserted-by": "publisher",
+    "first-page": "073101",
+    "DOI": "10.1063/5.0160186",
+    "article-title": "RF-sputtered Z-cut electro-optic barium titanate modulator on silicon photonic platform",
+    "volume": "134",
+    "year": "2023",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c37",
+    "doi-asserted-by": "publisher",
+    "first-page": "876",
+    "DOI": "10.1038/s41586-025-08820-7",
+    "article-title": "A manufacturable platform for photonic quantum computing",
+    "volume": "641",
+    "author": "PsiQuantum Team",
+    "year": "2025",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2026090914312215500_c38",
+    "doi-asserted-by": "publisher",
+    "first-page": "1164",
+    "DOI": "10.1038/s41563-020-0725-5",
+    "article-title": "An integrated optical modulator operating at cryogenic temperatures",
+    "volume": "19",
+    "year": "2020",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "2026090914312215500_c39",
+    "doi-asserted-by": "publisher",
+    "first-page": "1419",
+    "DOI": "10.1021/nl404513p",
+    "article-title": "Active silicon integrated nanophotonics: Ferroelectric BaTiO3 devices",
+    "volume": "14",
+    "year": "2014",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026090914312215500_c40",
+    "doi-asserted-by": "publisher",
+    "first-page": "1837",
+    "DOI": "10.1109/LPT.2004.831255",
+    "article-title": "Low-loss electrooptic BaTiO3 thin film waveguide modulator",
+    "volume": "16",
+    "year": "2004",
+    "journal-title": "IEEE Photonics Technol. Lett."
+   },
+   {
+    "key": "2026090914312215500_c41",
+    "doi-asserted-by": "publisher",
+    "first-page": "2402086",
+    "DOI": "10.1002/lpor.202402086",
+    "article-title": "High-Q monolithic ring resonators in low-loss barium titanate on silicon",
+    "volume": "19",
+    "year": "2025",
+    "journal-title": "Laser Photonics Rev."
+   },
+   {
+    "key": "2026090914312215500_c42",
+    "doi-asserted-by": "publisher",
+    "first-page": "1101",
+    "DOI": "10.1109/LPT.2025.3582846",
+    "article-title": "Fabrication and optical characterization of low-loss barium titanate waveguides",
+    "volume": "37",
+    "year": "2025",
+    "journal-title": "IEEE Photonics Technol. Lett."
+   },
+   {
+    "key": "2026090914312215500_c43",
+    "doi-asserted-by": "publisher",
+    "first-page": "399",
+    "DOI": "10.1038/s41377-025-02116-1",
+    "article-title": "The plasmonic BTO-on-SiN platform\u2013beyond 200 GBd modulation for optical communications",
+    "volume": "14",
+    "year": "2025",
+    "journal-title": "Light"
+   },
+   {
+    "key": "2026090914312215500_c44",
+    "doi-asserted-by": "publisher",
+    "first-page": "21",
+    "DOI": "10.1038/s41377-025-02081-9",
+    "article-title": "Self-buffered epitaxy of barium titanate on oxide insulators enables high-performance electro-optic modulators",
+    "volume": "15",
+    "year": "2026",
+    "journal-title": "Light"
+   },
+   {
+    "key": "2026090914312215500_c45",
+    "doi-asserted-by": "publisher",
+    "first-page": "2300168",
+    "DOI": "10.1002/adsr.202300168",
+    "article-title": "Recent progress on barium titanate-based ferroelectrics for sensor applications",
+    "volume": "3",
+    "year": "2024",
+    "journal-title": "Adv. Sensor Res."
+   },
+   {
+    "key": "2026090914312215500_c46",
+    "doi-asserted-by": "publisher",
+    "first-page": "868",
+    "DOI": "10.1038/s41563-025-02158-1",
+    "article-title": "Barium titanate and lithium niobate permittivity and Pockels coefficients from megahertz to sub-terahertz frequencies",
+    "volume": "24",
+    "year": "2025",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "2026090914312215500_c47",
+    "doi-asserted-by": "publisher",
+    "first-page": "9",
+    "DOI": "10.1038/s41563-018-0259-2",
+    "article-title": "Strong pockels materials",
+    "volume": "18",
+    "year": "2019",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "2026090914312215500_c48",
+    "doi-asserted-by": "publisher",
+    "first-page": "041305",
+    "DOI": "10.1063/1.4990046",
+    "article-title": "BaTiO3-based piezoelectrics: Fundamentals, current status, and perspectives",
+    "volume": "4",
+    "year": "2017",
+    "journal-title": "Appl. Phys. Rev."
+   },
+   {
+    "key": "2026090914312215500_c49",
+    "doi-asserted-by": "publisher",
+    "first-page": "1221",
+    "DOI": "10.1103/PhysRev.76.1221",
+    "article-title": "The electric and optical behavior of BaTiO3 single-domain crystals",
+    "volume": "76",
+    "year": "1949",
+    "journal-title": "Phys. Rev."
+   },
+   {
+    "key": "2026090914312215500_c50",
+    "doi-asserted-by": "publisher",
+    "first-page": "1797",
+    "DOI": "10.1016/0022-3697(68)90164-9",
+    "article-title": "Dielectric and optical properties of melt-grown BaTiO3",
+    "volume": "29",
+    "year": "1968",
+    "journal-title": "J. Phys. Chem. Solids"
+   },
+   {
+    "key": "2026090914312215500_c51",
+    "doi-asserted-by": "publisher",
+    "first-page": "2021",
+    "DOI": "10.1080/13642810108208556",
+    "article-title": "Domain patterns and macroscopic behaviour of ferroelectric materials",
+    "volume": "81",
+    "year": "2001",
+    "journal-title": "Philos. Mag. B"
+   },
+   {
+    "key": "2026090914312215500_c52",
+    "doi-asserted-by": "publisher",
+    "first-page": "309",
+    "DOI": "10.1002/pssb.19660130202",
+    "article-title": "The Curie temperature of LiNbO3",
+    "volume": "13",
+    "year": "1966",
+    "journal-title": "Phys. Status Solidi B"
+   },
+   {
+    "key": "2026090914312215500_c53",
+    "doi-asserted-by": "publisher",
+    "first-page": "169",
+    "DOI": "10.1063/1.1754695",
+    "article-title": "Temperature dependence of the optical properties of ferroelectric LiNbO3 and LiTaO3",
+    "volume": "9",
+    "year": "1966",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c54",
+    "doi-asserted-by": "publisher",
+    "first-page": "4555",
+    "DOI": "10.1063/1.371402",
+    "article-title": "Phase transition behavior of BaTiO3 thin films using high-temperature x-ray diffraction",
+    "volume": "86",
+    "year": "1999",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c55",
+    "doi-asserted-by": "publisher",
+    "first-page": "1005",
+    "DOI": "10.1126/science.1103218",
+    "article-title": "Enhancement of ferroelectricity in strained BaTiO3 thin films",
+    "volume": "306",
+    "year": "2004",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026090914312215500_c56",
+    "doi-asserted-by": "publisher",
+    "first-page": "2101128",
+    "DOI": "10.1002/adma.202101128",
+    "article-title": "A barium titanate-on-oxide insulator optoelectronics platform",
+    "volume": "33",
+    "year": "2021",
+    "journal-title": "Adv. Mater."
+   },
+   {
+    "key": "2026090914312215500_c57",
+    "volume-title": "Electromagnetism",
+    "year": "2013"
+   },
+   {
+    "key": "2026090914312215500_c58",
+    "doi-asserted-by": "publisher",
+    "first-page": "748",
+    "DOI": "10.1103/PhysRev.78.748",
+    "article-title": "The Lorentz correction in barium titanate",
+    "volume": "78",
+    "year": "1950",
+    "journal-title": "Phys. Rev."
+   },
+   {
+    "key": "2026090914312215500_c59",
+    "doi-asserted-by": "publisher",
+    "first-page": "637",
+    "DOI": "10.1002/pssa.2210640228",
+    "article-title": "Dielectric behaviour of ferroelectric barium titanate in the microwave region",
+    "volume": "64",
+    "year": "1981",
+    "journal-title": "Phys. Status Solidi A"
+   },
+   {
+    "key": "2026090914312215500_c60",
+    "doi-asserted-by": "publisher",
+    "first-page": "486",
+    "DOI": "10.1063/1.1746921",
+    "article-title": "The variation of the complex dielectric constant with frequency",
+    "volume": "16",
+    "year": "1948",
+    "journal-title": "J. Chem. Phys."
+   },
+   {
+    "key": "2026090914312215500_c61",
+    "doi-asserted-by": "publisher",
+    "first-page": "890",
+    "DOI": "10.1103/PhysRev.71.890",
+    "article-title": "Dielectric and piezoelectric properties of barium titanate",
+    "volume": "71",
+    "year": "1947",
+    "journal-title": "Phys. Rev."
+   },
+   {
+    "key": "2026090914312215500_c62",
+    "doi-asserted-by": "publisher",
+    "first-page": "6302",
+    "DOI": "10.1016/j.tsf.2006.11.139",
+    "article-title": "The effect of growth temperature on the nanostructure and dielectric response of BaTiO3 ferroelectric films",
+    "volume": "515",
+    "year": "2007",
+    "journal-title": "Thin Solid Films"
+   },
+   {
+    "key": "2026090914312215500_c63",
+    "doi-asserted-by": "publisher",
+    "first-page": "511",
+    "DOI": "10.1364/OPTICA.411161",
+    "article-title": "Hybrid electro-optic modulator combining silicon photonic slot waveguides with high-k radio-frequency slotlines",
+    "volume": "8",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2026090914312215500_c64",
+    "doi-asserted-by": "publisher",
+    "first-page": "383",
+    "DOI": "10.1049/pi-3.1949.0085",
+    "article-title": "The measurement of the dielectric properties of high-permittivity materials at centimetre wavelengths",
+    "volume": "96",
+    "year": "1949",
+    "journal-title": "Proc. IEE-Part III"
+   },
+   {
+    "key": "2026090914312215500_c65",
+    "doi-asserted-by": "publisher",
+    "first-page": "221",
+    "DOI": "10.1103/RevModPhys.22.221",
+    "article-title": "Ferroelectricity, domain structure, and phase transitions of barium titanate",
+    "volume": "22",
+    "year": "1950",
+    "journal-title": "Rev. Mod. Phys."
+   },
+   {
+    "key": "2026090914312215500_c66",
+    "doi-asserted-by": "publisher",
+    "first-page": "85",
+    "DOI": "10.1080/00150199208230015",
+    "article-title": "High frequency dielectric relaxation in BaTiO3 derived materials",
+    "volume": "135",
+    "year": "1992",
+    "journal-title": "Ferroelectrics"
+   },
+   {
+    "key": "2026090914312215500_c67",
+    "doi-asserted-by": "publisher",
+    "first-page": "309",
+    "DOI": "10.1209/0295-5075/26/4/012",
+    "article-title": "Indications of two separate relaxators in the subphonon region of tetragonal BaTiO3",
+    "volume": "26",
+    "year": "1994",
+    "journal-title": "Europhys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c68",
+    "doi-asserted-by": "publisher",
+    "first-page": "3288",
+    "DOI": "10.1063/1.367097",
+    "article-title": "The effect of grain and particle size on the microwave properties of barium titanate (BaTiO3)",
+    "volume": "83",
+    "year": "1998",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c69",
+    "doi-asserted-by": "publisher",
+    "first-page": "5274",
+    "DOI": "10.1063/1.1635967",
+    "article-title": "Relative dielectric constant of epitaxial BaTiO3 thin films in the GHz frequency range",
+    "volume": "83",
+    "year": "2003",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c70",
+    "doi-asserted-by": "publisher",
+    "first-page": "2627",
+    "DOI": "10.1016/S0955-2219(03)00190-0",
+    "article-title": "FIR and near-millimetre dielectric response of SrTiO3, BaTiO3 and BST films and ceramics",
+    "volume": "23",
+    "year": "2003",
+    "journal-title": "J. Eur. Ceram. Soc."
+   },
+   {
+    "key": "2026090914312215500_c71",
+    "doi-asserted-by": "publisher",
+    "first-page": "182905",
+    "DOI": "10.1063/1.2804570",
+    "article-title": "Ultrawide range dielectric spectroscopy of BaTiO3-based perovskite dielectrics",
+    "volume": "91",
+    "year": "2007",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c72",
+    "doi-asserted-by": "publisher",
+    "first-page": "4328",
+    "DOI": "10.1364/OME.7.004328",
+    "article-title": "Barium titanate (BaTiO3) RF characterization for application in electro-optic modulators",
+    "volume": "7",
+    "year": "2017",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2026090914312215500_c73",
+    "doi-asserted-by": "publisher",
+    "first-page": "014404",
+    "DOI": "10.1103/PhysRevMaterials.5.014404",
+    "article-title": "Ferroelectric soft mode and microwave dielectric relaxation in BaTiO3-PbMg1/3Nb2/3O3 ceramics",
+    "volume": "5",
+    "year": "2021",
+    "journal-title": "Phys. Rev. Mater."
+   },
+   {
+    "key": "2026090914312215500_c74",
+    "doi-asserted-by": "publisher",
+    "first-page": "578",
+    "DOI": "10.1002/andp.19945060703",
+    "article-title": "Dielectric dispersion of ferroelectric ceramics and single crystals at microwave frequencies",
+    "volume": "506",
+    "year": "1994",
+    "journal-title": "Ann. Phys."
+   },
+   {
+    "key": "2026090914312215500_c75",
+    "doi-asserted-by": "publisher",
+    "first-page": "5962",
+    "DOI": "10.1364/OPEX.12.005962",
+    "article-title": "Electrooptic modulation up to 40 GHz in a barium titanate thin film waveguide modulator",
+    "volume": "12",
+    "year": "2004",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c76",
+    "doi-asserted-by": "publisher",
+    "first-page": "319",
+    "DOI": "10.1016/j.optcom.2005.06.028",
+    "article-title": "Performance simulation for ferroelectric thin-film based waveguide electro-optic modulators",
+    "volume": "255",
+    "year": "2005",
+    "journal-title": "Opt. Commun."
+   },
+   {
+    "key": "2026090914312215500_c77",
+    "doi-asserted-by": "publisher",
+    "first-page": "125",
+    "DOI": "10.1149/1.2392926",
+    "article-title": "Low drive-voltage and high-bandwidth electro-optic modulators based on BaTiO3 thin-film waveguides",
+    "volume": "3",
+    "year": "2006",
+    "journal-title": "ECS Trans."
+   },
+   {
+    "key": "2026090914312215500_c78",
+    "doi-asserted-by": "publisher",
+    "first-page": "1699",
+    "DOI": "10.1364/OE.23.001699",
+    "article-title": "Modeling the anisotropic electro-optic interaction in hybrid silicon-ferroelectric optical modulator",
+    "volume": "23",
+    "year": "2015",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c79",
+    "doi-asserted-by": "publisher",
+    "first-page": "1937",
+    "DOI": "10.1109/JLT.2015.2388738",
+    "article-title": "Theoretical feasibility demonstration for over 100 GHz electro-optic modulators with c-axis grown BaTiO3 crystal thin-films",
+    "volume": "33",
+    "year": "2015",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2026090914312215500_c80",
+    "first-page": "54",
+    "article-title": "Towards high-speed electro-optical performance in a hybrid BaTiO3/Si Mach-Zehnder modulator",
+    "year": "2016"
+   },
+   {
+    "key": "2026090914312215500_c81",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JQE.2017.2718222",
+    "article-title": "\u03c7(2) modulator with 40-GHz modulation utilizing BaTiO3 photonic crystal waveguides",
+    "volume": "53",
+    "year": "2017",
+    "journal-title": "IEEE J. Quantum Electron."
+   },
+   {
+    "key": "2026090914312215500_c82",
+    "doi-asserted-by": "publisher",
+    "first-page": "23260",
+    "DOI": "10.1364/OE.460293",
+    "article-title": "Membrane multiple quantum well electro-optical modulator employing low loss high-k radio-frequency slot waveguides",
+    "volume": "30",
+    "year": "2022",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c83",
+    "doi-asserted-by": "publisher",
+    "first-page": "1432",
+    "DOI": "10.1364/JOSAB.599330",
+    "article-title": "Design principles for high-speed barium titanate on-insulator electro-optic modulators",
+    "volume": "43",
+    "year": "2026",
+    "journal-title": "J. Opt. Soc. Am. B"
+   },
+   {
+    "key": "2026090914312215500_c84",
+    "doi-asserted-by": "publisher",
+    "first-page": "K87",
+    "DOI": "10.1002/pssa.2211350242",
+    "article-title": "Refractive indices of single domain BaTiO3 for different wavelengths and temperatures",
+    "volume": "135",
+    "year": "1993",
+    "journal-title": "Phys. Status Solidi A"
+   },
+   {
+    "key": "2026090914312215500_c85",
+    "doi-asserted-by": "publisher",
+    "first-page": "720",
+    "DOI": "10.1063/1.1657458",
+    "article-title": "Oxygen-octahedra ferroelectrics. I. Theory of electro-optical and nonlinear optical effects",
+    "volume": "40",
+    "year": "1969",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c86",
+    "first-page": "575",
+    "volume-title": "The Principles of Nonlinear Optics",
+    "year": "1984"
+   },
+   {
+    "key": "2026090914312215500_c87",
+    "volume-title": "The Quantum Theory of Nonlinear Optics",
+    "year": "2014"
+   },
+   {
+    "key": "2026090914312215500_c88",
+    "volume-title": "Nonlinear Optics",
+    "year": "2008",
+    "edition": "3"
+   },
+   {
+    "key": "2026090914312215500_c89",
+    "volume-title": "Quantum Electronics",
+    "year": "1989"
+   },
+   {
+    "key": "2026090914312215500_c90",
+    "doi-asserted-by": "publisher",
+    "first-page": "1169",
+    "DOI": "10.1063/1.357841",
+    "article-title": "Investigation of barium titanate thin films on MgO substrates by second-harmonic generation",
+    "volume": "76",
+    "year": "1994",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c91",
+    "doi-asserted-by": "publisher",
+    "first-page": "A1313",
+    "DOI": "10.1103/PhysRev.134.A1313",
+    "article-title": "Optical harmonic generation in single crystal BaTiO3",
+    "volume": "134",
+    "year": "1964",
+    "journal-title": "Phys. Rev."
+   },
+   {
+    "key": "2026090914312215500_c92",
+    "volume-title": "Handbook of Optical Materials",
+    "year": "2018"
+   },
+   {
+    "key": "2026090914312215500_c93",
+    "doi-asserted-by": "publisher",
+    "first-page": "016121",
+    "DOI": "10.1063/5.0228990",
+    "article-title": "Absorption loss and Kerr nonlinearity in barium titanate waveguides",
+    "volume": "10",
+    "year": "2025",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "2026090914312215500_c94",
+    "doi-asserted-by": "publisher",
+    "first-page": "445",
+    "DOI": "10.1016/S0030-4018(02)01676-0",
+    "article-title": "Z-scan determination of the large third-order optical nonlinearity of Rh:BaTiO3 thin films deposited on MgO substrates",
+    "volume": "209",
+    "year": "2002",
+    "journal-title": "Opt. Commun."
+   },
+   {
+    "key": "2026090914312215500_c95",
+    "doi-asserted-by": "publisher",
+    "first-page": "1729",
+    "DOI": "10.1364/AO.41.001729",
+    "article-title": "Rh:BaTiO3 thin films with large nonlinear optical properties",
+    "volume": "41",
+    "year": "2002",
+    "journal-title": "Appl. Opt."
+   },
+   {
+    "key": "2026090914312215500_c96",
+    "doi-asserted-by": "publisher",
+    "first-page": "1547",
+    "DOI": "10.1063/1.124750",
+    "article-title": "Nonlinear optical properties of self-organized complex oxide Ce:BaTiO3 quantum dots grown by pulsed laser deposition",
+    "volume": "75",
+    "year": "1999",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c97",
+    "doi-asserted-by": "publisher",
+    "first-page": "7242",
+    "DOI": "10.1063/1.1524709",
+    "article-title": "Iron nanoparticles in amorphous BaTiO3 thin films with large third-order optical nonlinearity",
+    "volume": "92",
+    "year": "2002",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c98",
+    "volume-title": "Nonlinear Optics",
+    "year": "1996"
+   },
+   {
+    "key": "2026090914312215500_c99",
+    "doi-asserted-by": "publisher",
+    "first-page": "735",
+    "DOI": "10.1063/1.1657459",
+    "article-title": "Oxygen-octahedra ferroelectrics. II. Electro-optical and nonlinear-optical device applications",
+    "volume": "40",
+    "year": "1969",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c100",
+    "doi-asserted-by": "publisher",
+    "first-page": "956",
+    "DOI": "10.1364/OME.484836",
+    "article-title": "Domain effects on the electro-optic properties of thin-film barium titanate",
+    "volume": "13",
+    "year": "2023",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2026090914312215500_c101",
+    "doi-asserted-by": "publisher",
+    "first-page": "115201",
+    "DOI": "10.1103/PhysRevB.108.115201",
+    "article-title": "Nature of electro-optic response in tetragonal BaTiO3",
+    "volume": "108",
+    "year": "2023",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "2026090914312215500_c102",
+    "doi-asserted-by": "publisher",
+    "first-page": "2340",
+    "DOI": "10.1109/JLT.2006.874603",
+    "article-title": "Analysis and design optimization of electrooptic interferometric modulators for microphotonics applications",
+    "volume": "24",
+    "year": "2006",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2026090914312215500_c103",
+    "doi-asserted-by": "publisher",
+    "first-page": "15332",
+    "DOI": "10.1364/OE.23.015332",
+    "article-title": "Influence of BaTiO3 ferroelectric orientation for electro-optic modulation on silicon",
+    "volume": "23",
+    "year": "2015",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c104",
+    "doi-asserted-by": "publisher",
+    "first-page": "209",
+    "DOI": "10.1063/1.1651955",
+    "article-title": "Relationship between linear and quadratic electro-optic coefficients in LiNbO3, LiTaO3, and other oxygen-octahedra ferroelectrics based on direct measurement of spontaneous polarization",
+    "volume": "12",
+    "year": "1968",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c105",
+    "unstructured": "H.-L.\n            Lin\n          , P.Aashna, Y.Cao, and A.Danner, \u201cGiant electro-optic coefficient in single crystal barium titanate on oxide insulator based Mach-Zehnder interferometer,\u201d arXiv:2505.21927 (2025)."
+   },
+   {
+    "key": "2026090914312215500_c106",
+    "first-page": "195",
+    "article-title": "Photorefractive properties of BaTiO3",
+    "volume-title": "Photorefractive Materials and Their Applications I: Fundamental Phenomena",
+    "year": "2005"
+   },
+   {
+    "key": "2026090914312215500_c107",
+    "doi-asserted-by": "publisher",
+    "first-page": "293",
+    "DOI": "10.1364/JOSAB.3.000293",
+    "article-title": "Photorefractive effect in BaTiO3: Microscopic origins",
+    "volume": "3",
+    "year": "1986",
+    "journal-title": "J. Opt. Soc. Am. B"
+   },
+   {
+    "key": "2026090914312215500_c108",
+    "doi-asserted-by": "publisher",
+    "first-page": "732",
+    "DOI": "10.3390/ma16020732",
+    "article-title": "Growing, structure and optical properties of LiNbO3:B crystals, a material for laser radiation transformation",
+    "volume": "16",
+    "year": "2023",
+    "journal-title": "Materials"
+   },
+   {
+    "key": "2026090914312215500_c109",
+    "doi-asserted-by": "publisher",
+    "first-page": "6648",
+    "DOI": "10.1039/D5MA00721F",
+    "article-title": "Electronic paramagnetic resonance analysis of point defects in lithium niobate: Progress and prospects",
+    "volume": "6",
+    "year": "2025",
+    "journal-title": "Mater. Adv."
+   },
+   {
+    "key": "2026090914312215500_c110",
+    "first-page": "1626",
+    "article-title": "The photorefractive effect of lithium niobate crystals",
+    "volume": "51",
+    "year": "2022",
+    "journal-title": "J. Synth. Crystals"
+   },
+   {
+    "key": "2026090914312215500_c111",
+    "doi-asserted-by": "publisher",
+    "first-page": "2245",
+    "DOI": "10.1364/JOSAB.7.002245",
+    "article-title": "Photorefractive properties of BaTiO3:Co",
+    "volume": "7",
+    "year": "1990",
+    "journal-title": "J. Opt. Soc. Am. B"
+   },
+   {
+    "key": "2026090914312215500_c112",
+    "doi-asserted-by": "publisher",
+    "first-page": "416",
+    "DOI": "10.1016/0030-4018(94)00524-X",
+    "article-title": "Photorefractive properties of Ce: BaTiO3 crystals",
+    "volume": "113",
+    "year": "1995",
+    "journal-title": "Opt. Commun."
+   },
+   {
+    "key": "2026090914312215500_c113",
+    "doi-asserted-by": "publisher",
+    "first-page": "340",
+    "DOI": "10.1016/S0169-4332(02)01393-4",
+    "article-title": "Increasing the conductivity of photorefractive BaTiO3 single crystals by doping Ru",
+    "volume": "208\u2013209",
+    "year": "2003",
+    "journal-title": "Appl. Surf. Sci."
+   },
+   {
+    "key": "2026090914312215500_c114",
+    "doi-asserted-by": "publisher",
+    "first-page": "2318",
+    "DOI": "10.1063/1.369544",
+    "article-title": "Optical and photorefractive properties of Nb-doped BaTiO3",
+    "volume": "85",
+    "year": "1999",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c115",
+    "doi-asserted-by": "publisher",
+    "first-page": "2975",
+    "DOI": "10.1364/OME.577084",
+    "article-title": "Thermo-optic coefficient of single-crystal thin-film barium titanate on insulator",
+    "volume": "15",
+    "year": "2025",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2026090914312215500_c116",
+    "doi-asserted-by": "publisher",
+    "first-page": "D50",
+    "DOI": "10.1364/JOSAB.482238",
+    "article-title": "Integrated thermo-optic micro-ring resonator in Z-cut lithium niobate thin film with isolation trenches",
+    "volume": "40",
+    "year": "2023",
+    "journal-title": "J. Opt. Soc. Am. B"
+   },
+   {
+    "key": "2026090914312215500_c117",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JPHOT.2021.3076221",
+    "article-title": "Highly efficient thermal tuning interferometer in lithium niobate thin film using air bridge",
+    "volume": "13",
+    "year": "2021",
+    "journal-title": "IEEE Photonics J."
+   },
+   {
+    "key": "2026090914312215500_c118",
+    "doi-asserted-by": "publisher",
+    "first-page": "2022",
+    "DOI": "10.1557/JMR.1991.2022",
+    "article-title": "Epitaxy of barium titanate thin films grown on MgO by pulsed-laser ablation",
+    "volume": "6",
+    "year": "1991",
+    "journal-title": "J. Mater. Res."
+   },
+   {
+    "key": "2026090914312215500_c119",
+    "doi-asserted-by": "publisher",
+    "first-page": "6466",
+    "DOI": "10.1063/1.359121",
+    "article-title": "Growth and ferroelectricity of epitaxial-like BaTiO3 films on single-crystal MgO, SrTiO3, and silicon substrates synthesized by pulsed laser deposition",
+    "volume": "77",
+    "year": "1995",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c120",
+    "first-page": "SW4R.6",
+    "article-title": "Single-mode waveguides in barium titanate-on-insulator platform fabricated by wet etching",
+    "year": "2024"
+   },
+   {
+    "key": "2026090914312215500_c121",
+    "doi-asserted-by": "publisher",
+    "first-page": "275",
+    "DOI": "10.1116/1.580524",
+    "article-title": "Crystallographic and microstructural studies of BaTiO3 thin films grown on SrTiO3 by laser molecular beam epitaxy",
+    "volume": "15",
+    "year": "1997",
+    "journal-title": "J. Vac. Sci. Technol., A"
+   },
+   {
+    "key": "2026090914312215500_c122",
+    "doi-asserted-by": "publisher",
+    "first-page": "7442",
+    "DOI": "10.1063/1.373007",
+    "article-title": "Thickness and oxygen pressure dependent structural characteristics of BaTiO3 thin films grown by laser molecular beam epitaxy",
+    "volume": "87",
+    "year": "2000",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c123",
+    "doi-asserted-by": "publisher",
+    "first-page": "2501037",
+    "DOI": "10.1002/adom.202501037",
+    "article-title": "Effect of stoichiometry on the structure and polarization of batio3",
+    "volume": "13",
+    "year": "2025",
+    "journal-title": "Adv. Opt. Mater."
+   },
+   {
+    "key": "2026090914312215500_c124",
+    "doi-asserted-by": "publisher",
+    "first-page": "104104",
+    "DOI": "10.1063/5.0019980",
+    "article-title": "Polarization control of epitaxial barium titanate (BaTiO3) grown by pulsed-laser deposition on a MBE-SrTiO3/Si(001) pseudo-substrate",
+    "volume": "128",
+    "year": "2020",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c125",
+    "doi-asserted-by": "publisher",
+    "first-page": "1456",
+    "DOI": "10.1109/JLT.2019.2893500",
+    "article-title": "A BaTiO3-based electro-optic Pockels modulator monolithically integrated on an advanced silicon photonics platform",
+    "volume": "37",
+    "year": "2019",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2026090914312215500_c126",
+    "doi-asserted-by": "publisher",
+    "first-page": "234",
+    "DOI": "10.1016/S0921-5107(98)00219-0",
+    "article-title": "Epitaxial BaTiO3 thin films on MgO",
+    "volume": "56",
+    "year": "1998",
+    "journal-title": "Mater. Sci. Eng., B"
+   },
+   {
+    "key": "2026090914312215500_c127",
+    "doi-asserted-by": "publisher",
+    "first-page": "1152",
+    "DOI": "10.1557/JMR.1997.0159",
+    "article-title": "Preparation and characterization of BaTiO3 thin films on MgO-buffered Si(100) substrates by RF sputtering",
+    "volume": "12",
+    "year": "1997",
+    "journal-title": "J. Mater. Res."
+   },
+   {
+    "key": "2026090914312215500_c128",
+    "doi-asserted-by": "publisher",
+    "first-page": "021510",
+    "DOI": "10.1116/1.5082237",
+    "article-title": "Epitaxial growth and strain relaxation studies of BaTiO3 and BaTiO3/SrTiO3 superlattices grown by MBE on SrTiO3-buffered Si (001) substrate",
+    "volume": "37",
+    "year": "2019",
+    "journal-title": "J. Vac. Sci. Technol., A"
+   },
+   {
+    "key": "2026090914312215500_c129",
+    "doi-asserted-by": "publisher",
+    "first-page": "1255",
+    "DOI": "10.1002/cjce.23747",
+    "article-title": "Experimental methods in chemical engineering: X-ray diffraction spectroscopy\u2014XRD",
+    "volume": "98",
+    "year": "2020",
+    "journal-title": "Can. J. Chem. Eng."
+   },
+   {
+    "key": "2026090914312215500_c130",
+    "doi-asserted-by": "publisher",
+    "first-page": "9085",
+    "DOI": "10.1103/PhysRevB.35.9085",
+    "article-title": "X-ray diffraction studies of the structure of nanometer-sized crystalline materials",
+    "volume": "35",
+    "year": "1987",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "2026090914312215500_c131",
+    "doi-asserted-by": "publisher",
+    "first-page": "338",
+    "DOI": "10.1016/S0924-4247(02)00268-6",
+    "article-title": "Development of AFM-based techniques to measure mechanical properties of nanoscale structures",
+    "volume": "101",
+    "year": "2002",
+    "journal-title": "Sens. Actuators, A"
+   },
+   {
+    "key": "2026090914312215500_c132",
+    "doi-asserted-by": "publisher",
+    "first-page": "1803",
+    "DOI": "10.1063/1.115064",
+    "article-title": "Pulsed laser deposition of BaTiO3 thin films and their optical properties",
+    "volume": "67",
+    "year": "1995",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c133",
+    "doi-asserted-by": "publisher",
+    "first-page": "5363",
+    "DOI": "10.1038/s41598-022-09182-0",
+    "article-title": "Controlling of lattice strains for crack-free and strong ferroelectric barium titanate films by post-thermal treatment",
+    "volume": "12",
+    "year": "2022",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "2026090914312215500_c134",
+    "doi-asserted-by": "publisher",
+    "first-page": "1199",
+    "DOI": "10.1063/1.107404",
+    "article-title": "Epitaxial growth of MgO on GaAs (001) for growing epitaxial BaTiO3 thin films by pulsed laser deposition",
+    "volume": "60",
+    "year": "1992",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c135",
+    "doi-asserted-by": "publisher",
+    "first-page": "219",
+    "DOI": "10.1016/S0040-6090(01)00887-2",
+    "article-title": "The growth of MgO buffer layers on sapphire for the epitaxy of BaTiO3 optical thin films",
+    "volume": "389",
+    "year": "2001",
+    "journal-title": "Thin Solid Films"
+   },
+   {
+    "key": "2026090914312215500_c136",
+    "doi-asserted-by": "publisher",
+    "first-page": "2303058",
+    "DOI": "10.1002/adom.202303058",
+    "article-title": "Enhanced electro-optic coefficients in single-crystalline BaTiO3 thin films enabled by domain alignment",
+    "volume": "12",
+    "year": "2024",
+    "journal-title": "Adv. Opt. Mater."
+   },
+   {
+    "key": "2026090914312215500_c137",
+    "doi-asserted-by": "publisher",
+    "first-page": "2413515",
+    "DOI": "10.1002/adfm.202413515",
+    "article-title": "Heterogeneous integration of high endurance ferroelectric and piezoelectric epitaxial BaTiO3 devices on Si",
+    "volume": "35",
+    "year": "2025",
+    "journal-title": "Adv. Funct. Mater."
+   },
+   {
+    "key": "2026090914312215500_c138",
+    "doi-asserted-by": "publisher",
+    "first-page": "036005",
+    "DOI": "10.1088/1468-6996/16/3/036005",
+    "article-title": "A review of molecular beam epitaxy of ferroelectric BaTiO3 films on Si, Ge and GaAs substrates and their applications",
+    "volume": "16",
+    "year": "2015",
+    "journal-title": "Sci. Technol. Adv. Mater."
+   },
+   {
+    "key": "2026090914312215500_c139",
+    "doi-asserted-by": "publisher",
+    "first-page": "1442",
+    "DOI": "10.1016/j.apsusc.2005.02.146",
+    "article-title": "Effect of microstructure of MgO buffer layer on BaTiO3 grown on silicon substrates",
+    "volume": "252",
+    "year": "2005",
+    "journal-title": "Appl. Surf. Sci."
+   },
+   {
+    "key": "2026090914312215500_c140",
+    "doi-asserted-by": "publisher",
+    "first-page": "214102",
+    "DOI": "10.1063/1.4902165",
+    "article-title": "Structural study and ferroelectricity of epitaxial BaTiO3 films on silicon grown by molecular beam epitaxy",
+    "volume": "116",
+    "year": "2014",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c141",
+    "doi-asserted-by": "publisher",
+    "first-page": "065501",
+    "DOI": "10.7567/APEX.10.065501",
+    "article-title": "Controlled orientation of molecular-beam-epitaxial BaTiO3 on Si(001) using thickness engineering of BaTiO3 and SrTiO3 buffer layers",
+    "volume": "10",
+    "year": "2017",
+    "journal-title": "Appl. Phys. Express"
+   },
+   {
+    "key": "2026090914312215500_c142",
+    "doi-asserted-by": "publisher",
+    "first-page": "4276",
+    "DOI": "10.1021/acs.nanolett.2c00047",
+    "article-title": "Ferroelectric modulation of surface electronic states in BaTiO3 for enhanced hydrogen evolution activity",
+    "volume": "22",
+    "year": "2022",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026090914312215500_c143",
+    "doi-asserted-by": "publisher",
+    "first-page": "14246",
+    "DOI": "10.1021/acs.nanolett.5c02650",
+    "article-title": "Ferroelectric switching in hybrid molecular-beam-epitaxy-grown BaTiO3 films",
+    "volume": "25",
+    "year": "2025",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026090914312215500_c144",
+    "doi-asserted-by": "publisher",
+    "first-page": "5604",
+    "DOI": "10.1063/1.360696",
+    "article-title": "Structural characterization of epitaxial BaTiO3 thin films grown by sputter deposition on MgO (100)",
+    "volume": "78",
+    "year": "1995",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c145",
+    "doi-asserted-by": "publisher",
+    "first-page": "231",
+    "DOI": "10.1016/j.jascer.2014.05.002",
+    "article-title": "Ridge waveguide using highly oriented BaTiO3 thin films for electro-optic application",
+    "volume": "2",
+    "year": "2014",
+    "journal-title": "J. Asian Ceram. Soc."
+   },
+   {
+    "key": "2026090914312215500_c146",
+    "doi-asserted-by": "publisher",
+    "first-page": "51230",
+    "DOI": "10.1021/acsami.1c14048",
+    "article-title": "Thick BaTiO3 epitaxial films integrated on Si by RF sputtering for electro-optic modulators in Si photonics",
+    "volume": "13",
+    "year": "2021",
+    "journal-title": "ACS Appl. Mater. Interfaces"
+   },
+   {
+    "key": "2026090914312215500_c147",
+    "doi-asserted-by": "publisher",
+    "first-page": "2968",
+    "DOI": "10.1063/1.117746",
+    "article-title": "Thin film channel waveguides fabricated in metalorganic chemical vapor deposition grown BaTiO3 on MgO",
+    "volume": "69",
+    "year": "1996",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c148",
+    "doi-asserted-by": "publisher",
+    "first-page": "1700116",
+    "DOI": "10.1002/admi.201700116",
+    "article-title": "Low temperature epitaxial barium titanate thin film growth in high vacuum CVD",
+    "volume": "4",
+    "year": "2017",
+    "journal-title": "Adv. Mater. Interfaces"
+   },
+   {
+    "key": "2026090914312215500_c149",
+    "doi-asserted-by": "publisher",
+    "first-page": "102490",
+    "DOI": "10.1016/j.mtla.2025.102490",
+    "article-title": "High-quality epitaxial BaTiO3 films grown by high-vacuum chemical vapor deposition for integrated electro-optical devices",
+    "volume": "42",
+    "year": "2025",
+    "journal-title": "Materialia"
+   },
+   {
+    "key": "2026090914312215500_c150",
+    "doi-asserted-by": "publisher",
+    "first-page": "1209",
+    "DOI": "10.1111/jace.16815",
+    "article-title": "Epitaxial, electro-optically active barium titanate thin films on silicon by chemical solution deposition",
+    "volume": "103",
+    "year": "2020",
+    "journal-title": "J. Am. Ceram. Soc."
+   },
+   {
+    "key": "2026090914312215500_c151",
+    "doi-asserted-by": "publisher",
+    "first-page": "066005",
+    "DOI": "10.1117/1.APN.3.6.066005",
+    "article-title": "Hybrid silicon-barium-titanate tunable racetrack resonators based on chemical solution deposition",
+    "volume": "3",
+    "year": "2024",
+    "journal-title": "Adv. Photonics Nexus"
+   },
+   {
+    "key": "2026090914312215500_c152",
+    "doi-asserted-by": "publisher",
+    "first-page": "082910",
+    "DOI": "10.1063/1.4867469",
+    "article-title": "Epitaxial c-axis oriented BaTiO3 thin films on SrTiO3-buffered Si (001) by atomic layer deposition",
+    "volume": "104",
+    "year": "2014",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c153",
+    "doi-asserted-by": "publisher",
+    "first-page": "064101",
+    "DOI": "10.1063/1.5087571",
+    "article-title": "Atomic layer deposition of epitaxial ferroelectric barium titanate on Si (001) for electronic and photonic applications",
+    "volume": "126",
+    "year": "2019",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c154",
+    "doi-asserted-by": "publisher",
+    "first-page": "1285",
+    "DOI": "10.1109/LPT.2021.3114993",
+    "article-title": "Integrated electro-optic modulator in Z-cut lithium niobate thin film with vertical structure",
+    "volume": "33",
+    "year": "2021",
+    "journal-title": "IEEE Photonics Technol. Lett."
+   },
+   {
+    "key": "2026090914312215500_c155",
+    "doi-asserted-by": "publisher",
+    "first-page": "4856",
+    "DOI": "10.1038/s41467-023-40502-8",
+    "article-title": "High density lithium niobate photonic integrated circuits",
+    "volume": "14",
+    "year": "2023",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026090914312215500_c156",
+    "doi-asserted-by": "publisher",
+    "first-page": "237",
+    "DOI": "10.1038/s42254-025-00825-5",
+    "article-title": "Integrated electro-optics on thin-film lithium niobate",
+    "volume": "7",
+    "year": "2025",
+    "journal-title": "Nat. Rev. Phys."
+   },
+   {
+    "key": "2026090914312215500_c157",
+    "doi-asserted-by": "publisher",
+    "first-page": "1096",
+    "DOI": "10.1038/s41586-024-08354-4",
+    "article-title": "Ultrabroadband integrated electro-optic frequency comb in lithium tantalate",
+    "volume": "637",
+    "year": "2025",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2026090914312215500_c158",
+    "doi-asserted-by": "publisher",
+    "first-page": "784",
+    "DOI": "10.1038/s41586-024-07369-1",
+    "article-title": "Lithium tantalate photonic integrated circuits for volume manufacturing",
+    "volume": "629",
+    "year": "2024",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2026090914312215500_c159",
+    "doi-asserted-by": "publisher",
+    "first-page": "4543",
+    "DOI": "10.1364/OE.446665",
+    "article-title": "Compact MZI modulators on thin film Z-cut lithium niobate",
+    "volume": "30",
+    "year": "2022",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c160",
+    "doi-asserted-by": "publisher",
+    "first-page": "1547",
+    "DOI": "10.1364/OE.26.001547",
+    "article-title": "Nanophotonic lithium niobate electro-optic modulators",
+    "volume": "26",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c161",
+    "doi-asserted-by": "publisher",
+    "first-page": "036115",
+    "DOI": "10.1063/5.0187996",
+    "article-title": "Tunable and stable micro-ring resonator based on thin-film lithium tantalate",
+    "volume": "9",
+    "year": "2024",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "2026090914312215500_c162",
+    "doi-asserted-by": "publisher",
+    "first-page": "2127",
+    "DOI": "10.1364/OL.424996",
+    "article-title": "Electro-optically tunable microring laser monolithically integrated on lithium niobate on insulator",
+    "volume": "46",
+    "year": "2021",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "2026090914312215500_c163",
+    "doi-asserted-by": "publisher",
+    "first-page": "978",
+    "DOI": "10.1038/s41467-019-08969-6",
+    "article-title": "Monolithic lithium niobate photonic circuits for Kerr frequency comb generation and modulation",
+    "volume": "10",
+    "year": "2019",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026090914312215500_c164",
+    "doi-asserted-by": "publisher",
+    "first-page": "1783",
+    "DOI": "10.1063/1.119397",
+    "article-title": "Thin-film channel waveguide electro-optic modulator in epitaxial BaTiO3",
+    "volume": "71",
+    "year": "1997",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c165",
+    "first-page": "1",
+    "article-title": "Mach-Zehnder interferometor in thin film barium titanate on insulator by wet etching",
+    "year": "2025"
+   },
+   {
+    "key": "2026090914312215500_c166",
+    "doi-asserted-by": "publisher",
+    "first-page": "530",
+    "DOI": "10.1186/1556-276X-9-530",
+    "article-title": "Comparative analysis of barium titanate thin films dry etching using inductively coupled plasmas by different fluorine-based mixture gas",
+    "volume": "9",
+    "year": "2014",
+    "journal-title": "Nanoscale Res. Lett."
+   },
+   {
+    "key": "2026090914312215500_c167",
+    "doi-asserted-by": "publisher",
+    "first-page": "32",
+    "DOI": "10.1186/s11671-021-03494-2",
+    "article-title": "Analysis of perovskite oxide etching using argon inductively coupled plasmas for photonics applications",
+    "volume": "16",
+    "year": "2021",
+    "journal-title": "Nanoscale Res. Lett."
+   },
+   {
+    "key": "2026090914312215500_c168",
+    "doi-asserted-by": "publisher",
+    "first-page": "4367",
+    "DOI": "10.1021/acsphotonics.3c01144",
+    "article-title": "Monolithic barium titanate modulators on silicon-on-insulator substrates",
+    "volume": "10",
+    "year": "2023",
+    "journal-title": "ACS Photonics"
+   },
+   {
+    "key": "2026090914312215500_c169",
+    "unstructured": "G. I.\n            Kim\n          , J.Yim, and G.Bahl, \u201cLow loss monolithic barium titanate on insulator integrated photonics with intrinsic quality factor &gt;1 million,\u201d arXiv:2507.17150 (2025)."
+   },
+   {
+    "key": "2026090914312215500_c170",
+    "doi-asserted-by": "publisher",
+    "first-page": "1688",
+    "DOI": "10.1109/JLT.2015.2510282",
+    "article-title": "A hybrid barium titanate\u2013silicon photonics platform for ultraefficient electro-optic tuning",
+    "volume": "34",
+    "year": "2016",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2026090914312215500_c171",
+    "doi-asserted-by": "publisher",
+    "first-page": "1698",
+    "DOI": "10.1021/acsphotonics.6b00350",
+    "article-title": "Low-loss BaTiO3\u2013Si waveguides for nonlinear integrated photonics",
+    "volume": "3",
+    "year": "2016",
+    "journal-title": "ACS Photonics"
+   },
+   {
+    "key": "2026090914312215500_c172",
+    "doi-asserted-by": "publisher",
+    "first-page": "1671",
+    "DOI": "10.1038/ncomms2695",
+    "article-title": "A strong electro-optically active lead-free ferroelectric integrated on silicon",
+    "volume": "4",
+    "year": "2013",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026090914312215500_c173",
+    "doi-asserted-by": "publisher",
+    "first-page": "031106",
+    "DOI": "10.1063/5.0130516",
+    "article-title": "An active straight waveguide polarization rotator in single crystal thin film barium titanate-on-insulator",
+    "volume": "122",
+    "year": "2023",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c174",
+    "doi-asserted-by": "publisher",
+    "first-page": "2677",
+    "DOI": "10.1021/acsphotonics.9b00558",
+    "article-title": "Ultra-low-power tuning in hybrid barium titanate\u2013silicon nitride electro-optic devices on silicon",
+    "volume": "6",
+    "year": "2019",
+    "journal-title": "ACS Photonics"
+   },
+   {
+    "key": "2026090914312215500_c175",
+    "first-page": "1",
+    "article-title": "Thin-film BTO-based modulators enabling 200 Gb/s data rates with sub 1 Vpp drive signal",
+    "year": "2023"
+   },
+   {
+    "key": "2026090914312215500_c176",
+    "doi-asserted-by": "publisher",
+    "first-page": "848",
+    "DOI": "10.1364/OPTICA.589724",
+    "article-title": "Barium titanate poling dynamics in high-speed communications",
+    "volume": "13",
+    "year": "2026",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2026090914312215500_c177",
+    "first-page": "Th4B.3",
+    "article-title": "Barium titanate enabling net 1.6T (4\u2009\u00d7\u2009448\u2009Gbps PAM4) on a silicon photonics platform",
+    "year": "2026"
+   },
+   {
+    "key": "2026090914312215500_c178",
+    "doi-asserted-by": "publisher",
+    "first-page": "58",
+    "DOI": "10.1038/s41377-018-0058-1",
+    "article-title": "Optical metasurfaces: New generation building blocks for multi-functional optics",
+    "volume": "7",
+    "year": "2018",
+    "journal-title": "Light"
+   },
+   {
+    "key": "2026090914312215500_c179",
+    "doi-asserted-by": "publisher",
+    "first-page": "13339",
+    "DOI": "10.1021/acsnano.2c04628",
+    "article-title": "Recent advances in tunable metasurfaces: Materials, design, and applications",
+    "volume": "16",
+    "year": "2022",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "2026090914312215500_c180",
+    "doi-asserted-by": "publisher",
+    "first-page": "816",
+    "DOI": "10.1021/acsphotonics.3c00457",
+    "article-title": "Roadmap for optical metasurfaces",
+    "volume": "11",
+    "year": "2024",
+    "journal-title": "ACS Photonics"
+   },
+   {
+    "key": "2026090914312215500_c181",
+    "first-page": "FTh4K-5",
+    "article-title": "95 MHz bandwidth electro-optic metasurfaces based on barium titanate nanocrystals",
+    "year": "2021"
+   },
+   {
+    "key": "2026090914312215500_c182",
+    "doi-asserted-by": "publisher",
+    "first-page": "2000623",
+    "DOI": "10.1002/adom.202000623",
+    "article-title": "Electro-optic metasurfaces based on barium titanate nanoparticle films",
+    "volume": "8",
+    "year": "2020",
+    "journal-title": "Adv. Opt. Mater."
+   },
+   {
+    "key": "2026090914312215500_c183",
+    "first-page": "SS102_5",
+    "article-title": "BaTiO3/TiO2 hybrid metasurface for free-space electro-optic modulators",
+    "year": "2025"
+   },
+   {
+    "key": "2026090914312215500_c184",
+    "doi-asserted-by": "publisher",
+    "first-page": "20268",
+    "DOI": "10.1364/OE.522746",
+    "article-title": "Ultra-high Q-factor quasi-BIC BaTiO3 metasurface for electro-optic modulation",
+    "volume": "32",
+    "year": "2024",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2026090914312215500_c185",
+    "first-page": "1",
+    "article-title": "Electric field confinement optimization in polycrystalline barium titanate metasurfaces for electro-optic modulation",
+    "year": "2025"
+   },
+   {
+    "key": "2026090914312215500_c186",
+    "doi-asserted-by": "publisher",
+    "first-page": "5536",
+    "DOI": "10.1021/acs.nanolett.4c00711",
+    "article-title": "Nanoimprinting solution-derived barium titanate for electro-optic metasurfaces",
+    "volume": "24",
+    "year": "2024",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026090914312215500_c187",
+    "doi-asserted-by": "publisher",
+    "first-page": "R07",
+    "DOI": "10.3788/PI.2024.R07",
+    "article-title": "Electrically tunable optical metasurfaces",
+    "volume": "3",
+    "year": "2024",
+    "journal-title": "Photonics Insights"
+   },
+   {
+    "key": "2026090914312215500_c188",
+    "doi-asserted-by": "publisher",
+    "first-page": "eado8964",
+    "DOI": "10.1126/sciadv.ado8964",
+    "article-title": "The rise of electrically tunable metasurfaces",
+    "volume": "10",
+    "year": "2024",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "2026090914312215500_c189",
+    "doi-asserted-by": "publisher",
+    "first-page": "729",
+    "DOI": "10.3390/nano11030729",
+    "article-title": "Electrically-driven zoom metalens based on dynamically controlling the phase of barium titanate (BTO) column antennas",
+    "volume": "11",
+    "year": "2021",
+    "journal-title": "Nanomaterials"
+   },
+   {
+    "key": "2026090914312215500_c190",
+    "doi-asserted-by": "publisher",
+    "first-page": "2023",
+    "DOI": "10.3390/nano11082023",
+    "article-title": "Active modulating the intensity of bifocal metalens with electrically tunable barium titanate (BTO) nanofins",
+    "volume": "11",
+    "year": "2021",
+    "journal-title": "Nanomaterials"
+   },
+   {
+    "key": "2026090914312215500_c191",
+    "doi-asserted-by": "publisher",
+    "first-page": "529",
+    "DOI": "10.1021/acsphotonics.3c01401",
+    "article-title": "Subwavelength custom wavefront shaping by a nonlinear electro-optic spatial light modulator",
+    "volume": "11",
+    "year": "2024",
+    "journal-title": "ACS Photonics"
+   },
+   {
+    "key": "2026090914312215500_c192",
+    "doi-asserted-by": "publisher",
+    "first-page": "1900936",
+    "DOI": "10.1002/adom.201900936",
+    "article-title": "Enhanced nonlinear yield from barium titanate metasurface down to the near ultraviolet",
+    "volume": "7",
+    "year": "2019",
+    "journal-title": "Adv. Opt. Mater."
+   },
+   {
+    "key": "2026090914312215500_c193",
+    "doi-asserted-by": "publisher",
+    "first-page": "175",
+    "DOI": "10.1016/j.sna.2015.04.019",
+    "article-title": "Ultraviolet radiation detection by barium titanate thin films grown by sol\u2013gel hydrothermal method",
+    "volume": "230",
+    "year": "2015",
+    "journal-title": "Sens. Actuators, A"
+   },
+   {
+    "key": "2026090914312215500_c194",
+    "doi-asserted-by": "publisher",
+    "first-page": "8808",
+    "DOI": "10.1021/acs.nanolett.1c03171",
+    "article-title": "Self-powered high-responsivity photodetectors enhanced by the pyro-phototronic effect based on a BaTiO3/GaN heterojunction",
+    "volume": "21",
+    "year": "2021",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026090914312215500_c195",
+    "doi-asserted-by": "publisher",
+    "first-page": "e00024",
+    "DOI": "10.1002/smll.202600024",
+    "article-title": "Giant bulk photovoltaic effect in crystal orientation restructured quasi-epitaxial BaTiO3 films on silicon substrates",
+    "volume": "22",
+    "year": "2026",
+    "journal-title": "Small"
+   },
+   {
+    "key": "2026090914312215500_c196",
+    "doi-asserted-by": "publisher",
+    "first-page": "221103",
+    "DOI": "10.1063/1.2936934",
+    "article-title": "Highly efficient broadband second harmonic generation using polydomain epitaxial barium titanate thin film waveguides",
+    "volume": "92",
+    "year": "2008",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c197",
+    "doi-asserted-by": "publisher",
+    "first-page": "2406248",
+    "DOI": "10.1002/advs.202406248",
+    "article-title": "Periodic domain inversion in single crystal barium titanate-on-insulator thin film",
+    "volume": "11",
+    "year": "2024",
+    "journal-title": "Adv. Sci."
+   },
+   {
+    "key": "2026090914312215500_c198",
+    "doi-asserted-by": "publisher",
+    "first-page": "10",
+    "DOI": "10.1364/OPTICA.1.000010",
+    "article-title": "Microresonator frequency comb optical clock",
+    "volume": "1",
+    "year": "2014",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2026090914312215500_c199",
+    "doi-asserted-by": "publisher",
+    "first-page": "884",
+    "DOI": "10.1126/science.aao1968",
+    "article-title": "Soliton microcomb range measurement",
+    "volume": "359",
+    "year": "2018",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026090914312215500_c200",
+    "doi-asserted-by": "publisher",
+    "first-page": "503",
+    "DOI": "10.1515/nanoph-2016-0185",
+    "article-title": "Optical computing",
+    "volume": "6",
+    "year": "2017",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "2026090914312215500_c201",
+    "doi-asserted-by": "publisher",
+    "first-page": "717",
+    "DOI": "10.1038/s42254-023-00645-5",
+    "article-title": "The physics of optical computing",
+    "volume": "5",
+    "year": "2023",
+    "journal-title": "Nat. Rev. Phys."
+   },
+   {
+    "key": "2026090914312215500_c202",
+    "doi-asserted-by": "publisher",
+    "first-page": "358",
+    "DOI": "10.1038/s44287-024-00050-9",
+    "article-title": "Integrated photonic neuromorphic computing: Opportunities and challenges",
+    "volume": "1",
+    "year": "2024",
+    "journal-title": "Nat. Rev. Electr. Eng."
+   },
+   {
+    "key": "2026090914312215500_c203",
+    "doi-asserted-by": "publisher",
+    "first-page": "2312825",
+    "DOI": "10.1002/adma.202312825",
+    "article-title": "Photonics for neuromorphic computing: Fundamentals, devices, and opportunities",
+    "volume": "37",
+    "year": "2025",
+    "journal-title": "Adv. Mater."
+   },
+   {
+    "key": "2026090914312215500_c204",
+    "doi-asserted-by": "publisher",
+    "first-page": "3266",
+    "DOI": "10.1364/OME.501920",
+    "article-title": "Enhanced BaTiO3/Si3N4 integrated photonic platform with VO2 technology for large-scale neuromorphic computing",
+    "volume": "13",
+    "year": "2023",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2026090914312215500_c205",
+    "doi-asserted-by": "publisher",
+    "first-page": "7940",
+    "DOI": "10.1038/s41467-025-58592-x",
+    "article-title": "Subsecond optically controlled domain switching in freestanding ferroelectric batio3 membrane",
+    "volume": "16",
+    "year": "2025",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026090914312215500_c206",
+    "doi-asserted-by": "publisher",
+    "first-page": "4332",
+    "DOI": "10.1038/s41467-022-31763-w",
+    "article-title": "Nonvolatile ferroelectric domain wall memory integrated on silicon",
+    "volume": "13",
+    "year": "2022",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026090914312215500_c207",
+    "doi-asserted-by": "publisher",
+    "first-page": "561",
+    "DOI": "10.1038/s41566-023-01217-w",
+    "article-title": "Integrated optical memristors",
+    "volume": "17",
+    "year": "2023",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2026090914312215500_c208",
+    "volume-title": "Veeco and IMEC Develop 300\u2009mm Compatible Process to Enable Integration of Barium Titanate on Silicon Photonics",
+    "author": "Veeco Instruments Inc. and IMEC",
+    "year": "2026"
+   },
+   {
+    "key": "2026090914312215500_c209",
+    "doi-asserted-by": "publisher",
+    "first-page": "192903",
+    "DOI": "10.1063/1.4921083",
+    "article-title": "Strain-controlled optical absorption in epitaxial ferroelectric BaTiO3 films",
+    "volume": "106",
+    "year": "2015",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c210",
+    "doi-asserted-by": "publisher",
+    "first-page": "119340",
+    "DOI": "10.1016/j.apcatb.2020.119340",
+    "article-title": "Impact of oxygen vacancy occupancy on piezo-catalytic activity of BaTiO3 nanobelt",
+    "volume": "279",
+    "year": "2020",
+    "journal-title": "Appl. Catal., B"
+   },
+   {
+    "key": "2026090914312215500_c211",
+    "doi-asserted-by": "publisher",
+    "first-page": "311",
+    "DOI": "10.1364/PRJ.382535",
+    "article-title": "Second-harmonic generation using d33 in periodically poled lithium niobate microdisk resonators",
+    "volume": "8",
+    "year": "2020",
+    "journal-title": "Photonics Res."
+   },
+   {
+    "key": "2026090914312215500_c212",
+    "doi-asserted-by": "publisher",
+    "first-page": "234",
+    "DOI": "10.1063/1.1723604",
+    "article-title": "LiNbO3: An efficient phase matchable nonlinear optical material",
+    "volume": "5",
+    "year": "1964",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c213",
+    "doi-asserted-by": "publisher",
+    "first-page": "609",
+    "DOI": "10.1007/s00340-006-2186-1",
+    "article-title": "Thermo-optic effects in electro-optic crystals used in an intensity-modulation system\u2014Application in LiTaO3",
+    "volume": "83",
+    "year": "2006",
+    "journal-title": "Appl. Phys. B"
+   },
+   {
+    "key": "2026090914312215500_c214",
+    "first-page": "182",
+    "article-title": "Nonlinear refractive indices and third-order susceptibilities of nonlinear optical crystals",
+    "volume-title": "Nonlinear Frequency Generation and Conversion: Materials, Devices, and Applications II",
+    "year": "2003"
+   },
+   {
+    "key": "2026090914312215500_c215",
+    "doi-asserted-by": "publisher",
+    "first-page": "622",
+    "DOI": "10.1364/JOSAB.6.000622",
+    "article-title": "Potassium titanyl phosphate: Properties and new applications",
+    "volume": "6",
+    "year": "1989",
+    "journal-title": "J. Opt. Soc. Am. B"
+   },
+   {
+    "key": "2026090914312215500_c216",
+    "doi-asserted-by": "publisher",
+    "first-page": "2816",
+    "DOI": "10.1103/PhysRevLett.74.2816",
+    "article-title": "Kerr nonlinearity via cascaded optical rectification and the linear electro-optic effect",
+    "volume": "74",
+    "year": "1995",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "2026090914312215500_c217",
+    "doi-asserted-by": "publisher",
+    "first-page": "263",
+    "DOI": "10.1080/00150197408243977",
+    "article-title": "Dielectric, mechanical and optical properties of orthorhombic KNbO3",
+    "volume": "6",
+    "year": "1973",
+    "journal-title": "Ferroelectrics"
+   },
+   {
+    "key": "2026090914312215500_c218",
+    "doi-asserted-by": "publisher",
+    "first-page": "1825",
+    "DOI": "10.1063/1.368340",
+    "article-title": "Heterodyne interferometric measurement of the thermo-optic coefficients of potassium niobate",
+    "volume": "84",
+    "year": "1998",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c219",
+    "doi-asserted-by": "publisher",
+    "first-page": "2268",
+    "DOI": "10.1364/JOSAB.14.002268",
+    "article-title": "Absolute scale of second-order nonlinear-optical coefficients",
+    "volume": "14",
+    "year": "1997",
+    "journal-title": "J. Opt. Soc. Am. B"
+   },
+   {
+    "key": "2026090914312215500_c220",
+    "first-page": "790",
+    "article-title": "Temperature-dependent refractive index of silicon and germanium",
+    "year": "2006"
+   },
+   {
+    "key": "2026090914312215500_c221",
+    "doi-asserted-by": "publisher",
+    "first-page": "6023",
+    "DOI": "10.3390/s23136023",
+    "article-title": "Temperature dependence of the thermo-optic coefficient of SiO2 glass",
+    "volume": "23",
+    "year": "2023",
+    "journal-title": "Sensors"
+   },
+   {
+    "key": "2026090914312215500_c222",
+    "doi-asserted-by": "publisher",
+    "first-page": "042402",
+    "DOI": "10.7567/APEX.6.042402",
+    "article-title": "The thermo optic coefficient of amorphous SiN films in the near-infrared and visible regions and its experimental determination",
+    "volume": "6",
+    "year": "2013",
+    "journal-title": "Appl. Phys. Express"
+   },
+   {
+    "key": "2026090914312215500_c223",
+    "doi-asserted-by": "publisher",
+    "first-page": "1091",
+    "DOI": "10.1364/OME.8.001091",
+    "article-title": "Optical dispersion and phase matching in gallium nitride and aluminum nitride",
+    "volume": "8",
+    "year": "2018",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2026090914312215500_c224",
+    "doi-asserted-by": "publisher",
+    "first-page": "1614",
+    "DOI": "10.1063/1.1308529",
+    "article-title": "Temperature dependence of the thermo-optic coefficient of InP, GaAs, and SiC from room temperature to 600\u2009K at the wavelength of 1.5\u2009\u03bcm",
+    "volume": "77",
+    "year": "2000",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c225",
+    "doi-asserted-by": "publisher",
+    "first-page": "57",
+    "DOI": "10.1038/s41566-019-0537-9",
+    "article-title": "Integrated gallium phosphide nonlinear photonics",
+    "volume": "14",
+    "year": "2020",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2026090914312215500_c226",
+    "doi-asserted-by": "publisher",
+    "first-page": "3323",
+    "DOI": "10.1038/s41467-022-30966-5",
+    "article-title": "Probing material absorption and optical nonlinearity of integrated photonic materials",
+    "volume": "13",
+    "year": "2022",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2026090914312215500_c227",
+    "doi-asserted-by": "publisher",
+    "first-page": "3305",
+    "DOI": "10.1063/1.367099",
+    "article-title": "Structural and optical characterization of epitaxial waveguiding BaTiO3 thin films on MgO",
+    "volume": "83",
+    "year": "1998",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026090914312215500_c228",
+    "doi-asserted-by": "publisher",
+    "first-page": "4048",
+    "DOI": "10.1021/nl802981q",
+    "article-title": "Electrooptic modulation in thin film barium titanate plasmonic interferometers",
+    "volume": "8",
+    "year": "2008",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2026090914312215500_c229",
+    "doi-asserted-by": "publisher",
+    "first-page": "1232",
+    "DOI": "10.1016/j.mee.2011.03.028",
+    "article-title": "Epitaxy of BaTiO3 thin film on Si (0 0 1) using a SrTiO3 buffer layer for non-volatile memory application",
+    "volume": "88",
+    "year": "2011",
+    "journal-title": "Microelectron. Eng."
+   },
+   {
+    "key": "2026090914312215500_c230",
+    "doi-asserted-by": "publisher",
+    "first-page": "2300665",
+    "DOI": "10.1002/admi.202300665",
+    "article-title": "PLD epitaxial thin-film BaTiO3 on MgO-dielectric and electro-optic properties",
+    "volume": "11",
+    "year": "2024",
+    "journal-title": "Adv. Mater. Interfaces"
+   },
+   {
+    "key": "2026090914312215500_c231",
+    "doi-asserted-by": "publisher",
+    "first-page": "1053",
+    "DOI": "10.1116/1.2539503",
+    "article-title": "Epitaxial growth and strain relaxation of BaTiO3 thin films on SrTiO3 buffered (001) Si by molecular beam epitaxy",
+    "volume": "25",
+    "year": "2007",
+    "journal-title": "J. Vac. Sci. Technol., B"
+   },
+   {
+    "key": "2026090914312215500_c232",
+    "doi-asserted-by": "publisher",
+    "first-page": "032905",
+    "DOI": "10.1063/1.3075955",
+    "article-title": "Electrical properties of ferroelectric BaTiO3 thin film on SrTiO3 buffered GaAs by laser molecular beam epitaxy",
+    "volume": "94",
+    "year": "2009",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c233",
+    "doi-asserted-by": "publisher",
+    "first-page": "095201",
+    "DOI": "10.1103/PhysRevMaterials.6.095201",
+    "article-title": "Microstructural analysis and electro-optic properties of thick epitaxial BaTiO3 films integrated on silicon (001)",
+    "volume": "6",
+    "year": "2022",
+    "journal-title": "Phys. Rev. Mater."
+   },
+   {
+    "key": "2026090914312215500_c234",
+    "doi-asserted-by": "publisher",
+    "first-page": "4605",
+    "DOI": "10.1021/acsaelm.3c00747",
+    "article-title": "Si-integrated BaTiO3 for electro-optic applications: Crystalline and polarization orientation control",
+    "volume": "5",
+    "year": "2023",
+    "journal-title": "ACS Appl. Electron. Mater."
+   },
+   {
+    "key": "2026090914312215500_c235",
+    "doi-asserted-by": "publisher",
+    "first-page": "401",
+    "DOI": "10.1016/j.jcrysgro.2006.06.026",
+    "article-title": "Integration of BaTiO3 on Si (001) using MgO/STO buffer layers by molecular beam epitaxy",
+    "volume": "294",
+    "year": "2006",
+    "journal-title": "J. Cryst. Growth"
+   },
+   {
+    "key": "2026090914312215500_c236",
+    "doi-asserted-by": "publisher",
+    "first-page": "1037",
+    "DOI": "10.1364/OL.38.001037",
+    "article-title": "Guided-wave electro-optic characterization of BaTiO3 thin films using the prism coupling technique",
+    "volume": "38",
+    "year": "2013",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "2026090914312215500_c237",
+    "doi-asserted-by": "publisher",
+    "first-page": "21848",
+    "DOI": "10.1021/acsami.7b02681",
+    "article-title": "Monolithic mid-infrared integrated photonics using silicon-on-epitaxial barium titanate thin films",
+    "volume": "9",
+    "year": "2017",
+    "journal-title": "ACS Appl. Mater. Interfaces"
+   },
+   {
+    "key": "2026090914312215500_c238",
+    "doi-asserted-by": "publisher",
+    "first-page": "491",
+    "DOI": "10.1038/s41566-022-01003-0",
+    "article-title": "A ferroelectric multilevel non-volatile photonic phase shifter",
+    "volume": "16",
+    "year": "2022",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2026090914312215500_c239",
+    "doi-asserted-by": "publisher",
+    "first-page": "2527",
+    "DOI": "10.1364/OL.28.002527",
+    "article-title": "Integrated optical Mach Zehnder modulator based on polycrystalline BaTiO3",
+    "volume": "28",
+    "year": "2003",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "2026090914312215500_c240",
+    "doi-asserted-by": "publisher",
+    "first-page": "4615",
+    "DOI": "10.1063/1.1819515",
+    "article-title": "Low-voltage, polarization-insensitive, electro-optic modulator based on a polydomain barium titanate thin film",
+    "volume": "85",
+    "year": "2004",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2026090914312215500_c241",
+    "first-page": "1",
+    "article-title": "Integration of barium titanate thin films in silicon photonics for electro-optic modulation",
+    "year": "2024"
+   },
+   {
+    "key": "2026090914312215500_c242",
+    "doi-asserted-by": "publisher",
+    "first-page": "2315579",
+    "DOI": "10.1002/adfm.202315579",
+    "article-title": "Tuning the electro-optic properties of BaTiO3 epitaxial thin films via buffer layer-controlled polarization rotation paths",
+    "volume": "34",
+    "year": "2024",
+    "journal-title": "Adv. Funct. Mater."
+   }
+  ],
+  "container-title": [
+   "Applied Physics Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.aip.org/aip/apr/article-pdf/doi/10.1063/5.0325359/21131690/031330_1_5.0325359.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://pubs.aip.org/aip/apr/article-pdf/doi/10.1063/5.0325359/21131690/031330_1_5.0325359.pdf",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     9
+    ]
+   ],
+   "date-time": "2026-09-09T18:38:35Z",
+   "timestamp": 1788979115000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.aip.org/apr/article/13/3/031330/3404033/Integrated-photonic-devices-in-thin-film-barium"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     1
+    ]
+   ]
+  },
+  "references-count": 242,
+  "journal-issue": {
+   "issue": "3",
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      9,
+      1
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1063/5.0325359",
+  "relation": {},
+  "ISSN": [
+   "1931-9401"
+  ],
+  "issn-type": [
+   {
+    "value": "1931-9401",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published-other": {
+   "date-parts": [
+    [
+     2026,
+     9
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     1
+    ]
+   ]
+  },
+  "article-number": "031330"
+ }
+}

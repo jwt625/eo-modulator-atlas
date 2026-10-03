@@ -1,0 +1,1102 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     16
+    ]
+   ],
+   "date-time": "2026-08-16T18:46:53Z",
+   "timestamp": 1786906013057,
+   "version": "build-2736575974"
+  },
+  "reference-count": 73,
+  "publisher": "Wiley",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       27
+      ]
+     ],
+     "date-time": "2026-05-27T00:00:00Z",
+     "timestamp": 1779840000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       27
+      ]
+     ],
+     "date-time": "2026-05-27T00:00:00Z",
+     "timestamp": 1779840000000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100008398",
+    "name": "Villum Fonden",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "15401"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "15401"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100008398",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100008398",
+    "name": "Villum Fonden",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "0025298"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "0025298"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100008398",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "onlinelibrary.wiley.com"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Laser &amp; Photonics Reviews"
+  ],
+  "DOI": "10.1002/lpor.71349",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     27
+    ]
+   ],
+   "date-time": "2026-05-27T13:05:48Z",
+   "timestamp": 1779887148000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+   "High\u2010Efficiency Graphene\u2010Silicon Slot\u2010Waveguide Microring Modulator at 1.5 and 2\u00a0\u00b5m Wavelength Bands"
+  ],
+  "prefix": "10.1002",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0004-0177-8452",
+    "authenticated-orcid": false,
+    "given": "Chao",
+    "family": "Luan",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Lyngby Denmark"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Deming",
+    "family": "Kong",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Lyngby Denmark"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yong",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Lyngby Denmark"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yunhong",
+    "family": "Ding",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Lyngby Denmark"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hao",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Lyngby Denmark"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     27
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_9_2_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "518",
+    "DOI": "10.1038/nphoton.2010.179",
+    "article-title": "Silicon Optical Modulators",
+    "volume": "4",
+    "author": "Reed G. T.",
+    "year": "2010",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_3_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "346",
+    "DOI": "10.1109/JLT.2017.2647779",
+    "article-title": "Attojoule Optoelectronics for Low\u2010Energy Information Processing and Communications",
+    "volume": "35",
+    "author": "Miller D. A. B.",
+    "year": "2017",
+    "journal-title": "Journal of Lightwave Technology"
+   },
+   {
+    "key": "e_1_2_9_4_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "273",
+    "DOI": "10.1038/s41566-023-01159-3",
+    "article-title": "Harnessing Plasma Absorption in Silicon MOS Ring Modulators",
+    "volume": "17",
+    "author": "Zhang W.",
+    "year": "2023",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_5_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "207",
+    "DOI": "10.1038/s41586-020-2764-0",
+    "article-title": "Programmable Photonic Circuits",
+    "volume": "586",
+    "author": "Bogaerts W.",
+    "year": "2020",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "e_1_2_9_6_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "441",
+    "DOI": "10.1038/nphoton.2017.93",
+    "article-title": "Deep Learning With Coherent Nanophotonic Circuits",
+    "volume": "11",
+    "author": "Shen Y.",
+    "year": "2017",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_7_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "37",
+    "DOI": "10.1364/JOCN.7.000A37",
+    "article-title": "Reconfigurable 100 Gb/s Silicon Photonic Network\u2010On\u2010Chip",
+    "volume": "7",
+    "author": "Dong P.",
+    "year": "2014",
+    "journal-title": "Journal of Optical Communications and Networking"
+   },
+   {
+    "key": "e_1_2_9_8_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan R.DavisIII Z.Chen D.Englund andR.Hamerly \u201cSingle\u2010Shot Matrix\u2010Matrix Photonic Processor Based on Spatial\u2010Spectral Hypermultiplexed Parallel Diffraction \u201dNature Communications(2026).",
+    "DOI": "10.1038/s41467-026-68452-x"
+   },
+   {
+    "key": "e_1_2_9_9_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan A.Sludds C.Li G.Lankford R.Hamerly andD.Englund \u201cDemonstration and Non\u2010Volatile Trimming of a 64\u2010Channel Parallel Ring Modulators \u201d inCLEO: Applications and Technology(2025) AA1251.",
+    "DOI": "10.1364/CLEO_AT.2025.AA125_1"
+   },
+   {
+    "key": "e_1_2_9_10_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan R.Davis Z.Chen D.Englund andR.Hamerly \u201cLarge\u2010Scale High\u2010Parallelism Optical Tensor Processor \u201d inAI and Optical Data Sciences VII(2026) 99\u2013102.",
+    "DOI": "10.1117/12.3072412"
+   },
+   {
+    "issue": "1",
+    "key": "e_1_2_9_11_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "918",
+    "DOI": "10.1038/s41467-024-45301-3",
+    "article-title": "A 5\u00d7200$5\\times 200$ Gbps Microring Modulator Silicon Chip Empowered by Two\u2010Segment Z\u2010Shape Junctions",
+    "volume": "15",
+    "author": "Yuan Y.",
+    "year": "2024",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_12_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1127",
+    "DOI": "10.1364/PRJ.441791",
+    "article-title": "240 Gb/s Optical Transmission Based on an Ultrafast Silicon Microring Modulator",
+    "volume": "10",
+    "author": "Zhang Y.",
+    "year": "2022",
+    "journal-title": "Photonics Research"
+   },
+   {
+    "key": "e_1_2_9_13_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M.Sakib P.Liao C.Ma et\u00a0al. \u201cA High\u2010Speed Micro\u2010Ring Modulator for Next Generation Energy\u2010Efficient Optical Networks Beyond 100 Gbaud \u201d inCLEO(2021) SF1C.3.",
+    "DOI": "10.1364/CLEO_SI.2021.SF1C.3"
+   },
+   {
+    "key": "e_1_2_9_14_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "4008",
+    "DOI": "10.1038/ncomms5008",
+    "article-title": "An Ultralow Power Athermal Silicon Modulator",
+    "volume": "5",
+    "author": "Timurdogan E.",
+    "year": "2014",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_15_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "article-title": "Integrated Lithium Niobate Electro\u2010Optic Modulators Operating at CMOS\u2010Compatible Voltages",
+    "volume": "562",
+    "author": "Wang C.",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "e_1_2_9_16_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "article-title": "High\u2010Performance Hybrid Silicon and Lithium Niobate Mach\u2013Zehnder Modulators for 100 Gbit s\u22121${\\rm s}^{-1}$ and Beyond",
+    "volume": "13",
+    "author": "He M.",
+    "year": "2019",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_17_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1131",
+    "DOI": "10.1364/OPTICA.470596",
+    "article-title": "Breaking the Bandwidth Limit of a High\u2010Quality\u2010Factor Ring Modulator Based on Thin\u2010Film Lithium Niobate",
+    "volume": "9",
+    "author": "Xue Y.",
+    "year": "2022",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "e_1_2_9_18_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "748",
+    "DOI": "10.1038/s41467-020-14539-y",
+    "article-title": "Plasmonic Monolithic Lithium Niobate Directional Coupler Switches",
+    "volume": "11",
+    "author": "Thomaschewski M.",
+    "year": "2020",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_19_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1207",
+    "DOI": "10.1109/JLT.2022.3201269",
+    "article-title": "Ultrahigh\u2010Speed Optical Interconnects With Thin Film Lithium Niobate Modulator",
+    "volume": "41",
+    "author": "Fang X.",
+    "year": "2023",
+    "journal-title": "Journal of Lightwave Technology"
+   },
+   {
+    "key": "e_1_2_9_20_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "3911",
+    "DOI": "10.1038/s41467-020-17806-0",
+    "article-title": "High\u2010Performance Coherent Optical Modulators Based on Thin\u2010Film Lithium Niobate Platform",
+    "volume": "11",
+    "author": "Xu M.",
+    "year": "2020",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_21_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1496",
+    "DOI": "10.1038/s41467-023-36870-w",
+    "article-title": "Sub\u20101 Volt and High\u2010Bandwidth Visible to Near\u2010Infrared Electro\u2010Optic Modulators",
+    "volume": "14",
+    "author": "Renaud D.",
+    "year": "2023",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_22_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "652",
+    "DOI": "10.1364/OPTICA.415762",
+    "article-title": "Integrated Lithium Niobate Electro\u2010Optic Modulators: When Performance Meets Scalability",
+    "volume": "8",
+    "author": "Zhang M.",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "e_1_2_9_23_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "360",
+    "DOI": "10.1038/s41566-023-01161-9",
+    "article-title": "Resonant Plasmonic Micro\u2010Racetrack Modulators With High Bandwidth and High Temperature Tolerance",
+    "volume": "17",
+    "author": "Eppenberger M.",
+    "year": "2023",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_24_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "42",
+    "DOI": "10.1038/s41563-018-0208-0",
+    "article-title": "Large Pockels Effect in Micro\u2010 and Nanostructured Barium Titanate Integrated on Silicon",
+    "volume": "18",
+    "author": "Abel S.",
+    "year": "2019",
+    "journal-title": "Nature Materials"
+   },
+   {
+    "key": "e_1_2_9_25_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "525",
+    "DOI": "10.1038/nphoton.2015.127",
+    "article-title": "All\u2010Plasmonic Mach\u2013Zehnder Modulator Enabling Optical High\u2010Speed Communication at the Microscale",
+    "volume": "9",
+    "author": "Haffner C.",
+    "year": "2015",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_26_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "483",
+    "DOI": "10.1038/s41586-018-0031-4",
+    "article-title": "Low\u2010Loss Plasmon\u2010Assisted Electro\u2010Optic Modulator",
+    "volume": "556",
+    "author": "Haffner C.",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "e_1_2_9_27_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "281",
+    "DOI": "10.1109/JLT.2018.2881332",
+    "article-title": "Plasmonic Ferroelectric Modulators",
+    "volume": "37",
+    "author": "Messner A.",
+    "year": "2019",
+    "journal-title": "Journal of Lightwave Technology"
+   },
+   {
+    "key": "e_1_2_9_28_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "2726",
+    "DOI": "10.1109/JLT.2014.2321498",
+    "article-title": "High\u2010Speed, Low Drive\u2010Voltage Silicon\u2010Organic Hybrid Modulator Based on a Binary\u2010Chromophore Electro\u2010Optic Material",
+    "volume": "32",
+    "author": "Palmer R.",
+    "year": "2014",
+    "journal-title": "Journal of Lightwave Technology"
+   },
+   {
+    "key": "e_1_2_9_29_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "2598",
+    "DOI": "10.1038/s41598-017-19061-8",
+    "article-title": "Silicon\u2010Organic Hybrid (SOH) Mach\u2010Zehnder Modulators for 100 Gbit/s On\u2010Off Keying",
+    "volume": "8",
+    "author": "Wolf S.",
+    "year": "2018",
+    "journal-title": "Scientific Reports"
+   },
+   {
+    "key": "e_1_2_9_30_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "3170",
+    "DOI": "10.1038/s41467-022-30451-z",
+    "article-title": "Gigahertz Free\u2010Space Electro\u2010Optic Modulators Based on Mie Resonances",
+    "volume": "13",
+    "author": "Benea\u2010Chelmus I.",
+    "year": "2022",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_31_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1",
+    "DOI": "10.1109/JSTQE.2023.3298375",
+    "article-title": "Plasmonic Transceivers for the Terabaud Age",
+    "volume": "30",
+    "author": "Moor D.",
+    "year": "2024",
+    "journal-title": "IEEE Journal of Selected Topics in Quantum Electronics"
+   },
+   {
+    "key": "e_1_2_9_32_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "486",
+    "DOI": "10.1038/nphoton.2017.122",
+    "article-title": "Efficient Low\u2010Loss InGaAsP/Si Hybrid MOS Optical Modulator",
+    "volume": "11",
+    "author": "Han J.",
+    "year": "2017",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_33_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "482",
+    "DOI": "10.1038/nphoton.2017.120",
+    "article-title": "Heterogeneously Integrated III\u2013V/Si MOS Capacitor Mach\u2013Zehnder Modulator",
+    "volume": "11",
+    "author": "Hiraki T.",
+    "year": "2017",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_34_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "11529",
+    "DOI": "10.1364/OE.20.011529",
+    "article-title": "Over 67 GHz Bandwidth Hybrid Silicon Electro Absorption Modulator With Asymmetric Segmented Electrode for 1.3 \u03bcm$\\umu {\\rm m}$ Transmission",
+    "volume": "20",
+    "author": "Tang Y.",
+    "year": "2012",
+    "journal-title": "Optics Express"
+   },
+   {
+    "key": "e_1_2_9_35_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "333",
+    "DOI": "10.1364/OPTICA.389437",
+    "article-title": "Sub\u2010Wavelength GHz\u2010Fast Broadband ITO Mach\u2013Zehnder Modulator on Silicon Photonics",
+    "volume": "7",
+    "author": "Amin R.",
+    "year": "2020",
+    "journal-title": "Optica"
+   },
+   {
+    "issue": "12",
+    "key": "e_1_2_9_36_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1614",
+    "DOI": "10.1364/OPTICA.537730",
+    "article-title": "Ultrabroadband Thin\u2010Film Lithium Tantalate Modulator for High\u2010Speed Communications",
+    "volume": "11",
+    "author": "Wang C.",
+    "year": "2024",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "e_1_2_9_37_1",
+    "unstructured": "F.Nazar A.Kotz H.Larocque et\u00a0al. \u201cHeterogeneously Integrated Lithium Tantalate\u2010On\u2010Silicon Nitride Modulators for High\u2010Speed Communications \u201dNature Communications(2025)."
+   },
+   {
+    "key": "e_1_2_9_38_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1096",
+    "DOI": "10.1038/s41586-024-08354-4",
+    "article-title": "Ultrabroadband Integrated Electro\u2010Optic Frequency Comb in Lithium Tantalate",
+    "volume": "637",
+    "author": "Zhang J.",
+    "year": "2025",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "e_1_2_9_39_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "784",
+    "DOI": "10.1038/s41586-024-07369-1",
+    "article-title": "Lithium Tantalate Photonic Integrated Circuits for Volume Manufacturing",
+    "volume": "629",
+    "author": "Wang C.",
+    "year": "2024",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "e_1_2_9_40_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "511",
+    "DOI": "10.1038/nphoton.2015.122",
+    "article-title": "Graphene Electro\u2010Optic Modulator With 30 GHz Bandwidth",
+    "volume": "9",
+    "author": "Phare C. T.",
+    "year": "2015",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "issue": "10",
+    "key": "e_1_2_9_41_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "12823",
+    "DOI": "10.1364/OE.23.012823",
+    "article-title": "Mechanically Exfoliated Black Phosphorus as a New Saturable Absorber for Both Q\u2010Switching and Mode\u2010Locking Laser Operation",
+    "volume": "23",
+    "author": "Chen Y.",
+    "year": "2015",
+    "journal-title": "Optics Express"
+   },
+   {
+    "issue": "5",
+    "key": "e_1_2_9_42_1",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1093/nsr/nwab098",
+    "article-title": "High\u2010Performance Polarization\u2010Sensitive Photodetectors on Two\u2010Dimensional \u03b2$\\beta$\u2010InSe",
+    "volume": "9",
+    "author": "Guo Z.",
+    "year": "2022",
+    "journal-title": "National Science Review"
+   },
+   {
+    "key": "e_1_2_9_43_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1330",
+    "DOI": "10.1038/s41467-020-14902-z",
+    "article-title": "Epitaxial Nucleation and Lateral Growth of High\u2010Crystalline Black Phosphorus Films on Silicon",
+    "volume": "11",
+    "author": "Xu Y.",
+    "year": "2020",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_44_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "4062",
+    "DOI": "10.1038/s41467-019-11937-9",
+    "article-title": "Liquefaction of Water on the Surface of Anisotropic Two\u2010Dimensional Atomic Layered Black Phosphorus",
+    "volume": "10",
+    "author": "Zhao J.",
+    "year": "2019",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_45_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "40",
+    "DOI": "10.1038/s41566-017-0071-6",
+    "article-title": "Graphene\u2013Silicon Phase Modulators With Gigahertz Bandwidth",
+    "volume": "12",
+    "author": "Sorianello V.",
+    "year": "2018",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_46_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "64",
+    "DOI": "10.1038/nature10067",
+    "article-title": "A Graphene\u2010Based Broadband Optical Modulator",
+    "volume": "474",
+    "author": "Liu M.",
+    "year": "2011",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "e_1_2_9_47_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1482",
+    "DOI": "10.1021/nl204202k",
+    "article-title": "Double\u2010Layer Graphene Optical Modulator",
+    "volume": "12",
+    "author": "Liu M.",
+    "year": "2012",
+    "journal-title": "Nano Letters"
+   },
+   {
+    "key": "e_1_2_9_48_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1070",
+    "DOI": "10.1038/s41467-021-20926-w",
+    "article-title": "2D\u20103D Integration of Hexagonal Boron Nitride and a High\u2010\u03ba$\\kappa$ Dielectric for Ultrafast Graphene\u2010Based Electro\u2010Absorption Modulators",
+    "volume": "12",
+    "author": "Agarwal H.",
+    "year": "2021",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "e_1_2_9_49_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "20145",
+    "DOI": "10.1364/OE.27.020145",
+    "article-title": "High\u2010Speed Double Layer Graphene Electro\u2010Absorption Modulator on SOI Waveguide",
+    "volume": "27",
+    "author": "Giambra M.",
+    "year": "2019",
+    "journal-title": "Optics Express"
+   },
+   {
+    "key": "e_1_2_9_50_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "15292",
+    "DOI": "10.1364/OE.22.015292",
+    "article-title": "Graphene Based Low Insertion Loss Electro\u2010Absorption Modulator on SOI Waveguide",
+    "volume": "22",
+    "author": "Mohsin M.",
+    "year": "2014",
+    "journal-title": "Optics Express"
+   },
+   {
+    "key": "e_1_2_9_51_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1564",
+    "DOI": "10.1021/acsphotonics.6b00398",
+    "article-title": "Athermal Broadband Graphene Optical Modulator with 35 GHz Speed",
+    "volume": "3",
+    "author": "Dalir H.",
+    "year": "2016",
+    "journal-title": "ACS Photonics"
+   },
+   {
+    "key": "e_1_2_9_52_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "99",
+    "DOI": "10.1515/nanoph-2020-0363",
+    "article-title": "High\u2010Performance Integrated Graphene Electro\u2010Optic Modulator at Cryogenic Temperature",
+    "volume": "10",
+    "author": "Lee B. S.",
+    "year": "2021",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "e_1_2_9_53_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "611",
+    "DOI": "10.1038/nphoton.2010.186",
+    "article-title": "Graphene Photonics and Optoelectronics",
+    "volume": "4",
+    "author": "Bonaccorso F.",
+    "year": "2010",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_54_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "2741",
+    "DOI": "10.1021/nl500712u",
+    "article-title": "Multifunctional Graphene Optical Modulator and Photodetector Integrated on Silicon Waveguides",
+    "volume": "14",
+    "author": "Youngblood N.",
+    "year": "2014",
+    "journal-title": "Nano Letters"
+   },
+   {
+    "key": "e_1_2_9_55_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "6811",
+    "DOI": "10.1021/nl502363u",
+    "article-title": "Efficient Modulation of 1.55 \u03bcm$\\umu\\rm{m}$ Radiation with Gated Graphene on a Silicon Microring Resonator",
+    "volume": "14",
+    "author": "Qiu C.",
+    "year": "2014",
+    "journal-title": "Nano Letters"
+   },
+   {
+    "key": "e_1_2_9_56_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "307",
+    "DOI": "10.1002/lpor.201500250",
+    "article-title": "Broadband 10 Gb/s Operation of Graphene Electro\u2010Absorption Modulator on Silicon",
+    "volume": "10",
+    "author": "Hu Y.",
+    "year": "2016",
+    "journal-title": "Laser & Photonics Reviews"
+   },
+   {
+    "key": "e_1_2_9_57_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "252",
+    "DOI": "10.1038/s41566-020-0590-4",
+    "article-title": "Low\u2010Loss Composite Photonic Platform Based on 2D Semiconductor Monolayers",
+    "volume": "14",
+    "author": "Datta I.",
+    "year": "2020",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_58_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "899",
+    "DOI": "10.1038/nphoton.2014.271",
+    "article-title": "Two\u2010Dimensional Material Nanophotonics",
+    "volume": "8",
+    "author": "Xia F.",
+    "year": "2014",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_59_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "37",
+    "DOI": "10.1038/s41566-019-0547-7",
+    "article-title": "Ultrafast and Energy\u2010Efficient All\u2010Optical Switching with Graphene\u2010Loaded Deep\u2010Subwavelength Plasmonic Waveguides",
+    "volume": "14",
+    "author": "Ono M.",
+    "year": "2020",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "e_1_2_9_60_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan D.Kong Y.Ding andH.Hu \u201cHigh\u2010Modulation\u2010Efficiency Graphene\u2010Silicon Slot\u2010Waveguide Micro\u2010Ring Modulator \u201d inCLEO: Science and Innovations(2022) JTh6B\u20138.",
+    "DOI": "10.1364/CLEO_AT.2022.JTh6B.8"
+   },
+   {
+    "key": "e_1_2_9_61_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan Y.Liu D.Kong Y.Ding andH.Hu \u201cIntegrated 2\u2010\u03bcm$\\mu\\rm{m}$Electro\u2010Optic Modulator Based on Grapheme\u2010Silicon Slot\u2010Waveguide Microring Resonator \u201d in2022 Conference on Lasers and Electro\u2010Optics (CLEO)(2022) 1\u20132.",
+    "DOI": "10.1364/CLEO_SI.2022.SF1C.3"
+   },
+   {
+    "key": "e_1_2_9_62_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan D.Kong Y.Ding andH.Hu \u201cHigh\u2010Speed Integrated Graphene\u2010 Silicon Slot Waveguide Electro\u2010Absorption Modulator at 1.5\u2010\u03bcm$\\mathrm{\\mu}\\mathrm{m}$and 2\u2010\u03bcm$\\mathrm{\\mu}\\mathrm{m}$Wavebands \u201d in2022 Asia Communications and Photonics Conference (ACP)(2022) 1654\u20131656.",
+    "DOI": "10.1109/ACP55869.2022.10088766"
+   },
+   {
+    "key": "e_1_2_9_63_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan D.Kong Y.Ding andH.Hu\u201cUltra\u2010Compact Integrated Graphene\u2010Silicon Slot\u2010Waveguide Electro\u2010Optic Modulator \u201d in2022 Asia Communications and Photonics Conference (ACP)(2022) 29\u201332.",
+    "DOI": "10.1109/ACP55869.2022.10088719"
+   },
+   {
+    "key": "e_1_2_9_64_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan Y.Liu Y.Ding andH.Hu \u201c2\u2010um High\u2010Speed Graphene Electro\u2010Optic Modulator Based on Silicon Slot Microring Resonator \u201d inCLEO: Science and Innovations(2020) JTh2F\u201334.",
+    "DOI": "10.1364/CLEO_AT.2020.JTh2F.34"
+   },
+   {
+    "key": "e_1_2_9_65_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Luan R.Davis D.Englund andR.Hamerly \u201cSingle\u2010Shot Matrix\u2010Matrix Multiplication Optical Processor for Deep Learning \u201d inOptical Fiber Communication Conference(2025) W2A\u201339.",
+    "DOI": "10.1364/OFC.2025.W2A.39"
+   },
+   {
+    "issue": "9",
+    "key": "e_1_2_9_66_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1055",
+    "DOI": "10.1364/OPTICA.5.001055",
+    "article-title": "High\u2010Speed Silicon Modulators for the 2 \u03bcm$\\umu {\\rm m}$ Wavelength Band",
+    "volume": "5",
+    "author": "Cao W.",
+    "year": "2018",
+    "journal-title": "Optica"
+   },
+   {
+    "issue": "10",
+    "key": "e_1_2_9_67_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "483",
+    "DOI": "10.1109/LPT.2021.3069450",
+    "article-title": "On\u2010Chip Selective Dual\u2010Mode Switch for 2\u2010\u03bcm$\\mathrm{\\mu}\\mathrm{m}$ Wavelength High\u2010Speed Optical Interconnection",
+    "volume": "33",
+    "author": "Shen W.",
+    "year": "2021",
+    "journal-title": "IEEE Photonics Technology Letters"
+   },
+   {
+    "issue": "11",
+    "key": "e_1_2_9_68_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "16845",
+    "DOI": "10.1364/OE.393538",
+    "article-title": "High\u2010Speed Performance of a TDFA\u2010Band Micro\u2010Ring Resonator Modulator and Detector",
+    "volume": "28",
+    "author": "Hagan D. E.",
+    "year": "2020",
+    "journal-title": "Optics Express"
+   },
+   {
+    "issue": "3",
+    "key": "e_1_2_9_69_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "A35",
+    "DOI": "10.1364/PRJ.439583",
+    "article-title": "High\u2010Speed Silicon Microring Modulator at the 2 \u03bcm$\\mathrm{\\mu}\\mathrm{m}$ Waveband With Analysis and Observation of Optical Bistability",
+    "volume": "10",
+    "author": "Shen W.",
+    "year": "2022",
+    "journal-title": "Photonics Research"
+   },
+   {
+    "issue": "12",
+    "key": "e_1_2_9_70_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "17710",
+    "DOI": "10.1364/OE.416908",
+    "article-title": "Demonstration of High\u2010Speed Thin\u2010Film Lithium\u2010Niobate\u2010On\u2010Insulator Optical Modulators at the 2\u2010\u03bcm$\\mathrm{\\mu}\\mathrm{m}$ Wavelength",
+    "volume": "29",
+    "author": "Pan B.",
+    "year": "2021",
+    "journal-title": "Optics Express"
+   },
+   {
+    "key": "e_1_2_9_71_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1138",
+    "DOI": "10.1038/s41467-025-67902-2",
+    "article-title": "Ultra\u2010Broadband Near\u2010to Mid\u2010Infrared Electro\u2010Optic Modulator on Thin\u2010Film Lithium Niobate",
+    "volume": "17",
+    "author": "Li Q.",
+    "year": "2026",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "issue": "4",
+    "key": "e_1_2_9_72_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "535",
+    "DOI": "10.1364/PRJ.417107",
+    "article-title": "High\u2010Speed Silicon Photonic Mach\u2013Zehnder Modulator at 2 \u03bcm$\\mathrm{\\mu}\\mathrm{m}$",
+    "volume": "9",
+    "author": "Wang X.",
+    "year": "2021",
+    "journal-title": "Photonics Research"
+   },
+   {
+    "issue": "8",
+    "key": "e_1_2_9_73_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "2157",
+    "DOI": "10.1364/OL.518729",
+    "article-title": "Efficient and High\u2010Speed Coupling Modulation of Silicon Racetrack Ring Resonators at 2 \u03bcm$\\mathrm{\\mu}\\mathrm{m}$ Waveband",
+    "volume": "49",
+    "author": "Wang X.",
+    "year": "2024",
+    "journal-title": "Optics Letters"
+   },
+   {
+    "issue": "11",
+    "key": "e_1_2_9_74_1",
+    "doi-asserted-by": "crossref",
+    "first-page": "1209",
+    "DOI": "10.1364/OL.29.001209",
+    "article-title": "Guiding and Confining Light in Void Nanostructure",
+    "volume": "29",
+    "author": "Almeida V. R.",
+    "year": "2004",
+    "journal-title": "Optics letters"
+   }
+  ],
+  "container-title": [
+   "Laser &amp; Photonics Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/lpor.71349",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/lpor.71349",
+    "content-type": "application/xml",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/lpor.71349",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     27
+    ]
+   ],
+   "date-time": "2026-05-27T13:06:05Z",
+   "timestamp": 1779887165000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://onlinelibrary.wiley.com/doi/10.1002/lpor.71349"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     27
+    ]
+   ]
+  },
+  "references-count": 73,
+  "alternative-id": [
+   "10.1002/lpor.71349"
+  ],
+  "URL": "https://doi.org/10.1002/lpor.71349",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "1863-8880",
+   "1863-8899"
+  ],
+  "issn-type": [
+   {
+    "value": "1863-8880",
+    "type": "print"
+   },
+   {
+    "value": "1863-8899",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     27
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2026-04-01",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2026-05-13",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2026-05-27",
+    "order": 3,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ],
+  "article-number": "e71349"
+ }
+}
