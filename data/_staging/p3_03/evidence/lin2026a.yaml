@@ -1,0 +1,166 @@
+paper_id: lin2026a
+verified_on: '2026-10-02'
+source_files:
+- references/lin2026a/text.md
+- references/lin2026a/figures/page_05.png
+- references/lin2026a/figures/img_p05_1.png
+entries:
+- device_id: lin2026a-a
+  field: wavelength_nm
+  value: 375
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.5 text
+  note: 375 nm diode laser
+- device_id: lin2026a-a
+  field: length_mm
+  value: 0.2
+  unit: mm
+  basis: measured
+  locator: p.6 text; Fig. 2 caption
+  note: Electrode (interaction) length 200 um; device length 1.16 mm
+- device_id: lin2026a-a
+  field: vpi_dc_v
+  value: 4.2
+  unit: V
+  basis: measured
+  locator: p.8 text; Fig. 4 caption
+  note: 400 kHz triangular drive; push-pull GSG; text also quotes 4.25 V on p.10
+- device_id: lin2026a-a
+  field: vpil_dc_vcm
+  value: 0.085
+  unit: V*cm
+  basis: measured
+  locator: p.1 abstract; p.9 text
+  note: 85 +- 2 mV cm over six devices, electrode length 200 um
+- device_id: lin2026a-a
+  field: bw3db_ghz
+  value: 0.922
+  unit: GHz
+  basis: measured
+  locator: p.10 text; Fig. 4g
+  note: EOE link response incl. 900 MHz APD; detector-limited, not subtracted; lower bound for the modulator
+- device_id: lin2026a-a
+  field: eo_rolloff_db
+  value: 1
+  unit: dB
+  basis: author_estimate
+  locator: p.11 text; Fig. 5f
+  note: Estimated intrinsic EOE roll-off from measured EE response; not a measured EO point
+- device_id: lin2026a-a
+  field: eo_rolloff_freq_ghz
+  value: 67
+  unit: GHz
+  basis: author_estimate
+  locator: p.11 text; Fig. 5f
+  note: EE measurement limit of the 67 GHz VNA
+- device_id: lin2026a-a
+  field: il_onchip_db
+  value: 1.3
+  unit: dB
+  basis: derived
+  locator: p.8 text
+  note: Author-stated total of MMI and propagation losses; batch check 2x0.25 + 0.84 = 1.34 dB (3 dB split
+    excluded)
+- device_id: lin2026a-a
+  field: prop_loss_db_per_cm
+  value: 7.2
+  unit: dB/cm
+  basis: measured
+  locator: p.6 text; Fig. 3b
+  note: Single-mode waveguide at 375 nm, spiral cutback
+- device_id: lin2026a-a
+  field: extinction_ratio_db
+  value: 22.7
+  unit: dB
+  basis: measured
+  locator: p.8 text; Fig. 4c
+  note: Static, voltage ramp 0-10 V with power meter
+- device_id: lin2026a-a
+  field: z0_ohm
+  value: 23
+  unit: ohm
+  basis: derived
+  locator: p.10 text; Fig. 5d
+  note: Extracted from measured S-parameters, stable over frequency
+- device_id: lin2026a-a
+  field: n_rf
+  value: 2.3
+  unit: '1'
+  basis: derived
+  locator: p.10 text; Fig. 5e
+  note: Single value in text, no frequency given; Fig. 5(e) plateau about 2.5 from 20 to 67 GHz (visual)
+- device_id: lin2026a-a
+  field: ng_opt
+  value: 2.8
+  unit: '1'
+  basis: simulated
+  locator: p.10 text; Fig. 5e
+  note: Calculated optical group index of the UV mode
+- device_id: lin2026a-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.6 text; p.13 Methods
+- device_id: lin2026a-a
+  field: etch_depth_nm
+  value: 100
+  unit: nm
+  basis: measured
+  locator: p.6 text
+- device_id: lin2026a-a
+  field: rib_width_nm
+  value: 420
+  unit: nm
+  basis: measured
+  locator: p.6 text; Fig. 2e
+  note: Waveguide width 420 nm after taper from 2.70 um, cross-section Fig. 2e
+- device_id: lin2026a-a
+  field: electrode_gap_um
+  value: 1.5
+  unit: um
+  basis: measured
+  locator: p.5 Fig. 2 caption; p.6 text
+  note: Signal-to-ground gap
+- device_id: lin2026a-a
+  field: electrode_thickness_um
+  value: 0.22
+  unit: um
+  basis: measured
+  locator: p.14 Methods
+  note: 220 nm Ti/Au stack; Ti thickness not given
+- device_id: lin2026a-a
+  field: electrode_metal
+  value: Ti/Au (220 nm total stack)
+  unit: ''
+  basis: measured
+  locator: p.14 Methods
+- device_id: lin2026a-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.6 text; p.13 Methods
+- device_id: lin2026a-a
+  field: waveguide_orientation
+  value: propagation along the crystal y axis (TE, r33 along z)
+  unit: ''
+  basis: measured
+  locator: p.6 text
+- device_id: lin2026a-a
+  field: epitaxy_or_stack
+  value: 300 nm x-cut LT on insulator (NanoLN), 100 nm wet-etched rib 420 nm wide (single-mode, tapered
+    from 2.7 um at the facets), Ti/Au GSG lumped electrode 200 um long, 1.5 um gap, 1x2 MMIs
+  unit: ''
+  basis: measured
+  locator: p.5-6 text; Fig. 2
+- device_id: lin2026a-a
+  field: optical_power_handling_dbm
+  value: -1.5
+  unit: dBm
+  basis: derived
+  locator: p.13 text
+  note: No photodarkening up to 5 kW/mm2 from 700 uW guided power; 10 log10(0.7 mW) = -1.55 dBm, lower
+    bound
+derived: []

@@ -1,0 +1,14 @@
+# Schema / skill proposals from batch p3_04 (not applied)
+
+- `waveguide_platform` has no value for a ferroelectric ridge on SiO2/Si that is neither BTO nor LN (mao2024 PLZT: `other` used) and `bto_on_oxide_substrate` is used for both BTO on DSO (lin2025a) and BTO on SiO2/Si (kim2025). Proposal: add `plzt_on_oxide` (or generic `ferroelectric_on_oxide`) and split `bto_on_oxide_substrate` into DSO-type and SiO2/Si insulator variants.
+- Resonant coupling modulators (sayem2026b): Vpi here is the bias that takes the ring from critical coupling to no coupling, with an "equivalent straight-waveguide Vpi" also quoted. `vpi_convention` has no value for this (`unspecified` used). Proposal: add `coupling_switch` and a column for the straight-waveguide-equivalent Vpi.
+- `optical_power_handling_dbm` has no field for intracavity versus bus power; sayem2026b reports about 4 W circulating power in a ring. Proposal: add `optical_power_handling_basis` (bus|intracavity) or a separate intracavity column; the value was left empty.
+- Temperature as a row dimension (sayem2026a: same MZM at 25, 91, 120 C with different Vpi) works with `temperature_class` but the numeric temperature has no column. Proposal: `temperature_c`.
+- Resonance tuning for devices that are not resonators with Q (sayem2026a coupling modulator, lin2025a MZI): `tuning_nm_per_v` used; for a MZI the sign/definition (per-arm, FSR-referenced) is ambiguous. Proposal: add a `tuning_basis` note convention or a device-class-specific definition.
+- Effective Pockels coefficient (r_eff, r42; lin2025a, kim2025, mao2024 all report one) has no column and stays in notes. Proposal: `r_eff_pm_per_v` with basis and `r_eff_definition` text.
+- Static vs RF Vpi: Vpi measured at 14 kHz (mao2024) is entered as `vpi_dc_v`; a field for the measurement frequency of the quasi-static Vpi would remove the ambiguity.
+- Bandwidth with the low-frequency region compensated by the authors (mao2024) or normalization not stated (sayem2026a): `bw3db_reference = unspecified` used; no field records "response normalized or compensated".
+
+## Audit follow-ups (2026-10-03, not applied)
+- `vpi_convention = resonance_tuning_derived` vs `per_arm_phase_shifter` for an unbalanced MZI whose Vpi is derived from the FSR-referenced resonance shift (lin2025a): both are defensible; `per_arm_phase_shifter` with `vpi_basis = derived` and a `vpi_dc_v:approx` qualifier was kept. Propose a one-line definition of when `resonance_tuning_derived` applies (ring/cavity tuning only, or any tuning-derived Vpi).
+- Evidence locators: `<!-- page N -->` markers can place the start of a Methods section on a different PDF page than the journal pagination suggests (mao2024: fabrication Methods are on marker page 6, device characterization on page 7); a note in schema convention (i) that markers are authoritative would avoid p.N slips.

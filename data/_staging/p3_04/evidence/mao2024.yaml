@@ -1,0 +1,327 @@
+paper_id: mao2024
+verified_on: '2026-10-02'
+source_files:
+- references/mao2024/text.md
+- references/mao2024/crossref.json
+- references/mao2024/figures/page_03.png
+- references/mao2024/figures/page_04.png
+entries:
+- device_id: mao2024-1550
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3 text; Fig. 2(a)
+- device_id: mao2024-1550
+  field: length_mm
+  value: 2.5
+  unit: mm
+  basis: design_target
+  locator: p.2 text; Table 1 p.6
+  note: phase-shifter length
+- device_id: mao2024-1550
+  field: vpi_dc_v
+  value: 2.8
+  unit: V
+  basis: measured
+  locator: p.3 text; Fig. 2(a)
+  note: 14 kHz sinusoidal drive, i.e. quasi-static
+- device_id: mao2024-1550
+  field: vpil_dc_vcm
+  value: 0.7
+  unit: V*cm
+  basis: measured
+  locator: p.3 text; Table 1 p.6
+  note: reported as 7.0 V mm
+- device_id: mao2024-1550
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 text
+  note: authors state GSG electrode applies signals to each phase shifter for push-pull MZI operation
+- device_id: mao2024-1550
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2-3 text
+  note: authors do not label the Vpi convention; follows their stated push-pull operation
+- device_id: mao2024-1550
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.2 text
+  note: PLZT film
+- device_id: mao2024-1550
+  field: etch_depth_nm
+  value: 100
+  unit: nm
+  basis: design_target
+  locator: p.2 text; Fig. 1(b)
+  note: ridge height H_rid
+- device_id: mao2024-1550
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.2 text; Fig. 1(b)
+  note: ridge width W_wg
+- device_id: mao2024-1550
+  field: signal_width_um
+  value: 20
+  unit: um
+  basis: design_target
+  locator: p.6 Methods
+  note: Au strip-line electrodes stated as each 20 um wide; role of each line not specified
+- device_id: mao2024-1550
+  field: electrode_thickness_um
+  value: 1.5
+  unit: um
+  basis: design_target
+  locator: p.6 Methods
+  note: electroplated Au
+- device_id: mao2024-1550
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.6 Methods
+- device_id: mao2024-1550
+  field: buffer_oxide_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.2 text
+  note: thermally oxidized SiO2
+- device_id: mao2024-1550
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.2 text; Fig. 1(b)
+- device_id: mao2024-1550
+  field: cladding
+  value: SiO2, 1 um (CVD)
+  unit: ''
+  basis: design_target
+  locator: p.6 Methods
+  note: top cladding
+- device_id: mao2024-1550
+  field: epitaxy_or_stack
+  value: PLZT 300 nm (Pb1-xLax(ZryTi1-y)1-x/4O3, x/y/(1-y) = 8.0/65/35) on La2O2CO3 interlayer (under
+    10 nm) on 2.0 um thermal SiO2 on Si
+  unit: ''
+  basis: design_target
+  locator: p.2 text; p.6 Methods
+- device_id: mao2024-1550
+  field: max_baud_gbd
+  value: 172
+  unit: GBd
+  basis: derived
+  locator: p.4 text; Fig. 4(h)
+  note: OOK 172 Gbit/s equals 172 GBd; PAM4 304 Gbit/s is about 152 GBd
+- device_id: mao2024-1550
+  field: modulation_format
+  value: OOK 128-172 Gbit/s (BER below HD-FEC without FFE at 172); PAM4 232-304 Gbit/s (BER below HD-FEC
+    4.5e-3 at 304)
+  unit: ''
+  basis: measured
+  locator: p.4 text; Fig. 4(h,i)
+  note: also stated for 1550 nm in the text
+- device_id: mao2024-1550
+  field: max_line_rate_gbps
+  value: 304
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.4 text; Fig. 4(i)
+  note: PAM4, 4-level via AWG, Nyquist shaping roll-off 0.1
+- device_id: mao2024-1550
+  field: drive_vpp_v
+  value: 0.2
+  unit: V
+  basis: measured
+  locator: p.4 text; Table 1 p.6; p.7 Methods
+  note: 200 mVpp; drive swing range 100-270 mV (p.7, Supplementary Fig. 8)
+- device_id: mao2024-1550
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: p.4 text; Fig. 3(b) caption
+  note: S21 stated larger than 70 GHz; 1-8 GHz response compensated by authors; wavelength not stated
+- device_id: mao2024-1550
+  field: bw_measured_to_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: p.4 text; Fig. 3(b)
+  note: VNA range 1 to 70 GHz
+- device_id: mao2024-1550
+  field: il_onchip_db
+  value: 5.6
+  unit: dB
+  basis: author_estimate
+  locator: p.6 Methods
+  note: 'Estimated on-chip loss: 1.7 dB phase shifter plus 3.9 dB passive; wavelength not stated'
+- device_id: mao2024-1310
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.3 text; Fig. 2(b)
+- device_id: mao2024-1310
+  field: length_mm
+  value: 2.5
+  unit: mm
+  basis: design_target
+  locator: p.2 text; Table 1 p.6
+  note: phase-shifter length
+- device_id: mao2024-1310
+  field: vpi_dc_v
+  value: 2.3
+  unit: V
+  basis: measured
+  locator: p.3 text; Fig. 2(b)
+  note: 14 kHz sinusoidal drive, i.e. quasi-static
+- device_id: mao2024-1310
+  field: vpil_dc_vcm
+  value: 0.58
+  unit: V*cm
+  basis: measured
+  locator: p.3 text; Table 1 p.6
+  note: reported as 5.8 V mm; Introduction p.2 says 5.6 V mm
+- device_id: mao2024-1310
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 text
+  note: authors state GSG electrode applies signals to each phase shifter for push-pull MZI operation
+- device_id: mao2024-1310
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2-3 text
+  note: authors do not label the Vpi convention; follows their stated push-pull operation
+- device_id: mao2024-1310
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.2 text
+  note: PLZT film
+- device_id: mao2024-1310
+  field: etch_depth_nm
+  value: 100
+  unit: nm
+  basis: design_target
+  locator: p.2 text; Fig. 1(b)
+  note: ridge height H_rid
+- device_id: mao2024-1310
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.2 text; Fig. 1(b)
+  note: ridge width W_wg
+- device_id: mao2024-1310
+  field: signal_width_um
+  value: 20
+  unit: um
+  basis: design_target
+  locator: p.6 Methods
+  note: Au strip-line electrodes stated as each 20 um wide; role of each line not specified
+- device_id: mao2024-1310
+  field: electrode_thickness_um
+  value: 1.5
+  unit: um
+  basis: design_target
+  locator: p.6 Methods
+  note: electroplated Au
+- device_id: mao2024-1310
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.6 Methods
+- device_id: mao2024-1310
+  field: buffer_oxide_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.2 text
+  note: thermally oxidized SiO2
+- device_id: mao2024-1310
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.2 text; Fig. 1(b)
+- device_id: mao2024-1310
+  field: cladding
+  value: SiO2, 1 um (CVD)
+  unit: ''
+  basis: design_target
+  locator: p.6 Methods
+  note: top cladding
+- device_id: mao2024-1310
+  field: epitaxy_or_stack
+  value: PLZT 300 nm (Pb1-xLax(ZryTi1-y)1-x/4O3, x/y/(1-y) = 8.0/65/35) on La2O2CO3 interlayer (under
+    10 nm) on 2.0 um thermal SiO2 on Si
+  unit: ''
+  basis: design_target
+  locator: p.2 text; p.6 Methods
+- device_id: mao2024-1310
+  field: max_baud_gbd
+  value: 172
+  unit: GBd
+  basis: derived
+  locator: p.4 text; Fig. 4(h)
+  note: OOK 172 Gbit/s equals 172 GBd; PAM4 304 Gbit/s is about 152 GBd
+- device_id: mao2024-1310
+  field: modulation_format
+  value: OOK 128-172 Gbit/s (BER below HD-FEC without FFE at 172); PAM4 232-304 Gbit/s (BER below HD-FEC
+    4.5e-3 at 304)
+  unit: ''
+  basis: measured
+  locator: p.4 text; Fig. 4(h,i)
+  note: also stated for 1310 nm in the text
+- device_id: mao2024-1310
+  field: max_line_rate_gbps
+  value: 304
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.4 text; Fig. 4(i)
+  note: PAM4, 4-level via AWG, Nyquist shaping roll-off 0.1
+- device_id: mao2024-1310
+  field: drive_vpp_v
+  value: 0.2
+  unit: V
+  basis: measured
+  locator: p.4 text; Table 1 p.6; p.7 Methods
+  note: 200 mVpp; drive swing range 100-270 mV (p.7, Supplementary Fig. 8)
+derived:
+- device_id: mao2024-1550
+  field: slab_thickness_nm
+  value: 200
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: mao2024-1550
+  field: prop_loss_db_per_cm
+  value: 6.6
+  formula: 0.66 dB/mm x 10 mm/cm (paper states 0.66 dB/mm, p.6 Methods, Supplementary Fig. 6; wavelength
+    not stated, entered on the 1550 nm row)
+  inputs:
+  - 0.66 dB/mm
+- device_id: mao2024-1310
+  field: slab_thickness_nm
+  value: 200
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm

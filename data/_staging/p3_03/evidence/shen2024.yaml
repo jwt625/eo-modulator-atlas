@@ -1,0 +1,664 @@
+paper_id: shen2024
+verified_on: '2026-10-02'
+source_files:
+- references/shen2024/text.md
+- references/shen2024/crossref.json
+- references/shen2024/figures/page_03.png
+- references/shen2024/figures/page_05.png
+entries:
+- device_id: shen2024-a
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+- device_id: shen2024-a
+  field: etch_depth_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+  note: Partial etch leaving 250 nm slab
+- device_id: shen2024-a
+  field: slab_thickness_nm
+  value: 250
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.8 Methods
+  note: Buried oxide of the LNOI wafer
+- device_id: shen2024-a
+  field: electrode_metal
+  value: niobium
+  unit: ''
+  basis: measured
+  locator: p.3-4 text; p.8 Methods
+  note: Nb, 200-300 nm, superconducting below about 8 K
+- device_id: shen2024-a
+  field: substrate
+  value: 500 um high-resistivity silicon
+  unit: ''
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-a
+  field: cladding
+  value: annealed HSQ (SiO2), 900 nm
+  unit: ''
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+  note: 900 nm HSQ annealed at 400 C into silicon dioxide, sloped sidewall
+- device_id: shen2024-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 text; p.8 Methods
+- device_id: shen2024-a
+  field: waveguide_orientation
+  value: straight sections along crystal y axis
+  unit: ''
+  basis: measured
+  locator: p.2 text
+  note: To use r33
+- device_id: shen2024-a
+  field: length_mm
+  value: 500
+  unit: mm
+  basis: measured
+  locator: p.2 text; p.4 text; Fig. 2d
+  note: 1.0 m total, 0.5 m in each MZ arm
+- device_id: shen2024-b
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+- device_id: shen2024-b
+  field: etch_depth_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+  note: Partial etch leaving 250 nm slab
+- device_id: shen2024-b
+  field: slab_thickness_nm
+  value: 250
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-b
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.8 Methods
+  note: Buried oxide of the LNOI wafer
+- device_id: shen2024-b
+  field: electrode_metal
+  value: niobium
+  unit: ''
+  basis: measured
+  locator: p.3-4 text; p.8 Methods
+  note: Nb, 200-300 nm, superconducting below about 8 K
+- device_id: shen2024-b
+  field: substrate
+  value: 500 um high-resistivity silicon
+  unit: ''
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-b
+  field: cladding
+  value: annealed HSQ (SiO2), 900 nm
+  unit: ''
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+  note: 900 nm HSQ annealed at 400 C into silicon dioxide, sloped sidewall
+- device_id: shen2024-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 text; p.8 Methods
+- device_id: shen2024-b
+  field: waveguide_orientation
+  value: straight sections along crystal y axis
+  unit: ''
+  basis: measured
+  locator: p.2 text
+  note: To use r33
+- device_id: shen2024-b
+  field: length_mm
+  value: 200
+  unit: mm
+  basis: measured
+  locator: p.2 text; p.4 text; Fig. 2d
+  note: 0.4 m total, 0.2 m per arm
+- device_id: shen2024-c
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+- device_id: shen2024-c
+  field: etch_depth_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+  note: Partial etch leaving 250 nm slab
+- device_id: shen2024-c
+  field: slab_thickness_nm
+  value: 250
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-c
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.8 Methods
+  note: Buried oxide of the LNOI wafer
+- device_id: shen2024-c
+  field: electrode_metal
+  value: niobium
+  unit: ''
+  basis: measured
+  locator: p.3-4 text; p.8 Methods
+  note: Nb, 200-300 nm, superconducting below about 8 K
+- device_id: shen2024-c
+  field: substrate
+  value: 500 um high-resistivity silicon
+  unit: ''
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-c
+  field: cladding
+  value: annealed HSQ (SiO2), 900 nm
+  unit: ''
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+  note: 900 nm HSQ annealed at 400 C into silicon dioxide, sloped sidewall
+- device_id: shen2024-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 text; p.8 Methods
+- device_id: shen2024-c
+  field: waveguide_orientation
+  value: straight sections along crystal y axis
+  unit: ''
+  basis: measured
+  locator: p.2 text
+  note: To use r33
+- device_id: shen2024-c
+  field: length_mm
+  value: 100
+  unit: mm
+  basis: measured
+  locator: p.2 text; p.4 text; Fig. 2d
+  note: 0.2 m total, 0.1 m per arm
+- device_id: shen2024-d
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+- device_id: shen2024-d
+  field: etch_depth_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+  note: Partial etch leaving 250 nm slab
+- device_id: shen2024-d
+  field: slab_thickness_nm
+  value: 250
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-d
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.8 Methods
+  note: Buried oxide of the LNOI wafer
+- device_id: shen2024-d
+  field: electrode_metal
+  value: niobium
+  unit: ''
+  basis: measured
+  locator: p.3-4 text; p.8 Methods
+  note: Nb, 200-300 nm, superconducting below about 8 K
+- device_id: shen2024-d
+  field: substrate
+  value: 500 um high-resistivity silicon
+  unit: ''
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-d
+  field: cladding
+  value: annealed HSQ (SiO2), 900 nm
+  unit: ''
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+  note: 900 nm HSQ annealed at 400 C into silicon dioxide, sloped sidewall
+- device_id: shen2024-d
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 text; p.8 Methods
+- device_id: shen2024-d
+  field: waveguide_orientation
+  value: straight sections along crystal y axis
+  unit: ''
+  basis: measured
+  locator: p.2 text
+  note: To use r33
+- device_id: shen2024-d
+  field: length_mm
+  value: 100
+  unit: mm
+  basis: measured
+  locator: p.5 text; Fig. 3d caption
+  note: 0.2 m total modulation length, 0.1 m per arm
+- device_id: shen2024-e
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+- device_id: shen2024-e
+  field: etch_depth_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+  note: Partial etch leaving 250 nm slab
+- device_id: shen2024-e
+  field: slab_thickness_nm
+  value: 250
+  unit: nm
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-e
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.8 Methods
+  note: Buried oxide of the LNOI wafer
+- device_id: shen2024-e
+  field: electrode_metal
+  value: niobium
+  unit: ''
+  basis: measured
+  locator: p.3-4 text; p.8 Methods
+  note: Nb, 200-300 nm, superconducting below about 8 K
+- device_id: shen2024-e
+  field: substrate
+  value: 500 um high-resistivity silicon
+  unit: ''
+  basis: measured
+  locator: p.8 Methods
+- device_id: shen2024-e
+  field: cladding
+  value: annealed HSQ (SiO2), 900 nm
+  unit: ''
+  basis: measured
+  locator: p.8 Methods; p.10 Sec. I
+  note: 900 nm HSQ annealed at 400 C into silicon dioxide, sloped sidewall
+- device_id: shen2024-e
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 text; p.8 Methods
+- device_id: shen2024-e
+  field: waveguide_orientation
+  value: straight sections along crystal y axis
+  unit: ''
+  basis: measured
+  locator: p.2 text
+  note: To use r33
+- device_id: shen2024-e
+  field: length_mm
+  value: 100
+  unit: mm
+  basis: measured
+  locator: p.5 text; Fig. 3d caption
+  note: 0.2 m SEOM; 0.1 m per arm (p.24 Sec. IX)
+- device_id: shen2024-a
+  field: vpi_dc_v
+  value: 0.042
+  unit: V
+  basis: measured
+  locator: p.3 Fig. 2d; p.4 text
+  note: Room temperature voltage sweep, push-pull MZ convention inferred
+- device_id: shen2024-b
+  field: vpi_dc_v
+  value: 0.11
+  unit: V
+  basis: measured
+  locator: p.3 Fig. 2d; p.4 text
+- device_id: shen2024-c
+  field: vpi_dc_v
+  value: 0.23
+  unit: V
+  basis: measured
+  locator: p.3 Fig. 2d; p.4 text
+- device_id: shen2024-e
+  field: vpi_dc_v
+  value: 0.38
+  unit: V
+  basis: measured
+  locator: p.5 text; p.17 Fig. S5
+  note: At 4 K; 220 mV at 300 K for the same 0.2 m device
+- device_id: shen2024-a
+  field: drive_vpp_v
+  value: 0.001
+  unit: V
+  basis: measured
+  locator: p.3 Fig. 2e; p.4 text
+  note: Also 3 mV
+- device_id: shen2024-a
+  field: modulation_format
+  value: eye diagrams at Vpp 1 mV and 3 mV, 200 kb/s, room temperature (normal-metal RC limited)
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 2e; p.4 text
+- device_id: shen2024-a
+  field: max_line_rate_gbps
+  value: 0.0002
+  unit: Gb/s
+  basis: measured
+  locator: p.4 text
+  note: 200 kbps speed
+- device_id: shen2024-d
+  field: bw3db_ghz
+  value: 17.5
+  unit: GHz
+  basis: derived
+  locator: p.5 Fig. 3d caption; p.5 text
+  note: Derived by authors from fitted S21 at 5.6 K; 13.5, 16.8, 11.0 GHz at 4.8, 6.4, 6.8 K
+- device_id: shen2024-d
+  field: drive_vpp_v
+  value: 0.01
+  unit: V
+  basis: measured
+  locator: p.3 Fig. 2g caption
+- device_id: shen2024-d
+  field: modulation_format
+  value: eye diagrams at Vpp 10 mV, 2 and 4 Gb/s, cryogenic (format not stated; 6 GHz oscilloscope)
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 2g; p.4 text
+- device_id: shen2024-d
+  field: max_line_rate_gbps
+  value: 4
+  unit: Gb/s
+  basis: measured
+  locator: p.3 Fig. 2g caption
+  note: Stated as Gbps, format not stated
+- device_id: shen2024-d
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 text; p.5 Fig. 3a
+  note: Waveguide width of the modelled cross-section
+- device_id: shen2024-d
+  field: electrode_gap_um
+  value: 5.2
+  unit: um
+  basis: design_target
+  locator: p.4 text; p.5 Fig. 3 caption; p.16 Sec. III
+  note: Gap chosen for the device design and the modelled line
+- device_id: shen2024-d
+  field: signal_width_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.5 Fig. 3 caption
+  note: Signal electrode width around 2 um at matching
+- device_id: shen2024-d
+  field: electrode_thickness_um
+  value: 0.275
+  unit: um
+  basis: design_target
+  locator: p.4 text; p.5 Fig. 3 caption
+  note: Nb thickness around 275 nm at matching
+- device_id: shen2024-e
+  field: drive_vpp_v
+  value: 0.005
+  unit: V
+  basis: measured
+  locator: p.5 text; p.6 Fig. 4h
+  note: RSFQ output 5 mV Vpp; AWG 10 and 20 mV
+- device_id: shen2024-e
+  field: max_baud_gbd
+  value: 1
+  unit: GBd
+  basis: measured
+  locator: p.5 text
+  note: NRZ at 1 Gbps
+- device_id: shen2024-e
+  field: modulation_format
+  value: 'NRZ PRBS7 at 1 Gb/s: RSFQ 5 mV Vpp (SNR 3.1 dB, BER 2.2e-2 calculated); AWG 10 mV (7.0 dB, 7.7e-4)
+    and 20 mV (10.4 dB, 1.4e-6)'
+  unit: ''
+  basis: measured
+  locator: p.5-6 text; Fig. 4e-h
+  note: BER calculated from SNR by the authors
+- device_id: shen2024-e
+  field: max_line_rate_gbps
+  value: 1
+  unit: Gb/s
+  basis: measured
+  locator: p.5 text
+- device_id: shen2024-e
+  field: il_onchip_db
+  value: 8
+  unit: dB
+  basis: measured
+  locator: p.6 text
+  note: Additional on-chip insertion loss at cryogenic temperature
+- device_id: shen2024-e
+  field: il_fiber_to_fiber_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.6 text
+  note: 'Total optical loss: 12 dB coupling plus 8 dB on-chip'
+- device_id: shen2024-e
+  field: prop_loss_db_per_cm
+  value: 0.8
+  unit: dB/cm
+  basis: measured
+  locator: p.7 text; pp.21-23 Sec. VIII
+  note: About 0.8 dB/cm, e-beam damage; stated for the current device
+- device_id: shen2024-e
+  field: optical_input_power_dbm
+  value: 17
+  unit: dBm
+  basis: measured
+  locator: p.6 text
+  note: Laser power applied to the SEOM
+- device_id: shen2024-e
+  field: energy_per_bit_fj
+  value: 0.125
+  unit: fJ/bit
+  basis: derived
+  locator: p.7 text
+  note: 'Author-computed 125 aJ/bit: V^2/Z0 microwave dissipation at 5 mV Vpp and 1 Gb/s; optical power
+    excluded'
+- device_id: shen2024-a
+  field: vpil_dc_vcm
+  value: 2.2
+  unit: V*cm
+  basis: derived
+  locator: p.4 text
+  note: Authors' 'around 2.2 V cm' for the three devices, one-arm length; arithmetic gives 2.1/2.2/2.3
+- device_id: shen2024-b
+  field: vpil_dc_vcm
+  value: 2.2
+  unit: V*cm
+  basis: derived
+  locator: p.4 text
+  note: Authors' 'around 2.2 V cm' for the three devices, one-arm length; arithmetic gives 2.1/2.2/2.3
+- device_id: shen2024-c
+  field: vpil_dc_vcm
+  value: 2.2
+  unit: V*cm
+  basis: derived
+  locator: p.4 text
+  note: Authors' 'around 2.2 V cm' for the three devices, one-arm length; arithmetic gives 2.1/2.2/2.3
+- device_id: shen2024-e
+  field: vpil_dc_vcm
+  value: 3.8
+  unit: V*cm
+  basis: derived
+  locator: p.7 Fig. 5 caption
+  note: Cryogenic VpiL from experiment; 0.38 V x 10 cm per arm, 4 K
+- device_id: shen2024-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; inferred from GSG line between the two arms (25 um spacing)
+- device_id: shen2024-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; follows inferred push-pull drive; VpiL uses one-arm length (p.4)
+- device_id: shen2024-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; inferred from GSG line between the two arms (25 um spacing)
+- device_id: shen2024-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; follows inferred push-pull drive; VpiL uses one-arm length (p.4)
+- device_id: shen2024-c
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; inferred from GSG line between the two arms (25 um spacing)
+- device_id: shen2024-c
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; follows inferred push-pull drive; VpiL uses one-arm length (p.4)
+- device_id: shen2024-d
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; inferred from GSG line between the two arms (25 um spacing)
+- device_id: shen2024-d
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; follows inferred push-pull drive; VpiL uses one-arm length (p.4)
+- device_id: shen2024-e
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; inferred from GSG line between the two arms (25 um spacing)
+- device_id: shen2024-e
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 text; p.4 text
+  note: Authors do not state; follows inferred push-pull drive; VpiL uses one-arm length (p.4)
+- device_id: shen2024-a
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 text; p.5 Fig. 3a
+  note: Waveguide width of the modelled cross-section; as-built width not stated
+- device_id: shen2024-a
+  field: electrode_gap_um
+  value: 5.2
+  unit: um
+  basis: design_target
+  locator: p.4 text; p.16 Sec. III
+  note: Gap chosen for the device design
+- device_id: shen2024-b
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 text; p.5 Fig. 3a
+  note: Waveguide width of the modelled cross-section; as-built width not stated
+- device_id: shen2024-b
+  field: electrode_gap_um
+  value: 5.2
+  unit: um
+  basis: design_target
+  locator: p.4 text; p.16 Sec. III
+  note: Gap chosen for the device design
+- device_id: shen2024-c
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 text; p.5 Fig. 3a
+  note: Waveguide width of the modelled cross-section; as-built width not stated
+- device_id: shen2024-c
+  field: electrode_gap_um
+  value: 5.2
+  unit: um
+  basis: design_target
+  locator: p.4 text; p.16 Sec. III
+  note: Gap chosen for the device design
+- device_id: shen2024-e
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.4 text; p.5 Fig. 3a
+  note: Waveguide width of the modelled cross-section; as-built width not stated
+- device_id: shen2024-e
+  field: electrode_gap_um
+  value: 5.2
+  unit: um
+  basis: design_target
+  locator: p.4 text; p.16 Sec. III
+  note: Gap chosen for the device design
+- device_id: shen2024-d
+  field: ng_opt
+  value: 2.25
+  unit: '1'
+  basis: simulated
+  locator: p.4 text
+  note: Simulated optical group index of the modelled cross-section, stated as around 2.25
+derived: []

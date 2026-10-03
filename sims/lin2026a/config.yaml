@@ -1,0 +1,115 @@
+schema: eo-atlas.sim/v1
+id: lin2026a-a
+paper_id: lin2026a
+device_id: lin2026a-a
+title: Lin 2026 (arXiv v1), 200 um lumped GSG push-pull TFLT MZM at 375 nm (1.5 um gap, 420 nm waveguide)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap]
+
+# Coordinate frame: x lateral (paper z), y film normal up (paper x), z propagation (paper y).
+# Origin: optical axis of the RIGHT-hand waveguide in x; y = 0 at the SiO2 top / LT bottom.
+# GSG: the signal electrode lies between the two MZI arms, one arm in each 1.5 um gap (Fig. 2(a)); the arms
+# see opposite fields (push-pull stated by the authors). Both arms are in the electrostatic domain (symmetry none);
+# the optical mode is solved on the right arm.
+optics:
+  wavelength_nm: 375
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_tantalate:
+    crystal: {cut: x, propagation: y}
+    eps_r: {perp: 41.0, par: 43.0}
+    r_pm_per_v: {r33: 35.0}
+  silicon_dioxide: {eps_r: 3.9}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-200, 140], y_um: [-60, 40]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-200, 140], y_um: [-60, 40]}}
+    - {name: insulating_substrate, material: silicon_dioxide, rect: {x_um: [-200, 140], y_um: [-60, 0]}}
+    - {name: lt_slab, material: lithium_tantalate, rect: {x_um: [-200, 140], y_um: [0, 0.2]}}
+    - {name: lt_rib_r, material: lithium_tantalate, rect: {x_um: [-0.21, 0.21], y_um: [0.2, 0.3]}}
+    - {name: lt_rib_l, material: lithium_tantalate, rect: {x_um: [-65.71, -65.29], y_um: [0.2, 0.3]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-64.75, -0.75], y_um: [0.2, 0.42]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [0.75, 100.75], y_um: [0.2, 0.42]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-166.25, -66.25], y_um: [0.2, 0.42]}, material: gold}
+  optical_window: {x_um: [-0.6, 0.6], y_um: [-1.0, 1.0]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+line:
+  length_mm: 0.2
+  conductor_loss_model: none
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false
+  loading:
+    type: none
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 67, n_points: 134}
+
+alt_geometries: {}
+
+targets:
+  # Measured, 200 um electrode (devices.csv row lin2026a-a); VpiL uses the push-pull MZM Vpi x one-arm electrode length
+  - {metric: vpi_l_dc_vcm, value: 0.085, tol_rel: 0.15, source: {device_id: lin2026a-a, field: vpil_dc_vcm}}
+  - {metric: vpi_dc_v, value: 4.2, tol_rel: 0.15, source: {device_id: lin2026a-a, field: vpi_dc_v}}
+  # Extracted from the measured S-parameters of the 200 um lumped electrode; a static infinite-line cross-section is only an indicative comparison
+  - {metric: z0_ohm, value: 23, tol_abs: 5.0, source: {device_id: lin2026a-a, field: z0_ohm}}
+  - {metric: n_rf, value: 2.3, tol_abs: 0.2, source: {device_id: lin2026a-a, field: n_rf}}
+  # Not a target: the paper's own simulated VpiL 96 +- 2 mV cm (p.10, r33 = 35 pm/V, design gap) is a cross-solver reference only
+  - {metric: ng_opt, value: 2.8, tol_abs: 0.1, source: {device_id: lin2026a-a, field: ng_opt}}
+  # Not a target: 922 MHz EOE bandwidth is detector-limited; 1 dB roll-off at 67 GHz is an author estimate (no eo_rolloff reference stated)
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.5 text; p.1 abstract"}
+  optics.polarization: {class: paper_exact, locator: "p.6 text (TE mode, r33 along z)"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes a calculated optical group index 2.8 (p.10, Fig. 5e); the engine derives it and compares it as a target"}
+  materials.lithium_tantalate.crystal: {class: paper_exact, locator: "p.6 text; Fig. 2(e)", note: "x-cut film, propagation along y, TE along z"}
+  materials.lithium_tantalate.r_pm_per_v.r33: {class: paper_exact, locator: "p.10 text", note: "r33 = 35 pm/V at 375 nm used in the authors simulation, citing Juvalta et al. 2006 (ref. 20)"}
+  materials.lithium_tantalate.eps_r: {class: unknown, note: "UNVERIFIED: 41 / 43 are recalled values with no opened source; the paper does not state RF permittivity. Kept only so the config can be inspected, same convention as sims/lin2025 and sims/li2026ba; results depending on it must not be quoted as reproduction."}
+  materials.silicon_dioxide.eps_r: {class: project_inference, note: "3.9 typical handbook value; paper states none; UNVERIFIED. Optical n omitted so the engine library (Malitson fused silica) supplies it at 375 nm"}
+  materials.gold.sigma_Sm: {class: standard_reference, citation: "bulk gold 4.1e7 S/m as in sims/chen2022; film conductivity not stated; irrelevant to the static electrostatics"}
+  line.length_mm: {class: paper_exact, locator: "p.6 text; Fig. 2 caption (200 um interaction region)"}
+  line.differential: {class: project_inference, note: "single GSG probe on the signal line, one arm in each gap; push-pull stated by the authors (p.4-5, Fig. 4 caption), arm placement inferred from Fig. 2(a)"}
+  line.conductor_loss_model: {class: project_inference, note: "lumped 200 um electrode; paper reports only 2 dB EE attenuation at 67 GHz including pads; no loss model applied"}
+  geometry.regions.lt_slab: {class: paper_exact, locator: "p.6 text (300 nm film, 100 nm etch -> 200 nm slab)", note: "slab thickness is the arithmetic 300 - 100"}
+  geometry.regions.lt_rib_r: {class: paper_exact, locator: "p.6 text; Fig. 2(e)", note: "100 nm high, 420 nm wide; authors state vertical sidewalls from wet etching, Fig. 2(e) SEM is slightly sloped"}
+  geometry.regions.lt_rib_l: {class: project_inference, note: "same rib at x = -65.5 um (second arm centred in the left 1.5 um gap)"}
+  geometry.regions.insulating_substrate: {class: project_inference, locator: "p.6 text (insulating substrate, Pt coating against charging); Fig. 2(e) labels SiO2", note: "BOX thickness and substrate material not stated; modelled as a thick SiO2 half-space"}
+  geometry.electrodes.signal: {class: figure_digitized, locator: "Fig. 2(b) (100 um scale bar, 75 px)", note: "arm separation about 65-67 um read from the optical image (about 48-50 px, 100 um = 75 px); each arm is centred in its 1.5 um gap, so signal width = separation - 1.5 um; the geometry uses separation 65.5 um and signal width 64.0 um; low-resolution image, +-20% uncertainty"}
+  geometry.electrodes.ground_r: {class: figure_digitized, locator: "Fig. 2(b) (100 um scale bar, 75 px)", note: "ground width not stated; about 100 um from the total GSG pad span of about 265 um (about 206 px) minus signal width and gaps, same low-resolution caveat; inner edge 0.75 um from the waveguide axis (gap 1.5 um centred on the waveguide)"}
+  geometry.electrodes.ground_l: {class: project_inference, note: "mirror of ground_r about the signal centre"}
+  geometry.electrodes.signal.y: {class: paper_exact, locator: "p.14 Methods (220 nm Ti/Au)", note: "electrodes assumed to sit on the 200 nm slab (y 0.2 to 0.42); the stack position relative to the slab is not stated"}
+  geometry.optical_window: {class: project_inference, note: "crop inside the electrode gaps so no conductor is in the optical mesh; heavily truncates a 375 nm mode, expand-window convergence required"}
+  geometry.domain: {class: project_inference, note: "open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - BOX thickness and substrate material (only 'insulating substrate'; thick SiO2 assumed)
+  - signal and ground electrode widths and arm spacing (digitized from a 75 px / 100 um optical image)
+  - cladding (none stated; air assumed) and rib sidewall angle (vertical per text, SEM slightly sloped)
+  - RF permittivity of LT (UNVERIFIED placeholder 41 / 43) and SiO2 (3.9, unverified)
+  - optical refractive indices of LT at 375 nm (not stated; not given to the engine, so the optical stage cannot run)
+  - Pockels coefficients r13, r22, r51 of LT (only r33 = 35 pm/V given; engine treats missing as 0)
+  - Ti adhesion layer thickness; Ti/Au film conductivity
+  - whether the electrodes sit on the slab or on a deeper etched surface (Fig. 2(d))
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Lumped 200 um electrode: Z0 and n_RF targets compare an infinite-line static cross-section with values extracted from a short lumped structure; informational only"
+  - "LT RF permittivity (41 / 43) is an UNVERIFIED recalled placeholder, same as sims/lin2025 and sims/li2026ba"
+  - "Optical stage needs LT n_o/n_e at 375 nm, which are not in the paper or the engine library (see sims/SPEC.md optical inputs); the config is electrostatics-ready only"
+  - "Push-pull convention: the overlap integral must be evaluated on both arms with opposite fields; the SPEC leaves the push-pull factor open"
+  - "Zero-field optical window boundary inside the 1.5 um gaps over-confines a 375 nm mode on a 420 nm waveguide"
