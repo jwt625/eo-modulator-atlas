@@ -26,6 +26,8 @@ Other tranches remain unassigned. No implicit delegation.
 | C0 | Work plan, claims, current-state record | complete | codex-main | This board + detailed plan + claim file |
 | R0 | Standalone checkout and local cache migration | complete | codex-main | 726 artifacts including 39 PDFs hash-verified and ignored; environment checks pass |
 | D1.12 | Priority-2 batch p2_01 (Kieninger 2020, Wolf 2018a) | ready for reviewer recheck | codex-main | F1–F17 dispositions recorded; 157 entries + 3 conversions; joint dry-run clean |
+| C1 | Continued literature collection (2026-10-02 pass 2) | ready_for_review | claude-ingest-2026-10-02 | 118 caches, 235 new candidates, 195 open requests; DevLog-014 |
+| D1.15-D1.33 | Staged batches p3_01..p3_19 plus han2023 addendum | ready_for_review | claude-ingest-2026-10-02 | 88 papers / 192 device rows staged, 7 independent audits (180 findings, all dispositioned); joint dry run 0 conflicts; no canonical merge; DevLog-014 |
 | D1.13 | p2_02 high-k SOH / slow-light silicon | ready_for_review; Han PDF pending | claude-wave-2026-10-02, files released | Ummethala staged and Q1 accepted after corrections; DevLog-010 |
 | D1.14 | p2_03 silicon resonator / SOH IQ proposal | proposed, unclaimed | unassigned | Candidate pairing in DevLog-006; claim paths before prefetch |
 | D0 | Ingestion tooling and policy alignment | implementation reported complete | claude-data-lane | DevLog-004 records lock/breaker tests; single prefetch owner retained |

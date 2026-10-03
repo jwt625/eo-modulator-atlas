@@ -52,6 +52,8 @@ extracted text/figures retain source-specific rights; see the
 
 ## Open items
 
+- Continued in [DevLog-014](DevLog-014-continued-collection-and-ingestion.md) (2026-10-03): 72 further preprints cached, `han2023` and `li2022b` recovered, 235 candidates merged, staged distillation and audits. Counts below are as of this pass.
+
 - 34 retrieval requests remain; the retrieval inbox workflow is ready.
 - New candidates in `candidates.csv` are staged and not distilled.
 - Independent evidence and numerical audits are unaffected by this pass.
