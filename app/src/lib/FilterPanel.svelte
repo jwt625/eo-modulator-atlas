@@ -62,6 +62,7 @@
 		return o;
 	});
 	const sourceOpts = $derived(a ? opts('source_type', countBy(a.papers, (p) => p.source_type)) : []);
+	const auditOpts = $derived(a ? opts('audit_status', countBy(a.papers, (p) => p.audit_status)) : []);
 	const regionOpts = $derived(a ? opts('region', countBy(a.papers, (p) => p.regions_derived)) : []);
 	const countryOpts = $derived(a ? opts('country', countBy(a.papers, (p) => p.countries_derived)) : []);
 	const yearBounds = $derived.by(() => {
@@ -93,6 +94,7 @@
 			filters.classes.length ||
 			filters.platforms.length ||
 			filters.sourceTypes.length ||
+			filters.auditStatuses.length ||
 			filters.regions.length ||
 			filters.countries.length ||
 			filters.yearMin !== null ||
@@ -113,7 +115,7 @@
 	</section>
 {/snippet}
 
-{#snippet checks(list: Opt[], sel: string[], key: 'materials' | 'classes' | 'platforms' | 'sourceTypes' | 'regions' | 'countries')}
+{#snippet checks(list: Opt[], sel: string[], key: 'materials' | 'classes' | 'platforms' | 'sourceTypes' | 'auditStatuses' | 'regions' | 'countries')}
 	<div class="checks">
 		{#each list as o (o.value)}
 			<label title="{o.label}: {o.n}">
@@ -160,6 +162,8 @@
 			</div>
 			<div class="sub">Source type</div>
 			{@render checks(sourceOpts, filters.sourceTypes, 'sourceTypes')}
+			<div class="sub" title="Independent audit state of the paper's staged rows; see About">Audit status</div>
+			{@render checks(auditOpts, filters.auditStatuses, 'auditStatuses')}
 			<div class="sub">Region</div>
 			{@render checks(regionOpts, filters.regions, 'regions')}
 			<div class="sub">Country</div>

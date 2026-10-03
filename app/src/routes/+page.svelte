@@ -64,6 +64,10 @@
 				{#if i}<Bars items={i.per_source_type} labels={labelMap('source_type', Object.keys(i.per_source_type))} />{/if}
 			</section>
 			<section>
+				<h3 title="Papers per independent audit state">Audit status</h3>
+				{#if i}<Bars items={i.per_audit_status} labels={labelMap('audit_status', Object.keys(i.per_audit_status))} />{/if}
+			</section>
+			<section>
 				<h3 title="Papers per reproducibility grade">Repro grade</h3>
 				{#if i}<Bars items={i.per_repro_grade} />{/if}
 			</section>

@@ -20,7 +20,9 @@ describe('integrated atlas data in the app', () => {
     expect(vpil(d).derived).toBe(true);
   });
   it('uses the same default representative as the generated view', () => {
-    for (const p of atlas.papers) expect(pickRep(index.devsByPaper.get(p.paper_id)!, 'default')?.device_id).toBe(p.rep.default);
+    // Papers without device rows (material-only or no reported modulator metrics) have no representative.
+    for (const p of atlas.papers.filter(q => q.n_devices > 0)) expect(pickRep(index.devsByPaper.get(p.paper_id)!, 'default')?.device_id).toBe(p.rep.default);
+    expect(atlas.papers.filter(q => q.n_devices === 0).every(q => !index.devsByPaper.get(q.paper_id)?.length)).toBe(true);
   });
   it('round trips search, filters and multi-sort through the shareable hash', () => {
     const f = { ...defaultFilters(), q: 'Chen & TFLN', yearMin: 2020, hasSim: true, allDevices: true, materials: ['lithium_niobate'] };

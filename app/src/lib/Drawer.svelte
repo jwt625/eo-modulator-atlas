@@ -89,6 +89,8 @@
 				<div title="License as recorded for the source">{paper.license ?? EM_DASH}</div>
 				<div class="k">Redistribution</div>
 				<div title="Whether text and figures of the source may be redistributed with the atlas">{enumLabel(a, 'redistribution', paper.redistribution)}; access: {enumLabel(a, 'access', paper.access)}</div>
+				<div class="k">Audit</div>
+				<div title="Independent audit state of this paper's rows">{enumLabel(a, 'audit_status', paper.audit_status)}</div>
 				<div class="k">Organizations</div>
 				<div>{paper.orgs_affil.map((o) => o.org_name).join('; ') || EM_DASH}</div>
 				<div class="k">Foundry / fab</div>

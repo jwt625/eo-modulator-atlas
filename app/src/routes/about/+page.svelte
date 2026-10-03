@@ -22,6 +22,8 @@
   <p>EO overlap, RF loss, periodic loaded-line response and EO bandwidth remain unfinished. Unsupported targets appear as “not evaluated.” Inputs, targets, tolerances and provenance are tracked; solver results stay in memory. The current Chen optical window intersects metal and needs further modelling work.</p>
   <h2>Coverage and reproducibility</h2>
   <p>Grade A indicates disclosed geometry and materials, B requires extraction or inference, and C supports metrics only. A grade describes disclosure, not solver accuracy. Simulation configs list missing inputs and modelling assumptions explicitly.</p>
+  <h2>Audit status</h2>
+  <p>Every paper carries an independent-audit state. Audited: an independent audit report was written and the author corrections were accepted before integration. Needs 2nd audit: independently audited once and corrected, with the corrections not yet re-audited. Needs audit: no independent audit yet. Numbers from papers that are not Audited should be treated as unreviewed; most newly added papers were distilled from arXiv preprints and may differ from the version of record. Filter by audit status in the paper filters, or sort the Audit column.</p>
   <p>The repository includes source PDFs, extracted text and figure images under its recorded reference policy. The static app packages database views and simulation input YAML only. Redistribution rights remain recorded per source.</p>
 </article>
 

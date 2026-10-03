@@ -9,6 +9,7 @@ export function defaultFilters(): Filters {
 		classes: [],
 		platforms: [],
 		sourceTypes: [],
+		auditStatuses: [],
 		regions: [],
 		countries: [],
 		yearMin: null,
@@ -295,6 +296,7 @@ export function paperMatches(p: Paper, f: Filters, idx: Index): boolean {
 	if (f.yearMin !== null && p.year < f.yearMin) return false;
 	if (f.yearMax !== null && p.year > f.yearMax) return false;
 	if (f.sourceTypes.length && !f.sourceTypes.includes(p.source_type)) return false;
+	if (f.auditStatuses.length && !f.auditStatuses.includes(p.audit_status)) return false;
 	if (f.regions.length && !p.regions_derived.some((r) => f.regions.includes(r))) return false;
 	if (f.countries.length && !p.countries_derived.some((c) => f.countries.includes(c))) return false;
 	if (f.hasSim && !p.has_sim) return false;
@@ -393,6 +395,7 @@ export function toHash(f: Filters, extras: HashExtras = { sort: [] }): string {
 	if (f.classes.length) p.set('c', f.classes.join(','));
 	if (f.platforms.length) p.set('p', f.platforms.join(','));
 	if (f.sourceTypes.length) p.set('s', f.sourceTypes.join(','));
+	if (f.auditStatuses.length) p.set('au', f.auditStatuses.join(','));
 	if (f.regions.length) p.set('r', f.regions.join(','));
 	if (f.countries.length) p.set('k', f.countries.join(','));
 	if (f.yearMin !== null) p.set('y0', String(f.yearMin));
@@ -415,6 +418,7 @@ export function fromHash(hash: string): { filters: Filters; extras: HashExtras }
 	f.classes = list(p.get('c'));
 	f.platforms = list(p.get('p'));
 	f.sourceTypes = list(p.get('s'));
+	f.auditStatuses = list(p.get('au'));
 	f.regions = list(p.get('r'));
 	f.countries = list(p.get('k'));
 	const y0 = Number(p.get('y0'));

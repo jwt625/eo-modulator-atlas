@@ -64,6 +64,7 @@ export const COLS: ColDef[] = [
 	{ id: 'region', label: 'Country / region', tip: 'Derived from the affiliations', width: 130, level: 'paper', defaultOn: true },
 	{ id: 'fab', label: 'Foundry / fab', tip: 'Who fabricated the device, as stated in the paper', width: 190, level: 'paper', defaultOn: true },
 	{ id: 'grade', label: 'Repro', tip: 'Reproducibility grade: A geometry and materials fully disclosed; B needs figure digitization; C metrics only', width: 48, level: 'paper', defaultOn: true },
+	{ id: 'audit', label: 'Audit', tip: 'Independent audit state: Audited = audit report and corrections accepted before integration; Needs 2nd audit = audited once, corrections not re-audited; Needs audit = no independent audit yet', width: 120, level: 'paper', defaultOn: true },
 	{ id: 'sim', label: 'Sim', tip: 'Browser simulation config available', width: 44, level: 'paper', defaultOn: true },
 	{ id: 'device', label: 'Device', tip: 'Device label', width: 180, level: 'device', defaultOn: false },
 	{ id: 'length', label: 'Length', unit: 'mm', tip: 'Active electrode / phase-shifter length', width: 62, num: true, level: 'device', defaultOn: false },
@@ -74,6 +75,12 @@ export const COLS: ColDef[] = [
 	{ id: 'venue', label: 'Venue', tip: 'Journal / conference', width: 180, level: 'paper', defaultOn: false },
 	{ id: 'doi', label: 'DOI / arXiv', tip: 'Persistent identifier', width: 170, level: 'paper', defaultOn: false }
 ];
+
+const AUDIT_TIP: Record<string, string> = {
+	audited: 'Independent audit report and author corrections accepted before integration',
+	needs_recheck: 'Independently audited once and corrected by the author; the corrections have not been re-audited',
+	needs_audit: 'No independent audit yet; treat the numbers as unreviewed'
+};
 
 export const NUMERIC_METRIC: Record<string, (d: Device) => Metric> = {
 	vpil,
@@ -188,6 +195,8 @@ export function cellFor(a: Atlas, id: string, p: Paper, d: Device): Cell {
 		}
 		case 'grade':
 			return p.repro_grade ? { text: p.repro_grade, tip: `Reproducibility grade ${p.repro_grade}` } : dash();
+		case 'audit':
+			return { text: enumLabel(a, 'audit_status', p.audit_status), tip: AUDIT_TIP[p.audit_status] ?? p.audit_status };
 		case 'sim':
 			return p.has_sim
 				? { text: 'sim', href: `sim?id=${encodeURIComponent(p.sim_ids[0] ?? p.paper_id)}`, tip: `Simulation config: ${p.sim_ids.join(', ')}` }
@@ -225,6 +234,7 @@ export function sortValue(a: Atlas, id: string, p: Paper, d: Device): SortVal {
 		case 'complete': return isStatisticalReplicate(d) ? null : d.derived.completeness.value;
 		case 'sim': return p.has_sim ? 1 : 0;
 		case 'grade': return p.repro_grade;
+		case 'audit': return ({ audited: 0, needs_recheck: 1, needs_audit: 2 } as Record<string, number>)[p.audit_status] ?? 3;
 		case 'device': return d.device_label.toLowerCase();
 		default: {
 			const c = cellFor(a, id, p, d);

@@ -91,6 +91,7 @@ export interface Paper {
 	foundry_or_fab: string[];
 	repro_grade: string | null;
 	sim_config: string | null;
+	audit_status: string;
 	notes: string | null;
 	device_ids: string[];
 	rep: Record<string, string>;
@@ -152,6 +153,7 @@ export interface Atlas {
 		per_source_type: Record<string, number>;
 		per_access: Record<string, number>;
 		per_repro_grade: Record<string, number>;
+		per_audit_status: Record<string, number>;
 		per_redistribution: Record<string, number>;
 		evidence: { nonempty_evidence_fields: number; without_evidence_entry: number };
 		completeness_mean: number | null;
@@ -174,6 +176,7 @@ export interface Filters {
 	classes: string[];
 	platforms: string[];
 	sourceTypes: string[];
+	auditStatuses: string[];
 	regions: string[];
 	countries: string[];
 	yearMin: number | null;
