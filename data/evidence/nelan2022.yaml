@@ -1,0 +1,181 @@
+paper_id: nelan2022
+verified_on: '2026-10-02'
+source_files:
+- references/nelan2022/text.md
+- references/nelan2022/figures/img_p03_1.png
+- references/nelan2022/figures/img_p03_3.png
+- references/nelan2022/figures/img_p06_2.png
+- references/nelan2022/figures/page_07.png
+- references/nelan2022/figures/page_08.png
+- references/nelan2022/figures/img_p09_1.png
+- references/nelan2022/source.json
+entries:
+- device_id: nelan2022-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5 Sec. IV-A; p.9 Sec. IV-E
+  note: tunable laser at 1550 nm
+- device_id: nelan2022-a
+  field: length_mm
+  value: 11
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.3 Sec. II-A
+  note: interaction region, two 5.5 mm sections before and after the fold
+- device_id: nelan2022-a
+  field: vpi_dc_v
+  value: 2.98
+  unit: V
+  basis: measured
+  locator: p.7 Fig. 7(f) caption; p.6 Sec. IV-C
+  note: 150 kHz triangular sweep on the GSG electrodes; text 'roughly 3 V', abstract 'less than 3.0 V'
+- device_id: nelan2022-a
+  field: vpil_dc_vcm
+  value: 3.3
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.5 Sec. II-C
+  note: abstract states Vpi*L 3.3 V cm for the 11 mm region; design value roughly 3.3 V cm in Sec. II-C
+- device_id: nelan2022-a
+  field: bw3db_ghz
+  value: 30
+  unit: GHz
+  basis: derived
+  locator: p.9 Sec. IV-E; Fig. 11
+  note: 3 dB divided by roughly 0.1 dB/GHz fitted slope; Fig. 11 slopes 0.108-0.137 dB/GHz (22-28 GHz); no reference frequency
+- device_id: nelan2022-a
+  field: il_onchip_db
+  value: 1.1
+  unit: dB
+  basis: author_estimate
+  locator: p.5 Sec. IV-A
+  note: 'text: roughly 1.1 dB after the 17 mm path'
+- device_id: nelan2022-a
+  field: il_fiber_to_fiber_db
+  value: 12.0
+  unit: dB
+  basis: measured
+  locator: p.5 Sec. IV-A; p.1 abstract
+  note: total insertion loss roughly 12.0 dB with on-chip fiber couplers and lensed fibers
+- device_id: nelan2022-a
+  field: prop_loss_db_per_cm
+  value: 0.64
+  unit: dB/cm
+  basis: measured
+  locator: p.5 Sec. IV-A; Fig. 7(d)
+  note: OBR backscatter on an on-chip reference structure; Fig. 7(d) label 0.0644 dB/mm
+- device_id: nelan2022-a
+  field: extinction_ratio_db
+  value: 45
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.7-8 Sec. IV-D; Fig. 8
+  note: 'abstract: over 45 dB at each output port; static OSA peak/null'
+- device_id: nelan2022-a
+  field: n_rf
+  value: 2.1
+  unit: '1'
+  basis: measured
+  locator: p.5 Sec. II-C; Fig. 5(c)
+  note: UV15-clad plateau about 2.10 at about 40 GHz (about 2.4 at 1 GHz); air-clad about 1.85
+- device_id: nelan2022-a
+  field: ng_opt
+  value: 2.14
+  unit: '1'
+  basis: simulated
+  locator: p.5 Sec. II-C; Fig. 5(c)
+  note: optical group index of the TE mode, roughly 2.14; method not stated beyond mode simulation
+- device_id: nelan2022-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II-A
+  note: x-cut TFLNOI (NanoLN)
+- device_id: nelan2022-a
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II-A
+  note: width of the 100 nm PECVD SiNx strip (W_SiN); LN is not etched
+- device_id: nelan2022-a
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. II-C
+  note: W_GAP
+- device_id: nelan2022-a
+  field: signal_width_um
+  value: 24.5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. II-C
+  note: W_SIG optimised with HFSS; ground width W_GND 75 um
+- device_id: nelan2022-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. II-C
+  note: electroplated Au (T_ELEC)
+- device_id: nelan2022-a
+  field: electrode_metal
+  value: Au (electroplated on a sputtered seed layer)
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. II-C; p.5 Sec. III
+  note: ''
+- device_id: nelan2022-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. II-A
+  note: thermal SiO2 under the LN (T_BBUF), bonded to the Si handle
+- device_id: nelan2022-a
+  field: substrate
+  value: silicon handle 500 um
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II-A
+  note: ''
+- device_id: nelan2022-a
+  field: cladding
+  value: PECVD SiO2 buffer 450 nm (thicker over the waveguide) with 100 nm PECVD SiNx strip, n = 1.943; UV15 index-matching fluid on the electrodes
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II-A; p.5 Sec. II-C, III
+  note: reference surface of the 450 nm (LN top vs SiNx top) not stated
+- device_id: nelan2022-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II-A
+  note: ''
+- device_id: nelan2022-a
+  field: waveguide_orientation
+  value: light along crystal Y, RF field along Z
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II-A
+  note: ''
+- device_id: nelan2022-a
+  field: epitaxy_or_stack
+  value: Si 500 um / SiO2 4.7 um / x-cut LN 300 nm / SiNx strip 100 nm x 2 um / PECVD SiO2 450 nm / Au 1 um
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II-A; Fig. 2(c),(d)
+  note: ''
+- device_id: nelan2022-a
+  field: vpi_basis
+  value: measured
+  unit: ''
+  basis: measured
+  locator: p.7 Fig. 7(f)
+  note: ''
+derived: []

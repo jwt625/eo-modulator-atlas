@@ -1,0 +1,173 @@
+paper_id: shen2021
+verified_on: '2026-10-02'
+source_files:
+- references/shen2021/text.md
+- references/shen2021/source.json
+- references/shen2021/crossref.json
+- references/shen2021/figures/page_03.png
+- references/shen2021/figures/page_04.png
+entries:
+- device_id: shen2021-a
+  field: wavelength_nm
+  value: 1960
+  unit: nm
+  basis: measured
+  locator: p.1; p.2; p.3, Fig. 2(c)
+  note: Fiber laser near 1960 nm; Fig. 2(c) laser near 1959 nm.
+- device_id: shen2021-a
+  field: length_mm
+  value: 0.0628
+  unit: mm
+  basis: derived
+  locator: p.2-3
+  note: 2*pi*R with R = 10 um; the whole ring waveguide carries the PN junction.
+- device_id: shen2021-a
+  field: vpil_dc_vcm
+  value: 0.975
+  unit: V*cm
+  basis: derived
+  locator: p.1; p.3
+  note: Authors' modulation efficiency; resonance shift 52.5 pm/V with FSR 16.29 nm.
+- device_id: shen2021-a
+  field: drive_vpp_v
+  value: 2.5
+  unit: V
+  basis: measured
+  locator: p.3
+  note: AWG output amplified to about 2.5 Vpp with -2 V bias.
+- device_id: shen2021-a
+  field: bw3db_ghz
+  value: 15
+  unit: GHz
+  basis: measured
+  locator: p.3-4, Fig. 4(a)
+  note: At -2 V DC bias; text says beyond 15 GHz; VNA response normalized at low frequency.
+- device_id: shen2021-a
+  field: il_onchip_db
+  value: 8
+  unit: dB
+  basis: measured
+  locator: p.3
+  note: Authors state the insertion loss of the MRM is about 8 dB; scope and normalization not defined.
+- device_id: shen2021-a
+  field: extinction_ratio_db
+  value: 15
+  unit: dB
+  basis: measured
+  locator: p.3, Fig. 2(a)
+  note: Static ER near 1960 nm stated as more than 15 dB.
+- device_id: shen2021-a
+  field: fsr_nm
+  value: 16.29
+  unit: nm
+  basis: measured
+  locator: p.3
+  note: ''
+- device_id: shen2021-a
+  field: tuning_nm_per_v
+  value: 0.0525
+  unit: nm/V
+  basis: measured
+  locator: p.3
+  note: Resonance shift 52.5 pm/V under reverse bias.
+- device_id: shen2021-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: ''
+- device_id: shen2021-a
+  field: rib_width_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: Rib width for 2 um propagation.
+- device_id: shen2021-a
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: ''
+- device_id: shen2021-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.2
+  note: ''
+- device_id: shen2021-a
+  field: electrode_metal
+  value: Al (contact lines); TiN (heater, 150 nm)
+  unit: ''
+  basis: design_target
+  locator: p.2
+  note: ''
+- device_id: shen2021-a
+  field: substrate
+  value: SOI wafer, 220 nm Si, 2 um buried oxide
+  unit: ''
+  basis: design_target
+  locator: p.2
+  note: ''
+- device_id: shen2021-a
+  field: epitaxy_or_stack
+  value: L-shaped PN junction around the whole ring; doping n 4e18, p 1.5e18, n++ 1e20, p++ 1e20 cm^-3;
+    heavily doped regions 0.5 um from the waveguide; Al strips 10 um apart; 150 nm TiN heater; ring radius
+    10 um
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1
+  note: Junction cross-section dimensions only in Fig. 1(b).
+- device_id: shen2021-a
+  field: max_baud_gbd
+  value: 45
+  unit: GBd
+  basis: derived
+  locator: p.4, Fig. 4(c)
+  note: NRZ-OOK, baud equals the data rate.
+- device_id: shen2021-a
+  field: modulation_format
+  value: NRZ-OOK; 40 Gb/s BER under the 7% FEC threshold 3.8e-3 above 0 dBm received power; 45 Gb/s BER
+    8.85e-4 at 3 dBm with RRC filter and FFE
+  unit: ''
+  basis: measured
+  locator: p.4, Fig. 4(c)
+  note: 20 to 35 Gb/s eyes with AWG pre-equalization.
+- device_id: shen2021-a
+  field: max_line_rate_gbps
+  value: 45
+  unit: Gb/s
+  basis: measured
+  locator: p.4, Fig. 4(c)
+  note: ''
+- device_id: shen2021-a
+  field: vpi_convention
+  value: resonance_tuning_derived
+  unit: ''
+  basis: derived
+  locator: p.1; p.3
+  note: Vpi*L from resonance shift 52.5 pm/V and FSR; the convention label is ours.
+- device_id: shen2021-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.4, Fig. 4(a)
+  note: Response starts at 0 dB at 0 GHz; the authors do not state the reference.
+derived:
+- device_id: shen2021-a
+  field: length_mm
+  value: 0.0628
+  formula: 2*pi*R, R = 10 um
+  inputs: []
+- device_id: shen2021-a
+  field: vpil_dc_vcm
+  value: 0.974
+  formula: FSR*L/(2*dlambda/dV) = 16.29 nm * 62.8 um / (2 * 52.5 pm/V)
+  inputs:
+  - fsr_nm
+  - length_mm
+  - tuning_nm_per_v

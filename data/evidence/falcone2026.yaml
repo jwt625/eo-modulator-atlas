@@ -1,0 +1,224 @@
+paper_id: falcone2026
+verified_on: '2026-10-02'
+source_files:
+- references/falcone2026/text.md
+- references/falcone2026/figures/page_07.png
+entries:
+- device_id: falcone2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6 text; p.9 Methods
+  note: CW laser at 1550 nm for loss and EO measurements
+- device_id: falcone2026-a
+  field: electrode_gap_um
+  value: 9.7
+  unit: um
+  basis: measured
+  locator: p.6 text; Fig. 4(a)
+  note: separation of the two top electrodes of the fabricated devices
+- device_id: falcone2026-a
+  field: electrode_metal
+  value: Cr (5 nm) / Au (300 nm)
+  unit: ''
+  basis: design_target
+  locator: p.6 text
+  note: e-beam evaporation and lift-off
+- device_id: falcone2026-a
+  field: electrode_thickness_um
+  value: 0.3
+  unit: um
+  basis: design_target
+  locator: p.6 text
+  note: Au layer; Cr adhesion layer 5 nm not added
+- device_id: falcone2026-a
+  field: slab_thickness_nm
+  value: 100
+  unit: nm
+  basis: design_target
+  locator: p.6 text; p.9 Simulations
+  note: residual BTO layer under the waveguide, four spin-coated layers
+- device_id: falcone2026-a
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.5 text; p.9 Simulations
+  note: waveguide core width set to 2 um in the FEM design
+- device_id: falcone2026-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.9 Simulations
+  note: SiO2 thickness of the simulated device stack
+- device_id: falcone2026-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.6 text; p.9 Simulations
+  note: SiO2 (2 um) on Si
+- device_id: falcone2026-a
+  field: cladding
+  value: none (air above)
+  unit: ''
+  basis: design_target
+  locator: Fig. 4(a)
+  note: air above the waveguide and electrodes in the FEM model
+- device_id: falcone2026-a
+  field: crystal_cut
+  value: polycrystalline, no preferred orientation (partially poled)
+  unit: ''
+  basis: measured
+  locator: p.3 text; Fig. 2(d); p.6 text
+  note: XRD shows multi-domain film without preferred orientation
+- device_id: falcone2026-a
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.6 text; Fig. 4(d)
+  note: authors do not state; one waveguide between two lateral electrodes driven by a function generator
+- device_id: falcone2026-a
+  field: vpi_convention
+  value: per_arm_phase_shifter
+  unit: ''
+  basis: derived
+  locator: p.6 text
+  note: authors define Vpi as the voltage for a pi phase shift of the waveguide; no MZM drive convention
+- device_id: falcone2026-a
+  field: vpil_dc_vcm
+  value: 35
+  unit: V*cm
+  basis: measured
+  locator: p.7 text; Fig. 4(f)
+  note: from several waveguide lengths; +-2 V*cm; 100 kHz triangular drive, quasi-static, after poling
+- device_id: falcone2026-a
+  field: bias_for_vpi_v
+  value: 60
+  unit: V
+  basis: measured
+  locator: p.6 text
+  note: DC poling bias, then switched off before AC modulation; 65 kV/cm for this sample
+- device_id: falcone2026-a
+  field: prop_loss_db_per_cm
+  value: 20
+  unit: dB/cm
+  basis: derived
+  locator: p.6 text; Supplementary Note 4 not in cache
+  note: approx; authors estimate it by fitting transmission versus waveguide length at 1550 nm
+- device_id: falcone2026-a
+  field: epitaxy_or_stack
+  value: 'Sol-gel BTO: 100 nm residual layer plus 350 nm imprinted waveguide, on SiO2 (2 um) / Si; 700 C final anneal'
+  unit: ''
+  basis: design_target
+  locator: p.5-6 text; p.9 Simulations
+  note: 350 nm imprinted height and 100 nm residual layer
+- device_id: falcone2026-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6 text; p.9 Methods
+  note: CW laser at 1550 nm for loss and EO measurements
+- device_id: falcone2026-b
+  field: electrode_gap_um
+  value: 9.7
+  unit: um
+  basis: measured
+  locator: p.6 text; Fig. 4(a)
+  note: separation of the two top electrodes of the fabricated devices
+- device_id: falcone2026-b
+  field: electrode_metal
+  value: Cr (5 nm) / Au (300 nm)
+  unit: ''
+  basis: design_target
+  locator: p.6 text
+  note: e-beam evaporation and lift-off
+- device_id: falcone2026-b
+  field: electrode_thickness_um
+  value: 0.3
+  unit: um
+  basis: design_target
+  locator: p.6 text
+  note: Au layer; Cr adhesion layer 5 nm not added
+- device_id: falcone2026-b
+  field: slab_thickness_nm
+  value: 100
+  unit: nm
+  basis: design_target
+  locator: p.6 text; p.9 Simulations
+  note: residual BTO layer under the waveguide, four spin-coated layers
+- device_id: falcone2026-b
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.5 text; p.9 Simulations
+  note: waveguide core width set to 2 um in the FEM design
+- device_id: falcone2026-b
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.9 Simulations
+  note: SiO2 thickness of the simulated device stack
+- device_id: falcone2026-b
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.6 text; p.9 Simulations
+  note: SiO2 (2 um) on Si
+- device_id: falcone2026-b
+  field: cladding
+  value: none (air above)
+  unit: ''
+  basis: design_target
+  locator: Fig. 4(a)
+  note: air above the waveguide and electrodes in the FEM model
+- device_id: falcone2026-b
+  field: crystal_cut
+  value: polycrystalline, no preferred orientation (partially poled)
+  unit: ''
+  basis: measured
+  locator: p.3 text; Fig. 2(d); p.6 text
+  note: XRD shows multi-domain film without preferred orientation
+- device_id: falcone2026-b
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.6 text; Fig. 4(d)
+  note: authors do not state; one waveguide between two lateral electrodes driven by a function generator
+- device_id: falcone2026-b
+  field: vpi_convention
+  value: per_arm_phase_shifter
+  unit: ''
+  basis: derived
+  locator: p.6 text
+  note: authors define Vpi as the voltage for a pi phase shift of the waveguide; no MZM drive convention
+- device_id: falcone2026-b
+  field: vpil_dc_vcm
+  value: 52
+  unit: V*cm
+  basis: measured
+  locator: p.7 text; Fig. 4(f)
+  note: from several waveguide lengths; +-2 V*cm; 100 kHz triangular drive, quasi-static, after poling
+- device_id: falcone2026-b
+  field: prop_loss_db_per_cm
+  value: 50
+  unit: dB/cm
+  basis: derived
+  locator: p.6 text; Supplementary Note 4 not in cache
+  note: approx; authors estimate it by fitting transmission versus waveguide length at 1550 nm
+- device_id: falcone2026-b
+  field: epitaxy_or_stack
+  value: 'Sol-gel BTO: 100 nm residual layer plus 350 nm imprinted waveguide, on SiO2 (2 um) / Si; 800 C final anneal'
+  unit: ''
+  basis: design_target
+  locator: p.5-6 text; p.9 Simulations
+  note: 350 nm imprinted height and 100 nm residual layer
+derived: []

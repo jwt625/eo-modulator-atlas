@@ -1,0 +1,83 @@
+paper_id: liu2025c
+verified_on: '2026-10-02'
+source_files:
+- references/liu2025c/text.md
+- references/liu2025c/figures/page_03.png
+entries:
+- device_id: liu2025c-a
+  field: wavelength_nm
+  value: 787
+  unit: nm
+  basis: measured
+  locator: p.3 Fig. 4c; p.4 text
+  note: Maximum modulation depth wavelength; resonance near 788 nm in Fig. 3c
+- device_id: liu2025c-a
+  field: bw3db_ghz
+  value: 0.005
+  unit: GHz
+  basis: measured
+  locator: p.3 Fig. 4e; p.4 text
+  note: About 5 MHz, amplifier-limited per authors
+- device_id: liu2025c-a
+  field: q_loaded
+  value: 611
+  unit: '1'
+  basis: measured
+  locator: p.3 Fig. 4b; p.4 text
+  note: Fano fit, FWHM about 1.3 nm
+- device_id: liu2025c-a
+  field: eo_film_thickness_nm
+  value: 1000
+  unit: nm
+  basis: measured
+  locator: p.1 text
+  note: 1 um LN film (NanoLN)
+- device_id: liu2025c-a
+  field: electrode_gap_um
+  value: 10
+  unit: um
+  basis: measured
+  locator: p.1 text; Fig. 3 caption
+  note: Gap between the two Au electrodes
+- device_id: liu2025c-a
+  field: electrode_thickness_um
+  value: 0.05
+  unit: um
+  basis: measured
+  locator: p.1 text
+  note: 50 nm gold
+- device_id: liu2025c-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.1 text
+- device_id: liu2025c-a
+  field: substrate
+  value: fused silica
+  unit: ''
+  basis: measured
+  locator: p.2 text; Fig. 3a
+  note: Fused silica carrying PhC1; Fig. 3a labels fused quartz
+- device_id: liu2025c-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.1 text
+- device_id: liu2025c-a
+  field: waveguide_orientation
+  value: z-polarized light at normal incidence, field along the optic axis (z) across the electrode gap
+  unit: ''
+  basis: measured
+  locator: p.1-2 text; Fig. 1
+- device_id: liu2025c-a
+  field: epitaxy_or_stack
+  value: Fused silica substrate / PhC1 (alternating TiO2 and SiO2, design 65 nm TiO2 / 160 nm SiO2, pair
+    count not given in the main text) / Au electrodes 50 nm, 10 um gap / 1 um x-cut LN membrane / PhC2
+    (same alternating stack)
+  unit: ''
+  basis: design_target
+  locator: p.1-2 text
+  note: PhC thicknesses are design values from the optimization (p.2); fabricated values not stated
+derived: []

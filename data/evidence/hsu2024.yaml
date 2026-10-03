@@ -1,0 +1,259 @@
+paper_id: hsu2024
+verified_on: '2026-10-02'
+source_files:
+- references/hsu2024/text.md
+- references/hsu2024/source.json
+- references/hsu2024/crossref.json
+- references/hsu2024/figures/page_08.png
+- references/hsu2024/figures/page_09.png
+- references/hsu2024/figures/page_10.png
+- references/hsu2024/figures/page_11.png
+entries:
+- device_id: hsu2024-a
+  field: wavelength_nm
+  value: 1317.54
+  unit: nm
+  basis: measured
+  locator: p.8, Fig. 4(c) caption; p.7
+  note: lambda_MOD tuned for 3 dB IL at -1.5 V.
+- device_id: hsu2024-a
+  field: length_mm
+  value: 0.0314
+  unit: mm
+  basis: design_target
+  locator: p.3, Device Design
+  note: Active EO region about 62.5% of the microring circumference, L = 31.4 um (radius 8 um).
+- device_id: hsu2024-a
+  field: vpil_dc_vcm
+  value: 0.12
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.7
+  note: Resonance-shift based Vpi*L at 117 pm/V; formula not given in the text; bias for this value not
+    stated.
+- device_id: hsu2024-a
+  field: bw3db_ghz
+  value: 11
+  unit: GHz
+  basis: measured
+  locator: p.9, Fig. 5(b)
+  note: Author value; includes optical peaking; measured to 25 GHz with 42 GHz photodetector and 26 GHz
+    spectrum analyzer.
+- device_id: hsu2024-a
+  field: bw3db_reference_freq_ghz
+  value: 0.5
+  unit: GHz
+  basis: measured
+  locator: p.9
+  note: Output RF power normalized to the 500 MHz point.
+- device_id: hsu2024-a
+  field: il_onchip_db
+  value: 3
+  unit: dB
+  basis: measured
+  locator: p.7-8, Fig. 4(c)
+  note: Modulation-point loss at -1.5 V relative to the normalized off-resonance level; normalization
+    reference not stated.
+- device_id: hsu2024-a
+  field: extinction_ratio_db
+  value: 6
+  unit: dB
+  basis: measured
+  locator: p.8, Fig. 4(c)
+  note: Static, from transmission vs gate voltage over -1.5 to -2.3 V swing (bias -1.9 V).
+- device_id: hsu2024-a
+  field: q_loaded
+  value: 4600
+  unit: '1'
+  basis: measured
+  locator: p.7, Fig. 4(b)
+  note: Text says approximately 4600 at 0 V.
+- device_id: hsu2024-a
+  field: tuning_nm_per_v
+  value: 0.117
+  unit: nm/V
+  basis: measured
+  locator: p.7, Fig. 4(b)
+  note: 117 pm/V in accumulation mode beyond -1.5 V; 87 pm/V in depletion mode.
+- device_id: hsu2024-a
+  field: energy_per_bit_fj
+  value: 53
+  unit: fJ/bit
+  basis: derived
+  locator: p.9; p.19 (SI IV)
+  note: Authors' CV^2/4 with 333 fF at 0.8 Vpp; excludes driver.
+- device_id: hsu2024-a
+  field: capacitance_ff
+  value: 333
+  unit: fF
+  basis: derived
+  locator: p.9; p.19 (SI IV)
+  note: Total 500 fF at -1.9 V minus calculated slab (parasitic) contribution.
+- device_id: hsu2024-a
+  field: drive_vpp_v
+  value: 0.8
+  unit: V
+  basis: measured
+  locator: p.9; p.10, Fig. 6(a)
+  note: NRZ PRBS drive; 1.75 Vpp used for the 35 Gb/s eyes.
+- device_id: hsu2024-a
+  field: max_baud_gbd
+  value: 35
+  unit: GBd
+  basis: derived
+  locator: p.10, Fig. 6(b)
+  note: NRZ, so baud equals the 35 Gb/s data rate (not stated as baud by the authors).
+- device_id: hsu2024-a
+  field: modulation_format
+  value: NRZ-OOK, PRBS9 (below 10 Gb/s) and PRBS15; 25 Gb/s open eye at 0.8 Vpp; 35 Gb/s open eye at 1.75
+    Vpp with pre-emphasis
+  unit: ''
+  basis: measured
+  locator: p.9-10, Fig. 6
+  note: Eye diagrams on a digital communication analyzer; no BER.
+- device_id: hsu2024-a
+  field: max_line_rate_gbps
+  value: 35
+  unit: Gb/s
+  basis: measured
+  locator: p.10, Fig. 6(b)
+  note: At 1.75 Vpp with AWG pre-emphasis.
+- device_id: hsu2024-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.3; p.12
+  note: 300 nm Si rib height, 100 nm slab.
+- device_id: hsu2024-a
+  field: rib_width_nm
+  value: 290
+  unit: nm
+  basis: measured
+  locator: p.6, Fig. 3(b)
+  note: Fabricated width 290 nm (design 300 nm), narrowed by the cladding RIE.
+- device_id: hsu2024-a
+  field: slab_thickness_nm
+  value: 100
+  unit: nm
+  basis: design_target
+  locator: p.3; p.12
+  note: ''
+- device_id: hsu2024-a
+  field: electrode_metal
+  value: Ni/Au
+  unit: ''
+  basis: design_target
+  locator: p.3; p.12
+  note: Contacts on ITiO gate and Si; Ni/Au GSG pads.
+- device_id: hsu2024-a
+  field: substrate
+  value: silicon-on-insulator (Intel 300 mm photonics process)
+  unit: ''
+  basis: design_target
+  locator: p.6; p.12
+  note: BOX thickness not stated.
+- device_id: hsu2024-a
+  field: cladding
+  value: SiO2 top cladding, etched away over the active region and replaced by 10 nm HfO2 plus 14 nm ITiO
+  unit: ''
+  basis: design_target
+  locator: p.3; p.6; p.12
+  note: Cladding thickness not stated.
+- device_id: hsu2024-a
+  field: epitaxy_or_stack
+  value: Si p-type rib (background 1e17 cm^-3, p+ 3e18 cm^-3 over the rib top and part of the slab, p++
+    1e20 cm^-3 600 nm from the waveguide); 10 nm HfO2 (ALD) / 14 nm ITiO (RF-sputtered, n-type 1.23e20
+    cm^-3, mobility 62.6 cm^2/(V s), Hall on witness sample) gate covering rib top, both sidewalls and
+    500 nm of slab; ring radius 8 um; Ni/Au contacts about 1.2 um from the waveguide
+  unit: ''
+  basis: design_target
+  locator: p.3; p.12; p.19 (SI Table 2); p.10
+  note: ''
+- device_id: hsu2024-b
+  field: tuning_nm_per_v
+  value: 0.148
+  unit: nm/V
+  basis: simulated
+  locator: p.11, Fig. 7(b)
+  note: At -1.5 V bias.
+- device_id: hsu2024-b
+  field: q_loaded
+  value: 5600
+  unit: '1'
+  basis: simulated
+  locator: p.11, Fig. 7(b)
+  note: At -1.5 V.
+- device_id: hsu2024-b
+  field: bw3db_ghz
+  value: 52
+  unit: GHz
+  basis: simulated
+  locator: p.11, Fig. 7(c)
+  note: Simulated EO response of the projected design.
+- device_id: hsu2024-b
+  field: energy_per_bit_fj
+  value: 13.6
+  unit: fJ/bit
+  basis: simulated
+  locator: p.11; p.1 abstract
+  note: Projected energy efficiency; formula not restated for this case.
+- device_id: hsu2024-b
+  field: capacitance_ff
+  value: 218
+  unit: fF
+  basis: simulated
+  locator: p.11
+  note: Total capacitance of the projected structure.
+- device_id: hsu2024-b
+  field: drive_vpp_v
+  value: 0.5
+  unit: V
+  basis: simulated
+  locator: p.11, Fig. 7(b)
+  note: Swing for 6 dB ER at 3 dB IL.
+- device_id: hsu2024-b
+  field: extinction_ratio_db
+  value: 6
+  unit: dB
+  basis: simulated
+  locator: p.11, Fig. 7(b)
+  note: Static ER at 0.5 Vpp.
+- device_id: hsu2024-b
+  field: il_onchip_db
+  value: 3
+  unit: dB
+  basis: simulated
+  locator: p.11, Fig. 7(b)
+  note: Modulation-point loss.
+- device_id: hsu2024-b
+  field: epitaxy_or_stack
+  value: Outer-sidewall-only hydrogen-doped indium oxide (IHO) gate on a Si p/p+/p++ ring waveguide (300
+    nm wide, 400 nm slab part shown in Fig. 7(a)), 6 nm HfO2, Ni/Au contacts; active region 70 percent
+    of the ring
+  unit: ''
+  basis: design_target
+  locator: p.10-11, Fig. 7(a)
+  note: Figure labels p 1e18, p+ 1e19, p++ 1e20 cm^-3.
+- device_id: hsu2024-a
+  field: vpi_convention
+  value: resonance_tuning_derived
+  unit: ''
+  basis: derived
+  locator: p.7
+  note: Vpi*L is a resonance-shift figure at 117 pm/V; the convention label is ours.
+- device_id: hsu2024-b
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.11, Fig. 7(c)
+  note: Simulated response normalized at low frequency; reference frequency not stated.
+derived:
+- device_id: hsu2024-a
+  field: energy_per_bit_fj
+  value: 53.28
+  formula: C*Vpp^2/4 = 333e-15 F * (0.8 V)^2 / 4
+  inputs:
+  - capacitance_ff
+  - drive_vpp_v

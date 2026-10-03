@@ -1,0 +1,133 @@
+paper_id: wu2025
+verified_on: '2026-10-02'
+source_files:
+- references/wu2025/text.md
+- references/wu2025/crossref.json
+- references/wu2025/figures/page_04.png
+- references/wu2025/figures/page_07.png
+entries:
+- device_id: wu2025-a
+  field: length_mm
+  value: 6.4
+  unit: mm
+  basis: design_target
+  locator: p.6 Sec. Modulator; p.7 Fig. 3(a)
+  note: modulator (TFLN modulation section) length
+- device_id: wu2025-a
+  field: vpi_dc_v
+  value: 4.4
+  unit: V
+  basis: measured
+  locator: p.6 Sec. Modulator; p.7 Fig. 3(a)
+  note: 100 kHz triangular voltage sweep; wavelength not stated
+- device_id: wu2025-a
+  field: vpil_dc_vcm
+  value: 2.8
+  unit: V*cm
+  basis: derived
+  locator: p.6 Sec. Modulator
+  note: stated by authors from 4.4 V and 6.4 mm
+- device_id: wu2025-a
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. Modulator; p.7 Fig. 3(e)
+  note: about 100 GHz per authors; trace first reaches the -3 dB line near 90 GHz and stays near it to 110 GHz
+- device_id: wu2025-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. Modulator; p.7 Fig. 3(e)
+  note: 110 GHz optical component analyzer; frequency axis ends at 110 GHz
+- device_id: wu2025-a
+  field: il_onchip_db
+  value: 4
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. Modulator; p.7 Fig. 3(b)
+  note: minimal insertion loss of the Si-TFLN MZM; excess TFLN waveguide loss from contact lithography
+- device_id: wu2025-a
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. Modulator; p.7 Fig. 3(b)
+  note: static, wavelength spectrum; stated as exceeding 25 dB
+- device_id: wu2025-a
+  field: rib_width_nm
+  value: 2500
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. Interlayer coupling
+  note: TFLN waveguide width in the modulation section (1.5 um in the VAC region); top or bottom width not stated
+- device_id: wu2025-a
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.12 Methods, Fabrication
+  note: TFLN layer after substrate and BOX removal
+- device_id: wu2025-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.12 Methods, Fabrication
+  note: GSG traveling-wave electrodes; Ti termination resistors
+- device_id: wu2025-a
+  field: cladding
+  value: SU8
+  unit: ''
+  basis: design_target
+  locator: p.5 Fig. 2 caption; p.4 Fig. 1c legend
+  note: SU8 over-cladding; thickness not stated
+- device_id: wu2025-a
+  field: substrate
+  value: silicon (SOI wafer, 220 nm Si top layer, 3 um buried oxide)
+  unit: ''
+  basis: design_target
+  locator: p.11-12 Methods, Fabrication
+- device_id: wu2025-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. BEOL integration; p.12 Methods
+- device_id: wu2025-a
+  field: epitaxy_or_stack
+  value: x-cut TFLN 500 nm / BCB 85 nm / SiO2 about 180 nm over Si waveguides (220 nm Si; tapered 450 to 180 nm over 200 um in the vertical adiabatic couplers) / 3 um BOX / Si; SU8 over-cladding; Au GSG
+    electrodes
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. Interlayer coupling; p.11-12 Methods
+  note: ridge etch depth, electrode gap and widths in Supplementary Section I (not available)
+- device_id: wu2025-a
+  field: max_baud_gbd
+  value: 128
+  unit: GBd
+  basis: measured
+  locator: p.9 Sec. On-chip optical data link; p.10 Fig. 6(b)
+  note: OOK, on-chip back-to-back link with Ge photodetector; BER below 2.4e-4
+- device_id: wu2025-a
+  field: modulation_format
+  value: OOK 128 GBd (BER below 2.4e-4, KP4-FEC threshold); PAM4 100 GBd (BER below 3.8e-3, HD-FEC); offline resampling and feed-forward equalization
+  unit: ''
+  basis: measured
+  locator: p.9 Sec. On-chip optical data link; p.12 Methods
+- device_id: wu2025-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. BEOL integration
+  note: standard coplanar GSG push-pull traveling-wave electrodes
+- device_id: wu2025-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.3 Sec. BEOL integration; p.6 Sec. Modulator
+  note: push-pull electrodes per authors; Vpi convention itself not stated
+derived: []

@@ -1,0 +1,201 @@
+paper_id: li2020
+verified_on: '2026-10-02'
+source_files:
+- references/li2020/text.md
+- references/li2020/crossref.json
+- references/li2020/figures/page_07.png
+entries:
+- device_id: li2020-a
+  field: wavelength_nm
+  value: 1554.47
+  unit: nm
+  basis: measured
+  locator: p.4 text; Fig. 4b
+  note: Fundamental TE-like mode; Fig. 5 tuning resonance is near 1555.8 nm, identity with this one not
+    stated
+- device_id: li2020-a
+  field: length_mm
+  value: 0.03
+  unit: mm
+  basis: measured
+  locator: p.2 text; p.7 text
+  note: Electrode length 30 um covers the whole photonic-crystal structure; cavity itself 10 um
+- device_id: li2020-a
+  field: tuning_nm_per_v
+  value: 0.016
+  unit: nm/V
+  basis: measured
+  locator: p.4 text; Fig. 5b
+  note: 16 pm/V = 1.98 GHz/V; DC, 0-4.5 V; resonance near 1555.8 nm (Fig. 5a axis)
+- device_id: li2020-a
+  field: q_loaded
+  value: 134000
+  unit: '1'
+  basis: measured
+  locator: p.4 text; Fig. 4b
+  note: Loaded Q 1.34e5, coupling depth 93%
+- device_id: li2020-a
+  field: il_onchip_db
+  value: 2.2
+  unit: dB
+  basis: measured
+  locator: p.3 text
+  note: Stated as around 2.2 dB, waveguide to cavity, after subtracting facet and circulator loss
+- device_id: li2020-a
+  field: extinction_ratio_db
+  value: 11.5
+  unit: dB
+  basis: derived
+  locator: p.4 text
+  note: Full-swing ER corresponding to the 93% coupling depth, stated by the authors
+- device_id: li2020-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1 caption; p.3 text
+- device_id: li2020-a
+  field: etch_depth_nm
+  value: 150
+  unit: nm
+  basis: measured
+  locator: p.3 text
+  note: Waveguide (wing) partial etch of 150 nm; holes fully etched 300 nm
+- device_id: li2020-a
+  field: rib_width_nm
+  value: 1200
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1 caption
+  note: Nanobeam width w
+- device_id: li2020-a
+  field: slab_thickness_nm
+  value: 150
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1 caption; p.2 text
+  note: Wing layer on which the electrodes sit
+- device_id: li2020-a
+  field: signal_width_um
+  value: 50
+  unit: um
+  basis: measured
+  locator: p.7 text
+  note: 50 um electrode width (Fig. 2 red box) for impedance matching to the pad
+- device_id: li2020-a
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: measured
+  locator: p.3 text
+  note: 500 nm Au on 10 nm Ti
+- device_id: li2020-a
+  field: electrode_metal
+  value: Ti/Au (10 nm / 500 nm)
+  unit: ''
+  basis: measured
+  locator: p.3 text
+- device_id: li2020-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: measured
+  locator: p.3 text
+  note: Buried oxide before HF undercut to a suspended membrane
+- device_id: li2020-a
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: measured
+  locator: p.3 text
+  note: Silicon substrate under the buried oxide, NanoLN wafer
+- device_id: li2020-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.3 text
+- device_id: li2020-a
+  field: waveguide_orientation
+  value: cavity optical field along the LN optical axis z (in plane)
+  unit: ''
+  basis: measured
+  locator: p.2 text; Fig. 1f
+  note: Chosen to use r33
+- device_id: li2020-a
+  field: epitaxy_or_stack
+  value: Si substrate / 3 um SiO2 buried oxide (undercut by diluted HF, suspended membrane) / 300 nm x-cut
+    LN nanobeam, width 1200 nm, 150 nm wing, elliptical holes hx 270 nm by hy 490 nm fully etched / Ti-Au
+    electrodes on the wing
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1 caption; p.3 text
+- device_id: li2020-b
+  field: q_loaded
+  value: 14000
+  unit: '1'
+  basis: measured
+  locator: p.6 text; Fig. 7 caption
+  note: 'Text: lower loaded Q of 14000; caption: around 14000'
+- device_id: li2020-b
+  field: drive_vpp_v
+  value: 2.0
+  unit: V
+  basis: measured
+  locator: p.6 text; Fig. 7 caption
+  note: NRZ driving voltage
+- device_id: li2020-b
+  field: bw3db_ghz
+  value: 17.5
+  unit: GHz
+  basis: measured
+  locator: p.6 text; Fig. 7a
+  note: Up to around 17.5 GHz; photon-lifetime limited (about 11 ps)
+- device_id: li2020-b
+  field: max_baud_gbd
+  value: 11
+  unit: GBd
+  basis: measured
+  locator: p.6 text; Fig. 7b,c
+  note: NRZ so baud equals bit rate; limited by PRBS generator (12 Gb/s)
+- device_id: li2020-b
+  field: modulation_format
+  value: NRZ 2^7-1 PRBS, 9 and 11 Gb/s eye diagrams
+  unit: ''
+  basis: measured
+  locator: p.6 text; Fig. 7b,c
+- device_id: li2020-b
+  field: max_line_rate_gbps
+  value: 11
+  unit: Gb/s
+  basis: measured
+  locator: p.6 text; Fig. 7c
+- device_id: li2020-b
+  field: energy_per_bit_fj
+  value: 22
+  unit: fJ/bit
+  basis: derived
+  locator: p.6 text
+  note: Author-computed C Vpp^2 / 4, stated as about 22 fJ/bit
+- device_id: li2020-b
+  field: capacitance_ff
+  value: 22
+  unit: fF
+  basis: simulated
+  locator: p.3 text
+  note: Numerical simulation, about 22 fF, for the 30 um electrode design
+- device_id: li2020-c
+  field: q_loaded
+  value: 20000
+  unit: '1'
+  basis: measured
+  locator: p.6 text; Fig. 7 caption
+  note: Around 20000
+- device_id: li2020-c
+  field: bw3db_ghz
+  value: 12.5
+  unit: GHz
+  basis: measured
+  locator: p.6 text; Fig. 7a
+  note: About 12.5 GHz
+derived: []

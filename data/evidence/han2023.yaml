@@ -1,0 +1,164 @@
+paper_id: han2023
+verified_on: '2026-10-02'
+source_files:
+- references/han2023/text.md
+- references/han2023/source.pdf
+- references/han2023/crossref.json
+- references/han2023/source.json
+- references/han2023/figures/img_p30_1.png
+- references/han2023/figures/img_p28_1.png
+- references/han2023/figures/img_p29_1.png
+entries:
+- device_id: han2023-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.15, Methods
+  note: Authors state the modulator is designed for push-pull driving with a GSGSG electrode; drive actually used in the measurements not restated.
+- device_id: han2023-a
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.3, Sec. 1; p.11, Sec. 3; p.30-31, Fig. 4(a-b)
+  note: Operation around 1550 nm; passband about 8 nm.
+- device_id: han2023-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.3, Sec. 1; p.11, Sec. 3; p.30-31, Fig. 4(b)
+  note: Nominal passband centre; S21 measurement wavelength not stated; data wavelengths 1548-1556 nm per Fig. 4(f-g) axes.
+- device_id: han2023-a
+  field: length_mm
+  value: 0.124
+  unit: mm
+  basis: design_target
+  locator: p.1-2, abstract; p.29, Fig. 3(a)
+  note: Authors give 124 um (one text instance reads about 124 um, p.10); two 124 um PN-doped CROW arms.
+- device_id: han2023-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: derived
+  locator: p.11, Sec. 3; p.30-31, Fig. 4(c)
+  note: Authors' fit to the S21 curve crosses -3 dB at 110 GHz; measured trace is noisy and reaches about -3 to -4 dB there.
+- device_id: han2023-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.30-31, Fig. 4(c)
+  note: Normalized S21 curve starts at 0 dB at low frequency; authors do not state the reference. Peaking of about +1.5 dB near 20 GHz.
+- device_id: han2023-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.11, Sec. 3; p.15, Methods
+  note: Keysight PNA-X with 110 GHz lightwave component analyzer; response flat over the 110 GHz measurement range per authors.
+- device_id: han2023-a
+  field: il_onchip_db
+  value: 6.8
+  unit: dB
+  basis: measured
+  locator: p.15, Methods, Experimental details
+  note: Excludes an unoptimized coupling loss of about 10 dB; includes 5.4 dB phase shifter plus 3 dB couplers, routing and other structures.
+- device_id: han2023-a
+  field: extinction_ratio_db
+  value: 2.15
+  unit: dB
+  basis: measured
+  locator: p.31, Fig. 4(d) caption
+  note: Dynamic ER of the 112 Gb/s OOK eye; 3.15 dB at 100 Gb/s.
+- device_id: han2023-a
+  field: ng_opt
+  value: 6.1
+  unit: ''
+  basis: simulated
+  locator: p.6, Sec. 2; p.26-27, Fig. 1(f); p.14, Conclusion
+  note: Calculated group index near the centre of the mid-gap transmission window; not measured.
+- device_id: han2023-a
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: design_target
+  locator: p.14, Methods
+  note: Partially etched rib area for doping and contacts.
+- device_id: han2023-a
+  field: rib_width_nm
+  value: 455
+  unit: nm
+  basis: design_target
+  locator: p.14, Methods; p.28, Fig. 2(a)
+  note: Waveguide core width in the fishbone grating; SEM shows 444.8 nm on the fabricated device (Fig. 3b).
+- device_id: han2023-a
+  field: electrode_gap_um
+  value: 6.4
+  unit: um
+  basis: design_target
+  locator: p.15, Methods
+  note: Gap between ground and signal electrode, chosen for impedance match.
+- device_id: han2023-a
+  field: electrode_thickness_um
+  value: 1.2
+  unit: um
+  basis: design_target
+  locator: p.15, Methods
+  note: Cu electrode.
+- device_id: han2023-a
+  field: electrode_metal
+  value: Cu
+  unit: ''
+  basis: design_target
+  locator: p.15, Methods
+- device_id: han2023-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.14, Methods
+  note: Buried oxide of the 200 mm SOI wafer.
+- device_id: han2023-a
+  field: substrate
+  value: silicon-on-insulator (220 nm Si device layer, 200 mm wafer)
+  unit: ''
+  basis: design_target
+  locator: p.14, Methods
+- device_id: han2023-a
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.28, Fig. 2(a)
+  note: SiO2 label above the waveguide in the cross sections; cladding thickness not stated.
+- device_id: han2023-a
+  field: epitaxy_or_stack
+  value: 'Fishbone Bragg-grating CROW on 220 nm SOI: period 300 nm, sidewall corrugation depth 190 nm, Np 20 periods, Nr 10 resonators, lambda/4 phase-shifter regions; lateral pn junction, P and N doping 5.0e17 cm^-3 at the core, P+/P++/N+/N++ contact doping (levels not stated); 90 nm partially etched slab; GSGSG Cu electrode'
+  unit: ''
+  basis: design_target
+  locator: p.10, Sec. 3; p.14-15, Methods; p.28, Fig. 2(a)
+  note: Doping labels P+/P++/N+/N++ from Fig. 2(a); concentrations of those regions not given.
+- device_id: han2023-a
+  field: max_baud_gbd
+  value: 112
+  unit: GBd
+  basis: derived
+  locator: p.12, Sec. 3; p.13; p.31, Fig. 4(g-h)
+  note: OOK so baud equals the 112 Gb/s bit rate; authors state a symbol rate beyond 110 GBaud.
+- device_id: han2023-a
+  field: modulation_format
+  value: OOK, 70 / 84 / 98 / 100 / 112 Gb/s; eye diagrams at 100 and 112 Gb/s without pre-equalization or DSP; BER data with offline FFE and MLSE at the receiver; BER below the 7 percent HD-FEC line (3.8e-3) up to 98 Gb/s; at 112 Gb/s best BER about 1.7e-2 (Fig. 4(h), figure read), marginally above the 20 percent FEC line (about 1.5e-2), unlike the text claim of below 2e-3
+  unit: ''
+  basis: measured
+  locator: p.11-12, Sec. 3; p.15-16, Methods; p.31, Fig. 4(d,g,h)
+  note: Eyes in real time without transmitter pre-equalization; BER processed offline with FFE and MLSE. Fig. 4(h) contradicts text FEC claim at 112 Gb/s.
+- device_id: han2023-a
+  field: max_line_rate_gbps
+  value: 112
+  unit: Gb/s
+  basis: measured
+  locator: p.12, Sec. 3; p.31, Fig. 4(d,h)
+  note: 'Demonstrated rate (eye, BER measured), not FEC-compliant: best 112 Gb/s BER about 1.7e-2 (Fig. 4(h)) vs text claim below 2e-3; no net rate.'
+derived: []

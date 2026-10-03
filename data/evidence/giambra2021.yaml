@@ -1,0 +1,209 @@
+paper_id: giambra2021
+verified_on: '2026-10-02'
+source_files:
+- references/giambra2021/text.md
+- references/giambra2021/crossref.json
+- references/giambra2021/source.json
+- references/giambra2021/figures/page_10.png
+entries:
+- device_id: giambra2021-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.11
+  note: design wavelength for the quasi-TE mode; EF threshold 0.4 eV quoted at 1550 nm
+- device_id: giambra2021-a
+  field: length_mm
+  value: 0.03
+  unit: mm
+  basis: measured
+  locator: abstract p.1; Fig. 7 p.10
+  note: nominal DSLG overlap length, about 30 um
+- device_id: giambra2021-a
+  field: bw3db_ghz
+  value: 11.5
+  unit: GHz
+  basis: measured
+  locator: p.11; Fig. 7(b) p.10
+  note: text about 11.5 GHz; Fig. 7(b) point reads about 11.6 GHz
+- device_id: giambra2021-a
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: Fig. 6(a) caption p.10; p.11
+  note: Si3N4 core width, quasi-TE at 1550 nm
+- device_id: giambra2021-a
+  field: electrode_metal
+  value: Ni/Au
+  basis: measured
+  locator: p.9; Methods p.13
+  note: 7 nm Ni and 60 nm Au top contacts
+- device_id: giambra2021-a
+  field: substrate
+  value: '150 mm Si3N4 photonic platform wafer: 260 nm Si3N4 core on 15 um buried SiO2'
+  basis: measured
+  locator: p.11; Fig. 6(a) caption p.10
+- device_id: giambra2021-a
+  field: cladding
+  value: top cladding thinned to about 40 nm over the core (evanescent coupling to the DSLG stack)
+  basis: measured
+  locator: p.11
+- device_id: giambra2021-a
+  field: epitaxy_or_stack
+  value: SLG / 1L CVD-hBN / 17 nm PECVD Si3N4 gate dielectric / SLG on 1500 nm x 260 nm Si3N4 core; Ni/Au contacts 700 nm from core edge
+  basis: measured
+  locator: p.2; p.4; Fig. 6(a) caption p.10; Methods p.13
+  note: 17 nm Si3N4 deposited by PECVD at 350 C over hBN
+- device_id: giambra2021-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.11
+  note: design wavelength for the quasi-TE mode; EF threshold 0.4 eV quoted at 1550 nm
+- device_id: giambra2021-b
+  field: length_mm
+  value: 0.06
+  unit: mm
+  basis: measured
+  locator: abstract p.1; Fig. 7 p.10
+  note: nominal DSLG overlap length, about 60 um
+- device_id: giambra2021-b
+  field: bw3db_ghz
+  value: 6.5
+  unit: GHz
+  basis: measured
+  locator: p.11; Fig. 7(b) p.10
+  note: text about 6.5 GHz; Fig. 7(b) point about 6.5 GHz
+- device_id: giambra2021-b
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: Fig. 6(a) caption p.10; p.11
+  note: Si3N4 core width, quasi-TE at 1550 nm
+- device_id: giambra2021-b
+  field: electrode_metal
+  value: Ni/Au
+  basis: measured
+  locator: p.9; Methods p.13
+  note: 7 nm Ni and 60 nm Au top contacts
+- device_id: giambra2021-b
+  field: substrate
+  value: '150 mm Si3N4 photonic platform wafer: 260 nm Si3N4 core on 15 um buried SiO2'
+  basis: measured
+  locator: p.11; Fig. 6(a) caption p.10
+- device_id: giambra2021-b
+  field: cladding
+  value: top cladding thinned to about 40 nm over the core (evanescent coupling to the DSLG stack)
+  basis: measured
+  locator: p.11
+- device_id: giambra2021-b
+  field: epitaxy_or_stack
+  value: SLG / 1L CVD-hBN / 17 nm PECVD Si3N4 gate dielectric / SLG on 1500 nm x 260 nm Si3N4 core; Ni/Au contacts 700 nm from core edge
+  basis: measured
+  locator: p.2; p.4; Fig. 6(a) caption p.10; Methods p.13
+  note: 17 nm Si3N4 deposited by PECVD at 350 C over hBN
+- device_id: giambra2021-c
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.11
+  note: design wavelength for the quasi-TE mode; EF threshold 0.4 eV quoted at 1550 nm
+- device_id: giambra2021-c
+  field: length_mm
+  value: 0.09
+  unit: mm
+  basis: measured
+  locator: abstract p.1; Fig. 7 p.10
+  note: nominal DSLG overlap length, about 90 um
+- device_id: giambra2021-c
+  field: bw3db_ghz
+  value: 7.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: Fig. 7(b) p.10
+  note: point read from plot, error bar about 6.5 to 7.5 GHz; text lists no 90 um value
+- device_id: giambra2021-c
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: Fig. 6(a) caption p.10; p.11
+  note: Si3N4 core width, quasi-TE at 1550 nm
+- device_id: giambra2021-c
+  field: electrode_metal
+  value: Ni/Au
+  basis: measured
+  locator: p.9; Methods p.13
+  note: 7 nm Ni and 60 nm Au top contacts
+- device_id: giambra2021-c
+  field: substrate
+  value: '150 mm Si3N4 photonic platform wafer: 260 nm Si3N4 core on 15 um buried SiO2'
+  basis: measured
+  locator: p.11; Fig. 6(a) caption p.10
+- device_id: giambra2021-c
+  field: cladding
+  value: top cladding thinned to about 40 nm over the core (evanescent coupling to the DSLG stack)
+  basis: measured
+  locator: p.11
+- device_id: giambra2021-c
+  field: epitaxy_or_stack
+  value: SLG / 1L CVD-hBN / 17 nm PECVD Si3N4 gate dielectric / SLG on 1500 nm x 260 nm Si3N4 core; Ni/Au contacts 700 nm from core edge
+  basis: measured
+  locator: p.2; p.4; Fig. 6(a) caption p.10; Methods p.13
+  note: 17 nm Si3N4 deposited by PECVD at 350 C over hBN
+- device_id: giambra2021-d
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.11
+  note: design wavelength for the quasi-TE mode; EF threshold 0.4 eV quoted at 1550 nm
+- device_id: giambra2021-d
+  field: length_mm
+  value: 0.12
+  unit: mm
+  basis: measured
+  locator: abstract p.1; Fig. 7 p.10
+  note: nominal DSLG overlap length, about 120 um
+- device_id: giambra2021-d
+  field: bw3db_ghz
+  value: 4.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: Fig. 7(b) p.10; intro p.2
+  note: plot point about 4 GHz; p.2 gives cutoff about 4 GHz for 120 um; p.11 text says 7.4 GHz
+- device_id: giambra2021-d
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: Fig. 6(a) caption p.10; p.11
+  note: Si3N4 core width, quasi-TE at 1550 nm
+- device_id: giambra2021-d
+  field: electrode_metal
+  value: Ni/Au
+  basis: measured
+  locator: p.9; Methods p.13
+  note: 7 nm Ni and 60 nm Au top contacts
+- device_id: giambra2021-d
+  field: substrate
+  value: '150 mm Si3N4 photonic platform wafer: 260 nm Si3N4 core on 15 um buried SiO2'
+  basis: measured
+  locator: p.11; Fig. 6(a) caption p.10
+- device_id: giambra2021-d
+  field: cladding
+  value: top cladding thinned to about 40 nm over the core (evanescent coupling to the DSLG stack)
+  basis: measured
+  locator: p.11
+- device_id: giambra2021-d
+  field: epitaxy_or_stack
+  value: SLG / 1L CVD-hBN / 17 nm PECVD Si3N4 gate dielectric / SLG on 1500 nm x 260 nm Si3N4 core; Ni/Au contacts 700 nm from core edge
+  basis: measured
+  locator: p.2; p.4; Fig. 6(a) caption p.10; Methods p.13
+  note: 17 nm Si3N4 deposited by PECVD at 350 C over hBN
+derived: []

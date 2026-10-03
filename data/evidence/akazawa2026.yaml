@@ -1,0 +1,85 @@
+paper_id: akazawa2026
+verified_on: '2026-10-02'
+source_files:
+- references/akazawa2026/text.md
+- references/akazawa2026/source.json
+- references/akazawa2026/figures/page_03.png
+entries:
+- device_id: akazawa2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2; p.3 (Fig. 2(e) text)
+  note: operating wavelength
+- device_id: akazawa2026-a
+  field: length_mm
+  value: 0.6
+  unit: mm
+  basis: measured
+  locator: p.4
+  note: 600 um phase shifter used in the programmable circuit; Vpi, capacitance and static power quoted for this length
+- device_id: akazawa2026-a
+  field: vpi_dc_v
+  value: 2.2
+  unit: V
+  basis: derived
+  locator: p.4, capacitance paragraph
+  note: authors quote 2.2 V for 600 um, method not stated; consistent with 0.13 V cm / 0.6 mm = 2.17 V
+- device_id: akazawa2026-a
+  field: vpil_dc_vcm
+  value: 0.13
+  unit: V*cm
+  basis: measured
+  locator: abstract p.1; p.3; Fig. 2(d)
+  note: from asymmetric MZIs with 500 um and 1000 um phase shifters
+- device_id: akazawa2026-a
+  field: il_onchip_db
+  value: 0.56
+  unit: dB
+  basis: derived
+  locator: p.3; Table 1 p.7
+  note: 'total phase-shifter section at pi: 0.20 dB carrier excess + 2 x 0.18 dB tapers'
+- device_id: akazawa2026-a
+  field: capacitance_ff
+  value: 6480
+  unit: fF
+  basis: measured
+  locator: p.4
+  note: 6.48 pF at Vpi = 2.2 V, 600 um phase shifter
+- device_id: akazawa2026-a
+  field: eo_film_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.2; Methods p.8
+  note: n-InGaAsP membrane (bandgap wavelength 1300 nm)
+- device_id: akazawa2026-a
+  field: electrode_metal
+  value: Ni/Au
+  basis: measured
+  locator: Methods p.8
+  note: contact metal
+- device_id: akazawa2026-a
+  field: cladding
+  value: SiO2 610 nm (passivation)
+  basis: measured
+  locator: Methods p.8
+- device_id: akazawa2026-a
+  field: substrate
+  value: 300 mm SOI wafer, Si waveguides embedded in SiO2 and planarized (CMP); III-V grown on InP substrate
+  basis: measured
+  locator: Methods p.8
+- device_id: akazawa2026-a
+  field: epitaxy_or_stack
+  value: p-Si rib / 8.1 nm Al2O3 + 16 nm SiO2 (EOT 19.2 nm, TEM) / 200 nm n-InGaAsP / 20 nm n-InP / 100 nm n++-InGaAs; wafer bonded with Al2O3
+  basis: measured
+  locator: p.3 Fig. 2(b); Methods p.8
+  note: hybrid MOS; two-step InGaAsP taper
+- device_id: akazawa2026-a
+  field: vpi_convention
+  value: per_arm_phase_shifter
+  basis: derived
+  locator: p.3 Fig. 2(d)
+  note: single phase shifter characterized in asymmetric MZI; authors do not name the convention
+derived: []

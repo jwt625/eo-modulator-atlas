@@ -1,0 +1,204 @@
+paper_id: soma2025
+verified_on: '2026-10-02'
+source_files:
+- references/soma2025/text.md
+- references/soma2025/figures/page_05.png
+- references/soma2025/figures/page_07.png
+entries:
+- device_id: soma2025-a
+  field: wavelength_nm
+  value: 1563.15
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3d
+  note: operating wavelength of the voltage sweep
+- device_id: soma2025-a
+  field: length_mm
+  value: 0.06
+  unit: mm
+  basis: measured
+  locator: p.1; p.4; Fig. 2a
+  note: 60 um square grating region (footprint side, not a waveguide length)
+- device_id: soma2025-a
+  field: bw3db_ghz
+  value: 0.046
+  unit: GHz
+  basis: measured
+  locator: p.6; Fig. 3e
+  note: sinusoidal drive Vpp 0.5 V; 3 dB crossing observed; response normalized to the low-frequency level
+- device_id: soma2025-a
+  field: il_onchip_db
+  value: 2
+  unit: dB
+  basis: measured
+  locator: p.5
+  note: paper states an optical insertion loss of 2 dB at 3.3 V; no further definition
+- device_id: soma2025-a
+  field: extinction_ratio_db
+  value: 11
+  unit: dB
+  basis: measured
+  locator: p.5; Fig. 3d
+  note: Rmax/Rmin from the voltage sweep at 1563.15 nm
+- device_id: soma2025-a
+  field: q_loaded
+  value: 2400
+  unit: '1'
+  basis: measured
+  locator: p.5; Fig. 3c; Extended Data Table I (p.13)
+  note: approximately 2,400, nearly constant across voltages
+- device_id: soma2025-a
+  field: tuning_nm_per_v
+  value: 0.26
+  unit: nm/V
+  basis: derived
+  locator: p.5
+  note: S = delta lambda / delta V with 5.1 nm over +-10 V, as computed by the authors
+- device_id: soma2025-a
+  field: drive_vpp_v
+  value: 0.2
+  unit: V
+  basis: measured
+  locator: p.6; Fig. 3f
+  note: 50 Mbps NRZ; the 100 Mbps PAM4 point uses 0.8 V
+- device_id: soma2025-a
+  field: electrode_gap_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.2; p.3 Fig. 1 caption
+  note: slot width ws between the silicon bars; grating parameters per Fig. 1 caption except py and delta
+- device_id: soma2025-a
+  field: electrode_metal
+  value: n-doped silicon bars (interdigitated electrodes); aluminium contact pads
+  unit: ''
+  basis: measured
+  locator: p.2; p.11 Methods
+  note: Al about 400 nm annealed at 400 C
+- device_id: soma2025-a
+  field: substrate
+  value: 'SOI: 400 nm Si, 2 um BOX, 725 um Si'
+  unit: ''
+  basis: measured
+  locator: p.4; p.11 Methods
+  note: n-type Si doping about 1e18 cm-3
+- device_id: soma2025-a
+  field: epitaxy_or_stack
+  value: 400 nm n-Si dimerized grating (px 500 nm, py 700 nm, delta 0.02, wx 100 nm) with 150 nm slots filled with JRD1 EO polymer (NLM Photonics, spin-coated), on 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 1 caption; p.4; p.11
+  note: px, wx, ws from the Fig. 1 simulation parameters stated as common to the devices; py and delta from the selected device
+- device_id: soma2025-a
+  field: max_baud_gbd
+  value: 0.05
+  unit: GBd
+  basis: measured
+  locator: p.6; Fig. 3f,g
+  note: 50 Mbps NRZ equals 0.05 GBd; 100 Mbps PAM4 is 0.05 GBd
+- device_id: soma2025-a
+  field: modulation_format
+  value: NRZ 50 Mbps (Vpp 0.2 V); PAM4 100 Mbps (Vpp 0.8 V); PRBS 2^9-1; BER below 7% HD-FEC
+  unit: ''
+  basis: measured
+  locator: p.6; Fig. 3f,g
+  note: raised-cosine, roll-off 1
+- device_id: soma2025-a
+  field: max_line_rate_gbps
+  value: 0.1
+  unit: Gb/s
+  basis: measured
+  locator: p.6; Fig. 3g
+  note: 100 Mbps PAM4
+- device_id: soma2025-b
+  field: wavelength_nm
+  value: 1562.7
+  unit: nm
+  basis: measured
+  locator: p.6; Fig. 4d
+  note: wavelength of the voltage sweep; data experiment at 1560.2 nm
+- device_id: soma2025-b
+  field: length_mm
+  value: 0.01
+  unit: mm
+  basis: measured
+  locator: p.1; p.6; Fig. 4a
+  note: 10 um square dimerized resonator, DBR sections on both sides
+- device_id: soma2025-b
+  field: bw3db_ghz
+  value: 0.38
+  unit: GHz
+  basis: measured
+  locator: p.6; Fig. 4e
+  note: VNA with high-speed photodiode; 3 dB crossing observed; normalized to the low-frequency level
+- device_id: soma2025-b
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.6; Fig. 4d inset
+  note: passive reflection at 0 V in dB scale
+- device_id: soma2025-b
+  field: q_loaded
+  value: 665
+  unit: '1'
+  basis: measured
+  locator: p.7; Fig. 4d
+  note: figure label 665; Extended Data Table I (p.13) lists 655
+- device_id: soma2025-b
+  field: tuning_nm_per_v
+  value: 0.18
+  unit: nm/V
+  basis: derived
+  locator: p.6; Fig. 4d
+  note: S derived by the authors from the reflectance spectra versus voltage
+- device_id: soma2025-b
+  field: drive_vpp_v
+  value: 1.0
+  unit: V
+  basis: measured
+  locator: p.6; Fig. 4g
+  note: fixed for all data cases
+- device_id: soma2025-b
+  field: electrode_metal
+  value: n-doped silicon bars (interdigitated electrodes); aluminium contact pads
+  unit: ''
+  basis: measured
+  locator: p.2; p.11 Methods
+  note: same process as the 60 um device
+- device_id: soma2025-b
+  field: substrate
+  value: 'SOI: 400 nm Si, 2 um BOX, 725 um Si'
+  unit: ''
+  basis: measured
+  locator: p.4; p.11 Methods
+  note: same wafer stack as the 60 um device
+- device_id: soma2025-b
+  field: epitaxy_or_stack
+  value: 10 um square dimerized n-Si resonator with 20-layer DBR (dh 154 nm, dl 198 nm) on each side, electrical isolation trenches, JRD1 EO polymer fill, on 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.6; Fig. 4a caption
+  note: grating parameters similar to Fig. 1c-e, full list in Supplementary Table 1 (not cached)
+- device_id: soma2025-b
+  field: max_baud_gbd
+  value: 1.0
+  unit: GBd
+  basis: measured
+  locator: p.6; Fig. 4g
+  note: NRZ without DSP at 1.0 GBd; PAM4 with DSP reaches 0.8 GBd
+- device_id: soma2025-b
+  field: modulation_format
+  value: NRZ 1.0 Gbps (no DSP); PAM4 up to 1.6 Gbps (0.8 GBd, with DSP equalization); Vpp 1 V; PRBS
+  unit: ''
+  basis: measured
+  locator: p.6; Fig. 4g,h
+  note: raised-cosine, roll-off 1; adaptive 11-tap FIR in the DSP case
+- device_id: soma2025-b
+  field: max_line_rate_gbps
+  value: 1.6
+  unit: Gb/s
+  basis: measured
+  locator: p.6; Fig. 4g,h
+  note: PAM4 with DSP-based equalization
+derived: []

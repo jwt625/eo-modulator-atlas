@@ -1,0 +1,229 @@
+paper_id: gui2022
+verified_on: '2026-10-02'
+source_files:
+- references/gui2022/text.md
+- references/gui2022/crossref.json
+- references/gui2022/source.json
+- references/gui2022/figures/page_04.png
+- references/gui2022/figures/page_06.png
+entries:
+- device_id: gui2022-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: Fig. 2 caption p.4; Fig. 1(c) caption p.3
+  note: simulation wavelength
+- device_id: gui2022-a
+  field: length_mm
+  value: 0.0047
+  unit: mm
+  basis: design_target
+  locator: p.6; Fig. 3(c); conclusion p.8
+  note: active ITO region length
+- device_id: gui2022-a
+  field: vpil_dc_vcm
+  value: 0.0108
+  unit: V*cm
+  basis: simulated
+  locator: Table I p.3
+  note: 108 V*um in Table I; abstract p.1 gives 0.1 V*mm
+- device_id: gui2022-a
+  field: bw3db_ghz
+  value: 102
+  unit: GHz
+  basis: simulated
+  locator: Fig. 4 caption p.7; p.6
+  note: RC estimate with 62 fF and 25 Ohm; other places give 100 and 108 GHz
+- device_id: gui2022-a
+  field: il_onchip_db
+  value: 2.9
+  unit: dB
+  basis: simulated
+  locator: p.6; Table I p.3; Fig. 3(c) p.6
+  note: sum of propagation loss and design loss
+- device_id: gui2022-a
+  field: il_onchip_includes
+  value: active-arm propagation loss (0.27 dB/um), design loss from 0.33 pi phase shift, 41:59 splitter; SI Eq. 3 adds 2 x 0.07 dB facet loss
+  basis: simulated
+  locator: p.6; SI p.11
+- device_id: gui2022-a
+  field: prop_loss_db_per_cm
+  value: 2700
+  unit: dB/cm
+  basis: simulated
+  locator: p.6
+  note: 0.27 dB/um converted; alpha = 4 pi k_eff / lambda
+- device_id: gui2022-a
+  field: extinction_ratio_db
+  value: 3
+  unit: dB
+  basis: simulated
+  locator: p.6; Table I p.3; Fig. 3(c)
+  note: ER for the +/-3.5 V states, calculated
+- device_id: gui2022-a
+  field: energy_per_bit_fj
+  value: 380
+  unit: fJ/bit
+  basis: derived
+  locator: p.3; Table I p.3
+  note: calculated value per Table I note; p.6 text prints pJ
+- device_id: gui2022-a
+  field: capacitance_ff
+  value: 62
+  unit: fF
+  basis: simulated
+  locator: p.6; Fig. 2(b) p.4
+  note: calculated from device geometry
+- device_id: gui2022-a
+  field: eo_film_thickness_nm
+  value: 10
+  unit: nm
+  basis: design_target
+  locator: p.4; Fig. 1(d) caption p.3
+  note: ITO film thickness
+- device_id: gui2022-a
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: Fig. 1(c) caption p.3
+  note: Si waveguide width; height 220 nm
+- device_id: gui2022-a
+  field: electrode_thickness_um
+  value: 0.03
+  unit: um
+  basis: design_target
+  locator: Fig. 1(d) caption p.3
+  note: Au top plate 30 nm
+- device_id: gui2022-a
+  field: electrode_metal
+  value: Au
+  basis: design_target
+  locator: Fig. 1(d) caption p.3
+- device_id: gui2022-a
+  field: substrate
+  value: SOI (silicon-on-insulator) photonic platform
+  basis: design_target
+  locator: Fig. 1 caption p.3
+- device_id: gui2022-a
+  field: cladding
+  value: 5 nm Al2O3 passivation layer
+  basis: design_target
+  locator: p.4; Fig. 1(d) caption p.3
+- device_id: gui2022-a
+  field: epitaxy_or_stack
+  value: 500 nm x 220 nm Si waveguide / 5 nm Al2O3 passivation / 10 nm ITO / 15 nm Al2O3 gating oxide / 30 nm Au top plate (Fig. 1(d))
+  basis: design_target
+  locator: Fig. 1(d) caption p.3; p.4
+- device_id: gui2022-a
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: Fig. 1(b) caption p.3
+  note: ITO modulator in one MZI arm only; authors do not name the drive mode
+- device_id: gui2022-a
+  field: vpi_convention
+  value: per_arm_phase_shifter
+  basis: derived
+  locator: abstract p.1; p.6
+  note: VpiL quoted for the ITO phase shifter in one arm; authors do not name the convention
+- device_id: gui2022-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: Fig. 2 caption p.4
+  note: simulation wavelength
+- device_id: gui2022-b
+  field: length_mm
+  value: 0.0091
+  unit: mm
+  basis: design_target
+  locator: p.7; Fig. 4(c) caption p.7
+- device_id: gui2022-b
+  field: bw3db_ghz
+  value: 71
+  unit: GHz
+  basis: simulated
+  locator: Fig. 4 caption p.7; p.7
+  note: RC-limited speed of the 9.1 um design
+- device_id: gui2022-b
+  field: il_onchip_db
+  value: 10
+  unit: dB
+  basis: simulated
+  locator: Fig. 4 caption p.7; p.7
+- device_id: gui2022-b
+  field: extinction_ratio_db
+  value: 53
+  unit: dB
+  basis: simulated
+  locator: p.7; Fig. 4(c)
+  note: reached at splitting ratio 91:9; amplitude imbalance below 1e-5 in OFF state
+- device_id: gui2022-b
+  field: eo_film_thickness_nm
+  value: 10
+  unit: nm
+  basis: design_target
+  locator: p.4; Fig. 1(d) caption p.3
+  note: ITO film thickness
+- device_id: gui2022-b
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: Fig. 1(c) caption p.3
+  note: Si waveguide width; height 220 nm
+- device_id: gui2022-b
+  field: electrode_thickness_um
+  value: 0.03
+  unit: um
+  basis: design_target
+  locator: Fig. 1(d) caption p.3
+  note: Au top plate 30 nm
+- device_id: gui2022-b
+  field: electrode_metal
+  value: Au
+  basis: design_target
+  locator: Fig. 1(d) caption p.3
+- device_id: gui2022-b
+  field: substrate
+  value: SOI (silicon-on-insulator) photonic platform
+  basis: design_target
+  locator: Fig. 1 caption p.3
+- device_id: gui2022-b
+  field: cladding
+  value: 5 nm Al2O3 passivation layer
+  basis: design_target
+  locator: p.4; Fig. 1(d) caption p.3
+- device_id: gui2022-b
+  field: epitaxy_or_stack
+  value: 500 nm x 220 nm Si waveguide / 5 nm Al2O3 passivation / 10 nm ITO / 15 nm Al2O3 gating oxide / 30 nm Au top plate (Fig. 1(d))
+  basis: design_target
+  locator: 'Fig. 4 caption p.7: 15 nm Al2O3 gating oxide; Fig. 1(d) caption p.3'
+- device_id: gui2022-b
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: Fig. 1(b) caption p.3
+  note: ITO modulator in one MZI arm only; authors do not name the drive mode
+derived:
+- device_id: gui2022-a
+  field: bw3db_ghz_check
+  value: 102.7
+  formula: 1/(2*pi*R*C) with R = 25 Ohm, C = 62 fF (p.6)
+  inputs:
+  - capacitance_ff
+- device_id: gui2022-a
+  field: energy_per_bit_fj_check
+  value: 379.75
+  formula: 0.5*C*V^2 with C = 62 fF, V = 3.5 V
+  inputs:
+  - capacitance_ff
+- device_id: gui2022-a
+  field: vpil_dc_vcm_check
+  value: 0.00999
+  formula: (7 V / 0.33) * 4.7 um, in V*cm (7 V swing, 0.33 pi phase shift, p.6)
+  inputs:
+  - length_mm

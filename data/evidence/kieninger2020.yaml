@@ -1,0 +1,935 @@
+paper_id: kieninger2020
+verified_on: '2026-10-02'
+source_files:
+- references/kieninger2020/text.md
+- references/kieninger2020/source.pdf
+- references/kieninger2020/crossref.json
+entries:
+- device_id: kieninger2020-best-dc
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-best-dc
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-best-dc
+  field: substrate
+  value: silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.2, section 2
+- device_id: kieninger2020-best-dc
+  field: cladding
+  value: JRD1 organic electro-optic material
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+- device_id: kieninger2020-best-dc
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: author_estimate
+  locator: p.3, Fig. 1(b)
+  note: Caption specifies approximately 70 nm.
+- device_id: kieninger2020-best-dc
+  field: epitaxy_or_stack
+  value: Silicon rails approximately 240 nm wide and 220 nm high; optical slot approximately 130 nm; 2 um buried
+    oxide; 3 um top oxide locally opened for JRD1. Aluminum is stated for top pads and vias; bottom GSG metal
+    is unspecified.
+  unit: ''
+  basis: design_target
+  locator: pp.2-3, Fig. 1
+  note: Optical slot width is not a metal electrode gap.
+- device_id: kieninger2020-best-dc
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.4, section 3
+- device_id: kieninger2020-best-dc
+  field: vpi_dc_v
+  value: 1.48
+  unit: V
+  basis: measured
+  locator: p.4, section 3
+- device_id: kieninger2020-best-dc
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: pp.3-4, Figs. 1-2
+  note: MZM transmission maximum-to-minimum voltage with opposite arm phase shifts; no per-arm conversion.
+- device_id: kieninger2020-system-dc
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-system-dc
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-system-dc
+  field: vpi_dc_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.8, section 5
+- device_id: kieninger2020-system-dc
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: pp.3-4, Figs. 1-2
+  note: MZM transmission maximum-to-minimum voltage with opposite arm phase shifts; no per-arm conversion.
+- device_id: kieninger2020-system-loss-ungated
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-system-loss-ungated
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-system-loss-ungated
+  field: il_onchip_db
+  value: 0.74
+  unit: dB
+  basis: derived
+  locator: p.8, section 5
+  note: Wavelength-averaged phase-shifter loss without gate voltage.
+- device_id: kieninger2020-system-loss-ungated
+  field: il_fiber_to_fiber_db
+  value: 13.6
+  unit: dB
+  basis: measured
+  locator: p.8, section 5
+  note: Total transmission loss without gate voltage; wavelength not specified for this reading.
+- device_id: kieninger2020-open-ended
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-open-ended
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-open-ended
+  field: wavelength_nm
+  value: 1560
+  unit: nm
+  basis: measured
+  locator: p.6, section 5
+- device_id: kieninger2020-open-ended
+  field: drive_vpp_v
+  value: 1.44
+  unit: V
+  basis: derived
+  locator: pp.7-8, section 5
+  note: 'For 100 GBd PAM4 only: authors double 0.72 Vpp after probe loss via open-end reflection; OOK amplitude
+    unstated.'
+- device_id: kieninger2020-open-ended
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: measured
+  locator: pp.6-8, Fig. 4
+- device_id: kieninger2020-open-ended
+  field: modulation_format
+  value: OOK;PAM4
+  unit: ''
+  basis: measured
+  locator: pp.6-8, Fig. 4
+- device_id: kieninger2020-open-ended
+  field: max_line_rate_gbps
+  value: 200
+  unit: Gb/s
+  basis: measured
+  locator: p.8, section 5
+- device_id: kieninger2020-open-ended
+  field: max_net_rate_gbps
+  value: 187
+  unit: Gb/s
+  basis: derived
+  locator: p.8, section 5
+  note: Authors state net rate allowing 7 percent HD-FEC overhead; no implemented FEC decoder claimed.
+- device_id: kieninger2020-terminated
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-terminated
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-terminated
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.7, section 5
+  note: Gate field 0.1 V/nm and external 50-ohm termination; not the open-ended signal experiment.
+- device_id: kieninger2020-die1-mzm1
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die1-mzm1
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die1-mzm1
+  field: wavelength_nm
+  value: 1557
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 1, MZM 1
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die1-mzm1
+  field: il_fiber_to_fiber_db
+  value: 13.08
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 1, MZM 1
+  note: Reported total loss 13.08 +/- 0.23 dB at the listed wavelength.
+- device_id: kieninger2020-die1-mzm1
+  field: il_onchip_db
+  value: 0.75
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 1, MZM 1; p.5, Eq. (1)
+  note: Wavelength mean 0.75 dB; standard deviation 0.13 dB; de-embedded by authors.
+- device_id: kieninger2020-die1-mzm2
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die1-mzm2
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die1-mzm2
+  field: wavelength_nm
+  value: 1554
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 1, MZM 2
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die1-mzm2
+  field: il_fiber_to_fiber_db
+  value: 13.63
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 1, MZM 2
+  note: Reported total loss 13.63 +/- 0.06 dB at the listed wavelength.
+- device_id: kieninger2020-die1-mzm2
+  field: il_onchip_db
+  value: 0.74
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 1, MZM 2; p.5, Eq. (1)
+  note: Wavelength mean 0.74 dB; standard deviation 0.30 dB; de-embedded by authors.
+- device_id: kieninger2020-die1-mzm3
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die1-mzm3
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die1-mzm3
+  field: wavelength_nm
+  value: 1561
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 1, MZM 3
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die1-mzm3
+  field: il_fiber_to_fiber_db
+  value: 12.44
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 1, MZM 3
+  note: Reported total loss 12.44 +/- 0.24 dB at the listed wavelength.
+- device_id: kieninger2020-die1-mzm3
+  field: il_onchip_db
+  value: 0.48
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 1, MZM 3; p.5, Eq. (1)
+  note: Wavelength mean 0.48 dB; standard deviation 0.16 dB; de-embedded by authors.
+- device_id: kieninger2020-die1-mzm4
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die1-mzm4
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die1-mzm4
+  field: wavelength_nm
+  value: 1560
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 1, MZM 4
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die1-mzm4
+  field: il_fiber_to_fiber_db
+  value: 12.59
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 1, MZM 4
+  note: Reported total loss 12.59 +/- 0.05 dB at the listed wavelength.
+- device_id: kieninger2020-die1-mzm4
+  field: il_onchip_db
+  value: 0.55
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 1, MZM 4; p.5, Eq. (1)
+  note: Wavelength mean 0.55 dB; standard deviation 0.08 dB; de-embedded by authors.
+- device_id: kieninger2020-die2-mzm1
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die2-mzm1
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die2-mzm1
+  field: wavelength_nm
+  value: 1563
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 2, MZM 1
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die2-mzm1
+  field: il_fiber_to_fiber_db
+  value: 12.96
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 2, MZM 1
+  note: Reported total loss 12.96 +/- 0.06 dB at the listed wavelength.
+- device_id: kieninger2020-die2-mzm1
+  field: il_onchip_db
+  value: 1.78
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 2, MZM 1; p.5, Eq. (1)
+  note: Wavelength mean 1.78 dB; standard deviation 0.12 dB; de-embedded by authors.
+- device_id: kieninger2020-die2-mzm2
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die2-mzm2
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die2-mzm2
+  field: wavelength_nm
+  value: 1561
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 2, MZM 2
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die2-mzm2
+  field: il_fiber_to_fiber_db
+  value: 12.81
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 2, MZM 2
+  note: Reported total loss 12.81 +/- 0.07 dB at the listed wavelength.
+- device_id: kieninger2020-die2-mzm2
+  field: il_onchip_db
+  value: 1.83
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 2, MZM 2; p.5, Eq. (1)
+  note: Wavelength mean 1.83 dB; standard deviation 0.25 dB; de-embedded by authors.
+- device_id: kieninger2020-die2-mzm3
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die2-mzm3
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die2-mzm3
+  field: wavelength_nm
+  value: 1558
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 2, MZM 3
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die2-mzm3
+  field: il_fiber_to_fiber_db
+  value: 11.75
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 2, MZM 3
+  note: Reported total loss 11.75 +/- 0.08 dB at the listed wavelength.
+- device_id: kieninger2020-die2-mzm3
+  field: il_onchip_db
+  value: 0.41
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 2, MZM 3; p.5, Eq. (1)
+  note: Wavelength mean 0.41 dB; standard deviation 0.14 dB; de-embedded by authors.
+- device_id: kieninger2020-die2-mzm4
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die2-mzm4
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die2-mzm4
+  field: wavelength_nm
+  value: 1562
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 2, MZM 4
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die2-mzm4
+  field: il_fiber_to_fiber_db
+  value: 11.67
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 2, MZM 4
+  note: Reported total loss 11.67 +/- 0.08 dB at the listed wavelength.
+- device_id: kieninger2020-die2-mzm4
+  field: il_onchip_db
+  value: 0.46
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 2, MZM 4; p.5, Eq. (1)
+  note: Wavelength mean 0.46 dB; standard deviation 0.07 dB; de-embedded by authors.
+- device_id: kieninger2020-die3-mzm1
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die3-mzm1
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die3-mzm1
+  field: wavelength_nm
+  value: 1563
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 3, MZM 1
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die3-mzm1
+  field: il_fiber_to_fiber_db
+  value: 10.03
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 3, MZM 1
+  note: Reported total loss 10.03 +/- 0.06 dB at the listed wavelength.
+- device_id: kieninger2020-die3-mzm1
+  field: il_onchip_db
+  value: 0.51
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 3, MZM 1; p.5, Eq. (1)
+  note: Wavelength mean 0.51 dB; standard deviation 0.28 dB; de-embedded by authors.
+- device_id: kieninger2020-die3-mzm2
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die3-mzm2
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die3-mzm2
+  field: wavelength_nm
+  value: 1563
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 3, MZM 2
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die3-mzm2
+  field: il_fiber_to_fiber_db
+  value: 10.21
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 3, MZM 2
+  note: Reported total loss 10.21 +/- 0.08 dB at the listed wavelength.
+- device_id: kieninger2020-die3-mzm2
+  field: il_onchip_db
+  value: 0.53
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 3, MZM 2; p.5, Eq. (1)
+  note: Wavelength mean 0.53 dB; standard deviation 0.19 dB; de-embedded by authors.
+- device_id: kieninger2020-die3-mzm3
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die3-mzm3
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die3-mzm3
+  field: wavelength_nm
+  value: 1564
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 3, MZM 3
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die3-mzm3
+  field: il_fiber_to_fiber_db
+  value: 9.57
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 3, MZM 3
+  note: Reported total loss 9.57 +/- 0.05 dB at the listed wavelength.
+- device_id: kieninger2020-die3-mzm3
+  field: il_onchip_db
+  value: 0.03
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 3, MZM 3; p.5, Eq. (1)
+  note: Wavelength mean 0.03 dB; standard deviation 0.31 dB; de-embedded by authors.
+- device_id: kieninger2020-die3-mzm4
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die3-mzm4
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die3-mzm4
+  field: wavelength_nm
+  value: 1564
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 3, MZM 4
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die3-mzm4
+  field: il_fiber_to_fiber_db
+  value: 9.68
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 3, MZM 4
+  note: Reported total loss 9.68 +/- 0.27 dB at the listed wavelength.
+- device_id: kieninger2020-die3-mzm4
+  field: il_onchip_db
+  value: 0.21
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 3, MZM 4; p.5, Eq. (1)
+  note: Wavelength mean 0.21 dB; standard deviation 0.32 dB; de-embedded by authors.
+- device_id: kieninger2020-die4-mzm1
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die4-mzm1
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die4-mzm1
+  field: wavelength_nm
+  value: 1554
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 4, MZM 1
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die4-mzm1
+  field: il_fiber_to_fiber_db
+  value: 12.12
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 4, MZM 1
+  note: Reported total loss 12.12 +/- 0.07 dB at the listed wavelength.
+- device_id: kieninger2020-die4-mzm1
+  field: il_onchip_db
+  value: 0.64
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 4, MZM 1; p.5, Eq. (1)
+  note: Wavelength mean 0.64 dB; standard deviation 0.13 dB; de-embedded by authors.
+- device_id: kieninger2020-die4-mzm2
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die4-mzm2
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die4-mzm2
+  field: wavelength_nm
+  value: 1555
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 4, MZM 2
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die4-mzm2
+  field: il_fiber_to_fiber_db
+  value: 12.23
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 4, MZM 2
+  note: Reported total loss 12.23 +/- 0.10 dB at the listed wavelength.
+- device_id: kieninger2020-die4-mzm2
+  field: il_onchip_db
+  value: 0.7
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 4, MZM 2; p.5, Eq. (1)
+  note: Wavelength mean 0.70 dB; standard deviation 0.25 dB; de-embedded by authors.
+- device_id: kieninger2020-die4-mzm3
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die4-mzm3
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die4-mzm3
+  field: wavelength_nm
+  value: 1563
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 4, MZM 3
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die4-mzm3
+  field: il_fiber_to_fiber_db
+  value: 11.1
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 4, MZM 3
+  note: Reported total loss 11.10 +/- 0.08 dB at the listed wavelength.
+- device_id: kieninger2020-die4-mzm3
+  field: il_onchip_db
+  value: 0.01
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 4, MZM 3; p.5, Eq. (1)
+  note: Wavelength mean 0.01 dB; standard deviation 0.36 dB; de-embedded by authors.
+- device_id: kieninger2020-die4-mzm4
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: kieninger2020-die4-mzm4
+  field: length_mm
+  value: 0.28
+  unit: mm
+  basis: design_target
+  locator: p.4, section 3
+  note: Reported active phase-shifter length; micrometres converted to millimetres.
+- device_id: kieninger2020-die4-mzm4
+  field: wavelength_nm
+  value: 1559
+  unit: nm
+  basis: measured
+  locator: p.10, Table 1, Die 4, MZM 4
+  note: Constructive-interference wavelength for total loss; phase loss is separately wavelength-averaged.
+- device_id: kieninger2020-die4-mzm4
+  field: il_fiber_to_fiber_db
+  value: 11.46
+  unit: dB
+  basis: measured
+  locator: p.10, Table 1, Die 4, MZM 4
+  note: Reported total loss 11.46 +/- 0.07 dB at the listed wavelength.
+- device_id: kieninger2020-die4-mzm4
+  field: il_onchip_db
+  value: 0.3
+  unit: dB
+  basis: derived
+  locator: p.10, Table 1, Die 4, MZM 4; p.5, Eq. (1)
+  note: Wavelength mean 0.30 dB; standard deviation 0.28 dB; de-embedded by authors.
+- device_id: kieninger2020-best-dc
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-system-dc
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-system-loss-ungated
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-open-ended
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-terminated
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die1-mzm1
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die1-mzm2
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die1-mzm3
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die1-mzm4
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die2-mzm1
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die2-mzm2
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die2-mzm3
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die2-mzm4
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die3-mzm1
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die3-mzm2
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die3-mzm3
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die3-mzm4
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die4-mzm1
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die4-mzm2
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die4-mzm3
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: kieninger2020-die4-mzm4
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: pp.2-3, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+derived:
+- device_id: kieninger2020-best-dc
+  field: vpil_dc_vcm
+  value: 0.041
+  unit: V*cm
+  basis: derived
+  locator: p.4, section 3
+  formula: 0.41 V mm / 10 = 0.041 V cm; authors p.4, section 3; unit conversion only
+  inputs:
+  - reported U_pi L = 0.41 V mm

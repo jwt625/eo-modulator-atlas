@@ -1,0 +1,219 @@
+paper_id: wolf2018a
+verified_on: '2026-10-02'
+source_files:
+- references/wolf2018a/text.md
+- references/wolf2018a/source.pdf
+- references/wolf2018a/crossref.json
+entries:
+- device_id: wolf2018a-static
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.14, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: wolf2018a-static
+  field: length_mm
+  value: 1.1
+  unit: mm
+  basis: design_target
+  locator: p.5, first paragraph
+  note: Reported active phase-shifter length.
+- device_id: wolf2018a-static
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: design_target
+  locator: p.14, Fig. 1(b)
+- device_id: wolf2018a-static
+  field: substrate
+  value: silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.14, Fig. 1(b)
+- device_id: wolf2018a-static
+  field: cladding
+  value: SEO100 organic electro-optic polymer
+  unit: ''
+  basis: design_target
+  locator: p.4; p.16, Fig. 3(c)
+- device_id: wolf2018a-static
+  field: epitaxy_or_stack
+  value: Silicon rails 240 nm wide; optical slot 160 nm with SEO100; 2 um buried oxide. Rail/slab thickness
+    unresolved in Fig. 1 caption.
+  unit: ''
+  basis: design_target
+  locator: p.4; p.14, Fig. 1(b)
+  note: Optical slot width is not a metal electrode gap.
+- device_id: wolf2018a-static
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5, first paragraph
+- device_id: wolf2018a-static
+  field: vpi_dc_v
+  value: 0.9
+  unit: V
+  basis: measured
+  locator: p.5, first paragraph; p.14, Fig. 1(c)
+- device_id: wolf2018a-static
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: pp.4-5, Eqs. (1)-(3); p.14, Fig. 1
+  note: MZM transmission maximum-to-minimum voltage with opposite arm phase shifts; no per-arm conversion.
+- device_id: wolf2018a-static
+  field: bias_for_vpi_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.5; p.14, Fig. 1(c)
+  note: DC Vpi measured above 2 V bias; no exact bias specified.
+- device_id: wolf2018a-static
+  field: il_onchip_db
+  value: 8
+  unit: dB
+  basis: derived
+  locator: p.5, loss discussion
+  note: Authors approximate the remainder using 20 dB total-loss equality; the stated total is at least 20
+    dB.
+- device_id: wolf2018a-static
+  field: il_fiber_to_fiber_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.5, loss discussion
+  note: Paper says 20 dB or more for this device generation; inclusive bound retained in notes.
+- device_id: wolf2018a-static
+  field: extinction_ratio_db
+  value: 14
+  unit: dB
+  basis: measured
+  locator: p.5; p.14, Fig. 1(c)
+  note: Static extinction of the device used in transmission experiments.
+- device_id: wolf2018a-gated
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.14, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: wolf2018a-gated
+  field: length_mm
+  value: 1.1
+  unit: mm
+  basis: design_target
+  locator: p.5, first paragraph
+  note: Reported active phase-shifter length.
+- device_id: wolf2018a-gated
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6, setup for signal generation
+  note: Carrier specified approximately 1550 nm.
+- device_id: wolf2018a-gated
+  field: bw6db_ghz
+  value: 25
+  unit: GHz
+  basis: measured
+  locator: p.7, bandwidth discussion; p.16, Fig. 3(c)
+  note: Detected RF spectral power falls fourfold; authors equate this with halved optical modulation power
+    and photocurrent amplitude.
+- device_id: wolf2018a-gated
+  field: drive_vpp_v
+  value: 1.4
+  unit: V
+  basis: measured
+  locator: p.6; p.15, Fig. 2(c)
+  note: RF-amplifier output swing coupled through probe to the 50-ohm-terminated MZM.
+- device_id: wolf2018a-gated
+  field: max_line_rate_gbps
+  value: 100
+  unit: Gb/s
+  basis: measured
+  locator: p.6; p.15, Fig. 2(d)-(e)
+- device_id: wolf2018a-gated
+  field: modulation_format
+  value: NRZ OOK (100 Gb/s back-to-back; 80 and 100 Gb/s over 10 km)
+  unit: ''
+  basis: measured
+  locator: p.6; p.15, Fig. 2
+- device_id: wolf2018a-gated
+  field: energy_per_bit_fj
+  value: 98
+  unit: fJ/bit
+  basis: derived
+  locator: p.9, Eq. (10)
+  note: Authors compute terminating-load energy from 1.4 Vpp, 50 ohms and 100 Gb/s; excludes driver electronics.
+- device_id: wolf2018a-ungated
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.14, Fig. 1(b)
+  note: Opposite modulation fields in the two poled arms; single GSG feed.
+- device_id: wolf2018a-ungated
+  field: length_mm
+  value: 1.1
+  unit: mm
+  basis: design_target
+  locator: p.5, first paragraph
+  note: Reported active phase-shifter length.
+- device_id: wolf2018a-ungated
+  field: max_line_rate_gbps
+  value: 100
+  unit: Gb/s
+  basis: measured
+  locator: pp.8-9; p.17, Fig. 4
+- device_id: wolf2018a-ungated
+  field: modulation_format
+  value: NRZ OOK (60-80 Gb/s AWG back-to-back; 60-70 Gb/s over 10 km; 100 Gb/s DAC back-to-back)
+  unit: ''
+  basis: measured
+  locator: pp.6,8-9; pp.15,17, Figs. 2,4
+- device_id: wolf2018a-static
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.4; p.14, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: wolf2018a-gated
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.4; p.14, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+- device_id: wolf2018a-ungated
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.4; p.14, Fig. 1
+  note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
+    establish distributed optical operation.
+derived:
+- device_id: wolf2018a-static
+  field: vpil_dc_vcm
+  value: 0.1
+  unit: V*cm
+  basis: derived
+  locator: p.5, first paragraph; p.14, Fig. 1(c)
+  formula: 1 V mm / 10 = 0.1 V cm; authors p.5; unit conversion only
+  inputs:
+  - reported U_pi L = 1 V mm
+- device_id: wolf2018a-static
+  field: prop_loss_db_per_cm
+  value: 73
+  unit: dB/cm
+  basis: derived
+  locator: p.5, loss discussion
+  formula: 7.3 dB/mm * 10 mm/cm = 73 dB/cm; authors p.5; unit conversion only
+  inputs:
+  - reported propagation loss approximately 7.3 dB/mm

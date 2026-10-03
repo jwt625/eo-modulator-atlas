@@ -1,0 +1,64 @@
+paper_id: sayem2026b
+verified_on: '2026-10-02'
+source_files:
+- references/sayem2026b/text.md
+- references/sayem2026b/figures/page_02.png
+- references/sayem2026b/figures/page_03.png
+entries:
+- device_id: sayem2026b-cm
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.3, Fig. 2 caption; p.4 text
+  note: active length / L_MZI
+- device_id: sayem2026b-cm
+  field: vpi_dc_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.4 text; Fig. 2(b)
+  note: bias for coupling change from critical to no coupling; paper states equivalent straight-waveguide Vpi is 14 V (about 4.7x better)
+- device_id: sayem2026b-cm
+  field: vpil_dc_vcm
+  value: 0.6
+  unit: V*cm
+  basis: measured
+  locator: p.1 intro; p.1 abstract
+  note: reported VpiL of the coupling modulator
+- device_id: sayem2026b-cm
+  field: extinction_ratio_db
+  value: 15
+  unit: dB
+  basis: measured
+  locator: p.4 text; Fig. 2(b)
+  note: more than 15 dB resonance extinction change at 3 V; frequency shift minimal
+- device_id: sayem2026b-cm
+  field: electrode_gap_um
+  value: 5.5
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 2 caption; p.4 text
+  note: signal to ground gap
+- device_id: sayem2026b-cm
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.1 text
+  note: BOX of the NanoLN TFLT wafer
+- device_id: sayem2026b-cm
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.1 text; Fig. 1(a) inset
+  note: silicon substrate
+- device_id: sayem2026b-cm
+  field: cladding
+  value: PECVD SiO2, 1.5 um
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+  note: deposited after etching the optical layer
+derived: []

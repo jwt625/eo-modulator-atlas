@@ -1,0 +1,191 @@
+paper_id: hou2024
+verified_on: '2026-10-02'
+source_files:
+- references/hou2024/text.md
+- references/hou2024/crossref.json
+- references/hou2024/figures/page_08.png
+- references/hou2024/figures/page_10.png
+entries:
+- device_id: hou2024-a
+  field: eo_film_thickness_nm
+  value: 600.0
+  unit: nm
+  basis: design_target
+  locator: p.11, Methods
+  note: 600 nm x-cut thin-film LN (nanoLN)
+- device_id: hou2024-a
+  field: etch_depth_nm
+  value: 400.0
+  unit: nm
+  basis: design_target
+  locator: p.11, Methods
+  note: 400 nm LN etched, 200 nm slab left
+- device_id: hou2024-a
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4; p.11, Methods
+  note: Waveguides with 1.5 um width on a 200 nm slab
+- device_id: hou2024-a
+  field: electrode_gap_um
+  value: 4.5
+  unit: um
+  basis: design_target
+  locator: p.11, Methods
+  note: Electrode gap designed as 4.5 um
+- device_id: hou2024-a
+  field: electrode_thickness_um
+  value: 0.3
+  unit: um
+  basis: design_target
+  locator: p.11, Methods
+  note: 300 nm thick gold electrodes
+- device_id: hou2024-a
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.11, Methods
+  note: Gold electrodes, lift-off
+- device_id: hou2024-a
+  field: buffer_oxide_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.11, Methods
+  note: 2 um silicon dioxide on silicon wafer
+- device_id: hou2024-a
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.11, Methods
+  note: Silicon handle wafer
+- device_id: hou2024-a
+  field: cladding
+  value: SiO2, 1.5 um PECVD
+  unit: ''
+  basis: design_target
+  locator: p.4; p.11, Methods
+  note: 1.5 um SiO2 by PECVD
+- device_id: hou2024-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.7; p.11, Methods
+  note: x-cut thin-film LN
+- device_id: hou2024-a
+  field: slab_thickness_nm
+  value: 200.0
+  unit: nm
+  basis: design_target
+  locator: p.4; p.11, Methods
+  note: 200 nm LN slab
+- device_id: hou2024-a
+  field: extinction_ratio_db
+  value: 32.0
+  unit: dB
+  basis: measured
+  locator: p.8 text; p.8, Fig. 3c; p.9, Fig. 4c
+  note: Ring-pair ER about 32 dB with resonances aligned; abstract states beyond 30 dB
+- device_id: hou2024-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4, Fig. 1b-c
+  note: Authors state the two rings see inverse electric fields from one electrode pair; push_pull is our label
+- device_id: hou2024-b
+  field: eo_film_thickness_nm
+  value: 600.0
+  unit: nm
+  basis: design_target
+  locator: p.11, Methods
+  note: 600 nm x-cut thin-film LN (nanoLN)
+- device_id: hou2024-b
+  field: etch_depth_nm
+  value: 400.0
+  unit: nm
+  basis: design_target
+  locator: p.11, Methods
+  note: 400 nm LN etched, 200 nm slab left
+- device_id: hou2024-b
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4; p.11, Methods
+  note: Waveguides with 1.5 um width on a 200 nm slab
+- device_id: hou2024-b
+  field: electrode_gap_um
+  value: 4.5
+  unit: um
+  basis: design_target
+  locator: p.11, Methods
+  note: Electrode gap designed as 4.5 um
+- device_id: hou2024-b
+  field: electrode_thickness_um
+  value: 0.3
+  unit: um
+  basis: design_target
+  locator: p.11, Methods
+  note: 300 nm thick gold electrodes
+- device_id: hou2024-b
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.11, Methods
+  note: Gold electrodes, lift-off
+- device_id: hou2024-b
+  field: buffer_oxide_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.11, Methods
+  note: 2 um silicon dioxide on silicon wafer
+- device_id: hou2024-b
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.11, Methods
+  note: Silicon handle wafer
+- device_id: hou2024-b
+  field: cladding
+  value: SiO2, 1.5 um PECVD
+  unit: ''
+  basis: design_target
+  locator: p.4; p.11, Methods
+  note: 1.5 um SiO2 by PECVD
+- device_id: hou2024-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.7; p.11, Methods
+  note: x-cut thin-film LN
+- device_id: hou2024-b
+  field: slab_thickness_nm
+  value: 200.0
+  unit: nm
+  basis: design_target
+  locator: p.4; p.11, Methods
+  note: 200 nm LN slab
+- device_id: hou2024-b
+  field: wavelength_nm
+  value: 1567.8
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.10, Fig. 4a
+  note: Dashed lambda_res line at about 1567.8 nm
+- device_id: hou2024-b
+  field: tuning_nm_per_v
+  value: 0.0048
+  unit: nm/V
+  basis: measured
+  locator: p.9 text; p.10, Fig. 4b; Table 1
+  note: 4.8 pm/V linear shift
+derived: []

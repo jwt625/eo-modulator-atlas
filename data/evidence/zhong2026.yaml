@@ -1,0 +1,187 @@
+paper_id: zhong2026
+verified_on: '2026-10-02'
+source_files:
+- references/zhong2026/text.md
+- references/zhong2026/crossref.json
+- references/zhong2026/source.json
+- references/zhong2026/figures/page_04.png
+- references/zhong2026/figures/page_05.png
+- references/zhong2026/figures/img_p04_2.png
+entries:
+- device_id: zhong2026-a
+  field: wavelength_nm
+  value: 1555.2
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.4, Fig. 2(c)
+  note: Resonance peak near 1555.2 nm in the -2 to -4 V inset; S21 and data wavelength not stated.
+- device_id: zhong2026-a
+  field: length_mm
+  value: 0.01
+  unit: mm
+  basis: design_target
+  locator: p.6, Discussion
+  note: Length of the pn junction, matching the PCNC; footprint 10 um^2.
+- device_id: zhong2026-a
+  field: vpil_dc_vcm
+  value: 0.38
+  unit: V*cm
+  basis: derived
+  locator: p.4, Sec. Fabrication and static characterization
+  note: From the 160 pm redshift between -2 V and -4 V; stated as about 0.38 V cm, citing earlier work for the definition.
+- device_id: zhong2026-a
+  field: bias_for_vpi_v
+  value: -3
+  unit: V
+  basis: derived
+  locator: p.4
+  note: Center of the -2 V to -4 V interval used for the 80 pm/V figure; Vpi*L is the authors' resonance-shift figure.
+- device_id: zhong2026-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5; p.4, Fig. 3(b)
+  note: -3 dB detuning, -3 V bias; text gives 59 GHz at -1 dB and 97 GHz at -2 dB, whose reference criteria are not confirmed.
+- device_id: zhong2026-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5
+  note: 110 GHz lightwave component analyzer and 110 GHz probe; PD 90 GHz.
+- device_id: zhong2026-a
+  field: eo_rolloff_db
+  value: 1.84
+  unit: dB
+  basis: measured
+  locator: p.2; p.6; p.4, Fig. 3(b)
+  note: Roll-off at 110 GHz of the -3 dB detuning trace relative to its low-frequency level.
+- device_id: zhong2026-a
+  field: eo_rolloff_freq_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2; p.6; p.4, Fig. 3(b)
+  note: Roll-off evaluated at the end of the sweep.
+- device_id: zhong2026-a
+  field: il_onchip_db
+  value: 2.8
+  unit: dB
+  basis: measured
+  locator: p.4; p.4, Fig. 2(c)
+  note: Authors' insertion loss of the PCNC from the transmission spectrum; normalization reference not stated.
+- device_id: zhong2026-a
+  field: extinction_ratio_db
+  value: 0.6
+  unit: dB
+  basis: measured
+  locator: p.5, Fig. 4(e)
+  note: Dynamic ER of 110 Gb/s eye; 1, 0.9, 0.7 dB at 50, 70, 90 Gb/s; Table 1 below 1 dB; theory about 2 dB (p.6).
+- device_id: zhong2026-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.2, Sec. Device principle; p.6, Methods
+  note: 220 nm SOI.
+- device_id: zhong2026-a
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: design_target
+  locator: p.2, Sec. Device principle
+  note: 90 nm slab for doping and contacts.
+- device_id: zhong2026-a
+  field: substrate
+  value: 220 nm silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.2; p.6, Methods
+  note: BOX thickness not stated.
+- device_id: zhong2026-a
+  field: epitaxy_or_stack
+  value: 1D photonic crystal nanobeam cavity (mirror regions plus 10-period tapers, period a reduced linearly to 0.93a) on 220 nm SOI with 90 nm slab; lateral pn junction (p region slightly wider than n),
+    P++ and N++ contacts; group index 4.2 to 44 inside the cavity; mode volume 0.12 um^3; designed Rs 150 ohm; on-chip 50 ohm resistor
+  unit: ''
+  basis: design_target
+  locator: p.2-4
+  note: Period, hole dimensions and doping levels are in the Supplementary Information, not cached.
+- device_id: zhong2026-a
+  field: max_baud_gbd
+  value: 130
+  unit: GBd
+  basis: measured
+  locator: p.5, Fig. 4(f)
+  note: 130 Gb/s NRZ below the 2e-2 SD-FEC threshold at suitable received power.
+- device_id: zhong2026-a
+  field: modulation_format
+  value: NRZ 50, 70, 90, 110 Gb/s eyes (SNR 8.23, 6.07, 3.98, 3.17 dB); BER below 3.8e-3 at 110 Gb/s and below 2e-2 at 130 Gb/s
+  unit: ''
+  basis: measured
+  locator: p.5, Fig. 4(b-f)
+  note: PRBS 2^13-1, amplifier output about 2 Vpp, 67 GHz cable and probe, -3 V bias.
+- device_id: zhong2026-a
+  field: max_line_rate_gbps
+  value: 130
+  unit: Gb/s
+  basis: measured
+  locator: p.1, abstract; p.5, Fig. 4(f)
+  note: NRZ, so line rate equals baud.
+- device_id: zhong2026-a
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: author_estimate
+  locator: p.5
+  note: Amplifier output of about 2 Vpp; reference plane (amplifier vs device) not stated.
+- device_id: zhong2026-a
+  field: energy_per_bit_fj
+  value: 5.9
+  unit: fJ/bit
+  basis: derived
+  locator: p.1, abstract; p.6, Discussion
+  note: Authors' C*Vpp^2/4 with the designed 5.9 fF and 2 Vpp.
+- device_id: zhong2026-a
+  field: capacitance_ff
+  value: 5.9
+  unit: fF
+  basis: design_target
+  locator: p.4, Sec. Device principle
+  note: Designed junction capacitance; with 150 ohm gives RC-limited 180 GHz.
+- device_id: zhong2026-a
+  field: q_loaded
+  value: 2930
+  unit: '1'
+  basis: measured
+  locator: p.4; p.4, Fig. 2(c)
+  note: From the measured spectrum; Table 1 lists 2920.
+- device_id: zhong2026-a
+  field: tuning_nm_per_v
+  value: 0.08
+  unit: nm/V
+  basis: measured
+  locator: p.4; p.4, Fig. 2(c)
+  note: About 80 pm/V at -3 V, from a 160 pm shift between -2 V and -4 V.
+- device_id: zhong2026-a
+  field: vpi_convention
+  value: resonance_tuning_derived
+  unit: ''
+  basis: derived
+  locator: p.4
+  note: Vpi*L from the 80 pm/V resonance tuning; no phase-shifter Vpi reported.
+- device_id: zhong2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.4, Fig. 3(b); p.5
+  note: S21 normalized to the lowest EO response loss; each curve measured against its low-frequency level.
+- device_id: zhong2026-a
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.4, Fig. 2(c)
+  note: Resonance near 1555 nm.
+derived: []

@@ -1,0 +1,162 @@
+paper_id: fukui2025
+verified_on: '2026-10-02'
+source_files:
+- references/fukui2025/text.md
+- references/fukui2025/figures/page_12.png
+- references/fukui2025/figures/page_13.png
+entries:
+- device_id: fukui2025-a
+  field: wavelength_nm
+  value: 1510
+  unit: nm
+  basis: measured
+  locator: p.3; Fig. 4a (p.12)
+  note: resonance wavelength at 0 V; Fig. 4c modulation at 1515 nm
+- device_id: fukui2025-a
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: measured
+  locator: p.3
+  note: 40x40 um2 active metasurface footprint
+- device_id: fukui2025-a
+  field: bw3db_ghz
+  value: 17.5
+  unit: GHz
+  basis: measured
+  locator: p.1; p.3; Fig. 5a (p.13)
+  note: VNA, 3 dB crossing observed; normalized to the low-frequency level
+- device_id: fukui2025-a
+  field: il_onchip_db
+  value: 0.56
+  unit: dB
+  basis: measured
+  locator: p.1; p.3; Fig. 4a (p.12)
+  note: R+T above 0.88 over 1480-1540 nm, i.e. -0.56 dB at most
+- device_id: fukui2025-a
+  field: q_loaded
+  value: 102
+  unit: '1'
+  basis: measured
+  locator: p.1; p.3; Fig. 4a; Supp. Note 7 (p.21)
+  note: Fano-resonance fit
+- device_id: fukui2025-a
+  field: tuning_nm_per_v
+  value: 0.018
+  unit: nm/V
+  basis: derived
+  locator: p.3; Supp. Fig. S8c (p.21)
+  note: 18 pm/V from the fitted resonance wavelength versus DC bias
+- device_id: fukui2025-a
+  field: capacitance_ff
+  value: 227
+  unit: fF
+  basis: measured
+  locator: p.3; Supp. Fig. S3a (p.16)
+  note: semiconductor parameter analyzer, 1 MHz, 40x40 um2 device; agrees with FEM
+- device_id: fukui2025-a
+  field: drive_vpp_v
+  value: 20
+  unit: V
+  basis: measured
+  locator: p.3; Fig. 4c (p.12)
+  note: 200 Hz sinusoid at 1515 nm in the modulation-depth measurement; DC +-30 V in Fig. 4a
+- device_id: fukui2025-a
+  field: rib_width_nm
+  value: 405
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: InP bar width w of the measured device, period 750 nm
+- device_id: fukui2025-a
+  field: electrode_gap_um
+  value: 0.345
+  unit: um
+  basis: derived
+  locator: p.3
+  note: period minus bar width of the measured device
+- device_id: fukui2025-a
+  field: electrode_metal
+  value: Ni/Ti/Au
+  unit: ''
+  basis: measured
+  locator: p.4 Methods; Supp. Fig. S2 (p.15)
+  note: p.3 text writes Ti/Ni/Au; InP bars are also the interdigitated electrodes; GSG pads
+- device_id: fukui2025-a
+  field: substrate
+  value: quartz (SiO2)
+  unit: ''
+  basis: measured
+  locator: p.3
+  note: 590 nm n-InP membrane bonded to quartz with ALD Al2O3 adhesive
+- device_id: fukui2025-a
+  field: epitaxy_or_stack
+  value: n-InP membrane 590 nm (grating period 750 nm, bar width 405 nm) wafer-bonded to quartz, ALD Al2O3 passivation, side-chain EO polymer (Tg 132.5 C) spin-coated, SiO2 sputtered protection layer
+  unit: ''
+  basis: measured
+  locator: p.3; p.4 Methods
+  note: membrane from MOVPE epitaxial substrate with InGaAs/InP sacrificial layers
+- device_id: fukui2025-b
+  field: wavelength_nm
+  value: 1547.4
+  unit: nm
+  basis: simulated
+  locator: p.3; Fig. 2f (p.10)
+  note: operating wavelength used for the reflective-modulator case
+- device_id: fukui2025-b
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: simulated
+  locator: p.3; Fig. 2g (p.10)
+  note: 40x40 um2 device size in the RC bandwidth simulation
+- device_id: fukui2025-b
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: simulated
+  locator: p.3; Fig. 2g (p.10); Table S1 (p.22)
+  note: paper writes can exceed 40 GHz at ND 1e19 cm-3; Table S1 lists 40
+- device_id: fukui2025-b
+  field: il_onchip_db
+  value: 0.24
+  unit: dB
+  basis: simulated
+  locator: p.2-3; Fig. 2c (p.10); Table S1 (p.22)
+  note: as small as 0.24 dB at ND 1e19 cm-3
+- device_id: fukui2025-b
+  field: q_loaded
+  value: 930
+  unit: '1'
+  basis: simulated
+  locator: p.4; Table S1 (p.22)
+  note: assumed enhanced Q; Fig. 2c shows above 900 at ND 1e19 cm-3
+- device_id: fukui2025-b
+  field: tuning_nm_per_v
+  value: 0.18
+  unit: nm/V
+  basis: simulated
+  locator: Table S1 (p.22)
+  note: 180 pm/V for the numerical design (r33 200 pm/V)
+- device_id: fukui2025-b
+  field: rib_width_nm
+  value: 380
+  unit: nm
+  basis: design_target
+  locator: p.2; Fig. 1 caption (p.9)
+  note: InP bar width w, duty ratio 0.5
+- device_id: fukui2025-b
+  field: epitaxy_or_stack
+  value: n-InP membrane d 630 nm, period 760 nm, bar width 380 nm on quartz with OEO fill (n 1.65), ND 1e19 cm-3
+  unit: ''
+  basis: design_target
+  locator: p.2; Supp. Note 1 (p.14)
+  note: 'refractive indices at 1550 nm: InP 3.17, OEO 1.65, SiO2 1.44'
+derived:
+- device_id: fukui2025-a
+  field: electrode_gap_um
+  value: 0.345
+  formula: gap = Lambda - w = 750 nm - 405 nm
+  inputs:
+  - period 750 nm (p.3)
+  - bar width 405 nm (p.3)

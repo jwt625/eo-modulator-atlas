@@ -1,0 +1,264 @@
+paper_id: sayem2026a
+verified_on: '2026-10-02'
+source_files:
+- references/sayem2026a/text.md
+- references/sayem2026a/figures/page_02.png
+- references/sayem2026a/figures/page_03.png
+- references/sayem2026a/figures/page_04.png
+entries:
+- device_id: sayem2026a-m25
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.2, Fig. 2(a); p.1 intro
+  note: L_MZI label; intro says 7 mm long MZI
+- device_id: sayem2026a-m25
+  field: vpi_dc_v
+  value: 3.8
+  unit: V
+  basis: measured
+  locator: p.3 text; Fig. 2(c)
+  note: hot-plate temperature 25 C; DC sweep of normalized transmission
+- device_id: sayem2026a-m25
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 text; Fig. 3(b)
+  note: Authors expect 3 dB beyond 50 GHz even with 1 dB extra low-frequency roll-off; no crossing; Fig.
+    3(b) at 28, 92, 119 C
+- device_id: sayem2026a-m25
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 text; Fig. 3(b)
+  note: EO response measured 3.0 to 50 GHz (OSA sideband method)
+- device_id: sayem2026a-m25
+  field: electrode_gap_um
+  value: 5.5
+  unit: um
+  basis: design_target
+  locator: p.2, Fig. 2 caption
+  note: signal to ground gap g
+- device_id: sayem2026a-m25
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 2(a) legend
+  note: legend entry Au
+- device_id: sayem2026a-m25
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 2(a) legend
+  note: legend entry Si, with SiO2 below the LT
+- device_id: sayem2026a-m25
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(a)
+  note: authors do not state; inferred from GSG layout with LT waveguides in both gaps of the cross-section
+    schematic
+- device_id: sayem2026a-m25
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(a)
+  note: authors do not state; follows the inferred push-pull drive
+- device_id: sayem2026a-m91
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.2, Fig. 2(a); p.1 intro
+  note: L_MZI label; intro says 7 mm long MZI
+- device_id: sayem2026a-m91
+  field: vpi_dc_v
+  value: 3.6
+  unit: V
+  basis: measured
+  locator: p.3 text; Fig. 2(c)
+  note: hot-plate temperature 91 C; DC sweep of normalized transmission
+- device_id: sayem2026a-m91
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 text; Fig. 3(b)
+  note: Authors expect 3 dB beyond 50 GHz even with 1 dB extra low-frequency roll-off; no crossing; Fig.
+    3(b) at 28, 92, 119 C
+- device_id: sayem2026a-m91
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 text; Fig. 3(b)
+  note: EO response measured 3.0 to 50 GHz (OSA sideband method)
+- device_id: sayem2026a-m91
+  field: electrode_gap_um
+  value: 5.5
+  unit: um
+  basis: design_target
+  locator: p.2, Fig. 2 caption
+  note: signal to ground gap g
+- device_id: sayem2026a-m91
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 2(a) legend
+  note: legend entry Au
+- device_id: sayem2026a-m91
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 2(a) legend
+  note: legend entry Si, with SiO2 below the LT
+- device_id: sayem2026a-m91
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(a)
+  note: authors do not state; inferred from GSG layout with LT waveguides in both gaps of the cross-section
+    schematic
+- device_id: sayem2026a-m91
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(a)
+  note: authors do not state; follows the inferred push-pull drive
+- device_id: sayem2026a-m120
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.2, Fig. 2(a); p.1 intro
+  note: L_MZI label; intro says 7 mm long MZI
+- device_id: sayem2026a-m120
+  field: vpi_dc_v
+  value: 3.4
+  unit: V
+  basis: measured
+  locator: p.3 text; Fig. 2(c)
+  note: hot-plate temperature 120 C; DC sweep of normalized transmission
+- device_id: sayem2026a-m120
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 text; Fig. 3(b)
+  note: Authors expect 3 dB beyond 50 GHz even with 1 dB extra low-frequency roll-off; no crossing; Fig.
+    3(b) at 28, 92, 119 C
+- device_id: sayem2026a-m120
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 text; Fig. 3(b)
+  note: EO response measured 3.0 to 50 GHz (OSA sideband method)
+- device_id: sayem2026a-m120
+  field: electrode_gap_um
+  value: 5.5
+  unit: um
+  basis: design_target
+  locator: p.2, Fig. 2 caption
+  note: signal to ground gap g
+- device_id: sayem2026a-m120
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 2(a) legend
+  note: legend entry Au
+- device_id: sayem2026a-m120
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 2(a) legend
+  note: legend entry Si, with SiO2 below the LT
+- device_id: sayem2026a-m120
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(a)
+  note: authors do not state; inferred from GSG layout with LT waveguides in both gaps of the cross-section
+    schematic
+- device_id: sayem2026a-m120
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(a)
+  note: authors do not state; follows the inferred push-pull drive
+- device_id: sayem2026a-c25
+  field: length_mm
+  value: 1.5
+  unit: mm
+  basis: design_target
+  locator: p.4, Fig. 4(a) and caption
+  note: phase-shifter electrode length
+- device_id: sayem2026a-c25
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.4, Fig. 4 caption
+  note: gap between ground and signal electrodes
+- device_id: sayem2026a-c95
+  field: length_mm
+  value: 1.5
+  unit: mm
+  basis: design_target
+  locator: p.4, Fig. 4(a) and caption
+  note: phase-shifter electrode length
+- device_id: sayem2026a-c95
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.4, Fig. 4 caption
+  note: gap between ground and signal electrodes
+- device_id: sayem2026a-c125
+  field: length_mm
+  value: 1.5
+  unit: mm
+  basis: design_target
+  locator: p.4, Fig. 4(a) and caption
+  note: phase-shifter electrode length
+- device_id: sayem2026a-c125
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.4, Fig. 4 caption
+  note: gap between ground and signal electrodes
+derived:
+- device_id: sayem2026a-c25
+  field: tuning_nm_per_v
+  value: 0.00054
+  formula: 'secant at 25 V: |resonance shift read from Fig. 4(e), -13.4 pm| / 25 V / 1000'
+  inputs:
+  - resonance shift at 25 V (Fig. 4(e), p.4)
+- device_id: sayem2026a-c95
+  field: tuning_nm_per_v
+  value: 0.00137
+  formula: 'secant at 25 V: |resonance shift read from Fig. 4(e), -34.3 pm| / 25 V / 1000'
+  inputs:
+  - resonance shift at 25 V (Fig. 4(e), p.4)
+- device_id: sayem2026a-c125
+  field: tuning_nm_per_v
+  value: 0.0014
+  formula: 'secant at 25 V: |resonance shift read from Fig. 4(e), -35.1 pm| / 25 V / 1000'
+  inputs:
+  - resonance shift at 25 V (Fig. 4(e), p.4)

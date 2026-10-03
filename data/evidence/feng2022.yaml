@@ -1,0 +1,122 @@
+paper_id: feng2022
+verified_on: '2026-10-02'
+source_files:
+- references/feng2022/text.md
+- references/feng2022/figures/img_p13_1.png
+- references/feng2022/figures/img_p15_1.png
+- references/feng2022/crossref.json
+- references/feng2022/source.json
+entries:
+- device_id: feng2022-a
+  field: wavelength_nm
+  value: 1594.9
+  unit: nm
+  basis: measured
+  locator: p.9 Methods, SFDR characterization
+  note: pump laser used for the two-tone test
+- device_id: feng2022-a
+  field: il_onchip_db
+  value: 2.5
+  unit: dB
+  basis: derived
+  locator: p.5 Sec. Results
+  note: 'authors'' partition of the measured total: 2.2 dB MMIs + 0.3 dB propagation'
+- device_id: feng2022-a
+  field: il_fiber_to_fiber_db
+  value: 10.5
+  unit: dB
+  basis: measured
+  locator: p.5 Sec. Results
+  note: total insertion loss of the fabricated RAMZI; 8 dB total fiber-to-chip coupling
+- device_id: feng2022-a
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.9 Methods
+  note: x-cut LN thin film (NANOLN)
+- device_id: feng2022-a
+  field: etch_depth_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.9 Methods
+  note: roughly 250 nm
+- device_id: feng2022-a
+  field: rib_width_nm
+  value: 1200
+  unit: nm
+  basis: design_target
+  locator: p.9 Methods, Design of the RAMZI
+  note: designed top width of waveguides and racetrack
+- device_id: feng2022-a
+  field: slab_thickness_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.9 Methods
+  note: 250 nm slab left after etch
+- device_id: feng2022-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.9 Methods
+  note: spacing between positive and negative electrodes
+- device_id: feng2022-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.9 Methods
+  note: ''
+- device_id: feng2022-a
+  field: cladding
+  value: PECVD SiO2 1.8 um
+  unit: ''
+  basis: design_target
+  locator: p.9 Methods
+  note: ''
+- device_id: feng2022-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.9 Methods
+  note: ''
+- device_id: feng2022-a
+  field: fsr_nm
+  value: 0.4
+  unit: nm
+  basis: measured
+  locator: p.5 Sec. Results
+  note: racetrack FSR about 0.4 nm (50 GHz stated on p.4)
+- device_id: feng2022-a
+  field: modulation_format
+  value: analog two-tone IMD3 test, tones 10 MHz apart; SFDR 120.04 dB Hz^(4/5) at 1 GHz and 114.54 dB Hz^(4/5) at 5 GHz
+  unit: ''
+  basis: measured
+  locator: p.1 abstract; p.6-7; Fig. 3(b),(c)
+  note: no SFDR column in the schema
+- device_id: feng2022-b
+  field: modulation_format
+  value: analog two-tone IMD3 test; SFDR 102.31 dB Hz^(2/3) at 1 GHz and 101.28 dB Hz^(2/3) at 5 GHz
+  unit: ''
+  basis: measured
+  locator: p.6-7; Fig. 3(b),(c)
+  note: values read from the figure labels
+- device_id: feng2022-b
+  field: eo_material
+  value: lithium_niobate
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. Results
+  note: Same chip, similar waveguide dimensions and electrode design stated; not given per column for the reference MZI
+- device_id: feng2022-b
+  field: waveguide_platform
+  value: lnoi_rib
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. Results
+  note: Same chip, similar waveguide dimensions stated; rib vs other not stated for the reference MZI
+derived: []

@@ -1,0 +1,219 @@
+paper_id: chen2023a
+verified_on: '2026-10-02'
+source_files:
+- references/chen2023a/text.md
+- references/chen2023a/figures/page_03.png
+- references/chen2023a/figures/page_06.png
+- references/chen2023a/figures/page_07.png
+- references/chen2023a/figures/page_08.png
+- references/chen2023a/crossref.json
+entries:
+- device_id: chen2023a-glycerol
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.9 Sec. 5.2
+  note: tunable laser at 1550 nm in the measurement setup
+- device_id: chen2023a-glycerol
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.7 Sec. 3; Fig. 6(c)
+  note: 4-mm-long devices
+- device_id: chen2023a-glycerol
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. 2; p.9 Sec. 5.1
+  note: x-cut LN layer on NANOLN LNOI
+- device_id: chen2023a-glycerol
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.9 Sec. 5.1
+  note: 200-nm-thick LN layer etched by ICP
+- device_id: chen2023a-glycerol
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. 2; p.9 Sec. 5.1
+  note: buried SiO2 thickness
+- device_id: chen2023a-glycerol
+  field: electrode_metal
+  value: Ti/Au
+  unit: ''
+  basis: design_target
+  locator: p.9 Sec. 5.1
+  note: 600 nm Ti/Au by e-beam evaporation and lift-off
+- device_id: chen2023a-glycerol
+  field: electrode_thickness_um
+  value: 0.6
+  unit: um
+  basis: design_target
+  locator: p.9 Sec. 5.1
+  note: 600-nm-thick Ti/Au layer
+- device_id: chen2023a-glycerol
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+- device_id: chen2023a-glycerol
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.3 Sec. 2; Fig. 2(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: chen2023a-glycerol
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.3 Sec. 2; Fig. 2(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: chen2023a-glycerol
+  field: vpi_dc_v
+  value: 3.52
+  unit: V
+  basis: measured
+  locator: p.7 Sec. 3; Fig. 6(c)
+  note: 1 MHz triangular sweep (Sec. 5.2); MZI-level
+- device_id: chen2023a-glycerol
+  field: vpil_dc_vcm
+  value: 1.41
+  unit: V*cm
+  basis: measured
+  locator: p.1 abstract; p.7 Sec. 3; Fig. 6(c); p.9 Table 1
+  note: Vpi x 4 mm; Fig. 6(e) last glycerol point, P about 83 percent on the plot; air curve at that P about 2.32 V cm
+- device_id: chen2023a-glycerol
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.7 Sec. 3; Fig. 6(f); p.9 Table 1
+  note: 3 dB bandwidth beyond the 40 GHz VNA limit
+- device_id: chen2023a-glycerol
+  field: bw_measured_to_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.7 Sec. 3; Fig. 6(f)
+  note: VNA limit; response stays above -3 dB to 40 GHz
+- device_id: chen2023a-glycerol
+  field: il_onchip_db
+  value: 0.5
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.9 Table 1; p.9 Sec. 5.2
+  note: 'abstract: excess loss ~0.5 dB; Table 1 ''Loss (dB)''; no loss figure shown'
+- device_id: chen2023a-glycerol
+  field: cladding
+  value: SiO2 800 nm (PECVD) plus 500 nm high-permittivity upper layer (glycerol per Figs. 2, 6)
+  unit: ''
+  basis: design_target
+  locator: p.7 Sec. 3; p.9 Sec. 5.1; Fig. 2(c)
+  note: Methods say e-beam evaporated; text names glycerol; wSiO2 not stated for this device
+- device_id: chen2023a-air
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.9 Sec. 5.2
+  note: tunable laser at 1550 nm in the measurement setup
+- device_id: chen2023a-air
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.7 Sec. 3; Fig. 6(c)
+  note: 4-mm-long devices
+- device_id: chen2023a-air
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. 2; p.9 Sec. 5.1
+  note: x-cut LN layer on NANOLN LNOI
+- device_id: chen2023a-air
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.9 Sec. 5.1
+  note: 200-nm-thick LN layer etched by ICP
+- device_id: chen2023a-air
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. 2; p.9 Sec. 5.1
+  note: buried SiO2 thickness
+- device_id: chen2023a-air
+  field: electrode_metal
+  value: Ti/Au
+  unit: ''
+  basis: design_target
+  locator: p.9 Sec. 5.1
+  note: 600 nm Ti/Au by e-beam evaporation and lift-off
+- device_id: chen2023a-air
+  field: electrode_thickness_um
+  value: 0.6
+  unit: um
+  basis: design_target
+  locator: p.9 Sec. 5.1
+  note: 600-nm-thick Ti/Au layer
+- device_id: chen2023a-air
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+- device_id: chen2023a-air
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.3 Sec. 2; Fig. 2(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: chen2023a-air
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.3 Sec. 2; Fig. 2(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: chen2023a-air
+  field: vpil_dc_vcm
+  value: 2.22
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.8 Fig. 6(d)
+  note: Air point, wSiO2 = 3.2 um, 4 mm devices, read from plot (about +-0.02); matched glycerol device at 3.2 um reads about 1.92
+- device_id: chen2023a-air
+  field: cladding
+  value: SiO2 800 nm (PECVD), no upper cladding (air)
+  unit: ''
+  basis: design_target
+  locator: p.7 Sec. 3; Fig. 6(d)
+  note: Air upper cladding in the comparison
+derived:
+- device_id: chen2023a-glycerol
+  field: slab_thickness_nm
+  value: 400
+  formula: film thickness 600 nm minus etch depth 200 nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: chen2023a-air
+  field: slab_thickness_nm
+  value: 400
+  formula: film thickness 600 nm minus etch depth 200 nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm

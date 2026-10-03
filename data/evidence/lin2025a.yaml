@@ -1,0 +1,106 @@
+paper_id: lin2025a
+verified_on: '2026-10-02'
+source_files:
+- references/lin2025a/text.md
+- references/lin2025a/figures/page_03.png
+- references/lin2025a/figures/page_04.png
+entries:
+- device_id: lin2025a-mzi
+  field: length_mm
+  value: 3.5
+  unit: mm
+  basis: design_target
+  locator: p.3 text; Fig. 1 caption
+  note: electrode length 3500 um; arm length difference 430 um
+- device_id: lin2025a-mzi
+  field: fsr_nm
+  value: 2.563
+  unit: nm
+  basis: measured
+  locator: p.3 text; Fig. 2(c)
+  note: FSR of the unbalanced MZI transmission spectrum
+- device_id: lin2025a-mzi
+  field: tuning_nm_per_v
+  value: 0.0413
+  unit: nm/V
+  basis: measured
+  locator: p.3 text; p.4 Fig. 2(d)
+  note: 41.3 pm/V slope of linear fit, 0 to 20 V; the single 5 V point is 0.288 nm (57.6 pm/V)
+- device_id: lin2025a-mzi
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.2 Design section
+  note: PLD BTO film on DSO
+- device_id: lin2025a-mzi
+  field: etch_depth_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.2 Design section; p.4 Fig. 2(b) caption
+  note: wet etch, rib height 250 nm
+- device_id: lin2025a-mzi
+  field: rib_width_nm
+  value: 2500
+  unit: nm
+  basis: design_target
+  locator: p.2 Design section; p.4 Fig. 2(b) caption
+  note: base width, single-mode TE/TM
+- device_id: lin2025a-mzi
+  field: sidewall_angle_deg
+  value: 45
+  unit: deg
+  basis: author_estimate
+  locator: p.3 text
+  note: Etch angle 45 degrees stated as typical for wet etching, not a measurement
+- device_id: lin2025a-mzi
+  field: electrode_gap_um
+  value: 8
+  unit: um
+  basis: design_target
+  locator: p.2 text; p.4 Fig. 2(b) caption
+  note: 2.75 um from the waveguide edge on both sides
+- device_id: lin2025a-mzi
+  field: substrate
+  value: DSO (dysprosium scandate)
+  unit: ''
+  basis: design_target
+  locator: p.2 Design section
+- device_id: lin2025a-mzi
+  field: crystal_cut
+  value: c-axis out of plane
+  unit: ''
+  basis: measured
+  locator: p.2 Design section
+  note: single crystal verified; r51 and r42 used with coplanar electrodes
+- device_id: lin2025a-mzi
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 1(e)
+  note: Authors do not state; inferred from electrodes along one straight arm only
+- device_id: lin2025a-mzi
+  field: vpi_convention
+  value: per_arm_phase_shifter
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 1(e)
+  note: Authors report no Vpi; per-arm convention follows the single-arm drive
+derived:
+- device_id: lin2025a-mzi
+  field: vpi_dc_v
+  value: 31.0
+  formula: FSR_nm / (2 * tuning_nm_per_v) = 2.563 / (2 * 0.0413) = 31.0 V; the 5 V point (57.6 pm/V) gives
+    22.2 V; assumes one FSR shift = 2 pi on the driven arm only
+  inputs:
+  - fsr_nm
+  - tuning_nm_per_v
+- device_id: lin2025a-mzi
+  field: slab_thickness_nm
+  value: 250
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm

@@ -1,0 +1,175 @@
+paper_id: nenezic2026
+verified_on: '2026-10-02'
+source_files:
+- references/nenezic2026/text.md
+- references/nenezic2026/figures/page_08.png
+entries:
+- device_id: nenezic2026-case1
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: analysis limited to 1310 nm
+- device_id: nenezic2026-case1
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.8 Table I
+  note: modulator length of the optimized design
+- device_id: nenezic2026-case1
+  field: electrode_metal
+  value: copper
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: bulk-copper properties assumed; GSGSG electrodes buried in target wafer
+- device_id: nenezic2026-case1
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: GSGSG electrode structure on X-cut LN
+- device_id: nenezic2026-case1
+  field: cladding
+  value: oxide
+  unit: ''
+  basis: design_target
+  locator: p.2 Fig. 1(b)
+  note: oxide cladding layer labeled in the cross-section schematic
+- device_id: nenezic2026-case1
+  field: vpi_dc_v
+  value: 1.78
+  unit: V
+  basis: simulated
+  locator: p.8 Table I
+  note: +-0.04; half-wave voltage in push-pull amplitude modulation
+- device_id: nenezic2026-case1
+  field: bw3db_ghz
+  value: 139
+  unit: GHz
+  basis: simulated
+  locator: p.8 Table I
+  note: +-2; EOE 3 dB bandwidth
+- device_id: nenezic2026-case1
+  field: il_onchip_db
+  value: 0.3
+  unit: dB
+  basis: simulated
+  locator: p.8 Table I; p.5 definition
+  note: +-0.02; propagation loss times L plus twice the tapering loss
+- device_id: nenezic2026-case2
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: analysis limited to 1310 nm
+- device_id: nenezic2026-case2
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: design_target
+  locator: p.8 Table I
+  note: modulator length of the optimized design
+- device_id: nenezic2026-case2
+  field: electrode_metal
+  value: copper
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: bulk-copper properties assumed; GSGSG electrodes buried in target wafer
+- device_id: nenezic2026-case2
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: GSGSG electrode structure on X-cut LN
+- device_id: nenezic2026-case2
+  field: cladding
+  value: oxide
+  unit: ''
+  basis: design_target
+  locator: p.2 Fig. 1(b)
+  note: oxide cladding layer labeled in the cross-section schematic
+- device_id: nenezic2026-case2
+  field: vpi_dc_v
+  value: 2.25
+  unit: V
+  basis: simulated
+  locator: p.8 Table I
+  note: +-0.16; half-wave voltage in push-pull amplitude modulation
+- device_id: nenezic2026-case2
+  field: bw3db_ghz
+  value: 150
+  unit: GHz
+  basis: simulated
+  locator: p.8 Table I
+  note: printed as 150+; EOE 3 dB bandwidth
+- device_id: nenezic2026-case2
+  field: il_onchip_db
+  value: 0.38
+  unit: dB
+  basis: simulated
+  locator: p.8 Table I; p.5 definition
+  note: +-0.01; propagation loss times L plus twice the tapering loss
+- device_id: nenezic2026-case3
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: analysis limited to 1310 nm
+- device_id: nenezic2026-case3
+  field: length_mm
+  value: 12
+  unit: mm
+  basis: design_target
+  locator: p.8 Table I
+  note: modulator length of the optimized design
+- device_id: nenezic2026-case3
+  field: electrode_metal
+  value: copper
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: bulk-copper properties assumed; GSGSG electrodes buried in target wafer
+- device_id: nenezic2026-case3
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II text
+  note: GSGSG electrode structure on X-cut LN
+- device_id: nenezic2026-case3
+  field: cladding
+  value: oxide
+  unit: ''
+  basis: design_target
+  locator: p.2 Fig. 1(b)
+  note: oxide cladding layer labeled in the cross-section schematic
+- device_id: nenezic2026-case3
+  field: vpi_dc_v
+  value: 1.025
+  unit: V
+  basis: simulated
+  locator: p.8 Table I
+  note: +-0.025; half-wave voltage in push-pull amplitude modulation
+- device_id: nenezic2026-case3
+  field: bw3db_ghz
+  value: 95
+  unit: GHz
+  basis: simulated
+  locator: p.8 Table I
+  note: +-3; EOE 3 dB bandwidth
+- device_id: nenezic2026-case3
+  field: il_onchip_db
+  value: 0.82
+  unit: dB
+  basis: simulated
+  locator: p.8 Table I; p.5 definition
+  note: +-0.1; propagation loss times L plus twice the tapering loss
+derived: []

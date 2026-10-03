@@ -1,0 +1,219 @@
+paper_id: berman2026
+verified_on: '2026-10-02'
+source_files:
+- references/berman2026/text.md
+- references/berman2026/figures/page_03.png
+- references/berman2026/figures/page_05.png
+- references/berman2026/figures/page_06.png
+entries:
+- device_id: berman2026-a
+  field: wavelength_nm
+  value: 1631.5
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(f)
+  note: resonance position axis 1631.4 to 1631.6 nm; Eq. (1) text uses 1550 nm
+- device_id: berman2026-a
+  field: length_mm
+  value: 0.134
+  unit: mm
+  basis: design_target
+  locator: p.4 Eq. (1) text
+  note: probe (electrode) length L_probe = 134 um
+- device_id: berman2026-a
+  field: tuning_nm_per_v
+  value: 0.005428
+  unit: nm/V
+  basis: measured
+  locator: p.3 text; Fig. 1(f)
+  note: 5.428 pm/V DC tuning slope
+- device_id: berman2026-a
+  field: fsr_nm
+  value: 1.1
+  unit: nm
+  basis: measured
+  locator: p.4 Eq. (1) text
+  note: FSR input of Eq. (1), 'see SI'; wavelength not stated
+- device_id: berman2026-a
+  field: prop_loss_db_per_cm
+  value: 0.447
+  unit: dB/cm
+  basis: derived
+  locator: p.3 text; Fig. 1(d); p.9 Eq. (2)
+  note: extrapolated to 100 percent straight from Qi-derived losses; +-0.077 dB/cm
+- device_id: berman2026-a
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.8 Methods; p.4 Eq. (1) text
+  note: electrode gap 6 um
+- device_id: berman2026-a
+  field: electrode_metal
+  value: Cr (4 nm) / Au
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods
+  note: gold typically 200 to 300 nm with 4 nm chromium adhesion layer
+- device_id: berman2026-a
+  field: eo_film_thickness_nm
+  value: 330
+  unit: nm
+  basis: design_target
+  locator: p.2 text
+  note: process starts from 330 nm BTO-on-insulator; racetrack film not separately stated
+- device_id: berman2026-a
+  field: sidewall_angle_deg
+  value: 75
+  unit: deg
+  basis: measured
+  locator: p.2 text; Fig. 1(b)
+  note: approx; cross-sectional SEM
+- device_id: berman2026-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.4 text
+  note: 3 um silica layer of the BTO wafer
+- device_id: berman2026-a
+  field: substrate
+  value: Si (500 um)
+  unit: ''
+  basis: design_target
+  locator: p.4 text
+  note: 500 um silicon substrate of the BTO wafer
+- device_id: berman2026-a
+  field: crystal_cut
+  value: a-b oriented BTO film
+  unit: ''
+  basis: design_target
+  locator: p.3 text
+  note: commercial a-b oriented films, poled along the in-plane field
+- device_id: berman2026-a
+  field: epitaxy_or_stack
+  value: BTO (330 nm) on SiO2 (3 um) on Si (500 um); wafer from La Luce Cristallina
+  unit: ''
+  basis: design_target
+  locator: p.2 text; p.4 text
+  note: wafer stack as described for the photonic-crystal design
+- device_id: berman2026-b
+  field: wavelength_nm
+  value: 1570.6
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(e)
+  note: resonance peaks span about 1570.5 to 1570.8 nm over 2 to 10 V
+- device_id: berman2026-b
+  field: length_mm
+  value: 0.6
+  unit: mm
+  basis: design_target
+  locator: p.6 text
+  note: interaction length of 600 microns
+- device_id: berman2026-b
+  field: tuning_nm_per_v
+  value: 0.0294
+  unit: nm/V
+  basis: measured
+  locator: p.6 text; Fig. 3(e)
+  note: 29.4 pm/V DC tuning slope
+- device_id: berman2026-b
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.8 Methods
+  note: electrode gap 6 um
+- device_id: berman2026-b
+  field: electrode_metal
+  value: Cr (4 nm) / Au
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods
+  note: gold typically 200 to 300 nm with 4 nm chromium adhesion layer
+- device_id: berman2026-b
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.4 text
+  note: 3 um silica layer of the BTO wafer
+- device_id: berman2026-b
+  field: substrate
+  value: Si (500 um)
+  unit: ''
+  basis: design_target
+  locator: p.4 text
+  note: 500 um silicon substrate of the BTO wafer
+- device_id: berman2026-b
+  field: epitaxy_or_stack
+  value: BTO (330 or 400 nm, not specified for this cavity) on SiO2 (3 um) on Si (500 um)
+  unit: ''
+  basis: design_target
+  locator: p.4-5 text
+  note: two commercial BTO thicknesses used for photonic crystals
+- device_id: berman2026-c
+  field: wavelength_nm
+  value: 1559.661
+  unit: nm
+  basis: measured
+  locator: p.7 text; Fig. 4(c)
+  note: laser wavelength set at the band edge
+- device_id: berman2026-c
+  field: bw3db_ghz
+  value: 11
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.7 text; Fig. 4(b)
+  note: approx; text says approximately 11 GHz; marker lies on a near -3 dB plateau of the LOESS-smoothed trace; zero reference not stated
+- device_id: berman2026-c
+  field: bw6db_ghz
+  value: 21
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.7 text; Fig. 4(b)
+  note: approx; text says about 21 GHz
+- device_id: berman2026-c
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.7 text
+  note: contact spacing 6 um
+- device_id: berman2026-c
+  field: electrode_thickness_um
+  value: 0.2
+  unit: um
+  basis: design_target
+  locator: p.7 text
+  note: electrode thickness of the DUT 200 nm
+- device_id: berman2026-c
+  field: electrode_metal
+  value: Cr (4 nm) / Au
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods
+  note: gold typically 200 to 300 nm with 4 nm chromium adhesion layer
+- device_id: berman2026-c
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.4 text
+  note: 3 um silica layer of the BTO wafer
+- device_id: berman2026-c
+  field: substrate
+  value: Si (500 um)
+  unit: ''
+  basis: design_target
+  locator: p.4 text
+  note: 500 um silicon substrate of the BTO wafer
+- device_id: berman2026-c
+  field: epitaxy_or_stack
+  value: BTO (330 or 400 nm, not specified for this DUT) on SiO2 (3 um) on Si (500 um)
+  unit: ''
+  basis: design_target
+  locator: p.4-5 text
+  note: two commercial BTO thicknesses used for photonic crystals
+derived: []

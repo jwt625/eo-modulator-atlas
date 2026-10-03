@@ -1,0 +1,199 @@
+paper_id: ummethala2021
+verified_on: '2026-10-02'
+source_files:
+- references/ummethala2021/text.md
+- references/ummethala2021/source.pdf
+- references/ummethala2021/crossref.json
+- references/ummethala2021/source.json
+entries:
+- device_id: ummethala2021-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3, Sec. 3; p.4, Fig. 2(a)
+  note: Poling antiparallel in the two slots; one GSG feed; authors state push-pull operation.
+- device_id: ummethala2021-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.3, Sec. 3; p.4, Fig. 2(c)
+  note: Min-to-max MZM transmission swing with push-pull poling; authors do not use the label per-arm or push-pull Vpi.
+- device_id: ummethala2021-a
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.12, Eq. (S13); p.5, Sec. 4
+  note: Operating wavelength 1550 nm; data experiment near 1550 nm.
+- device_id: ummethala2021-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.14, Eq. (S21) text
+  note: Response normalized to its zero-frequency value; sweep starts at 0.01 GHz.
+- device_id: ummethala2021-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.12, Eq. (S13); p.5, Sec. 4
+  note: 'Nominal: Eq. S13 lambda and ''near 1550 nm'' for the data run; wavelength of Vpi and EO-response measurements not
+    stated.'
+- device_id: ummethala2021-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.4, Fig. 2 caption; p.3, Sec. 3
+  note: Phase-shifter section of each arm.
+- device_id: ummethala2021-a
+  field: electrode_thickness_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.3, Sec. 3; p.4, Fig. 2 caption
+  note: Gold GSG line, lift-off; p.4 says approximately 150 nm, elsewhere 150 nm-thick.
+- device_id: ummethala2021-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.3, Sec. 3; p.9, Sec. S1
+- device_id: ummethala2021-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.3, Sec. 3; p.9, Sec. S1
+  note: Buried oxide of the SOI substrate.
+- device_id: ummethala2021-a
+  field: substrate
+  value: silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.3, Sec. 3; p.9, Sec. S1
+  note: 220 nm Si device layer.
+- device_id: ummethala2021-a
+  field: cladding
+  value: YLD124 organic electro-optic polymer
+  unit: ''
+  basis: design_target
+  locator: p.3, Sec. 3
+  note: Fills the Si slots; poled once above its glass transition.
+- device_id: ummethala2021-a
+  field: epitaxy_or_stack
+  value: 'Si slot waveguide on 220 nm SOI: rails 200 nm wide, slot 100 nm, strip waveguide 500 nm wide; amorphous BaTiO3 slabs
+    150 nm thick, 1 um wide between slot waveguide and gold electrodes (n 1.85 at 1550 nm); 2 um buried oxide'
+  unit: ''
+  basis: design_target
+  locator: p.3, Sec. 3; p.4, Fig. 2(b); p.9, Sec. S1-A
+  note: Optical slot width is not the metal electrode gap; gap not stated.
+- device_id: ummethala2021-a
+  field: vpi_dc_v
+  value: 1.3
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 3; p.4, Fig. 2(c)
+  note: Low-frequency triangular drive, minimum to maximum transmission; wavelength not stated.
+- device_id: ummethala2021-a
+  field: bw3db_ghz
+  value: 76
+  unit: GHz
+  basis: measured
+  locator: p.1, abstract; p.4, Sec. 3 and Fig. 2(d)
+  note: Authors state about 76 GHz; index down by 1/sqrt2 (3 dB detected RF power); noisy plateau near -3 dB; 50 ohm terminated,
+    PD-corrected.
+- device_id: ummethala2021-a
+  field: bw6db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.4, Sec. 3
+  note: Authors state about 110 GHz, equal to the upper VNA limit; trace reaches about -6 dB at the sweep end within noise.
+- device_id: ummethala2021-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3; p.13, Sec. S2-B
+  note: VNA sweep 0.01 to 110 GHz.
+- device_id: ummethala2021-a
+  field: il_fiber_to_fiber_db
+  value: 19
+  unit: dB
+  basis: derived
+  locator: p.9, Sec. S1
+  note: Authors sum about 5 dB per grating coupler, 6 dB phase shifter and 3 dB other passive structures.
+- device_id: ummethala2021-a
+  field: rf_loss_freq_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.5, Sec. 3; p.15, Fig. S8
+  note: Frequency of the authors' 4.5 dB/mm statement for the modulator line.
+- device_id: ummethala2021-a
+  field: n_rf
+  value: 2.2
+  unit: ''
+  basis: derived
+  locator: p.5, Sec. 3; p.14, Sec. S2-B
+  note: Effective RF index from S-parameters, averaged over 0.01-110 GHz.
+- device_id: ummethala2021-a
+  field: ng_opt
+  value: 2.8
+  unit: ''
+  basis: simulated
+  locator: p.5, Sec. 3; p.14, Sec. S2-B
+  note: Optical group index at 1550 nm from a mode solver.
+- device_id: ummethala2021-a
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: measured
+  locator: p.5, Sec. 4; p.6, Fig. 3(b)
+- device_id: ummethala2021-a
+  field: modulation_format
+  value: OOK (64 and 100 GBd); PAM4 (64 and 100 GBd)
+  unit: ''
+  basis: measured
+  locator: p.5, Sec. 4; p.6, Fig. 3(b)
+  note: PRBS 2^11-1; raised-cosine pulses; BER below 1e-6, 4e-6, 5e-5, 9e-3 in the order listed in notes.
+- device_id: ummethala2021-a
+  field: max_line_rate_gbps
+  value: 200
+  unit: Gb/s
+  basis: measured
+  locator: p.5, Sec. 4; p.6, Fig. 3(b)
+  note: 100 GBd PAM4, BER 9e-3 below the 20 percent overhead SD-FEC limit.
+- device_id: ummethala2021-a
+  field: drive_vpp_v
+  value: 1
+  unit: V
+  basis: author_estimate
+  locator: p.5, Sec. 4
+  note: Peak-to-peak drive at 100 GBd estimated by authors; reference point not stated.
+derived:
+- device_id: ummethala2021-a
+  field: vpil_dc_vcm
+  value: 0.13
+  formula: U_pi*L = 1.3 V mm (authors, p.1 abstract; p.3) x 0.1 cm/mm = 0.13 V cm; unit conversion only
+  inputs:
+  - U_pi*L=1.3 V mm
+- device_id: ummethala2021-a
+  field: prop_loss_db_per_cm
+  value: 60
+  formula: phase-shifter optical propagation loss 6 dB/mm (authors, approximately; p.5 Sec. 3, p.9 Sec. S1) x 10 mm/cm = 60
+    dB/cm; unit conversion only
+  inputs:
+  - propagation loss=6 dB/mm
+- device_id: ummethala2021-a
+  field: rf_loss_db_per_cm
+  value: 45
+  formula: RF propagation loss 4.5 dB/mm at 50 GHz (authors; p.5 Sec. 3; Fig. S8 measured MZM curve, p.15, reads about 4.5
+    dB/mm) x 10 mm/cm = 45 dB/cm; unit conversion only; 150 nm gold line, from S-parameters
+  inputs:
+  - RF loss=4.5 dB/mm
+  - rf_loss_freq_ghz=50

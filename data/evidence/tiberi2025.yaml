@@ -1,0 +1,237 @@
+paper_id: tiberi2025
+verified_on: '2026-10-02'
+source_files:
+- references/tiberi2025/text.md
+- references/tiberi2025/source.json
+- references/tiberi2025/figures/page_13.png
+- references/tiberi2025/figures/page_14.png
+- references/tiberi2025/figures/page_15.png
+entries:
+- device_id: tiberi2025-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: Fig. 8 caption p.13; p.11
+  note: C-band measurement; transmission maximum near 1.55 um
+- device_id: tiberi2025-a
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: measured
+  locator: Table I p.3; Fig. 8(b) p.13
+- device_id: tiberi2025-a
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: derived
+  locator: p.14 Fig. 9(b); p.15
+  note: authors' extrapolated 3 dB point on an envelope fit; reference plateau about -55.5 dB; fit meets -58.5 dB near 66 GHz (figure reading)
+- device_id: tiberi2025-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.14 Fig. 9(a)-(b)
+  note: probe and bias tee rated about 67 GHz; plotted trace ends near 67 GHz
+- device_id: tiberi2025-a
+  field: il_onchip_db
+  value: 0.9
+  unit: dB
+  basis: measured
+  locator: Table I p.3; Fig. 8(b) p.13; conclusion p.16
+  note: relative to loss before fabrication; text p.12 says -0.1 dB, inconsistent with Fig. 8(b)
+- device_id: tiberi2025-a
+  field: extinction_ratio_db
+  value: 4
+  unit: dB
+  basis: measured
+  locator: Table I p.3; Fig. 8(d) p.13
+  note: static ER; text p.12 gives about 4.5 dB in a 20 V sweep
+- device_id: tiberi2025-a
+  field: drive_vpp_v
+  value: 7
+  unit: V
+  basis: measured
+  locator: p.15
+  note: Vpp used for 80 Gbit/s eye diagrams
+- device_id: tiberi2025-a
+  field: max_baud_gbd
+  value: 80
+  unit: GBd
+  basis: measured
+  locator: Fig. 9(c) p.14; Table IV p.15
+  note: NRZ, one bit per symbol
+- device_id: tiberi2025-a
+  field: modulation_format
+  value: NRZ
+  basis: measured
+  locator: Fig. 9(c) p.14; Table IV p.15
+- device_id: tiberi2025-a
+  field: max_line_rate_gbps
+  value: 80
+  unit: Gb/s
+  basis: measured
+  locator: abstract p.1; Fig. 9(c) p.14
+  note: Table I lists >80 Gbit/s; limited by the DAC
+- device_id: tiberi2025-a
+  field: energy_per_bit_fj
+  value: 58
+  unit: fJ/bit
+  basis: derived
+  locator: abstract p.1; Table I p.3
+  note: authors' CVpp^2/4 figure (p.2); C and Vpp not stated
+- device_id: tiberi2025-a
+  field: rib_width_nm
+  value: 450
+  unit: nm
+  basis: design_target
+  locator: p.15
+  note: Si waveguide width for C-band devices
+- device_id: tiberi2025-a
+  field: electrode_metal
+  value: Au (100 nm Au/SLG contacts); probe pads 3 nm Cr / 100 nm Au
+  basis: measured
+  locator: p.9
+- device_id: tiberi2025-a
+  field: substrate
+  value: 'SOI: 220 nm Si on 2 um buried oxide, 200 mm wafer; fully etched Si waveguide'
+  basis: measured
+  locator: p.9
+- device_id: tiberi2025-a
+  field: cladding
+  value: 'structured SiO2 cladding: effective about 10 nm over the active region (<30 nm), 1 um over passive waveguides'
+  basis: measured
+  locator: p.5; p.7; p.12
+  note: thickness inferred by authors from ER slope
+- device_id: tiberi2025-a
+  field: epitaxy_or_stack
+  value: SLG1 / 3.5 nm MOCVD hBN (wet transfer) / 40 nm PE-ALD Al2O3 / SLG2
+  basis: measured
+  locator: p.9; Fig. 5(b) p.10
+- device_id: tiberi2025-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: Fig. 8 caption p.13
+  note: C-band measurement
+- device_id: tiberi2025-b
+  field: length_mm
+  value: 0.02
+  unit: mm
+  basis: measured
+  locator: Table I p.3; Fig. 8(a) p.13
+- device_id: tiberi2025-b
+  field: bw3db_ghz
+  value: 17
+  unit: GHz
+  basis: author_estimate
+  locator: Table I p.3
+  note: Table I only; no S21 trace for this device; authors' simulation for the design gives about 24 to 28 GHz
+- device_id: tiberi2025-b
+  field: il_onchip_db
+  value: 1.1
+  unit: dB
+  basis: measured
+  locator: Fig. 8(a) p.13; p.12
+  note: output modulated from about -1.1 to -4.1 dB; Table I rounds to 1
+- device_id: tiberi2025-b
+  field: extinction_ratio_db
+  value: 3
+  unit: dB
+  basis: measured
+  locator: p.12; Table I p.3; Fig. 8(a) p.13
+  note: static ER about 3 dB over about 10 V sweep
+- device_id: tiberi2025-b
+  field: max_baud_gbd
+  value: 20
+  unit: GBd
+  basis: author_estimate
+  locator: Table I p.3; p.3 text
+  note: Table I and p.3 text; NRZ; no eye diagram shown for this device
+- device_id: tiberi2025-b
+  field: modulation_format
+  value: NRZ
+  basis: measured
+  locator: Table I p.3; p.3 text
+- device_id: tiberi2025-b
+  field: max_line_rate_gbps
+  value: 20
+  unit: Gb/s
+  basis: author_estimate
+  locator: Table I p.3; p.3 text
+  note: Table I and p.3 text; no eye diagram shown for this device
+- device_id: tiberi2025-b
+  field: energy_per_bit_fj
+  value: 26
+  unit: fJ/bit
+  basis: derived
+  locator: p.3; Table I p.3
+  note: authors' CVpp^2/4 figure (p.2); C and Vpp not stated
+- device_id: tiberi2025-b
+  field: rib_width_nm
+  value: 450
+  unit: nm
+  basis: design_target
+  locator: p.15
+  note: Si waveguide width for C-band devices; stated for the 40 nm design chip
+- device_id: tiberi2025-b
+  field: electrode_metal
+  value: Au (100 nm Au/SLG contacts); probe pads 3 nm Cr / 100 nm Au
+  basis: measured
+  locator: p.9
+- device_id: tiberi2025-b
+  field: substrate
+  value: 'SOI: 220 nm Si on 2 um buried oxide, 200 mm wafer; fully etched Si waveguide'
+  basis: measured
+  locator: p.9
+- device_id: tiberi2025-b
+  field: cladding
+  value: 'structured SiO2 cladding: effective about 10 nm over the active region (<30 nm), 1 um over passive waveguides'
+  basis: measured
+  locator: p.5; p.7; p.12
+  note: thickness inferred by authors from ER slope
+- device_id: tiberi2025-b
+  field: epitaxy_or_stack
+  value: SLG1 / 3.5 nm MOCVD hBN (wet transfer) / 20 nm PE-ALD Al2O3 / SLG2
+  basis: measured
+  locator: p.9; Fig. 8 p.13; Table I p.3
+- device_id: tiberi2025-c
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: measured
+  locator: Fig. 9 caption p.14
+- device_id: tiberi2025-c
+  field: max_baud_gbd
+  value: 40
+  unit: GBd
+  basis: measured
+  locator: Fig. 9(c) p.14; p.15
+  note: NRZ, one bit per symbol
+- device_id: tiberi2025-c
+  field: modulation_format
+  value: NRZ
+  basis: measured
+  locator: Fig. 9(c) p.14
+- device_id: tiberi2025-c
+  field: max_line_rate_gbps
+  value: 40
+  unit: Gb/s
+  basis: measured
+  locator: Fig. 9(c) p.14; p.15
+  note: O-band, 32 and 40 Gbit/s eye diagrams
+- device_id: tiberi2025-c
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.15
+  note: Si waveguide width for O-band devices
+- device_id: tiberi2025-c
+  field: substrate
+  value: 'SOI: 220 nm Si on 2 um buried oxide, 200 mm wafer; fully etched Si waveguide'
+  basis: measured
+  locator: p.9
+derived: []

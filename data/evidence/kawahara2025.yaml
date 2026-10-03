@@ -1,0 +1,182 @@
+paper_id: kawahara2025
+verified_on: '2026-10-02'
+source_files:
+- references/kawahara2025/text.md
+- references/kawahara2025/source.json
+- references/kawahara2025/crossref.json
+- references/kawahara2025/figures/page_05.png
+- references/kawahara2025/figures/page_06.png
+- references/kawahara2025/figures/page_07.png
+entries:
+- device_id: kawahara2025-a
+  field: wavelength_nm
+  value: 1537
+  unit: nm
+  basis: derived
+  locator: p.4
+  note: Reference wavelength around which the ng spread of +/- 5 per +/- 1 nm is quoted; laser wavelength
+    of the data runs not stated.
+- device_id: kawahara2025-a
+  field: length_mm
+  value: 0.15
+  unit: mm
+  basis: design_target
+  locator: p.4
+  note: PCW phase shifter length 150 um, 50 um segments with inductors between.
+- device_id: kawahara2025-a
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: simulated
+  locator: p.6, Fig. 4(c)
+  note: Crossing on the co-simulated curve beyond the measured 40 GHz; PDC 260 mW, peaking ON, ng 35,
+    whole transmitter (peaking OFF 42 GHz).
+- device_id: kawahara2025-a
+  field: bw_measured_to_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.8, Appendix C
+  note: Sinusoidal sweep 1 to 40 GHz in 1 GHz steps.
+- device_id: kawahara2025-a
+  field: il_onchip_db
+  value: 11
+  unit: dB
+  basis: measured
+  locator: p.4, Fig. 3(e)
+  note: On-chip insertion loss approximately 11 dB including the PN-doped PCW phase shifter loss of about
+    8 dB.
+- device_id: kawahara2025-a
+  field: extinction_ratio_db
+  value: 1.4
+  unit: dB
+  basis: measured
+  locator: p.7, Fig. 5(b)
+  note: Unprocessed 64 Gb/s eye at PDC = 50 mW.
+- device_id: kawahara2025-a
+  field: optical_input_power_dbm
+  value: 13
+  unit: dBm
+  basis: measured
+  locator: p.8, Appendix D
+  note: Tunable laser output PLD; coupling losses to the chip not stated.
+- device_id: kawahara2025-a
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: simulated
+  locator: p.3-4, Fig. 2(d)
+  note: Simulated electrode impedance with inductors LH (30 ohm without).
+- device_id: kawahara2025-a
+  field: ng_opt
+  value: 35
+  unit: '1'
+  basis: measured
+  locator: p.5; p.4, Fig. 3(f)
+  note: Measured ng = 35 +/- 5 around 1537 nm; the PCW spans ng 20 to 70.
+- device_id: kawahara2025-a
+  field: max_baud_gbd
+  value: 64
+  unit: GBd
+  basis: measured
+  locator: p.5; p.7, Fig. 5
+  note: NRZ, limited by the multiplexer.
+- device_id: kawahara2025-a
+  field: modulation_format
+  value: NRZ PRBS; 64 Gb/s with 5-tap receiver FFE (0.78 pJ/bit at 50 mW, SD-FEC compatible); 64 Gb/s
+    unprocessed 1.1 pJ/bit at 70 mW (SD-FEC); 50 Gb/s unprocessed 1.0 pJ/bit at 50 mW (HD-FEC)
+  unit: ''
+  basis: measured
+  locator: p.5; p.7, Fig. 5(b-d)
+  note: Optical sampling oscilloscope; BER from two-Gaussian histogram fit.
+- device_id: kawahara2025-a
+  field: max_line_rate_gbps
+  value: 64
+  unit: Gb/s
+  basis: measured
+  locator: p.5-7, Fig. 5
+  note: ''
+- device_id: kawahara2025-a
+  field: energy_per_bit_fj
+  value: 780
+  unit: fJ/bit
+  basis: derived
+  locator: p.1 abstract; p.5; p.7, Fig. 5(c)
+  note: Authors state 0.78 pJ/bit; 50 mW / 64 Gb/s = 781.25 fJ/bit, rounded. After receiver 5-tap FFE;
+    excludes laser.
+- device_id: kawahara2025-a
+  field: substrate
+  value: silicon-on-insulator (AIST 300 mm process); driver on a separate SiGe BiCMOS chip, both die-bonded
+    on an FR4 PCB
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8, Appendix B
+  note: ''
+- device_id: kawahara2025-a
+  field: epitaxy_or_stack
+  value: Si photonic-crystal-waveguide MZM with PN-doped phase shifters in 50 um segments, TiN heater
+    for quadrature bias, meander-line inductive electrodes (Z0 = sqrt(LH/Cpn))
+  unit: ''
+  basis: design_target
+  locator: p.3-4, Fig. 2
+  note: Dimensions in the authors' earlier paper, not here.
+- device_id: kawahara2025-b
+  field: length_mm
+  value: 0.15
+  unit: mm
+  basis: design_target
+  locator: p.4
+  note: PCW phase shifter length 150 um.
+- device_id: kawahara2025-b
+  field: bw3db_ghz
+  value: 55
+  unit: GHz
+  basis: simulated
+  locator: p.5; p.6, Fig. 4(c); p.8, Table 1
+  note: Crossing on the co-simulated curve beyond the measured 40 GHz; PDC 260 mW, peaking ON, ng 30,
+    whole transmitter; text says recorded.
+- device_id: kawahara2025-b
+  field: bw_measured_to_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.8, Appendix C
+  note: Sinusoidal sweep 1 to 40 GHz in 1 GHz steps.
+- device_id: kawahara2025-b
+  field: ng_opt
+  value: 30
+  unit: '1'
+  basis: measured
+  locator: p.5; p.6, Fig. 4(c)
+  note: Operating point with ng = 30.
+- device_id: kawahara2025-a
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.8, Appendix C
+  note: Sinusoid applied to one arm in the EO sweep; the authors do not name the transmitter drive scheme.
+- device_id: kawahara2025-a
+  field: bw3db_reference
+  value: 1ghz
+  unit: ''
+  basis: derived
+  locator: p.6, Fig. 4(c); p.8, Appendix C
+  note: Normalization frequency not stated; the sweep starts at 1 GHz and the -3 dB line is drawn on the
+    normalized axis.
+- device_id: kawahara2025-b
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.8, Appendix C
+  note: Sinusoid applied to one arm in the EO sweep; the authors do not name the transmitter drive scheme.
+- device_id: kawahara2025-b
+  field: bw3db_reference
+  value: 1ghz
+  unit: ''
+  basis: derived
+  locator: p.6, Fig. 4(c); p.8, Appendix C
+  note: Normalization frequency not stated; the sweep starts at 1 GHz and the -3 dB line is drawn on the
+    normalized axis.
+derived: []

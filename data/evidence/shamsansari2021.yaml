@@ -1,0 +1,108 @@
+paper_id: shamsansari2021
+verified_on: '2026-10-02'
+source_files:
+- references/shamsansari2021/text.md
+- references/shamsansari2021/figures/page_03.png
+- references/shamsansari2021/crossref.json
+- references/shamsansari2021/source.json
+entries:
+- device_id: shamsansari2021-a
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: design_target
+  locator: p.3; Fig. 4(d) caption
+  note: active modulation length of 5 mm, segmented traveling-wave electrodes
+- device_id: shamsansari2021-a
+  field: vpi_dc_v
+  value: 4.3
+  unit: V
+  basis: measured
+  locator: p.3; Fig. 4(c)
+  note: fit to normalized transmission vs applied voltage
+- device_id: shamsansari2021-a
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 Fig. 4(d) caption
+  note: Caption claim of about 50 GHz; trace falls below -3 dB beyond about 43 GHz, attributed by the
+    authors to the photodiode.
+- device_id: shamsansari2021-a
+  field: bw_measured_to_ghz
+  value: 45
+  unit: GHz
+  basis: measured
+  locator: p.3 Fig. 4(d) and text
+  note: Photodiode limit stated by the authors (45 GHz); VNA sweep itself ends at 50 GHz.
+- device_id: shamsansari2021-a
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: design_target
+  locator: p.2-3
+  note: electrode gaps about 4 um in the active modulator design
+- device_id: shamsansari2021-a
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.1
+  note: 600 nm thick X-cut LN device layer
+- device_id: shamsansari2021-a
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: RIE to a slab height of 300 nm
+- device_id: shamsansari2021-a
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.1
+  note: waveguide width chosen 800 nm for single-mode operation
+- device_id: shamsansari2021-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.1
+  note: thermally grown SiO2 buried oxide
+- device_id: shamsansari2021-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.1
+  note: SiO2 on Si substrate
+- device_id: shamsansari2021-a
+  field: cladding
+  value: SiO2 800 nm PECVD
+  unit: ''
+  basis: design_target
+  locator: p.2
+  note: device cladding
+- device_id: shamsansari2021-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.1
+  note: X-cut LN device layer
+- device_id: shamsansari2021-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 4(d)
+  note: Authors do not state the reference frequency; the plotted trace starts near 0 dB at the origin.
+derived:
+- device_id: shamsansari2021-a
+  field: etch_depth_nm
+  value: 300
+  formula: film thickness minus slab height = 600 nm - 300 nm
+  inputs:
+  - eo_film_thickness_nm
+  - slab_thickness_nm

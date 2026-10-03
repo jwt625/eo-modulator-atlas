@@ -1,0 +1,243 @@
+paper_id: geravand2025
+verified_on: '2026-10-02'
+source_files:
+- references/geravand2025/text.md
+- references/geravand2025/crossref.json
+- references/geravand2025/source.json
+- references/geravand2025/figures/page_09.png
+- references/geravand2025/figures/page_11.png
+- references/geravand2025/figures/img_p24_1.png
+entries:
+- device_id: geravand2025-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.12, Methods
+  note: 220 nm SOI.
+- device_id: geravand2025-a
+  field: substrate
+  value: 220 nm silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.12, Methods
+  note: BOX thickness not stated.
+- device_id: geravand2025-a
+  field: epitaxy_or_stack
+  value: Add-drop racetrack MRM, radius 10 um, coupler length 600 nm, gap 200 nm, over-coupled; lateral pn junction with six doping layers of about 2e18 to 7e18 cm^-3 in the core; TiN heater on each ring
+  unit: ''
+  basis: design_target
+  locator: p.12, Methods
+  note: Rib width, slab thickness and etch depth not stated in the preprint.
+- device_id: geravand2025-a
+  field: wavelength_nm
+  value: 1549.9
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.9, Fig. 5(a)
+  note: 0 V resonance dip near 1549.9 nm; the Vpi sweep wavelength is stated only as near resonance.
+- device_id: geravand2025-a
+  field: vpi_dc_v
+  value: 6.28
+  unit: V
+  basis: derived
+  locator: p.8; p.24, Extended Data Fig. 4(a)
+  note: Power-law fit of phase vs voltage reaches pi at 6.28 V; data end near 6 V (extrapolated). Text says around 6.28 V.
+- device_id: geravand2025-a
+  field: vpil_dc_vcm
+  value: 0.96
+  unit: V*cm
+  basis: derived
+  locator: p.9
+  note: Authors' formula VpiL = FSR*pi*R/(dlambda/dV) at 0.5 V reverse bias; resonance-shift definition, differs from the Vpi in vpi_dc_v.
+- device_id: geravand2025-a
+  field: bias_for_vpi_v
+  value: -0.5
+  unit: V
+  basis: measured
+  locator: p.9
+  note: Reverse bias for the Vpi*L figure only; the 6.28 V phase sweep spans 0 to 6 V.
+- device_id: geravand2025-a
+  field: extinction_ratio_db
+  value: 17
+  unit: dB
+  basis: measured
+  locator: p.8; p.9, Fig. 5(a)
+  note: Static (DC) ER of the stand-alone MRM at low power.
+- device_id: geravand2025-a
+  field: optical_input_power_dbm
+  value: -10
+  unit: dBm
+  basis: measured
+  locator: p.8
+  note: Low-power spectra taken below -10 dBm.
+- device_id: geravand2025-a
+  field: prop_loss_db_per_cm
+  value: 85
+  unit: dB/cm
+  basis: measured
+  locator: p.8
+  note: Loss of the pn-loaded waveguide phase shifter, stated as about 85 dB/cm.
+- device_id: geravand2025-a
+  field: q_loaded
+  value: 3200
+  unit: '1'
+  basis: measured
+  locator: p.8; p.9
+  note: Extracted from the DC response; FWHM 60 GHz.
+- device_id: geravand2025-a
+  field: fsr_nm
+  value: 9.73
+  unit: nm
+  basis: measured
+  locator: p.8; p.24, Extended Data Fig. 4(b)
+  note: FSR 9.73 nm; finesse 20.2.
+- device_id: geravand2025-a
+  field: tuning_nm_per_v
+  value: 0.032
+  unit: nm/V
+  basis: derived
+  locator: p.9
+  note: Authors give about 4 GHz/V; converted at 1550 nm (4e9 Hz * lambda^2/c).
+- device_id: geravand2025-b
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.12, Methods
+  note: 220 nm SOI.
+- device_id: geravand2025-b
+  field: substrate
+  value: 220 nm silicon-on-insulator
+  unit: ''
+  basis: design_target
+  locator: p.12, Methods
+  note: BOX thickness not stated.
+- device_id: geravand2025-b
+  field: epitaxy_or_stack
+  value: Add-drop racetrack MRM, radius 10 um, coupler length 600 nm, gap 200 nm, over-coupled; lateral pn junction with six doping layers of about 2e18 to 7e18 cm^-3 in the core; TiN heater on each ring
+  unit: ''
+  basis: design_target
+  locator: p.12, Methods
+  note: Rib width, slab thickness and etch depth not stated in the preprint.
+- device_id: geravand2025-b
+  field: wavelength_nm
+  value: 1550.5
+  unit: nm
+  basis: measured
+  locator: p.13, Methods
+  note: Laser center wavelength of the transmission experiments.
+- device_id: geravand2025-b
+  field: bw3db_ghz
+  value: 35
+  unit: GHz
+  basis: measured
+  locator: p.10; p.9, Fig. 5(i)
+  note: MRA-MZM at zero detuning, quadrature point; text says around 35 GHz, figure label reads about 36 GHz.
+- device_id: geravand2025-b
+  field: bw6db_ghz
+  value: 60
+  unit: GHz
+  basis: measured
+  locator: p.10; p.9, Fig. 5(i)
+  note: Stated as exceeding 60 GHz; trace ends near -6 dB at the end of the 67 GHz sweep.
+- device_id: geravand2025-b
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.32, Supplementary Note C; p.9, Fig. 5(i)
+  note: 67 GHz VNA; photodiode response (70 GHz) compensated.
+- device_id: geravand2025-b
+  field: il_onchip_db
+  value: 1
+  unit: dB
+  basis: measured
+  locator: p.13, Methods
+  note: On-chip waveguide routing loss, about 1 dB.
+- device_id: geravand2025-b
+  field: il_fiber_to_fiber_db
+  value: 6
+  unit: dB
+  basis: measured
+  locator: p.13, Methods
+  note: About 5 dB fiber-to-chip coupling plus about 1 dB routing; whether 5 dB is per facet or both facets is not stated.
+- device_id: geravand2025-b
+  field: extinction_ratio_db
+  value: 30
+  unit: dB
+  basis: measured
+  locator: p.9; p.9, Fig. 5(d)
+  note: Static ER of the MRA-MZM spectra, stated as greater than 30 dB.
+- device_id: geravand2025-b
+  field: max_baud_gbd
+  value: 180
+  unit: GBd
+  basis: measured
+  locator: p.1, abstract; p.10; p.11, Fig. 6(a)
+  note: QPSK single polarization back-to-back at the 24 percent SD-FEC threshold.
+- device_id: geravand2025-b
+  field: modulation_format
+  value: Coherent QPSK up to 180 GBd, 16QAM up to 150 GBd, 32QAM up to 130 GBd (single polarization, back-to-back, 24 percent SD-FEC threshold); dual-polarization 32QAM at 125 GBd back-to-back, 40 km and
+    80 km (BER below the 24 percent SD-FEC threshold)
+  unit: ''
+  basis: measured
+  locator: p.10-11; p.11, Fig. 6
+  note: Linear offline DSP only; deep digital pre-compensation; test equipment limits beyond 70 GHz.
+- device_id: geravand2025-b
+  field: max_net_rate_gbps
+  value: 1000
+  unit: Gb/s
+  basis: derived
+  locator: p.1, abstract; p.11, Fig. 6(d)
+  note: Authors convert symbol rate to net rate with 24 percent FEC; DP 32QAM over 80 km stated as surpassing 1 Tb/s; single-pol max 524.19 Gb/s.
+- device_id: geravand2025-b
+  field: energy_per_bit_fj
+  value: 10.4
+  unit: fJ/bit
+  basis: derived
+  locator: p.1, abstract; p.11; p.14, Methods
+  note: Authors' formula for 32QAM with Cj 18 fF and the swing used in the transmission experiment; 18.2 fJ/bit for 16QAM; modulator only.
+- device_id: geravand2025-b
+  field: capacitance_ff
+  value: 18
+  unit: fF
+  basis: author_estimate
+  locator: p.10; p.14, Methods; p.9, Fig. 5(h)
+  note: Junction capacitance from an equivalent-circuit fit to measured S11 (Rs 40 ohm); structure measured not stated.
+- device_id: geravand2025-a
+  field: vpi_convention
+  value: per_arm_phase_shifter
+  unit: ''
+  basis: derived
+  locator: p.8; p.24, Extended Data Fig. 4(a)
+  note: Authors call it the Vpi of the MRM as a phase shifter; single resonator, no MZM.
+- device_id: geravand2025-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1, abstract; p.2; p.6, Eq. 1
+  note: Authors describe a pair of MRMs in a push-pull configuration with differential drive.
+- device_id: geravand2025-b
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.9, Fig. 5(i)
+  note: Normalized S21 curve starts at 0 dB at low frequency; reference not stated.
+- device_id: geravand2025-a
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.9, Fig. 5(a)
+  note: Spectra near 1550 nm.
+- device_id: geravand2025-b
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.13, Methods
+  note: Laser at 1550.5 nm.
+derived: []

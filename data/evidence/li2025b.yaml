@@ -1,0 +1,291 @@
+paper_id: li2025b
+verified_on: '2026-10-02'
+source_files:
+- references/li2025b/text.md
+- references/li2025b/crossref.json
+- references/li2025b/figures/page_02.png
+- references/li2025b/figures/page_05.png
+- references/li2025b/figures/page_06.png
+- references/li2025b/figures/page_11.png
+entries:
+- device_id: li2025b-a
+  field: wavelength_nm
+  value: 1540
+  unit: nm
+  basis: extracted_from_figure
+  locator: Fig. 3(c,d), p.5
+  note: wavelength axes of the AM spectra near 1540 nm; Vpi fit wavelength not stated in text
+- device_id: li2025b-a
+  field: length_mm
+  value: 20.8
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. II
+  note: electrode overlaps 2.08 cm of the folded waveguide in both arms
+- device_id: li2025b-a
+  field: vpi_dc_v
+  value: 54.3
+  unit: V
+  basis: derived
+  locator: p.4 Sec. III; p.15 Eq. D33
+  note: fit of 1 MHz lock-in AM spectrum (Eq. D33), +/-1.3 V; DC-sweep Vpi (Fig. 3(d)) value not printed
+- device_id: li2025b-a
+  field: bw3db_ghz
+  value: 0.8
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. III; Fig. 5
+  note: approx; EO S21 swept 0.1-9 GHz; lumped-electrode RC limited
+- device_id: li2025b-a
+  field: bw3db_reference_freq_ghz
+  value: 0.1
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. III; p.15 Appendix E Eq. E2
+  note: response normalized to 100 MHz; APD response de-embedded
+- device_id: li2025b-a
+  field: il_fiber_to_fiber_db
+  value: 29.8
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. IV
+  note: 'end-to-end: 7.0 dB per grating coupler (2x), 1.0 dB per Y-splitter (2x), 13.8 dB propagation'
+- device_id: li2025b-a
+  field: prop_loss_db_per_cm
+  value: 5.5
+  unit: dB/cm
+  basis: derived
+  locator: p.6 Sec. IV
+  note: extracted from loaded Q of racetrack resonators on the same chip; Appendix C p.11 gives about 3.71
+- device_id: li2025b-a
+  field: eo_film_thickness_nm
+  value: 340
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II; p.8 Appendix A
+  note: GaAs device layer on 2 um Al0.6Ga0.4As buffer
+- device_id: li2025b-a
+  field: etch_depth_nm
+  value: 240
+  unit: nm
+  basis: design_target
+  locator: Fig. 1 caption, p.2
+  note: rib etch depth; parameter used in the FEM simulations
+- device_id: li2025b-a
+  field: rib_width_nm
+  value: 540
+  unit: nm
+  basis: design_target
+  locator: Fig. 1 caption, p.2
+  note: waveguide width used in simulations; p.6 mentions 550 nm widths in general
+- device_id: li2025b-a
+  field: electrode_thickness_um
+  value: 0.46
+  unit: um
+  basis: design_target
+  locator: Fig. 1 caption, p.2
+  note: simulation parameter t_elec; electrode metal not stated separately
+- device_id: li2025b-a
+  field: signal_width_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: Fig. 1 caption, p.2
+  note: top electrode width w_elec
+- device_id: li2025b-a
+  field: substrate
+  value: n-doped GaAs (1e18 cm^-3) with 2 um Al0.6Ga0.4As buffer removed beneath the waveguide
+  unit: ''
+  basis: design_target
+  locator: p.8 Appendix A; Fig. 1 caption
+  note: HF undercut leaves 2 um air gap
+- device_id: li2025b-a
+  field: cladding
+  value: PECVD SiO2 2.2 um top; air gap below (suspended)
+  unit: ''
+  basis: design_target
+  locator: p.8 Appendix A; Fig. 1 caption
+  note: top oxide offsets the signal electrode from the waveguide
+- device_id: li2025b-a
+  field: crystal_cut
+  value: (100) GaAs
+  unit: ''
+  basis: design_target
+  locator: Fig. 1(a) caption, p.2
+- device_id: li2025b-a
+  field: epitaxy_or_stack
+  value: 340 nm GaAs / 2 um Al0.6Ga0.4As (undercut) / n-GaAs substrate; 7 nm ALD alumina passivation; 2.2 um PECVD SiO2
+  unit: ''
+  basis: design_target
+  locator: p.8 Appendix A
+- device_id: li2025b-a
+  field: waveguide_orientation
+  value: arms along [011] (2.5 cm) and [01-1] (2.36 cm)
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II
+- device_id: li2025b-b
+  field: vpi_dc_v
+  value: 31.9
+  unit: V
+  basis: derived
+  locator: p.4 Sec. III; p.12 Eq. D17
+  note: 31.9 +/- 0.8 V from AM fit at 1 MHz; resonance max-to-min definition
+- device_id: li2025b-b
+  field: bw3db_ghz
+  value: 2
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. III; Fig. 5
+  note: approx; EO S21 swept 0.1-9 GHz; lumped-electrode RC limited
+- device_id: li2025b-b
+  field: bw3db_reference_freq_ghz
+  value: 0.1
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. III; p.15 Appendix E Eq. E2
+  note: response normalized to 100 MHz
+- device_id: li2025b-b
+  field: prop_loss_db_per_cm
+  value: 3.71
+  unit: dB/cm
+  basis: derived
+  locator: p.11 Appendix C; Fig. 14(b)
+  note: approx; from Q, ER and FSR of the racetrack; Sec. IV p.6 quotes 5.5 dB/cm
+- device_id: li2025b-b
+  field: extinction_ratio_db
+  value: 4.83
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. III; Fig. 3(b)
+  note: resonance dip depth, loaded Q about 1.47e5
+- device_id: li2025b-b
+  field: q_loaded
+  value: 146700
+  unit: '1'
+  basis: measured
+  locator: p.11 Appendix C
+  note: text p.4 quotes about 1.47e5
+- device_id: li2025b-b
+  field: fsr_nm
+  value: 1.58
+  unit: nm
+  basis: measured
+  locator: p.10 Appendix C; Fig. 13(a)
+- device_id: li2025b-b
+  field: tuning_nm_per_v
+  value: 0.000351
+  unit: nm/V
+  basis: measured
+  locator: p.4 Sec. III
+  note: 0.351 +/- 0.008 pm/V spectral tunability
+- device_id: li2025b-b
+  field: eo_film_thickness_nm
+  value: 340
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II; p.8 Appendix A
+  note: GaAs device layer on 2 um Al0.6Ga0.4As buffer
+- device_id: li2025b-b
+  field: etch_depth_nm
+  value: 240
+  unit: nm
+  basis: design_target
+  locator: Fig. 1 caption, p.2
+  note: rib etch depth; parameter used in the FEM simulations
+- device_id: li2025b-b
+  field: rib_width_nm
+  value: 540
+  unit: nm
+  basis: design_target
+  locator: Fig. 1 caption, p.2
+  note: waveguide width used in simulations; p.6 mentions 550 nm widths in general
+- device_id: li2025b-b
+  field: electrode_thickness_um
+  value: 0.46
+  unit: um
+  basis: design_target
+  locator: Fig. 1 caption, p.2
+  note: simulation parameter t_elec; electrode metal not stated separately
+- device_id: li2025b-b
+  field: signal_width_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: Fig. 1 caption, p.2
+  note: top electrode width w_elec
+- device_id: li2025b-b
+  field: substrate
+  value: n-doped GaAs (1e18 cm^-3) with 2 um Al0.6Ga0.4As buffer removed beneath the waveguide
+  unit: ''
+  basis: design_target
+  locator: p.8 Appendix A; Fig. 1 caption
+  note: HF undercut leaves 2 um air gap
+- device_id: li2025b-b
+  field: cladding
+  value: PECVD SiO2 2.2 um top; air gap below (suspended)
+  unit: ''
+  basis: design_target
+  locator: p.8 Appendix A; Fig. 1 caption
+  note: top oxide offsets the signal electrode from the waveguide
+- device_id: li2025b-b
+  field: crystal_cut
+  value: (100) GaAs
+  unit: ''
+  basis: design_target
+  locator: Fig. 1(a) caption, p.2
+- device_id: li2025b-b
+  field: epitaxy_or_stack
+  value: 340 nm GaAs / 2 um Al0.6Ga0.4As (undercut) / n-GaAs substrate; 7 nm ALD alumina passivation; 2.2 um PECVD SiO2
+  unit: ''
+  basis: design_target
+  locator: p.8 Appendix A
+- device_id: li2025b-b
+  field: waveguide_orientation
+  value: racetrack sides along crystal axes [011] and [01-1]
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II; Fig. 1(a)
+- device_id: li2025b-c
+  field: wavelength_nm
+  value: 1538.5
+  unit: nm
+  basis: extracted_from_figure
+  locator: Fig. 4(a), p.5
+  note: wavelength axis of the AM spectra near 1538.5 nm
+- device_id: li2025b-c
+  field: vpi_dc_v
+  value: 86
+  unit: V
+  basis: measured
+  locator: p.5 Sec. III
+  note: 86 V for device (i) [011], 93 V for device (ii) [01-1]; used to bound arm asymmetry
+- device_id: li2025b-d
+  field: wavelength_nm
+  value: 1538.5
+  unit: nm
+  basis: extracted_from_figure
+  locator: Fig. 4(a), p.5
+  note: wavelength axis of the AM spectra near 1538.5 nm
+- device_id: li2025b-d
+  field: vpi_dc_v
+  value: 93
+  unit: V
+  basis: measured
+  locator: p.5 Sec. III
+  note: 86 V for device (i) [011], 93 V for device (ii) [01-1]; used to bound arm asymmetry
+derived:
+- device_id: li2025b-a
+  field: slab_thickness_nm
+  value: 100
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: li2025b-b
+  field: slab_thickness_nm
+  value: 100
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
