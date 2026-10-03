@@ -4,9 +4,9 @@
  "doi": "10.1002/adma.202507564",
  "source_type": "arxiv_preprint",
  "source_version": "2510.13256v1",
- "license": "",
- "license_verified": false,
- "redistribution": "restricted_local_only",
+ "license": "CC-BY-4.0",
+ "license_verified": true,
+ "redistribution": "allowed_with_attribution",
  "retrieved_on": "2026-10-03T03:21:35+00:00",
  "acquisition_origin": "public_primary_source",
  "identity_url": "https://arxiv.org/abs/2510.13256v1",
@@ -21,5 +21,7 @@
  "identity_check": "First-page title and authors checked against paper identity; source version retained separately.",
  "extraction_notes": [
   "11 embedded-image extraction failures; affected pages have rendered fallbacks. Raw PDF retained."
- ]
+ ],
+ "license_evidence": "Page-1 CC BY notice in cached PDF plus Crossref version-of-record license (version number from Crossref)",
+ "content_note": "Fetched from the arXiv v1 URL, but the cached PDF content is the Wiley-typeset Advanced Materials article (DOI 10.1002/adma.202507564); not an arXiv-typeset preprint. Coordinator decision pending on source_type."
 }
