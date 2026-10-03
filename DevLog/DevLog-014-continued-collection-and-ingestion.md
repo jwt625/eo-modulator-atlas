@@ -11,9 +11,9 @@ tasks: [C1, D1.15-D1.33, D1.13-addendum]
 User request (2026-10-02): continue the new-references collection from
 [DevLog-013](DevLog-013-literature-cache-expansion.md) and start ingesting in
 parallel with subagents. Scope: source discovery and caching, staged
-distillation, independent audits and author corrections. No canonical
-`data/*.csv` metric table, `data/evidence/`, schema, engine or app file was
-changed. Claim: `coordination/claims/claude-ingest-2026-10-02.md`.
+distillation, independent audits and author corrections. Until 2026-10-03 no
+canonical table was changed; the later user-directed integration is recorded in
+the section below. Claim: `coordination/claims/claude-ingest-2026-10-02.md`.
 
 ## TODO
 
@@ -26,7 +26,8 @@ changed. Claim: `coordination/claims/claude-ingest-2026-10-02.md`.
 - [x] 7 independent fresh-context audits, 0 unresolved blocking findings
 - [x] Author corrections for every finding; dispositions per batch
 - [ ] User: retrieve raw materials (see Open items)
-- [ ] Coordinator decisions listed below, then D2 merge after reviewer recheck
+- [x] Canonical merge of all staged batches with `audit_status` (user request 2026-10-03)
+- [ ] Coordinator decisions listed below
 - [ ] Second audit round on corrected batches (sampled) before any D2 merge
 
 ## Progress log (timestamps are session-local, 2026-10-02 to 2026-10-03)
@@ -46,6 +47,31 @@ changed. Claim: `coordination/claims/claude-ingest-2026-10-02.md`.
   90 papers, 194 device rows, 153 organization rows, 82 evidence files,
   0 conflicts, 0 validation errors. Canonical validator 0 errors, 28 Python
   tests pass.
+
+## Canonical integration and audit status (2026-10-03, user request)
+
+The dashboard showed 15 papers because staged batches had not been merged. On the
+user's instruction every staged batch (p1_02, p1_04, p2_01, p2_02, p3_01..p3_19) was
+merged into `data/*.csv` and `data/evidence/` with `scripts/merge_staging.py --apply`
+(validator 0 errors, 0 conflicts), and the paper table gained a required
+`audit_status` column (schema enum, shown in the app):
+
+| Value | Meaning | Papers |
+|---|---|---|
+| `audited` | independent audit report plus corrections accepted before integration (p1_01, p1_03, p1_09, ummethala2021) | 13 |
+| `needs_recheck` | independently audited once and corrected, corrections not re-audited (pilots, p2_01, han2023, all p3 batches) | 94 |
+| `needs_audit` | no independent audit yet (p1_02, p1_04) | 10 |
+
+Result: 117 papers (15 + 102), 277 device rows (28 + 249), 185 organizations in the
+view, 20 sim configs. Papers with no device rows (material-only, no modulator
+metrics, review) count in the paper total but do not appear in the table or plots.
+App: Audit column (default on), audit filter and URL parameter `au`, audit line in
+the paper drawer, audit counts on the dashboard, About explanation. Checks: 28
+Python tests, 26 app tests, svelte-check 0 errors, browser smoke pass at the root
+path. A pre-merge copy of `data/` is kept outside the repo. Rows of unaudited or
+unrecheck papers, preprint-sourced numbers and simulated/projection rows are now
+visible in the comparison plots; use the audit filter and Measured only to
+restrict them.
 
 ## Collection
 

@@ -16,9 +16,10 @@ audits, then released implementation paths. See
 These three follow-ups are now `ready_for_review`; no canonical merge occurred.
 `claude-data-lane` owns D0,
 D1.01–D1.11, D2 and Q1. Progress: [E1/U1](DevLog/DevLog-003-cross-section-progress.md)
-and [data lane](DevLog/DevLog-004-data-lane-progress.md). Current canonical snapshot:
-15 papers / 28 device rows / 27 organizations after p1_01/03/09; generated view
-matches. New p2_01 adds 2 papers / 24 measurement rows in staging, pending Q1/D2.
+and [data lane](DevLog/DevLog-004-data-lane-progress.md). Current canonical snapshot
+(2026-10-03, user-directed integration of every staged batch): 117 papers / 277 device
+rows / 185 organizations; generated view matches. Each paper carries an `audit_status`
+(audited 13, needs_recheck 94, needs_audit 10); see DevLog-014.
 Other tranches remain unassigned. No implicit delegation.
 
 | ID | Tranche | State | Owner | Dependency / handoff |
@@ -27,7 +28,7 @@ Other tranches remain unassigned. No implicit delegation.
 | R0 | Standalone checkout and local cache migration | complete | codex-main | 726 artifacts including 39 PDFs hash-verified and ignored; environment checks pass |
 | D1.12 | Priority-2 batch p2_01 (Kieninger 2020, Wolf 2018a) | ready for reviewer recheck | codex-main | F1–F17 dispositions recorded; 157 entries + 3 conversions; joint dry-run clean |
 | C1 | Continued literature collection (2026-10-02 pass 2) | ready_for_review | claude-ingest-2026-10-02 | 118 caches, 235 new candidates, 195 open requests; DevLog-014 |
-| D1.15-D1.33 | Staged batches p3_01..p3_19 plus han2023 addendum | ready_for_review | claude-ingest-2026-10-02 | 88 papers / 192 device rows staged, 7 independent audits (180 findings, all dispositioned); joint dry run 0 conflicts; no canonical merge; DevLog-014 |
+| D1.15-D1.33 | Staged batches p3_01..p3_19 plus han2023 addendum | ready_for_review | claude-ingest-2026-10-02 | 88 papers / 192 device rows staged, 7 independent audits (180 findings, all dispositioned); merged into canonical 2026-10-03 with audit_status needs_recheck; DevLog-014 |
 | D1.13 | p2_02 high-k SOH / slow-light silicon | ready_for_review; Han PDF pending | claude-wave-2026-10-02, files released | Ummethala staged and Q1 accepted after corrections; DevLog-010 |
 | D1.14 | p2_03 silicon resonator / SOH IQ proposal | proposed, unclaimed | unassigned | Candidate pairing in DevLog-006; claim paths before prefetch |
 | D0 | Ingestion tooling and policy alignment | implementation reported complete | claude-data-lane | DevLog-004 records lock/breaker tests; single prefetch owner retained |
