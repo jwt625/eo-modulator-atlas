@@ -1,0 +1,129 @@
+paper_id: chiang2025
+verified_on: '2026-10-02'
+source_files:
+- references/chiang2025/text.md
+- references/chiang2025/source.json
+- references/chiang2025/figures/page_02.png
+- references/chiang2025/figures/page_03.png
+entries:
+- device_id: chiang2025-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: measured
+  locator: p.2, Design and Fabrication
+  note: phase shifters are 1 mm long
+- device_id: chiang2025-a
+  field: vpi_rf_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.2, Experimental Results; Fig. 3(a)
+  note: V_pi(AC) at 25 MHz, fitted from waveforms at different wavelengths, 5 Vpp drive
+- device_id: chiang2025-a
+  field: vpi_rf_freq_ghz
+  value: 0.025
+  unit: GHz
+  basis: measured
+  locator: p.2, Experimental Results
+  note: 25 MHz sinusoid, chosen to preclude slow molecular response
+- device_id: chiang2025-a
+  field: vpil_rf_vcm
+  value: 0.3
+  unit: V*cm
+  basis: measured
+  locator: abstract p.1; p.2
+  note: V_pi L (AC); equals 3 V x 1 mm
+- device_id: chiang2025-a
+  field: bias_for_vpi_v
+  value: 3.5
+  unit: V
+  basis: measured
+  locator: p.2, Experimental Results
+  note: Vbias maintained during AC and RF characterization
+- device_id: chiang2025-a
+  field: drive_vpp_v
+  value: 1.9
+  unit: V
+  basis: measured
+  locator: p.3, eye-diagram paragraph; Fig. 5
+  note: differential input before equalization, Vbias 3.5 V
+- device_id: chiang2025-a
+  field: bw6db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.3, Fig. 4(a)
+  note: 'paper: f6dB exceeds 67 GHz, limited by 67 GHz VNA; no roll-off observed'
+- device_id: chiang2025-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.3
+  note: 67 GHz PNA
+- device_id: chiang2025-a
+  field: prop_loss_db_per_cm
+  value: 65
+  unit: dB/cm
+  basis: measured
+  locator: p.2-3, end of Experimental Results
+  note: 'paper: approximately 6.5 dB/mm for the Si-FNLC phase shifters; converted to dB/cm'
+- device_id: chiang2025-a
+  field: extinction_ratio_db
+  value: 21.8
+  unit: dB
+  basis: measured
+  locator: p.2, Fig. 3(b)
+  note: static ER of the MZM transmission spectrum; FSR 7.5 nm
+- device_id: chiang2025-a
+  field: substrate
+  value: standard SOI wafer (commercial active silicon photonics MPW)
+  basis: measured
+  locator: p.2, Design and Fabrication
+  note: wafer type only; BOX thickness not stated
+- device_id: chiang2025-a
+  field: cladding
+  value: FNLC (PM616) as dielectric cladding in the oxide-open region
+  basis: measured
+  locator: p.1-2; Fig. 1(a)
+  note: foundry cladding oxide opened over the phase shifters
+- device_id: chiang2025-a
+  field: epitaxy_or_stack
+  value: doped-silicon slot waveguide phase shifters; slot width approx. 125 nm (TEM, Fig. 2); 350 nm oxide overetch into BOX at the slots; FNLC fills the slot
+  basis: measured
+  locator: p.2, Fig. 2
+  note: TEM before FNLC loading
+- device_id: chiang2025-a
+  field: max_baud_gbd
+  value: 51
+  unit: GBd
+  basis: measured
+  locator: p.3, Fig. 5
+  note: 51 GBd PAM-4, PRBS11
+- device_id: chiang2025-a
+  field: modulation_format
+  value: PAM-4
+  basis: measured
+  locator: abstract p.1; p.3, Fig. 5
+  note: TDECQ 2.56 dB; 7-tap Tx FFE and 42-tap Rx FFE
+- device_id: chiang2025-a
+  field: max_line_rate_gbps
+  value: 102
+  unit: Gb/s
+  basis: measured
+  locator: abstract p.1; p.3
+  note: 102 Gbit/s PAM-4
+- device_id: chiang2025-a
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.2 (push-pull driving of the two signal traces); p.3 (push-pull driving implemented, eye diagram)
+  note: stated for the eye-diagram experiment; drive of the 25 MHz Vpi measurement not stated
+- device_id: chiang2025-a
+  field: vpi_convention
+  value: unspecified
+  basis: derived
+  locator: p.2 Experimental Results
+  note: authors do not say whether the 3 V is per phase shifter or MZM-level; GSGSG asymmetric loading of two phase shifters
+derived: []

@@ -1,0 +1,12 @@
+org_name,org_type,country,region,parent_org,notes
+Stanford University,university,US,north_america,,"Ginzton Laboratory, Stanford address in the paper"
+Stanford Nano Shared Facilities,facility,US,north_america,Stanford University,"Author affiliation (Christine Jilly); host institution not stated as such in the paper, country from the Stanford name"
+University of Illinois at Urbana-Champaign,university,US,north_america,,"Urbana, IL; Department of Materials Science and Engineering; paper writes 'University of Illinois Urbana-Champaign', official name used to match other batches"
+University of Michigan,university,US,north_america,,"Ann Arbor, MI; Department of Physics"
+The Pennsylvania State University,university,US,north_america,,"University Park, PA; name as in the affiliation; departments of Materials Science and Engineering, Physics, Engineering Science and Mechanics, Nuclear Engineering, and Materials Research Institute"
+Cornell University,university,US,north_america,,"Ithaca, NY; Department of Materials Science and Engineering"
+"Platform for the Accelerated Realization, Analysis, and Discovery of Interface Materials (PARADIM)",facility,US,north_america,Cornell University,"Ithaca, NY affiliation of Dylan Sotir"
+Cornell High Energy Synchrotron Source,facility,US,north_america,Cornell University,"Ithaca, NY affiliation of Suchismita Sarker"
+Kavli Institute at Cornell for Nanoscale Science,research_institute,US,north_america,Cornell University,"Ithaca, NY affiliation of Darrell G. Schlom"
+Leibniz-Institut für Kristallzüchtung,research_institute,DE,europe,,"Max-Born-Straße 2, 12489 Berlin; affiliation of Darrell G. Schlom"
+KU Leuven,university,BE,europe,,"Leuven; Department of Electrical Engineering (ESAT), Department of Materials Engineering (MTM), Department of Physics and Astronomy"

@@ -1,0 +1,132 @@
+paper_id: taghavi2026
+verified_on: '2026-10-02'
+source_files:
+- references/taghavi2026/text.md
+- references/taghavi2026/crossref.json
+- references/taghavi2026/figures/page_13.png
+- references/taghavi2026/figures/page_14.png
+- references/taghavi2026/figures/page_15.png
+- references/taghavi2026/figures/page_16.png
+entries:
+- device_id: taghavi2026-a
+  field: vpi_dc_v
+  value: 13.25
+  unit: V
+  basis: author_estimate
+  locator: p.5 text; Fig. 3(d) caption p.14
+  note: estimated pi-phase voltage = FSR/2 shift over -5 to 5 V; DC/slow birefringence-dominated response, not the 7.8 GHz Pockels response
+- device_id: taghavi2026-a
+  field: vpil_dc_vcm
+  value: 0.333
+  unit: V*cm
+  basis: author_estimate
+  locator: p.5; p.7 Discussion
+  note: 'paper: V_pi L_ring approx 3.33 V*mm (ring circumference); converted to V*cm; DC/slow birefringence response, not Pockels'
+- device_id: taghavi2026-a
+  field: bw6db_ghz
+  value: 7.8
+  unit: GHz
+  basis: measured
+  locator: abstract p.1; p.6; Fig. 4(e)
+  note: f-6dB of the fast (Pockels) response; second response, slow one at 119 kHz; not referenced to DC
+- device_id: taghavi2026-a
+  field: bw_measured_to_ghz
+  value: 11
+  unit: GHz
+  basis: measured
+  locator: p.6
+  note: drive swept 30 kHz to 11 GHz
+- device_id: taghavi2026-a
+  field: il_onchip_db
+  value: 0.78
+  unit: dB
+  basis: measured
+  locator: abstract p.1; Fig. 3(c) caption p.14
+  note: caption/abstract value; Fig. 3(c) graphic annotates about 0.65 dB; definition and normalization not stated
+- device_id: taghavi2026-a
+  field: extinction_ratio_db
+  value: 10
+  unit: dB
+  basis: extracted_from_figure
+  locator: Fig. 3(c), p.14
+  note: ER annotation of the static through-port resonance dip
+- device_id: taghavi2026-a
+  field: q_loaded
+  value: 15340
+  unit: '1'
+  basis: measured
+  locator: Fig. 3(c) caption p.14
+  note: Q_MRM approx 15340 per caption; Fig. 3(c) graphic annotates FWHM about 150 pm at 1534.5 nm, Q about 10k by arithmetic
+- device_id: taghavi2026-a
+  field: tuning_nm_per_v
+  value: 0.15
+  unit: nm/V
+  basis: measured
+  locator: abstract p.1; p.5; Fig. 3(e)
+  note: approx 150 pm/V; Fig. 3(c) caption gives approx 250 pm/V; DC/slow birefringence response, not the 7.8 GHz Pockels response
+- device_id: taghavi2026-a
+  field: energy_per_bit_fj
+  value: 1.65
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.6
+  note: estimated dynamic energy E_dyn approx 1.65 fJ/bit, from the low capacitance
+- device_id: taghavi2026-a
+  field: capacitance_ff
+  value: 0.63
+  unit: fF
+  basis: author_estimate
+  locator: p.8, below Eq. (4)
+  note: equivalent capacitance of the MRM; basis (simulated vs measured) not stated
+- device_id: taghavi2026-a
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: extracted_from_figure
+  locator: Fig. 2(a), p.13
+  note: W_wg = 0.5 um label
+- device_id: taghavi2026-a
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: design_target
+  locator: p.4 text; Fig. 2(a)
+  note: t_slab approx 90 nm, lightly doped slab
+- device_id: taghavi2026-a
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: extracted_from_figure
+  locator: Fig. 2(a), p.13; p.8
+  note: d1, electrode-to-core distance label
+- device_id: taghavi2026-a
+  field: electrode_metal
+  value: Al (with W vias)
+  basis: extracted_from_figure
+  locator: Fig. 2(a), p.13; p.8
+  note: layer labels Al and W; text refers to an aluminum electrode
+- device_id: taghavi2026-a
+  field: substrate
+  value: standard SOI wafer
+  basis: measured
+  locator: p.4
+  note: DUV lithography at Advanced Micro Foundry
+- device_id: taghavi2026-a
+  field: cladding
+  value: SiO2 with 5 um wide oxide opening; FN-LC (pm-158) infiltrated
+  basis: measured
+  locator: p.4; Fig. 2(a), (e)
+  note: FN-LC layer thickness 10 to 50 nm per Fig. 4 caption
+- device_id: taghavi2026-a
+  field: epitaxy_or_stack
+  value: 220 nm undoped Si core, one-sided 90 nm n-Si slab (3e17 cm-3) to n++ (1e20 cm-3) contact; ring radius 40 um; FN-LC pm-158
+  basis: measured
+  locator: p.4; Fig. 2(a) caption p.13
+  note: semi-ridge, non-slotted
+- device_id: taghavi2026-a
+  field: vpi_convention
+  value: resonance_tuning_derived
+  basis: derived
+  locator: p.5; Fig. 3(d)
+  note: V_pi from transfer function (FSR/2 shift); not an MZM definition
+derived: []

@@ -1,0 +1,378 @@
+paper_id: yu2024
+verified_on: '2026-10-02'
+source_files:
+- references/yu2024/text.md
+- references/yu2024/figures/page_10.png
+- references/yu2024/figures/page_16.png
+entries:
+- device_id: yu2024-s0
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 text; p.20 Supplement Half-wave voltage measurement
+- device_id: yu2024-s0
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.10 text
+  note: length of the modulation area
+- device_id: yu2024-s0
+  field: vpi_dc_v
+  value: 4.95
+  unit: V
+  basis: measured
+  locator: p.11 text; Fig. 4(a) p.10
+  note: 1 MHz voltage sweep, quasi-static
+- device_id: yu2024-s0
+  field: vpil_dc_vcm
+  value: 1.98
+  unit: V*cm
+  basis: derived
+  locator: p.2 abstract; p.11 text
+  note: authors give modulation efficiency as Vpi times the 4 mm length
+- device_id: yu2024-s0
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.17 Table 1 (H); p.16 Fig. 2
+  note: label H read as LN film thickness from the schematic
+- device_id: yu2024-s0
+  field: rib_width_nm
+  value: 1400
+  unit: nm
+  basis: design_target
+  locator: p.17 Table 1 (Wg); p.16 Fig. 2
+  note: label read as ridge width from the schematic
+- device_id: yu2024-s0
+  field: electrode_gap_um
+  value: 3.6
+  unit: um
+  basis: design_target
+  locator: p.17 Table 1 (Gap); p.16 Fig. 2
+- device_id: yu2024-s0
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.15 Supplement Device fabrication
+  note: gold layer by electron-beam evaporation; thickness not stated
+- device_id: yu2024-s0
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.17 Table 1 (H1); p.16 Fig. 2
+  note: label read as buried oxide thickness from the schematic
+- device_id: yu2024-s0
+  field: substrate
+  value: silicon (550 um)
+  unit: ''
+  basis: design_target
+  locator: p.17 Table 1 (H2); p.16 Fig. 2
+  note: label read as substrate thickness; Si from the stack drawing
+- device_id: yu2024-s0
+  field: cladding
+  value: SiO2 (PECVD)
+  unit: ''
+  basis: design_target
+  locator: p.15 Supplement Device fabrication; p.16 Fig. 1
+  note: cladding thickness not entered
+- device_id: yu2024-s0
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.10 text
+  note: X-cut TFLN platform
+- device_id: yu2024-s0
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.10 Fig. 4(b)
+  note: authors do not state the drive; signal electrode between two grounds
+- device_id: yu2024-s0
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.10 Fig. 4(b)
+  note: authors do not state a convention
+- device_id: yu2024-s1
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 text; p.20 Supplement Half-wave voltage measurement
+- device_id: yu2024-s1
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.10 text
+  note: length of the modulation area
+- device_id: yu2024-s1
+  field: vpi_dc_v
+  value: 4.25
+  unit: V
+  basis: measured
+  locator: p.11 text; Fig. 4(a) p.10
+  note: 1 MHz voltage sweep, quasi-static
+- device_id: yu2024-s1
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.17 Table 1 (H); p.16 Fig. 2
+  note: label H read as LN film thickness from the schematic
+- device_id: yu2024-s1
+  field: rib_width_nm
+  value: 1400
+  unit: nm
+  basis: design_target
+  locator: p.17 Table 1 (Wg); p.16 Fig. 2
+  note: label read as ridge width from the schematic
+- device_id: yu2024-s1
+  field: electrode_gap_um
+  value: 3.6
+  unit: um
+  basis: design_target
+  locator: p.17 Table 1 (Gap); p.16 Fig. 2
+- device_id: yu2024-s1
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.15 Supplement Device fabrication
+  note: gold layer by electron-beam evaporation; thickness not stated
+- device_id: yu2024-s1
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.17 Table 1 (H1); p.16 Fig. 2
+  note: label read as buried oxide thickness from the schematic
+- device_id: yu2024-s1
+  field: substrate
+  value: silicon (550 um)
+  unit: ''
+  basis: design_target
+  locator: p.17 Table 1 (H2); p.16 Fig. 2
+  note: label read as substrate thickness; Si from the stack drawing
+- device_id: yu2024-s1
+  field: cladding
+  value: SiO2 (PECVD)
+  unit: ''
+  basis: design_target
+  locator: p.15 Supplement Device fabrication; p.16 Fig. 1
+  note: cladding thickness not entered
+- device_id: yu2024-s1
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.10 text
+  note: X-cut TFLN platform
+- device_id: yu2024-s1
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.10 Fig. 4(b)
+  note: authors do not state the drive; signal electrode between two grounds
+- device_id: yu2024-s1
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.10 Fig. 4(b)
+  note: authors do not state a convention
+- device_id: yu2024-s2
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 text; p.20 Supplement Half-wave voltage measurement
+- device_id: yu2024-s2
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.10 text
+  note: length of the modulation area
+- device_id: yu2024-s2
+  field: vpi_dc_v
+  value: 1.74
+  unit: V
+  basis: measured
+  locator: p.11 text; Fig. 4(a) p.10
+  note: 1 MHz voltage sweep, quasi-static
+- device_id: yu2024-s2
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.17 Table 1 (H); p.16 Fig. 2
+  note: label H read as LN film thickness from the schematic
+- device_id: yu2024-s2
+  field: rib_width_nm
+  value: 1400
+  unit: nm
+  basis: design_target
+  locator: p.17 Table 1 (Wg); p.16 Fig. 2
+  note: label read as ridge width from the schematic
+- device_id: yu2024-s2
+  field: electrode_gap_um
+  value: 3.6
+  unit: um
+  basis: design_target
+  locator: p.17 Table 1 (Gap); p.16 Fig. 2
+- device_id: yu2024-s2
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.15 Supplement Device fabrication
+  note: gold layer by electron-beam evaporation; thickness not stated
+- device_id: yu2024-s2
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.17 Table 1 (H1); p.16 Fig. 2
+  note: label read as buried oxide thickness from the schematic
+- device_id: yu2024-s2
+  field: substrate
+  value: silicon (550 um)
+  unit: ''
+  basis: design_target
+  locator: p.17 Table 1 (H2); p.16 Fig. 2
+  note: label read as substrate thickness; Si from the stack drawing
+- device_id: yu2024-s2
+  field: cladding
+  value: SiO2 (PECVD)
+  unit: ''
+  basis: design_target
+  locator: p.15 Supplement Device fabrication; p.16 Fig. 1
+  note: cladding thickness not entered
+- device_id: yu2024-s2
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.10 text
+  note: X-cut TFLN platform
+- device_id: yu2024-s2
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.10 Fig. 4(b)
+  note: authors do not state the drive; signal electrode between two grounds
+- device_id: yu2024-s2
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.10 Fig. 4(b)
+  note: authors do not state a convention
+- device_id: yu2024-s3
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 text; p.20 Supplement Half-wave voltage measurement
+- device_id: yu2024-s3
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.10 text
+  note: length of the modulation area
+- device_id: yu2024-s3
+  field: vpi_dc_v
+  value: 1.57
+  unit: V
+  basis: measured
+  locator: p.11 text; Fig. 4(a) p.10
+  note: 1 MHz voltage sweep, quasi-static
+- device_id: yu2024-s3
+  field: vpil_dc_vcm
+  value: 0.63
+  unit: V*cm
+  basis: derived
+  locator: p.2 abstract; p.11 text
+  note: authors give modulation efficiency as Vpi times the 4 mm length
+- device_id: yu2024-s3
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.17 Table 1 (H); p.16 Fig. 2
+  note: label H read as LN film thickness from the schematic
+- device_id: yu2024-s3
+  field: rib_width_nm
+  value: 1400
+  unit: nm
+  basis: design_target
+  locator: p.17 Table 1 (Wg); p.16 Fig. 2
+  note: label read as ridge width from the schematic
+- device_id: yu2024-s3
+  field: electrode_gap_um
+  value: 3.6
+  unit: um
+  basis: design_target
+  locator: p.17 Table 1 (Gap); p.16 Fig. 2
+- device_id: yu2024-s3
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.15 Supplement Device fabrication
+  note: gold layer by electron-beam evaporation; thickness not stated
+- device_id: yu2024-s3
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.17 Table 1 (H1); p.16 Fig. 2
+  note: label read as buried oxide thickness from the schematic
+- device_id: yu2024-s3
+  field: substrate
+  value: silicon (550 um)
+  unit: ''
+  basis: design_target
+  locator: p.17 Table 1 (H2); p.16 Fig. 2
+  note: label read as substrate thickness; Si from the stack drawing
+- device_id: yu2024-s3
+  field: cladding
+  value: SiO2 (PECVD)
+  unit: ''
+  basis: design_target
+  locator: p.15 Supplement Device fabrication; p.16 Fig. 1
+  note: cladding thickness not entered
+- device_id: yu2024-s3
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.10 text
+  note: X-cut TFLN platform
+- device_id: yu2024-s3
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.10 Fig. 4(b)
+  note: authors do not state the drive; signal electrode between two grounds
+- device_id: yu2024-s3
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.10 Fig. 4(b)
+  note: authors do not state a convention
+derived: []

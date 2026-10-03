@@ -1,0 +1,124 @@
+paper_id: ulrich2025
+verified_on: '2026-10-02'
+source_files:
+- references/ulrich2025/text.md
+- references/ulrich2025/figures/page_04.png
+- references/ulrich2025/figures/page_06.png
+entries:
+- device_id: ulrich2025-mzi
+  field: wavelength_nm
+  value: 1470
+  unit: nm
+  basis: design_target
+  locator: p.17, Supplement 4.1
+  note: '''around 1470 nm'' tunable laser; Fig. 3f inset spans about 1.46-1.47 um'
+- device_id: ulrich2025-mzi
+  field: length_mm
+  value: 15.37
+  unit: mm
+  basis: design_target
+  locator: p.10 Methods; p.18 Supplement 4.1
+  note: electrodes 'roughly' 15.37 mm long, meandered
+- device_id: ulrich2025-mzi
+  field: vpil_dc_vcm
+  value: 1.04
+  unit: V*cm
+  basis: derived
+  locator: p.6 text; p.22 Eq. 22
+  note: author-computed from r_eff, confinement and group index; +/- 0.08; 20 Hz drive
+- device_id: ulrich2025-mzi
+  field: bw3db_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.6 Fig. 3(f) caption; p.7 text; p.23 Supplement 4.4
+  note: flat from 20 Hz to 1 MHz, no crossing; indirect time-averaged method
+- device_id: ulrich2025-mzi
+  field: bw_measured_to_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.6 Fig. 3(f) caption; p.7 text; p.23-24 Fig. S10
+  note: 1 MHz upper limit; setup resonance at 5 MHz
+- device_id: ulrich2025-mzi
+  field: ng_opt
+  value: 1.84
+  unit: '1'
+  basis: derived
+  locator: p.29, Supplement Eq. 27
+  note: group index at 4 K from FSR with 200 um arm unbalance, +/- 0.04
+- device_id: ulrich2025-mzi
+  field: eo_film_thickness_nm
+  value: 105
+  unit: nm
+  basis: measured
+  locator: p.4 Fig. 2b caption; p.10 Methods
+  note: TEM and wafer-bonding process
+- device_id: ulrich2025-mzi
+  field: rib_width_nm
+  value: 1700
+  unit: nm
+  basis: design_target
+  locator: p.10 Methods
+  note: PMMA waveguide width about 1.7 um; strip loads the unetched SrTiO3
+- device_id: ulrich2025-mzi
+  field: electrode_gap_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.10 Methods; p.18 Supplement 4.1
+- device_id: ulrich2025-mzi
+  field: electrode_metal
+  value: Cr/Pt (about 30 nm / about 140 nm)
+  unit: ''
+  basis: design_target
+  locator: p.10 Methods
+  note: sputtered, bilayer lift-off with EBL
+- device_id: ulrich2025-mzi
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.10 Methods
+  note: 2 um SiO2 on Si
+- device_id: ulrich2025-mzi
+  field: substrate
+  value: silicon (001)
+  unit: ''
+  basis: design_target
+  locator: p.10 Methods; p.16 Supplement 2
+- device_id: ulrich2025-mzi
+  field: cladding
+  value: PMMA (about 480 nm), loads the waveguide
+  unit: ''
+  basis: design_target
+  locator: p.10 Methods
+  note: spin-coated about 480 nm PMMA, waveguides patterned by EBL
+- device_id: ulrich2025-mzi
+  field: waveguide_orientation
+  value: straight sections at 45, 135 and 225 deg to the in-plane crystal axes; 400 um bend radius
+  unit: ''
+  basis: design_target
+  locator: p.20-22 Supplement 4.2, Fig. S8; p.10 Methods
+- device_id: ulrich2025-mzi
+  field: epitaxy_or_stack
+  value: 105 nm MBE SrTiO3 (Sr/Ti 0.96 +/- 0.03, in-plane multidomain) bonded onto 2 um SiO2 on Si; PMMA-loaded waveguide, about 43% energy confinement in SrTiO3; 200 um arm unbalance
+  unit: ''
+  basis: measured
+  locator: p.4; p.5; p.10; p.19 Eq. 12
+  note: Sr/Ti by RBS; 43% from mode simulation
+- device_id: ulrich2025-mzi
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.6 Fig. 3b caption
+  note: bottom arm modulated; authors do not use the term single-ended
+- device_id: ulrich2025-mzi
+  field: vpi_convention
+  value: mzm_single_arm
+  unit: ''
+  basis: derived
+  locator: p.6 Fig. 3b caption
+  note: authors do not state a convention; only one arm carries the field
+derived: []
