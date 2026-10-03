@@ -1,0 +1,766 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     1
+    ]
+   ],
+   "date-time": "2026-10-01T12:51:29Z",
+   "timestamp": 1790859089950,
+   "version": "4.1.0"
+  },
+  "reference-count": 34,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       27
+      ]
+     ],
+     "date-time": "2025-11-27T00:00:00Z",
+     "timestamp": 1764201600000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       27
+      ]
+     ],
+     "date-time": "2025-11-27T00:00:00Z",
+     "timestamp": 1764201600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001659",
+    "name": "Deutsche Forschungsgemeinschaft",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "ZI 1283-6-2"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "ZI 1283-6-2"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001659",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001659",
+    "name": "Deutsche Forschungsgemeinschaft",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "ZI 1283-12-1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "ZI 1283-12-1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001659",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100010661",
+    "name": "EC | Horizon 2020 Framework Programme",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "101189988"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101189988"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100010661",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat Commun"
+  ],
+  "DOI": "10.1038/s41467-025-66566-2",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     27
+    ]
+   ],
+   "date-time": "2025-11-27T09:16:49Z",
+   "timestamp": 1764235009000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 7,
+  "title": [
+   "Monolithic electro-optic platform on silicon with bandwidth of 100\u2009GHz and beyond"
+  ],
+  "prefix": "10.1038",
+  "volume": "16",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-9645-1807",
+    "authenticated-orcid": false,
+    "given": "Daniel",
+    "family": "Steckler",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1361-2842",
+    "authenticated-orcid": false,
+    "given": "Stefan",
+    "family": "Lischke",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuji",
+    "family": "Yamamoto",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6804-9562",
+    "authenticated-orcid": false,
+    "given": "Wei-Chen",
+    "family": "Wen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Anna",
+    "family": "Peczek",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0008-5083-7964",
+    "authenticated-orcid": false,
+    "given": "Johannes",
+    "family": "Beyer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Aleksandra",
+    "family": "Kroh",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Oksana",
+    "family": "Fursenko",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-3640-9700",
+    "authenticated-orcid": false,
+    "given": "Florian",
+    "family": "B\u00e4rwolf",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Steffen",
+    "family": "Marschmeyer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Philipp",
+    "family": "Kulse",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Dirk",
+    "family": "Wolansky",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0927-4986",
+    "authenticated-orcid": false,
+    "given": "Lars",
+    "family": "Zimmermann",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     27
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "66566_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "1787",
+    "DOI": "10.1109/OJCOMS.2023.3301630",
+    "volume": "4",
+    "author": "WK Alsaedi",
+    "year": "2023",
+    "unstructured": "Alsaedi, W. K. et al. Spectrum options and allocations for 6\u2009G: a regulatory and standardization review. IEEE Open J. Commun. Soc. 4, 1787\u20131812 (2023).",
+    "journal-title": "IEEE Open J. Commun. Soc."
+   },
+   {
+    "key": "66566_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "341",
+    "DOI": "10.1038/nature13078",
+    "volume": "507",
+    "author": "P Ghelfi",
+    "year": "2014",
+    "unstructured": "Ghelfi, P. et al. A fully photonics-based coherent radar system. Nature 507, 341\u2013345 (2014).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "66566_CR3",
+    "doi-asserted-by": "publisher",
+    "unstructured": "S. Preussler et al. \u201cOptical Signal Generation and Distribution for Large Aperture Radar in Autonomous Driving,\u201d 2019 12th German Microwave Conference (GeMiC), Stuttgart, Germany, pp. 154-157, https://doi.org/10.23919/GEMIC.2019.8698119. (2019).",
+    "DOI": "10.23919/GEMIC.2019.8698119"
+   },
+   {
+    "key": "66566_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "4378",
+    "DOI": "10.1109/JLT.2014.2356645",
+    "volume": "32",
+    "author": "E Krune",
+    "year": "2014",
+    "unstructured": "Krune, E. et al. Jitter analysis of optical clock distribution networks in silicon photonics. J. Lightwave Technol. 32, 4378\u20134385 (2014).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "66566_CR5",
+    "doi-asserted-by": "publisher",
+    "unstructured": "C. Koos et al. \u201cPhotonic-Electronic Ultra-Broadband Signal Processing: Concepts, Devices, and Applications,\u201d 2020 IEEE BiCMOS and Compound Semiconductor Integrated Circuits and Technology Symposium (BCICTS), Monterey, CA, USA, pp. 1-3, https://doi.org/10.1109/BCICTS48439.2020.9392969. (2020).",
+    "DOI": "10.1109/BCICTS48439.2020.9392969"
+   },
+   {
+    "key": "66566_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "237",
+    "DOI": "10.1038/s42254-025-00825-5",
+    "volume": "7",
+    "author": "Y Hu",
+    "year": "2025",
+    "unstructured": "Hu, Y. et al. Integrated electro-optics on thin-film lithium niobite. Nat. Rev. Phys. 7, 237\u2013254 (2025).",
+    "journal-title": "Nat. Rev. Phys."
+   },
+   {
+    "key": "66566_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "482",
+    "DOI": "10.1038/nphoton.2017.120",
+    "volume": "11",
+    "author": "T Hiraki",
+    "year": "2017",
+    "unstructured": "Hiraki, T. et al. Heterogeneously integrated III\u2013V/Si MOS capacitor Mach\u2013Zehnder modulator. Nat. Photon 11, 482\u2013485 (2017).",
+    "journal-title": "Nat. Photon"
+   },
+   {
+    "key": "66566_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "925",
+    "DOI": "10.1038/s41566-021-00893-w",
+    "volume": "15",
+    "author": "S Lischke",
+    "year": "2021",
+    "unstructured": "Lischke, S. et al. Ultra-fast germanium photodiode with 3-dB bandwidth of 265\u2009GHz. Nat. Photon. 15, 925\u2013931 (2021).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "66566_CR9",
+    "doi-asserted-by": "crossref",
+    "unstructured": "X. Hu et al. \u201c280 Gbit/s PAM-4 Ge/Si Electro-absorption Modulator with 3-dB Bandwidth beyond 110\u2009GHz,\u201d in Optical Fiber Communication Conference (OFC) 2023, Technical Digest Series (Optica Publishing Group, 2023), paper Th4A.3.",
+    "DOI": "10.1364/OFC.2023.Th4A.3"
+   },
+   {
+    "key": "66566_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "203",
+    "DOI": "10.1364/OPTICA.545011",
+    "volume": "12",
+    "author": "H Yue",
+    "year": "2025",
+    "unstructured": "Yue, H. et al. Silicon modulator exceeding 110\u2009GHz using tunable time-frequency equalization,. Optica 12, 203\u2013215 (2025).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "66566_CR11",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M. Zou et al. \u201c135\u2009GHz Waveguide-Coupled Germanium Photodiode,\u201d in Optical Fiber Communication Conference (OFC) 2025, Technical Digest Series (Optica Publishing Group, 2025), paper M2K.2.",
+    "DOI": "10.1364/OFC.2025.M2K.2"
+   },
+   {
+    "key": "66566_CR12",
+    "doi-asserted-by": "crossref",
+    "unstructured": "X. Wang et al. \u201c100\u2009GHz Ultra-thin Germanium Photodetector with 1.05\u2009A/W Responsivity at 1550\u2009nm,\u201d in Optical Fiber Communication Conference (OFC) 2025, Technical Digest Series (Optica Publishing Group, 2025), paper M4K.2.",
+    "DOI": "10.1364/OFC.2025.M4K.2"
+   },
+   {
+    "key": "66566_CR13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.adi5339",
+    "volume": "9",
+    "author": "C Han",
+    "year": "2023",
+    "unstructured": "Han, C. et al. Slow-light silicon modulator with 110-GHz bandwidth. Sci. Adv. 9, eadi5339 (2023).",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "66566_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "631",
+    "DOI": "10.1109/JLT.2016.2604839",
+    "volume": "35",
+    "author": "M Pantouvaki",
+    "year": "2017",
+    "unstructured": "Pantouvaki, M. et al. Active components for 50\u2009Gb/s NRZ-OOK optical interconnects in a silicon photonics platform. J. Lightwave Technol. 35, 631\u2013638 (2017).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "66566_CR15",
+    "doi-asserted-by": "publisher",
+    "unstructured": "S. Lischke et al. \u201cGe Photodiode with -3 dB OE Bandwidth of 110\u2009GHz for PIC and ePIC Platforms,\u201d 2020 IEEE International Electron Devices Meeting (IEDM), San Francisco, CA, USA, pp. 7.3.1-7.3.4, https://doi.org/10.1109/IEDM13553.2020.9372033. (2020).",
+    "DOI": "10.1109/IEDM13553.2020.9372033"
+   },
+   {
+    "key": "66566_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "21",
+    "DOI": "10.1149/10904.0021ecst",
+    "volume": "109",
+    "author": "A Peczek",
+    "year": "2022",
+    "unstructured": "Peczek, A. et al. Versatile germanium photodiodes with 3\u2009dB bandwidths from 110\u2009GHz to 265\u2009GHz. ECS Trans. 109, 21 (2022). no.",
+    "journal-title": "ECS Trans."
+   },
+   {
+    "key": "66566_CR17",
+    "doi-asserted-by": "publisher",
+    "unstructured": "D. Steckler et al. \u201cGermanium Photodiodes With 3-dB Bandwidths >110\u2009GHz and L-Band Responsivity of >0.7\u2009A/W,\u201d in IEEE Photonics Technology Letters, vol. 36, no. 12, pp. 775-778, (2024) https://doi.org/10.1109/LPT.2024.3398359.",
+    "DOI": "10.1109/LPT.2024.3398359"
+   },
+   {
+    "key": "66566_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "3417",
+    "DOI": "10.1109/TED.2024.3370128",
+    "volume": "71",
+    "author": "D Steckler",
+    "year": "2024",
+    "unstructured": "Steckler, D. et al. Monolithic integration of 80-GHz Ge photodetectors and 100-GHz Ge electro-absorption modulators in a photonic BiCMOS technology. IEEE Trans. Electron Devices 71, 3417\u20133423 (2024).",
+    "journal-title": "IEEE Trans. Electron Devices"
+   },
+   {
+    "key": "66566_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "419",
+    "DOI": "10.1109/JLT.2015.2478601",
+    "volume": "34",
+    "author": "SA Srinivasan",
+    "year": "2016",
+    "unstructured": "Srinivasan, S. A. et al. 56\u2009Gb/s germanium waveguide electro-absorption modulator. J. Lightwave Technol. 34, 419\u2013424 (2016).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "66566_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "433",
+    "DOI": "10.1038/nphoton.2008.99",
+    "volume": "2",
+    "author": "J Liu",
+    "year": "2008",
+    "unstructured": "Liu, J. et al. Waveguide-integrated, ultralow-energy GeSi electro-absorption modulators. Nat. Photon 2, 433\u2013437 (2008).",
+    "journal-title": "Nat. Photon"
+   },
+   {
+    "key": "66566_CR21",
+    "doi-asserted-by": "crossref",
+    "unstructured": "S. A. Srinivasan et al. \u201c50Gb/s C-band GeSi Waveguide Electro-Absorption Modulator,\u201d in Optical Fiber Communication Conference, OSA Technical Digest (online) (Optica Publishing Group, 2016), paper Tu3D.7.",
+    "DOI": "10.1364/OFC.2016.Tu3D.7"
+   },
+   {
+    "key": "66566_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "345",
+    "DOI": "10.3390/mi3020345",
+    "volume": "3",
+    "author": "Y Luo",
+    "year": "2012",
+    "unstructured": "Luo, Y. et al. Strong Electro-Absorption in GeSi Epitaxy on Silicon-on-Insulator (SOI). Micromachines 3, 345\u2013363 (2012).",
+    "journal-title": "Micromachines"
+   },
+   {
+    "key": "66566_CR23",
+    "doi-asserted-by": "publisher",
+    "unstructured": "D. Steckler et al. \u201cOn the dynamic and static extinction ratio of germanium electro-absorption modulators,\u201d 2024 IEEE Silicon Photonics Conference (SiPhotonics), Tokyo Bay, Japan, 2024, pp. 1-2, https://doi.org/10.1109/SiPhotonics60897.2024.10543654.",
+    "DOI": "10.1109/SiPhotonics60897.2024.10543654"
+   },
+   {
+    "key": "66566_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "1474",
+    "DOI": "10.1364/PRJ.488474",
+    "volume": "11",
+    "author": "Y Liu",
+    "year": "2023",
+    "unstructured": "Liu, Y. et al. Thermally tunable GeSi electro-absorption modulator with a wide effective operating wavelength range. Photon. Res. 11, 1474\u20131483 (2023).",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "key": "66566_CR25",
+    "doi-asserted-by": "publisher",
+    "unstructured": "D. Steckler et al. \u201cGe-fin Photodiodes with 3-dB Bandwidths Well Beyond 110\u2009GHz for O-Band Receiver Subsystems,\u201d The 25th European Conference on Integrated Optics. ECIO 2024. Springer Proceedings in Physics, vol 402. Springer, Cham. https://doi.org/10.1007/978-3-031-63378-2_11.",
+    "DOI": "10.1007/978-3-031-63378-2_11"
+   },
+   {
+    "key": "66566_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "82",
+    "DOI": "10.1038/s44172-025-00421-6",
+    "volume": "4",
+    "author": "I Skandalos",
+    "year": "2025",
+    "unstructured": "Skandalos, I. et al. A 100\u2009Gb\u2009s\u2009\u2212\u20091 quantum-confined Stark effect modulator monolithically integrated with silicon nitride on Si,\u201d. Commun. Eng. 4, 82 (2025).",
+    "journal-title": "Commun. Eng."
+   },
+   {
+    "key": "66566_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "2794",
+    "DOI": "10.1109/JLT.2024.3505957",
+    "volume": "43",
+    "author": "A Kandeel",
+    "year": "2025",
+    "unstructured": "Kandeel, A. et al. 64 Gb/s O-band GeSi quantum-confined stark effect electro-absorption modulators integrated in a 300\u2009mm silicon photonics platform. J. Lightwave Technol. 43, 2794\u20132802 (2025).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "66566_CR28",
+    "unstructured": "D. Ma, \u201cGe and GeSi electroabsorption modulator arrays via strain and composition engineering,\u201d Ph.D. thesis (Massachusetts Institute of Technology, 2020), Chapter 9"
+   },
+   {
+    "key": "66566_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "12436",
+    "DOI": "10.1364/OE.548047",
+    "volume": "33",
+    "author": "Y Wang",
+    "year": "2025",
+    "unstructured": "Wang, Y. et al. Demonstration of an error-free and equalization-free data transmission system based on CMOS compatible GeSi devices. Opt. Express 33, 12436\u201312443 (2025).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "66566_CR30",
+    "doi-asserted-by": "crossref",
+    "unstructured": "J. Verbist et al. \u201cFirst real-time 100-Gb/s NRZ-OOK transmission over 2\u2009km with a silicon photonic electro-absorption modulator,\u201d 2017 Optical Fiber Communications Conference and Exhibition (OFC), Los Angeles, CA, USA, (2017) pp. 1-3.",
+    "DOI": "10.1364/OFC.2017.Th5C.4"
+   },
+   {
+    "key": "66566_CR31",
+    "unstructured": "Accessed: May 15, 2025 [Online]. Available: https://www.advmf.com/wp-content/uploads/2024/09/AMF-Brochure-2024-5-1.pdf."
+   },
+   {
+    "key": "66566_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "4374",
+    "DOI": "10.1109/JLT.2021.3066203",
+    "volume": "39",
+    "author": "SY Siew",
+    "year": "2021",
+    "unstructured": "Siew, S. Y. et al. Review of silicon photonics technology and platform development. J. Lightwave Technol. 39, 4374\u20134389 (2021).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "66566_CR33",
+    "doi-asserted-by": "publisher",
+    "unstructured": "S. K. Yeh et al. \u201cSilicon Photonics Platform for Next Generation Data Communication Technologies,\u201d 2024 IEEE International Electron Devices Meeting (IEDM), San Francisco, CA, USA, (2024) pp. 1-4, https://doi.org/10.1109/IEDM50854.2024.10873369.",
+    "DOI": "10.1109/IEDM50854.2024.10873369"
+   },
+   {
+    "key": "66566_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "10732",
+    "DOI": "10.1364/OE.484380",
+    "volume": "31",
+    "author": "J Fujikata",
+    "year": "2023",
+    "unstructured": "Fujikata, J. et al. High-performance Ge/Si electro-absorption optical modulator up to 85\u2009\u00b0C and its highly efficient photodetector operation. Opt. Express 31, 10732\u201310743 (2023).",
+    "journal-title": "Opt. Express"
+   }
+  ],
+  "container-title": [
+   "Nature Communications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-66566-2.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-66566-2",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-66566-2.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     3
+    ]
+   ],
+   "date-time": "2025-12-03T05:31:08Z",
+   "timestamp": 1764739868000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41467-025-66566-2"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     27
+    ]
+   ]
+  },
+  "references-count": 34,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2025,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "66566"
+  ],
+  "URL": "https://doi.org/10.1038/s41467-025-66566-2",
+  "relation": {},
+  "ISSN": [
+   "2041-1723"
+  ],
+  "issn-type": [
+   {
+    "value": "2041-1723",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     27
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "29 May 2025",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "9 November 2025",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "27 November 2025",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ],
+  "article-number": "10789"
+ }
+}

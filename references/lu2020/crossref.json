@@ -1,0 +1,1063 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     24
+    ]
+   ],
+   "date-time": "2026-09-24T08:26:19Z",
+   "timestamp": 1790238379894,
+   "version": "4.1.0"
+  },
+  "reference-count": 60,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       8,
+       24
+      ]
+     ],
+     "date-time": "2020-08-24T00:00:00Z",
+     "timestamp": 1598227200000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       8,
+       24
+      ]
+     ],
+     "date-time": "2020-08-24T00:00:00Z",
+     "timestamp": 1598227200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001691",
+    "name": "MEXT | Japan Society for the Promotion of Science",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "18K04152"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "18K04152"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001691",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100009036",
+    "name": "MEXT | JST | Strategic International Collaborative Research Program",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "18000585"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "18000585"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100009036",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100003382",
+    "name": "MEXT | JST | Core Research for Evolutional Science and Technology",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "16815359"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "16815359"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100003382",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "the Cooperative Research Programs of \u201cNetwork Joint Research Center for Materials and Devices\u201d and \u201cDynamic Alliance for Open Innovation Bridging Human, Environment, and Materials\u201d of MEXT"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat Commun"
+  ],
+  "DOI": "10.1038/s41467-020-18005-7",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2020,
+     8,
+     24
+    ]
+   ],
+   "date-time": "2020-08-24T06:04:26Z",
+   "timestamp": 1598249066000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 149,
+  "title": [
+   "High-temperature-resistant silicon-polymer hybrid modulator operating at up to 200\u2009Gbit\u2009s\u22121 for energy-efficient datacentres and harsh-environment applications"
+  ],
+  "prefix": "10.1038",
+  "volume": "11",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-0739-1556",
+    "authenticated-orcid": false,
+    "given": "Guo-Wei",
+    "family": "Lu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4707-9679",
+    "authenticated-orcid": false,
+    "given": "Jianxun",
+    "family": "Hong",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Feng",
+    "family": "Qiu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Andrew M.",
+    "family": "Spring",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tsubasa",
+    "family": "Kashino",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Juro",
+    "family": "Oshima",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Masa-aki",
+    "family": "Ozawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hideyuki",
+    "family": "Nawata",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0434-9950",
+    "authenticated-orcid": false,
+    "given": "Shiyoshi",
+    "family": "Yokoyama",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2020,
+     8,
+     24
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "18005_CR1",
+    "unstructured": "Andrae, Anders, S. G. Total consumer power consumption forecast. In The Nordic Digital Business Summit (Huawei, Helsinki, 2017)."
+   },
+   {
+    "key": "18005_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "163",
+    "DOI": "10.1038/d41586-018-06610-y",
+    "volume": "561",
+    "author": "N Jones",
+    "year": "2018",
+    "unstructured": "Jones, N. How to stop data centres from gobbling up the world\u2019s electricity. Nature 561, 163\u2013166 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "18005_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "625",
+    "DOI": "10.1016/j.rser.2016.09.050",
+    "volume": "67",
+    "author": "J Ni",
+    "year": "2017",
+    "unstructured": "Ni, J. & Bai, X. A review of air conditioning energy performance in data centres. Renew. Sustain. Energy Rev. 67, 625\u2013640 (2017).",
+    "journal-title": "Renew. Sustain. Energy Rev."
+   },
+   {
+    "key": "18005_CR4",
+    "unstructured": "Miller, R. Google: raise your data center temperature. Data Center Knowledge http://www.datacenterknowledge.com/archives/2008/10/14/google-raise-your-data-center-temperature (2008)."
+   },
+   {
+    "key": "18005_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "518",
+    "DOI": "10.1038/nphoton.2010.179",
+    "volume": "4",
+    "author": "GT Reed",
+    "year": "2010",
+    "unstructured": "Reed, G. T., Mashanovich, G., Gardes, F. Y. & Thomson, D. J. Silicon optical modulators. Nat. Photon 4, 518\u2013526 (2010).",
+    "journal-title": "Nat. Photon"
+   },
+   {
+    "key": "18005_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "6163",
+    "DOI": "10.1364/OE.20.006163",
+    "volume": "20",
+    "author": "P Dong",
+    "year": "2012",
+    "unstructured": "Dong, P., Chen, L. & Chen, Y.-K. High-speed low-voltage single-drive push-pull silicon Mach\u2013Zehnder modulators. Opt. Express 20, 6163\u20136169 (2012).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "4116",
+    "DOI": "10.1364/OE.21.004116",
+    "volume": "21",
+    "author": "X Xiao",
+    "year": "2013",
+    "unstructured": "Xiao, X. et al. High-speed, low-loss silicon Mach\u2013Zehnder modulators with doping optimization. Opt. Express 21, 4116\u20134125 (2013).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "1223",
+    "DOI": "10.1109/JLT.2014.2380811",
+    "volume": "33",
+    "author": "Y Urino",
+    "year": "2015",
+    "unstructured": "Urino, Y. et al. First demonstration of athermal silicon optical interposers with quantum dot lasers operating up to 125\u2009\u00b0C. J. Lightwave Technol. 33, 1223\u20131229 (2015).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "18005_CR9",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Shen, A. et al. Low insertion loss and polarization insensitive InP-based Mach\u2013Zehnder modulator for 40 Gbit/s optical regeneration. In Optical Fiber Communications Conference and Exhibition, paper WV3 (Anaheim, CA, 2002).",
+    "DOI": "10.1109/OFC.2002.1036403"
+   },
+   {
+    "key": "18005_CR10",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Prosyk, K. et al. High performance 40GHz InP Mach\u2013Zehnder modulator. In Optical Fiber Communications Conference and Exhibition, paper OW4F.7 (Optical Society of America, 2012).",
+    "DOI": "10.1364/OFC.2012.OW4F.7"
+   },
+   {
+    "key": "18005_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "1450",
+    "DOI": "10.1109/JLT.2016.2639542",
+    "volume": "35",
+    "author": "Y Ogiso",
+    "year": "2017",
+    "unstructured": "Ogiso, Y. et al. Over 67 GHz bandwidth and 1.5 V V\u03c0 InP-based optical IQ modulator with n\u2013i\u2013p\u2013n heterostructure. J. Lightwave Technol. 35, 1450\u20131455 (2017).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "18005_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "3335",
+    "DOI": "10.1063/1.119162",
+    "volume": "70",
+    "author": "DT Chen",
+    "year": "1997",
+    "unstructured": "Chen, D. T. et al. Demonstration of 110 GHz electro-optic polymer modulators. Appl. Phys. Lett. 70, 3335\u20133337 (1997).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "18005_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "1401",
+    "DOI": "10.1126/science.1077446",
+    "volume": "298",
+    "author": "M Lee",
+    "year": "2002",
+    "unstructured": "Lee, M. et al. Broadband modulation of light by using an electro-optic polymer. Science 298, 1401\u20131403 (2002).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "18005_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "180",
+    "DOI": "10.1038/nphoton.2007.25",
+    "volume": "1",
+    "author": "Y Enami",
+    "year": "2007",
+    "unstructured": "Enami, Y. et al. Hybrid polymer/sol\u2013gel waveguide modulators with exceptionally large electro-optic coefficients. Nat. Photon 1, 180\u2013185 (2007).",
+    "journal-title": "Nat. Photon"
+   },
+   {
+    "key": "18005_CR15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/lsa.2014.54",
+    "volume": "3",
+    "author": "L Alloatti",
+    "year": "2014",
+    "unstructured": "Alloatti, L. et al. 100 GHz silicon\u2013organic hybrid modulator. Light Sci. Appl. 3, e173 (2014).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "18005_CR16",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Ummethala, S. et al. Capacitively coupled silicon-organic hybrid modulator for 200 Gbit/s PAM-4 Signaling. In Conference on Lasers and Electro-Optics (CLEO), paper JTh5B.2 (Optical Society of America, 2019).",
+    "DOI": "10.1364/CLEO_AT.2019.JTh5B.2"
+   },
+   {
+    "key": "18005_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "1547",
+    "DOI": "10.1364/OE.26.001547",
+    "volume": "26",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C., Zhang, M., Stern, B., Lipson, M. & Lon\u010dar, M. Nanophotonic lithium niobate electro-optic modulators. Opt. Express 26, 1547\u20131555 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "volume": "13",
+    "author": "M He",
+    "year": "2019",
+    "unstructured": "He, M. et al. High-performance hybrid silicon and lithium niobate Mach\u2013Zehnder modulators for 100 Gbits\u22121 and beyond. Nat. Photon 13, 359\u2013364 (2019).",
+    "journal-title": "Nat. Photon"
+   },
+   {
+    "key": "18005_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages. Nature 562, 101\u2013104 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "18005_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "23728",
+    "DOI": "10.1364/OE.26.023728",
+    "volume": "26",
+    "author": "PO Weigel",
+    "year": "2018",
+    "unstructured": "Weigel, P. O. et al. Bonded thin film lithium niobite modulator on a silicon photonics platform exceeding 100 GHz 3\u2013dB electrical modulation bandwidth. Opt. Express 26, 23728\u201323739 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR21",
+    "doi-asserted-by": "publisher",
+    "first-page": "1868",
+    "DOI": "10.1364/OE.28.001868",
+    "volume": "28",
+    "author": "N Boynton",
+    "year": "2020",
+    "unstructured": "Boynton, N. et al. A heterogeneously integrated silicon photonic/lithium niobite travelling wave electro-optic modulator. Opt. Express 28, 1868\u20131884 (2020).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "14810",
+    "DOI": "10.1364/OE.26.014810",
+    "volume": "26",
+    "author": "AJ Mercante",
+    "year": "2018",
+    "unstructured": "Mercante, A. J. et al. Thin film lithium niobate electro-optic modulator with terahertz operating bandwidth. Opt. Express 26, 14810\u201314816 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "056106",
+    "DOI": "10.1063/1.5086868",
+    "volume": "4",
+    "author": "M Burla",
+    "year": "2019",
+    "unstructured": "Burla, M. et al. 500 GHz plasmonic Mach\u2013Zehnder modulator enabling sub-THz microwave photonics. APL Photon 4, 056106 (2019).",
+    "journal-title": "APL Photon"
+   },
+   {
+    "key": "18005_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "519",
+    "DOI": "10.1038/s41566-019-0475-6",
+    "volume": "13",
+    "author": "S Ummethala",
+    "year": "2019",
+    "unstructured": "Ummethala, S. et al. THz-to-optical conversion in wireless communications using an ultra-broadband plasmonic modulator. Nat. Photon 13, 519\u2013524 (2019).",
+    "journal-title": "Nat. Photon"
+   },
+   {
+    "key": "18005_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "630",
+    "DOI": "10.1126/science.aan5953",
+    "volume": "358",
+    "author": "M Ayata",
+    "year": "2017",
+    "unstructured": "Ayata, M. et al. High-speed plasmonic modulator in a single metal layer. Science 358, 630\u2013632 (2017).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "18005_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "525",
+    "DOI": "10.1038/nphoton.2015.127",
+    "volume": "9",
+    "author": "C Haffner",
+    "year": "2015",
+    "unstructured": "Haffner, C. et al. All-plasmonic Mach\u2013Zehnder modulator enabling optical high-speed communication at the microscale. Nat. Photon 9, 525\u2013528 (2015).",
+    "journal-title": "Nat. Photon"
+   },
+   {
+    "key": "18005_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "2050",
+    "DOI": "10.1109/JLT.2019.2897480",
+    "volume": "37",
+    "author": "B Baeuerle",
+    "year": "2019",
+    "unstructured": "Baeuerle, B. et al. Reduced equalization needs of 100 GHz bandwidth plasmonic modulators. J. Lightwave Technol. 37, 2050\u20132057 (2019).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "18005_CR28",
+    "doi-asserted-by": "publisher",
+    "first-page": "2734",
+    "DOI": "10.1109/JLT.2020.2972637",
+    "volume": "38",
+    "author": "W Heni",
+    "year": "2020",
+    "unstructured": "Heni, W. et al. Ultra-high-speed 2:1 digital selector and plasmonic modulator IM/DD transmitter operating at 222 Gbaud for Intra-Datacenter application. J. Lightwave Technol. 38, 2734\u20132739 (2020).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "18005_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "229",
+    "DOI": "10.1038/nphoton.2014.9",
+    "volume": "8",
+    "author": "A Melikyan",
+    "year": "2014",
+    "unstructured": "Melikyan, A. et al. High-speed plasmonic phase modulators. Nat. Photon 8, 229\u2013233 (2014).",
+    "journal-title": "Nat. Photon"
+   },
+   {
+    "key": "18005_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "6056",
+    "DOI": "10.1364/OE.26.006056",
+    "volume": "26",
+    "author": "A Abdollahinia",
+    "year": "2018",
+    "unstructured": "Abdollahinia, A. et al. Temperature stability of static and dynamic properties of 1.55 \u00b5m quantum dot lasers. Opt. Express 26, 6056\u20136066 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR31",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Nakajima, T. et al. Wide temperature range operation (20\u201380\u2009\u00b0C) of 53.2 Gbit/s NRZ directly modulated 1.3-\u03bcm DFB lasers transmitted over 2 km. In IEEE International Semiconductor Laser Conference (ISLC), 47\u201348 (2018).",
+    "DOI": "10.1109/ISLC.2018.8516159"
+   },
+   {
+    "key": "18005_CR32",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Sasada, N. et al. Wide-temperature-range (25\u2009\u00b0C to 80\u2009\u00b0C) 53-Gbaud PAM4 (106-Gb/s) operation of 1.3-\u03bcm directly modulated DFB lasers for 10-km transmission. In European Conference on Optical Communication (ECOC), paper Th3F.3 (Optical Society of America, 2018).",
+    "DOI": "10.1109/ECOC.2018.8535129"
+   },
+   {
+    "key": "18005_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "28643",
+    "DOI": "10.1364/OE.25.028643",
+    "volume": "25",
+    "author": "H Miura",
+    "year": "2017",
+    "unstructured": "Miura, H. et al. High thermal stability 40 GHz electro-optic polymer modulators. Opt. Express 25, 28643\u201328649 (2017).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "27955",
+    "DOI": "10.1364/OE.26.027955",
+    "volume": "26",
+    "author": "C Kieninger",
+    "year": "2018",
+    "unstructured": "Kieninger, C. et al. Demonstration of long-term thermally stable silicon-organic hybrid modulators at 85\u2009\u00b0C. Opt. Express 26, 27955\u201327964 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR35",
+    "doi-asserted-by": "publisher",
+    "first-page": "9389",
+    "DOI": "10.1364/OE.24.009389",
+    "volume": "24",
+    "author": "M Lauermann",
+    "year": "2016",
+    "unstructured": "Lauermann, M. et al. Generation of 64 GBd 4ASK signals using a silicon-organic hybrid modulator at 80\u2009\u00b0C. Opt. Express 24, 9389\u20139396 (2016).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR36",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Yokoyama, S., Lu, G.-W., Mirua, H., Qiu, F. & Spring, A. M. High temperature resistant 112 Gbit/s PAM4 modulator based on Electro-Optic Polymer modulator. In European Conference on Optical Communication (ECOC), paper Mo4C.6 (The Optical Society, 2018).",
+    "DOI": "10.1109/ECOC.2018.8535460"
+   },
+   {
+    "key": "18005_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "47",
+    "DOI": "10.1002/pola.24410",
+    "volume": "49",
+    "author": "X Piao",
+    "year": "2011",
+    "unstructured": "Piao, X. et al. Nonlinear optical side-chain polymers post-functionalized with high-\u03b2 chromophores exhibiting large electro-optic property. J. Polym. Sci. Part A 49, 47\u201354 (2011).",
+    "journal-title": "J. Polym. Sci. Part A"
+   },
+   {
+    "key": "18005_CR38",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Steglich, P. et al. Silicon-on-insulator slot-waveguide design trade-offs. In International Conference on Photonics, Optics and Laser Technology (PHOTOPTICS), Vol. 2, 47\u201352 (2015).",
+    "DOI": "10.5220/0005336200470052"
+   },
+   {
+    "key": "18005_CR39",
+    "doi-asserted-by": "publisher",
+    "first-page": "768",
+    "DOI": "10.1364/OE.25.000768",
+    "volume": "25",
+    "author": "H Sato",
+    "year": "2017",
+    "unstructured": "Sato, H. et al. Low driving voltage Mach\u2013Zehnder interference modulator constructed from an electro-optic polymer on ultra-thin silicon with a broadband operation. Opt. Express 25, 768\u2013775 (2017).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR40",
+    "doi-asserted-by": "publisher",
+    "first-page": "20784",
+    "DOI": "10.1364/OE.23.020784",
+    "volume": "23",
+    "author": "Z Zou",
+    "year": "2015",
+    "unstructured": "Zou, Z., Zhou, L., Li, X. & Chen, J. 60-nm-thick basic photonic components and Bragg gratings on the silicon-on-insulator platform. Opt. Express 23, 20784\u201320795 (2015).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR41",
+    "doi-asserted-by": "publisher",
+    "first-page": "4752",
+    "DOI": "10.1364/OE.17.004752",
+    "volume": "17",
+    "author": "J Cardenas",
+    "year": "2009",
+    "unstructured": "Cardenas, J. et al. Low loss etchless silicon photonic waveguide. Opt. Express 17, 4752\u20134757 (2009).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR42",
+    "doi-asserted-by": "publisher",
+    "first-page": "2233",
+    "DOI": "10.1109/LPT.2016.2590983",
+    "volume": "28",
+    "author": "M Chagnon",
+    "year": "2016",
+    "unstructured": "Chagnon, M., Lessard, S. & Plant, D. V. 336 Gb/s in direct detection below KP4 FEC threshold for intra data center applications. IEEE Photon. Technol. Lett. 28, 2233\u20132236 (2016).",
+    "journal-title": "IEEE Photon. Technol. Lett."
+   },
+   {
+    "key": "18005_CR43",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Yu, H. et al. 100Gbps CWDM4 silicon photonics transmitter for 5G applications. In Optical Fiber Communication Conference (OFC), paper W3E.4 (Optical Society of America, 2019).",
+    "DOI": "10.1364/OFC.2019.W3E.4"
+   },
+   {
+    "key": "18005_CR44",
+    "doi-asserted-by": "publisher",
+    "first-page": "771",
+    "DOI": "10.1016/0032-3861(96)87252-1",
+    "volume": "37",
+    "author": "H-Q Xie",
+    "year": "1996",
+    "unstructured": "Xie, H.-Q., Huang, X.-D. & Guo, J.-S. Synthesis and properties of two crosslinked polymers with stable non-linear optical properties. Polymer 37, 771\u2013775 (1996).",
+    "journal-title": "Polymer"
+   },
+   {
+    "key": "18005_CR45",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-019-09724-7",
+    "volume": "10",
+    "author": "W Heni",
+    "year": "2019",
+    "unstructured": "Heni, W. et al. Plasmonic IQ modulators with attojoule per bit electrical energy consumption. Nat. Commun. 10, 1694 (2019).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "18005_CR46",
+    "doi-asserted-by": "publisher",
+    "first-page": "2185",
+    "DOI": "10.1364/OL.33.002185",
+    "volume": "33",
+    "author": "S Manipatruni",
+    "year": "2008",
+    "unstructured": "Manipatruni, S. et al. Wide temperature range operation of micrometer-scale silicon electro-optic modulators. Opt. Lett. 33, 2185\u20132187 (2008).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "18005_CR47",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/ncomms5008",
+    "volume": "5",
+    "author": "E Timurdogan",
+    "year": "2014",
+    "unstructured": "Timurdogan, E. et al. An ultralow power athermal silicon modulator. Nat. Commun. 5, 4008 (2014).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "18005_CR48",
+    "doi-asserted-by": "publisher",
+    "first-page": "1800",
+    "DOI": "10.1364/OL.32.001800",
+    "volume": "32",
+    "author": "M Han",
+    "year": "2007",
+    "unstructured": "Han, M. & Wang, A. Temperature compensation of optical microresonators using a surface layer with negative thermo-optic coefficient. Opt. Lett. 32, 1800\u20131802 (2007).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "18005_CR49",
+    "doi-asserted-by": "publisher",
+    "first-page": "14627",
+    "DOI": "10.1364/OE.17.014627",
+    "volume": "17",
+    "author": "J Teng",
+    "year": "2009",
+    "unstructured": "Teng, J. et al. Athermal silicon-on-insulator ring resonators by overlaying a polymer cladding on narrowed waveguides. Opt. Express 17, 14627\u201314633 (2009).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR50",
+    "doi-asserted-by": "publisher",
+    "first-page": "780",
+    "DOI": "10.1021/acsphotonics.5b00695",
+    "volume": "3",
+    "author": "F Qiu",
+    "year": "2016",
+    "unstructured": "Qiu, F. et al. Athermal hybrid silicon/polymer ring resonator electro-optic modulator. ACS Photon 3, 780\u2013783 (2016).",
+    "journal-title": "ACS Photon"
+   },
+   {
+    "key": "18005_CR51",
+    "doi-asserted-by": "publisher",
+    "first-page": "3487",
+    "DOI": "10.1364/OE.18.003487",
+    "volume": "18",
+    "author": "B Guha",
+    "year": "2010",
+    "unstructured": "Guha, B., Kyotoku, B. B. C. & Lipson, M. CMOS-compatible athermal silicon microring resonators. Opt. Express 18, 3487\u20133493 (2010).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR52",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Kieninger, C. et al. Silicon-organic hybrid (SOH) Mach\u2013Zehnder modulators for 100 GBd PAM4 signaling with sub-1 dB phase-shifter loss. Preprint at http://arxiv.org/abs/2002.08176 (2020).",
+    "DOI": "10.1364/OFC.2020.Th3C.3"
+   },
+   {
+    "key": "18005_CR53",
+    "doi-asserted-by": "publisher",
+    "first-page": "739",
+    "DOI": "10.1364/OPTICA.5.000739",
+    "volume": "5",
+    "author": "C Kieninger",
+    "year": "2018",
+    "unstructured": "Kieninger, C. et al. Ultra-high electro-optic activity demonstrated in a silicon-organic hybrid modulator. Optica 5, 739\u2013748 (2018).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "18005_CR54",
+    "doi-asserted-by": "publisher",
+    "first-page": "3401413",
+    "DOI": "10.1109/JSTQE.2013.2271846",
+    "volume": "19",
+    "author": "J Leuthold",
+    "year": "2013",
+    "unstructured": "Leuthold, J. et al. Silicon-organic hybrid electro-optical devices. IEEE J. Sel. Top. Quantum Electron. 19, 3401413 (2013).",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "18005_CR55",
+    "doi-asserted-by": "publisher",
+    "first-page": "1576",
+    "DOI": "10.1021/acsphotonics.7b00224",
+    "volume": "4",
+    "author": "W Heni",
+    "year": "2017",
+    "unstructured": "Heni, W. et al. Silicon-organic and plasmonic-organic hybrid photonics. ACS Photon 4, 1576\u20131590 (2017).",
+    "journal-title": "ACS Photon"
+   },
+   {
+    "key": "18005_CR56",
+    "doi-asserted-by": "publisher",
+    "first-page": "1484",
+    "DOI": "10.1109/JLT.2019.2899372",
+    "volume": "37",
+    "author": "U Koch",
+    "year": "2019",
+    "unstructured": "Koch, U. et al. Ultra-compact terabit plasmonic modulator array. J. Lightwave Technol. 37, 1484\u20131491 (2019).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "18005_CR57",
+    "doi-asserted-by": "publisher",
+    "first-page": "29746",
+    "DOI": "10.1364/OE.23.029746",
+    "volume": "23",
+    "author": "W Heni",
+    "year": "2015",
+    "unstructured": "Heni, W. et al. High speed plasmonic modulator array enabling dense optical interconnect solution. Opt. Express 23, 29746\u201329757 (2015).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR58",
+    "doi-asserted-by": "publisher",
+    "first-page": "220",
+    "DOI": "10.1364/OE.26.000220",
+    "volume": "25",
+    "author": "S Wolf",
+    "year": "2018",
+    "unstructured": "Wolf, S. et al. Coherent modulation up to 100 GBd 16QAM using silicon-organic hybrid (SOH) devices. Opt. Express 25, 220\u2013232 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "18005_CR59",
+    "doi-asserted-by": "publisher",
+    "first-page": "1408",
+    "DOI": "10.1021/acs.chemmater.9b03725",
+    "volume": "32",
+    "author": "H Xu",
+    "year": "2020",
+    "unstructured": "Xu, H. et al. Ultrahigh electro-optic coefficients, high index of refraction, and long-term stability from Diels\u2013Alder cross-linkable binary molecular glasses. Chem. Mater. 32, 1408\u20131421 (2020).",
+    "journal-title": "Chem. Mater."
+   },
+   {
+    "key": "18005_CR60",
+    "doi-asserted-by": "publisher",
+    "first-page": "263",
+    "DOI": "10.1016/j.eurpolymj.2017.10.022",
+    "volume": "97",
+    "author": "AM Spring",
+    "year": "2017",
+    "unstructured": "Spring, A. M. et al. Crosslinked poly(norbornene-dicarboximide)s as electro-optic chromophore hosts. Eur. Polym. J. 97, 263\u2013271 (2017).",
+    "journal-title": "Eur. Polym. J."
+   }
+  ],
+  "updated-by": [
+   {
+    "DOI": "10.1038/s41467-020-18908-5",
+    "type": "correction",
+    "label": "Correction",
+    "source": "publisher",
+    "updated": {
+     "date-parts": [
+      [
+       2020,
+       10,
+       2
+      ]
+     ],
+     "date-time": "2020-10-02T00:00:00Z",
+     "timestamp": 1601596800000
+    }
+   }
+  ],
+  "container-title": [
+   "Nature Communications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41467-020-18005-7.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-020-18005-7",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-020-18005-7.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     8,
+     12
+    ]
+   ],
+   "date-time": "2024-08-12T07:09:19Z",
+   "timestamp": 1723446559000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41467-020-18005-7"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     8,
+     24
+    ]
+   ]
+  },
+  "references-count": 60,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2020,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "18005"
+  ],
+  "URL": "https://doi.org/10.1038/s41467-020-18005-7",
+  "relation": {},
+  "ISSN": [
+   "2041-1723"
+  ],
+  "issn-type": [
+   {
+    "value": "2041-1723",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     8,
+     24
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "15 February 2020",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "24 July 2020",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "24 August 2020",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "2 October 2020",
+    "order": 4,
+    "name": "change_date",
+    "label": "Change Date",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "Correction",
+    "order": 5,
+    "name": "change_type",
+    "label": "Change Type",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "An amendment to this paper has been published and can be accessed via a link at the top of the paper.",
+    "order": 6,
+    "name": "change_details",
+    "label": "Change Details",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ],
+  "article-number": "4224"
+ }
+}

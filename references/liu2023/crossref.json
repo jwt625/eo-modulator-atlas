@@ -1,0 +1,599 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     5
+    ]
+   ],
+   "date-time": "2026-09-05T02:47:43Z",
+   "timestamp": 1788576463106,
+   "version": "build-2803163510"
+  },
+  "reference-count": 61,
+  "publisher": "Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences",
+  "issue": "2",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "gxjzz"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "DOI": "10.37188/lam.2023.013",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     5,
+     9
+    ]
+   ],
+   "date-time": "2023-05-09T08:19:29Z",
+   "timestamp": 1683620369000
+  },
+  "page": "1",
+  "source": "Crossref",
+  "is-referenced-by-count": 46,
+  "title": [
+   "Ultra-compact lithium niobate photonic chip for high-capacity and energy-efficient wavelength-division-multiplexing transmitters"
+  ],
+  "prefix": "10.37188",
+  "volume": "4",
+  "author": [
+   {
+    "given": "Hongxuan",
+    "family": "Liu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bingcheng",
+    "family": "Pan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yishu",
+    "family": "Huang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jianghao",
+    "family": "He",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ming",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zejie",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Liu",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yaocheng",
+    "family": "Shi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Daoxin",
+    "family": "Dai",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "23217",
+  "reference": [
+   {
+    "key": "key-10.37188/lam.2023.013-1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Zheng, K. Y. et al. Mid-infrared all-optical modulators based on an acetylene-filled hollow-core fiber. <i>Light:Advanced Manufacturing</i>  3, 50 (2022).",
+    "DOI": "10.37188/lam.2022.050"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-2",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Liang, D. &amp; Bowers, J. E. Recent progress in heterogeneous III-V-on-silicon photonic integration. <i>Light:Advanced Manufacturing</i>  2, 59-83 (2021).",
+    "DOI": "10.37188/lam.2021.005"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-3",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Zhang, L. et al. \u2018Plug-and-play\u2019 plasmonic metafibers for ultrafast fibre lasers. <i>Light: Advanced Manufacturing</i>  3, 45 (2022).",
+    "DOI": "10.37188/lam.2022.045"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-4",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Li, M. F. et al. Silicon intensity Mach-Zehnder modulator for single lane 100 Gb/s applications. <i>Photonics Research</i>  6, 109-116 (2018).",
+    "DOI": "10.1364/PRJ.6.000109"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-5",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Zhalehpour, S. et al. System optimization of an all-silicon IQ modulator: achieving 100-gbaud dual-polarization 32QAM. <i>Journal of Lightwave Technology</i>  38, 256-264 (2020).",
+    "DOI": "10.1109/JLT.2019.2961646"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-6",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Zhang, Y. G. et al. 240 Gb/s optical transmission based on an ultrafast silicon microring modulator. <i>Photonics Research</i>  10, 1127-1133 (2022).",
+    "DOI": "10.1364/PRJ.441791"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-7",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Hiraki, T. et al. Heterogeneously integrated III\u2013V/Si MOS capacitor Mach\u2013Zehnder modulator. <i>Nature Photonics</i>  11, 482-485 (2017).",
+    "DOI": "10.1038/nphoton.2017.120"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-8",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Li, Q. et al. Si racetrack optical modulator based on the III-V/Si hybrid MOS capacitor. <i>Optics Express</i>  29, 6824-6833 (2021).",
+    "DOI": "10.1364/OE.418108"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-9",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Haffner, C. et al. Low-loss plasmon-assisted electro-optic modulator. <i>Nature</i>  556, 483-486 (2018).",
+    "DOI": "10.1038/s41586-018-0031-4"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-10",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Heni, W. et al. Plasmonic IQ modulators with attojoule per bit electrical energy consumption. <i>Nature Communications</i>  10, 1694 (2019).",
+    "DOI": "10.1038/s41467-019-09724-7"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-11",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Mao, J. W. et al. Efficient silicon and side-cladding waveguide modulator with electro-optic polymer. <i>Optics Express</i>  30, 1885-1895 (2022).",
+    "DOI": "10.1364/OE.447616"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-12",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Ummethala, S. et al. Hybrid electro-optic modulator combining silicon photonic slot waveguides with high-k radio-frequency slotlines. <i>Optica</i>  8, 511-519 (2021).",
+    "DOI": "10.1364/OPTICA.411161"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-13",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Huang, Y. S. et al. High-bandwidth Si/In<sub>2</sub>O<sub>3</sub> hybrid plasmonic waveguide modulator. <i>APL Photonics</i>  7, 051301 (2022).",
+    "DOI": "10.1063/5.0087540"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-14",
+    "doi-asserted-by": "publisher",
+    "unstructured": "He, M. B. et al. High-performance hybrid silicon and lithium niobate Mach\u2013Zehnder modulators for 100 Gbit s<sup>\u22121</sup> and beyond. <i>Nature Photonics</i>  13, 359-364 (2019).",
+    "DOI": "10.1038/s41566-019-0378-6"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-15",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages. <i>Nature</i>  562, 101-104 (2018).",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-16",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Sorianello, V. et al. Graphene\u2013silicon phase modulators with gigahertz bandwidth. <i>Nature Photonics</i>  12, 40-44 (2018).",
+    "DOI": "10.1038/s41566-017-0071-6"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-17",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Zhang, M. et al. Integrated lithium niobate electro-optic modulators: when performance meets scalability. <i>Optica</i>  8, 652-667 (2021).",
+    "DOI": "10.1364/OPTICA.415762"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-18",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Xu, M. Y. et al. High-performance coherent optical modulators based on thin-film lithium niobate platform. <i>Nature Communications</i>  11, 3911 (2020).",
+    "DOI": "10.1038/s41467-020-17806-0"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-19",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Hu, J. Y. et al. Folded thin-film lithium niobate modulator based on a poled Mach\u2013Zehnder interferometer structure. <i>Optics Letters</i>  46, 2940-2943 (2021).",
+    "DOI": "10.1364/OL.426083"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-20",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Pan, B. C. et al. Demonstration of high-speed thin-film lithium-niobate-on-insulator optical modulators at the 2-\u03bcm wavelength. <i>Optics Express</i>  29, 17710-17717 (2021).",
+    "DOI": "10.1364/OE.416908"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-21",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Kharel, P. et al. Breaking voltage\u2013bandwidth limits in integrated lithium niobate modulators using micro-structured electrodes. <i>Optica</i>  8, 357-363 (2021).",
+    "DOI": "10.1364/OPTICA.416155"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-22",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Chen, G. X. et al. High performance thin-film lithium niobate modulator on a silicon substrate using periodic capacitively loaded traveling-wave electrode. <i>APL Photonics</i>  7, 026103 (2022).",
+    "DOI": "10.1063/5.0077232"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-23",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Wang, Z. et al. Silicon\u2013lithium niobate hybrid intensity and coherent modulators using a periodic capacitively loaded traveling-wave electrode. <i>ACS Photonics</i>  9, 2668-2675 (2022).",
+    "DOI": "10.1021/acsphotonics.2c00263"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-24",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Wang, C. et al. Nanophotonic lithium niobate electro-optic modulators. <i>Optics Express</i>  26, 1547-1555 (2018).",
+    "DOI": "10.1364/OE.26.001547"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-25",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Li, M. X. et al. Lithium niobate photonic-crystal electro-optic modulator. <i>Nature Communications</i>  11, 4123 (2020).",
+    "DOI": "10.1038/s41467-020-17950-7"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-26",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Pohl, D. et al. 100-GBd waveguide bragg grating modulator in thin-film lithium niobate. <i>IEEE Photonics Technology Letters</i>  33, 85-88 (2021).",
+    "DOI": "10.1109/LPT.2020.3044648"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-27",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Pan, B. C. et al. Compact electro-optic modulator on lithium niobate. <i>Photonics Research</i>  10, 697-702 (2022).",
+    "DOI": "10.1364/PRJ.449172"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-28",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Pan, B. C. et al. Ultra-compact lithium niobate microcavity electro-optic modulator beyond 110 GHz. <i>Chip</i>  1, 100029 (2022).",
+    "DOI": "10.1016/j.chip.2022.100029"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-29",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Moralis-Pegios, M. et al. 4-channel 200 Gb/s WDM O-band silicon photonic transceiver sub-assembly. <i>Optics Express</i>  28, 5706-5714 (2020).",
+    "DOI": "10.1364/OE.373454"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-30",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Timurdogan, E. et al. 400G silicon photonics integrated circuit transceiver chipsets for CPO, OBO, and pluggable modules. Proceedings of the Optical Fiber Communication Conference (OFC) 2020. San Diego, California, USA: Optica Publishing Group, 2020.",
+    "DOI": "10.1364/OFC.2020.T3H.2"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-31",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Li, C. et al. Hybrid WDM-MDM transmitter with an integrated Si modulator array and a micro-resonator comb source. <i>Optics Express</i>  29, 39847-39858 (2021).",
+    "DOI": "10.1364/OE.444493"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-32",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Pathak, S. et al. Comparison of AWGs and echelle gratings for wavelength division multiplexing on silicon-on-insulator. <i>IEEE Photonics Journal</i>  6, 4900109 (2014).",
+    "DOI": "10.1109/JPHOT.2014.2361658"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-33",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Dai, D. X. et al. Monolithically integrated 64-channel silicon hybrid demultiplexer enabling simultaneous wavelength- and mode-division-multiplexing. <i>Laser &amp; Photonics Reviews</i>  9, 339-344 (2015).",
+    "DOI": "10.1002/lpor.201400446"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-34",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Dahlem, M. S. et al. Reconfigurable multi-channel second-order silicon microring-resonator filterbanks for on-chip WDM systems. <i>Optics Express</i>  19, 306-316 (2011).",
+    "DOI": "10.1364/OE.19.000306"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-35",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Papaioannou, S. et al. On-chip dual-stream DWDM eight-channel-capable SOI-based MUX s/DEMUX s with 40-GH z channel bandwidth. <i>IEEE Photonics Journal</i>  7, 7900210 (2015).",
+    "DOI": "10.1109/JPHOT.2014.2381639"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-36",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Liu, D. J. et al. High-order adiabatic elliptical-microring filter with an ultra-large free-spectral-range. <i>Journal of Lightwave Technology</i>  39, 5910-5916 (2021).",
+    "DOI": "10.1109/JLT.2021.3091724"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-37",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Horst, F. et al. Cascaded Mach-Zehnder wavelength filters in silicon photonics for low loss and flat pass-band WDM (de-)multiplexing. <i>Optics Express</i>  21, 11652-11658 (2013).",
+    "DOI": "10.1364/OE.21.011652"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-38",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Xu, H. N., Dai, D. X. &amp; Shi, Y. C. Low-crosstalk and fabrication-tolerant four-channel CWDM filter based on dispersion-engineered Mach-Zehnder interferometers. <i>Optics Express</i>  29, 20617-20631 (2021).",
+    "DOI": "10.1364/OE.428352"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-39",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Liu, D. J., Zhang, M. &amp; Dai, D. X. Low-loss and low-crosstalk silicon triplexer based on cascaded multimode waveguide gratings. <i>Optics Letters</i>  44, 1304-1307 (2019).",
+    "DOI": "10.1364/OL.44.001304"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-40",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Liu, Y. et al. C-band four-channel CWDM (de-)multiplexers on a thin film lithium niobate\u2013silicon rich nitride hybrid platform. <i>Optics Letters</i>  46, 4726-4729 (2021).",
+    "DOI": "10.1364/OL.437681"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-41",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Liu, D. J. et al. First demonstration of an on-chip quadplexer for passive optical network systems. <i>Photonics Research</i>  9, 757-763 (2021).",
+    "DOI": "10.1364/PRJ.420545"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-42",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Zhou, J. X. et al. Electro-optically switchable optical true delay lines of meter-scale lengths fabricated on lithium niobate on insulator using photolithography assisted chemo-mechanical etching. <i>Chinese Physics Letters</i>  37, 084201 (2020).",
+    "DOI": "10.1088/0256-307X/37/8/084201"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-43",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Wu, R. B. et al. Fabrication of a multifunctional photonic integrated chip on lithium niobate on insulator using femtosecond laser-assisted chemomechanical polish. <i>Optics Letters</i>  44, 4698-4701 (2019).",
+    "DOI": "10.1364/OL.44.004698"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-44",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Hu, H. et al. Lithium niobate ridge waveguides fabricated by wet etching. <i>IEEE Photonics Technology Letters</i>  19, 417-419 (2007).",
+    "DOI": "10.1109/LPT.2007.892886"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-45",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Ulliac, G. et al. Argon plasma inductively coupled plasma reactive ion etching study for smooth sidewall thin film lithium niobate waveguide application. <i>Optical Materials</i>  53, 1-5 (2016).",
+    "DOI": "10.1016/j.optmat.2015.12.040"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-46",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Zhang, M. et al. Monolithic ultra-high-<i>Q</i> lithium niobate microring resonator. <i>Optica</i>  4, 1536-1537 (2017).",
+    "DOI": "10.1364/OPTICA.4.001536"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-47",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Pan, B. C. et al. Compact racetrack resonator on LiNbO<sub>3</sub>. <i>Journal of Lightwave Technology</i>  39, 1770-1776 (2021).",
+    "DOI": "10.1109/JLT.2020.3040387"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-48",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Chen, K. X. et al. Four-channel CWDM transmitter chip based on thin-film lithium niobate platform. <i>Journal of Semiconductors</i>  43, 112301 (2022).",
+    "DOI": "10.1088/1674-4926/43/11/112301"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-49",
+    "doi-asserted-by": "publisher",
+    "unstructured": "He, J. H. et al. High-performance lithium-niobate-on-insulator optical filter based on multimode waveguide gratings. <i>Optics Express</i>  30, 34140-34148 (2022).",
+    "DOI": "10.1364/OE.468721"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-50",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Liu, D. J. et al. Four-Channel CWDM (de)multiplexers using cascaded multimode waveguide gratings. <i>IEEE Photonics Technology Letters</i>  32, 192-195 (2020).",
+    "DOI": "10.1109/LPT.2020.2966073"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-51",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Dai, D. X. et al. 10-Channel mode (de)multiplexer with dual polarizations. <i>Laser &amp; Photonics Reviews</i>  12, 1700109 (2018).",
+    "DOI": "10.1002/lpor.201700109"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-52",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Hu, Y. W. et al. Characterization of low loss waveguides using bragg gratings. <i>IEEE Journal of Selected Topics in Quantum Electronics</i>  24, 6101508 (2018).",
+    "DOI": "10.1109/JSTQE.2018.2827663"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-53",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Liu, D. J., Wu, H. &amp; Dai, D. X. Silicon multimode waveguide grating filter at 2 \u03bcm. <i>Journal of Lightwave Technology</i>  37, 2217-2222 (2019).",
+    "DOI": "10.1109/JLT.2019.2900439"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-54",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Gottscho, R. A., Jurgensen, C. W. &amp; Vitkavage, D. J. Microscopic uniformity in plasma etching. <i>Journal of Vacuum Science &amp; Technology B:Microelectronics and Nanometer Structures Processing</i>,<i>Measurement</i>,<i>and Phenomena</i>  10, 2133-2147 (1992).",
+    "DOI": "10.1116/1.586180"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-55",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Shi, W. et al. Silicon photonic grating-assisted, contra-directional couplers. <i>Optics Express</i>  21, 3633-3650 (2013).",
+    "DOI": "10.1364/OE.21.003633"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-56",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Hu, C. R. et al. High-efficient coupler for thin-film lithium niobate waveguide devices. <i>Optics Express</i>  29, 5397-5406 (2021).",
+    "DOI": "10.1364/OE.416492"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-57",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Ying, P. et al. Low-loss edge-coupling thin-film lithium niobate modulator with an efficient phase shifter. <i>Optics Letters</i>  46, 1478-1481 (2021).",
+    "DOI": "10.1364/OL.418996"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-58",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Luke, K. et al. Wafer-scale low-loss lithium niobate photonic integrated circuits. <i>Optics Express</i>  28, 24452-24458 (2020).",
+    "DOI": "10.1364/OE.401959"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-59",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Wang, C. et al. Second harmonic generation in nano-structured thin-film lithium niobate waveguides. <i>Optics Express</i>  25, 6963-6973 (2017).",
+    "DOI": "10.1364/OE.25.006963"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-60",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Krasnokutska, I. et al. Ultra-low loss photonic circuits in lithium niobate on insulator. <i>Optics Express</i>  26, 897-904 (2018).",
+    "DOI": "10.1364/OE.26.000897"
+   },
+   {
+    "key": "key-10.37188/lam.2023.013-61",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Liu, Y. et al. Low V\u03c0 thin-film lithium niobate modulator fabricated with photolithography. <i>Optics Express</i>  29, 6320-6329 (2021).",
+    "DOI": "10.1364/OE.414250"
+   }
+  ],
+  "container-title": [
+   "Light: Advanced Manufacturing"
+  ],
+  "original-title": [],
+  "deposited": {
+   "date-parts": [
+    [
+     2023,
+     11,
+     2
+    ]
+   ],
+   "date-time": "2023-11-02T09:12:43Z",
+   "timestamp": 1698916363000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.light-am.com/article/doi/10.37188/lam.2023.013"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "references-count": 61,
+  "journal-issue": {
+   "issue": "2",
+   "published-print": {
+    "date-parts": [
+     [
+      2023
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "LAM2022120039"
+  ],
+  "URL": "https://doi.org/10.37188/lam.2023.013",
+  "relation": {},
+  "ISSN": [
+   "2831-4093"
+  ],
+  "issn-type": [
+   {
+    "value": "2831-4093",
+    "type": "print"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  }
+ }
+}

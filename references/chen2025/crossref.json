@@ -1,0 +1,587 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     17
+    ]
+   ],
+   "date-time": "2026-09-17T17:41:18Z",
+   "timestamp": 1789666878346,
+   "version": "4.0.1"
+  },
+  "reference-count": 29,
+  "publisher": "Wiley",
+  "issue": "21",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       8,
+       10
+      ]
+     ],
+     "date-time": "2025-08-10T00:00:00Z",
+     "timestamp": 1754784000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100012166",
+    "name": "National Key Research and Development Program of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "2024YFB2808600"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2024YFB2808600"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100012166",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62405035"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62405035"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62374022"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62374022"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "onlinelibrary.wiley.com"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Laser &amp; Photonics Reviews"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     11
+    ]
+   ]
+  },
+  "DOI": "10.1002/lpor.202500380",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     8,
+     11
+    ]
+   ],
+   "date-time": "2025-08-11T02:28:46Z",
+   "timestamp": 1754879326000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 9,
+  "title": [
+   "Ultra\u2010Compact and Ultra\u2010High Speed Topological Photonic Crystal Modulator Based on Thin Film Lithium Niobate"
+  ],
+  "prefix": "10.1002",
+  "volume": "19",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-7388-7149",
+    "authenticated-orcid": false,
+    "given": "Guanyu",
+    "family": "Chen",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Optoelectronic Technology &amp; Systems (Ministry of Education) Chongqing University  Chongqing 400044 China"
+     },
+     {
+      "name": "College of Optoelectronic Engineering Chongqing University  Chongqing 400044 China"
+     },
+     {
+      "name": "Institute of Advanced Interdisciplinary Studies Chongqing University  Chongqing 400044 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yushan",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Optoelectronic Technology &amp; Systems (Ministry of Education) Chongqing University  Chongqing 400044 China"
+     },
+     {
+      "name": "College of Optoelectronic Engineering Chongqing University  Chongqing 400044 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bangtong",
+    "family": "Ge",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Optoelectronic Technology &amp; Systems (Ministry of Education) Chongqing University  Chongqing 400044 China"
+     },
+     {
+      "name": "College of Optoelectronic Engineering Chongqing University  Chongqing 400044 China"
+     },
+     {
+      "name": "Chongqing United Microelectronics Center (CUMEC)  No. 20 Xiyuannan Road Chongqing 401332 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mingjie",
+    "family": "Zou",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information Huazhong University of Science and Technology  Wuhan 430074 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chunde",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Optoelectronic Technology &amp; Systems (Ministry of Education) Chongqing University  Chongqing 400044 China"
+     },
+     {
+      "name": "College of Optoelectronic Engineering Chongqing University  Chongqing 400044 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuxin",
+    "family": "Liang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Chongqing United Microelectronics Center (CUMEC)  No. 20 Xiyuannan Road Chongqing 401332 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yu",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information Huazhong University of Science and Technology  Wuhan 430074 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tao",
+    "family": "Zhu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Optoelectronic Technology &amp; Systems (Ministry of Education) Chongqing University  Chongqing 400044 China"
+     },
+     {
+      "name": "College of Optoelectronic Engineering Chongqing University  Chongqing 400044 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hua",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Key Laboratory of Optoelectronic Technology &amp; Systems (Ministry of Education) Chongqing University  Chongqing 400044 China"
+     },
+     {
+      "name": "College of Optoelectronic Engineering Chongqing University  Chongqing 400044 China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     8,
+     10
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_10_1_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.411024"
+   },
+   {
+    "key": "e_1_2_10_2_1",
+    "volume": "4",
+    "author": "Chen G.",
+    "year": "2022",
+    "journal-title": "Adv. Photonics"
+   },
+   {
+    "key": "e_1_2_10_3_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.abj4396"
+   },
+   {
+    "key": "e_1_2_10_4_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "e_1_2_10_5_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0378-6"
+   },
+   {
+    "key": "e_1_2_10_6_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202000088"
+   },
+   {
+    "key": "e_1_2_10_7_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202208113"
+   },
+   {
+    "key": "e_1_2_10_8_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202400807"
+   },
+   {
+    "key": "e_1_2_10_9_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202400787"
+   },
+   {
+    "key": "e_1_2_10_10_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.449172"
+   },
+   {
+    "key": "e_1_2_10_11_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.chip.2022.100029"
+   },
+   {
+    "key": "e_1_2_10_12_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.478938"
+   },
+   {
+    "key": "e_1_2_10_13_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.2c00714"
+   },
+   {
+    "key": "e_1_2_10_14_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17950-7"
+   },
+   {
+    "key": "e_1_2_10_15_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.459315"
+   },
+   {
+    "key": "e_1_2_10_16_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2020.3044648"
+   },
+   {
+    "key": "e_1_2_10_17_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202401092"
+   },
+   {
+    "key": "e_1_2_10_18_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2014.248"
+   },
+   {
+    "key": "e_1_2_10_19_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0060007"
+   },
+   {
+    "key": "e_1_2_10_20_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202100269"
+   },
+   {
+    "key": "e_1_2_10_21_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OME.522200"
+   },
+   {
+    "key": "e_1_2_10_22_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-022-05077-2"
+   },
+   {
+    "key": "e_1_2_10_23_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202100300"
+   },
+   {
+    "key": "e_1_2_10_24_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.62.2747"
+   },
+   {
+    "key": "e_1_2_10_25_1",
+    "volume": "4",
+    "author": "Xiao M.",
+    "year": "2014",
+    "journal-title": "Phys. Rev. X"
+   },
+   {
+    "key": "e_1_2_10_26_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.441791"
+   },
+   {
+    "key": "e_1_2_10_27_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep06310"
+   },
+   {
+    "key": "e_1_2_10_28_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.001547"
+   },
+   {
+    "key": "e_1_2_10_29_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-023-01251-x"
+   }
+  ],
+  "container-title": [
+   "Laser &amp; Photonics Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/lpor.202500380",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     6
+    ]
+   ],
+   "date-time": "2025-11-06T06:47:54Z",
+   "timestamp": 1762411674000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://onlinelibrary.wiley.com/doi/10.1002/lpor.202500380"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     8,
+     10
+    ]
+   ]
+  },
+  "references-count": 29,
+  "journal-issue": {
+   "issue": "21",
+   "published-print": {
+    "date-parts": [
+     [
+      2025,
+      11
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1002/lpor.202500380"
+  ],
+  "URL": "https://doi.org/10.1002/lpor.202500380",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "1863-8880",
+   "1863-8899"
+  ],
+  "issn-type": [
+   {
+    "value": "1863-8880",
+    "type": "print"
+   },
+   {
+    "value": "1863-8899",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     8,
+     10
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2025-02-19",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-08-10",
+    "order": 3,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ],
+  "article-number": "e00380"
+ }
+}

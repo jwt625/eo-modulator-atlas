@@ -1,0 +1,915 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     18
+    ]
+   ],
+   "date-time": "2026-08-18T02:55:12Z",
+   "timestamp": 1787021712627,
+   "version": "build-2736575974"
+  },
+  "reference-count": 32,
+  "publisher": "Optica Publishing Group",
+  "issue": "10",
+  "funder": [
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "61922092"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "61922092"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "CityU 11204820"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "CityU 11204820"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "CityU 21208219"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "CityU 21208219"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "T42-103/16-N"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "T42-103/16-N"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001692",
+    "name": "Croucher Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "9509005"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9509005"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001692",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100007567",
+    "name": "City University of Hong Kong",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "9610402"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9610402"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100007567",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100007567",
+    "name": "City University of Hong Kong",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "9610455"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9610455"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100007567",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "Central Research Fund"
+   },
+   {
+    "DOI": "10.13039/501100001348",
+    "name": "Agency for Science, Technology and Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "A*STAR"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "A*STAR"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001348",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "Harvard Quantum Initiative (HQI) Postdoctoral Fellowship"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "opg.optica.org"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Photon. Res."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2022,
+     10,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1364/prj.468518",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2022,
+     8,
+     23
+    ]
+   ],
+   "date-time": "2022-08-23T16:00:45Z",
+   "timestamp": 1661270445000
+  },
+  "page": "2380",
+  "update-policy": "https://doi.org/10.1364/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 76,
+  "title": [
+   "Systematic investigation of millimeter-wave optic modulation performance in thin-film lithium niobate"
+  ],
+  "prefix": "10.1364",
+  "volume": "10",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-0507-4175",
+    "authenticated-orcid": true,
+    "given": "Yiwen",
+    "family": "Zhang",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, City University of Hong Kong"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0615-7848",
+    "authenticated-orcid": true,
+    "given": "Linbo",
+    "family": "Shao",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "John A. Paulson School of Engineering and Applied Sciences, Harvard University"
+     },
+     {
+      "name": "Bradley Department of Electrical and Computer Engineering, Virginia Tech"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jingwei",
+    "family": "Yang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, City University of Hong Kong"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-8598-152X",
+    "authenticated-orcid": true,
+    "given": "Zhaoxi",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, City University of Hong Kong"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ke",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, City University of Hong Kong"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kam-Man",
+    "family": "Shum",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory of Terahertz and Millimeter Waves"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0210-1860",
+    "authenticated-orcid": true,
+    "given": "Di",
+    "family": "Zhu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "John A. Paulson School of Engineering and Applied Sciences, Harvard University"
+     },
+     {
+      "name": "Institute of Materials Research and Engineering, Agency for Science, Technology and Research (A*STAR)"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chi Hou",
+    "family": "Chan",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, City University of Hong Kong"
+     },
+     {
+      "name": "State Key Laboratory of Terahertz and Millimeter Waves"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Marko",
+    "family": "Lon\u010dar",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "John A. Paulson School of Engineering and Applied Sciences, Harvard University"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1939-1422",
+    "authenticated-orcid": true,
+    "given": "Cheng",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, City University of Hong Kong"
+     },
+     {
+      "name": "State Key Laboratory of Terahertz and Millimeter Waves"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "published-online": {
+   "date-parts": [
+    [
+     2022,
+     9,
+     28
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "prj-10-10-2380-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1145/2897824.2925953",
+    "volume": "35",
+    "author": "Lien",
+    "year": "2016",
+    "journal-title": "ACM Trans. Graph."
+   },
+   {
+    "key": "prj-10-10-2380-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "80",
+    "DOI": "10.1038/s41566-018-0310-5",
+    "volume": "13",
+    "author": "Marpaung",
+    "year": "2019",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "prj-10-10-2380-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "5485",
+    "DOI": "10.1109/JLT.2020.3004176",
+    "volume": "38",
+    "author": "Murata",
+    "year": "2020",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "prj-10-10-2380-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "0600912",
+    "DOI": "10.1109/JQE.2015.2506992",
+    "volume": "52",
+    "author": "Nagatsuma",
+    "year": "2016",
+    "journal-title": "IEEE J. Quantum Electron."
+   },
+   {
+    "key": "prj-10-10-2380-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "249",
+    "DOI": "10.1109/JLT.2019.2924671",
+    "volume": "38",
+    "author": "Ogiso",
+    "year": "2020",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "prj-10-10-2380-R6",
+    "first-page": "Th4C.5",
+    "article-title": "Ultra-compact silicon modulator with 110 GHz bandwidth",
+    "volume-title": "Optical Fiber Communications Conference",
+    "author": "Han",
+    "year": "2022"
+   },
+   {
+    "key": "prj-10-10-2380-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "519",
+    "DOI": "10.1038/s41566-019-0475-6",
+    "volume": "13",
+    "author": "Ummethala",
+    "year": "2019",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "prj-10-10-2380-R8",
+    "doi-asserted-by": "crossref",
+    "first-page": "4011",
+    "DOI": "10.1515/nanoph-2021-0797",
+    "volume": "11",
+    "author": "Heidari",
+    "year": "2022",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "prj-10-10-2380-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "242",
+    "DOI": "10.1364/AOP.411024",
+    "volume": "13",
+    "author": "Zhu",
+    "year": "2021",
+    "journal-title": "Adv. Opt. Photon."
+   },
+   {
+    "key": "prj-10-10-2380-R10",
+    "doi-asserted-by": "publisher",
+    "first-page": "1112",
+    "DOI": "10.1364/OL.381892",
+    "volume": "45",
+    "author": "Ahmed",
+    "year": "2020",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "prj-10-10-2380-R11",
+    "doi-asserted-by": "crossref",
+    "first-page": "060016",
+    "DOI": "10.3788/COL202119.060016",
+    "volume": "19",
+    "author": "Liu",
+    "year": "2021",
+    "journal-title": "Chin. Opt. Lett."
+   },
+   {
+    "key": "prj-10-10-2380-R12",
+    "doi-asserted-by": "publisher",
+    "first-page": "3911",
+    "DOI": "10.1038/s41467-020-17806-0",
+    "volume": "11",
+    "author": "Xu",
+    "year": "2020",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "prj-10-10-2380-R13",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "Wang",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "prj-10-10-2380-R14",
+    "doi-asserted-by": "publisher",
+    "first-page": "357",
+    "DOI": "10.1364/OPTICA.416155",
+    "volume": "8",
+    "author": "Kharel",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "prj-10-10-2380-R15",
+    "doi-asserted-by": "publisher",
+    "first-page": "14810",
+    "DOI": "10.1364/OE.26.014810",
+    "volume": "26",
+    "author": "Mercante",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "prj-10-10-2380-R16",
+    "doi-asserted-by": "publisher",
+    "first-page": "026103",
+    "DOI": "10.1063/5.0077232",
+    "volume": "7",
+    "author": "Chen",
+    "year": "2022",
+    "journal-title": "APL Photon."
+   },
+   {
+    "key": "prj-10-10-2380-R17",
+    "doi-asserted-by": "publisher",
+    "first-page": "23728",
+    "DOI": "10.1364/OE.26.023728",
+    "volume": "26",
+    "author": "Weigel",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "prj-10-10-2380-R19",
+    "doi-asserted-by": "publisher",
+    "first-page": "1138",
+    "DOI": "10.1364/OPTICA.6.001138",
+    "volume": "6",
+    "author": "He",
+    "year": "2019",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "prj-10-10-2380-R20",
+    "doi-asserted-by": "publisher",
+    "first-page": "373",
+    "DOI": "10.1038/s41586-019-1008-7",
+    "volume": "568",
+    "author": "Zhang",
+    "year": "2019",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "prj-10-10-2380-R21",
+    "doi-asserted-by": "publisher",
+    "first-page": "2923",
+    "DOI": "10.1021/acsphotonics.1c00383",
+    "volume": "8",
+    "author": "Prencipe",
+    "year": "2021",
+    "journal-title": "ACS Photon."
+   },
+   {
+    "key": "prj-10-10-2380-R22",
+    "doi-asserted-by": "publisher",
+    "first-page": "2730",
+    "DOI": "10.1364/OL.427101",
+    "volume": "46",
+    "author": "Abdelsalam",
+    "year": "2021",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "prj-10-10-2380-R23",
+    "doi-asserted-by": "publisher",
+    "first-page": "084201",
+    "DOI": "10.1088/0256-307X/37/8/084201",
+    "volume": "37",
+    "author": "Zhou",
+    "year": "2020",
+    "journal-title": "Chin. Phys. Lett."
+   },
+   {
+    "key": "prj-10-10-2380-R24",
+    "doi-asserted-by": "publisher",
+    "first-page": "1288",
+    "DOI": "10.1364/OPTICA.438620",
+    "volume": "8",
+    "author": "Op de Beeck",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "prj-10-10-2380-R25",
+    "doi-asserted-by": "publisher",
+    "first-page": "1161",
+    "DOI": "10.1364/OL.420250",
+    "volume": "46",
+    "author": "Chen",
+    "year": "2021",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "prj-10-10-2380-R26",
+    "doi-asserted-by": "publisher",
+    "first-page": "1547",
+    "DOI": "10.1364/OE.26.001547",
+    "volume": "26",
+    "author": "Wang",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "prj-10-10-2380-R27",
+    "doi-asserted-by": "publisher",
+    "first-page": "854",
+    "DOI": "10.1109/LPT.2022.3178214",
+    "volume": "34",
+    "author": "Liu",
+    "year": "2022",
+    "journal-title": "IEEE Photon. Technol. Lett."
+   },
+   {
+    "key": "prj-10-10-2380-R28",
+    "doi-asserted-by": "publisher",
+    "first-page": "41798",
+    "DOI": "10.1364/OE.442091",
+    "volume": "29",
+    "author": "Liu",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "prj-10-10-2380-R29",
+    "doi-asserted-by": "publisher",
+    "first-page": "61",
+    "DOI": "10.1364/OPTICA.449691",
+    "volume": "9",
+    "author": "Xu",
+    "year": "2022",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "prj-10-10-2380-R30",
+    "doi-asserted-by": "publisher",
+    "first-page": "112792D",
+    "DOI": "10.1117/12.2547339",
+    "volume": "11279",
+    "author": "Wan",
+    "year": "2020",
+    "journal-title": "Proc. SPIE"
+   },
+   {
+    "key": "prj-10-10-2380-R31",
+    "doi-asserted-by": "publisher",
+    "first-page": "1342",
+    "DOI": "10.1063/1.1399305",
+    "volume": "79",
+    "author": "Lee",
+    "year": "2001",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "prj-10-10-2380-R32",
+    "doi-asserted-by": "publisher",
+    "first-page": "1501204",
+    "DOI": "10.1109/TASC.2013.2242951",
+    "volume": "23",
+    "author": "Li",
+    "year": "2013",
+    "journal-title": "IEEE Trans. Appl. Supercond."
+   },
+   {
+    "key": "prj-10-10-2380-R33",
+    "first-page": "1",
+    "article-title": "Transparent fiber\u2013radio\u2013fiber bridge at 101 GHz using optical modulator and direct photonic down-conversion",
+    "volume-title": "Optical Fiber Communications Conference",
+    "author": "Dat",
+    "year": "2021"
+   }
+  ],
+  "container-title": [
+   "Photonics Research"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=prj-10-10-2380&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2022,
+     9,
+     30
+    ]
+   ],
+   "date-time": "2022-09-30T21:30:32Z",
+   "timestamp": 1664573432000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=prj-10-10-2380"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     9,
+     28
+    ]
+   ]
+  },
+  "references-count": 32,
+  "journal-issue": {
+   "issue": "10",
+   "published-online": {
+    "date-parts": [
+     [
+      2022
+     ]
+    ]
+   },
+   "published-print": {
+    "date-parts": [
+     [
+      2022
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1364/prj.468518",
+  "relation": {},
+  "ISSN": [
+   "2327-9125"
+  ],
+  "issn-type": [
+   {
+    "value": "2327-9125",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     9,
+     28
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "Optica Publishing Group",
+    "name": "publisher",
+    "label": "This article is maintained by"
+   },
+   {
+    "value": "https://doi.org/10.1364/PRJ.468518",
+    "name": "articlelink",
+    "label": "Crossref DOI link to publisher maintained version"
+   },
+   {
+    "value": "research-article",
+    "name": "content_type",
+    "label": "Article type"
+   },
+   {
+    "value": "Screened by Similarity Check",
+    "name": "cross_check",
+    "label": "Similarity check"
+   },
+   {
+    "value": "Yes",
+    "order": 0,
+    "name": "peer_reviewed",
+    "label": "Peer reviewed",
+    "group": {
+     "name": "peer_review",
+     "label": "Peer review"
+    }
+   },
+   {
+    "value": "Single blind",
+    "order": 1,
+    "name": "review_process",
+    "label": "Review process",
+    "group": {
+     "name": "peer_review",
+     "label": "Peer review"
+    }
+   },
+   {
+    "value": "21 June 2022",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "21 August 2022",
+    "order": 1,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "28 September 2022",
+    "order": 2,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "\u00a9 2022 Chinese Laser Press",
+    "name": "copyright",
+    "label": "Copyright"
+   }
+  ]
+ }
+}

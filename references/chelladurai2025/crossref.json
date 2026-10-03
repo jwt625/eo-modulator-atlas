@@ -1,0 +1,1015 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     23
+    ]
+   ],
+   "date-time": "2026-09-23T06:16:21Z",
+   "timestamp": 1790144181622,
+   "version": "4.0.1"
+  },
+  "reference-count": 54,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "6",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       3,
+       17
+      ]
+     ],
+     "date-time": "2025-03-17T00:00:00Z",
+     "timestamp": 1742169600000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       3,
+       17
+      ]
+     ],
+     "date-time": "2025-03-17T00:00:00Z",
+     "timestamp": 1742169600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100010661",
+    "name": "EC | Horizon 2020 Framework Programme",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "871658"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "871658"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100010661",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100010661",
+    "name": "EC | Horizon 2020 Framework Programme",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "871391"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "871391"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100010661",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001711",
+    "name": "Schweizerischer Nationalfonds zur F\u00f6rderung der Wissenschaftlichen Forschung",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "208094"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "208094"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001711",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat. Mater."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     6
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41563-025-02158-1",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     3,
+     17
+    ]
+   ],
+   "date-time": "2025-03-17T06:02:42Z",
+   "timestamp": 1742191362000
+  },
+  "page": "868-875",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 69,
+  "title": [
+   "Barium titanate and lithium niobate permittivity and Pockels coefficients from megahertz to sub-terahertz frequencies"
+  ],
+  "prefix": "10.1038",
+  "volume": "24",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3877-600X",
+    "authenticated-orcid": false,
+    "given": "Daniel",
+    "family": "Chelladurai",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Manuel",
+    "family": "Kohli",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Joel",
+    "family": "Winiger",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0930-4604",
+    "authenticated-orcid": false,
+    "given": "David",
+    "family": "Moor",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7849-9644",
+    "authenticated-orcid": false,
+    "given": "Andreas",
+    "family": "Messner",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-6482-7870",
+    "authenticated-orcid": false,
+    "given": "Yuriy",
+    "family": "Fedoryshyn",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6432-3624",
+    "authenticated-orcid": false,
+    "given": "Mohammed",
+    "family": "Eleraky",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7968-0074",
+    "authenticated-orcid": false,
+    "given": "Yuqi",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hua",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0111-8169",
+    "authenticated-orcid": false,
+    "given": "Juerg",
+    "family": "Leuthold",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     3,
+     17
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "2158_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages. Nature 562, 101\u2013104 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2158_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "61",
+    "DOI": "10.1364/OPTICA.449691",
+    "volume": "9",
+    "author": "M Xu",
+    "year": "2022",
+    "unstructured": "Xu, M. et al. Dual-polarization thin-film lithium niobate in-phase quadrature modulators for terabit-per-second transmission. Optica 9, 61\u201362 (2022).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2158_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "360",
+    "DOI": "10.1038/s41566-023-01161-9",
+    "volume": "17",
+    "author": "M Eppenberger",
+    "year": "2023",
+    "unstructured": "Eppenberger, M. et al. Resonant plasmonic micro-racetrack modulators with high bandwidth and high temperature tolerance. Nat. Photon. 17, 360\u2013367 (2023).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "2158_CR4",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Kohli, M. et al. Plasmonic ferroelectric modulator monolithically integrated on SiN for 216\u2009GBd data transmission. J. Light. Technol. 41, 3825\u20133831 (2023).",
+    "DOI": "10.1109/JLT.2023.3260064"
+   },
+   {
+    "key": "2158_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "326",
+    "DOI": "10.1038/s41928-021-00570-4",
+    "volume": "4",
+    "author": "A Youssefi",
+    "year": "2021",
+    "unstructured": "Youssefi, A. et al. A cryogenic electro-optic interconnect for superconducting devices. Nat. Electron. 4, 326\u2013332 (2021).",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "key": "2158_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "1050",
+    "DOI": "10.1364/OPTICA.425414",
+    "volume": "8",
+    "author": "X Han",
+    "year": "2021",
+    "unstructured": "Han, X. et al. Microwave-optical quantum frequency conversion. Optica 8, 1050\u20131064 (2021).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2158_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "207",
+    "DOI": "10.1038/s41586-020-2764-0",
+    "volume": "586",
+    "author": "W Bogaerts",
+    "year": "2020",
+    "unstructured": "Bogaerts, W. et al. Programmable photonic circuits. Nature 586, 207\u2013216 (2020).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2158_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "273",
+    "DOI": "10.1038/s41566-019-0532-1",
+    "volume": "14",
+    "author": "J Wang",
+    "year": "2020",
+    "unstructured": "Wang, J., Sciarrino, F., Laing, A. & Thompson, M. G. Integrated photonic quantum technologies. Nat. Photon. 14, 273\u2013284 (2020).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "2158_CR9",
+    "doi-asserted-by": "publisher",
+    "first-page": "491",
+    "DOI": "10.1038/s41566-022-01003-0",
+    "volume": "16",
+    "author": "J Geler-Kremer",
+    "year": "2022",
+    "unstructured": "Geler-Kremer, J. et al. A ferroelectric multilevel non-volatile photonic phase shifter. Nat. Photon. 16, 491\u2013497 (2022).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "2158_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "1703",
+    "DOI": "10.1021/acs.nanolett.1c04723",
+    "volume": "22",
+    "author": "E Klopfer",
+    "year": "2022",
+    "unstructured": "Klopfer, E., Dagli, S., Barton, D. I., Lawrence, M. & Dionne, J. A. High-quality-factor silicon-on-lithium niobate metasurfaces for electro-optically reconfigurable wavefront shaping. Nano Lett. 22, 1703\u20131709 (2022).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "2158_CR11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.abq4240",
+    "volume": "8",
+    "author": "J Zhang",
+    "year": "2022",
+    "unstructured": "Zhang, J. et al. Spatially entangled photon pairs from lithium niobate nonlocal metasurfaces. Sci. Adv. 8, eabq4240 (2022).",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "2158_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "2158",
+    "DOI": "10.1109/JPROC.2018.2877636",
+    "volume": "106",
+    "author": "J Witzens",
+    "year": "2018",
+    "unstructured": "Witzens, J. High-speed silicon photonics modulators. Proc. IEEE 106, 2158\u20132182 (2018).",
+    "journal-title": "Proc. IEEE"
+   },
+   {
+    "key": "2158_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "4356",
+    "DOI": "10.1364/OL.39.004356",
+    "volume": "39",
+    "author": "L Lafone",
+    "year": "2014",
+    "unstructured": "Lafone, L., Sidiropoulos, T. P. H. & Oulton, R. F. Silicon-based metal-loaded plasmonic waveguides for low-loss nanofocusing. Opt. Lett. 39, 4356\u20134359 (2014).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "2158_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "1179",
+    "DOI": "10.1126/science.aao1467",
+    "volume": "358",
+    "author": "MP Nielsen",
+    "year": "2017",
+    "unstructured": "Nielsen, M. P., Shi, X., Dichtl, P., Maier, S. A. & Oulton, R. F. Giant nonlinear response at a plasmonic nanofocus drives efficient four-wave mixing. Science 358, 1179\u20131181 (2017).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2158_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "100901",
+    "DOI": "10.1063/5.0159166",
+    "volume": "8",
+    "author": "A Messner",
+    "year": "2023",
+    "unstructured": "Messner, A. et al. Plasmonic, photonic, or hybrid? Reviewing waveguide geometries for electro-optic modulators. APL Photon. 8, 100901 (2023).",
+    "journal-title": "APL Photon."
+   },
+   {
+    "key": "2158_CR16",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Chelladurai, D. et al. 200\u2009Gbit/s barium titanate modulator using weakly guided plasmonic modes. In Optical Fiber Communication Conference (OFC) 2023 Tu3C.3 (Optica Publishing Group, 2023).",
+    "DOI": "10.1364/OFC.2023.Tu3C.3"
+   },
+   {
+    "key": "2158_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "989",
+    "DOI": "10.1016/0022-3697(66)90071-0",
+    "volume": "27",
+    "author": "K Nassau",
+    "year": "1966",
+    "unstructured": "Nassau, K., Levinstein, H. J. & Loiacono, G. M. Ferroelectric lithium niobate. 2. Preparation of single domain crystals. J. Phys. Chem. Solids 27, 989\u2013996 (1966).",
+    "journal-title": "J. Phys. Chem. Solids"
+   },
+   {
+    "key": "2158_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "1467",
+    "DOI": "10.1143/JJAP.6.1467",
+    "volume": "6",
+    "author": "Y Ohmachi",
+    "year": "1967",
+    "unstructured": "Ohmachi, Y., Sawamoto, K. & Toyoda, H. Dielectric properties of LiNbO3 single crystal up to 9\u2009Gc. Jpn J. Appl. Phys. 6, 1467 (1967).",
+    "journal-title": "Jpn J. Appl. Phys."
+   },
+   {
+    "key": "2158_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "2864",
+    "DOI": "10.1063/1.322031",
+    "volume": "46",
+    "author": "JR Teague",
+    "year": "1975",
+    "unstructured": "Teague, J. R., Rice, R. R. & Gerson, R. High\u2010frequency dielectric measurements on electro\u2010optic single crystals. J. Appl. Phys. 46, 2864\u20132866 (1975).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2158_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "239",
+    "DOI": "10.1007/BF01007032",
+    "volume": "2",
+    "author": "MB Klein",
+    "year": "1981",
+    "unstructured": "Klein, M. B. Phase shifting at 94\u2009GHz using the electro-optic effect in bulk crystals. Int. J. Infrared Milli. Waves 2, 239\u2013246 (1981).",
+    "journal-title": "Int. J. Infrared Milli. Waves"
+   },
+   {
+    "key": "2158_CR21",
+    "doi-asserted-by": "publisher",
+    "first-page": "2123",
+    "DOI": "10.1063/1.332232",
+    "volume": "54",
+    "author": "BH Ahn",
+    "year": "1983",
+    "unstructured": "Ahn, B. H. Measurement of the indices of refraction and the absorption coefficients of dielectric materials in the millimeter wave region. J. Appl. Phys. 54, 2123\u20132124 (1983).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2158_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "163",
+    "DOI": "10.1143/JPSJ.56.163",
+    "volume": "56",
+    "author": "I Tomeno",
+    "year": "1987",
+    "unstructured": "Tomeno, I. & Matsumura, S. Elastic and dielectric properties of LiNbO3. J. Phys. Soc. Jpn 56, 163\u2013177 (1987).",
+    "journal-title": "J. Phys. Soc. Jpn"
+   },
+   {
+    "key": "2158_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "175",
+    "DOI": "10.1049/el:19910112",
+    "volume": "27",
+    "author": "WM Robertson",
+    "year": "1991",
+    "unstructured": "Robertson, W. M., Arjavalingam, G. & Kopcsay, G. V. Broadband microwave dielectric properties of lithium niobate. Electron. Lett. 27, 175\u2013176 (1991).",
+    "journal-title": "Electron. Lett."
+   },
+   {
+    "key": "2158_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "1342",
+    "DOI": "10.1063/1.1399305",
+    "volume": "79",
+    "author": "M Lee",
+    "year": "2001",
+    "unstructured": "Lee, M. Dielectric constant and loss tangent in LiNbO3 crystals from 90 to 147\u2009GHz. Appl. Phys. Lett. 79, 1342\u20131344 (2001).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2158_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "407",
+    "DOI": "10.1007/s003400200818",
+    "volume": "74",
+    "author": "M Jazbin\u0161ek",
+    "year": "2002",
+    "unstructured": "Jazbin\u0161ek, M. & Zgonik, M. Material tensor parameters of LiNbO3 relevant for electro- and elasto-optics. Appl. Phys. B 74, 407\u2013414 (2002).",
+    "journal-title": "Appl. Phys. B"
+   },
+   {
+    "key": "2158_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "2674",
+    "DOI": "10.1002/pssc.200405360",
+    "volume": "1",
+    "author": "S Kojima",
+    "year": "2004",
+    "unstructured": "Kojima, S., Kitahara, H., Nishizawa, S. & Wada Takeda, M. Complex dispersion relation of phonon-polariton in stoichiometric LiNbO3. Phys. Status Solidi C 1, 2674\u20132677 (2004).",
+    "journal-title": "Phys. Status Solidi C"
+   },
+   {
+    "key": "2158_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "18",
+    "DOI": "10.1109/TUFFC.2011.1770",
+    "volume": "58",
+    "author": "JS Mccloy",
+    "year": "2011",
+    "unstructured": "Mccloy, J. S., Korolev, K. A., Li, Z., Afsar, M. N. & Sundaram, S. K. Millimeter-wave dielectric properties of single-crystal ferroelectric and dielectric materials. IEEE Trans. Ultrason. Ferroelectr. Freq. Control 58, 18\u201329 (2011).",
+    "journal-title": "IEEE Trans. Ultrason. Ferroelectr. Freq. Control"
+   },
+   {
+    "key": "2158_CR28",
+    "first-page": "383",
+    "volume": "96",
+    "author": "JG Powles",
+    "year": "1949",
+    "unstructured": "Powles, J. G. & Jackson, W. The measurement of the dielectric properties of high-permittivity materials at centimetre wavelengths. Proc. IEE III 96, 383\u2013389 (1949).",
+    "journal-title": "Proc. IEE III"
+   },
+   {
+    "key": "2158_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "221",
+    "DOI": "10.1103/RevModPhys.22.221",
+    "volume": "22",
+    "author": "A von Hippel",
+    "year": "1950",
+    "unstructured": "von Hippel, A. Ferroelectricity, domain structure, and phase transitions of barium titanate. Rev. Mod. Phys. 22, 221\u2013237 (1950).",
+    "journal-title": "Rev. Mod. Phys."
+   },
+   {
+    "key": "2158_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "85",
+    "DOI": "10.1080/00150199208230015",
+    "volume": "135",
+    "author": "S Kazaoui",
+    "year": "1992",
+    "unstructured": "Kazaoui, S., Ravez, J., Elissalde, C. & Maglione, M. High frequency dielectric relaxation in BaTiO3 derived materials. Ferroelectrics 135, 85\u201399 (1992).",
+    "journal-title": "Ferroelectrics"
+   },
+   {
+    "key": "2158_CR31",
+    "doi-asserted-by": "publisher",
+    "first-page": "309",
+    "DOI": "10.1209/0295-5075/26/4/012",
+    "volume": "26",
+    "author": "K Laabidi",
+    "year": "1994",
+    "unstructured": "Laabidi, K., Fontana, M. D., Maglione, M., Jannot, B. & M\u00fcller, K. A. Indications of two separate relaxators in the subphonon region of tetragonal BaTiO3. Europhys. Lett. 26, 309\u2013314 (1994).",
+    "journal-title": "Europhys. Lett."
+   },
+   {
+    "key": "2158_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "3288",
+    "DOI": "10.1063/1.367097",
+    "volume": "83",
+    "author": "MP McNeal",
+    "year": "1998",
+    "unstructured": "McNeal, M. P., Jang, S.-J. & Newnham, R. E. The effect of grain and particle size on the microwave properties of barium titanate (BaTiO3). J. Appl. Phys. 83, 3288\u20133297 (1998).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2158_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "5274",
+    "DOI": "10.1063/1.1635967",
+    "volume": "83",
+    "author": "T Hamano",
+    "year": "2003",
+    "unstructured": "Hamano, T., Towner, D. J. & Wessels, B. W. Relative dielectric constant of epitaxial BaTiO3 thin films in the GHz frequency range. Appl. Phys. Lett. 83, 5274\u20135276 (2003).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2158_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "2627",
+    "DOI": "10.1016/S0955-2219(03)00190-0",
+    "volume": "23",
+    "author": "J Petzelt",
+    "year": "2003",
+    "unstructured": "Petzelt, J., Ostapchuk, T., Pashkin, A. & Rychetsk\u00fd, I. FIR and near-millimetre dielectric response of SrTiO3, BaTiO3 and BST films and ceramics. J. Eur. Ceram. 23, 2627\u20132632 (2003).",
+    "journal-title": "J. Eur. Ceram."
+   },
+   {
+    "key": "2158_CR35",
+    "doi-asserted-by": "publisher",
+    "first-page": "182905",
+    "DOI": "10.1063/1.2804570",
+    "volume": "91",
+    "author": "T Tsurumi",
+    "year": "2007",
+    "unstructured": "Tsurumi, T. et al. Ultrawide range dielectric spectroscopy of BaTiO3-based perovskite dielectrics. Appl. Phys. Lett. 91, 182905 (2007).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2158_CR36",
+    "doi-asserted-by": "publisher",
+    "first-page": "4328",
+    "DOI": "10.1364/OME.7.004328",
+    "volume": "7",
+    "author": "A Rosa",
+    "year": "2017",
+    "unstructured": "Rosa, A. et al. Barium titanate (BaTiO3) RF characterization for application in electro-optic modulators. Opt. Mater. Express 7, 4328\u20134336 (2017).",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2158_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "014404",
+    "DOI": "10.1103/PhysRevMaterials.5.014404",
+    "volume": "5",
+    "author": "V Bovtun",
+    "year": "2021",
+    "unstructured": "Bovtun, V. et al. Ferroelectric soft mode and microwave dielectric relaxation in BaTiO3-PbMg1/3Nb2/3O3 ceramics. Phys. Rev. Mater. 5, 014404 (2021).",
+    "journal-title": "Phys. Rev. Mater."
+   },
+   {
+    "key": "2158_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "1209",
+    "DOI": "10.1111/jace.16815",
+    "volume": "103",
+    "author": "BI Edmondson",
+    "year": "2020",
+    "unstructured": "Edmondson, B. I. et al. Epitaxial, electro-optically active barium titanate thin films on silicon by chemical solution deposition. J. Am. Ceram. Soc. 103, 1209\u20131218 (2020).",
+    "journal-title": "J. Am. Ceram. Soc."
+   },
+   {
+    "key": "2158_CR39",
+    "doi-asserted-by": "publisher",
+    "first-page": "2403024",
+    "DOI": "10.1002/adfm.202403024",
+    "volume": "34",
+    "author": "E Picavet",
+    "year": "2024",
+    "unstructured": "Picavet, E. et al. Integration of solution-processed BaTiO3 thin films with high Pockels coefficient on photonic platforms. Adv. Funct. Mater. 34, 2403024 (2024).",
+    "journal-title": "Adv. Funct. Mater."
+   },
+   {
+    "key": "2158_CR40",
+    "doi-asserted-by": "publisher",
+    "first-page": "51230",
+    "DOI": "10.1021/acsami.1c14048",
+    "volume": "13",
+    "author": "AB Posadas",
+    "year": "2021",
+    "unstructured": "Posadas, A. B. et al. Thick BaTiO3 epitaxial films integrated on Si by RF sputtering for electro-optic modulators in Si photonics. ACS Appl. Mater. Interfaces 13, 51230\u201351244 (2021).",
+    "journal-title": "ACS Appl. Mater. Interfaces"
+   },
+   {
+    "key": "2158_CR41",
+    "doi-asserted-by": "publisher",
+    "first-page": "073101",
+    "DOI": "10.1063/5.0160186",
+    "volume": "134",
+    "author": "AB Posadas",
+    "year": "2023",
+    "unstructured": "Posadas, A. B., Stenger, V. E., DeFouw, J. D., Warner, J. H. & Demkov, A. A. RF-sputtered Z-cut electro-optic barium titanate modulator on silicon photonic platform. J. Appl. Phys. 134, 073101 (2023).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2158_CR42",
+    "doi-asserted-by": "publisher",
+    "first-page": "1698",
+    "DOI": "10.1021/acsphotonics.6b00350",
+    "volume": "3",
+    "author": "F Eltes",
+    "year": "2016",
+    "unstructured": "Eltes, F. et al. Low-loss BaTiO3\u2013Si waveguides for nonlinear integrated photonics. ACS Photon. 3, 1698\u20131703 (2016).",
+    "journal-title": "ACS Photon."
+   },
+   {
+    "key": "2158_CR43",
+    "doi-asserted-by": "publisher",
+    "first-page": "42",
+    "DOI": "10.1038/s41563-018-0208-0",
+    "volume": "18",
+    "author": "S Abel",
+    "year": "2019",
+    "unstructured": "Abel, S. et al. Large Pockels effect in micro- and nanostructured barium titanate integrated on silicon. Nat. Mater. 18, 42\u201347 (2019).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "2158_CR44",
+    "doi-asserted-by": "publisher",
+    "first-page": "11441",
+    "DOI": "10.1103/PhysRevB.40.11441",
+    "volume": "40",
+    "author": "M Maglione",
+    "year": "1989",
+    "unstructured": "Maglione, M., B\u00f6hmer, R., Loidl, A. & H\u00f6chli, U. T. Polar relaxation mode in pure and iron-doped barium titanate. Phys. Rev. B 40, 11441\u201311444 (1989).",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "2158_CR45",
+    "doi-asserted-by": "publisher",
+    "first-page": "09NE02",
+    "DOI": "10.1143/JJAP.50.09NE02",
+    "volume": "50",
+    "author": "H Moriwake",
+    "year": "2011",
+    "unstructured": "Moriwake, H., Fisher, C. A. J., Kuwabara, A. & Hashimoto, T. Anisotropic permittivity of tetragonal BaTiO3: a first-principles study. Jpn J. Appl. Phys. 50, 09NE02 (2011).",
+    "journal-title": "Jpn J. Appl. Phys."
+   },
+   {
+    "key": "2158_CR46",
+    "doi-asserted-by": "publisher",
+    "first-page": "1730",
+    "DOI": "10.1063/1.108412",
+    "volume": "61",
+    "author": "O Nakao",
+    "year": "1992",
+    "unstructured": "Nakao, O., Tomomatsu, K., Ajimura, S., Kurosaka, A. & Tominaga, H. Influence of 180\u00b0 domains on ferroelectric properties of BaTiO3 single crystal. Appl. Phys. Lett. 61, 1730\u20131732 (1992).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2158_CR47",
+    "unstructured": "Boyd, R. W. Nonlinear Optics (Elsevier, 2008)."
+   },
+   {
+    "key": "2158_CR48",
+    "doi-asserted-by": "publisher",
+    "first-page": "990",
+    "DOI": "10.1109/LPT.2016.2522509",
+    "volume": "28",
+    "author": "P Castera",
+    "year": "2016",
+    "unstructured": "Castera, P. et al. Electro-optical modulation based on Pockels effect in BaTiO3 with a multi-domain structure. IEEE Photon. Technol. Lett. 28, 990\u2013993 (2016).",
+    "journal-title": "IEEE Photon. Technol. Lett."
+   },
+   {
+    "key": "2158_CR49",
+    "doi-asserted-by": "publisher",
+    "first-page": "281",
+    "DOI": "10.1109/JLT.2018.2881332",
+    "volume": "37",
+    "author": "A Messner",
+    "year": "2019",
+    "unstructured": "Messner, A. et al. Plasmonic ferroelectric modulators. J. Light. Technol. 37, 281\u2013290 (2019).",
+    "journal-title": "J. Light. Technol."
+   },
+   {
+    "key": "2158_CR50",
+    "doi-asserted-by": "publisher",
+    "first-page": "2651",
+    "DOI": "10.1063/1.360126",
+    "volume": "78",
+    "author": "P Bernasconi",
+    "year": "1995",
+    "unstructured": "Bernasconi, P., Zgonik, M. & G\u00fcnter, P. Temperature dependence and dispersion of electro\u2010optic and elasto\u2010optic effect in perovskite crystals. J. Appl. Phys. 78, 2651\u20132658 (1995).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2158_CR51",
+    "doi-asserted-by": "publisher",
+    "first-page": "17",
+    "DOI": "10.1063/1.1754022",
+    "volume": "5",
+    "author": "RC Miller",
+    "year": "1964",
+    "unstructured": "Miller, R. C. Optical second harmonic generation in piezoelectric crystals. Appl. Phys. Lett. 5, 17\u201319 (1964).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "2158_CR52",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Moor, D. et al. >150\u2009GHz hybrid-plasmonic BaTiO3-on-SOI modulator for CMOS foundry integration. In Frontiers in Optics + Laser Science 2021 FTh4D.2 (Optica Publishing Group, 2021).",
+    "DOI": "10.1364/FIO.2021.FTh4D.2"
+   },
+   {
+    "key": "2158_CR53",
+    "doi-asserted-by": "publisher",
+    "first-page": "5941",
+    "DOI": "10.1103/PhysRevB.50.5941",
+    "volume": "50",
+    "author": "M Zgonik",
+    "year": "1994",
+    "unstructured": "Zgonik, M. et al. Dielectric, elastic, piezoelectric, electro-optic, and elasto-optic tensors of BaTiO3 crystals. Phys. Rev. B 50, 5941\u20135949 (1994).",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "2158_CR54",
+    "doi-asserted-by": "publisher",
+    "first-page": "2358",
+    "DOI": "10.1109/JLT.2003.818162",
+    "volume": "21",
+    "author": "S Yongqiang",
+    "year": "2003",
+    "unstructured": "Yongqiang, S., Lianshan, Y. & Willner, A. E. High-speed electrooptic modulator characterization using optical spectrum analysis. J. Light. Technol. 21, 2358\u20132367 (2003).",
+    "journal-title": "J. Light. Technol."
+   }
+  ],
+  "container-title": [
+   "Nature Materials"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41563-025-02158-1.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41563-025-02158-1",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41563-025-02158-1.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     6,
+     3
+    ]
+   ],
+   "date-time": "2025-06-03T10:46:56Z",
+   "timestamp": 1748947616000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41563-025-02158-1"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     3,
+     17
+    ]
+   ]
+  },
+  "references-count": 54,
+  "journal-issue": {
+   "issue": "6",
+   "published-print": {
+    "date-parts": [
+     [
+      2025,
+      6
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "2158"
+  ],
+  "URL": "https://doi.org/10.1038/s41563-025-02158-1",
+  "relation": {},
+  "ISSN": [
+   "1476-1122",
+   "1476-4660"
+  ],
+  "issn-type": [
+   {
+    "value": "1476-1122",
+    "type": "print"
+   },
+   {
+    "value": "1476-4660",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     3,
+     17
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "7 November 2023",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "28 January 2025",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "17 March 2025",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ]
+ }
+}

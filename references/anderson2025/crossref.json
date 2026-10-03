@@ -1,0 +1,865 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     29
+    ]
+   ],
+   "date-time": "2026-09-29T06:34:36Z",
+   "timestamp": 1790663676357,
+   "version": "4.1.0"
+  },
+  "reference-count": 93,
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "issue": "6771",
+  "content-domain": {
+   "domain": [
+    "www.science.org"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Science"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ]
+  },
+  "DOI": "10.1126/science.adx8657",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ],
+   "date-time": "2025-10-23T18:00:46Z",
+   "timestamp": 1761242446000
+  },
+  "page": "394-399",
+  "update-policy": "https://doi.org/10.34133/aaas_crossmark",
+  "source": "Crossref",
+  "is-referenced-by-count": 14,
+  "title": [
+   "Quantum critical electro-optic and piezo-electric nonlinearities"
+  ],
+  "prefix": "10.1126",
+  "volume": "390",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-5624-0025",
+    "authenticated-orcid": true,
+    "given": "Christopher P.",
+    "family": "Anderson",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "E. L. Ginzton Laboratory, Stanford University, Stanford, CA, USA."
+     },
+     {
+      "name": "Department of Materials Science and Engineering, University of Illinois Urbana-Champaign, Urbana, IL, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1050-3114",
+    "authenticated-orcid": true,
+    "given": "Giovanni",
+    "family": "Scuri",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "E. L. Ginzton Laboratory, Stanford University, Stanford, CA, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0005-8871-0473",
+    "authenticated-orcid": true,
+    "given": "Aaron",
+    "family": "Chan",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Physics, University of Michigan, Ann Arbor, MI, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5581-0233",
+    "authenticated-orcid": true,
+    "given": "Sungjun",
+    "family": "Eun",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "E. L. Ginzton Laboratory, Stanford University, Stanford, CA, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5387-310X",
+    "authenticated-orcid": true,
+    "given": "Alexander D.",
+    "family": "White",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "E. L. Ginzton Laboratory, Stanford University, Stanford, CA, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4761-7804",
+    "authenticated-orcid": true,
+    "given": "Geun Ho",
+    "family": "Ahn",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "E. L. Ginzton Laboratory, Stanford University, Stanford, CA, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4879-8739",
+    "authenticated-orcid": true,
+    "given": "Christine",
+    "family": "Jilly",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Stanford Nano Shared Facilities, Stanford University, Stanford, CA, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6176-1274",
+    "authenticated-orcid": true,
+    "given": "Amir",
+    "family": "Safavi-Naeini",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "E. L. Ginzton Laboratory, Stanford University, Stanford, CA, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4286-585X",
+    "authenticated-orcid": true,
+    "given": "Kasper",
+    "family": "Van Gasse",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "E. L. Ginzton Laboratory, Stanford University, Stanford, CA, USA."
+     },
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8054-7406",
+    "authenticated-orcid": true,
+    "given": "Lu",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Physics, University of Michigan, Ann Arbor, MI, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4603-9686",
+    "authenticated-orcid": true,
+    "given": "Jelena",
+    "family": "Vu\u010dkovi\u0107",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "E. L. Ginzton Laboratory, Stanford University, Stanford, CA, USA."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "221",
+  "reference": [
+   {
+    "key": "e_1_3_2_2_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41578-024-00668-z"
+   },
+   {
+    "key": "e_1_3_2_3_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0048712"
+   },
+   {
+    "key": "e_1_3_2_4_2",
+    "volume-title": "Advanced piezoelectric materials: Science and technology",
+    "author": "Uchino K.",
+    "year": "2017",
+    "unstructured": "K. Uchino, Advanced piezoelectric materials: Science and technology (Woodhead Publishing, 2017)."
+   },
+   {
+    "key": "e_1_3_2_5_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0192018"
+   },
+   {
+    "key": "e_1_3_2_6_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-024-07369-1"
+   },
+   {
+    "key": "e_1_3_2_7_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-020-0725-5"
+   },
+   {
+    "key": "e_1_3_2_8_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0551-y"
+   },
+   {
+    "key": "e_1_3_2_9_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202100149"
+   },
+   {
+    "key": "e_1_3_2_10_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "K. Uchino Electrostrictive and Piezoelectric Effects in Relaxor Ferroelectrics: Historical Background. T-UFFC 69 3013\u20133036 (2022). 10.1109/TUFFC.2022.316500235389863",
+    "DOI": "10.1109/TUFFC.2022.3165002"
+   },
+   {
+    "key": "e_1_3_2_11_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.rinp.2021.104059"
+   },
+   {
+    "key": "e_1_3_2_12_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.jmat.2023.02.006"
+   },
+   {
+    "key": "e_1_3_2_13_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.aar4994"
+   },
+   {
+    "key": "e_1_3_2_14_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-14863-3"
+   },
+   {
+    "key": "e_1_3_2_15_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-025-08820-7"
+   },
+   {
+    "key": "e_1_3_2_16_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-020-2823-6"
+   },
+   {
+    "key": "e_1_3_2_17_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PRXQuantum.5.010102"
+   },
+   {
+    "key": "e_1_3_2_18_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41928-021-00570-4"
+   },
+   {
+    "key": "e_1_3_2_19_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1201/9781315371962-8"
+   },
+   {
+    "key": "e_1_3_2_20_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41928-022-00823-w"
+   },
+   {
+    "key": "e_1_3_2_21_2",
+    "unstructured": "C. M\u00f6hl A. Riedhauser M. Glantschnig D. Caimi U. Drechsler A. Olziersky D. Sabonis D. I. Indolese T. M. Karg P. Seidler Bidirectional microwave-optical conversion using an integrated barium-titanate transducer. arXiv:2501.09728 [physics.optics] (2025)."
+   },
+   {
+    "key": "e_1_3_2_22_2",
+    "volume-title": "Nonlinear Optics",
+    "author": "Boyd R. W.",
+    "year": "2020",
+    "unstructured": "R. W. Boyd, Nonlinear Optics (Academic Press, ed. 4, 2020).",
+    "edition": "4"
+   },
+   {
+    "key": "e_1_3_2_23_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1658421"
+   },
+   {
+    "key": "e_1_3_2_24_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1657458"
+   },
+   {
+    "key": "e_1_3_2_25_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0034-4885/61/9/002"
+   },
+   {
+    "key": "e_1_3_2_26_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/jp971522c"
+   },
+   {
+    "key": "e_1_3_2_28_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.19.3593"
+   },
+   {
+    "key": "e_1_3_2_29_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.aaw4913"
+   },
+   {
+    "key": "e_1_3_2_30_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3390/condmat5040058"
+   },
+   {
+    "key": "e_1_3_2_31_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphys4085"
+   },
+   {
+    "key": "e_1_3_2_32_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1023/A:1007797131173"
+   },
+   {
+    "key": "e_1_3_2_33_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "D. Park V. Yun X. Zhou J. Luo A. K.-Y. Jen W. N. Herman in Conference on Lasers and Electro-Optics (Optica Publishing Group 2010) paper CTuR3.",
+    "DOI": "10.1364/CLEO.2010.CTuR3"
+   },
+   {
+    "key": "e_1_3_2_34_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.optcom.2007.10.031"
+   },
+   {
+    "key": "e_1_3_2_35_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1754003"
+   },
+   {
+    "key": "e_1_3_2_36_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature02773"
+   },
+   {
+    "key": "e_1_3_2_37_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevMaterials.2.115202"
+   },
+   {
+    "key": "e_1_3_2_38_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.4861260"
+   },
+   {
+    "key": "e_1_3_2_39_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.88.035102"
+   },
+   {
+    "key": "e_1_3_2_40_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.276.5311.392"
+   },
+   {
+    "key": "e_1_3_2_41_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.82.3001"
+   },
+   {
+    "key": "e_1_3_2_42_2",
+    "first-page": "518",
+    "volume-title": "Proceedings of the SPIE 5623",
+    "author": "Fujiura K.",
+    "year": "2005",
+    "unstructured": "K. Fujiura, K. Nakamura, in Proceedings of the SPIE 5623 (SPIE, 2005), pp. 518\u2013532"
+   },
+   {
+    "key": "e_1_3_2_43_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-025-02158-1"
+   },
+   {
+    "key": "e_1_3_2_44_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.82.3540"
+   },
+   {
+    "key": "e_1_3_2_45_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphys2924"
+   },
+   {
+    "key": "e_1_3_2_46_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.53829/ntr200912sf6"
+   },
+   {
+    "key": "e_1_3_2_47_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.64.174104"
+   },
+   {
+    "key": "e_1_3_2_48_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2515-7647/ac1ef4"
+   },
+   {
+    "key": "e_1_3_2_49_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3117365"
+   },
+   {
+    "key": "e_1_3_2_50_2",
+    "doi-asserted-by": "crossref",
+    "first-page": "eadx3741",
+    "DOI": "10.1126/science.adx3741",
+    "article-title": "Engineering high Pockels coefficients in thin-film strontium titanate for cryogenic quantum electro-optic applications",
+    "volume": "390",
+    "author": "Ulrich A.",
+    "year": "2025",
+    "unstructured": "A. Ulrich, K. Brahim, A. Boelen, M. Debaets, C. Sun, Y. Huang, S. S. Saseendran, M. Baryshnikova, P. Favia, T. Nuytten, S. Sergeant, K. Van Gasse, B. Kuyken, K. De Greve, C. Merckling, C. Haffner Engineering high Pockels coefficients in thin-film strontium titanate for cryogenic quantum electro-optic applications. Science 390, eadx3741 (2025).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "e_1_3_2_51_2",
+    "unstructured": "C. P. Anderson G. Scuri A. Chan S. Eun A. White G. H. Ahn C. Jilly A. H. Safavi-Naeini K. Van Gasse L. Li J. Vu\u010dkovi\u0107 Dataset for \u201cQuantum critical electro-optic and piezo-electric nonlinearities\u201d Version v1 Zenodo (2025); https://zenodo.org/records/15653571."
+   },
+   {
+    "key": "e_1_3_2_52_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/B978-0-12-823144-9.00069-8"
+   },
+   {
+    "key": "e_1_3_2_53_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.7566/JPSJ.85.074703"
+   },
+   {
+    "key": "e_1_3_2_54_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1134/1.1258678"
+   },
+   {
+    "key": "e_1_3_2_55_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.366180"
+   },
+   {
+    "key": "e_1_3_2_56_2",
+    "unstructured": "P. Chandra P. B. Littlewood in Physics of Ferroelectrics (Springer 2007); pp. 69\u2013116."
+   },
+   {
+    "key": "e_1_3_2_57_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1146/annurev.ms.04.080174.001051"
+   },
+   {
+    "key": "e_1_3_2_58_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.403178"
+   },
+   {
+    "key": "e_1_3_2_59_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2058-9565/ab84c1"
+   },
+   {
+    "key": "e_1_3_2_60_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41524-020-00399-z"
+   },
+   {
+    "key": "e_1_3_2_61_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2058-9565/ab84c1"
+   },
+   {
+    "key": "e_1_3_2_62_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0022-3727/35/13/316"
+   },
+   {
+    "key": "e_1_3_2_63_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1713643"
+   },
+   {
+    "key": "e_1_3_2_64_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41597-023-02898-2"
+   },
+   {
+    "key": "e_1_3_2_65_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/1367-2630/11/8/083024"
+   },
+   {
+    "key": "e_1_3_2_66_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0022-3727/16/12/002"
+   },
+   {
+    "key": "e_1_3_2_67_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1661463"
+   },
+   {
+    "key": "e_1_3_2_68_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1905789"
+   },
+   {
+    "key": "e_1_3_2_69_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.110.054302"
+   },
+   {
+    "key": "e_1_3_2_70_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.108.097401"
+   },
+   {
+    "key": "e_1_3_2_71_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1073/pnas.2400568121"
+   },
+   {
+    "key": "e_1_3_2_72_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1143/APEX.4.111501"
+   },
+   {
+    "key": "e_1_3_2_73_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.25.015481"
+   },
+   {
+    "key": "e_1_3_2_74_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.4764046"
+   },
+   {
+    "key": "e_1_3_2_75_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/0038-1098(70)90725-8"
+   },
+   {
+    "key": "e_1_3_2_76_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.61.946"
+   },
+   {
+    "key": "e_1_3_2_77_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.4954886"
+   },
+   {
+    "key": "e_1_3_2_78_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/b53034"
+   },
+   {
+    "key": "e_1_3_2_79_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1660528"
+   },
+   {
+    "key": "e_1_3_2_80_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1143/JJAP.6.151"
+   },
+   {
+    "key": "e_1_3_2_81_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.339293"
+   },
+   {
+    "key": "e_1_3_2_82_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.358853"
+   },
+   {
+    "key": "e_1_3_2_83_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.50.5941"
+   },
+   {
+    "key": "e_1_3_2_84_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.abn7711"
+   },
+   {
+    "key": "e_1_3_2_85_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep25637"
+   },
+   {
+    "key": "e_1_3_2_86_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep25637"
+   },
+   {
+    "key": "e_1_3_2_87_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0953-8984/1/36/012"
+   },
+   {
+    "key": "e_1_3_2_88_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M. Thiercelin H. Dammak M. Pham Thi \u201cElectromechanical properties of PMN-PT and PZT ceramics at cryogenic temperatures\u201d in 2010 IEEE International Symposium on the Applications of Ferroelectrics (ISAF (2010) pp. 1\u20134.10.1109/ISAF.2010.5712258",
+    "DOI": "10.1109/ISAF.2010.5712258"
+   },
+   {
+    "key": "e_1_3_2_89_2",
+    "unstructured": "H. Zhao W. D. Chen A. Kejriwal M. Mirhosseini Quantum-enabled continuous microwave-to-optics frequency conversion. arXiv:2406.02704 [quant-ph] (2024)."
+   },
+   {
+    "key": "e_1_3_2_90_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.127.040503"
+   },
+   {
+    "key": "e_1_3_2_91_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-022-34373-8"
+   },
+   {
+    "key": "e_1_3_2_92_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.425414"
+   },
+   {
+    "key": "e_1_3_2_93_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-021-03268-x"
+   },
+   {
+    "key": "e_1_3_2_94_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-023-01370-2"
+   },
+   {
+    "key": "e_1_3_2_95_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPEX.12.005962"
+   }
+  ],
+  "container-title": [
+   "Science"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.science.org/doi/pdf/10.1126/science.adx8657",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ],
+   "date-time": "2025-10-23T18:01:35Z",
+   "timestamp": 1761242495000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.science.org/doi/10.1126/science.adx8657"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ]
+  },
+  "references-count": 93,
+  "journal-issue": {
+   "issue": "6771",
+   "published-print": {
+    "date-parts": [
+     [
+      2025,
+      10,
+      23
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1126/science.adx8657"
+  ],
+  "URL": "https://doi.org/10.1126/science.adx8657",
+  "relation": {},
+  "ISSN": [
+   "0036-8075",
+   "1095-9203"
+  ],
+  "issn-type": [
+   {
+    "value": "0036-8075",
+    "type": "print"
+   },
+   {
+    "value": "1095-9203",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2025-04-01",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-09-01",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-10-23",
+    "order": 3,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ]
+ }
+}

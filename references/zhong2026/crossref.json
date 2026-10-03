@@ -1,0 +1,927 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     14
+    ]
+   ],
+   "date-time": "2026-09-14T10:47:12Z",
+   "timestamp": 1789382832604,
+   "version": "build-2803163510"
+  },
+  "reference-count": 53,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       12,
+       18
+      ]
+     ],
+     "date-time": "2025-12-18T00:00:00Z",
+     "timestamp": 1766016000000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       1,
+       28
+      ]
+     ],
+     "date-time": "2026-01-28T00:00:00Z",
+     "timestamp": 1769558400000
+    },
+    "content-version": "vor",
+    "delay-in-days": 41,
+    "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "NSFC 62341508"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "NSFC 62341508"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "Shanghai Municipal of Science and Technology Major Project"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat Commun"
+  ],
+  "DOI": "10.1038/s41467-025-67826-x",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     18
+    ]
+   ],
+   "date-time": "2025-12-18T06:45:25Z",
+   "timestamp": 1766040325000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 5,
+  "title": [
+   "Ultracompact and large-bandwidth silicon modulator in a CMOS-compatible foundry"
+  ],
+  "prefix": "10.1038",
+  "volume": "17",
+  "author": [
+   {
+    "given": "Hua",
+    "family": "Zhong",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jingchi",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yu",
+    "family": "He",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hongwei",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuqi",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yong",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9368-8443",
+    "authenticated-orcid": false,
+    "given": "Xingfeng",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuhan",
+    "family": "Du",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1526-8187",
+    "authenticated-orcid": false,
+    "given": "Yikai",
+    "family": "Su",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     18
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "67826_CR1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Vankudre, A. & Vakula, R. Energy efficient algorithms in green cloud computing- a comprehensive study. 14th International Conference on Computing Communication and Networking Technologies (ICCCNT, 2023).",
+    "DOI": "10.1109/ICCCNT56998.2023.10306976"
+   },
+   {
+    "key": "67826_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1038/ncomms5008",
+    "volume": "5",
+    "author": "E Timurdogan",
+    "year": "2014",
+    "unstructured": "Timurdogan, E. et al. An ultralow power athermal silicon modulator. Nat. Commun. 5, 1\u201311 (2014).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "67826_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "622",
+    "DOI": "10.1364/OPTICA.3.000622",
+    "volume": "3",
+    "author": "R Dub\u00e9-Demers",
+    "year": "2016",
+    "unstructured": "Dub\u00e9-Demers, R., LaRochelle, S. & Shi, W. Ultrafast pulse-amplitude modulation with a femtojoule silicon photonic modulator. Optica 3, 622\u2013627 (2016).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "67826_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "110",
+    "DOI": "10.1109/JLT.2018.2878327",
+    "volume": "37",
+    "author": "J Sun",
+    "year": "2019",
+    "unstructured": "Sun, J. et al. A 128 Gb/s PAM4 silicon microring modulator with integrated thermo-optic resonance tuning. J. Lightwave Technol. 37, 110\u2013115 (2019).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "67826_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "1127",
+    "DOI": "10.1364/PRJ.441791",
+    "volume": "10",
+    "author": "Y Zhang",
+    "year": "2022",
+    "unstructured": "Zhang, Y. et al. 240\u2009Gb/s optical transmission based on an ultrafast silicon microring modulator. Photon. Res. 10, 1127\u20131133 (2022).",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "key": "67826_CR6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-023-43244-9",
+    "volume": "14",
+    "author": "Z Cheng",
+    "year": "2023",
+    "unstructured": "Cheng, Z. et al. On-chip silicon electro-optical modulator with ultra-high extinction ratio for fiber-optic distributed acoustic sensing. Nat. Commun. 14, 7409 (2023).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "67826_CR7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-45301-3",
+    "volume": "15",
+    "author": "Y Yuan",
+    "year": "2024",
+    "unstructured": "Yuan, Y. et al. A 5\u2009\u00d7\u2009200 Gbps microring modulator silicon chip empowered by two-segment Z-shape junctions. Nat. Commun. 15, 918 (2024).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "67826_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "11507",
+    "DOI": "10.1364/OE.19.011507",
+    "volume": "19",
+    "author": "D Thomson",
+    "year": "2011",
+    "unstructured": "Thomson, D. et al. High contrast 40Gbit/s optical modulation in silicon. Opt. Express 19, 11507\u201311516 (2011).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "67826_CR9",
+    "doi-asserted-by": "publisher",
+    "first-page": "222401",
+    "DOI": "10.1007/s11432-022-3556-0",
+    "volume": "65",
+    "author": "C Han",
+    "year": "2022",
+    "unstructured": "Han, C. et al. Proton radiation effects on high-speed silicon Mach-Zehnder modulators for space application. Sci. China Inf. Sci. 65, 222401 (2022).",
+    "journal-title": "Sci. China Inf. Sci."
+   },
+   {
+    "key": "67826_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "6163",
+    "DOI": "10.1364/OE.20.006163",
+    "volume": "20",
+    "author": "P Dong",
+    "year": "2012",
+    "unstructured": "Dong, P., Chen, L. & Chen, Y. High-speed low-voltage single-drive push-pull silicon Mach-Zehnder modulators. Opt. Express 20, 6163\u20136169 (2012).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "67826_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "14263",
+    "DOI": "10.1364/OE.23.014263",
+    "volume": "23",
+    "author": "D Patel",
+    "year": "2015",
+    "unstructured": "Patel, D. et al. Design, analysis, and transmission system performance of a 41 GHz silicon photonic modulator. Opt. Express 23, 14263\u201314287 (2015).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "67826_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "109",
+    "DOI": "10.1364/PRJ.6.000109",
+    "volume": "6",
+    "author": "M Li",
+    "year": "2018",
+    "unstructured": "Li, M. et al. Silicon intensity Mach-Zehnder modulator for single lane 100 Gb/s applications. Photonics Res. 6, 109\u2013116 (2018).",
+    "journal-title": "Photonics Res."
+   },
+   {
+    "key": "67826_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "5059",
+    "DOI": "10.1109/JLT.2023.3250112",
+    "volume": "41",
+    "author": "A Mohammadi",
+    "year": "2023",
+    "unstructured": "Mohammadi, A. et al. Segmented silicon modulator with a bandwidth beyond 67 GHz for high-speed signaling. J. Lightwave Technol. 41, 5059\u20135066 (2023).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "67826_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "4270",
+    "DOI": "10.1109/JLT.2021.3074096",
+    "volume": "39",
+    "author": "M Alam",
+    "year": "2021",
+    "unstructured": "Alam, M. et al. Net 220 Gbps/\u03bb IM/DD transmission in O-band and C-band with silicon photonic traveling-wave MZM. J. Lightwave Technol. 39, 4270 (2021).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "67826_CR15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/lsa.2014.54",
+    "volume": "3",
+    "author": "L Alloatti",
+    "year": "2014",
+    "unstructured": "Alloatti, L. et al. 100 GHz silicon\u2013organic hybrid modulator. Light Sci. Appl. 3, e173 (2014).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "67826_CR16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-017-19061-8",
+    "volume": "8",
+    "author": "S Wolf",
+    "year": "2018",
+    "unstructured": "Wolf, S. et al. Silicon-Organic Hybrid (SOH) Mach-Zehnder modulators for 100 Gbit/s on-off keying. Sci. Rep. 8, 2598 (2018).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "67826_CR17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/lsa.2015.28",
+    "volume": "4",
+    "author": "S Koeber",
+    "year": "2015",
+    "unstructured": "Koeber, S. et al. Femtojoule electro-optic modulation using a silicon\u2013organic hybrid device. Light Sci. Appl. 4, e255 (2015).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "67826_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "1093",
+    "DOI": "10.1109/LPT.2021.3106642",
+    "volume": "33",
+    "author": "X Huang",
+    "year": "2021",
+    "unstructured": "Huang, X. et al. High-efficiency, slow-light modulator on hybrid thin-film lithium niobate platform. IEEE Photonics Technol. Lett. 33, 1093\u20131096 (2021).",
+    "journal-title": "IEEE Photonics Technol. Lett."
+   },
+   {
+    "key": "67826_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "1212",
+    "DOI": "10.1364/OPTICA.531372",
+    "volume": "11",
+    "author": "K Kawahara",
+    "year": "2024",
+    "unstructured": "Kawahara, K. et al. High-speed, low-voltage, low-bit-energy silicon photonic crystal slow-light modulator with impedance-engineered distributed electrodes. Optica 11, 1212\u20131219 (2024).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "67826_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "64",
+    "DOI": "10.1038/nature10067",
+    "volume": "474",
+    "author": "M Liu",
+    "year": "2011",
+    "unstructured": "Liu, M. et al. A graphene-based broadband optical modulator. Nature 474, 64\u201367 (2011).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "67826_CR21",
+    "doi-asserted-by": "publisher",
+    "first-page": "40",
+    "DOI": "10.1038/s41566-017-0071-6",
+    "volume": "12",
+    "author": "V Sorianello",
+    "year": "2018",
+    "unstructured": "Sorianello, V. et al. Graphene\u2013silicon phase modulators with gigahertz bandwidth. Nat. Photonics 12, 40\u201344 (2018).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "67826_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "482",
+    "DOI": "10.1038/nphoton.2017.120",
+    "volume": "11",
+    "author": "T Hiraki",
+    "year": "2017",
+    "unstructured": "Hiraki, T. et al. Heterogeneously integrated III-V/Si MOS capacitor Mach-Zehnder modulator. Nat. Photonics 11, 482\u2013485 (2017).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "67826_CR23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.adi5339",
+    "volume": "9",
+    "author": "C Han",
+    "year": "2023",
+    "unstructured": "Han, C. et al. Slow-light silicon modulator with 110-GHz bandwidth. Sci. adv. 9, eadi5339 (2023).",
+    "journal-title": "Sci. adv."
+   },
+   {
+    "key": "67826_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "8425",
+    "DOI": "10.1364/OE.25.008425",
+    "volume": "25",
+    "author": "Z Yong",
+    "year": "2017",
+    "unstructured": "Yong, Z. et al. U-shaped PN junctions for efficient silicon Mach-Zehnder and microring modulators in the O-band. Opt. Express 25, 8425\u20138439 (2017).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "67826_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "131",
+    "DOI": "10.1109/JLT.2019.2938731",
+    "volume": "38",
+    "author": "H Li",
+    "year": "2020",
+    "unstructured": "Li, H. et al. 112 Gb/s PAM4 silicon photonics transmitter with microring modulator and CMOS driver. J. Lightwave Technol. 38, 131\u2013138 (2020).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "67826_CR26",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Chan, D. W. U. et al. 110 Gbaud PAM-4 silicon microring modulator operating in the C-band. Conference on Lasers and Electro-Optics Pacific Rim, Technical Digest Series (Optica Publishing Group, 2022)",
+    "DOI": "10.1364/CLEOPR.2022.CWP12A_01"
+   },
+   {
+    "key": "67826_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "273",
+    "DOI": "10.1038/s41566-023-01159-3",
+    "volume": "17",
+    "author": "W Zhang",
+    "year": "2023",
+    "unstructured": "Zhang, W. et al. Harnessing plasma absorption in silicon MOS ring modulators. Nat. Photonics 17, 273\u2013280 (2023).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "67826_CR28",
+    "doi-asserted-by": "publisher",
+    "first-page": "325",
+    "DOI": "10.1038/nature03569",
+    "volume": "435",
+    "author": "Q Xu",
+    "year": "2005",
+    "unstructured": "Xu, Q., Schmidt, B., Pradhan, S. & Lipson, M. Micrometre-scale silicon electro-optic modulator. Nature 435, 325\u2013327 (2005).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "67826_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "7848",
+    "DOI": "10.1109/JLT.2022.3208745",
+    "volume": "40",
+    "author": "DWU Chan",
+    "year": "2022",
+    "unstructured": "Chan, D. W. U. et al. Ultra-wide free-spectral-range silicon microring modulator for high capacity WDM. J. Lightwave Technol. 40, 7848\u20137855 (2022).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "67826_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "1036",
+    "DOI": "10.1364/OL.479046",
+    "volume": "48",
+    "author": "DWU Chan",
+    "year": "2023",
+    "unstructured": "Chan, D. W. U., Wu, X., Lu, C., Lau, A. P. T. & Tsang, H. K. Efficient 330-Gb/s PAM-8 modulation using silicon microring modulators. Opt. Lett. 48, 1036\u20131039 (2023).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "67826_CR31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0232053",
+    "volume": "125",
+    "author": "Y Su",
+    "year": "2024",
+    "unstructured": "Su, Y. et al. When do we need Pbps photonic chips and what are the challenges? Appl. Phys. Lett. 125, 230502 (2024).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "67826_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "121106",
+    "DOI": "10.1063/1.3107263",
+    "volume": "94",
+    "author": "PB Deotare",
+    "year": "2009",
+    "unstructured": "Deotare, P. B. et al. High quality factor photonic crystal nanobeam cavities. Appl. Phys. Lett. 94, 121106 (2009).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "67826_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "33",
+    "DOI": "10.1038/s44310-024-00032-7",
+    "volume": "1",
+    "author": "H Zhong",
+    "year": "2024",
+    "unstructured": "Zhong, H. et al. Ultra-low-power consumption silicon electro-optic switch based on photonic crystal nanobeam cavity. npj Nanophotonics 1, 33 (2024).",
+    "journal-title": "npj Nanophotonics"
+   },
+   {
+    "key": "67826_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "937",
+    "DOI": "10.1515/nanoph-2020-0496",
+    "volume": "10",
+    "author": "R Zhang",
+    "year": "2020",
+    "unstructured": "Zhang, R. et al. Ultra-compact and low-power-consumption silicon thermo-optic switch for high-speed data. Nanophotonics 10, 937\u2013945 (2020).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "67826_CR35",
+    "doi-asserted-by": "publisher",
+    "first-page": "4518",
+    "DOI": "10.1364/OL.43.004518",
+    "volume": "43",
+    "author": "Y Zhang",
+    "year": "2018",
+    "unstructured": "Zhang, Y. et al. Single-resonance silicon nanobeam filter with an ultra-high thermo-optic tuning efficiency over a wide continuous tuning range. Opt. Lett. 43, 4518\u20134521 (2018).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "67826_CR36",
+    "doi-asserted-by": "publisher",
+    "first-page": "346",
+    "DOI": "10.1109/JLT.2017.2647779",
+    "volume": "35",
+    "author": "DAB Miller",
+    "year": "2017",
+    "unstructured": "Miller, D. A. B. Attojoule optoelectronics for low-energy information processing and communications. J. Lightwave Technol. 35, 346\u2013396 (2017).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "67826_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "30692",
+    "DOI": "10.1364/OE.27.030692",
+    "volume": "27",
+    "author": "J Zhou",
+    "year": "2019",
+    "unstructured": "Zhou, J., Zheng, J., Fang, Z., Xu, P. & Majumdar, A. Ultra-low mode volume on-substrate silicon nanobeam cavity. Opt. Express 27, 30692\u201330699 (2019).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "67826_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "28623",
+    "DOI": "10.1364/OE.22.028623",
+    "volume": "22",
+    "author": "A Shakoor",
+    "year": "2014",
+    "unstructured": "Shakoor, A. et al. Compact 1D-silicon photonic crystal electrooptic modulator operating with ultra-low switching voltage and energy. Opt. Express 22, 28623\u201328634 (2014).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "67826_CR39",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Qubaisi, K. A., Onural, D., Gevorgyan, H. & Popovic, M. A. Photonic crystal modulator in a CMOS foundry platform. Optical Fiber Communication Conference (OFC, 2021).",
+    "DOI": "10.1364/OFC.2021.F4B.1"
+   },
+   {
+    "key": "67826_CR40",
+    "first-page": "1",
+    "volume": "T2D.3",
+    "author": "Y Zhang",
+    "year": "2021",
+    "unstructured": "Zhang, Y., Wu, D., Wang, L. & Xiao, X. 70 Gbit/s Optical NRZ modulation based on Silicon Photonic Crystal Modulator. Asia Commun. Photonics Conf. (ACP) T2D.3, 1\u20133 (2021).",
+    "journal-title": "Asia Commun. Photonics Conf. (ACP)"
+   },
+   {
+    "key": "67826_CR41",
+    "doi-asserted-by": "publisher",
+    "first-page": "206",
+    "DOI": "10.1038/s41377-023-01251-x",
+    "volume": "12",
+    "author": "Y Zhang",
+    "year": "2023",
+    "unstructured": "Zhang, Y. et al. High-speed electro-optic modulation in topological interface states of a one-dimensional lattice. Light Sci. Appl. 12, 206 (2023).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "67826_CR42",
+    "doi-asserted-by": "publisher",
+    "first-page": "1456",
+    "DOI": "10.1109/JLT.2019.2893500",
+    "volume": "37",
+    "author": "F Eltes",
+    "year": "2019",
+    "unstructured": "Eltes, F. et al. A BaTiO3-based electro-optic Pockels modulator monolithically integrated on an advanced silicon photonics platform. J. Lightwave Technol. 37, 1456\u20131462 (2019).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "67826_CR43",
+    "doi-asserted-by": "publisher",
+    "first-page": "3952",
+    "DOI": "10.1364/OE.19.003952",
+    "volume": "19",
+    "author": "M Gould",
+    "year": "2011",
+    "unstructured": "Gould, M. et al. Silicon-polymer hybrid slot waveguide ring-resonator modulator. Opt. Express 19, 3952\u20133961 (2011).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "67826_CR44",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep06310",
+    "volume": "4",
+    "author": "J M\u00fcller",
+    "year": "2014",
+    "unstructured": "M\u00fcller, J. et al. Optical peaking enhancement in high-speed ring modulators. Sci. Rep. 4, 6310 (2014).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "67826_CR45",
+    "doi-asserted-by": "publisher",
+    "first-page": "051803",
+    "DOI": "10.1103/PhysRevA.73.051803",
+    "volume": "73",
+    "author": "M Notomi",
+    "year": "2006",
+    "unstructured": "Notomi, M. & Mitsugi, S. Wavelength conversion via dynamic refractive index tuning of a cavity. Phys. Rev. A 73, 051803 (2006).",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "67826_CR46",
+    "doi-asserted-by": "publisher",
+    "first-page": "123",
+    "DOI": "10.1109/JQE.1987.1073206",
+    "volume": "23",
+    "author": "RA Soref",
+    "year": "1987",
+    "unstructured": "Soref, R. A. & Bennett, B. R. Electrooptical effects in silicon. J. Quantum Electron. 23, 123\u2013129 (1987).",
+    "journal-title": "J. Quantum Electron."
+   },
+   {
+    "key": "67826_CR47",
+    "doi-asserted-by": "publisher",
+    "first-page": "16604",
+    "DOI": "10.1364/OE.15.016604",
+    "volume": "15",
+    "author": "Q Lin",
+    "year": "2007",
+    "unstructured": "Lin, Q., Painter, O. J. & Agrawal, G. P. Nonlinear optical phenomena in silicon waveguides: Modeling and applications. Opt. Express 15, 16604\u201316644 (2007).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "67826_CR48",
+    "doi-asserted-by": "publisher",
+    "first-page": "2065",
+    "DOI": "10.1109/JLT.2019.2897555",
+    "volume": "37",
+    "author": "O Jafari",
+    "year": "2019",
+    "unstructured": "Jafari, O., Sepehrian, H., Shi, W. & LaRochelle, S. High-efficiency silicon photonic modulator using coupled Bragg grating resonators. J. Light Technol. 37, 2065\u20132075 (2019).",
+    "journal-title": "J. Light Technol."
+   },
+   {
+    "key": "67826_CR49",
+    "doi-asserted-by": "publisher",
+    "first-page": "448",
+    "DOI": "10.1038/nphoton.2008.139",
+    "volume": "2",
+    "author": "TF Krauss",
+    "year": "2008",
+    "unstructured": "Krauss, T. F. Why do we need slow light? Nat. Photonics 2, 448\u2013450 (2008).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "67826_CR50",
+    "doi-asserted-by": "publisher",
+    "first-page": "457",
+    "DOI": "10.1364/PRJ.382620",
+    "volume": "8",
+    "author": "M Passoni",
+    "year": "2020",
+    "unstructured": "Passoni, M., Gerace, D., O\u2019Faolain, L. & Andreani, L. C. Optimizing an interleaved p-n junction to reduce energy dissipation in silicon slow-light modulators. Photonics Res. 8, 457\u2013467 (2020).",
+    "journal-title": "Photonics Res."
+   },
+   {
+    "key": "67826_CR51",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JPHOT.2018.2792535",
+    "volume": "10",
+    "author": "R Hosseini",
+    "year": "2018",
+    "unstructured": "Hosseini, R., Mirzoyan, L. & Jamshidi, K. Energy consumption enhancement of reverse-biased silicon-based Mach\u2013Zehnder modulators using corrugated slow light waveguides. IEEE Photonics J. 10, 1\u20137 (2018).",
+    "journal-title": "IEEE Photonics J."
+   },
+   {
+    "key": "67826_CR52",
+    "doi-asserted-by": "publisher",
+    "first-page": "65",
+    "DOI": "10.1038/nature04210",
+    "volume": "438",
+    "author": "YA Vlasov",
+    "year": "2005",
+    "unstructured": "Vlasov, Y. A., O\u2019Boyle, M., Hamann, H. F. & McNab, S. J. Active control of slow light on a chip with photonic crystal waveguides. Nature 438, 65\u201369 (2005).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "67826_CR53",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-45130-4",
+    "volume": "15",
+    "author": "WC Hsu",
+    "year": "2024",
+    "unstructured": "Hsu, W. C. et al. Sub-volt high-speed silicon MOSCAP microring modulator driven by high-mobility conductive oxide. Nat. Commun. 15, 826 (2024).",
+    "journal-title": "Nat. Commun."
+   }
+  ],
+  "container-title": [
+   "Nature Communications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-67826-x.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-67826-x",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-67826-x.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     28
+    ]
+   ],
+   "date-time": "2026-01-28T15:04:08Z",
+   "timestamp": 1769612648000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41467-025-67826-x"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     18
+    ]
+   ]
+  },
+  "references-count": 53,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2026,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "67826"
+  ],
+  "URL": "https://doi.org/10.1038/s41467-025-67826-x",
+  "relation": {},
+  "ISSN": [
+   "2041-1723"
+  ],
+  "issn-type": [
+   {
+    "value": "2041-1723",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     18
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "3 April 2025",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "9 December 2025",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "18 December 2025",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ],
+  "article-number": "1069"
+ }
+}

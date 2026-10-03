@@ -1,0 +1,593 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     12
+    ]
+   ],
+   "date-time": "2026-09-12T02:10:05Z",
+   "timestamp": 1789179005257,
+   "version": "build-2803163510"
+  },
+  "reference-count": 47,
+  "publisher": "Wiley",
+  "issue": "13",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       3,
+       6
+      ]
+     ],
+     "date-time": "2026-03-06T00:00:00Z",
+     "timestamp": 1772755200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       3,
+       6
+      ]
+     ],
+     "date-time": "2026-03-06T00:00:00Z",
+     "timestamp": 1772755200000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "onlinelibrary.wiley.com"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Laser &amp;amp; Photonics Reviews"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     7
+    ]
+   ]
+  },
+  "DOI": "10.1002/lpor.202502840",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     8
+    ]
+   ],
+   "date-time": "2026-03-08T19:37:47Z",
+   "timestamp": 1772998667000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 7,
+  "title": [
+   "400\u2010Gbps/\u03bb Ultrafast Silicon Microring Modulator for Scalable Optical Compute Interconnects"
+  ],
+  "prefix": "10.1002",
+  "volume": "20",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0007-1328-1082",
+    "authenticated-orcid": false,
+    "given": "Fangchen",
+    "family": "Hu",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Zhangjiang Laboratory  Shanghai China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Fengxin",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Zhangjiang Laboratory  Shanghai China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xingyu",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Future Information Innovative College Fudan University  Shanghai China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Aoxue",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Future Information Innovative College Fudan University  Shanghai China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xiao",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Zhangjiang Laboratory  Shanghai China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Haiwen",
+    "family": "Cai",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Zhangjiang Laboratory  Shanghai China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wei",
+    "family": "Chu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Zhangjiang Laboratory  Shanghai China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     6
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_8_2_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "S.Naffziger \u201cInnovations for Energy Efficient Generative AI \u201d in2023 International Electron Devices Meeting (IEDM)(IEEE 2023) 1\u20134 https://doi.org/10.1109/IEDM45741.2023.10413684.",
+    "DOI": "10.1109/IEDM45741.2023.10413684"
+   },
+   {
+    "key": "e_1_2_8_3_1",
+    "unstructured": "P.Villalobos J.Sevilla T.Besiroglu L.Heim A.Ho andM.Hobbhahn \u201cMachine Learning Model Sizes and the Parameter Gap \u201d Preprint arXiv July 5 2022."
+   },
+   {
+    "key": "e_1_2_8_4_1",
+    "unstructured": "G.Wang H.Qin S. A.Jacobs et\u00a0al. \u201cZero++: Extremely Efficient Collective Communication for Giant Model Training \u201d Preprint arXiv June 16 2023."
+   },
+   {
+    "key": "e_1_2_8_5_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "J.Sevilla L.Heim A.Ho T.Besiroglu M.Hobbhahn andP.Villalobos \u201cCompute Trends Across Three Eras of Machine Learning \u201d in2022 International Joint Conference on Neural Networks (IJCNN)(IEEE 2022) 1\u20138 https://doi.org/10.1109/IJCNN55064.2022.9891914.",
+    "DOI": "10.1109/IJCNN55064.2022.9891914"
+   },
+   {
+    "key": "e_1_2_8_6_1",
+    "unstructured": "Y.Kundu M.Kaur T.Wig et\u00a0al. \u201cA Comparison of the Cerebras Wafer\u2010Scale Integration Technology With Nvidia GPU\u2010based Systems for Artificial Intelligence \u201d Preprint arXiv March 11 2025."
+   },
+   {
+    "key": "e_1_2_8_7_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2025.3570941"
+   },
+   {
+    "key": "e_1_2_8_8_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "K.Lim J.Chang T.Mudge P.Ranganathan S. K.Reinhardt andT. F.Wenisch \u201cDisaggregated Memory for Expansion and Sharing in Blade Servers \u201d inProceedings of the 36th Annual International Symposium on Computer Architecture (Association for Computing Machinery 2009) 267\u2013278.",
+    "DOI": "10.1145/1555754.1555789"
+   },
+   {
+    "key": "e_1_2_8_9_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/MCOM.001.1900612"
+   },
+   {
+    "key": "e_1_2_8_10_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.5.001354"
+   },
+   {
+    "key": "e_1_2_8_11_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467\u2010024\u201044750\u20100"
+   },
+   {
+    "key": "e_1_2_8_12_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2021.3104725"
+   },
+   {
+    "key": "e_1_2_8_13_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566\u2010025\u201001633\u20100"
+   },
+   {
+    "key": "e_1_2_8_14_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566\u2010023\u201001161\u20109"
+   },
+   {
+    "key": "e_1_2_8_15_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566\u2010024\u201001495\u2010y"
+   },
+   {
+    "key": "e_1_2_8_16_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "V.Jain W.Tang Z.Wu et\u00a0al. \u201cDesign Approach for Die\u2010to\u2010Die Interfaces to Enable Energy\u2010Efficient Chiplet Systems \u201d inProceedings of the 29th ACM/IEEE International Symposium on Low Power Electronics and Design(Association for Computing Machinery 2024) https://doi.org/10.1145/3665314.3680473.",
+    "DOI": "10.1145/3665314.3680473"
+   },
+   {
+    "key": "e_1_2_8_17_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566\u2010023\u201001244\u20107"
+   },
+   {
+    "key": "e_1_2_8_18_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/ncomms5008"
+   },
+   {
+    "key": "e_1_2_8_19_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "B. R.Koch E. J.Norberg B.Kim et\u00a0al. \u201cIntegrated Silicon Photonic Laser Sources for Telecom and Datacom \u201d inOptical Fiber Communication Conference(Optica Publishing Group 2013) PDP5C\u20138.",
+    "DOI": "10.1364/OFC.2013.PDP5C.8"
+   },
+   {
+    "key": "e_1_2_8_20_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C.Xie M.Raj A.Joshi et\u00a0al. \u201cA 64 Gb/s NRZ O\u2010Band Ring Modulator With 3.2 THz FSR for DWDM Applications \u201d in2024 Optical Fiber Communications Conference and Exhibition (OFC)(Optica Publishing Group 2024) 1\u20133 https://doi.org/10.1364/OFC.2024.Tu2D.5.",
+    "DOI": "10.1364/OFC.2024.Tu2D.5"
+   },
+   {
+    "key": "e_1_2_8_21_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2025.3585584"
+   },
+   {
+    "key": "e_1_2_8_22_1",
+    "volume-title": "2024 IEEE International Solid\u2010State Circuits Conference (ISSCC)",
+    "author": "Sun C.",
+    "year": "2024"
+   },
+   {
+    "key": "e_1_2_8_23_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M.Wade E.Anderson andS.Ardalan et\u00a0al. \u201cAn Error\u2010Free 1 Tbps WDM Optical I/O Chiplet and Multi\u2010Wavelength Multi\u2010Port Laser \u201d in2021 Optical Fiber Communications Conference and Exhibition (OFC)(Optica Publishing Group 2021) 1\u20133 https://doi.org/10.1364/OFC.2021.F3C.6.",
+    "DOI": "10.1364/OFC.2021.F3C.6"
+   },
+   {
+    "key": "e_1_2_8_24_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.441791"
+   },
+   {
+    "key": "e_1_2_8_25_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s44172\u2010023\u201000115\u2010x"
+   },
+   {
+    "key": "e_1_2_8_26_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2025.3561153"
+   },
+   {
+    "key": "e_1_2_8_27_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "X.Wang F.Yang Y.Liu et\u00a0al. \u201cA 290\u00a0Gbps Silicon Photonic Microring Modulator With 83 \u2010aJ/Bit Power Consumption \u201d inOptical Fiber Communication Conference (OFC) 2025(Optica Publishing Group 2025) https://doi.org/10.1364/OFC.2025.M3K.5.",
+    "DOI": "10.1364/OFC.2025.M3K.5"
+   },
+   {
+    "key": "e_1_2_8_28_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467\u2010024\u201045301\u20103"
+   },
+   {
+    "key": "e_1_2_8_29_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.479046"
+   },
+   {
+    "key": "e_1_2_8_30_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M.Sakib R.Kumar andC.Ma et\u00a0al. \u201cA 240 Gb/s PAM4 Silicon Micro\u2010Ring Optical Modulator \u201d in2022 Optical Fiber Communications Conference and Exhibition (OFC)(Optica Publishing Group 2022) 01\u201303 https://doi.org/10.1364/OFC.2022.M2D.4.",
+    "DOI": "10.1364/OFC.2022.M2D.4"
+   },
+   {
+    "key": "e_1_2_8_31_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2022.3208745"
+   },
+   {
+    "key": "e_1_2_8_32_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2025.3623843"
+   },
+   {
+    "key": "e_1_2_8_33_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "X.Chen P.Liao andF.Tang et\u00a0al. \u201c540\u00a0Gbps IMDD Transmission Over 30Km SMF Using 110\u00a0GHz Bandwidth InP EML \u201d inOptical Fiber Communication Conference (OFC)(Optica Publishing Group 2025) Th4B\u20132.",
+    "DOI": "10.1364/OFC.2025.Th4B.2"
+   },
+   {
+    "key": "e_1_2_8_34_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2023.3285881"
+   },
+   {
+    "key": "e_1_2_8_35_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467\u2010025\u201061933\u20105"
+   },
+   {
+    "key": "e_1_2_8_36_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202401092"
+   },
+   {
+    "key": "e_1_2_8_37_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.395182"
+   },
+   {
+    "key": "e_1_2_8_38_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep06310"
+   },
+   {
+    "key": "e_1_2_8_39_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.24.007585"
+   },
+   {
+    "key": "e_1_2_8_40_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.17.022484"
+   },
+   {
+    "key": "e_1_2_8_41_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2013.2278885"
+   },
+   {
+    "key": "e_1_2_8_42_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.535202"
+   },
+   {
+    "key": "e_1_2_8_43_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSSC.2023.3344072"
+   },
+   {
+    "key": "e_1_2_8_44_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TCPMT.2022.3207195"
+   },
+   {
+    "key": "e_1_2_8_45_1",
+    "unstructured": "GlobalFoundries 12 LP\u2014CMC Microsystems https://www.cmc.ca/globalfoundries\u201012\u2010lp/."
+   },
+   {
+    "key": "e_1_2_8_46_1",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Y.Zhang Z.Yao W.Zhou et\u00a0al. \u201c36.6 A 112Gb/s 0.61pJ/b PAM\u20104 Linear TIA Supporting Extended PD\u2010TIA Reach in 28Nm CMOS \u201d in2025 IEEE International Solid\u2010State Circuits Conference (ISSCC)(IEEE 2025) 1\u20133.",
+    "DOI": "10.1109/ISSCC49661.2025.10904575"
+   },
+   {
+    "key": "e_1_2_8_47_1",
+    "unstructured": "<number>[46]</number>PCI Express\u00ae Base Specification Revision 5.0 Version 10 May 22 2019 https://picture.iczhiku.com/resource/eetop/SYkDTqhOLhpUTnMx.pdf."
+   },
+   {
+    "key": "e_1_2_8_48_1",
+    "unstructured": "P.Alavi S.Krooswyk T.Wig et\u00a0al. \u201cPCI Express & PAM4: The Pathway to 128GT/s and Challenges of Building Interoperable 64GT/s Capable Systems \u201d inDesignCon 2024 (DesignCon 2024)."
+   }
+  ],
+  "container-title": [
+   "Laser &amp; Photonics Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/lpor.202502840",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/lpor.202502840",
+    "content-type": "application/xml",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/lpor.202502840",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     7,
+     12
+    ]
+   ],
+   "date-time": "2026-07-12T10:13:28Z",
+   "timestamp": 1783851208000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://onlinelibrary.wiley.com/doi/10.1002/lpor.202502840"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     6
+    ]
+   ]
+  },
+  "references-count": 47,
+  "journal-issue": {
+   "issue": "13",
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      7
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1002/lpor.202502840"
+  ],
+  "URL": "https://doi.org/10.1002/lpor.202502840",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "1863-8880",
+   "1863-8899"
+  ],
+  "issn-type": [
+   {
+    "value": "1863-8880",
+    "type": "print"
+   },
+   {
+    "value": "1863-8899",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     6
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2025-10-21",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2026-02-08",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2026-03-06",
+    "order": 3,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ],
+  "article-number": "e02840"
+ }
+}

@@ -1,0 +1,1085 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     2
+    ]
+   ],
+   "date-time": "2026-10-02T01:43:14Z",
+   "timestamp": 1790905394068,
+   "version": "4.1.0"
+  },
+  "reference-count": 48,
+  "publisher": "AIP Publishing",
+  "issue": "8",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       8,
+       1
+      ]
+     ],
+     "date-time": "2023-08-01T00:00:00Z",
+     "timestamp": 1690848000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       8,
+       1
+      ]
+     ],
+     "date-time": "2023-08-01T00:00:00Z",
+     "timestamp": 1690848000000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100003130",
+    "name": "Fonds Wetenschappelijk Onderzoek",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "11F5320N"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "11F5320N"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100003130",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100003130",
+    "name": "Fonds Wetenschappelijk Onderzoek",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "11H6721N"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "11H6721N"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100003130",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100003130",
+    "name": "Fonds Wetenschappelijk Onderzoek",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "11F8120N"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "11F8120N"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100003130",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002661",
+    "name": "Fonds de la Recherche Scientifique\u2013FNRS",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "MIS F.4506.20"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "MIS F.4506.20"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002661",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000781",
+    "name": "European Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "ELECTRIC"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "ELECTRIC"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000781",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "pubs.aip.org"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2023,
+     8,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1063/5.0150878",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     8,
+     2
+    ]
+   ],
+   "date-time": "2023-08-02T07:32:15Z",
+   "timestamp": 1690961535000
+  },
+  "update-policy": "https://doi.org/10.1063/aip-crossmark-policy-page",
+  "source": "Crossref",
+  "is-referenced-by-count": 91,
+  "title": [
+   "Heterogeneous integration of a high-speed lithium niobate modulator on silicon nitride using micro-transfer printing"
+  ],
+  "prefix": "10.1063",
+  "volume": "8",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-4692-9467",
+    "authenticated-orcid": false,
+    "given": "T.",
+    "family": "Vanackere",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     },
+     {
+      "name": "OPERA-Photonique CP 194/5, Universit\u00e9 Libre de Bruxelles (ULB) 2 , 1050 Bruxelles, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5639-9300",
+    "authenticated-orcid": false,
+    "given": "T.",
+    "family": "Vandekerckhove",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     },
+     {
+      "name": "OPERA-Photonique CP 194/5, Universit\u00e9 Libre de Bruxelles (ULB) 2 , 1050 Bruxelles, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3971-5938",
+    "authenticated-orcid": false,
+    "given": "L.",
+    "family": "Bogaert",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5784-5050",
+    "authenticated-orcid": false,
+    "given": "M.",
+    "family": "Billet",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     },
+     {
+      "name": "OPERA-Photonique CP 194/5, Universit\u00e9 Libre de Bruxelles (ULB) 2 , 1050 Bruxelles, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8374-1466",
+    "authenticated-orcid": false,
+    "given": "S.",
+    "family": "Poelman",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0943-9779",
+    "authenticated-orcid": false,
+    "given": "S.",
+    "family": "Cuyvers",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-6611-7979",
+    "authenticated-orcid": false,
+    "given": "J.",
+    "family": "Van Kerrebrouck",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), IDLab, Ghent University\u2013imec 3 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0945-2786",
+    "authenticated-orcid": false,
+    "given": "A.",
+    "family": "Moerman",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), IDLab, Ghent University\u2013imec 3 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1524-971X",
+    "authenticated-orcid": false,
+    "given": "O.",
+    "family": "Caytan",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), IDLab, Ghent University\u2013imec 3 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0609-1145",
+    "authenticated-orcid": false,
+    "given": "N.",
+    "family": "Singh",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), IDLab, Ghent University\u2013imec 3 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1366-2604",
+    "authenticated-orcid": false,
+    "given": "S.",
+    "family": "Lemey",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), IDLab, Ghent University\u2013imec 3 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1817-5370",
+    "authenticated-orcid": false,
+    "given": "G.",
+    "family": "Torfs",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), IDLab, Ghent University\u2013imec 3 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8737-9142",
+    "authenticated-orcid": false,
+    "given": "P.",
+    "family": "Ossieur",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), IDLab, Ghent University\u2013imec 3 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4667-5092",
+    "authenticated-orcid": false,
+    "given": "G.",
+    "family": "Roelkens",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0192-4662",
+    "authenticated-orcid": false,
+    "given": "S.",
+    "family": "Clemmen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     },
+     {
+      "name": "OPERA-Photonique CP 194/5, Universit\u00e9 Libre de Bruxelles (ULB) 2 , 1050 Bruxelles, Belgium"
+     },
+     {
+      "name": "Laboratoire d\u2019Information Quantique, Universit\u00e9 Libre de Bruxelles 4 , 1050 Bruxelles, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8745-7833",
+    "authenticated-orcid": false,
+    "given": "B.",
+    "family": "Kuyken",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University\u2013imec 1 , 9052 Ghent, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "317",
+  "published-online": {
+   "date-parts": [
+    [
+     2023,
+     8,
+     1
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "2023080207321275600_c1",
+    "doi-asserted-by": "publisher",
+    "first-page": "349",
+    "DOI": "10.1038/s41586-018-0028-z",
+    "article-title": "Integrating photonics with silicon nanoelectronics for the next generation of systems on a chip",
+    "volume": "556",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2023080207321275600_c2",
+    "doi-asserted-by": "publisher",
+    "first-page": "6100508",
+    "DOI": "10.1109/jstqe.2022.3187707",
+    "article-title": "Coherent LiDAR with an 8,192-element optical phased array and driving laser",
+    "volume": "28",
+    "year": "2022",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "2023080207321275600_c3",
+    "doi-asserted-by": "publisher",
+    "first-page": "341",
+    "DOI": "10.1038/s41566-021-00776-0",
+    "article-title": "Sensitive, small, broadband and scalable optomechanical ultrasound sensor in silicon photonics",
+    "volume": "15",
+    "year": "2021",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c4",
+    "doi-asserted-by": "publisher",
+    "first-page": "1755",
+    "DOI": "10.1002/adom.201600440",
+    "article-title": "Label-free glucose sensing using chip-scale mid-infrared integrated photonics",
+    "volume": "4",
+    "year": "2016",
+    "journal-title": "Adv. Opt. Mater."
+   },
+   {
+    "key": "2023080207321275600_c5",
+    "doi-asserted-by": "publisher",
+    "first-page": "5572",
+    "DOI": "10.1038/s41467-022-33259-z",
+    "article-title": "Noise-resilient and high-speed deep learning with coherent silicon photonics",
+    "volume": "13",
+    "year": "2022",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2023080207321275600_c6",
+    "doi-asserted-by": "publisher",
+    "first-page": "273",
+    "DOI": "10.1038/s41566-019-0532-1",
+    "article-title": "Integrated photonic quantum technologies",
+    "volume": "14",
+    "year": "2020",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c7",
+    "doi-asserted-by": "publisher",
+    "first-page": "3037",
+    "DOI": "10.1364/osac.2.003037",
+    "article-title": "Broadband telecom emission from InP/InGaAs nano-ridge lasers on silicon-on-insulator substrate",
+    "volume": "2",
+    "year": "2019",
+    "journal-title": "OSA Continuum"
+   },
+   {
+    "key": "2023080207321275600_c8",
+    "doi-asserted-by": "publisher",
+    "first-page": "1900364",
+    "DOI": "10.1002/lpor.201900364",
+    "article-title": "Micro-transfer-printed III-V-on-silicon C-band semiconductor optical amplifiers",
+    "volume": "14",
+    "year": "2020",
+    "journal-title": "Laser Photonics Rev."
+   },
+   {
+    "key": "2023080207321275600_c9",
+    "doi-asserted-by": "publisher",
+    "first-page": "012005",
+    "DOI": "10.35848/1347-4065/ac38fb",
+    "article-title": "InP-based high-speed monolithic PIN photodetector integrated with an MQW semiconductor optical amplifier",
+    "volume": "61",
+    "year": "2022",
+    "journal-title": "Jpn. J. Appl. Phys."
+   },
+   {
+    "key": "2023080207321275600_c10",
+    "doi-asserted-by": "publisher",
+    "first-page": "050901",
+    "DOI": "10.1063/1.5087862",
+    "article-title": "Past, present, and future of InP-based photonic integration",
+    "volume": "4",
+    "year": "2019",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "2023080207321275600_c11",
+    "doi-asserted-by": "publisher",
+    "first-page": "652",
+    "DOI": "10.1364/optica.415762",
+    "article-title": "Integrated lithium niobate electro-optic modulators: When performance meets scalability",
+    "volume": "8",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2023080207321275600_c12",
+    "doi-asserted-by": "publisher",
+    "first-page": "3444",
+    "DOI": "10.1038/s41467-018-05846-6",
+    "article-title": "Nanophotonic Pockels modulators on a silicon nitride platform",
+    "volume": "9",
+    "year": "2018",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2023080207321275600_c13",
+    "doi-asserted-by": "publisher",
+    "first-page": "2100149",
+    "DOI": "10.1002/adom.202100149",
+    "article-title": "Reversible and tunable second-order nonlinear optical susceptibility in PZT thin films for integrated optics",
+    "volume": "9",
+    "year": "2021",
+    "journal-title": "Adv. Opt. Mater."
+   },
+   {
+    "key": "2023080207321275600_c14",
+    "doi-asserted-by": "publisher",
+    "first-page": "10307",
+    "DOI": "10.1364/oe.409758",
+    "article-title": "Second harmonic generation in gallium phosphide nano-waveguides",
+    "volume": "29",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2023080207321275600_c15",
+    "doi-asserted-by": "publisher",
+    "first-page": "57",
+    "DOI": "10.1038/s41566-019-0537-9",
+    "article-title": "Integrated gallium phosphide nonlinear photonics",
+    "volume": "14",
+    "year": "2020",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c16",
+    "doi-asserted-by": "publisher",
+    "first-page": "8202008",
+    "DOI": "10.1109/jstqe.2013.2295882",
+    "article-title": "Design challenges in silicon photonics",
+    "volume": "20",
+    "year": "2013",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "2023080207321275600_c17",
+    "doi-asserted-by": "publisher",
+    "first-page": "639",
+    "DOI": "10.1109/jlt.2016.2617624",
+    "article-title": "Expanding the silicon photonics portfolio with silicon nitride photonic integrated circuits",
+    "volume": "35",
+    "year": "2017",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2023080207321275600_c18",
+    "doi-asserted-by": "publisher",
+    "first-page": "3878",
+    "DOI": "10.1364/ol.38.003878",
+    "article-title": "Measurements of the refractive indices and thermo-optic coefficients of Si3N4 and SiOx using microring resonances",
+    "volume": "38",
+    "year": "2013",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "2023080207321275600_c19",
+    "doi-asserted-by": "publisher",
+    "first-page": "597",
+    "DOI": "10.1038/nphoton.2013.183",
+    "article-title": "New CMOS-compatible platforms based on silicon nitride and Hydex for nonlinear optics",
+    "volume": "7",
+    "year": "2013",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c20",
+    "doi-asserted-by": "publisher",
+    "first-page": "486",
+    "DOI": "10.1038/nphoton.2017.122",
+    "article-title": "Efficient low-loss InGaAsP/Si hybrid MOS optical modulator",
+    "volume": "11",
+    "year": "2017",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c21",
+    "doi-asserted-by": "publisher",
+    "first-page": "482",
+    "DOI": "10.1038/nphoton.2017.120",
+    "article-title": "Heterogeneously integrated III\u2013V/Si MOS capacitor Mach\u2013Zehnder modulator",
+    "volume": "11",
+    "year": "2017",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c22",
+    "doi-asserted-by": "publisher",
+    "first-page": "511",
+    "DOI": "10.1038/nphoton.2015.122",
+    "article-title": "Graphene electro-optic modulator with 30\u00a0GHz bandwidth",
+    "volume": "9",
+    "year": "2015",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c23",
+    "doi-asserted-by": "publisher",
+    "first-page": "40",
+    "DOI": "10.1038/s41566-017-0071-6",
+    "article-title": "Graphene\u2013silicon phase modulators with gigahertz bandwidth",
+    "volume": "12",
+    "year": "2018",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c24",
+    "doi-asserted-by": "publisher",
+    "first-page": "991",
+    "DOI": "10.1038/s41598-018-19171-x",
+    "article-title": "Significantly high modulation efficiency of compact graphene modulator based on silicon waveguide",
+    "volume": "8",
+    "year": "2018",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "2023080207321275600_c25",
+    "doi-asserted-by": "publisher",
+    "first-page": "419",
+    "DOI": "10.1109/jlt.2015.2478601",
+    "article-title": "56 Gb/s germanium waveguide electro-absorption modulator",
+    "volume": "34",
+    "year": "2016",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2023080207321275600_c26",
+    "doi-asserted-by": "publisher",
+    "first-page": "PC120040B",
+    "DOI": "10.1117/12.2612836",
+    "article-title": "Silicon organic hybrid (SOH) and silicon-nitride-organic hybrid (SiNOH) integration: From electro-optic modulators to visible-wavelength lasers",
+    "volume": "PC12004",
+    "year": "2022",
+    "journal-title": "Proc. SPIE"
+   },
+   {
+    "key": "2023080207321275600_c27",
+    "doi-asserted-by": "publisher",
+    "first-page": "e173",
+    "DOI": "10.1038/lsa.2014.54",
+    "article-title": "100\u00a0GHz silicon\u2013organic hybrid modulator",
+    "volume": "3",
+    "year": "2014",
+    "journal-title": "Light: Sci. Appl."
+   },
+   {
+    "key": "2023080207321275600_c28",
+    "first-page": "24",
+    "article-title": "A novel 25 Gbps electro-optic Pockels modulator integrated on an advanced Si photonic platform",
+    "year": "2017"
+   },
+   {
+    "key": "2023080207321275600_c29",
+    "doi-asserted-by": "publisher",
+    "first-page": "1456",
+    "DOI": "10.1109/jlt.2019.2893500",
+    "article-title": "A BaTiO3-based electro-optic Pockels modulator monolithically integrated on an advanced silicon photonics platform",
+    "volume": "37",
+    "year": "2019",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2023080207321275600_c30",
+    "doi-asserted-by": "publisher",
+    "first-page": "30924",
+    "DOI": "10.1364/oe.22.030924",
+    "article-title": "Integrated high quality factor lithium niobate microdisk resonators",
+    "volume": "22",
+    "year": "2014",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2023080207321275600_c31",
+    "doi-asserted-by": "publisher",
+    "first-page": "1536",
+    "DOI": "10.1364/optica.4.001536",
+    "article-title": "Monolithic ultra-high-Q lithium niobate microring resonator",
+    "volume": "4",
+    "year": "2017",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2023080207321275600_c32",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "article-title": "Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages",
+    "volume": "562",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2023080207321275600_c33",
+    "doi-asserted-by": "publisher",
+    "first-page": "3911",
+    "DOI": "10.1038/s41467-020-17806-0",
+    "article-title": "High-performance coherent optical modulators based on thin-film lithium niobate platform",
+    "volume": "11",
+    "year": "2020",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2023080207321275600_c34",
+    "first-page": "1",
+    "article-title": "100-GHz low voltage integrated lithium niobate modulators",
+    "year": "2018"
+   },
+   {
+    "key": "2023080207321275600_c35",
+    "doi-asserted-by": "publisher",
+    "first-page": "61",
+    "DOI": "10.1364/optica.449691",
+    "article-title": "Dual-polarization thin-film lithium niobate in-phase quadrature modulators for terabit-per-second transmission",
+    "volume": "9",
+    "year": "2022",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2023080207321275600_c36",
+    "doi-asserted-by": "publisher",
+    "first-page": "1438",
+    "DOI": "10.1364/optica.5.001438",
+    "article-title": "Ultrahigh-efficiency wavelength conversion in nanophotonic periodically poled lithium niobate waveguides",
+    "volume": "5",
+    "year": "2018",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2023080207321275600_c37",
+    "doi-asserted-by": "publisher",
+    "first-page": "eabj4396",
+    "DOI": "10.1126/science.abj4396",
+    "article-title": "Lithium niobate photonics: Unlocking the electromagnetic spectrum",
+    "volume": "379",
+    "year": "2023",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2023080207321275600_c38",
+    "doi-asserted-by": "publisher",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "article-title": "High-performance hybrid silicon and lithium niobate Mach\u2013Zehnder modulators for 100 Gbit s\u22121 and beyond",
+    "volume": "13",
+    "year": "2019",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c39",
+    "doi-asserted-by": "publisher",
+    "first-page": "23728",
+    "DOI": "10.1364/oe.26.023728",
+    "article-title": "Bonded thin film lithium niobate modulator on a silicon photonics platform exceeding 100\u00a0GHz 3-dB electrical modulation bandwidth",
+    "volume": "26",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2023080207321275600_c40",
+    "doi-asserted-by": "publisher",
+    "first-page": "8200414",
+    "DOI": "10.1109/JSTQE.2022.3222686",
+    "article-title": "Micro-transfer printing for heterogeneous Si photonic integrated circuits",
+    "volume": "29",
+    "year": "2022",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "2023080207321275600_c41",
+    "doi-asserted-by": "publisher",
+    "first-page": "610",
+    "DOI": "10.1038/nphoton.2012.204",
+    "article-title": "Wafer-scale integration of group III\u2013V lasers on silicon using transfer printing of epitaxial layers",
+    "volume": "6",
+    "year": "2012",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2023080207321275600_c42",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1016/j.pquantelec.2017.01.001",
+    "article-title": "Transfer print techniques for heterogeneous integration of photonic components",
+    "volume": "52",
+    "year": "2017",
+    "journal-title": "Prog. Quantum Electron."
+   },
+   {
+    "key": "2023080207321275600_c43",
+    "doi-asserted-by": "publisher",
+    "first-page": "3731",
+    "DOI": "10.1364/ome.461146",
+    "article-title": "Gallium phosphide-on-insulator integrated photonic structures fabricated using micro-transfer printing",
+    "volume": "12",
+    "year": "2022",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2023080207321275600_c44",
+    "doi-asserted-by": "publisher",
+    "first-page": "16679",
+    "DOI": "10.1364/oe.26.016679",
+    "article-title": "High accuracy transfer printing of single-mode membrane silicon photonic devices",
+    "volume": "26",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2023080207321275600_c45",
+    "first-page": "1",
+    "article-title": "Micro-transfer printing of lithium niobate on silicon nitride",
+    "volume-title": "2020 European Conference on Optical Communications (ECOC)",
+    "year": "2020"
+   },
+   {
+    "key": "2023080207321275600_c46",
+    "doi-asserted-by": "publisher",
+    "first-page": "4375",
+    "DOI": "10.1364/ome.474200",
+    "article-title": "Photonic integration of lithium niobate micro-ring resonators onto silicon nitride waveguide chips by transfer-printing",
+    "volume": "12",
+    "year": "2022",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "2023080207321275600_c47",
+    "first-page": "1",
+    "article-title": "High-yield heterogeneous integration of silicon and lithium niobate thin films",
+    "volume-title": "2022 Conference on Lasers and Electro-Optics (CLEO)",
+    "year": "2022"
+   },
+   {
+    "key": "2023080207321275600_c48",
+    "doi-asserted-by": "publisher",
+    "first-page": "1984",
+    "DOI": "10.1364/ome.494038",
+    "article-title": "Reliable micro-transfer printing method for heterogeneous integration of lithium niobate and semiconductor thin films",
+    "volume": "13",
+    "year": "2023",
+    "journal-title": "Opt. Mater. Express"
+   }
+  ],
+  "container-title": [
+   "APL Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.aip.org/aip/app/article-pdf/doi/10.1063/5.0150878/18067902/086102_1_5.0150878.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://pubs.aip.org/aip/app/article-pdf/doi/10.1063/5.0150878/18067902/086102_1_5.0150878.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://pubs.aip.org/aip/app/article-pdf/doi/10.1063/5.0150878/18067902/086102_1_5.0150878.pdf",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     5,
+     28
+    ]
+   ],
+   "date-time": "2025-05-28T16:30:55Z",
+   "timestamp": 1748449855000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.aip.org/app/article/8/8/086102/2905003/Heterogeneous-integration-of-a-high-speed-lithium"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     8,
+     1
+    ]
+   ]
+  },
+  "references-count": 48,
+  "journal-issue": {
+   "issue": "8",
+   "published-print": {
+    "date-parts": [
+     [
+      2023,
+      8,
+      1
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1063/5.0150878",
+  "relation": {},
+  "ISSN": [
+   "2378-0967"
+  ],
+  "issn-type": [
+   {
+    "value": "2378-0967",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published-other": {
+   "date-parts": [
+    [
+     2023,
+     8,
+     1
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     8,
+     1
+    ]
+   ]
+  },
+  "article-number": "086102"
+ }
+}

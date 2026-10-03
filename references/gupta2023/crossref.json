@@ -1,0 +1,358 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     27
+    ]
+   ],
+   "date-time": "2026-08-27T19:02:52Z",
+   "timestamp": 1787857372339,
+   "version": "build-2784847793"
+  },
+  "reference-count": 11,
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "issue": "11",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       6,
+       1
+      ]
+     ],
+     "date-time": "2023-06-01T00:00:00Z",
+     "timestamp": 1685577600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       6,
+       1
+      ]
+     ],
+     "date-time": "2023-06-01T00:00:00Z",
+     "timestamp": 1685577600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       6,
+       1
+      ]
+     ],
+     "date-time": "2023-06-01T00:00:00Z",
+     "timestamp": 1685577600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "J. Lightwave Technol."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1109/jlt.2023.3244129",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     2,
+     10
+    ]
+   ],
+   "date-time": "2023-02-10T19:38:46Z",
+   "timestamp": 1676057926000
+  },
+  "page": "3498-3504",
+  "source": "Crossref",
+  "is-referenced-by-count": 20,
+  "title": [
+   "Implementation, Modelling and Verification of High-Speed Mach-Zehnder Phase Modulators in an Open Access InP Foundry Platform"
+  ],
+  "prefix": "10.1109",
+  "volume": "41",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3636-1855",
+    "authenticated-orcid": false,
+    "given": "Y Durvasa",
+    "family": "Gupta",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Fraunhofer Heinrich Hertz Institute, Berlin, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Guillaume",
+    "family": "Binet",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Fraunhofer Heinrich Hertz Institute, Berlin, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9587-7627",
+    "authenticated-orcid": false,
+    "given": "Wouter",
+    "family": "Diels",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Fraunhofer Heinrich Hertz Institute, Berlin, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Oliver",
+    "family": "Abdeen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Fraunhofer Heinrich Hertz Institute, Berlin, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tom",
+    "family": "Gaertner",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Fraunhofer Heinrich Hertz Institute, Berlin, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Moritz",
+    "family": "Baier",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Fraunhofer Heinrich Hertz Institute, Berlin, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Martin",
+    "family": "Schell",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Fraunhofer Heinrich Hertz Institute, Berlin, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "263",
+  "reference": [
+   {
+    "key": "ref8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.94561"
+   },
+   {
+    "key": "ref7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/CLEO_SI.2022.SF4M.6"
+   },
+   {
+    "key": "ref9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ICIPRM.2006.1634140"
+   },
+   {
+    "key": "ref4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3390/app9081588"
+   },
+   {
+    "key": "ref3",
+    "article-title": "Joint european platform for photonic integration of components and circuits",
+    "year": "0"
+   },
+   {
+    "key": "ref6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ECOC52684.2021.9606108"
+   },
+   {
+    "key": "ref11",
+    "article-title": "Highest performance phase modulators onl an open access InP platform",
+    "author": "gupta",
+    "year": "0",
+    "journal-title": "Proc Eur Conf Opt Commun"
+   },
+   {
+    "key": "ref5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2019.2910931"
+   },
+   {
+    "key": "ref10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1017/CBO9780511635595"
+   },
+   {
+    "key": "ref2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2017.2743211"
+   },
+   {
+    "key": "ref1",
+    "article-title": "Cisco annual internet report (2018.2023) white paper",
+    "author": "cisco",
+    "year": "2020"
+   }
+  ],
+  "container-title": [
+   "Journal of Lightwave Technology"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "http://xplorestaging.ieee.org/ielx7/50/10146346/10041912.pdf?arnumber=10041912",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2023,
+     7,
+     3
+    ]
+   ],
+   "date-time": "2023-07-03T18:14:57Z",
+   "timestamp": 1688408097000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://ieeexplore.ieee.org/document/10041912/"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     1
+    ]
+   ]
+  },
+  "references-count": 11,
+  "journal-issue": {
+   "issue": "11"
+  },
+  "URL": "https://doi.org/10.1109/jlt.2023.3244129",
+  "relation": {},
+  "ISSN": [
+   "0733-8724",
+   "1558-2213"
+  ],
+  "issn-type": [
+   {
+    "value": "0733-8724",
+    "type": "print"
+   },
+   {
+    "value": "1558-2213",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     1
+    ]
+   ]
+  }
+ }
+}

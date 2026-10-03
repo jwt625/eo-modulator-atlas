@@ -1,0 +1,784 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     29
+    ]
+   ],
+   "date-time": "2026-09-29T06:34:38Z",
+   "timestamp": 1790663678763,
+   "version": "4.1.0"
+  },
+  "reference-count": 55,
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "issue": "6771",
+  "content-domain": {
+   "domain": [
+    "www.science.org"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Science"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ]
+  },
+  "DOI": "10.1126/science.adx3741",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ],
+   "date-time": "2025-10-23T18:00:46Z",
+   "timestamp": 1761242446000
+  },
+  "page": "390-393",
+  "update-policy": "https://doi.org/10.34133/aaas_crossmark",
+  "source": "Crossref",
+  "is-referenced-by-count": 19,
+  "title": [
+   "Engineering high Pockels coefficients in thin-film strontium titanate for cryogenic quantum electro-optic applications"
+  ],
+  "prefix": "10.1126",
+  "volume": "390",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-7767-6039",
+    "authenticated-orcid": true,
+    "given": "Anja",
+    "family": "Ulrich",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8687-8302",
+    "authenticated-orcid": true,
+    "given": "Kamal",
+    "family": "Brahim",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Electrical Engineering (ESAT), KU Leuven, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5380-7348",
+    "authenticated-orcid": true,
+    "given": "Andries",
+    "family": "Boelen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Materials Engineering (MTM), KU Leuven, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0005-5853-9548",
+    "authenticated-orcid": true,
+    "given": "Michiel",
+    "family": "Debaets",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7971-8781",
+    "authenticated-orcid": true,
+    "given": "Ahmed",
+    "family": "Khalil",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Physics and Astronomy, KU Leuven, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Conglin",
+    "family": "Sun",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Physics and Astronomy, KU Leuven, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yishu",
+    "family": "Huang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sandeep Seema",
+    "family": "Saseendran",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Marina",
+    "family": "Baryshnikova",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1019-3497",
+    "authenticated-orcid": true,
+    "given": "Paola",
+    "family": "Favia",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5921-6928",
+    "authenticated-orcid": true,
+    "given": "Thomas",
+    "family": "Nuytten",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-9923-0903",
+    "authenticated-orcid": true,
+    "given": "Stefanie",
+    "family": "Sergeant",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4286-585X",
+    "authenticated-orcid": true,
+    "given": "Kasper",
+    "family": "Van Gasse",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bart",
+    "family": "Kuyken",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1314-9715",
+    "authenticated-orcid": true,
+    "given": "Kristiaan",
+    "family": "De Greve",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Electrical Engineering (ESAT), KU Leuven, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3084-2543",
+    "authenticated-orcid": true,
+    "given": "Clement",
+    "family": "Merckling",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     },
+     {
+      "name": "Department of Materials Engineering (MTM), KU Leuven, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8947-5293",
+    "authenticated-orcid": true,
+    "given": "Christian",
+    "family": "Haffner",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Imec, Leuven, Belgium."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "221",
+  "reference": [
+   {
+    "key": "e_1_3_2_2_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2058-9565/ab7eed"
+   },
+   {
+    "key": "e_1_3_2_3_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-020-3038-6"
+   },
+   {
+    "key": "e_1_3_2_4_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-020-0609-x"
+   },
+   {
+    "key": "e_1_3_2_5_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-024-08406-9"
+   },
+   {
+    "key": "e_1_3_2_6_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2515-7647/ac1ef4"
+   },
+   {
+    "key": "e_1_3_2_7_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/B978-0-12-369470-6.00006-X"
+   },
+   {
+    "key": "e_1_3_2_8_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.411024"
+   },
+   {
+    "key": "e_1_3_2_9_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-020-0725-5"
+   },
+   {
+    "key": "e_1_3_2_10_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.4c00507"
+   },
+   {
+    "key": "e_1_3_2_11_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.abj4396"
+   },
+   {
+    "key": "e_1_3_2_12_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.optcom.2007.10.031"
+   },
+   {
+    "key": "e_1_3_2_13_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0095146"
+   },
+   {
+    "key": "e_1_3_2_14_2",
+    "unstructured": "Nonlinear Materials Corporation \u201cHLD: Organic non-linear optical (NLO) material with high electro-optic effects\u201d (NLM 2021); https://www.nlmphotonics.com/wp-content/uploads/2021/09/nlm-bi-fold-8-11_9-21-1.pdf."
+   },
+   {
+    "key": "e_1_3_2_15_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1017/CBO9781139043885"
+   },
+   {
+    "key": "e_1_3_2_16_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3390/molecules29133188"
+   },
+   {
+    "key": "e_1_3_2_17_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.35848/1347-4065/ac235a"
+   },
+   {
+    "key": "e_1_3_2_18_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/cjoc.202200460"
+   },
+   {
+    "key": "e_1_3_2_19_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202001249"
+   },
+   {
+    "key": "e_1_3_2_20_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.19.3593"
+   },
+   {
+    "key": "e_1_3_2_21_2",
+    "unstructured": "C. P. Anderson G. Scuri A. Chan S. Eun A. D. White G. H. Ahn C. Jilly A. Safavi\u00adNaeini K. Van Gasse L. Li J. G. Scuri Quantum critical electro-optic and piezo-electric nonlinearities. arXiv:2502.15164 [cond-mat.mtrl-sci] [Preprint] (2025)."
+   },
+   {
+    "key": "e_1_3_2_22_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.cgd.5c00103"
+   },
+   {
+    "key": "e_1_3_2_23_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.apsusc.2019.143930"
+   },
+   {
+    "key": "e_1_3_2_24_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3390/ma17081714"
+   },
+   {
+    "key": "e_1_3_2_25_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.physb.2021.413265"
+   },
+   {
+    "key": "e_1_3_2_26_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.4802676"
+   },
+   {
+    "key": "e_1_3_2_27_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3390/cryst11121469"
+   },
+   {
+    "key": "e_1_3_2_28_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature02773"
+   },
+   {
+    "key": "e_1_3_2_29_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.6b00350"
+   },
+   {
+    "key": "e_1_3_2_30_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.ceramint.2017.12.027"
+   },
+   {
+    "key": "e_1_3_2_31_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.49.12095"
+   },
+   {
+    "key": "e_1_3_2_32_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-51093-3"
+   },
+   {
+    "key": "e_1_3_2_33_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0228990"
+   },
+   {
+    "key": "e_1_3_2_34_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/B978-0-323-51084-4.00002-2"
+   },
+   {
+    "key": "e_1_3_2_35_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "A. Ulrich K. Brahim A. Boelen M. Debaets A. Khalil C. Sun Y. Huang S. Seema Saseendran M. Baryshnikova P. Favia T. Nuytten S. Sergeant K. Van Gasse B. Kuyken K. De Greve C. Merckling C. Haffner Raw data for: Engineering high Pockels coefficients in thin-film strontium titanate for cryogenic quantum electro-optic applications Zenodo (2025); https://doi.org/10.5281/zenodo.16984395.",
+    "DOI": "10.1364/QUANTUM.2025.QTu4B.6"
+   },
+   {
+    "key": "e_1_3_2_36_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.2109/jcersj2.17250"
+   },
+   {
+    "key": "e_1_3_2_37_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/s12596-022-00916-x"
+   },
+   {
+    "key": "e_1_3_2_38_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2015.127"
+   },
+   {
+    "key": "e_1_3_2_39_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.2407273"
+   },
+   {
+    "key": "e_1_3_2_40_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/978-94-007-2739-7_64"
+   },
+   {
+    "key": "e_1_3_2_41_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3499273"
+   },
+   {
+    "key": "e_1_3_2_42_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0160448"
+   },
+   {
+    "key": "e_1_3_2_43_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1723677"
+   },
+   {
+    "key": "e_1_3_2_44_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevE.70.041103"
+   },
+   {
+    "key": "e_1_3_2_45_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.2c01222"
+   },
+   {
+    "key": "e_1_3_2_46_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.73.184112"
+   },
+   {
+    "key": "e_1_3_2_47_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-16912-3"
+   },
+   {
+    "key": "e_1_3_2_48_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-025-02158-1"
+   },
+   {
+    "key": "e_1_3_2_49_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.jeurceramsoc.2005.03.191"
+   },
+   {
+    "key": "e_1_3_2_50_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.2431448"
+   },
+   {
+    "key": "e_1_3_2_51_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1017/CBO9780511635595"
+   },
+   {
+    "key": "e_1_3_2_52_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adfm.201500827"
+   },
+   {
+    "key": "e_1_3_2_53_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.5.000739"
+   },
+   {
+    "key": "e_1_3_2_54_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202104174"
+   },
+   {
+    "key": "e_1_3_2_55_2",
+    "unstructured": "C. M\u00f6hl et al. Bidirectional microwave-optical conversion using an integrated barium-titanate transducer. arXiv:2501.09728 [physics.optics] [Preprint] (2025)."
+   },
+   {
+    "key": "e_1_3_2_56_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-18005-7"
+   }
+  ],
+  "container-title": [
+   "Science"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.science.org/doi/pdf/10.1126/science.adx3741",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ],
+   "date-time": "2025-10-23T18:01:11Z",
+   "timestamp": 1761242471000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.science.org/doi/10.1126/science.adx3741"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ]
+  },
+  "references-count": 55,
+  "journal-issue": {
+   "issue": "6771",
+   "published-print": {
+    "date-parts": [
+     [
+      2025,
+      10,
+      23
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1126/science.adx3741"
+  ],
+  "URL": "https://doi.org/10.1126/science.adx3741",
+  "relation": {},
+  "ISSN": [
+   "0036-8075",
+   "1095-9203"
+  ],
+  "issn-type": [
+   {
+    "value": "0036-8075",
+    "type": "print"
+   },
+   {
+    "value": "1095-9203",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     23
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2025-04-04",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-09-01",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-10-23",
+    "order": 3,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ]
+ }
+}

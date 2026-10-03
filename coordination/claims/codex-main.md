@@ -159,3 +159,25 @@ released `engine/src/materials.mjs`, `eo-overlap.mjs` and the rotation regressio
 for Q2 F6 correction. Independent audit assertions are retained; resolving an
 assertion does not constitute independent acceptance. No other active data-lane
 paths are taken over. Progress: DevLog-012.
+
+## Discovery and cache expansion (2026-10-02)
+
+User explicitly requested continued caching of EO modulator papers from 2020
+through 2026-10-02, searching by topic and existing authors, research groups and
+organizations, plus a list of raw materials requiring user retrieval. This
+authorizes source discovery and acquisition; canonical distillation/integration
+remains separate. Codex is the sole serialized download coordinator for this run.
+
+Own `data/_staging/discovery_2026_10_02/`, new or missing source caches under
+`references/<paper_id>/` for the recorded manifest (preserve existing files),
+`DevLog/DevLog-013-literature-cache-expansion.md`, and coordination updates.
+Candidate additions remain staged; do not edit canonical metric tables, existing
+batch records, paper simulation inputs, or the paused lane's implementation.
+Preserve actual fetched URLs, hashes, source versions and source-specific rights;
+only sanitized metadata is tracked. No delegation or commits.
+
+Related documentation scope: a successor-list pointer in `data/manual_downloads.md`
+(historical entries preserved), `references/README.md`, new
+`references/_inbox/README.md`, and `.gitignore` protection for incoming raw files.
+These support the user's requested handoff without changing the paused lane's
+paper batches or canonical tables.

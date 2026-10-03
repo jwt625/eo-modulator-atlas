@@ -1,0 +1,550 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     23
+    ]
+   ],
+   "date-time": "2026-06-23T04:46:48Z",
+   "timestamp": 1782190008615,
+   "version": "3.54.5"
+  },
+  "reference-count": 34,
+  "publisher": "Wiley",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       1,
+       30
+      ]
+     ],
+     "date-time": "2026-01-30T00:00:00Z",
+     "timestamp": 1769731200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 29,
+    "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       1,
+       1
+      ]
+     ],
+     "date-time": "2026-01-01T00:00:00Z",
+     "timestamp": 1767225600000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62275030"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62275030"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62405326"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62405326"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "onlinelibrary.wiley.com"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Physica Rapid Research Ltrs"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1002/pssr.202500340",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     30
+    ]
+   ],
+   "date-time": "2026-01-30T08:18:09Z",
+   "timestamp": 1769761089000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Microwave Characteristics and Bandwidth of BaTiO\n                    <sub>3</sub>\n                    Crystal Film Waveguide Electrooptic Modulator to Match the Light\u2010Wave Standard (Invited)"
+  ],
+  "prefix": "10.1002",
+  "volume": "20",
+  "author": [
+   {
+    "given": "Junyu",
+    "family": "Zhang",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "School of Physics at Changchun University of Science and Technology  Changchun China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zi",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Physics at Changchun University of Science and Technology  Changchun China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-5835-1354",
+    "authenticated-orcid": false,
+    "given": "DeGui",
+    "family": "Sun",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Physics at Changchun University of Science and Technology  Changchun China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zheng",
+    "family": "Wen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering College of Electronics and Information &amp; Shandong Key Laboratory of Micro\u2010nano Packaging and System Integration Qingdao University  Qingdao China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Na",
+    "family": "Sun",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Electronic Information Engineering at Changchun University  Changchun China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kaiping",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute of Microelectronics Chinese Academy of Sciences  Beijing China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     30
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_10_2_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2002.806761"
+   },
+   {
+    "key": "e_1_2_10_3_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.21.018812"
+   },
+   {
+    "key": "e_1_2_10_4_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.21.013219"
+   },
+   {
+    "key": "e_1_2_10_5_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2017.2776320"
+   },
+   {
+    "key": "e_1_2_10_6_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.26.019742"
+   },
+   {
+    "key": "e_1_2_10_7_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.94806"
+   },
+   {
+    "key": "e_1_2_10_8_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.200810073"
+   },
+   {
+    "key": "e_1_2_10_9_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.17.024261"
+   },
+   {
+    "key": "e_1_2_10_10_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/lpt.2015.2507136"
+   },
+   {
+    "key": "e_1_2_10_11_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ol.41.005700"
+   },
+   {
+    "key": "e_1_2_10_12_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586\u2010018\u20100551\u2010y"
+   },
+   {
+    "key": "e_1_2_10_13_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/iedm19573.2019.8993510"
+   },
+   {
+    "key": "e_1_2_10_14_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jstqe.2021.3126314"
+   },
+   {
+    "key": "e_1_2_10_15_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.470596"
+   },
+   {
+    "key": "e_1_2_10_16_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.463722"
+   },
+   {
+    "key": "e_1_2_10_17_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202300937"
+   },
+   {
+    "key": "e_1_2_10_18_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566\u2010021\u201000891\u2010y"
+   },
+   {
+    "key": "e_1_2_10_19_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.456271"
+   },
+   {
+    "key": "e_1_2_10_20_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467\u2010023\u201036870\u2010w"
+   },
+   {
+    "key": "e_1_2_10_21_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3212975"
+   },
+   {
+    "key": "e_1_2_10_22_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JQE.2017.2718222"
+   },
+   {
+    "key": "e_1_2_10_23_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2015.2510282"
+   },
+   {
+    "key": "e_1_2_10_24_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563\u2010018\u20100208\u20100"
+   },
+   {
+    "key": "e_1_2_10_25_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.4803707"
+   },
+   {
+    "key": "e_1_2_10_26_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2015.2388738"
+   },
+   {
+    "key": "e_1_2_10_27_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.44.004215"
+   },
+   {
+    "key": "e_1_2_10_28_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OME.431973"
+   },
+   {
+    "key": "e_1_2_10_29_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.411161"
+   },
+   {
+    "key": "e_1_2_10_30_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.2402978"
+   },
+   {
+    "key": "e_1_2_10_31_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AO.42.002674"
+   },
+   {
+    "key": "e_1_2_10_32_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2005.861630"
+   },
+   {
+    "key": "e_1_2_10_33_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2002.803063"
+   },
+   {
+    "key": "e_1_2_10_34_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1635967"
+   },
+   {
+    "key": "e_1_2_10_35_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.optcom.2005.06.028"
+   }
+  ],
+  "container-title": [
+   "physica status solidi (RRL) \u2013 Rapid Research Letters"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/pssr.202500340",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/pssr.202500340",
+    "content-type": "application/xml",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/pssr.202500340",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     23
+    ]
+   ],
+   "date-time": "2026-06-23T03:51:15Z",
+   "timestamp": 1782186675000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://onlinelibrary.wiley.com/doi/10.1002/pssr.202500340"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     1
+    ]
+   ]
+  },
+  "references-count": 34,
+  "journal-issue": {
+   "issue": "1",
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      1
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1002/pssr.202500340"
+  ],
+  "URL": "https://doi.org/10.1002/pssr.202500340",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "1862-6254",
+   "1862-6270"
+  ],
+  "issn-type": [
+   {
+    "value": "1862-6254",
+    "type": "print"
+   },
+   {
+    "value": "1862-6270",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     1
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2025-08-20",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-11-27",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2026-01-30",
+    "order": 3,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ],
+  "article-number": "e202500340"
+ }
+}

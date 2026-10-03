@@ -1,0 +1,648 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     1
+    ]
+   ],
+   "date-time": "2026-10-01T00:12:47Z",
+   "timestamp": 1790813567938,
+   "version": "4.1.0"
+  },
+  "reference-count": 18,
+  "publisher": "Optica Publishing Group",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       1,
+       19
+      ]
+     ],
+     "date-time": "2023-01-19T00:00:00Z",
+     "timestamp": 1674086400000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.1364/OA_License_v2#VOR-OA"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2023,
+       1,
+       19
+      ]
+     ],
+     "date-time": "2023-01-19T00:00:00Z",
+     "timestamp": 1674086400000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://opg.optica.org/policies/opg-tdm-policy.json"
+   }
+  ],
+  "funder": [
+   {
+    "name": "Meta Platform Technologies\n\t\t\t\t\t\tLLC"
+   },
+   {
+    "DOI": "10.13039/100000185",
+    "name": "Defense Advanced Research Projects\n\t\t\t\t\t\tAgency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "LUMOS, HR001-20-2-0044"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "LUMOS, HR001-20-2-0044"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "opg.optica.org"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Optica"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2023,
+     1,
+     20
+    ]
+   ]
+  },
+  "DOI": "10.1364/optica.482667",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     1,
+     4
+    ]
+   ],
+   "date-time": "2023-01-04T15:00:09Z",
+   "timestamp": 1672844409000
+  },
+  "page": "125",
+  "update-policy": "https://doi.org/10.1364/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 41,
+  "title": [
+   "Full-spectrum visible electro-optic modulator"
+  ],
+  "prefix": "10.1364",
+  "volume": "10",
+  "author": [
+   {
+    "given": "Shixin",
+    "family": "Xue",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "University of Rochester"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhimin",
+    "family": "Shi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Reality Labs Research, Meta"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7576-0878",
+    "authenticated-orcid": true,
+    "given": "Jingwei",
+    "family": "Ling",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Rochester"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhengdong",
+    "family": "Gao",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Rochester"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Qili",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Rochester"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kaibo",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Rochester"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Gareth",
+    "family": "Valentine",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Reality Labs Research, Meta"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xi",
+    "family": "Wu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Reality Labs Research, Meta"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jeremy",
+    "family": "Staffa",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Rochester"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Usman A.",
+    "family": "Javid",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Rochester"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Qiang",
+    "family": "Lin",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Rochester"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "published-online": {
+   "date-parts": [
+    [
+     2023,
+     1,
+     19
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "optica-10-1-125-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "755",
+    "DOI": "10.1364/OPTICA.426065",
+    "volume": "8",
+    "author": "Morin",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "optica-10-1-125-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "59",
+    "DOI": "10.1038/s41566-021-00903-x",
+    "volume": "16",
+    "author": "Dong",
+    "year": "2022",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "optica-10-1-125-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "380",
+    "DOI": "10.1364/OPTICA.6.000380",
+    "volume": "6",
+    "author": "Desiatov",
+    "year": "2019",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "optica-10-1-125-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "23177",
+    "DOI": "10.1364/OE.460119",
+    "volume": "30",
+    "author": "Celik",
+    "year": "2022",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "optica-10-1-125-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "36394",
+    "DOI": "10.1364/OE.469065",
+    "volume": "30",
+    "author": "Li",
+    "year": "2022",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "optica-10-1-125-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "3400114",
+    "DOI": "10.1109/JSTQE.2017.2779869",
+    "volume": "24",
+    "author": "Rao",
+    "year": "2018",
+    "journal-title": "IEEE J. Sel. Topics Quantum\n\t\t\t\t\tElectron."
+   },
+   {
+    "key": "optica-10-1-125-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "652",
+    "DOI": "10.1364/OPTICA.415762",
+    "volume": "8",
+    "author": "Zhang",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "optica-10-1-125-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "7253",
+    "DOI": "10.1364/OE.449022",
+    "volume": "30",
+    "author": "Xu",
+    "year": "2022",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "optica-10-1-125-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "Wang",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "optica-10-1-125-R10",
+    "doi-asserted-by": "publisher",
+    "first-page": "6320",
+    "DOI": "10.1364/OE.414250",
+    "volume": "29",
+    "author": "Liu",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "optica-10-1-125-R11",
+    "doi-asserted-by": "publisher",
+    "first-page": "41798",
+    "DOI": "10.1364/OE.442091",
+    "volume": "29",
+    "author": "Liu",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "optica-10-1-125-R12",
+    "doi-asserted-by": "publisher",
+    "first-page": "3300112",
+    "DOI": "10.1109/JSTQE.2020.3036059",
+    "volume": "27",
+    "author": "Sun",
+    "year": "2021",
+    "journal-title": "IEEE J. Sel. Top. Quantum\n\t\t\t\t\tElectron."
+   },
+   {
+    "key": "optica-10-1-125-R13",
+    "doi-asserted-by": "publisher",
+    "first-page": "61",
+    "DOI": "10.1364/OPTICA.449691",
+    "volume": "9",
+    "author": "Xu",
+    "year": "2022",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "optica-10-1-125-R14",
+    "doi-asserted-by": "publisher",
+    "first-page": "5503",
+    "DOI": "10.1143/JJAP.47.5503",
+    "volume": "47",
+    "author": "Yonekura",
+    "year": "2008",
+    "journal-title": "Jpn. J. Appl. Phys."
+   },
+   {
+    "key": "optica-10-1-125-R15",
+    "doi-asserted-by": "publisher",
+    "first-page": "12926",
+    "DOI": "10.1364/OE.20.012926",
+    "volume": "20",
+    "author": "Yu",
+    "year": "2012",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "optica-10-1-125-R16",
+    "doi-asserted-by": "publisher",
+    "first-page": "272",
+    "DOI": "10.1109/JLT.2019.2933384",
+    "volume": "38",
+    "author": "Zhou",
+    "year": "2019",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "optica-10-1-125-R17",
+    "doi-asserted-by": "publisher",
+    "first-page": "249",
+    "DOI": "10.1109/JLT.2019.2924671",
+    "volume": "38",
+    "author": "Ogiso",
+    "year": "2020",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "optica-10-1-125-R18",
+    "doi-asserted-by": "publisher",
+    "first-page": "1742",
+    "DOI": "10.1109/JPROC.2022.3203215",
+    "volume": "110",
+    "author": "Renaudier",
+    "year": "2022",
+    "journal-title": "Proc. IEEE"
+   }
+  ],
+  "container-title": [
+   "Optica"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=optica-10-1-125",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=optica-10-1-125&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     8,
+     6
+    ]
+   ],
+   "date-time": "2024-08-06T19:32:43Z",
+   "timestamp": 1722972763000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=optica-10-1-125"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     1,
+     19
+    ]
+   ]
+  },
+  "references-count": 18,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2023
+     ]
+    ]
+   },
+   "published-print": {
+    "date-parts": [
+     [
+      2023
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1364/optica.482667",
+  "relation": {},
+  "ISSN": [
+   "2334-2536"
+  ],
+  "issn-type": [
+   {
+    "value": "2334-2536",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     1,
+     19
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "Optica Publishing Group",
+    "name": "publisher",
+    "label": "This article is maintained by"
+   },
+   {
+    "value": "https://doi.org/10.1364/OPTICA.482667",
+    "name": "articlelink",
+    "label": "Crossref DOI link to publisher maintained version"
+   },
+   {
+    "value": "memorandum",
+    "name": "content_type",
+    "label": "Article type"
+   },
+   {
+    "value": "Screened by Similarity Check",
+    "name": "cross_check",
+    "label": "Similarity check"
+   },
+   {
+    "value": "No",
+    "order": 0,
+    "name": "peer_reviewed",
+    "label": "Peer reviewed",
+    "group": {
+     "name": "peer_review",
+     "label": "Peer review"
+    }
+   },
+   {
+    "value": "5 December 2022",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "30 December 2022",
+    "order": 1,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "19 January 2023",
+    "order": 2,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "\u00a9 2023 Optica Publishing Group under the terms of the\n\t\t\t\t\tOptica Open\n\t\t\t\t\tAccess Publishing Agreement",
+    "name": "copyright",
+    "label": "Copyright"
+   }
+  ]
+ }
+}

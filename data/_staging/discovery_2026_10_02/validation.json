@@ -1,0 +1,480 @@
+{
+  "checked_on": "2026-10-02",
+  "scope_start": "2020-01-01",
+  "scope_end": "2026-10-02",
+  "manifest_records": 78,
+  "new_candidates": 28,
+  "main_pdfs_added": 44,
+  "main_pdfs_before": 41,
+  "main_pdfs_now": 85,
+  "request_count": 34,
+  "old_requests_resolved": [
+    "arabjuneghani2022",
+    "gupta2023",
+    "valdez2023a",
+    "yue2025",
+    "zhang2022"
+  ],
+  "cached_by_year": {
+    "2020": 4,
+    "2021": 1,
+    "2022": 4,
+    "2023": 6,
+    "2024": 4,
+    "2025": 11,
+    "2026": 14
+  },
+  "new_candidates_by_year": {
+    "2020": 2,
+    "2021": 1,
+    "2022": 3,
+    "2023": 8,
+    "2024": 3,
+    "2025": 3,
+    "2026": 8
+  },
+  "cached_core_count": 35,
+  "cached_auxiliary_count": 9,
+  "papers": [
+    {
+      "paper_id": "li2020",
+      "sha256_match": true,
+      "pages": 9,
+      "first_page_identity": "checked",
+      "figure_files": 18,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 38292
+    },
+    {
+      "paper_id": "xu2020",
+      "sha256_match": true,
+      "pages": 10,
+      "first_page_identity": "checked",
+      "figure_files": 11,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 30899
+    },
+    {
+      "paper_id": "celik2022",
+      "sha256_match": true,
+      "pages": 10,
+      "first_page_identity": "checked",
+      "figure_files": 12,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 34561
+    },
+    {
+      "paper_id": "qi2024",
+      "sha256_match": true,
+      "pages": 9,
+      "first_page_identity": "checked",
+      "figure_files": 15,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 30849
+    },
+    {
+      "paper_id": "ummethala2021",
+      "sha256_match": true,
+      "pages": 15,
+      "first_page_identity": "checked",
+      "figure_files": 25,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 79513
+    },
+    {
+      "paper_id": "lin2025a",
+      "sha256_match": true,
+      "pages": 12,
+      "first_page_identity": "checked",
+      "figure_files": 15,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 28901
+    },
+    {
+      "paper_id": "akazawa2026",
+      "sha256_match": true,
+      "pages": 10,
+      "first_page_identity": "checked",
+      "figure_files": 27,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 46288
+    },
+    {
+      "paper_id": "chiang2025",
+      "sha256_match": true,
+      "pages": 4,
+      "first_page_identity": "checked",
+      "figure_files": 8,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 16207
+    },
+    {
+      "paper_id": "geravand2025",
+      "sha256_match": true,
+      "pages": 34,
+      "first_page_identity": "checked",
+      "figure_files": 25,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 91513
+    },
+    {
+      "paper_id": "hu2026",
+      "sha256_match": true,
+      "pages": 55,
+      "first_page_identity": "checked",
+      "figure_files": 38,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 69345
+    },
+    {
+      "paper_id": "kim2025",
+      "sha256_match": true,
+      "pages": 16,
+      "first_page_identity": "checked",
+      "figure_files": 9,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 30974
+    },
+    {
+      "paper_id": "li2025b",
+      "sha256_match": true,
+      "pages": 17,
+      "first_page_identity": "checked",
+      "figure_files": 92,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 71356
+    },
+    {
+      "paper_id": "montifiore2026",
+      "sha256_match": true,
+      "pages": 10,
+      "first_page_identity": "checked",
+      "figure_files": 11,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 32628
+    },
+    {
+      "paper_id": "nenezic2026",
+      "sha256_match": true,
+      "pages": 10,
+      "first_page_identity": "checked",
+      "figure_files": 12,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 46354
+    },
+    {
+      "paper_id": "sayem2026a",
+      "sha256_match": true,
+      "pages": 6,
+      "first_page_identity": "checked",
+      "figure_files": 7,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 23254
+    },
+    {
+      "paper_id": "sayem2026b",
+      "sha256_match": true,
+      "pages": 6,
+      "first_page_identity": "checked",
+      "figure_files": 8,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 23040
+    },
+    {
+      "paper_id": "shen2024",
+      "sha256_match": true,
+      "pages": 25,
+      "first_page_identity": "checked",
+      "figure_files": 38,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 100968
+    },
+    {
+      "paper_id": "taghavi2026",
+      "sha256_match": true,
+      "pages": 16,
+      "first_page_identity": "checked",
+      "figure_files": 13,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 55034
+    },
+    {
+      "paper_id": "wu2025",
+      "sha256_match": true,
+      "pages": 15,
+      "first_page_identity": "checked",
+      "figure_files": 11,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 37486
+    },
+    {
+      "paper_id": "anderson2025",
+      "sha256_match": true,
+      "pages": 24,
+      "first_page_identity": "checked",
+      "figure_files": 33,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 95220
+    },
+    {
+      "paper_id": "suceava2025",
+      "sha256_match": true,
+      "pages": 44,
+      "first_page_identity": "checked",
+      "figure_files": 53,
+      "embedded_failures": 11,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 111070
+    },
+    {
+      "paper_id": "ulrich2025",
+      "sha256_match": true,
+      "pages": 31,
+      "first_page_identity": "checked",
+      "figure_files": 36,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 81511
+    },
+    {
+      "paper_id": "valdez2023a",
+      "sha256_match": true,
+      "pages": 12,
+      "first_page_identity": "checked",
+      "figure_files": 39,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 45266
+    },
+    {
+      "paper_id": "yue2025",
+      "sha256_match": true,
+      "pages": 18,
+      "first_page_identity": "checked",
+      "figure_files": 11,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 61106
+    },
+    {
+      "paper_id": "arabjuneghani2022",
+      "sha256_match": true,
+      "pages": 6,
+      "first_page_identity": "checked",
+      "figure_files": 12,
+      "embedded_failures": 5,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 30212
+    },
+    {
+      "paper_id": "lu2020",
+      "sha256_match": true,
+      "pages": 9,
+      "first_page_identity": "checked",
+      "figure_files": 21,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 52924
+    },
+    {
+      "paper_id": "vanackere2023",
+      "sha256_match": true,
+      "pages": 8,
+      "first_page_identity": "checked",
+      "figure_files": 11,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 38829
+    },
+    {
+      "paper_id": "zwickel2020",
+      "sha256_match": true,
+      "pages": 27,
+      "first_page_identity": "checked",
+      "figure_files": 89,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 83987
+    },
+    {
+      "paper_id": "schwarzenberger2026",
+      "sha256_match": true,
+      "pages": 17,
+      "first_page_identity": "checked",
+      "figure_files": 15,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 101238
+    },
+    {
+      "paper_id": "liu2023",
+      "sha256_match": true,
+      "pages": 10,
+      "first_page_identity": "checked",
+      "figure_files": 40,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 43928
+    },
+    {
+      "paper_id": "lin2026a",
+      "sha256_match": true,
+      "pages": 18,
+      "first_page_identity": "checked",
+      "figure_files": 12,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 45165
+    },
+    {
+      "paper_id": "falcone2026",
+      "sha256_match": true,
+      "pages": 13,
+      "first_page_identity": "checked",
+      "figure_files": 27,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 54862
+    },
+    {
+      "paper_id": "berman2026",
+      "sha256_match": true,
+      "pages": 12,
+      "first_page_identity": "checked",
+      "figure_files": 14,
+      "embedded_failures": 1,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 48169
+    },
+    {
+      "paper_id": "yu2024",
+      "sha256_match": true,
+      "pages": 22,
+      "first_page_identity": "checked",
+      "figure_files": 25,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 32708
+    },
+    {
+      "paper_id": "liu2025c",
+      "sha256_match": true,
+      "pages": 7,
+      "first_page_identity": "checked",
+      "figure_files": 8,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 31095
+    },
+    {
+      "paper_id": "gupta2023",
+      "sha256_match": true,
+      "pages": 7,
+      "first_page_identity": "checked",
+      "figure_files": 15,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 35252
+    },
+    {
+      "paper_id": "zhang2022",
+      "sha256_match": true,
+      "pages": 8,
+      "first_page_identity": "checked",
+      "figure_files": 13,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 44037
+    },
+    {
+      "paper_id": "chelladurai2025",
+      "sha256_match": true,
+      "pages": 11,
+      "first_page_identity": "checked",
+      "figure_files": 10,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 64587
+    },
+    {
+      "paper_id": "churaev2023",
+      "sha256_match": true,
+      "pages": 9,
+      "first_page_identity": "checked",
+      "figure_files": 13,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 48915
+    },
+    {
+      "paper_id": "steckler2025",
+      "sha256_match": true,
+      "pages": 10,
+      "first_page_identity": "checked",
+      "figure_files": 11,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 53736
+    },
+    {
+      "paper_id": "mao2024",
+      "sha256_match": true,
+      "pages": 8,
+      "first_page_identity": "checked",
+      "figure_files": 9,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 49734
+    },
+    {
+      "paper_id": "zhang2023",
+      "sha256_match": true,
+      "pages": 10,
+      "first_page_identity": "checked",
+      "figure_files": 28,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 47475
+    },
+    {
+      "paper_id": "wang2022a",
+      "sha256_match": true,
+      "pages": 4,
+      "first_page_identity": "checked",
+      "figure_files": 6,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 21289
+    },
+    {
+      "paper_id": "zhong2026",
+      "sha256_match": true,
+      "pages": 8,
+      "first_page_identity": "checked",
+      "figure_files": 8,
+      "embedded_failures": 0,
+      "fallbacks_for_failed_pages": true,
+      "text_chars": 42541
+    }
+  ]
+}

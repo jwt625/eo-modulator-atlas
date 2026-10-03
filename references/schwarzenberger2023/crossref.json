@@ -1,0 +1,360 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     1
+    ]
+   ],
+   "date-time": "2026-05-01T02:22:51Z",
+   "timestamp": 1777602171108,
+   "version": "3.51.4"
+  },
+  "reference-count": 0,
+  "publisher": "Institution of Engineering and Technology (IET)",
+  "issue": "34",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "IET Conf. Proc."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2023,
+     11,
+     13
+    ]
+   ]
+  },
+  "DOI": "10.1049/icp.2023.2357",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2024,
+     3,
+     25
+    ]
+   ],
+   "date-time": "2024-03-25T20:11:47Z",
+   "timestamp": 1711397507000
+  },
+  "page": "859-862",
+  "source": "Crossref",
+  "is-referenced-by-count": 8,
+  "title": [
+   "First demonstration of a silicon-organic hybrid (SOH) modulator based on a long-term-stable crosslinked electro-optic material"
+  ],
+  "prefix": "10.1049",
+  "volume": "2023",
+  "author": [
+   {
+    "given": "A.",
+    "family": "Schwarzenberger",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Inst. of Photonics and Quantum Electron. (IPQ)/Inst. of Microstruct. Technol. (IMT), Karlsruhe Inst. of Technol. (KIT),Germany"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Mertens",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "SilOriX GmbH,Karlsruhe,Germany"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "H.",
+    "family": "Kholeif",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Inst. of Photonics and Quantum Electron. (IPQ)/Inst. of Microstruct. Technol. (IMT), Karlsruhe Inst. of Technol. (KIT),Germany"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Kotz",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Inst. of Photonics and Quantum Electron. (IPQ)/Inst. of Microstruct. Technol. (IMT), Karlsruhe Inst. of Technol. (KIT),Germany"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "C.",
+    "family": "Eschenbaum",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Inst. of Photonics and Quantum Electron. (IPQ)/Inst. of Microstruct. Technol. (IMT), Karlsruhe Inst. of Technol. (KIT),Germany"
+     },
+     {
+      "name": "SilOriX GmbH,Karlsruhe,Germany"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "L. E.",
+    "family": "Johnson",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "NLM Photonics,Seattle,USA"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "D. L.",
+    "family": "Elder",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "NLM Photonics,Seattle,USA"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "S. R.",
+    "family": "Hammond",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "NLM Photonics,Seattle,USA"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "K.",
+    "family": "O'Malley",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "NLM Photonics,Seattle,USA"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "L.",
+    "family": "Dalton",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Chemistry, University of Washington,Seattle,USA"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "S.",
+    "family": "Randel",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Inst. of Photonics and Quantum Electron. (IPQ)/Inst. of Microstruct. Technol. (IMT), Karlsruhe Inst. of Technol. (KIT),Germany"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "W.",
+    "family": "Freude",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Inst. of Photonics and Quantum Electron. (IPQ)/Inst. of Microstruct. Technol. (IMT), Karlsruhe Inst. of Technol. (KIT),Germany"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "C.",
+    "family": "Koos",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Inst. of Photonics and Quantum Electron. (IPQ)/Inst. of Microstruct. Technol. (IMT), Karlsruhe Inst. of Technol. (KIT),Germany"
+     },
+     {
+      "name": "SilOriX GmbH,Karlsruhe,Germany"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "member": "265",
+  "container-title": [
+   "IET Conference Proceedings"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://digital-library.theiet.org/content/conferences/10.1049/icp.2023.2357?crawler=true&mimetype=application/pdf",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     12
+    ]
+   ],
+   "date-time": "2024-11-12T16:41:34Z",
+   "timestamp": 1731429694000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "http://digital-library.theiet.org/doi/10.1049/icp.2023.2357"
+   },
+   "secondary": [
+    {
+     "URL": "https://ieeexplore.ieee.org/document/10484589",
+     "label": "Xplore"
+    }
+   ]
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     11,
+     13
+    ]
+   ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+   "issue": "34",
+   "published-print": {
+    "date-parts": [
+     [
+      2023,
+      11,
+      13
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1049/icp.2023.2357"
+  ],
+  "URL": "https://doi.org/10.1049/icp.2023.2357",
+  "relation": {},
+  "ISSN": [
+   "2732-4494"
+  ],
+  "issn-type": [
+   {
+    "value": "2732-4494",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023,
+     11,
+     13
+    ]
+   ]
+  }
+ }
+}

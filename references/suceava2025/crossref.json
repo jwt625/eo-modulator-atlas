@@ -1,0 +1,924 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     28
+    ]
+   ],
+   "date-time": "2026-09-28T17:27:22Z",
+   "timestamp": 1790616442923,
+   "version": "4.1.0"
+  },
+  "reference-count": 62,
+  "publisher": "Wiley",
+  "issue": "3",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       11
+      ]
+     ],
+     "date-time": "2025-10-11T00:00:00Z",
+     "timestamp": 1760140800000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://creativecommons.org/licenses/by/4.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       11
+      ]
+     ],
+     "date-time": "2025-10-11T00:00:00Z",
+     "timestamp": 1760140800000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100023581",
+    "name": "National Science Foundation Graduate Research Fellowship Program",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DGE1255832"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DGE1255832"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100023581",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000001",
+    "name": "National Science Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DMR\u20102039380"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DMR\u20102039380"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000001",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100006151",
+    "name": "Basic Energy Sciences",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "DE\u2010SC0020145"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "DE\u2010SC0020145"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100006151",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "advanced.onlinelibrary.wiley.com"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Advanced Materials"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1002/adma.202507564",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     11
+    ]
+   ],
+   "date-time": "2025-10-11T09:02:31Z",
+   "timestamp": 1760173351000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 3,
+  "title": [
+   "Colossal Cryogenic Electro\u2010Optic Response Through Metastability in Strained BaTiO\n                    <sub>3</sub>\n                    Thin Films"
+  ],
+  "prefix": "10.1002",
+  "volume": "38",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-7661-9596",
+    "authenticated-orcid": false,
+    "given": "Albert",
+    "family": "Suceava",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9126-8058",
+    "authenticated-orcid": false,
+    "given": "Sankalpa",
+    "family": "Hazra",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0001-8195-6172",
+    "authenticated-orcid": false,
+    "given": "Aiden",
+    "family": "Ross",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ian Reed",
+    "family": "Philippi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Physics The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7575-8885",
+    "authenticated-orcid": false,
+    "given": "Dylan",
+    "family": "Sotir",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Platform for the Accelerated Realization, Analysis, and Discovery of Interface Materials (PARADIM) Cornell University  Ithaca NY 14853 USA"
+     },
+     {
+      "name": "Department of Materials Science and Engineering Cornell University  Ithaca NY 14853 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Brynn",
+    "family": "Brower",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Physics The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Lei",
+    "family": "Ding",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Engineering Science and Mechanics The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yingxin",
+    "family": "Zhu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Engineering Science and Mechanics The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0001-8537-417X",
+    "authenticated-orcid": false,
+    "given": "Zhiyu",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Engineering Science and Mechanics The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4084-7532",
+    "authenticated-orcid": false,
+    "given": "Himirkanti",
+    "family": "Sarkar",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6812-1747",
+    "authenticated-orcid": false,
+    "given": "Saugata",
+    "family": "Sarker",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0025-5914",
+    "authenticated-orcid": false,
+    "given": "Yang",
+    "family": "Yang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Engineering Science and Mechanics The Pennsylvania State University  University Park PA 16802 USA"
+     },
+     {
+      "name": "Department of Nuclear Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     },
+     {
+      "name": "Materials Research Institute The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8820-1143",
+    "authenticated-orcid": false,
+    "given": "Suchismita",
+    "family": "Sarker",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Cornell High Energy Synchrotron Source Cornell University  Ithaca NY 14853 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2734-7819",
+    "authenticated-orcid": false,
+    "given": "Vladimir A.",
+    "family": "Stoica",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2493-6113",
+    "authenticated-orcid": false,
+    "given": "Darrell G.",
+    "family": "Schlom",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering Cornell University  Ithaca NY 14853 USA"
+     },
+     {
+      "name": "Kavli Institute at Cornell for Nanoscale Science  Ithaca NY 14853 USA"
+     },
+     {
+      "name": "Leibniz\u2010Institut f\u00fcr Kristallz\u00fcchtung  Max\u2010Born\u2010Stra\u00dfe 2 12489 Berlin Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3359-3781",
+    "authenticated-orcid": false,
+    "given": "Long\u2010Qing",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6866-3677",
+    "authenticated-orcid": false,
+    "given": "Venkatraman",
+    "family": "Gopalan",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Materials Science and Engineering The Pennsylvania State University  University Park PA 16802 USA"
+     },
+     {
+      "name": "Department of Physics The Pennsylvania State University  University Park PA 16802 USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "311",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     11
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "e_1_2_9_1_1",
+    "volume-title": "Optical Waves in Crystals: Propagation, and Control of Laser Radiation",
+    "author": "Yariv A.",
+    "year": "2002"
+   },
+   {
+    "key": "e_1_2_9_2_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/B978-012121682-5/50010-9"
+   },
+   {
+    "key": "e_1_2_9_3_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1146/annurev.ms.16.080186.001223"
+   },
+   {
+    "key": "e_1_2_9_4_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevA.94.053815"
+   },
+   {
+    "key": "e_1_2_9_5_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/qute.201900077"
+   },
+   {
+    "key": "e_1_2_9_6_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1146/annurev-conmatphys-031119-050605"
+   },
+   {
+    "key": "e_1_2_9_7_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5088164"
+   },
+   {
+    "key": "e_1_2_9_8_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.1601540"
+   },
+   {
+    "key": "e_1_2_9_9_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JMW.2020.3034071"
+   },
+   {
+    "key": "e_1_2_9_10_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-024-01417-y"
+   },
+   {
+    "key": "e_1_2_9_11_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.463722"
+   },
+   {
+    "key": "e_1_2_9_12_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-020-0609-x"
+   },
+   {
+    "key": "e_1_2_9_13_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0056441"
+   },
+   {
+    "key": "e_1_2_9_14_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-020-0725-5"
+   },
+   {
+    "key": "e_1_2_9_15_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-018-0208-0"
+   },
+   {
+    "key": "e_1_2_9_16_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1080/00150199208230015"
+   },
+   {
+    "key": "e_1_2_9_17_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevMaterials.5.014404"
+   },
+   {
+    "key": "e_1_2_9_18_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OME.7.004328"
+   },
+   {
+    "key": "e_1_2_9_19_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.2804570"
+   },
+   {
+    "key": "e_1_2_9_20_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1635967"
+   },
+   {
+    "key": "e_1_2_9_21_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1209/0295-5075/26/4/012"
+   },
+   {
+    "key": "e_1_2_9_22_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.367097"
+   },
+   {
+    "key": "e_1_2_9_23_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-025-02158-1"
+   },
+   {
+    "key": "e_1_2_9_24_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.84.5423"
+   },
+   {
+    "key": "e_1_2_9_25_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1080/01411590500467262"
+   },
+   {
+    "key": "e_1_2_9_26_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/35002022"
+   },
+   {
+    "key": "e_1_2_9_27_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1111/j.1551-2916.2005.00879.x"
+   },
+   {
+    "key": "e_1_2_9_28_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1557/S0883769400033170"
+   },
+   {
+    "key": "e_1_2_9_29_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/ncomms4172"
+   },
+   {
+    "key": "e_1_2_9_30_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.50.5941"
+   },
+   {
+    "key": "e_1_2_9_31_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1116/6.0000923"
+   },
+   {
+    "key": "e_1_2_9_32_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPEX.12.005962"
+   },
+   {
+    "key": "e_1_2_9_33_1",
+    "volume-title": "BaTiO3 (cubic) [F] Survey, 1A\u201010: Datasheet from Landolt\u2010B\u00f6rnstein \u2013 Group III Condensed Matter \u00b7 Volume 36A1: \u2018Oxides\u2019 in SpringerMaterials",
+    "author": "Adachi M.",
+    "year": "2001"
+   },
+   {
+    "key": "e_1_2_9_34_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1754387"
+   },
+   {
+    "key": "e_1_2_9_35_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.63.094108"
+   },
+   {
+    "key": "e_1_2_9_36_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevB.111.085109"
+   },
+   {
+    "key": "e_1_2_9_37_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/s003400050053"
+   },
+   {
+    "key": "e_1_2_9_38_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0103831"
+   },
+   {
+    "key": "e_1_2_9_39_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsaelm.3c00747"
+   },
+   {
+    "key": "e_1_2_9_40_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adfm.202315579"
+   },
+   {
+    "key": "e_1_2_9_41_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.mee.2015.04.041"
+   },
+   {
+    "key": "e_1_2_9_42_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0237644"
+   },
+   {
+    "key": "e_1_2_9_43_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202303058"
+   },
+   {
+    "key": "e_1_2_9_44_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202006368"
+   },
+   {
+    "key": "e_1_2_9_45_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.201808336"
+   },
+   {
+    "key": "e_1_2_9_46_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5117218"
+   },
+   {
+    "key": "e_1_2_9_47_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.35848/1347-4065/ac087d"
+   },
+   {
+    "key": "e_1_2_9_48_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1039/C8TC04576C"
+   },
+   {
+    "key": "e_1_2_9_49_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0230598"
+   },
+   {
+    "key": "e_1_2_9_50_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.35848/1347-4065/ac7ea9"
+   },
+   {
+    "key": "e_1_2_9_51_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.optmat.2018.08.008"
+   },
+   {
+    "key": "e_1_2_9_52_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0267559"
+   },
+   {
+    "key": "e_1_2_9_53_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.jeurceramsoc.2020.10.025"
+   },
+   {
+    "key": "e_1_2_9_54_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0260262"
+   },
+   {
+    "key": "e_1_2_9_55_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1660761"
+   },
+   {
+    "key": "e_1_2_9_56_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.pmatsci.2010.04.004"
+   },
+   {
+    "key": "e_1_2_9_57_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1111/j.1551-2916.2011.04740.x"
+   },
+   {
+    "key": "e_1_2_9_58_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202408664"
+   },
+   {
+    "key": "e_1_2_9_59_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.2042528"
+   },
+   {
+    "key": "e_1_2_9_60_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRev.86.118"
+   },
+   {
+    "key": "e_1_2_9_61_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/S1359-6454(01)00360-3"
+   },
+   {
+    "key": "e_1_2_9_62_1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.jcrysgro.2008.01.019"
+   }
+  ],
+  "container-title": [
+   "Advanced Materials"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adma.202507564",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://advanced.onlinelibrary.wiley.com/doi/full-xml/10.1002/adma.202507564",
+    "content-type": "application/xml",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adma.202507564",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     14
+    ]
+   ],
+   "date-time": "2026-01-14T11:58:43Z",
+   "timestamp": 1768391923000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202507564"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     11
+    ]
+   ]
+  },
+  "references-count": 62,
+  "journal-issue": {
+   "issue": "3",
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      1
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1002/adma.202507564"
+  ],
+  "URL": "https://doi.org/10.1002/adma.202507564",
+  "archive": [
+   "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+   "0935-9648",
+   "1521-4095"
+  ],
+  "issn-type": [
+   {
+    "value": "0935-9648",
+    "type": "print"
+   },
+   {
+    "value": "1521-4095",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     11
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2025-04-21",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-10-11",
+    "order": 3,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ],
+  "article-number": "e07564"
+ }
+}

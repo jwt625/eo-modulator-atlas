@@ -1,6 +1,6 @@
 # Override the aggressive PlayGround root .gitignore for this project's tracked artifacts.
-# This project tracks its database (CSV) and staging outputs. The reference cache (PDF/text/figures)
-# stays local: only per-source metadata (source.json, crossref.json) is tracked.
+# This project tracks its database (CSV), staging outputs, and per-source reference metadata
+# (source.json, crossref.json) plus cached source PDFs. Extracted text/figures stay local.
 !*.json
 !*.csv
 !*.txt
@@ -9,11 +9,12 @@
 !*.svg
 !*.html
 
-# Local-only: publisher PDFs, extracted text and figures (rights are source-specific).
-references/*/source.pdf
+# Local-only: extracted text and figures (rights are source-specific).
 references/*/source.html
 references/*/text.md
 references/*/figures/
+references/_inbox/*
+!references/_inbox/README.md
 
 # Local-only: private path mapping, generated caches, build output, logs.
 # (kept after the negations above so they win)

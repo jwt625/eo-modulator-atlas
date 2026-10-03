@@ -1,0 +1,346 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     14
+    ]
+   ],
+   "date-time": "2026-06-14T22:26:09Z",
+   "timestamp": 1781475969711,
+   "version": "3.54.1"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 9,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "DOI": "10.1364/cleo_si.2023.sth5c.7",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     7,
+     27
+    ]
+   ],
+   "date-time": "2023-07-27T12:27:26Z",
+   "timestamp": 1690460846000
+  },
+  "page": "STh5C.7",
+  "source": "Crossref",
+  "is-referenced-by-count": 8,
+  "title": [
+   "First Demonstration of a cryogenic Silicon Organic Hybrid (SOH) Mach-Zehnder Modulator with a Sub-1V \u03c0-Voltage"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "A.",
+    "family": "Schwarzenberger",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "H.",
+    "family": "Kholeif",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Kotz",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Kuzmin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Mertens",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "C.",
+    "family": "Eschenbaum",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "G.",
+    "family": "Ramann",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "J.",
+    "family": "Zyskind",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "M.",
+    "family": "Lebby",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "S.",
+    "family": "Randel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "W.",
+    "family": "Freude",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "C.",
+    "family": "Koos",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R1",
+    "doi-asserted-by": "crossref",
+    "first-page": "182",
+    "DOI": "10.1007/s42514-022-00114-y",
+    "volume": "4",
+    "author": "Ren",
+    "year": "2022",
+    "journal-title": "CCF Transactions on High Performance Computing"
+   },
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R2",
+    "first-page": "2",
+    "volume": "42",
+    "author": "Eltes",
+    "year": "2020",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R3",
+    "first-page": "M3",
+    "author": "Gevorgyan",
+    "year": "2021",
+    "journal-title": "OFC Proc."
+   },
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R4",
+    "doi-asserted-by": "crossref",
+    "first-page": "1176",
+    "DOI": "10.1364/OPTICA.463722",
+    "volume": "9",
+    "author": "Pintus",
+    "year": "2022",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R5",
+    "first-page": "Tu1G.1",
+    "author": "Habegger",
+    "year": "2022",
+    "journal-title": "ECOC Proc."
+   },
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R6",
+    "doi-asserted-by": "crossref",
+    "first-page": "326",
+    "DOI": "10.1038/s41928-021-00570-4",
+    "volume": "4",
+    "author": "Youssefi",
+    "year": "2021",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R7",
+    "first-page": "Th3B.3",
+    "author": "Schwarzenberger",
+    "year": "2022",
+    "journal-title": "ECOC Proc."
+   },
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R8",
+    "doi-asserted-by": "crossref",
+    "first-page": "12951",
+    "DOI": "10.1364/OE.383120",
+    "volume": "28",
+    "author": "Zwickel",
+    "year": "2020",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "CLEO_SI-2023-STh5C.7-R9",
+    "doi-asserted-by": "crossref",
+    "first-page": "24693",
+    "DOI": "10.1364/OE.390315",
+    "volume": "28",
+    "author": "Kieninger",
+    "year": "2020",
+    "journal-title": "Opt. Express"
+   }
+  ],
+  "event": {
+   "name": "CLEO: Science and Innovations",
+   "location": "San Jose, CA",
+   "acronym": "CLEO_SI",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2023
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "CLEO 2023"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=CLEO_SI-2023-STh5C.7&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2023,
+     8,
+     23
+    ]
+   ],
+   "date-time": "2023-08-23T20:44:35Z",
+   "timestamp": 1692823475000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=CLEO_SI-2023-STh5C.7"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "references-count": 9,
+  "URL": "https://doi.org/10.1364/cleo_si.2023.sth5c.7",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  }
+ }
+}

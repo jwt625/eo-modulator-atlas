@@ -1,0 +1,879 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     22
+    ]
+   ],
+   "date-time": "2026-09-22T19:32:12Z",
+   "timestamp": 1790105532092,
+   "version": "4.0.1"
+  },
+  "reference-count": 45,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "4",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       1,
+       16
+      ]
+     ],
+     "date-time": "2024-01-16T00:00:00Z",
+     "timestamp": 1705363200000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       1,
+       16
+      ]
+     ],
+     "date-time": "2024-01-16T00:00:00Z",
+     "timestamp": 1705363200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100011039",
+    "name": "ODNI | Intelligence Advanced Research Projects Activity",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "W911-NF-19-2-0115"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "W911-NF-19-2-0115"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100011039",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100011039",
+    "name": "ODNI | Intelligence Advanced Research Projects Activity",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "W911-NF-19-2-0115"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "W911-NF-19-2-0115"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100011039",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000006",
+    "name": "United States Department of Defense | United States Navy | Office of Naval Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "N00014-20-1-2134"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "N00014-20-1-2134"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000006",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000006",
+    "name": "United States Department of Defense | United States Navy | Office of Naval Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "N00014-20-1-2134"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "N00014-20-1-2134"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000006",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "Yale Quantum Institute"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat. Photon."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2024,
+     4
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41566-023-01370-2",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2024,
+     1,
+     16
+    ]
+   ],
+   "date-time": "2024-01-16T11:04:09Z",
+   "timestamp": 1705403049000
+  },
+  "page": "371-378",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 52,
+  "title": [
+   "Photonic link from single-flux-quantum circuits to room temperature"
+  ],
+  "prefix": "10.1038",
+  "volume": "18",
+  "author": [
+   {
+    "given": "Mohan",
+    "family": "Shen",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8797-7871",
+    "authenticated-orcid": false,
+    "given": "Jiacheng",
+    "family": "Xie",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuntao",
+    "family": "Xu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sihao",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2095-463X",
+    "authenticated-orcid": false,
+    "given": "Risheng",
+    "family": "Cheng",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wei",
+    "family": "Fu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-5543-9211",
+    "authenticated-orcid": false,
+    "given": "Yiyu",
+    "family": "Zhou",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-5374-2137",
+    "authenticated-orcid": false,
+    "given": "Hong X.",
+    "family": "Tang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2024,
+     1,
+     16
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "1370_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "1169",
+    "DOI": "10.1126/science.1231930",
+    "volume": "339",
+    "author": "MH Devoret",
+    "year": "2013",
+    "unstructured": "Devoret, M. H. & Schoelkopf, R. J. Superconducting circuits for quantum information: an outlook. Science 339, 1169\u20131174 (2013).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "1370_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "505",
+    "DOI": "10.1038/s41586-019-1666-5",
+    "volume": "574",
+    "author": "F Arute",
+    "year": "2019",
+    "unstructured": "Arute, F. et al. Quantum supremacy using a programmable superconducting processor. Nature 574, 505\u2013510 (2019).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "1370_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "1701610",
+    "DOI": "10.1109/TASC.2013.2244634",
+    "volume": "23",
+    "author": "DS Holmes",
+    "year": "2013",
+    "unstructured": "Holmes, D. S., Ripple, A. L. & Manheimer, M. A. Energy-efficient superconducting computing\u2014power budgets and requirements. IEEE Trans. Appl. Supercond. 23, 1701610 (2013).",
+    "journal-title": "IEEE Trans. Appl. Supercond."
+   },
+   {
+    "key": "1370_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "23",
+    "DOI": "10.1007/s10948-018-4884-4",
+    "volume": "32",
+    "author": "AI Braginski",
+    "year": "2019",
+    "unstructured": "Braginski, A. I. Superconductor electronics: status and outlook. J. Supercond. Nov. Magn. 32, 23\u201344 (2019).",
+    "journal-title": "J. Supercond. Nov. Magn."
+   },
+   {
+    "key": "1370_CR5",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Das, R. N. et al. Large scale cryogenic integration approach for superconducting high-performance computing. In 2017 IEEE 67th Electronic Components and Technology Conference (ECTC) 675\u2013683 (IEEE, 2017).",
+    "DOI": "10.1109/ECTC.2017.54"
+   },
+   {
+    "key": "1370_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "032324",
+    "DOI": "10.1103/PhysRevA.86.032324",
+    "volume": "86",
+    "author": "AG Fowler",
+    "year": "2012",
+    "unstructured": "Fowler, A. G., Mariantoni, M., Martinis, J. M. & Cleland, A. N. Surface codes: towards practical large-scale quantum computation. Phys. Rev. A 86, 032324 (2012).",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "1370_CR7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1140/epjqt/s40507-019-0072-0",
+    "volume": "6",
+    "author": "S Krinner",
+    "year": "2019",
+    "unstructured": "Krinner, S. et al. Engineering cryogenic setups for 100-qubit scale superconducting circuit systems. EPJ Quantum Technol. 6, 2 (2019).",
+    "journal-title": "EPJ Quantum Technol."
+   },
+   {
+    "key": "1370_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "575",
+    "DOI": "10.1038/s41586-021-03268-x",
+    "volume": "591",
+    "author": "F Lecocq",
+    "year": "2021",
+    "unstructured": "Lecocq, F. et al. Control and readout of a superconducting qubit using a photonic link. Nature 591, 575\u2013579 (2021).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "1370_CR9",
+    "doi-asserted-by": "publisher",
+    "first-page": "326",
+    "DOI": "10.1038/s41928-021-00570-4",
+    "volume": "4",
+    "author": "A Youssefi",
+    "year": "2021",
+    "unstructured": "Youssefi, A. et al. A cryogenic electro-optic interconnect for superconducting devices. Nat. Electron. 4, 326\u2013332 (2021).",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "key": "1370_CR10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-020-65971-5",
+    "volume": "10",
+    "author": "M de Cea",
+    "year": "2020",
+    "unstructured": "de Cea, M. et al. Photonic readout of superconducting nanowire single photon counting detectors. Sci. Rep. 10, 9470 (2020).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "1370_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "1050",
+    "DOI": "10.1364/OPTICA.425414",
+    "volume": "8",
+    "author": "X Han",
+    "year": "2021",
+    "unstructured": "Han, X., Fu, W., Zou, C.-L., Jiang, L. & Tang, H. X. Microwave-optical quantum frequency conversion. Optica 8, 1050\u20131064 (2021).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1370_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "346",
+    "DOI": "10.1109/JLT.2017.2647779",
+    "volume": "35",
+    "author": "DAB Miller",
+    "year": "2017",
+    "unstructured": "Miller, D. A. B. Attojoule optoelectronics for low-energy information processing and communications. J. Light. Technol. 35, 346\u2013396 (2017).",
+    "journal-title": "J. Light. Technol."
+   },
+   {
+    "key": "1370_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "1021",
+    "DOI": "10.1109/SURV.2011.122111.00069",
+    "volume": "14",
+    "author": "C Kachris",
+    "year": "2012",
+    "unstructured": "Kachris, C. & Tomkos, I. A survey on optical interconnects for data centers. IEEE Commun. Surveys Tuts 14, 1021\u20131036 (2012).",
+    "journal-title": "IEEE Commun. Surveys Tuts"
+   },
+   {
+    "key": "1370_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "24190",
+    "DOI": "10.1364/OE.26.024190",
+    "volume": "26",
+    "author": "PJ Winzer",
+    "year": "2018",
+    "unstructured": "Winzer, P. J., Neilson, D. T. & Chraplyvy, A. R. Fiber-optic transmission and networking: the previous 20 and the next 20 years [invited]. Opt. Express 26, 24190\u201324239 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "1370_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "306",
+    "DOI": "10.1093/ietele/e91-c.3.306",
+    "volume": "E91-C",
+    "author": "OA Mukhanov",
+    "year": "2008",
+    "unstructured": "Mukhanov, O. A. et al. Superconductor digital-RF receiver systems. IEICE Trans. Electron. E91-C, 306\u2013317 (2008).",
+    "journal-title": "IEICE Trans. Electron."
+   },
+   {
+    "key": "1370_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "760",
+    "DOI": "10.1109/TASC.2010.2096792",
+    "volume": "21",
+    "author": "OA Mukhanov",
+    "year": "2011",
+    "unstructured": "Mukhanov, O. A. Energy-efficient single flux quantum technology. IEEE Trans. Appl. Supercond. 21, 760\u2013769 (2011).",
+    "journal-title": "IEEE Trans. Appl. Supercond."
+   },
+   {
+    "key": "1370_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "024004",
+    "DOI": "10.1088/2058-9565/aaa3a0",
+    "volume": "3",
+    "author": "R McDermott",
+    "year": "2018",
+    "unstructured": "McDermott, R. et al. Quantum-classical interface based on single flux quantum digital logic. Quantum Sci. Technol. 3, 024004 (2018).",
+    "journal-title": "Quantum Sci. Technol."
+   },
+   {
+    "key": "1370_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "3",
+    "DOI": "10.1109/77.80745",
+    "volume": "1",
+    "author": "K Likharev",
+    "year": "1991",
+    "unstructured": "Likharev, K. & Semenov, V. RSFQ logic/memory family: a new Josephson-junction technology for sub-terahertz-clock-frequency digital systems. IEEE Trans. Appl. Supercond 1, 3\u201328 (1991).",
+    "journal-title": "IEEE Trans. Appl. Supercond"
+   },
+   {
+    "key": "1370_CR19",
+    "first-page": "1",
+    "volume": "29",
+    "author": "D Gupta",
+    "year": "2019",
+    "unstructured": "Gupta, D. et al. Digital output data links from superconductor integrated circuits. IEEE Trans. Appl. Supercond. 29, 1\u20138 (2019).",
+    "journal-title": "IEEE Trans. Appl. Supercond."
+   },
+   {
+    "key": "1370_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JQE.2022.3149512",
+    "volume": "58",
+    "author": "W Fu",
+    "year": "2022",
+    "unstructured": "Fu, W., Wu, H. & Feng, M. Superconducting processor modulated VCSELs for 4K high-speed optical data link. IEEE J. Quantum Electron. 58, 1\u20138 (2022).",
+    "journal-title": "IEEE J. Quantum Electron."
+   },
+   {
+    "key": "1370_CR21",
+    "doi-asserted-by": "publisher",
+    "first-page": "1900077",
+    "DOI": "10.1002/qute.201900077",
+    "volume": "3",
+    "author": "NJ Lambert",
+    "year": "2020",
+    "unstructured": "Lambert, N. J., Rueda, A., Sedlmeir, F. & Schwefel, H. G. L. Coherent conversion between microwave and optical photons\u2014an overview of physical implementations. Adv. Quantum Technol. 3, 1900077 (2020).",
+    "journal-title": "Adv. Quantum Technol."
+   },
+   {
+    "key": "1370_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "489",
+    "DOI": "10.1038/s41586-022-04720-2",
+    "volume": "606",
+    "author": "RD Delaney",
+    "year": "2022",
+    "unstructured": "Delaney, R. D. et al. Superconducting-qubit readout via low-backaction electro-optic transduction. Nature 606, 489\u2013493 (2022).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "1370_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "323",
+    "DOI": "10.1038/s41928-021-00587-9",
+    "volume": "4",
+    "author": "K Usami",
+    "year": "2021",
+    "unstructured": "Usami, K. & Nakamura, Y. A photonic link for quantum circuits. Nat. Electron. 4, 323\u2013324 (2021).",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "key": "1370_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "374",
+    "DOI": "10.1364/OPTICA.4.000374",
+    "volume": "4",
+    "author": "M Gehl",
+    "year": "2017",
+    "unstructured": "Gehl, M. et al. Operation of high-speed silicon photonic micro-disk modulators at cryogenic temperatures. Optica 4, 374\u2013382 (2017).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1370_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "1164",
+    "DOI": "10.1038/s41563-020-0725-5",
+    "volume": "19",
+    "author": "F Eltes",
+    "year": "2020",
+    "unstructured": "Eltes, F. et al. An integrated optical modulator operating at cryogenic temperatures. Nat. Mater. 19, 1164\u20131168 (2020).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "1370_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "1385",
+    "DOI": "10.1364/OPTICA.403178",
+    "volume": "7",
+    "author": "U Chakraborty",
+    "year": "2020",
+    "unstructured": "Chakraborty, U. et al. Cryogenic operation of silicon photonic modulators based on the d.c. Kerr effect. Optica 7, 1385\u20131390 (2020).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1370_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "99",
+    "DOI": "10.1515/nanoph-2020-0363",
+    "volume": "10",
+    "author": "BS Lee",
+    "year": "2020",
+    "unstructured": "Lee, B. S. et al. High-performance integrated graphene electro-optic modulator at cryogenic temperature. Nanophotonics 10, 99\u2013104 (2020).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "1370_CR28",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Yin, B. et al. Electronic-photonic cryogenic egress link. In ESSCIRC 2021\u2014IEEE 47th European Solid State Circuits Conference (ESSCIRC) 51\u201354 (IEEE, 2021).",
+    "DOI": "10.1109/ESSCIRC53450.2021.9567813"
+   },
+   {
+    "key": "1370_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "604",
+    "DOI": "10.1038/s41928-022-00823-w",
+    "volume": "5",
+    "author": "P Pintus",
+    "year": "2022",
+    "unstructured": "Pintus, P. et al. An integrated magneto-optic modulator for cryogenic applications. Nat. Electron. 5, 604\u2013610 (2022).",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "key": "1370_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "1176",
+    "DOI": "10.1364/OPTICA.463722",
+    "volume": "9",
+    "author": "P Pintus",
+    "year": "2022",
+    "unstructured": "Pintus, P. et al. Ultralow voltage, high-speed, and energy-efficient cryogenic electro-optic modulator. Optica 9, 1176\u20131182 (2022).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "1370_CR31",
+    "doi-asserted-by": "publisher",
+    "first-page": "3562",
+    "DOI": "10.1021/nl3011885",
+    "volume": "12",
+    "author": "C Xiong",
+    "year": "2012",
+    "unstructured": "Xiong, C., Pernice, W. H. P. & Tang, H. X. Low-loss, silicon integrated, aluminum nitride photonic circuits and their use for electro-optic signal processing. Nano Lett. 12, 3562\u20133568 (2012).",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "1370_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "69",
+    "DOI": "10.1109/2944.826874",
+    "volume": "6",
+    "author": "EL Wooten",
+    "year": "2000",
+    "unstructured": "Wooten, E. L. et al. A review of lithium niobate modulators for fiber-optic communications systems. IEEE J. Sel. Topics Quantum Electron 6, 69\u201382 (2000).",
+    "journal-title": "IEEE J. Sel. Topics Quantum Electron"
+   },
+   {
+    "key": "1370_CR33",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Herzog, C., Poberaj, G. & G\u00fcnter, P. Electro-optic behavior of lithium niobate at cryogenic temperatures. Opt. Commun. 281, 793\u2013796 (2008).",
+    "DOI": "10.1016/j.optcom.2007.10.031"
+   },
+   {
+    "key": "1370_CR34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-021-27205-8",
+    "volume": "12",
+    "author": "E Lomonte",
+    "year": "2021",
+    "unstructured": "Lomonte, E. et al. Single-photon detection and cryogenic reconfigurability in lithium niobate nanophotonic circuits. Nat. Commun. 12, 6847 (2021).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "1370_CR35",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages. Nature 562, 101\u2013104 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "1370_CR36",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Zhang, M., Wang, C., Kharel, P., Zhu, D. & Lon\u010dar, M. Integrated lithium niobate electro-optic modulators: when performance meets scalability. Optica 8, 652\u2013667 (2021).",
+    "DOI": "10.1364/OPTICA.415762"
+   },
+   {
+    "key": "1370_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "1201",
+    "DOI": "10.1109/22.775458",
+    "volume": "47",
+    "author": "K Yoshida",
+    "year": "1999",
+    "unstructured": "Yoshida, K., Kanda, Y. & Kohjiro, S. A traveling-wave-type LiNbO/sub 3/ optical modulator with superconducting electrodes. IEEE Trans. Microw. Theory Techn. 47, 1201\u20131205 (1999).",
+    "journal-title": "IEEE Trans. Microw. Theory Techn."
+   },
+   {
+    "key": "1370_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "034004",
+    "DOI": "10.1088/2515-7647/ac6c63",
+    "volume": "4",
+    "author": "F Thiele",
+    "year": "2022",
+    "unstructured": "Thiele, F. et al. Cryogenic electro-optic modulation in titanium in-diffused lithium niobate waveguides. J. Phys. Photonics 4, 034004 (2022).",
+    "journal-title": "J. Phys. Photonics"
+   },
+   {
+    "key": "1370_CR39",
+    "doi-asserted-by": "publisher",
+    "first-page": "5043",
+    "DOI": "10.1063/1.1663181",
+    "volume": "45",
+    "author": "JW Baker",
+    "year": "1974",
+    "unstructured": "Baker, J. W., Lejeune, J. D. & Naugle, D. G. Effects of a nonuniform current distribution on the kinetic inductance of a thin superconducting film. J. Appl. Phys. 45, 5043\u20135049 (1974).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "1370_CR40",
+    "unstructured": "Tinkham, M. Introduction to Superconductivity (Courier Corporation, 2004)."
+   },
+   {
+    "key": "1370_CR41",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Tolpygo, S. et al. Advanced fabrication processes for superconducting very large scale integrated circuits. In IEEE Trans. Appl. Supercond. 26, 1100110 (2016).",
+    "DOI": "10.1109/TASC.2016.2519388"
+   },
+   {
+    "key": "1370_CR42",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Freude, W. et al. Quality metrics for optical signals: eye diagram, Q-factor, OSNR, EVM and BER. In 2012 14th International Conference on Transparent Optical Networks (ICTON) 1\u20134 (IEEE, 2012).",
+    "DOI": "10.1109/ICTON.2012.6254380"
+   },
+   {
+    "key": "1370_CR43",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Agrell, E. & Secondini, M. Information-theoretic tools for optical communications engineers. In 2018 IEEE Photonics Conference 1\u20135 (IEEE, 2018).",
+    "DOI": "10.1109/IPCon.2018.8527126"
+   },
+   {
+    "key": "1370_CR44",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Chang, D. et al. LDPC convolutional codes using layered decoding algorithm for high speed coherent optical transmission. In Optical Fiber Communication (OFC) Conference 1\u20133 (IEEE, 2012).",
+    "DOI": "10.1364/OFC.2012.OW1H.4"
+   },
+   {
+    "key": "1370_CR45",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Zhang, M., Wang, C., Cheng, R., Shams-Ansari, A. & Lon\u010dar, M. Monolithic ultra-high-Q lithium niobate microring resonator. Optica 4, 1536\u20131537 (2017).",
+    "DOI": "10.1364/OPTICA.4.001536"
+   }
+  ],
+  "container-title": [
+   "Nature Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41566-023-01370-2.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41566-023-01370-2",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41566-023-01370-2.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     4,
+     5
+    ]
+   ],
+   "date-time": "2024-04-05T11:07:21Z",
+   "timestamp": 1712315241000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41566-023-01370-2"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     1,
+     16
+    ]
+   ]
+  },
+  "references-count": 45,
+  "journal-issue": {
+   "issue": "4",
+   "published-print": {
+    "date-parts": [
+     [
+      2024,
+      4
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "1370"
+  ],
+  "URL": "https://doi.org/10.1038/s41566-023-01370-2",
+  "relation": {},
+  "ISSN": [
+   "1749-4885",
+   "1749-4893"
+  ],
+  "issn-type": [
+   {
+    "value": "1749-4885",
+    "type": "print"
+   },
+   {
+    "value": "1749-4893",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     1,
+     16
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "15 June 2023",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "11 December 2023",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "16 January 2024",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ]
+ }
+}

@@ -58,7 +58,7 @@ a generated view, not a second database. Refresh it after accepted data changes.
 The [distillation skill](.claude/skills/eo-modulator-distill/SKILL.md),
 [batch contract](data/_staging/BATCH_INSTRUCTIONS.md) and
 [manual download list](data/manual_downloads.md) describe ingestion.
-Reference PDFs, extracted text and figures are not tracked in this public repo; see
+Reference PDFs are tracked in this repo; extracted text and figures are not; see
 [references/README.md](references/README.md). Rights remain source-specific.
 
 ## Simulation status and checks

@@ -1,0 +1,219 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     1
+    ]
+   ],
+   "date-time": "2026-10-01T00:15:03Z",
+   "timestamp": 1790813703297,
+   "version": "4.1.0"
+  },
+  "reference-count": 0,
+  "publisher": "Shanghai Institute of Optics and Fine Mechanics",
+  "issue": "2",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Chin. Opt. Lett.",
+   "\u4e2d\u56fd\u5149\u5b66\u5feb\u62a5"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "DOI": "10.3788/col202220.022502",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2021,
+     11,
+     25
+    ]
+   ],
+   "date-time": "2021-11-25T02:56:10Z",
+   "timestamp": 1637808970000
+  },
+  "page": "022502",
+  "source": "Crossref",
+  "is-referenced-by-count": 101,
+  "title": [
+   "Monolithic thin film lithium niobate electro-optic modulator with over 110 GHz bandwidth"
+  ],
+  "prefix": "10.3788",
+  "volume": "20",
+  "author": [
+   {
+    "given": "Fan",
+    "family": "Yang",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xiansong",
+    "family": "Fang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xinyu",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Lixin",
+    "family": "Zhu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Fan",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhangyuan",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yanping",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "2099",
+  "container-title": [
+   "Chinese Optics Letters"
+  ],
+  "original-title": [
+   "Monolithic thin film lithium niobate electro-optic modulator with over 110 GHz bandwidth"
+  ],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.researching.cn/articles/OJ93b54eba60600d4e/html",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2022,
+     1,
+     10
+    ]
+   ],
+   "date-time": "2022-01-10T08:02:53Z",
+   "timestamp": 1641801773000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.researching.cn/articles/OJ93b54eba60600d4e/html"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+   "issue": "2",
+   "published-print": {
+    "date-parts": [
+     [
+      2022
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "OJ93b54eba60600d4e"
+  ],
+  "URL": "https://doi.org/10.3788/col202220.022502",
+  "relation": {},
+  "ISSN": [
+   "1671-7694"
+  ],
+  "issn-type": [
+   {
+    "value": "1671-7694",
+    "type": "print"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  }
+ }
+}

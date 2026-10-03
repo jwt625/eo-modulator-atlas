@@ -1,0 +1,758 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T21:03:05Z",
+   "timestamp": 1787000585098,
+   "version": "build-2736575974"
+  },
+  "reference-count": 39,
+  "publisher": "American Chemical Society (ACS)",
+  "issue": "8",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       7,
+       21
+      ]
+     ],
+     "date-time": "2022-07-21T00:00:00Z",
+     "timestamp": 1658361600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       7,
+       21
+      ]
+     ],
+     "date-time": "2022-07-21T00:00:00Z",
+     "timestamp": 1658361600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       7,
+       21
+      ]
+     ],
+     "date-time": "2022-07-21T00:00:00Z",
+     "timestamp": 1658361600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-045"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100002855",
+    "name": "Ministry of Science and Technology of the People's Republic of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "2019YFB1803902"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2019YFB1803902"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002855",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100018594",
+    "name": "Central University Basic Research Fund of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "2021QNA5001"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2021QNA5001"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100018594",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62105107"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62105107"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62135012"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62135012"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "Guangdong Province",
+    "award": [
+     "2019A050510039"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2019A050510039"
+      ]
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100021171",
+    "name": "Guangdong Basic and Applied Basic Research Foundation",
+    "doi-asserted-by": "crossref",
+    "award": [
+     "2021A1515012215"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2021A1515012215"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100021171",
+      "id-type": "DOI",
+      "asserted-by": "crossref"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100021171",
+    "name": "Guangdong Basic and Applied Basic Research Foundation",
+    "doi-asserted-by": "crossref",
+    "award": [
+     "2021B1515120057"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2021B1515120057"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100021171",
+      "id-type": "DOI",
+      "asserted-by": "crossref"
+     }
+    ]
+   },
+   {
+    "name": "Leading Innovative and Entrepreneur Team Introduction Program of Zhejiang",
+    "award": [
+     "2021R01001"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2021R01001"
+      ]
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "ACS Photonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2022,
+     8,
+     17
+    ]
+   ]
+  },
+  "DOI": "10.1021/acsphotonics.2c00263",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     21
+    ]
+   ],
+   "date-time": "2022-07-21T03:43:05Z",
+   "timestamp": 1658374985000
+  },
+  "page": "2668-2675",
+  "source": "Crossref",
+  "is-referenced-by-count": 73,
+  "title": [
+   "Silicon\u2013Lithium Niobate Hybrid Intensity and Coherent Modulators Using a Periodic Capacitively Loaded Traveling-Wave Electrode"
+  ],
+  "prefix": "10.1021",
+  "volume": "9",
+  "author": [
+   {
+    "given": "Zong",
+    "family": "Wang",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Gengxin",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory for Modern Optical Instrumentation, College of Optical Science and Engineering, International Research Center for Advanced Photonics, Zijingang Campus, Zhejiang University, East Bldg. No. 5, Hangzhou 310058, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ziliang",
+    "family": "Ruan",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory for Modern Optical Instrumentation, College of Optical Science and Engineering, International Research Center for Advanced Photonics, Zijingang Campus, Zhejiang University, East Bldg. No. 5, Hangzhou 310058, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ranfeng",
+    "family": "Gan",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Pucheng",
+    "family": "Huang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhiwen",
+    "family": "Zheng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Liwang",
+    "family": "Lu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+     },
+     {
+      "name": "National Center for International Research on Green Optoelectronics, South China Normal University, Guangzhou 510006, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jun",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Changjian",
+    "family": "Guo",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+     },
+     {
+      "name": "National Center for International Research on Green Optoelectronics, South China Normal University, Guangzhou 510006, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kaixuan",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+     },
+     {
+      "name": "National Center for International Research on Green Optoelectronics, South China Normal University, Guangzhou 510006, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-3651-544X",
+    "authenticated-orcid": true,
+    "given": "Liu",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "State Key Laboratory for Modern Optical Instrumentation, College of Optical Science and Engineering, International Research Center for Advanced Photonics, Zijingang Campus, Zhejiang University, East Bldg. No. 5, Hangzhou 310058, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "316",
+  "published-online": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     21
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "ref1/cit1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/prj.7.000201"
+   },
+   {
+    "key": "ref2/cit2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ol.41.000820"
+   },
+   {
+    "key": "ref3/cit3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/lpt.2011.2141128"
+   },
+   {
+    "key": "ref4/cit4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ol.40.004655"
+   },
+   {
+    "key": "ref5/cit5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1117/12.2044258"
+   },
+   {
+    "key": "ref6/cit6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.201900364"
+   },
+   {
+    "key": "ref7/cit7",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Koepfli, S. M.; Baumann, M.; Giger, S.; Keller, K.; Horst, Y.; Salamin, Y.; Fedoryshyn, Y.; Leuthold, J. High-speed graphene photodetection: 300 GHz is not the limit.\n                      2021 Conference on Lasers and Electro-Optics Europe & European Quantum Electronics Conference (CLEO/Europe-EQEC)\n                      ; IEEE, 2021; p 1.",
+    "DOI": "10.1109/CLEO/Europe-EQEC52157.2021.9542100"
+   },
+   {
+    "key": "ref8/cit8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-021-00914-8"
+   },
+   {
+    "key": "ref9/cit9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jproc.2018.2877636"
+   },
+   {
+    "key": "ref10/cit10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.411122"
+   },
+   {
+    "key": "ref11/cit11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2020.3039218"
+   },
+   {
+    "key": "ref12/cit12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/prj.396815"
+   },
+   {
+    "key": "ref13/cit13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/prj.6.000109"
+   },
+   {
+    "key": "ref14/cit14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/lpt.2019.2960238"
+   },
+   {
+    "key": "ref15/cit15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.22.012628"
+   },
+   {
+    "key": "ref16/cit16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2017.120"
+   },
+   {
+    "key": "ref17/cit17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2017.122"
+   },
+   {
+    "key": "ref18/cit18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.5.000739"
+   },
+   {
+    "key": "ref19/cit19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-18005-7"
+   },
+   {
+    "key": "ref20/cit20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2020.2974189"
+   },
+   {
+    "key": "ref21/cit21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-017-0071-6"
+   },
+   {
+    "key": "ref22/cit22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2014.9"
+   },
+   {
+    "key": "ref23/cit23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-018-0031-4"
+   },
+   {
+    "key": "ref24/cit24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2020.2978190"
+   },
+   {
+    "key": "ref25/cit25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ol.41.005700"
+   },
+   {
+    "key": "ref26/cit26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3390/mi12070823"
+   },
+   {
+    "key": "ref27/cit27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.27.006495"
+   },
+   {
+    "key": "ref28/cit28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2020.3032786"
+   },
+   {
+    "key": "ref29/cit29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0378-6"
+   },
+   {
+    "key": "ref30/cit30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/prj.403167"
+   },
+   {
+    "key": "ref31/cit31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.26.023728"
+   },
+   {
+    "key": "ref32/cit32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5115243"
+   },
+   {
+    "key": "ref33/cit33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2515-7647/abc17e"
+   },
+   {
+    "key": "ref34/cit34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.416155"
+   },
+   {
+    "key": "ref35/cit35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.449691"
+   },
+   {
+    "key": "ref36/cit36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0077232"
+   },
+   {
+    "key": "ref37/cit37",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.26.001547"
+   },
+   {
+    "key": "ref38/cit38",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1017/CBO9780511635595",
+    "volume-title": "Semiconductor Devices for High-Speed Optoelectronics",
+    "author": "Ghione G.",
+    "year": "2009"
+   },
+   {
+    "key": "ref39/cit39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ol.43.000827"
+   }
+  ],
+  "container-title": [
+   "ACS Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.2c00263",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "unspecified"
+   },
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.2c00263",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2023,
+     4,
+     25
+    ]
+   ],
+   "date-time": "2023-04-25T07:37:57Z",
+   "timestamp": 1682408277000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.acs.org/doi/10.1021/acsphotonics.2c00263"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     21
+    ]
+   ]
+  },
+  "references-count": 39,
+  "journal-issue": {
+   "issue": "8",
+   "published-print": {
+    "date-parts": [
+     [
+      2022,
+      8,
+      17
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1021/acsphotonics.2c00263"
+  ],
+  "URL": "https://doi.org/10.1021/acsphotonics.2c00263",
+  "relation": {},
+  "ISSN": [
+   "2330-4022",
+   "2330-4022"
+  ],
+  "issn-type": [
+   {
+    "value": "2330-4022",
+    "type": "print"
+   },
+   {
+    "value": "2330-4022",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     21
+    ]
+   ]
+  }
+ }
+}

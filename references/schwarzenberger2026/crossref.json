@@ -1,0 +1,1061 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     7,
+     22
+    ]
+   ],
+   "date-time": "2026-07-22T17:30:21Z",
+   "timestamp": 1784741421221,
+   "version": "3.55.0"
+  },
+  "reference-count": 67,
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "issue": "3",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       2,
+       1
+      ]
+     ],
+     "date-time": "2026-02-01T00:00:00Z",
+     "timestamp": 1769904000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       2,
+       1
+      ]
+     ],
+     "date-time": "2026-02-01T00:00:00Z",
+     "timestamp": 1769904000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       2,
+       1
+      ]
+     ],
+     "date-time": "2026-02-01T00:00:00Z",
+     "timestamp": 1769904000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   }
+  ],
+  "funder": [
+   {
+    "name": "ERC Consolidator Grant &#x2018;TeraSHAPE",
+    "award": [
+     "773248"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "773248"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "DFG Excellence Cluster 3D Matter Made to Order",
+    "award": [
+     "EXC-2082/1\u2013390761711"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EXC-2082/1\u2013390761711"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "DFG Collaborative Research Center HyPERION",
+    "award": [
+     "454252029"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "454252029"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "DFG Projects PACE",
+    "award": [
+     "403188360"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "403188360"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "GOSPEL",
+    "award": [
+     "403187440"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "403187440"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "EU projects DYNAMOS",
+    "award": [
+     "101070342"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101070342"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "ELLIPTIC",
+    "award": [
+     "101187515"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101187515"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "CombTools",
+    "award": [
+     "101136978"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101136978"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "CIELO",
+    "award": [
+     "101187231"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101187231"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "BMBF Projects Open6GHub",
+    "award": [
+     "16KISK010"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "16KISK010"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "INTERSOUL",
+    "award": [
+     "16KISK244K"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "16KISK244K"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "MaxPlanck School of Photonics"
+   },
+   {
+    "name": "Karlsruhe School of Optics &amp; Photonics"
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "J. Lightwave Technol."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     2,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1109/jlt.2025.3625813",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     27
+    ]
+   ],
+   "date-time": "2025-10-27T17:58:32Z",
+   "timestamp": 1761587912000
+  },
+  "page": "1030-1046",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+   "Silicon-Organic Hybrid (SOH) Mach\u2013Zehnder Modulators (MZM) for Single-Carrier IM/DD Line Rates of 500 Gbit/s and Beyond"
+  ],
+  "prefix": "10.1109",
+  "volume": "44",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-3029-6426",
+    "authenticated-orcid": false,
+    "given": "Adrian",
+    "family": "Schwarzenberger",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Institute of Photonics and Quantum Electronics (IPQ), Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0459-6759",
+    "authenticated-orcid": false,
+    "given": "Alexander",
+    "family": "Kotz",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IPQ, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4529-6098",
+    "authenticated-orcid": false,
+    "given": "Dengyang",
+    "family": "Fang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IPQ, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0001-2303-1438",
+    "authenticated-orcid": false,
+    "given": "Hend",
+    "family": "Kholeif",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IPQ, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1399-6041",
+    "authenticated-orcid": false,
+    "given": "Carsten",
+    "family": "Eschenbaum",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "SilOriX GmbH, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5898-0713",
+    "authenticated-orcid": false,
+    "given": "Lukas",
+    "family": "Gr\u00fcnewald",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Laboratory of Electron Microscopy (LEM), KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Christoph",
+    "family": "Wilhelm",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute of Photonics and Quantum Electronics (IPQ), Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0005-7104-3096",
+    "authenticated-orcid": false,
+    "given": "Stefan",
+    "family": "Singer",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute of Photonics and Quantum Electronics (IPQ), Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mohamed",
+    "family": "Kelany",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IPQ, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2562-7112",
+    "authenticated-orcid": false,
+    "given": "Cheng",
+    "family": "Feng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "SilOriX GmbH, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0004-3988-2757",
+    "authenticated-orcid": false,
+    "given": "Malte",
+    "family": "Martens",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "SilOriX GmbH, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Adrian",
+    "family": "Mertens",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "SilOriX GmbH, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0971-8452",
+    "authenticated-orcid": false,
+    "given": "Sidra",
+    "family": "Sarwar",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IMT, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Patrick",
+    "family": "Kern",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IOC, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0002-5751-9906",
+    "authenticated-orcid": false,
+    "given": "Masis",
+    "family": "Sirim",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IOC, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Peter",
+    "family": "Erk",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute of Photonics and Quantum Electronics (IPQ), Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0124-5347",
+    "authenticated-orcid": false,
+    "given": "Artem",
+    "family": "Kuzmin",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IPQ, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yolita M.",
+    "family": "Eggeler",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "LEM, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4845-3191",
+    "authenticated-orcid": false,
+    "given": "Stefan",
+    "family": "Br\u00e4se",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IOC, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sebastian",
+    "family": "Randel",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IPQ, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8797-7687",
+    "authenticated-orcid": false,
+    "given": "Wolfgang",
+    "family": "Freude",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IPQ, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2690-0691",
+    "authenticated-orcid": false,
+    "given": "Christian",
+    "family": "Koos",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "IPQ, KIT, Karlsruhe, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "263",
+  "reference": [
+   {
+    "key": "ref1",
+    "article-title": "Data on notable AI models",
+    "year": "2025"
+   },
+   {
+    "key": "ref2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/mm.2024.3373763"
+   },
+   {
+    "key": "ref3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2021.3066203"
+   },
+   {
+    "key": "ref4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/d41586-018-04443-3"
+   },
+   {
+    "key": "ref5",
+    "article-title": "More compute power, better connectivity: Combining proven CMOS chip fabrication with silicon photonics to move data at the speed of light",
+    "year": "2022"
+   },
+   {
+    "key": "ref6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ofc.2025.m1g.2"
+   },
+   {
+    "key": "ref7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.27.025544"
+   },
+   {
+    "key": "ref8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2016.2639542"
+   },
+   {
+    "key": "ref9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ofc.2025.m3c.3"
+   },
+   {
+    "key": "ref10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202200927"
+   },
+   {
+    "key": "ref11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.537730"
+   },
+   {
+    "key": "ref12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.538870"
+   },
+   {
+    "key": "ref13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2023.3339472"
+   },
+   {
+    "key": "ref14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2014.9"
+   },
+   {
+    "key": "ref15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.23.009938"
+   },
+   {
+    "key": "ref16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0475-6"
+   },
+   {
+    "key": "ref17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.544016"
+   },
+   {
+    "key": "ref18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.chemmater.5c00027"
+   },
+   {
+    "key": "ref19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ofc.2024.w4h.5"
+   },
+   {
+    "key": "ref20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.383120"
+   },
+   {
+    "key": "ref21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ofc.2025.m4k.1"
+   },
+   {
+    "key": "ref22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jstqe.2024.3385375"
+   },
+   {
+    "key": "ref23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.5.000739"
+   },
+   {
+    "key": "ref24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.390315"
+   },
+   {
+    "key": "ref25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.msea.2024.147766"
+   },
+   {
+    "key": "ref26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/s12200-022-00055-y"
+   },
+   {
+    "key": "ref27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jphot.2022.3170366"
+   },
+   {
+    "key": "ref28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2020.3030123"
+   },
+   {
+    "key": "ref29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2015.2392784"
+   },
+   {
+    "key": "ref30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/s12200-022-00012-9"
+   },
+   {
+    "key": "ref31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-021-95981-w"
+   },
+   {
+    "key": "ref32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/tcpmt.2025.3531206"
+   },
+   {
+    "key": "ref33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.551866"
+   },
+   {
+    "key": "ref34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jsen.2022.3199663"
+   },
+   {
+    "key": "ref35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.26.019885"
+   },
+   {
+    "key": "ref36",
+    "article-title": "Prototyping and low-volume manufacturing of silicon photonic ICs",
+    "year": "2025"
+   },
+   {
+    "key": "ref37",
+    "article-title": "Base active PIC",
+    "year": "2025"
+   },
+   {
+    "key": "ref38",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1039/c2tc00255h"
+   },
+   {
+    "key": "ref39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.35848/1347-4065/ac235a"
+   },
+   {
+    "key": "ref40",
+    "first-page": "18",
+    "article-title": "Silicon-organic hybrid slot waveguide modulators on the verge of industrial adoption",
+    "volume": "3",
+    "author": "Mertens",
+    "year": "2024",
+    "journal-title": "PICMagazine"
+   },
+   {
+    "key": "ref41",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202005630"
+   },
+   {
+    "key": "ref42",
+    "article-title": "Lightwave Logic, Inc. Announces perkinamine(TM) polymer reliability breakthrough - passes Telcordia 8585 test & develops enhanced moisture & oxygen resistance via fourth-generation encapsulation technology",
+    "year": "2025"
+   },
+   {
+    "key": "ref43",
+    "first-page": "1",
+    "article-title": "Highly reliable organic polymer optical modulators",
+    "volume-title": "Proc. 2022 Opt. Fiber Commun. Conf. Exhib.",
+    "author": "Yokoyama"
+   },
+   {
+    "key": "ref44",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.26.027955"
+   },
+   {
+    "key": "ref45",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-023-01161-9"
+   },
+   {
+    "key": "ref46",
+    "first-page": "1",
+    "article-title": "Thermally stable silicon-organic hybrid (SOH) mach-Zehnder modulator for 140 GBd PAM4 transmission with sub-1 V drive signals",
+    "volume-title": "Proc. 2022 Eur. Conf. Opt. Commun.",
+    "author": "Eschenbaum"
+   },
+   {
+    "key": "ref47",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1049/icp.2023.2357"
+   },
+   {
+    "key": "ref48",
+    "volume-title": "Test Methods Standard Environmental Test methods for Microcircuits",
+    "year": "2021"
+   },
+   {
+    "key": "ref49",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/oe.25.002627"
+   },
+   {
+    "key": "ref50",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.411161"
+   },
+   {
+    "key": "ref51",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.411161"
+   },
+   {
+    "key": "ref52",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/nfoec.2013.jth2a.26"
+   },
+   {
+    "key": "ref53",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jphot.2013.2239283"
+   },
+   {
+    "key": "ref54",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/cleo_si.2025.ss187_1"
+   },
+   {
+    "key": "ref55",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ieeestd.2018.8310985"
+   },
+   {
+    "key": "ref56",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/tcom.1975.1092854"
+   },
+   {
+    "key": "ref57",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ofc.2017.th5b.5"
+   },
+   {
+    "key": "ref58",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/tit.2016.2543740"
+   },
+   {
+    "key": "ref59",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2022.3172246"
+   },
+   {
+    "key": "ref60",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/ofc.2024.th4b.6"
+   },
+   {
+    "key": "ref61",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/siphotonics60897.2024.10543408"
+   },
+   {
+    "key": "ref62",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.449691"
+   },
+   {
+    "key": "ref63",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/optica.416155"
+   },
+   {
+    "key": "ref64",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/prj.534954"
+   },
+   {
+    "key": "ref65",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jproc.2018.2858542"
+   },
+   {
+    "key": "ref66",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1117/12.938143"
+   },
+   {
+    "key": "ref67",
+    "article-title": "Nanophotonic devices for linear and nonlinear optical signal processing",
+    "author": "Koos",
+    "year": "2007"
+   }
+  ],
+  "container-title": [
+   "Journal of Lightwave Technology"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "http://xplorestaging.ieee.org/ielx8/50/11368632/11217993.pdf?arnumber=11217993",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     1,
+     30
+    ]
+   ],
+   "date-time": "2026-01-30T21:04:06Z",
+   "timestamp": 1769807046000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://ieeexplore.ieee.org/document/11217993/"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     2,
+     1
+    ]
+   ]
+  },
+  "references-count": 67,
+  "journal-issue": {
+   "issue": "3"
+  },
+  "URL": "https://doi.org/10.1109/jlt.2025.3625813",
+  "relation": {},
+  "ISSN": [
+   "0733-8724",
+   "1558-2213"
+  ],
+  "issn-type": [
+   {
+    "value": "0733-8724",
+    "type": "print"
+   },
+   {
+    "value": "1558-2213",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     2,
+     1
+    ]
+   ]
+  }
+ }
+}

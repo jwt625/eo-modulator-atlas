@@ -1,0 +1,619 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     7,
+     31
+    ]
+   ],
+   "date-time": "2026-07-31T22:34:52Z",
+   "timestamp": 1785537292362,
+   "version": "3.56.0"
+  },
+  "reference-count": 67,
+  "publisher": "American Chemical Society (ACS)",
+  "issue": "14",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       6,
+       26
+      ]
+     ],
+     "date-time": "2026-06-26T00:00:00Z",
+     "timestamp": 1782432000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100004189",
+    "name": "Max-Planck-Gesellschaft",
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "id": "10.13039/501100004189",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "ACS Photonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     7,
+     15
+    ]
+   ]
+  },
+  "DOI": "10.1021/acsphotonics.6c00668",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     26
+    ]
+   ],
+   "date-time": "2026-06-26T10:24:04Z",
+   "timestamp": 1782469444000
+  },
+  "page": "3951-3962",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+   "Visible and Near-Infrared Thin-Film Lithium Niobate Modulators with Thermo-Optic Bias"
+  ],
+  "prefix": "10.1021",
+  "volume": "13",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-3062-3634",
+    "authenticated-orcid": true,
+    "given": "Tianyi",
+    "family": "Liu",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Max Planck Institute of Microstructure Physics, Weinberg 2, 06120 Halle (Saale), Germany"
+     },
+     {
+      "name": "Department of Electrical and Computer Engineering, University of Toronto, 10 King\u2019s College Road, Toronto, Ontario M5S 3G4, Canada"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Engjell",
+    "family": "Bebeti",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Max Planck Institute of Microstructure Physics, Weinberg 2, 06120 Halle (Saale), Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "John N.",
+    "family": "Straguzzi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Max Planck Institute of Microstructure Physics, Weinberg 2, 06120 Halle (Saale), Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Joyce K. S.",
+    "family": "Poon",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, University of Toronto, 10 King\u2019s College Road, Toronto, Ontario M5S 3G4, Canada"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wesley D.",
+    "family": "Sacher",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Max Planck Institute of Microstructure Physics, Weinberg 2, 06120 Halle (Saale), Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "316",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     26
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "ref1/cit1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s42254-025-00825-5"
+   },
+   {
+    "key": "ref2/cit2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2022.3210466"
+   },
+   {
+    "key": "ref3/cit3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.1c01775"
+   },
+   {
+    "key": "ref4/cit4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.adg7268"
+   },
+   {
+    "key": "ref5/cit5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-025-02398-1"
+   },
+   {
+    "key": "ref6/cit6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-025-61970-0"
+   },
+   {
+    "key": "ref7/cit7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1117/1.AP.7.4.044002"
+   },
+   {
+    "key": "ref8/cit8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-025-09591-x"
+   },
+   {
+    "key": "ref9/cit9",
+    "doi-asserted-by": "crossref",
+    "first-page": "1496",
+    "DOI": "10.1038/s41467-023-36870-w",
+    "volume": "14",
+    "author": "Renaud D.",
+    "year": "2023",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "ref10/cit10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-017-0088-x"
+   },
+   {
+    "key": "ref11/cit11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-025-09107-7"
+   },
+   {
+    "key": "ref12/cit12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.21.014036"
+   },
+   {
+    "key": "ref13/cit13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5052502"
+   },
+   {
+    "key": "ref14/cit14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.27.037400"
+   },
+   {
+    "key": "ref15/cit15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.448938"
+   },
+   {
+    "key": "ref16/cit16",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Bebeti, E.; Govdeli, A.; Mikkelsen, J. C.; Sharma, A.; McLaughlin, B.; Liu, Z.; Chua, H.; Poon, J. K. S.; Lo, G.Q.; Sacher, W. D. In\n                      Broadband Foundry-Fabricated Active Si Photonics Platform for Visible to Near-Infrared Light\n                      , Conference on Lasers and Electro-Optics (CLEO); Optica Publishing Group: San Jose, CA, USA, 2025; p SS173_6.",
+    "DOI": "10.1364/CLEO_SI.2025.SS173_6"
+   },
+   {
+    "key": "ref17/cit17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.448614"
+   },
+   {
+    "key": "ref18/cit18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.539485"
+   },
+   {
+    "key": "ref19/cit19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-021-00903-x"
+   },
+   {
+    "key": "ref20/cit20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-025-65937-z"
+   },
+   {
+    "key": "ref21/cit21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-025-09959-z"
+   },
+   {
+    "key": "ref22/cit22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0142077"
+   },
+   {
+    "key": "ref23/cit23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.455969"
+   },
+   {
+    "key": "ref24/cit24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.484549"
+   },
+   {
+    "key": "ref25/cit25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-54541-2"
+   },
+   {
+    "key": "ref26/cit26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-55423-3"
+   },
+   {
+    "key": "ref27/cit27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2011.2136322"
+   },
+   {
+    "key": "ref28/cit28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.507536"
+   },
+   {
+    "key": "ref29/cit29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.42.003267"
+   },
+   {
+    "key": "ref30/cit30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.201806452"
+   },
+   {
+    "key": "ref31/cit31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2633-4356/ad207d"
+   },
+   {
+    "key": "ref32/cit32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41567-024-02739-y"
+   },
+   {
+    "key": "ref33/cit33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s44310-024-00052-3"
+   },
+   {
+    "key": "ref34/cit34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.538150"
+   },
+   {
+    "key": "ref35/cit35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17806-0"
+   },
+   {
+    "key": "ref36/cit36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202502207"
+   },
+   {
+    "key": "ref37/cit37",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.504867"
+   },
+   {
+    "key": "ref38/cit38",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.418877"
+   },
+   {
+    "key": "ref39/cit39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.410192"
+   },
+   {
+    "key": "ref40/cit40",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.469358"
+   },
+   {
+    "key": "ref41/cit41",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.474594"
+   },
+   {
+    "key": "ref42/cit42",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-025-67902-2"
+   },
+   {
+    "key": "ref43/cit43",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.403167"
+   },
+   {
+    "key": "ref44/cit44",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-026-69880-5"
+   },
+   {
+    "key": "ref45/cit45",
+    "unstructured": "Zhao, M.; Singh, M.; Singh, A.; Thoreen, H.; DeAngelo, R. J.; Dominguez, D.; Leenheer, A.; Peyskens, F.; Lukin, A.; Englund, D.; Eichenfield, M.; Gemelke, N.; Wan, N. H. An integrated photonics platform for high-speed, ultrahigh-extinction, many-channel quantum control. 2025, arXiv:2508.09920. arXiv.org e-Print archive. https://arxiv.org/abs/2508.09920."
+   },
+   {
+    "key": "ref46/cit46",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-024-07094-9"
+   },
+   {
+    "key": "ref47/cit47",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.489050"
+   },
+   {
+    "key": "ref48/cit48",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-022-01120-w"
+   },
+   {
+    "key": "ref49/cit49",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-025-65211-2"
+   },
+   {
+    "key": "ref50/cit50",
+    "unstructured": "Guo, C.; Li, X.; Wu, X.; Deng, J.; Huang, J.; Wang, Y.; Yang, W.; Ma, W.; Ruan, Z.; Chen, K.; He, S.; Liu, L. Robust and Active Visible-Light Integrated Photonics on Thin-Film Lithium Tantalate for Underwater Optical Wireless Communications. 2026, arXiv:2603.14346. arXiv.org e-Print archive. https://arxiv.org/abs/2603.14346."
+   },
+   {
+    "key": "ref51/cit51",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Liu, T.; Bebeti, E.; Wang, R. N.; Straguzzi, J. N.; Govdeli, A.; Poon, J. K. S.; Sacher, W. D. In\n                      Foundry-Fabricated Visible and Near-Infrared Thin-Film Lithium Niobate Modulators with Thermo-Optic Bias\n                      , Conference on Lasers and Electro-Optics (CLEO). Optica Publishing Group: San Jose, CA, USA, 2025; p SS168_4.",
+    "DOI": "10.1364/CLEO_SI.2025.SS168_4"
+   },
+   {
+    "key": "ref52/cit52",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-023-40502-8"
+   },
+   {
+    "key": "ref53/cit53",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevX.8.041054"
+   },
+   {
+    "key": "ref54/cit54",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0171734"
+   },
+   {
+    "key": "ref55/cit55",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.469065"
+   },
+   {
+    "key": "ref56/cit56",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.482667"
+   },
+   {
+    "key": "ref57/cit57",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2010.2048553"
+   },
+   {
+    "key": "ref58/cit58",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.386983"
+   },
+   {
+    "key": "ref59/cit59",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.119.230501"
+   },
+   {
+    "key": "ref60/cit60",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-022-01047-2"
+   },
+   {
+    "key": "ref61/cit61",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.580467"
+   },
+   {
+    "key": "ref62/cit62",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0077232"
+   },
+   {
+    "key": "ref63/cit63",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2015.2462341"
+   },
+   {
+    "key": "ref64/cit64",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.570940"
+   },
+   {
+    "key": "ref65/cit65",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.492372"
+   },
+   {
+    "key": "ref66/cit66",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.521766"
+   },
+   {
+    "key": "ref67/cit67",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2022.3146232"
+   }
+  ],
+  "container-title": [
+   "ACS Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.6c00668",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "unspecified"
+   },
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.6c00668",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     7,
+     15
+    ]
+   ],
+   "date-time": "2026-07-15T14:09:16Z",
+   "timestamp": 1784124556000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.acs.org/doi/10.1021/acsphotonics.6c00668"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     26
+    ]
+   ]
+  },
+  "references-count": 67,
+  "journal-issue": {
+   "issue": "14",
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      7,
+      15
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1021/acsphotonics.6c00668"
+  ],
+  "URL": "https://doi.org/10.1021/acsphotonics.6c00668",
+  "relation": {},
+  "ISSN": [
+   "2330-4022",
+   "2330-4022"
+  ],
+  "issn-type": [
+   {
+    "value": "2330-4022",
+    "type": "print"
+   },
+   {
+    "value": "2330-4022",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     26
+    ]
+   ]
+  }
+ }
+}

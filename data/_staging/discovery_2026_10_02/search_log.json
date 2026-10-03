@@ -1,0 +1,281 @@
+{
+  "scope": "2020-01-01 through 2026-10-02; journal issue year or preprint date, with actual source version retained",
+  "method": "Topic search plus authors, research groups, university publication lists and references of existing papers. Search results are leads; identities checked against primary pages, Crossref and downloaded PDFs.",
+  "note": "Recorded query batches from this session. Early search rounds are summarized in RESEARCH_ROUTES.md rather than reconstructed as verbatim queries.",
+  "batches": [
+    {
+      "batch": 1,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"electro-optic modulator\" \"2020\" \"2021\" \"2022\" \"Loncar\"",
+          "domains": [
+            "arxiv.org"
+          ]
+        },
+        {
+          "q": "\"modulator\" \"Zwickel\" \"2020\"",
+          "domains": [
+            "arxiv.org",
+            "ipq.kit.edu"
+          ]
+        },
+        {
+          "q": "\"High-temperature-resistant\" \"silicon-polymer\" modulator",
+          "domains": [
+            "nature.com",
+            "arxiv.org"
+          ]
+        },
+        {
+          "q": "\"Heterogeneous integration of a high-speed lithium niobate modulator\" \"2023\"",
+          "domains": [
+            "photonics.intec.ugent.be",
+            "pubs.aip.org",
+            "arxiv.org"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"A verified equivalent-circuit model for slotwaveguide modulators\""
+        },
+        {
+          "q": "\"silicon organic hybrid\" \"2024\" \"modulators\" Koos"
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"lithium niobate\" \"modulator\" \"2021\" \"2020\" \"Lončar\""
+        },
+        {
+          "q": "\"lithium niobate\" \"modulator\" \"2022\" \"2024\" \"Cheng Wang\""
+        },
+        {
+          "q": "\"electro-optic modulator\" \"2021\" \"2023\" \"Qiang Lin\""
+        },
+        {
+          "q": "\"modulator\" \"2024\" \"2025\" \"Daoxin Dai\""
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"Thin-Film Lithium Niobate Optical Modulators with an Extrapolated Bandwidth of 170 GHz\" pdf"
+        },
+        {
+          "q": "\"Dual-polarization thin-film lithium niobate in-phase quadrature modulators\" pdf"
+        },
+        {
+          "q": "\"Slow-light silicon modulator with 110-GHz bandwidth\" pdf"
+        },
+        {
+          "q": "\"100 GHz bandwidth, 1 volt\" modulator arxiv"
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"Full-spectrum visible electro-optic modulator\""
+        },
+        {
+          "q": "\"Thermally Stable Silicon-Organic Hybrid\" \"140\" KIT"
+        },
+        {
+          "q": "\"thin film\" \"modulator\" \"2024\" \"Xiong\" \"Sun\""
+        },
+        {
+          "q": "\"electro-optic modulator\" \"2025\" \"2026\" \"Qiu\" \"Yokoyama\""
+        }
+      ]
+    },
+    {
+      "batch": 6,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"Full-spectrum visible electro-optic modulator\" arxiv Optica 2023 125"
+        },
+        {
+          "q": "\"electro-optic\" \"modulator\" \"2020\" \"2021\" \"Loncar\" arxiv phase"
+        },
+        {
+          "q": "\"lithium niobate\" \"modulator\" \"2024\" \"2025\" \"Loncar\" arxiv"
+        },
+        {
+          "q": "\"electro-optic modulator\" \"2026\" September August July",
+          "domains": [
+            "arxiv.org"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": 7,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"modulator\" \"2020\" \"2021\" \"2022\" \"Ogiso\" \"Ozaki\""
+        },
+        {
+          "q": "\"electro-optic modulator\" \"2023\" \"2024\" \"Bowers\" lithium"
+        },
+        {
+          "q": "\"electro-optic\" \"barium titanate\" \"2026\" modulator arxiv"
+        },
+        {
+          "q": "\"modulator\" \"2026\" \"2025\" \"Ghent\" \"Vanackere\""
+        }
+      ]
+    },
+    {
+      "batch": 8,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"Full-spectrum visible electro-optic modulator\" \"482667\" pdf",
+          "domains": [
+            "rochester.edu",
+            "opg.optica.org"
+          ]
+        },
+        {
+          "q": "\"silicon\" \"lithium niobate\" \"2c00263\""
+        },
+        {
+          "q": "\"thin-film lithium tantalate for ultraviolet\""
+        },
+        {
+          "q": "\"An integrated low-voltage broadband lithium niobate phase modulator\""
+        }
+      ]
+    },
+    {
+      "batch": 9,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"Thin-film lithium niobate\" \"modulator\" \"2020\" \"2021\" \"Fathpour\" -review -patent"
+        },
+        {
+          "q": "\"lithium niobate\" \"modulator\" \"2022\" \"2023\" \"Liu Liu\" -review"
+        },
+        {
+          "q": "\"Barium titanate\" \"modulator\" \"2020\" \"2021\" \"2022\" \"Abel\" -review"
+        }
+      ]
+    },
+    {
+      "batch": 10,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"An integrated optical modulator operating at cryogenic temperatures\" arxiv"
+        },
+        {
+          "q": "\"Ultra-wideband MHz to THz plasmonic EO modulator\" pdf"
+        },
+        {
+          "q": "\"320 Gbps co-planar stripline Mach-Zehnder modulator\" pdf"
+        },
+        {
+          "q": "\"Implementation, Modelling and Verification\" \"Mach-Zehnder\" pdf"
+        }
+      ]
+    },
+    {
+      "batch": 11,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"Implementation, Modelling and Verification of High-Speed\" pdf"
+        },
+        {
+          "q": "\"An integrated optical modulator operating at cryogenic temperatures\" \"arxiv\""
+        }
+      ]
+    },
+    {
+      "batch": 12,
+      "queried_on": "2026-10-02",
+      "queries": [
+        {
+          "q": "\"modulator\" \"electro\" \"2021\" \"2022\" site:ee.cityu.edu.hk/~cwang/document"
+        },
+        {
+          "q": "\"Silicon–Lithium Niobate Hybrid Intensity\" pdf"
+        },
+        {
+          "q": "\"Full-spectrum visible electro-optic modulator\" site:linlab.ece.rochester.edu"
+        },
+        {
+          "q": "\"modulator\" \"2024\" \"2025\" \"Tianhao Ren\" \"Cheng Wang\""
+        }
+      ]
+    },
+    {
+      "batch": 13,
+      "queried_on": "2026-10-02",
+      "queries": [
+        "\"Plasmonic Ferroelectric Modulator Monolithically Integrated\" ETH pdf",
+        "\"Thin-Film BTO-Based MZMs\" pdf",
+        "\"An integrated optical modulator operating at cryogenic temperatures\" arxiv",
+        "\"Visible and Near-Infrared Thin-Film Lithium Niobate Modulators with Thermo-Optic Bias\""
+      ]
+    },
+    {
+      "batch": 14,
+      "queried_on": "2026-10-02",
+      "queries": [
+        "\"Demonstration of high-speed thin-film lithium-niobate-on-insulator optical modulators at the 2\" pdf",
+        "\"Dual-polarization thin-film lithium niobate\" \"2022\" pdf",
+        "\"80-GHz Bandwidth and 1.5-V\" pdf NTT",
+        "\"High-speed electro-optic modulator based on silicon nitride loaded\" pdf"
+      ]
+    },
+    {
+      "batch": 15,
+      "queried_on": "2026-10-02",
+      "queries": [
+        "\"High-speed electro-optic modulation in topological interface states\" nature",
+        "\"80-GHz Bandwidth and 1.5-V\" NTT pdf Ogiso",
+        "\"A heterogeneously integrated silicon photonic/lithium niobate travelling wave electro-optic modulator\" Boynton pdf",
+        "\"Thin-Film Lithium Niobate based Dual-Polarization IQ modulator\" 2201.09730"
+      ]
+    },
+    {
+      "batch": 16,
+      "queried_on": "2026-10-02",
+      "queries": [
+        "\"boynton\" \"1868\" site:osti.gov",
+        "\"80-GHz Bandwidth\" site:ntt-review.jp",
+        "\"High-speed electro-optic modulation\" site:otip.sjtu.edu.cn",
+        "\"Thin-Film BTO-Based MZMs\" filetype:pdf"
+      ]
+    },
+    {
+      "batch": 17,
+      "queried_on": "2026-10-02",
+      "queries": [
+        "\"Hybrid lithium tantalite-silicon integrated photonics platform\"",
+        "\"Integrated electro-optic modulator on lead zirconate titanate-silicon nitride\"",
+        "\"Highly Efficient Slow-Light Mach\" site:otip.sjtu.edu.cn",
+        "\"Visible and Near-Infrared Thin-Film Lithium Niobate Modulators with Thermo-Optic Bias\" arxiv"
+      ]
+    }
+  ]
+}
