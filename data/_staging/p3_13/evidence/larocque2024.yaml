@@ -1,0 +1,135 @@
+paper_id: larocque2024
+verified_on: '2026-10-02'
+source_files:
+- references/larocque2024/text.md
+- references/larocque2024/crossref.json
+- references/larocque2024/figures/page_04.png
+- references/larocque2024/figures/page_05.png
+entries:
+- device_id: larocque2024-a
+  field: wavelength_nm
+  value: 1548.66
+  unit: nm
+  basis: measured
+  locator: p.4, Fig. 3a; p.5, Fig. 4b caption
+  note: lambda = 1548.66 nm laser wavelength of the Fig. 4b map
+- device_id: larocque2024-a
+  field: bw3db_ghz
+  value: 1.5
+  unit: GHz
+  basis: measured
+  locator: p.3 text; p.5, Fig. 4a
+  note: Each cavity 3 dB cutoff around 1.5 GHz; Fig. 4a draws -3 and -6 dB lines; dB convention (optical or electrical) not stated
+- device_id: larocque2024-a
+  field: bw_measured_to_ghz
+  value: 5.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.5, Fig. 4a
+  note: Small-signal response plotted to 5 GHz (axis limit)
+- device_id: larocque2024-a
+  field: extinction_ratio_db
+  value: 30.0
+  unit: dB
+  basis: measured
+  locator: p.3 text; p.5, Fig. 4b inset
+  note: More than 30 dB extinction at destructive interference; static transmission map
+- device_id: larocque2024-a
+  field: drive_vpp_v
+  value: 2.0
+  unit: V
+  basis: measured
+  locator: p.2 text; p.3 text
+  note: 2 V peak to peak for 4-QAM; +-1 V on each cavity
+- device_id: larocque2024-a
+  field: eo_film_thickness_nm
+  value: 600.0
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: 600 nm thick x-cut TFLN wafer from NanoLN
+- device_id: larocque2024-a
+  field: etch_depth_nm
+  value: 400.0
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: Etch configured to remove 400 nm of LN
+- device_id: larocque2024-a
+  field: rib_width_nm
+  value: 800.0
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: Waveguide width 800 nm, tapering to 900 nm in the PhC region
+- device_id: larocque2024-a
+  field: sidewall_angle_deg
+  value: 35.0
+  unit: deg
+  basis: design_target
+  locator: p.6, Methods
+  note: 35 deg with respect to the chip normal (55 deg from the film plane); inner Bragg-gap sidewall about 17 deg
+- device_id: larocque2024-a
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: design_target
+  locator: p.6, Methods
+  note: 500 nm thick gold electrodes, lift-off
+- device_id: larocque2024-a
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.6, Methods
+  note: Gold electrodes
+- device_id: larocque2024-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.6, Methods
+  note: x-cut TFLN on insulator
+- device_id: larocque2024-a
+  field: modulation_format
+  value: 4-QAM (2 bits/symbol) from two binary-driven cavities, 2^7-1 PRBS, 20 MHz to 1 GHz modulation frequency, EVM below 0.27 (average over symbols) up to near the 3 dB cutoff
+  unit: ''
+  basis: measured
+  locator: p.3-4 text; p.5, Fig. 5d
+  note: Constellations at 20 MHz, 100 MHz, 250 MHz, 500 MHz, 1 GHz; EVM below 0.27
+- device_id: larocque2024-a
+  field: energy_per_bit_fj
+  value: 25.8
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.4 Discussion; p.19 Supp VI
+  note: Estimated average 25.8 fJ/bit from simulated capacitances, 0-2 V swings
+- device_id: larocque2024-a
+  field: q_loaded
+  value: 70000
+  unit: '1'
+  basis: measured
+  locator: p.2 text; p.4, Table I
+  note: About 70,000; fitted Q1 6.6e4 and Q2 7.4e4
+- device_id: larocque2024-a
+  field: tuning_nm_per_v
+  value: 0.0092
+  unit: nm/V
+  basis: extracted_from_figure
+  locator: p.4, Fig. 3b
+  note: 9.2 pm/V slope label for cavity 1; cavity 2 8.7 pm/V (Fig. 3c); Table I 1.15 and 1.09 GHz/V
+- device_id: larocque2024-a
+  field: drive
+  value: dual_drive
+  unit: ''
+  basis: derived
+  locator: p.23, Supp Fig. 16 caption; p.5, Fig. 5b
+  note: Authors do not name a drive type; two cavities driven by two independent PRBS signals, entered as dual_drive
+derived:
+- device_id: larocque2024-a
+  field: slab_thickness_nm
+  value: 200
+  formula: eo_film_thickness_nm - etch_depth_nm = 600 - 400
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm

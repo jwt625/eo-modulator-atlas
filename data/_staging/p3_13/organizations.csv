@@ -1,0 +1,22 @@
+org_name,org_type,country,region,parent_org,notes
+Massachusetts Institute of Technology,university,US,north_america,,"Cambridge, MA; Research Laboratory of Electronics (larocque2024 affiliation 1; holzgrafe2020 affiliation 3)"
+U.S. Army Combat Capabilities Development Command Army Research Laboratory,national_lab,US,north_america,,"Adelphi, MD; paper writes ""DEVCOM Army Research Laboratory""; official name expanded"
+Centre Suisse d'Electronique et de Microtechnique,research_institute,CH,europe,,"Neuchatel; paper writes ""Centre Suisse d'Electronique et de Microtechnique (CSEM)""; named as the TFLN multi-project fabrication run used (larocque2024)"
+University of Illinois Chicago,university,US,north_america,,"Chicago, IL; Department of Electrical and Computer Engineering; paper writes ""University of Illinois - Chicago"""
+Tulane University,university,US,north_america,,"New Orleans, LA"
+Raytheon BBN Technologies,company,US,north_america,,"Cambridge, MA"
+Technical University of Denmark,university,DK,europe,,Lyngby; Department of Electrical and Photonics Engineering
+University of Pittsburgh,university,US,north_america,,"Pittsburgh, PA; Department of Electrical and Computer Engineering"
+"University of California, Santa Barbara",university,US,north_america,,"Santa Barbara, CA; Department of Electrical and Computer Engineering; written without comma in the kari2025 paper"
+University of Cagliari,university,IT,europe,,Cagliari; Department of Physics
+"Cetus Photonics, Inc.",company,US,north_america,,Address not stated in the paper
+Harvard University,university,US,north_america,,"Cambridge, MA; John A. Paulson School of Engineering and Applied Sciences and Department of Physics"
+California Institute of Technology,university,US,north_america,,"Pasadena, CA; Division of Physics, Mathematics and Astronomy and Alliance for Quantum Technologies (affiliation 2 of holzgrafe2020)"
+Center for Nanoscale Systems,facility,US,north_america,Harvard University,"Acknowledgements: work performed in part at the Center for Nanoscale Systems, part of Harvard University; country from host institution"
+Paderborn University,university,DE,europe,,"Paderborn; Mesoscopic Quantum Optics and Integrated Quantum Optics, Department Physics"
+Xidian University,university,CN,east_asia,,"Guangzhou Institute of Technology and School of Microelectronics (State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology); affiliations from the Crossref record, absent from the cached preprint"
+Nanjing University of Aeronautics and Astronautics,university,CN,east_asia,,"Nanjing; Key Laboratory of Radar Imaging and Microwave Photonics, College of Electronic and Information Engineering; affiliation from the Crossref record, absent from the cached preprint"
+Stanford University,university,US,north_america,,Departments of Physics and Applied Physics and E.L. Ginzton Laboratory (multani2025)
+SLAC National Accelerator Laboratory,national_lab,US,north_america,Stanford University,"Menlo Park, CA; paper lists it as SLAC National Accelerator Laboratory, Stanford University"
+Stanford Nano Shared Facilities,facility,US,north_america,Stanford University,"Named in the acknowledgements of multani2025; host institution not stated as such in the paper, country from the Stanford name"
+Stanford Nanofabrication Facility,facility,US,north_america,Stanford University,"Named in the acknowledgements of multani2025; host institution not stated as such in the paper, country from the Stanford name"

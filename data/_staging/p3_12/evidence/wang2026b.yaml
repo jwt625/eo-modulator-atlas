@@ -1,0 +1,123 @@
+paper_id: wang2026b
+verified_on: '2026-10-02'
+source_files:
+- references/wang2026b/text.md
+- references/wang2026b/figures/page_10.png
+- references/wang2026b/figures/page_11.png
+entries:
+- device_id: wang2026b-am
+  field: length_mm
+  value: 11
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. Overall scheme
+  note: AM/PM transmission lines 'approximately 1.1 cm in length'
+- device_id: wang2026b-am
+  field: vpi_dc_v
+  value: 2.2
+  unit: V
+  basis: measured
+  locator: p.5 Sec. 2x8 switch; Fig. 3(c)
+  note: low-frequency triangular drive on AM 3-1; switching voltage cross/bar
+- device_id: wang2026b-am
+  field: vpil_dc_vcm
+  value: 2.4
+  unit: V*cm
+  basis: derived
+  locator: p.5 Sec. 2x8 switch
+  note: authors multiply 2.2 V by the electrode length; MZ-level convention not stated
+- device_id: wang2026b-am
+  field: vpi_rf_v
+  value: 3.7
+  unit: V
+  basis: derived
+  locator: p.6 Sec. EO comb transmitter
+  note: authors extract ~3.7 V at 50 GHz from DC Vpi and the chip-level EO S21
+- device_id: wang2026b-am
+  field: vpi_rf_freq_ghz
+  value: 50
+  unit: GHz
+  basis: derived
+  locator: p.6 Sec. EO comb transmitter
+- device_id: wang2026b-am
+  field: bw3db_ghz
+  value: 30
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. FC bonds; Fig. 2(f) light gray
+  note: chip-level EO S21 measured with a probe before packaging, approximately 30 GHz
+- device_id: wang2026b-am
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.3-4 Sec. Design of FC bonds
+  note: '''half-etched 500-nm-thick lithium niobate waveguides''; etch depth not given'
+- device_id: wang2026b-am
+  field: electrode_thickness_um
+  value: 1.0
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. Design of FC bonds
+  note: 1-um-thick Cu/Au transmission line electrodes
+- device_id: wang2026b-am
+  field: electrode_metal
+  value: Cu/Au
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Design of FC bonds
+- device_id: wang2026b-am
+  field: cladding
+  value: SiO2 3 um
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. Design of FC bonds
+  note: whole chip coated before opening vias
+- device_id: wang2026b-pm
+  field: vpi_rf_v
+  value: 3.9
+  unit: V
+  basis: author_estimate
+  locator: p.6 Sec. EO comb transmitter; Fig. 4(b)
+  note: estimated from Bessel-shaped comb at 28 dBm on-chip RF power, 50 GHz
+- device_id: wang2026b-pm
+  field: vpi_rf_freq_ghz
+  value: 50
+  unit: GHz
+  basis: author_estimate
+  locator: p.6 Sec. EO comb transmitter; Fig. 4(b)
+- device_id: wang2026b-switch
+  field: il_onchip_db
+  value: 3
+  unit: dB
+  basis: measured
+  locator: p.5 Sec. 2x8 switch; Fig. 3(d)
+  note: approximately 3 dB for all 8 outputs, excluding ~5 dB per facet fiber coupling
+- device_id: wang2026b-am2
+  field: length_mm
+  value: 11
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. Overall scheme
+  note: AM/PM transmission lines 'approximately 1.1 cm'; AM 2 not individually dimensioned
+- device_id: wang2026b-am2
+  field: max_baud_gbd
+  value: 20
+  unit: GBd
+  basis: measured
+  locator: p.6-7 Sec. EO comb transmitter; Fig. 4(e)
+  note: OOK eye at 20 Gbaud, limited by 13 GHz oscilloscope
+- device_id: wang2026b-am2
+  field: max_line_rate_gbps
+  value: 20
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; Fig. 4(e)
+  note: OOK, equipment limited
+- device_id: wang2026b-am2
+  field: modulation_format
+  value: OOK at 5, 10, 20 Gbaud on the left first comb sideband
+  unit: ''
+  basis: measured
+  locator: p.6-7 Fig. 4(e)
+derived: []

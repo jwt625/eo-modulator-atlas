@@ -1,0 +1,128 @@
+paper_id: kari2025
+verified_on: '2026-10-02'
+source_files:
+- references/kari2025/text.md
+- references/kari2025/figures/page_05.png
+- references/kari2025/figures/page_06.png
+- references/kari2025/figures/page_08.png
+entries:
+- device_id: kari2025-a
+  field: bw3db_ghz
+  value: 29.0
+  unit: GHz
+  basis: author_estimate
+  locator: p.8, Fig. 4c; p.5, Fig. 2e
+  note: Labelled VNA in Fig. 2e, but Methods give a 7.5 GHz VNA and the value equals the Q-limited estimate (Eqs. 1-3)
+- device_id: kari2025-a
+  field: il_onchip_db
+  value: 1.0
+  unit: dB
+  basis: measured
+  locator: p.6 text; p.11 Methods
+  note: Insertion loss of the fabricated resonators about 1 dB; exclusions not stated
+- device_id: kari2025-a
+  field: extinction_ratio_db
+  value: 2.5
+  unit: dB
+  basis: extracted_from_figure
+  locator: p.5, Fig. 2c
+  note: Passive resonance-dip depth (panel label ER = -2.5 dB, sign dropped), not modulation contrast
+- device_id: kari2025-a
+  field: q_loaded
+  value: 6232
+  unit: '1'
+  basis: measured
+  locator: p.5, Fig. 2c; p.8, Fig. 4c caption
+  note: Q = 6232
+- device_id: kari2025-b
+  field: bw3db_ghz
+  value: 4.4
+  unit: GHz
+  basis: measured
+  locator: p.8, Fig. 4c; p.5, Fig. 2e
+  note: Labelled VNA in Fig. 2e and below the 7.5 GHz VNA limit in Methods; Q-limited estimate would be about 7.2 GHz
+- device_id: kari2025-b
+  field: il_onchip_db
+  value: 1.0
+  unit: dB
+  basis: measured
+  locator: p.6 text; p.11 Methods
+  note: Insertion loss of the fabricated resonators about 1 dB; exclusions not stated
+- device_id: kari2025-b
+  field: extinction_ratio_db
+  value: 10.2
+  unit: dB
+  basis: extracted_from_figure
+  locator: p.5, Fig. 2b
+  note: Passive resonance-dip depth (panel label ER = -10.2 dB, sign dropped), not modulation contrast
+- device_id: kari2025-b
+  field: q_loaded
+  value: 26595
+  unit: '1'
+  basis: measured
+  locator: p.5, Fig. 2b; p.8, Fig. 4c caption
+  note: Q = 26595
+- device_id: kari2025-c
+  field: drive
+  value: differential
+  unit: ''
+  basis: derived
+  locator: p.2 text, Fig. 1; p.6 Fig. 3 text
+  note: Authors say differential modulation via contacts VS1 and VS2; entered as differential
+- device_id: kari2025-c
+  field: modulation_format
+  value: Small-signal differential modulation, 500 kHz +-10 V lock-in; in-phase drive gives amplitude modulation, out-of-phase drive phase modulation
+  unit: ''
+  basis: measured
+  locator: p.6-7 text; p.8, Fig. 4a-b
+  note: In-phase and out-of-phase small-signal modulation, 500 kHz
+- device_id: kari2025-d
+  field: drive
+  value: differential
+  unit: ''
+  basis: derived
+  locator: p.2 text, Fig. 1; p.6 Fig. 3 text
+  note: Authors say differential modulation via contacts VS1 and VS2; entered as differential
+- device_id: kari2025-d
+  field: modulation_format
+  value: Small-signal differential modulation, 500 kHz +-10 V lock-in; in-phase drive gives amplitude modulation, out-of-phase drive phase modulation
+  unit: ''
+  basis: measured
+  locator: p.6-7 text; p.8, Fig. 4a-b
+  note: In-phase and out-of-phase small-signal modulation, 500 kHz
+- device_id: kari2025-e
+  field: drive
+  value: differential
+  unit: ''
+  basis: derived
+  locator: p.8, Fig. 4d caption
+  note: Authors say eye measured during differential modulation; entered as differential
+- device_id: kari2025-e
+  field: drive_vpp_v
+  value: 6.32
+  unit: V
+  basis: measured
+  locator: p.8, Fig. 4d
+  note: Vpp = 6.32 V in the eye-diagram header
+- device_id: kari2025-e
+  field: extinction_ratio_db
+  value: 6.2
+  unit: dB
+  basis: measured
+  locator: p.8, Fig. 4d and caption
+  note: Dynamic ER 6.2 dB from the eye diagram
+- device_id: kari2025-e
+  field: max_baud_gbd
+  value: 10.0
+  unit: GBd
+  basis: measured
+  locator: p.8, Fig. 4d and caption
+  note: Eye diagram at 10 Gbaud
+- device_id: kari2025-e
+  field: modulation_format
+  value: Eye diagram at 10 Gbaud (data format and PRBS length not stated), differential drive, eye width 100 ps
+  unit: ''
+  basis: measured
+  locator: p.8, Fig. 4d
+  note: Eye diagram only; format not stated
+derived: []

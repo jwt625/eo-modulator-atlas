@@ -1,0 +1,144 @@
+paper_id: gao2024
+verified_on: '2026-10-02'
+source_files:
+- references/gao2024/text.md
+- references/gao2024/figures/img_p02_2.png
+- references/gao2024/figures/img_p03_2.png
+- references/gao2024/crossref.json
+- references/gao2024/source.json
+entries:
+- device_id: gao2024-a
+  field: length_mm
+  value: 10
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.2
+  note: total electrode length 1 cm
+- device_id: gao2024-a
+  field: vpi_rf_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.3 Fig. 4(a)
+  note: about 3 V near 12, 16, 22 and 26 GHz; dual-arm device Vpi, half of the single-arm 5.5 V
+- device_id: gao2024-a
+  field: vpi_rf_freq_ghz
+  value: 12
+  unit: GHz
+  basis: measured
+  locator: p.3 Fig. 4(a)
+  note: 'Text: near 12, 16, 22 and 26 GHz; Fig. 4(a) minima read at about 12, 17, 22, 27 GHz; first minimum entered'
+- device_id: gao2024-a
+  field: il_fiber_to_fiber_db
+  value: 2.8
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.1 Sec. 1
+  note: '''low insertion loss of 2.8 dB'' with spot-size converters; definition not stated'
+- device_id: gao2024-a
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: x-cut TFLN bonded to buried oxide
+- device_id: gao2024-a
+  field: etch_depth_nm
+  value: 210
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: ''
+- device_id: gao2024-a
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: ridge top width 1 um; bottom width 4.8 um
+- device_id: gao2024-a
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: gap between electrodes on the two sides of the waveguide
+- device_id: gao2024-a
+  field: signal_width_um
+  value: 23.5
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: ''
+- device_id: gao2024-a
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: 500 nm Au by e-beam evaporation; 200 nm Ti used only as a wet-etch mask
+- device_id: gao2024-a
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: ''
+- device_id: gao2024-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: buried SiO2
+- device_id: gao2024-a
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: extracted_from_figure
+  locator: Fig. 2(c)
+  note: thickness not stated
+- device_id: gao2024-a
+  field: cladding
+  value: none drawn in the phase-shifter cross-section (air); SiON 4 um x 3 um over the LN taper in the spot-size converter
+  unit: ''
+  basis: extracted_from_figure
+  locator: Fig. 2(c); p.3 Sec. 2
+  note: ''
+- device_id: gao2024-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: ''
+- device_id: gao2024-a
+  field: epitaxy_or_stack
+  value: Si / 4.7 um SiO2 / 500 nm x-cut TFLN ridge (210 nm etch, top 1 um, bottom 4.8 um) / Au electrodes 500 nm
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2; Fig. 2(c)
+  note: ''
+- device_id: gao2024-a
+  field: vpi_basis
+  value: measured
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 4(a)
+  note: OSA sideband-ratio extraction
+derived:
+- device_id: gao2024-a
+  field: slab_thickness_nm
+  value: 290
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: gao2024-a
+  field: sidewall_angle_deg
+  value: 6.3
+  formula: atan(210 nm / ((4.8 - 1.0)/2 um)) in degrees
+  inputs:
+  - etch_depth_nm
+  - top width 1 um
+  - bottom width 4.8 um

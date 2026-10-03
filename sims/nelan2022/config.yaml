@@ -1,0 +1,120 @@
+# STATUS: record of disclosed geometry and provenance for the uniform CPW interaction-region cross-section of ONE folded dual-output SiNx-loaded TFLN MZM.
+# NOT RUNNABLE as written: the paper states no RF permittivity for LN, SiNx, SiO2 or Si and no gold conductivity; of the Pockels tensor it states only r33 = 31 pm/V (p.3 Sec. II-A).
+# They are omitted on purpose (see `missing`); none was filled from memory. Optical indices of LN, SiO2 and Si come from the engine library; SiNx n = 1.943 is stated by the paper.
+#
+# Coordinate frame: x lateral (paper Z), y film normal up (paper X), z propagation (paper Y). x = 0 on the optical axis of the RIGHT-hand waveguide (SiNx strip centre);
+# y = 0 at the LN bottom (BOX top). Layout read from Fig. 1 and Fig. 2(c): ground | gap | signal | gap | ground, one waveguide centred in each 4 um gap.
+# Both arms are in the electrostatic domain (symmetry none) so the push-pull-like field in the two gaps comes from the geometry; the optical mode is solved on the right arm.
+# Vpi convention of the paper is not stated (devices.csv vpi_convention unspecified): the VpiL target is therefore flagged comparable: false.
+# The UV15 index-matching fluid on the electrodes is NOT modelled (air above the oxide); the n_rf target is the air-clad value for that reason.
+schema: eo-atlas.sim/v1
+id: nelan2022-a
+paper_id: nelan2022
+device_id: nelan2022-a
+title: Nelan 2022 (arXiv v1), 11 mm folded dual-output SiNx-loaded TFLN MZM, uniform GSG cross-section (4 um gaps, 24.5 um signal, 100 nm x 2 um SiNx strip on 300 nm x-cut LN)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap]
+
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    # n_o, n_e: engine library; RF eps_r not stated in the paper (omitted, see missing); r13, r22, r51 not stated (omitted)
+    r_pm_per_v: {r33: 31}
+  silicon_nitride: {n: 1.943}      # PECVD SiNx n at 1550 nm stated on p.5 Sec. III; RF eps_r omitted
+  silicon_dioxide: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon: {}                      # optical n from engine library; RF eps_r and resistivity not stated (omitted)
+  gold: {conductor: true}          # conductivity not stated (omitted)
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-160, 120], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-160, 120], y_um: [-250, 120]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-160, 120], y_um: [-250, -4.7]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-160, 120], y_um: [-4.7, 0]}}
+    - {name: ln_film, material: lithium_niobate, rect: {x_um: [-160, 120], y_um: [0, 0.3]}}
+    - {name: sio2_buffer, material: silicon_dioxide, rect: {x_um: [-160, 120], y_um: [0.3, 0.75]}}
+    - {name: sin_strip_r, material: silicon_nitride, rect: {x_um: [-1, 1], y_um: [0.3, 0.4]}}
+    - {name: sin_strip_l, material: silicon_nitride, rect: {x_um: [-29.5, -27.5], y_um: [0.3, 0.4]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-26.5, -2], y_um: [0.75, 1.75]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [2, 77], y_um: [0.75, 1.75]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-105.5, -30.5], y_um: [0.75, 1.75]}, material: gold}
+  optical_window: {x_um: [-1.9, 1.9], y_um: [-1.5, 0.7]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+line:
+  length_mm: 11
+  conductor_loss_model: none        # no RF loss coefficient is reported (only S21 of the electrode, length not stated)
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 40, n_points: 80}
+
+alt_geometries: {}
+
+targets:
+  # Paper-reported values for device nelan2022-a. VpiL is an abstract value (2.98 V x 11 mm); convention of the paper is unspecified.
+  - {metric: vpi_l_dc_vcm, value: 3.3, tol_rel: 0.15, source: {device_id: nelan2022-a, field: vpil_dc_vcm, comparable: false, note: "Vpi convention not stated by the paper; both arms are in the model"}}
+  - {metric: ng_opt, value: 2.14, tol_abs: 0.05, source: {device_id: nelan2022-a, field: ng_opt}}
+  # Air-clad measured RF group index (no UV15), matches the modelled topology; the devices.csv n_rf (2.10) is the UV15-clad value and is not a target here.
+  - {metric: n_rf, value: 1.85, tol_abs: 0.1, source: {paper_id: nelan2022, locator: "p.5 Sec. II-C text; Fig. 5(c) air-clad plateau 1.85-1.9", basis: measured, note: "air-clad, roughly 1.85 at about 40 GHz (measured RF group index, Fig. 5(c): about 1.89 at 10 GHz, 1.86 at 40 GHz)"}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.5 Sec. IV-A; p.9 Sec. IV-E (1550 nm TE light)"}
+  optics.polarization: {class: paper_exact, locator: "p.3 Sec. II-A; p.9 Sec. IV-E (TE, RF field along crystal Z, r33)"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes n_og roughly 2.14 (p.5); engine derives it by finite difference and compares it as a target"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.3 Sec. II-A (x-cut, optical mode along crystal Y, RF field along +/- Z)"}
+  materials.lithium_niobate.r_pm_per_v.r33: {class: paper_exact, locator: "p.3 Sec. II-A (maximum r33 = 31 pm/V for the TE mode)", note: "only r33 is stated"}
+  materials.silicon_nitride.n: {class: paper_exact, locator: "p.5 Sec. III (refractive index 1.943 at 1550 nm)"}
+  materials.silicon_dioxide: {class: standard_reference, citation: "engine/data/materials.json library entry (Malitson 1965); paper states no SiO2 index or RF permittivity"}
+  materials.silicon: {class: standard_reference, citation: "engine/data/materials.json library entry; paper states no silicon constants"}
+  materials.air: {class: standard_reference, citation: "vacuum-like ambient n = 1, eps_r = 1"}
+  line.length_mm: {class: paper_exact, locator: "p.1 abstract; p.3 Sec. II-A (11 mm interaction region, two 5.5 mm sections)"}
+  line.source_ohm: {class: project_inference, locator: "p.4-5 Sec. II-C (50 ohm GSG probes, 50 ohm design target)", note: "50 ohm assumed for source and load"}
+  line.differential: {class: project_inference, note: "single-ended GSG probe on the centre line (p.6 Sec. IV-C); push-pull-like fields arise from one arm per gap (Fig. 1); the paper does not use the words push-pull for this device"}
+  line.conductor_loss_model: {class: project_inference, note: "no RF loss coefficient or gold conductivity stated"}
+  geometry.regions.ln_film: {class: paper_exact, locator: "p.3 Sec. II-A (300 nm x-cut LN, unetched under the SiNx strip)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.3 Sec. II-A (4.7 um SiO2 under the LN)"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.3 Sec. II-A (500 um Si handle; region clipped to the domain)"}
+  geometry.regions.sio2_buffer: {class: figure_digitized, locator: "p.3 Sec. II-A (450 nm PECVD SiO2, T_BUF); Fig. 2(a)", note: "top of the oxide read at y = 0.74 um above the LN bottom on the Fig. 2(a) axes (74 px/um), i.e. 0.44 um above the LN top; modelled flat at 0.75 um over the whole cross-section, so the 450 nm is taken from the LN top"}
+  geometry.regions.sin_strip_r: {class: paper_exact, locator: "p.3 Sec. II-A (W_SiN 2 um, T_SiN 100 nm); Fig. 2(a)", note: "strip sits on the LN top (Fig. 2(a) outline from y = 0.3 to 0.4 um) and is embedded in the oxide"}
+  geometry.regions.sin_strip_l: {class: project_inference, note: "second arm assumed identical and centred in the left 4 um gap"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.5 Sec. II-C (W_SIG 24.5 um, T_ELEC 1 um)", note: "bottom on the oxide top at y = 0.75 um (Fig. 2(a): Au from 0.74 to 1.76 um); edges 2 um from the right waveguide axis"}
+  geometry.electrodes.ground_r: {class: paper_exact, locator: "p.5 Sec. II-C (W_GND 75 um, gap 4 um)", note: "inner edge 2 um from the right waveguide axis (waveguide assumed centred in the gap, as drawn in Fig. 2(a))"}
+  geometry.electrodes.ground_l: {class: project_inference, locator: "p.5 Sec. II-C; Fig. 1", note: "mirror arrangement: left waveguide in the left 4 um gap, ground width 75 um as for the right ground; the layout of Fig. 1 shows one waveguide in each gap, spacing not dimensioned"}
+  geometry.optical_window: {class: project_inference, note: "crop inside the 4 um gap and below the electrode bottom; truncates the mode tail, window convergence not studied"}
+  geometry.domain: {class: project_inference, note: "lateral -160..120 um, vertical -250..120 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - "lithium_niobate RF permittivity (anisotropic) and the Pockels coefficients r13, r22, r51 (not stated; omitted, not filled from memory); r33 = 31 pm/V is stated and entered"
+  - "silicon_nitride, silicon_dioxide, silicon RF permittivity; silicon resistivity (not stated)"
+  - "gold conductivity (not stated)"
+  - "UV15 index-matching fluid permittivity and extent (applied over the electrodes in the interaction region and fold; not modelled)"
+  - "position of the second waveguide relative to the signal electrode (assumed centred in the left gap)"
+  - "whether the Vpi of 2.98 V (150 kHz sweep) was measured with or without UV15"
+  - "temperature"
+  - "electrode loss and Z0 as single numbers (only curves in Fig. 5)"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Folded layout (waveguide crossing, 180 degree bend, 7.8 mm physical length) is not represented; only the straight interaction cross-section"
+  - "SiNx strip is modelled as embedded in a flat 450 nm oxide layer measured from the LN top; the thicker protective oxide used away from the interaction region is not modelled"
+  - "UV15 fluid is absent, so RF effective index and Z0 correspond to the air-clad electrode"
+  - "Optical window is narrow (3.8 um wide) to stay clear of the metal; the scalar solver rejects metal in the window"

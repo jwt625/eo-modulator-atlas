@@ -1,0 +1,786 @@
+paper_id: hu2026a
+verified_on: '2026-10-02'
+source_files:
+- references/hu2026a/text.md
+- references/hu2026a/figures/page_07.png
+- references/hu2026a/figures/page_10.png
+- references/hu2026a/figures/page_12.png
+- references/hu2026a/figures/img_p10_3.png
+entries:
+- device_id: hu2026a-ch1
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 Table 1
+  note: C band; measured at 1550 nm
+- device_id: hu2026a-ch1
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: modulation/electrode length
+- device_id: hu2026a-ch1
+  field: vpi_dc_v
+  value: 3.61
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7, panel 1 (row 1, column 1) inset
+  note: static transfer curve
+- device_id: hu2026a-ch1
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
+  note: all eight channels exceed 40 GHz; no crossing value stated
+- device_id: hu2026a-ch1
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
+- device_id: hu2026a-ch1
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.11 Table 1
+  note: selected gap, trade-off between VpiL and absorption
+- device_id: hu2026a-ch1
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: x-cut LNOI, 500 nm LN on buried SiO2
+- device_id: hu2026a-ch1
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+- device_id: hu2026a-ch1
+  field: electrode_metal
+  value: Au/Ti
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: Au/Ti bilayer film; Au etched in aqua regia, thickness not stated
+- device_id: hu2026a-ch1
+  field: substrate
+  value: Si 500 um
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: 500 um Si substrate under buried SiO2
+- device_id: hu2026a-ch1
+  field: cladding
+  value: SiO2 (2.5 um design value)
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.8 Sec. 3
+  note: 2.5 um from velocity-matching simulation; fabricated thickness not stated
+- device_id: hu2026a-ch1
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch1
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch2
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 Table 1
+  note: C band; measured at 1550 nm
+- device_id: hu2026a-ch2
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: modulation/electrode length
+- device_id: hu2026a-ch2
+  field: vpi_dc_v
+  value: 3.6
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7, panel 2 (row 1, column 2) inset
+  note: static transfer curve
+- device_id: hu2026a-ch2
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
+  note: all eight channels exceed 40 GHz; no crossing value stated
+- device_id: hu2026a-ch2
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
+- device_id: hu2026a-ch2
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.11 Table 1
+  note: selected gap, trade-off between VpiL and absorption
+- device_id: hu2026a-ch2
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: x-cut LNOI, 500 nm LN on buried SiO2
+- device_id: hu2026a-ch2
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+- device_id: hu2026a-ch2
+  field: electrode_metal
+  value: Au/Ti
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: Au/Ti bilayer film; Au etched in aqua regia, thickness not stated
+- device_id: hu2026a-ch2
+  field: substrate
+  value: Si 500 um
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: 500 um Si substrate under buried SiO2
+- device_id: hu2026a-ch2
+  field: cladding
+  value: SiO2 (2.5 um design value)
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.8 Sec. 3
+  note: 2.5 um from velocity-matching simulation; fabricated thickness not stated
+- device_id: hu2026a-ch2
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch2
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch3
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 Table 1
+  note: C band; measured at 1550 nm
+- device_id: hu2026a-ch3
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: modulation/electrode length
+- device_id: hu2026a-ch3
+  field: vpi_dc_v
+  value: 3.66
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7, panel 3 (row 1, column 3) inset
+  note: static transfer curve
+- device_id: hu2026a-ch3
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
+  note: all eight channels exceed 40 GHz; no crossing value stated
+- device_id: hu2026a-ch3
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
+- device_id: hu2026a-ch3
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.11 Table 1
+  note: selected gap, trade-off between VpiL and absorption
+- device_id: hu2026a-ch3
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: x-cut LNOI, 500 nm LN on buried SiO2
+- device_id: hu2026a-ch3
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+- device_id: hu2026a-ch3
+  field: electrode_metal
+  value: Au/Ti
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: Au/Ti bilayer film; Au etched in aqua regia, thickness not stated
+- device_id: hu2026a-ch3
+  field: substrate
+  value: Si 500 um
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: 500 um Si substrate under buried SiO2
+- device_id: hu2026a-ch3
+  field: cladding
+  value: SiO2 (2.5 um design value)
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.8 Sec. 3
+  note: 2.5 um from velocity-matching simulation; fabricated thickness not stated
+- device_id: hu2026a-ch3
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch3
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch4
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 Table 1
+  note: C band; measured at 1550 nm
+- device_id: hu2026a-ch4
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: modulation/electrode length
+- device_id: hu2026a-ch4
+  field: vpi_dc_v
+  value: 3.74
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7, panel 4 (row 1, column 4) inset
+  note: static transfer curve
+- device_id: hu2026a-ch4
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
+  note: all eight channels exceed 40 GHz; no crossing value stated
+- device_id: hu2026a-ch4
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
+- device_id: hu2026a-ch4
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.11 Table 1
+  note: selected gap, trade-off between VpiL and absorption
+- device_id: hu2026a-ch4
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: x-cut LNOI, 500 nm LN on buried SiO2
+- device_id: hu2026a-ch4
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+- device_id: hu2026a-ch4
+  field: electrode_metal
+  value: Au/Ti
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: Au/Ti bilayer film; Au etched in aqua regia, thickness not stated
+- device_id: hu2026a-ch4
+  field: substrate
+  value: Si 500 um
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: 500 um Si substrate under buried SiO2
+- device_id: hu2026a-ch4
+  field: cladding
+  value: SiO2 (2.5 um design value)
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.8 Sec. 3
+  note: 2.5 um from velocity-matching simulation; fabricated thickness not stated
+- device_id: hu2026a-ch4
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch4
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch5
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 Table 1
+  note: C band; measured at 1550 nm
+- device_id: hu2026a-ch5
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: modulation/electrode length
+- device_id: hu2026a-ch5
+  field: vpi_dc_v
+  value: 3.64
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7, panel 5 (row 2, column 1) inset
+  note: static transfer curve
+- device_id: hu2026a-ch5
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
+  note: all eight channels exceed 40 GHz; no crossing value stated
+- device_id: hu2026a-ch5
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
+- device_id: hu2026a-ch5
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.11 Table 1
+  note: selected gap, trade-off between VpiL and absorption
+- device_id: hu2026a-ch5
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: x-cut LNOI, 500 nm LN on buried SiO2
+- device_id: hu2026a-ch5
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+- device_id: hu2026a-ch5
+  field: electrode_metal
+  value: Au/Ti
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: Au/Ti bilayer film; Au etched in aqua regia, thickness not stated
+- device_id: hu2026a-ch5
+  field: substrate
+  value: Si 500 um
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: 500 um Si substrate under buried SiO2
+- device_id: hu2026a-ch5
+  field: cladding
+  value: SiO2 (2.5 um design value)
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.8 Sec. 3
+  note: 2.5 um from velocity-matching simulation; fabricated thickness not stated
+- device_id: hu2026a-ch5
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch5
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch6
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 Table 1
+  note: C band; measured at 1550 nm
+- device_id: hu2026a-ch6
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: modulation/electrode length
+- device_id: hu2026a-ch6
+  field: vpi_dc_v
+  value: 3.6
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7, panel 6 (row 2, column 2) inset
+  note: static transfer curve
+- device_id: hu2026a-ch6
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
+  note: all eight channels exceed 40 GHz; no crossing value stated
+- device_id: hu2026a-ch6
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
+- device_id: hu2026a-ch6
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.11 Table 1
+  note: selected gap, trade-off between VpiL and absorption
+- device_id: hu2026a-ch6
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: x-cut LNOI, 500 nm LN on buried SiO2
+- device_id: hu2026a-ch6
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+- device_id: hu2026a-ch6
+  field: electrode_metal
+  value: Au/Ti
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: Au/Ti bilayer film; Au etched in aqua regia, thickness not stated
+- device_id: hu2026a-ch6
+  field: substrate
+  value: Si 500 um
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: 500 um Si substrate under buried SiO2
+- device_id: hu2026a-ch6
+  field: cladding
+  value: SiO2 (2.5 um design value)
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.8 Sec. 3
+  note: 2.5 um from velocity-matching simulation; fabricated thickness not stated
+- device_id: hu2026a-ch6
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch6
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch7
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 Table 1
+  note: C band; measured at 1550 nm
+- device_id: hu2026a-ch7
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: modulation/electrode length
+- device_id: hu2026a-ch7
+  field: vpi_dc_v
+  value: 3.74
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7, panel 7 (row 2, column 3) inset
+  note: static transfer curve
+- device_id: hu2026a-ch7
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
+  note: all eight channels exceed 40 GHz; no crossing value stated
+- device_id: hu2026a-ch7
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
+- device_id: hu2026a-ch7
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.11 Table 1
+  note: selected gap, trade-off between VpiL and absorption
+- device_id: hu2026a-ch7
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: x-cut LNOI, 500 nm LN on buried SiO2
+- device_id: hu2026a-ch7
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+- device_id: hu2026a-ch7
+  field: electrode_metal
+  value: Au/Ti
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: Au/Ti bilayer film; Au etched in aqua regia, thickness not stated
+- device_id: hu2026a-ch7
+  field: substrate
+  value: Si 500 um
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: 500 um Si substrate under buried SiO2
+- device_id: hu2026a-ch7
+  field: cladding
+  value: SiO2 (2.5 um design value)
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.8 Sec. 3
+  note: 2.5 um from velocity-matching simulation; fabricated thickness not stated
+- device_id: hu2026a-ch7
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch7
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch8
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.11 Table 1
+  note: C band; measured at 1550 nm
+- device_id: hu2026a-ch8
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: modulation/electrode length
+- device_id: hu2026a-ch8
+  field: vpi_dc_v
+  value: 3.83
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7, panel 8 (row 2, column 4) inset
+  note: static transfer curve
+- device_id: hu2026a-ch8
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
+  note: all eight channels exceed 40 GHz; no crossing value stated
+- device_id: hu2026a-ch8
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.10 Sec. 4.2; p.11 Table 1
+  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
+- device_id: hu2026a-ch8
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.11 Table 1
+  note: selected gap, trade-off between VpiL and absorption
+- device_id: hu2026a-ch8
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: x-cut LNOI, 500 nm LN on buried SiO2
+- device_id: hu2026a-ch8
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+- device_id: hu2026a-ch8
+  field: electrode_metal
+  value: Au/Ti
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: Au/Ti bilayer film; Au etched in aqua regia, thickness not stated
+- device_id: hu2026a-ch8
+  field: substrate
+  value: Si 500 um
+  unit: ''
+  basis: design_target
+  locator: p.8 Sec. 3
+  note: 500 um Si substrate under buried SiO2
+- device_id: hu2026a-ch8
+  field: cladding
+  value: SiO2 (2.5 um design value)
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. 2.3; p.8 Sec. 3
+  note: 2.5 um from velocity-matching simulation; fabricated thickness not stated
+- device_id: hu2026a-ch8
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch8
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 3(a)
+  note: authors do not state it; inferred from GSG layout with one arm per gap
+- device_id: hu2026a-ch1
+  field: bw_measured_to_ghz
+  value: 47.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.10, Fig. 7
+  note: Plotted S21 range end read from the axis, about 47 GHz; claim of more than 40 GHz is the authors
+- device_id: hu2026a-ch2
+  field: bw_measured_to_ghz
+  value: 47.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.10, Fig. 7
+  note: Plotted S21 range end read from the axis, about 47 GHz; claim of more than 40 GHz is the authors
+- device_id: hu2026a-ch3
+  field: bw_measured_to_ghz
+  value: 47.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.10, Fig. 7
+  note: Plotted S21 range end read from the axis, about 47 GHz; claim of more than 40 GHz is the authors
+- device_id: hu2026a-ch4
+  field: bw_measured_to_ghz
+  value: 47.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.10, Fig. 7
+  note: Plotted S21 range end read from the axis, about 47 GHz; claim of more than 40 GHz is the authors
+- device_id: hu2026a-ch5
+  field: bw_measured_to_ghz
+  value: 47.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.10, Fig. 7
+  note: Plotted S21 range end read from the axis, about 47 GHz; claim of more than 40 GHz is the authors
+- device_id: hu2026a-ch6
+  field: bw_measured_to_ghz
+  value: 47.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.10, Fig. 7
+  note: Plotted S21 range end read from the axis, about 47 GHz; claim of more than 40 GHz is the authors
+- device_id: hu2026a-ch7
+  field: bw_measured_to_ghz
+  value: 47.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.10, Fig. 7
+  note: Plotted S21 range end read from the axis, about 47 GHz; claim of more than 40 GHz is the authors
+- device_id: hu2026a-ch8
+  field: bw_measured_to_ghz
+  value: 47.0
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.10, Fig. 7
+  note: Plotted S21 range end read from the axis, about 47 GHz; claim of more than 40 GHz is the authors
+derived: []

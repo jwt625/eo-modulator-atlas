@@ -1,0 +1,111 @@
+# STATUS: record of disclosed geometry and provenance for the single-pass phase-shifter cross-section of ONE dual-arm PLACE TFLN phase modulator.
+# NOT RUNNABLE as written: the paper states no RF permittivity or Pockels coefficients for LN, no RF permittivity for SiO2 or Si and no gold conductivity.
+# They are omitted on purpose (see `missing`); none was filled from memory. Optical indices of LN, SiO2 and Si come from the engine library.
+#
+# Coordinate frame: x lateral (paper Z), y film normal up (paper X), z propagation (paper Y). x = 0 on the optical axis of the RIGHT-hand waveguide;
+# y = 0 at the LN bottom (BOX top). Layout from Fig. 2(c): G | gap | S | gap | G with a ridge waveguide in each 6.5 um gap, no cladding.
+# Both gaps are in the electrostatic domain (symmetry none); the optical mode is solved on the right ridge.
+# The delay-line / crossing-waveguide scheme that sets the RF-frequency dependence of Vpi is NOT represented: this is one pass through one electrode pair.
+schema: eo-atlas.sim/v1
+id: gao2024-a
+paper_id: gao2024
+device_id: gao2024-a
+title: Gao 2024 (arXiv v1), dual-arm PLACE TFLN phase modulator, single-pass GSG cross-section (6.5 um gaps, 23.5 um signal, 1 um top / 4.8 um bottom ridge, 210 nm etch)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap]
+
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    # n_o, n_e: engine library; RF eps_r and Pockels tensor not stated in the paper (omitted, see missing)
+  silicon_dioxide: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon: {}                      # optical n from engine library; RF eps_r and resistivity not stated (omitted)
+  gold: {conductor: true}          # conductivity not stated (omitted)
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-250, 200], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-250, 200], y_um: [-250, 120]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-250, 200], y_um: [-250, -4.7]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-250, 200], y_um: [-4.7, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-250, 200], y_um: [0, 0.29]}}
+    - {name: ln_rib_r, material: lithium_niobate, polygon_um: [[-2.4, 0.29], [2.4, 0.29], [0.5, 0.5], [-0.5, 0.5]]}
+    - {name: ln_rib_l, material: lithium_niobate, polygon_um: [[-32.4, 0.29], [-27.6, 0.29], [-29.5, 0.5], [-30.5, 0.5]]}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-26.75, -3.25], y_um: [0.29, 0.79]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [3.25, 103.25], y_um: [0.29, 0.79]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-133.25, -33.25], y_um: [0.29, 0.79]}, material: gold}
+  optical_window: {x_um: [-3.2, 3.2], y_um: [-1.5, 1.5]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+line:
+  length_mm: 10
+  conductor_loss_model: none        # no RF loss coefficient is reported
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 30, n_points: 60}
+
+alt_geometries: {}
+
+targets:
+  # No target: the paper reports only an RF-frequency-dependent Vpi of the dual-arm device and a 5.5 V single-arm reference (text; about 5.2 V on the plotted line, Fig. 4(a)) of unstated length at 10-30 GHz RF.
+  # Neither is a static DC value, so no vpi_dc_v target is declared (removed after the Q1 audit; the earlier entry was flagged comparable: false).
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: project_inference, locator: "p.3 Sec. 3 (Vpi measured over 1510-1600 nm; comb centred near 193.55 THz in Fig. 4(c))", note: "1550 nm assumed; the wavelength of the Vpi-versus-frequency sweep is not stated"}
+  optics.polarization: {class: project_inference, note: "TE assumed from the x-cut r33 geometry; the paper does not name the polarization"}
+  optics.group_index_from: {class: project_inference, note: "no group index reported; engine finite difference"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 Sec. 2 (X-cut TFLN)", note: "propagation along crystal y is project_inference (axes in Fig. 2(c) show X vertical, Z lateral)"}
+  materials.silicon_dioxide: {class: standard_reference, citation: "engine/data/materials.json library entry (Malitson 1965); paper states no SiO2 constants"}
+  materials.silicon: {class: standard_reference, citation: "engine/data/materials.json library entry; paper states no silicon constants"}
+  materials.air: {class: standard_reference, citation: "vacuum-like ambient n = 1, eps_r = 1"}
+  line.length_mm: {class: paper_exact, locator: "p.2 Sec. 2 (total electrode length 1 cm); p.1 abstract", note: "per-pass length through each electrode pair is not stated; 10 mm is the total"}
+  line.source_ohm: {class: project_inference, locator: "p.3 Sec. 3 (GSG probe, 50 ohm matching load)", note: "50 ohm source assumed"}
+  line.differential: {class: project_inference, note: "single GSG feed, one waveguide in each gap; fields in the two gaps are opposite"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.2 Sec. 2 (500 nm x-cut TFLN, 210 nm etch)", note: "slab 290 nm = 500 - 210, derived"}
+  geometry.regions.box: {class: paper_exact, locator: "p.2 Sec. 2 (4.7 um buried SiO2)"}
+  geometry.regions.substrate: {class: figure_digitized, locator: "Fig. 2(c) (Si substrate)", note: "thickness not stated; region clipped to the domain"}
+  geometry.regions.ln_rib_r: {class: paper_exact, locator: "p.2 Sec. 2 (top width 1 um, bottom width 4.8 um, etch depth 210 nm)", note: "trapezoid symmetric about the axis"}
+  geometry.regions.ln_rib_l: {class: project_inference, note: "second waveguide assumed identical and centred in the left gap"}
+  geometry.regions.ambient: {class: figure_digitized, locator: "Fig. 2(c)", note: "no top cladding drawn over the ridge and electrodes"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.2 Sec. 2 (signal width 23.5 um, gap 6.5 um); p.3 Sec. 2 (500 nm Au)", note: "edge 3.25 um from the right waveguide axis (waveguide assumed centred in the gap, the paper does not state its position); bottom on the slab top"}
+  geometry.electrodes.ground_r: {class: project_inference, locator: "Fig. 2(c)", note: "ground width not stated; 100 um assumed (sensitivity not studied); inner edge 3.25 um from the axis"}
+  geometry.electrodes.ground_l: {class: project_inference, locator: "Fig. 2(c)", note: "mirror arrangement; left waveguide centred in the left 6.5 um gap, ground width 100 um assumed"}
+  geometry.optical_window: {class: project_inference, note: "crop inside the 6.5 um gap; window convergence not studied"}
+  geometry.domain: {class: project_inference, note: "lateral -250..200 um, vertical -250..120 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - "lithium_niobate RF permittivity (anisotropic) and Pockels tensor (not stated; omitted, not filled from memory)"
+  - "silicon_dioxide, silicon RF permittivity; silicon resistivity (not stated)"
+  - "gold conductivity (not stated)"
+  - "ground electrode width (not stated; 100 um assumed, project_inference)"
+  - "waveguide position inside the 6.5 um gap (assumed centred)"
+  - "per-pass electrode length of each pair (only total 1 cm)"
+  - "measurement wavelength of the Vpi-versus-frequency data (1550 nm assumed)"
+  - "propagation direction on the x-cut film (assumed y)"
+  - "silicon substrate thickness"
+  - "RF line behaviour (no S21, Z0 or n_RF reported)"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Dual-arm delay-line and crossing-waveguide scheme (RF-frequency-dependent Vpi, minima near 12, 16, 22, 26 GHz in the text, about 12, 17, 22, 27 GHz in Fig. 4(a)) is not representable in a single cross-section"
+  - "Electrode taper to 60 um signal width and 20 um gap at the probe pads is not modelled"
+  - "The 4.8 um bottom width gives a very shallow sidewall (about 6 degrees, derived); polygon sidewalls model it as a trapezoid, the real PLACE-polished profile is not dimensioned beyond top and bottom width"
