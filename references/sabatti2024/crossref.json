@@ -1,0 +1,824 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     21
+    ]
+   ],
+   "date-time": "2026-08-21T12:13:15Z",
+   "timestamp": 1787314395782,
+   "version": "build-2736575974"
+  },
+  "reference-count": 26,
+  "publisher": "Optica Publishing Group",
+  "issue": "14",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       7,
+       3
+      ]
+     ],
+     "date-time": "2024-07-03T00:00:00Z",
+     "timestamp": 1719964800000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.1364/OA_License_v2#VOR-OA"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       7,
+       3
+      ]
+     ],
+     "date-time": "2024-07-03T00:00:00Z",
+     "timestamp": 1719964800000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://opg.optica.org/policies/opg-tdm-policy.json"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001711",
+    "name": "Schweizerischer Nationalfonds zur F\u00f6rderung der Wissenschaftlichen Forschung",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "194693"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "194693"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001711",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001711",
+    "name": "Schweizerischer Nationalfonds zur F\u00f6rderung der Wissenschaftlichen Forschung",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "206008"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "206008"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001711",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001711",
+    "name": "Schweizerischer Nationalfonds zur F\u00f6rderung der Wissenschaftlichen Forschung",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "208707"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "208707"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001711",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000844",
+    "name": "European Space Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "1000032814"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "1000032814"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000844",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000844",
+    "name": "European Space Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "4000137426"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "4000137426"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000844",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "opg.optica.org"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Opt. Lett."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2024,
+     7,
+     15
+    ]
+   ]
+  },
+  "DOI": "10.1364/ol.525733",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2024,
+     6,
+     18
+    ]
+   ],
+   "date-time": "2024-06-18T08:01:31Z",
+   "timestamp": 1718697691000
+  },
+  "page": "3870",
+  "update-policy": "https://doi.org/10.1364/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 17,
+  "title": [
+   "Extremely high extinction ratio electro-optic modulator via frequency upconversion to visible wavelengths"
+  ],
+  "prefix": "10.1364",
+  "volume": "49",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0003-3233-5147",
+    "authenticated-orcid": true,
+    "given": "Alessandra",
+    "family": "Sabatti",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4037-7489",
+    "authenticated-orcid": true,
+    "given": "Jost",
+    "family": "Kellner",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-3164-8833",
+    "authenticated-orcid": true,
+    "given": "Fabian",
+    "family": "Kaufmann",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0368-8483",
+    "authenticated-orcid": true,
+    "given": "Robert J.",
+    "family": "Chapman",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1218-1924",
+    "authenticated-orcid": true,
+    "given": "Giovanni",
+    "family": "Finco",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tristan",
+    "family": "Kuttner",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1915-4718",
+    "authenticated-orcid": true,
+    "given": "Andreas",
+    "family": "Maeder",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7469-9756",
+    "authenticated-orcid": true,
+    "given": "Rachel",
+    "family": "Grange",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "published-online": {
+   "date-parts": [
+    [
+     2024,
+     7,
+     3
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "ol-49-14-3870-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "8300707",
+    "DOI": "10.1109/JSTQE.2018.2836991",
+    "volume": "24",
+    "author": "Sabouri",
+    "year": "2018",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "ol-49-14-3870-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "253",
+    "DOI": "10.1038/s41586-022-04415-8",
+    "volume": "603",
+    "author": "Zhang",
+    "year": "2022",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "ol-49-14-3870-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "8635",
+    "DOI": "10.1364/OE.417245",
+    "volume": "29",
+    "author": "Mashayekh",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "ol-49-14-3870-R4",
+    "author": "Kress",
+    "year": "2020"
+   },
+   {
+    "key": "ol-49-14-3870-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "2300145",
+    "DOI": "10.1002/qute.202300145",
+    "volume": "6",
+    "author": "Castelletto",
+    "year": "2023",
+    "journal-title": "Adv. Quantum Technol."
+   },
+   {
+    "key": "ol-49-14-3870-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "012711",
+    "DOI": "10.1103/PhysRevA.69.012711",
+    "volume": "69",
+    "author": "Lucas",
+    "year": "2004",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "ol-49-14-3870-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "637",
+    "DOI": "10.1103/RevModPhys.87.637",
+    "volume": "87",
+    "author": "Ludlow",
+    "year": "2015",
+    "journal-title": "Rev. Mod. Phys."
+   },
+   {
+    "key": "ol-49-14-3870-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "014019",
+    "DOI": "10.1103/PhysRevApplied.9.014019",
+    "volume": "9",
+    "author": "Martin",
+    "year": "2018",
+    "journal-title": "Phys. Rev. Appl."
+   },
+   {
+    "key": "ol-49-14-3870-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "382",
+    "DOI": "10.1364/OE.26.000382",
+    "volume": "26",
+    "author": "Ma",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "ol-49-14-3870-R10",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1364/AOP.501846",
+    "volume": "16",
+    "author": "Poon",
+    "year": "2024",
+    "journal-title": "Adv. Opt. Photonics"
+   },
+   {
+    "key": "ol-49-14-3870-R11",
+    "doi-asserted-by": "publisher",
+    "first-page": "012501",
+    "DOI": "10.1088/2515-7647/ac1ef4",
+    "volume": "4",
+    "author": "Moody",
+    "year": "2022",
+    "journal-title": "J. Phys. Photonics"
+   },
+   {
+    "key": "ol-49-14-3870-R12",
+    "doi-asserted-by": "publisher",
+    "first-page": "020343",
+    "DOI": "10.1103/PRXQuantum.2.020343",
+    "volume": "2",
+    "author": "Pogorelov",
+    "year": "2021",
+    "journal-title": "PRX Quantum"
+   },
+   {
+    "key": "ol-49-14-3870-R13",
+    "doi-asserted-by": "publisher",
+    "first-page": "533",
+    "DOI": "10.1038/s41586-020-2823-6",
+    "volume": "586",
+    "author": "Mehta",
+    "year": "2020",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "ol-49-14-3870-R14",
+    "doi-asserted-by": "publisher",
+    "first-page": "1496",
+    "DOI": "10.1038/s41534-023-00737-1",
+    "volume": "9",
+    "author": "Hogle",
+    "year": "2023",
+    "journal-title": "npj Quantum Inf"
+   },
+   {
+    "key": "ol-49-14-3870-R15",
+    "doi-asserted-by": "publisher",
+    "first-page": "1496",
+    "DOI": "10.1038/s41467-023-36870-w",
+    "volume": "14",
+    "author": "Renaud",
+    "year": "2023",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "ol-49-14-3870-R16",
+    "doi-asserted-by": "publisher",
+    "first-page": "125",
+    "DOI": "10.1364/OPTICA.482667",
+    "volume": "10",
+    "author": "Xue",
+    "year": "2023",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "ol-49-14-3870-R17",
+    "doi-asserted-by": "publisher",
+    "first-page": "1438",
+    "DOI": "10.1364/OPTICA.5.001438",
+    "volume": "5",
+    "author": "Wang",
+    "year": "2018",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "ol-49-14-3870-R18",
+    "doi-asserted-by": "publisher",
+    "first-page": "380",
+    "DOI": "10.1364/OPTICA.6.000380",
+    "volume": "6",
+    "author": "Desiatov",
+    "year": "2019",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "ol-49-14-3870-R19",
+    "doi-asserted-by": "publisher",
+    "first-page": "85",
+    "DOI": "10.1109/LPT.2020.3044648",
+    "volume": "33",
+    "author": "Pohl",
+    "year": "2021",
+    "journal-title": "IEEE Photonics Technol. Lett."
+   },
+   {
+    "key": "ol-49-14-3870-R20",
+    "doi-asserted-by": "publisher",
+    "first-page": "1265",
+    "DOI": "10.1364/OL.44.001265",
+    "volume": "44",
+    "author": "Jin",
+    "year": "2019",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "ol-49-14-3870-R21",
+    "doi-asserted-by": "publisher",
+    "first-page": "1574",
+    "DOI": "10.1364/OL.450547",
+    "volume": "47",
+    "author": "Wu",
+    "year": "2022",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "ol-49-14-3870-R22",
+    "doi-asserted-by": "publisher",
+    "first-page": "44",
+    "DOI": "10.1038/s41565-023-01525-w",
+    "volume": "19",
+    "author": "Chen",
+    "year": "2023",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "ol-49-14-3870-R23",
+    "doi-asserted-by": "publisher",
+    "first-page": "2372",
+    "DOI": "10.1109/TUFFC.2010.1705",
+    "volume": "57",
+    "author": "Randles",
+    "year": "2010",
+    "journal-title": "IEEE Trans. Ultrason., Ferroelect., Freq. Contr."
+   },
+   {
+    "key": "ol-49-14-3870-R24",
+    "doi-asserted-by": "publisher",
+    "first-page": "578",
+    "DOI": "10.1364/OPTICA.484549",
+    "volume": "10",
+    "author": "Valdez",
+    "year": "2023",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "ol-49-14-3870-R25",
+    "doi-asserted-by": "publisher",
+    "first-page": "1601",
+    "DOI": "10.1515/nanoph-2022-0676",
+    "volume": "12",
+    "author": "Kaufmann",
+    "year": "2023",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "ol-49-14-3870-R26",
+    "author": "Saleh",
+    "year": "1991"
+   }
+  ],
+  "container-title": [
+   "Optics Letters"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=ol-49-14-3870&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     8,
+     6
+    ]
+   ],
+   "date-time": "2024-08-06T15:31:33Z",
+   "timestamp": 1722958293000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=ol-49-14-3870"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     7,
+     3
+    ]
+   ]
+  },
+  "references-count": 26,
+  "journal-issue": {
+   "issue": "14",
+   "published-online": {
+    "date-parts": [
+     [
+      2024
+     ]
+    ]
+   },
+   "published-print": {
+    "date-parts": [
+     [
+      2024
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1364/ol.525733",
+  "relation": {},
+  "ISSN": [
+   "0146-9592",
+   "1539-4794"
+  ],
+  "issn-type": [
+   {
+    "value": "0146-9592",
+    "type": "print"
+   },
+   {
+    "value": "1539-4794",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     7,
+     3
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "Optica Publishing Group",
+    "name": "publisher",
+    "label": "This article is maintained by"
+   },
+   {
+    "value": "https://doi.org/10.1364/OL.525733",
+    "name": "articlelink",
+    "label": "Crossref DOI link to publisher maintained version"
+   },
+   {
+    "value": "letter",
+    "name": "content_type",
+    "label": "Article type"
+   },
+   {
+    "value": "Screened by Similarity Check",
+    "name": "cross_check",
+    "label": "Similarity check"
+   },
+   {
+    "value": "Yes",
+    "order": 0,
+    "name": "peer_reviewed",
+    "label": "Peer reviewed",
+    "group": {
+     "name": "peer_review",
+     "label": "Peer review"
+    }
+   },
+   {
+    "value": "Single blind",
+    "order": 1,
+    "name": "review_process",
+    "label": "Review process",
+    "group": {
+     "name": "peer_review",
+     "label": "Peer review"
+    }
+   },
+   {
+    "value": "4 April 2024",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "17 June 2024",
+    "order": 1,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "3 July 2024",
+    "order": 2,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "\u00a9 2024 Optica Publishing Group under the terms of the Optica Open Access Publishing Agreement",
+    "name": "copyright",
+    "label": "Copyright"
+   }
+  ]
+ }
+}

@@ -1,0 +1,725 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     30
+    ]
+   ],
+   "date-time": "2026-09-30T22:29:24Z",
+   "timestamp": 1790807364368,
+   "version": "4.1.0"
+  },
+  "reference-count": 72,
+  "publisher": "American Chemical Society (ACS)",
+  "issue": "10",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       5
+      ]
+     ],
+     "date-time": "2026-05-05T00:00:00Z",
+     "timestamp": 1777939200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001711",
+    "name": "Schweizerischer Nationalfonds zur F?rderung der Wissenschaftlichen Forschung",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "213713"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "213713"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001711",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "ACS Photonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     20
+    ]
+   ]
+  },
+  "DOI": "10.1021/acsphotonics.6c00340",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     5
+    ]
+   ],
+   "date-time": "2026-05-05T23:40:26Z",
+   "timestamp": 1778024426000
+  },
+  "page": "2928-2936",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+   "Electro-optic Modulation in Polycrystalline Barium Titanate Metasurfaces Enhanced by Poling"
+  ],
+  "prefix": "10.1021",
+  "volume": "13",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0008-6204-2042",
+    "authenticated-orcid": true,
+    "given": "Eleni",
+    "family": "Prountzou",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "ETH Zurich, Department of Physics",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     },
+     {
+      "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0558-5899",
+    "authenticated-orcid": true,
+    "given": "Helena C.",
+    "family": "Weigand",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ETH Zurich, Department of Physics",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     },
+     {
+      "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Virginia",
+    "family": "Falcone",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ETH Zurich, Department of Physics",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     },
+     {
+      "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "\u00dclle-Linda",
+    "family": "Talts",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ETH Zurich, Department of Physics",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     },
+     {
+      "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0240-0257",
+    "authenticated-orcid": true,
+    "given": "Morgan",
+    "family": "Trassin",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ETH Zurich, Department of Materials",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     },
+     {
+      "name": "Multifunctional Ferroic Materials",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7469-9756",
+    "authenticated-orcid": true,
+    "given": "Rachel",
+    "family": "Grange",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ETH Zurich, Department of Physics",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     },
+     {
+      "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+      "place": [
+       "Zurich, Switzerland"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "316",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     5
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "ref1/cit1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202414805"
+   },
+   {
+    "key": "ref2/cit2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.jmat.2024.04.001"
+   },
+   {
+    "key": "ref3/cit3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature12622"
+   },
+   {
+    "key": "ref4/cit4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.2c01589"
+   },
+   {
+    "key": "ref5/cit5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202506790"
+   },
+   {
+    "key": "ref6/cit6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s42254-025-00825-5"
+   },
+   {
+    "key": "ref7/cit7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17950-7"
+   },
+   {
+    "key": "ref8/cit8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.4c02354"
+   },
+   {
+    "key": "ref9/cit9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-025-62072-7"
+   },
+   {
+    "key": "ref10/cit10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202001249"
+   },
+   {
+    "key": "ref11/cit11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s43246-025-00908-x"
+   },
+   {
+    "key": "ref12/cit12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPEX.12.005962"
+   },
+   {
+    "key": "ref13/cit13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.mtla.2025.102490"
+   },
+   {
+    "key": "ref14/cit14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2515-7639/ae0ef0"
+   },
+   {
+    "key": "ref15/cit15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/admi.202300665"
+   },
+   {
+    "key": "ref16/cit16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.5c02279"
+   },
+   {
+    "key": "ref17/cit17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-018-0208-0"
+   },
+   {
+    "key": "ref18/cit18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/cm071037m"
+   },
+   {
+    "key": "ref19/cit19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/smll.202304355"
+   },
+   {
+    "key": "ref20/cit20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.4c00711"
+   },
+   {
+    "key": "ref21/cit21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202418957"
+   },
+   {
+    "key": "ref22/cit22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1819515"
+   },
+   {
+    "key": "ref23/cit23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1111/jace.16815"
+   },
+   {
+    "key": "ref24/cit24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/pssa.200303911"
+   },
+   {
+    "key": "ref25/cit25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OME.484836"
+   },
+   {
+    "key": "ref26/cit26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202303058"
+   },
+   {
+    "key": "ref27/cit27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/advs.202406248"
+   },
+   {
+    "key": "ref28/cit28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.1103218"
+   },
+   {
+    "key": "ref29/cit29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-022-01266-6"
+   },
+   {
+    "key": "ref30/cit30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/aelm.202400440"
+   },
+   {
+    "key": "ref31/cit31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-019-14250-7"
+   },
+   {
+    "key": "ref32/cit32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.5c04334"
+   },
+   {
+    "key": "ref33/cit33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.2794859"
+   },
+   {
+    "key": "ref34/cit34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1080/00150190600689332"
+   },
+   {
+    "key": "ref35/cit35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3499645"
+   },
+   {
+    "key": "ref36/cit36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5081086"
+   },
+   {
+    "key": "ref37/cit37",
+    "unstructured": "Falcone, V.; Prountzou, E.; Kellner, J.; Talts, \u00dc.L.; Grange, R. Solution-derived barium titanate waveguides for integrated electro-optic modulation, arXiv:2601.14938. arXiv.org e-Print archive. 2026 https://arxiv.org/abs/2601.14938."
+   },
+   {
+    "key": "ref38/cit38",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202101128"
+   },
+   {
+    "key": "ref39/cit39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adfm.202403024"
+   },
+   {
+    "key": "ref40/cit40",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41565-025-02000-4"
+   },
+   {
+    "key": "ref41/cit41",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/nl404513p"
+   },
+   {
+    "key": "ref42/cit42",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5094122"
+   },
+   {
+    "key": "ref43/cit43",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsomega.8b00173"
+   },
+   {
+    "key": "ref44/cit44",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.tsf.2012.02.029"
+   },
+   {
+    "key": "ref45/cit45",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.tsf.2014.01.081"
+   },
+   {
+    "key": "ref46/cit46",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-022-09054-7"
+   },
+   {
+    "key": "ref47/cit47",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.1c01582"
+   },
+   {
+    "key": "ref48/cit48",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1111/j.1151-2916.1956.tb15623.x"
+   },
+   {
+    "key": "ref49/cit49",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.1722606"
+   },
+   {
+    "key": "ref50/cit50",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3212975"
+   },
+   {
+    "key": "ref51/cit51",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-019-10530-4"
+   },
+   {
+    "key": "ref52/cit52",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevApplied.11.024058"
+   },
+   {
+    "key": "ref53/cit53",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.actamat.2022.118096"
+   },
+   {
+    "key": "ref54/cit54",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsami.4c03002"
+   },
+   {
+    "key": "ref55/cit55",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep38354"
+   },
+   {
+    "key": "ref56/cit56",
+    "first-page": "1",
+    "volume": "32",
+    "author": "Songtao L.",
+    "year": "2026",
+    "journal-title": "J. Funct. Mater. Devices"
+   },
+   {
+    "key": "ref57/cit57",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adfm.202303261"
+   },
+   {
+    "key": "ref58/cit58",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1080/00150199808229548"
+   },
+   {
+    "key": "ref59/cit59",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/pssa.201532373"
+   },
+   {
+    "key": "ref60/cit60",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.35848/1347-4065/ad6670"
+   },
+   {
+    "key": "ref61/cit61",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5020549"
+   },
+   {
+    "key": "ref62/cit62",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsnano.3c04071"
+   },
+   {
+    "key": "ref63/cit63",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/advs.202413316"
+   },
+   {
+    "key": "ref64/cit64",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.452936"
+   },
+   {
+    "key": "ref65/cit65",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.011161"
+   },
+   {
+    "key": "ref66/cit66",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.21.026387"
+   },
+   {
+    "key": "ref67/cit67",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.522746"
+   },
+   {
+    "key": "ref68/cit68",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.optcom.2024.131181"
+   },
+   {
+    "key": "ref69/cit69",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Weigand, H.; Vogler-Neuling, V. V.; Pitz, O.; Talts, \u0307L.; Timpu, F.; Karvounis, A.; Winiger, J.; Benedek, P.; Wood, V.; Leuthold, J.; Grange, R.\n                      Imprinted Barium Titanate Metalenses with broadband Focus\n                      , Conference on Lasers and Electro-Optics; 2022; p FF2D.6.",
+    "DOI": "10.1364/CLEO_QELS.2022.FF2D.6"
+   },
+   {
+    "key": "ref70/cit70",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3390/nano11082023"
+   },
+   {
+    "key": "ref71/cit71",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AO.458517"
+   },
+   {
+    "key": "ref72/cit72",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.559557"
+   }
+  ],
+  "container-title": [
+   "ACS Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.6c00340",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "unspecified"
+   },
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acsphotonics.6c00340",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     20
+    ]
+   ],
+   "date-time": "2026-05-20T08:13:24Z",
+   "timestamp": 1779264804000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.acs.org/doi/10.1021/acsphotonics.6c00340"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     5
+    ]
+   ]
+  },
+  "references-count": 72,
+  "journal-issue": {
+   "issue": "10",
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      5,
+      20
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1021/acsphotonics.6c00340"
+  ],
+  "URL": "https://doi.org/10.1021/acsphotonics.6c00340",
+  "relation": {},
+  "ISSN": [
+   "2330-4022",
+   "2330-4022"
+  ],
+  "issn-type": [
+   {
+    "value": "2330-4022",
+    "type": "print"
+   },
+   {
+    "value": "2330-4022",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     5
+    ]
+   ]
+  }
+ }
+}
