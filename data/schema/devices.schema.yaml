@@ -37,6 +37,7 @@ enums:
   cache_status: [full_extract, metadata_only, needs_download]
   repro_grade: [A, B, C]
   redistribution: [open_license_ok, restricted_local_only, unknown]
+  audit_status: [audited, needs_recheck, needs_audit]
 
 papers_columns:
   - {name: paper_id, type: str, required: true, desc: "FirstAuthorYear lowercase ascii, suffix a/b if needed (kohli2025)"}
@@ -63,6 +64,7 @@ papers_columns:
   - {name: cache_status, type: enum, enum: cache_status, required: true}
   - {name: repro_grade, type: enum, enum: repro_grade, required: false, desc: "A geometry+materials fully disclosed; B needs figure digitization; C metrics only"}
   - {name: sim_config, type: str, required: false, desc: "relative path sims/<paper_id>/config.yaml if one exists"}
+  - {name: audit_status, type: enum, enum: audit_status, required: true, desc: "audited = independent audit report plus author corrections accepted before integration; needs_recheck = independently audited and corrected, corrections not re-audited; needs_audit = no independent audit yet"}
   - {name: verified_on, type: date, required: true, desc: "ISO date the row was checked against the primary source"}
   - {name: notes, type: str, required: false}
 

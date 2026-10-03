@@ -52,6 +52,7 @@ CORE_FIELDS: list[tuple[str, list[str]]] = [
 SIM_BASES = {"simulated", "predicted", "design_target"}
 
 LABEL_OVERRIDES = {
+    "needs_recheck": "Needs 2nd audit",
     "mzm": "MZM",
     "iq_mzm": "IQ MZM",
     "eam": "EAM",
@@ -702,6 +703,7 @@ def build(data: Path, sims_dir: Path | None = None) -> dict[str, Any]:
         "per_source_type": cnt([p["source_type"] for p in paper_list]),
         "per_access": cnt([p["access"] for p in paper_list]),
         "per_repro_grade": cnt([p["repro_grade"] for p in paper_list]),
+        "per_audit_status": cnt([p["audit_status"] for p in paper_list]),
         "per_redistribution": cnt([p["redistribution"] for p in paper_list]),
         "evidence": {"nonempty_evidence_fields": nonempty_ev_fields, "without_evidence_entry": ev_missing},
         "completeness_mean": (sum(comp) / len(comp)) if comp else None,
@@ -769,6 +771,7 @@ FLAT_PAPER_COLS = [
     "license",
     "redistribution",
     "repro_grade",
+    "audit_status",
 ]
 FLAT_DERIVED = ["vpil_dc_vcm_derived", "il_rf_total_db", "vpi_il_vdb", "completeness", "fom"]
 

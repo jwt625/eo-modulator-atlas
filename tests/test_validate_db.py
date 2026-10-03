@@ -34,6 +34,7 @@ def make_db(tmp: Path) -> Path:
         redistribution="restricted_local_only",
         discovered_via="web",
         cache_status="full_extract",
+        audit_status="needs_audit",
         verified_on="2026-10-01",
         universities="Test University",
         countries="US",
