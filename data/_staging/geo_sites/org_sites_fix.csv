@@ -1,0 +1,8 @@
+org_name,locality,country,lat,lon,precision,source,source_ref,source_label,verified_on,notes
+"Chongqing United Microelectronics Center Co., Ltd",Chongqing,CN,30.05518,107.87487,city,nominatim,,locality centre: Chongqing,2026-10-04,institution not resolved; locality centre
+Hefei National Laboratory,Hefei,CN,31.86657,117.28143,city,nominatim,,locality centre: Hefei,2026-10-04,institution not resolved; locality centre
+Karlsruhe Institute of Technology,Karlsruhe,DE,49.00887,8.41714,city,nominatim,osm:way/1122435502,"Durlacher Tor/KIT-Campus Süd (U), Kapellenstraße, Oststadt Westlicher Teil, Oststadt, Karlsruhe, Baden-Württemberg, 76131, Deutschland",2026-10-04,1.0 km from locality centre
+Kyushu University,"Kasuga, Fukuoka",JP,33.52181,130.47632,campus,nominatim,osm:way/192537600,"九州大学 筑紫キャンパス, 那珂川大野城線, 春日四丁目, 大字春日, 春日市, 福岡県, 816-0814, 日本",2026-10-04,1.3 km from locality centre
+Lumiphase AG,Stäfa,CH,47.24133,8.73487,city,nominatim,,locality centre: Stäfa,2026-10-04,institution not resolved; locality centre
+The University of Aizu,Fukushima,JP,37.52367,139.93807,campus,nominatim,osm:way/81056653,"会津大学, 磐越自動車道, 一箕町鶴賀, 会津若松市, 福島県, 965-8601, 日本",2026-10-04,54.1 km from locality centre
+Tokai University,Kanagawa,JP,35.36381,139.27423,campus,nominatim,osm:relation/18729191,"東海大学 湘南キャンパス, 1, 北金目四丁目, 真田, 平塚市, 神奈川県, 259-1292, 日本",2026-10-04,12.0 km from locality centre

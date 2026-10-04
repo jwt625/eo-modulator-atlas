@@ -664,6 +664,39 @@ def build(data: Path, sims_dir: Path | None = None) -> dict[str, Any]:
         p["has_sim"] = bool(p["sim_ids"]) or bool(p["sim_config"])
         p["n_devices"] = len(devs)
 
+    # Author-level geolocation (optional tables): one site per (org_name, locality) with coordinates,
+    # and per paper the list of (author index, author, site, kind) for every printed affiliation.
+    sites: list[dict[str, Any]] = []
+    site_idx: dict[tuple[str, str], int] = {}
+    if (data / "org_sites.csv").exists():
+        _, s_rows = read_csv(data / "org_sites.csv")
+        for r in s_rows:
+            if r["precision"] == "unresolved" or not r["lat"]:
+                continue  # recorded but not placeable (no coordinates)
+            site_idx[(r["org_name"], r["locality"])] = len(sites)
+            sites.append(
+                {
+                    "id": len(sites),
+                    **{k: r[k] for k in ("org_name", "locality", "country", "precision", "source", "source_ref", "source_label")},
+                    "lat": float(r["lat"]),
+                    "lon": float(r["lon"]),
+                    "region": orgs.get(r["org_name"], {}).get("region", ""),
+                }
+            )
+    for p in papers.values():
+        p["affil"] = []
+    if (data / "author_affiliations.csv").exists():
+        _, a_rows = read_csv(data / "author_affiliations.csv")
+        for r in a_rows:
+            k = (r["org_name"], r["locality"])
+            if r["paper_id"] not in papers:
+                continue
+            if k not in site_idx:
+                continue  # unresolved site: affiliation kept in the table, no pin
+            papers[r["paper_id"]]["affil"].append(
+                {"a": int(r["author_index"]), "n": r["author"], "s": site_idx[k], "k": r["kind"], "u": r["unit"]}
+            )
+
     paper_list = [papers[k] for k in sorted(papers)]
     countries_all = sorted({c for p in paper_list for c in p["countries_derived"]})
 
@@ -694,6 +727,8 @@ def build(data: Path, sims_dir: Path | None = None) -> dict[str, Any]:
             "sim_configs": len(sims),
             "devices_with_fom": sum(1 for d in devices if "fom" in d["derived"]),
             "devices_with_derived_vpil": sum(1 for d in devices if "vpil_dc_vcm_derived" in d["derived"]),
+            "author_affiliations": sum(len(p["affil"]) for p in paper_list),
+            "sites": len(sites),
         },
         "per_platform": cnt([d["waveguide_platform"] for d in devices]),
         "per_material": cnt([d["eo_material"] for d in devices]),
@@ -754,6 +789,7 @@ def build(data: Path, sims_dir: Path | None = None) -> dict[str, Any]:
         "devices": devices,
         "organizations": [orgs[k] for k in sorted(orgs)],
         "sims": sims,
+        "sites": sites,
         "warnings": sorted(set(warnings)),
     }
 

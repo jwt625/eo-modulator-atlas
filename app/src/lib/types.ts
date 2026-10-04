@@ -102,7 +102,23 @@ export interface Paper {
 	sim_ids: string[];
 	has_sim: boolean;
 	n_devices: number;
+	/** printed affiliations per author: a = author index (1-based), n = author, s = site id, k = kind, u = unit */
+	affil: { a: number; n: string; s: number; k: string; u: string }[];
 	[key: string]: unknown;
+}
+
+export interface Site {
+	id: number;
+	org_name: string;
+	locality: string;
+	country: string;
+	region: string;
+	lat: number;
+	lon: number;
+	precision: string;
+	source: string;
+	source_ref: string;
+	source_label: string;
 }
 
 export interface Sim {
@@ -133,6 +149,7 @@ export interface EnumItem {
 }
 
 export interface Atlas {
+	sites?: Site[];
 	meta: {
 		generated_on: string;
 		schema_version: number;

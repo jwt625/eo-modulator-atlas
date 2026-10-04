@@ -183,6 +183,82 @@ def validate_evidence(
     return errs
 
 
+AFFIL_COLS = ["paper_id", "author_index", "author", "aff_order", "kind", "org_name", "unit", "locality", "country", "source", "locator", "note"]
+SITE_COLS = ["org_name", "locality", "country", "lat", "lon", "precision", "source", "source_ref", "source_label", "verified_on", "notes"]
+AFFIL_KINDS = {"primary", "additional", "present_address"}
+AFFIL_SOURCES = {"paper", "crossref"}
+SITE_PRECISION = {"building", "campus", "postcode", "city", "unresolved"}
+SITE_SOURCES = {"wikidata", "nominatim", ""}
+
+
+def validate_geo(data: Path, papers: list[dict[str, str]], org_names: set[str]) -> list[str]:
+    """Optional tables: author_affiliations.csv (author x printed affiliation) and org_sites.csv (coordinates)."""
+    errs: list[str] = []
+    sites: set[tuple[str, str]] = set()
+    s_path = data / "org_sites.csv"
+    if s_path.exists():
+        header, rows = read_csv(s_path)
+        if header != SITE_COLS:
+            return [f"org_sites.csv header mismatch: {header}"]
+        for i, r in enumerate(rows, start=2):
+            k = (r["org_name"], r["locality"])
+            if k in sites:
+                errs.append(f"org_sites.csv:{i} duplicate site {k}")
+            sites.add(k)
+            if r["org_name"] not in org_names:
+                errs.append(f"org_sites.csv:{i} org_name {r['org_name']!r} not in organizations.csv")
+            if len(r["country"]) != 2 or not r["country"].isupper():
+                errs.append(f"org_sites.csv:{i} country must be ISO alpha-2 uppercase")
+            if r["precision"] == "unresolved":
+                if r["lat"] or r["lon"]:
+                    errs.append(f"org_sites.csv:{i} unresolved site must have empty lat/lon")
+                continue
+            try:
+                lat, lon = float(r["lat"]), float(r["lon"])
+                if not (-90 <= lat <= 90 and -180 <= lon <= 180):
+                    errs.append(f"org_sites.csv:{i} lat/lon out of range")
+            except ValueError:
+                errs.append(f"org_sites.csv:{i} {k} lat/lon must be numbers")
+            if r["precision"] not in SITE_PRECISION:
+                errs.append(f"org_sites.csv:{i} precision {r['precision']!r} not in {sorted(SITE_PRECISION)}")
+            if r["source"] not in SITE_SOURCES:
+                errs.append(f"org_sites.csv:{i} source {r['source']!r} not in {sorted(SITE_SOURCES)}")
+    a_path = data / "author_affiliations.csv"
+    if a_path.exists():
+        header, rows = read_csv(a_path)
+        if header != AFFIL_COLS:
+            return errs + [f"author_affiliations.csv header mismatch: {header}"]
+        authors = {p["paper_id"]: [a.strip() for a in p["authors"].split(";") if a.strip()] for p in papers}
+        seen: set[tuple[str, str, str]] = set()
+        for i, r in enumerate(rows, start=2):
+            pid = r["paper_id"]
+            if pid not in authors:
+                errs.append(f"author_affiliations.csv:{i} unknown paper_id {pid}")
+                continue
+            try:
+                idx, order = int(r["author_index"]), int(r["aff_order"])
+            except ValueError:
+                errs.append(f"author_affiliations.csv:{i} author_index and aff_order must be integers")
+                continue
+            if not (1 <= idx <= len(authors[pid])) or authors[pid][idx - 1] != r["author"]:
+                errs.append(f"author_affiliations.csv:{i} {pid} author {idx} {r['author']!r} does not match papers.csv")
+            k = (pid, r["author_index"], r["aff_order"])
+            if k in seen or order < 1:
+                errs.append(f"author_affiliations.csv:{i} duplicate or invalid {k}")
+            seen.add(k)
+            if r["kind"] not in AFFIL_KINDS:
+                errs.append(f"author_affiliations.csv:{i} kind {r['kind']!r} not in {sorted(AFFIL_KINDS)}")
+            if r["source"] not in AFFIL_SOURCES:
+                errs.append(f"author_affiliations.csv:{i} source {r['source']!r} not in {sorted(AFFIL_SOURCES)}")
+            if r["org_name"] not in org_names:
+                errs.append(f"author_affiliations.csv:{i} org_name {r['org_name']!r} not in organizations.csv")
+            if len(r["country"]) != 2 or not r["country"].isupper():
+                errs.append(f"author_affiliations.csv:{i} country must be ISO alpha-2 uppercase")
+            if s_path.exists() and (r["org_name"], r["locality"]) not in sites:
+                errs.append(f"author_affiliations.csv:{i} no org_sites.csv row for {(r['org_name'], r['locality'])}")
+    return errs
+
+
 def validate(data: Path) -> list[str]:
     schema = load_schema(data / "schema" / "devices.schema.yaml")
     enums: dict[str, list[str]] = schema["enums"]
@@ -239,6 +315,7 @@ def validate(data: Path) -> list[str]:
         if d["evidence_ref"] != f"data/evidence/{d['paper_id']}.yaml":
             errs.append(f"devices.csv:{i} {did} evidence_ref must be data/evidence/{d['paper_id']}.yaml")
     errs += validate_evidence(data, devices, schema["devices_columns"], enums)
+    errs += validate_geo(data, papers, org_names)
     return errs
 
 

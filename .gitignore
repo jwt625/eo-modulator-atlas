@@ -13,6 +13,8 @@
 references/*/source.html
 references/*/text.md
 references/*/figures/
+# Local-only: raw geocoding responses (large; scripts/geocode_sites.py cache).
+data/_staging/geo_cache/
 references/_inbox/*
 !references/_inbox/README.md
 

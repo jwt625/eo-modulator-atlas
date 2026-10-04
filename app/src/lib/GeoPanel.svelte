@@ -3,107 +3,130 @@
 	import Plot from './Plot.svelte';
 	import { store, ui } from './state.svelte';
 	import { REGION_ORDER, materialGroup, plotTheme, regionColor } from './colors';
-	import { CENTROIDS } from './geo-centroids';
+	import { staticUrl } from './paths';
 	import { enumLabel, type View } from './logic';
+	import type { Site } from './types';
 
 	let { view }: { view: View } = $props();
-	let metric = $state<'papers' | 'devices'>('papers');
+	let unit = $state<'authors' | 'papers'>('authors');
 	let w = $state(1200);
+	let mapW = $state(800);
 
 	const th = $derived(plotTheme(ui.theme));
 	const a = $derived(store.atlas);
+	const sites = $derived(a?.sites ?? []);
 	const lab = (en: string, v: string) => (a ? enumLabel(a, en, v) : v);
 	const groupLabel = (g: string) => (g === 'other_group' ? 'Other EO materials' : lab('eo_material', g));
+	const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-	interface CountryRow {
-		code: string;
-		papers: number;
-		devices: number;
-		groups: Map<string, number>;
-		orgs: Map<string, number>;
+	interface Pin {
+		site: Site;
+		paper: string;
+		label: string;
+		author: string;
+		group: string;
 	}
 
-	const rows = $derived.by(() => {
-		const m = new Map<string, CountryRow>();
-		const row = (c: string) => {
-			let r = m.get(c);
-			if (!r) m.set(c, (r = { code: c, papers: 0, devices: 0, groups: new Map(), orgs: new Map() }));
-			return r;
-		};
-		const devsByPaper = new Map<string, number>();
-		for (const d of view.devices) devsByPaper.set(d.paper_id, (devsByPaper.get(d.paper_id) ?? 0) + 1);
+	/** One pin per (paper, author, site) in author mode; per (paper, site) in paper mode. */
+	const pins = $derived.by(() => {
+		const out: Pin[] = [];
 		for (const p of view.papers) {
 			const rep = view.reps.get(p.paper_id);
-			const g = rep ? materialGroup(rep.eo_material) : null;
-			for (const c of new Set(p.countries_derived)) {
-				const r = row(c);
-				r.papers += 1;
-				r.devices += devsByPaper.get(p.paper_id) ?? 0;
-				if (g) r.groups.set(g, (r.groups.get(g) ?? 0) + 1);
-				for (const o of p.orgs_affil) if (o.country === c) r.orgs.set(o.org_name, (r.orgs.get(o.org_name) ?? 0) + 1);
+			const group = rep ? materialGroup(rep.eo_material) : 'other_group';
+			const seen = new Set<string>();
+			for (const f of p.affil ?? []) {
+				const site = sites[f.s];
+				if (!site) continue;
+				const key = unit === 'authors' ? `${f.a}|${f.s}` : `${f.s}`;
+				if (seen.has(key)) continue;
+				seen.add(key);
+				out.push({ site, paper: p.paper_id, label: p.label, author: f.n, group });
 			}
 		}
-		return [...m.values()].filter((r) => CENTROIDS[r.code]).sort((x, y) => y.papers - x.papers);
+		return out;
 	});
 
-	const top = (mm: Map<string, number>, n: number, f: (k: string) => string = (k) => k) =>
-		[...mm.entries()]
-			.sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0]))
-			.slice(0, n)
-			.map(([k, v]) => `${f(k)} ${v}`)
-			.join('<br>');
+	const nPapersLocated = $derived(view.papers.filter((p) => (p.affil ?? []).length).length);
+
+	/** Hover summary per site (invisible, unclustered markers on top of the clustered pins). */
+	const siteSummary = $derived.by(() => {
+		const m = new Map<number, { site: Site; n: number; papers: Map<string, string>; authors: Set<string>; groups: Map<string, number> }>();
+		for (const q of pins) {
+			const r = m.get(q.site.id) ?? { site: q.site, n: 0, papers: new Map(), authors: new Set(), groups: new Map() };
+			r.n += 1;
+			if (!r.papers.has(q.paper)) r.groups.set(q.group, (r.groups.get(q.group) ?? 0) + 1);
+			r.papers.set(q.paper, q.label);
+			r.authors.add(q.author);
+			m.set(q.site.id, r);
+		}
+		return [...m.values()];
+	});
+
+	const zoom0 = $derived(Math.max(-1, Math.log2(Math.max(mapW, 200) / 512)));
+	const geojsonUrl = $derived(typeof location === 'undefined' ? '' : new URL(staticUrl('geo/countries_110m.geojson'), location.href).href);
 
 	const mapTraces = $derived.by(() => {
-		const v = rows.map((r) => (metric === 'papers' ? r.papers : r.devices));
-		const vmax = Math.max(1, ...v);
+		const top = (mm: Map<string, number>) =>
+			[...mm.entries()]
+				.sort((x, y) => y[1] - x[1])
+				.slice(0, 3)
+				.map(([k, v]) => `${esc(groupLabel(k))} ${v}`)
+				.join(', ');
 		return [
 			{
-				type: 'scattergeo',
-				lon: rows.map((r) => CENTROIDS[r.code][0]),
-				lat: rows.map((r) => CENTROIDS[r.code][1]),
-				mode: 'markers+text',
-				text: v.map(String),
-				textposition: 'middle center',
-				textfont: { size: 9, color: th.ink },
-				marker: {
-					size: v,
-					sizemode: 'area',
-					sizeref: (2 * vmax) / 46 ** 2,
-					sizemin: 4,
-					color: th.accent,
-					opacity: 0.55,
-					line: { color: th.surface, width: 2 }
-				},
-				customdata: rows.map(
-					(r) =>
-						`<b>${lab('country', r.code)}</b><br>${r.papers} papers, ${r.devices} devices<br><br><b>EO material</b> (papers)<br>${top(r.groups, 4, groupLabel)}<br><br><b>Affiliated organizations</b> (papers)<br>${top(r.orgs, 4)}`
-				),
+				type: 'scattermap',
+				lat: pins.map((q) => q.site.lat),
+				lon: pins.map((q) => q.site.lon),
+				mode: 'markers',
+				marker: { size: 9, color: th.accent, opacity: 0.9 },
+				cluster: { enabled: true, maxzoom: 14, color: th.accent, opacity: 0.85, size: [16, 22, 30, 38], step: [10, 40, 120] },
+				hoverinfo: 'skip'
+			},
+			{
+				type: 'scattermap',
+				lat: siteSummary.map((r) => r.site.lat),
+				lon: siteSummary.map((r) => r.site.lon),
+				mode: 'markers',
+				marker: { size: 18, color: th.accent, opacity: 0 },
+				customdata: siteSummary.map((r) => {
+					const labels = [...r.papers.values()];
+					const pl = [...r.papers.entries()].map(([id, l]) => (labels.filter((x) => x === l).length > 1 ? `${l} (${id})` : l));
+					return (
+						`<b>${esc(r.site.org_name)}</b><br>${esc(r.site.locality || lab('country', r.site.country))} (${esc(r.site.precision)}, ${esc(r.site.source)}${r.site.source_ref ? ' ' + esc(r.site.source_ref) : ''})` +
+						`<br>${r.authors.size} authors on ${pl.length} papers<br>${top(r.groups)}<br>` +
+						pl.slice(0, 8).map(esc).join('<br>') +
+						(pl.length > 8 ? `<br>+${pl.length - 8} more` : '')
+					);
+				}),
 				hovertemplate: '%{customdata}<extra></extra>'
 			}
 		];
 	});
 
 	const mapLayout = $derived({
+		uirevision: 'k-map',
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		margin: { l: 0, r: 0, t: 0, b: 0 },
 		font: { family: 'system-ui, sans-serif', size: 11, color: th.ink2 },
 		showlegend: false,
-		dragmode: 'pan',
+		hovermode: 'closest',
 		hoverlabel: { bgcolor: th.surface, bordercolor: th.line, font: { color: th.ink, size: 11 }, align: 'left' },
-		geo: {
-			projection: { type: 'natural earth' },
-			showframe: false,
-			showcoastlines: false,
-			showland: true,
-			landcolor: th.grid,
-			showcountries: true,
-			countrycolor: th.line,
-			countrywidth: 0.5,
-			showocean: false,
-			showlakes: false,
-			bgcolor: 'rgba(0,0,0,0)',
-			lataxis: { range: [-50, 75] },
-			lonaxis: { range: [-170, 180] }
+		map: {
+			center: { lat: 28, lon: 15 },
+			zoom: zoom0,
+			style: {
+				version: 8,
+				sources: geojsonUrl ? { countries: { type: 'geojson', data: geojsonUrl } } : {},
+				layers: [
+					{ id: 'bg', type: 'background', paint: { 'background-color': th.surface } },
+					...(geojsonUrl
+						? [
+								{ id: 'land', type: 'fill', source: 'countries', paint: { 'fill-color': th.grid } },
+								{ id: 'borders', type: 'line', source: 'countries', paint: { 'line-color': th.line, 'line-width': 0.6 } }
+							]
+						: [])
+				]
+			}
 		}
 	});
 
@@ -153,18 +176,25 @@
 
 <Frame
 	letter="k"
-	desc="Geography: bubble area = papers (or device rows) with an affiliation in each country, at the country centroid; right: papers per year by affiliation region. Countries and regions come from the affiliation list; a multi-country paper counts once in each country and each region."
-	badge={`${rows.length}`}
-	badgeTip="countries in the current filter"
-	height={narrow ? 660 : 440}
+	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Pins cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); hover a site for its papers. Right: papers per year by affiliation region."
+	badge={`${pins.length} pins, ${nPapersLocated}/${view.papers.length} papers`}
+	badgeTip="pins in the current filter; papers with at least one located affiliation / papers in the filter"
+	height={narrow ? 660 : 480}
 >
 	{#snippet controls()}
-		<span class="seg" title="Bubble size">
-			<button class:on={metric === 'papers'} onclick={() => (metric = 'papers')}>papers</button><button class:on={metric === 'devices'} onclick={() => (metric = 'devices')}>devices</button>
+		<span class="seg" title="Pin unit">
+			<button class:on={unit === 'authors'} onclick={() => (unit = 'authors')} title="one pin per author and affiliation">authors</button><button class:on={unit === 'papers'} onclick={() => (unit = 'papers')} title="one pin per paper and institution site">papers</button>
 		</span>
 	{/snippet}
 	<div class="geo" class:narrow>
-		<div class="map"><Plot data={mapTraces} layout={mapLayout} /></div>
+		<div class="map" bind:clientWidth={mapW}>
+			{#if sites.length}
+				<Plot data={mapTraces} layout={mapLayout} config={{ scrollZoom: true }} />
+				<span class="attr">Sites: Wikidata, &copy; OpenStreetMap contributors</span>
+			{:else}
+				<div class="msg muted">no located affiliations in this build</div>
+			{/if}
+		</div>
 		<div class="reg"><Plot data={regionTraces} layout={regionLayout} /></div>
 	</div>
 </Frame>
@@ -177,11 +207,27 @@
 	}
 	.geo.narrow {
 		grid-template-columns: minmax(0, 1fr);
-		grid-template-rows: 230px minmax(0, 1fr);
+		grid-template-rows: 260px minmax(0, 1fr);
 	}
 	.map,
 	.reg {
 		min-width: 0;
 		min-height: 0;
+		position: relative;
+	}
+	.attr {
+		position: absolute;
+		left: 4px;
+		bottom: 2px;
+		font-size: 9px;
+		color: var(--ink-3);
+		pointer-events: none;
+	}
+	.msg {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 </style>

@@ -55,6 +55,7 @@ Other tranches remain unassigned. No implicit delegation.
 | Q2 | Independent numerical review | review ready; final gate waits | unassigned | E1 diff; later E2–E5; separate audit files |
 | Q1-r2 | Round-2 recheck of 94 papers, first audit of p1_02/p1_04, serial corrections, fresh verification | ready_for_review | claude-audit-2026-10-03 | 11 audits, 10 verifications; 117/117 audited; user decisions listed in DevLog-015 |
 | D1.34-D1.38 | Ingest paused priority-1 papers as p4_01..p4_05 (Sonnet distill/correct, Opus audit/verify) | ready_for_review | claude-ingest-2026-10-04 | 21 papers, 62 rows merged as audited; DevLog-016 |
+| GEO | Per-author affiliations, geocoded institution sites, clustered map | ready_for_review | claude-geo-2026-10-04 | 1723 affiliation rows, 212 sites; DevLog-018 |
 | R1 | Release integration, second audit, public packaging | waiting | unassigned | Accepted D/E/U tranches; rights policy review |
 
 ## Claim protocol

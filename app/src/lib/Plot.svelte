@@ -10,8 +10,9 @@
 		onclick?: (e: any) => void;
 		onafterplot?: (gd: any) => void;
 		gd?: any;
+		config?: Record<string, unknown>;
 	}
-	let { data, layout, onhover, onunhover, onclick, onafterplot, gd = $bindable(null) }: Props = $props();
+	let { data, layout, onhover, onunhover, onclick, onafterplot, gd = $bindable(null), config = {} }: Props = $props();
 
 	let el: HTMLDivElement;
 	let P: any = $state(null);
@@ -44,7 +45,8 @@
 			doubleClick: 'reset',
 			modeBarButtonsToRemove: ['select2d', 'lasso2d', 'autoScale2d', 'toggleSpikelines', 'hoverClosestCartesian', 'hoverCompareCartesian'],
 			toImageButtonOptions: { format: 'png', scale: 2 },
-			topojsonURL: staticUrl('topojson/world_110m.json').replace(/world_110m\.json$/, '')
+			topojsonURL: staticUrl('topojson/world_110m.json').replace(/world_110m\.json$/, ''),
+			...config
 		}).then(() => {
 			gd = el;
 			if (!bound) {
