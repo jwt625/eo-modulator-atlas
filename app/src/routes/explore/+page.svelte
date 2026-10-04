@@ -23,6 +23,8 @@
 	import TopBars from '../../lib/TopBars.svelte';
 	import HeatChart from '../../lib/HeatChart.svelte';
 	import ScoreCard from '../../lib/ScoreCard.svelte';
+	import GeoPanel from '../../lib/GeoPanel.svelte';
+	import LineagePanel from '../../lib/LineagePanel.svelte';
 
 	const a = $derived(store.atlas);
 	const idx = $derived(store.index);
@@ -128,6 +130,8 @@
 				<div class="grid">
 					<ScatterChart letter="a" desc="Vpi*L against 3 dB bandwidth; dashed nominal frontiers exclude qualified/modelled axes and separate voltage contexts" panels={[{ pts: A.pts, yTitle: 'Vpi*L (V*cm)' }]} xTitle="3 dB bandwidth (GHz)" bind:xLog={aX} bind:yLog={aY} omitted={A.omitted} frontier />
 					<ScatterChart letter="b" desc="On-chip insertion loss against Vpi*L" panels={[{ pts: B.pts, yTitle: 'On-chip insertion loss (dB)' }]} xTitle="Vpi*L (V*cm)" bind:xLog={bX} bind:yLog={bY} omitted={B.omitted} />
+					<div class="full"><GeoPanel {view} /></div>
+					<div class="full"><LineagePanel {view} /></div>
 					<ScatterChart
 						letter="c"
 						desc="Vpi*IL (Vpi times on-chip loss) by EO material: range band min to max, thick line = median or mean, points overlaid"

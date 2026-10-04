@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { staticUrl } from './paths';
 
 	interface Props {
 		data: unknown[];
@@ -42,7 +43,8 @@
 			scrollZoom: false,
 			doubleClick: 'reset',
 			modeBarButtonsToRemove: ['select2d', 'lasso2d', 'autoScale2d', 'toggleSpikelines', 'hoverClosestCartesian', 'hoverCompareCartesian'],
-			toImageButtonOptions: { format: 'png', scale: 2 }
+			toImageButtonOptions: { format: 'png', scale: 2 },
+			topojsonURL: staticUrl('topojson/world_110m.json').replace(/world_110m\.json$/, '')
 		}).then(() => {
 			gd = el;
 			if (!bound) {

@@ -46,3 +46,13 @@ export function plotTheme(t: Theme): PlotTheme {
 		? { surface: '#1a1a19', ink: '#f2f1ec', ink2: '#c3c2b7', muted: '#898781', grid: '#2c2c2a', line: '#383835', accent: '#3987e5' }
 		: { surface: '#fcfcfb', ink: '#0b0b0b', ink2: '#52514e', muted: '#6f6d68', grid: '#e1e0d9', line: '#c3c2b7', accent: '#2a78d6' };
 }
+
+// Region identity colours: fixed slot per region (never by rank), from the same validated palette.
+export const REGION_ORDER = ['north_america', 'europe', 'east_asia', 'southeast_asia', 'south_asia', 'middle_east', 'oceania', 'other'];
+
+export function regionColor(region: string, theme: Theme): string {
+	const i = REGION_ORDER.indexOf(region);
+	if (i < 0 || i >= DARK.length) return OTHER;
+	return (theme === 'dark' ? DARK : LIGHT)[i];
+}
+
