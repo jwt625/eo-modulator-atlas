@@ -263,7 +263,16 @@
 	@media (max-width: 1100px) {
 		.grid,
 		.two {
-			grid-template-columns: 1fr;
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+	@media (max-width: 720px) {
+		.legend {
+			height: auto;
+			flex-wrap: wrap;
+			gap: 4px 12px;
+			padding: 6px 10px;
+			white-space: normal;
 		}
 	}
 </style>

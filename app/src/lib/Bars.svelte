@@ -2,7 +2,7 @@
 	import { EM_DASH } from './logic';
 	let { items, labels = {}, title = '' }: { items: Record<string, number>; labels?: Record<string, string>; title?: string } = $props();
 	const max = $derived(Math.max(1, ...Object.values(items)));
-	const entries = $derived(Object.entries(items));
+	const entries = $derived(Object.entries(items).sort(([ka, a], [kb, b]) => b - a || (labels[ka] ?? ka).localeCompare(labels[kb] ?? kb)));
 </script>
 
 <div class="bars" {title}>
