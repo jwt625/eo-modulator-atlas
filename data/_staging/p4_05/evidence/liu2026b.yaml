@@ -1,0 +1,149 @@
+paper_id: liu2026b
+verified_on: '2026-10-04'
+source_files:
+- references/liu2026b/text.md
+- references/liu2026b/figures/page_01.png
+- references/liu2026b/figures/page_02.png
+- references/liu2026b/figures/page_03.png
+entries:
+- device_id: liu2026b-a
+  field: vpi_dc_v
+  value: 4
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Average of two single-junction bypass phase-shift measurements at -2 V bias
+- device_id: liu2026b-a
+  field: bias_for_vpi_v
+  value: -2
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Bias at which the Vpi of 4 V was extracted
+- device_id: liu2026b-a
+  field: vpil_dc_vcm
+  value: 1.14
+  unit: V*cm
+  basis: derived
+  locator: p.2, Sec. 3
+  note: Stated as modulation efficiency 1.14 V cm corresponding to Vpi 4 V; length
+    not stated
+- device_id: liu2026b-a
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: No -3 dB crossing within 67 GHz; lowest point about -1.2 dB (Seg3, 0 V, near
+    66 GHz)
+- device_id: liu2026b-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: 67 GHz PNA and 67 GHz probe
+- device_id: liu2026b-a
+  field: il_onchip_db
+  value: 9
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Stated measured 9 dB, all segments driven; Fig. 2(a) peak about -9 dB on absolute
+    axis, may include grating couplers
+- device_id: liu2026b-a
+  field: extinction_ratio_db
+  value: 1.17
+  unit: dB
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3
+  note: Dynamic ER of the 192 GBd OOK eye
+- device_id: liu2026b-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 220 nm top silicon
+- device_id: liu2026b-a
+  field: etch_depth_nm
+  value: 150
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Rib etch depth
+- device_id: liu2026b-a
+  field: rib_width_nm
+  value: 380
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 220 nm x 380 nm rib
+- device_id: liu2026b-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 2 um BOX
+- device_id: liu2026b-a
+  field: substrate
+  value: 220 nm silicon-on-insulator, 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+- device_id: liu2026b-a
+  field: epitaxy_or_stack
+  value: 'Lateral PN junction, three doping levels: P 6e17, N 1e18, P+ and N+ 1e19,
+    P++ and N++ 1e20 cm^-3; 100 nm junction offset; three 950 um segments with serpentine
+    GS traveling-wave electrodes; 40 ohm termination on 52 ohm line; 100 um arm imbalance;
+    thermal phase shifters on both arms'
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Doping levels, junction offset, segment length, termination and arm imbalance
+    from the design section
+- device_id: liu2026b-a
+  field: max_baud_gbd
+  value: 192
+  unit: GBd
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(g)
+  note: Highest OOK baud rate with an open eye
+- device_id: liu2026b-a
+  field: max_line_rate_gbps
+  value: 192
+  unit: Gb/s
+  basis: derived
+  locator: p.3, Sec. 3
+  note: OOK carries one bit per symbol; authors state 192 Gbaud OOK only
+- device_id: liu2026b-a
+  field: modulation_format
+  value: OOK (NRZ), PRBS7, eye diagrams at 64, 96, 112, 128, 160 and 192 GBd; dynamic
+    ER 3.67, 2.87, 2.51, 2.23, 1.68, 1.17 dB; no BER reported
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3
+- device_id: liu2026b-a
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. 2
+  note: Modulator adopts a series push-pull electrode configuration; RF applied to
+    one segment in measurements
+- device_id: liu2026b-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(b)
+  note: Responses start at 0 dB at low frequency and are normalized there; reference
+    not stated
+derived:
+- device_id: liu2026b-a
+  field: max_line_rate_gbps
+  value: 192
+  formula: 192 GBd x 1 bit/symbol (OOK)
+  inputs:
+  - max_baud_gbd

@@ -1,0 +1,1545 @@
+paper_id: li2026aa
+verified_on: '2026-10-04'
+source_files:
+- references/li2026aa/text.md
+- references/li2026aa/crossref.json
+- references/li2026aa/figures/page_03.png
+- references/li2026aa/figures/page_04.png
+- references/li2026aa/figures/page_05.png
+- references/li2026aa/figures/page_06.png
+entries:
+- device_id: li2026aa-a
+  field: length_mm
+  value: 9
+  unit: mm
+  basis: measured
+  locator: p.5
+  note: 9 mm modulator length
+- device_id: li2026aa-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2; p.1 Fig. 1(a)
+  note: 300 nm x-cut TFLN (NanoLN) bonded to oxide
+- device_id: li2026aa-a
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 180 nm ICP etch of LN
+- device_id: li2026aa-a
+  field: rib_width_nm
+  value: 3500
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: W = 3.5 um in the modulation region
+- device_id: li2026aa-a
+  field: slab_thickness_nm
+  value: 120
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 120 nm slab
+- device_id: li2026aa-a
+  field: sidewall_angle_deg
+  value: 60
+  unit: deg
+  basis: measured
+  locator: p.2
+  note: sidewall angle 60 deg; reference direction not stated
+- device_id: li2026aa-a
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3; Fig. 2(f)
+  note: G = 6 um, horizontal separation between ground and signal electrodes
+- device_id: li2026aa-a
+  field: signal_width_um
+  value: 25
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: WS = 25 um; ground width WG = 150 um
+- device_id: li2026aa-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 1 um thick Au traveling-wave electrode
+- device_id: li2026aa-a
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3; p.8 Methods
+- device_id: li2026aa-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2
+  note: 4.7 um thermally grown SiO2 on a silicon base
+- device_id: li2026aa-a
+  field: substrate
+  value: silicon (thickness not stated)
+  basis: measured
+  locator: p.2
+  note: silicon base; thickness not stated
+- device_id: li2026aa-a
+  field: cladding
+  value: SiO2 2 um (PECVD)
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 2 um PECVD silica cladding in the modulation section
+- device_id: li2026aa-a
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: li2026aa-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: measurement wavelength
+- device_id: li2026aa-a
+  field: vpi_dc_v
+  value: 2.13
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 3(b) inset
+  note: 100 kHz triangular sweep
+- device_id: li2026aa-a
+  field: vpil_dc_vcm
+  value: 1.92
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state calculated Vpi*L for a 9 mm modulator
+- device_id: li2026aa-a
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b); p.1 abstract
+  note: about 100 GHz stated; trace reaches -3 dB near the 110 GHz LCA limit
+- device_id: li2026aa-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 110 GHz lightwave component analyzer
+- device_id: li2026aa-a
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5
+  note: RF amplifier output about 2.4 Vpp
+- device_id: li2026aa-a
+  field: modulation_format
+  value: OOK up to 170 Gb/s; PAM-4 up to 260 Gb/s; BER below HD-FEC 3.8e-3
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6-7
+- device_id: li2026aa-a
+  field: max_line_rate_gbps
+  value: 260
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6
+  note: PAM-4 maximum under the HD-FEC threshold
+- device_id: li2026aa-a
+  field: ng_opt
+  value: 2.18
+  unit: '1'
+  basis: simulated
+  locator: p.3; p.4 Fig. 2(g)
+  note: optical group index dashed line
+- device_id: li2026aa-a
+  field: il_onchip_db
+  value: 1.2
+  unit: dB
+  basis: derived
+  locator: p.4
+  note: authors deduce on-chip insertion loss from total loss
+- device_id: li2026aa-a
+  field: extinction_ratio_db
+  value: 17
+  unit: dB
+  basis: measured
+  locator: p.5
+  note: static ER from heater-voltage sweep
+- device_id: li2026aa-b
+  field: length_mm
+  value: 9
+  unit: mm
+  basis: measured
+  locator: p.5
+  note: 9 mm modulator length
+- device_id: li2026aa-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2; p.1 Fig. 1(a)
+  note: 300 nm x-cut TFLN (NanoLN) bonded to oxide
+- device_id: li2026aa-b
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 180 nm ICP etch of LN
+- device_id: li2026aa-b
+  field: rib_width_nm
+  value: 3500
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: W = 3.5 um in the modulation region
+- device_id: li2026aa-b
+  field: slab_thickness_nm
+  value: 120
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 120 nm slab
+- device_id: li2026aa-b
+  field: sidewall_angle_deg
+  value: 60
+  unit: deg
+  basis: measured
+  locator: p.2
+  note: sidewall angle 60 deg; reference direction not stated
+- device_id: li2026aa-b
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3; Fig. 2(f)
+  note: G = 6 um, horizontal separation between ground and signal electrodes
+- device_id: li2026aa-b
+  field: signal_width_um
+  value: 25
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: WS = 25 um; ground width WG = 150 um
+- device_id: li2026aa-b
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 1 um thick Au traveling-wave electrode
+- device_id: li2026aa-b
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3; p.8 Methods
+- device_id: li2026aa-b
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2
+  note: 4.7 um thermally grown SiO2 on a silicon base
+- device_id: li2026aa-b
+  field: substrate
+  value: silicon (thickness not stated)
+  basis: measured
+  locator: p.2
+  note: silicon base; thickness not stated
+- device_id: li2026aa-b
+  field: cladding
+  value: SiO2 2 um (PECVD)
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 2 um PECVD silica cladding in the modulation section
+- device_id: li2026aa-b
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: li2026aa-b
+  field: wavelength_nm
+  value: 1450
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: measurement wavelength
+- device_id: li2026aa-b
+  field: vpi_dc_v
+  value: 2.66
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 3(b) inset
+  note: 100 kHz triangular sweep
+- device_id: li2026aa-b
+  field: vpil_dc_vcm
+  value: 2.39
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state calculated Vpi*L for a 9 mm modulator
+- device_id: li2026aa-b
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b); p.1 abstract
+  note: exceeds 67 GHz, limited by the VNA; no crossing observed
+- device_id: li2026aa-b
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 67 GHz VNA
+- device_id: li2026aa-b
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5
+  note: RF amplifier output about 2.4 Vpp
+- device_id: li2026aa-b
+  field: modulation_format
+  value: OOK up to 170 Gb/s; PAM-4 up to 260 Gb/s; BER below HD-FEC 3.8e-3
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6-7
+- device_id: li2026aa-b
+  field: max_line_rate_gbps
+  value: 260
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6
+  note: PAM-4 maximum under the HD-FEC threshold
+- device_id: li2026aa-c
+  field: length_mm
+  value: 9
+  unit: mm
+  basis: measured
+  locator: p.5
+  note: 9 mm modulator length
+- device_id: li2026aa-c
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2; p.1 Fig. 1(a)
+  note: 300 nm x-cut TFLN (NanoLN) bonded to oxide
+- device_id: li2026aa-c
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 180 nm ICP etch of LN
+- device_id: li2026aa-c
+  field: rib_width_nm
+  value: 3500
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: W = 3.5 um in the modulation region
+- device_id: li2026aa-c
+  field: slab_thickness_nm
+  value: 120
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 120 nm slab
+- device_id: li2026aa-c
+  field: sidewall_angle_deg
+  value: 60
+  unit: deg
+  basis: measured
+  locator: p.2
+  note: sidewall angle 60 deg; reference direction not stated
+- device_id: li2026aa-c
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3; Fig. 2(f)
+  note: G = 6 um, horizontal separation between ground and signal electrodes
+- device_id: li2026aa-c
+  field: signal_width_um
+  value: 25
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: WS = 25 um; ground width WG = 150 um
+- device_id: li2026aa-c
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 1 um thick Au traveling-wave electrode
+- device_id: li2026aa-c
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3; p.8 Methods
+- device_id: li2026aa-c
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2
+  note: 4.7 um thermally grown SiO2 on a silicon base
+- device_id: li2026aa-c
+  field: substrate
+  value: silicon (thickness not stated)
+  basis: measured
+  locator: p.2
+  note: silicon base; thickness not stated
+- device_id: li2026aa-c
+  field: cladding
+  value: SiO2 2 um (PECVD)
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 2 um PECVD silica cladding in the modulation section
+- device_id: li2026aa-c
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: li2026aa-c
+  field: wavelength_nm
+  value: 1485
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: measurement wavelength
+- device_id: li2026aa-c
+  field: vpi_dc_v
+  value: 2.75
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 3(b) inset
+  note: 100 kHz triangular sweep
+- device_id: li2026aa-c
+  field: vpil_dc_vcm
+  value: 2.48
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state calculated Vpi*L for a 9 mm modulator
+- device_id: li2026aa-c
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b); p.1 abstract
+  note: about 100 GHz stated; trace reaches -3 dB near the 110 GHz LCA limit
+- device_id: li2026aa-c
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 110 GHz lightwave component analyzer
+- device_id: li2026aa-c
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5
+  note: RF amplifier output about 2.4 Vpp
+- device_id: li2026aa-c
+  field: modulation_format
+  value: OOK up to 170 Gb/s; PAM-4 up to 260 Gb/s; BER below HD-FEC 3.8e-3
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6-7
+- device_id: li2026aa-c
+  field: max_line_rate_gbps
+  value: 260
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6
+  note: PAM-4 maximum under the HD-FEC threshold
+- device_id: li2026aa-d
+  field: length_mm
+  value: 9
+  unit: mm
+  basis: measured
+  locator: p.5
+  note: 9 mm modulator length
+- device_id: li2026aa-d
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2; p.1 Fig. 1(a)
+  note: 300 nm x-cut TFLN (NanoLN) bonded to oxide
+- device_id: li2026aa-d
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 180 nm ICP etch of LN
+- device_id: li2026aa-d
+  field: rib_width_nm
+  value: 3500
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: W = 3.5 um in the modulation region
+- device_id: li2026aa-d
+  field: slab_thickness_nm
+  value: 120
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 120 nm slab
+- device_id: li2026aa-d
+  field: sidewall_angle_deg
+  value: 60
+  unit: deg
+  basis: measured
+  locator: p.2
+  note: sidewall angle 60 deg; reference direction not stated
+- device_id: li2026aa-d
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3; Fig. 2(f)
+  note: G = 6 um, horizontal separation between ground and signal electrodes
+- device_id: li2026aa-d
+  field: signal_width_um
+  value: 25
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: WS = 25 um; ground width WG = 150 um
+- device_id: li2026aa-d
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 1 um thick Au traveling-wave electrode
+- device_id: li2026aa-d
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3; p.8 Methods
+- device_id: li2026aa-d
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2
+  note: 4.7 um thermally grown SiO2 on a silicon base
+- device_id: li2026aa-d
+  field: substrate
+  value: silicon (thickness not stated)
+  basis: measured
+  locator: p.2
+  note: silicon base; thickness not stated
+- device_id: li2026aa-d
+  field: cladding
+  value: SiO2 2 um (PECVD)
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 2 um PECVD silica cladding in the modulation section
+- device_id: li2026aa-d
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: li2026aa-d
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: measurement wavelength
+- device_id: li2026aa-d
+  field: vpi_dc_v
+  value: 2.9
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 3(b) inset
+  note: 100 kHz triangular sweep
+- device_id: li2026aa-d
+  field: vpil_dc_vcm
+  value: 2.61
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state calculated Vpi*L for a 9 mm modulator
+- device_id: li2026aa-d
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b); p.1 abstract
+  note: about 100 GHz stated; trace reaches -3 dB near the 110 GHz LCA limit
+- device_id: li2026aa-d
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 110 GHz lightwave component analyzer
+- device_id: li2026aa-d
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5
+  note: RF amplifier output about 2.4 Vpp
+- device_id: li2026aa-d
+  field: modulation_format
+  value: OOK up to 180 Gb/s; PAM-4 up to 280 Gb/s; BER below HD-FEC 3.8e-3
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6-7
+- device_id: li2026aa-d
+  field: max_line_rate_gbps
+  value: 280
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6
+  note: PAM-4 maximum under the HD-FEC threshold
+- device_id: li2026aa-d
+  field: ng_opt
+  value: 2.13
+  unit: '1'
+  basis: simulated
+  locator: p.3; p.4 Fig. 2(g)
+  note: optical group index dashed line
+- device_id: li2026aa-d
+  field: il_onchip_db
+  value: 2.8
+  unit: dB
+  basis: derived
+  locator: p.4
+  note: authors deduce on-chip insertion loss from total loss
+- device_id: li2026aa-d
+  field: extinction_ratio_db
+  value: 15
+  unit: dB
+  basis: measured
+  locator: p.5
+  note: static ER from heater-voltage sweep
+- device_id: li2026aa-d
+  field: z0_ohm
+  value: 42
+  unit: ohm
+  basis: simulated
+  locator: p.3; p.4 Fig. 2(g) inset
+  note: characteristic impedance approximately 42 ohm, simulated CPW
+- device_id: li2026aa-d
+  field: n_rf
+  value: 2.13
+  unit: '1'
+  basis: simulated
+  locator: p.3; p.4 Fig. 2(g)
+  note: RF effective index designed as 2.13 at 50 GHz
+- device_id: li2026aa-e
+  field: length_mm
+  value: 9
+  unit: mm
+  basis: measured
+  locator: p.5
+  note: 9 mm modulator length
+- device_id: li2026aa-e
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2; p.1 Fig. 1(a)
+  note: 300 nm x-cut TFLN (NanoLN) bonded to oxide
+- device_id: li2026aa-e
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 180 nm ICP etch of LN
+- device_id: li2026aa-e
+  field: rib_width_nm
+  value: 3500
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: W = 3.5 um in the modulation region
+- device_id: li2026aa-e
+  field: slab_thickness_nm
+  value: 120
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 120 nm slab
+- device_id: li2026aa-e
+  field: sidewall_angle_deg
+  value: 60
+  unit: deg
+  basis: measured
+  locator: p.2
+  note: sidewall angle 60 deg; reference direction not stated
+- device_id: li2026aa-e
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3; Fig. 2(f)
+  note: G = 6 um, horizontal separation between ground and signal electrodes
+- device_id: li2026aa-e
+  field: signal_width_um
+  value: 25
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: WS = 25 um; ground width WG = 150 um
+- device_id: li2026aa-e
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 1 um thick Au traveling-wave electrode
+- device_id: li2026aa-e
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3; p.8 Methods
+- device_id: li2026aa-e
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2
+  note: 4.7 um thermally grown SiO2 on a silicon base
+- device_id: li2026aa-e
+  field: substrate
+  value: silicon (thickness not stated)
+  basis: measured
+  locator: p.2
+  note: silicon base; thickness not stated
+- device_id: li2026aa-e
+  field: cladding
+  value: SiO2 2 um (PECVD)
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 2 um PECVD silica cladding in the modulation section
+- device_id: li2026aa-e
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: li2026aa-e
+  field: wavelength_nm
+  value: 1590
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: measurement wavelength
+- device_id: li2026aa-e
+  field: vpi_dc_v
+  value: 3.04
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 3(b) inset
+  note: 100 kHz triangular sweep
+- device_id: li2026aa-e
+  field: vpil_dc_vcm
+  value: 2.74
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state calculated Vpi*L for a 9 mm modulator
+- device_id: li2026aa-e
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b); p.1 abstract
+  note: about 100 GHz stated; trace reaches -3 dB near the 110 GHz LCA limit
+- device_id: li2026aa-e
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 110 GHz lightwave component analyzer
+- device_id: li2026aa-e
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5
+  note: RF amplifier output about 2.4 Vpp
+- device_id: li2026aa-e
+  field: modulation_format
+  value: OOK up to 180 Gb/s; PAM-4 up to 280 Gb/s; BER below HD-FEC 3.8e-3
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6-7
+- device_id: li2026aa-e
+  field: max_line_rate_gbps
+  value: 280
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6
+  note: PAM-4 maximum under the HD-FEC threshold
+- device_id: li2026aa-f
+  field: length_mm
+  value: 9
+  unit: mm
+  basis: measured
+  locator: p.5
+  note: 9 mm modulator length
+- device_id: li2026aa-f
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2; p.1 Fig. 1(a)
+  note: 300 nm x-cut TFLN (NanoLN) bonded to oxide
+- device_id: li2026aa-f
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 180 nm ICP etch of LN
+- device_id: li2026aa-f
+  field: rib_width_nm
+  value: 3500
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: W = 3.5 um in the modulation region
+- device_id: li2026aa-f
+  field: slab_thickness_nm
+  value: 120
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 120 nm slab
+- device_id: li2026aa-f
+  field: sidewall_angle_deg
+  value: 60
+  unit: deg
+  basis: measured
+  locator: p.2
+  note: sidewall angle 60 deg; reference direction not stated
+- device_id: li2026aa-f
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3; Fig. 2(f)
+  note: G = 6 um, horizontal separation between ground and signal electrodes
+- device_id: li2026aa-f
+  field: signal_width_um
+  value: 25
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: WS = 25 um; ground width WG = 150 um
+- device_id: li2026aa-f
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 1 um thick Au traveling-wave electrode
+- device_id: li2026aa-f
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3; p.8 Methods
+- device_id: li2026aa-f
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2
+  note: 4.7 um thermally grown SiO2 on a silicon base
+- device_id: li2026aa-f
+  field: substrate
+  value: silicon (thickness not stated)
+  basis: measured
+  locator: p.2
+  note: silicon base; thickness not stated
+- device_id: li2026aa-f
+  field: cladding
+  value: SiO2 2 um (PECVD)
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 2 um PECVD silica cladding in the modulation section
+- device_id: li2026aa-f
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: li2026aa-f
+  field: wavelength_nm
+  value: 1653
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: measurement wavelength
+- device_id: li2026aa-f
+  field: vpi_dc_v
+  value: 3.21
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 3(b) inset
+  note: 100 kHz triangular sweep
+- device_id: li2026aa-f
+  field: vpil_dc_vcm
+  value: 2.89
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state calculated Vpi*L for a 9 mm modulator
+- device_id: li2026aa-f
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b); p.1 abstract
+  note: exceeds 67 GHz, limited by the VNA; no crossing observed
+- device_id: li2026aa-f
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 67 GHz VNA
+- device_id: li2026aa-f
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5
+  note: RF amplifier output about 2.4 Vpp
+- device_id: li2026aa-f
+  field: modulation_format
+  value: OOK up to 170 Gb/s; PAM-4 up to 240 Gb/s; BER below HD-FEC 3.8e-3
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6-7
+- device_id: li2026aa-f
+  field: max_line_rate_gbps
+  value: 240
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6
+  note: PAM-4 maximum under the HD-FEC threshold
+- device_id: li2026aa-g
+  field: length_mm
+  value: 9
+  unit: mm
+  basis: measured
+  locator: p.5
+  note: 9 mm modulator length
+- device_id: li2026aa-g
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2; p.1 Fig. 1(a)
+  note: 300 nm x-cut TFLN (NanoLN) bonded to oxide
+- device_id: li2026aa-g
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 180 nm ICP etch of LN
+- device_id: li2026aa-g
+  field: rib_width_nm
+  value: 3500
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: W = 3.5 um in the modulation region
+- device_id: li2026aa-g
+  field: slab_thickness_nm
+  value: 120
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 120 nm slab
+- device_id: li2026aa-g
+  field: sidewall_angle_deg
+  value: 60
+  unit: deg
+  basis: measured
+  locator: p.2
+  note: sidewall angle 60 deg; reference direction not stated
+- device_id: li2026aa-g
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3; Fig. 2(f)
+  note: G = 6 um, horizontal separation between ground and signal electrodes
+- device_id: li2026aa-g
+  field: signal_width_um
+  value: 25
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: WS = 25 um; ground width WG = 150 um
+- device_id: li2026aa-g
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 1 um thick Au traveling-wave electrode
+- device_id: li2026aa-g
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3; p.8 Methods
+- device_id: li2026aa-g
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2
+  note: 4.7 um thermally grown SiO2 on a silicon base
+- device_id: li2026aa-g
+  field: substrate
+  value: silicon (thickness not stated)
+  basis: measured
+  locator: p.2
+  note: silicon base; thickness not stated
+- device_id: li2026aa-g
+  field: cladding
+  value: SiO2 2 um (PECVD)
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 2 um PECVD silica cladding in the modulation section
+- device_id: li2026aa-g
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: li2026aa-g
+  field: wavelength_nm
+  value: 1970
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: measurement wavelength
+- device_id: li2026aa-g
+  field: vpi_dc_v
+  value: 4.33
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 3(b) inset
+  note: 100 kHz triangular sweep
+- device_id: li2026aa-g
+  field: vpil_dc_vcm
+  value: 3.9
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state calculated Vpi*L for a 9 mm modulator
+- device_id: li2026aa-g
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b); p.1 abstract
+  note: above 50 GHz in the 2-um band; photodiode limited
+- device_id: li2026aa-g
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.5; Fig. 3(b)
+  note: PD limited region begins at 50 GHz
+- device_id: li2026aa-g
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5
+  note: RF amplifier output about 2.4 Vpp
+- device_id: li2026aa-g
+  field: max_baud_gbd
+  value: 150
+  unit: GBd
+  basis: measured
+  locator: p.7 Table 2
+  note: Table 2 lists 150 Gbaud OOK
+- device_id: li2026aa-g
+  field: modulation_format
+  value: OOK up to 150 Gb/s; PAM-4 up to 170 Gb/s (85 GBd); BER below HD-FEC 3.8e-3
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6-7
+- device_id: li2026aa-g
+  field: max_line_rate_gbps
+  value: 170
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6
+  note: PAM-4 maximum under the HD-FEC threshold
+- device_id: li2026aa-g
+  field: il_onchip_db
+  value: 5.8
+  unit: dB
+  basis: derived
+  locator: p.4
+  note: authors deduce on-chip insertion loss from total loss
+- device_id: li2026aa-g
+  field: extinction_ratio_db
+  value: 18
+  unit: dB
+  basis: measured
+  locator: p.5
+  note: static ER from heater-voltage sweep
+- device_id: li2026aa-h
+  field: length_mm
+  value: 9
+  unit: mm
+  basis: measured
+  locator: p.5
+  note: 9 mm modulator length
+- device_id: li2026aa-h
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2; p.1 Fig. 1(a)
+  note: 300 nm x-cut TFLN (NanoLN) bonded to oxide
+- device_id: li2026aa-h
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 180 nm ICP etch of LN
+- device_id: li2026aa-h
+  field: rib_width_nm
+  value: 3500
+  unit: nm
+  basis: design_target
+  locator: p.3
+  note: W = 3.5 um in the modulation region
+- device_id: li2026aa-h
+  field: slab_thickness_nm
+  value: 120
+  unit: nm
+  basis: measured
+  locator: p.2; p.7 Methods
+  note: 120 nm slab
+- device_id: li2026aa-h
+  field: sidewall_angle_deg
+  value: 60
+  unit: deg
+  basis: measured
+  locator: p.2
+  note: sidewall angle 60 deg; reference direction not stated
+- device_id: li2026aa-h
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.3; Fig. 2(f)
+  note: G = 6 um, horizontal separation between ground and signal electrodes
+- device_id: li2026aa-h
+  field: signal_width_um
+  value: 25
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: WS = 25 um; ground width WG = 150 um
+- device_id: li2026aa-h
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 1 um thick Au traveling-wave electrode
+- device_id: li2026aa-h
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3; p.8 Methods
+- device_id: li2026aa-h
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2
+  note: 4.7 um thermally grown SiO2 on a silicon base
+- device_id: li2026aa-h
+  field: substrate
+  value: silicon (thickness not stated)
+  basis: measured
+  locator: p.2
+  note: silicon base; thickness not stated
+- device_id: li2026aa-h
+  field: cladding
+  value: SiO2 2 um (PECVD)
+  basis: measured
+  locator: p.3; p.8 Methods
+  note: 2 um PECVD silica cladding in the modulation section
+- device_id: li2026aa-h
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: li2026aa-h
+  field: wavelength_nm
+  value: 2000
+  unit: nm
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: measurement wavelength
+- device_id: li2026aa-h
+  field: vpi_dc_v
+  value: 4.38
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 3(b) inset
+  note: 100 kHz triangular sweep
+- device_id: li2026aa-h
+  field: vpil_dc_vcm
+  value: 3.94
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state calculated Vpi*L for a 9 mm modulator
+- device_id: li2026aa-h
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b); p.1 abstract
+  note: above 50 GHz in the 2-um band; photodiode limited
+- device_id: li2026aa-h
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.5; Fig. 3(b)
+  note: PD limited region begins at 50 GHz
+- device_id: li2026aa-h
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.5
+  note: RF amplifier output about 2.4 Vpp
+- device_id: li2026aa-h
+  field: modulation_format
+  value: OOK up to about 140 Gb/s (Fig. 4(d) read); PAM-4 up to 150 Gb/s; BER below HD-FEC 3.8e-3
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6-7
+- device_id: li2026aa-h
+  field: max_line_rate_gbps
+  value: 150
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Fig. 4(d); p.6
+  note: PAM-4 maximum under the HD-FEC threshold
+- device_id: li2026aa-h
+  field: ng_opt
+  value: 2.04
+  unit: '1'
+  basis: simulated
+  locator: p.3; p.4 Fig. 2(g)
+  note: optical group index dashed line
+- device_id: li2026aa-a
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.3
+  note: traveling-wave electrodes feature a push-pull configuration
+- device_id: li2026aa-b
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.3
+  note: traveling-wave electrodes feature a push-pull configuration
+- device_id: li2026aa-c
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.3
+  note: traveling-wave electrodes feature a push-pull configuration
+- device_id: li2026aa-d
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.3
+  note: traveling-wave electrodes feature a push-pull configuration
+- device_id: li2026aa-e
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.3
+  note: traveling-wave electrodes feature a push-pull configuration
+- device_id: li2026aa-f
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.3
+  note: traveling-wave electrodes feature a push-pull configuration
+- device_id: li2026aa-g
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.3
+  note: traveling-wave electrodes feature a push-pull configuration
+- device_id: li2026aa-h
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.3
+  note: traveling-wave electrodes feature a push-pull configuration
+- device_id: li2026aa-a
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.3
+  note: push-pull CPW
+- device_id: li2026aa-b
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.3
+  note: push-pull CPW
+- device_id: li2026aa-c
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.3
+  note: push-pull CPW
+- device_id: li2026aa-d
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.3
+  note: push-pull CPW
+- device_id: li2026aa-e
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.3
+  note: push-pull CPW
+- device_id: li2026aa-f
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.3
+  note: push-pull CPW
+- device_id: li2026aa-g
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.3
+  note: push-pull CPW
+- device_id: li2026aa-h
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.3
+  note: push-pull CPW
+- device_id: li2026aa-a
+  field: bw3db_reference
+  value: unspecified
+  basis: measured
+  locator: Fig. 3(b)
+  note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+- device_id: li2026aa-b
+  field: bw3db_reference
+  value: unspecified
+  basis: measured
+  locator: Fig. 3(b)
+  note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+- device_id: li2026aa-c
+  field: bw3db_reference
+  value: unspecified
+  basis: measured
+  locator: Fig. 3(b)
+  note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+- device_id: li2026aa-d
+  field: bw3db_reference
+  value: unspecified
+  basis: measured
+  locator: Fig. 3(b)
+  note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+- device_id: li2026aa-e
+  field: bw3db_reference
+  value: unspecified
+  basis: measured
+  locator: Fig. 3(b)
+  note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+- device_id: li2026aa-f
+  field: bw3db_reference
+  value: unspecified
+  basis: measured
+  locator: Fig. 3(b)
+  note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+- device_id: li2026aa-g
+  field: bw3db_reference
+  value: unspecified
+  basis: measured
+  locator: Fig. 3(b)
+  note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+- device_id: li2026aa-h
+  field: bw3db_reference
+  value: unspecified
+  basis: measured
+  locator: Fig. 3(b)
+  note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+- device_id: li2026aa-a
+  field: electrode_type
+  value: tw_gsg
+  basis: measured
+  locator: p.3
+  note: coplanar waveguide, ground-signal-ground
+- device_id: li2026aa-b
+  field: electrode_type
+  value: tw_gsg
+  basis: measured
+  locator: p.3
+  note: coplanar waveguide, ground-signal-ground
+- device_id: li2026aa-c
+  field: electrode_type
+  value: tw_gsg
+  basis: measured
+  locator: p.3
+  note: coplanar waveguide, ground-signal-ground
+- device_id: li2026aa-d
+  field: electrode_type
+  value: tw_gsg
+  basis: measured
+  locator: p.3
+  note: coplanar waveguide, ground-signal-ground
+- device_id: li2026aa-e
+  field: electrode_type
+  value: tw_gsg
+  basis: measured
+  locator: p.3
+  note: coplanar waveguide, ground-signal-ground
+- device_id: li2026aa-f
+  field: electrode_type
+  value: tw_gsg
+  basis: measured
+  locator: p.3
+  note: coplanar waveguide, ground-signal-ground
+- device_id: li2026aa-g
+  field: electrode_type
+  value: tw_gsg
+  basis: measured
+  locator: p.3
+  note: coplanar waveguide, ground-signal-ground
+- device_id: li2026aa-h
+  field: electrode_type
+  value: tw_gsg
+  basis: measured
+  locator: p.3
+  note: coplanar waveguide, ground-signal-ground
+- device_id: li2026aa-a
+  field: waveguide_platform
+  value: lnoi_rib
+  basis: measured
+  locator: p.2
+  note: ridge waveguide on 300 nm TFLN
+- device_id: li2026aa-b
+  field: waveguide_platform
+  value: lnoi_rib
+  basis: measured
+  locator: p.2
+  note: ridge waveguide on 300 nm TFLN
+- device_id: li2026aa-c
+  field: waveguide_platform
+  value: lnoi_rib
+  basis: measured
+  locator: p.2
+  note: ridge waveguide on 300 nm TFLN
+- device_id: li2026aa-d
+  field: waveguide_platform
+  value: lnoi_rib
+  basis: measured
+  locator: p.2
+  note: ridge waveguide on 300 nm TFLN
+- device_id: li2026aa-e
+  field: waveguide_platform
+  value: lnoi_rib
+  basis: measured
+  locator: p.2
+  note: ridge waveguide on 300 nm TFLN
+- device_id: li2026aa-f
+  field: waveguide_platform
+  value: lnoi_rib
+  basis: measured
+  locator: p.2
+  note: ridge waveguide on 300 nm TFLN
+- device_id: li2026aa-g
+  field: waveguide_platform
+  value: lnoi_rib
+  basis: measured
+  locator: p.2
+  note: ridge waveguide on 300 nm TFLN
+- device_id: li2026aa-h
+  field: waveguide_platform
+  value: lnoi_rib
+  basis: measured
+  locator: p.2
+  note: ridge waveguide on 300 nm TFLN
+derived:
+- device_id: li2026aa-a
+  field: max_baud_gbd
+  value: 170
+  formula: OOK 170 Gb/s / 1 bit per symbol = 170 GBd
+  inputs:
+  - 170 Gb/s OOK
+- device_id: li2026aa-b
+  field: max_baud_gbd
+  value: 170
+  formula: OOK 170 Gb/s / 1 bit per symbol = 170 GBd
+  inputs:
+  - 170 Gb/s OOK
+- device_id: li2026aa-c
+  field: max_baud_gbd
+  value: 170
+  formula: OOK 170 Gb/s / 1 bit per symbol = 170 GBd
+  inputs:
+  - 170 Gb/s OOK
+- device_id: li2026aa-d
+  field: max_baud_gbd
+  value: 180
+  formula: OOK 180 Gb/s / 1 bit per symbol = 180 GBd
+  inputs:
+  - 180 Gb/s OOK
+- device_id: li2026aa-e
+  field: max_baud_gbd
+  value: 180
+  formula: OOK 180 Gb/s / 1 bit per symbol = 180 GBd
+  inputs:
+  - 180 Gb/s OOK
+- device_id: li2026aa-f
+  field: max_baud_gbd
+  value: 170
+  formula: OOK 170 Gb/s / 1 bit per symbol = 170 GBd
+  inputs:
+  - 170 Gb/s OOK
+- device_id: li2026aa-h
+  field: max_baud_gbd
+  value: 140
+  formula: OOK 140 Gb/s / 1 bit per symbol = 140 GBd
+  inputs:
+  - 140 Gb/s OOK

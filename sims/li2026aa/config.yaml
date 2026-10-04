@@ -1,0 +1,134 @@
+schema: eo-atlas.sim/v1
+id: li2026aa-d
+paper_id: li2026aa
+device_id: li2026aa-d
+title: Li 2026, 9 mm broadband TFLN MZM on silicon (G-S-G CPW, push-pull arms), 1550 nm operating point
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+# Conventions follow sims/chen2022/config.yaml.
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand waveguide in x. Signal electrode centre (mirror plane) at x = -15.5 um; LEFT waveguide at x = -31 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm.
+# The paper does not state where the waveguide sits in the 6 um gap; it is centred (project_inference).
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  silicon: {n: 3.476, eps_r: 11.7}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:                          # uniform cross-section (plain CPW, no loading)
+  symmetry: none
+  domain: {x_um: [-260.5, 229.5], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-260.5, 229.5], y_um: [-250, 120]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-260.5, 229.5], y_um: [-500, -4.7]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-260.5, 229.5], y_um: [-4.7, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-260.5, 229.5], y_um: [0, 0.12]}}
+    - {name: sio2_cladding, material: silicon_dioxide, rect: {x_um: [-260.5, 229.5], y_um: [0.12, 2.3]}}
+    - {name: ln_rib_r, material: lithium_niobate, polygon_um: [[-1.85392, 0.12], [1.85392, 0.12], [1.75, 0.3], [-1.75, 0.3]]}
+    - {name: ln_rib_l, material: lithium_niobate, polygon_um: [[-32.85392, 0.12], [-29.14608, 0.12], [-29.25, 0.3], [-32.75, 0.3]]}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-28, -3], y_um: [0.12, 1.12]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [3, 153], y_um: [0.12, 1.12]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-184, -34], y_um: [0.12, 1.12]}, material: gold}
+  optical_window: {x_um: [-2.9, 2.9], y_um: [-1.5, 2.0]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 9
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 38
+  differential: false              # single-ended probe on the centre signal line; push-pull is produced by the arm placement (see chen2022 SPEC_PROPOSALS)
+  loading:
+    type: none
+    period_um: null
+    loaded_length_um: null
+    unloaded_cross_section: null
+    loaded_cross_section: null
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
+
+alt_geometries: {}
+
+targets:
+  # Measured, 1550 nm row li2026aa-d (VpiL is the authors' Vpi x 9 mm)
+  - {metric: vpi_l_dc_vcm, value: 2.61, tol_rel: 0.15, source: {device_id: li2026aa-d, field: vpil_dc_vcm}}
+  - {metric: vpi_dc_v, value: 2.90, tol_rel: 0.15, source: {device_id: li2026aa-d, field: vpi_dc_v}}
+  # Authors' own FDE/FEM design values (Fig. 2(g)); cross-solver references, not measurements
+  - {metric: z0_ohm, value: 42, tol_abs: 3.0, source: {device_id: li2026aa-d, field: z0_ohm}}
+  - {metric: n_rf, value: 2.13, tol_abs: 0.1, source: {device_id: li2026aa-d, field: n_rf, note: "paper value is the plateau at 50 GHz (Fig. 2(g)); static section value compared"}}
+  - {metric: ng_opt, value: 2.13, tol_abs: 0.05, source: {device_id: li2026aa-d, field: ng_opt}}
+  - {metric: bw3db_ghz, value: 100, tol_rel: 0.2, source: {device_id: li2026aa-d, field: bw3db_ghz}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.5 Fig. 3(b) (1550 nm panel; Vpi 2.90 V)"}
+  optics.polarization: {class: paper_exact, locator: "p.2 (TE mode of the SiON/LN structures); p.5 (TE coupling losses)", note: "TE stated for the edge coupler; modulation-region polarization taken as TE for x-cut with propagation along y"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.13 at 1550 nm (Fig. 2(g), simulated); engine derives it by finite difference and compares as a target"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 (x-cut TFLN); propagation along y is a project_inference from the standard x-cut convention"}
+  materials.lithium_niobate.n_o: {class: standard_reference, citation: "Zelmon, Small, Jundt, J. Opt. Soc. Am. B 14, 3319 (1997)", note: "value taken from SPEC.md example; not verified against the source here; paper states no LN indices"}
+  materials.lithium_niobate.n_e: {class: standard_reference, citation: "Zelmon, Small, Jundt, J. Opt. Soc. Am. B 14, 3319 (1997)", note: "value taken from SPEC.md example; not verified against the source here"}
+  materials.lithium_niobate.eps_r: {class: standard_reference, citation: "Weis and Gaylord, Appl. Phys. A 37, 191 (1985)", note: "SPEC.md example values 43/28; paper does not state RF permittivity; citation values not verified here"}
+  materials.lithium_niobate.r_pm_per_v: {class: standard_reference, citation: "Weis and Gaylord, Appl. Phys. A 37, 191 (1985)", note: "SPEC.md example values; paper does not state Pockels coefficients"}
+  materials.silicon_dioxide: {class: standard_reference, citation: "standard handbook values (n = 1.444 at 1550 nm, eps_r = 3.9); paper states neither for the thermal BOX or PECVD cladding"}
+  materials.silicon.eps_r: {class: standard_reference, citation: "standard handbook value 11.7; paper does not state it"}
+  materials.gold.sigma_Sm: {class: standard_reference, citation: "bulk gold 4.1e7 S/m; paper does not state film conductivity"}
+  line.length_mm: {class: paper_exact, locator: "p.5 (modulator length 9 mm); p.3 Fig. 1(b)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm source assumed; the paper names a 110 GHz RF probe and the LCA but no source impedance"}
+  line.load_ohm: {class: paper_exact, locator: "p.3 (ZL = 38 ohm, intentionally below Z0); p.5"}
+  line.differential: {class: project_inference, note: "G-S-G with one arm per gap and a push-pull configuration stated on p.3; drive modelled single-ended on the centre line, push-pull by arm placement"}
+  line.conductor_loss_model: {class: project_inference, note: "paper reports no electrode loss coefficient in the main text; loss model left to the engine"}
+  line.loading.type: {class: paper_exact, locator: "p.3 (plain coplanar waveguide; no loaded or periodic electrode described)"}
+  geometry.regions.ambient: {class: project_inference, note: "air above the cladding; domain extent is an engine choice"}
+  geometry.regions.substrate: {class: project_inference, locator: "p.2 (silicon base)", note: "silicon thickness not stated; region clipped to the domain, 500 um nominal"}
+  geometry.regions.box: {class: paper_exact, locator: "p.2 (4.7 um thermally grown SiO2)"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.2; p.7 Methods (300 nm film, 180 nm etch, 120 nm slab)"}
+  geometry.regions.sio2_cladding: {class: project_inference, locator: "p.3; p.8 Methods (2 um PECVD cladding)", note: "thickness stated; reference surface not stated; taken as 2 um above the ridge top over the whole cross-section; electrodes drawn over it as conductors"}
+  geometry.regions.ln_rib_r: {class: project_inference, locator: "p.3 (W = 3.5 um); p.2 (sidewall angle 60 deg, 180 nm etch)", note: "top width 3.5 um; angle taken from horizontal so the bottom width is 3.5 + 2*0.18/tan(60 deg) = 3.708 um; reference direction of the angle is not stated"}
+  geometry.regions.ln_rib_l: {class: project_inference, note: "mirror image of the right-hand ridge about the signal centre (x = -15.5 um)"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.3 (WS = 25 um, H = 1 um Au); p.8 Methods", note: "edge-to-edge 25 um centred at x = -15.5 um, thickness 1 um; vertical placement is listed separately under geometry.electrode_vertical_position"}
+  geometry.electrodes.ground_r: {class: paper_exact, locator: "p.3 (WG = 150 um; gap G = 6 um between ground and signal)", note: "inner edge 6 um from the signal edge"}
+  geometry.electrodes.ground_l: {class: paper_exact, locator: "p.3", note: "mirror of ground_r"}
+  geometry.electrode_vertical_position: {class: project_inference, locator: "p.8 Methods (Au deposited before the SiON; cladding later thinned to 2 um)", note: "Au y-range [0.12, 1.12] um, on the LN slab level and overlapping the modelled full-width silica region; inferred from the process sequence, not stated"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 2.9 um around the ridge, just inside the electrode edges at +-3 um (a conductor in the window is unsupported)"}
+  geometry.domain: {class: project_inference, note: "lateral -260.5..229.5 um about the signal centre, vertical -250..120 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+  waveguide_position: {class: project_inference, note: "waveguide centred in the 6 um gap (3 um to each electrode edge); lateral position is not stated"}
+
+missing:
+  - silicon substrate thickness and resistivity (not stated)
+  - LN refractive indices, RF permittivity tensor, Pockels coefficients and loss tangents (not stated; standard-reference placeholders in the file)
+  - SiO2 refractive index and RF permittivity for the BOX and PECVD cladding (not stated)
+  - gold film conductivity (not stated)
+  - lateral position of the waveguides within the 6 um gap
+  - reference surface and profile of the 2 um silica cladding, and whether silica covers the electrode gaps
+  - reference direction of the 60 deg sidewall angle
+  - source impedance and probe de-embedding for the EO response (Supplementary Note 3 not cached)
+  - measured Z0, RF loss and RF index (only simulated design values are in the main text)
+  - temperature (not stated)
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Wavelength-dependent behaviour of the other seven rows (1310 to 2000 nm) is not configured; one 1550 nm cross-section is given"
+  - "The EO response is DC-normalised in the paper with a deliberate low-frequency peak from ZL < Z0; the bw3db target is a bound-like reading (about 100 GHz at the 110 GHz LCA limit) and depends on the engine's EO-response stage"
+  - "Silicon is lossless in the model (conductivity unknown); substrate loss is absent"
+  - "Ti heater layer, thermo-optic phase shifter, spot-size converters and splitters are outside the 2D cut"
+  - "The paper's Z0 (42 ohm) and nRF (2.13) are its own simulation outputs; agreement shows only consistency of the two solvers on the inferred geometry"

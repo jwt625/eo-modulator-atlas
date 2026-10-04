@@ -1,0 +1,546 @@
+paper_id: yue2025
+verified_on: '2026-10-04'
+source_files:
+- references/yue2025/text.md
+- references/yue2025/figures/page_11.png
+- references/yue2025/figures/page_12.png
+- references/yue2025/figures/page_13.png
+- references/yue2025/source.pdf (p.14 Table 2)
+entries:
+- device_id: yue2025-a
+  field: length_mm
+  value: 0.9
+  unit: mm
+  basis: measured
+  locator: p.14, Table 2; p.12 Sec. 2B
+  note: Total of three 0.3 mm modulation regions
+- device_id: yue2025-a
+  field: vpi_dc_v
+  value: 54
+  unit: V
+  basis: author_estimate
+  locator: p.15, Sec. 3; p.16 Methods A
+  note: Estimated from DC modulation efficiency divided by length; bias not stated
+- device_id: yue2025-a
+  field: vpil_dc_vcm
+  value: 4.86
+  unit: V*cm
+  basis: derived
+  locator: p.14, Table 2
+  note: From DC phase-versus-voltage measurement, see Supplement S4 (not cached)
+- device_id: yue2025-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.13, Sec. 2B; Fig. 5(b)
+  note: Larger than 110 GHz at 6 V; EO response about -1 dB at 110 GHz
+- device_id: yue2025-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.13, Fig. 5(b); p.16 Methods B
+  note: 110 GHz lightwave component analyzer
+- device_id: yue2025-a
+  field: eo_rolloff_db
+  value: 1
+  unit: dB
+  basis: measured
+  locator: p.13, Sec. 2B; p.14 Table 2
+  note: Stated approximately -1 dB at 110 GHz, relative to DC-normalized response
+- device_id: yue2025-a
+  field: eo_rolloff_freq_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.14, Table 2
+- device_id: yue2025-a
+  field: il_onchip_db
+  value: 4.3
+  unit: dB
+  basis: measured
+  locator: p.16, Methods A
+  note: Stated insertion loss 4.3 dB for m=1; coupler loss listed separately
+- device_id: yue2025-a
+  field: extinction_ratio_db
+  value: 33.2
+  unit: dB
+  basis: measured
+  locator: p.16, Methods A
+  note: Static extinction ratio of m=1 device
+- device_id: yue2025-a
+  field: prop_loss_db_per_cm
+  value: 42
+  unit: dB/cm
+  basis: derived
+  locator: p.16, Methods A
+  note: Doped waveguide stated as about 4.2 dB/mm, converted to dB/cm
+- device_id: yue2025-a
+  field: drive_vpp_v
+  value: 5
+  unit: V
+  basis: measured
+  locator: p.13, Sec. 2B; p.16 Methods B
+  note: Amplifier output Vpp of 5 V
+- device_id: yue2025-a
+  field: max_baud_gbd
+  value: 140
+  unit: GBd
+  basis: measured
+  locator: p.12, Fig. 5(e); p.13-14
+  note: Open eye at 140 GBd, limited by amplifier, MUX and probe bandwidth
+- device_id: yue2025-a
+  field: max_line_rate_gbps
+  value: 140
+  unit: Gb/s
+  basis: derived
+  locator: p.14, Sec. 2B
+  note: OOK carries one bit per symbol
+- device_id: yue2025-a
+  field: modulation_format
+  value: OOK, no DSP, eye diagrams at 100, 110, 120, 130 and 140 GBd; dynamic ER 2.94,
+    2.77, 2.54, 2.26, 2.08 dB; 5 Vpp drive
+  unit: ''
+  basis: measured
+  locator: p.12, Fig. 5(e); p.13-14
+- device_id: yue2025-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: 220 nm top silicon
+- device_id: yue2025-a
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: Optical waveguide width
+- device_id: yue2025-a
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: Slab thickness
+- device_id: yue2025-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Buried oxide thickness
+- device_id: yue2025-a
+  field: electrode_gap_um
+  value: 9
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Traveling-wave electrode gap
+- device_id: yue2025-a
+  field: signal_width_um
+  value: 40
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Traveling-wave electrode width
+- device_id: yue2025-a
+  field: electrode_metal
+  value: Aluminum
+  unit: ''
+  basis: measured
+  locator: p.16, Methods A
+  note: Ohmic contact made with aluminum electrode
+- device_id: yue2025-a
+  field: substrate
+  value: 220 nm silicon-on-insulator, 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.16, Methods A
+  note: Foundry service by Advanced Micro Foundry (Singapore)
+- device_id: yue2025-a
+  field: epitaxy_or_stack
+  value: Series push-pull NPN main and forward regions, PNP reverse region (inverse
+    doping); junction interface offset 50 nm from waveguide center toward N; heavily
+    doped contacts 750 nm from waveguide center; main, forward and reverse regions
+    0.3 mm each, about 77 um extra electrode length in mismatch region; 50 ohm on-chip
+    terminator; two bias voltages V1 and V2
+  unit: ''
+  basis: measured
+  locator: p.3; p.12; p.16
+  note: Doping arrangement from principle section, geometry from Methods and Fig.
+    4
+- device_id: yue2025-a
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2A
+  note: Operates in series push-pull configuration with two series-connected PN junctions
+- device_id: yue2025-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.13, Fig. 5(b)-(c)
+  note: Curves start near 0 dB at DC; Fig. 5(c) text says normalized to DC power
+- device_id: yue2025-b
+  field: length_mm
+  value: 0.3
+  unit: mm
+  basis: measured
+  locator: p.11, Fig. 4(b) caption; p.12, Sec. 2B
+  note: Length of all modulation regions of the m=0 device
+- device_id: yue2025-b
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: p.13, Sec. 2B; Fig. 5(b)
+  note: Stated 70 GHz at 6 V reverse bias; trace first crosses -3 dB near 68-70 GHz
+- device_id: yue2025-b
+  field: il_onchip_db
+  value: 2
+  unit: dB
+  basis: measured
+  locator: p.16, Methods A
+  note: Stated insertion loss 2 dB for m=0; coupler loss listed separately
+- device_id: yue2025-b
+  field: extinction_ratio_db
+  value: 35.3
+  unit: dB
+  basis: measured
+  locator: p.16, Methods A
+  note: Static extinction ratio of m=0 device
+- device_id: yue2025-b
+  field: prop_loss_db_per_cm
+  value: 42
+  unit: dB/cm
+  basis: derived
+  locator: p.16, Methods A
+  note: Doped waveguide stated as about 4.2 dB/mm, converted to dB/cm
+- device_id: yue2025-b
+  field: drive_vpp_v
+  value: 5
+  unit: V
+  basis: measured
+  locator: p.13, Sec. 2B; p.16 Methods B
+  note: Amplifier output Vpp of 5 V, maintained during experiments
+- device_id: yue2025-b
+  field: max_baud_gbd
+  value: 110
+  unit: GBd
+  basis: measured
+  locator: p.12, Fig. 5(f); p.14 Sec. 2B
+  note: Maximum baud rate 110 GBd without DSP
+- device_id: yue2025-b
+  field: max_line_rate_gbps
+  value: 110
+  unit: Gb/s
+  basis: derived
+  locator: p.14, Sec. 2B
+  note: OOK carries one bit per symbol
+- device_id: yue2025-b
+  field: modulation_format
+  value: OOK, no DSP, eye diagrams at 100, 110 GBd (dynamic ER 2.36, 2.14 dB); eyes
+    at 120 GBd and above not open (ER N/A)
+  unit: ''
+  basis: measured
+  locator: p.12, Fig. 5(f); p.13-14
+- device_id: yue2025-b
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: 220 nm top silicon; stated for the fabricated modulators generally
+- device_id: yue2025-b
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: Optical waveguide width; stated for the fabricated modulators generally
+- device_id: yue2025-b
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: Slab thickness; stated for the fabricated modulators generally
+- device_id: yue2025-b
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Buried oxide thickness; stated for the fabricated modulators generally
+- device_id: yue2025-b
+  field: electrode_gap_um
+  value: 9
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Traveling-wave electrode gap; stated for the fabricated modulators generally
+- device_id: yue2025-b
+  field: signal_width_um
+  value: 40
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Traveling-wave electrode width; stated for the fabricated modulators generally
+- device_id: yue2025-b
+  field: electrode_metal
+  value: Aluminum
+  unit: ''
+  basis: measured
+  locator: p.16, Methods A
+  note: Ohmic contact made with aluminum electrode; stated for the fabricated modulators
+    generally
+- device_id: yue2025-b
+  field: substrate
+  value: 220 nm silicon-on-insulator, 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.16, Methods A
+  note: Foundry service by Advanced Micro Foundry (Singapore); stated for the fabricated
+    modulators generally
+- device_id: yue2025-b
+  field: epitaxy_or_stack
+  value: Main modulation region only (all modulation regions 0.3 mm), NPN-type series
+    push-pull doping; same junction geometry as the m=1 device; single bias voltage
+  unit: ''
+  basis: measured
+  locator: p.12; p.16
+  note: Doping geometry from Methods; m=0 structure from Fig. 4(b) caption
+- device_id: yue2025-b
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2-3 Sec. 2A
+  note: Authors state series push-pull for the TFT device; m=0 main region has the
+    same NPN doping
+- device_id: yue2025-b
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.13, Fig. 5(b)
+  note: Curves start near 0 dB at DC; normalized, reference not stated
+- device_id: yue2025-c
+  field: length_mm
+  value: 0.9
+  unit: mm
+  basis: measured
+  locator: p.14, Table 2; p.12 Sec. 2B
+  note: Total of three 0.3 mm modulation regions
+- device_id: yue2025-c
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: 220 nm top silicon
+- device_id: yue2025-c
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: Optical waveguide width
+- device_id: yue2025-c
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: Slab thickness
+- device_id: yue2025-c
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Buried oxide thickness
+- device_id: yue2025-c
+  field: electrode_gap_um
+  value: 9
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Traveling-wave electrode gap
+- device_id: yue2025-c
+  field: signal_width_um
+  value: 40
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Traveling-wave electrode width
+- device_id: yue2025-c
+  field: electrode_metal
+  value: Aluminum
+  unit: ''
+  basis: measured
+  locator: p.16, Methods A
+  note: Ohmic contact made with aluminum electrode
+- device_id: yue2025-c
+  field: substrate
+  value: 220 nm silicon-on-insulator, 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.16, Methods A
+  note: Foundry service by Advanced Micro Foundry (Singapore)
+- device_id: yue2025-c
+  field: epitaxy_or_stack
+  value: Series push-pull NPN main and forward regions, PNP reverse region (inverse
+    doping); junction interface offset 50 nm from waveguide center toward N; heavily
+    doped contacts 750 nm from waveguide center; main, forward and reverse regions
+    0.3 mm each, about 77 um extra electrode length in mismatch region; 50 ohm on-chip
+    terminator; two bias voltages V1 and V2
+  unit: ''
+  basis: measured
+  locator: p.3; p.12; p.16
+  note: Doping arrangement from principle section, geometry from Methods and Fig.
+    4
+- device_id: yue2025-c
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2A
+  note: Operates in series push-pull configuration with two series-connected PN junctions
+- device_id: yue2025-c
+  field: bw3db_ghz
+  value: 81.9
+  unit: GHz
+  basis: measured
+  locator: p.13, Sec. 2B; Fig. 5(b)
+  note: Stated 3 dB bandwidth at 0 V reverse bias on all regions; crossing observed
+- device_id: yue2025-c
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.13, Fig. 5(b)-(c)
+  note: Curves start near 0 dB at DC; normalized, reference not stated
+- device_id: yue2025-d
+  field: length_mm
+  value: 0.3
+  unit: mm
+  basis: measured
+  locator: p.11, Fig. 4(b) caption; p.12, Sec. 2B
+  note: Length of all modulation regions of the m=0 device
+- device_id: yue2025-d
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: 220 nm top silicon; stated for the fabricated modulators generally
+- device_id: yue2025-d
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: Optical waveguide width; stated for the fabricated modulators generally
+- device_id: yue2025-d
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: measured
+  locator: p.16, Methods A
+  note: Slab thickness; stated for the fabricated modulators generally
+- device_id: yue2025-d
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Buried oxide thickness; stated for the fabricated modulators generally
+- device_id: yue2025-d
+  field: electrode_gap_um
+  value: 9
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Traveling-wave electrode gap; stated for the fabricated modulators generally
+- device_id: yue2025-d
+  field: signal_width_um
+  value: 40
+  unit: um
+  basis: measured
+  locator: p.16, Methods A
+  note: Traveling-wave electrode width; stated for the fabricated modulators generally
+- device_id: yue2025-d
+  field: electrode_metal
+  value: Aluminum
+  unit: ''
+  basis: measured
+  locator: p.16, Methods A
+  note: Ohmic contact made with aluminum electrode; stated for the fabricated modulators
+    generally
+- device_id: yue2025-d
+  field: substrate
+  value: 220 nm silicon-on-insulator, 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.16, Methods A
+  note: Foundry service by Advanced Micro Foundry (Singapore); stated for the fabricated
+    modulators generally
+- device_id: yue2025-d
+  field: epitaxy_or_stack
+  value: Main modulation region only (all modulation regions 0.3 mm), NPN-type series
+    push-pull doping; same junction geometry as the m=1 device; single bias voltage
+  unit: ''
+  basis: measured
+  locator: p.12; p.16
+  note: Doping geometry from Methods; m=0 structure from Fig. 4(b) caption
+- device_id: yue2025-d
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2-3 Sec. 2A
+  note: Authors state series push-pull for the TFT device; m=0 main region has the
+    same NPN doping
+- device_id: yue2025-d
+  field: bw3db_ghz
+  value: 43.1
+  unit: GHz
+  basis: measured
+  locator: p.13, Sec. 2B; Fig. 5(b)
+  note: Stated 3 dB bandwidth at 0 V reverse bias on all regions; crossing observed
+- device_id: yue2025-d
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.13, Fig. 5(b)-(c)
+  note: Curves start near 0 dB at DC; normalized, reference not stated
+derived:
+- device_id: yue2025-a
+  field: prop_loss_db_per_cm
+  value: 42
+  formula: 4.2 dB/mm x 10 mm/cm
+  inputs: []
+- device_id: yue2025-a
+  field: max_line_rate_gbps
+  value: 140
+  formula: 140 GBd x 1 bit/symbol (OOK)
+  inputs:
+  - max_baud_gbd
+- device_id: yue2025-b
+  field: prop_loss_db_per_cm
+  value: 42
+  formula: 4.2 dB/mm x 10 mm/cm
+  inputs: []
+- device_id: yue2025-b
+  field: max_line_rate_gbps
+  value: 110
+  formula: 110 GBd x 1 bit/symbol (OOK)
+  inputs:
+  - max_baud_gbd

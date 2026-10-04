@@ -1,0 +1,469 @@
+paper_id: sayem2026c
+verified_on: '2026-10-04'
+source_files:
+- references/sayem2026c/text.md
+- references/sayem2026c/figures/page_02.png
+- references/sayem2026c/figures/page_03.png
+- references/sayem2026c/figures/page_04.png
+- references/sayem2026c/figures/img_p02_1.png
+entries:
+- device_id: sayem2026c-a
+  field: wavelength_nm
+  value: 1071
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. Device geometry; Fig. 1(f)
+- device_id: sayem2026c-a
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: L_MZI
+- device_id: sayem2026c-a
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.1 Sec. Intro; p.2 Fig. 1(b) caption
+  note: tf; 4-inch TFLT wafer
+- device_id: sayem2026c-a
+  field: slab_thickness_nm
+  value: 240
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: td labelled on the slab in the schematic; approximate
+- device_id: sayem2026c-a
+  field: rib_width_nm
+  value: 1600
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: w_MZI; arrow spans the rib top in the schematic
+- device_id: sayem2026c-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.3 Sec. Modulator performance
+  note: G = 5 um for the VpiL-versus-wavelength device
+- device_id: sayem2026c-a
+  field: signal_width_um
+  value: 17
+  unit: um
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: w_s
+- device_id: sayem2026c-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: t_m
+- device_id: sayem2026c-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2 Sec. Device geometry
+  note: insulating oxide under the TFLT
+- device_id: sayem2026c-a
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-a
+  field: cladding
+  value: SiO2 (thickness not stated)
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-a
+  field: vpi_dc_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.2 Fig. 1(f)
+  note: 100 Hz triangular voltage at 1071 nm
+- device_id: sayem2026c-a
+  field: vpil_dc_vcm
+  value: 1.62
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.3 Fig. 2(c)
+  note: read from the 1071 nm marker; approximate
+- device_id: sayem2026c-a
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.1 Sec. Intro; p.3-4 Fig. 3(d)
+  note: 'paper: more than 50 GHz EO bandwidth, less than 2 dB roll-off to 50 GHz'
+- device_id: sayem2026c-a
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.4 Fig. 3(d)
+  note: OSA sideband method; measured to 50 GHz
+- device_id: sayem2026c-a
+  field: eo_rolloff_db
+  value: 2
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.3 Sec. Modulator performance
+  note: less than 2 dB roll-off up to 50 GHz
+- device_id: sayem2026c-a
+  field: eo_rolloff_freq_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. Modulator performance
+- device_id: sayem2026c-a
+  field: extinction_ratio_db
+  value: 30
+  unit: dB
+  basis: measured
+  locator: p.2 Sec. Device geometry; Fig. 1(e)
+  note: close to 30 dB, limited by photodetector dynamic range
+- device_id: sayem2026c-a
+  field: n_rf
+  value: 2.26
+  unit: '1'
+  basis: extracted_from_figure
+  locator: p.4 Fig. 3(b)
+  note: RF phase index plateau at 50-65 GHz; unterminated device of identical geometry
+- device_id: sayem2026c-a
+  field: ng_opt
+  value: 2.25
+  unit: '1'
+  basis: simulated
+  locator: p.4 Fig. 3(c)
+  note: simulated group index near 1.07 um for 1.6 um wide waveguide; approximate
+- device_id: sayem2026c-b
+  field: wavelength_nm
+  value: 984
+  unit: nm
+  basis: measured
+  locator: p.3 Fig. 2(b),(c)
+- device_id: sayem2026c-b
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: L_MZI
+- device_id: sayem2026c-b
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.1 Sec. Intro; p.2 Fig. 1(b) caption
+  note: tf; 4-inch TFLT wafer
+- device_id: sayem2026c-b
+  field: slab_thickness_nm
+  value: 240
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: td labelled on the slab in the schematic; approximate
+- device_id: sayem2026c-b
+  field: rib_width_nm
+  value: 1600
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: w_MZI; arrow spans the rib top in the schematic
+- device_id: sayem2026c-b
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.3 Sec. Modulator performance
+  note: G = 5 um for the VpiL-versus-wavelength device
+- device_id: sayem2026c-b
+  field: signal_width_um
+  value: 17
+  unit: um
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: w_s
+- device_id: sayem2026c-b
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: t_m
+- device_id: sayem2026c-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-b
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2 Sec. Device geometry
+  note: insulating oxide under the TFLT
+- device_id: sayem2026c-b
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-b
+  field: cladding
+  value: SiO2 (thickness not stated)
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-b
+  field: vpil_dc_vcm
+  value: 1.45
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.3 Fig. 2(c)
+  note: read from the 984 nm marker; approximate
+- device_id: sayem2026c-c
+  field: wavelength_nm
+  value: 1311
+  unit: nm
+  basis: measured
+  locator: p.3 Fig. 2(b),(c)
+- device_id: sayem2026c-c
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: L_MZI
+- device_id: sayem2026c-c
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.1 Sec. Intro; p.2 Fig. 1(b) caption
+  note: tf; 4-inch TFLT wafer
+- device_id: sayem2026c-c
+  field: slab_thickness_nm
+  value: 240
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: td labelled on the slab in the schematic; approximate
+- device_id: sayem2026c-c
+  field: rib_width_nm
+  value: 1600
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: w_MZI; arrow spans the rib top in the schematic
+- device_id: sayem2026c-c
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.3 Sec. Modulator performance
+  note: G = 5 um for the VpiL-versus-wavelength device
+- device_id: sayem2026c-c
+  field: signal_width_um
+  value: 17
+  unit: um
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: w_s
+- device_id: sayem2026c-c
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: t_m
+- device_id: sayem2026c-c
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-c
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2 Sec. Device geometry
+  note: insulating oxide under the TFLT
+- device_id: sayem2026c-c
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-c
+  field: cladding
+  value: SiO2 (thickness not stated)
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-c
+  field: vpil_dc_vcm
+  value: 2.07
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.3 Fig. 2(c)
+  note: read from the 1311 nm marker; approximate
+- device_id: sayem2026c-d
+  field: wavelength_nm
+  value: 1551
+  unit: nm
+  basis: measured
+  locator: p.3 Fig. 2(b),(c)
+- device_id: sayem2026c-d
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: L_MZI
+- device_id: sayem2026c-d
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: measured
+  locator: p.1 Sec. Intro; p.2 Fig. 1(b) caption
+  note: tf; 4-inch TFLT wafer
+- device_id: sayem2026c-d
+  field: slab_thickness_nm
+  value: 240
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: td labelled on the slab in the schematic; approximate
+- device_id: sayem2026c-d
+  field: rib_width_nm
+  value: 1600
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: w_MZI; arrow spans the rib top in the schematic
+- device_id: sayem2026c-d
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.3 Sec. Modulator performance
+  note: G = 5 um for the VpiL-versus-wavelength device
+- device_id: sayem2026c-d
+  field: signal_width_um
+  value: 17
+  unit: um
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: w_s
+- device_id: sayem2026c-d
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2 Fig. 1(b) caption
+  note: t_m
+- device_id: sayem2026c-d
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-d
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2 Sec. Device geometry
+  note: insulating oxide under the TFLT
+- device_id: sayem2026c-d
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-d
+  field: cladding
+  value: SiO2 (thickness not stated)
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(b) legend
+- device_id: sayem2026c-d
+  field: vpil_dc_vcm
+  value: 2.57
+  unit: V*cm
+  basis: extracted_from_figure
+  locator: p.3 Fig. 2(c)
+  note: read from the 1551 nm marker; approximate
+- device_id: sayem2026c-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a),(b)
+  note: authors do not state it; GSG with one rib in each gap; crystal cut not stated
+- device_id: sayem2026c-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a),(b)
+  note: authors do not state it; follows the inferred push-pull drive
+- device_id: sayem2026c-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a),(b)
+  note: authors do not state it; GSG with one rib in each gap; crystal cut not stated
+- device_id: sayem2026c-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a),(b)
+  note: authors do not state it; follows the inferred push-pull drive
+- device_id: sayem2026c-c
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a),(b)
+  note: authors do not state it; GSG with one rib in each gap; crystal cut not stated
+- device_id: sayem2026c-c
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a),(b)
+  note: authors do not state it; follows the inferred push-pull drive
+- device_id: sayem2026c-d
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a),(b)
+  note: authors do not state it; GSG with one rib in each gap; crystal cut not stated
+- device_id: sayem2026c-d
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a),(b)
+  note: authors do not state it; follows the inferred push-pull drive
+derived: []

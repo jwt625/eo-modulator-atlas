@@ -1,0 +1,402 @@
+paper_id: arabjuneghani2022
+verified_on: '2026-10-04'
+source_files:
+- references/arabjuneghani2022/text.md
+- references/arabjuneghani2022/crossref.json
+- references/arabjuneghani2022/figures/page_02.png
+- references/arabjuneghani2022/figures/page_03.png
+- references/arabjuneghani2022/figures/page_04.png
+- references/arabjuneghani2022/figures/page_05.png
+entries:
+- device_id: arabjuneghani2022-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.4 Sec. 3.3
+  note: stated for the EO response; wavelength of the Vpi sweep not stated
+- device_id: arabjuneghani2022-a
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: measured
+  locator: p.2 Table 1; p.3 Fig. 3
+  note: Table 1 length 5000 um
+- device_id: arabjuneghani2022-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.2 Table 1
+  note: parameter G
+- device_id: arabjuneghani2022-a
+  field: signal_width_um
+  value: 12
+  unit: um
+  basis: measured
+  locator: p.2 Table 1
+  note: parameter Wc
+- device_id: arabjuneghani2022-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2 Table 1
+  note: parameter Tg
+- device_id: arabjuneghani2022-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(a)
+  note: legend entry Gold
+- device_id: arabjuneghani2022-a
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2
+  note: x-cut LN device layer
+- device_id: arabjuneghani2022-a
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2
+  note: rib etched 200 nm
+- device_id: arabjuneghani2022-a
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2
+- device_id: arabjuneghani2022-a
+  field: substrate
+  value: silicon (thickness not stated)
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(a)
+  note: legend entry Silicon
+- device_id: arabjuneghani2022-a
+  field: cladding
+  value: SiO2 (Tc = 0.8 um)
+  unit: ''
+  basis: measured
+  locator: p.2 Table 1, Fig. 1(a)
+  note: Tc as drawn above LN between electrodes
+- device_id: arabjuneghani2022-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+- device_id: arabjuneghani2022-a
+  field: epitaxy_or_stack
+  value: Si substrate / SiO2 BOX (thickness not stated) / 500 nm x-cut LN with 200 nm rib etch, 800 nm wide / 0.2 um SiO2 buffer under electrodes (Tb) / SiO2 cladding Tc = 0.8 um / 1 um Au (Tg)
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2, Table 1, Fig. 1(a)
+  note: BOX thickness not stated
+- device_id: arabjuneghani2022-a
+  field: vpi_dc_v
+  value: 4.4
+  unit: V
+  basis: measured
+  locator: p.3 Sec. 3.1, Fig. 3(a)
+  note: 100 kHz triangular voltage sweep
+- device_id: arabjuneghani2022-a
+  field: vpil_dc_vcm
+  value: 2.2
+  unit: V*cm
+  basis: derived
+  locator: p.3 Sec. 3.1
+  note: author-stated, Vpi times 0.5 cm length
+- device_id: arabjuneghani2022-a
+  field: bw3db_ghz
+  value: 84
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. 3.3, Fig. 5(a)
+  note: 3.6 dB roll-off at 100 GHz
+- device_id: arabjuneghani2022-a
+  field: bw_measured_to_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. 3.3, Fig. 5(a)
+  note: VNA to 67 GHz, OSA sidebands 60-100 GHz
+- device_id: arabjuneghani2022-a
+  field: eo_rolloff_db
+  value: 3.6
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. 3.3, Fig. 5(a)
+  note: from low frequencies to 100 GHz
+- device_id: arabjuneghani2022-a
+  field: eo_rolloff_freq_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. 3.3
+- device_id: arabjuneghani2022-a
+  field: il_fiber_to_fiber_db
+  value: 16
+  unit: dB
+  basis: measured
+  locator: p.3 Sec. 3.1
+  note: '''total insertion loss about 16 dB'', mainly facet loss'
+- device_id: arabjuneghani2022-a
+  field: extinction_ratio_db
+  value: 23
+  unit: dB
+  basis: measured
+  locator: p.3 Sec. 3.1, Fig. 3(a)
+  note: from the static transmission sweep
+- device_id: arabjuneghani2022-a
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: measured
+  locator: p.5 Sec. 3.4, Fig. 8(b),(d)
+  note: 100 Gbaud OOK and PAM-4
+- device_id: arabjuneghani2022-a
+  field: modulation_format
+  value: OOK 100 Gbaud; PAM-4 53.125 and 100 Gbaud; PAM-8 80 Gbaud
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. 3.4, Fig. 8
+- device_id: arabjuneghani2022-a
+  field: max_line_rate_gbps
+  value: 240
+  unit: Gb/s
+  basis: measured
+  locator: p.5 Sec. 3.4, Fig. 8(e)
+  note: PAM-8 at 80 Gbaud, BER 1.1e-2
+- device_id: arabjuneghani2022-a
+  field: energy_per_bit_fj
+  value: 124
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.5 Sec. 3.4
+  note: Vrms 1.23 V at 240 Gb/s; 81 fJ/bit at 106.25 Gb/s PAM-4
+- device_id: arabjuneghani2022-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+  note: '''MZMs in a push-pull configuration'''
+- device_id: arabjuneghani2022-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2; p.3 Sec. 3.1
+  note: authors state push-pull MZMs; Vpi from the MZM transmission sweep
+- device_id: arabjuneghani2022-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.4 Sec. 3.3
+  note: stated for the EO response; wavelength of the Vpi sweep not stated
+- device_id: arabjuneghani2022-b
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: measured
+  locator: p.2 Table 1; p.3 Fig. 3
+  note: Table 1 length 5000 um
+- device_id: arabjuneghani2022-b
+  field: electrode_gap_um
+  value: 10
+  unit: um
+  basis: measured
+  locator: p.2 Table 1
+  note: parameter G
+- device_id: arabjuneghani2022-b
+  field: signal_width_um
+  value: 22
+  unit: um
+  basis: measured
+  locator: p.2 Table 1
+  note: parameter Wc
+- device_id: arabjuneghani2022-b
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2 Table 1
+  note: parameter Tg
+- device_id: arabjuneghani2022-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(a)
+  note: legend entry Gold
+- device_id: arabjuneghani2022-b
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2
+  note: x-cut LN device layer
+- device_id: arabjuneghani2022-b
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2
+  note: rib etched 200 nm
+- device_id: arabjuneghani2022-b
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2
+- device_id: arabjuneghani2022-b
+  field: substrate
+  value: silicon (thickness not stated)
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(a)
+  note: legend entry Silicon
+- device_id: arabjuneghani2022-b
+  field: cladding
+  value: SiO2 (Tc = 0.8 um)
+  unit: ''
+  basis: measured
+  locator: p.2 Table 1, Fig. 1(a)
+  note: Tc as drawn above LN between electrodes
+- device_id: arabjuneghani2022-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+- device_id: arabjuneghani2022-b
+  field: epitaxy_or_stack
+  value: Si substrate / SiO2 BOX (thickness not stated) / 500 nm x-cut LN with 200 nm rib etch, 800 nm wide / 0.2 um SiO2 buffer under electrodes (Tb) / SiO2 cladding Tc = 0.8 um / 1 um Au (Tg)
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2, Table 1, Fig. 1(a)
+  note: BOX thickness not stated
+- device_id: arabjuneghani2022-b
+  field: vpi_dc_v
+  value: 6.6
+  unit: V
+  basis: measured
+  locator: p.3 Sec. 3.1, Fig. 3(b)
+  note: 100 kHz triangular voltage sweep
+- device_id: arabjuneghani2022-b
+  field: vpil_dc_vcm
+  value: 3.3
+  unit: V*cm
+  basis: derived
+  locator: p.3 Sec. 3.1
+  note: author-stated, Vpi times 0.5 cm length
+- device_id: arabjuneghani2022-b
+  field: vpil_rf_vcm
+  value: 4.1
+  unit: V*cm
+  basis: derived
+  locator: p.4 Sec. 3.3, Fig. 6
+  note: 'text: below 4.1 V cm up to 100 GHz; from EO response and DC Vpi'
+- device_id: arabjuneghani2022-b
+  field: vpi_rf_freq_ghz
+  value: 100
+  unit: GHz
+  basis: derived
+  locator: p.4 Sec. 3.3, Fig. 6
+  note: upper end of the stated bound
+- device_id: arabjuneghani2022-b
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. 3.3, Fig. 5(b)
+  note: measured 3 dB 'well beyond 100 GHz' (2 dB roll-off at 100 GHz); authors' model extrapolation 170 GHz not entered
+- device_id: arabjuneghani2022-b
+  field: bw_measured_to_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. 3.3, Fig. 5(b)
+  note: VNA to 67 GHz, OSA sidebands 60-100 GHz
+- device_id: arabjuneghani2022-b
+  field: eo_rolloff_db
+  value: 2
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. 3.3, Fig. 5(b)
+  note: from low frequencies to 100 GHz
+- device_id: arabjuneghani2022-b
+  field: eo_rolloff_freq_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. 3.3
+- device_id: arabjuneghani2022-b
+  field: il_fiber_to_fiber_db
+  value: 16
+  unit: dB
+  basis: measured
+  locator: p.3 Sec. 3.1
+  note: '''total insertion loss about 16 dB'', mainly facet loss'
+- device_id: arabjuneghani2022-b
+  field: prop_loss_db_per_cm
+  value: 0.02
+  unit: dB/cm
+  basis: simulated
+  locator: p.3 Sec. 3.1, Fig. 3(c)
+  note: stated as below 0.02 dB/cm for D = 2.6 um; Ansys Lumerical
+- device_id: arabjuneghani2022-b
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.3 Sec. 3.1, Fig. 3(b)
+  note: from the static transmission sweep
+- device_id: arabjuneghani2022-b
+  field: rf_loss_db_per_cm
+  value: 3.6
+  unit: dB/cm
+  basis: derived
+  locator: p.4 Sec. 3.2, Fig. 4
+  note: extracted from measured S-parameters; equals 0.44 dB/cm/GHz^0.5
+- device_id: arabjuneghani2022-b
+  field: rf_loss_freq_ghz
+  value: 67
+  unit: GHz
+  basis: derived
+  locator: p.4 Sec. 3.2
+- device_id: arabjuneghani2022-b
+  field: n_rf
+  value: 2.2
+  unit: '1'
+  basis: derived
+  locator: p.3 Sec. 3.2, Fig. 4
+  note: extracted from measured S-parameters
+- device_id: arabjuneghani2022-b
+  field: ng_opt
+  value: 2.23
+  unit: '1'
+  basis: simulated
+  locator: p.2 Fig. 1(a) inset; p.3 Sec. 3.2
+  note: compact optical mode group index
+- device_id: arabjuneghani2022-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+  note: '''MZMs in a push-pull configuration'''
+- device_id: arabjuneghani2022-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2; p.3 Sec. 3.1
+  note: authors state push-pull MZMs; Vpi from the MZM transmission sweep
+derived: []

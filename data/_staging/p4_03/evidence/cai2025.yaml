@@ -1,0 +1,294 @@
+paper_id: cai2025
+verified_on: '2026-10-04'
+source_files:
+- references/cai2025/text.md
+- references/cai2025/figures/page_04.png
+- references/cai2025/figures/page_16.png
+- references/cai2025/crossref.json
+entries:
+- device_id: cai2025-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3 Sec. II
+  note: 1550 nm CW light for the quasi-DC Vpi measurement
+- device_id: cai2025-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. II
+  note: x-cut LiTaO3, bonded, unetched except tapers
+- device_id: cai2025-a
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. II
+  note: Si3N4 strip width (strip height 0.5 um)
+- device_id: cai2025-a
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: measured
+  locator: p.3 Sec. II; Fig. 2(c) inset
+  note: signal-ground gap
+- device_id: cai2025-a
+  field: signal_width_um
+  value: 23
+  unit: um
+  basis: measured
+  locator: p.3 Sec. II; Fig. 2(c) inset
+- device_id: cai2025-a
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: measured
+  locator: p.2 Sec. II; Fig. S5(a) inset
+  note: 800 nm Au on 10 nm Ti
+- device_id: cai2025-a
+  field: electrode_metal
+  value: gold on 10 nm titanium
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II
+- device_id: cai2025-a
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.2 Sec. II
+  note: thermal oxide on the 100 mm Si wafer before Damascene preform
+- device_id: cai2025-a
+  field: substrate
+  value: silicon (525 um)
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II; p.13 S1
+- device_id: cai2025-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II
+- device_id: cai2025-a
+  field: epitaxy_or_stack
+  value: Si3N4 strip 1.0 um x 0.5 um (Damascene) under 300 nm unetched x-cut LiTaO3 on 4 um SiO2 on Si
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II; p.13 S2
+  note: interlayer oxide thickness not stated
+- device_id: cai2025-a
+  field: length_mm
+  value: 6.8
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. II; Fig. 2(a)
+  note: MZM pair in push-pull
+- device_id: cai2025-a
+  field: vpi_dc_v
+  value: 6
+  unit: V
+  basis: measured
+  locator: p.3 Sec. II; Fig. 2(c)
+  note: 100 Hz triangle wave via RF probe; push-pull
+- device_id: cai2025-a
+  field: vpil_dc_vcm
+  value: 4.08
+  unit: V*cm
+  basis: derived
+  locator: p.1 Sec. I; p.3 Sec. II
+  note: 'authors: 6 V corresponds to 4.08 V cm for 6.8 mm'
+- device_id: cai2025-a
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.4 Fig. 2(d)
+  note: 'figure label: 3 dB EO bandwidth about 100 GHz'
+- device_id: cai2025-a
+  field: bw3db_reference_freq_ghz
+  value: 0.025
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. II
+  note: S21 flat within 3 dB from 25 MHz to 110 GHz
+- device_id: cai2025-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. II; Fig. 2(d)
+  note: VNA sweep to 110 GHz; trace nears the -3 dB line there
+- device_id: cai2025-a
+  field: rf_loss_db_per_cm
+  value: 6.3
+  unit: dB/cm
+  basis: extracted_from_figure
+  locator: p.16 Fig. S5(a)
+  note: end of measured trace near 64 GHz; long Au electrode of this geometry; approximate
+- device_id: cai2025-a
+  field: rf_loss_freq_ghz
+  value: 64
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.16 Fig. S5(a)
+  note: axis ends at 8 GHz^1/2; VNA rated to 67 GHz
+- device_id: cai2025-a
+  field: n_rf
+  value: 2.19
+  unit: '1'
+  basis: simulated
+  locator: p.15 Fig. S3
+  note: simulated microwave effective index (HFSS) label
+- device_id: cai2025-a
+  field: ng_opt
+  value: 2.185
+  unit: '1'
+  basis: simulated
+  locator: p.15 Fig. S3
+  note: simulated optical group index (Lumerical) label
+- device_id: cai2025-a
+  field: max_baud_gbd
+  value: 200
+  unit: GBd
+  basis: measured
+  locator: p.5-6 Fig. 3(b)
+  note: PAM4, 144-200 GBd; BER at 200 GBd within 25 percent SD-FEC
+- device_id: cai2025-a
+  field: modulation_format
+  value: PAM4 IMDD, 144-200 GBd
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. II
+- device_id: cai2025-a
+  field: max_line_rate_gbps
+  value: 400
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Sec. II
+  note: 200 GBd PAM4
+- device_id: cai2025-a
+  field: max_net_rate_gbps
+  value: 333
+  unit: Gb/s
+  basis: derived
+  locator: p.1 abstract; p.6 Sec. II
+  note: net rate = line rate x FEC code rate; 192 GBd, 15 percent SD-FEC
+- device_id: cai2025-b
+  field: length_mm
+  value: 13.5
+  unit: mm
+  basis: measured
+  locator: p.6 Sec. II; Fig. 4(a)
+  note: each of the two MZMs
+- device_id: cai2025-b
+  field: max_baud_gbd
+  value: 204
+  unit: GBd
+  basis: measured
+  locator: p.6 Sec. II; Fig. 4(c)
+  note: QPSK; BER 7e-3 below 25 percent SD-FEC threshold; 16QAM up to 176 GBd
+- device_id: cai2025-b
+  field: modulation_format
+  value: QPSK and 16QAM, 144-204 GBd
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. II
+- device_id: cai2025-b
+  field: max_line_rate_gbps
+  value: 704
+  unit: Gb/s
+  basis: measured
+  locator: p.6 Sec. II
+  note: 176 GBd 16QAM, BER 3.08e-2
+- device_id: cai2025-b
+  field: max_net_rate_gbps
+  value: 581
+  unit: Gb/s
+  basis: derived
+  locator: p.1 abstract; p.6 Sec. II
+  note: net rate = line rate x FEC code rate; 16QAM
+- device_id: cai2025-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. II
+  note: x-cut LiTaO3, bonded, unetched except tapers
+- device_id: cai2025-b
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. II
+  note: Si3N4 strip width (strip height 0.5 um)
+- device_id: cai2025-b
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: derived
+  locator: p.3 Sec. II; Fig. 2(c) inset
+  note: stated for the 6.8 mm MZM; IQ device described as MZMs such as Fig. 2(a)
+- device_id: cai2025-b
+  field: signal_width_um
+  value: 23
+  unit: um
+  basis: derived
+  locator: p.3 Sec. II; Fig. 2(c) inset
+  note: stated for the 6.8 mm MZM; IQ device described as MZMs such as Fig. 2(a)
+- device_id: cai2025-b
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: derived
+  locator: p.2 Sec. II; Fig. S5(a) inset
+  note: stated for the 6.8 mm MZM; IQ device described as MZMs such as Fig. 2(a)
+- device_id: cai2025-b
+  field: electrode_metal
+  value: gold on 10 nm titanium
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II
+- device_id: cai2025-b
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.2 Sec. II
+  note: thermal oxide on the 100 mm Si wafer before Damascene preform
+- device_id: cai2025-b
+  field: substrate
+  value: silicon (525 um)
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II; p.13 S1
+- device_id: cai2025-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II
+- device_id: cai2025-b
+  field: epitaxy_or_stack
+  value: Si3N4 strip 1.0 um x 0.5 um (Damascene) under 300 nm unetched x-cut LiTaO3 on 4 um SiO2 on Si
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II; p.13 S2
+  note: interlayer oxide thickness not stated
+- device_id: cai2025-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. II; p.3 Sec. II
+  note: authors state push-pull configuration
+- device_id: cai2025-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.3 Sec. II
+  note: 6 V stated for a 6.8 mm long push-pull configuration
+derived: []

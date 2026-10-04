@@ -1,0 +1,288 @@
+paper_id: valdez2023a
+verified_on: '2026-10-04'
+source_files:
+- references/valdez2023a/text.md
+- references/valdez2023a/crossref.json
+- references/valdez2023a/figures/page_02.png
+- references/valdez2023a/figures/page_03.png
+- references/valdez2023a/figures/page_05.png
+- references/valdez2023a/figures/page_06.png
+entries:
+- device_id: valdez2023a-a
+  field: wavelength_nm
+  value: 784
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. III
+  note: DFB laser, fixed wavelength
+- device_id: valdez2023a-a
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: measured
+  locator: p.4 Sec. III
+  note: phase-shifter length
+- device_id: valdez2023a-a
+  field: vpi_dc_v
+  value: 2.0
+  unit: V
+  basis: measured
+  locator: p.4 Sec. III; p.5 Fig. 3(c)
+  note: 100 kHz trapezoidal drive; squared-cosine fit to measured transmission
+- device_id: valdez2023a-a
+  field: vpil_dc_vcm
+  value: 0.8
+  unit: V*cm
+  basis: derived
+  locator: p.4 Sec. III; p.5 Sec. IV.A
+  note: author-stated, product of measured Vpi and length
+- device_id: valdez2023a-a
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. III; p.6 Fig. 4
+  note: 'paper: 3 dB roll-off only beyond 100 GHz'
+- device_id: valdez2023a-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. III; p.6 Fig. 4
+  note: EOR measured 1 to 110 GHz
+- device_id: valdez2023a-a
+  field: optical_input_power_dbm
+  value: 0
+  unit: dBm
+  basis: measured
+  locator: p.4 Sec. III
+  note: on-chip optical power about 0 dBm
+- device_id: valdez2023a-a
+  field: eo_film_thickness_nm
+  value: 200
+  unit: nm
+  basis: measured
+  locator: p.3 Sec. II; Fig. 2(b)
+  note: commercial LNOI, unetched
+- device_id: valdez2023a-a
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.2 Sec. I
+  note: parameter G of the slow-wave electrode
+- device_id: valdez2023a-a
+  field: electrode_thickness_um
+  value: 0.75
+  unit: um
+  basis: measured
+  locator: p.3 Sec. II
+  note: Au; 20 nm Ti below
+- device_id: valdez2023a-a
+  field: electrode_metal
+  value: gold (20 nm Ti adhesion)
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. II
+- device_id: valdez2023a-a
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.3 Fig. 2(b)
+  note: SiO2 of the SiN chip; process schematic label
+- device_id: valdez2023a-a
+  field: substrate
+  value: high-resistivity Si (thickness not stated)
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 2(b)
+- device_id: valdez2023a-a
+  field: cladding
+  value: air above LN; Au electrodes directly on LN
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(e); p.3 Fig. 2(f)
+- device_id: valdez2023a-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. II
+- device_id: valdez2023a-a
+  field: epitaxy_or_stack
+  value: HR Si / 4000 nm SiO2 / 180 nm SiN (0.9 um wide in the phase shifter) / about 40 nm CMP SiO2 / 200 nm 5 mol% MgO-doped x-cut LN (unetched) / 750 nm Au on 20 nm Ti directly on LN
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. II, Fig. 2
+- device_id: valdez2023a-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. IV.A
+  note: '''driven in a push-pull configuration'''
+- device_id: valdez2023a-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. IV.A
+  note: push-pull stated for the VpiL equation; Vpi from the MZM sweep
+- device_id: valdez2023a-b
+  field: wavelength_nm
+  value: 784
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. III
+  note: DFB laser, fixed wavelength
+- device_id: valdez2023a-b
+  field: length_mm
+  value: 8
+  unit: mm
+  basis: measured
+  locator: p.4 Sec. III
+  note: phase-shifter length
+- device_id: valdez2023a-b
+  field: vpi_dc_v
+  value: 1.0
+  unit: V
+  basis: measured
+  locator: p.4 Sec. III; p.5 Fig. 3(d)
+  note: 100 kHz trapezoidal drive; squared-cosine fit to measured transmission
+- device_id: valdez2023a-b
+  field: vpil_dc_vcm
+  value: 0.8
+  unit: V*cm
+  basis: derived
+  locator: p.4 Sec. III; p.5 Sec. IV.A
+  note: author-stated, product of measured Vpi and length
+- device_id: valdez2023a-b
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. III; p.6 Fig. 4
+  note: 'authors take the edge roll-off above 100 GHz as f3dB; points scatter about -3 dB from about 80 GHz (approx. reading)'
+- device_id: valdez2023a-b
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. III; p.6 Fig. 4
+  note: EOR measured 1 to 110 GHz
+- device_id: valdez2023a-b
+  field: optical_input_power_dbm
+  value: 0
+  unit: dBm
+  basis: measured
+  locator: p.4 Sec. III
+  note: on-chip optical power about 0 dBm
+- device_id: valdez2023a-b
+  field: eo_film_thickness_nm
+  value: 200
+  unit: nm
+  basis: measured
+  locator: p.3 Sec. II; Fig. 2(b)
+  note: commercial LNOI, unetched
+- device_id: valdez2023a-b
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.2 Sec. I
+  note: parameter G of the slow-wave electrode
+- device_id: valdez2023a-b
+  field: electrode_thickness_um
+  value: 0.75
+  unit: um
+  basis: measured
+  locator: p.3 Sec. II
+  note: Au; 20 nm Ti below
+- device_id: valdez2023a-b
+  field: electrode_metal
+  value: gold (20 nm Ti adhesion)
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. II
+- device_id: valdez2023a-b
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.3 Fig. 2(b)
+  note: SiO2 of the SiN chip; process schematic label
+- device_id: valdez2023a-b
+  field: substrate
+  value: high-resistivity Si (thickness not stated)
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 2(b)
+- device_id: valdez2023a-b
+  field: cladding
+  value: air above LN; Au electrodes directly on LN
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(e); p.3 Fig. 2(f)
+- device_id: valdez2023a-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. II
+- device_id: valdez2023a-b
+  field: epitaxy_or_stack
+  value: HR Si / 4000 nm SiO2 / 180 nm SiN (0.9 um wide in the phase shifter) / about 40 nm CMP SiO2 / 200 nm 5 mol% MgO-doped x-cut LN (unetched) / 750 nm Au on 20 nm Ti directly on LN
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. II, Fig. 2
+- device_id: valdez2023a-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. IV.A
+  note: '''driven in a push-pull configuration'''
+- device_id: valdez2023a-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. IV.A
+  note: push-pull stated for the VpiL equation; Vpi from the MZM sweep
+- device_id: valdez2023a-b
+  field: il_onchip_db
+  value: 12
+  unit: dB
+  basis: author_estimate
+  locator: p.4 Sec. III
+  note: subtractive estimate from 20 dB fiber-to-fiber, 3.4 dB/facet, 4.2 mm feeders
+- device_id: valdez2023a-b
+  field: il_fiber_to_fiber_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. III
+  note: mainly un-optimized edge coupling
+- device_id: valdez2023a-b
+  field: extinction_ratio_db
+  value: 31
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. III, Fig. 3(e)
+  note: from the 100 kHz transmission trace on a log scale
+- device_id: valdez2023a-b
+  field: n_rf
+  value: 2.24
+  unit: '1'
+  basis: simulated
+  locator: p.2 Sec. I, Fig. 1(b)
+  note: simulated at 110 GHz for the transmission line; shared design of both lengths
+- device_id: valdez2023a-b
+  field: ng_opt
+  value: 2.24
+  unit: '1'
+  basis: extracted_from_figure
+  locator: p.2 Fig. 1(b)
+  note: 'text: matches nRF; read where ng curve meets dashed nRF line'
+derived: []

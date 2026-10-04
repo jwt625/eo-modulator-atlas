@@ -1,0 +1,336 @@
+paper_id: zheng2026
+verified_on: '2026-10-04'
+source_files:
+- references/zheng2026/text.md
+- references/zheng2026/figures/page_08.png
+- references/zheng2026/figures/page_09.png
+- references/zheng2026/figures/img_p09_1.png
+entries:
+- device_id: zheng2026-pre
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.7 Sec. IV; Fig. 3(b)
+  note: spectrum of a representative MZM swept around 1310 nm
+- device_id: zheng2026-pre
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. I; p.8
+  note: 7 mm push-pull MZMs in GSSG configuration
+- device_id: zheng2026-pre
+  field: epitaxy_or_stack
+  value: pre-patterned TFLN coupon printed on a 50 nm bonding layer over SiN/SiO2 on silicon
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. III
+- device_id: zheng2026-pre
+  field: il_onchip_db
+  value: 2
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.8 Sec. IV; Fig. 3(c)
+  note: mean below 2 dB; IL referenced to a reference waveguide
+- device_id: zheng2026-pre
+  field: extinction_ratio_db
+  value: 30
+  unit: dB
+  basis: measured
+  locator: p.8 Sec. IV; Fig. 3(b)
+  note: representative device, exceeding 30 dB
+- device_id: zheng2026-g4
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. I; p.8
+  note: 7 mm push-pull MZMs in GSSG configuration
+- device_id: zheng2026-g4
+  field: vpi_dc_v
+  value: 4
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.10 Sec. V; Fig. 4(f)
+  note: Vpi around 4 V at 4 um gap (Fig. 4(f) median); raw Fig. 4(d),(e) traces suggest about 5.5-6 V; 100 kHz drive
+- device_id: zheng2026-g4
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.9 Sec. V; Fig. 4(f)
+  note: design value; metal gap
+- device_id: zheng2026-g4
+  field: substrate
+  value: high-resistivity silicon (200 mm wafer)
+  unit: ''
+  basis: measured
+  locator: p.10 Sec. V
+- device_id: zheng2026-g4
+  field: epitaxy_or_stack
+  value: pre-patterned TFLN coupon printed on a 50 nm bonding layer over SiN/SiO2 on silicon; 100 nm oxide spacer under Al RDL
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. III; p.9 Sec. V
+- device_id: zheng2026-g4
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.9 Sec. V
+  note: RDL metal
+- device_id: zheng2026-g4
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: measured
+  locator: p.9-10 Sec. V
+- device_id: zheng2026-g5
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. I; p.8
+  note: 7 mm push-pull MZMs in GSSG configuration
+- device_id: zheng2026-g5
+  field: vpi_dc_v
+  value: 5.5
+  unit: V
+  basis: extracted_from_figure
+  locator: p.9 Fig. 4(f)
+  note: box-plot median of 5 um gap devices; approximate
+- device_id: zheng2026-g5
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.9 Sec. V; Fig. 4(f)
+  note: design value; metal gap
+- device_id: zheng2026-g5
+  field: substrate
+  value: high-resistivity silicon (200 mm wafer)
+  unit: ''
+  basis: measured
+  locator: p.10 Sec. V
+- device_id: zheng2026-g5
+  field: epitaxy_or_stack
+  value: pre-patterned TFLN coupon printed on a 50 nm bonding layer over SiN/SiO2 on silicon; 100 nm oxide spacer under Al RDL
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. III; p.9 Sec. V
+- device_id: zheng2026-g5
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.9 Sec. V
+  note: RDL metal
+- device_id: zheng2026-g5
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: measured
+  locator: p.9-10 Sec. V
+- device_id: zheng2026-g6
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. I; p.8
+  note: 7 mm push-pull MZMs in GSSG configuration
+- device_id: zheng2026-g6
+  field: vpi_dc_v
+  value: 7.0
+  unit: V
+  basis: extracted_from_figure
+  locator: p.9 Fig. 4(f)
+  note: box-plot median of 6 um gap devices; approximate
+- device_id: zheng2026-g6
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: measured
+  locator: p.9 Sec. V; Fig. 4(f)
+  note: design value; metal gap
+- device_id: zheng2026-g6
+  field: substrate
+  value: high-resistivity silicon (200 mm wafer)
+  unit: ''
+  basis: measured
+  locator: p.10 Sec. V
+- device_id: zheng2026-g6
+  field: epitaxy_or_stack
+  value: pre-patterned TFLN coupon printed on a 50 nm bonding layer over SiN/SiO2 on silicon; 100 nm oxide spacer under Al RDL
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. III; p.9 Sec. V
+- device_id: zheng2026-g6
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.9 Sec. V
+  note: RDL metal
+- device_id: zheng2026-g6
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: measured
+  locator: p.9-10 Sec. V
+- device_id: zheng2026-al500
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. I; p.8
+  note: 7 mm push-pull MZMs in GSSG configuration
+- device_id: zheng2026-al500
+  field: bw3db_ghz
+  value: 30
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. V; Fig. 4(g)
+  note: 'paper: bandwidth limited to 20-30 GHz with 500 nm Al; upper end entered as bound'
+- device_id: zheng2026-al500
+  field: substrate
+  value: high-resistivity silicon (200 mm wafer)
+  unit: ''
+  basis: measured
+  locator: p.10 Sec. V
+- device_id: zheng2026-al500
+  field: epitaxy_or_stack
+  value: pre-patterned TFLN coupon printed on a 50 nm bonding layer over SiN/SiO2 on silicon; 100 nm oxide spacer under Al RDL
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. III; p.9 Sec. V
+- device_id: zheng2026-al500
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.9 Sec. V
+  note: RDL metal
+- device_id: zheng2026-al500
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: measured
+  locator: p.9-10 Sec. V
+- device_id: zheng2026-al1000
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. I; p.8
+  note: 7 mm push-pull MZMs in GSSG configuration
+- device_id: zheng2026-al1000
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: author_estimate
+  locator: p.1 abstract; p.10 Sec. V; Fig. 4(h)
+  note: 'paper: 70 GHz+ (expects about 90 GHz); Fig. 4(h) ripple dips reach about -3.2 to -3.7 dB near 42 GHz'
+- device_id: zheng2026-al1000
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.9 Fig. 4(h)
+  note: last data point of Fig. 4(h); axis frame ends near 70 GHz
+- device_id: zheng2026-al1000
+  field: substrate
+  value: high-resistivity silicon (200 mm wafer)
+  unit: ''
+  basis: measured
+  locator: p.10 Sec. V
+- device_id: zheng2026-al1000
+  field: epitaxy_or_stack
+  value: pre-patterned TFLN coupon printed on a 50 nm bonding layer over SiN/SiO2 on silicon; 100 nm oxide spacer under Al RDL
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. III; p.9 Sec. V
+- device_id: zheng2026-al1000
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.9 Sec. V
+  note: RDL metal
+- device_id: zheng2026-al1000
+  field: electrode_thickness_um
+  value: 1.0
+  unit: um
+  basis: measured
+  locator: p.9-10 Sec. V
+- device_id: zheng2026-g4
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 abstract; p.4 Sec. III
+  note: crystal orientation flipped in the two arms for push-pull modulation
+- device_id: zheng2026-g4
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 abstract
+  note: abstract states Vpi of 4 V in push-pull configuration; convention not defined further
+- device_id: zheng2026-g5
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 abstract; p.4 Sec. III
+  note: crystal orientation flipped in the two arms for push-pull modulation
+- device_id: zheng2026-g5
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 abstract
+  note: abstract states Vpi of 4 V in push-pull configuration; convention not defined further
+- device_id: zheng2026-g6
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 abstract; p.4 Sec. III
+  note: crystal orientation flipped in the two arms for push-pull modulation
+- device_id: zheng2026-g6
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 abstract
+  note: abstract states Vpi of 4 V in push-pull configuration; convention not defined further
+- device_id: zheng2026-al500
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 abstract; p.4 Sec. III
+  note: crystal orientation flipped in the two arms for push-pull modulation
+- device_id: zheng2026-al500
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 abstract
+  note: abstract states Vpi of 4 V in push-pull configuration; convention not defined further
+- device_id: zheng2026-al1000
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 abstract; p.4 Sec. III
+  note: crystal orientation flipped in the two arms for push-pull modulation
+- device_id: zheng2026-al1000
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 abstract
+  note: abstract states Vpi of 4 V in push-pull configuration; convention not defined further
+derived: []

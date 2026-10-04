@@ -1,0 +1,114 @@
+# STATUS: record of disclosed geometry and provenance for ONE cross-section (7 mm TFLT traveling-wave MZM, device sayem2026c-a). NOT RUNNABLE as written:
+# the paper states no RF permittivity for LiTaO3 or SiO2, no Pockels tensor and no gold conductivity. They are omitted on purpose (see `missing`); none was filled from memory.
+# Optical refractive indices are left to the engine's verified dispersion library (named materials carry no `n` here).
+#
+# Coordinate frame: x lateral, y film normal up, z propagation. x = 0 at the optical axis of the RIGHT-hand 1.6 um rib; y = 0 at the BOX top / LT bottom.
+# Layout (project_inference): G = 5 um gaps centred on each rib, signal electrode x = -19.5 .. -2.5 um (17 um wide), left rib at x = -22 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm.
+schema: eo-atlas.sim/v1
+id: sayem2026c-a
+paper_id: sayem2026c
+device_id: sayem2026c-a
+title: Sayem 2026, 7 mm TFLT traveling-wave MZM at 1071 nm (600 nm film, 1.6 um rib, 5 um gap, 17 um signal, 1 um Au)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+optics:
+  wavelength_nm: 1071
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_tantalate:
+    crystal: {cut: x, propagation: y}
+    # n_o, n_e: engine library (Bond); RF eps_r and Pockels tensor not stated (omitted, see missing)
+  silicon_dioxide: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon: {}                      # optical n from engine library; RF eps_r and resistivity not stated (omitted)
+  gold: {conductor: true}          # conductivity not stated (omitted)
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-130, 110], y_um: [-40, 30]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-130, 110], y_um: [-40, 30]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-130, 110], y_um: [-40, -4.7]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-130, 110], y_um: [-4.7, 0]}}
+    - {name: lt_slab, material: lithium_tantalate, rect: {x_um: [-130, 110], y_um: [0, 0.24]}}
+    - {name: sio2_cladding, material: silicon_dioxide, rect: {x_um: [-130, 110], y_um: [0.24, 1.24]}}
+    - {name: lt_rib_r, material: lithium_tantalate, rect: {x_um: [-0.8, 0.8], y_um: [0.24, 0.6]}}
+    - {name: lt_rib_l, material: lithium_tantalate, rect: {x_um: [-22.8, -21.2], y_um: [0.24, 0.6]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-19.5, -2.5], y_um: [0.24, 1.24]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [2.5, 102.5], y_um: [0.24, 1.24]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-124.5, -24.5], y_um: [0.24, 1.24]}, material: gold}
+  optical_window: {x_um: [-2.4, 2.4], y_um: [-1.5, 1.5]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+line:
+  length_mm: 7
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single GSG feed with on-chip 50 ohm termination; arm placement gives opposite fields (not stated by the paper)
+  loading: {type: none}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 70, n_points: 140}
+
+targets:
+  # Measured (devices.csv rows sayem2026c-a ... -d); same device, G = 5 um
+  - {metric: vpi_dc_v, value: 2.4, tol_rel: 0.15, source: {device_id: sayem2026c-a, field: vpi_dc_v}}
+  - {metric: vpi_l_dc_vcm, value: 1.62, tol_rel: 0.15, source: {device_id: sayem2026c-a, field: vpil_dc_vcm}}
+  - {metric: n_rf, value: 2.26, tol_abs: 0.05, source: {device_id: sayem2026c-a, field: n_rf}}
+  # Paper's own simulation (cross-solver reference, not a measurement)
+  - {metric: ng_opt, value: 2.25, tol_abs: 0.03, source: {device_id: sayem2026c-a, field: ng_opt}}
+  # Not evaluated by the static cross-section: EO roll-off below 2 dB to 50 GHz; S11 below about -15 dB
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.2 Sec. Device geometry (all Fig. 1 measurements at 1071 nm)"}
+  optics.polarization: {class: project_inference, note: "TE assumed for lateral-field GSG electrodes; polarization is not stated"}
+  optics.group_index_from: {class: project_inference, note: "paper shows a simulated group index near 2.25 (Fig. 3(c)); engine finite difference"}
+  materials.lithium_tantalate.crystal: {class: project_inference, note: "crystal cut and propagation direction are not stated in the paper; x-cut with y propagation assumed from the lateral-field TE geometry"}
+  geometry.regions.lt_slab: {class: figure_digitized, locator: "p.2 Fig. 1(b) caption (td about 240 nm)", note: "td is labelled on the slab in the schematic; interpreted as slab thickness; the sketch is not to scale"}
+  geometry.regions.lt_rib_r: {class: project_inference, locator: "p.2 Fig. 1(b) caption (tf = 600 nm film, w_MZI = 1.6 um)", note: "rib height 0.36 um = 600 - 240 nm (my subtraction); width 1.6 um read as the top width; vertical sidewalls assumed; sidewall angle not stated"}
+  geometry.regions.lt_rib_l: {class: project_inference, note: "same rib centred in the left 5 um gap (x = -22 um)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.2 Sec. Device geometry (4.7 um insulating oxide)"}
+  geometry.regions.substrate: {class: project_inference, locator: "p.2 Fig. 1(b) legend", note: "silicon substrate thickness not stated; clipped to the domain; resistivity not stated"}
+  geometry.regions.sio2_cladding: {class: project_inference, locator: "p.2 Fig. 1(b) legend (SiO2 above the film)", note: "cladding thickness not stated; flat top at the electrode top (1 um above the slab) assumed"}
+  geometry.regions.ambient: {class: project_inference, note: "air above the cladding"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.2 Fig. 1(b) caption (w_s = 17 um, t_m = 1 um); p.3 (G = 5 um)", note: "centred between the two 5 um gaps; electrode metal Au per the Fig. 1(b) legend"}
+  geometry.electrodes.ground_r: {class: project_inference, note: "ground width not stated; 100 um assumed"}
+  geometry.electrodes.ground_l: {class: project_inference, note: "ground width not stated; 100 um assumed"}
+  geometry.optical_window: {class: project_inference, note: "crop between the electrode edges (|x| < 2.5 um) so no conductor lies inside the optical mesh"}
+  geometry.domain: {class: project_inference, note: "lateral -130..110 um, vertical -40..30 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+  line.length_mm: {class: paper_exact, locator: "p.2 Fig. 1(b) caption (L_MZI = 7 mm)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm assumed for the source"}
+  line.load_ohm: {class: paper_exact, locator: "p.2 Sec. Device geometry (on-chip 50 ohm termination)"}
+  line.differential: {class: project_inference, note: "G-S-G line with an arm in each gap (Fig. 1(a)); push-pull drive is inferred (devices.csv drive derived), not stated by the paper"}
+  line.conductor_loss_model: {class: project_inference, note: "no RF loss reported; loss model left to the engine"}
+
+missing:
+  - "crystal cut and propagation direction (x-cut, y assumed)"
+  - "lithium_tantalate RF permittivity (anisotropic) and Pockels tensor (not stated; omitted, not filled from memory)"
+  - "silicon_dioxide and silicon RF permittivity; silicon resistivity; gold conductivity (not stated)"
+  - "rib sidewall angle and whether 1.6 um is the top or base width (vertical walls, top width assumed)"
+  - "interpretation of td (240 nm) as slab thickness versus etch depth (slab assumed)"
+  - "SiO2 cladding thickness and profile (flat top at the electrode top assumed)"
+  - "ground electrode width (100 um assumed) and rib lateral position in the gap (centred assumed)"
+  - "polarization of the measurement (TE assumed)"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Config is not runnable until RF permittivities and Pockels coefficients are supplied from a verified source; the engine rejects dielectrics without eps_r by design"
+  - "Vpi*L target 1.62 V cm is read from Fig. 2(c); Vpi 2.4 V x 7 mm would give 1.68 V cm; both are at 1071 nm"
+  - "Slab/etch interpretation of td, vertical rib walls and the flat cladding top are assumptions that change the overlap"
+  - "Rows -b, -c, -d (984, 1311, 1551 nm) share this cross-section; wavelength changes only the optics block; no variants mechanism in SPEC yet"
+  - "Silicon substrate modelled lossless (resistivity not given), so substrate RF loss is absent"

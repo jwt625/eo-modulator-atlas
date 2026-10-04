@@ -1,0 +1,640 @@
+paper_id: lee2026
+verified_on: '2026-10-04'
+source_files:
+- references/lee2026/text.md
+- references/lee2026/crossref.json
+- references/lee2026/figures/page_04.png
+- references/lee2026/figures/page_05.png
+- references/lee2026/figures/page_06.png
+- references/lee2026/figures/page_07.png
+entries:
+- device_id: lee2026-a
+  field: eo_film_thickness_nm
+  value: 800
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: 800 nm X-cut LN on 4.7 um oxide on Si
+- device_id: lee2026-a
+  field: etch_depth_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: ion-milled etch depth 500 nm
+- device_id: lee2026-a
+  field: rib_width_nm
+  value: 4000
+  unit: nm
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: waveguide top width 4 um (w0)
+- device_id: lee2026-a
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: remaining 300 nm slab; Fig. 1 caption lists 0.25 um
+- device_id: lee2026-a
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: smallest gap g = 6.5 um chosen by co-design
+- device_id: lee2026-a
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: measured
+  locator: p.3; p.4 Fig. 1(f) caption
+  note: 800 nm thick Au
+- device_id: lee2026-a
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3
+  note: thick Au metal thickness of 800 nm
+- device_id: lee2026-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: oxide removed around the waveguide; h_air = 4.7 um
+- device_id: lee2026-a
+  field: substrate
+  value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: BOE etch releases the oxide only around the waveguide
+- device_id: lee2026-a
+  field: cladding
+  value: air
+  basis: extracted_from_figure
+  locator: p.4 Fig. 1(f)
+  note: cross-section shows no top cladding
+- device_id: lee2026-a
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: lee2026-a
+  field: epitaxy_or_stack
+  value: 800 nm X-cut LN / 4.7 um SiO2 / Si; oxide released around the waveguide through air holes
+  basis: measured
+  locator: p.2; p.4 Fig. 1(a)
+  note: stack from the wafer description and Fig. 1(a) inset
+- device_id: lee2026-a
+  field: length_mm
+  value: 20
+  unit: mm
+  basis: measured
+  locator: p.2; Fig. 2 caption
+  note: 2 cm active modulation length, push-pull amplitude modulator
+- device_id: lee2026-a
+  field: wavelength_nm
+  value: 2700
+  unit: nm
+  basis: measured
+  locator: p.2; Fig. 2(b)
+  note: Vpi and MW Vpi at 2.7 um
+- device_id: lee2026-a
+  field: vpi_dc_v
+  value: 2.7
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 2(b)
+  note: label 2.7 V at 2.7 um; 100 kHz saw-tooth
+- device_id: lee2026-a
+  field: vpi_rf_v
+  value: 5
+  unit: V
+  basis: measured
+  locator: p.6 Fig. 3(d) caption; p.3
+  note: extracted from optical spectrum under MW drive; 5.26 V at 34 GHz
+- device_id: lee2026-a
+  field: vpi_rf_freq_ghz
+  value: 27
+  unit: GHz
+  basis: measured
+  locator: p.6 Fig. 3(d) caption
+  note: abstract range 4.5-6.5 V at 25-35 GHz
+- device_id: lee2026-a
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: author_estimate
+  locator: p.3 conclusion; p.8 Table 1 notes c, d
+  note: 'authors: EO bandwidth exceeding 40 GHz; their 50 GHz fit is extrapolated (Table 1 note d)'
+- device_id: lee2026-a
+  field: bw3db_reference_freq_ghz
+  value: 2
+  unit: GHz
+  basis: measured
+  locator: p.6 Fig. 3(d) caption
+  note: response referenced to performance at 2 GHz
+- device_id: lee2026-a
+  field: bw_measured_to_ghz
+  value: 35
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.6 Fig. 3(d)
+  note: Vpi,MW and EO points span 25-35 GHz; 40 GHz is the generator and VNA limit
+- device_id: lee2026-a
+  field: extinction_ratio_db
+  value: 7.1
+  unit: dB
+  basis: measured
+  locator: p.9 Methods; Ext. Data Fig. 2
+  note: 7.1 dB from sinusoidal fit, lock-in measurement at 2.7 um
+- device_id: lee2026-a
+  field: rf_loss_db_per_cm
+  value: 2.75
+  unit: dB/cm
+  basis: measured
+  locator: p.2-3; p.6 Fig. 3(a)
+  note: S21-extracted loss; 2 dB/cm at 10 GHz
+- device_id: lee2026-a
+  field: rf_loss_freq_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.2-3; p.6 Fig. 3(a)
+- device_id: lee2026-a
+  field: ng_opt
+  value: 2.29
+  unit: '1'
+  basis: simulated
+  locator: p.3; p.6 Fig. 3(c)
+  note: optical group index 2.29 of the suspended waveguide, dashed line
+- device_id: lee2026-a
+  field: max_baud_gbd
+  value: 1.5
+  unit: GBd
+  basis: measured
+  locator: p.3; p.7 Fig. 5
+  note: 1.5 GBd OOK and PAM-4, detector limited
+- device_id: lee2026-a
+  field: modulation_format
+  value: OOK 1.5 GBd; PAM-4 0.5 and 1.5 GBd; PAM-8 0.5 GBd (BER below the 7 percent HD-FEC threshold; offline RLS equalization for PAM)
+  basis: measured
+  locator: p.3; p.7 Fig. 5
+- device_id: lee2026-a
+  field: vpi_convention
+  value: mzm_push_pull
+  basis: measured
+  locator: p.2
+  note: active modulation length of 2 cm in a push-pull configuration
+- device_id: lee2026-a
+  field: drive
+  value: push_pull
+  basis: measured
+  locator: p.2
+  note: ''
+- device_id: lee2026-a
+  field: bw3db_reference
+  value: other
+  basis: measured
+  locator: p.6 Fig. 3(d) caption
+  note: EO response referenced to 2 GHz
+- device_id: lee2026-a
+  field: er_type
+  value: static
+  basis: measured
+  locator: p.9 Methods
+  note: chopper and lock-in while the AWG sweeps the applied voltage
+- device_id: lee2026-a
+  field: electrode_type
+  value: slow_wave
+  basis: measured
+  locator: p.2; p.4 Fig. 1(e)
+  note: segmented slow-wave T-shaped coplanar electrodes
+- device_id: lee2026-a
+  field: waveguide_platform
+  value: suspended_lnoi
+  basis: measured
+  locator: p.2
+  note: air-suspended TFLN
+- device_id: lee2026-b
+  field: eo_film_thickness_nm
+  value: 800
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: 800 nm X-cut LN on 4.7 um oxide on Si
+- device_id: lee2026-b
+  field: etch_depth_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: ion-milled etch depth 500 nm
+- device_id: lee2026-b
+  field: rib_width_nm
+  value: 4000
+  unit: nm
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: waveguide top width 4 um (w0)
+- device_id: lee2026-b
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: remaining 300 nm slab; Fig. 1 caption lists 0.25 um
+- device_id: lee2026-b
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: smallest gap g = 6.5 um chosen by co-design
+- device_id: lee2026-b
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: measured
+  locator: p.3; p.4 Fig. 1(f) caption
+  note: 800 nm thick Au
+- device_id: lee2026-b
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3
+  note: thick Au metal thickness of 800 nm
+- device_id: lee2026-b
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: oxide removed around the waveguide; h_air = 4.7 um
+- device_id: lee2026-b
+  field: substrate
+  value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: BOE etch releases the oxide only around the waveguide
+- device_id: lee2026-b
+  field: cladding
+  value: air
+  basis: extracted_from_figure
+  locator: p.4 Fig. 1(f)
+  note: cross-section shows no top cladding
+- device_id: lee2026-b
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: lee2026-b
+  field: epitaxy_or_stack
+  value: 800 nm X-cut LN / 4.7 um SiO2 / Si; oxide released around the waveguide through air holes
+  basis: measured
+  locator: p.2; p.4 Fig. 1(a)
+  note: stack from the wafer description and Fig. 1(a) inset
+- device_id: lee2026-b
+  field: length_mm
+  value: 20
+  unit: mm
+  basis: measured
+  locator: p.2; Fig. 2 caption
+  note: 2 cm active modulation length, push-pull amplitude modulator
+- device_id: lee2026-b
+  field: wavelength_nm
+  value: 2400
+  unit: nm
+  basis: measured
+  locator: p.2; Fig. 2(b)
+- device_id: lee2026-b
+  field: vpi_dc_v
+  value: 2.3
+  unit: V
+  basis: measured
+  locator: p.2; p.5 Fig. 2(b)
+  note: label 2.3 V at 2.4 um; 100 kHz saw-tooth
+- device_id: lee2026-b
+  field: vpil_dc_vcm
+  value: 4.6
+  unit: V*cm
+  basis: derived
+  locator: p.2; Fig. 2 caption
+  note: authors state 4.6 V*cm; equals Vpi x 2 cm
+- device_id: lee2026-b
+  field: prop_loss_db_per_cm
+  value: 6.4
+  unit: dB/cm
+  basis: measured
+  locator: p.10 Methods
+  note: measured active propagation loss with nearby electrodes
+- device_id: lee2026-c
+  field: eo_film_thickness_nm
+  value: 800
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: 800 nm X-cut LN on 4.7 um oxide on Si
+- device_id: lee2026-c
+  field: etch_depth_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: ion-milled etch depth 500 nm
+- device_id: lee2026-c
+  field: rib_width_nm
+  value: 4000
+  unit: nm
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: waveguide top width 4 um (w0)
+- device_id: lee2026-c
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: remaining 300 nm slab; Fig. 1 caption lists 0.25 um
+- device_id: lee2026-c
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: smallest gap g = 6.5 um chosen by co-design
+- device_id: lee2026-c
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: measured
+  locator: p.3; p.4 Fig. 1(f) caption
+  note: 800 nm thick Au
+- device_id: lee2026-c
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3
+  note: thick Au metal thickness of 800 nm
+- device_id: lee2026-c
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: oxide removed around the waveguide; h_air = 4.7 um
+- device_id: lee2026-c
+  field: substrate
+  value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: BOE etch releases the oxide only around the waveguide
+- device_id: lee2026-c
+  field: cladding
+  value: air
+  basis: extracted_from_figure
+  locator: p.4 Fig. 1(f)
+  note: cross-section shows no top cladding
+- device_id: lee2026-c
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: lee2026-c
+  field: epitaxy_or_stack
+  value: 800 nm X-cut LN / 4.7 um SiO2 / Si; oxide released around the waveguide through air holes
+  basis: measured
+  locator: p.2; p.4 Fig. 1(a)
+  note: stack from the wafer description and Fig. 1(a) inset
+- device_id: lee2026-c
+  field: length_mm
+  value: 20
+  unit: mm
+  basis: measured
+  locator: p.2; Fig. 2 caption
+  note: 2 cm active modulation length, push-pull amplitude modulator
+- device_id: lee2026-c
+  field: wavelength_nm
+  value: 3600
+  unit: nm
+  basis: measured
+  locator: p.2; Fig. 2(b)
+- device_id: lee2026-c
+  field: vpi_dc_v
+  value: 4.3
+  unit: V
+  basis: measured
+  locator: p.2; p.5 Fig. 2(b)
+  note: label 4.3 V at 3.6 um; 100 kHz saw-tooth
+- device_id: lee2026-c
+  field: vpil_dc_vcm
+  value: 8.6
+  unit: V*cm
+  basis: derived
+  locator: p.2; Fig. 2 caption
+  note: authors state 8.6 V*cm; equals Vpi x 2 cm
+- device_id: lee2026-c
+  field: prop_loss_db_per_cm
+  value: 10.5
+  unit: dB/cm
+  basis: measured
+  locator: p.10 Methods
+  note: measured active propagation loss with nearby electrodes
+- device_id: lee2026-d
+  field: eo_film_thickness_nm
+  value: 800
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: 800 nm X-cut LN on 4.7 um oxide on Si
+- device_id: lee2026-d
+  field: etch_depth_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: ion-milled etch depth 500 nm
+- device_id: lee2026-d
+  field: rib_width_nm
+  value: 4000
+  unit: nm
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: waveguide top width 4 um (w0)
+- device_id: lee2026-d
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: remaining 300 nm slab; Fig. 1 caption lists 0.25 um
+- device_id: lee2026-d
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: smallest gap g = 6.5 um chosen by co-design
+- device_id: lee2026-d
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: measured
+  locator: p.3; p.4 Fig. 1(f) caption
+  note: 800 nm thick Au
+- device_id: lee2026-d
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3
+  note: thick Au metal thickness of 800 nm
+- device_id: lee2026-d
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: oxide removed around the waveguide; h_air = 4.7 um
+- device_id: lee2026-d
+  field: substrate
+  value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: BOE etch releases the oxide only around the waveguide
+- device_id: lee2026-d
+  field: cladding
+  value: air
+  basis: extracted_from_figure
+  locator: p.4 Fig. 1(f)
+  note: cross-section shows no top cladding
+- device_id: lee2026-d
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: lee2026-d
+  field: epitaxy_or_stack
+  value: 800 nm X-cut LN / 4.7 um SiO2 / Si; oxide released around the waveguide through air holes
+  basis: measured
+  locator: p.2; p.4 Fig. 1(a)
+  note: stack from the wafer description and Fig. 1(a) inset
+- device_id: lee2026-d
+  field: length_mm
+  value: 20
+  unit: mm
+  basis: measured
+  locator: p.2; Fig. 2 caption
+  note: 2 cm active modulation length, push-pull amplitude modulator
+- device_id: lee2026-d
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2; Fig. 2(b)
+  note: NIR wavelength
+- device_id: lee2026-d
+  field: vpi_dc_v
+  value: 1.8
+  unit: V
+  basis: measured
+  locator: p.2; p.5 Fig. 2(b)
+  note: label 1.8 V at 1.55 um
+- device_id: lee2026-e
+  field: eo_film_thickness_nm
+  value: 800
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: 800 nm X-cut LN on 4.7 um oxide on Si
+- device_id: lee2026-e
+  field: etch_depth_nm
+  value: 500
+  unit: nm
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: ion-milled etch depth 500 nm
+- device_id: lee2026-e
+  field: rib_width_nm
+  value: 4000
+  unit: nm
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: waveguide top width 4 um (w0)
+- device_id: lee2026-e
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: remaining 300 nm slab; Fig. 1 caption lists 0.25 um
+- device_id: lee2026-e
+  field: electrode_gap_um
+  value: 6.5
+  unit: um
+  basis: design_target
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: smallest gap g = 6.5 um chosen by co-design
+- device_id: lee2026-e
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: measured
+  locator: p.3; p.4 Fig. 1(f) caption
+  note: 800 nm thick Au
+- device_id: lee2026-e
+  field: electrode_metal
+  value: gold
+  basis: measured
+  locator: p.3
+  note: thick Au metal thickness of 800 nm
+- device_id: lee2026-e
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.2; p.4 Fig. 1(f) caption
+  note: oxide removed around the waveguide; h_air = 4.7 um
+- device_id: lee2026-e
+  field: substrate
+  value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
+  basis: measured
+  locator: p.2; p.8 Methods
+  note: BOE etch releases the oxide only around the waveguide
+- device_id: lee2026-e
+  field: cladding
+  value: air
+  basis: extracted_from_figure
+  locator: p.4 Fig. 1(f)
+  note: cross-section shows no top cladding
+- device_id: lee2026-e
+  field: crystal_cut
+  value: x-cut
+  basis: measured
+  locator: p.2
+- device_id: lee2026-e
+  field: epitaxy_or_stack
+  value: 800 nm X-cut LN / 4.7 um SiO2 / Si; oxide released around the waveguide through air holes
+  basis: measured
+  locator: p.2; p.4 Fig. 1(a)
+  note: stack from the wafer description and Fig. 1(a) inset
+- device_id: lee2026-e
+  field: length_mm
+  value: 40
+  unit: mm
+  basis: measured
+  locator: p.3; p.7 Fig. 4(a)
+  note: 'double-pass: total active modulation length 4 cm'
+- device_id: lee2026-e
+  field: modulation_format
+  value: 'EO comb: modulation index 4 pi at 29.2 GHz (2.7 um) and 4.2 pi at 27.2 GHz (2.36 um); 10 dB span 0.8 THz, 33 lines'
+  basis: measured
+  locator: p.3; p.7 Fig. 4(b)
+  note: comb spectra at two pump wavelengths
+derived:
+- device_id: lee2026-a
+  field: max_line_rate_gbps
+  value: 3
+  formula: 1.5 GBd PAM-4 x 2 bits per symbol = 3 Gb/s (OOK 1.5, PAM-8 0.5 x 3 = 1.5 Gb/s are lower)
+  inputs:
+  - 1.5 GBd PAM-4

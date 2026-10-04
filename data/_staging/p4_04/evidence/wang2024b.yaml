@@ -1,0 +1,291 @@
+paper_id: wang2024b
+verified_on: '2026-10-04'
+source_files:
+- references/wang2024b/text.md
+- references/wang2024b/crossref.json
+- references/wang2024b/figures/page_04.png
+- references/wang2024b/figures/img_p15_1.png
+entries:
+- device_id: wang2024b-a
+  field: length_mm
+  value: 2.5
+  unit: mm
+  basis: design_target
+  locator: p.5 Electro-optical modulation; p.4 Fig. 3 caption
+  note: push-pull phase shifter pair length
+- device_id: wang2024b-a
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+  note: film thinned to 600 nm; text also gives 220 nm etch plus 400 nm slab
+- device_id: wang2024b-a
+  field: etch_depth_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+- device_id: wang2024b-a
+  field: rib_width_nm
+  value: 1200
+  unit: nm
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+  note: waveguide width; top or bottom width not stated
+- device_id: wang2024b-a
+  field: slab_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+  note: 'text: etching depth 220 nm, leaving a 400 nm slab'
+- device_id: wang2024b-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+  note: gold electrode
+- device_id: wang2024b-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+  note: thermal SiO2
+- device_id: wang2024b-a
+  field: substrate
+  value: silicon 525 um, high-resistivity carrier wafer
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+- device_id: wang2024b-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods; p.2 Fig. 1(e) caption
+- device_id: wang2024b-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.5 Electro-optical modulation
+  note: authors describe a push-pull phase-shifter pair
+- device_id: wang2024b-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.5; p.4 Fig. 3(g)
+  note: authors do not state; V_pi read from MZM transmission of push-pull device
+- device_id: wang2024b-a
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.4 Fig. 3(e)
+  note: text says travelling-wave electrodes only; SEM shows three-electrode layout
+- device_id: wang2024b-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5 Electro-optical modulation; p.4 Fig. 3(g)
+- device_id: wang2024b-a
+  field: vpi_dc_v
+  value: 7.6
+  unit: V
+  basis: measured
+  locator: p.5 text; p.4 Fig. 3(g)
+  note: 10 kHz triangular sweep
+- device_id: wang2024b-a
+  field: vpil_dc_vcm
+  value: 1.9
+  unit: V*cm
+  basis: derived
+  locator: p.5 text; p.4 Fig. 3(g) caption
+  note: authors state V_pi L; 7.6 V x 0.25 cm is 1.9
+- device_id: wang2024b-a
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.5 text; p.4 Fig. 3(f)
+  note: 'paper: more than 40 GHz (gt); trace touches -3 dB near 34.5 GHz, first below near 40, below from about 42.5 (approx)'
+- device_id: wang2024b-a
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.4 Fig. 3(f) x-axis; p.8 Methods
+  note: plotted to 50 GHz; VNA 67 GHz, photodiode 50 GHz
+- device_id: wang2024b-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.4 Fig. 3(f)
+  note: normalization of S21 not stated; trace starts at 0 dB near DC
+- device_id: wang2024b-a
+  field: n_rf
+  value: 2.25
+  unit: '1'
+  basis: author_estimate
+  locator: p.5 Electro-optical modulation
+  note: authors say ng around 2.25 for both microwave and optical waves; no RF measurement shown
+- device_id: wang2024b-a
+  field: ng_opt
+  value: 2.25
+  unit: '1'
+  basis: author_estimate
+  locator: p.5 Electro-optical modulation
+  note: design statement; spiral of other cross-section measured 2.25 (Extended Data Fig. 2)
+- device_id: wang2024b-b
+  field: length_mm
+  value: 2.5
+  unit: mm
+  basis: design_target
+  locator: p.5 Electro-optical modulation; p.4 Fig. 3 caption
+  note: push-pull phase shifter pair length
+- device_id: wang2024b-b
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+  note: film thinned to 600 nm; text also gives 220 nm etch plus 400 nm slab
+- device_id: wang2024b-b
+  field: etch_depth_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+- device_id: wang2024b-b
+  field: rib_width_nm
+  value: 1200
+  unit: nm
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+  note: waveguide width; top or bottom width not stated
+- device_id: wang2024b-b
+  field: slab_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+  note: 'text: etching depth 220 nm, leaving a 400 nm slab'
+- device_id: wang2024b-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+  note: gold electrode
+- device_id: wang2024b-b
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+  note: thermal SiO2
+- device_id: wang2024b-b
+  field: substrate
+  value: silicon 525 um, high-resistivity carrier wafer
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+- device_id: wang2024b-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods; p.2 Fig. 1(e) caption
+- device_id: wang2024b-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.5 Electro-optical modulation
+  note: authors describe a push-pull phase-shifter pair
+- device_id: wang2024b-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.5; p.4 Fig. 3(g)
+  note: authors do not state; V_pi read from MZM transmission of push-pull device
+- device_id: wang2024b-b
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.4 Fig. 3(e)
+  note: text says travelling-wave electrodes only; SEM shows three-electrode layout
+- device_id: wang2024b-b
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.5 Electro-optical modulation; p.4 Fig. 3(g)
+- device_id: wang2024b-b
+  field: vpi_dc_v
+  value: 6.4
+  unit: V
+  basis: measured
+  locator: p.5 text; p.4 Fig. 3(g)
+  note: 10 kHz triangular sweep
+- device_id: wang2024b-b
+  field: vpil_dc_vcm
+  value: 1.6
+  unit: V*cm
+  basis: derived
+  locator: p.5 text; p.4 Fig. 3(g) caption
+  note: authors state V_pi L; 6.4 V x 0.25 cm is 1.6
+- device_id: wang2024b-c
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+- device_id: wang2024b-c
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.5 Electro-optical modulation
+  note: uniform waveguide width 2 um; etch depth of this resonator not stated
+- device_id: wang2024b-c
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Fig. 3(a) caption
+  note: gold electrodes (yellow)
+- device_id: wang2024b-c
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+- device_id: wang2024b-c
+  field: substrate
+  value: silicon 525 um, high-resistivity carrier wafer
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods LTOI wafer fabrication
+- device_id: wang2024b-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.8 Methods; p.2 Fig. 1(e) caption
+- device_id: wang2024b-c
+  field: electrode_type
+  value: lumped
+  unit: ''
+  basis: derived
+  locator: p.4 Fig. 3(a); p.5 text
+  note: voltage applied across two of four electrodes; not called lumped by the authors
+derived: []

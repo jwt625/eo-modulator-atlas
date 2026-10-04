@@ -1,0 +1,144 @@
+schema: eo-atlas.sim/v1
+id: valdez2023a-b
+paper_id: valdez2023a
+device_id: valdez2023a-b
+title: Valdez 2023, 0.8 cm hybrid SiN-LN MZM at 784 nm, unetched 200 nm LN on SiN, capacitively loaded slow-wave GSG electrode, G = 4 um
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, loaded_line, eo_response]
+
+# STATUS: record of disclosed geometry and provenance. Material constants, signal and ground widths and the T-rail unit-cell reading
+# are placeholders or inferences (see provenance and missing); NOT a literature comparison until they are verified.
+# Conventions follow sims/valdez2023/config.yaml. Coordinate frame: x lateral, y film normal up, z propagation.
+# y = 0 at the top of the SiN-chip BOX (SiN bottom). Origin: optical axis (SiN waveguide) of the RIGHT arm in x.
+# Waveguides are assumed centred in the gaps (Fig. 1(a) schematic, not to scale). Signal centre at x = -29.5 um, LEFT waveguide at x = -59 um.
+# Top-level `geometry` = LOADED section (T-rail protrusions, gap G = 4 um); `alt_geometries.recessed` = unloaded section (inner edges recessed by h = 2 um each side, gap 8 um).
+optics:
+  wavelength_nm: 784
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {n: 1.454, eps_r: 3.9}
+  silicon_nitride: {n: 2.0, eps_r: 7.5}
+  silicon: {n: 3.7, eps_r: 11.7}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-250, 250], y_um: [-100, 60]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-250, 250], y_um: [-100, 60]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-250, 250], y_um: [-300, -4]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-250, 250], y_um: [-4, 0]}}
+    - {name: cmp_oxide, material: silicon_dioxide, rect: {x_um: [-250, 250], y_um: [0, 0.22]}}
+    - {name: sin_wg_r, material: silicon_nitride, rect: {x_um: [-0.45, 0.45], y_um: [0, 0.18]}}
+    - {name: sin_wg_l, material: silicon_nitride, rect: {x_um: [-59.45, -58.55], y_um: [0, 0.18]}}
+    - {name: ln_film, material: lithium_niobate, rect: {x_um: [-250, 250], y_um: [0.22, 0.42]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-57, -2], y_um: [0.42, 1.17]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [2, 102], y_um: [0.42, 1.17]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-161, -61], y_um: [0.42, 1.17]}, material: gold}
+  optical_window: {x_um: [-1.8, 1.8], y_um: [-1.0, 1.2]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 8
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-ended GSG probe on the centre line; push-pull by geometry (paper states push-pull, p.5)
+  loading: {type: periodic_t_rail, period_um: 20, loaded_length_um: 15, unloaded_cross_section: recessed, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
+alt_geometries:
+  recessed:
+    symmetry: none
+    domain: {x_um: [-250, 250], y_um: [-100, 60]}
+    regions:
+      - {name: ambient, material: air, rect: {x_um: [-250, 250], y_um: [-100, 60]}}
+      - {name: substrate, material: silicon, rect: {x_um: [-250, 250], y_um: [-300, -4]}}
+      - {name: box, material: silicon_dioxide, rect: {x_um: [-250, 250], y_um: [-4, 0]}}
+      - {name: cmp_oxide, material: silicon_dioxide, rect: {x_um: [-250, 250], y_um: [0, 0.22]}}
+      - {name: sin_wg_r, material: silicon_nitride, rect: {x_um: [-0.45, 0.45], y_um: [0, 0.18]}}
+      - {name: sin_wg_l, material: silicon_nitride, rect: {x_um: [-59.45, -58.55], y_um: [0, 0.18]}}
+      - {name: ln_film, material: lithium_niobate, rect: {x_um: [-250, 250], y_um: [0.22, 0.42]}}
+    electrodes:
+      - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-55, -4], y_um: [0.42, 1.17]}, material: gold}
+      - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [4, 104], y_um: [0.42, 1.17]}, material: gold}
+      - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-163, -63], y_um: [0.42, 1.17]}, material: gold}
+    optical_window: {x_um: [-1.8, 1.8], y_um: [-1.0, 1.2]}
+    mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+targets:
+  # Measured, 0.8 cm device (devices.csv row valdez2023a-b)
+  - {metric: vpi_l_dc_vcm, value: 0.8, tol_rel: 0.15, source: {device_id: valdez2023a-b, field: vpil_dc_vcm, note: "author-stated product of the measured 1.0 V and 0.8 cm; quoted for the push-pull MZM"}}
+  # Paper-simulated RF index and group index (Fig. 1(b)); compare as cross-solver reference
+  - {metric: n_rf, value: 2.24, tol_abs: 0.05, source: {device_id: valdez2023a-b, field: n_rf, note: "simulated at 110 GHz by the authors (PathWave EM Design)"}}
+  - {metric: ng_opt, value: 2.24, tol_abs: 0.05, source: {device_id: valdez2023a-b, field: ng_opt, note: "read from Fig. 1(b) where the curve meets the nRF line; paper states they match"}}
+  # Not a target: the 3 dB bandwidth is an approximate, noisy crossing near 100 GHz (measured to 110 GHz)
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.1 abstract; p.4 Sec. III (784 nm DFB laser)"}
+  optics.polarization: {class: paper_exact, locator: "p.2 Sec. I (TE-polarized fundamental mode); p.5 Eq. (1) (r33)"}
+  optics.group_index_from: {class: project_inference, note: "paper simulates ng = nRF = 2.24 (Fig. 1(b)); engine derives ng by finite difference"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.3 Sec. II (x-cut LN); p.2 Fig. 1(a) axes", note: "propagation along crystal y inferred from the axes of Fig. 1(a) (z lateral, y propagation)"}
+  materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config (1550 nm values); the paper states no index and the operating wavelength is 784 nm"}
+  materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config (1550 nm values); needs 784 nm values"}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder 43/28 (SPEC.md example values); the paper states no RF permittivity"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values); the paper gives only the symbol r33"}
+  materials.silicon_dioxide: {class: unknown, note: "UNVERIFIED placeholder n = 1.454 (a 784 nm value is not stated by the paper), eps_r = 3.9"}
+  materials.silicon_nitride: {class: unknown, note: "UNVERIFIED placeholders n = 2.0, eps_r = 7.5; the paper states neither (neff and Gamma values of Fig. 1 are outputs)"}
+  materials.silicon: {class: unknown, note: "UNVERIFIED placeholders n = 3.7, eps_r = 11.7; HR silicon resistivity not stated"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder bulk gold 4.1e7 S/m; film conductivity not stated"}
+  materials.air: {class: standard_reference, citation: "vacuum-like ambient n = 1, eps_r = 1"}
+  geometry.regions.ln_film: {class: paper_exact, locator: "p.3 Sec. II (200 nm MgO-doped x-cut LN), Fig. 2(b)", note: "unetched film"}
+  geometry.regions.sin_wg_r: {class: paper_exact, locator: "p.2 Sec. I (SiN 0.9 um wide in the phase shifter), p.3 Fig. 2(b) (180 nm SiN)"}
+  geometry.regions.sin_wg_l: {class: project_inference, note: "same waveguide in the left gap, centred; position in the gap not stated"}
+  geometry.regions.cmp_oxide: {class: paper_exact, locator: "p.3 Sec. II (about 40 nm SiO2 over the SiN waveguides)", note: "flat planarized oxide to SiN top + 40 nm = 0.22 um"}
+  geometry.regions.box: {class: paper_exact, locator: "p.3 Fig. 2(b) (4000 nm SiO2 on HR Si)", note: "schematic label; Fig. 2 is not to scale"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.3 Fig. 2(b) (HR Si substrate)", note: "thickness not stated; region clipped to the domain"}
+  geometry.regions.ambient: {class: paper_exact, locator: "p.2 Fig. 1(e); p.3 Fig. 2(f)", note: "no cladding above LN; Au electrodes directly on LN"}
+  geometry.electrodes.signal: {class: unknown, locator: "p.3 Sec. II (750 nm Au on 20 nm Ti)", note: "UNVERIFIED placeholder width 55 um inherited from sims/valdez2023 (same group); not stated in this paper; Ti layer ignored; protrusion edge at G/2 = 2 um from the waveguide axis"}
+  geometry.electrodes.ground_r: {class: unknown, locator: "p.2 Sec. I (G = 4 um)", note: "UNVERIFIED placeholder width 100 um (as in sims/valdez2023); gap G = 4 um from the signal protrusion edge"}
+  geometry.electrodes.ground_l: {class: unknown, note: "mirror of ground_r about the signal centre; same placeholder width"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 1.8 um inside the 2 um protrusion edge (a conductor in the window is unsupported)"}
+  geometry.domain: {class: project_inference, note: "lateral +-250 um, vertical -100..60 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+  line.length_mm: {class: paper_exact, locator: "p.4 Sec. III (0.8 cm device)"}
+  line.load_ohm: {class: paper_exact, locator: "p.4 Sec. III (GSG probes source and terminate the electrodes); p.5 Fig. 3(a) (50 ohm load)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm assumed for the probe"}
+  line.differential: {class: project_inference, locator: "p.5 Sec. IV.A (push-pull stated), Fig. 1(a)", note: "single-ended GSG feed; arms in opposite fields by geometry"}
+  line.conductor_loss_model: {class: project_inference, note: "loss model left to the engine; no RF loss curve is reported"}
+  line.loading.period_um: {class: project_inference, locator: "p.2 Sec. I (L = 20 um), Fig. 1(f)", note: "L read as the unit-cell period"}
+  line.loading.loaded_length_um: {class: project_inference, locator: "p.2 Sec. I (t = 15 um), Fig. 1(f)", note: "t read as the length of the protruding head along z, leaving c = L - t = 5 um recessed; w and c are not stated and the drawing is a photograph"}
+  alt_geometries.recessed: {class: project_inference, locator: "p.2 Sec. I (h = 2 um: distance between the inner electrode edge and the inner T-rail edge), Fig. 1(f)", note: "inner electrode edges recessed by h on both sides of each gap; signal narrowed to 51 um, ground widths kept at 100 um"}
+
+missing:
+  - "signal and ground electrode widths (placeholders 55 and 100 um)"
+  - "T-rail head width w, gap c and the exact T-rail/slot topology (Fig. 1(f) is a photograph with labels)"
+  - "waveguide position inside the 4 um gap (assumed centred) and whether G is the protrusion gap"
+  - "LN refractive indices at 784 nm, RF permittivity, Pockels coefficients, SiO2, SiN and Si constants, gold conductivity (UNVERIFIED placeholders)"
+  - "HR Si resistivity and substrate thickness"
+  - "Ti adhesion layer treatment (20 nm, ignored)"
+  - "temperature"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Config is not runnable as a literature comparison until the material constants and the electrode widths are supplied from verified sources"
+  - "Only the 0.8 cm design is configured; the 0.4 cm device shares the cross-section and differs only in line.length_mm"
+  - "The unit-cell reading (L = 20, t = 15, h = 2 um) comes from text parameters plus a labelled photograph and is a project inference"
+  - "SiN waveguide centred in the gap and flat planarized oxide (about 40 nm over the SiN) are assumptions"
+  - "The 3 dB bandwidth is an approximate, noisy crossing near 100 GHz and is not a target"

@@ -1,0 +1,215 @@
+paper_id: wang2024a
+verified_on: '2026-10-04'
+source_files:
+- references/wang2024a/text.md
+- references/wang2024a/crossref.json
+- references/wang2024a/figures/page_02.png
+- references/wang2024a/figures/page_03.png
+- references/wang2024a/figures/page_05.png
+entries:
+- device_id: wang2024a-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3-4 Static V_pi characterization; Fig. 2(a)
+- device_id: wang2024a-a
+  field: length_mm
+  value: 6
+  unit: mm
+  basis: design_target
+  locator: p.2 Fig. 1(a); p.2 text
+  note: push-pull phase shifter pair length
+- device_id: wang2024a-a
+  field: vpi_dc_v
+  value: 4.8
+  unit: V
+  basis: measured
+  locator: p.4 text; p.3 Fig. 2(a)
+  note: 100 Hz triangular sweep, 1550 nm, 6 mm device
+- device_id: wang2024a-a
+  field: vpil_dc_vcm
+  value: 2.8
+  unit: V*cm
+  basis: derived
+  locator: p.4 text; p.2 text
+  note: authors state corresponding V_pi L; 4.8 V x 0.6 cm is 2.88
+- device_id: wang2024a-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.2 text; p.4 text; p.3 Fig. 2(c)
+  note: 'authors: approximately 110 GHz; measured trace first below -3 dB near 90 GHz; EE-derived simulated curve crosses near 110 (approx. reading)'
+- device_id: wang2024a-a
+  field: bw3db_reference_freq_ghz
+  value: 0.01
+  unit: GHz
+  basis: measured
+  locator: p.4 text
+  note: reference stated as 10 MHz
+- device_id: wang2024a-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.3 Fig. 2(c),(d) axes; p.4 text
+  note: measurement ends near 110 GHz; 110 GHz probes
+- device_id: wang2024a-a
+  field: bw3db_reference
+  value: other
+  unit: ''
+  basis: measured
+  locator: p.4 text
+  note: 3 dB roll-off quoted relative to 10 MHz
+- device_id: wang2024a-a
+  field: n_rf
+  value: 2.22
+  unit: '1'
+  basis: measured
+  locator: p.3 text; p.2 Fig. 1(b)
+  note: phase index at 50 GHz, SiO2-clad device
+- device_id: wang2024a-a
+  field: ng_opt
+  value: 2.25
+  unit: '1'
+  basis: simulated
+  locator: p.2 Fig. 1(b) caption; p.3 text
+  note: simulated optical group index of the waveguide
+- device_id: wang2024a-a
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.2 text; Fig. 1(b) caption
+  note: half-etched LiTaO3 thickness 600 nm
+- device_id: wang2024a-a
+  field: rib_width_nm
+  value: 1200
+  unit: nm
+  basis: design_target
+  locator: p.2 Fig. 1(b) caption; p.3 text
+  note: waveguide width; top or bottom width not stated
+- device_id: wang2024a-a
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.2 Fig. 1(b) caption
+  note: 'gap 6 um; text: 2.4 um from waveguide sidewall to electrode each side'
+- device_id: wang2024a-a
+  field: signal_width_um
+  value: 19
+  unit: um
+  basis: design_target
+  locator: p.2 Fig. 1(b) caption
+- device_id: wang2024a-a
+  field: electrode_thickness_um
+  value: 0.8
+  unit: um
+  basis: design_target
+  locator: p.2 Fig. 1(b) caption; p.3 text
+  note: silver deposited with 800 nm thickness
+- device_id: wang2024a-a
+  field: electrode_metal
+  value: silver
+  unit: ''
+  basis: design_target
+  locator: p.3 text; Fig. 1(c)
+  note: silver CPW electrodes
+- device_id: wang2024a-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.2 text; Fig. 1(b) caption
+  note: thermal SiO2 BOX
+- device_id: wang2024a-a
+  field: substrate
+  value: silicon 525 um, high-resistivity carrier wafer
+  unit: ''
+  basis: design_target
+  locator: p.2 text
+- device_id: wang2024a-a
+  field: cladding
+  value: SiO2 1.4 um (device of the Fig. 1(b) inset); an air-clad gold-electrode variant was also fabricated
+  unit: ''
+  basis: design_target
+  locator: p.2 Fig. 1(b) caption; p.4 bias-drift text
+  note: cladding of the V_pi and bandwidth device not stated
+- device_id: wang2024a-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.2 text
+- device_id: wang2024a-a
+  field: waveguide_orientation
+  value: y (read from the Fig. 1(a) axis labels; not stated in the text)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.2 Fig. 1(a)
+  note: waveguide drawn along the y axis label
+- device_id: wang2024a-a
+  field: epitaxy_or_stack
+  value: 'LTOI wafer: 600 nm x-cut LiTaO3 (ion-cut, wafer-bonded from optical-grade bulk), 4.7 um thermal SiO2, 525 um Si'
+  unit: ''
+  basis: design_target
+  locator: p.2 text
+  note: optical-grade bulk wafer stated in the text
+- device_id: wang2024a-a
+  field: max_baud_gbd
+  value: 208
+  unit: GBd
+  basis: measured
+  locator: p.4 text; p.5 Fig. 3(b)
+  note: 208 GBd PAM2 is the top symbol rate; 176 GBd PAM8 is the headline
+- device_id: wang2024a-a
+  field: modulation_format
+  value: IMDD back-to-back PAM2/PAM4/PAM8, 144-208 GBd; 176 GBd PAM8 (BER 3.8e-2, below 25% SD-FEC); 200 GBd PAM4 and 208 GBd PAM2 below 15% SD-FEC and 7% HD-FEC limits
+  unit: ''
+  basis: measured
+  locator: p.4 text; p.5 Fig. 3(b)
+- device_id: wang2024a-a
+  field: max_line_rate_gbps
+  value: 528
+  unit: Gb/s
+  basis: extracted_from_figure
+  locator: p.5 Fig. 3(b), 3(f) label
+  note: label 176 GBd PAM8 (528 Gbit/s); text states net and AIR only
+- device_id: wang2024a-a
+  field: max_net_rate_gbps
+  value: 405
+  unit: Gb/s
+  basis: derived
+  locator: p.6 text; p.5 Fig. 3(c)
+  note: 'authors: NGMI-threshold code rate times symbol rate; AIR 432 Gb/s'
+- device_id: wang2024a-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.2 text
+  note: authors describe a push-pull phase shifter pair
+- device_id: wang2024a-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.3 Fig. 2(a)
+  note: authors do not state; V_pi read from MZM transmission of push-pull device
+- device_id: wang2024a-a
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 1(a); p.2 text
+  note: GSG coplanar waveguide electrodes
+- device_id: wang2024a-a
+  field: driver
+  value: Keysight M8199B AWG via 20 cm RF cable and 110 GHz probe; no RF amplifier stated; linear MMSE predistortion
+  unit: ''
+  basis: measured
+  locator: p.4 text
+  note: setup description lists AWG, cable, probe
+derived: []

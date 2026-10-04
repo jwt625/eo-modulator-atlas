@@ -1,0 +1,227 @@
+paper_id: derose2012
+verified_on: '2026-10-04'
+source_files:
+- references/derose2012/text.md
+- references/derose2012/figures/page_01.png
+- references/derose2012/figures/page_02.png
+entries:
+- device_id: derose2012-a
+  field: eo_film_thickness_nm
+  value: 250
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Initial silicon layer thickness of the SOI wafer
+- device_id: derose2012-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Buried oxide thickness
+- device_id: derose2012-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Unloaded slot line fabricated in 1 um metal1 stack
+- device_id: derose2012-a
+  field: electrode_metal
+  value: Ti/TiN/AlCu/TiN stack (metal1)
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Metal1 stack; separate Al bus lines contact device through tungsten vias
+- device_id: derose2012-a
+  field: substrate
+  value: SOI wafer, 3 um buried oxide, 250 nm initial silicon layer
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+- device_id: derose2012-a
+  field: epitaxy_or_stack
+  value: Lateral p-n junctions, n- and p-type doping about 5e18 cm^-3 (As and P implants);
+    W vias to Al bus lines; slot-line electrode loaded periodically by series-connected
+    p-n segments (50 um active segments, fill factor 0.6, junction capacitance 0.41
+    fF/um at 0 V)
+  unit: ''
+  basis: measured
+  locator: p.1-2, Sec. 2
+  note: Doping approx 5e18 per cm3; segment length and fill factor from p.2; dopant
+    species as written (As, P named for n- and p-type)
+- device_id: derose2012-a
+  field: length_mm
+  value: 0.5
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Effective active length
+- device_id: derose2012-a
+  field: bw3db_ghz
+  value: 24
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Stated in text; measured trace and fit both plotted; reference frequency not
+    stated
+- device_id: derose2012-a
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1, Fig. 1(c); p.2, Sec. 2
+  note: Authors say push-pull; Fig. 1(c) and p.2 show two series-connected junctions
+    driven by one RF signal
+- device_id: derose2012-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(a)
+  note: Relative response plotted from low frequency; reference not stated by authors,
+    entered unspecified
+- device_id: derose2012-b
+  field: eo_film_thickness_nm
+  value: 250
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Initial silicon layer thickness of the SOI wafer
+- device_id: derose2012-b
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Buried oxide thickness
+- device_id: derose2012-b
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Unloaded slot line fabricated in 1 um metal1 stack
+- device_id: derose2012-b
+  field: electrode_metal
+  value: Ti/TiN/AlCu/TiN stack (metal1)
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Metal1 stack; separate Al bus lines contact device through tungsten vias
+- device_id: derose2012-b
+  field: substrate
+  value: SOI wafer, 3 um buried oxide, 250 nm initial silicon layer
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+- device_id: derose2012-b
+  field: epitaxy_or_stack
+  value: Lateral p-n junctions, n- and p-type doping about 5e18 cm^-3 (As and P implants);
+    W vias to Al bus lines; slot-line electrode loaded periodically by series-connected
+    p-n segments (50 um active segments, fill factor 0.6, junction capacitance 0.41
+    fF/um at 0 V)
+  unit: ''
+  basis: measured
+  locator: p.1-2, Sec. 2
+  note: Doping approx 5e18 per cm3; segment length and fill factor from p.2; dopant
+    species as written (As, P named for n- and p-type)
+- device_id: derose2012-b
+  field: length_mm
+  value: 1.5
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Effective active length
+- device_id: derose2012-b
+  field: bw3db_ghz
+  value: 14
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Stated in text; measured trace and fit both plotted; reference frequency not
+    stated
+- device_id: derose2012-b
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1, Fig. 1(c); p.2, Sec. 2
+  note: Authors say push-pull; Fig. 1(c) and p.2 show two series-connected junctions
+    driven by one RF signal
+- device_id: derose2012-b
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(a)
+  note: Relative response plotted from low frequency; reference not stated by authors,
+    entered unspecified
+- device_id: derose2012-c
+  field: eo_film_thickness_nm
+  value: 250
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Initial silicon layer thickness of the SOI wafer
+- device_id: derose2012-c
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Buried oxide thickness
+- device_id: derose2012-c
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Unloaded slot line fabricated in 1 um metal1 stack
+- device_id: derose2012-c
+  field: electrode_metal
+  value: Ti/TiN/AlCu/TiN stack (metal1)
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Metal1 stack; separate Al bus lines contact device through tungsten vias
+- device_id: derose2012-c
+  field: substrate
+  value: SOI wafer, 3 um buried oxide, 250 nm initial silicon layer
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+- device_id: derose2012-c
+  field: epitaxy_or_stack
+  value: Lateral p-n junctions, n- and p-type doping about 5e18 cm^-3 (As and P implants);
+    W vias to Al bus lines; slot-line electrode loaded periodically by series-connected
+    p-n segments (50 um active segments, fill factor 0.6, junction capacitance 0.41
+    fF/um at 0 V)
+  unit: ''
+  basis: measured
+  locator: p.1-2, Sec. 2
+  note: Doping approx 5e18 per cm3; segment length and fill factor from p.2; dopant
+    species as written (As, P named for n- and p-type)
+- device_id: derose2012-c
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Length of the modulator on which the VpiL was measured
+- device_id: derose2012-c
+  field: vpil_dc_vcm
+  value: 0.7
+  unit: V*cm
+  basis: measured
+  locator: p.1 abstract; p.2, Sec. 3 and Sec. 4
+  note: Stated as half-wave voltage length product; DC or RF and convention not stated
+- device_id: derose2012-c
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1, Fig. 1(c); p.2, Sec. 2
+  note: Authors say push-pull; Fig. 1(c) and p.2 show two series-connected junctions
+    driven by one RF signal
+derived: []

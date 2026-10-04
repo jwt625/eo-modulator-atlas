@@ -1,0 +1,114 @@
+# STATUS: record of disclosed geometry and provenance for ONE cross-section (6.8 mm push-pull hybrid Si3N4-LiTaO3 MZM, device cai2025-a). NOT RUNNABLE as written:
+# the paper states no RF permittivity for LiTaO3, Si3N4 or SiO2, no Pockels tensor and no gold conductivity.
+# They are omitted on purpose (see `missing`); none was filled from memory. Optical refractive indices are left to the engine's verified dispersion library.
+#
+# Coordinate frame: x lateral, y film normal up, z propagation. x = 0 at the optical axis of the RIGHT-hand Si3N4 strip; y = 0 at the LiTaO3 bottom (top of the oxide).
+# Both arms are in the electrostatic domain (symmetry none) so the push-pull field in the two gaps comes from the geometry; the optical mode is solved on the right arm.
+# Layout (project_inference): signal electrode x = -26 .. -3 um (23 um wide), gaps 6 um on each side, waveguides centred in the gaps (right at x = 0, left at x = -29 um).
+schema: eo-atlas.sim/v1
+id: cai2025-a
+paper_id: cai2025
+device_id: cai2025-a
+title: Cai 2025, 6.8 mm plain CPW hybrid Si3N4-LiTaO3 MZM (Damascene Si3N4 under 300 nm unetched x-cut LT, 23 um signal, 6 um gap, push-pull arms)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_tantalate:
+    crystal: {cut: x, propagation: y}
+    # n_o, n_e: engine library (Bond); RF eps_r not stated (omitted, see missing)
+  silicon_nitride: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon_dioxide: {}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon: {}                      # optical n from engine library; RF eps_r and resistivity not stated (omitted)
+  gold: {conductor: true}          # conductivity not stated (omitted)
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-140, 110], y_um: [-40, 30]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-140, 110], y_um: [-40, 30]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-140, 110], y_um: [-40, -4]}}
+    - {name: oxide, material: silicon_dioxide, rect: {x_um: [-140, 110], y_um: [-4, 0]}}
+    - {name: sin_core_r, material: silicon_nitride, rect: {x_um: [-0.5, 0.5], y_um: [-0.5, 0]}}
+    - {name: sin_core_l, material: silicon_nitride, rect: {x_um: [-29.5, -28.5], y_um: [-0.5, 0]}}
+    - {name: lt_film, material: lithium_tantalate, rect: {x_um: [-140, 110], y_um: [0, 0.3]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-26, -3], y_um: [0.3, 1.1]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [3, 103], y_um: [0.3, 1.1]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-132, -32], y_um: [0.3, 1.1]}, material: gold}
+  optical_window: {x_um: [-2.9, 2.9], y_um: [-2.0, 1.2]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+line:
+  length_mm: 6.8
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single GSG probe on the signal line; push-pull arms by geometry (paper states push-pull)
+  loading: {type: none}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
+
+targets:
+  # Measured (devices.csv row cai2025-a): 6 V x 0.68 cm = 4.08 V cm, push-pull, 100 Hz triangle, 1550 nm
+  - {metric: vpi_l_dc_vcm, value: 4.08, tol_rel: 0.15, source: {device_id: cai2025-a, field: vpil_dc_vcm}}
+  # Paper's own simulations (cross-solver references, not measurements)
+  - {metric: vpi_l_dc_vcm, value: 5.5, tol_rel: 0.10, source: {paper_id: cai2025, locator: "p.3 Sec. II; p.14 Fig. S2(c)", basis: simulated, note: "text: simulated VpiL about 5.5 V cm for 6 um gap, 1 um wide Si3N4; differs from the measured 4.08 V cm"}}
+  - {metric: n_eff, value: 1.8202, tol_abs: 0.01, source: {paper_id: cai2025, locator: "p.14 Fig. S2(a) label", basis: simulated, note: "hybrid optical mode effective index"}}
+  - {metric: n_rf, value: 2.19, tol_abs: 0.05, source: {device_id: cai2025-a, field: n_rf}}
+  - {metric: ng_opt, value: 2.185, tol_abs: 0.05, source: {device_id: cai2025-a, field: ng_opt}}
+  # Not evaluated by the static cross-section: 3 dB EO bandwidth about 100 GHz (110 GHz sweep), RF loss about 6.3 dB/cm at 64 GHz
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.3 Sec. II (1550 nm CW light for the quasi-DC Vpi measurement)"}
+  optics.polarization: {class: paper_exact, locator: "p.5 Sec. II (quasi-TE mode with field parallel to the substrate plane)", note: "stated for the IMDD experiment; the Vpi measurement polarization is not named separately"}
+  optics.group_index_from: {class: project_inference, note: "paper gives a simulated group index of 2.185 (Fig. S3); engine finite difference"}
+  materials.lithium_tantalate.crystal: {class: paper_exact, locator: "p.2 Sec. II (300 nm x-cut LiTaO3)", note: "propagation along crystal y is project_inference (not stated)"}
+  geometry.regions.lt_film: {class: paper_exact, locator: "p.2 Sec. II (300 nm x-cut LiTaO3)", note: "unetched across the modulator; etched only at tapers and chip facets (p.2)"}
+  geometry.regions.sin_core_r: {class: paper_exact, locator: "p.2 Sec. II (1 um width, 0.5 um height); p.13 S2 (500 nm)", note: "rectangular section assumed; Fig. 2(b) SEM shows the reflowed Damascene profile; lateral position centred in the 6 um gap is project_inference; top flush with the LiTaO3 bottom (zero interlayer) is project_inference"}
+  geometry.regions.sin_core_l: {class: project_inference, note: "same strip centred in the left 6 um gap (x = -29 um)"}
+  geometry.regions.oxide: {class: project_inference, locator: "p.2 Sec. II (4 um wet thermal oxide); p.13 S1 (500 nm preform etch)", note: "oxide top flush with the Si3N4 top (Damascene), Si top at y = -4 um; the stated 4 um is the thermal oxide before the 0.5 um preform etch"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.2 Sec. II; p.13 S1 (525 um silicon, clipped to the domain)", note: "resistivity not stated"}
+  geometry.regions.ambient: {class: project_inference, note: "cladding deposition is mentioned (p.2) but material and thickness are not stated; Fig. S2(a) shows an air cladding in the simulation; no cladding modelled"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.3 Sec. II; Fig. 2(c) inset (23 um signal, 6 um gap); p.2 (800 nm Au)", note: "10 nm Ti adhesion layer omitted"}
+  geometry.electrodes.ground_r: {class: project_inference, locator: "p.3 Sec. II (6 um gap)", note: "ground width not stated; 100 um assumed"}
+  geometry.electrodes.ground_l: {class: project_inference, note: "mirror of ground_r about the signal centre"}
+  geometry.optical_window: {class: project_inference, note: "crop between the electrode edges (|x| < 3 um) so no conductor lies inside the optical mesh"}
+  geometry.domain: {class: project_inference, note: "lateral -140..110 um, vertical -40..30 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+  line.length_mm: {class: paper_exact, locator: "p.2 Sec. II; Fig. 2(a) (6.8 mm long modulator)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm source assumed (AWG/VNA); the paper states only the load"}
+  line.load_ohm: {class: paper_exact, locator: "p.5 Sec. II (second probe terminates the line with a 50 ohm coaxial termination)"}
+  line.differential: {class: project_inference, note: "single GSG probe on the signal line, one waveguide in each gap; push-pull stated on p.2-3, arm placement inferred"}
+  line.conductor_loss_model: {class: project_inference, note: "loss model left to the engine; measured CPW loss about 6.3 dB/cm at 64 GHz (Fig. S5(a))"}
+
+missing:
+  - "lithium_tantalate RF permittivity (anisotropic) and Pockels tensor (not stated; omitted, not filled from memory; the r33 of about 30 pm/V quoted in another paper is a secondary citation)"
+  - "silicon_nitride, silicon_dioxide, silicon RF permittivity; silicon resistivity (not stated)"
+  - "gold conductivity (not stated)"
+  - "thickness of any oxide interlayer between Si3N4 and LiTaO3 (a small oxide interlayer is mentioned in the Damascene flow, p.13 S1; zero assumed)"
+  - "cladding material and thickness above the LiTaO3 and electrodes (cladding deposited, p.2; openings over the electrodes)"
+  - "ground electrode width (100 um assumed) and waveguide lateral position in the gap (centred assumed)"
+  - "Si3N4 sidewall profile of the fabricated strip (Fig. 2(b) SEM; rectangle assumed)"
+  - "propagation direction on the x-cut film (y assumed)"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Config is not runnable until RF permittivities are supplied from a verified source; the engine rejects dielectrics without eps_r by design"
+  - "Zero Si3N4-LiTaO3 interlayer, no cladding and a rectangular Si3N4 strip are assumptions; the hybrid-mode overlap depends on all three"
+  - "Paper's simulated VpiL (about 5.5 V cm) is above the measured 4.08 V cm; the target is kept as the paper's own simulation, not as a measurement"
+  - "Silicon substrate modelled lossless (resistivity not given), so substrate RF loss is absent"
+  - "13.5 mm IQ modulator (cai2025-b) shares this CPW cross-section; no variants mechanism in SPEC yet"

@@ -1,0 +1,110 @@
+paper_id: dong2026
+verified_on: '2026-10-04'
+source_files:
+- references/dong2026/text.md
+- references/dong2026/figures/page_02.png
+- references/dong2026/figures/page_03.png
+- references/dong2026/figures/img_p02_1.png
+entries:
+- device_id: dong2026-a
+  field: vpi_dc_v
+  value: 7
+  unit: V
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Authors define effective Vpi as VpiL divided by phase-shifter length; approximately
+    7 V; inputs not given
+- device_id: dong2026-a
+  field: drive_vpp_v
+  value: 2.5
+  unit: V
+  basis: measured
+  locator: p.1 Sec. 1; p.1 Sec. 3
+  note: SiGe driver maximum differential output swing, also quoted as the swing in
+    the demonstration
+- device_id: dong2026-a
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1
+  note: Stated >70 GHz; trace dips to about -3.6 dB near 69.5-70 GHz (calibration
+    ripple), last point about -2.9 dB
+- device_id: dong2026-a
+  field: bw_measured_to_ghz
+  value: 70
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1
+  note: Upper end of the plotted EO response axis
+- device_id: dong2026-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 220 nm silicon
+- device_id: dong2026-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 3 um BOX substrate
+- device_id: dong2026-a
+  field: electrode_thickness_um
+  value: 2.8
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Traveling-wave electrodes with 2.8 um thick aluminum
+- device_id: dong2026-a
+  field: electrode_metal
+  value: Aluminum
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Aluminum; copper suggested as future improvement
+- device_id: dong2026-a
+  field: substrate
+  value: 220 nm silicon-on-insulator, 3 um BOX
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+- device_id: dong2026-a
+  field: extinction_ratio_db
+  value: 3.71
+  unit: dB
+  basis: measured
+  locator: p.2-3, Fig. 3
+  note: Dynamic modulation ER at 420 Gb/s; 4.71 dB at 300 Gb/s, 4.22 dB at 360 Gb/s
+- device_id: dong2026-a
+  field: max_line_rate_gbps
+  value: 420
+  unit: Gb/s
+  basis: measured
+  locator: p.2-3, Fig. 3
+  note: Highest rate recorded, BER 8e-2
+- device_id: dong2026-a
+  field: modulation_format
+  value: PAM4 optical back-to-back at 300, 360 and 420 Gb/s; 15-tap FFE at 300 Gb/s,
+    31-tap FFE at 360 and 420 Gb/s; link BER 3e-6, 2e-2, 8e-2 with a 200G/lane receiver;
+    RLM 0.93, 0.95, 0.94; dynamic ER 4.71, 4.22, 3.71 dB
+  unit: ''
+  basis: measured
+  locator: p.2-3, Fig. 3
+- device_id: dong2026-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: design_target
+  locator: p.1, Sec. 2
+  note: Modulator adopts a dual-drive differential configuration
+- device_id: dong2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 1
+  note: Sdd21 normalized to about 0 dB at the lowest frequency; reference not stated
+derived: []

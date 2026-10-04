@@ -1,0 +1,168 @@
+paper_id: wang2026a
+verified_on: '2026-10-04'
+source_files:
+- references/wang2026a/text.md
+- references/wang2026a/figures/page_01.png
+- references/wang2026a/figures/page_02.png
+- references/wang2026a/source.pdf (p.3 Table I)
+entries:
+- device_id: wang2026a-a
+  field: length_mm
+  value: 2.25
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Effective modulation length; total MZM length is 2.5 mm
+- device_id: wang2026a-a
+  field: vpi_dc_v
+  value: 10.2
+  unit: V
+  basis: derived
+  locator: p.2, Sec. 2
+  note: Approximately 10.2 V under DC test, authors derive from VpiL and length
+- device_id: wang2026a-a
+  field: vpil_dc_vcm
+  value: 2.3
+  unit: V*cm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Extracted from phase shift versus bias in transmission spectra
+- device_id: wang2026a-a
+  field: drive_vpp_v
+  value: 2.5
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 1(e)
+  note: AWG output around 2.5 V for 100 GBd or higher
+- device_id: wang2026a-a
+  field: bw3db_ghz
+  value: 81.8
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.2, Sec. 2; Fig. 1(d)
+  note: Extracted from LCA EO response; figure label reads 81.82 GHz
+- device_id: wang2026a-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(d)
+  note: Upper end of the plotted EO response axis
+- device_id: wang2026a-a
+  field: il_onchip_db
+  value: 2.6
+  unit: dB
+  basis: measured
+  locator: p.3, Table I
+  note: C-band row of this work; definition not given
+- device_id: wang2026a-a
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: measured
+  locator: p.1, Fig. 1(f); p.2 Sec. 2
+  note: PAM-8 eye at 100 GBd; eye only
+- device_id: wang2026a-a
+  field: max_line_rate_gbps
+  value: 300
+  unit: Gb/s
+  basis: measured
+  locator: p.1 Sec. 1; p.3 Table I
+  note: 300 Gb/s per lane stated for the PAM-8 eye at 100 GBd
+- device_id: wang2026a-a
+  field: modulation_format
+  value: PAM-8 eye diagram at 100 GBd (no BER reported)
+  unit: ''
+  basis: measured
+  locator: p.1, Fig. 1(f)
+- device_id: wang2026a-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: design_target
+  locator: p.1 abstract; p.2 Sec. 2
+  note: Differential-drive structure with on-chip terminator
+- device_id: wang2026a-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.1, Fig. 1(d)
+  note: Ssd21 starts near 0 dB at low frequency; reference not stated
+- device_id: wang2026a-b
+  field: vpi_dc_v
+  value: 6
+  unit: V
+  basis: derived
+  locator: p.2, Sec. 2
+  note: Corresponding Vpi approximately 6 V per authors; derived from VpiL and length
+- device_id: wang2026a-b
+  field: vpil_dc_vcm
+  value: 1.36
+  unit: V*cm
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(a)
+  note: Extracted from transmission spectra at 0 to 6 V
+- device_id: wang2026a-b
+  field: bw3db_ghz
+  value: 59.5
+  unit: GHz
+  basis: measured
+  locator: p.2, Fig. 2(b); p.3 Table I
+  note: Figure label 59.5 GHz; text says around 60 GHz
+- device_id: wang2026a-b
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(b)
+  note: Upper end of the plotted EO response axis
+- device_id: wang2026a-b
+  field: il_onchip_db
+  value: 2.45
+  unit: dB
+  basis: measured
+  locator: p.3, Table I
+  note: O-band row of this work; definition not given
+- device_id: wang2026a-b
+  field: extinction_ratio_db
+  value: 4.2
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(c)
+  note: Dynamic ER of the PAM-4 100 GBd eye
+- device_id: wang2026a-b
+  field: max_baud_gbd
+  value: 112
+  unit: GBd
+  basis: measured
+  locator: p.2-3, Fig. 2(e)
+  note: PAM-8 eye at 112 GBd; eye only
+- device_id: wang2026a-b
+  field: max_line_rate_gbps
+  value: 336
+  unit: Gb/s
+  basis: measured
+  locator: p.1 Sec. 1; p.3 Table I
+  note: 336 Gb/s per lane stated for PAM-8 at 112 GBd
+- device_id: wang2026a-b
+  field: modulation_format
+  value: PAM-4 at 100 GBd (SER 4.8e-4, ER 4.2 dB, TDECQ 2.6 dB); PAM-8 eye diagrams at 100 and 112 GBd (eyes only)
+  unit: ''
+  basis: measured
+  locator: p.2, Fig. 2(c)-(e)
+- device_id: wang2026a-b
+  field: drive
+  value: differential
+  unit: ''
+  basis: design_target
+  locator: p.2, Sec. 2
+  note: Described as a differential-drive modulator
+- device_id: wang2026a-b
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(b)
+  note: Ssd21 starts near 0 dB at low frequency; reference not stated
+derived: []

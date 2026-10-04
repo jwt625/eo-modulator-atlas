@@ -1,0 +1,396 @@
+paper_id: rahman2025
+verified_on: '2026-10-04'
+source_files:
+- references/rahman2025/text.md
+- references/rahman2025/figures/page_02.png
+- references/rahman2025/figures/page_04.png
+- references/rahman2025/figures/page_07.png
+- references/rahman2025/figures/page_13.png
+entries:
+- device_id: rahman2025-1
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. IV
+  note: near 1550 nm; IL peak at 1549.89 nm (Fig. S2)
+- device_id: rahman2025-1
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. II; p.3 Sec. III
+  note: x-cut LN, bonded, unetched in the modulator section
+- device_id: rahman2025-1
+  field: rib_width_nm
+  value: 1400
+  unit: nm
+  basis: measured
+  locator: p.3 Sec. III; Fig. 2(b)
+  note: SiN2 strip width; hybrid-section width not separately stated
+- device_id: rahman2025-1
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: measured
+  locator: p.2-3 Sec. II
+  note: signal-ground gap G
+- device_id: rahman2025-1
+  field: electrode_thickness_um
+  value: 1.0
+  unit: um
+  basis: measured
+  locator: p.4 Fig. 2(e)
+  note: label on schematic, not to scale
+- device_id: rahman2025-1
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III; Fig. 1(c)
+  note: Al, dry-etch defined
+- device_id: rahman2025-1
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.3 Sec. III
+  note: nominal oxide below SiN1
+- device_id: rahman2025-1
+  field: substrate
+  value: silicon handle, about 10 ohm cm resistivity, about 700 um; no undercut trench
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III
+- device_id: rahman2025-1
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II
+- device_id: rahman2025-1
+  field: optical_input_power_dbm
+  value: -3
+  unit: dBm
+  basis: measured
+  locator: p.3 Sec. IV
+  note: on-chip power about -3 dBm (0.5 mW)
+- device_id: rahman2025-1
+  field: epitaxy_or_stack
+  value: SiN1 1.0 um x 0.8 um; 200 nm SiO2; SiN2 1.4 um x 0.35 um; 100 nm SiO2; 300 nm unetched x-cut LN; Al electrodes
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III; p.4 Fig. 2(b)
+  note: interlayer thicknesses from Fig. 2(b) labels
+- device_id: rahman2025-1
+  field: vpil_dc_vcm
+  value: 4.29
+  unit: V*cm
+  basis: derived
+  locator: p.5 Sec. IV.B; p.7
+  note: mean of four chips (std 0.14); author-computed from Vpi x L
+- device_id: rahman2025-1
+  field: bw3db_ghz
+  value: 20
+  unit: GHz
+  basis: measured
+  locator: p.11 S3; Fig. 4(b) p.7; Fig. S3 p.13
+  note: 'text: around 20 GHz; EOR normalized to 3 GHz; no multipliers needed'
+- device_id: rahman2025-1
+  field: bw3db_reference_freq_ghz
+  value: 3
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. IV.C; p.11 S3
+  note: Design 1 curves normalized to value at 3 GHz
+- device_id: rahman2025-1
+  field: il_onchip_db
+  value: 2.95
+  unit: dB
+  basis: measured
+  locator: p.11 S2
+  note: mean across four chips (std 1.43); main text p.3 gives 3.1 dB
+- device_id: rahman2025-2
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. IV
+  note: near 1550 nm; IL peak at 1549.89 nm (Fig. S2)
+- device_id: rahman2025-2
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. II; p.3 Sec. III
+  note: x-cut LN, bonded, unetched in the modulator section
+- device_id: rahman2025-2
+  field: rib_width_nm
+  value: 1400
+  unit: nm
+  basis: measured
+  locator: p.3 Sec. III; Fig. 2(b)
+  note: SiN2 strip width; hybrid-section width not separately stated
+- device_id: rahman2025-2
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.2-3 Sec. II
+  note: signal-ground gap G
+- device_id: rahman2025-2
+  field: electrode_thickness_um
+  value: 1.0
+  unit: um
+  basis: measured
+  locator: p.4 Fig. 2(e)
+  note: label on schematic, not to scale
+- device_id: rahman2025-2
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III; Fig. 1(c)
+  note: Al, dry-etch defined
+- device_id: rahman2025-2
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.3 Sec. III
+  note: nominal oxide below SiN1
+- device_id: rahman2025-2
+  field: substrate
+  value: silicon handle, about 10 ohm cm resistivity, about 700 um; air trenches undercut the phase shifters (about 80 um)
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III
+- device_id: rahman2025-2
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II
+- device_id: rahman2025-2
+  field: optical_input_power_dbm
+  value: -3
+  unit: dBm
+  basis: measured
+  locator: p.3 Sec. IV
+  note: on-chip power about -3 dBm (0.5 mW)
+- device_id: rahman2025-2
+  field: epitaxy_or_stack
+  value: SiN1 1.0 um x 0.8 um; 200 nm SiO2; SiN2 1.4 um x 0.35 um; 100 nm SiO2; 300 nm unetched x-cut LN; Al electrodes
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III; p.4 Fig. 2(b)
+  note: interlayer thicknesses from Fig. 2(b) labels
+- device_id: rahman2025-2
+  field: vpil_dc_vcm
+  value: 3.4
+  unit: V*cm
+  basis: derived
+  locator: p.5 Sec. IV.B; p.7
+  note: mean of four chips (std 0.15); author-computed from Vpi x L
+- device_id: rahman2025-2
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. IV.C; p.11 S3; Fig. S3 p.13
+  note: 'paper: greater than 100 GHz for all tested Design 2 and 3 EOMs'
+- device_id: rahman2025-2
+  field: bw3db_reference_freq_ghz
+  value: 3
+  unit: GHz
+  basis: measured
+  locator: p.11 S3; Fig. S3 p.13
+  note: Fig. S3 curves normalized to value at 3 GHz
+- device_id: rahman2025-2
+  field: bw_measured_to_ghz
+  value: 111
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. IV.C; Fig. S3 p.13
+  note: apparatus limit 111 GHz; Fig. S3 axis ends near 111 GHz
+- device_id: rahman2025-2
+  field: il_onchip_db
+  value: 6.43
+  unit: dB
+  basis: measured
+  locator: p.11 S2
+  note: mean across four chips (std 2.75); main text p.3 gives 6.6 dB
+- device_id: rahman2025-3
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.4 Sec. IV
+  note: near 1550 nm; IL peak at 1549.89 nm (Fig. S2)
+- device_id: rahman2025-3
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. II; p.3 Sec. III
+  note: x-cut LN, bonded, unetched in the modulator section
+- device_id: rahman2025-3
+  field: rib_width_nm
+  value: 1400
+  unit: nm
+  basis: measured
+  locator: p.3 Sec. III; Fig. 2(b)
+  note: SiN2 strip width; hybrid-section width not separately stated
+- device_id: rahman2025-3
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.2-3 Sec. II
+  note: signal-ground gap G
+- device_id: rahman2025-3
+  field: electrode_thickness_um
+  value: 1.0
+  unit: um
+  basis: measured
+  locator: p.4 Fig. 2(e)
+  note: label on schematic, not to scale
+- device_id: rahman2025-3
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III; Fig. 1(c)
+  note: Al, dry-etch defined
+- device_id: rahman2025-3
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.3 Sec. III
+  note: nominal oxide below SiN1
+- device_id: rahman2025-3
+  field: substrate
+  value: silicon handle, about 10 ohm cm resistivity, about 700 um; air trenches undercut the phase shifters (about 80 um)
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III
+- device_id: rahman2025-3
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. II
+- device_id: rahman2025-3
+  field: optical_input_power_dbm
+  value: -3
+  unit: dBm
+  basis: measured
+  locator: p.3 Sec. IV
+  note: on-chip power about -3 dBm (0.5 mW)
+- device_id: rahman2025-3
+  field: epitaxy_or_stack
+  value: SiN1 1.0 um x 0.8 um; 200 nm SiO2; SiN2 1.4 um x 0.35 um; 100 nm SiO2; 300 nm unetched x-cut LN; Al electrodes
+  unit: ''
+  basis: measured
+  locator: p.3 Sec. III; p.4 Fig. 2(b)
+  note: interlayer thicknesses from Fig. 2(b) labels
+- device_id: rahman2025-3
+  field: length_mm
+  value: 6
+  unit: mm
+  basis: author_estimate
+  locator: p.13 S4
+  note: phase-shifter length Lps = 0.6 cm is a fit assumption; consistent with Vpi x L
+- device_id: rahman2025-3
+  field: vpi_dc_v
+  value: 6.4
+  unit: V
+  basis: measured
+  locator: p.5 Sec. IV.B; Fig. 3(c)
+  note: cosine-squared fit, same at 1 kHz and 1 MHz; representative Design 3 device
+- device_id: rahman2025-3
+  field: vpil_dc_vcm
+  value: 3.83
+  unit: V*cm
+  basis: derived
+  locator: p.5 Sec. IV.B; p.7
+  note: mean of four chips (std 0.01); representative device 3.8 V cm (6.4 V x 0.6 cm)
+- device_id: rahman2025-3
+  field: bw3db_ghz
+  value: 111
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.6 Sec. IV.C; Fig. 4(c),(d)
+  note: EOR does not fall 3 dB below the 1-3 GHz mean up to 111 GHz
+- device_id: rahman2025-3
+  field: bw_measured_to_ghz
+  value: 111
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. IV.C; Fig. 4(c)
+  note: upper limit of the measurement apparatus
+- device_id: rahman2025-3
+  field: il_onchip_db
+  value: 3.77
+  unit: dB
+  basis: measured
+  locator: p.11 S2; Fig. S2
+  note: mean across four chips (std 0.83); abstract 3.8 dB; main text p.3 gives 4.0 dB
+- device_id: rahman2025-3
+  field: extinction_ratio_db
+  value: 34
+  unit: dB
+  basis: measured
+  locator: p.5 Fig. 3(d); p.1 abstract
+  note: 1 kHz data on log scale; abstract states greater than 30 dB
+- device_id: rahman2025-3
+  field: ng_opt
+  value: 2.0854
+  unit: '1'
+  basis: measured
+  locator: p.13 S4
+  note: measured group index used as fit input for Fig. 4(c)
+- device_id: rahman2025-1
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. II
+  note: authors state the EOMs are push-pull Mach-Zehnder interferometers
+- device_id: rahman2025-1
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Eq. (2)
+  note: VpiL equation includes push-pull factor 2; Vpi convention not named otherwise
+- device_id: rahman2025-2
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. II
+  note: authors state the EOMs are push-pull Mach-Zehnder interferometers
+- device_id: rahman2025-2
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Eq. (2)
+  note: VpiL equation includes push-pull factor 2; Vpi convention not named otherwise
+- device_id: rahman2025-3
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. II
+  note: authors state the EOMs are push-pull Mach-Zehnder interferometers
+- device_id: rahman2025-3
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Eq. (2)
+  note: VpiL equation includes push-pull factor 2; Vpi convention not named otherwise
+derived: []

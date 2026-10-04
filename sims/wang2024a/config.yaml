@@ -1,0 +1,123 @@
+schema: eo-atlas.sim/v1
+id: wang2024a-a
+paper_id: wang2024a
+device_id: wang2024a-a
+title: Wang 2024a, 6 mm silver-electrode G-S-G push-pull TFLT MZM on silicon (half-etched rib, SiO2 cladding), one MZM cross-section
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the BOX top / LT bottom.
+# Origin: optical axis of the RIGHT-hand waveguide in x. Signal electrode centre (mirror plane) at x = -12.5 um; LEFT waveguide at x = -25 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm.
+# Cross-section is the Fig. 1(b) inset of the preprint: Ag electrodes on the LT slab, 6 um electrode gap with the 1.2 um rib centred (2.4 um each side).
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_tantalate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.119
+    n_e: 2.123
+    eps_r: {perp: 54.0, par: 43.0}
+    r_pm_per_v: {r33: 30.5, r51: 20.0}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  silicon: {n: 3.476, eps_r: 11.7}
+  silver: {conductor: true, sigma_Sm: 6.45e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-260, 235], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-260, 235], y_um: [-250, 120]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-260, 235], y_um: [-529.7, -4.7]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-260, 235], y_um: [-4.7, 0]}}
+    - {name: lt_slab, material: lithium_tantalate, rect: {x_um: [-260, 235], y_um: [0, 0.3]}}
+    - {name: cladding, material: silicon_dioxide, rect: {x_um: [-260, 235], y_um: [0.3, 1.7]}}
+    - {name: lt_rib_r, material: lithium_tantalate, polygon_um: [[-0.7212, 0.3], [0.7212, 0.3], [0.6, 0.6], [-0.6, 0.6]]}
+    - {name: lt_rib_l, material: lithium_tantalate, polygon_um: [[-25.7212, 0.3], [-24.2788, 0.3], [-24.4, 0.6], [-25.6, 0.6]]}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-22, -3], y_um: [0.3, 1.1]}, material: silver}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [3, 103], y_um: [0.3, 1.1]}, material: silver}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-128, -28], y_um: [0.3, 1.1]}, material: silver}
+  optical_window: {x_um: [-2.9, 2.9], y_um: [-1.5, 1.6]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 6
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-ended G-S-G probe on the centre line; push-pull arises from the arm placement
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
+alt_geometries: {}
+
+targets:
+  # Measured, 6 mm device (devices.csv row wang2024a-a)
+  - {metric: vpi_l_dc_vcm, value: 2.8, tol_rel: 0.15, source: {device_id: wang2024a-a, field: vpil_dc_vcm, comparable: false, note: "author-stated from V_pi 4.8 V x 6 mm; NON-COMPARABLE until rib width definition, etch depth, cladding/electrode stack and LT constants are confirmed"}}
+  - {metric: n_rf, value: 2.22, tol_abs: 0.10, source: {device_id: wang2024a-a, field: n_rf, comparable: false, note: "measured at 50 GHz on the SiO2-clad device; the static section solve is quasi-static"}}
+  - {metric: ng_opt, value: 2.25, tol_abs: 0.05, source: {device_id: wang2024a-a, field: ng_opt, basis: simulated, note: "paper's own simulated group index"}}
+  - {metric: bw3db_ghz, value: 110, tol_rel: 0.15, source: {device_id: wang2024a-a, field: bw3db_ghz, comparable: false, note: "authors' stated approximate 110 GHz, claimed crossing at the measurement limit; referenced to 10 MHz. Measured S21 first dips below -3 dB near 90 GHz (Fig. 2(c), approx. reading); 110 GHz matches the EE-derived simulated curve."}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.3-4 Static V_pi characterization (light at 1550 nm)"}
+  optics.polarization: {class: project_inference, note: "TE assumed for the x-cut film with propagation along y; the preprint does not name the polarization"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes simulated ng = 2.25 (Fig. 1(b)); engine derives it by finite difference and compares as a target"}
+  materials.lithium_tantalate.crystal: {class: project_inference, locator: "p.2 text (x-cut); Fig. 1(a) axes", note: "x-cut stated; propagation along crystal y read from the Fig. 1(a) axis labels, not stated in the text"}
+  materials.lithium_tantalate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (p.15 of references/wang2024b/text.md), 1550 nm", note: "2.119; same authors' platform paper, not stated in wang2024a"}
+  materials.lithium_tantalate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1, 1550 nm", note: "2.123"}
+  materials.lithium_tantalate.eps_r: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1, 100 kHz", note: "eps_11,22 = 54 (perp), eps_33 = 43 (par); RF permittivity at 100 kHz, not at mm-wave"}
+  materials.lithium_tantalate.r_pm_per_v: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1, 1550 nm", note: "r33 = 30.5 and r51 = 20 pm/V only; r13 and r22 are not given there and are left out (see missing)"}
+  materials.silicon_dioxide: {class: standard_reference, citation: "standard handbook values (n = 1.444 at 1550 nm, eps_r = 3.9); paper states neither"}
+  materials.silicon.eps_r: {class: standard_reference, citation: "standard handbook value 11.7; paper states only high-resistivity Si, no resistivity"}
+  materials.silver.sigma_Sm: {class: standard_reference, citation: "rho_Ag = 1.55e-6 ohm cm quoted on p.3 from Matula, J. Phys. Chem. Ref. Data 8, 1147 (1979); sigma = 1/rho = 6.45e7 S/m is project arithmetic", note: "bulk value; film conductivity not measured"}
+  materials.air: {class: standard_reference, citation: "vacuum-like ambient n = 1, eps_r = 1"}
+  line.length_mm: {class: paper_exact, locator: "p.2 Fig. 1(a); p.2 text (6 mm phase-shifter pair)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm assumed; probe and AWG source impedance not stated"}
+  line.load_ohm: {class: paper_exact, locator: "p.4 text (second probe with bias-T followed by a 50 ohm resistor)", note: "termination stated for the data-transmission setup; S21 measurement setup not described"}
+  line.differential: {class: project_inference, note: "G-S-G with one arm per gap (Fig. 1(b) inset); the paper says push-pull arms (p.2) but not the drive form"}
+  line.conductor_loss_model: {class: project_inference, note: "paper reports alpha_RF,Ag = 0.58 dB/cm/GHz^0.5 on test CPWs (Fig. 1(c)); loss model left to the engine"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.2 text (525 um high-resistivity Si carrier; region clipped to the domain)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.2 text; Fig. 1(b) caption (4.7 um)"}
+  geometry.regions.lt_slab: {class: project_inference, locator: "Fig. 1(b) caption (LT thickness half-etched: 600 nm); Fig. 1(a) SEM inset", note: "slab 300 nm assumed from 'half-etched'; the SEM inset (600 nm scale bar) reads a slab of about 280 nm and a rib height of about 270 nm"}
+  geometry.regions.cladding: {class: project_inference, locator: "Fig. 1(b) caption (cladding thickness 1.4 um); inset sketch", note: "flat top 1.4 um above the slab assumed; sketch is not to scale and draws the SiO2 flush with the 0.8 um Ag top, which conflicts with 1.4 um"}
+  geometry.regions.lt_rib_r: {class: figure_digitized, locator: "Fig. 1(b) caption (waveguide width 1.2 um); Fig. 1(a) SEM inset", note: "top width 1.2 um assumed (top or bottom is not stated); sidewall about 68 deg measured on the SEM inset; the SEM rib looks about 2 um wide, which conflicts with 1.2 um"}
+  geometry.regions.lt_rib_l: {class: project_inference, note: "mirror image of the right-hand rib about x = -12.5 um"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.2 Fig. 1(b) caption (signal electrode width 19 um, thickness 800 nm)", note: "gap to the waveguide axis 3 um (6 um gap, rib centred; text: 2.4 um sidewall-to-electrode each side); Ag on the slab per inset"}
+  geometry.electrodes.ground_r: {class: project_inference, locator: "Fig. 1(a) microscope image", note: "ground width not stated and not resolvable in the 6 mm overview; 100 um assumed, inner edge 3 um from the waveguide axis"}
+  geometry.electrodes.ground_l: {class: project_inference, note: "mirror of ground_r about the signal centre"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 2.9 um, just inside the 3 um electrode edge"}
+  geometry.domain: {class: project_inference, note: "lateral -260..235 um, vertical -250..120 um"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - "whether the 1.2 um rib width is the top or bottom width (SEM inset suggests a wider rib)"
+  - "numerical etch depth / slab thickness (only 'half-etched' of the 600 nm film)"
+  - "rib sidewall angle (about 68 deg read from the SEM inset only)"
+  - "ground electrode widths"
+  - "cladding profile and reference surface (1.4 um stated; sketch shows it flush with the 0.8 um Ag)"
+  - "polarization (TE assumed) and propagation direction (y read from the figure axis)"
+  - "LT Pockels coefficients r13 and r22 (only r33, r51 available from the companion paper)"
+  - "RF permittivity of LT at mm-wave frequencies (100 kHz values used) and RF loss tangents of LT and SiO2"
+  - "silicon resistivity (high resistivity only)"
+  - "silver film conductivity (bulk value used)"
+  - "which device (air- or SiO2-clad) the V_pi and EO bandwidth were measured on"
+  - "temperature"
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "LT constants come from the companion Nature paper (wang2024b) Extended Data Table 1, not from this paper; RF permittivity is a 100 kHz value"
+  - "Silicon modelled lossless (resistivity unknown); substrate loss is absent"
+  - "Slab/rib split (300/300 nm) and 68 deg sidewall are inferences; the SEM inset conflicts with the stated 1.2 um width"
+  - "Cladding modelled as a flat 1.4 um layer above the slab with the 0.8 um Ag embedded; the sketch shows a different stack"
+  - "Measured n_rf is at 50 GHz; the static section solve returns the quasi-static value"
