@@ -71,6 +71,11 @@
 	<main>
 		{@render children()}
 	</main>
+	<footer>
+		Created by Wentao Jiang
+		<span class="sep">|</span><a href="https://outside5sigma.com" target="_blank" rel="noopener">homepage</a>
+		<span class="sep">|</span><a href="https://github.com/jwt625/eo-modulator-atlas" target="_blank" rel="noopener">GitHub</a>
+	</footer>
 </div>
 
 <style>
@@ -78,7 +83,7 @@
 		height: 100vh;
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
-		grid-template-rows: var(--hdr) minmax(0, 1fr);
+		grid-template-rows: var(--hdr) minmax(0, 1fr) auto;
 	}
 	header {
 		min-width: 0;
@@ -120,13 +125,29 @@
 	.grow {
 		flex: 1;
 	}
+	footer {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		height: 20px;
+		padding: 0 10px;
+		font-size: 10px;
+		color: var(--ink-3);
+		background: var(--surface);
+		border-top: 1px solid var(--border);
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	footer .sep {
+		color: var(--line);
+	}
 	main {
 		min-height: 0;
 		min-width: 0;
 		overflow: hidden;
 	}
 	@media (max-width: 700px) {
-		.app { grid-template-rows: auto minmax(0, 1fr); }
+		.app { grid-template-rows: auto minmax(0, 1fr) auto; }
 		header { flex-wrap: wrap; gap: 6px 10px; padding: 6px 10px; }
 		.brand { white-space: nowrap; }
 		header > .muted { display: none; }
