@@ -23,16 +23,16 @@ entries:
   field: bw3db_ghz
   value: 1.05
   unit: GHz
-  basis: measured
+  basis: derived
   locator: p.4; Fig. 4(d)
-  note: from fit of the response at 1550 nm; normalized S21
+  note: from fit of the response at 1550 nm; normalized S21; raw trace noisy, first reaches -3 dB near 0.95 GHz (approx. reading)
 - device_id: lotkov2024-a
   field: bw6db_ghz
   value: 2.3
   unit: GHz
-  basis: measured
+  basis: derived
   locator: p.4; Fig. 4(d)
-  note: from fit of the response
+  note: from fit of the response; raw trace noisy, reaches about -6 dB near 1.5 GHz, briefly back above -3 dB near 1.8, 1.9 and 2.1 GHz (approx. reading)
 - device_id: lotkov2024-a
   field: il_onchip_db
   value: 5.7

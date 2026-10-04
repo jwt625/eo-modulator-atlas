@@ -75,7 +75,7 @@ entries:
 - device_id: han2023-a
   field: ng_opt
   value: 6.1
-  unit: ''
+  unit: '1'
   basis: simulated
   locator: p.6, Sec. 2; p.26-27, Fig. 1(f); p.14, Conclusion
   note: Calculated group index near the centre of the mid-gap transmission window; not measured.

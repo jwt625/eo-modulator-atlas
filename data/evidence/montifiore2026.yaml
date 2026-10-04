@@ -68,9 +68,9 @@ entries:
   field: capacitance_ff
   value: 19000000
   unit: fF
-  basis: measured
+  basis: author_estimate
   locator: p.4 Sec. 2
-  note: 19 nF PZT actuator capacitance
+  note: 19 nF stated PZT actuator capacitance; measurement method not given
 - device_id: montifiore2026-a
   field: substrate
   value: Si

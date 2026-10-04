@@ -73,6 +73,13 @@ entries:
   basis: design_target
   locator: p.4 Sec. Design of FC bonds
   note: whole chip coated before opening vias
+- device_id: wang2026b-am
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. 2x8 switch; Fig. 3(c)
+  note: authors do not state the drive; GSG transmission line feeds each AM (p.3)
 - device_id: wang2026b-pm
   field: vpi_rf_v
   value: 3.9
@@ -86,6 +93,13 @@ entries:
   unit: GHz
   basis: author_estimate
   locator: p.6 Sec. EO comb transmitter; Fig. 4(b)
+- device_id: wang2026b-pm
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.6 Sec. EO comb transmitter; Fig. 4(b)
+  note: authors do not state the drive
 - device_id: wang2026b-switch
   field: il_onchip_db
   value: 3
@@ -106,14 +120,14 @@ entries:
   unit: GBd
   basis: measured
   locator: p.6-7 Sec. EO comb transmitter; Fig. 4(e)
-  note: OOK eye at 20 Gbaud, limited by 13 GHz oscilloscope
+  note: OOK eye at 20 Gbaud, limited by 13 GHz oscilloscope; demonstrated maximum, no bound qualifier
 - device_id: wang2026b-am2
   field: max_line_rate_gbps
   value: 20
   unit: Gb/s
   basis: measured
   locator: p.1 abstract; Fig. 4(e)
-  note: OOK, equipment limited
+  note: OOK, equipment limited; demonstrated maximum, no bound qualifier
 - device_id: wang2026b-am2
   field: modulation_format
   value: OOK at 5, 10, 20 Gbaud on the left first comb sideband

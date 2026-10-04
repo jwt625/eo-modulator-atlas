@@ -30,11 +30,12 @@ entries:
     authors to the photodiode.
 - device_id: shamsansari2021-a
   field: bw_measured_to_ghz
-  value: 45
+  value: 50
   unit: GHz
   basis: measured
-  locator: p.3 Fig. 4(d) and text
-  note: Photodiode limit stated by the authors (45 GHz); VNA sweep itself ends at 50 GHz.
+  locator: p.3 text (50 GHz VNA); Fig. 4(d)
+  note: VNA sweep and plotted trace end at 50 GHz; 45 GHz photodiode response de-embedded; authors attribute
+    fluctuation beyond 45 GHz to the photodiode.
 - device_id: shamsansari2021-a
   field: electrode_gap_um
   value: 4

@@ -84,7 +84,14 @@ entries:
   unit: um
   basis: design_target
   locator: Fig. 1 caption, p.2
-  note: simulation parameter t_elec; electrode metal not stated separately
+  note: simulation parameter t_elec; equals the 45/15/400 nm AuGe/Ni/Au stack sum (App. A step (f))
+- device_id: li2025b-a
+  field: electrode_metal
+  value: AuGe/Ni/Au (45/15/400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.8 App. A step (f); p.3 Sec. II
+  note: single metallization step described; thickness sum equals t_elec 460 nm (Fig. 1 caption)
 - device_id: li2025b-a
   field: signal_width_um
   value: 5
@@ -206,7 +213,14 @@ entries:
   unit: um
   basis: design_target
   locator: Fig. 1 caption, p.2
-  note: simulation parameter t_elec; electrode metal not stated separately
+  note: simulation parameter t_elec; equals the 45/15/400 nm AuGe/Ni/Au stack sum (App. A step (f))
+- device_id: li2025b-b
+  field: electrode_metal
+  value: AuGe/Ni/Au (45/15/400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.8 App. A step (f); p.3 Sec. II
+  note: single metallization step described; thickness sum equals t_elec 460 nm (Fig. 1 caption)
 - device_id: li2025b-b
   field: signal_width_um
   value: 5
@@ -257,9 +271,9 @@ entries:
   field: vpi_dc_v
   value: 86
   unit: V
-  basis: measured
+  basis: derived
   locator: p.5 Sec. III
-  note: 86 V for device (i) [011], 93 V for device (ii) [01-1]; used to bound arm asymmetry
+  note: extracted value (86 V device (i), 93 V device (ii)); method not stated, direct read-out excluded by the 0-32 V sweep (Fig. 4)
 - device_id: li2025b-d
   field: wavelength_nm
   value: 1538.5
@@ -271,9 +285,9 @@ entries:
   field: vpi_dc_v
   value: 93
   unit: V
-  basis: measured
+  basis: derived
   locator: p.5 Sec. III
-  note: 86 V for device (i) [011], 93 V for device (ii) [01-1]; used to bound arm asymmetry
+  note: extracted value (86 V device (i), 93 V device (ii)); method not stated, direct read-out excluded by the 0-32 V sweep (Fig. 4)
 derived:
 - device_id: li2025b-a
   field: slab_thickness_nm

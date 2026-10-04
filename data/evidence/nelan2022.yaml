@@ -145,7 +145,7 @@ entries:
   note: ''
 - device_id: nelan2022-a
   field: cladding
-  value: PECVD SiO2 buffer 450 nm (thicker over the waveguide) with 100 nm PECVD SiNx strip, n = 1.943; UV15 index-matching fluid on the electrodes
+  value: PECVD SiO2 buffer 450 nm (thicker only where Au crosses over the waveguide) with 100 nm PECVD SiNx strip, n = 1.943; UV15 index-matching fluid on the electrodes
   unit: ''
   basis: design_target
   locator: p.3 Sec. II-A; p.5 Sec. II-C, III
@@ -178,4 +178,18 @@ entries:
   basis: measured
   locator: p.7 Fig. 7(f)
   note: ''
+- device_id: nelan2022-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.6 Sec. IV-C; Fig. 1(a)
+  note: authors do not state the convention; single GSG feed, center electrode active, one arm in each gap
+- device_id: nelan2022-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.6 Sec. IV-C; Fig. 1(a)
+  note: authors do not state the convention; single GSG feed, center electrode active, one arm in each gap
 derived: []

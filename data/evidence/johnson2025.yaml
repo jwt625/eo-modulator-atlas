@@ -225,7 +225,7 @@ entries:
   field: wavelength_nm
   value: 1290
   unit: nm
-  basis: author_estimate
+  basis: measured
   locator: p.2, below Eq. (1)
   note: 1290 nm is the 'measurement wavelength' used in the authors' r33 calculation; differs from the 1310 nm link wavelength
 - device_id: johnson2025-200g-best

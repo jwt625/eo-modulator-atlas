@@ -81,22 +81,7 @@ entries:
   basis: derived
   locator: p.3, Fig. 1(e)
   note: Authors do not state; inferred from electrodes along one straight arm only
-- device_id: lin2025a-mzi
-  field: vpi_convention
-  value: per_arm_phase_shifter
-  unit: ''
-  basis: derived
-  locator: p.3, Fig. 1(e)
-  note: Authors report no Vpi; per-arm convention follows the single-arm drive
 derived:
-- device_id: lin2025a-mzi
-  field: vpi_dc_v
-  value: 31.0
-  formula: FSR_nm / (2 * tuning_nm_per_v) = 2.563 / (2 * 0.0413) = 31.0 V; the 5 V point (57.6 pm/V) gives
-    22.2 V; assumes one FSR shift = 2 pi on the driven arm only
-  inputs:
-  - fsr_nm
-  - tuning_nm_per_v
 - device_id: lin2025a-mzi
   field: slab_thickness_nm
   value: 250

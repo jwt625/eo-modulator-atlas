@@ -52,12 +52,12 @@ entries:
   unit: ''
   basis: measured
   locator: p.5, Fig. 3b
-  note: 0 dB level at low frequency not stated; trace starts near 10 GHz
+  note: 0 dB reference not stated; traces start near 1 GHz (approximate figure reading); PD response de-embedded (p.9 Methods)
 - device_id: he2019-a
   field: il_onchip_db
   value: 2.5
   unit: dB
-  basis: author_estimate
+  basis: measured
   locator: p.1, abstract; p.8, Tab. 1
   note: Method and excluded items not stated; length not specified (Tab. 1 lists 5 mm)
 - device_id: he2019-a
@@ -85,7 +85,7 @@ entries:
   field: drive_vpp_v
   value: 4
   unit: V
-  basis: author_estimate
+  basis: measured
   locator: p.9, Methods; p.16, Supp. II
   note: Amplifier saturated output 4 Vpp; Supp. says 4 V obtained after the amplifier
 - device_id: he2019-a
@@ -262,7 +262,7 @@ entries:
   unit: ''
   basis: measured
   locator: p.5, Fig. 3b
-  note: 0 dB level at low frequency not stated; trace starts near 10 GHz
+  note: 0 dB reference not stated; traces start near 1 GHz (approximate figure reading); PD response de-embedded (p.9 Methods)
 - device_id: he2019-b
   field: prop_loss_db_per_cm
   value: 0.98
@@ -401,7 +401,7 @@ context_values:
 - item: simulated_vpil_experimental_structure
   value: 2.46
   unit: V*cm
-  locator: p.16, Supp. II
+  locator: p.14, Supp. I; p.16, Supp. II
   note: Paper's own simulation; 13 mm arms would give Vpi 1.9 V
 - item: simulated_rf_line_adopted_structure
   value: n_m about 2.16 (60-120 GHz), Re(Z0) about 48 ohm at 40-60 GHz, alpha_m about 7.3 dB/cm at 100 GHz

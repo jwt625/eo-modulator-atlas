@@ -148,9 +148,9 @@ entries:
   field: bw3db_ghz
   value: 70
   unit: GHz
-  basis: measured
+  basis: derived
   locator: p.4 text; Fig. 3(b) caption
-  note: S21 stated larger than 70 GHz; 1-8 GHz response compensated by authors; wavelength not stated
+  note: Bound on the authors' low-frequency-compensated S21 (red trace); compensation method not given; wavelength not stated
 - device_id: mao2024-1550
   field: bw_measured_to_ghz
   value: 70

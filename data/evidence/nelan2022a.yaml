@@ -141,4 +141,18 @@ entries:
   basis: design_target
   locator: p.3 Sec. 2; Fig. 1(b),(c)
   note: about 69 percent of the mode in LN (text)
+- device_id: nelan2022a-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: Fig. 1(c),(f)
+  note: authors do not state the convention; single GSG feed with one arm in each gap
+- device_id: nelan2022a-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: Fig. 1(c),(f)
+  note: authors do not state the convention; single GSG feed with one arm in each gap
 derived: []

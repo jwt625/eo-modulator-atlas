@@ -232,11 +232,11 @@ entries:
   note: Paper states 0.3 nm/V tuning efficiency corresponds to Vpi 3 V at DC after poling
 - device_id: kohli2025-rt
   field: bw_measured_to_ghz
-  value: 70
+  value: 75
   unit: GHz
   basis: extracted_from_figure
   locator: p.6 Fig. 4d; p.9 Methods
-  note: Axis spans +/-70 GHz, flat response; no 3 dB crossing and no bandwidth number stated
+  note: Data plotted to the axis end at about +/-75 GHz (figure read; last labelled tick 70 GHz), flat response; no 3 dB crossing and no bandwidth number stated
 - device_id: kohli2025-rt
   field: il_fiber_to_fiber_db
   value: 9.4

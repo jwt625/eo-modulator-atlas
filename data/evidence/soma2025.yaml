@@ -137,7 +137,7 @@ entries:
   unit: dB
   basis: measured
   locator: p.6; Fig. 4d inset
-  note: passive reflection at 0 V in dB scale
+  note: 0 V notch depth of the passive reflection spectrum in dB scale, not a voltage-switched ratio
 - device_id: soma2025-b
   field: q_loaded
   value: 665

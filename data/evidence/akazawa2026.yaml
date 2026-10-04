@@ -82,4 +82,11 @@ entries:
   basis: derived
   locator: p.3 Fig. 2(d)
   note: single phase shifter characterized in asymmetric MZI; authors do not name the convention
+- device_id: akazawa2026-a
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.3 Fig. 2(d); p.4 Fig. 3(b) caption; p.5 text
+  note: single phase shifter drive not stated; circuit MZI pairs operated push-pull
 derived: []

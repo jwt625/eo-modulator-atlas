@@ -25,9 +25,9 @@ entries:
   field: vpil_dc_vcm
   value: 2.4
   unit: V*cm
-  basis: measured
+  basis: derived
   locator: p.5
-  note: as reported; 1.9 V x 1.3 cm = 2.47
+  note: stated by authors from Vpi and length; 1.9 V x 1.3 cm = 2.47
 - device_id: xu2020-a
   field: bw3db_ghz
   value: 48
@@ -82,7 +82,7 @@ entries:
   value: 25
   unit: dB
   basis: measured
-  locator: p.5 Fig. 3(a) inset
+  locator: p.4 Fig. 3(a) inset; p.5 text
   note: 'text: > 25 dB for one sub-MZM; >10 devices 24 to 28 dB'
 - device_id: xu2020-a
   field: optical_input_power_dbm
@@ -212,7 +212,7 @@ entries:
   value: c_band
   unit: ''
   basis: measured
-  locator: p.5 Fig. 3(c)
+  locator: p.4 Fig. 3(c); p.5 text
   note: 'transmission shown 1530 to 1570 nm; text: whole C-band'
 - device_id: xu2020-b
   field: length_mm
@@ -232,9 +232,9 @@ entries:
   field: vpil_dc_vcm
   value: 2.3
   unit: V*cm
-  basis: measured
+  basis: derived
   locator: p.5
-  note: as reported; 3.1 V x 0.75 cm = 2.33
+  note: stated by authors from Vpi and length; 3.1 V x 0.75 cm = 2.33
 - device_id: xu2020-b
   field: bw3db_ghz
   value: 67
@@ -385,7 +385,7 @@ entries:
   value: c_band
   unit: ''
   basis: measured
-  locator: p.5 Fig. 3(c)
+  locator: p.4 Fig. 3(c); p.5 text
   note: whole C-band operation stated
 - device_id: xu2020-a
   field: bw_measured_to_ghz

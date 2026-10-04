@@ -403,9 +403,9 @@ entries:
   field: vpil_dc_vcm
   value: 2.53
   unit: V*cm
-  basis: measured
+  basis: derived
   locator: p.1 abstract; p.6 Sec. 3
-  note: 1.96 V x 1.2917 cm = 2.53
+  note: stated by authors from Vpi and length; 1.96 V x 1.2917 cm = 2.53
 - device_id: qi2024-d
   field: eo_film_thickness_nm
   value: 300

@@ -49,9 +49,9 @@ entries:
   field: z0_ohm
   value: 50
   unit: ohm
-  basis: derived
-  locator: p.9 Sec. 3; Fig. 3(a)
-  note: Authors state the ideal high-frequency real value sqrt(L'/(C'S+C'TL)) is about 50 ohm; no frequency given; measured Re Z0 varies with gate.
+  basis: measured
+  locator: p.7-8 Sec. 3; Fig. 2(d)
+  note: De-embedded Re Z0 about 51-55 ohm from 5 to 50 GHz at gate 0 V; authors state approximately 50 ohm except low frequency.
 - device_id: zwickel2020-gate0
   field: rf_loss_freq_ghz
   value: 50
@@ -126,8 +126,8 @@ entries:
   value: 50
   unit: ohm
   basis: derived
-  locator: p.9 Sec. 3; Fig. 3(a)
-  note: Authors state the ideal high-frequency real value sqrt(L'/(C'S+C'TL)) is about 50 ohm; no frequency given; measured Re Z0 varies with gate.
+  locator: p.9 Sec. 3; Fig. 3(a); p.8 Fig. 2(d)
+  note: Authors state Z0 is rather insensitive to gate voltage (p.9); measured Re Z0 at 300 V only in 3D Fig. 3(a), not read; limit about 50 ohm.
 - device_id: zwickel2020-gate300
   field: rf_loss_freq_ghz
   value: 50
@@ -226,16 +226,18 @@ entries:
   basis: predicted
   locator: p.21 Fig. 11; p.22-23 Summary
   note: 6 dB EOE bandwidth above 100 GHz with excess loss below 0.1 dB
-derived:
 - device_id: zwickel2020-gate0
   field: rf_loss_db_per_cm
-  value: 17
-  formula: 8.686 dB/Np x alpha[1/mm] x 10 mm/cm; alpha about 0.2 1/mm at 50 GHz read from Fig. 4
-  inputs:
-  - alpha ~ 0.2 1/mm (p.11 Fig. 4)
+  value: 22
+  unit: dB/cm
+  basis: extracted_from_figure
+  locator: p.11 Fig. 4(a); p.8 Fig. 2(f)
+  note: Measured alpha (amplitude, 1/mm, p.5) about 0.25 at 50 GHz (scatter 0.22-0.30; model 0.19); x 8.686 x 10 = 22 dB/cm.
 - device_id: zwickel2020-gate300
   field: rf_loss_db_per_cm
-  value: 59
-  formula: 8.686 dB/Np x alpha[1/mm] x 10 mm/cm; alpha about 0.68 1/mm at 50 GHz read from Fig. 4
-  inputs:
-  - alpha ~ 0.68 1/mm (p.11 Fig. 4)
+  value: 66
+  unit: dB/cm
+  basis: extracted_from_figure
+  locator: p.11 Fig. 4(c)
+  note: Measured alpha (amplitude, 1/mm, p.5) about 0.76 at 50 GHz (scatter 0.68-0.84; model 0.70); x 8.686 x 10 = 66 dB/cm.
+derived: []

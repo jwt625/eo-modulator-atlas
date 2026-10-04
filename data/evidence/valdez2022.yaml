@@ -35,7 +35,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.1 abstract; p.8 Fig. 5; p.9 Table 1
-  note: 'abstract: greater than 110 GHz; body: 110 GHz'
+  note: abstract says greater than 110 GHz; body, Fig. 5 caption and Table 1 give 110 GHz; data cross -3 dB near 107-110 GHz
 - device_id: valdez2022-a
   field: bw_measured_to_ghz
   value: 110
@@ -69,7 +69,7 @@ entries:
   unit: dBm
   basis: measured
   locator: p.1 abstract (110 mW); p.10 Conclusion (20.4 dBm)
-  note: maximum on-chip peak power tested, quasi-CW 1 us pulses; not a damage limit
+  note: maximum on-chip peak power tested, quasi-CW 1 us pulses; not a damage limit; source says up to 110 mW, so no bound qualifier
 - device_id: valdez2022-a
   field: ng_opt
   value: 2.32
@@ -142,12 +142,6 @@ entries:
   unit: ''
   basis: measured
   locator: p.2; p.5; p.6
-- device_id: valdez2022-a
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-8
 - device_id: valdez2022-a
   field: drive
   value: push_pull

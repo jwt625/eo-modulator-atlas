@@ -18,8 +18,8 @@ These three follow-ups are now `ready_for_review`; no canonical merge occurred.
 D1.01–D1.11, D2 and Q1. Progress: [E1/U1](DevLog/DevLog-003-cross-section-progress.md)
 and [data lane](DevLog/DevLog-004-data-lane-progress.md). Current canonical snapshot
 (2026-10-03, user-directed integration of every staged batch): 117 papers / 277 device
-rows / 185 organizations; generated view matches. Each paper carries an `audit_status`
-(audited 13, needs_recheck 94, needs_audit 10); see DevLog-014.
+rows / 185 organizations; generated view matches. Each paper carries an `audit_status`;
+after audit round 2 (2026-10-04) all 117 are `audited`; see DevLog-015.
 Other tranches remain unassigned. No implicit delegation.
 
 | ID | Tranche | State | Owner | Dependency / handoff |
@@ -51,6 +51,7 @@ Other tranches remain unassigned. No implicit delegation.
 | Q1-p2_02 | Independent D1.13 evidence audit | accepted after corrections | claude-wave-2026-10-02 | Second pass recorded; D2 canonical merge remains |
 | Q2-E2/E3 | Independent numerical module audit | corrections applied; limits open | claude-wave-2026-10-02 | DevLog/audits report; does not replace E1 independent audit |
 | Q2 | Independent numerical review | review ready; final gate waits | unassigned | E1 diff; later E2–E5; separate audit files |
+| Q1-r2 | Round-2 recheck of 94 papers, first audit of p1_02/p1_04, serial corrections, fresh verification | ready_for_review | claude-audit-2026-10-03 | 11 audits, 10 verifications; 117/117 audited; user decisions listed in DevLog-015 |
 | R1 | Release integration, second audit, public packaging | waiting | unassigned | Accepted D/E/U tranches; rights policy review |
 
 ## Claim protocol

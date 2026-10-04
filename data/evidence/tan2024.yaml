@@ -132,6 +132,20 @@ entries:
   basis: design_target
   locator: p.3-4 Sec. 2; p.3 Fig. 1(b)
   note: Si width 370 nm, bend radius 15 um, straight length 400 um
+- device_id: tan2024-a
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.4 Sec. 2; Fig. 2(a)
+  note: ring modulator; authors do not state the drive
+- device_id: tan2024-a
+  field: electrode_thickness_um
+  value: 0.7
+  unit: um
+  basis: design_target
+  locator: p.5; Fig. 1(b)
+  note: bottom (field-defining) electrodes 10 nm Ti + 700 nm Au; top routing layer 1.5 um Au
 derived:
 - device_id: tan2024-a
   field: length_mm

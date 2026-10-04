@@ -153,8 +153,9 @@ entries:
 - device_id: tiberi2025-b
   field: modulation_format
   value: NRZ
-  basis: measured
+  basis: author_estimate
   locator: Table I p.3; p.3 text
+  note: Table I and p.3 text; no eye diagram shown for this device
 - device_id: tiberi2025-b
   field: max_line_rate_gbps
   value: 20

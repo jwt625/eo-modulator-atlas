@@ -97,6 +97,13 @@ entries:
   basis: derived
   locator: p.4, Fig. 1b-c
   note: Authors state the two rings see inverse electric fields from one electrode pair; push_pull is our label
+- device_id: hou2024-a
+  field: wavelength_nm
+  value: 1561.36
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.10 Fig. 4(c); p.9
+  note: 0 V ring-pair dip; single-ring resonances 1561.33 and 1561.39 nm stated (p.9)
 - device_id: hou2024-b
   field: eo_film_thickness_nm
   value: 600.0

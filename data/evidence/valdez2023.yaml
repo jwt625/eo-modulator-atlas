@@ -139,12 +139,6 @@ entries:
   locator: p.2-4; p.3 Fig. 1(b)
   note: Si thickness 150 nm, widths 300/275/250/225 nm
 - device_id: valdez2023-cw1
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-9
-- device_id: valdez2023-cw1
   field: drive
   value: push_pull
   unit: ''
@@ -286,12 +280,6 @@ entries:
   locator: p.2-4; p.3 Fig. 1(b)
   note: Si thickness 150 nm, widths 300/275/250/225 nm
 - device_id: valdez2023-cw2
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-9
-- device_id: valdez2023-cw2
   field: drive
   value: push_pull
   unit: ''
@@ -432,12 +420,6 @@ entries:
   basis: measured
   locator: p.2-4; p.3 Fig. 1(b)
   note: Si thickness 150 nm, widths 300/275/250/225 nm
-- device_id: valdez2023-cn1
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-9
 - device_id: valdez2023-cn1
   field: drive
   value: push_pull
@@ -594,12 +576,6 @@ entries:
   locator: p.2-4; p.3 Fig. 1(b)
   note: Si thickness 150 nm, widths 300/275/250/225 nm
 - device_id: valdez2023-cn2
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-9
-- device_id: valdez2023-cn2
   field: drive
   value: push_pull
   unit: ''
@@ -755,12 +731,6 @@ entries:
   locator: p.2-4; p.3 Fig. 1(b)
   note: Si thickness 150 nm, widths 300/275/250/225 nm
 - device_id: valdez2023-ow1
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-9
-- device_id: valdez2023-ow1
   field: drive
   value: push_pull
   unit: ''
@@ -901,12 +871,6 @@ entries:
   basis: measured
   locator: p.2-4; p.3 Fig. 1(b)
   note: Si thickness 150 nm, widths 300/275/250/225 nm
-- device_id: valdez2023-ow2
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-9
 - device_id: valdez2023-ow2
   field: drive
   value: push_pull
@@ -1049,12 +1013,6 @@ entries:
   locator: p.2-4; p.3 Fig. 1(b)
   note: Si thickness 150 nm, widths 300/275/250/225 nm
 - device_id: valdez2023-on1
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-9
-- device_id: valdez2023-on1
   field: drive
   value: push_pull
   unit: ''
@@ -1195,12 +1153,6 @@ entries:
   basis: measured
   locator: p.2-4; p.3 Fig. 1(b)
   note: Si thickness 150 nm, widths 300/275/250/225 nm
-- device_id: valdez2023-on2
-  field: modulation_format
-  value: none (small-signal EO S21 and Vpi characterization only)
-  unit: ''
-  basis: measured
-  locator: p.7-9
 - device_id: valdez2023-on2
   field: drive
   value: push_pull

@@ -24,9 +24,9 @@ entries:
   field: vpil_dc_vcm
   value: 2.6
   unit: V*cm
-  basis: measured
+  basis: derived
   locator: p.3 Sec. 2
-  note: as reported; 2.18 V x 1.2 cm = 2.62
+  note: stated by authors from Vpi and length; 2.18 V x 1.2 cm = 2.62
 - device_id: wang2022a-a
   field: bw6db_ghz
   value: 67
@@ -136,11 +136,11 @@ entries:
   locator: p.2 Sec. 2
 - device_id: wang2022a-a
   field: cladding
-  value: SiO2 2 um (PECVD, whole chip)
+  value: SiO2 2 um (whole chip)
   unit: ''
   basis: design_target
   locator: p.2 Sec. 2 step (ix)
-  note: also 900 nm PECVD SiO2 earlier; 3.2 um SiON for the SSC; modulation-section stack not drawn
+  note: deposition method of the 2 um layer not stated; 900 nm PECVD SiO2 earlier; 3.2 um PECVD SiON for the SSC; modulation-section stack not drawn
 - device_id: wang2022a-a
   field: crystal_cut
   value: x-cut

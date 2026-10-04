@@ -161,6 +161,13 @@ entries:
   basis: author_estimate
   locator: p.4, Sec. text
   note: About 0.2 pF from the longer RF electrode
+- device_id: wang2018-mzi
+  field: max_baud_gbd
+  value: 22
+  unit: GBd
+  basis: derived
+  locator: p.4, Fig. 4 caption; p.5
+  note: NRZ, one bit per symbol
 - device_id: wang2018-rt-q50k
   field: wavelength_nm
   value: 1576
@@ -182,6 +189,48 @@ entries:
   basis: measured
   locator: p.3, Sec. text; Fig. 3 caption
   note: '''loaded quality (Q) factor ~50,000'''
+- device_id: wang2018-rt-q50k
+  field: etch_depth_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Rib height h = 400 nm taken as etch depth; platform waveguide statement
+- device_id: wang2018-rt-q50k
+  field: rib_width_nm
+  value: 900
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Top width w; stated for the platform optical waveguides
+- device_id: wang2018-rt-q50k
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Slab thickness s; stated for the platform optical waveguides
+- device_id: wang2018-rt-q50k
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''gold micro-RF electrodes'' stated for the platform'
+- device_id: wang2018-rt-q50k
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: SiO2 cladding layer stated for the platform; thickness not stated
+- device_id: wang2018-rt-q50k
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''Our devices make use of an x-cut LN configuration'''
 - device_id: wang2018-rt-q8k
   field: q_loaded
   value: 8000
@@ -196,6 +245,48 @@ entries:
   basis: measured
   locator: p.4, Sec. text; Fig. 4b
   note: Limited by photon lifetime of about 6 ps
+- device_id: wang2018-rt-q8k
+  field: etch_depth_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Rib height h = 400 nm taken as etch depth; platform waveguide statement
+- device_id: wang2018-rt-q8k
+  field: rib_width_nm
+  value: 900
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Top width w; stated for the platform optical waveguides
+- device_id: wang2018-rt-q8k
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Slab thickness s; stated for the platform optical waveguides
+- device_id: wang2018-rt-q8k
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''gold micro-RF electrodes'' stated for the platform'
+- device_id: wang2018-rt-q8k
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: SiO2 cladding layer stated for the platform; thickness not stated
+- device_id: wang2018-rt-q8k
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''Our devices make use of an x-cut LN configuration'''
 - device_id: wang2018-rt-q5p7k
   field: q_loaded
   value: 5700
@@ -210,6 +301,48 @@ entries:
   basis: measured
   locator: p.4, Sec. text
   note: Paired with Q 5,700 in order of mention
+- device_id: wang2018-rt-q5p7k
+  field: etch_depth_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Rib height h = 400 nm taken as etch depth; platform waveguide statement
+- device_id: wang2018-rt-q5p7k
+  field: rib_width_nm
+  value: 900
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Top width w; stated for the platform optical waveguides
+- device_id: wang2018-rt-q5p7k
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Slab thickness s; stated for the platform optical waveguides
+- device_id: wang2018-rt-q5p7k
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''gold micro-RF electrodes'' stated for the platform'
+- device_id: wang2018-rt-q5p7k
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: SiO2 cladding layer stated for the platform; thickness not stated
+- device_id: wang2018-rt-q5p7k
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''Our devices make use of an x-cut LN configuration'''
 - device_id: wang2018-rt-q18k
   field: q_loaded
   value: 18000
@@ -224,6 +357,48 @@ entries:
   basis: measured
   locator: p.4, Sec. text
   note: Paired with Q 18,000 in order of mention
+- device_id: wang2018-rt-q18k
+  field: etch_depth_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Rib height h = 400 nm taken as etch depth; platform waveguide statement
+- device_id: wang2018-rt-q18k
+  field: rib_width_nm
+  value: 900
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Top width w; stated for the platform optical waveguides
+- device_id: wang2018-rt-q18k
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Slab thickness s; stated for the platform optical waveguides
+- device_id: wang2018-rt-q18k
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''gold micro-RF electrodes'' stated for the platform'
+- device_id: wang2018-rt-q18k
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: SiO2 cladding layer stated for the platform; thickness not stated
+- device_id: wang2018-rt-q18k
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''Our devices make use of an x-cut LN configuration'''
 - device_id: wang2018-rt-eye
   field: drive_vpp_v
   value: 5.66
@@ -259,6 +434,55 @@ entries:
   basis: derived
   locator: p.5, Sec. text
   note: 'CV^2/4 stated by authors: 240 fJ/bit'
+- device_id: wang2018-rt-eye
+  field: max_baud_gbd
+  value: 40
+  unit: GBd
+  basis: derived
+  locator: p.4, Fig. 4 caption; p.5
+  note: NRZ, one bit per symbol
+- device_id: wang2018-rt-eye
+  field: etch_depth_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Rib height h = 400 nm taken as etch depth; platform waveguide statement
+- device_id: wang2018-rt-eye
+  field: rib_width_nm
+  value: 900
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Top width w; stated for the platform optical waveguides
+- device_id: wang2018-rt-eye
+  field: slab_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. text
+  note: Slab thickness s; stated for the platform optical waveguides
+- device_id: wang2018-rt-eye
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''gold micro-RF electrodes'' stated for the platform'
+- device_id: wang2018-rt-eye
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: SiO2 cladding layer stated for the platform; thickness not stated
+- device_id: wang2018-rt-eye
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. text
+  note: '''Our devices make use of an x-cut LN configuration'''
 derived:
 - device_id: wang2018-mzi
   field: max_baud_gbd

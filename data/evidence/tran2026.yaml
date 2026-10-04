@@ -17,9 +17,9 @@ entries:
   field: vpi_dc_v
   value: 3.1
   unit: V
-  basis: measured
-  locator: p.2, Sec. 3; p.3, Conclusion; Fig. 1 center
-  note: Static transfer at 5 V bias; Fig. 1 center label reads 3.4 V, text and conclusion 3.1 V
+  basis: author_estimate
+  locator: p.2, Sec. 3 text; p.3, Conclusion
+  note: Text value; the static transfer curve in Fig. 1 center is labelled 3.4 V; method for 3.1 V not stated
 - device_id: tran2026-a
   field: vpil_dc_vcm
   value: 0.62

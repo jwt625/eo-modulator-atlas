@@ -81,3 +81,9 @@ entries:
   locator: p.1-2 text
   note: PhC thicknesses are design values from the optimization (p.2); fabricated values not stated
 derived: []
+context_values:
+- item: published_on_arxiv_v1_stamp
+  value: '2025-11-04'
+  unit: ''
+  locator: p.1 arXiv stamp
+  note: "published_on basis: page-1 arXiv v1 stamp 'arXiv:2511.02202v1 [physics.optics] 4 Nov 2025'; no crossref.json for this paper"

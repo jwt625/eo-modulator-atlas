@@ -213,9 +213,9 @@ entries:
   field: bw3db_ghz
   value: 35
   unit: GHz
-  basis: extracted_from_figure
+  basis: measured
   locator: p.3 Sec. MZM bandwidth; Fig. 2(c)
-  note: 'text: approximately 35 GHz w.r.t. 3 GHz'
+  note: 'text: approximately 35 GHz w.r.t. 3 GHz; authors'' Bessel-fit extraction'
 - device_id: renaud2023-3um-738
   field: bw3db_reference
   value: other
@@ -254,23 +254,9 @@ entries:
   field: extinction_ratio_db
   value: 21
   unit: dB
-  basis: extracted_from_figure
-  locator: p.3 Fig. 2(b) inset; p.3 text
+  basis: measured
+  locator: p.3 text; Fig. 2(b) inset
   note: 'text: about 21 dB for 3 um gap'
-- device_id: renaud2023-3um-738
-  field: rf_loss_db_per_cm
-  value: 7.99
-  unit: dB/cm
-  basis: derived
-  locator: p.3
-  note: 1.35 dB/cm/GHz^0.5 coefficient stated; value at 35 GHz computed here
-- device_id: renaud2023-3um-738
-  field: rf_loss_freq_ghz
-  value: 35
-  unit: GHz
-  basis: derived
-  locator: p.3
-  note: evaluated at the 3 dB bandwidth
 - device_id: renaud2023-3um-738
   field: n_rf
   value: 2.22
@@ -285,13 +271,6 @@ entries:
   basis: simulated
   locator: p.2
   note: VNIR optical group index; wavelength and method not stated
-- device_id: renaud2023-3um-738
-  field: z0_ohm
-  value: 50
-  unit: ohm
-  basis: design_target
-  locator: p.2
-  note: electrodes designed for impedance close to 50 ohm
 - device_id: renaud2023-3um-738
   field: wavelength_nm
   value: 738
@@ -933,10 +912,4 @@ entries:
   basis: derived
   locator: p.4
   note: phase modulator; authors do not state the convention
-derived:
-- device_id: renaud2023-3um-738
-  field: rf_loss_db_per_cm
-  value: 7.99
-  formula: 1.35 * sqrt(35)
-  inputs:
-  - rf_loss_freq_ghz
+derived: []

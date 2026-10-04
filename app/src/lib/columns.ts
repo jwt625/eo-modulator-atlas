@@ -64,7 +64,7 @@ export const COLS: ColDef[] = [
 	{ id: 'region', label: 'Country / region', tip: 'Derived from the affiliations', width: 130, level: 'paper', defaultOn: true },
 	{ id: 'fab', label: 'Foundry / fab', tip: 'Who fabricated the device, as stated in the paper', width: 190, level: 'paper', defaultOn: true },
 	{ id: 'grade', label: 'Repro', tip: 'Reproducibility grade: A geometry and materials fully disclosed; B needs figure digitization; C metrics only', width: 48, level: 'paper', defaultOn: true },
-	{ id: 'audit', label: 'Audit', tip: 'Independent audit state: Audited = audit report and corrections accepted before integration; Needs 2nd audit = audited once, corrections not re-audited; Needs audit = no independent audit yet', width: 120, level: 'paper', defaultOn: true },
+	{ id: 'audit', label: 'Audit', tip: 'Independent audit state: Audited = audit report and corrections accepted (before integration or independently verified); Needs 2nd audit = audited once, corrections not re-audited; Needs audit = no independent audit yet', width: 120, level: 'paper', defaultOn: true },
 	{ id: 'sim', label: 'Sim', tip: 'Browser simulation config available', width: 44, level: 'paper', defaultOn: true },
 	{ id: 'device', label: 'Device', tip: 'Device label', width: 180, level: 'device', defaultOn: false },
 	{ id: 'length', label: 'Length', unit: 'mm', tip: 'Active electrode / phase-shifter length', width: 62, num: true, level: 'device', defaultOn: false },
@@ -77,7 +77,7 @@ export const COLS: ColDef[] = [
 ];
 
 const AUDIT_TIP: Record<string, string> = {
-	audited: 'Independent audit report and author corrections accepted before integration',
+	audited: 'Independent audit report and author corrections accepted (before integration or independently verified)',
 	needs_recheck: 'Independently audited once and corrected by the author; the corrections have not been re-audited',
 	needs_audit: 'No independent audit yet; treat the numbers as unreviewed'
 };

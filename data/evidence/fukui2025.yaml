@@ -98,11 +98,11 @@ entries:
   note: membrane from MOVPE epitaxial substrate with InGaAs/InP sacrificial layers
 - device_id: fukui2025-b
   field: wavelength_nm
-  value: 1547.4
+  value: 1550
   unit: nm
   basis: simulated
-  locator: p.3; Fig. 2f (p.10)
-  note: operating wavelength used for the reflective-modulator case
+  locator: Table S1 (p.22)
+  note: Table S1 numerical case, paired there with 0.24 dB loss; Fig. 2f operating point is 1547.4 nm with 0.21 dB (p.3)
 - device_id: fukui2025-b
   field: length_mm
   value: 0.04
@@ -123,7 +123,7 @@ entries:
   unit: dB
   basis: simulated
   locator: p.2-3; Fig. 2c (p.10); Table S1 (p.22)
-  note: as small as 0.24 dB at ND 1e19 cm-3
+  note: as small as 0.24 dB at ND 1e19 cm-3; largest value over the simulated range (Methods p.4); Table S1 pairs it with 1550 nm
 - device_id: fukui2025-b
   field: q_loaded
   value: 930

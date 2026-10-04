@@ -25,9 +25,9 @@ entries:
   field: vpil_dc_vcm
   value: 0.025
   unit: V*cm
-  basis: author_estimate
+  basis: derived
   locator: p.2 abstract; p.11 Discussion
-  note: DC modulation efficiency about 0.25 V.mm for 500 um in a push-pull MZM; converted to V*cm; equals 0.5 V x 0.5 mm
+  note: DC modulation efficiency about 0.25 V.mm stated as achieved for 500 um in a push-pull MZM; converted to V*cm; equals 0.5 V x 0.5 mm
 - device_id: taghavi2024-a
   field: vpi_rf_v
   value: 51.4
@@ -67,9 +67,9 @@ entries:
   field: prop_loss_db_per_cm
   value: 42
   unit: dB/cm
-  basis: derived
+  basis: measured
   locator: p.11 Discussion; p.15 Methods
-  note: Stated about 4.2 dB/mm for the FLS waveguide; converted to dB/cm; Table 2 VpiLalpha 1.05 V.dB is consistent
+  note: about 4.2 dB/mm recorded for the FLS waveguide; converted to dB/cm; Table 2 VpiLalpha 1.05 V.dB is consistent
 - device_id: taghavi2024-a
   field: extinction_ratio_db
   value: 26

@@ -66,14 +66,14 @@ entries:
   field: vpi_dc_v
   value: 22
   unit: V
-  basis: measured
+  basis: derived
   locator: p.5; Fig. 3(a) caption
-  note: full pi phase shift between 20 V and -2 V (22 V swing) on 10 um graphene; extraction method not stated
+  note: pi phase between 20 V and -2 V (22 V swing), 10 um graphene; deduced from ring resonance shift (SI V, not cached)
 - device_id: luan2026-a
   field: vpil_dc_vcm
   value: 0.022
   unit: V*cm
-  basis: measured
+  basis: derived
   locator: abstract p.1
   note: 'paper: V_pi L = 220 V um, converted to V*cm'
 - device_id: luan2026-a

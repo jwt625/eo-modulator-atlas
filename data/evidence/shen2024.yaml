@@ -662,3 +662,9 @@ entries:
   locator: p.4 text
   note: Simulated optical group index of the modelled cross-section, stated as around 2.25
 derived: []
+context_values:
+- item: published_on_arxiv_v1_stamp
+  value: '2023-09-06'
+  unit: ''
+  locator: p.1 arXiv stamp
+  note: "published_on basis: page-1 arXiv v1 stamp 'arXiv:2309.03284v1 [quant-ph] 6 Sep 2023'; Crossref date 2024-01-16 is the journal version"

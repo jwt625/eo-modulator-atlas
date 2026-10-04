@@ -154,7 +154,7 @@ entries:
   field: drive_vpp_v
   value: 4.4
   unit: V
-  basis: author_estimate
+  basis: measured
   locator: p.5 Sec. IV
   note: 4.4 V peak-to-peak input signal at 56 Gb/s; authors estimate the resulting dynamic ER as 3.7 dB
 - device_id: vanackere2023-a

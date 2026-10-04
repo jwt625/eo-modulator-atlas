@@ -91,10 +91,10 @@ entries:
   field: drive_vpp_v
   value: 0.6
   unit: V
-  basis: derived
-  locator: p.8, Fig. 5 caption; p.9, Fig. 6
-  note: Vpp stated for bias and wavelength scans and the transient; the 302 Gb/s DMT run states none,
-    so 0.6 V is carried over.
+  basis: measured
+  locator: p.8, Fig. 5(c),(d) caption; p.9, Fig. 6
+  note: Vpp fixed at 600 mV in the Fig. 5(c),(d) data-rate scans, which peak near 302 Gb/s at 1312 nm,
+    -0.9 V; Fig. 7 run states no Vpp.
 - device_id: hu2023-a
   field: max_baud_gbd
   value: 60

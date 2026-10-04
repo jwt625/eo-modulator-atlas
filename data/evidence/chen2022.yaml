@@ -13,14 +13,14 @@ entries:
   value: 5
   unit: mm
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(a)
+  locator: p.7 Sec. III; p.6 Fig. 4(a)
   note: modulation section length
 - device_id: chen2022-a
   field: vpi_dc_v
   value: 4.45
   unit: V
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(a)
+  locator: p.7 Sec. III; p.6 Fig. 4(a)
   note: 100 kHz triangular voltage sweep
 - device_id: chen2022-a
   field: vpil_dc_vcm
@@ -34,21 +34,21 @@ entries:
   value: 67
   unit: GHz
   basis: measured
-  locator: p.7 Sec. III; Fig. 5
+  locator: p.7 Sec. III; p.6 Fig. 5
   note: 3 dB EO bandwidth greater than 67 GHz, beyond network analyzer limit
 - device_id: chen2022-a
   field: il_onchip_db
   value: 0.2
   unit: dB
   basis: extracted_from_figure
-  locator: Fig. 4(a) inset; p.7 Sec. III
+  locator: p.6 Fig. 4(a) inset; p.7 Sec. III
   note: inset label -0.2 dB; text deduces ~0.2 dB for the 10 mm device
 - device_id: chen2022-a
   field: extinction_ratio_db
   value: 30
   unit: dB
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(a) inset
+  locator: p.7 Sec. III; p.6 Fig. 4(a) inset
   note: reported as lower bound (>)
 - device_id: chen2022-a
   field: ng_opt
@@ -121,11 +121,11 @@ entries:
   note: buried oxide (BOX) under the LN film
 - device_id: chen2022-a
   field: substrate
-  value: silicon 725 um with 35 um isotropic undercut beneath the modulation section
+  value: silicon 725 um, isotropically undercut beneath the modulation section (35 um design optimum; fabricated depth not stated)
   unit: ''
   basis: measured
-  locator: p.6 Sec. II; p.5
-  note: 725 um Si; 35 um undercut stated optimal
+  locator: p.6 Sec. II; p.5 Sec. II; p.7 Sec. III
+  note: 725 um Si (p.6); 35 um undercut is the design optimum (p.5); p.7 calls for longer undercut; fabricated depth not stated
 - device_id: chen2022-a
   field: cladding
   value: SiO2 900 nm (PECVD)
@@ -143,14 +143,14 @@ entries:
   value: 7
   unit: mm
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(b)
+  locator: p.7 Sec. III; p.6 Fig. 4(b)
   note: modulation section length
 - device_id: chen2022-b
   field: vpi_dc_v
   value: 3.22
   unit: V
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(b)
+  locator: p.7 Sec. III; p.6 Fig. 4(b)
   note: 100 kHz triangular voltage sweep
 - device_id: chen2022-b
   field: vpil_dc_vcm
@@ -164,21 +164,21 @@ entries:
   value: 67
   unit: GHz
   basis: measured
-  locator: p.7 Sec. III; Fig. 5
+  locator: p.7 Sec. III; p.6 Fig. 5
   note: 3 dB EO bandwidth greater than 67 GHz, beyond network analyzer limit
 - device_id: chen2022-b
   field: il_onchip_db
   value: 0.2
   unit: dB
   basis: extracted_from_figure
-  locator: Fig. 4(b) inset; p.7 Sec. III
+  locator: p.6 Fig. 4(b) inset; p.7 Sec. III
   note: inset label -0.2 dB; text deduces ~0.2 dB for the 10 mm device
 - device_id: chen2022-b
   field: extinction_ratio_db
   value: 25
   unit: dB
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(b) inset
+  locator: p.7 Sec. III; p.6 Fig. 4(b) inset
   note: reported as lower bound (>)
 - device_id: chen2022-b
   field: ng_opt
@@ -251,11 +251,11 @@ entries:
   note: buried oxide (BOX) under the LN film
 - device_id: chen2022-b
   field: substrate
-  value: silicon 725 um with 35 um isotropic undercut beneath the modulation section
+  value: silicon 725 um, isotropically undercut beneath the modulation section (35 um design optimum; fabricated depth not stated)
   unit: ''
   basis: measured
-  locator: p.6 Sec. II; p.5
-  note: 725 um Si; 35 um undercut stated optimal
+  locator: p.6 Sec. II; p.5 Sec. II; p.7 Sec. III
+  note: 725 um Si (p.6); 35 um undercut is the design optimum (p.5); p.7 calls for longer undercut; fabricated depth not stated
 - device_id: chen2022-b
   field: cladding
   value: SiO2 900 nm (PECVD)
@@ -273,14 +273,14 @@ entries:
   value: 10
   unit: mm
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(c)
+  locator: p.7 Sec. III; p.6 Fig. 4(c)
   note: modulation section length
 - device_id: chen2022-c
   field: vpi_dc_v
   value: 2.2
   unit: V
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(c)
+  locator: p.7 Sec. III; p.6 Fig. 4(c)
   note: 100 kHz triangular voltage sweep
 - device_id: chen2022-c
   field: vpil_dc_vcm
@@ -294,35 +294,35 @@ entries:
   value: 67
   unit: GHz
   basis: measured
-  locator: p.7 Sec. III; Fig. 5
+  locator: p.7 Sec. III; p.6 Fig. 5
   note: 3 dB EO bandwidth greater than 67 GHz, beyond network analyzer limit
 - device_id: chen2022-c
   field: il_onchip_db
   value: 0.2
   unit: dB
   basis: derived
-  locator: Fig. 4(c) inset; p.7 Sec. III
+  locator: p.6 Fig. 4(c) inset; p.7 Sec. III
   note: inset label -0.2 dB; text deduces ~0.2 dB for the 10 mm device
 - device_id: chen2022-c
   field: extinction_ratio_db
   value: 20
   unit: dB
   basis: measured
-  locator: p.7 Sec. III; Fig. 4(c) inset
+  locator: p.7 Sec. III; p.6 Fig. 4(c) inset
   note: reported as lower bound (>)
 - device_id: chen2022-c
   field: z0_ohm
   value: 50.5
   unit: ohm
   basis: extracted_from_figure
-  locator: Fig. 5(d)
+  locator: p.6 Fig. 5(d)
   note: approx. 50 ohm at low frequency rising to ~52 ohm at 67 GHz; band-average reading
 - device_id: chen2022-c
   field: n_rf
   value: 2.35
   unit: '1'
   basis: extracted_from_figure
-  locator: Fig. 5(f); p.7 text
+  locator: p.6 Fig. 5(f); p.7 text
   note: flat 10-67 GHz; text states mismatch ~0.15 versus ng
 - device_id: chen2022-c
   field: ng_opt
@@ -395,11 +395,11 @@ entries:
   note: buried oxide (BOX) under the LN film
 - device_id: chen2022-c
   field: substrate
-  value: silicon 725 um with 35 um isotropic undercut beneath the modulation section
+  value: silicon 725 um, isotropically undercut beneath the modulation section (35 um design optimum; fabricated depth not stated)
   unit: ''
   basis: measured
-  locator: p.6 Sec. II; p.5
-  note: 725 um Si; 35 um undercut stated optimal
+  locator: p.6 Sec. II; p.5 Sec. II; p.7 Sec. III
+  note: 725 um Si (p.6); 35 um undercut is the design optimum (p.5); p.7 calls for longer undercut; fabricated depth not stated
 - device_id: chen2022-c
   field: cladding
   value: SiO2 900 nm (PECVD)
@@ -431,21 +431,21 @@ entries:
   value: 112
   unit: Gb/s
   basis: measured
-  locator: p.6-7 Fig. 6(d); abstract
+  locator: p.7 Fig. 6(d); p.8 text; abstract
   note: 56 GBd PAM-4
 - device_id: chen2022-c
   field: modulation_format
   value: OOK; PAM-4
   unit: ''
   basis: measured
-  locator: p.6-7 Fig. 6
+  locator: p.7 Fig. 6; p.7-8 text
   note: OOK up to 100 Gb/s, PAM-4 up to 112 Gb/s
 - device_id: chen2022-c
   field: rf_loss_freq_ghz
   value: 67
   unit: GHz
   basis: derived
-  locator: p.7 Sec. III; Fig. 5(e)
+  locator: p.7 Sec. III; p.6 Fig. 5(e)
   note: evaluation frequency chosen at the measurement limit for the fitted alpha0 sqrt(f) law
 - device_id: chen2022-a
   field: bw3db_ghz
@@ -466,7 +466,7 @@ entries:
   value: mzm_push_pull
   unit: ''
   basis: derived
-  locator: Fig. 1(c,d); Fig. 4
+  locator: Fig. 1(c,d); p.6 Fig. 4
   note: not stated by the authors; Vpi read as the full-transmission swing of the MZM
 - device_id: chen2022-a
   field: er_type
@@ -494,7 +494,7 @@ entries:
   value: mzm_push_pull
   unit: ''
   basis: derived
-  locator: Fig. 1(c,d); Fig. 4
+  locator: Fig. 1(c,d); p.6 Fig. 4
   note: not stated by the authors; Vpi read as the full-transmission swing of the MZM
 - device_id: chen2022-b
   field: er_type
@@ -522,7 +522,7 @@ entries:
   value: mzm_push_pull
   unit: ''
   basis: derived
-  locator: Fig. 1(c,d); Fig. 4
+  locator: Fig. 1(c,d); p.6 Fig. 4
   note: not stated by the authors; Vpi read as the full-transmission swing of the MZM
 - device_id: chen2022-c
   field: er_type
@@ -536,14 +536,14 @@ entries:
   value: 1.4
   unit: dB
   basis: measured
-  locator: Abstract; p.7; Table I
+  locator: Abstract; p.7; p.8 Table I
   note: roll-off at 67 GHz for the 10 mm device; reference frequency not stated in the paper; 0.76 dB at 50 GHz in notes
 - device_id: chen2022-c
   field: eo_rolloff_freq_ghz
   value: 67
   unit: GHz
   basis: measured
-  locator: Abstract; p.7; Table I
+  locator: Abstract; p.7; p.8 Table I
   note: ''
 derived:
 - device_id: chen2022-c

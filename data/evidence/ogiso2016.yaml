@@ -155,11 +155,11 @@ entries:
   note: 'lower bound (qualifier gt): ''over 67 GHz'', 3 dB point not reached; reference 1.5 GHz; -5 V reverse bias'
 - device_id: ogiso2016-a
   field: eo_rolloff_db
-  value: 2.7
+  value: 2.0
   unit: dB
   basis: extracted_from_figure
   locator: Fig. 4
-  note: EO response at the 67 GHz end of the trace, about -2.7 dB relative to 1.5 GHz
+  note: EO response at the 67 GHz end of the trace, about -2.0 dB relative to 1.5 GHz (figure read, pixel analysis against axis ticks)
 - device_id: ogiso2016-a
   field: eo_rolloff_freq_ghz
   value: 67
@@ -202,7 +202,7 @@ context_values:
   locator: p.1, p.2 Fig. 5
   note: NRZ-OOK
 - item: eo_response_at_end_of_trace
-  value: approx -2.7 (read from plot)
+  value: approx -2.0 (read from plot)
   unit: dB
   locator: p.1, Fig. 4
-  note: visual read only, not entered in CSV
+  note: figure read; same reading as CSV eo_rolloff_db 2.0 at 67 GHz

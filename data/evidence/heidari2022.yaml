@@ -29,6 +29,13 @@ entries:
   locator: p.3
   note: simulation estimate for the on-chip integrated device
 - device_id: heidari2022-a
+  field: extinction_ratio_db
+  value: 13
+  unit: dB
+  basis: extracted_from_figure
+  locator: Fig. 3(a) p.4
+  note: static, 1550 nm, about -3 dB at -4 V to about -16 dB at 0 V; approximate reading
+- device_id: heidari2022-a
   field: energy_per_bit_fj
   value: 2.25
   unit: fJ/bit

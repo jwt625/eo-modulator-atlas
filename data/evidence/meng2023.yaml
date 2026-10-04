@@ -57,11 +57,11 @@ entries:
   note: no reference frequency stated
 - device_id: meng2023-a
   field: extinction_ratio_db
-  value: 1.98
+  value: 5.34
   unit: dB
   basis: measured
-  locator: p.11 Sec. 3.2; Fig. 7(e)
-  note: dynamic ER of the 224 Gb/s PAM4 eye
+  locator: p.11 Sec. 3.2; Fig. 7(a)
+  note: dynamic ER of the 56 Gb/s OOK eye; 1.98 dB at 224 Gb/s PAM4 (Fig. 7(e))
 - device_id: meng2023-a
   field: ng_opt
   value: 2.29
@@ -69,13 +69,6 @@ entries:
   basis: simulated
   locator: p.6 Fig. 2(b)
   note: TE0 mode label ng ~ 2.29
-- device_id: meng2023-a
-  field: eo_film_thickness_nm
-  value: 500
-  unit: nm
-  basis: derived
-  locator: p.5
-  note: film = ridge 260 nm + slab 240 nm
 - device_id: meng2023-a
   field: etch_depth_nm
   value: 260
@@ -234,7 +227,7 @@ derived:
 - device_id: meng2023-a
   field: eo_film_thickness_nm
   value: 500
-  formula: h + s = 260 nm + 240 nm
+  formula: h + s = 260 nm + 240 nm (not stated in the paper; computed by the distiller)
   inputs:
   - etch_depth_nm
   - slab_thickness_nm

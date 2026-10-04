@@ -24,8 +24,8 @@ entries:
   value: 1.04
   unit: V*cm
   basis: derived
-  locator: p.6 text; p.22 Eq. 22
-  note: author-computed from r_eff, confinement and group index; +/- 0.08; 20 Hz drive
+  locator: p.6 text; p.22 Eq. 20-22
+  note: Eq. 22 with meander-corrected r_eff 345 pm/V (280/0.81); +/- 0.08; 20 Hz; as-measured device about 1.29 V cm (0.084 V/um x d x L)
 - device_id: ulrich2025-mzi
   field: bw3db_ghz
   value: 0.001
@@ -39,7 +39,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.6 Fig. 3(f) caption; p.7 text; p.23-24 Fig. S10
-  note: 1 MHz upper limit; setup resonance at 5 MHz
+  note: 1 MHz upper limit; setup resonance at 5 MHz; data recorded to 20 MHz (Fig. S10a), setup resonances above 1 MHz (Fig. S10b)
 - device_id: ulrich2025-mzi
   field: ng_opt
   value: 1.84
