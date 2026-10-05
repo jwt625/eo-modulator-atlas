@@ -99,3 +99,14 @@ A pin = (paper, author, site). "Papers" mode dedupes to (paper, site).
 - Country and city names and major roads from Natural Earth (public domain), built by `scripts/build_map_labels.py` from ne_110m_admin_0_countries, ne_10m_populated_places_simple and ne_10m_roads (downloaded once from the natural-earth-vector repository; not vendored). Outputs: `app/static/geo/labels.json` (177 countries with label points and min_label, 7342 places with min_zoom; 219 KB, 94 KB gzip) and `app/static/geo/roads_major.geojson` (10098 Major Highway/Beltway/Bypass/expressway segments, 3-decimal coordinates; 2.4 MB, 498 KB gzip).
 - Display rules (Natural Earth zooms are for 256 px tiles, map zoom + 1): country labels where min_label <= zoom + 2, hidden above zoom 7; places where min_zoom <= zoom + 1; roads as a Plotly map layer visible from zoom 4.5, so the file is requested only on first zoom-in (verified: 0 requests at world and zoom 3.7, 1 at zoom 5.5). Cluster bubbles are drawn last so their counts win label collisions. Attribution line extended with Natural Earth. Hover text pluralization fixed.
 - Checks: dark, light, 390 px; no external requests; svelte-check 0 errors; 33 app tests; smoke 15/15.
+
+## Follow-up 2026-10-04: smaller roads (user request)
+
+- `scripts/build_map_labels.py` now also writes the non-major Natural Earth 1:10m roads (Secondary Highway, Road, Unknown, Track; ferries excluded) in two tiers by Natural Earth min_zoom: `roads_minor_a.geojson` (<= 6; 17089 segments, 5.0 MB, 1.1 MB gzip) and `roads_minor_b.geojson` (> 6; 29099 segments, 8.1 MB, 1.8 MB gzip). Douglas-Peucker at 50-100 m saved only about 4% (Natural Earth roads are already generalized), so it is not applied.
+- Map: three road layers (major from zoom 4.5, tier a from 5.5, tier b from 6.5; thinner and fainter per tier), each file requested only when its zoom is reached (verified: major at 4.6, a at 5.6, b at 6.6; nothing before). Clusters keep splitting (76 -> 127 bubbles from zoom 4.6 to 8.2; KIT Campus South vs North separate at 8.2).
+- Limit: Natural Earth has no city streets; street-level detail would need external tiles (declined earlier for self-containment).
+- Checks: svelte-check 0 errors; 33 app tests; smoke 15/15; no external requests.
+
+## Follow-up 2026-10-04: count people, not affiliations (user question on the Moscow cluster)
+
+- lotkov2024 has 18 authors and 14 of them print two Moscow affiliations, so the old label read 32 "author pins". Labels now count distinct authors per paper (authors mode) or distinct papers (papers mode); headlines read "N authors (M affiliations)"; panel badge "1270 authors, 1524 affiliations". Verified: Moscow bubble 18, hover "1 paper, 18 authors (32 affiliations)". Pins stay one per affiliation so every institution keeps its credit.

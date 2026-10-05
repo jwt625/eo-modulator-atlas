@@ -8,6 +8,9 @@ Outputs:
   app/static/geo/labels.json: {"countries": [[name, lon, lat, min_label]], "places": [[name, lon, lat, min_zoom]]}
   app/static/geo/roads_major.geojson: major roads only (Major Highway, Beltway, Bypass, or expressway),
     coordinates rounded to 3 decimals, property z = Natural Earth min_zoom.
+  app/static/geo/roads_minor_a.geojson, roads_minor_b.geojson: all other roads (Secondary Highway, Road,
+    Unknown, Track; ferries excluded) split at Natural Earth min_zoom 6 (a: <= 6, b: > 6) so the map can load
+    each tier only when zoomed in that far.
 Natural Earth zoom levels refer to 256 px tiles; the map uses 512 px tiles, so map zoom z ~ NE zoom z + 1.
 """
 
@@ -48,8 +51,23 @@ def main() -> int:
         if f.get("geometry") and (f["properties"].get("type") in MAJOR or f["properties"].get("expressway") == 1)
     ]
     (OUT / "roads_major.geojson").write_text(json.dumps({"type": "FeatureCollection", "features": keep}, separators=(",", ":")))
+    minor = [
+        f
+        for f in roads
+        if f.get("geometry")
+        and not (f["properties"].get("type") in MAJOR or f["properties"].get("expressway") == 1)
+        and "Ferry" not in (f["properties"].get("type") or "")
+    ]
+    for name, sel in (("roads_minor_a.geojson", lambda z: z <= 6), ("roads_minor_b.geojson", lambda z: z > 6)):
+        fs = [
+            {"type": "Feature", "properties": {}, "geometry": {"type": f["geometry"]["type"], "coordinates": rnd(f["geometry"]["coordinates"])}}
+            for f in minor
+            if sel(f["properties"]["min_zoom"])
+        ]
+        (OUT / name).write_text(json.dumps({"type": "FeatureCollection", "features": fs}, separators=(",", ":")))
+        print(name, len(fs), "segments")
     print(f"countries {len(labels['countries'])}, places {len(labels['places'])}, major road segments {len(keep)}")
-    for f in ("labels.json", "roads_major.geojson"):
+    for f in ("labels.json", "roads_major.geojson", "roads_minor_a.geojson", "roads_minor_b.geojson"):
         print(f, (OUT / f).stat().st_size // 1024, "KB")
     return 0
 

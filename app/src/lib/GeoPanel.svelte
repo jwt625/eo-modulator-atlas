@@ -48,17 +48,19 @@
 		return out;
 	});
 
+	const nAuthors = $derived(new Set(pins.map((q) => `${q.paper}|${q.author}`)).size);
 	const nPapersLocated = $derived(view.papers.filter((p) => (p.affil ?? []).length).length);
 
 	/** Per-site aggregate of the pins in the current unit mode. */
 	const siteSummary = $derived.by(() => {
-		const m = new Map<number, { site: Site; n: number; papers: Map<string, string>; authors: Set<string>; groups: Map<string, number> }>();
+		const m = new Map<number, { site: Site; n: number; papers: Map<string, string>; authors: Set<string>; authorPapers: Set<string>; groups: Map<string, number> }>();
 		for (const q of pins) {
-			const r = m.get(q.site.id) ?? { site: q.site, n: 0, papers: new Map(), authors: new Set(), groups: new Map() };
+			const r = m.get(q.site.id) ?? { site: q.site, n: 0, papers: new Map(), authors: new Set(), authorPapers: new Set(), groups: new Map() };
 			r.n += 1;
 			if (!r.papers.has(q.paper)) r.groups.set(q.group, (r.groups.get(q.group) ?? 0) + 1);
 			r.papers.set(q.paper, q.label);
 			r.authors.add(q.author);
+			r.authorPapers.add(`${q.paper}|${q.author}`);
 			m.set(q.site.id, r);
 		}
 		return [...m.values()];
@@ -74,9 +76,12 @@
 	const clusters = $derived(clusterPoints(siteSummary.map((r) => ({ lon: r.site.lon, lat: r.site.lat, w: r.papers.size, item: r })), zoom ?? zoom0));
 
 	const absUrl = (f: string) => (typeof location === 'undefined' ? '' : new URL(staticUrl(f), location.href).href);
-	const geo = $derived({ c110: absUrl('geo/countries_110m.geojson'), c50: absUrl('geo/countries_50m.geojson'), s50: absUrl('geo/subunits_50m.geojson'), roads: absUrl('geo/roads_major.geojson') });
+	const geo = $derived({ c110: absUrl('geo/countries_110m.geojson'), c50: absUrl('geo/countries_50m.geojson'), s50: absUrl('geo/subunits_50m.geojson'), roads: absUrl('geo/roads_major.geojson'), minorA: absUrl('geo/roads_minor_a.geojson'), minorB: absUrl('geo/roads_minor_b.geojson') });
 	const FINE_ZOOM = 3;
 	const ROAD_ZOOM = 4.5;
+	/** minor-road tiers (Natural Earth min_zoom <= 6, > 6) */
+	const MINOR_A_ZOOM = 5.5;
+	const MINOR_B_ZOOM = 6.5;
 	const zEff = $derived(zoom ?? zoom0);
 
 	/** Natural Earth labels (countries: [name, lon, lat, min_label]; places: [name, lon, lat, min_zoom]). */
@@ -105,6 +110,7 @@
 		const where = (si: Site) => esc(si.locality || `city not printed, ${lab('country', si.country)}`);
 		const hover = clusters.map((c) => {
 			const pinsN = c.items.reduce((t, r) => t + r.n, 0);
+			const people = new Set(c.items.flatMap((r) => [...r.authorPapers])).size;
 			if (c.items.length === 1) {
 				const r = c.items[0];
 				const labels = [...r.papers.values()];
@@ -125,7 +131,7 @@
 			}
 			const ranked = [...c.items].sort((x, y) => y.papers.size - x.papers.size || y.authors.size - x.authors.size || x.site.org_name.localeCompare(y.site.org_name));
 			return (
-				`<b>${pl_(c.items.length, 'site')}, ${pl_(papers.size, 'paper')}, ${pl_(pinsN, unit === 'authors' ? 'author pin' : 'paper pin')}</b><br>${topGroups(groups)}<br><br><b>Top sites by papers</b><br>` +
+				`<b>${pl_(c.items.length, 'site')}, ${pl_(papers.size, 'paper')}, ${unit === 'authors' ? `${pl_(people, 'author')} (${pl_(pinsN, 'affiliation')})` : pl_(pinsN, 'paper-site pair')}</b><br>${topGroups(groups)}<br><br><b>Top sites by papers</b><br>` +
 				ranked
 					.slice(0, 5)
 					.map((r) => `${esc(r.site.org_name)} (${where(r.site)}): ${pl_(r.papers.size, 'paper')}, ${pl_(r.authors.size, 'author')}`)
@@ -133,7 +139,8 @@
 				(ranked.length > 5 ? `<br>+${pl_(ranked.length - 5, 'more site')}; zoom in to split` : '')
 			);
 		});
-		const n = clusters.map((c) => c.items.reduce((t, r) => t + r.n, 0));
+		// bubble label: distinct authors per paper (authors mode) or distinct papers (papers mode), not affiliation pins
+		const n = clusters.map((c) => (unit === 'authors' ? new Set(c.items.flatMap((r) => [...r.authorPapers])).size : new Set(c.items.flatMap((r) => [...r.papers.keys()])).size));
 		return [
 			{
 				type: 'scattermap',
@@ -205,8 +212,30 @@
 			center: { lat: 28, lon: 15 },
 			zoom: zoom0,
 			style: mapStyle,
-			// Natural Earth major roads; the layer (and its file) is added only once zoomed in
+			// Natural Earth roads in three tiers; each layer (and its file) is added only once zoomed in that far
 			layers: [
+				{
+					sourcetype: 'geojson',
+					source: geo.minorB,
+					type: 'line',
+					color: th.muted,
+					opacity: 0.3,
+					line: { width: 0.5 },
+					minzoom: MINOR_B_ZOOM,
+					below: 'traces',
+					visible: zEff >= MINOR_B_ZOOM && !!geo.minorB
+				},
+				{
+					sourcetype: 'geojson',
+					source: geo.minorA,
+					type: 'line',
+					color: th.muted,
+					opacity: 0.4,
+					line: { width: 0.7 },
+					minzoom: MINOR_A_ZOOM,
+					below: 'traces',
+					visible: zEff >= MINOR_A_ZOOM && !!geo.minorA
+				},
 				{
 					sourcetype: 'geojson',
 					source: geo.roads,
@@ -268,8 +297,8 @@
 
 <Frame
 	letter="k"
-	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Sites cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); bubble label = pins; hover a cluster for its top 5 sites by papers, or a single site for its papers. Country outlines refine from 1:110m to 1:50m with state/province borders at zoom 3; country and city labels appear by Natural Earth label zoom, major roads from zoom 4.5. Right: papers per year by affiliation region."
-	badge={`${pins.length} pins, ${nPapersLocated}/${view.papers.length} papers`}
+	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Sites cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); bubble label = distinct authors per paper (authors mode) or papers (papers mode); an author with two affiliations counts once in the label and twice as affiliations; hover a cluster for its top 5 sites by papers, or a single site for its papers. Country outlines refine from 1:110m to 1:50m with state/province borders at zoom 3; country and city labels appear by Natural Earth label zoom; major roads from zoom 4.5, secondary and other roads from zoom 5.5 and 6.5 (Natural Earth 1:10m; no city streets). Right: papers per year by affiliation region."
+	badge={unit === 'authors' ? `${nAuthors} authors, ${pins.length} affiliations, ${nPapersLocated}/${view.papers.length} papers` : `${pins.length} paper-site pairs, ${nPapersLocated}/${view.papers.length} papers`}
 	badgeTip="pins in the current filter; papers with at least one located affiliation / papers in the filter"
 	height={narrow ? 660 : 480}
 >
