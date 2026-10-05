@@ -199,3 +199,5 @@ each `source.json`; arXiv-sourced rows have empty `license` and
 (`lu2020`, `suceava2025`, `giambra2021`, `chelladurai2025`). Search-agent
 abstract-level numbers in `candidates.csv` notes are labelled unverified and are
 not paper data.
+
+- 2026-10-04 update: 46 OFC 2026 candidates retrieved from the user's NAS OFC archive and queued for ingestion as p5_01..p5_09; see [DevLog-019](DevLog-019-ofc2026-retrieval-and-ingestion.md).
