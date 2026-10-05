@@ -11,8 +11,9 @@
 		onafterplot?: (gd: any) => void;
 		gd?: any;
 		config?: Record<string, unknown>;
+		onrelayout?: (e: any) => void;
 	}
-	let { data, layout, onhover, onunhover, onclick, onafterplot, gd = $bindable(null), config = {} }: Props = $props();
+	let { data, layout, onhover, onunhover, onclick, onafterplot, gd = $bindable(null), config = {}, onrelayout }: Props = $props();
 
 	let el: HTMLDivElement;
 	let P: any = $state(null);
@@ -55,6 +56,7 @@
 				(el as any).on('plotly_unhover', (e: any) => onunhover?.(e));
 				(el as any).on('plotly_click', (e: any) => onclick?.(e));
 				(el as any).on('plotly_afterplot', () => onafterplot?.(el));
+				(el as any).on('plotly_relayout', (e: any) => onrelayout?.(e));
 			}
 			onafterplot?.(el);
 		});

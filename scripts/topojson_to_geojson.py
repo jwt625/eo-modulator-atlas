@@ -1,6 +1,8 @@
 """Convert the `countries` object of a quantized TopoJSON (Plotly geo assets) to a GeoJSON FeatureCollection.
 
-Usage: uv run python scripts/topojson_to_geojson.py app/static/topojson/world_110m.json app/static/geo/countries_110m.geojson
+Usage: uv run python scripts/topojson_to_geojson.py IN.json OUT.geojson [OBJECT]
+  OBJECT defaults to "countries"; "subunits" gives first-level subdivisions (US, BR, CA, AU in Plotly assets).
+  110m: app/static/topojson/world_110m.json; 50m: https://cdn.plot.ly/un/world_50m.json (not vendored; output only).
 Coordinates are rounded to 3 decimals (about 100 m), enough for an outline basemap. Rings crossing the
 antimeridian are unwrapped (consecutive longitudes kept within 180 deg) so MapLibre does not draw edges across
 the whole map; Antarctica (a ring around the pole, no affiliations) is omitted.
@@ -52,7 +54,8 @@ def main() -> int:
     topo = json.loads(Path(sys.argv[1]).read_text())
     arcs = decode_arcs(topo)
     feats = []
-    for g in topo["objects"]["countries"]["geometries"]:
+    obj = sys.argv[3] if len(sys.argv) > 3 else "countries"
+    for g in topo["objects"][obj]["geometries"]:
         if g.get("id") == "ATA":
             continue
         if g["type"] == "Polygon":

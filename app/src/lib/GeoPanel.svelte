@@ -4,6 +4,7 @@
 	import { store, ui } from './state.svelte';
 	import { REGION_ORDER, materialGroup, plotTheme, regionColor } from './colors';
 	import { staticUrl } from './paths';
+	import { clusterPoints } from './geo';
 	import { enumLabel, type View } from './logic';
 	import type { Site } from './types';
 
@@ -48,7 +49,7 @@
 
 	const nPapersLocated = $derived(view.papers.filter((p) => (p.affil ?? []).length).length);
 
-	/** Hover summary per site (invisible, unclustered markers on top of the clustered pins). */
+	/** Per-site aggregate of the pins in the current unit mode. */
 	const siteSummary = $derived.by(() => {
 		const m = new Map<number, { site: Site; n: number; papers: Map<string, string>; authors: Set<string>; groups: Map<string, number> }>();
 		for (const q of pins) {
@@ -63,41 +64,69 @@
 	});
 
 	const zoom0 = $derived(Math.max(-1, Math.log2(Math.max(mapW, 200) / 512)));
-	const geojsonUrl = $derived(typeof location === 'undefined' ? '' : new URL(staticUrl('geo/countries_110m.geojson'), location.href).href);
+	/** Current map zoom (from user zoom/pan); clusters are recomputed for it. */
+	let zoom = $state<number | null>(null);
+	function onrelayout(e: any) {
+		if (e && typeof e['map.zoom'] === 'number') zoom = e['map.zoom'];
+		else if (e && e['map.zoom'] === undefined && e.map?.zoom !== undefined) zoom = e.map.zoom;
+	}
+	const clusters = $derived(clusterPoints(siteSummary.map((r) => ({ lon: r.site.lon, lat: r.site.lat, w: r.papers.size, item: r })), zoom ?? zoom0));
+
+	const absUrl = (f: string) => (typeof location === 'undefined' ? '' : new URL(staticUrl(f), location.href).href);
+	const geo = $derived({ c110: absUrl('geo/countries_110m.geojson'), c50: absUrl('geo/countries_50m.geojson'), s50: absUrl('geo/subunits_50m.geojson') });
+	const FINE_ZOOM = 3;
+
+	const paperGroup = $derived(new Map(pins.map((q) => [q.paper, q.group])));
 
 	const mapTraces = $derived.by(() => {
-		const top = (mm: Map<string, number>) =>
+		const topGroups = (mm: Map<string, number>) =>
 			[...mm.entries()]
 				.sort((x, y) => y[1] - x[1])
 				.slice(0, 3)
 				.map(([k, v]) => `${esc(groupLabel(k))} ${v}`)
 				.join(', ');
+		const where = (si: Site) => esc(si.locality || `city not printed, ${lab('country', si.country)}`);
+		const hover = clusters.map((c) => {
+			const pinsN = c.items.reduce((t, r) => t + r.n, 0);
+			if (c.items.length === 1) {
+				const r = c.items[0];
+				const labels = [...r.papers.values()];
+				const pl = [...r.papers.entries()].map(([id, l]) => (labels.filter((x) => x === l).length > 1 ? `${l} (${id})` : l));
+				return (
+					`<b>${esc(r.site.org_name)}</b><br>${where(r.site)} (${esc(r.site.precision)}, ${esc(r.site.source)}${r.site.source_ref ? ' ' + esc(r.site.source_ref) : ''})` +
+					`<br>${r.authors.size} authors on ${pl.length} papers; ${topGroups(r.groups)}<br>` +
+					pl.slice(0, 10).map(esc).join('<br>') +
+					(pl.length > 10 ? `<br>+${pl.length - 10} more papers` : '')
+				);
+			}
+			const papers = new Set(c.items.flatMap((r) => [...r.papers.keys()]));
+			// material mix over distinct papers (a paper with authors at several sites counts once)
+			const groups = new Map<string, number>();
+			for (const pid of papers) {
+				const g = paperGroup.get(pid) ?? 'other_group';
+				groups.set(g, (groups.get(g) ?? 0) + 1);
+			}
+			const ranked = [...c.items].sort((x, y) => y.papers.size - x.papers.size || y.authors.size - x.authors.size || x.site.org_name.localeCompare(y.site.org_name));
+			return (
+				`<b>${c.items.length} sites, ${papers.size} papers, ${pinsN} ${unit === 'authors' ? 'author pins' : 'paper pins'}</b><br>${topGroups(groups)}<br><br><b>Top sites by papers</b><br>` +
+				ranked
+					.slice(0, 5)
+					.map((r) => `${esc(r.site.org_name)} (${where(r.site)}): ${r.papers.size} papers, ${r.authors.size} authors`)
+					.join('<br>') +
+				(ranked.length > 5 ? `<br>+${ranked.length - 5} more sites; zoom in to split` : '')
+			);
+		});
+		const n = clusters.map((c) => c.items.reduce((t, r) => t + r.n, 0));
 		return [
 			{
 				type: 'scattermap',
-				lat: pins.map((q) => q.site.lat),
-				lon: pins.map((q) => q.site.lon),
-				mode: 'markers',
-				marker: { size: 9, color: th.accent, opacity: 0.9 },
-				cluster: { enabled: true, maxzoom: 14, color: th.accent, opacity: 0.85, size: [16, 22, 30, 38], step: [10, 40, 120] },
-				hoverinfo: 'skip'
-			},
-			{
-				type: 'scattermap',
-				lat: siteSummary.map((r) => r.site.lat),
-				lon: siteSummary.map((r) => r.site.lon),
-				mode: 'markers',
-				marker: { size: 18, color: th.accent, opacity: 0 },
-				customdata: siteSummary.map((r) => {
-					const labels = [...r.papers.values()];
-					const pl = [...r.papers.entries()].map(([id, l]) => (labels.filter((x) => x === l).length > 1 ? `${l} (${id})` : l));
-					return (
-						`<b>${esc(r.site.org_name)}</b><br>${esc(r.site.locality || lab('country', r.site.country))} (${esc(r.site.precision)}, ${esc(r.site.source)}${r.site.source_ref ? ' ' + esc(r.site.source_ref) : ''})` +
-						`<br>${r.authors.size} authors on ${pl.length} papers<br>${top(r.groups)}<br>` +
-						pl.slice(0, 8).map(esc).join('<br>') +
-						(pl.length > 8 ? `<br>+${pl.length - 8} more` : '')
-					);
-				}),
+				lat: clusters.map((c) => c.lat),
+				lon: clusters.map((c) => c.lon),
+				mode: 'markers+text',
+				text: n.map(String),
+				textfont: { size: 10, color: '#ffffff' },
+				marker: { size: n.map((v) => Math.min(46, 11 + 3.2 * Math.sqrt(v))), color: th.accent, opacity: 0.85 },
+				customdata: hover,
 				hovertemplate: '%{customdata}<extra></extra>'
 			}
 		];
@@ -116,13 +145,23 @@
 			zoom: zoom0,
 			style: {
 				version: 8,
-				sources: geojsonUrl ? { countries: { type: 'geojson', data: geojsonUrl } } : {},
+				sources: geo.c110
+					? {
+							c110: { type: 'geojson', data: geo.c110 },
+							c50: { type: 'geojson', data: geo.c50 },
+							s50: { type: 'geojson', data: geo.s50 }
+						}
+					: {},
 				layers: [
 					{ id: 'bg', type: 'background', paint: { 'background-color': th.surface } },
-					...(geojsonUrl
+					...(geo.c110
 						? [
-								{ id: 'land', type: 'fill', source: 'countries', paint: { 'fill-color': th.grid } },
-								{ id: 'borders', type: 'line', source: 'countries', paint: { 'line-color': th.line, 'line-width': 0.6 } }
+								// coarse outlines when zoomed out, 1:50m outlines plus state/province borders when zoomed in
+								{ id: 'land110', type: 'fill', source: 'c110', maxzoom: FINE_ZOOM, paint: { 'fill-color': th.grid } },
+								{ id: 'borders110', type: 'line', source: 'c110', maxzoom: FINE_ZOOM, paint: { 'line-color': th.line, 'line-width': 0.6 } },
+								{ id: 'land50', type: 'fill', source: 'c50', minzoom: FINE_ZOOM, paint: { 'fill-color': th.grid } },
+								{ id: 'sub50', type: 'line', source: 's50', minzoom: FINE_ZOOM, paint: { 'line-color': th.line, 'line-width': 0.5, 'line-dasharray': [2, 2] } },
+								{ id: 'borders50', type: 'line', source: 'c50', minzoom: FINE_ZOOM, paint: { 'line-color': th.line, 'line-width': 0.8 } }
 							]
 						: [])
 				]
@@ -176,7 +215,7 @@
 
 <Frame
 	letter="k"
-	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Pins cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); hover a site for its papers. Right: papers per year by affiliation region."
+	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Sites cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); bubble label = pins; hover a cluster for its top 5 sites by papers, or a single site for its papers. Country outlines refine from 1:110m to 1:50m with state/province borders at zoom 3. Right: papers per year by affiliation region."
 	badge={`${pins.length} pins, ${nPapersLocated}/${view.papers.length} papers`}
 	badgeTip="pins in the current filter; papers with at least one located affiliation / papers in the filter"
 	height={narrow ? 660 : 480}
@@ -189,7 +228,7 @@
 	<div class="geo" class:narrow>
 		<div class="map" bind:clientWidth={mapW}>
 			{#if sites.length}
-				<Plot data={mapTraces} layout={mapLayout} config={{ scrollZoom: true }} />
+				<Plot data={mapTraces} layout={mapLayout} config={{ scrollZoom: true }} {onrelayout} />
 				<span class="attr">Sites: Wikidata, &copy; OpenStreetMap contributors</span>
 			{:else}
 				<div class="msg muted">no located affiliations in this build</div>

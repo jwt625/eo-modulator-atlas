@@ -86,3 +86,10 @@ A pin = (paper, author, site). "Papers" mode dedupes to (paper, site).
 - Coordinates come from Wikidata (CC0) and OpenStreetMap via Nominatim (ODbL; attribution shown on the map). Query strings proposed by reviewers were search inputs only; every accepted hit is stored with its source label and distance note.
 - The outline basemap has no streets or city labels at high zoom (user choice: no external tiles).
 
+
+## Follow-up 2026-10-04: finer map and fuller hover (user request)
+
+- Basemap refines with zoom: 1:110m country outlines below zoom 3; 1:50m outlines plus dashed first-level subdivision borders (US, BR, CA, AU in the Plotly 50m assets) from zoom 3. Generated with `scripts/topojson_to_geojson.py` (new OBJECT argument) into `app/static/geo/countries_50m.geojson` (1.2 MB, 366 KB gzip) and `subunits_50m.geojson` (0.6 MB, 188 KB gzip); the 50m source file is not vendored.
+- Clustering moved from Plotly's built-in cluster (no hover) to `app/src/lib/geo.ts` (`clusterPoints`: greedy, heaviest site seeds, 36 px radius in Web Mercator pixels at the current zoom; 3 unit tests). Re-clustered on every zoom (`plotly_relayout`, new `onrelayout` prop on Plot.svelte). Bubble label = pins; size grows with sqrt(pins).
+- Hover: a cluster lists sites, distinct papers, pins, material mix over distinct papers, and the top 5 sites by paper count (papers, authors) plus "+N more sites; zoom in to split"; a single site lists its location, precision, source id, authors, papers (up to 10). Sites without a printed city show "city not printed, <country>".
+- Checks: world view 11 bubbles, wheel zoom to Europe 67 bubbles; no external requests; svelte-check 0 errors; 33 app tests; 30 Python tests; smoke 15/15; dark/light/390 px.
