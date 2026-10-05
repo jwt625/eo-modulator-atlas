@@ -10,12 +10,19 @@
 	const th = $derived(plotTheme(ui.theme));
 	const core = $derived(store.atlas?.meta.core_fields.map((c) => c.name) ?? []);
 	const m = $derived(completenessMatrix(view, core));
-	const height = $derived(Math.max(300, m.rows.length * 17 + 70));
+	const cols = $derived(core.map((c) => CORE_LABELS[c] ?? c));
+	const height = $derived(Math.max(260, m.rows.length * 17 + 16));
+	/** plot area (left offset, width) after automargin; the sticky HTML column header is aligned to it */
+	let area = $state<{ l: number; w: number } | null>(null);
+	function onafterplot(gd: any) {
+		const s = gd?._fullLayout?._size;
+		if (s && (!area || area.l !== s.l || area.w !== s.w)) area = { l: s.l, w: s.w };
+	}
 	const traces = $derived([
 		{
 			type: 'heatmap',
 			z: m.z,
-			x: core.map((c) => CORE_LABELS[c] ?? c),
+			x: cols,
 			y: m.rows.map((r) => r.paper.paper_id),
 			text: m.rows.map((r, i) => core.map((c, j) => `${r.paper.title}<br>${r.paper.label} / ${r.dev.device_label}<br>${CORE_LABELS[c] ?? c}: ${m.z[i][j] ? 'reported' : 'not reported'}`)),
 			hovertemplate: '%{text}<extra></extra>',
@@ -33,7 +40,7 @@
 		margin: { l: 8, r: 12, t: 4, b: 4 },
 		font: { family: 'system-ui, sans-serif', size: 11, color: th.ink2 },
 		hoverlabel: { bgcolor: th.surface, bordercolor: th.line, font: { color: th.ink, size: 11 }, align: 'left' },
-		xaxis: { side: 'top', tickfont: { size: 10, color: th.ink }, automargin: true, fixedrange: true, linecolor: th.line },
+		xaxis: { side: 'top', showticklabels: false, ticks: '', fixedrange: true, linecolor: th.line },
 		yaxis: { type: 'category', autorange: 'reversed', tickmode: 'array', tickvals: m.rows.map((r) => r.paper.paper_id), ticktext: m.rows.map((r) => r.paper.label), tickfont: { size: 10, color: th.ink }, automargin: true, fixedrange: true }
 	});
 </script>
@@ -42,13 +49,40 @@
 	{#snippet controls()}
 		<span class="key"><i class="sw on"></i> reported <i class="sw"></i> not reported</span>
 	{/snippet}
-	<div class="sc"><div style="height:{height}px"><Plot data={traces} {layout} /></div></div>
+	<div class="sc">
+		<div class="hd" style="height:{area && area.w / cols.length < 72 ? 52 : 28}px">
+			{#if area}
+				{#each cols as c, j (c)}
+					<span style="left:{area.l + (j * area.w) / cols.length}px;width:{area.w / cols.length}px">{c}</span>
+				{/each}
+			{/if}
+		</div>
+		<div style="height:{height}px"><Plot data={traces} {layout} {onafterplot} /></div>
+	</div>
 </Frame>
 
 <style>
 	.sc {
 		height: 100%;
 		overflow-y: auto;
+	}
+	.hd {
+		position: sticky;
+		top: 0;
+		z-index: 2;
+		background: var(--surface);
+		border-bottom: 1px solid var(--line);
+	}
+	.hd span {
+		position: absolute;
+		bottom: 3px;
+		padding: 0 2px;
+		box-sizing: border-box;
+		text-align: center;
+		font-size: 10px;
+		line-height: 11px;
+		color: var(--ink);
+		overflow-wrap: break-word;
 	}
 	.key {
 		display: inline-flex;

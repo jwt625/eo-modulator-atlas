@@ -1,14 +1,15 @@
 # EO Modulator Atlas
 
 A traceable literature database and static browser explorer for electro-optic
-modulators. The integrated atlas contains **15 papers, 28 device rows and 27 organizations**
-after p1_01/03/09 (checked 2026-10-02); the candidate index contains 198 records and distillation
-is continuing. Each reported metric has an evidence
-locator and basis. Missing values stay empty.
+modulators. The integrated atlas contains **184 papers (2012-2026), 403 device rows and
+232 organizations**, all papers with `audit_status: audited` (checked 2026-10-05). It also holds
+1,723 author-affiliation rows and 212 geolocated institution sites. The candidate index contains
+461 records and distillation is continuing. Each reported metric has an evidence locator and
+basis. Missing values stay empty.
 
 ## Run the app
 
-Use Node 22.12+ (tested with Node 25.9) and pnpm 10.12.4:
+Use Node 22.12+ (tested with Node 23.7 and 25.9) and pnpm 10.12.4:
 
 ```sh
 cd engine
@@ -22,7 +23,11 @@ Open the local URL printed by Vite. Routes:
 
 - `/table`: expandable paper/device table, filters, representative selection,
   evidence details and CSV export.
-- `/explore`: metric comparisons, disclosure and organization views.
+- `/explore`: panels a-l. Metric scatter comparisons (a-f: Vpi*L vs bandwidth, loss vs
+  Vpi*L, Vpi*IL by material, bandwidth/baud/line rate vs year, bandwidth vs length), papers per
+  year by material (g), papers per organization and country (h), disclosure completeness (i),
+  simulation configs (j), author-level geography map with papers per region (k) and candidate PI
+  lineage (l).
 - `/sim?id=chen2022-c`: editable YAML, geometry preview and cancellable browser
   cross-section solver. The legacy `?config=sims/chen2022/config.yaml` URL also works.
 - `/about`: metric conventions, evidence and current model limitations.
@@ -58,7 +63,11 @@ a generated view, not a second database. Refresh it after accepted data changes.
 The [distillation skill](.claude/skills/eo-modulator-distill/SKILL.md),
 [batch contract](data/_staging/BATCH_INSTRUCTIONS.md) and
 [manual download list](data/manual_downloads.md) describe ingestion.
-Reference PDFs are tracked in this repo; extracted text and figures are not; see
+Per-author affiliations (`data/author_affiliations.csv`) and institution coordinates
+(`data/org_sites.csv`, Wikidata with OpenStreetMap fallback) feed the map; see
+[DevLog-018](DevLog/DevLog-018-author-affiliation-geolocation.md).
+Most reference PDFs are tracked in this repo; OFC 2026 conference PDFs are local-only
+(not redistributable, listed in `.gitignore`); extracted text and figures are not tracked; see
 [references/README.md](references/README.md). Rights remain source-specific.
 
 ## Simulation status and checks
@@ -92,7 +101,7 @@ runner integration remains pending. Periodic loaded-line and EO-response stages
 remain unimplemented.
 A cross-section's RF index and impedance are not the effective values of a
 periodically loaded device. Such targets are reported as `not_evaluated`.
-The Chen config remains `unvalidated`. Its optical window intersects gold, so
+All 28 simulation configs under `sims/` are `unvalidated` (2026-10-05). The Chen config remains `unvalidated`. Its optical window intersects gold, so
 `--optical` stops by default with an explicit unsupported-material error. Session
 YAML may explicitly select `optics.metal_in_window: absent` or `pec_scalar` to
 explore scalar sensitivity limits. Outputs disclose the policy, scalar limits,
@@ -129,5 +138,7 @@ Standalone cache migration, staged SOH references and next task ownership:
 [DevLog-006](DevLog/DevLog-006-standalone-continuation.md).
 Latest audit corrections, sample guards and optical runner integration:
 [DevLog-011](DevLog/DevLog-011-audit-corrections-and-integration.md).
+Explore geography and lineage panels: [DevLog-017](DevLog/DevLog-017-explore-geo-and-lineage-panels.md).
+Latest ingestion (46 OFC 2026 papers, independent audit): [DevLog-019](DevLog/DevLog-019-ofc2026-retrieval-and-ingestion.md).
 Read [WORKBOARD.md](WORKBOARD.md) and the active claims under
 `coordination/claims/` before starting concurrent work.

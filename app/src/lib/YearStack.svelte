@@ -23,7 +23,26 @@
 			textposition: 'none'
 		}))
 	);
+	/** tallest stacked bar; the full-view y span */
+	const yMax = $derived(Math.max(1, ...data.years.map((y) => data.groups.reduce((t, g) => t + (data.counts.get(g)?.get(y) ?? 0), 0))));
+	/** visible y span from user zoom (null = full view) */
+	let ySpan = $state<number | null>(null);
+	function onrelayout(e: any) {
+		if (!e) return;
+		if (e['yaxis.autorange']) ySpan = null;
+		else if (typeof e['yaxis.range[0]'] === 'number' && typeof e['yaxis.range[1]'] === 'number') ySpan = Math.abs(e['yaxis.range[1]'] - e['yaxis.range[0]']);
+		else if (Array.isArray(e['yaxis.range'])) ySpan = Math.abs(e['yaxis.range'][1] - e['yaxis.range'][0]);
+	}
+	/** integer 1-2-5 tick step giving about 6 ticks over the visible span */
+	const yDtick = $derived.by(() => {
+		const raw = (ySpan ?? yMax * 1.05) / 6;
+		if (raw <= 1) return 1;
+		const p = 10 ** Math.floor(Math.log10(raw));
+		const f = raw / p;
+		return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * p;
+	});
 	const layout = $derived({
+		uirevision: 'g',
 		barmode: 'stack',
 		bargap: 0.35,
 		paper_bgcolor: 'rgba(0,0,0,0)',
@@ -33,11 +52,11 @@
 		showlegend: false,
 		hoverlabel: { bgcolor: th.surface, bordercolor: th.line, font: { color: th.ink, size: 11 } },
 		xaxis: { title: { text: 'Publication year', standoff: 4 }, dtick: 1, tickformat: 'd', gridcolor: th.grid, linecolor: th.line, tickfont: { size: 10 }, automargin: true, zeroline: false },
-		yaxis: { title: { text: 'Papers (count)', standoff: 4 }, gridcolor: th.grid, linecolor: th.line, tickfont: { size: 10 }, rangemode: 'tozero', dtick: 1, tickformat: 'd', automargin: true, zeroline: false }
+		yaxis: { title: { text: 'Papers (count)', standoff: 4 }, gridcolor: th.grid, linecolor: th.line, tickfont: { size: 10 }, rangemode: 'tozero', dtick: yDtick, tickformat: 'd', automargin: true, zeroline: false }
 	});
 	const total = $derived(view.papers.length);
 </script>
 
 <Frame letter="g" desc="Papers per publication year, stacked by EO material of each paper's representative device" badge={`${total}`} badgeTip="papers in the current filter">
-	<Plot data={traces} {layout} />
+	<Plot data={traces} {layout} {onrelayout} />
 </Frame>

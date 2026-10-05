@@ -65,3 +65,9 @@ cdn.plot.ly/un/, 285 KB) so the static site does not depend on the CDN; centroid
 - European bubbles overlap at world scale; hover and Plotly zoom separate them.
 
 - 2026-10-04: user request: panels k and l moved to positions 3 and 4 (after a and b, full width); panel letters unchanged. Order verified at 1440 px and 390 px; smoke 15/15.
+- 2026-10-05: user requests: (1) panel k `sites | lump` toggle, default `sites` (one small unlabelled point per site
+  location, 5-11 px by log count; sites at identical coordinates share a point); `lump` keeps the 36 px zoom clustering
+  with labelled bubbles. (2) Panel i column header is a sticky HTML row aligned to the Plotly plot area
+  (`_fullLayout._size`), taller when columns are narrow. (3) Panel g y ticks: integer 1-2-5 step for about 6 ticks over
+  the visible span (recomputed on zoom) instead of `dtick: 1`. README counts and descriptions refreshed.
+  Checks: svelte-check 0 errors, 33 app tests, build, screenshots 1440 px and 390 px (no console errors).

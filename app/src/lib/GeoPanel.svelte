@@ -11,6 +11,8 @@
 
 	let { view }: { view: View } = $props();
 	let unit = $state<'authors' | 'papers'>('authors');
+	/** lump nearby sites into zoom-dependent clusters; off = one bubble per site location (exactly co-located sites still share one) */
+	let lump = $state(false);
 	let w = $state(1200);
 	let mapW = $state(800);
 
@@ -73,7 +75,7 @@
 		if (e && typeof e['map.zoom'] === 'number') zoom = e['map.zoom'];
 		else if (e && e['map.zoom'] === undefined && e.map?.zoom !== undefined) zoom = e.map.zoom;
 	}
-	const clusters = $derived(clusterPoints(siteSummary.map((r) => ({ lon: r.site.lon, lat: r.site.lat, w: r.papers.size, item: r })), zoom ?? zoom0));
+	const clusters = $derived(clusterPoints(siteSummary.map((r) => ({ lon: r.site.lon, lat: r.site.lat, w: r.papers.size, item: r })), zoom ?? zoom0, lump ? 36 : 0));
 
 	const absUrl = (f: string) => (typeof location === 'undefined' ? '' : new URL(staticUrl(f), location.href).href);
 	const geo = $derived({ c110: absUrl('geo/countries_110m.geojson'), c50: absUrl('geo/countries_50m.geojson'), s50: absUrl('geo/subunits_50m.geojson'), roads: absUrl('geo/roads_major.geojson'), minorA: absUrl('geo/roads_minor_a.geojson'), minorB: absUrl('geo/roads_minor_b.geojson') });
@@ -136,7 +138,7 @@
 					.slice(0, 5)
 					.map((r) => `${esc(r.site.org_name)} (${where(r.site)}): ${pl_(r.papers.size, 'paper')}, ${pl_(r.authors.size, 'author')}`)
 					.join('<br>') +
-				(ranked.length > 5 ? `<br>+${pl_(ranked.length - 5, 'more site')}; zoom in to split` : '')
+				(ranked.length > 5 ? `<br>+${pl_(ranked.length - 5, 'more site')}${lump ? '; zoom in to split' : ' at the same coordinates'}` : '')
 			);
 		});
 		// bubble label: distinct authors per paper (authors mode) or distinct papers (papers mode), not affiliation pins
@@ -166,10 +168,11 @@
 				type: 'scattermap',
 				lat: clusters.map((c) => c.lat),
 				lon: clusters.map((c) => c.lon),
-				mode: 'markers+text',
+				// lumped: labelled bubbles; unlumped: tiny unlabelled points, log-size 5 to 11 px so every location stays visible
+				mode: lump ? 'markers+text' : 'markers',
 				text: n.map(String),
 				textfont: { size: 10, color: '#ffffff' },
-				marker: { size: n.map((v) => Math.min(46, 11 + 3.2 * Math.sqrt(v))), color: th.accent, opacity: 0.85 },
+				marker: { size: n.map((v) => (lump ? Math.min(46, 11 + 3.2 * Math.sqrt(v)) : Math.min(11, 5 + 1.2 * Math.log2(Math.max(1, v))))), color: th.accent, opacity: lump ? 0.85 : 0.8 },
 				customdata: hover,
 				hovertemplate: '%{customdata}<extra></extra>'
 			}
@@ -297,12 +300,15 @@
 
 <Frame
 	letter="k"
-	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Sites cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); bubble label = distinct authors per paper (authors mode) or papers (papers mode); an author with two affiliations counts once in the label and twice as affiliations; hover a cluster for its top 5 sites by papers, or a single site for its papers. Country outlines refine from 1:110m to 1:50m with state/province borders at zoom 3; country and city labels appear by Natural Earth label zoom; major roads from zoom 4.5, secondary and other roads from zoom 5.5 and 6.5 (Natural Earth 1:10m; no city streets). Right: papers per year by affiliation region."
+	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Bubbles: one per site location by default (sites sharing exact coordinates share a bubble); with lump on, nearby sites cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); unlumped points are 5 to 11 px (log of the count) and unlabelled; lumped bubble label = distinct authors per paper (authors mode) or papers (papers mode); an author with two affiliations counts once in the label and twice as affiliations; hover a multi-site bubble for its top 5 sites by papers, or a single site for its papers. Country outlines refine from 1:110m to 1:50m with state/province borders at zoom 3; country and city labels appear by Natural Earth label zoom; major roads from zoom 4.5, secondary and other roads from zoom 5.5 and 6.5 (Natural Earth 1:10m; no city streets). Right: papers per year by affiliation region."
 	badge={unit === 'authors' ? `${nAuthors} authors, ${pins.length} affiliations, ${nPapersLocated}/${view.papers.length} papers` : `${pins.length} paper-site pairs, ${nPapersLocated}/${view.papers.length} papers`}
 	badgeTip="pins in the current filter; papers with at least one located affiliation / papers in the filter"
 	height={narrow ? 660 : 480}
 >
 	{#snippet controls()}
+		<span class="seg" title="Bubble grouping">
+			<button class:on={!lump} onclick={() => (lump = false)} title="one bubble per site location">sites</button><button class:on={lump} onclick={() => (lump = true)} title="lump nearby sites into larger bubbles (36 px radius at the current zoom)">lump</button>
+		</span>
 		<span class="seg" title="Pin unit">
 			<button class:on={unit === 'authors'} onclick={() => (unit = 'authors')} title="one pin per author and affiliation">authors</button><button class:on={unit === 'papers'} onclick={() => (unit = 'papers')} title="one pin per paper and institution site">papers</button>
 		</span>
