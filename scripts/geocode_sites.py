@@ -106,7 +106,7 @@ def get(url: str, dry: bool) -> Any:
         _last = time.monotonic()
     CACHE.parent.mkdir(parents=True, exist_ok=True)
     with CACHE.open("a") as f:
-        f.write(json.dumps({"url": url, "fetched": dt.datetime.now(dt.timezone.utc).isoformat(), "body": body}) + "\n")
+        f.write(json.dumps({"url": url, "fetched": dt.datetime.now(dt.UTC).isoformat(), "body": body}) + "\n")
     _cache[url] = body
     return body
 
