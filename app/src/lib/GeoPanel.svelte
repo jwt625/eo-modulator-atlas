@@ -3,7 +3,7 @@
 	import Frame from './Frame.svelte';
 	import Plot from './Plot.svelte';
 	import { store, ui } from './state.svelte';
-	import { REGION_ORDER, materialGroup, plotTheme, regionColor } from './colors';
+	import { GROUP_ORDER, REGION_ORDER, groupColor, materialGroup, plotTheme, regionColor } from './colors';
 	import { staticUrl } from './paths';
 	import { clusterPoints } from './geo';
 	import { enumLabel, type View } from './logic';
@@ -101,6 +101,82 @@
 
 	const paperGroup = $derived(new Map(pins.map((q) => [q.paper, q.group])));
 
+	/** EO material mix per bubble over distinct papers, in GROUP_ORDER (sites-mode color and pie slices) */
+	const clusterMix = $derived(
+		clusters.map((c) => {
+			const m = new Map<string, number>();
+			for (const pid of new Set(c.items.flatMap((r) => [...r.papers.keys()]))) {
+				const g = paperGroup.get(pid) ?? 'other_group';
+				m.set(g, (m.get(g) ?? 0) + 1);
+			}
+			return [...m.entries()].sort((x, y) => GROUP_ORDER.indexOf(x[0]) - GROUP_ORDER.indexOf(y[0]));
+		})
+	);
+	const dominant = (mix: [string, number][]) => (mix.length ? mix.reduce((b, e) => (e[1] > b[1] ? e : b))[0] : 'other_group');
+	// bubble label: distinct authors per paper (authors mode) or distinct papers (papers mode), not affiliation pins
+	const bubbleN = $derived(clusters.map((c) => (unit === 'authors' ? new Set(c.items.flatMap((r) => [...r.authorPapers])).size : new Set(c.items.flatMap((r) => [...r.papers.keys()])).size)));
+	// lumped: labelled bubbles; unlumped: tiny unlabelled points, log-size 5 to 11 px so every location stays visible
+	const bubbleSize = $derived(bubbleN.map((v) => (lump ? Math.min(46, 11 + 3.2 * Math.sqrt(v)) : Math.min(11, 5 + 1.2 * Math.log2(Math.max(1, v))))));
+
+	/** MapLibre map inside the Plotly scattermap (internal API; without it the dominant-color points remain) */
+	let mlMap = $state<any>(null);
+	let pieSvg = $state<SVGSVGElement | null>(null);
+	let mapTick = $state(0);
+	function onafterplot(gd: any) {
+		const m = gd?._fullLayout?.map?._subplot?.map;
+		if (m && m !== mlMap) mlMap = m;
+		mapTick += 1;
+	}
+	// pie overlay in the MapLibre canvas container: below Plotly's hover labels, transparent to the mouse
+	$effect(() => {
+		const m = mlMap;
+		if (!m) return;
+		const el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+		el.setAttribute('style', 'position:absolute;left:0;top:0;pointer-events:none;overflow:visible');
+		m.getCanvasContainer().appendChild(el);
+		pieSvg = el;
+		const bump = () => (mapTick += 1);
+		m.on('move', bump);
+		m.on('resize', bump);
+		return () => {
+			m.off('move', bump);
+			m.off('resize', bump);
+			el.remove();
+			pieSvg = null;
+		};
+	});
+	$effect(() => {
+		const el = pieSvg;
+		const m = mlMap;
+		void mapTick;
+		if (!el || !m) return;
+		if (lump) {
+			el.innerHTML = '';
+			return;
+		}
+		const W = m.getContainer().clientWidth;
+		const H = m.getContainer().clientHeight;
+		el.setAttribute('width', String(W));
+		el.setAttribute('height', String(H));
+		const f = (v: number) => v.toFixed(2);
+		let out = '';
+		clusters.forEach((c, i) => {
+			const mix = clusterMix[i];
+			if (mix.length < 2) return;
+			const p = m.project([c.lon, c.lat]);
+			const r = bubbleSize[i] / 2;
+			if (p.x < -r || p.y < -r || p.x > W + r || p.y > H + r) return;
+			const tot = mix.reduce((t, e) => t + e[1], 0);
+			let a0 = -Math.PI / 2;
+			for (const [g, k] of mix) {
+				const a1 = a0 + (2 * Math.PI * k) / tot;
+				out += `<path d="M${f(p.x)},${f(p.y)}L${f(p.x + r * Math.cos(a0))},${f(p.y + r * Math.sin(a0))}A${f(r)},${f(r)} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${f(p.x + r * Math.cos(a1))},${f(p.y + r * Math.sin(a1))}Z" fill="${groupColor(g, ui.theme)}"/>`;
+				a0 = a1;
+			}
+		});
+		el.innerHTML = `<g opacity="0.9" stroke="${th.surface}" stroke-width="0.5">${out}</g>`;
+	});
+
 	const mapTraces = $derived.by(() => {
 		const topGroups = (mm: Map<string, number>) =>
 			[...mm.entries()]
@@ -141,8 +217,6 @@
 				(ranked.length > 5 ? `<br>+${pl_(ranked.length - 5, 'more site')}${lump ? '; zoom in to split' : ' at the same coordinates'}` : '')
 			);
 		});
-		// bubble label: distinct authors per paper (authors mode) or distinct papers (papers mode), not affiliation pins
-		const n = clusters.map((c) => (unit === 'authors' ? new Set(c.items.flatMap((r) => [...r.authorPapers])).size : new Set(c.items.flatMap((r) => [...r.papers.keys()])).size));
 		return [
 			{
 				type: 'scattermap',
@@ -168,11 +242,10 @@
 				type: 'scattermap',
 				lat: clusters.map((c) => c.lat),
 				lon: clusters.map((c) => c.lon),
-				// lumped: labelled bubbles; unlumped: tiny unlabelled points, log-size 5 to 11 px so every location stays visible
 				mode: lump ? 'markers+text' : 'markers',
-				text: n.map(String),
+				text: bubbleN.map(String),
 				textfont: { size: 10, color: '#ffffff' },
-				marker: { size: n.map((v) => (lump ? Math.min(46, 11 + 3.2 * Math.sqrt(v)) : Math.min(11, 5 + 1.2 * Math.log2(Math.max(1, v))))), color: th.accent, opacity: lump ? 0.85 : 0.8 },
+				marker: { size: bubbleSize, color: lump ? th.accent : clusterMix.map((mx) => groupColor(dominant(mx), ui.theme)), opacity: lump ? 0.85 : 0.9 },
 				customdata: hover,
 				hovertemplate: '%{customdata}<extra></extra>'
 			}
@@ -300,7 +373,7 @@
 
 <Frame
 	letter="k"
-	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Bubbles: one per site location by default (sites sharing exact coordinates share a bubble); with lump on, nearby sites cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); unlumped points are 5 to 11 px (log of the count) and unlabelled; lumped bubble label = distinct authors per paper (authors mode) or papers (papers mode); an author with two affiliations counts once in the label and twice as affiliations; hover a multi-site bubble for its top 5 sites by papers, or a single site for its papers. Country outlines refine from 1:110m to 1:50m with state/province borders at zoom 3; country and city labels appear by Natural Earth label zoom; major roads from zoom 4.5, secondary and other roads from zoom 5.5 and 6.5 (Natural Earth 1:10m; no city streets). Right: papers per year by affiliation region."
+	desc="Geography at author level: one pin per author and printed affiliation (or per paper and institution site), placed at the institution site (Wikidata or OpenStreetMap coordinates; precision campus or city). Bubbles: one per site location by default (sites sharing exact coordinates share a bubble); with lump on, nearby sites cluster when zoomed out and split when zoomed in (scroll to zoom, drag to pan, double-click to reset); unlumped points are 5 to 11 px (log of the count), unlabelled and colored by EO material group (page legend), a pie by distinct papers per group where a location has several; lumped bubble label = distinct authors per paper (authors mode) or papers (papers mode); an author with two affiliations counts once in the label and twice as affiliations; hover a multi-site bubble for its top 5 sites by papers, or a single site for its papers. Country outlines refine from 1:110m to 1:50m with state/province borders at zoom 3; country and city labels appear by Natural Earth label zoom; major roads from zoom 4.5, secondary and other roads from zoom 5.5 and 6.5 (Natural Earth 1:10m; no city streets). Right: papers per year by affiliation region."
 	badge={unit === 'authors' ? `${nAuthors} authors, ${pins.length} affiliations, ${nPapersLocated}/${view.papers.length} papers` : `${pins.length} paper-site pairs, ${nPapersLocated}/${view.papers.length} papers`}
 	badgeTip="pins in the current filter; papers with at least one located affiliation / papers in the filter"
 	height={narrow ? 660 : 480}
@@ -316,7 +389,7 @@
 	<div class="geo" class:narrow>
 		<div class="map" bind:clientWidth={mapW}>
 			{#if sites.length}
-				<Plot data={mapTraces} layout={mapLayout} config={{ scrollZoom: true }} {onrelayout} />
+				<Plot data={mapTraces} layout={mapLayout} config={{ scrollZoom: true }} {onrelayout} {onafterplot} />
 				<span class="attr">Sites: Wikidata, &copy; OpenStreetMap contributors; basemap labels and roads: Natural Earth</span>
 			{:else}
 				<div class="msg muted">no located affiliations in this build</div>

@@ -71,3 +71,11 @@ cdn.plot.ly/un/, 285 KB) so the static site does not depend on the CDN; centroid
   (`_fullLayout._size`), taller when columns are narrow. (3) Panel g y ticks: integer 1-2-5 step for about 6 ticks over
   the visible span (recomputed on zoom) instead of `dtick: 1`. README counts and descriptions refreshed.
   Checks: svelte-check 0 errors, 33 app tests, build, screenshots 1440 px and 390 px (no console errors).
+- 2026-10-05: user request: color panel k `sites` points by EO material group; pie markers for multi-material
+  locations. Plan: Plotly scattermap has no pie symbol, so Plotly markers carry the dominant group color (fallback and
+  hover target) and an SVG pie overlay is mounted in the MapLibre canvas container (below Plotly's hover layer,
+  pointer-events none), reprojected on map `move`/`resize`. Slices = distinct papers per group at the location.
+  Done 2026-10-05: implemented as planned in `GeoPanel.svelte` (`clusterMix`, `onafterplot` grabs
+  `_fullLayout.map._subplot.map`). Verified: 80 pie slices at default view, pies track wheel zoom, Plotly hover labels
+  draw above pies and hover reaches the points beneath, overlay cleared in `lump` mode, dark and light themes;
+  svelte-check 0 errors, 33 app tests, smoke 15/15, no console errors.
