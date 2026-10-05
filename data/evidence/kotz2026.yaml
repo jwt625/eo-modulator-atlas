@@ -1,0 +1,114 @@
+paper_id: kotz2026
+verified_on: '2026-10-04'
+source_files:
+- references/kotz2026/text.md
+- references/kotz2026/figures/page_02.png
+entries:
+- device_id: kotz2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2; p.3, Sec. 3
+  note: Fiber-to-fiber loss quoted at 1550 nm; ECL at 1550 nm in the experiment
+- device_id: kotz2026-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 1 mm long SOH slot-waveguide phase shifters between signal and ground
+- device_id: kotz2026-a
+  field: vpi_dc_v
+  value: 0.79
+  unit: V
+  basis: measured
+  locator: p.1, abstract; p.2, Sec. 2
+  note: 780 mV and 790 mV for the two nested MZMs; larger entered; measurement frequency not stated
+- device_id: kotz2026-a
+  field: drive_vpp_v
+  value: 1.1
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 3 and Sec. 4
+  note: Peak-to-peak swing of the drive signal below 1.1 V, no RF amplifier
+- device_id: kotz2026-a
+  field: il_fiber_to_fiber_db
+  value: 17.7
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 'Paper wording: optical fiber-to-fiber transmission (17.7 dB at 1550 nm); coupler type (GC or EC) not stated'
+- device_id: kotz2026-a
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(b)
+  note: Label 90 nm on the Si slab
+- device_id: kotz2026-a
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Aluminum electrodes
+- device_id: kotz2026-a
+  field: substrate
+  value: Si substrate with buried oxide (BOX)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(b)
+  note: Si substrate and BOX layers drawn in cross-section
+- device_id: kotz2026-a
+  field: cladding
+  value: SOXD123 organic electro-optic material (SilOriX GmbH), poled
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+  note: SOXD123 dispensed back-end-of-line and poled at elevated temperature
+- device_id: kotz2026-a
+  field: epitaxy_or_stack
+  value: Two Si rails forming a slot filled with organic EO material; Fig. 1(b) labels 220 nm (rail height), 160 nm (slot)
+    and 90 nm (slab); graded n-type doping (nD, nD+, nD++) from rails to ohmic contacts; Al electrodes connected through vias
+    and thin Si slabs
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(b); Sec. 2
+  note: Dimension labels read from the cross-section schematic
+- device_id: kotz2026-a
+  field: max_baud_gbd
+  value: 200
+  unit: GBd
+  basis: measured
+  locator: p.1, abstract; p.3, Sec. 3
+  note: 200 GBd 16QAM; 144 GBd 64QAM
+- device_id: kotz2026-a
+  field: modulation_format
+  value: 16QAM 200 GBd over 85 km SMF (NGMI 0.857, above SD-FEC 25% OH threshold; AIR 712 Gbit/s at 192 GBd); 64QAM 144 GBd
+    over 85 km SMF (NGMI above SD-FEC threshold; AIR 743 Gbit/s); single polarization, RRC roll-off 0.05
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 1(d)-(f)
+  note: NGMI and AIR stated by the authors; single-polarization AIR
+- device_id: kotz2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 2; Fig. 1(a)
+  note: Single GSG feed with slot phase shifters in both gaps (Fig. 1(a)); authors do not state push-pull; same-group GSG
+    convention
+- device_id: kotz2026-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 2; Fig. 1(a)
+  note: MZM-level half-wave voltage under single GSG feed; convention not stated by authors; same-group GSG convention
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

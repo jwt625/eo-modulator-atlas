@@ -1,0 +1,104 @@
+paper_id: huang2026
+verified_on: '2026-10-04'
+source_files:
+- references/huang2026/text.md
+- references/huang2026/figures/page_02.png
+- references/huang2026/figures/img_p02_1.png
+entries:
+- device_id: huang2026-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 1(c)
+  note: 3 dB EO bandwidth before packaging; plot reference frequency not stated
+- device_id: huang2026-b
+  field: wavelength_nm
+  value: 1550.12
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: laser wavelength (C34) in the time/frequency demonstration; S21 measurement wavelength not stated
+- device_id: huang2026-b
+  field: vpi_dc_v
+  value: 4
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 2
+  note: '''a V_pi of 4 V'' for the packaged EOM; frequency not stated'
+- device_id: huang2026-b
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 1(c)
+  note: 'paper: ''above 100 GHz'' (Sec. 2), ''100 GHz'' (Secs. 1, 4); authors'' stated bandwidth kept. Fig. 1(c) packaged trace first touches -3 dB near 72 GHz and runs at about -2.6 to -3.7 dB from 82 to 110 GHz (verifier pixel reading, approximate)'
+- device_id: huang2026-b
+  field: il_fiber_to_fiber_db
+  value: 4.2
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 2
+  note: '''optical insertion loss of less than 4.2 dB''; definition not stated, fibers attached to the packaged chip'
+- device_id: huang2026-b
+  field: epitaxy_or_stack
+  value: TFLN EOM and driver EIC dies (CMOS SoC, GaN PA, InP LNA) mounted in etched cavities of a 4-inch, 1-mm high-resistivity Si interposer with 300 nm Si3N4; 4 um Cu ground; 12 um BCB; 3 um Cu / 1 um Au redistribution
+  unit: ''
+  basis: measured
+  locator: p.1 Sec. 2 steps 1-6; p.2 Step 6
+  note: wafer-level integration process stack
+- device_id: huang2026-b
+  field: modulation_format
+  value: 94 GHz RF tone (11.75 GHz source multiplied to 94 GHz, amplified to 24 dBm by the EICs) for fiber time/frequency comparison; not a data link
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3
+  note: 94 GHz tone for time/frequency comparison
+- device_id: huang2026-b
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 2
+  note: authors do not state how the EOM is driven; Vpi convention likewise not stated
+- device_id: huang2026-b
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 2
+  note: authors give only 'V_pi of 4 V'
+- device_id: huang2026-b
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(c)
+  note: S21 data end at about 110 GHz (axis extent)
+- device_id: huang2026-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(c)
+  note: data end at about 110 GHz; dashed trace about -2.6 dB there (lowest about -2.8 dB), no crossing visible; bw3db_ghz 110 is the paper's claimed crossing at the instrument limit
+- device_id: huang2026-a
+  field: device_class
+  value: mzm
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 2(a)
+  note: Mach-Zehnder layout drawn in the schematic; text says only 'EOM'
+- device_id: huang2026-b
+  field: device_class
+  value: mzm
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 2(a)
+  note: Mach-Zehnder layout drawn in the schematic; text says only 'EOM'
+derived: []
+context_values:
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: printed in the page footer of pages 1-3

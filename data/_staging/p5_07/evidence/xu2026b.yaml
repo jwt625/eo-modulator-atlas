@@ -1,0 +1,174 @@
+paper_id: xu2026b
+verified_on: '2026-10-04'
+source_files:
+- references/xu2026b/text.md
+- references/xu2026b/figures/page_01.png
+- references/xu2026b/figures/page_02.png
+- references/xu2026b/figures/page_03.png
+entries:
+- device_id: xu2026b-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Low-frequency Vpi measured at 1550 nm
+- device_id: xu2026b-a
+  field: length_mm
+  value: 18
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 2(b)
+  note: 18 mm long
+- device_id: xu2026b-a
+  field: vpi_dc_v
+  value: 1.35
+  unit: V
+  basis: derived
+  locator: p.1 abstract; p.2 Sec. 2; Fig. 3(b)
+  note: Average over 1 Hz-10 kHz, +-4 percent; low-frequency, not DC
+- device_id: xu2026b-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 2(a)-(b)
+  note: Authors do not state it; three-line GSG electrode
+- device_id: xu2026b-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2
+  note: Authors do not state the Vpi convention
+- device_id: xu2026b-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.2 Sec. 2; Fig. 3(c)
+  note: Authors state exceeds 110 GHz; Fig. 3(c) trace touches -3 dB near 103-104 GHz, ends near -2.5 dB
+- device_id: xu2026b-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 3(c)
+  note: Reference frequency not stated; response normalized near 0 dB at low frequency
+- device_id: xu2026b-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2 Fig. 3(c); p.2 Sec. 3
+  note: 110 GHz photodetector; axis ends near 110 GHz
+- device_id: xu2026b-a
+  field: il_onchip_db
+  value: 2.4
+  unit: dB
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Within the fiber-to-fiber loss of about 12 dB
+- device_id: xu2026b-a
+  field: il_onchip_excludes
+  value: fiber-to-chip coupling
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2
+  note: 'Inferred: fiber-to-fiber loss dominated by fiber-to-chip coupling; not itemised'
+- device_id: xu2026b-a
+  field: il_fiber_to_fiber_db
+  value: 12
+  unit: dB
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Approximately 12 dB
+- device_id: xu2026b-a
+  field: prop_loss_db_per_cm
+  value: 0.1
+  unit: dB/cm
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Approximately 0.1 dB/cm
+- device_id: xu2026b-a
+  field: extinction_ratio_db
+  value: 42
+  unit: dB
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 3(a)
+  note: Text approximately 42 dB; figure label greater than 40 dB
+- device_id: xu2026b-a
+  field: er_type
+  value: static
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 3(a) inset
+  note: Transmission versus voltage and wavelength
+- device_id: xu2026b-a
+  field: optical_input_power_dbm
+  value: 23
+  unit: dBm
+  basis: measured
+  locator: p.2 Sec. 3
+  note: EDFA output launched into the chip
+- device_id: xu2026b-a
+  field: sidewall_angle_deg
+  value: 76
+  unit: deg
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 2(d)
+  note: SEM cross-section
+- device_id: xu2026b-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.1 Sec. 2
+  note: 1 um gold
+- device_id: xu2026b-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.1 Sec. 2
+- device_id: xu2026b-a
+  field: max_baud_gbd
+  value: 226
+  unit: GBd
+  basis: measured
+  locator: p.2 Sec. 3
+  note: 226 GBd
+- device_id: xu2026b-a
+  field: modulation_format
+  value: '226 GBd back-to-back, no linear pre-equalization: PAM4 452 (420) Gb/s BER 2.27e-3; PAM6 584 (494) Gb/s BER 1.72e-2;
+    PAM8 678 (504) Gb/s NGMI 0.8299; PS-PAM16 768 (536) Gb/s at entropy 3.4'
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 4(c)-(d)
+- device_id: xu2026b-a
+  field: max_line_rate_gbps
+  value: 768
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.3 Fig. 4(d)
+  note: PS-PAM16 at 226 GBd; entropy 3.4 bit/symbol
+- device_id: xu2026b-a
+  field: max_net_rate_gbps
+  value: 536.6
+  unit: Gb/s
+  basis: derived
+  locator: p.2 Sec. 3
+  note: Computed by the authors as B(H-(1-c)log2 M) with c=0.7436; abstract rounds to 536
+- device_id: xu2026b-a
+  field: driver
+  value: DBI-DAC (digital-band-interleaved DAC), 110 GHz RF probe; 23 dBm EDFA-amplified ECL; 110 GHz photodetector, 256 GS/s
+    oscilloscope
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 3; p.3 Fig. 4(a)
+derived: []
+context_values:
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: printed in the page footer of pages 1-3

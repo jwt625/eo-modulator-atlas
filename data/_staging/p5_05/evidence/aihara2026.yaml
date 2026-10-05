@@ -1,0 +1,87 @@
+paper_id: aihara2026
+verified_on: '2026-10-04'
+source_files:
+- references/aihara2026/text.md
+- references/aihara2026/figures/page_02.png
+- references/aihara2026/figures/page_03.png
+entries:
+- device_id: aihara2026-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(a)
+  note: DFB lasing peak read from the spectrum at 55 C; EAM shares the laser wavelength
+- device_id: aihara2026-a
+  field: length_mm
+  value: 0.1
+  unit: mm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 100 um long EAMs, 300 um DFB lasers, 250 um EAM pitch
+- device_id: aihara2026-a
+  field: bw3db_ghz
+  value: 103
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(c)
+  note: Small-signal EO response without termination resistor at -1.5 V bias, 25 C
+- device_id: aihara2026-a
+  field: extinction_ratio_db
+  value: 3.8
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(b)
+  note: Static ER for 0 to 1 V swing at 55 C, low laser current 10 mA; modulation efficiency 3.8 dB/V
+- device_id: aihara2026-a
+  field: drive_vpp_v
+  value: 0.5
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Swing voltage at the probe for 400 Gbps; 0.4 V for 448 Gbps
+- device_id: aihara2026-a
+  field: max_baud_gbd
+  value: 200
+  unit: GBd
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3(a)
+  note: Highest symbol rate with TDECQ (4.7 dB at 200 GBd, 21-tap FFE, target SER 9.3e-3; Fig. 3(a) label
+    9.7e-3)
+- device_id: aihara2026-a
+  field: max_line_rate_gbps
+  value: 448
+  unit: Gb/s
+  basis: measured
+  locator: p.1, abstract; p.2, Fig. 3(f-i)
+  note: 448 Gbps PAM4 eyes, baud not stated, ER above 2.7 dB, TDECQ not evaluable; 400 Gbps TDECQ below
+    6.4 dB on all four channels
+- device_id: aihara2026-a
+  field: modulation_format
+  value: PAM4 at 400 Gbps (0.5 V swing, 21-tap FFE, TDECQ below 6.4 dB, ER 3.0 to 3.6 dB over four channels)
+    and 448 Gbps (0.4 V swing, ER 2.7 to 3.2 dB, eyes only); FDIU after AWG, PDFA before detection
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3
+  note: Channels measured sequentially at 55 C
+- device_id: aihara2026-a
+  field: epitaxy_or_stack
+  value: InGaAlAs MQW (PL peak 1.26 um) in 230 nm InP membrane with lateral p-i-n; no Si core under the
+    EAM
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(b)
+  note: Zn diffusion anneal at 490 C
+- device_id: aihara2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(c)
+  note: Response normalized to about 0 dB at lowest frequency; reference not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

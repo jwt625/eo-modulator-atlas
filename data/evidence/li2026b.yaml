@@ -1,0 +1,86 @@
+paper_id: li2026b
+verified_on: '2026-10-04'
+source_files:
+- references/li2026b/text.md
+- references/li2026b/figures/page_01.png
+- references/li2026b/figures/page_02.png
+- references/li2026b/figures/page_03.png
+entries:
+- device_id: li2026b-a
+  field: wavelength_nm
+  value: 1563
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2; p.2, Sec. 2
+  note: Operating wavelength 1563 nm
+- device_id: li2026b-a
+  field: drive_vpp_v
+  value: 1.4
+  unit: V
+  basis: measured
+  locator: p.1, abstract; p.1, Sec. 2
+  note: AWG delivers 1.4 Vpp, limited by system nonlinearity
+- device_id: li2026b-a
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.1, abstract; p.2, Sec. 2; Fig. 1(b)
+  note: Authors state above 67 GHz; Fig. 1(b) notch about -3.2 dB near 46.6 GHz (below -2 dB about 45-48 GHz), trace ends near -2 dB at 67
+    GHz
+- device_id: li2026b-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(b)
+  note: End of the GeSi EAM trace read from the plot
+- device_id: li2026b-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 1(b)
+  note: Trace starts near 0 dB at low frequency; reference not stated
+- device_id: li2026b-a
+  field: il_onchip_db
+  value: 3.5
+  unit: dB
+  basis: measured
+  locator: p.1, Sec. 2; p.2, Sec. 2
+  note: 3.5 dB at 0 V; grating couplers 4.5 dB each and 4 dB self-heating listed separately
+- device_id: li2026b-a
+  field: extinction_ratio_db
+  value: 3.1
+  unit: dB
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 3.1 dB static ER at -2 V bias and 1563 nm
+- device_id: li2026b-a
+  field: max_baud_gbd
+  value: 160
+  unit: GBd
+  basis: measured
+  locator: p.1, Sec. 1; p.3, Sec. 3
+  note: 160 GBd PAM4
+- device_id: li2026b-a
+  field: modulation_format
+  value: 'PAM4 160 GBd, BU-GRU equalizer, 35 taps: BER 4.22e-3 back-to-back (RoP 5 dBm) and 4.36e-3 after 100 m SMF, below
+    the 6.25% OH HD-FEC threshold 4.5e-3'
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(b)-(c)
+  note: BER values from text; RoP 5 dBm B2B, 100 m RoP 4.8 dBm in Fig. 3(c) inset
+- device_id: li2026b-a
+  field: max_net_rate_gbps
+  value: 300
+  unit: Gb/s
+  basis: measured
+  locator: p.1, abstract; p.3, Sec. 4
+  note: 300 Gb/s per lambda net data rate stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-4 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

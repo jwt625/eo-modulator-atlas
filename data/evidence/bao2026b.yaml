@@ -1,0 +1,120 @@
+paper_id: bao2026b
+verified_on: '2026-10-04'
+source_files:
+- references/bao2026b/text.md
+- references/bao2026b/figures/page_02.png
+- references/bao2026b/figures/page_03.png
+entries:
+- device_id: bao2026b-a
+  field: wavelength_nm
+  value: 1326.3
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(b)
+  note: Resonance minimum at 0 V of the characterized channel; EO measurement wavelength not stated
+- device_id: bao2026b-a
+  field: bw3db_ghz
+  value: 65
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.2, Sec. 2; Fig. 2(d)
+  note: EO response at -2 V; figure label reads about 65 GHz
+- device_id: bao2026b-a
+  field: bw_measured_to_ghz
+  value: 100
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(d)
+  note: Plotted trace extends to the 100 GHz axis end
+- device_id: bao2026b-a
+  field: extinction_ratio_db
+  value: 16
+  unit: dB
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(b)
+  note: Dip depth of the 0 V spectrum below the 0 dB baseline, read from the plot
+- device_id: bao2026b-a
+  field: rib_width_nm
+  value: 380
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Waveguide width 380 nm; radius 4.1 um, coupling gap 180 nm
+- device_id: bao2026b-a
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 3
+  note: Single-ended 2 Vpp from the AWG via bias-tee and RF probe
+- device_id: bao2026b-a
+  field: max_line_rate_gbps
+  value: 256
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.3, Fig. 3
+  note: Per channel PAM4; all 16 channels open eyes
+- device_id: bao2026b-a
+  field: modulation_format
+  value: PAM4 256 Gb/s per channel on all 16 channels, 16 x 256 Gb/s = 4 Tb/s per fiber; TDECQ 2.68 to
+    3.24 dB with 9-tap FFE on the oscilloscope; no BER reported
+  unit: ''
+  basis: measured
+  locator: p.1 intro; p.3, Sec. 3; Fig. 3
+- device_id: bao2026b-a
+  field: capacitance_ff
+  value: 8
+  unit: fF
+  basis: derived
+  locator: p.2, Sec. 2; Fig. 2(c)
+  note: Junction capacitance stated from the S11 response; extraction method not given
+- device_id: bao2026b-a
+  field: q_loaded
+  value: 3500
+  unit: '1'
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(b)
+  note: Q about 3500 for the characterized disk; 3200 to 3700 across the array
+- device_id: bao2026b-a
+  field: fsr_nm
+  value: 19.6
+  unit: nm
+  basis: measured
+  locator: p.1 intro; p.2, Sec. 2; Fig. 2(a)
+  note: Figure label reads FSR about 19.6 nm
+- device_id: bao2026b-a
+  field: tuning_nm_per_v
+  value: 0.025
+  unit: nm/V
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(b)
+  note: Modulation efficiency 25 pm/V from resonance shift versus bias
+- device_id: bao2026b-a
+  field: epitaxy_or_stack
+  value: Disk radius 4.1 um, waveguide width 380 nm, coupling gap 180 nm, arc-shaped coupling region +/-12
+    deg; extended-depletion lateral PN, N 1.0e20, 1.0e19, 3.8e17 and P 7.1e19, 5.3e18, 2.1e17 cm^-3, P++
+    at disk centre; independent metal heater per channel
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+- device_id: bao2026b-a
+  field: driver
+  value: Keysight M8199B AWG, 2 Vpp single-ended via bias-tee and RF probe pads; no driver amplifier stated;
+    PDFA after the chip
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3
+- device_id: bao2026b-a
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3
+  note: Stated 2 Vpp single-ended signal
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

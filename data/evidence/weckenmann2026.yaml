@@ -1,0 +1,51 @@
+paper_id: weckenmann2026
+verified_on: '2026-10-04'
+source_files:
+- references/weckenmann2026/text.md
+- references/weckenmann2026/figures/page_01.png
+- references/weckenmann2026/figures/page_03.png
+entries:
+- device_id: weckenmann2026-a
+  field: optical_input_power_dbm
+  value: 15
+  unit: dBm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: SOA output per modulator input; not on-chip after coupling
+- device_id: weckenmann2026-a
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.1, Sec. 2
+  note: About 4 Vpp amplifier output, 2 Vpp per MRM in single-drive push-pull
+- device_id: weckenmann2026-a
+  field: max_baud_gbd
+  value: 110
+  unit: GBd
+  basis: measured
+  locator: p.1, Sec. 2; p.2, Sec. 3
+  note: Per subcarrier per chip; 220 GBd super-channel total over two chips
+- device_id: weckenmann2026-a
+  field: modulation_format
+  value: 'Nyquist super-channel (two chips, zero guard band), single polarization, back-to-back: QPSK
+    to 220 GBd total (BER below 7% HD-FEC), 16-QAM BER below 20% SD-FEC to 150 GBd and below 24% SD-FEC
+    to 190 GBd; 20 km SMF: 16-QAM 150 GBd and QPSK 220 GBd below 20% SD-FEC; net 612.9 Gb/s per polarization
+    (16-QAM, 190 GBd total, two-chip super-channel)'
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a), 2(b), 2(d)
+- device_id: weckenmann2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 'Authors: single-drive push-pull configuration'
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

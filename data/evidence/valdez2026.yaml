@@ -1,0 +1,236 @@
+paper_id: valdez2026
+verified_on: '2026-10-04'
+source_files:
+- references/valdez2026/text.md
+- references/valdez2026/figures/page_01.png
+- references/valdez2026/figures/page_02.png
+- references/valdez2026/figures/page_03.png
+entries:
+- device_id: valdez2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2; p.3 Fig. 2 caption
+  note: Bias wavelength near 1550 nm (RAMZM near critical coupling)
+- device_id: valdez2026-a
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 1(d)
+  note: Phase shifter length Lm = 2 mm
+- device_id: valdez2026-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 1(b)
+  note: 300 nm LT slab
+- device_id: valdez2026-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Signal-ground gap
+- device_id: valdez2026-a
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: measured
+  locator: p.2 Sec. 2
+- device_id: valdez2026-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2 Sec. 2
+- device_id: valdez2026-a
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Co-planar aluminum electrodes
+- device_id: valdez2026-a
+  field: substrate
+  value: low-resistivity silicon (5-30 ohm cm, about 750 um)
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 1(b)
+  note: Manufacturer specification 5-30 ohm cm
+- device_id: valdez2026-a
+  field: epitaxy_or_stack
+  value: 800 nm SiN1 routing layer; 350 nm SiN2 hybrid waveguide (tapered), nominally 200 nm above SiN1; 300 nm LT slab bonded
+    above SiN2 with thin oxide between; SiO2 cladding; Si substrate
+  unit: ''
+  basis: measured
+  locator: p.1-2 Sec. 2; Fig. 1(b)
+  note: SiN2 above SiN1 offset 200 nm per text; oxide between SiN2 and LT not quantified in text
+- device_id: valdez2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.1 Sec. 1
+  note: Push-pull SiN/LT structure stated
+- device_id: valdez2026-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 Sec. 1; p.3 Fig. 2(b)
+  note: Push-pull stated; Vpi convention not stated
+- device_id: valdez2026-a
+  field: vpi_dc_v
+  value: 6.7
+  unit: V
+  basis: measured
+  locator: p.3 Fig. 2(b); p.2 Sec. 2
+  note: RAMZM Vpi from 1 MHz sinusoidal scan; intro states 6.8 V
+- device_id: valdez2026-a
+  field: vpil_dc_vcm
+  value: 1.36
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.2 Sec. 2; p.3 Conclusions
+  note: Abstract/conclusions 1.36 V cm = intro Vpi 6.8 V x 0.2 cm; Sec. 2 gives 6.7 V with 1.4 V cm
+- device_id: valdez2026-a
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.3 Fig. 2(d)
+  note: Authors state over 50 GHz; isolated point about -3.2 dB at 46 GHz; fit about -1.8 dB at 50 GHz
+- device_id: valdez2026-a
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 Fig. 2(c)-(d) caption
+  note: EO response measured up to 50 GHz by OSA method
+- device_id: valdez2026-a
+  field: il_onchip_db
+  value: 1.75
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.1 Sec. 1; p.3 Conclusions
+  note: Abstract says insertion loss in the C-band; conclusions say on-chip insertion loss
+- device_id: valdez2026-a
+  field: il_onchip_includes
+  value: device insertion loss as stated (not itemised)
+  unit: ''
+  basis: derived
+  locator: p.1 Sec. 1; p.3 Conclusions
+  note: Conclusions credit PDK edge-coupling, routing, splitting components; inclusion of couplers not stated
+- device_id: valdez2026-a
+  field: il_onchip_excludes
+  value: not stated; Fig. 2(a) fiber-to-fiber peak about -3.3 dB suggests edge coupling excluded
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2; p.3 Fig. 2(a)
+  note: Authors do not state exclusions; Fig. 2(a) fiber-to-fiber peak about -3.3 dB is about 1.6 dB above the on-chip value
+- device_id: valdez2026-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2; p.3 Fig. 2 caption
+  note: Bias wavelength near 1550 nm
+- device_id: valdez2026-b
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 1(d)
+  note: Phase shifter length Lm = 2 mm
+- device_id: valdez2026-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 1(b)
+  note: 300 nm LT slab
+- device_id: valdez2026-b
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Signal-ground gap
+- device_id: valdez2026-b
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: measured
+  locator: p.2 Sec. 2
+- device_id: valdez2026-b
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.2 Sec. 2
+- device_id: valdez2026-b
+  field: electrode_metal
+  value: aluminum
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Co-planar aluminum electrodes
+- device_id: valdez2026-b
+  field: substrate
+  value: low-resistivity silicon (5-30 ohm cm, about 750 um)
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 1(b)
+  note: Manufacturer specification 5-30 ohm cm
+- device_id: valdez2026-b
+  field: epitaxy_or_stack
+  value: 800 nm SiN1 routing layer; 350 nm SiN2 hybrid waveguide (tapered), nominally 200 nm above SiN1; 300 nm LT slab bonded
+    above SiN2 with thin oxide between; SiO2 cladding; Si substrate
+  unit: ''
+  basis: measured
+  locator: p.1-2 Sec. 2; Fig. 1(b)
+  note: SiN2 above SiN1 offset 200 nm per text; oxide between SiN2 and LT not quantified in text
+- device_id: valdez2026-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Sec. 2
+  note: Both devices share the modulation cross-section; push-pull stated for the RAMZM
+- device_id: valdez2026-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 Sec. 1; p.3 Fig. 2(b)
+  note: Push-pull stated; Vpi convention not stated
+- device_id: valdez2026-b
+  field: vpi_dc_v
+  value: 20.9
+  unit: V
+  basis: derived
+  locator: p.2 Sec. 2; p.3 Fig. 2(b)
+  note: Cosine-squared fit of the 20 Vpp (+-10 V) scan; Vpi exceeds the scanned range, so a fit extrapolation
+- device_id: valdez2026-b
+  field: vpil_dc_vcm
+  value: 4.2
+  unit: V*cm
+  basis: derived
+  locator: p.2 Sec. 2
+  note: Authors convert fitted Vpi 20.9 V with 2 mm
+- device_id: valdez2026-b
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.3 Fig. 2(c) caption
+  note: Measured up to 50 GHz; text claims over 50 GHz but Fig. 2(c) data reach -3 dB near 25 GHz; no 3 dB value entered
+derived: []
+context_values:
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: printed in the page footer of pages 1-3

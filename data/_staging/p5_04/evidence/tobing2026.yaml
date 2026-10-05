@@ -1,0 +1,90 @@
+paper_id: tobing2026
+verified_on: '2026-10-04'
+source_files:
+- references/tobing2026/text.md
+- references/tobing2026/figures/page_03.png
+- references/tobing2026/figures/img_p03_2.png
+entries:
+- device_id: tobing2026-a
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4(e),(f)
+  note: '''7 mm arm length'''
+- device_id: tobing2026-a
+  field: vpi_dc_v
+  value: 4.14
+  unit: V
+  basis: extracted_from_figure
+  locator: p.3, Fig. 4(e)
+  note: annotated 4.14 V between response maximum and minimum; consistent with VpiL 2.9 V cm at 7 mm
+- device_id: tobing2026-a
+  field: vpil_dc_vcm
+  value: 2.9
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.3 Sec. 3; Fig. 4(e)
+  note: authors' DC VpiL; only Vpi is annotated in the plot
+- device_id: tobing2026-a
+  field: bw3db_ghz
+  value: 20
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4(f)
+  note: '''3-dB bandwidth of ~20 GHz''; preliminary RF; normalized S21 crosses -3 dB'
+- device_id: tobing2026-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.3, Fig. 4(f)
+  note: normalized S21 data end at about 67 GHz (about -9 dB)
+- device_id: tobing2026-a
+  field: eo_film_thickness_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2.2
+  note: bonded TFLN thickness
+- device_id: tobing2026-a
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4(e) caption
+  note: '''4 um metal gap'''
+- device_id: tobing2026-a
+  field: electrode_metal
+  value: Aluminum with Ti/TiN adhesion and barrier layer (single-layer metallization scheme)
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2.3
+  note: stated for the modulator metallization; electrode layer not singled out
+- device_id: tobing2026-a
+  field: epitaxy_or_stack
+  value: SiN:D (SiD4-based) passive waveguides planarized on 200 mm Si; TFLN die (350 nm LN with 500 nm thermal oxide; oxide position after bonding not stated) die-to-wafer bonded, Si handle removed; post-bond LN patterning and Al/Ti/TiN metallization
+  unit: ''
+  basis: measured
+  locator: p.1-2, Secs. 2.1-2.3
+  note: oxide position after bonding and layer order beneath the LN not stated in the text
+- device_id: tobing2026-a
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.3, Sec. 3
+  note: arm drive not stated
+- device_id: tobing2026-a
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.3, Sec. 3
+  note: Vpi convention not stated
+derived: []
+context_values:
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: printed in the page footer of pages 1-3; abstract also reads '(c) 2026 The Author(s)'

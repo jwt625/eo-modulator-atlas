@@ -1,0 +1,105 @@
+paper_id: zhou2026
+verified_on: '2026-10-04'
+source_files:
+- references/zhou2026/text.md
+- references/zhou2026/figures/page_02.png
+- references/zhou2026/figures/img_p02_1.png
+- references/zhou2026/figures/img_p02_5.png
+entries:
+- device_id: zhou2026-a
+  field: vpi_dc_v
+  value: 2.7
+  unit: V
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1
+  note: Text states 2.7 V; figure header reads Vpi < 2.7 V; triangle-sweep trace; DC or RF and convention not stated
+- device_id: zhou2026-a
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1
+  note: 1 dB roll-off at 67 GHz, end of measured trace; authors' extrapolated >140 GHz follows the simulated curve, not entered
+- device_id: zhou2026-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1
+  note: Measured EO S21 trace ends near 67 GHz, where text quotes 1 dB roll-off
+- device_id: zhou2026-a
+  field: eo_rolloff_db
+  value: 1
+  unit: dB
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1
+  note: Stated roll-off at 67 GHz in S21; reference not stated
+- device_id: zhou2026-a
+  field: eo_rolloff_freq_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Frequency of the 1 dB roll-off
+- device_id: zhou2026-a
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 2
+  note: AWG differential output range 1.3 to 2 Vppd; optional RF amplifier, swing at MZM not stated
+- device_id: zhou2026-a
+  field: max_baud_gbd
+  value: 182.5
+  unit: GBd
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2
+  note: Highest PAM4 symbol rate tested; performance degrades rapidly beyond 180 GBd due to AWG response
+- device_id: zhou2026-a
+  field: extinction_ratio_db
+  value: 2.4
+  unit: dB
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2 (right)
+  note: Dynamic ER from DCA at 182.5 GBd read from the ER line on the right axis; about 4.4 dB at 140 GBd
+- device_id: zhou2026-a
+  field: modulation_format
+  value: PAM4, PRBSQ, 140 to 182.5 GBd; TDECQ 3.7 dB at 160 GBd with 15-tap FFE (KP4 FEC threshold 2.4e-4); at 180 GBd 2.5 dB with 15 taps, 2.3 dB with 23 taps, 1.9 dB with 23-tap FFE plus 1-tap DFE (KP4+Hamming
+    threshold 4.85e-3); 2.6 dB at 182.5 GBd with 23 taps
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2
+  note: Thresholds are the IEEE 802.3dj values quoted by the authors; Fig. 2 reads about 3.6 dB (15 taps) and 3.7 dB (23 taps)
+- device_id: zhou2026-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: GSSG differential electrode; MZM differential driving signal
+- device_id: zhou2026-a
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Convention for Vpi not stated
+- device_id: zhou2026-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2; Fig. 1
+  note: Reference not stated; trace starts near 0 dB
+derived:
+- device_id: zhou2026-a
+  field: max_line_rate_gbps
+  value: 365
+  formula: max_baud_gbd * 2 bits per PAM4 symbol
+  inputs:
+  - max_baud_gbd
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

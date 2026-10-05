@@ -1,0 +1,46 @@
+paper_id: tatarczak2026
+verified_on: '2026-10-04'
+source_files:
+- references/tatarczak2026/text.md
+- references/tatarczak2026/figures/page_01.png
+- references/tatarczak2026/figures/page_02.png
+entries:
+- device_id: tatarczak2026-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2.1
+  note: Stated as 1310 nm InP diff-EML
+- device_id: tatarczak2026-a
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(a); p.2 Sec. 2.1
+  note: Measured trace crosses -3 dB line near 100 GHz; text says exceeding 100 GHz
+- device_id: tatarczak2026-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(a)
+  note: Trace and axis end near 110 GHz at about -5.4 dB
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3, page footer
+    note: Footer on pages 1-3
+  simulated_tx_eye_426gbps:
+    value: ER 4.9 dB, OMA 8.6 dBm, TDECQ 1.5 dB, 20 FFE taps
+    locator: p.2 Sec. 2.1; p.1 Fig. 1(c)
+    note: Large-signal simulation with optimized PCB trace; not measured
+  driver_s21:
+    value: driver and PD-TIA beyond 100 GHz
+    locator: p.1 Fig. 1(b), 1(d); p.2
+    note: Non-modulator components; not entered
+  drive_requirement:
+    value: 2.0 Vppd on 100 ohm, T = 20 C
+    locator: p.2 Sec. 2.1
+    note: Requirement stated by authors; differential; feeds simulated eye

@@ -1,0 +1,199 @@
+paper_id: yamaguchi2026
+verified_on: '2026-10-04'
+source_files:
+- references/yamaguchi2026/text.md
+- references/yamaguchi2026/figures/page_02.png
+- references/yamaguchi2026/figures/page_03.png
+- references/yamaguchi2026/figures/img_p02_2.png
+- references/yamaguchi2026/figures/img_p03_3.png
+entries:
+- device_id: yamaguchi2026-a
+  field: length_mm
+  value: 45
+  unit: mm
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(a)
+  note: Three 15 mm sections (fundamental, same-polarity, reverse-polarity); total electrode length stated
+    approximately 45 mm
+- device_id: yamaguchi2026-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(c)
+  note: Paper states EO 3 dB bandwidth exceeded 110 GHz; EO-S21 trace stays above -3 dB across the plotted
+    range
+- device_id: yamaguchi2026-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(c)
+  note: Upper end of the plotted EO-S21 frequency axis
+- device_id: yamaguchi2026-a
+  field: il_fiber_to_fiber_db
+  value: 19.6
+  unit: dB
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Total fiber-to-chip-to-fiber loss with angle-polished fibers on grating couplers; 8.2 dB per facet
+    coupling loss
+- device_id: yamaguchi2026-a
+  field: extinction_ratio_db
+  value: 50
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 1(d)
+  note: Low-frequency modulation curve, stated approximately 50 dB; deepest point near -50 dB in Fig.
+    1(d)
+- device_id: yamaguchi2026-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(b)
+  note: CLTWE gap set to 5 um to reduce half-wave voltage
+- device_id: yamaguchi2026-a
+  field: electrode_thickness_um
+  value: 1.2
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(b)
+  note: Electrode designed 1.2 um thick to minimize microwave loss
+- device_id: yamaguchi2026-a
+  field: eo_film_thickness_nm
+  value: 800
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(b)
+  note: Dimension label on the LiNbO3 layer of the cross-section schematic; not given in text
+- device_id: yamaguchi2026-a
+  field: substrate
+  value: SiO2, 500 um
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.2, Fig. 1(b)
+  note: Handle layer label in the cross-section schematic; not given in text
+- device_id: yamaguchi2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 1(b)
+  note: Not stated by authors; GSG electrode with waveguides in both gaps implies push-pull
+- device_id: yamaguchi2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 1(c)
+  note: EO-S21 normalized to about 0 dB at lowest frequency; reference not stated
+- device_id: yamaguchi2026-b
+  field: length_mm
+  value: 40.5
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Total operating length measured 40.5 mm; folding shortens chip length to 26.5 mm; fundamental
+    section 13.5 mm
+- device_id: yamaguchi2026-b
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.3, Fig. 2(c)
+  note: Red chip trace stays above -3 dB to 110 GHz; paper states 1 dB bandwidth of 100 GHz, no chip 3
+    dB value
+- device_id: yamaguchi2026-b
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.3, Fig. 2(c)
+  note: Upper end of the plotted EO response axis
+- device_id: yamaguchi2026-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 2(a)
+  note: Label X-cut TFLN in schematic
+- device_id: yamaguchi2026-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 2(a)
+  note: Not stated by authors; X-cut GSG layout with waveguides in both gaps implies push-pull
+- device_id: yamaguchi2026-b
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 2(c)
+  note: Response normalized to about 0 dB at lowest frequency; reference not stated
+- device_id: yamaguchi2026-c
+  field: vpi_dc_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 3 and Sec. 4; Fig. 2(d)
+  note: Semi-static curve; Conclusion attributes 2 V to the packaged module; DC bias and convention not
+    stated
+- device_id: yamaguchi2026-c
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.2-3, Sec. 3; Fig. 2(c)
+  note: Stated 100 GHz 3 dB bandwidth for the module; blue trace crosses -3 dB near 100 GHz, minimum about
+    -3.4 dB near 105 GHz
+- device_id: yamaguchi2026-c
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.3, Fig. 2(c)
+  note: Upper end of the plotted EO response axis
+- device_id: yamaguchi2026-c
+  field: il_fiber_to_fiber_db
+  value: 9.2
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Optical loss of the module with polarization-maintaining fiber; definition not detailed, entered
+    as fiber-to-fiber
+- device_id: yamaguchi2026-c
+  field: extinction_ratio_db
+  value: 40
+  unit: dB
+  basis: measured
+  locator: p.3, Sec. 3 and Sec. 4; Fig. 2(d)
+  note: Stated 40 dB; deepest point of the Fig. 2(d) curve is about -38 dB
+- device_id: yamaguchi2026-c
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 2(a)
+  note: Not stated by authors; X-cut GSG layout with waveguides in both gaps implies push-pull
+- device_id: yamaguchi2026-c
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.3, Sec. 3
+  note: Paper gives Vpi 2 V without stating the MZM convention
+- device_id: yamaguchi2026-c
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 2(c)
+  note: Response normalized to about 0 dB at lowest frequency; reference not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

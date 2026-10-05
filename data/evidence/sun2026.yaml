@@ -1,0 +1,99 @@
+paper_id: sun2026
+verified_on: '2026-10-04'
+source_files:
+- references/sun2026/text.md
+- references/sun2026/figures/page_01.png
+- references/sun2026/figures/page_02.png
+- references/sun2026/figures/page_03.png
+entries:
+- device_id: sun2026-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: design_target
+  locator: p.1-2 Sec. 2
+  note: Design and simulation wavelength; measured resonances lie near 1313-1315 nm (Fig. 3b)
+- device_id: sun2026-a
+  field: eo_film_thickness_nm
+  value: 270
+  unit: nm
+  basis: design_target
+  locator: p.1 Sec. 2
+  note: Nominal SOI thickness of the platform
+- device_id: sun2026-a
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.1 Sec. 2
+  note: Nominal rib etch; design varied over 196-204 nm
+- device_id: sun2026-a
+  field: epitaxy_or_stack
+  value: 270 nm SOI with 200 nm rib etch; vertical PN junction in the ring waveguide, offset 93 nm from the inner edge; heavy
+    doping; commercial CMOS foundry (not named)
+  unit: ''
+  basis: measured
+  locator: p.1 Sec. 2; p.2 Sec. 3
+  note: Junction offset and process as stated by authors
+- device_id: sun2026-a
+  field: tuning_nm_per_v
+  value: 0.0474
+  unit: nm/V
+  basis: extracted_from_figure
+  locator: p.3 Fig. 3(e)
+  note: Group mean from plot, labelled phase efficiency in pm/V (about 47.4); 31 of 40 designs, 5 and 10 um pooled; bias range
+    not stated
+- device_id: sun2026-b
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: design_target
+  locator: p.1-2 Sec. 2
+  note: Design and simulation wavelength; measured resonances lie near 1313-1315 nm (Fig. 3b)
+- device_id: sun2026-b
+  field: eo_film_thickness_nm
+  value: 270
+  unit: nm
+  basis: design_target
+  locator: p.1 Sec. 2
+  note: Nominal SOI thickness of the platform
+- device_id: sun2026-b
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.1 Sec. 2
+  note: Nominal rib etch; design varied over 196-204 nm
+- device_id: sun2026-b
+  field: epitaxy_or_stack
+  value: 270 nm SOI with 200 nm rib etch; vertical PN junction in the ring waveguide, offset 93 nm from the inner edge; heavy
+    doping; commercial CMOS foundry (not named)
+  unit: ''
+  basis: measured
+  locator: p.1 Sec. 2; p.2 Sec. 3
+  note: Junction offset and process as stated by authors
+- device_id: sun2026-b
+  field: tuning_nm_per_v
+  value: 0.0426
+  unit: nm/V
+  basis: extracted_from_figure
+  locator: p.3 Fig. 3(e)
+  note: Group mean read from plot, labelled phase efficiency in pm/V (about 42.6 pm/V); bias range not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3, page footer
+    note: Footer on pages 1-3; page 1 abstract also reads (c) 2026 The Author(s)
+  equivalent_waveguide_loss_db_per_cm:
+    value: about 170 and 178 (simple and stable, 5 um); about 146 and 153 (10 um)
+    locator: p.3 Fig. 3(a)
+    note: Group means read from plot; text states stable about 8 dB/cm higher; not entered (differs by radius)
+  resonance_variation_reduction:
+    value: about 2.5x measured (range and std), 5x simulated
+    locator: p.1 abstract; p.3 Sec. 3
+    note: 75 dies on one wafer
+  phase_efficiency_gain_stable_vs_simple:
+    value: about 15 percent
+    locator: p.3 Sec. 3
+    note: Plot group means differ by about 11 percent

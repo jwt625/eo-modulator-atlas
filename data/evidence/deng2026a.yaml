@@ -1,0 +1,164 @@
+paper_id: deng2026a
+verified_on: '2026-10-04'
+source_files:
+- references/deng2026a/text.md
+- references/deng2026a/figures/page_02.png
+- references/deng2026a/figures/page_03.png
+- references/deng2026a/figures/img_p02_1.png
+entries:
+- device_id: deng2026a-a
+  field: length_mm
+  value: 2.5
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Two 2.5 mm phase shifters, series-connected p-n junctions
+- device_id: deng2026a-a
+  field: vpil_dc_vcm
+  value: 1.5
+  unit: V*cm
+  basis: measured
+  locator: p.1, Sec. 2; p.2, Sec. 3
+  note: Stated modulation efficiency 1.5 V cm; bias, DC versus RF, and definition not stated
+- device_id: deng2026a-a
+  field: bw3db_ghz
+  value: 40.8
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(d)
+  note: Fig. 2(d) label for plotted -3 V trace; text says median, inset median 38.0 GHz (bias unlabeled); trace crosses -3 dB near 40 GHz
+- device_id: deng2026a-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: 220 nm silicon layer on 300 mm SOI
+- device_id: deng2026a-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 3
+  note: 2 um buried oxide
+- device_id: deng2026a-a
+  field: substrate
+  value: 300 mm SOI wafer, 220 nm silicon, 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3
+- device_id: deng2026a-a
+  field: extinction_ratio_db
+  value: 3.38
+  unit: dB
+  basis: measured
+  locator: p.3, Sec. 5; Fig. 4(c)
+  note: Dynamic ER of the 224 Gb/s PAM4 eye; NRZ 4.05 dB at 112 Gb/s
+- device_id: deng2026a-a
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Two series-connected p-n junctions form a push-pull configuration; driven differentially at 3.2 Vppd
+- device_id: deng2026a-a
+  field: max_baud_gbd
+  value: 112
+  unit: GBd
+  basis: measured
+  locator: p.3, Sec. 5; Fig. 4
+  note: Eyes at 112 GBaud NRZ, PAM4, PAM6 and PAM8
+- device_id: deng2026a-a
+  field: modulation_format
+  value: '112 GBaud eyes: NRZ 112 Gb/s (ER 4.05 dB), PAM4 224 Gb/s (ER 3.38 dB, RLM 94.4%, TDECQ 1.25 dB), PAM6 280 Gb/s, PAM8 336 Gb/s; 10-tap FFE; no BER reported'
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 5; Fig. 4
+- device_id: deng2026a-a
+  field: max_line_rate_gbps
+  value: 336
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.3, Fig. 4(e)
+  note: 112 GBaud PAM8 optical eye
+- device_id: deng2026a-a
+  field: energy_per_bit_fj
+  value: 2470
+  unit: fJ/bit
+  basis: derived
+  locator: p.1 title; p.3, Sec. 5-6
+  note: 'Authors: 831 mW total transmitter power (driver included) / 336 Gb/s = 2.47 pJ/b; not modulator-only.'
+- device_id: deng2026a-a
+  field: drive_vpp_v
+  value: 3.2
+  unit: V
+  basis: measured
+  locator: p.1, Sec. 1; p.3, Sec. 5
+  note: Differential peak-to-peak swing delivered by the driver, 3.2 Vppd
+- device_id: deng2026a-a
+  field: epitaxy_or_stack
+  value: Series push-pull, two 2.5 mm phase shifters; GSSG capacitive-loaded TW electrode with periodic loading, Fig. 2(b) labels Td 4, Tp 50, Th 5, Tl 47, Tg 3 um (definitions not in text); customized
+    doping for linearity
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+- device_id: deng2026a-a
+  field: driver
+  value: 90 nm SiGe BiCMOS distributed driver with 4.1 dB CTLE peaking at 62 GHz, 3.2 Vppd, 40 ohm back termination, wire-bonded to the MZM; Keysight M8199A AWG input; 831 mW total
+  unit: ''
+  basis: measured
+  locator: p.1-3, Sec. 2, 4, 5
+- device_id: deng2026a-a
+  field: electrode_type
+  value: cl_twe
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: GSSG electrode with capacitive loaded traveling-wave structure
+- device_id: deng2026a-a
+  field: waveguide_platform
+  value: soi_rib
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Ridge waveguide on 220 nm SOI; etch depth not stated
+- device_id: deng2026a-b
+  field: length_mm
+  value: 2.5
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Two 2.5 mm phase shifters, series-connected p-n junctions
+- device_id: deng2026a-b
+  field: bw3db_ghz
+  value: 52.9
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(d)
+  note: Fig. 2(d) label for -6 V trace; text says median; trace crosses -3 dB near 52 GHz
+- device_id: deng2026a-b
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Two series-connected p-n junctions form a push-pull configuration
+- device_id: deng2026a-a
+  field: band
+  value: o_band
+  basis: derived
+  locator: p.3, Fig. 4(a)
+  note: PDFA (O-band amplifier) in test setup; wavelength not stated
+- device_id: deng2026a-b
+  field: band
+  value: o_band
+  basis: derived
+  locator: p.3, Fig. 4(a)
+  note: PDFA (O-band amplifier) in test setup; wavelength not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

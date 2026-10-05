@@ -1,0 +1,89 @@
+paper_id: okuda2026
+verified_on: '2026-10-04'
+source_files:
+- references/okuda2026/text.md
+- references/okuda2026/figures/page_02.png
+- references/okuda2026/figures/page_03.png
+entries:
+- device_id: okuda2026-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Lasing wavelength stated as 1.31 um at 55 C
+- device_id: okuda2026-a
+  field: drive_vpp_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Peak-to-peak differential amplitude
+- device_id: okuda2026-a
+  field: bw3db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.1, abstract; p.2, Fig. 2(b)
+  note: Stated exceeding 100 GHz; trace ends near 100 GHz at about -1.7 dB with no crossing
+- device_id: okuda2026-a
+  field: bw_measured_to_ghz
+  value: 100
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(b)
+  note: Plotted trace ends at the axis limit of 100 GHz
+- device_id: okuda2026-a
+  field: extinction_ratio_db
+  value: 4
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3(a)
+  note: Dynamic ER stated approximately 4 dB
+- device_id: okuda2026-a
+  field: epitaxy_or_stack
+  value: Monolithic buried-heterostructure DFB laser, two series-connected high-mesa EAM waveguides (common
+    GND electrode) and spot-size converter; laser and EAM cathodes electrically isolated
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(a)
+  note: MQW and substrate not described
+- device_id: okuda2026-a
+  field: max_baud_gbd
+  value: 180
+  unit: GBd
+  basis: measured
+  locator: p.3, Fig. 3
+- device_id: okuda2026-a
+  field: modulation_format
+  value: 'PAM4 differential, 15-tap FFE, SER 9.6e-3: BtB 180 GBd (360 Gb/s) TDECQ 3.3 dB, 170 GBd (340
+    Gb/s) 2.1 dB; 500 m 170 GBd 3.1 dB, 180 GBd 5.4 dB; 2 km up to 160 GBd (320 Gb/s) below 3.4 dB'
+  unit: ''
+  basis: measured
+  locator: p.2-3, Fig. 3
+- device_id: okuda2026-a
+  field: max_line_rate_gbps
+  value: 360
+  unit: Gb/s
+  basis: measured
+  locator: p.1, abstract; p.3, Fig. 3(a)
+  note: 180 GBd PAM4 back-to-back
+- device_id: okuda2026-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+- device_id: okuda2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(b)
+  note: Trace normalized to about 0 dB at low frequency; reference not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

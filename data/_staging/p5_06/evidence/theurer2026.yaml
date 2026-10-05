@@ -1,0 +1,92 @@
+paper_id: theurer2026
+verified_on: '2026-10-04'
+source_files:
+- references/theurer2026/text.md
+- references/theurer2026/figures/page_01.png
+- references/theurer2026/figures/page_02.png
+- references/theurer2026/figures/page_03.png
+entries:
+- device_id: theurer2026-a
+  field: length_mm
+  value: 0.08
+  unit: mm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: EAM 80 um; DFB 350 um; SOA 150 um
+- device_id: theurer2026-a
+  field: drive_vpp_v
+  value: 1.2
+  unit: V
+  basis: measured
+  locator: p.2, Fig. 3 caption
+  note: Vpp at 145 GBd PAM4
+- device_id: theurer2026-a
+  field: bw3db_ghz
+  value: 65
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: Text states approximately 65 GHz bandwidth; 3 dB level not stated, traces reach about -3 dB near
+    65 GHz
+- device_id: theurer2026-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(c)
+  note: Plotted traces end near 67 GHz; |S21|^2 relative, 50 C, VEAM -2 V
+- device_id: theurer2026-a
+  field: extinction_ratio_db
+  value: 12
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: Static ER, maximum up to 12 dB at -3.5 V, 50 C; about 3 to 4 dB at -2 V operating bias, Fig. 2(b) reading
+- device_id: theurer2026-a
+  field: max_baud_gbd
+  value: 145
+  unit: GBd
+  basis: measured
+  locator: p.2-3, Fig. 3
+- device_id: theurer2026-a
+  field: modulation_format
+  value: BtB PAM4 145 GBd (290 Gb/s) BER below 3.8e-3 on all four channels at 10 dBm Rx power; 140 GBd
+    over up to 11 km SSMF; 140 GBd uncooled 25 to 85 C; Vpp 1.2 V
+  unit: ''
+  basis: measured
+  locator: p.2-3, Figs. 3-4
+- device_id: theurer2026-a
+  field: max_line_rate_gbps
+  value: 290
+  unit: Gb/s
+  basis: measured
+  locator: p.3, Sec. 3
+  note: 145 GBd PAM4 back-to-back, BER below HD-FEC threshold
+- device_id: theurer2026-a
+  field: epitaxy_or_stack
+  value: Single InGaAlAs MQW layer stack shared by DFB (lambda/4, index-coupled grating), EAM and SOA;
+    ridge waveguide; tilted AR-coated front facet
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+- device_id: theurer2026-a
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2
+  note: GSG contacts described as the interface for single-side-driven transmitters; drive not stated
+    explicitly
+- device_id: theurer2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(c)
+  note: Relative |S21|^2 normalized to about 0 dB at low frequency; reference not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

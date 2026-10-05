@@ -1,0 +1,82 @@
+paper_id: lin2026
+verified_on: '2026-10-04'
+source_files:
+- references/lin2026/text.md
+- references/lin2026/figures/page_01.png
+- references/lin2026/figures/page_02.png
+- references/lin2026/figures/page_03.png
+entries:
+- device_id: lin2026-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 1
+  note: Stated 220 nm silicon device layer of the imec iSiPP200 platform
+- device_id: lin2026-a
+  field: fsr_nm
+  value: 19.5
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Fitted ring spectrum, Fig. 2(a); radius 5 um
+- device_id: lin2026-a
+  field: ng_opt
+  value: 3.95
+  unit: '1'
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Stated n_g = 3.95 with n_eff 2.5112 at -2 V
+- device_id: lin2026-a
+  field: bw3db_ghz
+  value: 90
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 2(d)
+  note: Authors state approximately 90 GHz; noisy measured trace crosses -3 dB near
+    90 GHz at -6 dB detuning
+- device_id: lin2026-a
+  field: bw_measured_to_ghz
+  value: 100
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(d)
+  note: Upper end of the plotted measured trace; 110 GHz VNA in the setup, Fig. 2(e)
+- device_id: lin2026-a
+  field: extinction_ratio_db
+  value: 36
+  unit: dB
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(a)
+  note: Measured dip minimum about -36.4 dB vs off-resonance about -0.5 dB; simulation
+    marker about -34 dB; not stated in text
+- device_id: lin2026-a
+  field: capacitance_ff
+  value: 19.3
+  unit: fF
+  basis: derived
+  locator: p.3, Sec. 3
+  note: Junction capacitance C_j of the extracted equivalent circuit used in Fig.
+    2(b)
+- device_id: lin2026-a
+  field: max_line_rate_gbps
+  value: 224
+  unit: Gb/s
+  basis: measured
+  locator: p.1 title; p.3, Sec. 3
+  note: 224 Gb/s PAM4 optical eye; 200 Gb/s eye also shown
+- device_id: lin2026-a
+  field: modulation_format
+  value: PAM4 optical eyes at 200 and 224 Gb/s, no equalization (as stated), -6 dB
+    detuning; TDECQ 1.58 dB (200 Gb/s) and 2.94 dB (224 Gb/s); SER 4.8e-4 and outer
+    OMA 5.63 mW stated without a per-rate attribution
+  basis: measured
+  locator: p.2, Fig. 2(g); p.3, Sec. 3
+  note: TDECQ 1.58 dB at 200 Gb/s, 2.94 dB at 224 Gb/s from the eye labels
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

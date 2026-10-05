@@ -1,0 +1,135 @@
+paper_id: yang2026
+verified_on: '2026-10-04'
+source_files:
+- references/yang2026/text.md
+- references/yang2026/figures/page_02.png
+- references/yang2026/figures/page_03.png
+entries:
+- device_id: yang2026-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.1 abstract; p.3 Conclusion
+  note: O-band operating wavelength
+- device_id: yang2026-a
+  field: length_mm
+  value: 0.5
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 2 and Sec. 3
+  note: Each of two active PhC waveguides is 500 um long
+- device_id: yang2026-a
+  field: vpil_dc_vcm
+  value: 0.66
+  unit: V*cm
+  basis: derived
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Authors state efficiency follows from the static spectra for a 500 um modulator; bias not stated
+- device_id: yang2026-a
+  field: drive_vpp_v
+  value: 2.7
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 3
+  note: AWG RF signal on GSSG probe
+- device_id: yang2026-a
+  field: bw3db_ghz
+  value: 94.7
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.3; Fig. 2(e)
+  note: Median over wafer-level dies; reference frequency not stated
+- device_id: yang2026-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(d)
+  note: Upper end of the plotted EO S21 axis; traces cross -3 dB inside the range
+- device_id: yang2026-a
+  field: il_onchip_db
+  value: 2.4
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.2, Fig. 2(b)
+  note: Median wafer-level IL excluding grating couplers
+- device_id: yang2026-a
+  field: extinction_ratio_db
+  value: 4.3
+  unit: dB
+  basis: measured
+  locator: p.3, Fig. 3(b)
+  note: Dynamic ER of 56 GBd NRZ eye; 112 GBd eye 3.2 dB
+- device_id: yang2026-a
+  field: ng_opt
+  value: 16.3
+  unit: '1'
+  basis: simulated
+  locator: p.1, Sec. 2; p.2, Fig. 1(c)
+  note: Group index at 1310 nm of the 1D PhC waveguide; Fig. 1(a) is labelled simulated, 1(c) not explicitly
+- device_id: yang2026-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Silicon layer of the high-resistance SOI wafer
+- device_id: yang2026-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Buried oxide thickness
+- device_id: yang2026-a
+  field: substrate
+  value: 300 mm high-resistance SOI wafer, 220 nm Si, 2 um BOX
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+- device_id: yang2026-a
+  field: epitaxy_or_stack
+  value: 1D photonic-crystal (Bragg grating) waveguide, lattice constant 245 nm, W1 = 0.8 Lambda, W2 =
+    0.7 Lambda, W3 = 0.5 Lambda; lateral p-n junctions in both arms, P 3.8e17 and N 7.1e17 cm^-3, intermediate
+    region 400 nm from the junction at 2.8e18 cm^-3, P++/N++ 1.9e20 cm^-3; two junctions in series; thermal
+    phase shifter on one arm
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; p.2
+  note: Doping and PhC dimensions as stated
+- device_id: yang2026-a
+  field: max_baud_gbd
+  value: 150
+  unit: GBd
+  basis: measured
+  locator: p.3, Fig. 3(e)
+  note: PAM-4 eye at 150 GBd (300 Gb/s label)
+- device_id: yang2026-a
+  field: modulation_format
+  value: NRZ eyes at 56 and 112 GBd; PAM-4 eyes at 112 GBd (TDECQ 1.05 dB) and 150 GBd (TDECQ 1.8 dB);
+    PAM-8 eye at 135 GBd; eyes only, no BER
+  unit: ''
+  basis: measured
+  locator: p.3, Fig. 3(b)-(f)
+- device_id: yang2026-a
+  field: max_line_rate_gbps
+  value: 400
+  unit: Gb/s
+  basis: measured
+  locator: p.3, Sec. 3 and Conclusion; Fig. 3(f)
+  note: 135 GBd PAM-8 eye; Fig. 3(f) label reads 405 Gbps, text says 400; eye only
+- device_id: yang2026-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 'Authors: differential-drive GSSG electrode; two p-n junctions in series form push-pull'
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

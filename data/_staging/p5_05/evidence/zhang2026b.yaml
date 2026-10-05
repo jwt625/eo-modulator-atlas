@@ -1,0 +1,370 @@
+paper_id: zhang2026b
+verified_on: '2026-10-04'
+source_files:
+- references/zhang2026b/text.md
+- references/zhang2026b/crossref.json
+- references/zhang2026b/figures/page_02.png
+- references/zhang2026b/figures/page_03.png
+- references/zhang2026b/figures/img_p02_1.png
+- references/zhang2026b/figures/img_p03_1.png
+entries:
+- device_id: zhang2026b-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3(a)
+  note: Typical measurement at 1310 nm
+- device_id: zhang2026b-a
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 1(e)
+  note: 5-mm-long modulator
+- device_id: zhang2026b-a
+  field: vpi_dc_v
+  value: 4.29
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3(a)
+  note: DC Vpi from 1 kHz sweep; drive configuration not stated
+- device_id: zhang2026b-a
+  field: vpil_dc_vcm
+  value: 2.15
+  unit: V*cm
+  basis: derived
+  locator: p.2, Sec. 3
+  note: 'Author statement: Vpi corresponds to VpiL of 2.15 V cm for 5 mm'
+- device_id: zhang2026b-a
+  field: prop_loss_db_per_cm
+  value: 0.37
+  unit: dB/cm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: 1.0 um wide passive ridge waveguides at 1330 nm, wafer mean 0.37 +- 0.06; not the modulator waveguide
+- device_id: zhang2026b-a
+  field: rf_loss_db_per_cm
+  value: 8.9
+  unit: dB/cm
+  basis: extracted_from_figure
+  locator: p.3, Fig. 3(c)
+  note: Blue curve at 100 GHz, calculated from EE S21 of CPW electrodes; device not identified
+- device_id: zhang2026b-a
+  field: rf_loss_freq_ghz
+  value: 100
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.3, Fig. 3(c)
+  note: Frequency of the RF loss reading
+- device_id: zhang2026b-a
+  field: n_rf
+  value: 2.2
+  unit: '1'
+  basis: derived
+  locator: p.3, Fig. 3(c); p.2, Sec. 3
+  note: Microwave phase index extracted from EE S21; legend CPW n_eff 2.2 at 100 GHz
+- device_id: zhang2026b-a
+  field: ng_opt
+  value: 2.27
+  unit: '1'
+  basis: derived
+  locator: p.3, Fig. 3(c); p.2, Sec. 3
+  note: Extracted from MZI structures; text calls it phase index, figure legend LN ng
+- device_id: zhang2026b-a
+  field: eo_film_thickness_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 350 nm X-cut LN film on 8-inch TFLNoI wafer
+- device_id: zhang2026b-a
+  field: slab_thickness_nm
+  value: 150
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: LN rib and slab thicknesses 200 and 150 nm
+- device_id: zhang2026b-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Metal space of 5 um
+- device_id: zhang2026b-a
+  field: electrode_thickness_um
+  value: 1.5
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Al electrodes 1.5 um thick, GSG, with 1 um deep vias
+- device_id: zhang2026b-a
+  field: electrode_metal
+  value: Al
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Al electrodes
+- device_id: zhang2026b-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 4.7 um buried oxide
+- device_id: zhang2026b-a
+  field: substrate
+  value: 725 um high-resistivity Si handle
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Wafer from NanoLN
+- device_id: zhang2026b-a
+  field: cladding
+  value: SiO2, 1 um
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Optimized SiO2 top cladding
+- device_id: zhang2026b-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: X-cut LN film
+- device_id: zhang2026b-a
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Rib thickness 200 nm above a 150 nm slab; equals 350 nm film minus 150 nm slab
+- device_id: zhang2026b-a
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 3
+  note: Drive configuration not stated
+- device_id: zhang2026b-a
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 3
+  note: MZM convention for Vpi not stated
+- device_id: zhang2026b-b
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: measured
+  locator: p.3, Fig. 3(b)
+  note: Wafer map is for 5-mm-long modulators
+- device_id: zhang2026b-b
+  field: vpil_dc_vcm
+  value: 1.87
+  unit: V*cm
+  basis: derived
+  locator: p.2-3, Sec. 3; Fig. 3(b); Table 1
+  note: Best of wafer map, average 2.37 +- 0.35 V cm; VpiL computed by authors from measured Vpi x 0.5
+    cm
+- device_id: zhang2026b-b
+  field: eo_film_thickness_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 350 nm X-cut LN film on 8-inch TFLNoI wafer
+- device_id: zhang2026b-b
+  field: slab_thickness_nm
+  value: 150
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: LN rib and slab thicknesses 200 and 150 nm
+- device_id: zhang2026b-b
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Metal space of 5 um
+- device_id: zhang2026b-b
+  field: electrode_thickness_um
+  value: 1.5
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Al electrodes 1.5 um thick, GSG, with 1 um deep vias
+- device_id: zhang2026b-b
+  field: electrode_metal
+  value: Al
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Al electrodes
+- device_id: zhang2026b-b
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 4.7 um buried oxide
+- device_id: zhang2026b-b
+  field: substrate
+  value: 725 um high-resistivity Si handle
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Wafer from NanoLN
+- device_id: zhang2026b-b
+  field: cladding
+  value: SiO2, 1 um
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Optimized SiO2 top cladding
+- device_id: zhang2026b-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: X-cut LN film
+- device_id: zhang2026b-b
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Rib thickness 200 nm above a 150 nm slab; equals 350 nm film minus 150 nm slab
+- device_id: zhang2026b-b
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 3
+  note: Drive configuration not stated
+- device_id: zhang2026b-b
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 3
+  note: MZM convention for VpiL not stated
+- device_id: zhang2026b-c
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2-3, Sec. 3; Fig. 3(d); Table 1
+  note: Maximum 3 dB bandwidth of exemplary devices; range 93 to 110 GHz
+- device_id: zhang2026b-c
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.3, Fig. 3(d)
+  note: Plotted EO S21 axis ends near 110 GHz, matching 110 GHz VNA; traces drop steeply at the end
+- device_id: zhang2026b-c
+  field: eo_film_thickness_nm
+  value: 350
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 350 nm X-cut LN film on 8-inch TFLNoI wafer
+- device_id: zhang2026b-c
+  field: slab_thickness_nm
+  value: 150
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: LN rib and slab thicknesses 200 and 150 nm
+- device_id: zhang2026b-c
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Metal space of 5 um
+- device_id: zhang2026b-c
+  field: electrode_thickness_um
+  value: 1.5
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Al electrodes 1.5 um thick, GSG, with 1 um deep vias
+- device_id: zhang2026b-c
+  field: electrode_metal
+  value: Al
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Al electrodes
+- device_id: zhang2026b-c
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 4.7 um buried oxide
+- device_id: zhang2026b-c
+  field: substrate
+  value: 725 um high-resistivity Si handle
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Wafer from NanoLN
+- device_id: zhang2026b-c
+  field: cladding
+  value: SiO2, 1 um
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Optimized SiO2 top cladding
+- device_id: zhang2026b-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: X-cut LN film
+- device_id: zhang2026b-c
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Rib thickness 200 nm above a 150 nm slab; equals 350 nm film minus 150 nm slab
+- device_id: zhang2026b-c
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 3(d)
+  note: Traces start near 0 dB; reference not stated
+derived:
+- device_id: zhang2026b-a
+  field: etch_depth_nm
+  value: 200
+  formula: eo_film_thickness_nm - slab_thickness_nm
+  inputs: &id001
+  - eo_film_thickness_nm
+  - slab_thickness_nm
+- device_id: zhang2026b-b
+  field: etch_depth_nm
+  value: 200
+  formula: eo_film_thickness_nm - slab_thickness_nm
+  inputs: *id001
+- device_id: zhang2026b-c
+  field: etch_depth_nm
+  value: 200
+  formula: eo_film_thickness_nm - slab_thickness_nm
+  inputs: *id001
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

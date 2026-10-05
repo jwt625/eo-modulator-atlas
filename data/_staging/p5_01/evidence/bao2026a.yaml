@@ -1,0 +1,135 @@
+paper_id: bao2026a
+verified_on: '2026-10-04'
+source_files:
+- references/bao2026a/text.md
+- references/bao2026a/figures/page_02.png
+- references/bao2026a/figures/page_03.png
+entries:
+- device_id: bao2026a-a
+  field: wavelength_nm
+  value: 1310.8
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(a)
+  note: Resonance minimum at 0 V read from the axis; measurement wavelength of the EO response not stated
+- device_id: bao2026a-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Sec. 2; Fig. 2(d)
+  note: No -3 dB crossing; text states 1 dB bandwidth >110 GHz; lowest point about -1.2 dB
+- device_id: bao2026a-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(d)
+  note: Approximate end of the measured red trace
+- device_id: bao2026a-a
+  field: extinction_ratio_db
+  value: 18
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(a)
+  note: Static ER stated as exceeding 18 dB near critical coupling
+- device_id: bao2026a-a
+  field: rib_width_nm
+  value: 380
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Ring waveguide width 380 nm; radius 6 um, coupling gap 180 nm
+- device_id: bao2026a-a
+  field: drive_vpp_v
+  value: 1
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.3, Sec. 3
+  note: Single-ended AWG drive, no full-link calibration
+- device_id: bao2026a-a
+  field: max_line_rate_gbps
+  value: 416
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.3, Fig. 3(c)
+  note: PAM4 with TDECQ 2.88 dB using 9-tap FFE on the oscilloscope
+- device_id: bao2026a-a
+  field: modulation_format
+  value: PAM4 at 256 Gb/s (TDECQ 0.16 dB, 128 GBd), 416 Gb/s (TDECQ 2.88 dB, 9-tap FFE) and 448 Gb/s (TDECQ
+    4.96 dB); NRZ 224 Gb/s (SNR 3.12 dB)
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3
+  note: Eye diagrams at 1 Vpp; no BER reported
+- device_id: bao2026a-a
+  field: q_loaded
+  value: 2300
+  unit: '1'
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(a)
+  note: Stated Q of about 2300 near critical coupling
+- device_id: bao2026a-a
+  field: fsr_nm
+  value: 11
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(b)
+  note: FSR approximately 11 nm
+- device_id: bao2026a-a
+  field: tuning_nm_per_v
+  value: 0.037
+  unit: nm/V
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(a)
+  note: Modulation efficiency 37 pm/V from resonance shift versus bias
+- device_id: bao2026a-a
+  field: epitaxy_or_stack
+  value: Ring radius 6 um, waveguide width 380 nm, coupling gap 180 nm, coupling length 0.8 um; lateral
+    PN junction, N 1.06e20 and 1.02e19, P 7.14e19 and 5.34e18 cm^-3; on-chip T-coil L1 18 pH, L2 16 pH,
+    RL 20 ohm
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+- device_id: bao2026a-a
+  field: driver
+  value: Keysight AWG, 1 Vpp single-ended, no driver amplifier stated; PDFA after the chip; 9-tap FFE
+    on the oscilloscope
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3
+- device_id: bao2026a-a
+  field: drive
+  value: single_ended
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3
+  note: Stated 1 Vpp single-ended drive signal
+- device_id: bao2026a-a
+  field: electrode_type
+  value: lumped
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 1(c)
+  note: Lumped ring with RC equivalent circuit; authors do not name the electrode type
+- device_id: bao2026a-a
+  field: band
+  value: o_band
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(a)
+  note: Authors place the 200 GHz channels in the O-band; resonance near 1311 nm
+- device_id: bao2026a-b
+  field: bw3db_ghz
+  value: 64
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(d)
+  note: Stated 64 GHz (3 dB) without inductors; blue trace falls to about -12 dB near 110 GHz
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

@@ -1,0 +1,5 @@
+org_name,org_type,country,region,parent_org,notes
+National Tsing Hua University,university,TW,east_asia,,Hsinchu; affiliation 2 of lin2026 (Institute of Photonics Technologies and Department of Electrical Engineering); paper writes National Tsing-Hua University
+National Institutes of Applied Research,research_institute,TW,east_asia,,Taiwan; parent of the Taiwan Semiconductor Research Institute in lin2026 affiliation 1
+Taiwan Semiconductor Research Institute,research_institute,TW,east_asia,National Institutes of Applied Research,"Hsinchu; affiliation 1 of lin2026, written National Institutes of Applied Research Taiwan Semiconductor Research Institute"
+GlobalFoundries,foundry,US,north_america,,"Malta, NY; also Essex Junction, VT and Santa Clara, CA (rakowski2026 affiliations 1-3)"

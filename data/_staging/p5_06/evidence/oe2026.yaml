@@ -1,0 +1,82 @@
+paper_id: oe2026
+verified_on: '2026-10-04'
+source_files:
+- references/oe2026/text.md
+- references/oe2026/figures/page_02.png
+- references/oe2026/figures/page_03.png
+entries:
+- device_id: oe2026-a
+  field: wavelength_nm
+  value: 1311.1
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3(b)
+  note: Lasing wavelength at 55 C, 100 mA; SMSR above 40 dB
+- device_id: oe2026-a
+  field: drive_vpp_v
+  value: 2.0
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 5(a)
+  note: Differential amplitude 2.0 Vpp
+- device_id: oe2026-a
+  field: bw3db_ghz
+  value: 80
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4(a)
+  note: EO response at -1.7 V bias, 55 C, 100 mA laser
+- device_id: oe2026-a
+  field: extinction_ratio_db
+  value: 5.2
+  unit: dB
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 5(c)
+  note: Dynamic ER at 113 GBd PAM4 after FFE
+- device_id: oe2026-a
+  field: substrate
+  value: semi-insulating InP
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2
+- device_id: oe2026-a
+  field: epitaxy_or_stack
+  value: DFB laser, two series EA modulators and passive waveguide joined by butt-joint regrowth on semi-insulating
+    InP; p-InP cladding, mesa buried by semi-insulating InP; n+ InP cathode access layer
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2
+- device_id: oe2026-a
+  field: max_baud_gbd
+  value: 113.4375
+  unit: GBd
+  basis: measured
+  locator: p.3, Sec. 3
+  note: Abstract states 113 Gbd
+- device_id: oe2026-a
+  field: modulation_format
+  value: 'PAM4 113.4375 GBd (SSPRQ), 2.0 Vpp differential, 15-tap FFE: ER 5.2 dB, OMA 8.6 dBm, TDECQ 1.28
+    dB at SER 9.6e-3 (56.72 GHz Bessel-Thomson filter)'
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 5
+- device_id: oe2026-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: measured
+  locator: p.1, abstract; p.2, Sec. 2
+  note: Positive phase to EA1, negative phase to EA2
+- device_id: oe2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 4(a)
+  note: Trace normalized to about 0 dB at low frequency; reference not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

@@ -1,0 +1,149 @@
+paper_id: su2026
+verified_on: '2026-10-04'
+source_files:
+- references/su2026/text.md
+- references/su2026/crossref.json
+- references/su2026/figures/page_01.png
+- references/su2026/figures/page_02.png
+- references/su2026/figures/page_03.png
+- references/su2026/figures/img_p03_1.png
+entries:
+- device_id: su2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(c),(d)
+  note: Vpi and S21 measured at 1550 nm
+- device_id: su2026-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: measured
+  locator: p.3, Sec. 3
+  note: '''all the measured devices featured a 1 mm length modulation region'''
+- device_id: su2026-a
+  field: vpil_dc_vcm
+  value: 1.3
+  unit: V*cm
+  basis: measured
+  locator: p.1 abstract; p.3 Sec. 3; Fig. 3(c)
+  note: 100 kHz sawtooth drive; abstract wording 'as low as 1.3'
+- device_id: su2026-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(d)
+  note: 3 dB bandwidth 'exceeds the 110 GHz measurement limit'; no crossing
+- device_id: su2026-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3
+  note: instrument limit of the light wave component analyzer
+- device_id: su2026-a
+  field: il_onchip_db
+  value: 0.86
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.2 Sec. 3
+  note: '''on-chip propagation loss is 0.86 dB at 1550 nm''; abstract calls it insertion loss'
+- device_id: su2026-a
+  field: il_fiber_to_fiber_db
+  value: 11.81
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3
+  note: '''measured total insertion loss of the modulator''; includes both grating couplers'
+- device_id: su2026-a
+  field: prop_loss_db_per_cm
+  value: 8.2
+  unit: dB/cm
+  basis: derived
+  locator: p.3, Sec. 3; Fig. 3(b)
+  note: '''calculated'' for the CaTiO3-clad waveguide from the microring Q of 2.0e5'
+- device_id: su2026-a
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: commercial X-cut LNOI, 400 nm LN film
+- device_id: su2026-a
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(f)
+  note: 200 nm partial etch; AFM line profile
+- device_id: su2026-a
+  field: sidewall_angle_deg
+  value: 64.37
+  unit: deg
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(f)
+  note: AFM line profile
+- device_id: su2026-a
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: measured
+  locator: p.1, Sec. 2; p.2 Sec. 3
+  note: 400 nm Au
+- device_id: su2026-a
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3
+  note: e-beam evaporation and lift-off
+- device_id: su2026-a
+  field: substrate
+  value: commercial 4-inch X-cut LNOI wafer (SiO2 on Si; thicknesses not stated)
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3; p.1 Fig. 1(b)
+  note: layers SiO2 and Si per Fig. 1(b)
+- device_id: su2026-a
+  field: cladding
+  value: CaTiO3, 300 nm, PECVD, covering the electrodes and ridge
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; p.2 Sec. 3
+  note: contact windows opened over pads by BOE etch
+- device_id: su2026-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3
+  note: X-cut LNOI wafer
+- device_id: su2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: GSG electrode structure in a push-pull configuration
+- device_id: su2026-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2; p.3 Sec. 3
+  note: authors state push-pull but not the Vpi*L convention; MZM-level assumed
+derived:
+- device_id: su2026-a
+  field: vpi_dc_v
+  value: 13
+  formula: VpiL / L = 1.3 V*cm / 0.1 cm (not entered in CSV)
+  inputs:
+  - vpil_dc_vcm=1.3
+  - length_mm=1
+context_values:
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: printed in the page footer of pages 1-3; abstract also reads '(c) 2026 The Author(s)'

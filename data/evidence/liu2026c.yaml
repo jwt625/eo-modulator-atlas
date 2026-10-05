@@ -1,0 +1,236 @@
+paper_id: liu2026c
+verified_on: '2026-10-04'
+source_files:
+- references/liu2026c/text.md
+- references/liu2026c/figures/page_01.png
+- references/liu2026c/figures/page_02.png
+- references/liu2026c/figures/page_03.png
+entries:
+- device_id: liu2026c-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.3, Fig. 3(a)
+  note: Laser labelled 1310 nm in the eye-measurement setup
+- device_id: liu2026c-a
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Phase shifter length 2 mm for both devices
+- device_id: liu2026c-a
+  field: vpi_dc_v
+  value: 4.5
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: Pi phase shift at 4.5 V reverse bias on the DC transmission curve
+- device_id: liu2026c-a
+  field: vpil_dc_vcm
+  value: 0.9
+  unit: V*cm
+  basis: derived
+  locator: p.2, Sec. 3
+  note: Authors state 0.9 V cm for 4.5 V; equals Vpi times the 2 mm length
+- device_id: liu2026c-a
+  field: bw3db_ghz
+  value: 80
+  unit: GHz
+  basis: author_estimate
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: 3 dB not measurable at 67 GHz; authors' curve fit indicates above 80 GHz
+- device_id: liu2026c-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: 67 GHz GS probe; trace ends near 67 GHz
+- device_id: liu2026c-a
+  field: eo_rolloff_db
+  value: 1
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: 1 dB bandwidth at -3 V bias, referenced to the 0 dB level at low frequency
+- device_id: liu2026c-a
+  field: eo_rolloff_freq_ghz
+  value: 66
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: Stated 66 GHz 1 dB bandwidth
+- device_id: liu2026c-a
+  field: extinction_ratio_db
+  value: 2.21
+  unit: dB
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(c)
+  note: Dynamic ER of the 128 GBd NRZ eye; 5.08 dB at 64 GBd
+- device_id: liu2026c-a
+  field: drive_vpp_v
+  value: 1.8
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 3
+  note: Approximately 1.8 Vpp at 128 GBd; 2.4 Vpp at 64 GBd
+- device_id: liu2026c-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Top silicon layer 220 nm
+- device_id: liu2026c-a
+  field: etch_depth_nm
+  value: 150
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Ridge etch depth 150 nm
+- device_id: liu2026c-a
+  field: rib_width_nm
+  value: 380
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Ridge 220 nm x 380 nm
+- device_id: liu2026c-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Buried oxide 2 um
+- device_id: liu2026c-a
+  field: epitaxy_or_stack
+  value: 220 nm SOI, 2 um BOX; lateral PN, p+ 5.3e18, n+ 1.0e19, p++ 7.4e19, n++ 1.1e20
+    cm^-3; integrated termination resistor; thermal phase shifters on both arms
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Doping levels and series push-pull layout as stated
+- device_id: liu2026c-a
+  field: max_baud_gbd
+  value: 128
+  unit: GBd
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(c)
+  note: NRZ at 128 Gbaud
+- device_id: liu2026c-a
+  field: max_line_rate_gbps
+  value: 280
+  unit: Gb/s
+  basis: measured
+  locator: p.3, Fig. 3(f); Sec. 4
+  note: 280 Gbps PAM6 eye
+- device_id: liu2026c-a
+  field: modulation_format
+  value: NRZ 64 and 128 GBd (PRBS7, dynamic ER 5.08 and 2.21 dB); PAM4 128 and 256
+    Gb/s (PRBS7, TDECQ 0.33 and 2.88 dB); PAM6 280 Gb/s (eye only, no BER or TDECQ);
+    equalization not stated; link not AWG-calibrated
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3
+  note: ER and TDECQ values from the text and eye labels
+- device_id: liu2026c-b
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Phase shifter length 2 mm for both devices
+- device_id: liu2026c-b
+  field: vpi_dc_v
+  value: 5.9
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: Conventional TWE-MZM requires 5.9 V for pi
+- device_id: liu2026c-b
+  field: vpil_dc_vcm
+  value: 1.18
+  unit: V*cm
+  basis: derived
+  locator: p.2, Sec. 3
+  note: Authors state 1.18 V cm for 5.9 V; equals Vpi times the 2 mm length
+- device_id: liu2026c-b
+  field: bw3db_ghz
+  value: 60
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(c)
+  note: Trace first reaches -3 dB near 60 GHz, -3.0 to -3.2 dB to 63 GHz, -3.5 dB
+    at 66 GHz; not stated by authors
+- device_id: liu2026c-b
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: 67 GHz GS probe; trace ends near 67 GHz
+- device_id: liu2026c-b
+  field: eo_rolloff_db
+  value: 1
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: 1 dB bandwidth at -3 V bias, referenced to the 0 dB level at low frequency
+- device_id: liu2026c-b
+  field: eo_rolloff_freq_ghz
+  value: 39
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: Stated 39 GHz 1 dB bandwidth
+- device_id: liu2026c-b
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 'Same optical design as the tabbed device: 220 nm'
+- device_id: liu2026c-b
+  field: etch_depth_nm
+  value: 150
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 'Same optical design: ridge etch 150 nm'
+- device_id: liu2026c-b
+  field: rib_width_nm
+  value: 380
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 'Same optical design: ridge 380 nm wide'
+- device_id: liu2026c-b
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Buried oxide 2 um
+- device_id: liu2026c-b
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 2; Sec. 3
+  note: Stated for the tabbed device; conventional device shares GS pads and design
+    except electrode; authors do not state its drive
+- device_id: liu2026c-b
+  field: epitaxy_or_stack
+  value: 220 nm SOI, 2 um BOX; lateral PN, p+ 5.3e18, n+ 1.0e19, p++ 7.4e19, n++ 1.1e20
+    cm^-3; integrated termination resistor; thermal phase shifters on both arms
+  basis: measured
+  locator: p.2, Sec. 2; Sec. 3
+  note: Identical doping design stated for both devices; termination and heaters stated
+    for the tabbed device only
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

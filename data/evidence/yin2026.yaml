@@ -1,0 +1,298 @@
+paper_id: yin2026
+verified_on: '2026-10-04'
+source_files:
+- references/yin2026/text.md
+- references/yin2026/figures/page_01.png
+- references/yin2026/figures/page_02.png
+- references/yin2026/figures/img_p01_7.png
+entries:
+- device_id: yin2026-a
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.2, Sec. 2; Fig. 2(d)
+  note: Reported as over 67 GHz (no reduction); no crossing in the measured range
+- device_id: yin2026-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(d)
+  note: 67 GHz VNA and 67 GHz optical component analyzer
+- device_id: yin2026-a
+  field: il_onchip_db
+  value: 9
+  unit: dB
+  basis: measured
+  locator: p.2, Fig. 2(d); p.3, Sec. 2
+  note: Resonance tuned to 9 dB IL from off-resonance maximum for the eye experiments
+- device_id: yin2026-a
+  field: extinction_ratio_db
+  value: 1.5
+  unit: dB
+  basis: measured
+  locator: p.2, Fig. 3(d)
+  note: Dynamic ER of the 140 Gb/s NRZ eye; 100 Gb/s eye 1.9 dB
+- device_id: yin2026-a
+  field: optical_input_power_dbm
+  value: 0
+  unit: dBm
+  basis: measured
+  locator: p.3, Sec. 2
+  note: On-chip power; 6 dB coupling loss per facet
+- device_id: yin2026-a
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 2
+  note: AWG amplified to 2 Vpp; -3 V reverse bias
+- device_id: yin2026-a
+  field: q_loaded
+  value: 2000
+  unit: '1'
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 1(e)
+  note: Measured loaded Q
+- device_id: yin2026-a
+  field: fsr_nm
+  value: 17.1
+  unit: nm
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 1(e)
+  note: Stated as 3 THz FSR
+- device_id: yin2026-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.1, Fig. 1(b); p.2, Sec. 2
+  note: 220 nm SOI MPW
+- device_id: yin2026-a
+  field: etch_depth_nm
+  value: 130
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(b)
+  note: Printed label on rib height above slab
+- device_id: yin2026-a
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(b)
+  note: Printed label on slab
+- device_id: yin2026-a
+  field: epitaxy_or_stack
+  value: Euler-bend microring, effective bend radius 3.6 um, variable waveguide width 400 to 800 nm, two-level
+    lateral p-n doping (levels not stated), P++/N++ contacts; 220 nm SOI, 130 nm rib on 90 nm slab
+  unit: ''
+  basis: measured
+  locator: p.1, Fig. 1(b); p.2, Sec. 2
+  note: Doping concentrations not stated
+- device_id: yin2026-a
+  field: modulation_format
+  value: NRZ 100 Gb/s (SNR 5.08) and 140 Gb/s (SNR 4.07); PAM4 224 Gb/s (TDECQ 4.09 dB) and 256 Gb/s (TDECQ
+    4.18 dB, SD-FEC threshold 1.8e-2, 64-tap FFE); eyes at -3 V bias, -9 dB IL
+  unit: ''
+  basis: measured
+  locator: p.2, Fig. 3(c)-(f); p.3, Sec. 2
+- device_id: yin2026-a
+  field: max_line_rate_gbps
+  value: 256
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.2, Fig. 3(f)
+  note: PAM4 eye, TDECQ 4.18 dB
+- device_id: yin2026-b
+  field: bw3db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(c), 2(d)
+  note: Without inductor, -3 V, -9 dB IL
+- device_id: yin2026-b
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 67 GHz VNA and optical component analyzer
+- device_id: yin2026-b
+  field: il_onchip_db
+  value: 9
+  unit: dB
+  basis: measured
+  locator: p.2, Fig. 2(d); p.3, Fig. 3(b)
+  note: Detuning point of the no-inductor comparison
+- device_id: yin2026-b
+  field: extinction_ratio_db
+  value: 1.8
+  unit: dB
+  basis: measured
+  locator: p.2, Fig. 3(b)
+  note: Dynamic ER of the 100 Gb/s NRZ eye
+- device_id: yin2026-b
+  field: optical_input_power_dbm
+  value: 0
+  unit: dBm
+  basis: measured
+  locator: p.3, Sec. 2
+  note: On-chip power stated for the eye experiments; applied to this eye by inference
+- device_id: yin2026-b
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 2
+  note: AWG amplified to 2 Vpp; applied to this eye by inference
+- device_id: yin2026-b
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.1, Fig. 1(b); p.2, Sec. 2
+  note: 220 nm SOI MPW
+- device_id: yin2026-b
+  field: etch_depth_nm
+  value: 130
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(b)
+  note: Printed label on rib height above slab
+- device_id: yin2026-b
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(b)
+  note: Printed label on slab
+- device_id: yin2026-b
+  field: epitaxy_or_stack
+  value: Euler-bend microring, effective bend radius 3.6 um, variable waveguide width 400 to 800 nm, two-level
+    lateral p-n doping (levels not stated), P++/N++ contacts; 220 nm SOI, 130 nm rib on 90 nm slab
+  unit: ''
+  basis: measured
+  locator: p.1, Fig. 1(b); p.2, Sec. 2
+  note: Doping concentrations not stated
+- device_id: yin2026-b
+  field: modulation_format
+  value: NRZ 100 Gb/s eye (SNR 4.53, 6-tap FFE); 140 Gb/s NRZ failed (not shown)
+  unit: ''
+  basis: measured
+  locator: p.2, Fig. 3(b); p.3, Sec. 2
+- device_id: yin2026-b
+  field: max_line_rate_gbps
+  value: 100
+  unit: Gb/s
+  basis: measured
+  locator: p.2, Fig. 3(b)
+  note: NRZ eye; 140 Gb/s failed per text
+- device_id: yin2026-c
+  field: bw3db_ghz
+  value: 62
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(c)
+  note: Without inductor, -3 V, -6 dB IL
+- device_id: yin2026-c
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 67 GHz VNA and optical component analyzer
+- device_id: yin2026-c
+  field: il_onchip_db
+  value: 6
+  unit: dB
+  basis: measured
+  locator: p.2, Fig. 2(c)
+  note: Detuning point, relative to off-resonance maximum
+- device_id: yin2026-c
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.1, Fig. 1(b); p.2, Sec. 2
+  note: 220 nm SOI MPW
+- device_id: yin2026-c
+  field: etch_depth_nm
+  value: 130
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(b)
+  note: Printed label on rib height above slab
+- device_id: yin2026-c
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(b)
+  note: Printed label on slab
+- device_id: yin2026-c
+  field: epitaxy_or_stack
+  value: Euler-bend microring, effective bend radius 3.6 um, variable waveguide width 400 to 800 nm, two-level
+    lateral p-n doping (levels not stated), P++/N++ contacts; 220 nm SOI, 130 nm rib on 90 nm slab
+  unit: ''
+  basis: measured
+  locator: p.1, Fig. 1(b); p.2, Sec. 2
+  note: Doping concentrations not stated
+- device_id: yin2026-d
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2; Fig. 2(c)
+  note: Stated as over 67 GHz; no crossing in the measured range
+- device_id: yin2026-d
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 2
+  note: 67 GHz VNA and optical component analyzer
+- device_id: yin2026-d
+  field: il_onchip_db
+  value: 3
+  unit: dB
+  basis: measured
+  locator: p.2, Fig. 2(c)
+  note: Detuning point, relative to off-resonance maximum
+- device_id: yin2026-d
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: measured
+  locator: p.1, Fig. 1(b); p.2, Sec. 2
+  note: 220 nm SOI MPW
+- device_id: yin2026-d
+  field: etch_depth_nm
+  value: 130
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(b)
+  note: Printed label on rib height above slab
+- device_id: yin2026-d
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.1, Fig. 1(b)
+  note: Printed label on slab
+- device_id: yin2026-d
+  field: epitaxy_or_stack
+  value: Euler-bend microring, effective bend radius 3.6 um, variable waveguide width 400 to 800 nm, two-level
+    lateral p-n doping (levels not stated), P++/N++ contacts; 220 nm SOI, 130 nm rib on 90 nm slab
+  unit: ''
+  basis: measured
+  locator: p.1, Fig. 1(b); p.2, Sec. 2
+  note: Doping concentrations not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

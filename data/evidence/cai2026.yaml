@@ -1,0 +1,134 @@
+paper_id: cai2026
+verified_on: '2026-10-04'
+source_files:
+- references/cai2026/text.md
+- references/cai2026/figures/page_02.png
+- references/cai2026/figures/page_03.png
+entries:
+- device_id: cai2026-a
+  field: wavelength_nm
+  value: 1600
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 1; p.3, Sec. 4
+  note: IL quoted at 1600 nm; static and eye data over 1590 to 1610 nm
+- device_id: cai2026-a
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Ge length 40 um (device 1), set of 30 to 120 um fabricated
+- device_id: cai2026-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3(a)
+  note: Stated to exceed 110 GHz for 1 to 4 V; Fig. 3(a) 1 V trace has single-point spike to about -3.2 dB near 104 GHz
+- device_id: cai2026-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3(a)
+  note: Keysight 110 GHz lightwave component analyzer
+- device_id: cai2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.3, Fig. 3(a)
+  note: S21 starts near 0 dB at low frequency; reference not stated
+- device_id: cai2026-a
+  field: eo_rolloff_db
+  value: 1
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3
+  note: At 4 V bias the EO S21 drops by 1 dB at 110 GHz
+- device_id: cai2026-a
+  field: eo_rolloff_freq_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Frequency of the 1 dB drop at 4 V bias
+- device_id: cai2026-a
+  field: il_onchip_db
+  value: 1.5
+  unit: dB
+  basis: measured
+  locator: p.1, abstract and Sec. 1; p.2, Fig. 2(a)
+  note: 1.5 dB at 1600 nm; Fig. 2(a) trace consistent
+- device_id: cai2026-a
+  field: extinction_ratio_db
+  value: 3
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Maximum static ER of device 1 for 1 to 7 V
+- device_id: cai2026-a
+  field: optical_input_power_dbm
+  value: -1
+  unit: dBm
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Input optical power -1 dBm for the EO response; on-chip versus fiber not stated
+- device_id: cai2026-a
+  field: epitaxy_or_stack
+  value: p-i-n junction on recessed Si with Ge on Si (P++/P+ and N+/N++ Si regions, Cu vias, Fig. 1(a)); Ge top flush with
+    the 220 nm Si waveguide (height difference h = 0) by CMP thinning
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.1, Sec. 2; p.2, Fig. 1(a)
+  note: Layer layout read from the cross-section schematic; h = 0 design stated in text
+- device_id: cai2026-a
+  field: max_baud_gbd
+  value: 150
+  unit: GBd
+  basis: measured
+  locator: p.3, Fig. 4(f)
+  note: 150 GBd PAM-4 eye
+- device_id: cai2026-a
+  field: modulation_format
+  value: NRZ 120 Gbit/s eyes at 1590 to 1610 nm (dynamic SNR 5.44 to 5.70); PAM-4 150 GBd eye, TDECQ 4.46 dB, no offline DSP;
+    all at -1.8 V bias
+  unit: ''
+  basis: measured
+  locator: p.3, Fig. 4
+  note: Eye diagrams at -1.8 V bias
+- device_id: cai2026-a
+  field: max_line_rate_gbps
+  value: 300
+  unit: Gb/s
+  basis: measured
+  locator: p.1, abstract; p.3, Fig. 4(f)
+  note: 300 Gbit/s PAM-4 eye with clear opening
+- device_id: cai2026-b
+  field: length_mm
+  value: 0.1
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: Ge length 100 um (device 2)
+- device_id: cai2026-b
+  field: il_onchip_db
+  value: 6.3
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: IL below 6.3 dB over 1590 to 1610 nm; upper bound
+- device_id: cai2026-b
+  field: extinction_ratio_db
+  value: 7.5
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: Maximum static ER of device 2 for 1 to 7 V
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

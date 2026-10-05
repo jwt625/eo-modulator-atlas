@@ -1,0 +1,245 @@
+paper_id: rakowski2026
+verified_on: '2026-10-04'
+source_files:
+- references/rakowski2026/text.md
+- references/rakowski2026/figures/page_01.png
+- references/rakowski2026/figures/page_02.png
+- references/rakowski2026/figures/page_03.png
+entries:
+- device_id: rakowski2026-a
+  field: wavelength_nm
+  value: 1314.385
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(b)
+  note: Resonance at 0 V bias printed in the figure inset; operating wavelength is detuned about -80 pm
+- device_id: rakowski2026-a
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Rib 400 nm wide
+- device_id: rakowski2026-a
+  field: slab_thickness_nm
+  value: 55
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Slab 55 nm
+- device_id: rakowski2026-a
+  field: epitaxy_or_stack
+  value: Silicon rib 160 nm high, 400 nm wide, 55 nm slab; S-shaped PN junction; NiSi heater inside and outside the ring with undercut; 1 percent drop port
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1
+  note: Rib height 160 nm as stated (total versus rib height not specified); junction, heater and drop port as described
+- device_id: rakowski2026-a
+  field: q_loaded
+  value: 3900
+  unit: '1'
+  basis: measured
+  locator: p.2, Table 1
+  note: Q-factor approximately 3900 for both drive conditions
+- device_id: rakowski2026-a
+  field: fsr_nm
+  value: 9.2
+  unit: nm
+  basis: measured
+  locator: p.1, Fig. 1(c)
+  note: FSR label 9.2 nm in the ring response; text gives 1.6 THz
+- device_id: rakowski2026-a
+  field: capacitance_ff
+  value: 50
+  unit: fF
+  basis: derived
+  locator: p.2, Sec. 3; Fig. 2(d)
+  note: R 15 ohm and C 50 fF extracted from S11 at 1 V reverse bias
+- device_id: rakowski2026-a
+  field: bw3db_ghz
+  value: 55
+  unit: GHz
+  basis: derived
+  locator: p.2, Sec. 3; Table 1; Fig. 3(a)
+  note: 55 GHz at ER 3.5 dB from regression trend of S21 bandwidths; nearest measured trace 53.4 GHz
+- device_id: rakowski2026-a
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: measured
+  locator: p.2, Fig. 2(c) title; Fig. 3 caption
+  note: S21 bandwidth referenced to max DC gain at 1 V reverse bias
+- device_id: rakowski2026-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: S21 measured with a 67 GHz lightwave component analyzer
+- device_id: rakowski2026-a
+  field: il_onchip_db
+  value: 3
+  unit: dB
+  basis: derived
+  locator: p.2, Table 1; Fig. 3(a)
+  note: IL at ER=3.5 dB from the authors' static-IL regression trend vs BW
+- device_id: rakowski2026-a
+  field: il_onchip_excludes
+  value: Grating couplers, routing and off-resonance waveguide loss (IL is relative to off-resonance transmission, Fig. 2b)
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(b)
+  note: Fig. 2(b) IL falls to about 0 dB at 1000 pm detuning; normalization is off-resonance transmission
+- device_id: rakowski2026-a
+  field: extinction_ratio_db
+  value: 3.5
+  unit: dB
+  basis: measured
+  locator: p.2, Sec. 3; Table 1
+  note: Average ER 3.5 dB at about -80 pm detuning, extracted from the static response
+- device_id: rakowski2026-a
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.2, Table 1
+  note: 2 Vpp swing, 0 V to -2 V
+- device_id: rakowski2026-a
+  field: optical_input_power_dbm
+  value: 6
+  unit: dBm
+  basis: measured
+  locator: p.3, Sec. 3
+  note: About 6 dBm at the device for the eye diagrams
+- device_id: rakowski2026-a
+  field: max_baud_gbd
+  value: 120
+  unit: GBd
+  basis: measured
+  locator: p.3, Fig. 4; Sec. 3
+  note: 120 GBd PAM4 at 240 Gb/s; NRZ at 120 Gb/s
+- device_id: rakowski2026-a
+  field: max_line_rate_gbps
+  value: 240
+  unit: Gb/s
+  basis: measured
+  locator: p.3, Fig. 4(b)
+  note: PAM4 240 Gb/s at 2 Vpp
+- device_id: rakowski2026-a
+  field: modulation_format
+  value: NRZ 120 Gb/s (PRBS 2^16-1, DC -1 V, ER 2.6 dB); PAM4 240 Gb/s = 120 GBd (DC -0.86 V, 32 GHz receiver filter, 21-tap FFE, reaches SD-FEC threshold 5e-3, TDECQ not measurable)
+  basis: measured
+  locator: p.3, Fig. 4; Sec. 3
+  note: NRZ ER 2.6 dB; PAM4 with 32 GHz filter and 21-tap FFE reaching 5e-3
+- device_id: rakowski2026-b
+  field: wavelength_nm
+  value: 1314.385
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(b)
+  note: Resonance at 0 V bias printed in the figure inset; operating wavelength is detuned
+- device_id: rakowski2026-b
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Rib 400 nm wide
+- device_id: rakowski2026-b
+  field: slab_thickness_nm
+  value: 55
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Slab 55 nm
+- device_id: rakowski2026-b
+  field: epitaxy_or_stack
+  value: Silicon rib 160 nm high, 400 nm wide, 55 nm slab; S-shaped PN junction; NiSi heater inside and outside the ring with undercut; 1 percent drop port
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1
+  note: Rib height 160 nm as stated (total versus rib height not specified); junction, heater and drop port as described
+- device_id: rakowski2026-b
+  field: q_loaded
+  value: 3900
+  unit: '1'
+  basis: measured
+  locator: p.2, Table 1
+  note: Q-factor approximately 3900 for both drive conditions
+- device_id: rakowski2026-b
+  field: fsr_nm
+  value: 9.2
+  unit: nm
+  basis: measured
+  locator: p.1, Fig. 1(c)
+  note: FSR label 9.2 nm in the ring response; text gives 1.6 THz
+- device_id: rakowski2026-b
+  field: capacitance_ff
+  value: 50
+  unit: fF
+  basis: derived
+  locator: p.2, Sec. 3; Fig. 2(d)
+  note: R 15 ohm and C 50 fF extracted from S11 at 1 V reverse bias
+- device_id: rakowski2026-b
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: derived
+  locator: p.3, Sec. 3; Table 1; Fig. 3(b)
+  note: 70 GHz at ER 3.5 dB from regression trend; above 67 GHz range, as are fitted BWs in Fig. 2(c) legend
+- device_id: rakowski2026-b
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: measured
+  locator: p.2, Fig. 2(c) title; Fig. 3 caption
+  note: S21 bandwidth referenced to max DC gain at 1 V reverse bias
+- device_id: rakowski2026-b
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(c)
+  note: S21 measured with a 67 GHz lightwave component analyzer
+- device_id: rakowski2026-b
+  field: il_onchip_db
+  value: 1.8
+  unit: dB
+  basis: derived
+  locator: p.2, Table 1; Fig. 3(b)
+  note: IL at ER=3.5 dB from the authors' static-IL regression trend vs BW; Fig. 3(b) trend line reads about 2.0 dB at the 72 GHz marker vs 1.8 dB in Table 1
+- device_id: rakowski2026-b
+  field: il_onchip_excludes
+  value: Grating couplers, routing and off-resonance waveguide loss (IL is relative to off-resonance transmission, Fig. 2b)
+  unit: ''
+  basis: derived
+  locator: p.2, Fig. 2(b)
+  note: Fig. 2(b) IL falls to about 0 dB at 1000 pm detuning; normalization is off-resonance transmission
+- device_id: rakowski2026-b
+  field: extinction_ratio_db
+  value: 3.5
+  unit: dB
+  basis: measured
+  locator: p.1 abstract; p.3, Sec. 3
+  note: Stated ER greater than 3.5 dB at 3 Vpp
+- device_id: rakowski2026-b
+  field: drive_vpp_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.3, Sec. 3
+  note: 3 Vpp swing, 0.5 V forward to 2.5 V reverse
+derived:
+- device_id: rakowski2026-a
+  field: tuning_nm_per_v
+  value: 0.04
+  formula: 80 pm / 2 V / 1000 pm per nm (Table 1); not entered in CSV
+  inputs: []
+- device_id: rakowski2026-b
+  field: tuning_nm_per_v
+  value: 0.0417
+  formula: 125 pm / 3 V / 1000 pm per nm (Table 1); not entered in CSV
+  inputs: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

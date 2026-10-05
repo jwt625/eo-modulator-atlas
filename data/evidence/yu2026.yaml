@@ -1,0 +1,86 @@
+paper_id: yu2026
+verified_on: '2026-10-04'
+source_files:
+- references/yu2026/text.md
+- references/yu2026/figures/page_02.png
+- references/yu2026/figures/page_03.png
+entries:
+- device_id: yu2026-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: 1310 nm DFB laser, 70 mW output, in the TOSA
+- device_id: yu2026-a
+  field: vpi_dc_v
+  value: 2
+  unit: V
+  basis: design_target
+  locator: p.1, Sec. 2; p.2, Sec. 3
+  note: Stated as designed low Vpi values (<2 V); no measurement shown; DC or RF not stated
+- device_id: yu2026-a
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 2
+  note: Driver output swing exceeding 2 Vppd drives the MZM; AWG input 0.4 Vppd
+- device_id: yu2026-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Differential TFLN MZMs stated to exhibit EO 3 dB bandwidth of approximately 110 GHz; no trace
+    shown in the paper
+- device_id: yu2026-a
+  field: max_baud_gbd
+  value: 210
+  unit: GBd
+  basis: measured
+  locator: p.2-3, Sec. 3; Fig. 4(c)
+  note: 'Sample c: process-C assembly with driver-B, clean eye after 23-tap equalization at SER 9.7e-3'
+- device_id: yu2026-a
+  field: max_line_rate_gbps
+  value: 420
+  unit: Gb/s
+  basis: measured
+  locator: p.2-3, Sec. 3; Fig. 4(c)
+  note: PAM4 at 210 GBd, TDECQ not extractable for this sample
+- device_id: yu2026-a
+  field: modulation_format
+  value: 'PAM4 with 23-tap equalizer, target SER 9.7e-3: 185 GBd (370 Gb/s, TDECQ 2.97 dB, sample a),
+    200 GBd (400 Gb/s, 3.83 dB, b), 210 GBd (420 Gb/s, TDECQ not available, c), 180 GBd with driver-A
+    (360 Gb/s, 2.76 dB, d); PRBS 2^14-1'
+  unit: ''
+  basis: measured
+  locator: p.2-3, Fig. 4
+  note: Four TOSA samples with different assembly processes and drivers
+- device_id: yu2026-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Paper describes the TFLN MZMs as differential
+- device_id: yu2026-a
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Convention for Vpi not stated
+- device_id: yu2026-a
+  field: bw3db_reference
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Reference frequency not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

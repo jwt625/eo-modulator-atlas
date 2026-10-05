@@ -1,0 +1,121 @@
+paper_id: zhang2026a
+verified_on: '2026-10-04'
+source_files:
+- references/zhang2026a/text.md
+- references/zhang2026a/figures/page_02.png
+- references/zhang2026a/figures/page_03.png
+entries:
+- device_id: zhang2026a-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3, Sec. 3
+  note: ITLA at 1550 nm, tuned to the quadrature point
+- device_id: zhang2026a-a
+  field: length_mm
+  value: 0.5
+  unit: mm
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Phase-shifter length 0.5 mm
+- device_id: zhang2026a-a
+  field: vpi_dc_v
+  value: 6.7
+  unit: V
+  basis: measured
+  locator: p.1, Sec. 2
+  note: Vpi measured with a 1 MHz sinusoidal driving signal; entered as quasi-static
+- device_id: zhang2026a-a
+  field: drive_vpp_v
+  value: 2.4
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3
+  note: Voltage swing 2.4 Vpp on the differential AWG channel
+- device_id: zhang2026a-a
+  field: cladding
+  value: FenGlass (Polaris ferroelectric nematic glass) dispensed as ink and processed to the ferroelectric glass phase; monodomain
+    set by a small DC field; no encapsulation
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2
+  note: FenGlass dispensed as an ink; monodomain created along the phase shifter
+- device_id: zhang2026a-a
+  field: epitaxy_or_stack
+  value: 220 nm silicon photonics platform; doped Si slot waveguides in both MZI arms (TE0, C-band) filled with FenGlass;
+    GSGSG traveling-wave electrode; 50 ohm on-chip termination; edge coupling and strip-to-slot converters
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; p.2, Fig. 1(c)-(d)
+  note: Stack summarized from text and cross-section schematic
+- device_id: zhang2026a-a
+  field: max_baud_gbd
+  value: 224
+  unit: GBd
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(a)
+  note: 224 GBd PAM4 below the 25% OH SD-FEC threshold
+- device_id: zhang2026a-a
+  field: modulation_format
+  value: '100 m SSMF, 41-tap FFE + 1-tap DFE: PAM4 176 GBd net 330 Gb/s (HD-FEC 6.7% OH); PAM6 136 GBd net 330 Gb/s (HD-FEC);
+    PAM4 224 GBd net 358 Gb/s (SD-FEC 25% OH); PAM6 200 GBd net 414 Gb/s (SD-FEC); PAM8 168 GBd net 403 Gb/s (SD-FEC)'
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(a)
+  note: Net rates and FEC thresholds as stated by the authors
+- device_id: zhang2026a-a
+  field: max_net_rate_gbps
+  value: 414
+  unit: Gb/s
+  basis: measured
+  locator: p.3, Sec. 3 and Sec. 4
+  note: 414 Gb/s at 200 GBd PAM6; author-stated net rate
+- device_id: zhang2026a-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; p.2, Sec. 3
+  note: GSGSG traveling-wave electrode configured for push-pull drive
+- device_id: zhang2026a-a
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Vpi of the device; arm convention of the 1 MHz measurement not stated
+- device_id: zhang2026a-b
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: measured
+  locator: p.2, Sec. 2
+  note: FenGlass modulator with a 1 mm long phase shifter
+- device_id: zhang2026a-b
+  field: vpi_dc_v
+  value: 3.2
+  unit: V
+  basis: extracted_from_figure
+  locator: p.2, Fig. 2(b)
+  note: 1 MHz point of Fig. 2(b); about 2.84 to 3.21 V from 50 mHz to 1 MHz
+- device_id: zhang2026a-b
+  field: drive
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 2
+  note: Arm drive not stated for the low-frequency Vpi measurement
+- device_id: zhang2026a-b
+  field: vpi_convention
+  value: unspecified
+  unit: ''
+  basis: derived
+  locator: p.2, Sec. 2
+  note: Convention of the low-frequency Vpi not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+    locator: p.1-3 page footer (repeated on every page)
+    note: printed page-footer copyright notice; basis for license publisher-copyright

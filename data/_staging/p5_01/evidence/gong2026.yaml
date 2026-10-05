@@ -1,0 +1,134 @@
+paper_id: gong2026
+verified_on: '2026-10-04'
+source_files:
+- references/gong2026/text.md
+- references/gong2026/figures/page_02.png
+- references/gong2026/figures/page_03.png
+entries:
+- device_id: gong2026-a
+  field: vpil_dc_vcm
+  value: 1.8
+  unit: V*cm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(a)
+  note: Median-level value over 10 lots, std 0.016 V cm; bias and definition not stated
+- device_id: gong2026-a
+  field: prop_loss_db_per_cm
+  value: 10.3
+  unit: dB/cm
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 2(b)
+  note: Median over 10 lots, std 0.15 dB/cm
+- device_id: gong2026-a
+  field: bw3db_ghz
+  value: 61
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(a), 3(c)
+  note: Average EO bandwidth at -1 V; lot median 61 GHz, std 3 GHz
+- device_id: gong2026-a
+  field: z0_ohm
+  value: 70
+  unit: ohm
+  basis: author_estimate
+  locator: p.3, Sec. 3
+  note: Differential line and termination impedance both around 70 ohm (differential); method not stated
+- device_id: gong2026-a
+  field: extinction_ratio_db
+  value: 3.2
+  unit: dB
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4(f)
+  note: Dynamic ER at 3.2 Vppd drive with 19 percent input reflection, flat across 53 to 100 GBd
+- device_id: gong2026-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: measured
+  locator: p.1, Fig. 1(a); p.3, Sec. 3
+  note: Differential push-pull drive, 3.2 Vppd equal to 1.6 Vpp per arm
+- device_id: gong2026-a
+  field: drive_vpp_v
+  value: 3.2
+  unit: V
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4
+  note: Differential peak-to-peak drive; effective 1.3 Vpp per arm after reflection
+- device_id: gong2026-a
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4(f)
+  note: PAM4 transmission studied from 53 to 100 GBaud
+- device_id: gong2026-a
+  field: max_line_rate_gbps
+  value: 240
+  unit: Gb/s
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4(d)
+  note: 240 Gb/s PAM4, TDECQ 3.1 dB at 1.92 Vppd, 7-tap FFE, -1 V bias
+- device_id: gong2026-a
+  field: modulation_format
+  value: 'PAM4 at -1 V bias, 7-tap FFE, BER target 3.8e-3: 160 Gb/s TDECQ 1.3 dB (3.2 Vppd); 200 Gb/s
+    TDECQ 2.9 dB (3.2 Vppd) and 1.6 dB (2.65 Vppd); 240 Gb/s TDECQ 3.1 dB (1.92 Vppd)'
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 4
+- device_id: gong2026-a
+  field: driver
+  value: No integrated driver; external electrical drive with amplifiers and switches (models not stated),
+    3.2 Vppd, 19 percent reflection at the MZM input
+  unit: ''
+  basis: measured
+  locator: p.3, Sec. 3
+- device_id: gong2026-a
+  field: epitaxy_or_stack
+  value: S-shape PN junction with junction boundary shifted toward the N region (wider P region); low
+    rib doping, optimized contact and intermediate implants; GSGSG slow-wave T-teeth electrodes with on-chip
+    series poly-R/C AC termination; thermal phase shifters in both arms
+  unit: ''
+  basis: measured
+  locator: p.1-2, Sec. 2; Fig. 1
+- device_id: gong2026-a
+  field: electrode_type
+  value: slow_wave
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(a)
+  note: Slow-wave T-shape teeth transmission lines
+- device_id: gong2026-a
+  field: waveguide_platform
+  value: soi_rib
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(b)
+  note: Rib waveguide in silicon; SOI thickness and etch depth not stated
+- device_id: gong2026-a
+  field: band
+  value: o_band
+  unit: ''
+  basis: measured
+  locator: p.1 title
+  note: O-band 200G per lambda; wavelength not stated
+- device_id: gong2026-b
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3; Fig. 3(b)
+  note: No -3 dB crossing within the 67 GHz LCA range; text states >67 GHz
+- device_id: gong2026-b
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.3, Sec. 3
+  note: 67 GHz lightwave component analyzer
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

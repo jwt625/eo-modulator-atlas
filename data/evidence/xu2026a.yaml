@@ -1,0 +1,207 @@
+paper_id: xu2026a
+verified_on: '2026-10-04'
+source_files:
+- references/xu2026a/text.md
+- references/xu2026a/figures/page_01.png
+- references/xu2026a/figures/page_02.png
+- references/xu2026a/figures/page_03.png
+entries:
+- device_id: xu2026a-a
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.3 Fig. 4(a) caption
+  note: Low-frequency Vpi measured at 1310 nm; transmission dip near 1311 nm in Fig. 2(b)
+- device_id: xu2026a-a
+  field: length_mm
+  value: 15
+  unit: mm
+  basis: measured
+  locator: p.1 Sec. 1; p.2 Sec. 2
+  note: 15 mm modulation region
+- device_id: xu2026a-a
+  field: vpi_dc_v
+  value: 1.089
+  unit: V
+  basis: derived
+  locator: p.2 Sec. 2; p.3 Fig. 4(a)
+  note: Average over 10 Hz-10 kHz; 1.045 V at 10 Hz. Low-frequency, not DC
+- device_id: xu2026a-a
+  field: vpil_dc_vcm
+  value: 1.63
+  unit: V*cm
+  basis: derived
+  locator: p.2 Sec. 2
+  note: Authors convert average Vpi; 1.57 V cm at 10 Hz
+- device_id: xu2026a-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 Fig. 1(b)-(c)
+  note: Authors do not state it; GSG line with a waveguide in each gap
+- device_id: xu2026a-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 Fig. 1(c)
+  note: Authors do not state the Vpi convention
+- device_id: xu2026a-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.2 Sec. 2; p.3 Fig. 4(b)
+  note: Authors state beyond 110 GHz; Fig. 4(b) trace touches -3 dB near 101-104 GHz, ends near -2.7 dB
+- device_id: xu2026a-a
+  field: bw3db_reference
+  value: other
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Referenced to the value at 2 GHz
+- device_id: xu2026a-a
+  field: bw3db_reference_freq_ghz
+  value: 2
+  unit: GHz
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Referenced to the value at 2 GHz
+- device_id: xu2026a-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2 Sec. 2; p.3 Fig. 4(b)
+  note: VNA and 110 GHz photodetector
+- device_id: xu2026a-a
+  field: il_onchip_db
+  value: 1.2
+  unit: dB
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 2(b)
+  note: After normalizing the grating couplers
+- device_id: xu2026a-a
+  field: il_onchip_includes
+  value: MZM insertion loss (not itemised)
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Authors call it MZM insertion loss
+- device_id: xu2026a-a
+  field: il_onchip_excludes
+  value: grating couplers (normalized out)
+  unit: ''
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Grating-coupler impact normalized out
+- device_id: xu2026a-a
+  field: extinction_ratio_db
+  value: 35
+  unit: dB
+  basis: measured
+  locator: p.2 Fig. 2(b) caption
+  note: Caption says greater than 35 dB; text says up to 35 dB
+- device_id: xu2026a-a
+  field: er_type
+  value: static
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 2(b)
+  note: Optical transmission spectrum of the MZM
+- device_id: xu2026a-a
+  field: rf_loss_db_per_cm
+  value: 4.8
+  unit: dB/cm
+  basis: measured
+  locator: p.2 Sec. 2; Fig. 3(b)
+  note: Extracted from measured S-parameters; 3.2 dB/cm at 70 GHz
+- device_id: xu2026a-a
+  field: rf_loss_freq_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2 Fig. 3(b)
+- device_id: xu2026a-a
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: measured
+  locator: p.1 Sec. 2
+  note: NANOLN x-cut wafer
+- device_id: xu2026a-a
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 2
+  note: Two 200 nm deep side trenches define the rib
+- device_id: xu2026a-a
+  field: rib_width_nm
+  value: 2000
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: Waveguide width 2 um stated as design
+- device_id: xu2026a-a
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: Electrode spacing 4 um stated as design
+- device_id: xu2026a-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: measured
+  locator: p.1 Sec. 2
+  note: Gold, lift-off
+- device_id: xu2026a-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: measured
+  locator: p.1 Sec. 2
+- device_id: xu2026a-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: measured
+  locator: p.1 Sec. 2
+  note: Buried oxide
+- device_id: xu2026a-a
+  field: substrate
+  value: silicon, locally removed under the electrodes
+  unit: ''
+  basis: measured
+  locator: p.1-2 Sec. 2
+  note: Silicon removed locally under the transmission line by XeF2
+- device_id: xu2026a-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.1 Sec. 2
+- device_id: xu2026a-a
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LT on 3 um SiO2 on Si (NANOLN); 200 nm deep side trenches define the rib; electrodes on intact LT membrane;
+    periodic through-vias plus XeF2 Si undercut
+  unit: ''
+  basis: measured
+  locator: p.1-2 Sec. 2; Fig. 1(c)
+derived:
+- device_id: xu2026a-a
+  field: slab_thickness_nm
+  value: 200
+  formula: 400 nm film - 200 nm trench depth; not entered in the CSV (not stated by authors)
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+context_values:
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: printed in the page footer of pages 1-3

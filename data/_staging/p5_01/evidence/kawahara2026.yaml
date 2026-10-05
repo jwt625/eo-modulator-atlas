@@ -1,0 +1,155 @@
+paper_id: kawahara2026
+verified_on: '2026-10-04'
+source_files:
+- references/kawahara2026/text.md
+- references/kawahara2026/figures/page_02.png
+- references/kawahara2026/figures/page_03.png
+entries:
+- device_id: kawahara2026-a
+  field: bw3db_ghz
+  value: 66
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.3, Fig. 2(b)
+  note: Measured red trace ends near 66 GHz without crossing -3 dB; stated 80 GHz relies on extrapolation
+- device_id: kawahara2026-a
+  field: bw_measured_to_ghz
+  value: 66
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.3, Fig. 2(b)
+  note: End of the solid measured trace; Keysight N4373E lightwave component analyzer
+- device_id: kawahara2026-a
+  field: ng_opt
+  value: 30
+  unit: '1'
+  basis: design_target
+  locator: p.1, Sec. 2
+  note: Lattice designed for ng about 30 in the C-band; measured ng not stated
+- device_id: kawahara2026-a
+  field: epitaxy_or_stack
+  value: Triangular-lattice SiO2-filled hole PCW, lattice a 404 nm, hole diameter 230 nm; p-n doped NA
+    9.5e17, ND 1.0e18 cm^-3; N = 3 segments with delay lines and crossing (FIR equalizer, negative tap)
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1
+- device_id: kawahara2026-a
+  field: drive
+  value: differential
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Equalizer principle assumes differential drive (p.1); drive used in the experiment not stated.
+- device_id: kawahara2026-a
+  field: electrode_type
+  value: segmented
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(a)
+  note: Phase shifter divided into N segments with transmission lines between them
+- device_id: kawahara2026-a
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2; p.2, Sec. 3
+  note: C-band design (ng about 30) and EDFA in setup; wavelength not stated
+- device_id: kawahara2026-b
+  field: bw3db_ghz
+  value: 35
+  unit: GHz
+  basis: measured
+  locator: p.2, Sec. 3; p.3, Fig. 2(b)
+  note: Stated 35 GHz without equalizer; plot crossing reads about 36-37 GHz
+- device_id: kawahara2026-b
+  field: ng_opt
+  value: 30
+  unit: '1'
+  basis: design_target
+  locator: p.1, Sec. 2
+  note: Lattice designed for ng about 30 in the C-band; measured ng not stated
+- device_id: kawahara2026-b
+  field: electrode_type
+  value: segmented
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(a)
+  note: Phase shifter divided into N segments with transmission lines between them
+- device_id: kawahara2026-b
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2; p.2, Sec. 3
+  note: C-band design (ng about 30) and EDFA in setup; wavelength not stated
+- device_id: kawahara2026-c
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.2, Sec. 3; Fig. 3(a)
+  note: Vpp about 2 V (2.0 V eye) for DSP-free 112 Gb/s OOK; PAM4 needs 4.2 to 5.2 V
+- device_id: kawahara2026-c
+  field: max_line_rate_gbps
+  value: 200
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.2, Sec. 3; Fig. 3(b)
+  note: 200 Gb/s PAM4 with 11-tap FFE, TDECQ 1.5 dB
+- device_id: kawahara2026-c
+  field: modulation_format
+  value: OOK DSP-free 100 Gb/s (TDEC 1.8 dB, 2.3 V) and 112 Gb/s (TDEC 2.7 dB, 2.0 V); OOK 140 Gb/s with
+    11-tap FFE (TDEC 2.5 dB, 1.8 V); PAM4 DSP-free 160 Gb/s (TDECQ 1.6 dB) and 180 Gb/s (TDECQ 2.2 dB);
+    PAM4 200 Gb/s with 11-tap FFE (TDECQ 1.5 dB); SD-FEC reference BER 2e-2; no BER reported
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3; p.3, Fig. 3
+- device_id: kawahara2026-c
+  field: driver
+  value: Keysight M8199B AWG with broadband amplifier and probe; no integrated driver; receiver-side 11-tap
+    FFE where stated
+  unit: ''
+  basis: measured
+  locator: p.2, Sec. 3
+- device_id: kawahara2026-c
+  field: ng_opt
+  value: 30
+  unit: '1'
+  basis: design_target
+  locator: p.1, Sec. 2
+  note: Lattice designed for ng about 30 in the C-band; measured ng not stated
+- device_id: kawahara2026-c
+  field: drive
+  value: differential
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2
+  note: Equalizer principle assumes differential drive (p.1); drive used in the experiment not stated.
+- device_id: kawahara2026-c
+  field: electrode_type
+  value: segmented
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1(a)
+  note: Phase shifter divided into N segments with transmission lines between them
+- device_id: kawahara2026-c
+  field: epitaxy_or_stack
+  value: Triangular-lattice SiO2-filled hole PCW, lattice a 404 nm, hole diameter 230 nm; p-n doped NA
+    9.5e17, ND 1.0e18 cm^-3; N = 4 segments with delay lines and crossing
+  unit: ''
+  basis: measured
+  locator: p.1, Sec. 2; Fig. 1
+- device_id: kawahara2026-c
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.1, Sec. 2; p.2, Sec. 3
+  note: C-band design (ng about 30) and EDFA in setup; wavelength not stated
+derived: []
+context_values:
+  license_notice:
+    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
+      Group
+    locator: p.1-3, page footer
+    note: printed in the page footer of pages 1-3

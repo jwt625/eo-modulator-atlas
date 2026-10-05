@@ -12,7 +12,9 @@ Beijing Information Science and Technology University,university,CN,east_asia,,"
 Binnig and Rohrer Nanotechnology Center,facility,CH,europe,,"Cleanroom named in acknowledgements; host institution and address not stated in the paper, country entered from outside the paper; sabatti2024 p.4 names it 'BRNC of ETH Zurich and IBM Ruschlikon'"
 Brazilian Center for Research in Energy and Materials,research_institute,BR,other,,"Campinas; CNPEM, parent of the national laboratory below; navarro2026"
 Brazilian Nanotechnology National Laboratory,national_lab,BR,other,Brazilian Center for Research in Energy and Materials,Campinas 13083-200; LNNano; navarro2026
+Broadcom Inc.,company,US,north_america,,"Breinigsville, PA address in the paper (bhasker2026 p.1)"
 CMC Microsystems,other,CA,north_america,,Multi-project wafer service provider named in geravand2025 Methods and acknowledgements; country entered from outside the paper
+CORNERSTONE,facility,GB,europe,,"SOI fab named in tiberi2026 p.1, no address printed; GB from the Southampton-hosted URL in tiberi2025 Ref. [103], cited as tiberi2026 Ref. [8]"
 California Institute of Technology,university,US,north_america,,"Pasadena, CA; Division of Physics, Mathematics and Astronomy and Alliance for Quantum Technologies (affiliation 4); name as in the affiliation (PDF text extraction spacing garbled)"
 CamGraPhIC srl,company,IT,europe,,Pisa; written CamGraPhiC in giambra2021
 Center for Advanced Electronic Materials and Devices,facility,CN,east_asia,Shanghai Jiao Tong University,AEMD; acknowledged for device fabrication support; also author affiliation 2; country from host institution
@@ -22,6 +24,7 @@ Centre Suisse d'Electronique et de Microtechnique,research_institute,CH,europe,,
 "Cetus Photonics, Inc.",company,US,north_america,,Address not stated in the paper
 China Information and Communication Technologies Group Corporation,company,CN,east_asia,,Wuhan; National Information Optoelectronics Innovation Center and State Key Laboratory of Optical Communication Technologies and Networks; paper abbreviation CICT
 "Chongqing United Microelectronics Center Co., Ltd",company,CN,east_asia,,Chongqing address in the paper; source of the Si/SiN photonics PDK used
+Chongqing University,university,CN,east_asia,,Chongqing; affiliations 1-3 (su2026 p.1)
 Chulalongkorn University,university,TH,southeast_asia,,"Bangkok; Department of Physics, Faculty of Science; present address of W. Yanwachirakul in fukui2025 p.1"
 Ciena Corporation,company,CA,north_america,,Quebec City and Ottawa addresses in the paper
 City University of Hong Kong,university,HK,east_asia,,"Kowloon, Hong Kong; Department of Electrical Engineering and State Key Laboratory of Terahertz and Millimeter Waves"
@@ -47,9 +50,11 @@ Flux Photonics Inc.,company,US,north_america,,"Pacifica, CA address in the paper
 Fraunhofer Heinrich Hertz Institute,research_institute,DE,europe,,Berlin; name as written in the affiliation; fabricated the InP MZM on its InP platform
 Freedom Photonics,company,US,north_america,,"41 Aero Camino, Goleta, CA; name as written in the affiliation"
 Fudan University,university,CN,east_asia,,"Shanghai; Future Information Innovative College, affiliation 2"
+Genuine Optics,company,US,north_america,,"San Jose, CA; affiliation 2 (yu2026 p.1); relation to the Wuhan company not stated"
 George Washington University,university,US,north_america,,"Washington, DC; Department of Electrical and Computer Engineering; heidari2022 and gui2022"
 Georgia Institute of Technology,university,US,north_america,,"Atlanta, GA; Department of Electrical and Computer Engineering (taghavi2022a); page-1 affiliation labels are swapped in the arXiv text, assignment follows Crossref"
 Ghent University,university,BE,europe,,"Department of Information Technology (INTEC), Photonics Research Group and IDLab, Ghent University-imec"
+GlobalFoundries,foundry,US,north_america,,"Malta, NY; gong2026 p.1 sole affiliation"
 Graphenea Semiconductor SLU,company,ES,europe,,San Sebastian; name as written in the affiliation
 Graz University of Technology,university,AT,europe,,Graz; Institute of Experimental Physics; affiliation 4 in sun2026a p.1
 Hainan Normal University,university,CN,east_asia,,Haikou; School of Physics and Electronic Engineering; sia2022 p.1
@@ -80,14 +85,18 @@ Jiaxing Key Laboratory of Photonic Sensing & Intelligent Imaging,research_instit
 John O'Brien Nanofabrication Laboratory,facility,US,north_america,University of Southern California,Named in the lee2026 acknowledgements as the device fabrication site; country from host institution
 Johns Hopkins University,university,US,north_america,,"Baltimore, MD; gui2022 affiliation of J. B. Khurgin"
 KEEQuant GmbH,company,DE,europe,,Fuerth; current affiliation of M. Baier
+KTH Royal Institute of Technology,university,SE,europe,,Stockholm; Department of Physics (li2026b p.1)
 KU Leuven,university,BE,europe,,"Leuven; Department of Electrical Engineering (ESAT), Department of Materials Engineering (MTM), Department of Physics and Astronomy"
 Karlsruhe Institute of Technology,university,DE,europe,,"Institute of Photonics and Quantum Electronics (IPQ) and Institute of Microstructure Technology (IMT), Karlsruhe"
 Kavli Institute at Cornell for Nanoscale Science,research_institute,US,north_america,Cornell University,"Ithaca, NY affiliation of Darrell G. Schlom"
+Keysight Technologies,company,US,north_america,,"Santa Clara, CA address (shen2026 p.1)"
+Keysight Technologies Deutschland GmbH,company,DE,europe,Keysight Technologies,"Böblingen (li2026b p.1); distinct from Keysight Technologies (Santa Clara, US)"
 Kyushu University,university,JP,east_asia,,"Kasuga, Fukuoka; Institute for Materials Chemistry and Engineering and Department of Molecular and Material Science"
 "La Luce Cristallina, Inc.",company,US,north_america,,"Austin, Texas; affiliation 3 in sun2026a p.1"
 Lanzhou University,university,CN,east_asia,,"Lanzhou, Gansu; affiliation 3 (Institute of Microelectronics and Key Laboratory for Magnetism and Magnetic Materials of MOE, School of Physical Science and Technology)"
 Lawrence Berkeley National Laboratory,national_lab,US,north_america,,"Berkeley, CA; Materials Sciences Division (affiliation 6 of lee2026)"
 Leibniz-Institut für Kristallzüchtung,research_institute,DE,europe,,"Max-Born-Straße 2, 12489 Berlin; affiliation of Darrell G. Schlom"
+"Ligent Technologies, Inc.",company,US,north_america,,"San Jose, CA and Qingdao, China addresses; US from the first affiliation (zhou2026 p.1)"
 Ligentec SA,foundry,CH,europe,,Ecublens; SiN photonic foundry; named as fabricating the SiN wafers
 "Lightmatter, Inc.",company,US,north_america,,"Boston, MA; present address of an author"
 Lomonosov Moscow State University,university,RU,europe,,Moscow; Faculty of Physics; lotkov2024
@@ -97,11 +106,14 @@ MACOM Technology Solutions,company,US,north_america,,"Santa Clara, CA; EML drive
 Massachusetts Institute of Technology,university,US,north_america,,"Cambridge, MA; Research Laboratory of Electronics (larocque2024 affiliation 1; holzgrafe2020 affiliation 3)"
 McGill University,university,CA,north_america,,"Montreal, QC; Department of Electrical and Computer Engineering"
 Micram Microelectronic GmbH,company,DE,europe,,"Wolf p.1 affiliation 5, Bochum."
+Mitsubishi Electric Corporation,company,JP,east_asia,,"Kamakura (Information Technology R & D Center), Itami (High Frequency & Optical Device Works), Amagasaki (Manufacturing Engineering Center) (ohata2026 p.1, okuda2026 p.1)"
 Monarch Quantum,company,US,north_america,,"San Diego, California; affiliation 8 in sun2026a p.1"
 NLM Photonics,company,US,north_america,,"Seattle, WA (4000 Mason Road); name as printed on page 1"
 NTT Innovative Devices Corporation,company,JP,east_asia,,"Atsugi City, Kanagawa; paper writes the affiliation as given; separate legal entity from Nippon Telegraph and Telephone Corporation, parent relation not stated in the paper"
 "NTT Research, Inc.",company,US,north_america,,"Sunnyvale, CA address in the paper"
 NUFAB facility of the NUANCE Center,facility,US,north_america,Northwestern University,Named in acknowledgements as the NUFAB facility of Northwestern University's NUANCE Center (acronyms not expanded in the paper); country from host institution
+NVIDIA Corporation,company,US,north_america,,"Santa Clara, CA (sun2026, patel2026 p.1, written NVIDIA in patel2026); Yokneam, Israel site (sun2026)"
+Nagoya Institute of Technology,university,JP,east_asia,,"Showa-ku, Nagoya; Graduate School of Engineering (yamaguchi2026 p.1)"
 Nanjing University of Aeronautics and Astronautics,university,CN,east_asia,,"Nanjing; Key Laboratory of Radar Imaging and Microwave Photonics, College of Electronic and Information Engineering; affiliation from the Crossref record, absent from the cached preprint"
 Nankai University,university,CN,east_asia,,"Tianjin; School of Physics and TEDA Applied Physics Institute, Academy for Advanced Interdisciplinary Studies"
 Nanofabrication Platform of Nankai University,facility,CN,east_asia,Nankai University,Acknowledgements: thanked for fabricating samples; country from host institution
@@ -111,13 +123,18 @@ National Information Optoelectronics Innovation Center,research_institute,CN,eas
 National Institute of Advanced Industrial Science and Technology,research_institute,JP,east_asia,,"Tsukuba, Ibaraki; paper abbreviation AIST"
 National Institute of Information and Communications Technology,research_institute,JP,east_asia,,"Koganei, Tokyo; paper abbreviation NICT; kawahara2025 p.1"
 National Institute of Standards and Technology,national_lab,US,north_america,,"Boulder, CO; Time and Frequency Division; present address of an author"
+National Institutes of Applied Research,research_institute,TW,east_asia,,Taiwan; parent of the Taiwan Semiconductor Research Institute in lin2026 affiliation 1
 National Inter-University Consortium for Telecommunications,consortium,IT,europe,,"Pisa; Photonic Networks and Technologies Lab; written CNIT in giambra2021 and tiberi2025, expansion from outside the paper"
+National Semiconductor Translation and Innovation Centre,research_institute,SG,southeast_asia,,"Singapore, Fusionopolis Way address (tobing2026 p.1, affiliation 1)"
 National Sun Yat-sen University,university,TW,east_asia,,Kaohsiung; Department of Photonics
+National Tsing Hua University,university,TW,east_asia,,Hsinchu; affiliation 2 of lin2026 (Institute of Photonics Technologies and Department of Electrical Engineering); paper writes National Tsing-Hua University
 National University of Singapore,university,SG,southeast_asia,,Singapore; Department of Electrical and Computer Engineering
-Nippon Telegraph and Telephone Corporation,company,JP,east_asia,,"Paper writes the affiliation as 'NTT Corporation' (NTT Device Innovation Center; NTT Device Technology Laboratories), Atsugi-shi, Kanagawa"
+Nexus Photonics,company,US,north_america,,"Goleta, CA address in the paper (shen2026 p.1)"
+Nippon Telegraph and Telephone Corporation,company,JP,east_asia,,"Paper writes the affiliation as 'NTT Corporation' (NTT Device Innovation Center; NTT Device Technology Laboratories), Atsugi-shi, Kanagawa; aihara2026 (2026) writes 'NTT, Inc.'"
 Nissan Chemical Corporation,company,JP,east_asia,,Funabashi; lu2020 p.1 affiliation 4
 Nokia Bell Labs,company,US,north_america,,"Murray Hill, NJ"
 Nokia Corporation,company,US,north_america,,"Sunnyvale, CA"
+Northeastern University,university,US,north_america,,"Oakland, CA address; Department of Electrical and Computer Engineering (shen2026 p.1)"
 Northwestern University,university,US,north_america,,"Evanston, Illinois; Department of Materials Science and Engineering, McCormick School of Engineering"
 Optics Valley Laboratory,research_institute,CN,east_asia,,Wuhan (affiliation 5 of li2026aa)
 Oregon State University,university,US,north_america,,"Corvallis, Oregon; School of Electrical Engineering and Computer Science; cleanroom (Materials Synthesis and Characterization Facility) used for the TCO gate processing; hsu2024 p.1, p.12"
@@ -129,8 +146,11 @@ Phase Sensitive Innovations,company,US,north_america,,"Newark, DE; name as writt
 Photonics Electronics Technology Research Association,consortium,JP,east_asia,,"Bunkyo-ku, Tokyo; paper abbreviation PETRA"
 "Platform for the Accelerated Realization, Analysis, and Discovery of Interface Materials (PARADIM)",facility,US,north_america,Cornell University,"Ithaca, NY affiliation of Dylan Sotir"
 "Polaris Electro-Optics, Inc.",company,US,north_america,,"USA in chiang2025; Broomfield, CO address in taghavi2026 (written without Inc. there)"
+Polariton Technologies AG,company,CH,europe,,Adliswil; affiliation 2 of hess2026 p.1; designed and fabricated the ring modulator
+RISE Research Institutes of Sweden,research_institute,SE,europe,,Kista; Kista High-Speed Transmission Lab (hess2026 p.1)
 Raytheon BBN Technologies,company,US,north_america,,"Cambridge, MA"
 Rhinopix Technology Limited,company,HK,east_asia,,Hong Kong; affiliation 4; wang2026b p.1
+Riga Technical University,university,LV,europe,,"Riga; Institute of Photonics, Electronics and Telecommunications (hess2026 p.1)"
 SLAC National Accelerator Laboratory,national_lab,US,north_america,Stanford University,"Menlo Park, CA; paper lists it as SLAC National Accelerator Laboratory, Stanford University"
 San Diego Nanotechnology Infrastructure,facility,US,north_america,"University of California, San Diego",Acknowledged for part of the work (valdez2023); country from host institution
 Sandia National Laboratories,national_lab,US,north_america,,"Albuquerque, NM; Applied Microphotonic Systems (author affiliation in valdez2022, weigel2018); Si photonics foundry process named in weigel2018 (its ref. 4); fabrication assistance acknowledged in valdez2023"
@@ -149,10 +169,13 @@ South China Normal University,university,CN,east_asia,,Guangzhou; affiliations 2
 Stanford Nano Shared Facilities,facility,US,north_america,Stanford University,"Named in the acknowledgements; host institution not stated as such in the paper, country from the Stanford name"
 Stanford Nanofabrication Facility,facility,US,north_america,Stanford University,"Named in the acknowledgements; host institution not stated as such in the paper, country from the Stanford name"
 Stanford University,university,US,north_america,,"Ginzton Laboratory, Stanford address in the paper"
+"Sumitomo Electric Device Innovations, Inc.",company,JP,east_asia,,"Sakae-ku, Yokohama, Kanagawa (oe2026 p.1); relation to Sumitomo Electric Industries, Ltd. not stated in the paper"
 "Sumitomo Electric Industries, Ltd.",company,JP,east_asia,,"Yokohama, Kanagawa"
+"Sumitomo Osaka Cement Co., Ltd.",company,JP,east_asia,,"Funabashi, Chiba; New Technology Laboratory; paper writes Co. Ltd. (yamaguchi2026 p.1)"
 Sun Yat-sen University,university,CN,east_asia,,Guangzhou; State Key Laboratory of Optoelectronic Materials and Technologies and School of Physics and Engineering
 Swiss Federal Institute of Technology Lausanne,university,CH,europe,,"Institutes of Physics and of Electrical and Micro Engineering, Lausanne; name as written in the affiliation (EPFL)"
 TOPTICA Photonics Inc.,company,US,north_america,,"Pittsford, NY (affiliation 4 of lee2026)"
+Taiwan Semiconductor Research Institute,research_institute,TW,east_asia,National Institutes of Applied Research,"Hsinchu; affiliation 1 of lin2026, written National Institutes of Applied Research Taiwan Semiconductor Research Institute"
 Takeda Sentanchi Super Cleanroom,facility,JP,east_asia,The University of Tokyo,Cleanroom named in acknowledgements; country from host institution; full name as written in akazawa2026; soma2025 writes 'Takeda Cleanroom'
 Technical University Berlin,university,DE,europe,,Berlin; affiliation 2 (name as written in the paper)
 Technical University of Denmark,university,DK,europe,,Lyngby; Department of Electrical and Photonics Engineering
@@ -182,6 +205,7 @@ University of Campinas,university,BR,other,,Campinas-SP; School of Electrical an
 University of Central Florida,university,US,north_america,,"Orlando, FL; CREOL, The College of Optics and Photonics, and Department of Electrical and Computer Engineering (arabjuneghani2022 p.1)"
 University of Chinese Academy of Sciences,university,CN,east_asia,,Beijing
 "University of Colorado, Boulder",university,US,north_america,,"Boulder, CO; Department of Physics; present address of an author"
+University of Copenhagen,university,DK,europe,,Center for Digital and Computational Humanities (li2026b p.1)
 University of Delaware,university,US,north_america,,"Newark, DE; School of Electrical and Computer Engineering"
 University of Freiburg,university,DE,europe,,"Institute for Anatomy and Cell Biology; present address of one author in schwarzenberger2026 p.1, printed 'University Freiburg'"
 University of Illinois Chicago,university,US,north_america,,"Chicago, IL; Department of Electrical and Computer Engineering; paper writes ""University of Illinois - Chicago"""
@@ -196,7 +220,9 @@ University of Washington,university,US,north_america,,"Seattle, Washington; affi
 Université Laval,university,CA,north_america,,"Quebec City; Department of Electrical and Computer Engineering and Centre d'optique, photonique et laser (COPL)"
 Université Libre de Bruxelles,university,BE,europe,,Brussels address in the paper (OPERA-Photonique; Laboratoire d'Information Quantique)
 Virginia Tech,university,US,north_america,,"Blacksburg, VA; Bradley Department of Electrical and Computer Engineering; name as written in the affiliation"
+Waseda University,university,JP,east_asia,,"Shinjuku, Tokyo; Faculty of Science and Engineering (yamaguchi2026 p.1)"
 Wuhan ANPI Optoelectronics Company Ltd,company,CN,east_asia,,Wuhan (affiliation 4 of li2026aa)
+"Wuhan HGGenuine Optics Tech Co., Ltd",company,CN,east_asia,,"Wuhan, Hubei; affiliation 1 (yu2026 p.1)"
 Xidian University,university,CN,east_asia,,"Guangzhou Institute of Technology and School of Microelectronics (State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology); affiliations from the Crossref record, absent from the cached preprint"
 Yale University,university,US,north_america,,"New Haven, CT; Department of Electrical Engineering"
 Yokohama National University,university,JP,east_asia,,"Yokohama, Kanagawa; Department of Electrical and Computer Engineering; kawahara2025 p.1"
