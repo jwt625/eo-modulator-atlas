@@ -1,0 +1,23 @@
+# p7_03 audit dispositions (2026-10-05)
+
+Audit: data/_staging/audits/p7_03-claude-audit-2026-10-05.md. Coordinator decisions applied as stated in the correction request. Counts: applied 14, adjusted 3, rejected 0 (F8 no change by coordinator decision, counted under adjusted).
+
+- F1 adjusted (coordinator decision): wang2022-a bw3db_ghz 70 -> 67 (gt kept, basis extracted_from_figure, locator p.4 Fig. 4(e)); bw_measured_to_ghz 67 unchanged; bw_basis extracted_from_figure; row notes and evidence note state that '>70 GHz' (abstract, p.2, p.4, Table 1, conclusions) and the simulated 100 GHz are not entered as values. Evidence: Fig. 4(e) trace ends near 67 GHz (-2.3 dB), re-read from the audit's description and the source text p.4.
+- F2 applied (coordinator decision): liu2026d-a..g vpil_rf_vcm moved to vpil_dc_vcm (vpi_basis derived, no frequency); row c vpi_dc_v 6.71 (derived, Fig. 2(c)), vpi_rf_v and vpi_dc_freq_ghz emptied, 7.64 V at 100 kHz and 20 C moved to notes; evidence fields renamed, row c entries replaced; notes, paper note updated. Evidence: p.4 'low-frequency (<=100 kHz)', p.5 high-pass model, Table 1 footnote.
+- F3 applied (coordinator decision): chen2025-a..e tuning_nm_per_v signed negative (-0.02433, -0.02015, -0.01753, -0.01536, -0.01105); evidence note 'blue shift for positive voltage'; row and paper notes updated; f-i unchanged magnitudes with 'sign not stated'. Evidence: Fig. 3(g) reversed axis (-0.8 nm at +30 V, +0.7 nm at -30 V), Fig. S2(b),(d),(f),(h),(j) re-read.
+- F4 applied (coordinator decision): liu2026d-a..h integration foundry_native, evidence entries added (basis derived, p.3, p.4); paper note updated. Canonical kari2025 alignment left to the coordinator.
+- F5 applied: wang2022-a il_basis measured -> derived.
+- F6 applied: wang2022 paper note now says the CUMEC expansion is not printed in wang2022 and matches the chen2025 p.1 / supplement p.1 affiliation; mapping kept.
+- F7 applied: wang2022-b notes and evidence note state that no measurement range is given, the probes named in supplement p.5 are 67 GHz parts, and why row b stays 70 gt while row a does not (no plotted trace for b).
+- F8 adjusted (coordinator decision): no change to buffer_oxide_um (0.65 um); column meaning left to the coordinator follow-up.
+- F9 applied: sims/wang2022 geometry.regions.bcb reclassified figure_digitized (Fig. 2(a), 150 nm above the 220 nm wire, total about 0.37 um); the 'above or around' item removed from `missing`. Re-measured on the 500 nm scale bar of Fig. 2(a): LN 113 px = 0.50 um, SiO2 cladding about 0.65 um, wire layer about 0.37 um. Geometry unchanged (y = 0..0.37). The matching gap line in the batch report is superseded by the correction section appended there.
+- F10 applied: header comment corrected (Fig. 1(b) not to scale; Fig. 2(b) roughly to scale laterally, not vertically) and slot provenance cites Fig. 2(b); class kept project_inference (agreement is at the 1-3 um level, reclassification was optional); `missing` entry reworded.
+- F11 applied: electrodes.signal note cites Fig. 1(c) (h from the rail edge to the stem-side edge of the T-bar, so h excludes s; re-checked on a zoomed render). No geometry change.
+- F12 applied: line.loading.loaded_length_um 36 -> 33 (L - c = 36 - 3; Fig. 1(c) shows the hole L centred on the c gap), provenance note and limitation updated (33 / 17 um split, 14 um bar-without-slot region not representable). Config re-parsed (parseConfig, inspectConfig, empty solveError); engine not run.
+- F13 adjusted (coordinator condition): physical_device_id left empty because the paper does not state that one design was measured on one chip ('three devices', 'our blue/green MZM' at 488 and 461 nm, p.5, p.9); the passages are quoted in the paper note.
+- F14 applied: wavelength_nm (extracted_from_figure, approx) added to chen2025-b..i: b 1569.2, c 1569.3, d 1569.3, e 1568.2 (Fig. 3(e)); f 1566.7, g 1567.5, h 1568.5, i 1568.4 (Fig. 3(d), assigned by N only, gap not stated); evidence entries and notes added; row e note corrected to about 1568 nm. Own pixel read of Fig. 3(d),(e); l_band derived for all.
+- F15 applied: chen2025-a..e IL notes (row and evidence) state the spread between Fig. S1(a), Fig. S2 and Fig. 3(e), and the Fig. 3(d) normalization to about 0 dB; values and scope unchanged.
+- F16 applied: chen2025-a energy_per_bit_fj evidence basis author_estimate -> derived (formula CV^2pp/4 given, p.6); approx kept.
+- F17 applied: liu2026d-h drive_vpp_v evidence basis measured -> derived; note says the amplifier maximum is inferred to be the drive used.
+
+Also: papers.csv notes updated for wang2022 (F6, Fig. 2(a)/(b) scale statement), liu2026d (F2, F4, F13), chen2025 (F3); BATCH_REPORT.md has a correction section appended.

@@ -1,0 +1,174 @@
+paper_id: kohli2023
+verified_on: '2026-10-05'
+source_files:
+- references/kohli2023/text.md
+- references/kohli2023/crossref.json
+- references/kohli2023/figures/page_02.png
+- references/kohli2023/figures/page_04.png
+entries:
+- device_id: kohli2023-a
+  field: wavelength_nm
+  value: 1557
+  unit: nm
+  basis: measured
+  locator: p.5, Section V
+  note: Optical carrier of the data experiments; wavelength of the Vpi and S21 measurements not stated
+- device_id: kohli2023-a
+  field: length_mm
+  value: 0.015
+  unit: mm
+  basis: design_target
+  locator: abstract; p.4, Section IV-A
+  note: 15 um plasmonic phase-shifter section; converters excluded
+- device_id: kohli2023-a
+  field: vpi_dc_v
+  value: 3.2
+  unit: V
+  basis: measured
+  locator: p.5, Section IV-B
+  note: DC half-wave voltage extracted from the MZM resonance shift caused by the phase difference between the arms (200 um arm-length asymmetry, p.2); arm drive scheme not stated
+- device_id: kohli2023-a
+  field: vpi_convention
+  value: resonance_tuning_derived
+  unit: ''
+  basis: derived
+  locator: p.2, Section II; p.5, Section IV-B
+  note: Headline DC Vpi from the fringe shift of the unbalanced MZM; the RF Vpi 9.6 V uses the sideband-ratio method (Eq. 3) at MZM level; arm drive not stated
+- device_id: kohli2023-a
+  field: vpil_dc_vcm
+  value: 0.0048
+  unit: V*cm
+  basis: derived
+  locator: p.5, Section IV-B
+  note: Paper states Vpi,DC L = 0.048 V mm (3.2 V x 15 um); converted to V cm
+- device_id: kohli2023-a
+  field: vpi_rf_v
+  value: 9.6
+  unit: V
+  basis: measured
+  locator: p.5, Section IV-B, Eq. 3
+  note: High-frequency Vpi from first and second modulation sidebands; modulation frequency not stated
+- device_id: kohli2023-a
+  field: vpil_rf_vcm
+  value: 0.0144
+  unit: V*cm
+  basis: derived
+  locator: abstract; p.5, Section IV-B
+  note: Paper states 0.144 V mm = 144 V um; converted to V cm
+- device_id: kohli2023-a
+  field: drive_vpp_v
+  value: 3.6
+  unit: V
+  basis: measured
+  locator: p.2, Section I
+  note: All modulation experiments at 1.8 Vp (3.6 Vpp); up to 1.78 Vp at 128 GBd (p.5); reference plane not stated
+- device_id: kohli2023-a
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: abstract; p.4, Fig. 5b; p.5 text
+  note: Flat 10-70 GHz, 3 dB bandwidth stated to be beyond 70 GHz
+- device_id: kohli2023-a
+  field: bw_measured_to_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: p.4, Fig. 5b
+  note: MZM response measured from 10 to 70 GHz; lower range not repeated
+- device_id: kohli2023-a
+  field: il_fiber_to_fiber_db
+  value: 29
+  unit: dB
+  basis: measured
+  locator: p.4, Section IV-A
+  note: Proof-of-principle device; simulation predicted below 10 dB
+- device_id: kohli2023-a
+  field: il_onchip_db
+  value: 20.5
+  unit: dB
+  basis: derived
+  locator: p.4, Section IV-A
+  note: 'Phase shifter plus plasmonic converters: 7.5 dB plasmonic plus 2 x 6.5 dB excess, from reference devices'
+- device_id: kohli2023-a
+  field: prop_loss_db_per_cm
+  value: 5000
+  unit: dB/cm
+  basis: derived
+  locator: p.4, Section IV-A
+  note: Plasmonic section only, 0.5 dB/um by cutback (converted to dB/cm, see derived list)
+- device_id: kohli2023-a
+  field: eo_film_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Section II-A; Fig. 1(d)
+  note: BTO access waveguide 1200 x 200 nm (width x height per Fig. 1d)
+- device_id: kohli2023-a
+  field: electrode_gap_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 2 caption; Section II-A
+  note: 150 nm wide metal-insulator-metal slot filled with BTO
+- device_id: kohli2023-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4, Section III
+- device_id: kohli2023-a
+  field: cladding
+  value: PMMA
+  unit: ''
+  basis: design_target
+  locator: p.4, Section III
+- device_id: kohli2023-a
+  field: epitaxy_or_stack
+  value: SiN 800 x 800 nm2 in SiO2 (100 nm inter-layer oxide), tapered to 200 x 800 nm in an 80 um vertical directional coupler; BTO access waveguide 1200 x 200 nm tapered to the 150 nm slot over 15 um;
+    gold plates form the plasmonic slot; amorphous-Si overlay grating couplers
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1(c-f); p.3, Section II-A
+- device_id: kohli2023-a
+  field: max_baud_gbd
+  value: 216
+  unit: GBd
+  basis: measured
+  locator: abstract; p.5-6, Section V; Fig. 7c
+  note: 2PAM (NRZ), BER 3.98e-2, stated below the SD-FEC limit
+- device_id: kohli2023-a
+  field: modulation_format
+  value: 2PAM (NRZ) 216 GBd; 4PAM 128 GBd
+  unit: ''
+  basis: measured
+  locator: abstract; Fig. 7c,d
+- device_id: kohli2023-a
+  field: max_line_rate_gbps
+  value: 256
+  unit: Gb/s
+  basis: measured
+  locator: abstract; Fig. 7d
+  note: 128 GBd 4PAM, BER 3.89e-2; 216 Gb/s at 216 GBd 2PAM
+derived:
+- device_id: kohli2023-a
+  field: prop_loss_db_per_cm
+  value: 5000
+  unit: dB/cm
+  formula: 0.5 dB/um * 1e4 um/cm
+  inputs:
+  - paper plasmonic-section loss 0.5 dB/um (cutback)
+- device_id: kohli2023-a
+  field: vpil_dc_vcm
+  value: 0.0048
+  unit: V*cm
+  formula: 0.048 V*mm / 10
+  inputs:
+  - paper VpiL,DC 0.048 V*mm
+- device_id: kohli2023-a
+  field: vpil_rf_vcm
+  value: 0.0144
+  unit: V*cm
+  formula: 0.144 V*mm / 10
+  inputs:
+  - paper VpiL 0.144 V*mm (144 V*um)

@@ -1,0 +1,136 @@
+paper_id: horst2025
+verified_on: '2026-10-05'
+source_files:
+- references/horst2025/text.md
+- references/horst2025/crossref.json
+- references/horst2025/source.json
+- references/horst2025/figures/page_02.png
+- references/horst2025/figures/img_p02_2.png
+- references/horst2025/figures/page_03.png
+entries:
+- device_id: horst2025-d1
+  field: length_mm
+  value: 0.01
+  unit: mm
+  basis: design_target
+  locator: p.2 text; p.3, Fig. 2 text
+  note: Slots 10-15 um long stated; 10 um is the slot length of the THz-experiment modulator (p.3)
+- device_id: horst2025-d1
+  field: electrode_gap_um
+  value: 0.1
+  unit: um
+  basis: design_target
+  locator: p.2 text
+  note: Slots with 100 nm widths
+- device_id: horst2025-d1
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1(a) legend
+  note: Gold in Fig. 1(a) materials legend
+- device_id: horst2025-d1
+  field: bw3db_ghz
+  value: 880
+  unit: GHz
+  basis: measured
+  locator: p.2 text; Fig. 1(c)
+  note: Normalized modulation efficiency from OSA sideband ratio; reference frequency not stated
+- device_id: horst2025-d1
+  field: bw_measured_to_ghz
+  value: 1140
+  unit: GHz
+  basis: measured
+  locator: p.2 text; Fig. 1(c)
+  note: Tested range 10 MHz to 1.14 THz; 3 dB crossing observed inside it
+- device_id: horst2025-d1
+  field: epitaxy_or_stack
+  value: Silicon waveguides with a gold plasmonic metal-insulator-metal slot, 100 nm wide, filled with organic EO material (Perkinamine chromophore series 3 from Lightwave Logic, per acknowledgements); SiO2 cladding; GSG pads on the Polariton plasmonic PIC platform; signal pad 25 x 25 um, ground pad 42 x 40 um (Fig. 1(c) table); optical path through one arm only (phase-shifter use)
+  unit: ''
+  basis: design_target
+  locator: p.2 text; Fig. 1(a); Fig. 1(c) table
+  note: Pad sizes from Fig. 1(c) table; slot and chromophore from text and acknowledgements
+- device_id: horst2025-d2
+  field: length_mm
+  value: 0.01
+  unit: mm
+  basis: design_target
+  locator: p.2 text; p.3, Fig. 2 text
+  note: Slots 10-15 um long stated; 10 um is the slot length of the THz-experiment modulator (p.3)
+- device_id: horst2025-d2
+  field: electrode_gap_um
+  value: 0.1
+  unit: um
+  basis: design_target
+  locator: p.2 text
+  note: Slots with 100 nm widths
+- device_id: horst2025-d2
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1(a) legend
+  note: Gold in Fig. 1(a) materials legend
+- device_id: horst2025-d2
+  field: bw3db_ghz
+  value: 997
+  unit: GHz
+  basis: measured
+  locator: p.2 text; Fig. 1(c)
+  note: Normalized modulation efficiency from OSA sideband ratio; reference frequency not stated
+- device_id: horst2025-d2
+  field: bw_measured_to_ghz
+  value: 1140
+  unit: GHz
+  basis: measured
+  locator: p.2 text; Fig. 1(c)
+  note: Tested range 10 MHz to 1.14 THz; 3 dB crossing observed inside it
+- device_id: horst2025-d2
+  field: epitaxy_or_stack
+  value: Silicon waveguides with a gold plasmonic metal-insulator-metal slot, 100 nm wide, filled with organic EO material (Perkinamine chromophore series 3 from Lightwave Logic, per acknowledgements); SiO2 cladding; GSG pads on the Polariton plasmonic PIC platform; signal pad 20 x 25 um, ground pad 20 x 40 um (Fig. 1(c) table); optical path through one arm only (phase-shifter use)
+  unit: ''
+  basis: design_target
+  locator: p.2 text; Fig. 1(a); Fig. 1(c) table
+  note: Pad sizes from Fig. 1(c) table; slot and chromophore from text and acknowledgements
+- device_id: horst2025-pm
+  field: length_mm
+  value: 0.01
+  unit: mm
+  basis: design_target
+  locator: p.2 text
+  note: 10 um long phase modulator
+- device_id: horst2025-pm
+  field: electrode_gap_um
+  value: 0.1
+  unit: um
+  basis: design_target
+  locator: p.2 text
+  note: Slots with 100 nm widths, general device description
+- device_id: horst2025-pm
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1(a) legend
+  note: Gold in Fig. 1(a) materials legend
+- device_id: horst2025-pm
+  field: il_onchip_db
+  value: 5.6
+  unit: dB
+  basis: measured
+  locator: p.2 text
+  note: Insertion loss of the 10 um phase modulator; definition not given
+- device_id: horst2025-pm
+  field: epitaxy_or_stack
+  value: Silicon waveguides with a gold plasmonic metal-insulator-metal slot, 100 nm wide, filled with organic EO material (Perkinamine chromophore series 3 from Lightwave Logic, per acknowledgements); SiO2 cladding; GSG pads on the Polariton plasmonic PIC platform; pad layout not stated for this device; optical path through one arm only (phase-shifter use)
+  unit: ''
+  basis: design_target
+  locator: p.2 text; Fig. 1(a)
+  note: Material stack from text, legend and acknowledgements
+derived:
+- device_id: horst2025-pm
+  field: vpil_dc_vcm
+  value: 0.0234
+  formula: 234 V*um / (10000 um/cm); reported Vpi,PM*l = 234 V um (p.2)
+  inputs:
+  - 234 V*um

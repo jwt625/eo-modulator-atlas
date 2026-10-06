@@ -1,0 +1,184 @@
+paper_id: li2024
+verified_on: '2026-10-05'
+source_files:
+- references/li2024/text.md
+- references/li2024/crossref.json
+- references/li2024/figures/page_02.png
+- references/li2024/figures/page_05.png
+- references/li2024/figures/page_07.png
+- references/li2024/figures/img_p02_1.png
+entries:
+- device_id: li2024-c
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3, Section III-A; p.4, Section IV-A
+  note: ECL at 1550 nm for the C-band runs
+- device_id: li2024-c
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.2, Section II
+  note: HSPS length stated as less than 2 mm; Table II footprint 0.4 x 1.6 mm2
+- device_id: li2024-c
+  field: vpi_dc_v
+  value: 3.6
+  unit: V
+  basis: measured
+  locator: p.3, Section II; p.7, Table II
+  note: 'Table II: Vpi at 10 MHz; MZM-level number under push-pull drive (see vpi_convention entry)'
+- device_id: li2024-c
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.3, Section II
+  note: 'Paper: "The HSPS adopts a single-ended drive scheme enabling standard push-pull driving with a Vpi of 3.6 V"; the authors do not label the 3.6 V as MZM-level explicitly'
+- device_id: li2024-c
+  field: vpi_dc_freq_ghz
+  value: 0.01
+  unit: GHz
+  basis: measured
+  locator: p.2, Section II; p.7, Table II
+  note: AC Vpi at 10 MHz by the method of ref. 22
+- device_id: li2024-c
+  field: drive_vpp_v
+  value: 0.83
+  unit: V
+  basis: measured
+  locator: p.4, Section III-B; p.7, Table II
+  note: Driver-less AWG maximum of 830 mVpp; 3.3 Vpp (3.7 Vpp for PAM-8) with the RF amplifier; reference plane not stated
+- device_id: li2024-c
+  field: bw6db_ghz
+  value: 40
+  unit: GHz
+  basis: measured
+  locator: p.3, Section II
+  note: C-band modulators, 6 dB bandwidths within 40 to 50 GHz (early technology samples)
+- device_id: li2024-c
+  field: il_onchip_db
+  value: 2
+  unit: dB
+  basis: measured
+  locator: abstract; p.3, Section II
+  note: Entire MZM including splitters and DC tuners; excludes grating couplers
+- device_id: li2024-c
+  field: extinction_ratio_db
+  value: 23
+  unit: dB
+  basis: measured
+  locator: p.3, Section II
+  note: DC extinction ratio of the MZM with BTO DC tuner, stated as exceeding 23 dB
+- device_id: li2024-c
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: design_target
+  locator: p.3, Section II
+  note: Characteristic impedance and termination both designed to be 50 ohm
+- device_id: li2024-c
+  field: max_baud_gbd
+  value: 128
+  unit: GBd
+  basis: measured
+  locator: p.6, Section IV-B; Fig. 7a
+  note: OOK, driver-less, below KP4-FEC with 11-tap FFE, under 1 Vpp
+- device_id: li2024-c
+  field: modulation_format
+  value: OOK 128 GBd (net 117 Gb/s, KP4-FEC) and PAM-4 106 GBd (net 200 Gb/s, HD-FEC) driver-less; PAM-4 112 GBd (net 212 Gb/s, KP4-FEC), PAM-6 112 GBd (net 262 Gb/s, HD-FEC), PAM-8 110 GBd (net 264 Gb/s,
+    SD-FEC) and PCS-PAM-8 122 GBd (net 300 Gb/s, SD-FEC) with RF amplifier
+  unit: ''
+  basis: measured
+  locator: abstract; p.4, Section IV-A1; Fig. 2d
+- device_id: li2024-c
+  field: max_net_rate_gbps
+  value: 300
+  unit: Gb/s
+  basis: measured
+  locator: abstract; p.4, Section IV-A1
+  note: 122 GBd PCS-PAM-8, net source entropy 2.46 bit/symbol, below 20% SD-FEC, with RF amplifier and PNLE
+- device_id: li2024-c
+  field: energy_per_bit_fj
+  value: 9
+  unit: fJ/bit
+  basis: derived
+  locator: abstract; p.7, Eq. 2 and Table II
+  note: E/bit = (E_RF + E_DC)/B at 106 GBd PAM-4, 830 mVpp, B = 200 Gb/s; termination plus DC tuner only; driver excluded
+- device_id: li2024-o
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.2, Section II
+  note: HSPS length stated as less than 2 mm; Section II parameters stated to apply to both C- and O-band MZMs
+- device_id: li2024-o
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: design_target
+  locator: p.2-3, Section II
+  note: Characteristic impedance and termination both designed to be 50 ohm; Section II parameters stated to apply to both C- and O-band MZMs
+- device_id: li2024-o
+  field: wavelength_nm
+  value: 1310
+  unit: nm
+  basis: measured
+  locator: p.3, Section III-A; p.5, Fig. 5
+  note: DFB laser at 1310 nm; tunable ECL from 1281 to 1331 nm in Fig. 6 and Table I
+- device_id: li2024-o
+  field: max_baud_gbd
+  value: 124
+  unit: GBd
+  basis: measured
+  locator: p.5, Section IV-A2; Fig. 5b
+  note: PAM-4 over 10 km SSMF below HD-FEC, net 232 Gb/s
+- device_id: li2024-o
+  field: modulation_format
+  value: PAM-4 106 GBd (net 200 Gb/s, KP4-FEC, 10 km), PAM-6 100 GBd (net 234 Gb/s, HD-FEC, 10 km), PAM-4 124 GBd (net 232 Gb/s, HD-FEC, 10 km), PAM-8 100 GBd (net 240 Gb/s, SD-FEC, 10 km), PAM-6 106 GBd
+    (net 250 Gb/s, 6.7% FEC OH, 10 km, 1311-1321 nm), PAM-6 106 GBd (net 250 Gb/s, HD-FEC, 2 km)
+  unit: ''
+  basis: measured
+  locator: p.5, Section IV-A2; p.5, Table I
+- device_id: li2024-o
+  field: max_net_rate_gbps
+  value: 250
+  unit: Gb/s
+  basis: measured
+  locator: p.5, Table I
+  note: 106 GBd PAM-6 over 2 km SSMF below HD-FEC (6.7% overhead), 1291 to 1321 nm; Table I also lists 250 Gb/s over 10 km with 106 GBd PAM-6, 6.7% overhead, 1311 to 1321 nm
+- device_id: li2024-ps
+  field: length_mm
+  value: 1.5
+  unit: mm
+  basis: design_target
+  locator: p.2, Fig. 1 caption
+- device_id: li2024-ps
+  field: vpi_dc_v
+  value: 3.2
+  unit: V
+  basis: measured
+  locator: p.2, Fig. 1c
+  note: Fit parameter in the Fig. 1c legend (average transmission vs Vpp)
+- device_id: li2024-ps
+  field: vpi_dc_freq_ghz
+  value: 0.01
+  unit: GHz
+  basis: measured
+  locator: p.2, Fig. 1c caption; Section II
+- device_id: li2024-ps
+  field: vpil_dc_vcm
+  value: 0.48
+  unit: V*cm
+  basis: derived
+  locator: abstract; p.2, Section II
+  note: Paper states VpiL 4.8 V mm; converted to V cm
+derived:
+- device_id: li2024-ps
+  field: vpil_dc_vcm
+  value: 0.48
+  unit: V*cm
+  formula: 4.8 V*mm / 10
+  inputs:
+  - paper VpiL 4.8 V*mm

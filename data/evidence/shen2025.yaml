@@ -1,0 +1,919 @@
+paper_id: shen2025
+verified_on: '2026-10-05'
+source_files:
+- references/shen2025/text.md
+- references/shen2025/supplement/text.md
+- references/shen2025/crossref.json
+- references/shen2025/figures/page_03.png
+- references/shen2025/figures/page_05.png
+- references/shen2025/figures/page_06.png
+- references/shen2025/figures/page_07.png
+- references/shen2025/figures/img_p03_2.png
+- references/shen2025/figures/img_p05_2.png
+- references/shen2025/supplement/source.docx
+entries:
+- device_id: shen2025-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. 3
+  note: '''driven by GSG electrodes in a single-driving push-pull configuration'''
+- device_id: shen2025-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Eq. (1); p.4 Sec. 3
+  note: push-pull MZM Vpi; Vpi*L equation is stated for the push-pull configuration
+- device_id: shen2025-a
+  field: wavelength_nm
+  value: 1547.1
+  unit: nm
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; p.5 Sec. 4
+  note: fixed-wavelength operating point of the tunable laser
+- device_id: shen2025-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.5 Fig. 2(e); Table 1 p.8
+  note: arm (modulation section) length 1 mm
+- device_id: shen2025-a
+  field: vpi_dc_v
+  value: 2.1
+  unit: V
+  basis: measured
+  locator: p.4 Sec. 3; p.5 Fig. 2(e),(f); Table 1 p.8
+  note: 10 kHz triangular sweep; smallest Vpi of the device
+- device_id: shen2025-a
+  field: vpil_dc_vcm
+  value: 0.21
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.4 Sec. 3; p.5 Fig. 2(g)
+  note: author-stated product of Vpi and 1 mm arm length
+- device_id: shen2025-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 3(b)
+  note: 'paper: ''bandwidth exceeds 110 GHz''; no -3 dB crossing within the 110 GHz LCA range (supplement Fig. S12 agrees)'
+- device_id: shen2025-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 3(b)
+  note: 110 GHz bandwidth lightwave component analyzer
+- device_id: shen2025-a
+  field: extinction_ratio_db
+  value: 27.5
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. 3; p.5 Fig. 2(f)
+  note: static transmission sweep at 1547.1 nm
+- device_id: shen2025-a
+  field: il_onchip_db
+  value: 12.4
+  unit: dB
+  basis: extracted_from_figure
+  locator: supplement Section 7, Fig. S9
+  note: 'read from Fig. S9 (docx image word/media/image36.jpeg, transmission vs wavelength) at 1547.1 nm; about +/-0.3 dB, at the end of the plotted trace (-12.2 to -12.6 dB); the paper calls it on-chip loss and does not say whether the grating couplers are included'
+- device_id: shen2025-a
+  field: il_onchip_scope
+  value: undefined
+  unit: ''
+  basis: derived
+  locator: supplement Section 7
+  note: 'supplement Section 7 and main p.4 Sec. 3 call the loss on-chip and wavelength dependent; coupler treatment not stated'
+- device_id: shen2025-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut single-crystal TFLN wafer thickness
+- device_id: shen2025-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1 caption (continued p.4)
+  note: parameter g of the segmented slow-wave electrode
+- device_id: shen2025-a
+  field: electrode_thickness_um
+  value: 0.35
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 350 nm segmented slow-wave electrodes by e-beam evaporation and lift-off
+- device_id: shen2025-a
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(e) legend
+  note: Au in the schematic legend; text names no metal
+- device_id: shen2025-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 2 um SiO2 buried oxide of the NanoLN wafer
+- device_id: shen2025-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3; p.3 Fig. 1(e) legend
+  note: silicon substrate, thickness not stated
+- device_id: shen2025-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut
+- device_id: shen2025-a
+  field: epitaxy_or_stack
+  value: Si / 2 um SiO2 (BOX) / 300 nm x-cut LN / 300 nm PECVD SiN loaded waveguide with periodic rectangular air holes (period 420 nm; D1 150 nm, D2 80 nm, D3 674 nm) / 350 nm Au T-rail slow-wave GSG electrodes
+    (p = 50 um, h = t = 4 um, r = 45 um, s = 2 um)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1; p.4 Sec. 3; p.2 Sec. 2
+  note: layer stack and air-hole/electrode dimensions as stated
+- device_id: shen2025-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. 3
+  note: '''driven by GSG electrodes in a single-driving push-pull configuration'''
+- device_id: shen2025-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Eq. (1); p.4 Sec. 3
+  note: push-pull MZM Vpi; Vpi*L equation is stated for the push-pull configuration
+- device_id: shen2025-b
+  field: wavelength_nm
+  value: 1546.92
+  unit: nm
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; p.5 Sec. 4
+  note: fixed-wavelength operating point of the tunable laser
+- device_id: shen2025-b
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.5 Fig. 2(e); Table 1 p.8
+  note: arm (modulation section) length 1 mm
+- device_id: shen2025-b
+  field: vpi_dc_v
+  value: 4
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; supplement Section 8, Fig. S11(a)
+  note: 10 kHz triangular sweep
+- device_id: shen2025-b
+  field: vpil_dc_vcm
+  value: 0.4
+  unit: V*cm
+  basis: derived
+  locator: p.5 Sec. 4 (after Fig. 3 text); Fig. 3(b) labels; supplement Section 9
+  note: author-stated Vpi*L for the 1 mm arm
+- device_id: shen2025-b
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 3(b)
+  note: 'paper: ''bandwidth exceeds 110 GHz''; no -3 dB crossing within the 110 GHz LCA range (supplement Fig. S12 agrees)'
+- device_id: shen2025-b
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 3(b)
+  note: 110 GHz bandwidth lightwave component analyzer
+- device_id: shen2025-b
+  field: extinction_ratio_db
+  value: 23
+  unit: dB
+  basis: measured
+  locator: supplement Section 8, Fig. S11(b)
+  note: static ER at this wavelength
+- device_id: shen2025-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut single-crystal TFLN wafer thickness
+- device_id: shen2025-b
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1 caption (continued p.4)
+  note: parameter g of the segmented slow-wave electrode
+- device_id: shen2025-b
+  field: electrode_thickness_um
+  value: 0.35
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 350 nm segmented slow-wave electrodes by e-beam evaporation and lift-off
+- device_id: shen2025-b
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(e) legend
+  note: Au in the schematic legend; text names no metal
+- device_id: shen2025-b
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 2 um SiO2 buried oxide of the NanoLN wafer
+- device_id: shen2025-b
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3; p.3 Fig. 1(e) legend
+  note: silicon substrate, thickness not stated
+- device_id: shen2025-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut
+- device_id: shen2025-b
+  field: epitaxy_or_stack
+  value: Si / 2 um SiO2 (BOX) / 300 nm x-cut LN / 300 nm PECVD SiN loaded waveguide with periodic rectangular air holes (period 420 nm; D1 150 nm, D2 80 nm, D3 674 nm) / 350 nm Au T-rail slow-wave GSG electrodes
+    (p = 50 um, h = t = 4 um, r = 45 um, s = 2 um)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1; p.4 Sec. 3; p.2 Sec. 2
+  note: layer stack and air-hole/electrode dimensions as stated
+- device_id: shen2025-c
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. 3
+  note: '''driven by GSG electrodes in a single-driving push-pull configuration'''
+- device_id: shen2025-c
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Eq. (1); p.4 Sec. 3
+  note: push-pull MZM Vpi; Vpi*L equation is stated for the push-pull configuration
+- device_id: shen2025-c
+  field: wavelength_nm
+  value: 1546.7
+  unit: nm
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; p.5 Sec. 4
+  note: fixed-wavelength operating point of the tunable laser
+- device_id: shen2025-c
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.5 Fig. 2(e); Table 1 p.8
+  note: arm (modulation section) length 1 mm
+- device_id: shen2025-c
+  field: vpi_dc_v
+  value: 7
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; supplement Section 8, Fig. S11(a)
+  note: 10 kHz triangular sweep
+- device_id: shen2025-c
+  field: vpil_dc_vcm
+  value: 0.7
+  unit: V*cm
+  basis: derived
+  locator: p.5 Sec. 4 (after Fig. 3 text); Fig. 3(b) labels; supplement Section 9
+  note: author-stated Vpi*L for the 1 mm arm
+- device_id: shen2025-c
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 3(b)
+  note: 'paper: ''bandwidth exceeds 110 GHz''; no -3 dB crossing within the 110 GHz LCA range (supplement Fig. S12 agrees)'
+- device_id: shen2025-c
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 3(b)
+  note: 110 GHz bandwidth lightwave component analyzer
+- device_id: shen2025-c
+  field: extinction_ratio_db
+  value: 23.8
+  unit: dB
+  basis: measured
+  locator: supplement Section 8, Fig. S11(b)
+  note: static ER at this wavelength
+- device_id: shen2025-c
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut single-crystal TFLN wafer thickness
+- device_id: shen2025-c
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1 caption (continued p.4)
+  note: parameter g of the segmented slow-wave electrode
+- device_id: shen2025-c
+  field: electrode_thickness_um
+  value: 0.35
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 350 nm segmented slow-wave electrodes by e-beam evaporation and lift-off
+- device_id: shen2025-c
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(e) legend
+  note: Au in the schematic legend; text names no metal
+- device_id: shen2025-c
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 2 um SiO2 buried oxide of the NanoLN wafer
+- device_id: shen2025-c
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3; p.3 Fig. 1(e) legend
+  note: silicon substrate, thickness not stated
+- device_id: shen2025-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut
+- device_id: shen2025-c
+  field: epitaxy_or_stack
+  value: Si / 2 um SiO2 (BOX) / 300 nm x-cut LN / 300 nm PECVD SiN loaded waveguide with periodic rectangular air holes (period 420 nm; D1 150 nm, D2 80 nm, D3 674 nm) / 350 nm Au T-rail slow-wave GSG electrodes
+    (p = 50 um, h = t = 4 um, r = 45 um, s = 2 um)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1; p.4 Sec. 3; p.2 Sec. 2
+  note: layer stack and air-hole/electrode dimensions as stated
+- device_id: shen2025-d
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. 3
+  note: '''driven by GSG electrodes in a single-driving push-pull configuration'''
+- device_id: shen2025-d
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Eq. (1); p.4 Sec. 3
+  note: push-pull MZM Vpi; Vpi*L equation is stated for the push-pull configuration
+- device_id: shen2025-d
+  field: wavelength_nm
+  value: 1546.1
+  unit: nm
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; p.5 Sec. 4
+  note: fixed-wavelength operating point of the tunable laser
+- device_id: shen2025-d
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.5 Fig. 2(e); Table 1 p.8
+  note: arm (modulation section) length 1 mm
+- device_id: shen2025-d
+  field: vpi_dc_v
+  value: 9.8
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; supplement Section 8, Fig. S11(a)
+  note: 10 kHz triangular sweep
+- device_id: shen2025-d
+  field: vpil_dc_vcm
+  value: 0.98
+  unit: V*cm
+  basis: derived
+  locator: p.5 Sec. 4 (after Fig. 3 text); Fig. 3(b) labels; supplement Section 9
+  note: author-stated Vpi*L for the 1 mm arm
+- device_id: shen2025-d
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 3(b)
+  note: 'paper: ''bandwidth exceeds 110 GHz''; no -3 dB crossing within the 110 GHz LCA range (supplement Fig. S12 agrees)'
+- device_id: shen2025-d
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 3(b)
+  note: 110 GHz bandwidth lightwave component analyzer
+- device_id: shen2025-d
+  field: extinction_ratio_db
+  value: 23.2
+  unit: dB
+  basis: measured
+  locator: supplement Section 8, Fig. S11(b)
+  note: static ER at this wavelength
+- device_id: shen2025-d
+  field: il_onchip_db
+  value: 13.0
+  unit: dB
+  basis: extracted_from_figure
+  locator: supplement Section 7, Fig. S9
+  note: 'read from Fig. S9 (docx image word/media/image36.jpeg, transmission vs wavelength) at 1546.1 nm; about +/-0.3 dB, near the local minimum of the trace at about 1546.07 nm; the paper calls it on-chip loss and does not say whether the grating couplers are included'
+- device_id: shen2025-d
+  field: il_onchip_scope
+  value: undefined
+  unit: ''
+  basis: derived
+  locator: supplement Section 7
+  note: 'supplement Section 7 and main p.4 Sec. 3 call the loss on-chip and wavelength dependent; coupler treatment not stated'
+- device_id: shen2025-d
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut single-crystal TFLN wafer thickness
+- device_id: shen2025-d
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1 caption (continued p.4)
+  note: parameter g of the segmented slow-wave electrode
+- device_id: shen2025-d
+  field: electrode_thickness_um
+  value: 0.35
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 350 nm segmented slow-wave electrodes by e-beam evaporation and lift-off
+- device_id: shen2025-d
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(e) legend
+  note: Au in the schematic legend; text names no metal
+- device_id: shen2025-d
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 2 um SiO2 buried oxide of the NanoLN wafer
+- device_id: shen2025-d
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3; p.3 Fig. 1(e) legend
+  note: silicon substrate, thickness not stated
+- device_id: shen2025-d
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut
+- device_id: shen2025-d
+  field: epitaxy_or_stack
+  value: Si / 2 um SiO2 (BOX) / 300 nm x-cut LN / 300 nm PECVD SiN loaded waveguide with periodic rectangular air holes (period 420 nm; D1 150 nm, D2 80 nm, D3 674 nm) / 350 nm Au T-rail slow-wave GSG electrodes
+    (p = 50 um, h = t = 4 um, r = 45 um, s = 2 um)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1; p.4 Sec. 3; p.2 Sec. 2
+  note: layer stack and air-hole/electrode dimensions as stated
+- device_id: shen2025-e
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. 3
+  note: '''driven by GSG electrodes in a single-driving push-pull configuration'''
+- device_id: shen2025-e
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Eq. (1); p.4 Sec. 3
+  note: push-pull MZM Vpi; Vpi*L equation is stated for the push-pull configuration
+- device_id: shen2025-e
+  field: wavelength_nm
+  value: 1535
+  unit: nm
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; supplement Section 8, Fig. S11(a)
+  note: fixed-wavelength operating point of the tunable laser
+- device_id: shen2025-e
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.5 Fig. 2(e); Table 1 p.8
+  note: arm (modulation section) length 1 mm
+- device_id: shen2025-e
+  field: vpi_dc_v
+  value: 21.7
+  unit: V
+  basis: measured
+  locator: p.5 Fig. 2(e) caption; supplement Section 8, Fig. S11(a)
+  note: regular region, 10 kHz triangular sweep
+- device_id: shen2025-e
+  field: vpil_dc_vcm
+  value: 2.17
+  unit: V*cm
+  basis: derived
+  locator: supplement Section 8
+  note: author-stated Vpi*L 2.17 V cm for the 1 mm arm
+- device_id: shen2025-e
+  field: extinction_ratio_db
+  value: 22
+  unit: dB
+  basis: measured
+  locator: supplement Section 8, Fig. S11(b)
+  note: static ER at 1535 nm
+- device_id: shen2025-e
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut single-crystal TFLN wafer thickness
+- device_id: shen2025-e
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1 caption (continued p.4)
+  note: parameter g of the segmented slow-wave electrode
+- device_id: shen2025-e
+  field: electrode_thickness_um
+  value: 0.35
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 350 nm segmented slow-wave electrodes by e-beam evaporation and lift-off
+- device_id: shen2025-e
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(e) legend
+  note: Au in the schematic legend; text names no metal
+- device_id: shen2025-e
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 2 um SiO2 buried oxide of the NanoLN wafer
+- device_id: shen2025-e
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3; p.3 Fig. 1(e) legend
+  note: silicon substrate, thickness not stated
+- device_id: shen2025-e
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut
+- device_id: shen2025-e
+  field: epitaxy_or_stack
+  value: Si / 2 um SiO2 (BOX) / 300 nm x-cut LN / 300 nm PECVD SiN loaded waveguide with periodic rectangular air holes (period 420 nm; D1 150 nm, D2 80 nm, D3 674 nm) / 350 nm Au T-rail slow-wave GSG electrodes
+    (p = 50 um, h = t = 4 um, r = 45 um, s = 2 um)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1; p.4 Sec. 3; p.2 Sec. 2
+  note: layer stack and air-hole/electrode dimensions as stated
+- device_id: shen2025-sys
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. 3
+  note: '''driven by GSG electrodes in a single-driving push-pull configuration'''
+- device_id: shen2025-sys
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract; p.5 Fig. 2(e); Table 1 p.8
+  note: arm (modulation section) length 1 mm
+- device_id: shen2025-sys
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.7 Fig. 4(l); p.6 Sec. 4
+  note: eye-diagram carrier wavelength not stated; scan about 1544.9-1547.1 nm of Fig. 4(l)
+- device_id: shen2025-sys
+  field: drive_vpp_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.6 Sec. 4; Table 1 p.8
+  note: AWG output amplified by EA; reference plane and probe loss not stated
+- device_id: shen2025-sys
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut single-crystal TFLN wafer thickness
+- device_id: shen2025-sys
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1 caption (continued p.4)
+  note: parameter g of the segmented slow-wave electrode
+- device_id: shen2025-sys
+  field: electrode_thickness_um
+  value: 0.35
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 350 nm segmented slow-wave electrodes by e-beam evaporation and lift-off
+- device_id: shen2025-sys
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(e) legend
+  note: Au in the schematic legend; text names no metal
+- device_id: shen2025-sys
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 2 um SiO2 buried oxide of the NanoLN wafer
+- device_id: shen2025-sys
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3; p.3 Fig. 1(e) legend
+  note: silicon substrate, thickness not stated
+- device_id: shen2025-sys
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut
+- device_id: shen2025-sys
+  field: epitaxy_or_stack
+  value: Si / 2 um SiO2 (BOX) / 300 nm x-cut LN / 300 nm PECVD SiN loaded waveguide with periodic rectangular air holes (period 420 nm; D1 150 nm, D2 80 nm, D3 674 nm) / 350 nm Au T-rail slow-wave GSG electrodes
+    (p = 50 um, h = t = 4 um, r = 45 um, s = 2 um)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1; p.4 Sec. 3; p.2 Sec. 2
+  note: layer stack and air-hole/electrode dimensions as stated
+- device_id: shen2025-sys
+  field: max_baud_gbd
+  value: 180
+  unit: GBd
+  basis: measured
+  locator: p.7 Fig. 4(d) label
+  note: NRZ 180 Gbps labelled '180 Gbaud'
+- device_id: shen2025-sys
+  field: modulation_format
+  value: NRZ 120/150/180 Gbps; PAM4 200/220/240 Gbps (100/110/120 GBd); PAM6 257 Gbps (100 GBd); PAM8 270 Gbps (90 GBd) and 300 Gbps (100 GBd); eye diagrams without transceiver DSP, BER by offline feed-forward
+    equalizer
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. 4; p.7 Fig. 4(b)-(j) labels
+  note: eye diagrams and BER points as listed
+- device_id: shen2025-sys
+  field: max_line_rate_gbps
+  value: 300
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.7 Fig. 4(j)
+  note: 300 Gbps PAM8 eye diagram, 100 GBd
+- device_id: shen2025-sys
+  field: energy_per_bit_fj
+  value: 44
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.6 Sec. 4; supplement Section 11
+  note: estimated for 240 Gbps PAM4 with Vrms 730 mV; modulator dissipation, driver excluded
+- device_id: shen2025-design
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: measured
+  locator: p.4 Sec. 3
+  note: '''driven by GSG electrodes in a single-driving push-pull configuration'''
+- device_id: shen2025-design
+  field: bw3db_ghz
+  value: 235
+  unit: GHz
+  basis: simulated
+  locator: p.4 Sec. 2 text; p.4 Fig. 1(h); p.5 Sec. 4; p.6 Sec. 5
+  note: simulated EO S21, S21 drops by 3 dB at 235 GHz; reference is the 0 dB value at 0 GHz in the plot
+- device_id: shen2025-design
+  field: bw3db_reference
+  value: dc
+  unit: ''
+  basis: derived
+  locator: p.4 Fig. 1(h)
+  note: read from the plotted curve, 0 dB at 0 GHz; not stated in text
+- device_id: shen2025-design
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: derived
+  locator: p.4 Fig. 1(h)
+  note: simulated EO S21 curve
+- device_id: shen2025-design
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: simulated
+  locator: supplement Section 6, Fig. S8(d)
+  note: 'text: ''simulated impedance is ~50 ohm'''
+- device_id: shen2025-design
+  field: n_rf
+  value: 3
+  unit: '1'
+  basis: simulated
+  locator: p.4 Sec. 2 text; p.4 Fig. 1(g)
+  note: 'text: ''RF index of >3'''
+- device_id: shen2025-design
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.4 Fig. 1(h) caption; p.5 Sec. 4
+  note: simulation of the 1 mm device (3 dB bandwidth of 'our device' is predicted to be 235 GHz); length not restated in the simulation text
+- device_id: shen2025-design
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut single-crystal TFLN wafer thickness
+- device_id: shen2025-design
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1 caption (continued p.4)
+  note: parameter g of the segmented slow-wave electrode
+- device_id: shen2025-design
+  field: electrode_thickness_um
+  value: 0.35
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 350 nm segmented slow-wave electrodes by e-beam evaporation and lift-off
+- device_id: shen2025-design
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1(e) legend
+  note: Au in the schematic legend; text names no metal
+- device_id: shen2025-design
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 2 um SiO2 buried oxide of the NanoLN wafer
+- device_id: shen2025-design
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3; p.3 Fig. 1(e) legend
+  note: silicon substrate, thickness not stated
+- device_id: shen2025-design
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: x-cut
+- device_id: shen2025-design
+  field: epitaxy_or_stack
+  value: Si / 2 um SiO2 (BOX) / 300 nm x-cut LN / 300 nm PECVD SiN loaded waveguide with periodic rectangular air holes (period 420 nm; D1 150 nm, D2 80 nm, D3 674 nm) / 350 nm Au T-rail slow-wave GSG electrodes
+    (p = 50 um, h = t = 4 um, r = 45 um, s = 2 um)
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 1; p.4 Sec. 3; p.2 Sec. 2
+  note: layer stack and air-hole/electrode dimensions as stated
+derived:
+- device_id: shen2025-a
+  field: vpi_dc_freq_ghz
+  value: 1.0e-05
+  formula: 10 kHz / 1e6 (kHz to GHz)
+  inputs: []
+- device_id: shen2025-b
+  field: vpi_dc_freq_ghz
+  value: 1.0e-05
+  formula: 10 kHz / 1e6 (kHz to GHz)
+  inputs: []
+- device_id: shen2025-c
+  field: vpi_dc_freq_ghz
+  value: 1.0e-05
+  formula: 10 kHz / 1e6 (kHz to GHz)
+  inputs: []
+- device_id: shen2025-d
+  field: vpi_dc_freq_ghz
+  value: 1.0e-05
+  formula: 10 kHz / 1e6 (kHz to GHz)
+  inputs: []
+- device_id: shen2025-e
+  field: vpi_dc_freq_ghz
+  value: 1.0e-05
+  formula: 10 kHz / 1e6 (kHz to GHz)
+  inputs: []
+context_values:
+- item: simulated_microwave_loss_db_per_cm_per_sqrt_ghz
+  value: 0.54 (Si substrate); 0.22 (air); 0.31 (quartz)
+  locator: supplement Section 6, Fig. S8(e)
+  note: simulation, T-rail electrode with matched velocity and impedance
+- item: on_chip_loss_db_slow_light_range
+  value: min 5.8; max 16.9; mean 9.3 (1544.9-1547.1 nm)
+  locator: supplement Section 7, Fig. S9
+  note: transmission of the grating-coupler device, scope undefined (coupler treatment not stated); min and max located in Fig. S9 at about 1545.22 nm (5.8 dB) and 1546.72 nm (16.8 dB); rows a and d read from the same figure
+- item: on_chip_loss_db_fig_s9_readings_not_entered
+  value: about 10.2 (1546.92 nm, shen2025-b); about 15.3 (1546.7 nm, shen2025-c); 1535 nm (shen2025-e) outside the plotted range 1544.9-1547.1 nm
+  locator: supplement Section 7, Fig. S9
+  note: read from the docx image; about +/-1 dB on steep segments (sample spacing about 0.07 nm); not entered as cells (coordinator decision), il_onchip_db is entered on shen2025-a (12.4) and shen2025-d (13.0) only
+- item: mmi_excess_loss_db
+  value: measured 0.4; simulated 0.19; power imbalance measured 0.5, simulated 0.1
+  locator: supplement Section 5, Fig. S7
+  note: 1x2 MMI splitter/combiner
+- item: optical_confinement_in_LN
+  value: 61.5 percent
+  locator: p.4 Sec. 3; p.4 Fig. 1(e) caption
+  note: hybrid SiN-LN TE mode
+- item: simulated_bandwidth_substrate_study
+  value: EO S21 below 1 dB roll-off at 800 GHz for Si, air and quartz substrates
+  locator: supplement Section 6, Fig. S8(f)
+  note: assuming velocity and impedance matching; estimate
+- item: eye_diagram_er_nrz_db
+  value: 3.3 (120 Gbps); 2.1 (150 Gbps); 1.5 (180 Gbps)
+  locator: p.6 Sec. 4; p.7 Fig. 4(b)-(d)
+  note: dynamic extinction ratio
+- item: ber_nrz
+  value: 9.5e-4 (120 Gbps); 2.3e-4 (150 Gbps); 3.6e-2 (180 Gbps)
+  locator: p.6 Sec. 4
+  note: offline feed-forward equalizer
+- item: operating_wavelength_range_100gbps_nrz_nm
+  value: 2.2 measured; 4.4 extended by symmetric bandgap (long-wavelength side not tested)
+  locator: p.6 Sec. 4; p.7 Fig. 4(l)
+  note: BER below 4e-2
+- item: slow_light_waveguide_fit_coefficients
+  value: 0.62, 0.55, 0.78, 0.12
+  locator: supplement Section 1, Eq. (8),(9)
+  note: linear fit of effective index to LN index
+- item: cascaded_1d_tpc_cavity_proposal
+  value: ng about 6.8 over 7.1 nm with insertion loss below 1 dB
+  locator: supplement Section 7, Fig. S10
+  note: simulated proposal, not fabricated

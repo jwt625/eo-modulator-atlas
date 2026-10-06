@@ -1,9 +1,9 @@
 # EO Modulator Atlas
 
 A traceable literature database and static browser explorer for electro-optic
-modulators. The integrated atlas contains **184 papers (2012-2026), 407 device rows and
-240 organizations**, all papers with `audit_status: audited` (checked 2026-10-05). It also holds
-1,723 author-affiliation rows, 212 geolocated institution sites and 1,278 deduplicated people. The candidate index contains
+modulators. The integrated atlas contains **208 papers (2012-2026), 479 device rows and
+258 organizations**, all papers with `audit_status: audited` (checked 2026-10-05). It also holds
+1,723 author-affiliation rows, 212 geolocated institution sites and 1,385 deduplicated people. The candidate index contains
 461 records and distillation is continuing. Each reported metric has an evidence locator and
 basis. Missing values stay empty.
 
@@ -134,7 +134,7 @@ fixed group index are excluded from prediction comparisons. Each mesh has an
 2. Implement periodic-cell/EO-response stages and quantify scalar/vector limitations.
 3. Reconcile generated rankings with sample/loss-scope guards before merging reviewed batches.
 4. Continue ingestion, literature convergence studies and independent audits.
-5. Open data items from DevLog-020: hu2026a per-channel bandwidths, per-author affiliations for the 46 OFC 2026 papers.
+5. Open data items (DevLog-020/021): hu2026a per-channel bandwidths; per-author affiliations for the 46 OFC 2026 papers and the 31 papers ingested 2026-10-05; arXiv preprint search for the 13 second-wave papers (arXiv returned HTTP 429).
 
 Current work and remaining phases are recorded in [DevLog-000](DevLog/DevLog-000-plan.md)
 and [DevLog-002](DevLog/DevLog-002-work-plan-and-ownership.md).
@@ -146,5 +146,6 @@ Latest audit corrections, sample guards and optical runner integration:
 Explore geography and lineage panels: [DevLog-017](DevLog/DevLog-017-explore-geo-and-lineage-panels.md).
 Latest ingestion (46 OFC 2026 papers, independent audit): [DevLog-019](DevLog/DevLog-019-ofc2026-retrieval-and-ingestion.md).
 Data convention decisions and their application: [DevLog-020](DevLog/DevLog-020-data-convention-decisions.md).
+Latest ingestion (papers retrieved by the user 2026-10-05, batches p6/p7, independent audit and verification): [DevLog-021](DevLog/DevLog-021-inbox-ingestion-2026-10-05.md).
 Read [WORKBOARD.md](WORKBOARD.md) and the active claims under
 `coordination/claims/` before starting concurrent work.

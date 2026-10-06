@@ -1,0 +1,145 @@
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand waveguide in x; mirror plane (signal centre) at x = -11.75 um; LEFT waveguide at x = -23.5 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm.
+# Geometry values are the designed parameters of p.3 (g, ws, wg, t, w, h); fabricated values are not reported.
+schema: eo-atlas.sim/v1
+id: pan2021-a
+paper_id: pan2021
+device_id: pan2021-a
+title: Pan 2021, 5 mm 1957 nm TFLN MZM on silicon (GSG traveling-wave electrode, push-pull arms), designed parameters
+repro_grade: A
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+optics: {wavelength_nm: 1957, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null, eo_axis: auto}
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {eps_r: 3.9}
+  silicon: {eps_r: 11.7}
+  gold: {conductor: true, sigma_Sm: 41000000.0, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+geometry:
+  symmetry: none
+  domain:
+    x_um: [-150, 120]
+    y_um: [-250, 120]
+  regions:
+  - name: ambient
+    material: air
+    rect:
+      x_um: [-150, 120]
+      y_um: [-250, 120]
+  - name: substrate
+    material: silicon
+    rect:
+      x_um: [-150, 120]
+      y_um: [-250, -2]
+  - name: box
+    material: silicon_dioxide
+    rect:
+      x_um: [-150, 120]
+      y_um: [-2, 0]
+  - name: ln_slab
+    material: lithium_niobate
+    rect:
+      x_um: [-150, 120]
+      y_um: [0, 0.3]
+  - name: ln_rib_r
+    material: lithium_niobate
+    polygon_um:
+    - [-0.7232, 0.3]
+    - [0.7232, 0.3]
+    - [0.55, 0.6]
+    - [-0.55, 0.6]
+  - name: ln_rib_l
+    material: lithium_niobate
+    polygon_um:
+    - [-24.2232, 0.3]
+    - [-22.7768, 0.3]
+    - [-22.95, 0.6]
+    - [-24.05, 0.6]
+  electrodes:
+  - name: signal
+    role: signal
+    weight: 1.0
+    rect:
+      x_um: [-20.25, -3.25]
+      y_um: [0.3, 0.8]
+    material: gold
+  - name: ground_r
+    role: ground
+    weight: 0.0
+    rect:
+      x_um: [3.25, 63.25]
+      y_um: [0.3, 0.8]
+    material: gold
+  - name: ground_l
+    role: ground
+    weight: 0.0
+    rect:
+      x_um: [-86.75, -26.75]
+      y_um: [0.3, 0.8]
+    material: gold
+  optical_window:
+    x_um: [-3.1, 3.1]
+    y_um: [-1.5, 1.5]
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 5
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 100, n_points: 200}
+alt_geometries: {}
+targets:
+- metric: vpi_l_dc_vcm
+  value: 3.67
+  tol_rel: 0.15
+  source: {device_id: pan2021-a, field: vpil_dc_vcm, comparable: false, note: NON-COMPARABLE until LN constants at 1957 nm are verified; fabricated electrodes were wider than designed}
+- metric: vpi_l_dc_vcm
+  value: 4.06
+  tol_rel: 0.1
+  source: {paper_id: pan2021, locator: 'p.3 Sec. 2; Fig. 2(c) (g = 6.5 um, h = 300 nm)', basis: simulated, note: paper's own simulation of the designed cross-section; cross-solver reference}
+- metric: ng_opt
+  value: 2.276
+  tol_abs: 0.05
+  source: {device_id: pan2021-a, field: ng_opt, note: paper-simulated; depends on the missing LN indices}
+- metric: z0_ohm
+  value: 50
+  tol_abs: 2.0
+  source: {device_id: pan2021-a, field: z0_ohm, note: 'paper-simulated Re[Z0] plateau at 50 ohm (Fig. 4(a))'}
+reported_curves: []
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: p.6 Sec. 3 (1957 nm laser), note: design wavelength 1.95 um (p.2)}
+  optics.polarization: {class: paper_exact, locator: p.2 Sec. 2 (TE0 mode of the x-cut waveguide)}
+  optics.group_index_from: {class: project_inference, note: paper quotes ng 2.276 (p.4 Fig. 4(c)); the engine derives it by finite difference}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: p.2 Sec. 2 (x-cut), note: propagation along y is a project_inference (light travels in the x-z plane per Fig. 1 axes)}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example value perp 43, par 28); the paper states no RF permittivity of LN"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values r13 8.6, r22 3.4, r33 30.8, r51 28.0); the paper states no Pockels coefficients; the wavelength of the SPEC.md example set is not stated in any repo source; the device is at 1957 nm"}
+  materials.silicon_dioxide.eps_r: {class: unknown, note: "UNVERIFIED placeholder eps_r 3.9; the paper states none"}
+  materials.silicon.eps_r: {class: unknown, note: "UNVERIFIED placeholder eps_r 11.7; the paper states none"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder 4.1e7 S/m; the paper states no film conductivity"}
+  line.length_mm: {class: paper_exact, locator: p.3 Sec. 2 (arm length 5 mm)}
+  line.source_ohm: {class: paper_exact, locator: p.3 Sec. 2 (source and load assumed 50 ohm in the calculation)}
+  line.load_ohm: {class: paper_exact, locator: p.2 Fig. 1(a) (50 ohm load); p.3 Sec. 2}
+  line.differential: {class: project_inference, note: single GSG probe; push-pull is produced by the arm placement; paper states 'driven with the push-pull configuration' (p.3)}
+  line.conductor_loss_model: {class: project_inference, note: paper calculates alpha_m below 9 dB/cm to 100 GHz (Fig. 4(b)); loss model left to the engine}
+  geometry.regions.box: {class: paper_exact, locator: p.4 Sec. 2 (2 um silica)}
+  geometry.regions.substrate: {class: paper_exact, locator: p.4 Sec. 2 (0.4 mm Si; region clipped to the domain)}
+  geometry.regions.ln_slab: {class: paper_exact, locator: 'p.3-4 Sec. 2 (600 nm film, rib height h = 300 nm)', note: slab 300 nm is the arithmetic 600 - 300}
+  geometry.regions.ln_rib_r: {class: project_inference, locator: p.2-3 Sec. 2 (w = 1.1 um top width, h = 300 nm: paper_exact); p.4 (sidewall about 30 deg), note: 'the sidewall reading is the inference: 30 deg taken from the vertical as drawn in Fig. 1(b), so the bottom half-width is 0.55 + 0.3 tan 30 deg = 0.723 um; the SEM Fig. 5(b) looks steeper'}
+  geometry.regions.ln_rib_l: {class: project_inference, note: 'same rib at x = -23.5 um, centred in the left 6.5 um gap; arm spacing follows from the signal width'}
+  geometry.electrodes.signal: {class: paper_exact, locator: 'p.3 Sec. 2 (g = 6.5, ws = 17, t = 0.5 um; designed)', note: electrodes sit on the LN slab top (Fig. 1(b)); fabricated strips were wider than designed (p.6)}
+  geometry.electrodes.ground_r: {class: paper_exact, locator: p.3 Sec. 2 (wg = 60 um; designed), note: 'inner edge 3.25 um from the right waveguide axis (waveguide centred in the gap, Fig. 1(b))'}
+  geometry.electrodes.ground_l: {class: project_inference, note: mirror of ground_r about the signal centre}
+  geometry.optical_window: {class: project_inference, note: crop inside the electrode edge at 3.25 um}
+  geometry.domain: {class: project_inference}
+  geometry.mesh: {class: project_inference}
+missing: [LN ordinary and extraordinary indices at 1957 nm (left out; optical stage cannot run), SiO2 and Si optical indices at 1957 nm (left out), 'RF permittivity and Pockels coefficients of LN, SiO2 and Si, gold conductivity (all UNVERIFIED placeholders: the numeric values in materials are kept only so the electrostatic stage can run; none is read from a source in this repo)', electrode metal named only in the Fig. 1(b) legend (Au), waveguide position inside the 6.5 um gap (assumed centred), fabricated
+    (as opposed to designed) electrode and rib dimensions, cladding (none drawn in Fig. 1(b); air assumed), temperature]
+limitations: [scalar_optical_not_full_vector, quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, 'Optical stage blocked: no LN indices at 1957 nm are given in the paper', Measured EO bandwidth (>22 GHz) is limited by the 18 GHz photodetector and is not a target, Sidewall angle reading (30 deg from the vertical) is an interpretation of Fig. 1(b); the text gives no reference]

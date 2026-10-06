@@ -13,6 +13,9 @@
 references/*/source.html
 references/*/text.md
 references/*/figures/
+# Local-only extracts of secondary sources (supplements, corrections, superseded preprints) in subfolders (DevLog-021).
+references/*/*/text.md
+references/*/*/figures/
 # Local-only: raw geocoding responses (large; scripts/geocode_sites.py cache).
 data/_staging/geo_cache/
 references/_inbox/*
@@ -80,3 +83,21 @@ references/ohata2026/source.pdf
 references/patel2026/source.pdf
 references/tatarczak2026/source.pdf
 references/yamaguchi2026/source.pdf
+
+# Local-only: PDFs carrying an institutional licensed-download stamp (subscription copies; access details are not
+# redistributed). Untracked 2026-10-05 (DevLog-021); the files stay in the local cache.
+references/ogiso2020/source.pdf
+references/schwarzenberger2026a/source.pdf
+references/li2024/source.pdf
+references/wang2022/source.pdf
+references/wang2022/supplement/source.pdf
+references/liu2026d/source.pdf
+references/eltes2023/source.pdf
+references/schwarzenberger2023a/source.pdf
+references/schwarzenberger2023/source.pdf
+references/chen2025/source.pdf
+references/shen2025/source.pdf
+references/zhang2026c/source.pdf
+references/ogiso2024/source.pdf
+references/wang2025/source.pdf
+references/gupta2023/source.pdf

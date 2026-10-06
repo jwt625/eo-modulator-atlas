@@ -1,0 +1,367 @@
+paper_id: murai2025
+verified_on: '2026-10-05'
+source_files:
+- references/murai2025/text.md
+- references/murai2025/figures/page_02.png
+- references/murai2025/figures/img_p03_2.png
+- references/murai2025/figures/page_06.png
+- references/murai2025/figures/page_07.png
+- references/murai2025/figures/page_08.png
+- references/murai2025/crossref.json
+entries:
+- device_id: murai2025-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5 Sec. 3.2; p.6 Sec. 3.3
+  note: TLD, TE polarization
+- device_id: murai2025-a
+  field: length_mm
+  value: 9.9
+  unit: mm
+  basis: design_target
+  locator: p.5-6 Sec. 3.2; p.8 Table 1
+  note: phase-shifter length of the 11 mm coupon
+- device_id: murai2025-a
+  field: vpi_dc_v
+  value: 2.7
+  unit: V
+  basis: measured
+  locator: p.5 Sec. 3.2; p.7 Fig. 5(b)
+  note: 100 kHz triangular sweep, push-pull, 1550 nm
+- device_id: murai2025-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 3.2
+  note: repetition rate 100 kHz
+- device_id: murai2025-a
+  field: vpil_dc_vcm
+  value: 2.7
+  unit: V*cm
+  basis: derived
+  locator: p.6 Sec. 3.2
+  note: author arithmetic from Vpi x L (2.7 V x 0.99 cm = 2.67), stated for the 9.9 mm push-pull phase shifters; simulated 2.5 V cm
+- device_id: murai2025-a
+  field: bw3db_ghz
+  value: 28
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. 3.3; p.7 Fig. 6(b)
+  note: stated as approximately 28 GHz, normalized to 1 GHz; 9.9 mm device
+- device_id: murai2025-a
+  field: il_onchip_db
+  value: 0.97
+  unit: dB
+  basis: derived
+  locator: p.6 Sec. 3.2; p.8 Table 1
+  note: includes 0.77 dB propagation and MMI excess loss simulated at 0.1 dB
+- device_id: murai2025-a
+  field: prop_loss_db_per_cm
+  value: 0.7
+  unit: dB/cm
+  basis: measured
+  locator: p.5 Sec. 3.1; p.6 Fig. 4(c)
+  note: cut-back linear fit at 1550 nm on printed waveguides
+- device_id: murai2025-a
+  field: ng_opt
+  value: 2.2
+  unit: '1'
+  basis: author_estimate
+  locator: p.6 Sec. 3.3
+  note: group index of light; method not stated
+- device_id: murai2025-a
+  field: n_rf
+  value: 2.1
+  unit: '1'
+  basis: author_estimate
+  locator: p.6 Sec. 3.3
+  note: microwave group index as stated; method not stated
+- device_id: murai2025-a
+  field: z0_ohm
+  value: 40
+  unit: ohm
+  basis: author_estimate
+  locator: p.6 Sec. 3.3
+  note: GSG electrode characteristic impedance; method not stated
+- device_id: murai2025-a
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 2
+  note: X-cut LNOI source wafer film thickness as stated
+- device_id: murai2025-a
+  field: etch_depth_nm
+  value: 400
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.7 Fig. 5(c)
+  note: Fig. 5(c) is a simulation sketch of the cross-section; vertical walls drawn; rib 0.2 to 0.6 um above the LN bottom
+- device_id: murai2025-a
+  field: rib_width_nm
+  value: 2400
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.7 Fig. 5(c)
+  note: rib spans x = -1.2 to 1.2 um on the axis; top and bottom width not distinguished
+- device_id: murai2025-a
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.7 Fig. 5(c)
+  note: slab top at y = 0.2 um above the LN bottom
+- device_id: murai2025-a
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: electrode gap as stated
+- device_id: murai2025-a
+  field: signal_width_um
+  value: 22
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: signal width as stated
+- device_id: murai2025-a
+  field: electrode_thickness_um
+  value: 1.2
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: Au, electron-beam evaporation and lift-off
+- device_id: murai2025-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: Au electrodes
+- device_id: murai2025-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: thermal SiO2 of the Si target substrate under the printed coupon
+- device_id: murai2025-a
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 2; p.6 Sec. 3.3
+  note: non-doped bare Si, resistivity 1 to 20 ohm cm, thickness not stated
+- device_id: murai2025-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2
+- device_id: murai2025-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.6 Sec. 3.3
+  note: TLD with polarization controller, EDFA before the PD
+- device_id: murai2025-b
+  field: length_mm
+  value: 3.0
+  unit: mm
+  basis: design_target
+  locator: p.6 Sec. 3.3; p.8 Table 1
+  note: phase-shifter length of the 4 mm coupon
+- device_id: murai2025-b
+  field: vpi_dc_v
+  value: 8.9
+  unit: V
+  basis: author_estimate
+  locator: p.8 Table 1 footnote a
+  note: estimated from the Fig. 5(b) measurement; 2.7 V x 9.9/3.0 gives 8.91; length-scaled from row -a, so the derived VpiL is not independent
+- device_id: murai2025-b
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. 3.3; p.7 Fig. 6(b)
+  note: exceeded 50 GHz, limited by the VNA; normalized to 1 GHz
+- device_id: murai2025-b
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. 3.3; p.7 Fig. 6(b)
+  note: VNA maximum frequency
+- device_id: murai2025-b
+  field: il_onchip_db
+  value: 0.48
+  unit: dB
+  basis: derived
+  locator: p.8 Table 1
+  note: table value only; composition not stated
+- device_id: murai2025-b
+  field: drive_vpp_v
+  value: 3.0
+  unit: V
+  basis: measured
+  locator: p.7 Sec. 3.3
+  note: peak-to-peak voltage applied for the 50 Gb/s eye; reference plane not stated
+- device_id: murai2025-b
+  field: max_baud_gbd
+  value: 50
+  unit: GBd
+  basis: derived
+  locator: p.7 Sec. 3.3
+  note: NRZ line rate 50 Gb/s equals 50 GBd
+- device_id: murai2025-b
+  field: modulation_format
+  value: NRZ, PRBS7
+  unit: ''
+  basis: measured
+  locator: p.7 Sec. 3.3; p.8 Fig. 7(b)
+  note: sampling-oscilloscope eye
+- device_id: murai2025-b
+  field: max_line_rate_gbps
+  value: 50
+  unit: Gb/s
+  basis: measured
+  locator: p.7 Sec. 3.3; p.8 Fig. 7(b)
+  note: eye diagram for 50 Gb/s NRZ
+- device_id: murai2025-b
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 2
+  note: X-cut LNOI source wafer film thickness as stated
+- device_id: murai2025-b
+  field: etch_depth_nm
+  value: 400
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.7 Fig. 5(c)
+  note: Fig. 5(c) is a simulation sketch of the cross-section; vertical walls drawn; rib 0.2 to 0.6 um above the LN bottom
+- device_id: murai2025-b
+  field: rib_width_nm
+  value: 2400
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.7 Fig. 5(c)
+  note: rib spans x = -1.2 to 1.2 um on the axis; top and bottom width not distinguished
+- device_id: murai2025-b
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.7 Fig. 5(c)
+  note: slab top at y = 0.2 um above the LN bottom
+- device_id: murai2025-b
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: electrode gap as stated
+- device_id: murai2025-b
+  field: signal_width_um
+  value: 22
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: signal width as stated
+- device_id: murai2025-b
+  field: electrode_thickness_um
+  value: 1.2
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: Au, electron-beam evaporation and lift-off
+- device_id: murai2025-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: Au electrodes
+- device_id: murai2025-b
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 2
+  note: thermal SiO2 of the Si target substrate under the printed coupon
+- device_id: murai2025-b
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 2; p.6 Sec. 3.3
+  note: non-doped bare Si, resistivity 1 to 20 ohm cm, thickness not stated
+- device_id: murai2025-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2
+- device_id: murai2025-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3.2
+  note: triangular voltage applied in a push-pull manner through the GSG electrode
+- device_id: murai2025-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.6 Sec. 3.2
+  note: VpiL stated for push-pull phase shifters; convention of the MZM Vpi not named otherwise
+- device_id: murai2025-a
+  field: bw3db_reference
+  value: 1ghz
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. 3.3
+  note: EO response normalized to the value at 1 GHz
+- device_id: murai2025-a
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2; p.5 Sec. 2
+  note: Au electrodes with ground-signal-ground configuration
+- device_id: murai2025-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3.2
+  note: triangular voltage applied in a push-pull manner through the GSG electrode
+- device_id: murai2025-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.6 Sec. 3.2
+  note: VpiL stated for push-pull phase shifters; convention of the MZM Vpi not named otherwise
+- device_id: murai2025-b
+  field: bw3db_reference
+  value: 1ghz
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. 3.3
+  note: EO response normalized to the value at 1 GHz
+- device_id: murai2025-b
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2; p.5 Sec. 2
+  note: Au electrodes with ground-signal-ground configuration
+derived: []

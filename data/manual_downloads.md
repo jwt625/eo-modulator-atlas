@@ -78,6 +78,7 @@ Drop each file into references/_inbox/ using the exact save_as filename.
   doi: 10.1364/oe.28.001868
   publisher_url: https://doi.org/10.1364/oe.28.001868
   save_as: boynton2020.pdf
+  status: retrieved 2026-10-05 (version of record), extracted to references/boynton2020/, batch p6_03
   drop_folder: references/_inbox/
   priority: 1
   why_needed: open-access publisher PDF blocked to scripted download (anti-bot); metrics per abstract, not yet read
@@ -110,6 +111,7 @@ Drop each file into references/_inbox/ using the exact save_as filename.
   doi: 10.1364/optica.449691
   publisher_url: https://doi.org/10.1364/optica.449691
   save_as: xu2022.pdf
+  status: retrieved 2026-10-05 (version of record), extracted to references/xu2022/, batch p6_05
   drop_folder: references/_inbox/
   priority: 1
   why_needed: open-access publisher PDF blocked to scripted download (anti-bot); metrics per abstract, not yet read

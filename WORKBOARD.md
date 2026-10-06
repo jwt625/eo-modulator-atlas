@@ -57,6 +57,7 @@ Other tranches remain unassigned. No implicit delegation.
 | D1.34-D1.38 | Ingest paused priority-1 papers as p4_01..p4_05 (Sonnet distill/correct, Opus audit/verify) | ready_for_review | claude-ingest-2026-10-04 | 21 papers, 62 rows merged as audited; DevLog-016 |
 | GEO | Per-author affiliations, geocoded institution sites, clustered map | ready_for_review | claude-geo-2026-10-04 | 1723 affiliation rows, 212 sites; DevLog-018 |
 | CONV | User data-convention decisions 2026-10-05 (identity, dates, Crossref authors, people dedup, licences, bands, 1 GHz Vpi, org names, schema proposals W2, Phase B re-read of 405 rows) | ready_for_review | claude-conventions-2026-10-05 | DevLog-020; verified per group by fresh Opus agents; final audit in data/_staging/conventions_2026_10_05/AUDIT_final.md |
+| INBOX-1005 | Ingest user-retrieved papers 2026-10-05 (12 new, 2 first sources, han2023/li2022b VOR re-distill, lu2020 SI + correction) as p6_01..p6_05, plus a second wave p7_01..p7_04 (13 new, chelladurai2025 SI) | ready_for_review | claude-inbox-2026-10-05 | DevLog-021; 208 papers / 479 device rows, all audited |
 | R1 | Release integration, second audit, public packaging | waiting | unassigned | Accepted D/E/U tranches; rights policy review |
 
 ## Claim protocol

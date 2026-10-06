@@ -1,0 +1,124 @@
+schema: eo-atlas.sim/v1
+id: mao2022-a
+paper_id: mao2022
+device_id: mao2022-a
+title: Mao 2022, 6.0 mm a-Si-loaded unetched TFLN MZM on SiO2/Si with G-S-G line (push-pull arms by geometry)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+# Conventions follow sims/chen2022/config.yaml and sims/qi2024/config.yaml.
+# Coordinate frame: x lateral (paper Z), y film normal up (paper X), z propagation (paper Y). y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand a-Si strip in x. Signal electrode centre at x = -11 um (mirror plane); LEFT strip at x = -22 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm.
+# Strips are assumed centred in the 6.0 um gaps (paper Fig. 2(b)); all three electrodes are 16 um wide (ground widths not stated).
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 31.0, r51: 28.0}
+  amorphous_silicon: {n: 3.475, eps_r: 11.7}
+  silicon: {n: 3.476, eps_r: 11.7}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-141, 119], y_um: [-100, 60]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-141, 119], y_um: [-100, 60]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-141, 119], y_um: [-100, -2]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-141, 119], y_um: [-2, 0]}}
+    - {name: ln_film, material: lithium_niobate, rect: {x_um: [-141, 119], y_um: [0, 0.7]}}
+    - {name: sio2_cladding, material: silicon_dioxide, rect: {x_um: [-141, 119], y_um: [0.7, 2.3]}}
+    - {name: si_strip_r, material: amorphous_silicon, rect: {x_um: [-0.5, 0.5], y_um: [0.7, 0.77]}}
+    - {name: si_strip_l, material: amorphous_silicon, rect: {x_um: [-22.5, -21.5], y_um: [0.7, 0.77]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-19, -3], y_um: [0.7, 2.2]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [3, 19], y_um: [0.7, 2.2]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-41, -25], y_um: [0.7, 2.2]}, material: gold}
+  optical_window: {x_um: [-2.9, 2.9], y_um: [-1.5, 2.2]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 6.0
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-ended GSG probe on the centre line; push-pull arises from the arm placement
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 70, n_points: 140}
+alt_geometries: {}
+
+targets:
+  # Measured (devices.csv row mao2022-a)
+  - {metric: vpi_l_dc_vcm, value: 1.9, tol_rel: 0.15, source: {device_id: mao2022-a, field: vpil_dc_vcm, note: "Vpi 3.2 V x 6.0 mm; arm drive convention not defined by the authors; LN tensor partly placeholder"}}
+  - {metric: bw3db_ghz, value: 60, tol_rel: 0.15, source: {device_id: mao2022-a, field: bw3db_ghz}}
+  # Authors' own simulation values (basis simulated), cross-solver references
+  - {metric: n_rf, value: 2.34, tol_abs: 0.1, source: {device_id: mao2022-a, field: n_rf, basis: simulated}}
+  - {metric: z0_ohm, value: 44, tol_abs: 3.0, source: {device_id: mao2022-a, field: z0_ohm, basis: simulated}}
+  - {metric: ng_opt, value: 2.62, tol_abs: 0.1, source: {device_id: mao2022-a, field: ng_opt, basis: simulated}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.4 Sec. II B (1550 nm)"}
+  optics.polarization: {class: paper_exact, locator: "p.3 Sec. II A (TE mode, E_Z)"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes a simulated ng of 2.62; engine derives it by finite difference and compares as a target"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.3 Sec. II A (X-cut); propagation along Y from Fig. 1(a,d,f) axes"}
+  materials.lithium_niobate.n_o: {class: paper_exact, locator: "p.3 Sec. II A (n_ord,LN = 2.211)"}
+  materials.lithium_niobate.n_e: {class: paper_exact, locator: "p.3 Sec. II A (n_ext,LN = 2.138)"}
+  materials.lithium_niobate.eps_r: {class: unknown, locator: "p.3 Sec. I (eps_LN = 28 along Z stated)", note: "par = 28 stated; perp = 43 is an UNVERIFIED SPEC.md placeholder"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, locator: "p.2 Sec. I (r33 = 31 pm/V stated)", note: "r33 = 31 stated; r13, r22, r51 are UNVERIFIED SPEC.md placeholders"}
+  materials.amorphous_silicon.n: {class: paper_exact, locator: "p.3 Sec. II A (n_Si = 3.475)"}
+  materials.amorphous_silicon.eps_r: {class: unknown, note: "UNVERIFIED placeholder 11.7; the paper states no Si RF permittivity"}
+  materials.silicon: {class: unknown, note: "UNVERIFIED placeholder n = 3.476, eps_r = 11.7; substrate constants not stated"}
+  materials.silicon_dioxide: {class: paper_exact, locator: "p.3 Sec. II A (n_SiO2 = 1.444); p.3 Sec. I (eps_SiO2 = 3.9)"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder bulk gold 4.1e7 S/m; the 10 nm Cr adhesion layer is ignored"}
+  materials.air: {class: paper_exact, locator: "p.3 Sec. I (eps_air = 1.0)", note: "n = 1 follows from eps = 1.0"}
+  line.length_mm: {class: paper_exact, locator: "p.4 Sec. II B (6.0 mm phase shifter)"}
+  line.load_ohm: {class: paper_exact, locator: "p.5 Sec. II C (50 ohm termination probe)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm VNA / probe"}
+  line.differential: {class: project_inference, note: "GSG with one arm per gap (Fig. 2); push-pull MZI drive stated (p.3, p.5) but implemented here by geometry with a single-ended signal"}
+  line.conductor_loss_model: {class: project_inference, note: "no RF loss coefficient stated"}
+  geometry.regions.ln_film: {class: paper_exact, locator: "p.3 Sec. II A (700 nm LN, not patterned)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.3 Sec. II A (2.0 um SiO2 on Si)"}
+  geometry.regions.substrate: {class: project_inference, note: "silicon handle thickness not stated; clipped to 98 um below the BOX"}
+  geometry.regions.si_strip_r: {class: paper_exact, locator: "p.3 Sec. II A (70 nm a-Si); p.4 Sec. II B (1.0 um wide)", note: "rectangular profile, sidewall slope not stated; centred in the 6.0 um gap"}
+  geometry.regions.si_strip_l: {class: project_inference, note: "mirror of the right strip about the signal centre"}
+  geometry.regions.sio2_cladding: {class: project_inference, locator: "p.3 Sec. II A (1.6 um SiO2 upper cladding)", note: "1.6 um measured from the LN surface (top at 2.3 um) is assumed; reference surface not stated"}
+  geometry.regions.ambient: {class: project_inference, note: "air above the cladding"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.4 Sec. II A (1.5 um thick, 16 um wide, 6.0 um spacing)", note: "sits on the LN surface beside the Si strip (Fig. 1(b)); 10 nm Cr ignored; gap edge at 3 um from the strip axis"}
+  geometry.electrodes.ground_r: {class: project_inference, locator: "p.4 Sec. II A", note: "ground width not stated; taken equal to the 16 um electrode width"}
+  geometry.electrodes.ground_l: {class: project_inference, locator: "p.4 Sec. II A", note: "mirror of the right ground"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 2.9 um inside the 3 um electrode edge"}
+  geometry.domain: {class: project_inference, note: "lateral +-130 um about the signal centre; vertical -100..60 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - ground electrode width (not stated; 16 um assumed)
+  - silicon handle thickness and resistivity (not stated)
+  - reference surface of the 1.6 um SiO2 cladding (assumed LN surface)
+  - sidewall slope and exact profile of the a-Si strip
+  - RF permittivity perp of LN, Pockels components other than r33, RF constants of Si, SiO2 loss tangent, Au conductivity (UNVERIFIED placeholders)
+  - Vpi drive convention (push-pull MZI stated, arm-level definition not given)
+  - temperature
+  - optical input power
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Y-branch, 200 um adiabatic tapers and probe pads are not represented; the paper's CST model is 3D"
+  - "Cr 10 nm adhesion layer ignored; Au conductivity is a placeholder, so RF loss and the 60 GHz bandwidth are not expected to be reproduced"
+  - "The paper reports a LN confinement factor of 73 percent (p.4, energy-flux definition); it is not a target here"

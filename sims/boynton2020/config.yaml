@@ -1,0 +1,126 @@
+schema: eo-atlas.sim/v1
+id: boynton2020-a
+paper_id: boynton2020
+device_id: boynton2020-a
+title: Boynton 2020, 5 mm bonded TFLN on SiNx/SiO2/Al CPW (CMOS-fabricated), 4 um gap, push-pull arms by geometry
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+# Conventions follow sims/chen2022/config.yaml and sims/qi2024/config.yaml.
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the bonded face of the TFLN (TFLN bottom).
+# The TFLN chip is bonded face down on the planarized SiP chip: below y = 0 are 123 nm SiO2, the SiNx core, oxide, the Al CPW, 3 um thermal SiO2 and the Si wafer;
+# above y = 0 are the 200 nm TFLN, 2 um SiO2 and the x-cut LiNbO3 handle (clipped to the domain).
+# Origin: optical axis of the RIGHT-hand SiNx core in x. Signal electrode centre at x = -5 um (mirror plane); LEFT core at x = -10 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm. Cores are assumed centred in the 4 um gaps (Fig. 4(a)).
+# Only the top 1.6 x 0.225 um SiNx core is modelled, as in the authors' simulated hybrid section; the bottom routing SiNx layer is absent there.
+optics:
+  wavelength_nm: 1551.64
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 31.0, r51: 28.0}
+  silicon_nitride_top: {n: 1.91, eps_r: 7.0}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  silicon: {n: 3.476, eps_r: 11.7}
+  aluminum: {conductor: true, sigma_Sm: 3.5e7, n_complex: null}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-205, 195], y_um: [-105, 52]}
+  regions:
+    - {name: oxide_fill, material: silicon_dioxide, rect: {x_um: [-205, 195], y_um: [-105, 52]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-205, 195], y_um: [-105, -5.018]}}
+    - {name: thermal_oxide, material: silicon_dioxide, rect: {x_um: [-205, 195], y_um: [-5.018, -2.018]}}
+    - {name: sinx_core_r, material: silicon_nitride_top, rect: {x_um: [-0.8, 0.8], y_um: [-0.348, -0.123]}}
+    - {name: sinx_core_l, material: silicon_nitride_top, rect: {x_um: [-10.8, -9.2], y_um: [-0.348, -0.123]}}
+    - {name: tfln, material: lithium_niobate, rect: {x_um: [-205, 195], y_um: [0, 0.2]}}
+    - {name: tfln_box, material: silicon_dioxide, rect: {x_um: [-205, 195], y_um: [0.2, 2.2]}}
+    - {name: ln_handle, material: lithium_niobate, rect: {x_um: [-205, 195], y_um: [2.2, 52]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-8, -2], y_um: [-2.018, -1.148]}, material: aluminum}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [2, 132], y_um: [-2.018, -1.148]}, material: aluminum}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-142, -12], y_um: [-2.018, -1.148]}, material: aluminum}
+  optical_window: {x_um: [-1.9, 1.9], y_um: [-1.0, 1.0]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 5
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-ended probe on the centre line; push-pull arises from the arm placement
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 60, n_points: 120}
+alt_geometries: {}
+
+targets:
+  # Measured (devices.csv row boynton2020-a)
+  - {metric: vpi_l_dc_vcm, value: 6.67, tol_rel: 0.15, source: {device_id: boynton2020-a, field: vpil_dc_vcm, note: "push-pull MZM; LN tensor and SiN RF permittivity are UNVERIFIED placeholders; the paper itself predicts 4.88 V cm"}}
+  - {metric: bw3db_ghz, value: 30.55, tol_rel: 0.15, source: {device_id: boynton2020-a, field: bw3db_ghz}}
+  - {metric: z0_ohm, value: 50, tol_abs: 5.0, source: {device_id: boynton2020-a, field: z0_ohm, basis: design_target}}
+  # Authors' own simulations (basis simulated), cross-solver references
+  - {metric: vpi_l_dc_vcm, value: 4.88, tol_rel: 0.10, source: {paper_id: boynton2020, locator: "p.7 Sec. 2, Eq. (1)", basis: simulated, note: "123 nm SiO2 above the SiNx, overlap 19.03 percent"}}
+  - {metric: ng_opt, value: 2.051, tol_abs: 0.1, source: {device_id: boynton2020-a, field: ng_opt, basis: simulated}}
+  - {metric: n_eff, value: 1.757, tol_abs: 0.03, source: {paper_id: boynton2020, locator: "p.7 Sec. 2", basis: simulated, note: "simulated effective index at 1550 nm"}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.11 Sec. 3 (bias wavelength 1551.64 nm)"}
+  optics.polarization: {class: paper_exact, locator: "p.7 Sec. 2 (TE direction, r33)"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes a simulated ng of 2.051; engine derives it by finite difference and compares as a target"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.5 Sec. 2 (x-cut TFLN)", note: "propagation along y is a project_inference from TE with r33 on x-cut (p.7)"}
+  materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED SPEC.md placeholder; the paper quotes n_e = 2.21 at 1550 nm (p.7) which is not used"}
+  materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED SPEC.md placeholder; see n_o"}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED SPEC.md placeholder 43/28; the paper states no RF permittivity of LN"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, locator: "p.7 Sec. 2 (r33 = 31 pm/V)", note: "r33 = 31 stated; r13, r22, r51 are UNVERIFIED SPEC.md placeholders"}
+  materials.silicon_nitride_top.n: {class: paper_exact, locator: "p.4 Sec. 2 (n = 1.91 at 1546 nm)"}
+  materials.silicon_nitride_top.eps_r: {class: unknown, note: "UNVERIFIED placeholder 7.0; the paper states no RF permittivity of SiNx"}
+  materials.silicon_dioxide: {class: unknown, note: "UNVERIFIED placeholder n = 1.444, eps_r = 3.9; the paper states neither"}
+  materials.silicon: {class: unknown, note: "UNVERIFIED placeholder; the wafer is >1000 ohm cm (p.4) but the RF model needs eps_r only; loss not representable"}
+  materials.aluminum.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder; the Ti/TiN/Al stack (870 nm, p.4) is lumped into one conductor; paper states no conductivity"}
+  line.length_mm: {class: paper_exact, locator: "p.4 Sec. 1; p.6 Fig. 4(b) (5 mm)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm VNA / probe"}
+  line.load_ohm: {class: project_inference, note: "termination not stated; 50 ohm CPW design (p.8) assumed"}
+  line.differential: {class: project_inference, note: "push-pull stated (p.4, p.7); implemented by one core per gap with a single-ended signal on the centre line"}
+  line.conductor_loss_model: {class: project_inference, note: "simulated RF attenuation is plotted (Fig. 5(a)) without a coefficient"}
+  geometry.regions.tfln: {class: paper_exact, locator: "p.5 Sec. 2; p.6 Fig. 4(a) (nominal 0.2 um x-cut TFLN)"}
+  geometry.regions.tfln_box: {class: paper_exact, locator: "p.5 Sec. 2; Fig. 4(a) (2 um SiO2)"}
+  geometry.regions.ln_handle: {class: paper_exact, locator: "p.5 Sec. 2 (500 um x-cut LiNbO3 handle)", note: "clipped to 50 um in the domain"}
+  geometry.regions.thermal_oxide: {class: paper_exact, locator: "p.4 Sec. 2; Fig. 4(a) (3 um)"}
+  geometry.regions.substrate: {class: project_inference, locator: "p.4 Sec. 2 (high-resistivity Si)", note: "wafer thickness not stated; clipped to 100 um"}
+  geometry.regions.oxide_fill: {class: figure_digitized, locator: "Fig. 4(a); p.4 Sec. 2 (HDP oxide, CMP)", note: "bottom 0.3 um SiNx routing layer omitted in the hybrid section; SiO2 fills the stack"}
+  geometry.regions.sinx_core_r: {class: paper_exact, locator: "p.7 Sec. 2 (1.6 x 0.225 um core, 123 nm SiO2 to the TFLN); Fig. 4(a)", note: "rectangular; centred in the 4 um gap per Fig. 4(a); level -0.348..-0.123 um relative to the bonded face"}
+  geometry.regions.sinx_core_l: {class: project_inference, note: "mirror of the right core about the signal centre"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.7 Sec. 2 (6 um signal, 4 um gap); p.4 (870 nm Ti/TiN/Al)", note: "top at -1.148 um: 250 nm HDP oxide + 300 nm bottom SiNx + 250 nm oxide + 225 nm top SiNx + 123 nm SiO2 stack from Fig. 4(a)"}
+  geometry.electrodes.ground_r: {class: paper_exact, locator: "p.7 Sec. 2 (130 um ground planes)"}
+  geometry.electrodes.ground_l: {class: paper_exact, locator: "p.7 Sec. 2 (130 um ground planes)"}
+  geometry.optical_window: {class: project_inference, note: "crop around the core; electrode edges at |x| = 2 um are outside"}
+  geometry.domain: {class: project_inference, note: "lateral +-200 um about the signal centre; vertical -105..52 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - propagation direction in the crystal (x-cut stated; y assumed)
+  - LN refractive indices, RF permittivities of LN, SiNx, SiO2 and Si, Pockels components other than r33, metal conductivity (UNVERIFIED placeholders)
+  - TFLN lateral extent and edge position relative to the CPW
+  - silicon wafer thickness
+  - thickness variation of the SiO2 between TFLN and SiNx along the device (123 nm mean, CMP-dependent)
+  - temperature
+  - optical input power at the chip
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "The hybrid fundamental mode competes with the TFLN slab mode; the paper stresses this design constraint (p.10). The scalar solver on a cropped window may select a slab-like mode"
+  - "Vertical SiNx transitions, bottom routing layer, MMIs and the TFLN edge are not modelled; the measured bandwidth includes group-index variation along the length that a single cross-section cannot reproduce"
+  - "Ti/TiN/Al stack lumped into one conductor; high-resistivity Si substrate loss and the interface sheet charge cited on p.11 are not representable"

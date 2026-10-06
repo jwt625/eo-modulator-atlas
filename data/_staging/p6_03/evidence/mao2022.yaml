@@ -1,0 +1,252 @@
+paper_id: mao2022
+verified_on: '2026-10-05'
+source_files:
+- references/mao2022/text.md
+- references/mao2022/crossref.json
+- references/mao2022/source.json
+- references/mao2022/figures/page_03.png
+- references/mao2022/figures/page_04.png
+- references/mao2022/figures/page_05.png
+- references/mao2022/figures/page_06.png
+entries:
+- device_id: mao2022-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.4 Sec. II B
+  note: Tunable laser set at 1550 nm for the transmission measurements
+- device_id: mao2022-a
+  field: length_mm
+  value: 6.0
+  unit: mm
+  basis: design_target
+  locator: p.3 Sec. I; p.4 Sec. II B; Table I (p.6)
+  note: Phase-shifter length, per arm
+- device_id: mao2022-a
+  field: vpi_dc_v
+  value: 3.2
+  unit: V
+  basis: measured
+  locator: p.5 Sec. II B; Fig. 3
+  note: 10 kHz triangle wave, 5.0 Vpp applied; amplified photodetector and oscilloscope
+- device_id: mao2022-a
+  field: vpi_dc_freq_ghz
+  value: 1.0e-05
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. II B
+  note: 10 kHz triangle wave
+- device_id: mao2022-a
+  field: vpil_dc_vcm
+  value: 1.9
+  unit: V*cm
+  basis: derived
+  locator: abstract; p.5 Sec. II B; Table I (p.6)
+  note: Vpi times 6.0 mm (1.92 V cm); abstract calls it measured
+- device_id: mao2022-a
+  field: drive_vpp_v
+  value: 1.8
+  unit: V
+  basis: measured
+  locator: p.6 Sec. II C
+  note: AWG output amplified by SHF S804B linear amplifier to 1.8 Vpp; reference plane at the amplifier output
+- device_id: mao2022-a
+  field: r_eff_pm_per_v
+  value: 31
+  unit: pm/V
+  basis: derived
+  locator: p.5 Sec. II B; Eq. (2)
+  note: In-device EO coefficient from measured Vpi, gap and confinement; tensor component not stated; text says around 31
+- device_id: mao2022-a
+  field: bw3db_ghz
+  value: 60
+  unit: GHz
+  basis: measured
+  locator: abstract; p.5 Sec. II C; Fig. 4; Table I (p.6)
+  note: VNA trace with RF probe, 0.01-70 GHz; -3 dB at 60 GHz
+- device_id: mao2022-a
+  field: bw_measured_to_ghz
+  value: 70
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. II C; Fig. 4
+  note: VNA range 0.01 to 70 GHz
+- device_id: mao2022-a
+  field: il_onchip_db
+  value: 2.7
+  unit: dB
+  basis: author_estimate
+  locator: p.4 Sec. II B
+  note: 'Estimated on-chip loss: phase shifter 0.9 dB plus other passive components 1.8 dB'
+- device_id: mao2022-a
+  field: prop_loss_db_per_cm
+  value: 1.5
+  unit: dB/cm
+  basis: derived
+  locator: p.4 Sec. II B; p.3 Sec. I
+  note: 0.15 +/- 0.02 dB/mm from cut-back at 1550 nm, converted to dB/cm
+- device_id: mao2022-a
+  field: extinction_ratio_db
+  value: 17.9
+  unit: dB
+  basis: measured
+  locator: abstract; p.5 Sec. II B; Fig. 3 inset
+  note: Static ER of the MZI; dynamic eye ER 3.8 dB at 84 and 3.0 dB at 100 Gbit/s OOK (p.6)
+- device_id: mao2022-a
+  field: z0_ohm
+  value: 44
+  unit: ohm
+  basis: simulated
+  locator: p.4 Sec. II A; Fig. 1(e)
+  note: CST FDTD impedance of the TWE, about 44 ohm up to 70 GHz
+- device_id: mao2022-a
+  field: n_rf
+  value: 2.34
+  unit: '1'
+  basis: simulated
+  locator: p.4 Sec. II A; Fig. 1(e)
+  note: RF effective index evaluated at around 2.34
+- device_id: mao2022-a
+  field: ng_opt
+  value: 2.62
+  unit: '1'
+  basis: simulated
+  locator: p.4 Sec. II A
+  note: Simulated optical group index of the TE fundamental mode
+- device_id: mao2022-a
+  field: eo_film_thickness_nm
+  value: 700
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. II A; p.4
+  note: NANOLN wafer, 700 nm LN on 2.0 um SiO2/Si
+- device_id: mao2022-a
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. II A, II B
+  note: Width of the 70 nm a-Si loading strip; design scan 0.5-2.5 um, 1.0 um fabricated
+- device_id: mao2022-a
+  field: electrode_gap_um
+  value: 6.0
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. II A; Fig. 2(b)
+  note: Spacing between electrodes, Fig. 2(b) marks 6.0 um around the Si line
+- device_id: mao2022-a
+  field: signal_width_um
+  value: 16
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. II A
+  note: TWE width; ground widths not separately stated
+- device_id: mao2022-a
+  field: electrode_thickness_um
+  value: 1.5
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. II A
+  note: 1.5 um Au on 10 nm Cr
+- device_id: mao2022-a
+  field: electrode_metal
+  value: Cr/Au
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. II A
+- device_id: mao2022-a
+  field: buffer_oxide_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.3 Sec. II A
+  note: SiO2 under the LN
+- device_id: mao2022-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Sec. II A
+- device_id: mao2022-a
+  field: cladding
+  value: SiO2 (1.6 um, CVD)
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II A; p.4
+  note: Reference surface of the 1.6 um not stated
+- device_id: mao2022-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II A
+- device_id: mao2022-a
+  field: waveguide_orientation
+  value: propagation along Y, TE field along Z (Fig. 1(a))
+  unit: ''
+  basis: extracted_from_figure
+  locator: Fig. 1(a,d,f), p.3
+  note: Text p.3 says lateral confinement along Y; figure axes used
+- device_id: mao2022-a
+  field: epitaxy_or_stack
+  value: 1.0 um wide, 70 nm a-Si strip (PECVD, 150 C) on unetched 700 nm x-cut LN on 2.0 um SiO2 on Si; 1.6 um SiO2 upper cladding; Cr 10 nm / Au 1.5 um GSG electrodes on the LN
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Sec. II A, II B
+  note: Electrodes sit beside the strip on the LN per Fig. 1(b)
+- device_id: mao2022-a
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: derived
+  locator: abstract; p.6 Sec. II C
+  note: 100 Gbit/s OOK; PAM4 200 Gbit/s is 100 GBd
+- device_id: mao2022-a
+  field: max_line_rate_gbps
+  value: 200
+  unit: Gb/s
+  basis: measured
+  locator: abstract; p.6 Sec. II C; Fig. 5(e), Fig. 6(b)
+  note: PAM4
+- device_id: mao2022-a
+  field: modulation_format
+  value: OOK 84 and 100 Gbit/s; PAM4 168 and 200 Gbit/s (raised-cosine roll-off 0.4); offline feed-forward equalization; OOK BER 1.2e-8 at 84 Gbit/s (ROP -8 dBm), 7.5e-5 at 100 Gbit/s (ROP -4 dBm) reaching the 7 percent HD-FEC level at ROP -19 dBm; PAM4 BER 2.6e-4 at 168 Gbit/s and 1.0e-3 at 200 Gbit/s
+  unit: ''
+  basis: measured
+  locator: p.6 Sec. II C; Fig. 6; p.7
+  note: HD-FEC threshold 3.8e-3; eye Q 7.2 and 5.3 for 84 and 100 Gbit/s OOK
+- device_id: mao2022-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. II A; p.5 Sec. II B
+  note: GSG electrodes apply opposite fields in the two phase shifters
+- device_id: mao2022-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.5 Sec. II B
+  note: Authors do not define the Vpi convention; push-pull MZI drive stated, so derived
+- device_id: mao2022-a
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: derived
+  locator: Fig. 4
+  note: Trace normalized near 0 dB at low frequency; reference not stated
+- device_id: mao2022-a
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. II C
+  note: Anritsu MS4647B VNA with calibrated O/E module
+derived:
+- device_id: mao2022-a
+  field: prop_loss_db_per_cm
+  value: 1.5
+  formula: 0.15 dB/mm x 10 mm/cm (unit conversion only)
+  inputs: []

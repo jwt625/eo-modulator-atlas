@@ -1,0 +1,353 @@
+paper_id: eltes2020
+verified_on: '2026-10-05'
+source_files:
+- references/eltes2020/text.md
+- references/eltes2020/crossref.json
+- references/eltes2020/figures/page_02.png
+- references/eltes2020/figures/page_03.png
+- references/eltes2020/figures/page_04.png
+- references/eltes2020/supplement/text.md
+- references/eltes2020/supplement/figures/page_07.png
+- references/eltes2020/supplement/figures/page_17.png
+entries:
+- device_id: eltes2020-a
+  field: temperature_k
+  value: 4
+  unit: K
+  basis: measured
+  locator: p.3, Fig. 2; p.6, Methods
+  note: Methods give a liquid-helium base temperature of 4.2 K
+- device_id: eltes2020-a
+  field: r_eff_pm_per_v
+  value: 200
+  unit: pm/V
+  basis: derived
+  locator: abstract; p.3, Fig. 2b; p.2, Fig. 1f caption; supplement p.10, Fig. S3
+  note: Hysteresis fit of Delta n vs E (SI Eq. 3); peak at 45 deg device angle; 300 K peak about 365. Attributed to the SiN design because the Fig. 1f caption (16.7 MV/m = 150 V) implies the 9.0 um SiN-design gap and Fig. S3 is a hysteresis fit 'measured in a BaTiO3-SiN device' (321 pm/V at 300 K, Table S1)
+- device_id: eltes2020-a
+  field: prop_loss_db_per_cm
+  value: 5.6
+  unit: dB/cm
+  basis: measured
+  locator: p.2, text; supplement p.6, Fig. S1
+  note: SiN device, straight-waveguide cut-back measurement, not the racetrack; no difference between 4 K and 300 K or with/without BTO within error
+- device_id: eltes2020-a
+  field: eo_film_thickness_nm
+  value: 80
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: BTO layer thickness as stated in Methods
+- device_id: eltes2020-a
+  field: rib_width_nm
+  value: 1100
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: Strip-waveguide width on top of the BTO layer, not an etched rib
+- device_id: eltes2020-a
+  field: electrode_gap_um
+  value: 9
+  unit: um
+  basis: design_target
+  locator: p.6, Methods
+- device_id: eltes2020-a
+  field: electrode_metal
+  value: W
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1 caption
+  note: Lateral electrodes fabricated with W
+- device_id: eltes2020-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.6, Methods
+  note: Thermal oxide under the BTO on high-resistivity Si
+- device_id: eltes2020-a
+  field: substrate
+  value: high-resistivity Si
+  unit: ''
+  basis: design_target
+  locator: p.6, Methods
+- device_id: eltes2020-a
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1 caption
+  note: Devices embedded in SiO2
+- device_id: eltes2020-a
+  field: epitaxy_or_stack
+  value: BTO 80 nm (MBE on 4 nm SrTiO3 seed, direct-bonded) / SiN strip 150 nm; thin Al2O3 adhesion layer; BTO confinement 18%; SiO2 3 um thermal oxide on Si
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1; p.6, Methods
+- device_id: eltes2020-b
+  field: temperature_k
+  value: 4
+  unit: K
+  basis: measured
+  locator: p.4, Fig. 4c; p.6, Methods
+  note: Methods give a liquid-helium base temperature of 4.2 K
+- device_id: eltes2020-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.4, Fig. 4c caption
+  note: Tunable laser set to about 1550 nm; Fig. S2 resonance near 1530 nm, spectrum temperature not stated
+- device_id: eltes2020-b
+  field: bw6db_ghz
+  value: 30
+  unit: GHz
+  basis: measured
+  locator: abstract; supplement p.17, Fig. S9
+  note: Fig. S9 plots EOE |S21| and the dashed cut-off marker is at -6 dB; paper says 'cut-off at ~30 GHz' (approx) and attributes it to the photon lifetime (32 GHz predicted for Q about 6000); the value coincides with the stated 30 GHz measurement limit
+- device_id: eltes2020-b
+  field: bw_measured_to_ghz
+  value: 30
+  unit: GHz
+  basis: measured
+  locator: p.6, Methods
+  note: 26 GHz photodiode plus cryogenic probe-station losses make measurement beyond 30 GHz impossible
+- device_id: eltes2020-b
+  field: prop_loss_db_per_cm
+  value: 23
+  unit: dB/cm
+  basis: derived
+  locator: supplement p.7
+  note: Ring loss from fitted alpha and circumference; access waveguide 2.9 dB/cm (Fig. S1)
+- device_id: eltes2020-b
+  field: extinction_ratio_db
+  value: 35.8
+  unit: dB
+  basis: measured
+  locator: supplement p.7, Fig. S2
+  note: Resonance dip of the modulator used for data; spectrum temperature not stated
+- device_id: eltes2020-b
+  field: drive_vpp_v
+  value: 1.7
+  unit: V
+  basis: author_estimate
+  locator: p.4, text and Fig. 4d; supplement p.18, Fig. S10c
+  note: 'Estimated at the device: 2.5 dBm RF power, 1.7 Vpp on open termination, after probe-station loss'
+- device_id: eltes2020-b
+  field: q_loaded
+  value: 6000
+  unit: '1'
+  basis: measured
+  locator: p.4, text; supplement p.17
+  note: Quality factor quoted as Q about 6,000; type not stated
+- device_id: eltes2020-b
+  field: fsr_nm
+  value: 5.01
+  unit: nm
+  basis: measured
+  locator: supplement p.7, Fig. S2
+  note: Spectrum temperature not stated
+- device_id: eltes2020-b
+  field: max_line_rate_gbps
+  value: 20
+  unit: Gb/s
+  basis: measured
+  locator: p.4, Fig. 4d
+  note: Eye diagrams at 10 and 20 Gb/s
+- device_id: eltes2020-b
+  field: modulation_format
+  value: binary PRBS 2^7-1 bit stream (format not named); eyes at 10 and 20 Gb/s
+  unit: ''
+  basis: measured
+  locator: p.4, Fig. 4d; p.6, Methods
+- device_id: eltes2020-b
+  field: energy_per_bit_fj
+  value: 45
+  unit: fJ/bit
+  basis: author_estimate
+  locator: abstract; p.4, Fig. 4d; supplement p.19
+  note: Modulator CV^2/4 only with estimated C; no driver or amplifier included
+- device_id: eltes2020-b
+  field: capacitance_ff
+  value: 62
+  unit: fF
+  basis: author_estimate
+  locator: supplement p.19
+  note: Estimated from an identical stack in an earlier work, scaled for permittivity drop at low temperature
+- device_id: eltes2020-b
+  field: eo_film_thickness_nm
+  value: 225
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: BTO layer thickness as stated in Methods
+- device_id: eltes2020-b
+  field: rib_width_nm
+  value: 750
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: Strip-waveguide width on top of the BTO layer, not an etched rib
+- device_id: eltes2020-b
+  field: electrode_gap_um
+  value: 2.3
+  unit: um
+  basis: design_target
+  locator: p.6, Methods
+- device_id: eltes2020-b
+  field: electrode_metal
+  value: W
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1 caption
+  note: Lateral electrodes fabricated with W
+- device_id: eltes2020-b
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.6, Methods
+  note: Thermal oxide under the BTO on high-resistivity Si
+- device_id: eltes2020-b
+  field: substrate
+  value: high-resistivity Si
+  unit: ''
+  basis: design_target
+  locator: p.6, Methods
+- device_id: eltes2020-b
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1 caption
+  note: Devices embedded in SiO2
+- device_id: eltes2020-b
+  field: epitaxy_or_stack
+  value: BTO 225 nm (MBE on 4 nm SrTiO3 seed, direct-bonded) / Si strip 100 nm; racetrack bend radius 15 um, straights 30 um, coupling gap about 0.1 um; BTO confinement 41%; SiO2 3 um thermal oxide on Si
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1; p.6, Methods
+- device_id: eltes2020-c
+  field: temperature_k
+  value: 4
+  unit: K
+  basis: measured
+  locator: p.3, Fig. 4a,b; p.6, Methods
+  note: Methods give a liquid-helium base temperature of 4.2 K
+- device_id: eltes2020-c
+  field: length_mm
+  value: 0.5
+  unit: mm
+  basis: design_target
+  locator: p.3, text; supplement p.15, Note 7
+  note: Electrode length per the single driven arm
+- device_id: eltes2020-c
+  field: vpil_dc_vcm
+  value: 5
+  unit: V*cm
+  basis: measured
+  locator: p.3, text; Fig. 4b
+  note: Single-arm drive; applied voltage about 50 V per polarity, see notes
+- device_id: eltes2020-c
+  field: il_onchip_db
+  value: 1
+  unit: dB
+  basis: author_estimate
+  locator: p.4, text; supplement p.6-7, Note 3
+  note: Estimated from propagation loss and geometry; on-chip IL with coupling is 1.6 dB, 2 mm access waveguides add 1.1 dB
+- device_id: eltes2020-c
+  field: prop_loss_db_per_cm
+  value: 5.6
+  unit: dB/cm
+  basis: measured
+  locator: p.4, text; supplement p.6, Fig. S1
+  note: SiN device, same at 4 K and 300 K within error
+- device_id: eltes2020-c
+  field: capacitance_ff
+  value: 11
+  unit: fF
+  basis: author_estimate
+  locator: supplement p.15, Note 7
+  note: Total device capacitance mapped from the measured capacitance per length
+- device_id: eltes2020-c
+  field: eo_film_thickness_nm
+  value: 80
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: BTO layer thickness as stated in Methods
+- device_id: eltes2020-c
+  field: rib_width_nm
+  value: 1100
+  unit: nm
+  basis: design_target
+  locator: p.6, Methods
+  note: Strip-waveguide width on top of the BTO layer, not an etched rib
+- device_id: eltes2020-c
+  field: electrode_gap_um
+  value: 9
+  unit: um
+  basis: design_target
+  locator: p.6, Methods
+- device_id: eltes2020-c
+  field: electrode_metal
+  value: W
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1 caption
+  note: Lateral electrodes fabricated with W
+- device_id: eltes2020-c
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.6, Methods
+  note: Thermal oxide under the BTO on high-resistivity Si
+- device_id: eltes2020-c
+  field: substrate
+  value: high-resistivity Si
+  unit: ''
+  basis: design_target
+  locator: p.6, Methods
+- device_id: eltes2020-c
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1 caption
+  note: Devices embedded in SiO2
+- device_id: eltes2020-c
+  field: epitaxy_or_stack
+  value: BTO 80 nm (MBE on 4 nm SrTiO3 seed, direct-bonded) / SiN strip 150 nm; BTO confinement 18%; SiO2 3 um thermal oxide on Si
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1; p.6, Methods
+- device_id: eltes2020-d
+  field: temperature_k
+  value: 4
+  unit: K
+  basis: measured
+  locator: p.2 text; p.3, Fig. 2c; p.6, Methods
+  note: Methods give a liquid-helium base temperature of 4.2 K
+- device_id: eltes2020-d
+  field: q_loaded
+  value: 1800
+  unit: '1'
+  basis: measured
+  locator: p.2, text
+  note: Quality factor quoted as Q about 1,800; type not stated
+- device_id: eltes2020-d
+  field: bw3db_ghz
+  value: 30
+  unit: GHz
+  basis: measured
+  locator: abstract; p.2 text; p.3, Fig. 2c
+  note: Flat EO S21 to 30 GHz, no 3 dB crossing observed
+- device_id: eltes2020-d
+  field: bw_measured_to_ghz
+  value: 30
+  unit: GHz
+  basis: measured
+  locator: p.3, Fig. 2c; p.6, Methods
+  note: Photodiode 26 GHz and probe-station loss prevent measurement beyond 30 GHz
+derived: []

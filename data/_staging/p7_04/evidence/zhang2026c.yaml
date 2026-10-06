@@ -1,0 +1,43 @@
+paper_id: zhang2026c
+verified_on: '2026-10-05'
+source_files:
+- references/zhang2026c/text.md
+- references/zhang2026c/crossref.json
+- references/zhang2026c/figures/page_06.png
+- references/zhang2026c/figures/page_07.png
+- references/zhang2026c/figures/page_08.png
+entries: []
+derived: []
+context_values:
+- item: model_geometry_for_bandwidth_standard
+  value: BTO 450 nm on SiO2 via STO buffer; rib H 100 nm, W 4.0 um; Leo 1000 um; Gx 20 um; tm 1.0 um; r51 430-630 pm/V; N_o 2.01 (FDTD)
+  locator: p.3 Sec. 2.3
+  note: model inputs, not a fabricated-device measurement
+- item: lightwave_bandwidth_criterion
+  value: microwave S21 -6.4 dB matches the -3 dB lightwave criterion (alpha_m L = 0.74, u+ about 1.39)
+  locator: p.3 Eq. (11)-(14)
+  note: derived by the authors
+- item: simulated_s21_60ghz_nine_structures_db
+  value: -2.7
+  locator: p.4 Sec. 3.1; Fig. 2(b)
+  note: WE 20 um, tE 1.0 um, Gx 8 um; SiO2 1/2/3 um, STO 50/100/150 nm all overlap
+- item: simulated_s21_60ghz_db_by_electrode_width
+  value: 'WE 80 um: -4.0 to -5.2; WE 40 um: -3.0 to -3.5; WE 20 um: -2.5 to -5.2 (Gx 6 um worst)'
+  locator: p.5 Sec. 3.3; Fig. 4(a)-(c)
+  note: HFSS, Gx 6, 8, 10, 12 um
+- item: simulated_zm_max_ohm
+  value: 40
+  locator: p.5 Sec. 3.2; Fig. 3(c),(d)
+  note: maximum of the Zm maps, WE 40 um, tE 1.0 and 2.0 um
+- item: modelled_lightwave_bandwidth_ghz
+  value: 53
+  locator: p.6 Sec. 3.3; Fig. 4(d)
+  note: WE 80 um, fm 60 GHz, Gx 8 um; abstract says over 55 GHz (not supported by the body)
+- item: measured_microwave_s21_at_40ghz_db
+  value: 'about -1.0 (0.72 mm), about -1.7 to -1.9 (1.02, 1.52 mm); text: -2.0 and -2.5'
+  locator: p.8 Sec. 4; Fig. 6(b)
+  note: electrical VNA S21 of the electrodes, 0-40 GHz, not an EO response; text and figure disagree
+- item: bit_energy_scale_pj
+  value: 2.4e-15 to 7.66e-14 (panel a); 1.4e-14 to 4.48e-13 (panel b)
+  locator: p.7 Fig. 5
+  note: model maps vs frequency 40-100 GHz and Gx 5-8 um; Vb = 0 per caption

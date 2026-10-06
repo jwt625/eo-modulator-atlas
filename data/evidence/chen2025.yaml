@@ -1,0 +1,995 @@
+paper_id: chen2025
+verified_on: '2026-10-05'
+source_files:
+- references/chen2025/text.md
+- references/chen2025/crossref.json
+- references/chen2025/source.json
+- references/chen2025/figures/img_p03_2.png
+- references/chen2025/figures/img_p04_2.png
+- references/chen2025/figures/img_p05_2.png
+- references/chen2025/figures/img_p07_1.png
+- references/chen2025/supplement/text.md
+- references/chen2025/supplement/figures/img_p03_2.png
+- references/chen2025/supplement/figures/img_p04_2.png
+entries:
+- device_id: chen2025-a
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-a
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-a
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-a
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-a
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-a
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-a
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-a
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-a
+  field: wavelength_nm
+  value: 1568
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(e),(f)
+  note: Resonance peak near 1568 nm
+- device_id: chen2025-a
+  field: length_mm
+  value: 0.064
+  unit: mm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(b)
+  note: 64 um dimension label spanning the electrode
+- device_id: chen2025-a
+  field: electrode_gap_um
+  value: 3.5
+  unit: um
+  basis: design_target
+  locator: p.5, Fig. 3 caption (f),(g)
+  note: 3.5 um
+- device_id: chen2025-a
+  field: tuning_nm_per_v
+  value: -0.02433
+  unit: nm/V
+  basis: measured
+  locator: p.5 Sec. 3; p.5 Fig. 3(g); supplement p.5 Fig. S2(b)
+  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -24.33 pm/V; the label and text quote the magnitude 24.33 pm/V
+- device_id: chen2025-a
+  field: q_loaded
+  value: 2200
+  unit: '1'
+  basis: author_estimate
+  locator: p.2
+  note: Q 2200 for the modulator; type not stated
+- device_id: chen2025-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5-6, Fig. 3(h); p.1 abstract
+  note: Greater than 110 GHz, LCA limit 110 GHz
+- device_id: chen2025-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.5, Fig. 3(h)
+  note: 110 GHz lightwave component analyzer
+- device_id: chen2025-a
+  field: il_onchip_db
+  value: 13.7
+  unit: dB
+  basis: extracted_from_figure
+  locator: supplement p.3, Fig. S1(a)
+  note: N70 at 3.5 um gap, about -13.7 dB; Fig. 3(e) shows about -14 dB, Fig. 3(d) spectra are normalized to about 0 dB outside the stop band
+- device_id: chen2025-a
+  field: drive_vpp_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.8 High-Speed Performance Measurements
+  note: Amplified to 3 Vpp; reference plane not stated
+- device_id: chen2025-a
+  field: energy_per_bit_fj
+  value: 0.2
+  unit: fJ/bit
+  basis: derived
+  locator: p.6; p.8 Conclusion
+  note: C Vpp^2/4 for NRZ with 3 Vpp stated by the authors (p.6), about 0.2 fJ/bit; capacitance not stated
+- device_id: chen2025-a
+  field: max_baud_gbd
+  value: 220
+  unit: GBd
+  basis: derived
+  locator: p.6, Fig. 4(d)
+  note: 220 Gb/s NRZ, one bit per symbol
+- device_id: chen2025-a
+  field: modulation_format
+  value: NRZ eyes 180, 190, 220 Gb/s; PAM4 180, 200, 220 Gb/s; PAM6 128, 154 Gb/s; PAM8 150 Gb/s; BER of NRZ 50, 70, 100 Gb/s against the SD-FEC threshold 2e-2 (sensitivity -5, -4, -2 dBm)
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(b)-(k)
+  note: Eyes up to 220 Gb/s; BER for NRZ 50, 70 and 100 Gb/s
+- device_id: chen2025-a
+  field: max_line_rate_gbps
+  value: 220
+  unit: Gb/s
+  basis: measured
+  locator: p.6, Fig. 4(d),(g)
+  note: NRZ and PAM4 eyes at 220 Gb/s
+- device_id: chen2025-a
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.5, Fig. 3(h)
+  note: Normalised S21, low-frequency reference not stated
+- device_id: chen2025-a
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.5; p.8
+  note: Small-signal EO S21 with a 110 GHz LCA
+- device_id: chen2025-a
+  field: il_onchip_scope
+  value: undefined
+  unit: ''
+  basis: measured
+  locator: supplement p.3, Fig. S1(a)
+  note: Scope not defined by the authors
+- device_id: chen2025-b
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-b
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-b
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-b
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-b
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-b
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-b
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-b
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-b
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-b
+  field: electrode_gap_um
+  value: 3.7
+  unit: um
+  basis: design_target
+  locator: p.4-5, Fig. 3(e); supplement p.4-5, Fig. S2
+  note: 3.7 um gap
+- device_id: chen2025-b
+  field: tuning_nm_per_v
+  value: -0.02015
+  unit: nm/V
+  basis: measured
+  locator: supplement p.5, Fig. S2(d)
+  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -20.15 pm/V; the label and text quote the magnitude 20.15 pm/V
+- device_id: chen2025-b
+  field: wavelength_nm
+  value: 1569.2
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(e)
+  note: Peak read from the Fig. 3(e) trace of this gap (0 V); about 0.3 nm reading uncertainty
+- device_id: chen2025-b
+  field: il_onchip_db
+  value: 14.6
+  unit: dB
+  basis: extracted_from_figure
+  locator: supplement p.3, Fig. S1(a)
+  note: Read at 3.7 um gap, scope not defined; Fig. S2(c) spectra of the same gap peak at about -11.5 dB
+- device_id: chen2025-b
+  field: il_onchip_scope
+  value: undefined
+  unit: ''
+  basis: measured
+  locator: supplement p.3, Fig. S1(a)
+  note: Scope not defined by the authors; transmission peak of the resonance
+- device_id: chen2025-c
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-c
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-c
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-c
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-c
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-c
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-c
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-c
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-c
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-c
+  field: electrode_gap_um
+  value: 4.0
+  unit: um
+  basis: design_target
+  locator: p.4-5, Fig. 3(e); supplement p.4-5, Fig. S2
+  note: 4.0 um gap
+- device_id: chen2025-c
+  field: tuning_nm_per_v
+  value: -0.01753
+  unit: nm/V
+  basis: measured
+  locator: supplement p.5, Fig. S2(f)
+  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -17.53 pm/V; the label and text quote the magnitude 17.53 pm/V
+- device_id: chen2025-c
+  field: wavelength_nm
+  value: 1569.3
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(e)
+  note: Peak read from the Fig. 3(e) trace of this gap (0 V); about 0.3 nm reading uncertainty
+- device_id: chen2025-c
+  field: il_onchip_db
+  value: 12.9
+  unit: dB
+  basis: extracted_from_figure
+  locator: supplement p.3, Fig. S1(a)
+  note: Read at 4.0 um gap, scope not defined; Fig. S2(e) spectra of the same gap peak at about -10.7 dB
+- device_id: chen2025-c
+  field: il_onchip_scope
+  value: undefined
+  unit: ''
+  basis: measured
+  locator: supplement p.3, Fig. S1(a)
+  note: Scope not defined by the authors; transmission peak of the resonance
+- device_id: chen2025-d
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-d
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-d
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-d
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-d
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-d
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-d
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-d
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-d
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-d
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-d
+  field: electrode_gap_um
+  value: 4.2
+  unit: um
+  basis: design_target
+  locator: p.4-5, Fig. 3(e); supplement p.4-5, Fig. S2
+  note: 4.2 um gap
+- device_id: chen2025-d
+  field: tuning_nm_per_v
+  value: -0.01536
+  unit: nm/V
+  basis: measured
+  locator: supplement p.5, Fig. S2(h)
+  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -15.36 pm/V; the label and text quote the magnitude 15.36 pm/V
+- device_id: chen2025-d
+  field: wavelength_nm
+  value: 1569.3
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(e)
+  note: Peak read from the Fig. 3(e) trace of this gap (0 V); about 0.3 nm reading uncertainty
+- device_id: chen2025-d
+  field: il_onchip_db
+  value: 13.0
+  unit: dB
+  basis: extracted_from_figure
+  locator: supplement p.3, Fig. S1(a)
+  note: Read at 4.2 um gap, scope not defined; Fig. S2(g) spectra of the same gap peak at about -11.2 dB
+- device_id: chen2025-d
+  field: il_onchip_scope
+  value: undefined
+  unit: ''
+  basis: measured
+  locator: supplement p.3, Fig. S1(a)
+  note: Scope not defined by the authors; transmission peak of the resonance
+- device_id: chen2025-e
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-e
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-e
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-e
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-e
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-e
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-e
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-e
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-e
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-e
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-e
+  field: electrode_gap_um
+  value: 4.5
+  unit: um
+  basis: design_target
+  locator: p.4-5, Fig. 3(e); supplement p.4-5, Fig. S2
+  note: 4.5 um gap
+- device_id: chen2025-e
+  field: tuning_nm_per_v
+  value: -0.01105
+  unit: nm/V
+  basis: measured
+  locator: supplement p.5, Fig. S2(j); p.5 Sec. 3
+  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -11.05 pm/V; the label and text quote the magnitude 11.05 pm/V
+- device_id: chen2025-e
+  field: wavelength_nm
+  value: 1568.2
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(e)
+  note: Peak read from the Fig. 3(e) trace of this gap (0 V); about 0.3 nm reading uncertainty
+- device_id: chen2025-e
+  field: il_onchip_db
+  value: 12.3
+  unit: dB
+  basis: extracted_from_figure
+  locator: supplement p.3, Fig. S1(a)
+  note: Read at 4.5 um gap, scope not defined; Fig. S2(i) peaks at about -12.5 to -13 dB
+- device_id: chen2025-e
+  field: il_onchip_scope
+  value: undefined
+  unit: ''
+  basis: measured
+  locator: supplement p.3, Fig. S1(a)
+  note: Scope not defined by the authors; transmission peak of the resonance
+- device_id: chen2025-f
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-f
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-f
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-f
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-f
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-f
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-f
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-f
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-f
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-f
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-f
+  field: electrode_gap_um
+  value: 3.5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: For the 3.5 um electrode gap
+- device_id: chen2025-f
+  field: tuning_nm_per_v
+  value: 0.02452
+  unit: nm/V
+  basis: measured
+  locator: p.5 Sec. 3
+  note: Magnitude; sign not stated
+- device_id: chen2025-f
+  field: wavelength_nm
+  value: 1566.7
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(d)
+  note: Peak of the N = 50 trace read from Fig. 3(d), about 0.5 nm reading uncertainty; the gap of the Fig. 3(d) devices is not stated, assignment by N only
+- device_id: chen2025-f
+  field: q_loaded
+  value: 1118
+  unit: '1'
+  basis: measured
+  locator: p.4 Sec. 3
+  note: Q 1118 to 3848 for N 50 to 90; type not stated
+- device_id: chen2025-g
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-g
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-g
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-g
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-g
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-g
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-g
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-g
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-g
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-g
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-g
+  field: electrode_gap_um
+  value: 3.5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: For the 3.5 um electrode gap
+- device_id: chen2025-g
+  field: tuning_nm_per_v
+  value: 0.01743
+  unit: nm/V
+  basis: measured
+  locator: p.5 Sec. 3
+  note: Magnitude; sign not stated
+- device_id: chen2025-g
+  field: wavelength_nm
+  value: 1567.5
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(d)
+  note: Peak of the N = 60 trace read from Fig. 3(d), about 0.5 nm reading uncertainty; the gap of the Fig. 3(d) devices is not stated, assignment by N only
+- device_id: chen2025-h
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-h
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-h
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-h
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-h
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-h
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-h
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-h
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-h
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-h
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-h
+  field: electrode_gap_um
+  value: 3.5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: For the 3.5 um electrode gap
+- device_id: chen2025-h
+  field: tuning_nm_per_v
+  value: 0.02179
+  unit: nm/V
+  basis: measured
+  locator: p.5 Sec. 3
+  note: Magnitude; sign not stated
+- device_id: chen2025-h
+  field: wavelength_nm
+  value: 1568.5
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(d)
+  note: Peak of the N = 80 trace read from Fig. 3(d), about 0.5 nm reading uncertainty; the gap of the Fig. 3(d) devices is not stated, assignment by N only
+- device_id: chen2025-i
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8 Experimental Section
+  note: 400 nm X-cut TFLN
+- device_id: chen2025-i
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3; p.8
+  note: Partially etched by 200 nm
+- device_id: chen2025-i
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: W = 0.4 um, width of slab B; slab A is W + 2 delta = 0.9 um
+- device_id: chen2025-i
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.3, Fig. 1 caption
+  note: h1 = 0.2 um residual TFLN after etching
+- device_id: chen2025-i
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4
+  note: hAu = 0.4 um
+- device_id: chen2025-i
+  field: electrode_metal
+  value: Ti/Au (20 nm / 400 nm)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: 20 nm Ti plus 400 nm Au, e-beam evaporation and lift-off
+- device_id: chen2025-i
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.8 Experimental Section
+  note: 4.7 um buried oxide
+- device_id: chen2025-i
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4; p.8
+  note: X-cut
+- device_id: chen2025-i
+  field: waveguide_orientation
+  value: y (light along crystal y, from the Fig. 1(a) axes)
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1(a)
+  note: 'Axes in the schematic: x normal, y along the waveguide, z in plane'
+- device_id: chen2025-i
+  field: epitaxy_or_stack
+  value: 400 nm x-cut LN on 4.7 um SiO2 (NANOLN), 200 nm ICP-etched slab; 1D topological photonic crystal (two mirror-symmetric SSH-type gratings, period 454 nm, W 400 nm, corrugation depth 250 nm, 70 unit cells per side for N70); Ti 20 nm / Au 400 nm electrodes either side; no cladding drawn
+  unit: ''
+  basis: design_target
+  locator: p.3, Fig. 1 caption; p.4; p.8
+  note: Period 454 nm, W 0.4, delta 0.25, h1 0.2 um; N = 70 for the headline device
+- device_id: chen2025-i
+  field: electrode_gap_um
+  value: 3.5
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: For the 3.5 um electrode gap
+- device_id: chen2025-i
+  field: tuning_nm_per_v
+  value: 0.0167
+  unit: nm/V
+  basis: measured
+  locator: p.5 Sec. 3
+  note: Magnitude; sign not stated
+- device_id: chen2025-i
+  field: wavelength_nm
+  value: 1568.4
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 3(d)
+  note: Peak of the N = 90 trace read from Fig. 3(d), about 0.5 nm reading uncertainty; the gap of the Fig. 3(d) devices is not stated, assignment by N only
+- device_id: chen2025-i
+  field: q_loaded
+  value: 3848
+  unit: '1'
+  basis: measured
+  locator: p.4 Sec. 3
+  note: Q 1118 to 3848 for N 50 to 90; type not stated
+derived: []

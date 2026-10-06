@@ -1,0 +1,156 @@
+paper_id: ogiso2020
+verified_on: '2026-10-05'
+source_files:
+- references/ogiso2020/text.md
+- references/ogiso2020/source.pdf
+- references/ogiso2020/crossref.json
+- references/ogiso2020/source.json
+entries:
+- device_id: ogiso2020-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.3 Fig. 6; Fig. 7(b)
+  note: Static data labeled 1550 nm; wavelength of EO response not stated
+- device_id: ogiso2020-a
+  field: length_mm
+  value: 4
+  unit: mm
+  basis: design_target
+  locator: p.2 Sec. II
+  note: CL-TWE 4.0 mm long
+- device_id: ogiso2020-a
+  field: vpi_dc_v
+  value: 1.5
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.3 Sec. III-A, Fig. 6
+  note: Bias adjusted for Vpi below 1.5 V; abstract and title state 1.5 V
+- device_id: ogiso2020-a
+  field: bias_for_vpi_v
+  value: -10
+  unit: V
+  basis: measured
+  locator: p.3 Sec. III-A, Fig. 7(b)
+  note: Approximately 10 V reverse bias in the PIC itself; paper gives magnitude of negative bias
+- device_id: ogiso2020-a
+  field: bw3db_ghz
+  value: 80
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. III-C, Fig. 10
+  note: Approximately 80 GHz, small-signal EO response with flip-chip terminations
+- device_id: ogiso2020-a
+  field: bw6db_ghz
+  value: 100
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. III-C, Fig. 10
+  note: Approximately 100 GHz
+- device_id: ogiso2020-a
+  field: il_onchip_db
+  value: 8.5
+  unit: dB
+  basis: author_estimate
+  locator: p.3 Sec. III-A
+  note: Overall on-chip loss 8.5 dB per polarization was estimated; paper-defined scope absent
+- device_id: ogiso2020-a
+  field: prop_loss_db_per_cm
+  value: 1.5
+  unit: dB/cm
+  basis: author_estimate
+  locator: p.2 Sec. II
+  note: Estimated below 1.5 dB/cm for both waveguide types
+- device_id: ogiso2020-a
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.3 Sec. III-A, Fig. 6
+  note: Static ER better than 25 dB for all sub-MZMs
+- device_id: ogiso2020-a
+  field: waveguide_orientation
+  value: '[011]'
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. II
+  note: Stripe rotated to [011]
+- device_id: ogiso2020-a
+  field: epitaxy_or_stack
+  value: 'n-i-p-n heterostructure: thick n-doped layer, undoped core, thin p-doped layer under the undoped layer (electron blocker), n-doped layer; ridge waveguide (inverted-trapezoidal by wet etching of
+    the [011] stripe); I/O passive region: deep-ridge waveguide with semi-insulating over-cladding replacing the n-doped layer; vertical-tapered spot-size converter; layer thicknesses and doping not stated'
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. II, Fig. 2
+- device_id: ogiso2020-a
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 2(b); p.3 Fig. 6 caption, Fig. 7(a)
+  note: Series arms on a common n-layer with differential GSSG input; the paper says "differential drive" / "push-pull drive", not "series"; ogiso2024 (same group, same n-i-p-n CL-TWE) is series_push_pull
+- device_id: ogiso2020-a
+  field: vpi_convention
+  value: mzm_series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 2(b); p.3 Fig. 6 caption, Fig. 7(a)
+  note: Vpi is the voltage between the two differential signal lines (series push-pull); series arms on a common n-layer with differential GSSG input; the paper says "differential drive" / "push-pull drive",
+    not "series"; ogiso2024 (same group, same n-i-p-n CL-TWE) is series_push_pull
+- device_id: ogiso2020-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5 Sec. IV-C
+  note: ECL wavelength 1550 nm used for the IQ modulation experiments
+- device_id: ogiso2020-b
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.4 Fig. 12(b); p.5 Sec. IV-B
+  note: 'Authors: 3 dB EO bandwidth exceeding 67 GHz; driver and modulator together; no crossing observed'
+- device_id: ogiso2020-b
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.4 Fig. 12(b)
+  note: Upper end of the plotted EO response axis, about 67 GHz
+- device_id: ogiso2020-b
+  field: il_fiber_to_fiber_db
+  value: 9
+  unit: dB
+  basis: measured
+  locator: p.5 Sec. IV-C
+  note: Fiber-to-fiber optical insertion loss of the PIC 9.0 dB
+- device_id: ogiso2020-b
+  field: max_baud_gbd
+  value: 128
+  unit: GBd
+  basis: measured
+  locator: p.5 Sec. IV-D, Fig. 14
+  note: 128 GBd QPSK, BER 3.38e-5
+- device_id: ogiso2020-b
+  field: modulation_format
+  value: 'back-to-back single polarization: QPSK 128 GBd BER 3.38e-5 (below 20% SD-FEC; oscilloscope 63 GHz insufficient); QPSK 120 GBd error-free at OSNR 29.5 dB; 16QAM 112 GBd BER 6.68e-3 at OSNR 29.5
+    dB; 600 mVppd differential driver input, 45 C'
+  unit: ''
+  basis: measured
+  locator: p.5 Sec. IV-C, IV-D, Fig. 14
+- device_id: ogiso2020-b
+  field: drive
+  value: series_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 2(b); p.3 Fig. 7(a); p.5 Sec. IV
+  note: Almost the same electrical design as the twin-IQ PIC (series arms on a common n-layer, differential input from the driver IC); the paper says "differential", not "series"
+derived:
+- device_id: ogiso2020-b
+  field: temperature_k
+  value: 318.15
+  formula: 45 C + 273.15
+  inputs:
+  - 45 C (p.5)

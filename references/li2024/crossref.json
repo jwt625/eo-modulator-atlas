@@ -1,0 +1,515 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     18
+    ]
+   ],
+   "date-time": "2026-09-18T11:39:32Z",
+   "timestamp": 1789731572390,
+   "version": "4.0.1"
+  },
+  "reference-count": 34,
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "issue": "3",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       2,
+       1
+      ]
+     ],
+     "date-time": "2024-02-01T00:00:00Z",
+     "timestamp": 1706745600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       2,
+       1
+      ]
+     ],
+     "date-time": "2024-02-01T00:00:00Z",
+     "timestamp": 1706745600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2024,
+       2,
+       1
+      ]
+     ],
+     "date-time": "2024-02-01T00:00:00Z",
+     "timestamp": 1706745600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   }
+  ],
+  "funder": [
+   {
+    "name": "Fonds de Recherche du Quebec&#x2014;Nature et Technologies",
+    "award": [
+     "319965"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "319965"
+      ]
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "J. Lightwave Technol."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2024,
+     2,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1109/jlt.2023.3339472",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     12,
+     5
+    ]
+   ],
+   "date-time": "2023-12-05T18:23:49Z",
+   "timestamp": 1701800629000
+  },
+  "page": "1143-1150",
+  "source": "Crossref",
+  "is-referenced-by-count": 31,
+  "title": [
+   "Thin-Film BTO-Based MZMs for Next-Generation IMDD Transceivers Beyond 200 Gbps/λ"
+  ],
+  "prefix": "10.1109",
+  "volume": "42",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-6578-3152",
+    "authenticated-orcid": false,
+    "given": "Weijia",
+    "family": "Li",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Photonic Systems Group, Department of Electrical and Computer Engineering, McGill University, Montr&#x00E9;al, QC, Canada"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3882-8121",
+    "authenticated-orcid": false,
+    "given": "Felix",
+    "family": "Eltes",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Lumiphase AG, St&#x00E4;fa, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2782-2341",
+    "authenticated-orcid": false,
+    "given": "Essam",
+    "family": "Berikaa",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonic Systems Group, Department of Electrical and Computer Engineering, McGill University, Montr&#x00E9;al, QC, Canada"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7712-9353",
+    "authenticated-orcid": false,
+    "given": "Md Samiul",
+    "family": "Alam",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonic Systems Group, Department of Electrical and Computer Engineering, McGill University, Montr&#x00E9;al, QC, Canada"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Santiago",
+    "family": "Bernal",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonic Systems Group, Department of Electrical and Computer Engineering, McGill University, Montr&#x00E9;al, QC, Canada"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Cyriel",
+    "family": "Minkenberg",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Lumiphase AG, St&#x00E4;fa, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-9688-7168",
+    "authenticated-orcid": false,
+    "given": "Stefan",
+    "family": "Abel",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Lumiphase AG, St&#x00E4;fa, Switzerland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "David V.",
+    "family": "Plant",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Photonic Systems Group, Department of Electrical and Computer Engineering, McGill University, Montr&#x00E9;al, QC, Canada"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "263",
+  "reference": [
+   {
+    "key": "ref1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/MCOM.2010.5496876"
+   },
+   {
+    "key": "ref2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2023.3311716"
+   },
+   {
+    "key": "ref3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ieeestd.2019.8649797"
+   },
+   {
+    "key": "ref4",
+    "first-page": "1",
+    "article-title": "200G per lane for beyond 400 GbE",
+    "volume-title": "Proc. IEEE 802.3 B400G SG Meeting",
+    "author": "Lam"
+   },
+   {
+    "key": "ref5",
+    "article-title": "200 Glane electrical interfaces - system implications",
+    "author": "Ran",
+    "year": "2022"
+   },
+   {
+    "key": "ref7",
+    "article-title": "QSFP-DD/QSFP-DD800/QSFP-DD1600 hardware specification for QSFP double density 8X and QSFP 4X pluggable transceiversqsfp,"
+   },
+   {
+    "key": "ref8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2021.3124196"
+   },
+   {
+    "key": "ref9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ecoc.2018.8535167"
+   },
+   {
+    "key": "ref10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.27.025544"
+   },
+   {
+    "key": "ref11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.476399"
+   },
+   {
+    "key": "ref12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2022.3172246"
+   },
+   {
+    "key": "ref13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-018-0208-0"
+   },
+   {
+    "key": "ref14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2019.2893500"
+   },
+   {
+    "key": "ref15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.6b00350"
+   },
+   {
+    "key": "ref16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/nl404513p"
+   },
+   {
+    "key": "ref17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2015.2510282"
+   },
+   {
+    "key": "ref18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-022-01003-0"
+   },
+   {
+    "key": "ref19",
+    "article-title": "Electro-optic frequency response of thin-film barium titanate (BTO) from 20 to 270 GHz",
+    "volume-title": "Proc. Eur. Conf. Opt. Commun.",
+    "author": "Chelladurai"
+   },
+   {
+    "key": "ref20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OFC.2023.Th4A.2"
+   },
+   {
+    "key": "ref21",
+    "doi-asserted-by": "crossref",
+    "DOI": "10.1049/icp.2023.2510",
+    "article-title": "Performance analysis of BTO-based MZM for 200 Gbps O-band intra-datacenter interconnects",
+    "volume-title": "Proc. Eur. Conf. Opt. Commun.",
+    "author": "Li"
+   },
+   {
+    "key": "ref22",
+    "article-title": "Technique for measuring the VPI-AC of a Mach-Zehnder modulator",
+    "author": "Nagarajan",
+    "year": "2001"
+   },
+   {
+    "key": "ref23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OFC.2020.Th4A.3"
+   },
+   {
+    "key": "ref24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1049/cp.2019.0884"
+   },
+   {
+    "key": "ref25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.sigpro.2013.02.003"
+   },
+   {
+    "key": "ref26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2015.2510034"
+   },
+   {
+    "key": "ref27",
+    "author": "Harley",
+    "year": "2022",
+    "journal-title": "IEEE Draft Standard for Ethernet Amendment: Media Access Control Parameters for 800 Gb/s and Physical Layers and Management Parameters for 400 Gb/s and 800 Gb/s Operation"
+   },
+   {
+    "key": "ref28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ieeestd.2019.8632920"
+   },
+   {
+    "key": "ref29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/s10043-021-00706-z"
+   },
+   {
+    "key": "ref30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2019.2901201"
+   },
+   {
+    "key": "ref31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/isscc19947.2020.9063027"
+   },
+   {
+    "key": "ref32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/ISSCC42613.2021.9365840"
+   },
+   {
+    "key": "ref33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/isscc42614.2022.9731794"
+   },
+   {
+    "key": "ref34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/jlt.2023.3307504"
+   },
+   {
+    "key": "ref35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2040-8986/aacd65"
+   }
+  ],
+  "container-title": [
+   "Journal of Lightwave Technology"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "http://xplorestaging.ieee.org/ielx7/50/10416918/10342830.pdf?arnumber=10342830",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     5
+    ]
+   ],
+   "date-time": "2024-11-05T04:12:42Z",
+   "timestamp": 1730779962000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://ieeexplore.ieee.org/document/10342830/"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     2,
+     1
+    ]
+   ]
+  },
+  "references-count": 34,
+  "journal-issue": {
+   "issue": "3"
+  },
+  "URL": "https://doi.org/10.1109/jlt.2023.3339472",
+  "relation": {},
+  "ISSN": [
+   "0733-8724",
+   "1558-2213"
+  ],
+  "issn-type": [
+   {
+    "value": "0733-8724",
+    "type": "print"
+   },
+   {
+    "value": "1558-2213",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2024,
+     2,
+     1
+    ]
+   ]
+  }
+ }
+}

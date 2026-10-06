@@ -1,0 +1,132 @@
+paper_id: eltes2023
+verified_on: '2026-10-05'
+source_files:
+- references/eltes2023/text.md
+- references/eltes2023/crossref.json
+- references/eltes2023/figures/page_01.png
+- references/eltes2023/figures/page_02.png
+entries:
+- device_id: eltes2023-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2, Section 3
+  note: Tunable external cavity laser set to 1550 nm
+- device_id: eltes2023-a
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.2, Section 2
+  note: High-speed phase shifter length stated as less than 2 mm; Table 1 footprint 0.4 x 1.6 mm
+- device_id: eltes2023-a
+  field: vpi_dc_v
+  value: 3.6
+  unit: V
+  basis: measured
+  locator: p.2, Section 2; p.3, Table 1
+  note: 'Table 1: Vpi at 10 MHz; MZM-level number under push-pull drive (see vpi_convention entry)'
+- device_id: eltes2023-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2, Section 2
+  note: 'Paper: MZM with Vpi of 3.6 V and "a single-ended drive scheme enabling standard push-pull driving"; the authors do not label the 3.6 V as push-pull explicitly'
+- device_id: eltes2023-a
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3, Section 5 (Conclusions); p.1, Fig. 1a
+  note: 'Paper: "the manufacturing process we have established at a 200 mm SiPh-compatible line"; Fig. 1a shows a Lumiphase 200 mm wafer; fab line not named further; measured MZMs are stand-alone devices without SiPh components'
+- device_id: eltes2023-a
+  field: vpi_dc_freq_ghz
+  value: 0.01
+  unit: GHz
+  basis: measured
+  locator: p.1, Section 2; p.3, Table 1
+  note: Average transmission vs modulation voltage at 10 MHz, Bessel-function fit
+- device_id: eltes2023-a
+  field: drive_vpp_v
+  value: 0.83
+  unit: V
+  basis: measured
+  locator: p.3, Table 1 caption
+  note: Driver-less operating point of Table 1; text prints 830 Vpp, read as 830 mVpp; reference plane not stated
+- device_id: eltes2023-a
+  field: il_onchip_db
+  value: 2
+  unit: dB
+  basis: measured
+  locator: p.2, Section 2; p.3, Table 1
+  note: MZM including splitters and DC tuner
+- device_id: eltes2023-a
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: design_target
+  locator: p.2, Section 2
+  note: Characteristic impedance and on-chip termination both designed to be 50 ohm
+- device_id: eltes2023-a
+  field: max_baud_gbd
+  value: 128
+  unit: GBd
+  basis: measured
+  locator: p.2, Fig. 3
+  note: OOK at 128 GBd driver-less, below KP4-FEC with 11 FFE taps
+- device_id: eltes2023-a
+  field: modulation_format
+  value: OOK 128 GBd (net 117 Gb/s, KP4-FEC) and PAM-4 106 GBd (net 200 Gb/s, HD-FEC) driver-less; PAM-4 112 GBd (net 212 Gb/s) and PAM-6 112 GBd (net 262 Gb/s, HD-FEC) at 3 Vpp
+  unit: ''
+  basis: measured
+  locator: p.2, Fig. 2b and Fig. 3b
+- device_id: eltes2023-a
+  field: max_net_rate_gbps
+  value: 262
+  unit: Gb/s
+  basis: measured
+  locator: p.1, Section 1; p.2, Fig. 2b
+  note: 112 GBd PAM-6 at 3 Vpp with Tx DSP and PNLE, below HD-FEC; driver-less maximum is 200 Gb/s
+- device_id: eltes2023-a
+  field: energy_per_bit_fj
+  value: 9
+  unit: fJ/bit
+  basis: derived
+  locator: abstract; p.3, Table 1
+  note: E/bit = (P_RF + P_DC)/B, termination plus DC tuner only, B = 200 Gb/s; driver not included
+- device_id: eltes2023-b
+  field: length_mm
+  value: 1.5
+  unit: mm
+  basis: design_target
+  locator: p.1, Fig. 1 caption
+- device_id: eltes2023-b
+  field: vpi_dc_v
+  value: 3.2
+  unit: V
+  basis: measured
+  locator: p.1, Fig. 1c
+  note: Fit parameter printed in the Fig. 1c legend (Bessel fit of average transmission vs Vpp)
+- device_id: eltes2023-b
+  field: vpi_dc_freq_ghz
+  value: 0.01
+  unit: GHz
+  basis: measured
+  locator: p.1, Section 2; Fig. 1c
+- device_id: eltes2023-b
+  field: vpil_dc_vcm
+  value: 0.48
+  unit: V*cm
+  basis: derived
+  locator: p.1, Section 2; Fig. 1c
+  note: Paper states VpiL 4.8 V mm (3.2 V x 1.5 mm); converted to V cm
+derived:
+- device_id: eltes2023-b
+  field: vpil_dc_vcm
+  value: 0.48
+  unit: V*cm
+  formula: 4.8 V*mm / 10
+  inputs:
+  - paper VpiL 4.8 V*mm

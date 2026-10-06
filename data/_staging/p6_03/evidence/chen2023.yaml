@@ -1,0 +1,226 @@
+paper_id: chen2023
+verified_on: '2026-10-05'
+source_files:
+- references/chen2023/text.md
+- references/chen2023/crossref.json
+- references/chen2023/source.json
+- references/chen2023/figures/page_05.png
+- references/chen2023/figures/page_06.png
+- references/chen2023/figures/page_07.png
+entries:
+- device_id: chen2023-a
+  field: vpil_dc_vcm
+  value: 1.29
+  unit: V*cm
+  basis: derived
+  locator: p.6 Sec. 3; Fig. 7(a); Table 1 (p.8)
+  note: Authors deduce from 15.7 pm/V fringe (wavelength) shift (0-40 V DC sweep); formula not given; wavelength not stated; convention resonance_tuning_derived
+- device_id: chen2023-a
+  field: tuning_nm_per_v
+  value: 0.0157
+  unit: nm/V
+  basis: derived
+  locator: p.6 Sec. 3; Fig. 7(a)
+  note: Text ~15.7 pm/V, Fig. 7(a) label 15.67; MZI fringe shift, red shift for positive voltage; converted from pm/V
+- device_id: chen2023-a
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: abstract; p.6 Sec. 3; Fig. 7(b)
+  note: Responses clearly above -3 dB to 50 GHz at three wavelengths; no crossing observed
+- device_id: chen2023-a
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: Fig. 7(b)
+  note: Frequency axis ends at 50 GHz; instrument not named
+- device_id: chen2023-a
+  field: extinction_ratio_db
+  value: 2
+  unit: dB
+  basis: measured
+  locator: p.2 Sec. 1; p.8 Sec. 3; Fig. 7(d,e)
+  note: Dynamic ER of the 64 and 80 Gbit/s OOK eyes
+- device_id: chen2023-a
+  field: drive_vpp_v
+  value: 8.5
+  unit: V
+  basis: measured
+  locator: p.8 Sec. 3
+  note: AWG output amplified by a high-speed electrical amplifier (model not stated); reference plane at the amplifier output
+- device_id: chen2023-a
+  field: ng_opt
+  value: 4.0
+  unit: '1'
+  basis: derived
+  locator: p.6 Sec. 3; p.5 Sec. 3
+  note: Measured ng of the fabricated SL-MZM from FP-cavity FSR, ng = lambda^2/(2 F L) on test structures of the same design
+- device_id: chen2023-a
+  field: n_rf
+  value: 2.18
+  unit: '1'
+  basis: simulated
+  locator: p.4 Sec. 2
+  note: Microwave index in the design simulation; not measured
+- device_id: chen2023-a
+  field: max_baud_gbd
+  value: 80
+  unit: GBd
+  basis: derived
+  locator: abstract; p.8 Sec. 3
+  note: OOK so baud equals 80 Gbit/s
+- device_id: chen2023-a
+  field: max_line_rate_gbps
+  value: 80
+  unit: Gb/s
+  basis: measured
+  locator: abstract; p.8 Sec. 3; Fig. 7(e,f)
+- device_id: chen2023-a
+  field: modulation_format
+  value: OOK, 64 and 80 Gbit/s; back-to-back BER with offline FFE (64 Gbit/s) and Volterra nonlinear equalization (80 Gbit/s); BER below the KP4-FEC threshold (2.4e-4) at 64 Gbit/s and below the HD-FEC threshold (3.8e-3) at 80 Gbit/s
+  unit: ''
+  basis: measured
+  locator: p.8 Sec. 3; Fig. 7(d-f)
+  note: BER read against dashed threshold lines in Fig. 7(f)
+- device_id: chen2023-a
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: Commercial NanoLN wafer, nominal top LN thickness
+- device_id: chen2023-a
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: Ar plasma etch, half-etched waveguide
+- device_id: chen2023-a
+  field: rib_width_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.6 Sec. 3; p.2 Sec. 2
+  note: W = 0.4 um core width of the corrugated waveguide; corrugation delta 0.24 um not included
+- device_id: chen2023-a
+  field: electrode_gap_um
+  value: 5.3
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 2
+  note: Simulation setting chosen for impedance matching; fabricated gap not stated
+- device_id: chen2023-a
+  field: signal_width_um
+  value: 16
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 2
+  note: Simulation setting; fabricated width not stated
+- device_id: chen2023-a
+  field: electrode_thickness_um
+  value: 0.4
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: 400 nm Au on 5 nm Ti, e-beam evaporation and lift-off
+- device_id: chen2023-a
+  field: electrode_metal
+  value: Ti/Au
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+- device_id: chen2023-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 3
+  note: Buried oxide of the NanoLN wafer
+- device_id: chen2023-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 3
+- device_id: chen2023-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2; p.4 Sec. 3
+- device_id: chen2023-a
+  field: waveguide_orientation
+  value: propagation along y of the x-cut chip, TE0 with the LN z axis lateral
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+- device_id: chen2023-a
+  field: epitaxy_or_stack
+  value: 'Fishbone-like Bragg-grating coupled-resonator waveguide on 400 nm x-cut LN, 200 nm half etch: period 461 nm, 50 percent duty sidewall corrugation delta 0.24 um on W = 0.4 um, P = 20 periods per mirror, N = 20 resonators per arm, half-period pi-phase-shifter between mirrors; GSG Ti/Au electrode'
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2; p.5 Sec. 3; p.6 Sec. 3
+  note: Parameters adopted in the fabricated SL-MZM
+- device_id: chen2023-a
+  field: band
+  value: cl_band
+  unit: ''
+  basis: derived
+  locator: Fig. 7(b)
+  note: EO responses at 1557.43, 1561.64 and 1565.24 nm span C and L; DC and data wavelengths not stated
+- device_id: chen2023-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: GSG traveling-wave electrode works in a push-pull configuration
+- device_id: chen2023-a
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: derived
+  locator: Fig. 7(b)
+  note: Traces start near 0 dB at low frequency; reference not stated
+- device_id: chen2023-a
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: derived
+  locator: Fig. 7(b)
+  note: Plotted measured small-signal EO response; instrument not named
+- device_id: chen2023-a
+  field: vpi_convention
+  value: resonance_tuning_derived
+  unit: ''
+  basis: derived
+  locator: p.6 Sec. 3
+  note: VpiL 1.29 V cm is computed from a wavelength (fringe) shift of 15.7 pm/V, convention (q)
+- device_id: chen2023-a
+  field: prop_loss_db_per_cm
+  value: 133
+  unit: dB/cm
+  basis: derived
+  locator: p.6 Sec. 3; Fig. 6(f)
+  note: Authors' fit 0.0133 dB/um (unit conversion only) on separate SL waveguides of the same design (W 0.4 um, P 20, ng 4.00), not the MZM itself
+derived:
+- device_id: chen2023-a
+  field: slab_thickness_nm
+  value: 200
+  formula: film thickness (400 nm) minus etch depth (200 nm)
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: chen2023-a
+  field: tuning_nm_per_v
+  value: 0.0157
+  formula: 15.7 pm/V x 1e-3 nm/pm (unit conversion only)
+  inputs: []
+- device_id: chen2023-a
+  field: prop_loss_db_per_cm
+  value: 133
+  formula: 0.0133 dB/um x 1e4 um/cm (unit conversion only)
+  inputs: []

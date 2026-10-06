@@ -1,0 +1,20 @@
+# p6_04 audit dispositions (2026-10-05)
+
+Audit: `data/_staging/audits/p6_04-claude-audit-2026-10-05.md`. Each finding re-read in `references/<id>/text.md` (and the figure noted). 14 findings: 13 applied, 1 adjusted, 0 rejected.
+
+- N1 applied. hillier2025-1mm-ee: bw6db_ghz, bw_method, bw3db_reference, bw_measured_to_ghz, bw_basis cleared; the two evidence entries (bw6db_ghz, bw_measured_to_ghz) deleted; 80 +/- 8 GHz EE statement kept in notes (zero bias, VNA 1.7-110 GHz, data above about 80 GHz excluded); row relabelled "zero-bias RF line characterization"; z0_ohm kept; papers.csv note reworded. Evidence: text.md p.7 "extracted EE bandwidth, BWEE, of 80 +/- 8 GHz", Fig. 3(a) caption "Port-1 to port-2 transmitted electrical power, S21,EE (dB)".
+- N2 applied. vpil_dc_vcm cleared on 1mm-q1 and 2mm-q1 and their evidence entries deleted; joint "1.3 +/- 0.1 V cm" (two-device mean) moved to notes with the per-row derived values 1.19 and 1.40 V cm (p.6 text: "Vpi were 11.9 V and 7 V (VpiL = 1.3 +/- 0.1 Vcm)", lengths 1 and 2 mm).
+- N3 applied. 2mm-data max_baud_gbd 192 (evidence value, locator "p.10 text; Fig. 5(a)", note "OOK ... max over formats"); modulation_format rewritten (csv and evidence identical); max_line_rate 320 and max_net_rate 256 unchanged. Evidence: p.10 "crossing the 25 % overhead HD-FEC threshold between 192 GBd and 200 GBd"; Fig. 5(a) re-opened (img_p10_2): 2 mm OOK 4th point about 1e-2 below the dashed line, 5th above.
+- N4 applied. ng_opt cleared on 1mm-ee and the evidence entry deleted; value kept in the row notes (p.2 "approx 5 vs 3.7 [25]", p.8 caption, p.11 model input); design row keeps ng_opt 3.7 (design_target).
+- M1 applied (coordinator rule 2). name_source emptied for MultiLane Inc., SMART Photonics, University College London (not printed in the papers, no ROR in crossref.json); ror_id was already empty. Eindhoven University of Technology keeps ror_id and name_source (ROR 02c2kyt77 present in references/hillier2025/crossref.json).
+- M2 applied. singer2025 license -> `Optica-OA-License-v2`; provenance (Crossref VOR record URL and p.1 notice) moved to notes; redistribution unchanged (restricted_local_only). xu2022 is outside this batch and not touched.
+- M3 applied. papers.csv hillier2025 note: 1 mm Q2 ER label is Fig. 2(a). Also reworded the "(Vpi, VpiL, ER)" and "-6 dB EE" phrases to match N1/N2.
+- m1 applied. 1mm-q1 note: 20.1 kept (text, Fig. 2(a) label and trace agree); Fig. 2(c) ER-scatter discrepancy added. 2mm-q1 note: Fig. 2(d) plots the VpiL point at about 3.6 V; bias cell stays empty (convention (y)).
+- m2 applied. 2mm-data note: the wrong "1 mm 320 Gbit/s at about the threshold" replaced by the Fig. 5(a) reads (1 mm PAM-4 288 Gbit/s about 1.1e-2 below, 320 Gbit/s about 2.5e-2 above; 1 mm OOK 192 Gbit/s near but below); notes only, no 1 mm data row (near-threshold reads).
+- m3 applied. 1mm-q1 il note and evidence note: geometry not named in the sentence, may cover several 1 mm devices; value 9.1 stays on 1mm-q1.
+- m4 applied. hillier2025-design bw_method eo_s21 -> indirect (equivalent-circuit prediction; precedent zwickel2020-design rows); note says so.
+- m5 adjusted. modulation_format reworded as recommended ("no bit errors detected below 160 GBd; threshold crossed between 192 and 200 GBd"), combined with N3. Adjusted only in that the audit's "OOK: no errors detected below 160 GBd" is phrased with the paper's "no bit errors were detected up to 160 GBd. However, bit errors appeared at 160 GBd" (p.10).
+- m6 applied. horst2025-d2 bw3db_reference -> unspecified; note explains (Fig. 1(c) Device 2 trace starts near 500 GHz, plateau shown for Device 1 only). d1 keeps low_freq_unstated. No evidence entry carries the reference.
+- m7 applied. singer2025-a row note and il_onchip_db evidence note reworded: 4.2 dB stated (p.6, p.8); equals Table 2 sum of on-chip elements and 10.8 dB minus two estimated 3.3 dB PWB (p.16). Value, basis derived and scope device_total unchanged.
+
+Not changed (audit rulings, no fix required): horst2025-pm own row; hillier2025 emptied cells (2 mm Q1 bias, 1 mm Q2 ER, 2 mm Q1 ER, data-run bias); per-quadrature-point split.

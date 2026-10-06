@@ -1,0 +1,628 @@
+paper_id: hillier2025
+verified_on: '2026-10-05'
+source_files:
+- references/hillier2025/text.md
+- references/hillier2025/crossref.json
+- references/hillier2025/source.json
+- references/hillier2025/figures/page_04.png
+- references/hillier2025/figures/img_p06_2.png
+- references/hillier2025/figures/img_p08_2.png
+- references/hillier2025/figures/page_10.png
+- references/hillier2025/figures/img_p09_2.png
+entries:
+- device_id: hillier2025-1mm-q1
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.5; Fig. 1(d) caption p.4
+  note: 1 mm electrode length of the best-performing design
+- device_id: hillier2025-1mm-q1
+  field: eo_film_thickness_nm
+  value: 580
+  unit: nm
+  basis: design_target
+  locator: p.4, Table 1
+  note: Intrinsic MQW layer thickness; model input based on chip specification
+- device_id: hillier2025-1mm-q1
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.5, Table 2; p.5 text
+  note: Waveguide width 0.8 um of the best-performing design
+- device_id: hillier2025-1mm-q1
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal track width
+- device_id: hillier2025-1mm-q1
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal-signal gap
+- device_id: hillier2025-1mm-q1
+  field: electrode_thickness_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.4, Table 1
+  note: Metal thickness in the model input table
+- device_id: hillier2025-1mm-q1
+  field: substrate
+  value: semi-insulating substrate (InP generic platform)
+  unit: ''
+  basis: design_target
+  locator: p.5; Fig. 1(a)
+  note: Semi-insulating substrate
+- device_id: hillier2025-1mm-q1
+  field: cladding
+  value: polyimide, 2.3 um, static permittivity ratio 2.26
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1
+  note: Polyimide layer in the model input table
+- device_id: hillier2025-1mm-q1
+  field: epitaxy_or_stack
+  value: 'InP generic-platform MQW stack (Table 1): p-contact 0.3 um (1.5e19 cm-3), p-cladding 1.3 um (3e17), n-buffer 0.20 um (2e16), intrinsic MQW 0.58 um (not intentionally doped, about 1e14), n-cladding 7.5 um (5e17), n-bottom 1.5 um (1e18), metal 2.0 um, polyimide 2.3 um; active-layer bandgap 1.39 +/- 0.02 um; signal-to-waveguide gap and electrode lengths per row'
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1; p.5
+  note: Layer table from model inputs based on chip specifications
+- device_id: hillier2025-1mm-q1
+  field: vpi_dc_v
+  value: 11.9
+  unit: V
+  basis: measured
+  locator: p.6 text; Fig. 2(a)
+  note: Static sweep, 1st quadrature point at 6 V reverse bias
+- device_id: hillier2025-1mm-q1
+  field: bias_for_vpi_v
+  value: -6
+  unit: V
+  basis: measured
+  locator: p.6 text; Fig. 2(a)
+  note: Reverse bias 6 V in the paper; stored negative
+- device_id: hillier2025-1mm-q1
+  field: il_onchip_db
+  value: 9.1
+  unit: dB
+  basis: author_estimate
+  locator: p.5 text
+  note: Estimated 9.1 +/- 0.8 dB for the full 1 mm device excluding 2.5 dB per facet; sentence does not name the geometry, may cover several 1 mm devices
+- device_id: hillier2025-1mm-q1
+  field: extinction_ratio_db
+  value: 20.1
+  unit: dB
+  basis: measured
+  locator: p.6 text; Fig. 2(a)
+  note: Static ER at Q1
+- device_id: hillier2025-1mm-q2
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.5; Fig. 1(d) caption p.4
+  note: 1 mm electrode length of the best-performing design
+- device_id: hillier2025-1mm-q2
+  field: eo_film_thickness_nm
+  value: 580
+  unit: nm
+  basis: design_target
+  locator: p.4, Table 1
+  note: Intrinsic MQW layer thickness; model input based on chip specification
+- device_id: hillier2025-1mm-q2
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.5, Table 2; p.5 text
+  note: Waveguide width 0.8 um of the best-performing design
+- device_id: hillier2025-1mm-q2
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal track width
+- device_id: hillier2025-1mm-q2
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal-signal gap
+- device_id: hillier2025-1mm-q2
+  field: electrode_thickness_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.4, Table 1
+  note: Metal thickness in the model input table
+- device_id: hillier2025-1mm-q2
+  field: substrate
+  value: semi-insulating substrate (InP generic platform)
+  unit: ''
+  basis: design_target
+  locator: p.5; Fig. 1(a)
+  note: Semi-insulating substrate
+- device_id: hillier2025-1mm-q2
+  field: cladding
+  value: polyimide, 2.3 um, static permittivity ratio 2.26
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1
+  note: Polyimide layer in the model input table
+- device_id: hillier2025-1mm-q2
+  field: epitaxy_or_stack
+  value: 'InP generic-platform MQW stack (Table 1): p-contact 0.3 um (1.5e19 cm-3), p-cladding 1.3 um (3e17), n-buffer 0.20 um (2e16), intrinsic MQW 0.58 um (not intentionally doped, about 1e14), n-cladding 7.5 um (5e17), n-bottom 1.5 um (1e18), metal 2.0 um, polyimide 2.3 um; active-layer bandgap 1.39 +/- 0.02 um; signal-to-waveguide gap and electrode lengths per row'
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1; p.5
+  note: Layer table from model inputs based on chip specifications
+- device_id: hillier2025-1mm-q2
+  field: vpi_dc_v
+  value: 3.1
+  unit: V
+  basis: measured
+  locator: p.6 text; Fig. 2(a)
+  note: Second quadrature point at 13.4 V reverse bias
+- device_id: hillier2025-1mm-q2
+  field: bias_for_vpi_v
+  value: -13.4
+  unit: V
+  basis: measured
+  locator: p.6 text; Fig. 2(a)
+  note: Reverse bias 13.4 V in the paper; stored negative
+- device_id: hillier2025-1mm-ee
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.5; Fig. 1(d) caption p.4
+  note: 1 mm electrode length of the best-performing design
+- device_id: hillier2025-1mm-ee
+  field: eo_film_thickness_nm
+  value: 580
+  unit: nm
+  basis: design_target
+  locator: p.4, Table 1
+  note: Intrinsic MQW layer thickness; model input based on chip specification
+- device_id: hillier2025-1mm-ee
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.5, Table 2; p.5 text
+  note: Waveguide width 0.8 um of the best-performing design
+- device_id: hillier2025-1mm-ee
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal track width
+- device_id: hillier2025-1mm-ee
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal-signal gap
+- device_id: hillier2025-1mm-ee
+  field: electrode_thickness_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.4, Table 1
+  note: Metal thickness in the model input table
+- device_id: hillier2025-1mm-ee
+  field: substrate
+  value: semi-insulating substrate (InP generic platform)
+  unit: ''
+  basis: design_target
+  locator: p.5; Fig. 1(a)
+  note: Semi-insulating substrate
+- device_id: hillier2025-1mm-ee
+  field: cladding
+  value: polyimide, 2.3 um, static permittivity ratio 2.26
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1
+  note: Polyimide layer in the model input table
+- device_id: hillier2025-1mm-ee
+  field: epitaxy_or_stack
+  value: 'InP generic-platform MQW stack (Table 1): p-contact 0.3 um (1.5e19 cm-3), p-cladding 1.3 um (3e17), n-buffer 0.20 um (2e16), intrinsic MQW 0.58 um (not intentionally doped, about 1e14), n-cladding 7.5 um (5e17), n-bottom 1.5 um (1e18), metal 2.0 um, polyimide 2.3 um; active-layer bandgap 1.39 +/- 0.02 um; signal-to-waveguide gap and electrode lengths per row'
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1; p.5
+  note: Layer table from model inputs based on chip specifications
+- device_id: hillier2025-1mm-ee
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: extracted_from_figure
+  locator: p.1 abstract; Fig. 3(c) p.8
+  note: Abstract states 50 ohm impedance; measured input impedance roughly 45-55 ohm
+- device_id: hillier2025-2mm-q1
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.5; Fig. 1(d) caption p.4
+  note: 2 mm electrode length of the best-performing design
+- device_id: hillier2025-2mm-q1
+  field: eo_film_thickness_nm
+  value: 580
+  unit: nm
+  basis: design_target
+  locator: p.4, Table 1
+  note: Intrinsic MQW layer thickness; model input based on chip specification
+- device_id: hillier2025-2mm-q1
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.5, Table 2; p.5 text
+  note: Waveguide width 0.8 um of the best-performing design
+- device_id: hillier2025-2mm-q1
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal track width
+- device_id: hillier2025-2mm-q1
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal-signal gap
+- device_id: hillier2025-2mm-q1
+  field: electrode_thickness_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.4, Table 1
+  note: Metal thickness in the model input table
+- device_id: hillier2025-2mm-q1
+  field: substrate
+  value: semi-insulating substrate (InP generic platform)
+  unit: ''
+  basis: design_target
+  locator: p.5; Fig. 1(a)
+  note: Semi-insulating substrate
+- device_id: hillier2025-2mm-q1
+  field: cladding
+  value: polyimide, 2.3 um, static permittivity ratio 2.26
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1
+  note: Polyimide layer in the model input table
+- device_id: hillier2025-2mm-q1
+  field: epitaxy_or_stack
+  value: 'InP generic-platform MQW stack (Table 1): p-contact 0.3 um (1.5e19 cm-3), p-cladding 1.3 um (3e17), n-buffer 0.20 um (2e16), intrinsic MQW 0.58 um (not intentionally doped, about 1e14), n-cladding 7.5 um (5e17), n-bottom 1.5 um (1e18), metal 2.0 um, polyimide 2.3 um; active-layer bandgap 1.39 +/- 0.02 um; signal-to-waveguide gap and electrode lengths per row'
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1; p.5
+  note: Layer table from model inputs based on chip specifications
+- device_id: hillier2025-2mm-q1
+  field: vpi_dc_v
+  value: 7.0
+  unit: V
+  basis: measured
+  locator: p.6 text; Fig. 2(b)
+  note: First quadrature point
+- device_id: hillier2025-2mm-q2
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.5; Fig. 1(d) caption p.4
+  note: 2 mm electrode length of the best-performing design
+- device_id: hillier2025-2mm-q2
+  field: eo_film_thickness_nm
+  value: 580
+  unit: nm
+  basis: design_target
+  locator: p.4, Table 1
+  note: Intrinsic MQW layer thickness; model input based on chip specification
+- device_id: hillier2025-2mm-q2
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.5, Table 2; p.5 text
+  note: Waveguide width 0.8 um of the best-performing design
+- device_id: hillier2025-2mm-q2
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal track width
+- device_id: hillier2025-2mm-q2
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal-signal gap
+- device_id: hillier2025-2mm-q2
+  field: electrode_thickness_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.4, Table 1
+  note: Metal thickness in the model input table
+- device_id: hillier2025-2mm-q2
+  field: substrate
+  value: semi-insulating substrate (InP generic platform)
+  unit: ''
+  basis: design_target
+  locator: p.5; Fig. 1(a)
+  note: Semi-insulating substrate
+- device_id: hillier2025-2mm-q2
+  field: cladding
+  value: polyimide, 2.3 um, static permittivity ratio 2.26
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1
+  note: Polyimide layer in the model input table
+- device_id: hillier2025-2mm-q2
+  field: epitaxy_or_stack
+  value: 'InP generic-platform MQW stack (Table 1): p-contact 0.3 um (1.5e19 cm-3), p-cladding 1.3 um (3e17), n-buffer 0.20 um (2e16), intrinsic MQW 0.58 um (not intentionally doped, about 1e14), n-cladding 7.5 um (5e17), n-bottom 1.5 um (1e18), metal 2.0 um, polyimide 2.3 um; active-layer bandgap 1.39 +/- 0.02 um; signal-to-waveguide gap and electrode lengths per row'
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1; p.5
+  note: Layer table from model inputs based on chip specifications
+- device_id: hillier2025-2mm-q2
+  field: vpi_dc_v
+  value: 4.0
+  unit: V
+  basis: measured
+  locator: p.6 text; Fig. 2(b)
+  note: Second quadrature point
+- device_id: hillier2025-2mm-q2
+  field: bias_for_vpi_v
+  value: -9
+  unit: V
+  basis: extracted_from_figure
+  locator: Fig. 2(b) p.6
+  note: Q2 marker line read at about 9 V reverse bias; stored negative
+- device_id: hillier2025-2mm-q2
+  field: extinction_ratio_db
+  value: 18.7
+  unit: dB
+  basis: measured
+  locator: p.6 text; Fig. 2(b)
+  note: Static ER at Q2
+- device_id: hillier2025-2mm-q3
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.5; Fig. 1(d) caption p.4
+  note: 2 mm electrode length of the best-performing design
+- device_id: hillier2025-2mm-q3
+  field: eo_film_thickness_nm
+  value: 580
+  unit: nm
+  basis: design_target
+  locator: p.4, Table 1
+  note: Intrinsic MQW layer thickness; model input based on chip specification
+- device_id: hillier2025-2mm-q3
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.5, Table 2; p.5 text
+  note: Waveguide width 0.8 um of the best-performing design
+- device_id: hillier2025-2mm-q3
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal track width
+- device_id: hillier2025-2mm-q3
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal-signal gap
+- device_id: hillier2025-2mm-q3
+  field: electrode_thickness_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.4, Table 1
+  note: Metal thickness in the model input table
+- device_id: hillier2025-2mm-q3
+  field: substrate
+  value: semi-insulating substrate (InP generic platform)
+  unit: ''
+  basis: design_target
+  locator: p.5; Fig. 1(a)
+  note: Semi-insulating substrate
+- device_id: hillier2025-2mm-q3
+  field: cladding
+  value: polyimide, 2.3 um, static permittivity ratio 2.26
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1
+  note: Polyimide layer in the model input table
+- device_id: hillier2025-2mm-q3
+  field: epitaxy_or_stack
+  value: 'InP generic-platform MQW stack (Table 1): p-contact 0.3 um (1.5e19 cm-3), p-cladding 1.3 um (3e17), n-buffer 0.20 um (2e16), intrinsic MQW 0.58 um (not intentionally doped, about 1e14), n-cladding 7.5 um (5e17), n-bottom 1.5 um (1e18), metal 2.0 um, polyimide 2.3 um; active-layer bandgap 1.39 +/- 0.02 um; signal-to-waveguide gap and electrode lengths per row'
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1; p.5
+  note: Layer table from model inputs based on chip specifications
+- device_id: hillier2025-2mm-q3
+  field: vpi_dc_v
+  value: 2.8
+  unit: V
+  basis: measured
+  locator: p.6 text; Fig. 2(b)
+  note: Third quadrature point
+- device_id: hillier2025-2mm-q3
+  field: bias_for_vpi_v
+  value: -12.5
+  unit: V
+  basis: extracted_from_figure
+  locator: Fig. 2(b) p.6
+  note: Q3 marker line read at about 12.5 V reverse bias; stored negative
+- device_id: hillier2025-2mm-q3
+  field: extinction_ratio_db
+  value: 10.7
+  unit: dB
+  basis: measured
+  locator: p.6 text; Fig. 2(b)
+  note: Static ER at Q3
+- device_id: hillier2025-2mm-data
+  field: length_mm
+  value: 2
+  unit: mm
+  basis: design_target
+  locator: p.5; Fig. 1(d) caption p.4
+  note: 2 mm electrode length of the best-performing design
+- device_id: hillier2025-2mm-data
+  field: eo_film_thickness_nm
+  value: 580
+  unit: nm
+  basis: design_target
+  locator: p.4, Table 1
+  note: Intrinsic MQW layer thickness; model input based on chip specification
+- device_id: hillier2025-2mm-data
+  field: rib_width_nm
+  value: 800
+  unit: nm
+  basis: design_target
+  locator: p.5, Table 2; p.5 text
+  note: Waveguide width 0.8 um of the best-performing design
+- device_id: hillier2025-2mm-data
+  field: signal_width_um
+  value: 10
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal track width
+- device_id: hillier2025-2mm-data
+  field: electrode_gap_um
+  value: 7
+  unit: um
+  basis: design_target
+  locator: p.5, Table 2
+  note: Signal-signal gap
+- device_id: hillier2025-2mm-data
+  field: electrode_thickness_um
+  value: 2.0
+  unit: um
+  basis: design_target
+  locator: p.4, Table 1
+  note: Metal thickness in the model input table
+- device_id: hillier2025-2mm-data
+  field: substrate
+  value: semi-insulating substrate (InP generic platform)
+  unit: ''
+  basis: design_target
+  locator: p.5; Fig. 1(a)
+  note: Semi-insulating substrate
+- device_id: hillier2025-2mm-data
+  field: cladding
+  value: polyimide, 2.3 um, static permittivity ratio 2.26
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1
+  note: Polyimide layer in the model input table
+- device_id: hillier2025-2mm-data
+  field: epitaxy_or_stack
+  value: 'InP generic-platform MQW stack (Table 1): p-contact 0.3 um (1.5e19 cm-3), p-cladding 1.3 um (3e17), n-buffer 0.20 um (2e16), intrinsic MQW 0.58 um (not intentionally doped, about 1e14), n-cladding 7.5 um (5e17), n-bottom 1.5 um (1e18), metal 2.0 um, polyimide 2.3 um; active-layer bandgap 1.39 +/- 0.02 um; signal-to-waveguide gap and electrode lengths per row'
+  unit: ''
+  basis: design_target
+  locator: p.4, Table 1; p.5
+  note: Layer table from model inputs based on chip specifications
+- device_id: hillier2025-2mm-data
+  field: drive_vpp_v
+  value: 2.7
+  unit: V
+  basis: measured
+  locator: p.10 text
+  note: Peak-to-peak driving voltage for 96-200 GBd runs; reference plane not stated
+- device_id: hillier2025-2mm-data
+  field: max_baud_gbd
+  value: 192
+  unit: GBd
+  basis: measured
+  locator: p.10 text; Fig. 5(a)
+  note: OOK below the 25 % OH HD-FEC threshold up to 192 GBd (crossing between 192 and 200 GBd, p.10); PAM4 below it up to 160 GBd; max over formats
+- device_id: hillier2025-2mm-data
+  field: modulation_format
+  value: OOK below the 25 % OH HD-FEC threshold to 192 GBd (no bit errors detected below 160 GBd; threshold crossed between 192 and 200 GBd); PAM4 below the threshold to 160 GBd (320 Gbit/s line rate); PAM8 also measured; 96-200 GBd tested, offline DSP with equalization
+  unit: ''
+  basis: measured
+  locator: p.10 text; Fig. 5
+- device_id: hillier2025-2mm-data
+  field: max_line_rate_gbps
+  value: 320
+  unit: Gb/s
+  basis: measured
+  locator: p.10 text; p.1 abstract
+  note: 160 GBd PAM4, line rate stated as 320 Gbit/s
+- device_id: hillier2025-2mm-data
+  field: max_net_rate_gbps
+  value: 256
+  unit: Gb/s
+  basis: derived
+  locator: p.10 text
+  note: Authors compute 256 Gbit/s bit rate from the line rate (Supplement 1)
+- device_id: hillier2025-design
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.11 Sec. 3.3
+  note: 1 mm electrode chosen for comparison with fabricated devices
+- device_id: hillier2025-design
+  field: bw3db_ghz
+  value: 120
+  unit: GHz
+  basis: simulated
+  locator: p.1 abstract; p.11 Sec. 3.3; Fig. 6(d); p.12 Sec. 4
+  note: Predicted EO bandwidth of the optimized design; abstract writes about 120 GHz
+- device_id: hillier2025-design
+  field: rib_width_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.11 Sec. 3.3
+  note: Optimized waveguide width 0.6 um
+- device_id: hillier2025-design
+  field: signal_width_um
+  value: 3.8
+  unit: um
+  basis: design_target
+  locator: p.11 Sec. 3.3
+  note: Optimized signal track width
+- device_id: hillier2025-design
+  field: electrode_gap_um
+  value: 3.6
+  unit: um
+  basis: design_target
+  locator: p.11 Sec. 3.3
+  note: Optimized signal-signal gap
+- device_id: hillier2025-design
+  field: ng_opt
+  value: 3.7
+  unit: ''
+  basis: design_target
+  locator: p.11 Sec. 3.3
+  note: Optical effective group index used in the optimization
+derived: []

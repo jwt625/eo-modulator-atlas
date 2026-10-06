@@ -1,0 +1,97 @@
+paper_id: singer2025
+verified_on: '2026-10-05'
+source_files:
+- references/singer2025/text.md
+- references/singer2025/crossref.json
+- references/singer2025/source.json
+- references/singer2025/figures/page_08.png
+entries:
+- device_id: singer2025-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.8, Fig. 4 caption and text
+  note: Carrier 'around 1550 nm' in text; imbalanced MZM operated at quadrature via wavelength
+- device_id: singer2025-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.6, Fig. 3 caption; p.7
+  note: 1 mm-long slot waveguide per arm
+- device_id: singer2025-a
+  field: vpi_dc_v
+  value: 1
+  unit: V
+  basis: measured
+  locator: p.7; p.8
+  note: Measured after poling of the 1 mm device; frequency not stated; also written approx. 1 V
+- device_id: singer2025-a
+  field: drive_vpp_v
+  value: 0.265
+  unit: V
+  basis: measured
+  locator: p.9; p.8
+  note: Oscilloscope-measured swing at balun output for 56 GBd; probe loss not stated
+- device_id: singer2025-a
+  field: il_onchip_db
+  value: 4.2
+  unit: dB
+  basis: derived
+  locator: p.6; p.8; Table 2 p.17
+  note: On-chip excess loss stated by the authors (p.6, p.8); equals the Table 2 sum of the on-chip elements (cutback test structures) and 10.8 dB minus two estimated 3.3 dB photonic wire bonds (p.16)
+- device_id: singer2025-a
+  field: il_fiber_to_fiber_db
+  value: 10.8
+  unit: dB
+  basis: measured
+  locator: p.6; p.8; Table 2 p.17
+  note: Fiber-to-fiber of the packaged assembly including two photonic wire bonds
+- device_id: singer2025-a
+  field: cladding
+  value: organic EO material over the slot waveguide and strip-to-slot converters; SiO2 over MMIs and strip waveguides
+  unit: ''
+  basis: design_target
+  locator: p.6; p.17
+  note: Organic EO material n = 1.8; SiO2 n = 1.44 over MMIs
+- device_id: singer2025-a
+  field: epitaxy_or_stack
+  value: Silicon slot waveguide, slot width approx 140 nm, height 220 nm, filled with organic EO material (n = 1.8 at 1550 nm); rails connected to the GSG line via doped Si slabs and metal vias; SiO2 cladding n = 1.44; arm length difference 50 um (FSR approx 12 nm)
+  unit: ''
+  basis: design_target
+  locator: p.6; p.7; p.17
+  note: Slot width and height given as approximate design values
+- device_id: singer2025-a
+  field: max_baud_gbd
+  value: 56
+  unit: GBd
+  basis: measured
+  locator: p.9; Fig. 4(b) p.8
+  note: Highest PAM4 symbol rate measured without RF amplifier
+- device_id: singer2025-a
+  field: modulation_format
+  value: PAM4 Gray-coded, PRBS 2^11-1; without RF amplifier 24, 48, 54 and 56 GBd at 299, 253, 252 and 265 mVpp; with 11 dB RF amplifier 48 and 56 GBd swept at fixed 0.6 dBm received power, optimum Ud,pp/Upi about 0.45
+  unit: ''
+  basis: measured
+  locator: p.8; p.9; Fig. 4
+- device_id: singer2025-a
+  field: max_line_rate_gbps
+  value: 112
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.15 Summary
+  note: 56 GBd PAM4 line rate stated as 112 Gbit/s
+derived:
+- device_id: singer2025-a
+  field: vpil_dc_vcm
+  value: 0.1
+  formula: 1.0 V*mm / (10 mm/cm); reported U_pi L = 1 V mm (p.7, Table 1 p.12)
+  inputs:
+  - 1.0 V*mm
+- device_id: singer2025-a
+  field: prop_loss_db_per_cm
+  value: 28
+  formula: 2.8 dB/mm x 10 mm/cm; 2.8 dB/mm stated (p.16)
+  inputs:
+  - 2.8 dB/mm

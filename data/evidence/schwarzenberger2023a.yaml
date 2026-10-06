@@ -1,0 +1,148 @@
+paper_id: schwarzenberger2023a
+verified_on: '2026-10-05'
+source_files:
+- references/schwarzenberger2023a/text.md
+- references/schwarzenberger2023a/source.pdf
+- references/schwarzenberger2023a/crossref.json
+- references/schwarzenberger2023a/source.json
+entries:
+- device_id: schwarzenberger2023a-a
+  field: temperature_k
+  value: 11
+  unit: K
+  basis: measured
+  locator: p.1
+  note: Cryostat base temperature 11 K; device temperature not separately stated
+- device_id: schwarzenberger2023a-a
+  field: wavelength_nm
+  value: 1532
+  unit: nm
+  basis: measured
+  locator: p.1
+  note: Transmission-experiment laser wavelength 1532 nm; Vpi wavelength not stated
+- device_id: schwarzenberger2023a-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.1
+  note: 1 mm long device for the Vpi measurement
+- device_id: schwarzenberger2023a-a
+  field: vpi_dc_v
+  value: 0.92
+  unit: V
+  basis: measured
+  locator: p.1 abstract; p.1 body
+  note: Abstract 0.92 V; body and summary print 0.9 V measured at RT and 11 K
+- device_id: schwarzenberger2023a-a
+  field: drive_vpp_v
+  value: 1.4
+  unit: V
+  basis: measured
+  locator: p.2; p.2 Fig. 1(g)
+  note: Stated drive setting of the PAM4 70 GBd eye ("generated with 1.4 Vpp peak-to-peak drive voltage"); on-chip versus amplifier-output reference plane not stated for this value (the OOK voltages are
+    the ones the authors call estimated on-chip values)
+- device_id: schwarzenberger2023a-a
+  field: optical_input_power_dbm
+  value: 2
+  unit: dBm
+  basis: measured
+  locator: p.2
+  note: On-chip optical power for the PAM4 eye; 1 dBm for the 60 Gb/s OOK point
+- device_id: schwarzenberger2023a-a
+  field: energy_per_bit_fj
+  value: 72
+  unit: fJ/bit
+  basis: derived
+  locator: p.1
+  note: Wbit at 100 Gb/s OOK, 1.2 Vpp on chip, terminated; electrical dissipation, driver not stated as included
+- device_id: schwarzenberger2023a-a
+  field: cladding
+  value: Organic electro-optic material based on Perkinamine Series 5G (Lightwave Logic Inc.), poled
+  unit: ''
+  basis: design_target
+  locator: p.1
+- device_id: schwarzenberger2023a-a
+  field: epitaxy_or_stack
+  value: Silicon slot waveguide; GSG RF line connected through metal vias to doped Si slabs; three-level doping N / N+ / N++ (N+ and N++ degenerate, no carrier freeze-out), weakly doped N rails form the slot; slot filled with the organic EO material; optional 2 x 100 ohm terminations (Fig. 1b)
+  unit: ''
+  basis: design_target
+  locator: p.2 Fig. 1(a)-(b)
+  note: Layer dimensions not stated
+- device_id: schwarzenberger2023a-a
+  field: modulation_format
+  value: 'PAM4 70 GBd (140 Gbit/s) at 11 K, 1.4 Vpp, 2 dBm on chip: BER 2.3e-2 (below 20% SD-FEC); OOK terminated: 60 Gb/s below HD-FEC at 0.92 Vpp (1 dBm, 71 fJ/bit), 90 Gb/s below HD-FEC at 1.34 Vpp (2
+    dBm, 100 fJ/bit), 100 Gb/s below SD-FEC at 1.2 Vpp (72 fJ/bit); OOK unterminated 60 Gb/s below HD-FEC at 0.92 Vpp (38 fJ/bit), 10 Gb/s error-free at 0.23 Vpp (2 fJ/bit); OOK drive voltages are author
+    on-chip estimates; the reference plane of the 1.4 Vpp PAM4 value is not stated'
+  unit: ''
+  basis: measured
+  locator: p.1-2 Fig. 1(d)-(g)
+- device_id: schwarzenberger2023a-a
+  field: max_line_rate_gbps
+  value: 140
+  unit: Gb/s
+  basis: measured
+  locator: p.2
+  note: PAM4 70 GBd, line rate 140 Gbit/s
+- device_id: schwarzenberger2023a-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a); p.1 (procedure per ref. [9])
+  note: Single GSG feed of two slot arms (Fig. 1(a) cross section A-A); push-pull not stated by the authors
+- device_id: schwarzenberger2023a-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a); p.1 (procedure per ref. [9])
+  note: MZM-level half-wave voltage under single GSG feed, procedure per ref. [9] (Kieninger et al., canonical kieninger2020, mzm_push_pull); convention not stated by the authors
+- device_id: schwarzenberger2023a-b
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.1
+  note: 1 mm long device
+- device_id: schwarzenberger2023a-b
+  field: vpi_dc_v
+  value: 0.9
+  unit: V
+  basis: measured
+  locator: p.1
+  note: 0.9 V measured both at RT and at 11 K after poling; procedure per their ref. 9, not restated
+- device_id: schwarzenberger2023a-b
+  field: cladding
+  value: Organic electro-optic material based on Perkinamine Series 5G (Lightwave Logic Inc.), poled
+  unit: ''
+  basis: design_target
+  locator: p.1
+- device_id: schwarzenberger2023a-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a); p.1 (procedure per ref. [9])
+  note: Single GSG feed of two slot arms (Fig. 1(a) cross section A-A); push-pull not stated by the authors
+- device_id: schwarzenberger2023a-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2 Fig. 1(a); p.1 (procedure per ref. [9])
+  note: MZM-level half-wave voltage under single GSG feed, procedure per ref. [9] (Kieninger et al., canonical kieninger2020, mzm_push_pull); convention not stated by the authors
+- device_id: schwarzenberger2023a-b
+  field: epitaxy_or_stack
+  value: Silicon slot waveguide; GSG RF line connected through metal vias to doped Si slabs; three-level doping N / N+ / N++ (N+ and N++ degenerate, no carrier freeze-out), weakly doped N rails form the slot; slot filled with the organic EO material; optional 2 x 100 ohm terminations (Fig. 1b)
+  unit: ''
+  basis: design_target
+  locator: p.2 Fig. 1(a)-(b)
+  note: Layer dimensions not stated
+derived:
+- device_id: schwarzenberger2023a-a
+  field: max_baud_gbd
+  value: 100
+  formula: 100 Gb/s OOK line rate = 100 GBd (OOK carries 1 bit per symbol)
+  inputs:
+  - 100 Gb/s OOK, BER below SD-FEC (p.1)

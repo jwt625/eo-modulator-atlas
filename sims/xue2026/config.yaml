@@ -1,0 +1,168 @@
+schema: eo-atlas.sim/v1
+id: xue2026-b
+paper_id: xue2026
+device_id: xue2026-b
+title: Xue 2026, 7 mm periodic T-rail CLTW TFLN MZM on 12 um SiO2 / Si (G-S-G, push-pull arms; 4 mm device xue2026-a shares the cross-section)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, loaded_line, eo_response]
+
+# Conventions follow sims/chen2022/config.yaml and sims/liu2021/config.yaml.
+# Coordinate frame: x lateral (paper z), y film normal up (paper x), z propagation (paper y). y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand waveguide in x. Signal electrode centre (mirror plane) at x = -34.7; LEFT waveguide at x = -69.4.
+# Per gap: [main conductor] -S slot- [T-rail head, width H] -g/2- [waveguide] -g/2- [T-rail head] -S slot- [main conductor].
+# Signal-side rails are tied to the signal conductor, ground-side rails to ground, by stems (width T) that this 2D cut does not contain.
+# Symbol roles (W signal width, g tip gap, H head width, S slot, T stem width, R head length along z, C gap along z) are read from the Fig. 1(a) schematic and the text, see provenance; an alternative reading (H and S swapped) is recorded there.
+# Metal sits directly on the LN slab top (y = 0.1): T-rails and main electrodes are deposited before the 100 nm PECVD cladding, which is then etched open over the main electrodes (p.3 process order; Fig. 1(b)).
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.21
+    n_e: 2.14
+    eps_r: {perp: 38.0, par: 28.0}
+    r_pm_per_v: {r33: 30.9, r51: 32.6}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  silicon: {n: 3.475, eps_r: 11.9}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:                          # LOADED cross-section: T-rail heads present
+  symmetry: none
+  domain: {x_um: [-340, 260], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-340, 260], y_um: [-250, 120]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-340, 260], y_um: [-512, -12]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-340, 260], y_um: [-12, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-340, 260], y_um: [0, 0.1]}}
+    - {name: silica_buffer, material: silicon_dioxide, rect: {x_um: [-340, 260], y_um: [0.1, 0.2]}}
+    - {name: silica_cap_r, material: silicon_dioxide, polygon_um: [[-0.6656, 0.1], [0.6656, 0.1], [0.4577, 0.46], [-0.4577, 0.46]]}
+    - {name: silica_cap_l, material: silicon_dioxide, polygon_um: [[-70.0656, 0.1], [-68.7344, 0.1], [-68.9423, 0.46], [-69.8577, 0.46]]}
+    - {name: ln_rib_r, material: lithium_niobate, polygon_um: [[-0.5501, 0.1], [0.5501, 0.1], [0.4, 0.36], [-0.4, 0.36]]}
+    - {name: ln_rib_l, material: lithium_niobate, polygon_um: [[-69.9501, 0.1], [-68.8499, 0.1], [-69.0, 0.36], [-69.8, 0.36]]}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-59.7, -9.7], y_um: [0.1, 1.2]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [9.7, 59.7], y_um: [0.1, 1.2]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-129.10000000000002, -79.10000000000001], y_um: [0.1, 1.2]}, material: gold}
+    - {name: rail_r_ground_side, role: ground, weight: 0.0, rect: {x_um: [2.5, 7.7], y_um: [0.1, 0.7]}, material: gold}
+    - {name: rail_r_signal_side, role: signal, weight: 1.0, rect: {x_um: [-7.7, -2.5], y_um: [0.1, 0.7]}, material: gold}
+    - {name: rail_l_signal_side, role: signal, weight: 1.0, rect: {x_um: [-66.9, -61.7], y_um: [0.1, 0.7]}, material: gold}
+    - {name: rail_l_ground_side, role: ground, weight: 0.0, rect: {x_um: [-77.10000000000001, -71.9], y_um: [0.1, 0.7]}, material: gold}
+  optical_window: {x_um: [-2.4, 2.4], y_um: [-1.5, 1.5]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 7
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-ended G-S-G probe on the centre line; push-pull arises from the arm placement
+  loading:
+    type: periodic_t_rail
+    period_um: 50                  # R + C = 45 + 5
+    loaded_length_um: 40           # head length R = 45 minus the 5 um stem T (stem not representable in 2D)
+    unloaded_cross_section: unloaded
+    loaded_cross_section: null     # null = top-level `geometry`
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
+
+alt_geometries:
+  unloaded:                        # cut through the gap C between rails: no rails, main conductors 2 x 9.7 um apart across each waveguide
+    symmetry: none
+    domain: {x_um: [-340, 260], y_um: [-250, 120]}
+    regions:
+      - {name: ambient, material: air, rect: {x_um: [-340, 260], y_um: [-250, 120]}}
+      - {name: substrate, material: silicon, rect: {x_um: [-340, 260], y_um: [-512, -12]}}
+      - {name: box, material: silicon_dioxide, rect: {x_um: [-340, 260], y_um: [-12, 0]}}
+      - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-340, 260], y_um: [0, 0.1]}}
+      - {name: silica_buffer, material: silicon_dioxide, rect: {x_um: [-340, 260], y_um: [0.1, 0.2]}}
+      - {name: silica_cap_r, material: silicon_dioxide, polygon_um: [[-0.6656, 0.1], [0.6656, 0.1], [0.4577, 0.46], [-0.4577, 0.46]]}
+      - {name: silica_cap_l, material: silicon_dioxide, polygon_um: [[-70.0656, 0.1], [-68.7344, 0.1], [-68.9423, 0.46], [-69.8577, 0.46]]}
+      - {name: ln_rib_r, material: lithium_niobate, polygon_um: [[-0.5501, 0.1], [0.5501, 0.1], [0.4, 0.36], [-0.4, 0.36]]}
+      - {name: ln_rib_l, material: lithium_niobate, polygon_um: [[-69.9501, 0.1], [-68.8499, 0.1], [-69.0, 0.36], [-69.8, 0.36]]}
+    electrodes:
+      - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-59.7, -9.7], y_um: [0.1, 1.2]}, material: gold}
+      - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [9.7, 59.7], y_um: [0.1, 1.2]}, material: gold}
+      - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-129.10000000000002, -79.10000000000001], y_um: [0.1, 1.2]}, material: gold}
+    optical_window: {x_um: [-2.4, 2.4], y_um: [-1.5, 1.5]}
+    mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+
+targets:
+  # Measured, 7 mm device (devices.csv row xue2026-b)
+  - {metric: vpi_l_dc_vcm, value: 1.25, tol_rel: 0.15, source: {device_id: xue2026-b, field: vpil_dc_vcm, note: "LOW CONFIDENCE until the Fig. 1 symbol roles H and S are confirmed (loaded capacitance depends on them)"}}
+  - {metric: n_rf, value: 2.26, tol_abs: 0.1, source: {device_id: xue2026-b, field: n_rf, note: "LOW CONFIDENCE until the Fig. 1 symbol roles H and S are confirmed (loaded capacitance depends on them)"}}
+  - {metric: z0_ohm, value: 46, tol_abs: 3.0, source: {device_id: xue2026-b, field: z0_ohm, comparable: false, note: "NON-COMPARABLE: the authors state the extracted value encompasses contributions from all output ports, microwave cables and RF probes (p.7)"}}
+  - {metric: ng_opt, value: 2.26, tol_abs: 0.05, source: {device_id: xue2026-b, field: ng_opt}}
+  - {metric: eo_rolloff_db, at_ghz: 67, value: -1.3, tol_abs: 0.5, source: {device_id: xue2026-b, field: eo_rolloff_db}}
+  # Paper's own design calculation (p.6), cross-solver reference
+  - {metric: vpi_l_dc_vcm, value: 1.20, tol_rel: 0.10, source: {paper_id: xue2026, locator: "p.6 text", basis: simulated, note: "calculated modulation efficiency at 1550 nm"}}
+  # Not a target: 3 dB bandwidth over 67 GHz is a bound (see SPEC_PROPOSALS)
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: "p.6 (static characterization and calculation at 1550 nm)"}
+  optics.polarization: {class: paper_exact, locator: "p.4 (TE0 mode input)"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes calculated ng 2.26 (p.6); engine derives it by finite difference and compares as a target"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 (x-cut NANOLN wafer); p.3 Fig. 1(c) axes (propagation along y)"}
+  materials.lithium_niobate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.21; paper states no LN indices"}
+  materials.lithium_niobate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.14"}
+  materials.lithium_niobate.eps_r: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm, 100 kHz", note: "eps_11,22 = 38, eps_33 = 28; low-frequency permittivity"}
+  materials.lithium_niobate.r_pm_per_v: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "r33 = 30.9, r51 = 32.6 only; r13 and r22 left out (see missing)"}
+  materials.silicon_dioxide.n: {class: standard_reference, citation: "Mao et al., APL Photon. 7, 126103 (2022) (references/mao2022/text.md p.3, printed 126103-2: nSiO2 = 1.444)", note: "the paper states no SiO2 index"}
+  materials.silicon_dioxide.eps_r: {class: standard_reference, citation: "Yang et al., Chin. Opt. Lett. 20, 022502 (references/yang2022/text.md p.2: SiO2 eps about 3.9)", note: "value quoted by another paper; this paper gives no SiO2 permittivity"}
+  materials.silicon.eps_r: {class: paper_exact, locator: "p.4 (silicon permittivity about 11.9)"}
+  materials.silicon.n: {class: standard_reference, citation: "Mao et al., APL Photon. 7, 126103 (2022) (references/mao2022/text.md p.3, printed 126103-2: nSi = 3.475)", note: "outside the optical window, not used by the solve"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder 4.1e7 S/m (no source read); the paper does not state the film conductivity"}
+  line.length_mm: {class: paper_exact, locator: "p.4 (7 mm push-pull phase shifters)"}
+  line.source_ohm: {class: project_inference, note: "VNA ports assumed 50 ohm"}
+  line.load_ohm: {class: paper_exact, locator: "p.7 (50 ohm termination through a second probe)"}
+  line.differential: {class: project_inference, note: "G-S-G with one waveguide in each gap; single-ended drive, push-pull by geometry (p.2 states push-pull)"}
+  line.conductor_loss_model: {class: project_inference, note: "paper quotes 0.74 dB/cm/GHz^0.5 measured (Fig. 4(d)); model choice left to the engine"}
+  line.loading.period_um: {class: paper_exact, locator: "p.3 Fig. 1 caption (R = 45, C = 5 um)", note: "period = R + C = 50 um; period itself not stated"}
+  line.loading.loaded_length_um: {class: project_inference, locator: "p.3 Fig. 1(a); Fig. 1 caption (R = 45, T = 5)", note: "head length R minus stem width T; symbol roles read from the schematic; stem centred on the head assumed"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.3 (500 um Si; region clipped to the domain)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.2-3 (12 um silica buffer)"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.3 (360 nm film, 260 nm etch depth)", note: "slab 100 nm = 360 - 260"}
+  geometry.regions.silica_buffer: {class: project_inference, locator: "p.3 (100 nm PECVD SiO2 upper cladding, deposited after the electrodes; ICP-RIE then exposes the main electrodes)", note: "flat 100 nm layer above the slab (y 0.1 to 0.2) and conformal over the ridge; the electrodes start at the slab top (y = 0.1) and override this region, so no oxide lies under the metal; conformal cladding over the T-rail tops and electrode sidewalls is not modelled"}
+  geometry.regions.silica_cap_r: {class: project_inference, note: "conformal 100 nm layer approximated by an outward offset of the ridge sidewalls and top"}
+  geometry.regions.silica_cap_l: {class: project_inference, note: "mirror of the right-hand cap"}
+  geometry.regions.ln_rib_r: {class: project_inference, locator: "p.3 (260 nm etch, 800 nm top width, 60 deg sidewall)", note: "60 deg is stated without its reference plane; taken from horizontal, giving a bottom width of about 1.1 um"}
+  geometry.regions.ln_rib_l: {class: project_inference, note: "mirror image of the right-hand ridge about the signal centre"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.3 Fig. 1 caption (W = 50 um); p.3 (1.1 um Au main electrodes, deposited before the cladding); p.3 Fig. 1(b) (Au directly on the LN slab)", note: "inner edge 9.7 um from the waveguide axis = g/2 + H + S; electrode bottom on the slab top (y = 0.1), top at 1.2"}
+  geometry.electrodes.ground_r: {class: project_inference, note: "ground width not stated; taken equal to the signal width"}
+  geometry.electrodes.ground_l: {class: project_inference, note: "mirror of ground_r"}
+  geometry.electrodes.rail_r_signal_side: {class: project_inference, locator: "p.3 Fig. 1 caption (g = 5, H = 5.2, S = 2 um); p.3 (600 nm Au T-rails, patterned before the main electrodes); Fig. 1(a)", note: "roles of g (tip gap across the waveguide), H (head width) and S (slot to the main electrode) read from the schematic, not defined in the text; ALTERNATIVE READING (Fig. 1(a) zoom, p.3): the H bracket runs from the main-electrode edge to the outer edge of the rail head and the S bracket spans a narrow bar at the head, i.e. head 2 um and slot 5.2 um, which keeps the main-electrode inner edge at 9.7 um but changes the loaded capacitance; both readings are inference from a low-resolution schematic; 600 nm rail thickness stated; rail bottom on the slab top"}
+  geometry.electrodes.rail_r_ground_side: {class: project_inference, note: "see rail_r_signal_side"}
+  geometry.electrodes.rail_l_signal_side: {class: project_inference, note: "mirror of the right-hand rails"}
+  geometry.electrodes.rail_l_ground_side: {class: project_inference, note: "mirror of the right-hand rails"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 2.4 um, inside the rail tip at 2.5 um"}
+  geometry.domain: {class: project_inference, note: "lateral extent and vertical -250..120 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+  alt_geometries.unloaded: {class: project_inference, locator: "p.3 Fig. 1(a)", note: "cut through the 5 um gap C between heads: rails and stems absent; the 5 um stem section is lumped into this cut"}
+
+missing:
+  - definitions of the Fig. 1 symbols H, S, T (read from the schematic; not defined in the text)
+  - ground electrode width (not stated; taken equal to the signal width)
+  - waveguide position inside the gap (assumed centred)
+  - sidewall-angle reference plane (60 deg stated without it)
+  - cladding profile over the T-rails and electrode sidewalls (cladding etched open over the main electrodes; extent not stated)
+  - which reading of H and S is correct (head 5.2 and slot 2 versus head 2 and slot 5.2); n_rf and VpiL targets are low confidence until confirmed
+  - LN refractive indices, RF permittivity and r13/r22 (standard_reference values from another paper)
+  - gold film conductivity (4.1e7 S/m is an UNVERIFIED placeholder); silicon resistivity
+  - temperature
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Stems (T = 5 um bridges tying each head to its main conductor) are not representable in 2D; rails are given electrode potentials directly"
+  - "H and S roles are inferred from a low-resolution schematic; the swapped reading (head 2 um, slot 5.2 um) is an equally supported alternative"
+  - "Three sections per period (head-plus-slot, stem, gap) do not fit the two-cut loading form; stem and gap are lumped into the unloaded cut"
+  - "Lossless silicon (resistivity not stated); optical metal absorption not modelled"
+  - "The 4 mm device xue2026-a shares this cross-section; no variants mechanism in SPEC yet"

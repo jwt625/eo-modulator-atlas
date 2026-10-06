@@ -1,0 +1,475 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     4
+    ]
+   ],
+   "date-time": "2026-09-04T19:11:04Z",
+   "timestamp": 1788549064581,
+   "version": "build-2803163510"
+  },
+  "reference-count": 17,
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "issue": "2",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       1,
+       15
+      ]
+     ],
+     "date-time": "2020-01-15T00:00:00Z",
+     "timestamp": 1579046400000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       1,
+       15
+      ]
+     ],
+     "date-time": "2020-01-15T00:00:00Z",
+     "timestamp": 1579046400000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       1,
+       15
+      ]
+     ],
+     "date-time": "2020-01-15T00:00:00Z",
+     "timestamp": 1579046400000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "J. Lightwave Technol."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2020,
+     1,
+     15
+    ]
+   ]
+  },
+  "DOI": "10.1109/jlt.2019.2924671",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2019,
+     6,
+     25
+    ]
+   ],
+   "date-time": "2019-06-25T12:12:18Z",
+   "timestamp": 1561464738000
+  },
+  "page": "249-255",
+  "source": "Crossref",
+  "is-referenced-by-count": 117,
+  "title": [
+   "80-GHz Bandwidth and 1.5-V V<sub>π</sub> InP-Based IQ Modulator"
+  ],
+  "prefix": "10.1109",
+  "volume": "38",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-5466-6989",
+    "authenticated-orcid": false,
+    "given": "Yoshihiro",
+    "family": "Ogiso",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yasuaki",
+    "family": "Hashizume",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hiromasa",
+    "family": "Tanobe",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nobuhiro",
+    "family": "Nunoya",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1475-6047",
+    "authenticated-orcid": false,
+    "given": "Minoru",
+    "family": "Ida",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yutaka",
+    "family": "Miyamoto",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mitsuteru",
+    "family": "Ishikawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Josuke",
+    "family": "Ozaki",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0978-5126",
+    "authenticated-orcid": false,
+    "given": "Yuta",
+    "family": "Ueda",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hitoshi",
+    "family": "Wakita",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Munehiko",
+    "family": "Nagatani",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-9434-2957",
+    "authenticated-orcid": false,
+    "given": "Hiroshi",
+    "family": "Yamazaki",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1145-8036",
+    "authenticated-orcid": false,
+    "given": "Masanori",
+    "family": "Nakamura",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Takayuki",
+    "family": "Kobayashi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7606-6215",
+    "authenticated-orcid": false,
+    "given": "Shigeru",
+    "family": "Kanazawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "263",
+  "reference": [
+   {
+    "key": "ref10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1049/el.2014.0430"
+   },
+   {
+    "key": "ref11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2016.2639542"
+   },
+   {
+    "key": "ref12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1049/el.2017.0711"
+   },
+   {
+    "key": "ref13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OFC.2015.Tu3I.1"
+   },
+   {
+    "key": "ref14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TED.2014.2349872"
+   },
+   {
+    "key": "ref15",
+    "article-title": "An over-67-GHz-bandwidth 2 Vppd linear differential amplifier with gain control in 0.25-mm InP DHBT technology",
+    "author": "wakita",
+    "year": "0",
+    "journal-title": "Proc Microw Symp"
+   },
+   {
+    "key": "ref16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OFC.2019.Th4B.4"
+   },
+   {
+    "key": "ref17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2019.2898675"
+   },
+   {
+    "key": "ref4",
+    "article-title": "Low loss InP C-band IQ modulator with 40�GHz bandwidth and 1.5V V?",
+    "author": "letal",
+    "year": "0",
+    "journal-title": "Proc Opt Fiber Commun Conf Exhib"
+   },
+   {
+    "key": "ref3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JQE.2018.2840081"
+   },
+   {
+    "key": "ref6",
+    "article-title": "Ultra-high bandwidth integrated lithium niobate modulators with record-low V?",
+    "author": "zhang",
+    "year": "0",
+    "journal-title": "Proc Opt Fiber Commun Conf Exhib"
+   },
+   {
+    "key": "ref5",
+    "article-title": "Silicon-organic hybrid (SOH) IQ modulator for 100�GBd 16QAM operation",
+    "author": "wolf",
+    "year": "0",
+    "journal-title": "Proc Opt Fiber Commun Conf Exhib"
+   },
+   {
+    "key": "ref8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OFC.2019.M2F.2"
+   },
+   {
+    "key": "ref7",
+    "article-title": "Ultra-low power dissipation (<2.4W) coherent InP modulator module with CMOS driver IC",
+    "author": "ozaki",
+    "year": "0",
+    "journal-title": "Proc Eur Conf Opt Commun"
+   },
+   {
+    "key": "ref2",
+    "article-title": "Electro-optical co-design to minimize power consumption of a 32�GBd optical IQ-transmitter using InP MZ-modulators",
+    "author": "wolf",
+    "year": "0",
+    "journal-title": "Proc IEEE Compound Semicond Integr Circuit Symp"
+   },
+   {
+    "key": "ref1",
+    "article-title": "Over 400 Gbit/s digital coherent channels for optical transport network",
+    "author": "miyamoto",
+    "year": "0",
+    "journal-title": "Proc 21st OptoElectron Commun Conf /Int Conf Photon Switching"
+   },
+   {
+    "key": "ref9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2009.2018475"
+   }
+  ],
+  "container-title": [
+   "Journal of Lightwave Technology"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "http://xplorestaging.ieee.org/ielx7/50/8966974/08744592.pdf?arnumber=8744592",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2022,
+     4,
+     27
+    ]
+   ],
+   "date-time": "2022-04-27T14:21:09Z",
+   "timestamp": 1651069269000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://ieeexplore.ieee.org/document/8744592/"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     1,
+     15
+    ]
+   ]
+  },
+  "references-count": 17,
+  "journal-issue": {
+   "issue": "2"
+  },
+  "URL": "https://doi.org/10.1109/jlt.2019.2924671",
+  "relation": {},
+  "ISSN": [
+   "0733-8724",
+   "1558-2213"
+  ],
+  "issn-type": [
+   {
+    "value": "0733-8724",
+    "type": "print"
+   },
+   {
+    "value": "1558-2213",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     1,
+     15
+    ]
+   ]
+  }
+ }
+}

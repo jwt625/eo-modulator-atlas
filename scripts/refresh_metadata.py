@@ -250,6 +250,31 @@ def cr_dates(m: dict[str, Any], keys: tuple[str, ...]) -> list[tuple[str, tuple[
     return out
 
 
+MONTH_NAMES = {
+    m: i
+    for i, m in enumerate(
+        "january february march april may june july august september october november december".split(), 1
+    )
+}
+
+
+def printed_online(pid: str) -> tuple[int, ...] | None:
+    """'Posted Online June 25, 2021', 'Date of publication December 5, 2023' (IEEE) or 'Published online: 13 July 2020'
+    printed on a cached version of record."""
+    t = REFS / pid / "text.md"
+    if not t.exists() or arxiv_stamp(pid):
+        return None
+    head = t.read_text(errors="ignore")[:15000]
+    lead = r"(?:(?:Posted|Published)\s+[Oo]nline:?|Date\s+of\s+publication)"
+    m = re.search(lead + r"\s+([A-Z][a-z]+)\s+(\d{1,2}),\s+(\d{4})", head)
+    if m and m.group(1).lower() in MONTH_NAMES:
+        return (int(m.group(3)), MONTH_NAMES[m.group(1).lower()], int(m.group(2)))
+    m = re.search(lead + r"\s+(\d{1,2})\s+([A-Z][a-z]+)\s+(\d{4})", head)
+    if m and m.group(2).lower() in MONTH_NAMES:
+        return (int(m.group(3)), MONTH_NAMES[m.group(2).lower()], int(m.group(1)))
+    return None
+
+
 def ax_v1(ax: dict[str, Any]) -> tuple[int, ...] | None:
     for v in ax.get("versions", []):
         if v["version"] == "v1":
@@ -358,7 +383,7 @@ def plan_row(p: dict[str, str]) -> tuple[dict[str, str], list[str]]:
         new["url"] = f"https://doi.org/{doi}"
         if m:
             t = CR_TYPES.get(m.get("type", ""))
-            if t and p["source_type"] != "review":
+            if t and p["source_type"] not in ("review", "conference"):  # proceedings registered as journal-article
                 new["source_type"] = t
             if (p["venue"].strip() in ("", "arXiv") or "arXiv" in p["venue"]) and venue_from_cr(m):
                 new["venue"] = venue_from_cr(m)
@@ -371,6 +396,9 @@ def plan_row(p: dict[str, str]) -> tuple[dict[str, str], list[str]]:
     cands: list[tuple[str, tuple[int, ...]]] = cr_dates(m, CR_ONLINE_KEYS) if m else []
     if ax and ax_v1(ax):
         cands.append(("arxiv:v1", ax_v1(ax)))  # type: ignore[arg-type]
+    po = printed_online(pid)
+    if po:
+        cands.append(("printed:online", po))
     fallback = cr_dates(m, CR_FALLBACK_KEYS) if m else []
     if not cands:
         cands = fallback
@@ -500,6 +528,7 @@ def main() -> int:
     ap.add_argument("--only", nargs="*", default=None)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--no-arxiv", action="store_true", help="Crossref only (e.g. while arXiv returns 429)")
     a = ap.parse_args()
     with (ROOT / "data" / "papers.csv").open(newline="") as f:
         papers = list(csv.DictReader(f))
@@ -535,11 +564,11 @@ def main() -> int:
                     doi = st["crossref_search"][6:]
             if doi:
                 st["crossref"] = crossref_by_doi(pid, doi, a.dry_run)
-            if not aid:
+            if not aid and not a.no_arxiv:
                 st["arxiv_search"] = arxiv_search(pid, p["title"], first, a.dry_run)
                 if st["arxiv_search"].startswith("match:"):
                     aid = st["arxiv_search"][6:]
-            if aid:
+            if aid and not a.no_arxiv:
                 st["arxiv"] = arxiv_oai(pid, aid, a.dry_run)
                 ax = load_json(REFS / pid / "arxiv.json")
                 axdoi = str((ax or {}).get("doi", "")).strip().lower()

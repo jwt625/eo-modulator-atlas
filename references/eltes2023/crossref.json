@@ -1,0 +1,289 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     4,
+     30
+    ]
+   ],
+   "date-time": "2026-04-30T02:59:48Z",
+   "timestamp": 1777517988471,
+   "version": "3.51.4"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 7,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate BTO-enhanced silicon photonics enabling compact, low-loss modulator PICs delivering net PAM4 data rates below HD-FEC threshold of 200 Gb/s in a driver-less setup with linear Rx DSP, at 9 fJ/bit electrical power dissipation.</jats:p>",
+  "DOI": "10.1364/ofc.2023.th4a.2",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2023,
+     5,
+     18
+    ]
+   ],
+   "date-time": "2023-05-18T09:56:49Z",
+   "timestamp": 1684403809000
+  },
+  "page": "Th4A.2",
+  "source": "Crossref",
+  "is-referenced-by-count": 16,
+  "title": [
+   "Thin-film BTO-based modulators enabling 200 Gb/s data rates with sub 1 Vpp drive signal"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Felix",
+    "family": "Eltes",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Weijia",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Essam",
+    "family": "Berikaa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Md Samiul",
+    "family": "Alam",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Santiago",
+    "family": "Bernal",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Cyriel",
+    "family": "Minkenberg",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "David V.",
+    "family": "Plant",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Stefan",
+    "family": "Abel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2023-Th4A.2-R1",
+    "doi-asserted-by": "crossref",
+    "first-page": "42",
+    "DOI": "10.1038/s41563-018-0208-0",
+    "volume": "18",
+    "author": "Abel",
+    "year": "2019",
+    "journal-title": "Nature Materials"
+   },
+   {
+    "key": "OFC-2023-Th4A.2-R2",
+    "doi-asserted-by": "crossref",
+    "first-page": "1456",
+    "DOI": "10.1109/JLT.2019.2893500",
+    "volume": "37",
+    "author": "Eltes",
+    "year": "2019",
+    "journal-title": "Journal of Lightwave Technology"
+   },
+   {
+    "key": "OFC-2023-Th4A.2-R5",
+    "doi-asserted-by": "crossref",
+    "first-page": "1698",
+    "DOI": "10.1021/acsphotonics.6b00350",
+    "volume": "3",
+    "author": "Eltes",
+    "year": "2016",
+    "journal-title": "ACS Photonics"
+   },
+   {
+    "key": "OFC-2023-Th4A.2-R6",
+    "doi-asserted-by": "crossref",
+    "first-page": "1391",
+    "DOI": "10.1109/LPT.2021.3124196",
+    "volume": "33",
+    "author": "Alam",
+    "year": "2021",
+    "journal-title": "IEEE Photon. Technol. Lett."
+   },
+   {
+    "key": "OFC-2023-Th4A.2-R7",
+    "doi-asserted-by": "crossref",
+    "first-page": "25544",
+    "DOI": "10.1364/OE.27.025544",
+    "volume": "27",
+    "author": "Yamazaki",
+    "year": "2019",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2023-Th4A.2-R8",
+    "doi-asserted-by": "crossref",
+    "first-page": "6273",
+    "DOI": "10.1364/OL.476399",
+    "volume": "47",
+    "author": "Berikaa",
+    "year": "2022",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "OFC-2023-Th4A.2-R9",
+    "doi-asserted-by": "crossref",
+    "first-page": "3338",
+    "DOI": "10.1109/JLT.2022.3172246",
+    "volume": "40",
+    "author": "Hu",
+    "journal-title": "J. Lightwave Technol."
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "San Diego California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2023
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2023"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2023-Th4A.2&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     21
+    ]
+   ],
+   "date-time": "2023-06-21T09:33:27Z",
+   "timestamp": 1687340007000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2023-Th4A.2"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "references-count": 7,
+  "URL": "https://doi.org/10.1364/ofc.2023.th4a.2",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  }
+ }
+}

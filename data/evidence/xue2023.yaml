@@ -1,0 +1,504 @@
+paper_id: xue2023
+verified_on: '2026-10-05'
+source_files:
+- references/xue2023/text.md
+- references/xue2023/figures/page_01.png
+- references/xue2023/figures/page_02.png
+- references/xue2023/figures/img_p01_5.png
+- references/xue2023/figures/img_p01_6.png
+- references/xue2023/crossref.json
+entries:
+- device_id: xue2023-a
+  field: wavelength_nm
+  value: 630
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 2(a)
+  note: laser wavelength of the transfer curve
+- device_id: xue2023-a
+  field: vpi_dc_v
+  value: 0.6
+  unit: V
+  basis: measured
+  locator: p.2 text; Fig. 2(a)
+  note: quasi-static transmission sweep; frequency not stated
+- device_id: xue2023-a
+  field: vpil_dc_vcm
+  value: 0.48
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.2 text
+  note: 'author arithmetic: stated as Vpi x 8 mm (p.2: corresponds to a Vpi L of 0.48, 0.25, and 0.17 V cm)'
+- device_id: xue2023-a
+  field: extinction_ratio_db
+  value: 16
+  unit: dB
+  basis: measured
+  locator: p.2 text; Fig. 2(a)
+  note: ER from the transmission sweep in Fig. 2(a)
+- device_id: xue2023-a
+  field: il_onchip_db
+  value: 6.8
+  unit: dB
+  basis: measured
+  locator: p.2 text
+  note: insertion loss of the EOM at 630 nm; scope not defined, attributed to SMF and MMI imperfections
+- device_id: xue2023-a
+  field: length_mm
+  value: 8
+  unit: mm
+  basis: design_target
+  locator: p.1 text and Fig. 1(a)
+  note: phase modulation section length
+- device_id: xue2023-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: x-cut LN-on-insulator
+- device_id: xue2023-a
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: partially etched
+- device_id: xue2023-a
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: waveguide width; top or bottom not stated
+- device_id: xue2023-a
+  field: electrode_gap_um
+  value: 2.6
+  unit: um
+  basis: design_target
+  locator: p.1 text
+  note: electrode spacing; waveguide-electrode gap 0.8 um
+- device_id: xue2023-a
+  field: signal_width_um
+  value: 19
+  unit: um
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(a) SEM inset
+  note: scale bar 10 um at 982x; ground electrodes read about 19 um too
+- device_id: xue2023-a
+  field: electrode_thickness_um
+  value: 0.7
+  unit: um
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(d) inset
+  note: scaled against the 2.6 um electrode spacing; simulation sketch
+- device_id: xue2023-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(d) inset
+  note: Au in the inset legend; text says electrodes contact the LN directly
+- device_id: xue2023-a
+  field: cladding
+  value: air
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(d) inset
+  note: inset legend shows air above the LN and electrodes; no over-cladding named
+- device_id: xue2023-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+- device_id: xue2023-b
+  field: wavelength_nm
+  value: 520
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 2(b)
+  note: laser wavelength of the transfer curve
+- device_id: xue2023-b
+  field: vpi_dc_v
+  value: 0.31
+  unit: V
+  basis: measured
+  locator: p.2 text; Fig. 2(b)
+  note: quasi-static transmission sweep; frequency not stated
+- device_id: xue2023-b
+  field: vpil_dc_vcm
+  value: 0.25
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.2 text
+  note: 'author arithmetic: stated as Vpi x 8 mm (p.2: corresponds to a Vpi L of 0.48, 0.25, and 0.17 V cm)'
+- device_id: xue2023-b
+  field: extinction_ratio_db
+  value: 7
+  unit: dB
+  basis: measured
+  locator: p.2 text; Fig. 2(b)
+  note: ER reduced by the poorly polarized green FP laser (about 10 dB polarization ER)
+- device_id: xue2023-b
+  field: length_mm
+  value: 8
+  unit: mm
+  basis: design_target
+  locator: p.1 text and Fig. 1(a)
+  note: phase modulation section length
+- device_id: xue2023-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: x-cut LN-on-insulator
+- device_id: xue2023-b
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: partially etched
+- device_id: xue2023-b
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: waveguide width; top or bottom not stated
+- device_id: xue2023-b
+  field: electrode_gap_um
+  value: 2.6
+  unit: um
+  basis: design_target
+  locator: p.1 text
+  note: electrode spacing; waveguide-electrode gap 0.8 um
+- device_id: xue2023-b
+  field: signal_width_um
+  value: 19
+  unit: um
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(a) SEM inset
+  note: scale bar 10 um at 982x; ground electrodes read about 19 um too
+- device_id: xue2023-b
+  field: electrode_thickness_um
+  value: 0.7
+  unit: um
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(d) inset
+  note: scaled against the 2.6 um electrode spacing; simulation sketch
+- device_id: xue2023-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(d) inset
+  note: Au in the inset legend; text says electrodes contact the LN directly
+- device_id: xue2023-b
+  field: cladding
+  value: air
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(d) inset
+  note: inset legend shows air above the LN and electrodes; no over-cladding named
+- device_id: xue2023-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+- device_id: xue2023-c
+  field: wavelength_nm
+  value: 450
+  unit: nm
+  basis: measured
+  locator: p.2 Fig. 2(c)
+  note: laser wavelength of the transfer curve
+- device_id: xue2023-c
+  field: vpi_dc_v
+  value: 0.21
+  unit: V
+  basis: measured
+  locator: p.2 text; Fig. 2(c)
+  note: quasi-static transmission sweep; frequency not stated
+- device_id: xue2023-c
+  field: vpil_dc_vcm
+  value: 0.17
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.2 text
+  note: 'author arithmetic: stated as Vpi x 8 mm (p.2: corresponds to a Vpi L of 0.48, 0.25, and 0.17 V cm)'
+- device_id: xue2023-c
+  field: extinction_ratio_db
+  value: 12
+  unit: dB
+  basis: measured
+  locator: p.2 text; Fig. 2(c)
+  note: ER reduced by the poorly polarized blue FP laser (about 10 dB polarization ER)
+- device_id: xue2023-c
+  field: length_mm
+  value: 8
+  unit: mm
+  basis: design_target
+  locator: p.1 text and Fig. 1(a)
+  note: phase modulation section length
+- device_id: xue2023-c
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: x-cut LN-on-insulator
+- device_id: xue2023-c
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: partially etched
+- device_id: xue2023-c
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: waveguide width; top or bottom not stated
+- device_id: xue2023-c
+  field: electrode_gap_um
+  value: 2.6
+  unit: um
+  basis: design_target
+  locator: p.1 text
+  note: electrode spacing; waveguide-electrode gap 0.8 um
+- device_id: xue2023-c
+  field: signal_width_um
+  value: 19
+  unit: um
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(a) SEM inset
+  note: scale bar 10 um at 982x; ground electrodes read about 19 um too
+- device_id: xue2023-c
+  field: electrode_thickness_um
+  value: 0.7
+  unit: um
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(d) inset
+  note: scaled against the 2.6 um electrode spacing; simulation sketch
+- device_id: xue2023-c
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(d) inset
+  note: Au in the inset legend; text says electrodes contact the LN directly
+- device_id: xue2023-c
+  field: cladding
+  value: air
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(d) inset
+  note: inset legend shows air above the LN and electrodes; no over-cladding named
+- device_id: xue2023-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+- device_id: xue2023-d
+  field: bw3db_ghz
+  value: 20
+  unit: GHz
+  basis: measured
+  locator: p.1 abstract; p.2 Fig. 2(e)
+  note: EOM bandwidth larger than 20 GHz after dividing out the detector response (green curve)
+- device_id: xue2023-d
+  field: bw_measured_to_ghz
+  value: 20
+  unit: GHz
+  basis: measured
+  locator: p.2 Fig. 2(e)
+  note: frequency axis ends at 20 GHz
+- device_id: xue2023-d
+  field: length_mm
+  value: 8
+  unit: mm
+  basis: design_target
+  locator: p.1 text and Fig. 1(a)
+  note: phase modulation section length
+- device_id: xue2023-d
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: x-cut LN-on-insulator
+- device_id: xue2023-d
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: partially etched
+- device_id: xue2023-d
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.1 text
+  note: waveguide width; top or bottom not stated
+- device_id: xue2023-d
+  field: electrode_gap_um
+  value: 2.6
+  unit: um
+  basis: design_target
+  locator: p.1 text
+  note: electrode spacing; waveguide-electrode gap 0.8 um
+- device_id: xue2023-d
+  field: signal_width_um
+  value: 19
+  unit: um
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(a) SEM inset
+  note: scale bar 10 um at 982x; ground electrodes read about 19 um too
+- device_id: xue2023-d
+  field: electrode_thickness_um
+  value: 0.7
+  unit: um
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(d) inset
+  note: scaled against the 2.6 um electrode spacing; simulation sketch
+- device_id: xue2023-d
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(d) inset
+  note: Au in the inset legend; text says electrodes contact the LN directly
+- device_id: xue2023-d
+  field: cladding
+  value: air
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(d) inset
+  note: inset legend shows air above the LN and electrodes; no over-cladding named
+- device_id: xue2023-d
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+- device_id: xue2023-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+  note: phase modulation section operating in the push-pull fashion
+- device_id: xue2023-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 text; p.1 Fig. 1(c) caption
+  note: Vpi.L simulated for a push-pull MZM; convention of the measured Vpi not named otherwise
+- device_id: xue2023-a
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.1 Fig. 1(a)
+  note: three electrodes in the SEM with one waveguide per gap; the paper does not name the layout
+- device_id: xue2023-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+  note: phase modulation section operating in the push-pull fashion
+- device_id: xue2023-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 text; p.1 Fig. 1(c) caption
+  note: Vpi.L simulated for a push-pull MZM; convention of the measured Vpi not named otherwise
+- device_id: xue2023-b
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.1 Fig. 1(a)
+  note: three electrodes in the SEM with one waveguide per gap; the paper does not name the layout
+- device_id: xue2023-c
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+  note: phase modulation section operating in the push-pull fashion
+- device_id: xue2023-c
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 text; p.1 Fig. 1(c) caption
+  note: Vpi.L simulated for a push-pull MZM; convention of the measured Vpi not named otherwise
+- device_id: xue2023-c
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.1 Fig. 1(a)
+  note: three electrodes in the SEM with one waveguide per gap; the paper does not name the layout
+- device_id: xue2023-d
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.1 text
+  note: phase modulation section operating in the push-pull fashion
+- device_id: xue2023-d
+  field: electrode_type
+  value: tw_gsg
+  unit: ''
+  basis: derived
+  locator: p.1 Fig. 1(a)
+  note: three electrodes in the SEM with one waveguide per gap; the paper does not name the layout
+- device_id: xue2023-d
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.2 Fig. 2(e)
+  note: trace starts near 0 dB; normalization frequency not stated
+derived:
+- device_id: xue2023-a
+  field: slab_thickness_nm
+  value: 120
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: xue2023-b
+  field: slab_thickness_nm
+  value: 120
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: xue2023-c
+  field: slab_thickness_nm
+  value: 120
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: xue2023-d
+  field: slab_thickness_nm
+  value: 120
+  formula: eo_film_thickness_nm - etch_depth_nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm

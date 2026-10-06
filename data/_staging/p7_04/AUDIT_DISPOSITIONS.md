@@ -1,0 +1,14 @@
+# p7_04 audit dispositions (2026-10-05)
+
+Audit: data/_staging/audits/p7_04-claude-audit-2026-10-05.md. Corrector re-read the source for every finding.
+
+- A1 (numerical, shen2025-a to -d il_onchip_db) - adjusted per coordinator decision: il_onchip_db entered only on shen2025-a (12.4 dB) and shen2025-d (13.0 dB), il_onchip_scope undefined, il_basis extracted_from_figure, qualifier il_onchip_db:approx, locator "supplement Section 7, Fig. S9", evidence entries for il_onchip_db and il_onchip_scope added. Corrector unzipped references/shen2025/supplement/source.docx (word/media/image36.jpeg, 607 x 384 px), viewed it and digitized the trace: 1547.1 nm about -12.4 dB (-12.2 to -12.6), 1546.92 nm about -10.2 to -10.6 dB, 1546.7 nm about -15.3 to -15.5 dB, 1546.72 nm minimum about -16.8 dB, 1546.1 nm vertex about -13.0 dB; max about -5.8 dB at about 1545.2 nm; matches the supplement text (5.8 / 16.9 / 9.3 dB). b (about 10.2 dB) and c (about 15.3 dB, +/-1 dB on steep slopes) are in notes and a new context_values item only; row e stays empty (1535 nm outside the plotted 1544.9-1547.1 nm). Row a notes, papers notes and BATCH_REPORT judgment call (5) updated; min/max/mean kept in context_values.
+- A2 (metadata, "figures not extractable") - applied: row a notes, papers notes and BATCH_REPORT now say figures are embedded in source.docx word/media, S9, S12, S14 raster and read, S8 and S11 EMF not rendered. Evidence: image36.jpeg opened here. source.docx added to the evidence source_files.
+- A3 (minor, physical_device_id on shen2025-design) - applied: physical_device_id cleared on the design row, kept on a-e and -sys; row a notes now name -sys only and say -design is the simulation of the same design (also in the design row notes).
+- A4 (minor, design length_mm) - applied: length_mm 1 with evidence basis design_target, locator "p.4 Fig. 1(h) caption; p.5 Sec. 4" (p.5: "The 3 dB bandwidth of our device is predicted to be 235 GHz in the simulation"); design-row note now says wavelength not stated and length not restated.
+- A5 (minor, shen2025-sys band) - applied: evidence entry band c_band, basis derived, locator "p.7 Fig. 4(l); p.6 Sec. 4", note on the about 1544.9-1547.1 nm scan; CSV band unchanged.
+- A6 (minor, row e axis label) - applied: row e notes record that the Fig. 2(e) axis label reads 1535.1 nm while caption and supplement Section 8 say 1535 nm; wavelength_nm stays 1535.
+- A7 (minor, zhang2026c source defect) - applied: papers notes list that the text cites Figure 5c for the WE = 20 um S21 panel (Fig. 4(c)); no value change.
+
+Counts: applied 6 (A2-A7), adjusted 1 (A1: a and d entered, b and c notes only per coordinator), rejected 0.
+Dry run: `uv run python scripts/merge_staging.py data/_staging/p7_04 --replace-paper-ids chelladurai2025` -> merge counts papers 3, devices 7, orgs 5, evidence 3; conflicts 0; validation errors 0.

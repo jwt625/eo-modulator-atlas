@@ -1,0 +1,132 @@
+paper_id: schwarzenberger2023
+verified_on: '2026-10-05'
+source_files:
+- references/schwarzenberger2023/text.md
+- references/schwarzenberger2023/source.pdf
+- references/schwarzenberger2023/crossref.json
+- references/schwarzenberger2023/source.json
+entries:
+- device_id: schwarzenberger2023-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: UpiL obtained at 1550 nm
+- device_id: schwarzenberger2023-a
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.2
+  note: 1 mm slot-waveguide section
+- device_id: schwarzenberger2023-a
+  field: r_eff_pm_per_v
+  value: 57
+  unit: pm/V
+  basis: author_estimate
+  locator: p.2
+  note: Initial r33 estimated with Eq. (1), n_EO 1.85, Gamma 0.21
+- device_id: schwarzenberger2023-a
+  field: rib_width_nm
+  value: 240
+  unit: nm
+  basis: design_target
+  locator: p.1 Device structure
+  note: Rail width 240 nm, rail height 220 nm
+- device_id: schwarzenberger2023-a
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: design_target
+  locator: p.1 Device structure
+- device_id: schwarzenberger2023-a
+  field: cladding
+  value: HLD, a two-component thermally crosslinked organic electro-optic material (n 1.85 at the operating wavelength)
+  unit: ''
+  basis: design_target
+  locator: p.1-2
+- device_id: schwarzenberger2023-a
+  field: epitaxy_or_stack
+  value: 'Silicon slot waveguide: rails 220 nm high and 240 nm wide, slot 180 nm, slab 70 nm; multi-level doping N / N+ / N++; slot filled with crosslinked HLD; EO interaction factor 0.21 (their ref. 19
+    definition); arm-length mismatch 30 um'
+  unit: ''
+  basis: design_target
+  locator: p.1-2 Fig. 1(b)
+- device_id: schwarzenberger2023-b
+  field: length_mm
+  value: 1
+  unit: mm
+  basis: design_target
+  locator: p.2
+  note: 1 mm slot-waveguide section of the devices
+- device_id: schwarzenberger2023-b
+  field: drive_vpp_v
+  value: 2.1
+  unit: V
+  basis: author_estimate
+  locator: p.3
+  note: On-chip drive at 100 GBd PAM4 estimated 2.1 Vpp for nominal 2.8 Vpp at the amplifier output
+- device_id: schwarzenberger2023-b
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: measured
+  locator: p.3 Fig. 2(b); abstract p.1
+  note: PAM4 100 GBd below the 20% SD-FEC limit
+- device_id: schwarzenberger2023-b
+  field: modulation_format
+  value: 'PAM4 100 GBd (200 Gbit/s) below 20% SD-FEC at 2.8 Vpp nominal (about 2.1 Vpp on chip, estimated); PAM4 up to 80 GBd (160 Gbit/s) below HD-FEC; OOK up to 80 GBd below HD-FEC at 0.9 Vpp nominal;
+    OOK below HD-FEC at 2.8 Vpp nominal (abstract: 100 Gbit/s OOK); measured after 2256 h of vacuum storage at 120 C'
+  unit: ''
+  basis: measured
+  locator: p.3 Fig. 2(b)-(c)
+- device_id: schwarzenberger2023-b
+  field: max_line_rate_gbps
+  value: 200
+  unit: Gb/s
+  basis: measured
+  locator: p.1 abstract; p.3
+  note: PAM4 200 Gbit/s at 100 GBd
+- device_id: schwarzenberger2023-b
+  field: cladding
+  value: HLD, a two-component thermally crosslinked organic electro-optic material, stored in vacuum at 120 C for 2256 h
+  unit: ''
+  basis: design_target
+  locator: p.2-3
+- device_id: schwarzenberger2023-b
+  field: rib_width_nm
+  value: 240
+  unit: nm
+  basis: design_target
+  locator: p.1 Device structure
+  note: Device description of "our devices" (as-poled row geometry repeated); not stated separately for the stored devices
+- device_id: schwarzenberger2023-b
+  field: slab_thickness_nm
+  value: 70
+  unit: nm
+  basis: design_target
+  locator: p.1 Device structure
+  note: Device description of "our devices" (as-poled row geometry repeated); not stated separately for the stored devices
+- device_id: schwarzenberger2023-b
+  field: epitaxy_or_stack
+  value: 'Silicon slot waveguide: rails 220 nm high and 240 nm wide, slot 180 nm, slab 70 nm; multi-level doping N / N+ / N++; slot filled with crosslinked HLD; EO interaction factor 0.21 (their ref. 19
+    definition); arm-length mismatch 30 um'
+  unit: ''
+  basis: design_target
+  locator: p.1-2 Fig. 1(b)
+  note: Device description of "our devices" (as-poled row geometry repeated); not stated separately for the stored devices
+- device_id: schwarzenberger2023-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2
+  note: p.1 states 1550 nm for the SOH MZM used in the experiments; repeated on the aged-device row
+derived:
+- device_id: schwarzenberger2023-a
+  field: vpil_dc_vcm
+  value: 0.19
+  formula: 1.9 V*mm / (10 mm/cm); reported 1.9 V mm (p.2)
+  inputs:
+  - 1.9 V*mm

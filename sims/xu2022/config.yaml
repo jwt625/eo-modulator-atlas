@@ -1,0 +1,122 @@
+schema: eo-atlas.sim/v1
+id: xu2022-a
+paper_id: xu2022
+device_id: xu2022-a
+title: Xu 2022, 23.5 mm CL-TWE sub-MZM of the DP-IQ TFLN modulator on quartz (G-S-G, push-pull arms), uniform Fig. 1(c) cross-section
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+
+# Conventions follow sims/chen2022/config.yaml and sims/kharel2021/config.yaml.
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the LN bottom / quartz top.
+# Origin: optical axis of the RIGHT-hand waveguide in x. Signal electrode centre (mirror plane) at x = -41.5 um; LEFT waveguide at x = -83 um.
+# Cross-section as drawn in Fig. 1(c): per gap, [ground or signal Au] -g = 3 um- [Au]; the waveguide (rib top width 2.5 um) is centred in the gap.
+# The cut is the plain two-electrode section of Fig. 1(c). The segmented (capacitance-loaded) fingers of Fig. 1(b) (period 50 um, segment gap 5 um) are NOT in this cut: finger width is not given.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm.
+optics:
+  wavelength_nm: 1550              # NOT reported for the modulator measurements; see provenance and missing
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  quartz: {n: 1.53, eps_r: 4.5}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-250, 170], y_um: [-250, 120]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-250, 170], y_um: [-250, 120]}}
+    - {name: substrate, material: quartz, rect: {x_um: [-250, 170], y_um: [-500, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-250, 170], y_um: [0, 0.18]}}
+    - {name: sio2_cladding, material: silicon_dioxide, rect: {x_um: [-250, 170], y_um: [0.18, 0.88]}}
+    - {name: ln_rib_r, material: lithium_niobate, polygon_um: [[-1.25, 0.18], [1.25, 0.18], [1.25, 0.36], [-1.25, 0.36]]}
+    - {name: ln_rib_l, material: lithium_niobate, polygon_um: [[-84.25, 0.18], [-81.75, 0.18], [-81.75, 0.36], [-84.25, 0.36]]}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-81.5, -1.5], y_um: [0.88, 1.78]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [1.5, 81.5], y_um: [0.88, 1.78]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-164.5, -84.5], y_um: [0.88, 1.78]}, material: gold}
+  optical_window: {x_um: [-1.4, 1.4], y_um: [-1.5, 1.8]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 23.5
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-drive G-S-G probe on the centre line; push-pull arises from the arm placement (inferred, see provenance)
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 200, n_points: 400}
+alt_geometries: {}
+
+targets:
+  # Measured headline values for the four sub-MZMs (devices.csv row xu2022-a). All carry comparable: false because the solve depends on placeholder material constants, rib sidewalls, electrode widths and the unmodelled capacitive loading.
+  - {metric: vpi_dc_v, value: 1.0, tol_rel: 0.15, source: {device_id: xu2022-a, field: vpi_dc_v, comparable: false, note: "NON-COMPARABLE: UNVERIFIED LN constants, vertical rib sidewalls and assumed electrode widths; Vpi frequency and wavelength not stated"}}
+  - {metric: vpi_l_dc_vcm, value: 2.4, tol_rel: 0.1, source: {paper_id: xu2022, locator: "p.2", comparable: false, basis: simulated, note: "Authors' own simulated efficiency of the design (text p.2); NON-COMPARABLE until LN constants and the optical wavelength are known; not a devices.csv value (vpil_dc_vcm of xu2022-a is empty)"}}
+  - {metric: bw3db_ghz, value: 110, tol_rel: 0.15, source: {device_id: xu2022-a, field: bw3db_ghz, comparable: false, note: "Paper states >110 GHz (lower bound, traces end near 110 GHz); the uniform-line model omits the capacitive loading that the design relies on"}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: project_inference, note: "wavelength of the modulator measurements is not stated (PRC characterised over 1520-1580 nm only, p.1 Fig. 1(e)); 1550 nm assumed"}
+  optics.polarization: {class: project_inference, note: "polarization not stated for the sub-MZMs; TE assumed for an x-cut film with propagation along y (PRC input ports are TE0, p.2)"}
+  optics.group_index_from: {class: project_inference, note: "no group index is quoted; engine derives it"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.1 (x-cut TFLN device layer 360 nm)", note: "propagation along y is a project_inference from the standard x-cut convention"}
+  materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder 43/28 (SPEC.md example values); the paper states no RF permittivity"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values); the paper states no Pockels coefficients"}
+  materials.silicon_dioxide: {class: unknown, note: "UNVERIFIED placeholder n = 1.444, eps_r = 3.9; the paper states neither"}
+  materials.quartz: {class: unknown, note: "UNVERIFIED placeholder n = 1.53, eps_r = 4.5; the paper gives only the 500 um quartz substrate, no constants (crystalline vs fused not stated)"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder 4.1e7 S/m bulk gold; film conductivity not stated"}
+  materials.air: {class: standard_reference, citation: "vacuum-like ambient n = 1, eps_r = 1"}
+  line.length_mm: {class: paper_exact, locator: "p.1 Fig. 1 caption; p.2 (23.5 mm CL-TWE)"}
+  line.source_ohm: {class: project_inference, note: "50 ohm source assumed; the electrical drive is a DAC with probe array, impedance not stated"}
+  line.load_ohm: {class: paper_exact, locator: "p.2 (flip-chip bonded 50 ohm terminators at the end of each CL-TWE)"}
+  line.differential: {class: project_inference, note: "single G-S-G with one arm per gap (Fig. 1(a),(b)); the paper does not state push-pull or the drive form"}
+  line.conductor_loss_model: {class: project_inference, note: "paper quotes a simulated 0.21 dB/cm/GHz^0.5 (p.2); model choice left to the engine"}
+  line.loading: {class: project_inference, locator: "p.1 Fig. 1(b) (period 50 um, segment gap c = 5 um)", note: "loading type none: finger width and which conductor each finger belongs to are not given, so no loaded cross-section can be built; the real device is capacitance-loaded"}
+  geometry.regions.ambient: {class: project_inference, locator: "p.1 Fig. 1(c) (Air label)", note: "air above the electrodes"}
+  geometry.regions.substrate: {class: paper_exact, locator: "p.1 (500 um quartz substrate; region clipped to the domain)"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.2 (slab thickness 180 nm)"}
+  geometry.regions.sio2_cladding: {class: project_inference, locator: "p.2; p.1 Fig. 1(c) (0.7 um SiO2 cladding)", note: "0.7 um thickness stated; profile over the rib and reference surface not stated; flat top 0.7 um above the slab top assumed; alternative reading of Fig. 1(c): the 0.7 um dimension spans the electrode bottom to the quartz top (about 0.52 um SiO2 over the slab)"}
+  geometry.regions.ln_rib_r: {class: project_inference, locator: "p.2 (top width 2.5 um, rib height 180 nm); p.1 Fig. 1(c)", note: "rib modelled with vertical sidewalls; sidewall angle not stated; centred in the 3 um gap per Fig. 1(c)"}
+  geometry.regions.ln_rib_l: {class: project_inference, note: "mirror image of the right-hand rib about x = -41.5 um"}
+  geometry.electrodes.signal: {class: project_inference, locator: "p.1 Fig. 1(b) (ws = 80 um); Fig. 1(c) (t = 0.9 um, g = 3 um)", note: "80 um is the ws label of Fig. 1(b), whose arrow spans the light region between the inner edges of the two segment rows; reading it as the signal-conductor width is a project inference not stated in the text and conflicts with the Fig. 1(b) scale: by the 50 um scale bar the arm pitch is about 104 um (each waveguide about 12 um outside the ws edge), not the 83 um used here (waveguides at x = 0 and -83 um). Thickness 0.9 um and 3 um gap are paper_exact; the electrode bottom on the SiO2 top surface (0.7 um above the slab) follows Fig. 1(c) (Au drawn on the SiO2 layer); alternative reading of Fig. 1(c): the 0.7 um arrows may span the electrode bottom to the quartz top (about 0.52 um SiO2 over the slab), not adopted"}
+  geometry.electrodes.ground_r: {class: project_inference, note: "ground width not stated; taken equal to the signal width; inner edge at g/2 = 1.5 um from the waveguide axis"}
+  geometry.electrodes.ground_l: {class: project_inference, note: "mirror of ground_r"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 1.4 um, just inside the 1.5 um electrode edge; the rib half-width is 1.25 um, so the Dirichlet window sides truncate the mode tail"}
+  geometry.domain: {class: project_inference, note: "lateral -250..170 um, vertical -250..120 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - LN refractive indices, RF permittivity tensor and Pockels coefficients (UNVERIFIED placeholders in the file; the paper states none)
+  - SiO2 and quartz optical and RF constants (UNVERIFIED placeholders)
+  - gold film conductivity (not stated)
+  - wavelength and polarization of the modulator measurements (1550 nm TE assumed)
+  - rib sidewall angle and whether 2.5 um is the top or bottom width (stated as top width w; vertical placeholder)
+  - width of the signal and ground electrodes (ws = 80 um of Fig. 1(b) is the gap between the inner edges of the two segment rows, read here as the signal width; Fig. 1(b) scale gives an arm pitch of about 104 um vs the 83 um used; ground width assumed equal)
+  - width of the capacitive-loading fingers and the stem layout (Fig. 1(b) labels p, c, s, t only; unit-cell cannot be constructed)
+  - SiO2 cladding profile over the rib and its reference surface (0.7 um stated; Fig. 1(c) dimension may span electrode bottom to quartz top, about 0.52 um over the slab)
+  - RF characteristic impedance, effective index and measured RF loss (only a simulated 0.21 dB/cm/GHz^0.5 is quoted)
+  - Vpi measurement frequency and wavelength
+  - temperature
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "The capacitance-loaded segmented electrode (period 50 um, segment gap 5 um) is not represented: this is the plain two-electrode cut of Fig. 1(c); bandwidth and loaded-line quantities are not comparable to the paper"
+  - "Electrode and ground widths are assumptions; the optical window is narrower than the rib-plus-margin preferred for mode convergence"
+  - "The paper is a 2-page memorandum: dimensions come from the text and figure labels only, with no supplement"
+  - "Four sub-MZMs share one set of headline numbers; no per-channel geometry difference is stated"

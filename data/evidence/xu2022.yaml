@@ -1,0 +1,204 @@
+paper_id: xu2022
+verified_on: '2026-10-05'
+source_files:
+- references/xu2022/text.md
+- references/xu2022/crossref.json
+- references/xu2022/source.json
+- references/xu2022/figures/page_01.png
+- references/xu2022/figures/page_02.png
+- references/xu2022/figures/img_p01_10.png
+- references/xu2022/figures/img_p02_1.png
+entries:
+- device_id: xu2022-a
+  field: length_mm
+  value: 23.5
+  unit: mm
+  basis: design_target
+  locator: p.1 Fig. 1 caption; p.2
+  note: Modulation length of the CL-TWEs, 23.5 mm
+- device_id: xu2022-a
+  field: vpi_dc_v
+  value: 1
+  unit: V
+  basis: measured
+  locator: p.2; p.1 Fig. 1(f)
+  note: Vpi 1 V for all sub-MZMs; frequency and wavelength of the sweep not stated
+- device_id: xu2022-a
+  field: drive_vpp_v
+  value: 0.628
+  unit: V
+  basis: author_estimate
+  locator: p.2
+  note: Peak-to-peak at the sub-MZMs after cable and probe-array loss; RMS 161 mV; calculation not shown
+- device_id: xu2022-a
+  field: bw3db_ghz
+  value: 110
+  unit: GHz
+  basis: measured
+  locator: p.2; p.1 Fig. 1(g)
+  note: 'Text: >110 GHz for all channels, referenced to 1.5 GHz; traces end near 110 GHz at about -3 dB'
+- device_id: xu2022-a
+  field: bw3db_reference_freq_ghz
+  value: 1.5
+  unit: GHz
+  basis: measured
+  locator: p.1 Fig. 1 caption (g)
+  note: 1.5 GHz reference stated in the caption
+- device_id: xu2022-a
+  field: bw_measured_to_ghz
+  value: 110
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.1 Fig. 1(g)
+  note: End of the measured traces read from the axis; 100 GHz photodetector with frequency converters
+- device_id: xu2022-a
+  field: il_fiber_to_fiber_db
+  value: 6.8
+  unit: dB
+  basis: measured
+  locator: p.2
+  note: Total fiber-to-fiber loss; edge coupler 1.9 dB per facet
+- device_id: xu2022-a
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.2
+  note: All sub-MZMs ER above 20 dB; static or dynamic not stated
+- device_id: xu2022-a
+  field: eo_film_thickness_nm
+  value: 360
+  unit: nm
+  basis: design_target
+  locator: p.1
+  note: x-cut TFLN device layer 360 nm
+- device_id: xu2022-a
+  field: etch_depth_nm
+  value: 180
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: Rib height 180 nm
+- device_id: xu2022-a
+  field: rib_width_nm
+  value: 2500
+  unit: nm
+  basis: design_target
+  locator: p.2; p.1 Fig. 1(c)
+  note: Top width w 2.5 um
+- device_id: xu2022-a
+  field: slab_thickness_nm
+  value: 180
+  unit: nm
+  basis: design_target
+  locator: p.2
+- device_id: xu2022-a
+  field: electrode_gap_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.1 Fig. 1(c)
+  note: g = 3 um between the electrode edges flanking the waveguide
+- device_id: xu2022-a
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.2; p.1 Fig. 1(c)
+  note: 0.9 um thick CL-TWE
+- device_id: xu2022-a
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: design_target
+  locator: p.1 Fig. 1(c)
+  note: Au label in the cross-section
+- device_id: xu2022-a
+  field: buffer_oxide_um
+  value: 0.7
+  unit: um
+  basis: design_target
+  locator: p.2; p.1 Fig. 1(c)
+  note: 0.7 um SiO2 cladding under the CL-TWE (text value); in Fig. 1(c) the 0.7 um arrows may span the electrode bottom to the quartz top instead (alternative reading, about 0.52 um SiO2 over the slab), not adopted
+- device_id: xu2022-a
+  field: substrate
+  value: quartz 500 um
+  unit: ''
+  basis: design_target
+  locator: p.1
+  note: 500 um thick quartz substrate
+- device_id: xu2022-a
+  field: cladding
+  value: SiO2 0.7 um under the electrodes; air above
+  unit: ''
+  basis: design_target
+  locator: p.2; p.1 Fig. 1(c)
+  note: Air above read from the cross-section sketch
+- device_id: xu2022-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.1
+- device_id: xu2022-a
+  field: epitaxy_or_stack
+  value: x-cut TFLN device layer 360 nm on 500 um quartz; 0.7 um SiO2; 0.9 um Au CL-TWE
+  unit: ''
+  basis: design_target
+  locator: p.1; p.2; Fig. 1(c)
+- device_id: xu2022-a
+  field: max_baud_gbd
+  value: 130
+  unit: GBd
+  basis: measured
+  locator: p.2 Fig. 2 caption
+  note: 130 GBd probabilistic constellation shaping 400QAM
+- device_id: xu2022-a
+  field: modulation_format
+  value: 'DP-PCS-400QAM at 130 GBd, entropy 8.14-8.54 bit/symbol/pol; 8.44 bit/symbol/pol: pre-FEC BER 1.91e-2, SNR 23.4 dB, information rate 15.38 bit/symbol'
+  unit: ''
+  basis: measured
+  locator: p.2; Fig. 2(c),(d); Fig. 3(a)
+- device_id: xu2022-a
+  field: max_net_rate_gbps
+  value: 1960
+  unit: Gb/s
+  basis: measured
+  locator: p.2; Fig. 2(c)
+  note: Net rate with 10 percent FEC code; computation from entropy and FEC not shown
+- device_id: xu2022-a
+  field: energy_per_bit_fj
+  value: 1.04
+  unit: fJ/bit
+  basis: author_estimate
+  locator: p.2 conclusion
+  note: Formula and scope (modulator vs driver) not stated; auditor check, not stated by the authors, 4 x (0.161 V)^2 / 50 ohm / (130 GBd x 15.38 bit/symbol) = 1.04 fJ/bit, consistent with RF power of the four sub-MZMs into 50 ohm (modulator load only, DAC excluded)
+- device_id: xu2022-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.1 Fig. 1(a),(c)
+  note: Authors do not state the drive form; inferred from the x-cut two-arm CL-TWE layout, one arm per electrode gap
+- device_id: xu2022-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.2
+  note: Authors give Vpi per sub-MZM without naming the convention; inferred from the push-pull layout
+- device_id: xu2022-a
+  field: bw3db_reference
+  value: other
+  unit: ''
+  basis: measured
+  locator: p.1 Fig. 1 caption (g)
+  note: 1.5 GHz reference stated, stored with bw3db_reference_freq_ghz
+- device_id: xu2022-a
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.2
+  note: Measured small-signal EO response, 100 GHz photodetector and VNA with frequency converters
+derived: []

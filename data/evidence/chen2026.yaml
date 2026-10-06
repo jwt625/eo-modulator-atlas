@@ -1,0 +1,189 @@
+paper_id: chen2026
+verified_on: '2026-10-05'
+source_files:
+- references/chen2026/text.md
+- references/chen2026/figures/page_03.png
+- references/chen2026/figures/page_04.png
+- references/chen2026/figures/page_06.png
+entries:
+- device_id: chen2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.2 Sec. 1; p.5
+  note: input light at 1550 nm
+- device_id: chen2026-a
+  field: length_mm
+  value: 7.5
+  unit: mm
+  basis: design_target
+  locator: p.2 Sec. 2; Fig. 2(a)
+  note: total length of the modulation section
+- device_id: chen2026-a
+  field: vpi_dc_v
+  value: 3.2
+  unit: V
+  basis: measured
+  locator: p.5 text; Fig. 3(a)
+  note: 5 kHz triangular wave, 8 V peak-to-peak
+- device_id: chen2026-a
+  field: vpi_dc_freq_ghz
+  value: 5.0e-06
+  unit: GHz
+  basis: measured
+  locator: p.5 text
+  note: 5 kHz
+- device_id: chen2026-a
+  field: vpil_dc_vcm
+  value: 2.4
+  unit: V*cm
+  basis: derived
+  locator: p.1 abstract; p.5
+  note: 3.2 V x 0.75 cm; formula implicit
+- device_id: chen2026-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.6 Fig. 4(a)
+  note: 67 GHz photodetector and VNA range; the measured trace dips below -3 dB at about 57, 64 and 66-67 GHz (Fig. 4(a)), so no 3 dB bound is entered
+- device_id: chen2026-a
+  field: n_rf
+  value: 2.2
+  unit: '1'
+  basis: measured
+  locator: p.4 Fig. 2(b)
+  note: measured RF effective index at 47 GHz
+- device_id: chen2026-a
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: x-cut LTOI wafer
+- device_id: chen2026-a
+  field: etch_depth_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2; Fig. 1(a) inset
+  note: ridge height 300 nm
+- device_id: chen2026-a
+  field: rib_width_nm
+  value: 2200
+  unit: nm
+  basis: design_target
+  locator: p.2-3; Fig. 1(a),(b)
+  note: top width in the modulating arms, simulation optimum
+- device_id: chen2026-a
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2; Fig. 1(a) inset
+  note: between signal and ground electrode
+- device_id: chen2026-a
+  field: signal_width_um
+  value: 30
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1(a) inset
+- device_id: chen2026-a
+  field: electrode_thickness_um
+  value: 1.0
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 1(a) inset
+  note: Au
+- device_id: chen2026-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 fabrication paragraph
+  note: CPW gold electrodes by EBE and lift-off
+- device_id: chen2026-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: SiO2 under the LT
+- device_id: chen2026-a
+  field: substrate
+  value: silicon (thickness not stated)
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+- device_id: chen2026-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.2 Sec. 2
+- device_id: chen2026-a
+  field: waveguide_orientation
+  value: propagation along y
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 3
+  note: light propagates along the y-direction, TE polarization
+- device_id: chen2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.3 Fig. 1(a) inset
+  note: not stated by the authors; inferred from one waveguide in each gap of the G-S-G electrode
+- device_id: chen2026-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.5 Fig. 3(a)
+  note: not stated; Vpi read as the MZM transmission swing
+- device_id: chen2026-a
+  field: ng_opt
+  value: 2.2
+  unit: '1'
+  basis: author_estimate
+  locator: p.5 Sec. 3
+  note: paper quotes 'group index of the optical mode (ng = 2.2)' without a source or method
+derived:
+- device_id: chen2026-a
+  field: slab_thickness_nm
+  value: 300
+  formula: eo_film_thickness_nm - etch_depth_nm = 600 - 300
+  inputs:
+  - eo_film_thickness_nm=600
+  - etch_depth_nm=300
+context_values:
+- item: sidewall_angle_deg_unreferenced
+  value: 69
+  locator: p.2
+  note: reference plane not stated
+- item: rf_loss_alpha0_db_per_cm_per_sqrt_ghz
+  value: 0.74
+  locator: p.5 text; Fig. 2(c)
+  note: stated fit coefficient; measured curve in the figure is higher
+- item: ring_waveguide_propagation_loss_db_per_cm
+  value: 'approximately 0.5 (caption: less than 0.5)'
+  locator: p.5 text; Fig. 2(c) inset
+  note: single-mode ring waveguide
+- item: bw_over_vpi_squared_ghz_per_v2
+  value: 6.8
+  locator: p.7 text; Table 1
+  note: stated FoM
+- item: power_drift_db_60min
+  value: below 1
+  locator: p.5 Fig. 3(b) inset
+  note: second quadrature point
+- item: claimed_bw3db_ghz
+  value: exceeds 67
+  locator: p.1 abstract; p.6 text; p.8 conclusion
+  note: authors claim; contradicted by the measured trace of Fig. 4(a) (below -3 dB near 57, 64, 66-67 GHz); not entered (convention y)
+- item: dc_drift_normalization_reference
+  value: 1.0 GHz/V
+  locator: p.8 Fig. 5 caption
+  note: both EO response variations normalized to this reference point; Fig. 5(c) TFLT about 0.38-0.46, Fig. 5(d) TFLN about 0.37-0.69 (read from plots); no device row

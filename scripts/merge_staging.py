@@ -19,6 +19,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_people import write_tables as build_people_tables  # noqa: E402
 from validate_db import read_csv, validate  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -106,6 +107,8 @@ def main() -> int:
         work = Path(tmp) / "data"
         shutil.copytree(DATA, work)
         msgs, counts = merge([Path(d) for d in a.dirs], work, replace)
+        if (work / "paper_authors.csv").exists():  # person ids for the merged author lists (DevLog-020)
+            build_people_tables(work)
         errs = validate(work)
         for m in msgs:
             print(m)
@@ -113,8 +116,9 @@ def main() -> int:
             print("VALIDATION", e)
         print(f"merge counts: {counts}; conflicts: {len(msgs)}; validation errors: {len(errs)}")
         if a.apply and (not msgs and not errs or a.force):
-            for name in ("papers.csv", "devices.csv", "organizations.csv"):
-                shutil.copyfile(work / name, DATA / name)
+            for name in ("papers.csv", "devices.csv", "organizations.csv", "people.csv", "paper_authors.csv"):
+                if (work / name).exists():
+                    shutil.copyfile(work / name, DATA / name)
             (DATA / "evidence").mkdir(exist_ok=True)
             for ev in (work / "evidence").glob("*.yaml"):
                 shutil.copyfile(ev, DATA / "evidence" / ev.name)

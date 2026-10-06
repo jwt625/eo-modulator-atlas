@@ -1,0 +1,150 @@
+# Coordinate frame: x lateral, y film normal up, z propagation. y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand waveguide in x; mirror plane (signal centre) at x = -13.5 um; LEFT waveguide at x = -27 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm.
+# Conventions follow sims/chen2022/config.yaml and sims/li2022b/config.yaml. Optical indices at 1550 nm are not given by the paper and are left out.
+schema: eo-atlas.sim/v1
+id: murai2025-a
+paper_id: murai2025
+device_id: murai2025-a
+title: Murai 2025, 9.9 mm micro-transfer-printed TFLN MZM on Si (GSG, push-pull arms), cross-section read from Fig. 5(c)
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
+optics: {wavelength_nm: 1550, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null, eo_axis: auto}
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {eps_r: 3.9}
+  silicon: {eps_r: 11.7}
+  gold: {conductor: true, sigma_Sm: 41000000.0, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+geometry:
+  symmetry: none
+  domain:
+    x_um: [-150, 120]
+    y_um: [-250, 120]
+  regions:
+  - name: ambient
+    material: air
+    rect:
+      x_um: [-150, 120]
+      y_um: [-250, 120]
+  - name: substrate
+    material: silicon
+    rect:
+      x_um: [-150, 120]
+      y_um: [-250, -3]
+  - name: box
+    material: silicon_dioxide
+    rect:
+      x_um: [-150, 120]
+      y_um: [-3, 0]
+  - name: ln_slab
+    material: lithium_niobate
+    rect:
+      x_um: [-150, 120]
+      y_um: [0, 0.2]
+  - name: ln_rib_r
+    material: lithium_niobate
+    polygon_um:
+    - [-1.2, 0.2]
+    - [1.2, 0.2]
+    - [1.2, 0.6]
+    - [-1.2, 0.6]
+  - name: ln_rib_l
+    material: lithium_niobate
+    polygon_um:
+    - [-28.2, 0.2]
+    - [-25.8, 0.2]
+    - [-25.8, 0.6]
+    - [-28.2, 0.6]
+  electrodes:
+  - name: signal
+    role: signal
+    weight: 1.0
+    rect:
+      x_um: [-24.5, -2.5]
+      y_um: [0.2, 1.4]
+    material: gold
+  - name: ground_r
+    role: ground
+    weight: 0.0
+    rect:
+      x_um: [2.5, 62.5]
+      y_um: [0.2, 1.4]
+    material: gold
+  - name: ground_l
+    role: ground
+    weight: 0.0
+    rect:
+      x_um: [-89.5, -29.5]
+      y_um: [0.2, 1.4]
+    material: gold
+  optical_window:
+    x_um: [-2.4, 2.4]
+    y_um: [-1.5, 1.5]
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 9.9
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 50, n_points: 100}
+alt_geometries: {}
+targets:
+- metric: vpi_l_dc_vcm
+  value: 2.7
+  tol_rel: 0.15
+  source: {device_id: murai2025-a, field: vpil_dc_vcm, comparable: false, note: NON-COMPARABLE until LN Pockels coefficients are verified; push-pull MZM definition}
+- metric: vpi_l_dc_vcm
+  value: 2.5
+  tol_rel: 0.1
+  source: {paper_id: murai2025, locator: 'p.6 Sec. 3.2 (simulated VpiL 2.5 V cm, Fig. 5(c) geometry)', basis: simulated, note: 'paper''s own simulation; cross-solver reference, not a measurement'}
+- metric: ng_opt
+  value: 2.2
+  tol_abs: 0.1
+  source: {device_id: murai2025-a, field: ng_opt, note: depends on the missing LN indices}
+- metric: n_rf
+  value: 2.1
+  tol_abs: 0.15
+  source: {device_id: murai2025-a, field: n_rf, note: stated microwave group index of the full device incl. Si substrate loss; static section value is only indicative}
+- metric: z0_ohm
+  value: 40
+  tol_abs: 5.0
+  source: {device_id: murai2025-a, field: z0_ohm, note: stated GSG characteristic impedance; method not stated}
+reported_curves: []
+provenance:
+  optics.wavelength_nm: {class: paper_exact, locator: p.5 Sec. 3.2; p.6 Sec. 3.3 (1550 nm TLD)}
+  optics.polarization: {class: paper_exact, locator: p.5 Sec. 3.2 (TE-polarized CW light)}
+  optics.group_index_from: {class: project_inference, note: paper quotes ng 2.2 (p.6); the engine derives it by finite difference}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: p.4 Sec. 2 (X-cut LNOI), note: propagation along y is a project_inference from the standard x-cut convention}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example value perp 43, par 28); the paper states no RF permittivity of LN"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values r13 8.6, r22 3.4, r33 30.8, r51 28.0); the paper states no Pockels coefficients"}
+  materials.silicon_dioxide.eps_r: {class: unknown, note: "UNVERIFIED placeholder eps_r 3.9; the paper states none"}
+  materials.silicon.eps_r: {class: unknown, note: "UNVERIFIED placeholder eps_r 11.7; the paper states none"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder 4.1e7 S/m; the paper states no film conductivity"}
+  line.length_mm: {class: paper_exact, locator: p.6 Sec. 3.2 (9.9 mm phase shifters)}
+  line.source_ohm: {class: project_inference, note: '50 ohm VNA/source assumed; Fig. 6(a) shows a VNA, source impedance not stated'}
+  line.load_ohm: {class: project_inference, note: 50 ohm termination assumed; not stated for the device}
+  line.differential: {class: project_inference, note: GSG on the signal line with one arm in each gap; push-pull stated by the authors (p.5)}
+  line.conductor_loss_model: {class: project_inference, note: no RF loss values reported; the 1-20 ohm cm Si substrate loss (p.6) cannot be represented by the quasi-static 2D electrostatics}
+  geometry.regions.box: {class: paper_exact, locator: p.5 Sec. 2 (3 um thermal oxide on the Si target substrate)}
+  geometry.regions.substrate: {class: project_inference, note: Si thickness not stated; region ends at the domain bottom; low-resistivity (1-20 ohm cm) behaviour not modelled (treated as lossless eps_r 11.7)}
+  geometry.regions.ln_slab: {class: figure_digitized, locator: p.7 Fig. 5(c), note: film 600 nm from p.4 Sec. 2; slab top at y = 0.2 um read from the axis of the simulation sketch}
+  geometry.regions.ln_rib_r: {class: figure_digitized, locator: p.7 Fig. 5(c), note: 'rib x = -1.2 to 1.2 um, top at y = 0.6 um, vertical walls as drawn; simulation sketch, not an SEM of the fabricated device'}
+  geometry.regions.ln_rib_l: {class: project_inference, note: 'same rib at x = -27 um, centred in the left 5 um gap; arm spacing is not stated'}
+  geometry.electrodes.signal: {class: paper_exact, locator: 'p.5 Sec. 2 (gap 5 um, signal width 22 um, Au 1.2 um)', note: 'electrodes on the LN slab top: inferred from the field hot spots at x = +-2.5 um in the Fig. 5(c) DC-field panel'}
+  geometry.electrodes.ground_r: {class: unknown, note: 'UNVERIFIED placeholder: ground width not stated in the paper; 60 um is a placeholder, not from this paper'}
+  geometry.electrodes.ground_l: {class: project_inference, note: mirror of ground_r about the signal centre}
+  geometry.optical_window: {class: project_inference, note: crop inside the electrode gap so no conductor is in the optical mesh}
+  geometry.domain: {class: project_inference}
+  geometry.mesh: {class: project_inference}
+missing: [LN ordinary and extraordinary indices at 1550 nm (left out; optical stage cannot run), SiO2 and Si optical indices at 1550 nm (left out), 'RF permittivity and Pockels coefficients of LN, SiO2 and Si, gold conductivity (all UNVERIFIED placeholders: the numeric values in materials are kept only so the electrostatic stage can run; none is read from a source in this repo)', ground electrode width, left-arm position (arm spacing), rib top vs bottom width and sidewall angle of the fabricated device (sketch
+    shows vertical walls), silicon substrate thickness and its resistivity model (1 to 20 ohm cm stated), cladding (none drawn in Fig. 5(c); air assumed), temperature]
+limitations: [scalar_optical_not_full_vector, quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, 'Optical stage blocked: no LN indices at 1550 nm are given in the paper', Lossy low-resistivity Si substrate (dominant roll-off mechanism per p.6) is not representable in the quasi-static lossless model, 'Rib dimensions come from a simulation sketch, not from an SEM of the
+    fabricated device']

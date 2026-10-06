@@ -1,0 +1,916 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     29
+    ]
+   ],
+   "date-time": "2026-09-29T02:09:15Z",
+   "timestamp": 1790647755885,
+   "version": "4.1.0"
+  },
+  "reference-count": 30,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "11",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       7,
+       6
+      ]
+     ],
+     "date-time": "2020-07-06T00:00:00Z",
+     "timestamp": 1593993600000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://www.springer.com/tdm"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2020,
+       7,
+       6
+      ]
+     ],
+     "date-time": "2020-07-06T00:00:00Z",
+     "timestamp": 1593993600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://www.springer.com/tdm"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100000780",
+    "name": "European Commission",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "H2020-ICT-2015-25- 688579"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "H2020-ICT-2015-25- 688579"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000780",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100007352",
+    "name": "Federal Department of Economic Affairs, Education and Research, Switzerland | Staatssekretariat für Bildung, Forschung und Innovation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "15.0285"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "15.0285"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100007352",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100007352",
+    "name": "Federal Department of Economic Affairs, Education and Research, Switzerland | Staatssekretariat für Bildung, Forschung und Innovation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "16.0001"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "16.0001"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100007352",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001711",
+    "name": "Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "200021_159565"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "200021_159565"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001711",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000266",
+    "name": "RCUK | Engineering and Physical Sciences Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EP/L024020/1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EP/L024020/1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000266",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000266",
+    "name": "RCUK | Engineering and Physical Sciences Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EP/M013472/1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EP/M013472/1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000266",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000266",
+    "name": "RCUK | Engineering and Physical Sciences Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EP/K033085/1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EP/K033085/1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000266",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000266",
+    "name": "RCUK | Engineering and Physical Sciences Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EP/N015126/1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EP/N015126/1"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000266",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000266",
+    "name": "RCUK | Engineering and Physical Sciences Research Council",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "2014- STG 640079"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2014- STG 640079"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100000266",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat. Mater."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2020,
+     11
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41563-020-0725-5",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2020,
+     7,
+     6
+    ]
+   ],
+   "date-time": "2020-07-06T16:03:42Z",
+   "timestamp": 1594051422000
+  },
+  "page": "1164-1168",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 174,
+  "title": [
+   "An integrated optical modulator operating at cryogenic temperatures"
+  ],
+  "prefix": "10.1038",
+  "volume": "19",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3882-8121",
+    "authenticated-orcid": false,
+    "given": "Felix",
+    "family": "Eltes",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Gerardo E.",
+    "family": "Villarreal-Garcia",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Daniele",
+    "family": "Caimi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Heinz",
+    "family": "Siegwart",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Antonio A.",
+    "family": "Gentile",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Andy",
+    "family": "Hart",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7389-5592",
+    "authenticated-orcid": false,
+    "given": "Pascal",
+    "family": "Stark",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Graham D.",
+    "family": "Marshall",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2865-9558",
+    "authenticated-orcid": false,
+    "given": "Mark G.",
+    "family": "Thompson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-5662-7345",
+    "authenticated-orcid": false,
+    "given": "Jorge",
+    "family": "Barreto",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jean",
+    "family": "Fompeyrine",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Stefan",
+    "family": "Abel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2020,
+     7,
+     6
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "725_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "6700113",
+    "DOI": "10.1109/JSTQE.2016.2573218",
+    "volume": "22",
+    "author": "JW Silverstone",
+    "year": "2016",
+    "unstructured": "Silverstone, J. W., Bonneau, D., O’Brien, J. L. & Thompson, M. G. Silicon quantum photonics. IEEE J. Sel. Top. Quantum Electron. 22, 6700113 (2016).",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "725_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "687",
+    "DOI": "10.1038/nphoton.2009.229",
+    "volume": "3",
+    "author": "JL O’Brien",
+    "year": "2009",
+    "unstructured": "O’Brien, J. L., Furusawa, A. & Vučković, J. Photonic quantum technologies. Nat. Photon. 3, 687–695 (2009).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "725_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "42",
+    "DOI": "10.1038/s41563-018-0208-0",
+    "volume": "18",
+    "author": "S Abel",
+    "year": "2019",
+    "unstructured": "Abel, S. et al. Large Pockels effect in micro- and nanostructured barium titanate integrated on silicon. Nat. Mater. 18, 42–47 (2019).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "725_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "760",
+    "DOI": "10.1109/TASC.2010.2096792",
+    "volume": "21",
+    "author": "OA Mukhanov",
+    "year": "2011",
+    "unstructured": "Mukhanov, O. A. Energy-efficient single flux quantum technology. IEEE Trans. Appl. Supercond. 21, 760–769 (2011).",
+    "journal-title": "IEEE Trans. Appl. Supercond."
+   },
+   {
+    "key": "725_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "45",
+    "DOI": "10.1038/nature08812",
+    "volume": "464",
+    "author": "TD Ladd",
+    "year": "2010",
+    "unstructured": "Ladd, T. D. et al. Quantum computing. Nature 464, 45–53 (2010).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "725_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "2881",
+    "DOI": "10.1109/77.234002",
+    "volume": "3",
+    "author": "BVan Zeghbroeck",
+    "year": "1993",
+    "unstructured": "Zeghbroeck, B. Van Optical data communication between Josephson-junction circuits and room-temperature electronics. IEEE Trans. Appl. Supercond. 3, 2881–2884 (1993).",
+    "journal-title": "IEEE Trans. Appl. Supercond."
+   },
+   {
+    "key": "725_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "1023",
+    "DOI": "10.1038/nature07127",
+    "volume": "453",
+    "author": "HJ Kimble",
+    "year": "2008",
+    "unstructured": "Kimble, H. J. The quantum internet. Nature 453, 1023–1030 (2008).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "725_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "053815",
+    "DOI": "10.1103/PhysRevA.94.053815",
+    "volume": "94",
+    "author": "C Javerzac-Galy",
+    "year": "2016",
+    "unstructured": "Javerzac-Galy, C. et al. On-chip microwave-to-optical quantum coherent converter based on a superconducting resonator coupled to an electro-optic microresonator. Phys. Rev. A 94, 053815 (2016).",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "725_CR9",
+    "doi-asserted-by": "publisher",
+    "first-page": "303",
+    "DOI": "10.1088/1367-2630/18/1/013020",
+    "volume": "18",
+    "author": "C Greganti",
+    "year": "2016",
+    "unstructured": "Greganti, C., Roehsner, M. C., Barz, S., Morimae, T. & Walther, P. Demonstration of measurement-only blind quantum computing. New J. Phys. 18, 303–309 (2016).",
+    "journal-title": "New J. Phys."
+   },
+   {
+    "key": "725_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "1066",
+    "DOI": "10.1038/nnano.2016.139",
+    "volume": "11",
+    "author": "KK Mehta",
+    "year": "2016",
+    "unstructured": "Mehta, K. K. et al. Integrated optical addressing of an ion qubit. Nat. Nanotechnol. 11, 1066–1070 (2016).",
+    "journal-title": "Nat. Nanotechnol."
+   },
+   {
+    "key": "725_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "2013",
+    "DOI": "10.1117/12.169726",
+    "volume": "33",
+    "author": "AR Johnston",
+    "year": "1994",
+    "unstructured": "Johnston, A. R. et al. Optical links for cryogenic focal plane array readout. Opt. Eng. 33, 2013–2019 (1994).",
+    "journal-title": "Opt. Eng."
+   },
+   {
+    "key": "725_CR12",
+    "unstructured": "Dowell, J. D. et al. Optoelectronic Analogue Signal Transfer for LHC Detectors CERN/DRDC-91-41 (CERN, 1991)."
+   },
+   {
+    "key": "725_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "202",
+    "DOI": "10.1038/s41586-019-1083-9",
+    "volume": "568",
+    "author": "I-C Benea-Chelmus",
+    "year": "2019",
+    "unstructured": "Benea-Chelmus, I.-C., Settembrini, F. F., Scalari, G. & Faist, J. Electric field correlation measurements on the electromagnetic vacuum state. Nature 568, 202–206 (2019).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "725_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "2701009",
+    "DOI": "10.1109/JPHOT.2016.2561622",
+    "volume": "8",
+    "author": "AW Elshaari",
+    "year": "2016",
+    "unstructured": "Elshaari, A. W., Zadeh, I. E., Jöns, K. D. & Zwiller, V. Thermo-optic characterization of silicon nitride resonators for cryogenic photonic circuits. IEEE Photon. J. 8, 2701009 (2016).",
+    "journal-title": "IEEE Photon. J."
+   },
+   {
+    "key": "725_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "374",
+    "DOI": "10.1364/OPTICA.4.000374",
+    "volume": "4",
+    "author": "M Gehl",
+    "year": "2017",
+    "unstructured": "Gehl, M. et al. Operation of high-speed silicon photonic micro-disk modulators at cryogenic temperatures. Optica 4, 374–382 (2017).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "725_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "83",
+    "DOI": "10.1364/OE.22.010487",
+    "volume": "22",
+    "author": "NC Harris",
+    "year": "2014",
+    "unstructured": "Harris, N. C. et al. Efficient, compact and low loss thermo-optic phase shifter in silicon. Opt. Express 22, 83–85 (2014).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "725_CR17",
+    "first-page": "41007",
+    "volume": "5",
+    "author": "Y Li",
+    "year": "2015",
+    "unstructured": "Li, Y., Humphreys, P. C., Mendoza, G. J. & Benjamin, S. C. Resource costs for fault-tolerant linear optical quantum computing. Phys. Rev. X 5, 41007 (2015).",
+    "journal-title": "Phys. Rev. X"
+   },
+   {
+    "key": "725_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "100805",
+    "DOI": "10.1063/1.5120046",
+    "volume": "4",
+    "author": "P Pintus",
+    "year": "2019",
+    "unstructured": "Pintus, P. et al. Characterization of heterogeneous InP-on-Si optical modulators operating between 77 K and room temperature. APL Photon. 4, 100805 (2019).",
+    "journal-title": "APL Photon."
+   },
+   {
+    "key": "725_CR19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-018-05846-6",
+    "volume": "9",
+    "author": "K Alexander",
+    "year": "2018",
+    "unstructured": "Alexander, K. et al. Nanophotonic Pockels modulators on a silicon nitride platform. Nat. Commun. 9, 3444 (2018).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "725_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages. Nature 562, 101–104 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "725_CR21",
+    "doi-asserted-by": "publisher",
+    "first-page": "1698",
+    "DOI": "10.1021/acsphotonics.6b00350",
+    "volume": "3",
+    "author": "F Eltes",
+    "year": "2016",
+    "unstructured": "Eltes, F. et al. Low-loss BaTiO3-Si waveguides for nonlinear integrated photonics. ACS Photon. 3, 1698–1703 (2016).",
+    "journal-title": "ACS Photon."
+   },
+   {
+    "key": "725_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "793",
+    "DOI": "10.1016/j.optcom.2007.10.031",
+    "volume": "281",
+    "author": "C Herzog",
+    "year": "2008",
+    "unstructured": "Herzog, C., Poberaj, G. & Günter, P. Electro-optic behavior of lithium niobate at cryogenic temperatures. Opt. Commun. 281, 793–796 (2008).",
+    "journal-title": "Opt. Commun."
+   },
+   {
+    "key": "725_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "1210",
+    "DOI": "10.1109/JLT.2015.2394211",
+    "volume": "33",
+    "author": "M Lauermann",
+    "year": "2015",
+    "unstructured": "Lauermann, M. et al. 40 GBd 16QAM signaling at 160 Gb/s in a silicon-organic hybrid modulator. J. Light. Technol. 33, 1210–1216 (2015).",
+    "journal-title": "J. Light. Technol."
+   },
+   {
+    "key": "725_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "1456",
+    "DOI": "10.1109/JLT.2019.2893500",
+    "volume": "37",
+    "author": "F Eltes",
+    "year": "2019",
+    "unstructured": "Eltes, F. et al. A BaTiO3-based electro-optic Pockels modulator monolithically integrated on an advanced silicon photonics platform. J. Lightwave Technol. 37, 1456–1462 (2019).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "725_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "1019",
+    "DOI": "10.1080/14786444908561371",
+    "volume": "40",
+    "author": "HF Kay",
+    "year": "1949",
+    "unstructured": "Kay, H. F. & Vousden, P. XCV. Symmetry changes in barium titanate at low temperatures and their relation to its ferroelectric properties. Lond. Edinb. Dublin Phil. Mag. J. Sci. 40, 1019–1040 (1949).",
+    "journal-title": "Lond. Edinb. Dublin Phil. Mag. J. Sci."
+   },
+   {
+    "key": "725_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "152908",
+    "DOI": "10.1063/1.2194231",
+    "volume": "88",
+    "author": "F He",
+    "year": "2006",
+    "unstructured": "He, F. & Wells, B. O. Lattice strain in epitaxial BaTiO3 thin films. Appl. Phys. Lett. 88, 152908 (2006).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "725_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "2",
+    "DOI": "10.1103/PhysRevB.69.174101",
+    "volume": "69",
+    "author": "DA Tenne",
+    "year": "2004",
+    "unstructured": "Tenne, D. A. et al. Absence of low-temperature phase transitions in epitaxial BaTiO3 thin films. Phys. Rev. B 69, 2–6 (2004).",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "725_CR28",
+    "doi-asserted-by": "publisher",
+    "first-page": "2651",
+    "DOI": "10.1063/1.360126",
+    "volume": "78",
+    "author": "P Bernasconi",
+    "year": "1995",
+    "unstructured": "Bernasconi, P., Zgonik, M. & Gunter, P. Temperature dependence and dispersion of electro-optic and elasto-optic effect in perovskite crystals. J. Appl. Phys. 78, 2651–2658 (1995).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "725_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "041305",
+    "DOI": "10.1063/1.4990046",
+    "volume": "4",
+    "author": "M Acosta",
+    "year": "2017",
+    "unstructured": "Acosta, M. et al. BaTiO3-based piezoelectrics: fundamentals, current status, and perspectives. Appl. Phys. Rev. 4, 041305 (2017).",
+    "journal-title": "Appl. Phys. Rev."
+   },
+   {
+    "key": "725_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "884",
+    "DOI": "10.1364/OPTICA.5.000884",
+    "volume": "5",
+    "author": "MHP Pfeiffer",
+    "year": "2018",
+    "unstructured": "Pfeiffer, M. H. P. et al. Ultra-smooth silicon nitride waveguides based on the Damascene reflow process: fabrication and loss origins. Optica 5, 884–892 (2018).",
+    "journal-title": "Optica"
+   }
+  ],
+  "container-title": [
+   "Nature Materials"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41563-020-0725-5.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41563-020-0725-5",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41563-020-0725-5.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     6
+    ]
+   ],
+   "date-time": "2022-07-06T20:40:35Z",
+   "timestamp": 1657140035000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41563-020-0725-5"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     7,
+     6
+    ]
+   ]
+  },
+  "references-count": 30,
+  "journal-issue": {
+   "issue": "11",
+   "published-print": {
+    "date-parts": [
+     [
+      2020,
+      11
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "725"
+  ],
+  "URL": "https://doi.org/10.1038/s41563-020-0725-5",
+  "relation": {},
+  "ISSN": [
+   "1476-1122",
+   "1476-4660"
+  ],
+  "issn-type": [
+   {
+    "value": "1476-1122",
+    "type": "print"
+   },
+   {
+    "value": "1476-4660",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2020,
+     7,
+     6
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "28 October 2019",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "8 June 2020",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "6 July 2020",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "F.E., J.F. and S.A. are involved in commercially developing barium titanate technologies at Lumiphase AG. M.G.T. is involved in developing photonic quantum technologies at PsiQuantum Corporation.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ]
+ }
+}

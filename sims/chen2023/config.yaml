@@ -1,0 +1,118 @@
+schema: eo-atlas.sim/v1
+id: chen2023-a
+paper_id: chen2023
+device_id: chen2023-a
+title: Chen 2023, coupled-Bragg-resonator slow-light TFLN MZM on silicon (G-S-G, push-pull arms), unperturbed-waveguide cross-section only
+repro_grade: B
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap, rf_line]
+
+# Conventions follow sims/chen2022/config.yaml and sims/qi2024/config.yaml.
+# Coordinate frame: x lateral (LN z), y film normal up (LN x), z propagation (LN y). y = 0 at the BOX top / LN bottom.
+# Origin: optical axis of the RIGHT-hand rib in x. Signal electrode centre at x = -10.65 um (mirror plane); LEFT rib at x = -21.3 um.
+# Both arms are in the electrostatic domain (symmetry none); the optical mode is solved on the right arm.
+# The cross-section is the uniform half-etched rib of core width W = 0.4 um. The fishbone sidewall corrugation (delta = 0.24 um, period 461 nm),
+# the pi-phase-shifter regions and the resulting slow-light enhancement (measured ng about 4.0) are NOT representable in this 2D model.
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211
+    n_e: 2.138
+    eps_r: {perp: 43.0, par: 28.0}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
+  silicon: {n: 3.476, eps_r: 11.7}
+  gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
+  air: {n: 1.0, eps_r: 1.0}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-140.65, 119.35], y_um: [-100, 30]}
+  regions:
+    - {name: ambient, material: air, rect: {x_um: [-140.65, 119.35], y_um: [-100, 30]}}
+    - {name: substrate, material: silicon, rect: {x_um: [-140.65, 119.35], y_um: [-100, -3]}}
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-140.65, 119.35], y_um: [-3, 0]}}
+    - {name: ln_slab, material: lithium_niobate, rect: {x_um: [-140.65, 119.35], y_um: [0, 0.2]}}
+    - {name: ln_rib_r, material: lithium_niobate, rect: {x_um: [-0.2, 0.2], y_um: [0.2, 0.4]}}
+    - {name: ln_rib_l, material: lithium_niobate, rect: {x_um: [-21.5, -21.1], y_um: [0.2, 0.4]}}
+  electrodes:
+    - {name: signal, role: signal, weight: 1.0, rect: {x_um: [-18.65, -2.65], y_um: [0.2, 0.6]}, material: gold}
+    - {name: ground_r, role: ground, weight: 0.0, rect: {x_um: [2.65, 18.65], y_um: [0.2, 0.6]}, material: gold}
+    - {name: ground_l, role: ground, weight: 0.0, rect: {x_um: [-39.95, -23.95], y_um: [0.2, 0.6]}, material: gold}
+  optical_window: {x_um: [-2.5, 2.5], y_um: [-1.5, 1.5]}
+  mesh: {max_edge_um: 2.0, electrode_edge_um: 0.05}
+line:
+  length_mm: 0.37
+  conductor_loss_model: skin_effect_wheeler
+  rf_loss_table: null
+  source_ohm: 50
+  load_ohm: 50
+  differential: false              # single-ended probe on the centre line; push-pull arises from the arm placement
+  loading: {type: none, period_um: null, loaded_length_um: null, unloaded_cross_section: null, loaded_cross_section: null}
+sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
+alt_geometries: {}
+
+targets:
+  # Measured (devices.csv row chen2023-a); expected NOT to match: the slow-light enhancement is absent from the uniform cross-section
+  - {metric: vpi_l_dc_vcm, value: 1.29, tol_rel: 0.15, source: {device_id: chen2023-a, field: vpil_dc_vcm, comparable: false, note: "slow-light enhanced (ng about 4.0 vs about 2.2 of a regular rib); the uniform 2D cross-section has no corrugation; LN tensor placeholders; VpiL derived from the 15.7 pm/V fringe shift (resonance_tuning_derived)"}}
+  # Authors' own simulation of the design geometry (basis simulated), cross-solver reference
+  - {metric: n_rf, value: 2.18, tol_abs: 0.1, source: {device_id: chen2023-a, field: n_rf, basis: simulated}}
+reported_curves: []
+
+provenance:
+  optics.wavelength_nm: {class: project_inference, locator: "p.2 Sec. 2 (Bragg wavelength designed around 1550 nm); Fig. 7(b) spans 1557-1565 nm", note: "nominal wavelength; the DC and data wavelengths are not stated"}
+  optics.polarization: {class: paper_exact, locator: "p.2 Sec. 2 (TE0)"}
+  optics.group_index_from: {class: project_inference, note: "uniform rib group index is computed by the engine; the measured SL ng of about 4.0 is not a target"}
+  materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 Sec. 2 (x-cut, propagation along y, z axis perpendicular to the waveguide)"}
+  materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder from the chen2022 config; the paper states no value"}
+  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED SPEC.md placeholder 43/28; the paper states no RF permittivity"}
+  materials.lithium_niobate.r_pm_per_v: {class: unknown, locator: "p.1 Sec. 1 (r33 about 27 pm/V quoted)", note: "UNVERIFIED SPEC.md placeholder tensor; the paper's 27 pm/V is not used"}
+  materials.silicon_dioxide: {class: unknown, note: "UNVERIFIED placeholder n = 1.444, eps_r = 3.9; the paper states neither"}
+  materials.silicon: {class: unknown, note: "UNVERIFIED placeholder; substrate constants not stated"}
+  materials.gold.sigma_Sm: {class: unknown, note: "UNVERIFIED placeholder bulk gold; the 5 nm Ti layer is ignored"}
+  materials.air: {class: standard_reference, citation: "definitional: vacuum/air n = 1, eps_r = 1; no cladding is stated (p.8 Sec. 4 suggests an oxide overcladding as a future improvement)"}
+  line.length_mm: {class: project_inference, locator: "abstract; p.4 Sec. 2 (about 370 um); p.8 conclusions; Table 1 p.8 (360 um)", note: "the paper is self-contradictory; 0.37 mm is used and the devices.csv length_mm is empty"}
+  line.source_ohm: {class: project_inference, note: "50 ohm probe assumed; not stated"}
+  line.load_ohm: {class: project_inference, note: "termination not stated"}
+  line.differential: {class: project_inference, note: "GSG with one arm per gap; push-pull stated on p.2 Sec. 2 (electrode configuration)"}
+  line.conductor_loss_model: {class: project_inference, note: "no RF loss coefficient stated; authors quote metal absorption loss below 0.01 dB/cm for the design"}
+  geometry.regions.ln_slab: {class: paper_exact, locator: "p.4 Sec. 3 (400 nm film); p.5 Sec. 3 (200 nm etched, 200 nm slab)"}
+  geometry.regions.box: {class: paper_exact, locator: "p.4 Sec. 3 (3 um buried oxide)"}
+  geometry.regions.substrate: {class: project_inference, note: "silicon handle thickness not stated; clipped to 97 um below the BOX"}
+  geometry.regions.ln_rib_r: {class: paper_exact, locator: "p.2 Sec. 2 (half-etched waveguide of width W); p.6 Sec. 3 (W = 0.4 um)", note: "vertical sidewalls assumed (angle not stated); corrugation omitted"}
+  geometry.regions.ln_rib_l: {class: project_inference, note: "mirror of the right rib about the signal centre"}
+  geometry.regions.ambient: {class: project_inference, note: "no cladding stated; SEM and microscope images show bare waveguides, air assumed"}
+  geometry.electrodes.signal: {class: paper_exact, locator: "p.4 Sec. 2 (S = 16 um, G = 5.3 um); p.5 Sec. 3 (5 nm Ti / 400 nm Au)", note: "simulation-setting values; Ti lumped into 400 nm Au; electrode on the 200 nm slab, bottom at 0.2 um"}
+  geometry.electrodes.ground_r: {class: project_inference, locator: "p.4 Sec. 2", note: "ground width not stated; taken equal to the 16 um signal width"}
+  geometry.electrodes.ground_l: {class: project_inference, locator: "p.4 Sec. 2", note: "mirror of the right ground"}
+  geometry.optical_window: {class: project_inference, note: "crop |x| < 2.5 um inside the 2.65 um electrode edge"}
+  geometry.domain: {class: project_inference, note: "lateral +-130 um about the signal centre; vertical -100..30 um; open-boundary treatment is an engine choice"}
+  geometry.mesh: {class: project_inference}
+
+missing:
+  - ground electrode width (not stated; 16 um assumed)
+  - electrode length (about 370 um in text, 360 um in Table 1)
+  - rib sidewall angle
+  - cladding (none stated)
+  - DC and data operating wavelengths
+  - fabricated electrode gap and signal width (5.3 and 16 um are simulation settings)
+  - silicon handle thickness and resistivity
+  - LN refractive indices, RF permittivity, Pockels tensor, SiO2 and Si constants, Au conductivity (UNVERIFIED placeholders)
+  - temperature
+limitations:
+  - scalar_optical_not_full_vector
+  - quasi_static_2d_rf
+  - rectangular_or_polygon_sidewalls_only
+  - no_3d_launch_pad_effects
+  - "Slow-light corrugated waveguide (fishbone gratings, pi-phase shifters, ng enhancement to about 4.0) cannot be represented in a uniform 2D cross-section; Vpi*L and EO response of this config describe an unperturbed rib, not the paper device"
+  - "No bandwidth target: with ng about 4.0 versus n_rf 2.18 the EO response of the real device depends on the slow-light group index, which the cross-section solver does not provide"
+  - "Ti 5 nm adhesion layer lumped into the 400 nm Au conductor"

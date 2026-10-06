@@ -1,0 +1,49 @@
+paper_id: chelladurai2025
+verified_on: '2026-10-05'
+source_files:
+- references/chelladurai2025/text.md
+- references/chelladurai2025/supplement/text.md
+- references/chelladurai2025/crossref.json
+entries: []
+derived: []
+context_values:
+- item: ln_permittivity
+  value: eps_a 45, eps_c 27, constant 0.1-330 GHz
+  locator: p.3 Fig. 2(c); supplement p.5
+  note: literature mean confirmed by this work
+- item: bto_debye_this_work
+  value: gamma0 72.6 +/- 2.3 GHz; sigma 0.87 +/- 0.02; delta_eps 905 +/- 26; eps_inf 231 fixed
+  locator: p.4 Table 1
+  note: RF-sputtered 485 nm BTO
+- item: ln_pockels_pm_per_v
+  value: r33 26.9; 1/2(r13 + 2 r42) 15.0
+  locator: p.5 Pockels coefficient section; Fig. 4(a)
+  note: flat 0.1-330 GHz; 10 GHz fit gives 26.9 +/- 0.9 and 28.9 +/- 2.0 for r13 + 2 r42 (supplement p.16, Fig. S7)
+- item: bto_r33_debye
+  value: 125 pm/V at 100 MHz; gamma0 565 MHz; sigma 0.06; S_R 75; r_inf 60
+  locator: p.6 Fig. 4(b)
+  note: caption attributes these to r42; text followed
+- item: bto_r13_2r42_half
+  value: 481 pm/V at 100 MHz; 191 pm/V at 330 GHz; Miller delta 0.327 +/- 0.002; n0 2.26
+  locator: p.6 Eq. (5)
+  note: 10 GHz fit r13 + 2 r42 = 838 +/- 29, r33 = 64.8 +/- 16.2 pm/V (supplement p.16)
+- item: domain_fractions_partially_poled
+  value: 0.375 (0, 90 deg); 0.125 (180, 270 deg)
+  locator: p.5; supplement p.16
+  note: taken from similar films
+- item: poling_decay
+  value: about 1 dB below poled sideband ratio after bias removal
+  locator: supplement p.17, Fig. S8
+  note: 50 GHz tone, 1 V bias steps
+- item: phase_shifter_geometry
+  value: BTO 485 nm / LN 300 nm on 2 um BOX; 100 nm PECVD SiO2 spacer; 200 nm Au; 5 um electrode separation; 25 um (BTO) and 50 um (LN) long; PMMA cladding
+  locator: p.2; p.9 Methods; supplement p.12
+  note: characterization vehicle, no measured Vpi or loss
+- item: simulated_insertion_loss_db
+  value: about 0.2 (0.1 propagation at 20 dB/cm for 50 um LN plus 0.1 reflection)
+  locator: p.2
+  note: mode simulation
+- item: simulated_vpil_assumption
+  value: r_eff 440 pm/V constant for permittivity sweep
+  locator: supplement p.20, Fig. S10
+  note: curves only, no values in text

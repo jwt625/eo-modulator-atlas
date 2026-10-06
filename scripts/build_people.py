@@ -89,9 +89,9 @@ def read(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(f))
 
 
-def build() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
-    papers = read(DATA / "papers.csv")
-    affil = read(DATA / "author_affiliations.csv") if (DATA / "author_affiliations.csv").exists() else []
+def build(data: Path = DATA) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    papers = read(data / "papers.csv")
+    affil = read(data / "author_affiliations.csv") if (data / "author_affiliations.csv").exists() else []
     slot_orgs: dict[tuple[str, int], set[str]] = defaultdict(set)
     for r in affil:
         slot_orgs[(r["paper_id"], int(r["author_index"]))].add(r["org_name"])
@@ -206,6 +206,14 @@ def build() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     order = {p["paper_id"]: n for n, p in enumerate(papers)}
     pa.sort(key=lambda r: (order[r["paper_id"]], int(r["author_index"])))
     return people, pa
+
+
+def write_tables(data: Path) -> tuple[int, int]:
+    """Build and write people.csv and paper_authors.csv into `data` (used by merge_staging on its work copy)."""
+    people, pa = build(data)
+    write(data / "people.csv", PEOPLE_COLS, people)
+    write(data / "paper_authors.csv", PA_COLS, pa)
+    return len(people), len(pa)
 
 
 def write(path: Path, cols: list[str], rows: list[dict[str, str]]) -> None:

@@ -1,0 +1,274 @@
+paper_id: wang2022
+verified_on: '2026-10-05'
+source_files:
+- references/wang2022/text.md
+- references/wang2022/crossref.json
+- references/wang2022/source.json
+- references/wang2022/figures/img_p02_1.png
+- references/wang2022/figures/img_p03_1.png
+- references/wang2022/figures/img_p04_1.png
+- references/wang2022/figures/img_p04_2.png
+- references/wang2022/figures/page_05.png
+- references/wang2022/supplement/text.md
+- references/wang2022/supplement/figures/img_p02_1.png
+entries:
+- device_id: wang2022-a
+  field: length_mm
+  value: 12.5
+  unit: mm
+  basis: design_target
+  locator: p.3; p.4 Sec. Performances of an Intensity Modulator
+  note: Modulation section 12.5 mm
+- device_id: wang2022-a
+  field: vpi_dc_v
+  value: 1.7
+  unit: V
+  basis: measured
+  locator: p.4, Fig. 3(c)
+  note: 100 kHz triangular drive; wavelength not stated
+- device_id: wang2022-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.4
+  note: 100 kHz triangular-wave drive
+- device_id: wang2022-a
+  field: vpil_dc_vcm
+  value: 2.13
+  unit: V*cm
+  basis: derived
+  locator: p.4
+  note: Authors state 2.13 V cm for 1.7 V and 12.5 mm
+- device_id: wang2022-a
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(e)
+  note: Measured EO S21 trace ends near 67 GHz at about -2.3 dB (lowest dip about -2.4 dB near 52 GHz), so only a lower bound of 67 GHz is shown; the paper claims >70 GHz (abstract p.1, p.2, p.4, Table 1, conclusions) beyond the plotted data and 100 GHz is the simulated 3 dB point
+- device_id: wang2022-a
+  field: bw_measured_to_ghz
+  value: 67
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(e); p.4 Fig. 4(a)
+  note: End of the measured EO trace read from the axis; EE S21 trace also ends at 67 GHz and surpasses the 6.4 dB point there
+- device_id: wang2022-a
+  field: il_onchip_db
+  value: 3
+  unit: dB
+  basis: derived
+  locator: p.4; p.5 Table 1; p.5 Conclusions
+  note: Stated 3 dB equals 10.2 dB chip loss minus 7.2 dB two grating couplers
+- device_id: wang2022-a
+  field: il_fiber_to_fiber_db
+  value: 10.2
+  unit: dB
+  basis: measured
+  locator: p.3-4
+  note: Total chip insertion loss 10.2 dB including grating couplers 7.2 dB
+- device_id: wang2022-a
+  field: prop_loss_db_per_cm
+  value: 1.6
+  unit: dB/cm
+  basis: author_estimate
+  locator: p.3
+  note: Hybrid waveguide, estimated 1.6 dB/cm before electrode deposition
+- device_id: wang2022-a
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.3, Fig. 3(b)
+  note: Static MZI spectrum before electrode deposition
+- device_id: wang2022-a
+  field: rf_loss_freq_ghz
+  value: 67
+  unit: GHz
+  basis: derived
+  locator: p.4, Fig. 4(d)
+  note: Upper end of the measured EE range
+- device_id: wang2022-a
+  field: n_rf
+  value: 2.6
+  unit: '1'
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(c)
+  note: Plateau above 10 GHz; design value 2.5 dashed
+- device_id: wang2022-a
+  field: ng_opt
+  value: 2.5
+  unit: '1'
+  basis: simulated
+  locator: p.3, Fig. 2(d); p.4 Fig. 4(c)
+  note: Optical group index marked as dash-dotted line, read 2.5
+- device_id: wang2022-a
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.2
+  note: 500 nm thick x-cut TFLN
+- device_id: wang2022-a
+  field: electrode_gap_um
+  value: 2.28
+  unit: um
+  basis: design_target
+  locator: p.3; supplement p.3
+  note: g = 2.28 um
+- device_id: wang2022-a
+  field: signal_width_um
+  value: 65
+  unit: um
+  basis: design_target
+  locator: p.2
+  note: Ws = 65 um
+- device_id: wang2022-a
+  field: electrode_thickness_um
+  value: 1.1
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: Main electrode D = 1.1 um; T-structure d = 200 nm
+- device_id: wang2022-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.2, Fig. 1(b); supplement p.4
+  note: Au
+- device_id: wang2022-a
+  field: buffer_oxide_um
+  value: 0.65
+  unit: um
+  basis: design_target
+  locator: p.3
+  note: 650 nm SiO2 over-cladding between LN and electrode
+- device_id: wang2022-a
+  field: substrate
+  value: SOI wafer, 220 nm Si top layer, 2 um BOX; Si substrate undercut-etched about 28 um beside the waveguides
+  unit: ''
+  basis: design_target
+  locator: p.2; p.3
+  note: 220 nm Si top layer, 2 um BOX; undercut about 28 um
+- device_id: wang2022-a
+  field: cladding
+  value: 650 nm PECVD SiO2 over-cladding on the LN
+  unit: ''
+  basis: design_target
+  locator: p.3; supplement p.4
+  note: 650 nm PECVD SiO2
+- device_id: wang2022-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.2
+  note: x-cut
+- device_id: wang2022-a
+  field: epitaxy_or_stack
+  value: 'SOI: 220 nm Si top layer (wire tapered 450 nm to 280 nm over 300 um, 280 nm in the modulation section), 2 um BOX; 150 nm BCB bonding layer; 500 nm x-cut LN (not etched); 650 nm SiO2 over-cladding; Au CLTW electrode (main 1.1 um, T-structures 200 nm); Si substrate undercut about 28 um'
+  unit: ''
+  basis: design_target
+  locator: p.2; p.3; supplement p.2, p.4
+  note: Si wire width 280 nm in the modulation section, taper 450 to 280 nm over 300 um
+- device_id: wang2022-a
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: derived
+  locator: p.4; p.5 Fig. 5(b)
+  note: 100 Gbit/s OOK line rate, one bit per symbol
+- device_id: wang2022-a
+  field: modulation_format
+  value: OOK 56 and 100 Gbit/s, PAM4 112 Gbit/s, PAM8 168 Gbit/s (56 GBd) eyes; B2B BER of 64 and 100 Gbit/s OOK below the KP-4 FEC threshold
+  unit: ''
+  basis: measured
+  locator: p.4; p.5 Fig. 5
+  note: Eyes 56 and 100 OOK, 112 PAM4, 168 PAM8; BER 64 and 100 Gbit/s OOK
+- device_id: wang2022-a
+  field: max_line_rate_gbps
+  value: 168
+  unit: Gb/s
+  basis: measured
+  locator: p.4; p.5 Fig. 5(a)
+  note: Clear eye opening up to 168 Gbit/s
+- device_id: wang2022-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: supplement p.3
+  note: Supplement states the push-pull configuration of the device in the VpiL derivation
+- device_id: wang2022-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: supplement p.3
+  note: MZM-level Vpi; push-pull from supplement; measurement text does not name it
+- device_id: wang2022-a
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.4, Fig. 4(e)
+  note: Curve normalised to 0 dB at low frequency; frequency not stated
+- device_id: wang2022-a
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.4, Fig. 4(e)
+  note: Plotted measured EO S21; instrument not named
+- device_id: wang2022-a
+  field: il_onchip_scope
+  value: device_total
+  unit: ''
+  basis: derived
+  locator: p.4
+  note: Chip loss with only the grating couplers removed
+- device_id: wang2022-a
+  field: er_type
+  value: static
+  unit: ''
+  basis: measured
+  locator: p.3, Fig. 3(b)
+  note: Wavelength sweep of the passive MZI
+- device_id: wang2022-b
+  field: length_mm
+  value: 7.5
+  unit: mm
+  basis: design_target
+  locator: p.5
+  note: Length of modulation arms 7.5 mm
+- device_id: wang2022-b
+  field: vpi_dc_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.5
+  note: Measured Vpi 3 V; frequency and wavelength not stated
+- device_id: wang2022-b
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: author_estimate
+  locator: p.5
+  note: Paper states 'a bandwidth of also >70 GHz' in the same sentence as Vpi 3 V; no figure, no measurement range given; supplement p.5 names 67 GHz probe arrays (GGB 67A)
+- device_id: wang2022-b
+  field: modulation_format
+  value: DP-16QAM 96 GBd (main text; supplement states 90 GBd), SNR 15.5 dB (X-pol) and 14.7 dB (Y-pol), BER better than 1e-3 in both polarizations
+  unit: ''
+  basis: measured
+  locator: p.5, Fig. 6(d); supplement p.5
+  note: 96 GBd per main text; supplement states 90 GBd
+derived:
+- device_id: wang2022-a
+  field: rf_loss_db_per_cm
+  value: 4.01
+  formula: alpha0 * sqrt(f) = 0.49 dB/cm/GHz^0.5 * sqrt(67 GHz), alpha0 fitted in Fig. 4(d) (p.4)
+  inputs:
+  - alpha0
+  - rf_loss_freq_ghz

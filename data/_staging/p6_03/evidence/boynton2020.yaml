@@ -1,0 +1,184 @@
+paper_id: boynton2020
+verified_on: '2026-10-05'
+source_files:
+- references/boynton2020/text.md
+- references/boynton2020/crossref.json
+- references/boynton2020/source.json
+- references/boynton2020/figures/page_06.png
+- references/boynton2020/figures/page_10.png
+- references/boynton2020/figures/page_11.png
+- references/boynton2020/figures/page_12.png
+entries:
+- device_id: boynton2020-a
+  field: wavelength_nm
+  value: 1551.64
+  unit: nm
+  basis: measured
+  locator: p.11 Sec. 3
+  note: Quadrature bias wavelength, arbitrarily chosen, used for Vpi, EO bandwidth and SFDR
+- device_id: boynton2020-a
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: design_target
+  locator: p.4 Sec. 1; p.6 Fig. 4(b); Fig. 7 caption (p.10)
+  note: 0.5 cm phase modulators
+- device_id: boynton2020-a
+  field: vpi_dc_v
+  value: 13.34
+  unit: V
+  basis: measured
+  locator: p.10 Fig. 7(b)
+  note: Peak-to-peak span marked on the 50 kHz sawtooth response of the 0.5 cm MZM
+- device_id: boynton2020-a
+  field: vpi_dc_freq_ghz
+  value: 5.0e-05
+  unit: GHz
+  basis: measured
+  locator: p.11 Sec. 3; Fig. 7 caption (p.10)
+  note: 50 kHz sawtooth
+- device_id: boynton2020-a
+  field: vpil_dc_vcm
+  value: 6.67
+  unit: V*cm
+  basis: derived
+  locator: abstract; p.4 Sec. 1; p.11 Sec. 3
+  note: Stated by the authors as the measured half-wave voltage of the 4 um gap MZM; computed as 13.34 V x 0.5 cm
+- device_id: boynton2020-a
+  field: bw3db_ghz
+  value: 30.55
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. 1; p.11 Sec. 3; Fig. 8(b)
+  note: Abstract rounds to 30.6; Fig. 8 caption says 30 GHz; 3 dB crossing observed
+- device_id: boynton2020-a
+  field: il_fiber_to_fiber_db
+  value: 13.4
+  unit: dB
+  basis: measured
+  locator: p.11 Table 2; p.10 Sec. 3
+  note: Complete modulator, lensed fibers 3.5 um spot; text says 13 dB through the cross port at peak transmission
+- device_id: boynton2020-a
+  field: extinction_ratio_db
+  value: 20
+  unit: dB
+  basis: measured
+  locator: p.10 Fig. 7(a) caption
+  note: Un-biased MZM spectra, extinction ratios above 20 dB from 1500 to 1600 nm
+- device_id: boynton2020-a
+  field: z0_ohm
+  value: 50
+  unit: ohm
+  basis: design_target
+  locator: p.8 Sec. 2
+  note: CPW designed for 50 ohm; simulated Z0 only plotted (Fig. 5(c))
+- device_id: boynton2020-a
+  field: ng_opt
+  value: 2.051
+  unit: '1'
+  basis: simulated
+  locator: p.11 Sec. 3; p.15 Sec. 4
+  note: Simulated group index of the guided mode in the phase modulator region
+- device_id: boynton2020-a
+  field: eo_film_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. 2; p.6 Fig. 4(a)
+  note: Nominal TFLN layer of the NanoLN chip
+- device_id: boynton2020-a
+  field: rib_width_nm
+  value: 1600
+  unit: nm
+  basis: design_target
+  locator: p.4 Sec. 2; p.6 Fig. 4(a)
+  note: Top-layer SiNx core width (225 nm thick); TFLN unpatterned
+- device_id: boynton2020-a
+  field: electrode_gap_um
+  value: 4
+  unit: um
+  basis: design_target
+  locator: p.7 Sec. 2; Fig. 4(a)
+  note: CPW gap G_CPW; 3.5 and 4.5 um simulated for sensitivity
+- device_id: boynton2020-a
+  field: signal_width_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.7 Sec. 2; Fig. 4(a)
+  note: W_CPW
+- device_id: boynton2020-a
+  field: electrode_thickness_um
+  value: 0.87
+  unit: um
+  basis: design_target
+  locator: p.4 Sec. 2; p.8 Sec. 2
+  note: Ti/TiN/Al stack 870 nm total; ground planes 130 um wide
+- device_id: boynton2020-a
+  field: electrode_metal
+  value: Al (Ti/TiN/Al stack)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2
+- device_id: boynton2020-a
+  field: substrate
+  value: high-resistivity Si (>1000 ohm cm) with 3 um thermal SiO2; bonded TFLN chip on 500 um x-cut LiNbO3 handle with 2 um SiO2
+  unit: ''
+  basis: design_target
+  locator: p.4-5 Sec. 2; Fig. 4(a)
+- device_id: boynton2020-a
+  field: cladding
+  value: SiO2 (HDP oxide, CMP-planarized; 123 nm above the top SiNx)
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2
+  note: 123 nm is quoted as measured by SEM (p.4) and ellipsometry (p.7)
+- device_id: boynton2020-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. 2
+- device_id: boynton2020-a
+  field: epitaxy_or_stack
+  value: 'Bottom to top: Si, 3 um SiO2, Ti/TiN/Al 870 nm, 250 nm HDP SiO2, 300 nm Si-rich SiNx (n 2.11, 1.2 um wide, routing layer), 250 nm SiO2, 225 nm SiNx (n 1.91, 1.6 um wide, hybrid core), 123 nm SiO2, bonded 200 nm x-cut TFLN, 2 um SiO2, x-cut LiNbO3 handle; 250 um vertical tapers between SiNx layers'
+  unit: ''
+  basis: design_target
+  locator: p.4-6 Sec. 2; Fig. 4(a)
+  note: Layer values as labelled in Fig. 4(a); bottom SiNx absent in the hybrid section per p.7 simulation
+- device_id: boynton2020-a
+  field: band
+  value: c_band
+  unit: ''
+  basis: derived
+  locator: p.11 Sec. 3
+  note: Bias wavelength 1551.64 nm
+- device_id: boynton2020-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2; p.7 Sec. 2
+  note: Two phase modulators driven with equal and opposite fields
+- device_id: boynton2020-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.7 Sec. 2; p.11 Sec. 3
+  note: Authors give the push-pull Vpi formula (factor two) and compare the measured value to it; measured convention not separately defined
+- device_id: boynton2020-a
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: derived
+  locator: Fig. 8(b)
+  note: Response normalized near 0 dB at 10 MHz; reference not stated
+- device_id: boynton2020-a
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.11 Sec. 3
+  note: VNA with 42 GHz photodiode after EDFA and 1 nm filter
+derived: []

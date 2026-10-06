@@ -1,0 +1,1111 @@
+paper_id: liu2026d
+verified_on: '2026-10-05'
+source_files:
+- references/liu2026d/text.md
+- references/liu2026d/crossref.json
+- references/liu2026d/source.json
+- references/liu2026d/figures/page_03.png
+- references/liu2026d/figures/img_p03_1.png
+- references/liu2026d/figures/page_05.png
+- references/liu2026d/figures/page_07.png
+entries:
+- device_id: liu2026d-a
+  field: length_mm
+  value: 1.35
+  unit: mm
+  basis: design_target
+  locator: p.3 Methods
+  note: 1.35 mm-long EO modulation section
+- device_id: liu2026d-a
+  field: eo_film_thickness_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: 150 nm TFLN layer, customized thickness
+- device_id: liu2026d-a
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: Strip widened to 1.5 um in the EO section, all designs
+- device_id: liu2026d-a
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 900 nm gold layer
+- device_id: liu2026d-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: Gold CPW electrodes and heaters
+- device_id: liu2026d-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 4.7 um BOX
+- device_id: liu2026d-a
+  field: cladding
+  value: 1.6 um SiO2 with shallow trenches for the metallization
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: 1.6 um SiO2, trenches etched for metallization
+- device_id: liu2026d-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: X-cut TFLN-on-insulator wafer
+- device_id: liu2026d-a
+  field: epitaxy_or_stack
+  value: 150 nm x-cut TFLN on 4.7 um BOX (NanoLN, 4-in. wafer); fully etched strip waveguides (DUV lithography, Ar ion beam etch), EO section widened to 1.5 um; 1.6 um SiO2 cladding with shallow trenches for the metal; 900 nm Au CPW traveling-wave electrodes and heater wires; 1.35 mm EO section, 0.75 mm TO section
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Methods
+  note: Fully etched strip; EO 1.35 mm, TO 0.75 mm
+- device_id: liu2026d-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: Authors state the EO modulators are designed for push-pull with CPW traveling-wave electrodes
+- device_id: liu2026d-a
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3; p.4
+  note: 'Foundry-fabricated TFLN MZMs: ''fabricated by Luxtelligence SA ... in a dedicated run'' (p.4), wafer-scale DUV process (p.3)'
+- device_id: liu2026d-a
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: MZM-level VpiL; push-pull design stated, convention of the quoted VpiL not named
+- device_id: liu2026d-a
+  field: wavelength_nm
+  value: 445
+  unit: nm
+  basis: measured
+  locator: p.4 Experimental Setup; p.5 Table 1
+  note: 445 nm laser line
+- device_id: liu2026d-a
+  field: vpil_dc_vcm
+  value: 0.83
+  unit: V*cm
+  basis: derived
+  locator: p.5 Table 1; p.5 Results
+  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+- device_id: liu2026d-b
+  field: length_mm
+  value: 1.35
+  unit: mm
+  basis: design_target
+  locator: p.3 Methods
+  note: 1.35 mm-long EO modulation section
+- device_id: liu2026d-b
+  field: eo_film_thickness_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: 150 nm TFLN layer, customized thickness
+- device_id: liu2026d-b
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: Strip widened to 1.5 um in the EO section, all designs
+- device_id: liu2026d-b
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 900 nm gold layer
+- device_id: liu2026d-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: Gold CPW electrodes and heaters
+- device_id: liu2026d-b
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 4.7 um BOX
+- device_id: liu2026d-b
+  field: cladding
+  value: 1.6 um SiO2 with shallow trenches for the metallization
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: 1.6 um SiO2, trenches etched for metallization
+- device_id: liu2026d-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: X-cut TFLN-on-insulator wafer
+- device_id: liu2026d-b
+  field: epitaxy_or_stack
+  value: 150 nm x-cut TFLN on 4.7 um BOX (NanoLN, 4-in. wafer); fully etched strip waveguides (DUV lithography, Ar ion beam etch), EO section widened to 1.5 um; 1.6 um SiO2 cladding with shallow trenches for the metal; 900 nm Au CPW traveling-wave electrodes and heater wires; 1.35 mm EO section, 0.75 mm TO section
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Methods
+  note: Fully etched strip; EO 1.35 mm, TO 0.75 mm
+- device_id: liu2026d-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: Authors state the EO modulators are designed for push-pull with CPW traveling-wave electrodes
+- device_id: liu2026d-b
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3; p.4
+  note: 'Foundry-fabricated TFLN MZMs: ''fabricated by Luxtelligence SA ... in a dedicated run'' (p.4), wafer-scale DUV process (p.3)'
+- device_id: liu2026d-b
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: MZM-level VpiL; push-pull design stated, convention of the quoted VpiL not named
+- device_id: liu2026d-b
+  field: wavelength_nm
+  value: 461
+  unit: nm
+  basis: measured
+  locator: p.4 Experimental Setup; p.5 Table 1
+  note: 461 nm laser line
+- device_id: liu2026d-b
+  field: vpil_dc_vcm
+  value: 0.86
+  unit: V*cm
+  basis: derived
+  locator: p.5 Table 1; p.5 Results
+  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+- device_id: liu2026d-b
+  field: bw3db_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.5 Table 1; p.6 Bias-Controlled RF Modulation
+  note: VNA-limited, exceeds 26.5 GHz
+- device_id: liu2026d-b
+  field: bw_measured_to_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.6 Bias-Controlled RF Modulation; p.4 Experimental Setup
+  note: 26.5 GHz VNA
+- device_id: liu2026d-b
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a)
+  note: Normalised S21; low-frequency reference not stated
+- device_id: liu2026d-b
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a); p.4
+  note: VNA-measured EO S21 with 42 GHz photodetector
+- device_id: liu2026d-c
+  field: length_mm
+  value: 1.35
+  unit: mm
+  basis: design_target
+  locator: p.3 Methods
+  note: 1.35 mm-long EO modulation section
+- device_id: liu2026d-c
+  field: eo_film_thickness_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: 150 nm TFLN layer, customized thickness
+- device_id: liu2026d-c
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: Strip widened to 1.5 um in the EO section, all designs
+- device_id: liu2026d-c
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 900 nm gold layer
+- device_id: liu2026d-c
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: Gold CPW electrodes and heaters
+- device_id: liu2026d-c
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 4.7 um BOX
+- device_id: liu2026d-c
+  field: cladding
+  value: 1.6 um SiO2 with shallow trenches for the metallization
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: 1.6 um SiO2, trenches etched for metallization
+- device_id: liu2026d-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: X-cut TFLN-on-insulator wafer
+- device_id: liu2026d-c
+  field: epitaxy_or_stack
+  value: 150 nm x-cut TFLN on 4.7 um BOX (NanoLN, 4-in. wafer); fully etched strip waveguides (DUV lithography, Ar ion beam etch), EO section widened to 1.5 um; 1.6 um SiO2 cladding with shallow trenches for the metal; 900 nm Au CPW traveling-wave electrodes and heater wires; 1.35 mm EO section, 0.75 mm TO section
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Methods
+  note: Fully etched strip; EO 1.35 mm, TO 0.75 mm
+- device_id: liu2026d-c
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: Authors state the EO modulators are designed for push-pull with CPW traveling-wave electrodes
+- device_id: liu2026d-c
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3; p.4
+  note: 'Foundry-fabricated TFLN MZMs: ''fabricated by Luxtelligence SA ... in a dedicated run'' (p.4), wafer-scale DUV process (p.3)'
+- device_id: liu2026d-c
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: MZM-level VpiL; push-pull design stated, convention of the quoted VpiL not named
+- device_id: liu2026d-c
+  field: wavelength_nm
+  value: 488
+  unit: nm
+  basis: measured
+  locator: p.4 Experimental Setup; p.5 Table 1
+  note: 488 nm laser line
+- device_id: liu2026d-c
+  field: vpil_dc_vcm
+  value: 0.91
+  unit: V*cm
+  basis: derived
+  locator: p.5 Table 1; p.5 Results
+  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+- device_id: liu2026d-c
+  field: bw3db_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.5 Table 1; p.6 Bias-Controlled RF Modulation
+  note: VNA-limited, exceeds 26.5 GHz
+- device_id: liu2026d-c
+  field: bw_measured_to_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.6 Bias-Controlled RF Modulation; p.4 Experimental Setup
+  note: 26.5 GHz VNA
+- device_id: liu2026d-c
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a)
+  note: Normalised S21; low-frequency reference not stated
+- device_id: liu2026d-c
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a); p.4
+  note: VNA-measured EO S21 with 42 GHz photodetector
+- device_id: liu2026d-c
+  field: vpi_dc_v
+  value: 6.71
+  unit: V
+  basis: derived
+  locator: p.3, Fig. 2(c)
+  note: Asymptote label Vpi = 6.71 V of the high-pass fit at 488 nm (data 10-100 kHz); frequency not applicable; the 7.64 V at 100 kHz, 20 C point of Fig. 2(a) inset is in the row notes only
+- device_id: liu2026d-c
+  field: il_onchip_db
+  value: 10
+  unit: dB
+  basis: author_estimate
+  locator: p.4-5 Optical Transmission; p.9 Discussion
+  note: On-chip device loss about 10 dB; coupling 19 dB per facet
+- device_id: liu2026d-c
+  field: il_onchip_scope
+  value: device_total
+  unit: ''
+  basis: derived
+  locator: p.4-5
+  note: Total minus per-facet coupling loss from test structures
+- device_id: liu2026d-d
+  field: length_mm
+  value: 1.35
+  unit: mm
+  basis: design_target
+  locator: p.3 Methods
+  note: 1.35 mm-long EO modulation section
+- device_id: liu2026d-d
+  field: eo_film_thickness_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: 150 nm TFLN layer, customized thickness
+- device_id: liu2026d-d
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: Strip widened to 1.5 um in the EO section, all designs
+- device_id: liu2026d-d
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 900 nm gold layer
+- device_id: liu2026d-d
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: Gold CPW electrodes and heaters
+- device_id: liu2026d-d
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 4.7 um BOX
+- device_id: liu2026d-d
+  field: cladding
+  value: 1.6 um SiO2 with shallow trenches for the metallization
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: 1.6 um SiO2, trenches etched for metallization
+- device_id: liu2026d-d
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: X-cut TFLN-on-insulator wafer
+- device_id: liu2026d-d
+  field: epitaxy_or_stack
+  value: 150 nm x-cut TFLN on 4.7 um BOX (NanoLN, 4-in. wafer); fully etched strip waveguides (DUV lithography, Ar ion beam etch), EO section widened to 1.5 um; 1.6 um SiO2 cladding with shallow trenches for the metal; 900 nm Au CPW traveling-wave electrodes and heater wires; 1.35 mm EO section, 0.75 mm TO section
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Methods
+  note: Fully etched strip; EO 1.35 mm, TO 0.75 mm
+- device_id: liu2026d-d
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: Authors state the EO modulators are designed for push-pull with CPW traveling-wave electrodes
+- device_id: liu2026d-d
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3; p.4
+  note: 'Foundry-fabricated TFLN MZMs: ''fabricated by Luxtelligence SA ... in a dedicated run'' (p.4), wafer-scale DUV process (p.3)'
+- device_id: liu2026d-d
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: MZM-level VpiL; push-pull design stated, convention of the quoted VpiL not named
+- device_id: liu2026d-d
+  field: wavelength_nm
+  value: 520
+  unit: nm
+  basis: measured
+  locator: p.4 Experimental Setup; p.5 Table 1
+  note: 520 nm laser line
+- device_id: liu2026d-d
+  field: vpil_dc_vcm
+  value: 1.0
+  unit: V*cm
+  basis: derived
+  locator: p.5 Table 1; p.5 Results
+  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+- device_id: liu2026d-d
+  field: bw3db_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.5 Table 1; p.6 Bias-Controlled RF Modulation
+  note: VNA-limited, exceeds 26.5 GHz
+- device_id: liu2026d-d
+  field: bw_measured_to_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.6 Bias-Controlled RF Modulation; p.4 Experimental Setup
+  note: 26.5 GHz VNA
+- device_id: liu2026d-d
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a)
+  note: Normalised S21; low-frequency reference not stated
+- device_id: liu2026d-d
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a); p.4
+  note: VNA-measured EO S21 with 42 GHz photodetector
+- device_id: liu2026d-e
+  field: length_mm
+  value: 1.35
+  unit: mm
+  basis: design_target
+  locator: p.3 Methods
+  note: 1.35 mm-long EO modulation section
+- device_id: liu2026d-e
+  field: eo_film_thickness_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: 150 nm TFLN layer, customized thickness
+- device_id: liu2026d-e
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: Strip widened to 1.5 um in the EO section, all designs
+- device_id: liu2026d-e
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 900 nm gold layer
+- device_id: liu2026d-e
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: Gold CPW electrodes and heaters
+- device_id: liu2026d-e
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 4.7 um BOX
+- device_id: liu2026d-e
+  field: cladding
+  value: 1.6 um SiO2 with shallow trenches for the metallization
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: 1.6 um SiO2, trenches etched for metallization
+- device_id: liu2026d-e
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: X-cut TFLN-on-insulator wafer
+- device_id: liu2026d-e
+  field: epitaxy_or_stack
+  value: 150 nm x-cut TFLN on 4.7 um BOX (NanoLN, 4-in. wafer); fully etched strip waveguides (DUV lithography, Ar ion beam etch), EO section widened to 1.5 um; 1.6 um SiO2 cladding with shallow trenches for the metal; 900 nm Au CPW traveling-wave electrodes and heater wires; 1.35 mm EO section, 0.75 mm TO section
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Methods
+  note: Fully etched strip; EO 1.35 mm, TO 0.75 mm
+- device_id: liu2026d-e
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: Authors state the EO modulators are designed for push-pull with CPW traveling-wave electrodes
+- device_id: liu2026d-e
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3; p.4
+  note: 'Foundry-fabricated TFLN MZMs: ''fabricated by Luxtelligence SA ... in a dedicated run'' (p.4), wafer-scale DUV process (p.3)'
+- device_id: liu2026d-e
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: MZM-level VpiL; push-pull design stated, convention of the quoted VpiL not named
+- device_id: liu2026d-e
+  field: wavelength_nm
+  value: 594
+  unit: nm
+  basis: measured
+  locator: p.4 Experimental Setup; p.5 Table 1
+  note: 594 nm laser line
+- device_id: liu2026d-e
+  field: vpil_dc_vcm
+  value: 1.34
+  unit: V*cm
+  basis: derived
+  locator: p.5 Table 1; p.5 Results
+  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+- device_id: liu2026d-e
+  field: bw3db_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.5 Table 1; p.6 Bias-Controlled RF Modulation
+  note: VNA-limited, exceeds 26.5 GHz
+- device_id: liu2026d-e
+  field: bw_measured_to_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.6 Bias-Controlled RF Modulation; p.4 Experimental Setup
+  note: 26.5 GHz VNA
+- device_id: liu2026d-e
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a)
+  note: Normalised S21; low-frequency reference not stated
+- device_id: liu2026d-e
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a); p.4
+  note: VNA-measured EO S21 with 42 GHz photodetector
+- device_id: liu2026d-f
+  field: length_mm
+  value: 1.35
+  unit: mm
+  basis: design_target
+  locator: p.3 Methods
+  note: 1.35 mm-long EO modulation section
+- device_id: liu2026d-f
+  field: eo_film_thickness_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: 150 nm TFLN layer, customized thickness
+- device_id: liu2026d-f
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: Strip widened to 1.5 um in the EO section, all designs
+- device_id: liu2026d-f
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 900 nm gold layer
+- device_id: liu2026d-f
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: Gold CPW electrodes and heaters
+- device_id: liu2026d-f
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 4.7 um BOX
+- device_id: liu2026d-f
+  field: cladding
+  value: 1.6 um SiO2 with shallow trenches for the metallization
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: 1.6 um SiO2, trenches etched for metallization
+- device_id: liu2026d-f
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: X-cut TFLN-on-insulator wafer
+- device_id: liu2026d-f
+  field: epitaxy_or_stack
+  value: 150 nm x-cut TFLN on 4.7 um BOX (NanoLN, 4-in. wafer); fully etched strip waveguides (DUV lithography, Ar ion beam etch), EO section widened to 1.5 um; 1.6 um SiO2 cladding with shallow trenches for the metal; 900 nm Au CPW traveling-wave electrodes and heater wires; 1.35 mm EO section, 0.75 mm TO section
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Methods
+  note: Fully etched strip; EO 1.35 mm, TO 0.75 mm
+- device_id: liu2026d-f
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: Authors state the EO modulators are designed for push-pull with CPW traveling-wave electrodes
+- device_id: liu2026d-f
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3; p.4
+  note: 'Foundry-fabricated TFLN MZMs: ''fabricated by Luxtelligence SA ... in a dedicated run'' (p.4), wafer-scale DUV process (p.3)'
+- device_id: liu2026d-f
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: MZM-level VpiL; push-pull design stated, convention of the quoted VpiL not named
+- device_id: liu2026d-f
+  field: wavelength_nm
+  value: 640
+  unit: nm
+  basis: measured
+  locator: p.4 Experimental Setup; p.5 Table 1
+  note: 640 nm laser line
+- device_id: liu2026d-f
+  field: vpil_dc_vcm
+  value: 1.56
+  unit: V*cm
+  basis: derived
+  locator: p.5 Table 1; p.5 Results
+  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+- device_id: liu2026d-f
+  field: bw3db_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.5 Table 1; p.6 Bias-Controlled RF Modulation
+  note: VNA-limited, exceeds 26.5 GHz
+- device_id: liu2026d-f
+  field: bw_measured_to_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.6 Bias-Controlled RF Modulation; p.4 Experimental Setup
+  note: 26.5 GHz VNA
+- device_id: liu2026d-f
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a)
+  note: Normalised S21; low-frequency reference not stated
+- device_id: liu2026d-f
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a); p.4
+  note: VNA-measured EO S21 with 42 GHz photodetector
+- device_id: liu2026d-f
+  field: il_onchip_db
+  value: 4
+  unit: dB
+  basis: author_estimate
+  locator: p.4-5 Optical Transmission; p.9 Discussion
+  note: On-chip device loss about 4 dB; coupling 16 dB per facet
+- device_id: liu2026d-f
+  field: il_onchip_scope
+  value: device_total
+  unit: ''
+  basis: derived
+  locator: p.4-5
+  note: Total minus per-facet coupling loss from test structures
+- device_id: liu2026d-g
+  field: length_mm
+  value: 1.35
+  unit: mm
+  basis: design_target
+  locator: p.3 Methods
+  note: 1.35 mm-long EO modulation section
+- device_id: liu2026d-g
+  field: eo_film_thickness_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: 150 nm TFLN layer, customized thickness
+- device_id: liu2026d-g
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: Strip widened to 1.5 um in the EO section, all designs
+- device_id: liu2026d-g
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 900 nm gold layer
+- device_id: liu2026d-g
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: Gold CPW electrodes and heaters
+- device_id: liu2026d-g
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 4.7 um BOX
+- device_id: liu2026d-g
+  field: cladding
+  value: 1.6 um SiO2 with shallow trenches for the metallization
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: 1.6 um SiO2, trenches etched for metallization
+- device_id: liu2026d-g
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: X-cut TFLN-on-insulator wafer
+- device_id: liu2026d-g
+  field: epitaxy_or_stack
+  value: 150 nm x-cut TFLN on 4.7 um BOX (NanoLN, 4-in. wafer); fully etched strip waveguides (DUV lithography, Ar ion beam etch), EO section widened to 1.5 um; 1.6 um SiO2 cladding with shallow trenches for the metal; 900 nm Au CPW traveling-wave electrodes and heater wires; 1.35 mm EO section, 0.75 mm TO section
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Methods
+  note: Fully etched strip; EO 1.35 mm, TO 0.75 mm
+- device_id: liu2026d-g
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: Authors state the EO modulators are designed for push-pull with CPW traveling-wave electrodes
+- device_id: liu2026d-g
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3; p.4
+  note: 'Foundry-fabricated TFLN MZMs: ''fabricated by Luxtelligence SA ... in a dedicated run'' (p.4), wafer-scale DUV process (p.3)'
+- device_id: liu2026d-g
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: MZM-level VpiL; push-pull design stated, convention of the quoted VpiL not named
+- device_id: liu2026d-g
+  field: wavelength_nm
+  value: 940
+  unit: nm
+  basis: measured
+  locator: p.4 Experimental Setup; p.5 Table 1
+  note: 940 nm laser line
+- device_id: liu2026d-g
+  field: vpil_dc_vcm
+  value: 2.81
+  unit: V*cm
+  basis: derived
+  locator: p.5 Table 1; p.5 Results
+  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+- device_id: liu2026d-g
+  field: bw3db_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.5 Table 1; p.6 Bias-Controlled RF Modulation
+  note: VNA-limited, exceeds 26.5 GHz
+- device_id: liu2026d-g
+  field: bw_measured_to_ghz
+  value: 26.5
+  unit: GHz
+  basis: measured
+  locator: p.6 Bias-Controlled RF Modulation; p.4 Experimental Setup
+  note: 26.5 GHz VNA
+- device_id: liu2026d-g
+  field: bw3db_reference
+  value: low_freq_unstated
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a)
+  note: Normalised S21; low-frequency reference not stated
+- device_id: liu2026d-g
+  field: bw_method
+  value: eo_s21
+  unit: ''
+  basis: measured
+  locator: p.6, Fig. 4(a); p.4
+  note: VNA-measured EO S21 with 42 GHz photodetector
+- device_id: liu2026d-g
+  field: il_fiber_to_fiber_db
+  value: 8.6
+  unit: dB
+  basis: measured
+  locator: p.4 Optical Transmission
+  note: Total fiber-to-fiber loss at 940 nm
+- device_id: liu2026d-g
+  field: il_onchip_db
+  value: 2.6
+  unit: dB
+  basis: derived
+  locator: p.4 Optical Transmission
+  note: 8.6 dB minus 2 x 3.0 dB coupling per facet, as stated by the authors
+- device_id: liu2026d-g
+  field: il_onchip_scope
+  value: device_total
+  unit: ''
+  basis: derived
+  locator: p.4
+  note: Fiber-to-fiber minus per-facet coupling from test structures
+- device_id: liu2026d-g
+  field: extinction_ratio_db
+  value: 18.8
+  unit: dB
+  basis: measured
+  locator: p.8; supplement Fig. S11
+  note: Pulse picking 78 MHz to 7.8 MHz at 940 nm, gated by EO modulation
+- device_id: liu2026d-g
+  field: er_type
+  value: dynamic
+  unit: ''
+  basis: measured
+  locator: p.8
+  note: Pulse-picking extinction ratio, dynamic
+- device_id: liu2026d-h
+  field: length_mm
+  value: 1.35
+  unit: mm
+  basis: design_target
+  locator: p.3 Methods
+  note: 1.35 mm-long EO modulation section
+- device_id: liu2026d-h
+  field: eo_film_thickness_nm
+  value: 150
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: 150 nm TFLN layer, customized thickness
+- device_id: liu2026d-h
+  field: rib_width_nm
+  value: 1500
+  unit: nm
+  basis: design_target
+  locator: p.4 Methods
+  note: Strip widened to 1.5 um in the EO section, all designs
+- device_id: liu2026d-h
+  field: electrode_thickness_um
+  value: 0.9
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 900 nm gold layer
+- device_id: liu2026d-h
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: Gold CPW electrodes and heaters
+- device_id: liu2026d-h
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.4 Methods
+  note: 4.7 um BOX
+- device_id: liu2026d-h
+  field: cladding
+  value: 1.6 um SiO2 with shallow trenches for the metallization
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: 1.6 um SiO2, trenches etched for metallization
+- device_id: liu2026d-h
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Methods
+  note: X-cut TFLN-on-insulator wafer
+- device_id: liu2026d-h
+  field: epitaxy_or_stack
+  value: 150 nm x-cut TFLN on 4.7 um BOX (NanoLN, 4-in. wafer); fully etched strip waveguides (DUV lithography, Ar ion beam etch), EO section widened to 1.5 um; 1.6 um SiO2 cladding with shallow trenches for the metal; 900 nm Au CPW traveling-wave electrodes and heater wires; 1.35 mm EO section, 0.75 mm TO section
+  unit: ''
+  basis: design_target
+  locator: p.3-4 Methods
+  note: Fully etched strip; EO 1.35 mm, TO 0.75 mm
+- device_id: liu2026d-h
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: Authors state the EO modulators are designed for push-pull with CPW traveling-wave electrodes
+- device_id: liu2026d-h
+  field: integration
+  value: foundry_native
+  unit: ''
+  basis: derived
+  locator: p.3; p.4
+  note: 'Foundry-fabricated TFLN MZMs: ''fabricated by Luxtelligence SA ... in a dedicated run'' (p.4), wafer-scale DUV process (p.3)'
+- device_id: liu2026d-h
+  field: vpi_convention
+  value: mzm_push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Methods
+  note: MZM-level VpiL; push-pull design stated, convention of the quoted VpiL not named
+- device_id: liu2026d-h
+  field: wavelength_nm
+  value: 875
+  unit: nm
+  basis: measured
+  locator: p.7; p.8
+  note: Toptica DL pro at 875 nm
+- device_id: liu2026d-h
+  field: drive_vpp_v
+  value: 7.0
+  unit: V
+  basis: derived
+  locator: p.7
+  note: Amplifier maximum output 7.0 Vpp in digital mode (p.7), inferred to be the drive used because ER was limited by the maximum amplifier swing (p.8); not a measured swing
+- device_id: liu2026d-h
+  field: extinction_ratio_db
+  value: 25
+  unit: dB
+  basis: measured
+  locator: p.8, Fig. 5(a)
+  note: Median over 93 min; standard deviation 0.65 dB; pulse ER, dynamic
+- device_id: liu2026d-h
+  field: er_type
+  value: dynamic
+  unit: ''
+  basis: measured
+  locator: p.8
+  note: Pulse extinction ratio
+- device_id: liu2026d-h
+  field: max_baud_gbd
+  value: 10
+  unit: GBd
+  basis: derived
+  locator: p.8, Fig. 5(b)
+  note: 10 Gbit/s NRZ-OOK, one bit per symbol
+- device_id: liu2026d-h
+  field: modulation_format
+  value: NRZ-OOK 10 Gbit/s PRBS9 eye (SNR 9.4 dB, 10 million symbols); 10 MHz pulse train, 100 ps nominal, FWHM 117 ps, ER 25 dB median over 93 min
+  unit: ''
+  basis: measured
+  locator: p.8, Fig. 5
+  note: PRBS9 NRZ-OOK eye; pulse train 10 MHz
+- device_id: liu2026d-h
+  field: max_line_rate_gbps
+  value: 10
+  unit: Gb/s
+  basis: measured
+  locator: p.8, Fig. 5(b)
+  note: Eye of 10 Gbit/s NRZ-OOK
+derived:
+- device_id: liu2026d-a
+  field: optical_input_power_dbm
+  value: -20.0
+  formula: 10*log10(10 uW / 1 mW), Table 1 on-chip power estimate
+  inputs:
+  - Poptical
+- device_id: liu2026d-b
+  field: optical_input_power_dbm
+  value: -16.78
+  formula: 10*log10(21 uW / 1 mW), Table 1 on-chip power estimate
+  inputs:
+  - Poptical
+- device_id: liu2026d-c
+  field: optical_input_power_dbm
+  value: -17.21
+  formula: 10*log10(19 uW / 1 mW), Table 1 on-chip power estimate
+  inputs:
+  - Poptical
+- device_id: liu2026d-d
+  field: optical_input_power_dbm
+  value: -17.96
+  formula: 10*log10(16 uW / 1 mW), Table 1 on-chip power estimate
+  inputs:
+  - Poptical
+- device_id: liu2026d-e
+  field: optical_input_power_dbm
+  value: -13.19
+  formula: 10*log10(48 uW / 1 mW), Table 1 on-chip power estimate
+  inputs:
+  - Poptical
+- device_id: liu2026d-f
+  field: optical_input_power_dbm
+  value: -13.1
+  formula: 10*log10(49 uW / 1 mW), Table 1 on-chip power estimate
+  inputs:
+  - Poptical
+- device_id: liu2026d-g
+  field: optical_input_power_dbm
+  value: -9.47
+  formula: 10*log10(113 uW / 1 mW), Table 1 on-chip power estimate
+  inputs:
+  - Poptical

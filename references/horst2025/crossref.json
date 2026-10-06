@@ -1,0 +1,966 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     2
+    ]
+   ],
+   "date-time": "2026-10-02T17:08:18Z",
+   "timestamp": 1790960898041,
+   "version": "4.1.0"
+  },
+  "reference-count": 31,
+  "publisher": "Optica Publishing Group",
+  "issue": "3",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       2,
+       26
+      ]
+     ],
+     "date-time": "2025-02-26T00:00:00Z",
+     "timestamp": 1740528000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       2,
+       26
+      ]
+     ],
+     "date-time": "2025-02-26T00:00:00Z",
+     "timestamp": 1740528000000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://opg.optica.org/policies/opg-tdm-policy.json"
+   }
+  ],
+  "funder": [
+   {
+    "name": "EC Horizon Europe",
+    "award": [
+     "101139134"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101139134"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "EC Horizon Europe",
+    "award": [
+     "101139133"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101139133"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Armasuisse Science and Technology"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "opg.optica.org"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Optica"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     3,
+     20
+    ]
+   ]
+  },
+  "abstract": "<jats:p>Electromagnetic fields at terahertz frequencies open a window to multiple applications, such as wireless communication, sensing, and medical imaging. Yet the challenge remains to efficiently generate, receive and process such high frequencies. In this work, we investigate plasmonic modulators to bring THz frequencies to photonic integrated circuits (PICs). We demonstrate a frequency response beyond the 1 THz and develop an equivalent circuit model of the modulator. Our results show that plasmonic modulators are uniquely suited for THz PICs.</jats:p>",
+  "DOI": "10.1364/optica.544016",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     2,
+     4
+    ]
+   ],
+   "date-time": "2025-02-04T10:00:34Z",
+   "timestamp": 1738663234000
+  },
+  "page": "325",
+  "update-policy": "https://doi.org/10.1364/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 43,
+  "title": [
+   "Ultra-wideband MHz to THz plasmonic EO modulator"
+  ],
+  "prefix": "10.1364",
+  "volume": "12",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-3826-3362",
+    "authenticated-orcid": true,
+    "given": "Yannik",
+    "family": "Horst",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-0930-4604",
+    "authenticated-orcid": true,
+    "given": "David",
+    "family": "Moor",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3877-600X",
+    "authenticated-orcid": true,
+    "given": "Daniel",
+    "family": "Chelladurai",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2211-5955",
+    "authenticated-orcid": true,
+    "given": "Tobias",
+    "family": "Blatter",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sónia",
+    "family": "Fernandes",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Polariton Technologies AG"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-9414-6497",
+    "authenticated-orcid": true,
+    "given": "Laurenz",
+    "family": "Kulmer",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7692-5913",
+    "authenticated-orcid": true,
+    "given": "Michael",
+    "family": "Baumann",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hande",
+    "family": "Ibili",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Christian",
+    "family": "Funck",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Polariton Technologies AG"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3180-8400",
+    "authenticated-orcid": true,
+    "given": "Killian",
+    "family": "Keller",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1947-7779",
+    "authenticated-orcid": true,
+    "given": "Marcel",
+    "family": "Destraz",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Polariton Technologies AG"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0861-2530",
+    "authenticated-orcid": true,
+    "given": "Wolfgang",
+    "family": "Heni",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Polariton Technologies AG"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Loïc",
+    "family": "Chérix",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7968-0074",
+    "authenticated-orcid": true,
+    "given": "Yuqi",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hua",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0291-2065",
+    "authenticated-orcid": true,
+    "given": "Stefan M.",
+    "family": "Koepfli",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0111-8169",
+    "authenticated-orcid": true,
+    "given": "Juerg",
+    "family": "Leuthold",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "id": [
+       {
+        "id": "https://ror.org/05a28rw58",
+        "id-type": "ROR",
+        "asserted-by": "publisher"
+       }
+      ]
+     },
+     {
+      "name": "Polariton Technologies AG"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     2,
+     26
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "optica-12-3-325-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "106",
+    "DOI": "10.1016/j.eng.2022.06.023",
+    "volume": "22",
+    "author": "Huang",
+    "year": "2023",
+    "journal-title": "Engineering"
+   },
+   {
+    "key": "optica-12-3-325-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "26",
+    "DOI": "10.1038/nmat708",
+    "volume": "1",
+    "author": "Ferguson",
+    "year": "2002",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "optica-12-3-325-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "97",
+    "DOI": "10.1038/nphoton.2007.3",
+    "volume": "1",
+    "author": "Tonouchi",
+    "year": "2007",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "optica-12-3-325-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "78729",
+    "DOI": "10.1109/ACCESS.2019.2921522",
+    "volume": "7",
+    "author": "Rappaport",
+    "year": "2019",
+    "journal-title": "IEEE Access"
+   },
+   {
+    "key": "optica-12-3-325-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "977",
+    "DOI": "10.1038/nphoton.2013.275",
+    "volume": "7",
+    "author": "Koenig",
+    "year": "2013",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "optica-12-3-325-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "4715",
+    "DOI": "10.1109/JLT.2020.2995702",
+    "volume": "38",
+    "author": "Jia",
+    "year": "2020",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "optica-12-3-325-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "601",
+    "DOI": "10.1038/s41566-020-0675-0",
+    "volume": "14",
+    "author": "Harter",
+    "year": "2020",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "optica-12-3-325-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "1690",
+    "DOI": "10.1109/JLT.2022.3148534",
+    "volume": "40",
+    "author": "Horst",
+    "year": "2022",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "optica-12-3-325-R9",
+    "first-page": "M2",
+    "volume-title": "Optical Fiber Communications Conference and Exhibition",
+    "author": "Blatter",
+    "year": "2024"
+   },
+   {
+    "key": "optica-12-3-325-R10",
+    "first-page": "We1F.6",
+    "volume-title": "European Conference on Optical Communication (ECOC)",
+    "author": "Li",
+    "year": "2022"
+   },
+   {
+    "key": "optica-12-3-325-R11",
+    "doi-asserted-by": "publisher",
+    "first-page": "221",
+    "DOI": "10.1007/s10762-014-0140-6",
+    "volume": "36",
+    "author": "Kallfass",
+    "year": "2015",
+    "journal-title": "J. Infrared Millim. Terahertz Waves"
+   },
+   {
+    "key": "optica-12-3-325-R12",
+    "doi-asserted-by": "publisher",
+    "first-page": "856",
+    "DOI": "10.1049/el.2011.1451",
+    "volume": "47",
+    "author": "Moeller",
+    "year": "2011",
+    "journal-title": "Electron. Lett."
+   },
+   {
+    "key": "optica-12-3-325-R13",
+    "doi-asserted-by": "publisher",
+    "first-page": "081301",
+    "DOI": "10.1063/1.4960136",
+    "volume": "1",
+    "author": "Yu",
+    "year": "2016",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "optica-12-3-325-R14",
+    "first-page": "1",
+    "volume-title": "IEEE IMS",
+    "volume": "6848519",
+    "author": "McKenna",
+    "year": "2014"
+   },
+   {
+    "key": "optica-12-3-325-R15",
+    "doi-asserted-by": "publisher",
+    "first-page": "749",
+    "DOI": "10.1038/s41566-018-0281-6",
+    "volume": "12",
+    "author": "Salamin",
+    "year": "2018",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "optica-12-3-325-R16",
+    "doi-asserted-by": "publisher",
+    "first-page": "1483",
+    "DOI": "10.1109/JLT.2022.3141058",
+    "volume": "40",
+    "author": "Dat",
+    "year": "2022",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "optica-12-3-325-R17",
+    "first-page": "1",
+    "volume-title": "International Conference on Infrared, Millimeter, and Terahertz Waves (IRMMW-THz)",
+    "author": "Wakatsuki",
+    "year": "2008"
+   },
+   {
+    "key": "optica-12-3-325-R18",
+    "doi-asserted-by": "publisher",
+    "first-page": "1169",
+    "DOI": "10.1126/science.adg8017",
+    "volume": "380",
+    "author": "Koepfli",
+    "year": "2023",
+    "journal-title": "Science"
+   },
+   {
+    "key": "optica-12-3-325-R19",
+    "first-page": "844",
+    "volume-title": "Joint 32nd International Conference on Infrared and Millimeter Waves and the 15th International Conference on Terahertz Electronics",
+    "author": "Hesler",
+    "year": "2007"
+   },
+   {
+    "key": "optica-12-3-325-R20",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JSTQE.2024.3396549",
+    "volume": "30",
+    "author": "Smajic",
+    "year": "2024",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "optica-12-3-325-R21",
+    "doi-asserted-by": "publisher",
+    "first-page": "056106",
+    "DOI": "10.1063/1.5086868",
+    "volume": "4",
+    "author": "Burla",
+    "year": "2019",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "optica-12-3-325-R22",
+    "doi-asserted-by": "publisher",
+    "first-page": "261",
+    "DOI": "10.1039/D1MH01206A",
+    "volume": "9",
+    "author": "Xu",
+    "year": "2022",
+    "journal-title": "Mater. Horiz."
+   },
+   {
+    "key": "optica-12-3-325-R23",
+    "doi-asserted-by": "publisher",
+    "first-page": "8342",
+    "DOI": "10.1021/acs.nanolett.5b04025",
+    "volume": "15",
+    "author": "Salamin",
+    "year": "2015",
+    "journal-title": "Nano Lett."
+   },
+   {
+    "key": "optica-12-3-325-R24",
+    "doi-asserted-by": "publisher",
+    "first-page": "5550",
+    "DOI": "10.1038/s41467-019-13490-x",
+    "volume": "10",
+    "author": "Salamin",
+    "year": "2019",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "optica-12-3-325-R25",
+    "first-page": "WE.D.5.5",
+    "volume-title": "European Conference on Optical Communication (ECOC)",
+    "author": "Kulmer",
+    "year": "2023"
+   },
+   {
+    "key": "optica-12-3-325-R26",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JSTQE.2023.3314696",
+    "volume": "29",
+    "author": "Ibili",
+    "year": "2023",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "optica-12-3-325-R27",
+    "first-page": "Tu4G.4",
+    "volume-title": "European Conference on Optical Communication (ECOC)",
+    "author": "Heni",
+    "year": "2024"
+   },
+   {
+    "key": "optica-12-3-325-R28",
+    "doi-asserted-by": "publisher",
+    "first-page": "2627",
+    "DOI": "10.1364/OE.25.002627",
+    "volume": "25",
+    "author": "Heni",
+    "year": "2017",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "optica-12-3-325-R29",
+    "doi-asserted-by": "publisher",
+    "first-page": "1602",
+    "DOI": "10.1109/JLT.2012.2188779",
+    "volume": "30",
+    "author": "Yu",
+    "year": "2012",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "optica-12-3-325-R30",
+    "doi-asserted-by": "publisher",
+    "first-page": "1694",
+    "DOI": "10.1038/s41467-019-09724-7",
+    "volume": "10",
+    "author": "Heni",
+    "year": "2019",
+    "journal-title": "Nat Commun"
+   },
+   {
+    "key": "optica-12-3-325-R31",
+    "doi-asserted-by": "publisher",
+    "first-page": "338",
+    "DOI": "10.1038/s41928-020-0417-9",
+    "volume": "3",
+    "author": "Koch",
+    "year": "2020",
+    "journal-title": "Nat. Electron."
+   }
+  ],
+  "container-title": [
+   "Optica"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=optica-12-3-325&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     2,
+     26
+    ]
+   ],
+   "date-time": "2025-02-26T17:10:33Z",
+   "timestamp": 1740589833000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=optica-12-3-325"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     2,
+     26
+    ]
+   ]
+  },
+  "references-count": 31,
+  "journal-issue": {
+   "issue": "3",
+   "published-online": {
+    "date-parts": [
+     [
+      2025
+     ]
+    ]
+   },
+   "published-print": {
+    "date-parts": [
+     [
+      2025
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1364/optica.544016",
+  "relation": {},
+  "ISSN": [
+   "2334-2536"
+  ],
+  "issn-type": [
+   {
+    "value": "2334-2536",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     2,
+     26
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "Optica Publishing Group",
+    "name": "publisher",
+    "label": "This article is maintained by"
+   },
+   {
+    "value": "https://doi.org/10.1364/OPTICA.544016",
+    "name": "articlelink",
+    "label": "Crossref DOI link to publisher maintained version"
+   },
+   {
+    "value": "letter",
+    "name": "content_type",
+    "label": "Article type"
+   },
+   {
+    "value": "Screened by Similarity Check",
+    "name": "cross_check",
+    "label": "Similarity check"
+   },
+   {
+    "value": "Yes",
+    "order": 0,
+    "name": "peer_reviewed",
+    "label": "Peer reviewed",
+    "group": {
+     "name": "peer_review",
+     "label": "Peer review"
+    }
+   },
+   {
+    "value": "Single blind",
+    "order": 1,
+    "name": "review_process",
+    "label": "Review process",
+    "group": {
+     "name": "peer_review",
+     "label": "Peer review"
+    }
+   },
+   {
+    "value": "16 October 2024",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "1 February 2025",
+    "order": 1,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "26 February 2025",
+    "order": 2,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "Published by Optica Publishing Group under the terms of the Creative Commons Attribution 4.0 License. Further distribution of this work must maintain attribution to the author(s) and the published article’s title, journal citation, and DOI.",
+    "name": "copyright",
+    "label": "Copyright"
+   }
+  ]
+ }
+}
