@@ -1358,52 +1358,60 @@ entries:
   note: push-pull CPW
 - device_id: li2026aa-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 3(b)
   note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+  previous_value: unspecified
 - device_id: li2026aa-b
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 3(b)
   note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+  previous_value: unspecified
 - device_id: li2026aa-c
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 3(b)
   note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+  previous_value: unspecified
 - device_id: li2026aa-d
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 3(b)
   note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+  previous_value: unspecified
 - device_id: li2026aa-e
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 3(b)
   note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+  previous_value: unspecified
 - device_id: li2026aa-f
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 3(b)
   note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+  previous_value: unspecified
 - device_id: li2026aa-g
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 3(b)
   note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+  previous_value: unspecified
 - device_id: li2026aa-h
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 3(b)
   note: curves start at about 0 dB with a low-frequency peak from ZL below Z0
+  previous_value: unspecified
 - device_id: li2026aa-a
   field: electrode_type
   value: tw_gsg
@@ -1500,6 +1508,62 @@ entries:
   basis: measured
   locator: p.2
   note: ridge waveguide on 300 nm TFLN
+- device_id: li2026aa-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 'source: Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.'
+- device_id: li2026aa-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 'source: Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.'
+- device_id: li2026aa-c
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 'source: Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.'
+- device_id: li2026aa-d
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 'source: Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.'
+- device_id: li2026aa-e
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 'source: Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.'
+- device_id: li2026aa-f
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 'source: Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.'
+- device_id: li2026aa-g
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 'source: Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.'
+- device_id: li2026aa-h
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 3(b)
+  note: 'source: Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.'
 derived:
 - device_id: li2026aa-a
   field: max_baud_gbd

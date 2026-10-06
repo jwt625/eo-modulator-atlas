@@ -184,11 +184,12 @@ entries:
   note: authors do not state the convention for the 2.18 V; push-pull MZM inferred
 - device_id: wang2022a-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: measured
   locator: p.3 Fig. 3(c)
   note: traces start near 0 dB at low frequency; reference not stated
+  previous_value: unspecified
 - device_id: wang2022a-a
   field: er_type
   value: unspecified
@@ -196,6 +197,13 @@ entries:
   basis: measured
   locator: p.3 Sec. 2
   note: type of ER not stated
+- device_id: wang2022a-a
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. 2; Fig. 3(b)
+  note: 'source: When measuring the half-wave voltage of the modulator, a 1 kHz triangle electric signal is applied onto the ...'
 derived:
 - device_id: wang2022a-a
   field: slab_thickness_nm

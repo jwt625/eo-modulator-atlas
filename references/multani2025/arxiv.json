@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2504.01920",
+ "title": "Integrated sub-terahertz cavity electro-optic transduction",
+ "authors": "Kevin K. S. Multani, Jason F. Herrmann, Emilio A. Nanni, Amir H. Safavi-Naeini",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 02 Apr 2025 17:29:53 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:09:25Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2504.01920\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2504.01920</identifier>\n        <datestamp>2025-04-03</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:quant-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2504.01920</id>\n        <submitter>Amir H. Safavi-Naeini</submitter>\n            <version version=\"v1\">\n                <date>Wed, 02 Apr 2025 17:29:53 GMT</date>\n                <size>9565kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Integrated sub-terahertz cavity electro-optic transduction</title>\n        <authors>Kevin K. S. Multani, Jason F. Herrmann, Emilio A. Nanni, Amir H. Safavi-Naeini</authors>\n        <categories>physics.optics quant-ph</categories>\n            <comments>51 pages (15 pages main body)</comments>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Emerging communications and computing technologies will rely ever-more on expanding the useful radio frequency (RF) spectrum into the sub-THz and THz frequency range. Both classical and quantum applications would benefit from advancing integration and incorporation of sub-THz and electro-optic technologies into common devices, such as modulators. Here we demonstrate an integrated triply-resonant, superconducting electro-optic transducer. Our design incorporates an on-chip $107$ GHz sub-THz niobium titanium nitride superconducting resonator, modulating a thin-film lithium niobate optical racetrack resonator operating at telecom wavelengths. We observe a maximum photon transduction efficiency of $\\eta_{\\text{OE}}\\approx 0.82\\times 10^{-6}$ and an average single-photon electro-optic interaction rate of $g_0/2\\pi\\approx 0.7$ kHz. We also present a study and analysis of the challenges associated with the design of integrated sub-THz resonators and propose possible solutions to these challenges. Our work paves the way for further advancements in resonant electro-optic technologies operating at sub-THz frequencies.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

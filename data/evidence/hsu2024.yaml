@@ -244,11 +244,12 @@ entries:
   note: Vpi*L is a resonance-shift figure at 117 pm/V; the convention label is ours.
 - device_id: hsu2024-b
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.11, Fig. 7(c)
   note: Simulated response normalized at low frequency; reference frequency not stated.
+  previous_value: unspecified
 derived:
 - device_id: hsu2024-a
   field: energy_per_bit_fj

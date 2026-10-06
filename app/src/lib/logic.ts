@@ -35,6 +35,13 @@ export function fmt(v: number | null | undefined, sig = 3): string {
 	return String(Number(v.toPrecision(sig)));
 }
 
+/** Frequency given in GHz, shown in the natural unit (Hz, kHz, MHz, GHz). */
+export function hz(ghz: number): string {
+	const v = ghz * 1e9;
+	const [div, u] = v >= 1e9 ? [1e9, 'GHz'] : v >= 1e6 ? [1e6, 'MHz'] : v >= 1e3 ? [1e3, 'kHz'] : [1, 'Hz'];
+	return `${fmt(v / div)} ${u}`;
+}
+
 export function qualPrefix(q: Qual | null | undefined): string {
 	return q === 'lt' ? '<' : q === 'gt' ? '>' : q === 'approx' ? '~' : '';
 }

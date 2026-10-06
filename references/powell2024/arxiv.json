@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2505.00906",
+ "title": "A sub-volt near-IR lithium tantalate electro-optic modulator",
+ "authors": "Keith Powell, Dylan Renaud, Xudong Li, Daniel Assumpcao, C. J. Xin, Neil Sinclair, and Marko Lon\\v{c}ar",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 01 May 2025 22:59:46 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:10:45Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2505.00906\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2505.00906</identifier>\n        <datestamp>2025-05-05</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:ins-det</setSpec>\n            <setSpec>physics:quant-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2505.00906</id>\n        <submitter>Neil Sinclair</submitter>\n            <version version=\"v1\">\n                <date>Thu, 01 May 2025 22:59:46 GMT</date>\n                <size>2716kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>A sub-volt near-IR lithium tantalate electro-optic modulator</title>\n        <authors>Keith Powell, Dylan Renaud, Xudong Li, Daniel Assumpcao, C. J. Xin, Neil Sinclair, and Marko Lon\\v{c}ar</authors>\n        <categories>physics.optics physics.app-ph physics.ins-det quant-ph</categories>\n            <license>http://creativecommons.org/licenses/by-nc-nd/4.0/</license>\n            <abstract>We demonstrate a low-loss integrated electro-optic Mach-Zehnder modulator in thin-film lithium tantalate at 737 nm, featuring a low half-wave voltage-length product of 0.65 V$\\cdot$cm, an extinction ratio of 30 dB, low optical loss of 5.3 dB, and a detector-limited bandwidth of 20 GHz. A small $&lt;2$ dB DC bias drift relative to quadrature bias is measured over 16 minutes using 4.3 dBm of on-chip power in ambient conditions, which outperforms the 8 dB measured using a counterpart thin-film lithium niobate modulator. Finally, an optical loss coefficient of 0.5 dB/cm for a thin-film lithium tantalate waveguide is estimated at 638 nm using a fabricated ring resonator.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

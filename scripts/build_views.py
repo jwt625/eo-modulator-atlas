@@ -81,13 +81,39 @@ LABEL_OVERRIDES = {
     "tw_cpw": "Traveling-wave CPW",
     "tw_cps": "Traveling-wave CPS",
     "tw_gsg": "Traveling-wave GSG",
-    "o_band": "O-band",
-    "c_band": "C-band",
-    "l_band": "L-band",
+    "soi_strip": "SOI strip",
+    "lnos_rib": "LN-on-sapphire rib",
+    "resonance_dip": "Resonance dip depth",
+    "free_space": "Free-space",
+    "lnoi_loaded_oxide": "LNOI loaded oxide",
+    "transferred_2d": "Transferred 2D",
+    "tw_gssg": "Traveling-wave GSSG",
+    "transparent_conducting_oxide": "Transparent conducting oxide",
+    "not_applicable": "Not applicable",
+    "low_freq_unstated": "Low frequency (unstated)",
+    "eo_s21": "EO S21 (VNA/LCA)",
+    "link_eoe": "EOE link response",
+    "photon_lifetime_estimate": "Photon-lifetime estimate",
+    "optical_linewidth": "Optical linewidth",
+    "device_total": "Whole device",
+    "phase_section_only": "Phase section only",
+    "excess_over_reference": "Excess over reference",
+    "qcse": "QCSE",
+    "franz_keldysh": "Franz-Keldysh",
+    "pauli_blocking": "Pauli blocking",
+    "stress_optic": "Stress-optic",
+    "uv": "UV (<380 nm)",
+    "visible": "Visible (380-780 nm)",
+    "nir_below_o": "NIR 780-1260 nm",
+    "o_band": "O-band (1260-1360 nm)",
+    "e_band": "E-band (1360-1460 nm)",
+    "s_band": "S-band (1460-1530 nm)",
+    "c_band": "C-band (1530-1565 nm)",
+    "l_band": "L-band (1565-1625 nm)",
+    "u_band": "U-band (1625-1675 nm)",
     "cl_band": "C+L band",
-    "one_um": "1 um band",
-    "visible_nir": "Visible / NIR",
-    "mid_ir": "Mid-IR",
+    "nir_above_u": "NIR 1675-3000 nm",
+    "mid_ir": "Mid-IR (3-50 um)",
     "bw_reference": "BW reference",
     "dc": "DC",
     "1ghz": "1 GHz",
@@ -192,9 +218,12 @@ COLUMN_GROUPS = {
         "device_id",
         "paper_id",
         "device_label",
+        "physical_device_id",
         "device_class",
+        "row_kind",
         "tags",
         "eo_material",
+        "eo_effect",
         "waveguide_platform",
         "integration",
         "electrode_type",
@@ -202,10 +231,12 @@ COLUMN_GROUPS = {
         "vpi_convention",
         "temperature_class",
         "band",
+        "statistic",
     ],
-    "operating point": ["wavelength_nm", "length_mm"],
+    "operating point": ["wavelength_nm", "length_mm", "temperature_k"],
     "drive efficiency": [
         "vpi_dc_v",
+        "vpi_dc_freq_ghz",
         "vpi_rf_v",
         "vpi_rf_freq_ghz",
         "vpil_dc_vcm",
@@ -214,17 +245,22 @@ COLUMN_GROUPS = {
         "bias_for_vpi_v",
         "drive_vpp_v",
         "vpi_basis",
+        "r_eff_pm_per_v",
     ],
     "bandwidth": [
         "bw3db_ghz",
         "bw3db_reference",
         "bw3db_reference_freq_ghz",
+        "bw_method",
         "bw6db_ghz",
         "bw_measured_to_ghz",
+        "eo_rolloff_db",
+        "eo_rolloff_freq_ghz",
         "bw_basis",
     ],
     "optical loss": [
         "il_onchip_db",
+        "il_onchip_scope",
         "il_onchip_includes",
         "il_onchip_excludes",
         "il_fiber_to_fiber_db",
@@ -281,6 +317,7 @@ COLUMN_LABELS = {
     "length_mm": "Length",
     "vpi_dc_v": "Vpi (DC)",
     "vpi_rf_v": "Vpi (RF)",
+    "vpi_dc_freq_ghz": "Vpi (DC) drive frequency",
     "vpi_rf_freq_ghz": "Vpi (RF) frequency",
     "vpil_dc_vcm": "Vpi*L (DC)",
     "vpil_rf_vcm": "Vpi*L (RF)",
@@ -626,7 +663,9 @@ def build(data: Path, sims_dir: Path | None = None) -> dict[str, Any]:
             d["vpil_best"] = vpil_best(d, derived)
             hb = headline_basis(d, ev, derived)
             d["headline_basis"] = hb
-            d["is_sim"] = any(hb[k] in SIM_BASES for k in ("vpi", "vpil", "bw3db", "il_onchip", "il_f2f"))
+            d["is_sim"] = d.get("row_kind") == "design" or any(
+                hb[k] in SIM_BASES for k in ("vpi", "vpil", "bw3db", "il_onchip", "il_f2f")
+            )
             d["measured_only"] = not d["is_sim"]
             d["evidence"] = ev
             d["sim_available"] = d["device_id"] in sim_device_ids or d["device_id"] in sims_by_paper.get(pid, [])
@@ -696,6 +735,17 @@ def build(data: Path, sims_dir: Path | None = None) -> dict[str, Any]:
             papers[r["paper_id"]]["affil"].append(
                 {"a": int(r["author_index"]), "n": r["author"], "s": site_idx[k], "k": r["kind"], "u": r["unit"]}
             )
+
+    # person ids parallel to `authors` (scripts/build_people.py; DevLog-020); empty string when not built
+    for p in papers.values():
+        p["author_ids"] = [""] * len(p["authors"])
+    if (data / "paper_authors.csv").exists():
+        _, pa_rows = read_csv(data / "paper_authors.csv")
+        for r in pa_rows:
+            pp = papers.get(r["paper_id"])
+            i = int(r["author_index"]) - 1
+            if pp is not None and 0 <= i < len(pp["authors"]):
+                pp["author_ids"][i] = r["person_id"]
 
     paper_list = [papers[k] for k in sorted(papers)]
     countries_all = sorted({c for p in paper_list for c in p["countries_derived"]})

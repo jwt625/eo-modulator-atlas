@@ -4,8 +4,8 @@
  "doi": "10.1038/s41565-025-02000-4",
  "source_type": "arxiv_preprint",
  "source_version": "2503.17986v1",
- "license": "",
- "license_verified": false,
+ "license": "CC-BY-NC-ND-4.0",
+ "license_verified": true,
  "redistribution": "restricted_local_only",
  "retrieved_on": "2026-10-03T06:09:49+00:00",
  "acquisition_origin": "public_primary_source",
@@ -15,5 +15,6 @@
  "pages": 13,
  "text_chars": 58566,
  "n_figure_files": 21,
- "extracted_on": "2026-10-02"
+ "extracted_on": "2026-10-02",
+ "license_source": "references/soma2025/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

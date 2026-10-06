@@ -127,11 +127,12 @@ entries:
     measurement range shown.
 - device_id: hu2023-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.8, Fig. 5(b)
   note: Authors do not state the reference; Fig. 5(b) response is normalized at the 1 GHz plot start.
+  previous_value: unspecified
 - device_id: hu2023-b
   field: bw3db_reference
   value: unspecified

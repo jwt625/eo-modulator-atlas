@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2412.15157",
+ "title": "Centimetre-Scale Micro-Transfer Printing to enable Heterogeneous Integration of Thin Film Lithium Niobate with Silicon Photonics",
+ "authors": "Margot Niels, Tom Vanackere, Tom Vandekerckhove, Stijn Poelman, Tom Reep, G\\\"unther Roelkens, Maximilien Billet, Bart Kuyken",
+ "doi": "",
+ "journal_ref": "Opt. Mater. Express 15, 531-540 (2025)",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 19 Dec 2024 18:32:46 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Thu, 20 Feb 2025 18:16:57 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:10:03Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2412.15157\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2412.15157</identifier>\n        <datestamp>2025-02-21</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2412.15157</id>\n        <submitter>Margot Niels</submitter>\n            <version version=\"v1\">\n                <date>Thu, 19 Dec 2024 18:32:46 GMT</date>\n                <size>1359kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Thu, 20 Feb 2025 18:16:57 GMT</date>\n                <size>971kb</size>\n            </version>\n        <title>Centimetre-Scale Micro-Transfer Printing to enable Heterogeneous Integration of Thin Film Lithium Niobate with Silicon Photonics</title>\n        <authors>Margot Niels, Tom Vanackere, Tom Vandekerckhove, Stijn Poelman, Tom Reep, G\\&#34;unther Roelkens, Maximilien Billet, Bart Kuyken</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <journal-ref>Opt. Mater. Express 15, 531-540 (2025)</journal-ref>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>The integrated photonics CMOS-compatible silicon nitride (SiN) platform is praised for its low propagation loss, but is limited by its lack of active functionalities such as a strong Pockels coefficient and intrinsic \\c{hi}(2) nonlinearity. In this paper, we demonstrate the integration of centimetre-long thin-film lithium niobate (TFLN) devices on a SiN platform using the micro-transfer printing (uTP) method. At a wavelength of 1550 nm, propagation losses of approximately 0.9 dB/cm and transition losses of 1.8 dB per facet were measured. Furthermore, the TFLN was integrated into an imbalanced push-pull Mach-Zehnder modulator, achieving a V{\\pi} of 3.2 V. The electro-optics nature of the observed modulation is confirmed by measuring the device up to 35 GHz, showing that the printing does not affect the high-speed LN properties.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

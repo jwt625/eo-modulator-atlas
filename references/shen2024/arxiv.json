@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2309.03284",
+ "title": "Photonic link from single flux quantum circuits to room temperature",
+ "authors": "Mohan Shen, Jiacheng Xie, Yuntao Xu, Sihao Wang, Risheng Cheng, Wei Fu, Yiyu Zhou, Hong X. Tang",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 06 Sep 2023 18:02:16 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Sun, 26 Nov 2023 01:08:36 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:13:53Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2309.03284\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2309.03284</identifier>\n        <datestamp>2023-11-28</datestamp>\n            <setSpec>physics:quant-ph</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2309.03284</id>\n        <submitter>Mohan Shen</submitter>\n            <version version=\"v1\">\n                <date>Wed, 06 Sep 2023 18:02:16 GMT</date>\n                <size>11271kb</size>\n                    <source_type>D</source_type>\n            </version>\n            <version version=\"v2\">\n                <date>Sun, 26 Nov 2023 01:08:36 GMT</date>\n                <size>12208kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Photonic link from single flux quantum circuits to room temperature</title>\n        <authors>Mohan Shen, Jiacheng Xie, Yuntao Xu, Sihao Wang, Risheng Cheng, Wei Fu, Yiyu Zhou, Hong X. Tang</authors>\n        <categories>quant-ph physics.app-ph physics.optics</categories>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Broadband, energy-efficient signal transfer between cryogenic and room-temperature environment has been a major bottleneck for superconducting quantum and classical logic circuits. Photonic links promise to overcome this challenge by offering simultaneous high bandwidth and low thermal load. However, the development of cryogenic electro-optic modulators -- a key component for photonic readout of electrical signals -- has been stifled by the stringent requirements of superconducting circuits. Rapid single flux quantum circuits (RSFQ), for example, operate with a tiny signal amplitude of only a few millivolts (mV), far below the volt-level signal used in conventional circuits. Here, we demonstrate the first direct optical readout of an RSFQ circuit without additional electrical amplification enabled by a novel superconducting electro-optic modulator (SEOM) featuring a record-low half-wave voltage V{\\pi} of 42 mV on a 1 m-long SEOM. Leveraging the low ohmic loss of superconductors, we break the fundamental V{\\pi}-bandwidth trade-off and demonstrate electro-optic bandwidth up to 17 GHz on a 0.2 m-long SEOM at cryogenic temperatures. Our work presents a viable solution toward high-bandwidth signal transfer between future large-scale superconducting circuits and room-temperature electronics.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

@@ -1,0 +1,797 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     16
+    ]
+   ],
+   "date-time": "2026-09-16T22:02:08Z",
+   "timestamp": 1789596128057,
+   "version": "build-2803163510"
+  },
+  "reference-count": 42,
+  "publisher": "Elsevier BV",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       5,
+       1
+      ]
+     ],
+     "date-time": "2025-05-01T00:00:00Z",
+     "timestamp": 1746057600000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       5,
+       1
+      ]
+     ],
+     "date-time": "2025-05-01T00:00:00Z",
+     "timestamp": 1746057600000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://www.elsevier.com/legal/tdmrep-license"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       5,
+       1
+      ]
+     ],
+     "date-time": "2025-05-01T00:00:00Z",
+     "timestamp": 1746057600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-017"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       5,
+       1
+      ]
+     ],
+     "date-time": "2025-05-01T00:00:00Z",
+     "timestamp": 1746057600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       5,
+       1
+      ]
+     ],
+     "date-time": "2025-05-01T00:00:00Z",
+     "timestamp": 1746057600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-012"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       5,
+       1
+      ]
+     ],
+     "date-time": "2025-05-01T00:00:00Z",
+     "timestamp": 1746057600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       5,
+       1
+      ]
+     ],
+     "date-time": "2025-05-01T00:00:00Z",
+     "timestamp": 1746057600000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-004"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62035001"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62035001"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "elsevier.com",
+    "sciencedirect.com"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Optics &amp; Laser Technology"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     5
+    ]
+   ]
+  },
+  "DOI": "10.1016/j.optlastec.2024.112396",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     1,
+     2
+    ]
+   ],
+   "date-time": "2025-01-02T06:28:19Z",
+   "timestamp": 1735799299000
+  },
+  "page": "112396",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "special_numbering": "C",
+  "title": [
+   "Breaking the baud rate ceiling of electro-optic modulators using optical equalization technique"
+  ],
+  "prefix": "10.1016",
+  "volume": "183",
+  "author": [
+   {
+    "given": "Hengsong",
+    "family": "Yue",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nuo",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Haozhe",
+    "family": "Sun",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-3190-7452",
+    "authenticated-orcid": false,
+    "given": "Tao",
+    "family": "Chu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "78",
+  "reference": [
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0005",
+    "doi-asserted-by": "crossref",
+    "unstructured": "R.G. Beausoleil, M. McLaren, and N. P. Jouppi, “Photonic Architectures for High-Performance Data Centers,” IEEE J. Sel. Top. Quant., vol. 19, no. 2, Mar. 2013, Art. no. 3700109.",
+    "DOI": "10.1109/JSTQE.2012.2236080"
+   },
+   {
+    "issue": "2",
+    "key": "10.1016/j.optlastec.2024.112396_b0010",
+    "doi-asserted-by": "crossref",
+    "first-page": "627",
+    "DOI": "10.1109/JLT.2018.2881728",
+    "article-title": "High-speed reconfigurable free-space optical interconnects with carrierless-amplitude-phase modulation and space-time block code",
+    "volume": "37",
+    "author": "Wang",
+    "year": "2019",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "5597",
+    "key": "10.1016/j.optlastec.2024.112396_b0015",
+    "doi-asserted-by": "crossref",
+    "first-page": "1401",
+    "DOI": "10.1126/science.1077446",
+    "article-title": "Broadband modulation of light by using an electro-optic polymer",
+    "volume": "298",
+    "author": "Lee",
+    "year": "2002",
+    "journal-title": "Science"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0020",
+    "doi-asserted-by": "crossref",
+    "first-page": "483",
+    "DOI": "10.1038/s41586-018-0031-4",
+    "article-title": "Low-loss plasmon-assisted electro-optic modulator",
+    "volume": "556",
+    "author": "Haffner",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0025",
+    "doi-asserted-by": "crossref",
+    "unstructured": "D. Renaud et al., “Sub-1 Volt and high-bandwidth visible to near-infrared electro-optic modulators,” Nat. Commun., vol. 14, no. 1, Mar. 2023, Art. no. 1496.",
+    "DOI": "10.1038/s41467-023-36870-w"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0030",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M. Xu et al., “High-performance coherent optical modulators based on thin-film lithium niobate platform,” Nat. Commun., vol. 11, no. 1, Aug. 2020, Art. no. 3911.",
+    "DOI": "10.1038/s41467-020-17806-0"
+   },
+   {
+    "issue": "2",
+    "key": "10.1016/j.optlastec.2024.112396_b0035",
+    "doi-asserted-by": "crossref",
+    "first-page": "249",
+    "DOI": "10.1109/JLT.2019.2924671",
+    "article-title": "80-GHz bandwidth and 1.5-V Vπ InP-based IQ modulator",
+    "volume": "38",
+    "author": "Ogiso",
+    "year": "2020",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "5",
+    "key": "10.1016/j.optlastec.2024.112396_b0040",
+    "doi-asserted-by": "crossref",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "article-title": "High-performance hybrid silicon and lithium niobate Mach-Zehnder modulators for 100 Gbits-1 and beyond",
+    "volume": "13",
+    "author": "He",
+    "year": "2019",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "issue": "10",
+    "key": "10.1016/j.optlastec.2024.112396_b0045",
+    "doi-asserted-by": "crossref",
+    "first-page": "2380",
+    "DOI": "10.1364/PRJ.468518",
+    "article-title": "Systematic investigation of millimeter-wave optic modulation performance in thin-film lithium niobate",
+    "volume": "10",
+    "author": "Zhang",
+    "year": "2022",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0050",
+    "doi-asserted-by": "crossref",
+    "first-page": "64",
+    "DOI": "10.1038/nature10067",
+    "article-title": "A graphene-based broadband optical modulator",
+    "volume": "474",
+    "author": "Liu",
+    "year": "2011",
+    "journal-title": "Nature"
+   },
+   {
+    "issue": "1",
+    "key": "10.1016/j.optlastec.2024.112396_b0055",
+    "doi-asserted-by": "crossref",
+    "first-page": "40",
+    "DOI": "10.1038/s41566-017-0071-6",
+    "article-title": "Graphene-silicon phase modulators with gigahertz bandwidth",
+    "volume": "12",
+    "author": "Sorianello",
+    "year": "2018",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "issue": "12",
+    "key": "10.1016/j.optlastec.2024.112396_b0060",
+    "doi-asserted-by": "crossref",
+    "first-page": "2240",
+    "DOI": "10.1109/JLT.2014.2323954",
+    "article-title": "High-speed silicon modulator with slow-wave electrodes and fully independent differential drive",
+    "volume": "32",
+    "author": "Ding",
+    "year": "2014",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "4–5",
+    "key": "10.1016/j.optlastec.2024.112396_b0065",
+    "doi-asserted-by": "crossref",
+    "first-page": "229",
+    "DOI": "10.1515/nanoph-2013-0016",
+    "article-title": "Recent breakthroughs in carrier depletion based silicon optical modulators",
+    "volume": "3",
+    "author": "Reed",
+    "year": "2014",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "issue": "11",
+    "key": "10.1016/j.optlastec.2024.112396_b0070",
+    "doi-asserted-by": "crossref",
+    "first-page": "14263",
+    "DOI": "10.1364/OE.23.014263",
+    "article-title": "Design, analysis, and transmission system performance of a 41 GHz silicon photonic modulator",
+    "volume": "23",
+    "author": "Patel",
+    "year": "2015",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "issue": "2",
+    "key": "10.1016/j.optlastec.2024.112396_b0075",
+    "doi-asserted-by": "crossref",
+    "first-page": "124",
+    "DOI": "10.1364/PRJ.5.000124",
+    "article-title": "Electrical nonlinearity in silicon modulators based on reversed PN junctions",
+    "volume": "5",
+    "author": "Yu",
+    "year": "2017",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "issue": "2",
+    "key": "10.1016/j.optlastec.2024.112396_b0080",
+    "doi-asserted-by": "crossref",
+    "first-page": "109",
+    "DOI": "10.1364/PRJ.6.000109",
+    "article-title": "Silicon intensity Mach-Zehnder modulator for single lane 100 Gb/s applications",
+    "volume": "6",
+    "author": "Li",
+    "year": "2018",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "issue": "11",
+    "key": "10.1016/j.optlastec.2024.112396_b0085",
+    "first-page": "2872",
+    "article-title": "Differential Drive I/Q Modulator Based on Silicon Photonic Electro-Absorption Modulators",
+    "volume": "38",
+    "author": "Melikyan",
+    "year": "2020",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "18",
+    "key": "10.1016/j.optlastec.2024.112396_b0090",
+    "doi-asserted-by": "crossref",
+    "first-page": "32990",
+    "DOI": "10.1364/OE.468150",
+    "article-title": "Design, analysis, and characterization of a compact silicon photonic modulator with meandered phase shifters",
+    "volume": "30",
+    "author": "Mao",
+    "year": "2022",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0095",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M. Sakib et al., “A high-speed micro-ring modulator for next generation energy-efficient optical networks beyond 100 Gbaud,” in Proc. Conf. Lasers Electro-Opt., 2021, pp. 1-2.",
+    "DOI": "10.1364/CLEO_SI.2021.SF1C.3"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0100",
+    "doi-asserted-by": "crossref",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "article-title": "Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages",
+    "volume": "562",
+    "author": "Wang",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0105",
+    "doi-asserted-by": "crossref",
+    "unstructured": "G.-W. Lu et al., “High-temperature-resistant silicon-polymer hybrid modulator operating at up to 200 Gbits−1 for energy-efficient datacentres and harsh-environment applications,” Nat. Commun., vol. 11, no. 1, Aug. 2020, Art. no. 4224.",
+    "DOI": "10.1038/s41467-020-18005-7"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0110",
+    "doi-asserted-by": "crossref",
+    "unstructured": "L. Alloatti et al., “100 GHz silicon–organic hybrid modulator,” Light Sci. Appl., vol. 3, no. 5, May 2014, Art. no. e173.",
+    "DOI": "10.1038/lsa.2014.54"
+   },
+   {
+    "issue": "5",
+    "key": "10.1016/j.optlastec.2024.112396_b0115",
+    "doi-asserted-by": "crossref",
+    "first-page": "7253",
+    "DOI": "10.1364/OE.449022",
+    "article-title": "Advances in integrated ultra-wideband electro-optic modulators",
+    "volume": "30",
+    "author": "Xu",
+    "year": "2022",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "issue": "11",
+    "key": "10.1016/j.optlastec.2024.112396_b0120",
+    "doi-asserted-by": "crossref",
+    "first-page": "1776",
+    "DOI": "10.1364/PRJ.396815",
+    "article-title": "800 Gbit/s transmission over 1 km single-mode fiber using a four-channel silicon photonic transmitter",
+    "volume": "8",
+    "author": "Zhang",
+    "year": "2020",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "issue": "12",
+    "key": "10.1016/j.optlastec.2024.112396_b0125",
+    "doi-asserted-by": "crossref",
+    "first-page": "3872",
+    "DOI": "10.1109/JLT.2022.3152487",
+    "article-title": "A 50-GHz bandwidth traveling wave Mach-Zehnder modulator with built-in feedback equalization",
+    "volume": "40",
+    "author": "Gao",
+    "year": "2022",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0130",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M. Xu, S. Gao, H. Tan, and X. Cai, “CMOS-level-voltage substrate-removed thin-film lithium niobate modulator,” in Proc. Opt. Fiber Commun. Conf. Exhib., 2022, pp. 1-3.",
+    "DOI": "10.1364/OFC.2022.Th1J.3"
+   },
+   {
+    "issue": "3",
+    "key": "10.1016/j.optlastec.2024.112396_b0135",
+    "doi-asserted-by": "crossref",
+    "first-page": "357",
+    "DOI": "10.1364/OPTICA.416155",
+    "article-title": "Breaking voltage–bandwidth limits in integrated lithium niobate modulators using micro-structured electrodes",
+    "volume": "8",
+    "author": "Kharel",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0140",
+    "doi-asserted-by": "crossref",
+    "unstructured": "G. Chen et al., “High performance thin-film lithium niobate modulator on a silicon substrate using periodic capacitively loaded traveling-wave electrode,” APL Photonics, vol. 7, no. 2, Feb. 2022, Art. no. 026103.",
+    "DOI": "10.1063/5.0077232"
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0145",
+    "doi-asserted-by": "crossref",
+    "unstructured": "C. Han, M. Jin, Y. Tao, B. Shen, H. Shu, and X. Wang, “Ultra-compact silicon modulator with 110 GHz bandwidth,” in Proc. Opt. Fiber Commun. Conf. Exhib., 2022, pp. 1-3.",
+    "DOI": "10.1364/OFC.2022.Th4C.5"
+   },
+   {
+    "issue": "22",
+    "key": "10.1016/j.optlastec.2024.112396_b0150",
+    "doi-asserted-by": "crossref",
+    "first-page": "5129",
+    "DOI": "10.1109/JLT.2016.2606558",
+    "article-title": "Flexible transmitter employing silicon-segmented Mach-Zehnder modulator with 32-nm CMOS distributed driver",
+    "volume": "34",
+    "author": "Huynh",
+    "year": "2016",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "1",
+    "key": "10.1016/j.optlastec.2024.112396_b0155",
+    "doi-asserted-by": "crossref",
+    "first-page": "89",
+    "DOI": "10.1109/JLT.2018.2878651",
+    "article-title": "SiGe-driven hybrid-integrated silicon photonic link using optical-domain equalization",
+    "volume": "37",
+    "author": "Lee",
+    "year": "2019",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "6",
+    "key": "10.1016/j.optlastec.2024.112396_b0160",
+    "doi-asserted-by": "crossref",
+    "first-page": "1191",
+    "DOI": "10.1109/JLT.2015.2396039",
+    "article-title": "Silicon in-phase/quadrature modulator with on-chip optical equalizer",
+    "volume": "33",
+    "author": "Dong",
+    "year": "2015",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "6",
+    "key": "10.1016/j.optlastec.2024.112396_b0165",
+    "doi-asserted-by": "crossref",
+    "first-page": "1777",
+    "DOI": "10.1109/JLT.2020.3043131",
+    "article-title": "Electro-optic frequency response shaping using embedded FIR filters in slow-wave modulators",
+    "volume": "39",
+    "author": "Breyne",
+    "year": "2021",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "6",
+    "key": "10.1016/j.optlastec.2024.112396_b0170",
+    "doi-asserted-by": "crossref",
+    "first-page": "1",
+    "DOI": "10.1109/JSTQE.2022.3172630",
+    "article-title": "Multiple Tb/s coherent optical transceivers for short reach interconnect",
+    "volume": "28",
+    "author": "Zhou",
+    "year": "2022",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "issue": "2",
+    "key": "10.1016/j.optlastec.2024.112396_b0175",
+    "doi-asserted-by": "crossref",
+    "first-page": "272",
+    "DOI": "10.1109/JLT.2019.2933384",
+    "article-title": "High baud rate all-silicon photonics carrier depletion modulators",
+    "volume": "38",
+    "author": "Zhou",
+    "year": "2020",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "issue": "11",
+    "key": "10.1016/j.optlastec.2024.112396_b0180",
+    "doi-asserted-by": "crossref",
+    "first-page": "1602",
+    "DOI": "10.1109/JLT.2012.2188779",
+    "article-title": "An equivalent circuit model of the traveling wave electrode for carrier-depletion-based silicon optical modulators",
+    "volume": "30",
+    "author": "Yu",
+    "year": "2012",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "key": "10.1016/j.optlastec.2024.112396_b0185",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Y. Yamaguchi et al., “60-GHz-bandwidth silicon optical modulator utilizing electro-optic frequency-domain equalizer,” in Proc. Eur. Conf. Opt. Commun., 2024, pp. 1-3.",
+    "DOI": "10.1364/OFC.2024.M3K.4"
+   },
+   {
+    "issue": "6",
+    "key": "10.1016/j.optlastec.2024.112396_b0190",
+    "doi-asserted-by": "crossref",
+    "first-page": "45",
+    "DOI": "10.1109/LSSC.2019.2930197",
+    "article-title": "A millimeter-wave miniature branch-line coupler in 22-nm CMOS technology",
+    "volume": "2",
+    "author": "Acri",
+    "year": "2019",
+    "journal-title": "IEEE Solid-State Circuits Lett."
+   },
+   {
+    "issue": "7",
+    "key": "10.1016/j.optlastec.2024.112396_b0195",
+    "doi-asserted-by": "crossref",
+    "first-page": "1070",
+    "DOI": "10.1109/TCPMT.2012.2186450",
+    "article-title": "Compact 60-GHz IPD-based branch-line coupler for system-on-package V-band radios",
+    "volume": "2",
+    "author": "Haroun",
+    "year": "2012",
+    "journal-title": "IEEE Trans. Compon. Packag. Manuf. Technol."
+   },
+   {
+    "issue": "2",
+    "key": "10.1016/j.optlastec.2024.112396_b0200",
+    "doi-asserted-by": "crossref",
+    "first-page": "329",
+    "DOI": "10.1364/PRJ.473778",
+    "article-title": "High sideband suppression silicon single sideband modulator integrated with a radio frequency branch line coupler",
+    "volume": "11",
+    "author": "Xia",
+    "year": "2023",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "issue": "12",
+    "key": "10.1016/j.optlastec.2024.112396_b0205",
+    "doi-asserted-by": "crossref",
+    "first-page": "1937",
+    "DOI": "10.1109/50.257953",
+    "article-title": "Simple measurement of fiber dispersion and of chirp parameter of intensity modulated light emitter",
+    "volume": "11",
+    "author": "Devaux",
+    "year": "1993",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "issue": "17",
+    "key": "10.1016/j.optlastec.2024.112396_b0210",
+    "doi-asserted-by": "crossref",
+    "first-page": "20252",
+    "DOI": "10.1364/OE.22.020252",
+    "article-title": "Binary phase-shift keying by coupling modulation of microrings",
+    "volume": "22",
+    "author": "Sacher",
+    "year": "2014",
+    "journal-title": "Opt. Express"
+   }
+  ],
+  "container-title": [
+   "Optics &amp; Laser Technology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://api.elsevier.com/content/article/PII:S0030399224018541?httpAccept=text/xml",
+    "content-type": "text/xml",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://api.elsevier.com/content/article/PII:S0030399224018541?httpAccept=text/plain",
+    "content-type": "text/plain",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     16
+    ]
+   ],
+   "date-time": "2026-09-16T21:06:18Z",
+   "timestamp": 1789592778000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0030399224018541"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     5
+    ]
+   ]
+  },
+  "references-count": 42,
+  "alternative-id": [
+   "S0030399224018541"
+  ],
+  "URL": "https://doi.org/10.1016/j.optlastec.2024.112396",
+  "relation": {},
+  "ISSN": [
+   "0030-3992"
+  ],
+  "issn-type": [
+   {
+    "value": "0030-3992",
+    "type": "print"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     5
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "Elsevier",
+    "name": "publisher",
+    "label": "This article is maintained by"
+   },
+   {
+    "value": "Breaking the baud rate ceiling of electro-optic modulators using optical equalization technique",
+    "name": "articletitle",
+    "label": "Article Title"
+   },
+   {
+    "value": "Optics & Laser Technology",
+    "name": "journaltitle",
+    "label": "Journal Title"
+   },
+   {
+    "value": "https://doi.org/10.1016/j.optlastec.2024.112396",
+    "name": "articlelink",
+    "label": "CrossRef DOI link to publisher maintained version"
+   },
+   {
+    "value": "article",
+    "name": "content_type",
+    "label": "Content Type"
+   },
+   {
+    "value": "© 2024 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+    "name": "copyright",
+    "label": "Copyright"
+   }
+  ],
+  "article-number": "112396"
+ }
+}

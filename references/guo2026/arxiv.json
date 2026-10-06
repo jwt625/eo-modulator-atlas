@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2603.14346",
+ "title": "Robust and Active Visible-Light Integrated Photonics on Thin-Film Lithium Tantalate for Underwater Optical Wireless Communications",
+ "authors": "Changjian Guo, Xingjie Li, Xiaofeng Wu, Jiajie Deng, Wenchang Yang, Weilong Ma, Ziliang Ruan, Kaixuan Chen, Sailing He, and Liu Liu",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sun, 15 Mar 2026 12:30:12 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Wed, 13 May 2026 14:17:44 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:00:08Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2603.14346\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2603.14346</identifier>\n        <datestamp>2026-05-14</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2603.14346</id>\n        <submitter>Kaixuan Chen</submitter>\n            <version version=\"v1\">\n                <date>Sun, 15 Mar 2026 12:30:12 GMT</date>\n                <size>2006kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Wed, 13 May 2026 14:17:44 GMT</date>\n                <size>1495kb</size>\n            </version>\n        <title>Robust and Active Visible-Light Integrated Photonics on Thin-Film Lithium Tantalate for Underwater Optical Wireless Communications</title>\n        <authors>Changjian Guo, Xingjie Li, Xiaofeng Wu, Jiajie Deng, Wenchang Yang, Weilong Ma, Ziliang Ruan, Kaixuan Chen, Sailing He, and Liu Liu</authors>\n        <categories>physics.optics</categories>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Visible-light integrated photonics enables compact platforms for sensing, precision metrology, and free-space data links at visible wavelengths. However, many applications remain limited by the lack of high-speed and robust modulators in the blue-green band. Here we report, both operating at 532 nm, thin-film lithium tantalate waveguides of propagation losses of dB/cm scale and modulators with a flat frequency response to ~50 GHz. The modulator remains stable when delivering 5 dBm modulated optical power for an hour, which cannot be achieved by thin-film lithium niobate based counterparts under similar conditions and structures. System-level underwater optical wireless communication (UWOC) is validated with 112-Gb/s transmission over 3-m and 64-Gb/s transmission over 9-m underwater links. This represents the first integrated external modulator based UWOC system, overcoming the bandwidth-power-chirp trade-offs of traditional directly modulated laser-based systems. We further demonstrate dual-drive modulators for optical single-sideband and electro-optic frequency-comb generations in the green-wavelength band. These results provide a foundation for complex, robust, and active visible-light photonic integrated circuits for underwater optical applications.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

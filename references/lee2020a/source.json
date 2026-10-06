@@ -4,8 +4,8 @@
  "doi": "",
  "source_type": "arxiv_preprint",
  "source_version": "2011.08832v1",
- "license": "",
- "license_verified": false,
+ "license": "arXiv-nonexclusive-1.0",
+ "license_verified": true,
  "redistribution": "restricted_local_only",
  "retrieved_on": "2026-10-03T06:10:46+00:00",
  "acquisition_origin": "public_primary_source",
@@ -15,5 +15,6 @@
  "pages": 21,
  "text_chars": 40653,
  "n_figure_files": 26,
- "extracted_on": "2026-10-02"
+ "extracted_on": "2026-10-02",
+ "license_source": "references/lee2020a/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "1701.06470",
+ "title": "Nanophotonic Lithium Niobate Electro-optic Modulators",
+ "authors": "Cheng Wang, Mian Zhang, Brian Stern, Michal Lipson, Marko Loncar",
+ "doi": "10.1364/OE.26.001547",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Mon, 23 Jan 2017 16:04:32 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:18:45Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:1701.06470\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:1701.06470</identifier>\n        <datestamp>2018-02-14</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:cond-mat:mes-hall</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>1701.06470</id>\n        <submitter>Mian Zhang</submitter>\n            <version version=\"v1\">\n                <date>Mon, 23 Jan 2017 16:04:32 GMT</date>\n                <size>4029kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Nanophotonic Lithium Niobate Electro-optic Modulators</title>\n        <authors>Cheng Wang, Mian Zhang, Brian Stern, Michal Lipson, Marko Loncar</authors>\n        <categories>physics.optics cond-mat.mes-hall</categories>\n            <comments>6 pages, 4 figures</comments>\n            <doi>10.1364/OE.26.001547</doi>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Modern communication networks require high performance and scalable electro-optic modulators that convert electrical signals to optical signals at high speed. Existing lithium niobate modulators have excellent performance but are bulky and prohibitively expensive to scale up. Here we demonstrate scalable and high-performance nanophotonic electro-optic modulators made of single-crystalline lithium niobate microring resonators and micro-Mach-Zehnder interferometers. We show a half-wave electro-optic modulation efficiency of 1.8V$\\cdot$cm and data rates up to 40 Gbps.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

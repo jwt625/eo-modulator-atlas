@@ -1,0 +1,578 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 160,
+  "items": [
+   {
+    "DOI": "10.1109/icocn.2019.8934731",
+    "title": [
+     "Two-mode multiplexer based on the multilayer Si-SiN platform for 2μm waveband"
+    ],
+    "author": [
+     {
+      "given": "Wanjun",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jia Xu",
+      "family": "Brian Sia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zhongliang",
+      "family": "Qiao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiang",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xin",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jin",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Chongyang",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Callum G.",
+      "family": "Littlejohns",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Graham T.",
+      "family": "Reed",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hong",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2019,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/ccca.2011.6031536",
+    "title": [
+     "A new structural approach for ARRs generation from linear &amp;amp; linearized bond graphs"
+    ],
+    "author": [
+     {
+      "given": "K.",
+      "family": "Sia",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "A.",
+      "family": "Namaane",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "N. K.",
+      "family": "M'Sirdi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2011,
+       3
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/group4.2019.8925811",
+    "title": [
+     "Silicon Nitride Waveguiding for Prospective Technologies at the 2 μm Waveband"
+    ],
+    "author": [
+     {
+      "given": "Jia Xu Brian",
+      "family": "Sia",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wanjun",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zhongliang",
+      "family": "Qiao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiang",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xin",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jin",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Callum G.",
+      "family": "Littlejohns",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Optoelectronics Research Centre, University of Southampton, Southampton, SO17, 1BJ, UK; School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zecen",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Chongyang",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Nanyang Nanofabrication Centre, School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Graham T.",
+      "family": "Reed",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Optoelectronics Research Centre, University of Southampton, Southampton, SO17, 1BJ, UK; School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hong",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore; Nanyang Nanofabrication Centre, School of Electrical and Electronic Engineering, Nanyang Technological University, 639798 Singapore"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2019,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/group4.2019.8853884",
+    "title": [
+     "Silicon Nitride Waveguiding for Prospective Technologies at the 2 μm Waveband"
+    ],
+    "author": [
+     {
+      "given": "Jia Xu Brian",
+      "family": "Sia",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Graham T.",
+      "family": "Reed",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hong",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wanjun",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zhongliang",
+      "family": "Qiao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiang",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xin",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jin",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Callum G.",
+      "family": "Littlejohns",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zecen",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Chongyang",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2019,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.64193/ealmemt-br.2025-e042025",
+    "title": [
+     "A Etnomatemática na pele de um bissau-guineense"
+    ],
+    "author": [
+     {
+      "given": "Isna Gabriel",
+      "family": "Sia",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       12,
+       1
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

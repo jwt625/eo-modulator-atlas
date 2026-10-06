@@ -113,9 +113,30 @@ entries:
   basis: derived
   locator: p.2, Sec. 2
   note: Convention of the low-frequency Vpi not stated
+- device_id: zhang2026a-a
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.1 Sec. 2
+  note: 'source: The half-wave voltage of this device was measured using a 1 MHz sinusoidal driving signal and is 6.7 ...'
+- device_id: zhang2026a-b
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.2 Fig. 2(b)
+  note: 'source: (b) Vπ vs frequency in the low frequency ranges from 50mHz to 1MHz.'
+- device_id: zhang2026a-a
+  field: r_eff_pm_per_v
+  value: 27.0
+  unit: pm/V
+  basis: author_estimate
+  locator: p.1-2, Sec. 2, Fig. 2(a)
+  note: r33 of FenGlass from phase-extraction VpiL 3.4 V*mm; device not stated, assigned to 0.5 mm row (6.7 V x 0.5 mm). Low confidence.
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1-3 page footer (repeated on every page)
-    note: printed page-footer copyright notice; basis for license publisher-copyright
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3 page footer (repeated on every page)
+  note: printed page-footer copyright notice; basis for license publisher-copyright

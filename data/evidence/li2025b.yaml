@@ -288,6 +288,20 @@ entries:
   basis: derived
   locator: p.5 Sec. III
   note: extracted value (86 V device (i), 93 V device (ii)); method not stated, direct read-out excluded by the 0-32 V sweep (Fig. 4)
+- device_id: li2025b-a
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. III
+  note: 'source: a modulation (AC) signal of frequency 1 MHz, and peak amplitude 1 V for PeM-MZM ... is applied'
+- device_id: li2025b-b
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. III
+  note: 'source: a modulation (AC) signal of frequency 1 MHz ... (0.25 V-2 V for the racetrack EOM) is applied'
 derived:
 - device_id: li2025b-a
   field: slab_thickness_nm

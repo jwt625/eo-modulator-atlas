@@ -1,0 +1,233 @@
+device_id,field,proposed,verdict,correct_value,evidence,note
+aimone2026-a,bw_method,eo_s21,confirm,,"p.1: 3-dB EO bandwidth ... exceeds 67 GHz, limit of the measurement equipment; p.2 Fig. 1(b) 'S21, measured'",Stand-alone setup not described; VNA+110 GHz PD described for the assembly only; eo_s21 is the natural reading
+aimone2026-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 1(b): y-axis 'normalized S-parameter, dB', trace ~-0.5 dB at lowest point, 0 dB peak near 4 GHz",Normalized to the low-frequency maximum; no frequency stated
+aimone2026-a,integration,monolithic,confirm,,"p.1: fabricated in a commercial foundry multi-project wafer run with 350 nm of Lithium Niobate on a Silicon substrate",Consistent with 117 TFLN monolithic rows
+aimone2026-a,max_line_rate_gbps,move_to_context,confirm,,"p.3: net data rate of 347 Gb/s; no gross 420 Gb/s stated",420 = 140 GBd x 3 is DB arithmetic
+bao2026b-a,bw_method,eo_s21,confirm,,"p.2: Measured EO responses of the MDM at a bias voltage of -2 V; Fig. 2(d) EO Response (dB) 0-100 GHz",Small-signal trace with S11 Smith chart; instrument not named
+bao2026b-a,drive,not_applicable,confirm,,"p.3: driven by a 2 Vpp single-ended signal from a Keysight M8199B AWG",Microdisk; no differential drive
+bao2026b-a,integration,monolithic,confirm,,"p.1-2: no foundry or fab named","Silicon device, foundry not named; foundry_native vs monolithic is a coordinator rule (17 Si rows still empty)"
+bao2026b-a,tuning_nm_per_v,-0.025,confirm,,"Fig. 2(b): dip moves to longer wavelength from 0 V to -4 V legend; '25 pm/V' arrow pointing right","Red shift with increasing reverse bias -> d(lambda)/dV < 0 in DB convention"
+cai2025-a,bw_method,eo_s21,confirm,,"p.4: probing the modulator's response with a vector network analyzer (VNA) provided the modulator's bandwidth",
+didier2026-a,bw_method,eo_s21,confirm,,"p.4: using a Vector Network Analyzer (VNA) in combination with an InAs/InAsSb type-II superlattice (T2SL) photodetector",
+didier2026-b,bw_method,eo_s21,confirm,,same as didier2026-a,
+didier2026-c,bw_method,eo_s21,confirm,,same as didier2026-a,
+didier2026-d,bw_method,eo_s21,confirm,,same as didier2026-a,
+didier2026-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 4(a),(b) (PDF p.6): y-axis 'S21 (dB, Normalized)', traces start ~+2-3 dB, red dashed line at -3 dB","Caveat: -3 dB line is drawn vs the 0 dB normalization, not vs the +2 dB plateau; 'normalized' wording fits low_freq_unstated per W7 definition"
+didier2026-b,bw3db_reference,low_freq_unstated,confirm,,same as didier2026-a,same caveat
+didier2026-c,bw3db_reference,low_freq_unstated,confirm,,same as didier2026-a,same caveat
+didier2026-d,bw3db_reference,low_freq_unstated,confirm,,same as didier2026-a,same caveat
+didier2026-a,il_onchip_scope,device_total,confirm,,"p.4: remove the coupling contributions and evaluate the intrinsic device loss, including both waveguide and plasmonic electrode losses, to be at most 4 dB",
+didier2026-e,il_onchip_scope,device_total,confirm,,"p.4: ... at most 4 dB at 4 um and 5 dB at 4.3 um",
+dong2026-a,bw_method,eo_s21,confirm,,"p.1: The measured EO response demonstrates a >70 GHz 3-dB bandwidth in Fig. 1",Fig. 1 'Measured s-parameter'
+dong2026-a,integration,monolithic,confirm,,"p.1: fabricated in 220-nm silicon on a 3-um BOX substrate","No fab named; same monolithic-vs-foundry_native caveat as bao2026b-a"
+dong2026-a,electrode_type,tw_gssg,confirm,,"p.1: Traveling-wave electrodes ... dual-drive differential configuration with a target differential impedance of 75 ohm","Two signal conductors follow from dual-drive differential; loading not stated (inference)"
+dong2026-a,extinction_ratio_db,3.71,confirm,,"p.2: the ER decreased to 4.22 dB and 3.71 dB, respectively",No static ER in the paper
+dong2026-a,er_type,dynamic,confirm,,p.2 modulation extinction ratio from PAM4 eyes,
+dong2026-a,statistic,single,confirm,,"p.1: Since the driver is single-channel, only one MZM is characterized in this work",
+gao2024-a,drive,not_applicable,confirm,,"p.2: a pair of coplanar waveguides traveling wave electrodes ... dual-arm TFLN phase modulator","One optical path folded through both electrode gaps via delay line; phase modulator, no MZ arms"
+gao2024-a,sidewall_angle_deg,6.3,confirm,,"p.2: top width of 1 um, a bottom width of 4.8 um, and an etching depth of 210 nm","atan(0.21/1.9)=6.31 deg verified; Fig. 2(c) shows sloped shallow ridge. No angle stated: DB-computed derived value (policy (h) call)"
+giambra2021-a,bw_method,eo_s21,confirm,,"p.11: output 50 ohm impedance of the vector network analyzer (VNA) used to perform the measurements",EO BW defined as conversion-efficiency bandwidth; PD for BW not named
+giambra2021-b,bw_method,eo_s21,confirm,,same as giambra2021-a,
+giambra2021-c,bw_method,eo_s21,confirm,,same as giambra2021-a,
+giambra2021-d,bw_method,eo_s21,confirm,,same as giambra2021-a,
+giambra2021-a,bw3db_reference,unspecified,confirm,,"p.10-11: Fig. 7(b) 3 dB EO BW as a function of devices length",No S21 trace or reference stated
+giambra2021-b,bw3db_reference,unspecified,confirm,,same as giambra2021-a,
+giambra2021-c,bw3db_reference,unspecified,confirm,,same as giambra2021-a,
+giambra2021-d,bw3db_reference,unspecified,confirm,,same as giambra2021-a,
+gupta2023-a,bw_method,eo_s21,confirm,,"p.6: The small signal electro-optic (EO) 3 dB bandwidth is measured using the VNA connected to a light component analyzer (LCA) module",
+gupta2023-b,bw_method,eo_s21,confirm,,same as gupta2023-a,
+gupta2023-c,bw_method,eo_s21,confirm,,same as gupta2023-a,
+gupta2023-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 14: |S21| (dB), all traces at 0 dB at the first plotted point (~2 GHz)",
+gupta2023-b,bw3db_reference,low_freq_unstated,confirm,,same as gupta2023-a,
+gupta2023-c,bw3db_reference,low_freq_unstated,confirm,,same as gupta2023-a,
+gupta2023-a,physical_device_id,gupta2023-5mm,confirm,,"p.5: ER map for the MZM with a 5 mm long TWE ... For demonstrating the DC performance over the C-band, the extinction ratio maps ... at 1530 nm (Fig. 12c) and 1570 nm (Fig. 12d)","Same device by context (continuation of the 5 mm MZM paragraph), not stated verbatim"
+gupta2023-d,physical_device_id,gupta2023-5mm,confirm,,same as gupta2023-a,same caveat
+gupta2023-e,physical_device_id,gupta2023-5mm,confirm,,same as gupta2023-a,same caveat
+hess2026-a,bw_method,eo_s21,confirm,,"p.2: The electro-optic bandwidth of the device exceeds 100 GHz, see Fig. 1(e); caption: normalized electro/optic response of the measured plasmonic RRM",Instrument not named; small-signal EO response
+hess2026-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 1(e): normalized E/O response starts at 0 dB at the lowest frequency, rises to ~+2 dB",
+hess2026-a,il_onchip_scope,device_total,confirm,,"p.2: The on-chip device insertion loss (IL) at the operating wavelength is 2.6 dB; GC ~2.8 dB each",Abstract 2.2 dB is the off-resonance minimum (7.8 - 2x2.8)
+hess2026-a,integration,polymer_backfill,confirm,,"p.3: Lightwave Logic for supplying the electro-optic Perkinamine chromophore series 3 material",Organic EO in plasmonic slot of a Polariton PIC
+hu2026-a,bw_method,eo_s21,confirm,,"p.12: measuring the EO S21 using a lightwave component analyser (LCA) through a GS probe",
+hu2026-b,bw_method,eo_s21,confirm,,same as hu2026-a,
+hu2026-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 3(d) (PDF p.31): 'Normalized EO response (dB)', traces at ~0 dB at the left edge (a few GHz), dotted -3 dB line","Proposer's 'about 10 GHz' start is imprecise; traces start near the axis origin"
+hu2026-b,bw3db_reference,low_freq_unstated,confirm,,same as hu2026-a,
+hu2026-a,il_onchip_scope,excess_over_reference,confirm,,"p.11: Comparison of the two curves yields an average off-resonance insertion loss of 1 dB for the MRM",Reference = grating-coupler pair
+hu2026-a,physical_device_id,hu2026-mrm8um,confirm,,"Fig. 3(d) caption: Measured EO responses with IL from 4 to 6 dB, at bias voltage of 0 and -3V; p.44: The die #5 is shown in Fig. 3d","Better evidence than the proposer's p.18 quote; both rows from the same die-5 MRM"
+hu2026-b,physical_device_id,hu2026-mrm8um,confirm,,same as hu2026-a,
+hu2026-a,tuning_nm_per_v,-0.0245,confirm,,"p.11: From +1V to -4V, the resonance wavelength shifts to the red side ... 24.5 pm/V as the bias voltage varies from 0 to -4 V",Fig. 3(b) arrow 0 V -> -4 V to longer wavelength
+johnson2025-200g-b,bw_method,eo_s21,confirm,,"p.2: 2-port Keysight N4372 110 GHz Lightwave component analyser to obtain S-parameters and 3 dB bandwidth",
+johnson2025-200g-c,bw_method,eo_s21,confirm,,same as johnson2025-200g-b,
+johnson2025-400g-a,bw_method,eo_s21,confirm,,same as johnson2025-200g-b,
+johnson2025-400g-b,bw_method,eo_s21,confirm,,same as johnson2025-200g-b,
+johnson2025-200g-design,bw_method,unspecified,confirm,,"p.2: Modulators on the 200G/lambda PIC were designed for a 3 dB bandwidth of 80.3 GHz",Method of the design value not stated
+johnson2025-200g-design,bw3db_reference,unspecified,confirm,,same quote,
+johnson2025-200g-best,statistic,best,confirm,,"p.2: The best Vpi,diff obtained on a single channel was 1.57V",
+johnson2025-200g-best,r_eff_pm_per_v,343,confirm,,"p.2: with n = 1.9, mode confinement factor Gamma = 0.14, and measurement wavelength 1290 nm gives an in-device r33 of 343 pm/V","Extracted from own best-channel Vpi via Eq. (1); n and Gamma are model inputs (standard extraction)"
+karakida2026-a,bw_method,eo_s21,confirm,,"p.3: received by a high-speed PD, and characterized by a vector network analyzer (VNA)",3 dB point from a fit (basis derived)
+karakida2026-a,integration,monolithic,confirm,,"p.2: the 30-nm-thick Au layer was sputtered and patterned on the SiO2 substrate ... After spin-coating the OEO material, the 130-nm-thick Au layer was sputtered","OEO is a mid-stack layer, not applied to a finished chip, so not polymer_backfill under (ee); coordinator may still prefer polymer_backfill for organic EO"
+karakida2026-a,tuning_nm_per_v,0.3,confirm,,"Fig. 2(c): dip order -10 V (shortest) ... 10 V (longest); p.3: shifts clearly by 6.0 nm at 10 V, corresponding to a modulation efficiency of 0.30 nm/V",Red shift for positive voltage; 6 nm spans -10 to +10 V
+karakida2026-a,r_eff_pm_per_v,43,confirm,,"p.3: From this result, EO coefficient r13 of the OEO layer is derived to be 43 pm/V",r13 component; r33 ~130 pm/V is an assumption (r33 ~ 3 r13)
+kohli2025-iq,bw_method,sideband,confirm,,"p.9: The modulation sidebands were tracked with an optical spectrum analyzer",
+kohli2025-mzm,bw_method,sideband,confirm,,same as kohli2025-iq,
+kohli2025-iq,integration,monolithic,confirm,,"p.8: prepared for the wafer-scaled integration of the BTO active material; p.10: The growth and integration of the BTO was completed by Lumiphase","Bonding/transfer not stated in this paper; authors' ref. 12 title says 'monolithically integrated on SiN'. Low confidence; bonded_heterogeneous would need a source statement"
+kohli2025-mzm,integration,monolithic,confirm,,same as kohli2025-iq,same caveat
+kohli2025-rt,integration,monolithic,confirm,,same as kohli2025-iq,same caveat
+kohli2025-rt,il_onchip_scope,device_total,correct,excess_over_reference,"p.6: Measurements of reference waveguides show on-chip device losses of less than 2 dB","Loss is taken relative to reference waveguides, the same method the proposer scored excess_over_reference for rahman2025/tan2024/hu2026; make the rule consistent"
+kohli2025-rt,tuning_nm_per_v,0.3,confirm,,"Fig. 4(b): DeltaV = 2 V (blue) dips at longer wavelength than DeltaV = 0 V (red); p.6: tuning efficiency of 0.3 nm/V",Red shift for positive DeltaV; Pockels sign is relative to poling direction (not stated)
+kohli2025-mzm,r_eff_pm_per_v,180,confirm,,"p.4 (not p.5): We extract an effective Pockels effect of ~180 pm/V at 40 GHz by comparing measured and simulated Vpi","Needs approx qualifier (~); locator page is p.4"
+lee2026-a,bw_method,indirect,confirm,,"p.3: The EO response can be simulated from the measured MW properties and scales inversely with the square of the microwave Vpi; Table 1 note c,d","EO points from FTIR-measured Vpi,MW (25-35 GHz); 2.7 dB at 40 GHz and 50 GHz fit are model-based; indirect fits"
+lee2026-a,physical_device_id,lee2026-am,confirm,,"p.5 Fig. 2 caption: Characterization of near-DC half-wave voltage Vpi of a 2-cm-long air-suspended amplitude modulator ... the suspended AM device is measured across more than an octave",Singular device for 2.4-3.6 um and 1.55 um
+lee2026-b,physical_device_id,lee2026-am,confirm,,same as lee2026-a,
+lee2026-c,physical_device_id,lee2026-am,confirm,,same as lee2026-a,
+lee2026-d,physical_device_id,lee2026-am,confirm,,same as lee2026-a,
+lee2026-e,drive,not_applicable,confirm,,"p.3: we demonstrate a suspended 2-cm-long TFLN PM ... double-pass photonic structure",Phase modulator
+li2025a-a,bw_method,eo_s21,confirm,,"p.9: The frequency range is limited to 67 GHz due to the Lightwave component analyzer (LCA) constraints",
+li2025a-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 4(a) (p.10): EO Response (dB), traces at 0 dB at 0 GHz with 1 dB and 3 dB dashed lines",
+li2025a-a,extinction_ratio_db,4.5,confirm,,"p.9: high extinction ratios of 4.5, 3.8, and 3.6 dB for the 100 Gbps OOK, 200 Gbps PAM4, and 150 Gbps PAM8","Fig. 3 caption lists 'f, Static extinction ratio (ER) as a function of the applied voltage' but no such panel exists (Fig. 3(f) is excess loss); no static value"
+li2025a-a,er_type,dynamic,confirm,,same as extinction_ratio_db,
+li2026a-a,bw_method,NO_SOURCE,confirm,,references/li2026a contains only crossref.json,
+li2026a-a,bw3db_reference,NO_SOURCE,confirm,,references/li2026a contains only crossref.json,
+li2026a-a,integration,NO_SOURCE,confirm,,references/li2026a contains only crossref.json,
+li2026a-a,GENERAL,NO_SOURCE,confirm,,references/li2026a contains only crossref.json,
+li2026a-b,integration,NO_SOURCE,confirm,,references/li2026a contains only crossref.json,
+li2026a-b,GENERAL,NO_SOURCE,confirm,,references/li2026a contains only crossref.json,
+li2026b-a,bw_method,unspecified,correct,eo_s21,"p.2: Fig. 1(b) shows the measured frequency response of AWG and GeSi EAM at 1.4 V reverse bias; Fig. 1(b) separate 'GeSi EAM' EO response trace","EAM trace is plotted separately from the AWG trace; proposer used eo_s21 for identical 'measured EO response, instrument not named' cases (bao2026b, dong2026, hess2026, tatarczak2026). Low confidence"
+li2026b-a,il_onchip_scope,device_total,confirm,,"p.1: shows 3.5 dB insertion loss at 0 V; p.2: grating couplers (4.5 dB each), the EAM (3.5 dB)",Stand-alone EAM
+mao2024-1550,bw_method,eo_s21,confirm,,"p.7: a vector network analyzer (Anritsu, MS4647B) ... EO 3-dB bandwidth (S21). The modulated output signal was received by an O/E calibration module",
+mao2024-1550,bw3db_reference,low_freq_unstated,confirm,,"Fig. 3(b): EO S21 (dB) 1-70 GHz, compensated (red) trace ~0 dB at 1 GHz, dashed 0 and -3 dB lines","Reference level is the unstated 0 dB line; headline uses the authors' low-frequency-compensated trace (note)"
+mao2024-1550,r_eff_pm_per_v,195,confirm,,"p.6-7: On the basis of the experimental Vpi values, we calculated the in device EO coefficient ... we obtained an reff of 195 pm V-1","Wavelength of the extraction not stated; placing it on the 1550 row is an assumption to note in evidence"
+mao2024-1310,physical_device_id,mao2024-mzm,confirm,,"p.3: Vpi values for the PLZT modulator were determined at wavelengths of 1550 and 1310 nm","Note: text says 1330 nm in one sentence ('EO modulation at 1330 nm') vs 1310 elsewhere"
+mao2024-1550,physical_device_id,mao2024-mzm,confirm,,same as mao2024-1310,
+meng2023-a,bw_method,eo_s21,confirm,,"p.10: its EO S21 response rolled down to -3dB at 108 GHz; p.9 VNA Agilent N5227A",PD for S21 not named
+meng2023-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 6 (p.10): measured S21 starts at 0 dB at 0 GHz, +2 dB peak near 5 GHz, -3 dB dotted line",
+meng2023-a,extinction_ratio_db,5.34,confirm,,"p.11: dynamic extinction ratios of the eye diagrams ... (5.34, 4.15, 2.81, 2.32, 1.98) (dB)",Fig. 5 is normalized transmission; no static ER
+meng2023-a,er_type,dynamic,confirm,,same,
+meng2023-b,extinction_ratio_db,6.0,confirm,,"p.12: increasing from 1.3dB to 6.0dB as a result of loading TCO",Eye ER at 56 Gb/s OOK
+meng2023-b,er_type,dynamic,confirm,,same,
+meng2023-c,extinction_ratio_db,1.3,confirm,,"p.12: increasing from 1.3dB to 6.0dB as a result of loading TCO",
+meng2023-c,er_type,dynamic,confirm,,same,
+navarro2026-a,bw_method,indirect,confirm,,"p.17: the device behaves as a first-order low-pass filter, with a voltage transfer function of the form VM/VD = 1/(1+jwRC)",Theory RC model only
+navarro2026-b,bw_method,indirect,confirm,,same as navarro2026-a,
+navarro2026-c,bw_method,indirect,confirm,,same as navarro2026-a,
+navarro2026-d,bw_method,indirect,confirm,,same as navarro2026-a,
+navarro2026-e,bw_method,indirect,confirm,,same as navarro2026-a,
+navarro2026-f,bw_method,indirect,confirm,,same as navarro2026-a,
+navarro2026-a,il_onchip_scope,phase_section_only,confirm,,"p.5: the insertion loss IL = MPA x L",
+navarro2026-b,il_onchip_scope,phase_section_only,confirm,,same as navarro2026-a,
+navarro2026-c,il_onchip_scope,phase_section_only,confirm,,same as navarro2026-a,
+navarro2026-d,il_onchip_scope,phase_section_only,confirm,,same as navarro2026-a,
+navarro2026-e,il_onchip_scope,phase_section_only,confirm,,same as navarro2026-a,
+navarro2026-f,il_onchip_scope,phase_section_only,confirm,,same as navarro2026-a,
+navarro2026-a,integration,transferred_2d,correct,(empty),"p.11: typical CVD-grown graphene; graphene sheets are usually encapsulated with hBN during fabrication; no transfer or integration step described","Theory paper; integration not stated -> empty (not other). transferred_2d only as an explicit inference note (CVD/exfoliated SLG on Si3N4 implies transfer)"
+navarro2026-b,integration,transferred_2d,correct,(empty),same as navarro2026-a,same ruling
+navarro2026-c,integration,transferred_2d,correct,(empty),same as navarro2026-a,same ruling
+navarro2026-d,integration,transferred_2d,correct,(empty),same as navarro2026-a,same ruling
+navarro2026-e,integration,transferred_2d,correct,(empty),same as navarro2026-a,same ruling
+navarro2026-f,integration,transferred_2d,correct,(empty),same as navarro2026-a,same ruling
+navarro2026-a,temperature_k,300,confirm,,"p.15 Table 1: This work DSLG (HfO2) Theoretical Phase MZM (SA) 300","Simulation temperature, basis simulated; row order matches Table 1 (300/10/10/300/10/10)"
+navarro2026-b,temperature_k,10,confirm,,"p.15 Table 1: DSLG (HfO2) MZM (SA) 10",basis simulated
+navarro2026-c,temperature_k,10,confirm,,"p.15 Table 1: DSLG (HfO2) MZM (PP) 10",basis simulated
+navarro2026-d,temperature_k,300,confirm,,"p.15 Table 1: DSLG (Al2O3) MZM (SA) 300",basis simulated
+navarro2026-e,temperature_k,10,confirm,,"p.15 Table 1: DSLG (Al2O3) MZM (SA) 10",basis simulated
+navarro2026-f,temperature_k,10,confirm,,"p.15 Table 1: DSLG (Al2O3) MZM (PP) 10",basis simulated
+nelan2022a-a,bw_method,(not proposed; current sideband),confirm,,"p.3: The measured sideband power of the modulator from 1 GHz to 120 GHz ... normalized to the carrier and RF input power ... roughly 95 GHz using 1 GHz as the reference frequency",Extra item 1: sideband correct; 1ghz reference also correct
+oe2026-a,eo_effect,qcse,confirm,,"p.2: All the core layers of laser, modulator ... butt-joint regrowth on a semi-insulating InP substrate","EA modulator; mechanism not named, MQW not stated for the EAM; qcse by the inp_mqw default"
+oe2026-a,bw_method,eo_s21,confirm,,"p.2: 3 dB bandwidth of the EO response is 80 GHz; relatively large S21 roll-off over 80 GHz","Chip-on-carrier, not de-embedded; instrument not named"
+oe2026-a,drive,differential,confirm,,"p.2: The positive phase of the drive signal modulates the 1st modulator EA1 ... the negative phase ... the cathode of the 2nd modulator EA2",Stated differential drive
+oe2026-a,extinction_ratio_db,22,confirm,,"p.2: DC extinction ratio between 0V to -3V is 22 dB","Convention (x): static wins; dynamic 5.2 dB (113 GBd PAM4, 2.0 Vppd) to notes. Note the 3 V DC swing exceeds the 2 Vppd drive"
+oe2026-a,er_type,static,confirm,,same as extinction_ratio_db,EAM DC voltage-swept contrast typed static as for li2026b-a
+oe2026-a,temperature_k,328.15,confirm,,"p.2: Measurements were performed at 55 C carrier temperature and 100 mA laser bias current",55 + 273.15 = 328.15; derived
+ogiso2016-a,eo_effect,qcse,confirm,,"p.1: undoped multi-quantum well (InGaAlAs/InAlAs) core ... formed along the [011] stripe direction to obtain a synergistic EO effect","MQW stated; paper does not apportion linear vs quadratic EO; qcse per default, low confidence (other is the alternative)"
+ogiso2016-a,bw_method,eo_s21,confirm,,"p.1: the measured 3 dB EO-BW (1.5 GHz reference) was over 67 GHz as shown in Fig. 4 (Small-signal EO response)",
+qi2024-a,bw_method,eo_s21,confirm,,"p.5: we used an high-speed photodiode to detect the modulated optical signal and send it back to VNA",
+qi2024-b,bw_method,eo_s21,confirm,,same as qi2024-a,
+qi2024-c,bw_method,eo_s21,confirm,,same as qi2024-a,
+rahman2025-1,bw_method,sideband,confirm,,"p.5: we used a modified modulation-sideband method for measuring the electro-optic response (EOR)",
+rahman2025-2,bw_method,sideband,confirm,,same as rahman2025-1,
+rahman2025-3,bw_method,sideband,confirm,,same as rahman2025-1,
+rahman2025-1,il_onchip_scope,excess_over_reference,confirm,,"p.3: measured by comparing the optical transmission through the EOM to that through a passive waveguide formed in the SiN1 layer","Side finding: main text p.3-4 gives 3.1/6.6/4.0 dB, SI p.11 gives 2.95/6.43/3.77 dB (CSV uses SI) - self-contradiction per (y)"
+rahman2025-2,il_onchip_scope,excess_over_reference,confirm,,same as rahman2025-1,same side finding
+rahman2025-3,il_onchip_scope,excess_over_reference,confirm,,same as rahman2025-1,same side finding
+rahman2025-1,statistic,mean,reject,(empty),"p.5: average (and one-standard deviation) VpiL ... across four chips; p.6: Figure 4(b) compares the EOR curves for the three EOM designs on one chip","Mixed row: VpiL and IL are 4-chip means but bw3db 20 GHz is one chip's curve; leave empty, N=4 and spreads in note"
+rahman2025-2,statistic,mean,confirm,,"p.5: 3.40 V.cm (0.15 V.cm) for Design 2; p.6: 3-dB modulation bandwidth greater than 100 GHz for all tested Design 2 and Design 3 EOMs","VpiL and IL are means; the >100 GHz bound holds for all tested devices, so mean does not mislabel the row"
+rahman2025-3,statistic,mean,reject,(empty),"p.5: resulting in a measured Vpi of 6.4 V (VpiL = 3.8 V.cm) ... ER > 34 dB; average VpiL 3.83 V.cm (0.01) for Design 3","Mixed row: Vpi 6.4 V, ER 34 dB and the 111 GHz trace are one device; only VpiL/IL are means. Leave empty with note (convention z)"
+sabatti2024-fh,bw_method,eo_s21,confirm,,"p.3: a vector network analyser (VNA, R&S ZNA) is used together with a high-speed photodetector",
+sabatti2024-sh,bw_method,eo_s21,confirm,,same as sabatti2024-fh,
+sabatti2024-fh,physical_device_id,sabatti2024-upconv,confirm,,"p.2: Each of the two outputs is routed to a 7 mm long PPLN region where the FH signal is converted to the SH signal ... inheriting from the modulated FH the Vpi and modulation speed",Same MZM; FH and SH are two outputs
+sabatti2024-sh,physical_device_id,sabatti2024-upconv,confirm,,same as sabatti2024-fh,
+taghavi2022a-a,vpi_dc_v,move_to_context,confirm,,"p.12: A shift of 120 pm/V with a free-spectral range (FSR) of ~1.15 nm is observed","No Vpi stated; 4.79 V is DB arithmetic contradicting the abstract VpiL bound"
+taghavi2022a-sim,bw_method,indirect,confirm,,"p.14: our electrostatic and electric simulations (using COMSOL Multiphysics) predict a bandwidth of 39 GHz",
+taghavi2022a-sim,bw3db_reference,unspecified,confirm,,same quote,
+tan2024-a,bw_method,(not proposed; current photon_lifetime_estimate),correct,eo_s21,"p.7: The RF signal generated by the vector network analyzer (VNA, Keysight N5247A PNA-X) ... The 3dB electro-optical bandwidth is measured to be 16GHz","Extra item 1: 16 GHz is a VNA EO S21 crossing (Fig. 8(a)); the photon-lifetime 17 GHz is only the theoretical comparison"
+tan2024-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 8(a): EO-coefficient |S21| (dB) starts ~0 to +1 dB at the lowest frequency, dash-dot -3 dB line",
+tan2024-a,il_onchip_scope,excess_over_reference,confirm,,"p.6: insertion loss of the device is around 1.5dB by normalizing to a 500nm-wide straight waveguide locally covered with a LN coupon",
+tan2024-a,tuning_nm_per_v,-0.00389,confirm,,"Fig. 6(c): resonant wavelength 1566.02 nm at -10 V falls linearly to ~1565.945 nm at +10 V; label 3.89 pm/V","Blue shift for positive V; slope -0.0775 nm/20 V = -3.9 pm/V checks"
+tatarczak2026-a,eo_effect,qcse,confirm,,"p.2: Fig. 1a) shows a measured frequency response of a 1310 nm InP diff-EML","Mechanism and MQW not stated; qcse by inp_mqw default"
+tatarczak2026-a,bw_method,eo_s21,confirm,,same quote,"Instrument not named; consistent with other unnamed-instrument cases"
+tatarczak2026-a,temperature_k,293.15,confirm,,"p.2: This modulator at T=20C requires a driver voltage swing of 2.0 Vppd on 100 ohm load","20 + 273.15; stated for the Fig. 1a modulator in the same paragraph, not explicitly for the S21 run. Low confidence"
+valdez2026-a,bw_method,sideband,confirm,,"p.2: The high-frequency EO response of both devices are shown in Figures 2c-d using an optical spectrum analyzer (OSA) characterization method",
+valdez2026-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 2(d) (p.3): EO Response (dB), first RAMZM point 0 dB at lowest frequency, dashed 0 and -3 dB lines",
+wang2022a-a,bw_method,eo_s21,confirm,,"p.3: The small-signal EO response of the modulator is also characterized ... measured S21 ... obtained without excluding the effect of RF probes",
+wang2022a-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 3(c): Electro-optic S21 traces at 0 dB at the lowest frequency, -6 dB dashed line, ~-5 dB at 67 GHz",Applies to bw6db and eo_rolloff
+wang2026b-am,bw_method,eo_s21,confirm,,"p.4: the normalized EO S21 of the AM measured at the chip level before packaging using a high-speed probe, exhibiting a 3-dB EO bandwidth of approximately 30 GHz",Instrument not named
+wang2026b-am,bw3db_reference,low_freq_unstated,confirm,,"Fig. 2(f) (p.10): EO S21 (TFLN chip, light gray) starts at 0 dB at 0 GHz, '3 dB' dashed line",
+wang2026b-pm,drive,not_applicable,confirm,,"p.6: the photonic circuit starts with a double-pass PM optimized for maximum EO response at 50 GHz",Phase modulator
+wang2026b-switch,drive,unspecified,confirm,,"p.5: When the phase difference between the two arms is zero (or pi), the input light is ideally directed exclusively to the cross (or bar) port","MZ-type AM units; only GSG pads/electrodes mentioned, arm drive scheme not stated"
+wang2026b-switch,il_onchip_scope,device_total,confirm,,"p.5: (excluding fiber-to-chip coupling loss of ~5 dB/facet) ... all 8 output channels show low on-chip insertion loss of approximately 3 dB",Whole 3-stage switch path
+witmer2020-converter,tuning_nm_per_v,0.0037,confirm,,"p.12: The extracted electro-optic tuning rate is 3.70 pm/V",Stroboscopic square wave; direction not stated -> keep value with 'sign not stated'
+witmer2020-slot,tuning_nm_per_v,0.08,confirm,,"p.7-8: a large EO tuning coefficient of ~80 pm/V; Fig. 4(d) Vpp = 6 V",Sign not stated; approx qualifier
+witmer2020-unslotted,tuning_nm_per_v,0.0039,confirm,,"p.8 Fig. 4(h): 3.9 pm/V, Vpp = 6 V","Sign not stated; text also gives a 2-6 pm/V range for unslotted strips"
+witmer2020-slot,bw_method,unspecified,confirm,,"p.8: the modulation had a 3 dB roll-off around 20 kHz making it unsuitable for microwave signals",No response measurement described
+witmer2020-slot,bw3db_reference,unspecified,confirm,,same quote,
+wolf2018a-gated,bw_method,eo_s21,confirm,,"p.7: The modulated optical power is received with a photodiode featuring a calibrated frequency response, which feeds its output back to the VNA","Authors call it EOE; PD response calibrated, so not link_eoe. 25 GHz is the 6 dB EOE point (bw6db)"
+wolf2018a-gated,bw3db_reference,low_freq_unstated,confirm,,"Fig. 3(c) (p.16): EOE amplitude 0 dB at the lowest frequency, dashed -3 and -6 dB lines, -6 dB near 25 GHz",Applies to bw6db
+wolf2018a-static,bias_for_vpi_v,2,confirm,,"p.5: Note that the U_pi-voltage was measured at DC bias voltages above 2 V","No junction (SOH slot), printed sign positive; keep gt qualifier"
+wolf2018a-static,r_eff_pm_per_v,147,confirm,,"p.5: The EO coefficient r33 can be estimated from the measured UL-product ... For our device, we find an r33 coefficient of 147 pm/V","In-device r33 from own UpiL; paper says 'estimated' so basis author_estimate is arguable vs derived (Eq. 3 given)"
+wolf2018a-gated,physical_device_id,wolf2018a-seo100,confirm,,"p.5: The MZM used in our experiment ...; p.8: We operate the MZM without a gate field; p.7: a 1.1 mm long SOH MZM with a gate field of 0.1 V/nm, as used for the 100 Gbit/s transmission experiment","Same MZM for static, gated OOK and ungated DAC runs; the gated EOE run says 'a 1.1 mm long SOH MZM' (slightly ambiguous)"
+wolf2018a-static,physical_device_id,wolf2018a-seo100,confirm,,same as wolf2018a-gated,
+wolf2018a-ungated,physical_device_id,wolf2018a-seo100,confirm,,same as wolf2018a-gated,
+yang2026-a,bw_method,eo_s21,confirm,,"p.3: The measured EO S21 curves at different wafer locations are shown in Fig. 2(d) and (e), with a median EO bandwidth of 94.7 GHz",Fig. 2(c) setup: PD/PDFA small-signal
+yang2026-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 2(d) (p.2): EO S21 (dB) traces at ~0 dB at the left edge (~5 GHz), -3 dB dashed line",
+yang2026-a,il_onchip_scope,device_total,confirm,,"p.2-3: A median IL of 2.4 dB is obtained excluding the grating couplers",
+yang2026-a,extinction_ratio_db,4.3,confirm,,"p.3: with an extinction ratio (ER) of 4.3 dB and 3.2 dB",Fig. 2(a) static spectra give no stated ER number
+yang2026-a,er_type,dynamic,confirm,,same,
+yang2026-a,statistic,median,reject,(empty),"p.3: median EO bandwidth of 94.7 GHz; p.2-3: median IL of 2.4 dB; p.2: Fig. 2(a) static spectra ... 0.66 V.cm (one device); eye ER from one device","Same mixed-row pattern as rahman2025-3: BW and IL are medians (~12 dies) but VpiL and ER are single-device. Empty + note, or confirm if the coordinator ties statistic to BW/IL only"
+yin2026-a,bw_method,eo_s21,confirm,,"p.2: measured using a 67 GHz vector network analyzer and a 67 GHz general optical component analyzer",
+yin2026-b,bw_method,eo_s21,confirm,,same as yin2026-a,
+yin2026-c,bw_method,eo_s21,confirm,,same as yin2026-a,
+yin2026-d,bw_method,eo_s21,confirm,,same as yin2026-a,
+yin2026-a,bw3db_reference,low_freq_unstated,confirm,,"Fig. 2(c),(d): 'Normalized EO S21 (dB)', traces start at 0 dB at the lowest frequency, dotted -3 dB line",
+yin2026-b,bw3db_reference,low_freq_unstated,confirm,,same as yin2026-a,
+yin2026-c,bw3db_reference,low_freq_unstated,confirm,,same as yin2026-a,
+yin2026-d,bw3db_reference,low_freq_unstated,confirm,,same as yin2026-a,
+yin2026-a,il_onchip_scope,excess_over_reference,confirm,,"p.2: under the -3 dB, -6 dB, -9 dB insertion loss (IL) from the off-resonance transmission maximum power level","Value is a detuning operating point, not a device loss; excess_over_reference is the closest enum; coordinator may prefer moving il_onchip_db to notes"
+yin2026-b,il_onchip_scope,excess_over_reference,confirm,,same as yin2026-a,same caveat
+yin2026-c,il_onchip_scope,excess_over_reference,confirm,,same as yin2026-a,same caveat
+yin2026-d,il_onchip_scope,excess_over_reference,confirm,,same as yin2026-a,same caveat
+yin2026-b,physical_device_id,yin2026-euler-noind,confirm,,"p.2: The 3 dB EO bandwidth of the MRM without inductor under -3 V bias in Fig. 2c, are measured to be >67 GHz, 62 GHz, 40 GHz under the -3 dB, -6 dB, -9 dB insertion loss",One MRM at three detunings
+yin2026-c,physical_device_id,yin2026-euler-noind,confirm,,same as yin2026-b,
+yin2026-d,physical_device_id,yin2026-euler-noind,confirm,,same as yin2026-b,
+yin2026-a,extinction_ratio_db,1.5,confirm,,"Fig. 3(d): 140 Gb/s NRZ (inductive-peaking MRM) ER = 1.5 dB",100 Gb/s with inductor ER 1.9 dB (Fig. 3(c)) to notes
+yin2026-a,er_type,dynamic,confirm,,same,
+yin2026-b,extinction_ratio_db,1.8,confirm,,"Fig. 3(b): 100 Gb/s NRZ without inductor ER = 1.8 dB",
+yin2026-b,er_type,dynamic,confirm,,same,
+yu2024-s0,physical_device_id,yu2024-mzm,confirm,,"p.11: Without skyrmion excitation, the modulator exhibits a Vpi of 4.95 V ... Then, the device underwent a magnetic field annealing process ... (S1)","Item 3: same chip, successive treatment states (not operating points); same hardware, so a shared id is correct; tag the states in notes"
+yu2024-s1,physical_device_id,yu2024-mzm,confirm,,same as yu2024-s0,
+yu2024-s2,physical_device_id,yu2024-mzm,confirm,,same as yu2024-s0,
+yu2024-s3,physical_device_id,yu2024-mzm,confirm,,same as yu2024-s0,
+yu2024-s3,r_eff_pm_per_v,(empty),confirm,,"p.2,4: Pockels coefficient of LN to 101 pm/V; p.11: exceptionally high Pockels coefficient of 69 pm/V",Self-contradiction -> empty per (y)
+yu2026-a,bw3db_reference,unspecified,confirm,,"p.1: The differential TFLN MZMs exhibit an electro-optic 3dB bandwidth of approximately 110 GHz",No trace or reference
+yu2026-a,integration,monolithic,confirm,,"p.1: a TFLN-based Mach-Zehnder modulator (MZM) chip","Platform not described; TFLN default. Low confidence"
+yu2026-a,bw_method,(not proposed; current sideband),correct,unspecified,"p.1: exhibit an electro-optic 3dB bandwidth of approximately 110 GHz (no method; Fig. 3 TOSA S21 is simulated)","Extra item 1: no sideband/OSA measurement anywhere in the text; current value unsupported"
+yue2025-a,bw_method,eo_s21,confirm,,"p.16: EO response measurements were performed using a vector network analyzer (Keysight N5245B) and a 110 GHz lightwave component analyzer",
+yue2025-b,bw_method,eo_s21,confirm,,same as yue2025-a,
+yue2025-c,bw_method,eo_s21,confirm,,same as yue2025-a,
+yue2025-d,bw_method,eo_s21,confirm,,same as yue2025-a,
+yue2025-a,il_onchip_scope,device_total,confirm,,"p.16: The silicon modulator with m = 1 exhibited an insertion loss of 4.3 dB",GC 4.8 dB each listed separately
+yue2025-b,il_onchip_scope,device_total,confirm,,"p.16: The silicon modulator with m = 0 exhibits an insertion loss of 2 dB",Proposer quoted the m=1 sentence; m=0 sentence is the next one
+yue2025-a,physical_device_id,yue2025-tft-m1,confirm,,"p.13: EO response characterization of silicon modulators with m = 0 and m = 1 when all modulation regions have the same reverse bias voltage; 0 V: 43.1 and 81.9 GHz; 6 V: 70 and >110 GHz","Same modulators at two biases; implied, not stated verbatim"
+yue2025-c,physical_device_id,yue2025-tft-m1,confirm,,same as yue2025-a,
+yue2025-b,physical_device_id,yue2025-conv-m0,confirm,,same as yue2025-a,
+yue2025-d,physical_device_id,yue2025-conv-m0,confirm,,same as yue2025-a,
+zhang2022-a,bw_method,(not proposed; current sideband),confirm,,"p.6: The electro-optic response is tested by monitoring the power ratio between the sideband and the carrier, using an optical spectrum analyzer (OSA)","Extra item 1: sideband correct (EO S21 computed from sideband-derived RF Vpi). Side note: 3-dB BW 170 GHz (abstract) vs 175 GHz (p.2)"
+zhang2022-b,bw_method,(not proposed; current sideband),confirm,,same as zhang2022-a,

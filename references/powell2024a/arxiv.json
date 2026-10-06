@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2405.05169",
+ "title": "Stable electro-optic modulators using thin-film lithium tantalate",
+ "authors": "Keith Powell, Xudong Li, Daniel Assumpcao, Let\\'icia Magalh\\~aes, Neil Sinclair, Marko Lon\\v{c}ar",
+ "doi": "10.1364/OE.538870",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 08 May 2024 16:06:26 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:11:36Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2405.05169\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2405.05169</identifier>\n        <datestamp>2024-11-21</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:quant-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2405.05169</id>\n        <submitter>Neil Sinclair</submitter>\n            <version version=\"v1\">\n                <date>Wed, 08 May 2024 16:06:26 GMT</date>\n                <size>5735kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Stable electro-optic modulators using thin-film lithium tantalate</title>\n        <authors>Keith Powell, Xudong Li, Daniel Assumpcao, Let\\&#39;icia Magalh\\~aes, Neil Sinclair, Marko Lon\\v{c}ar</authors>\n        <categories>physics.optics physics.app-ph quant-ph</categories>\n            <doi>10.1364/OE.538870</doi>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>We demonstrate electro-optic modulators realized in low-loss thin-film lithium tantalate with superior DC-stability (&lt;1 dB power fluctuation from quadrature with 12.1 dBm input) compared to equivalent thin-film lithium niobate modulators (5 dB fluctuation) over 46 hours.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

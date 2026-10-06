@@ -1,0 +1,320 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:24:31Z",
+   "timestamp": 1786991071556,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 8,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate a 280 Gbps optical link using a silicon depletion-type microring modulator and a germanium photodetector, both with 3dB bandwidth over 110 GHz and fabricated on 300 mm silicon photonic platform.</jats:p>",
+  "DOI": "10.1364/ofc.2026.m2b.2",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:26:08Z",
+   "timestamp": 1780428368000
+  },
+  "page": "M2B.2",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "A 280 Gbps Optical Transceiver with Monolithically Integrated 110 GHz Silicon Microring Modulators and 110 GHz Germanium Photodetectors"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Xingyu",
+    "family": "Liu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xu",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Fangchen",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zixuan",
+    "family": "Cai",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wei",
+    "family": "Chu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Haibin",
+    "family": "Zhao",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Haiwen",
+    "family": "Cai",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Fengxin",
+    "family": "Yu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xiao",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-M2B.2-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "2401249",
+    "DOI": "10.1002/lpor.202401249",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Zhang",
+    "year": "2025",
+    "journal-title": "Laser  Photonics Reviews"
+   },
+   {
+    "key": "OFC-2026-M2B.2-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "5175",
+    "DOI": "10.1109/JLT.2024.3390988",
+    "type": "journal-article",
+    "volume": "42",
+    "author": "Li",
+    "year": "2024",
+    "journal-title": "J. Lightwave Technol"
+   },
+   {
+    "key": "OFC-2026-M2B.2-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "676",
+    "DOI": "10.1049/icp.2023.2290",
+    "type": "journal-article",
+    "volume-title": "IET Conf. Proc",
+    "volume": "2023",
+    "author": "Yang",
+    "year": "2023"
+   },
+   {
+    "key": "OFC-2026-M2B.2-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "1314",
+    "DOI": "10.1049/icp.2023.2534",
+    "type": "journal-article",
+    "volume-title": "IET Conf. Proc",
+    "volume": "2023",
+    "author": "Chan",
+    "year": "2023"
+   },
+   {
+    "key": "OFC-2026-M2B.2-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "2265",
+    "DOI": "10.1109/JLT.2022.3141906",
+    "type": "journal-article",
+    "volume": "40",
+    "author": "Chan",
+    "year": "2022",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "OFC-2026-M2B.2-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "070501",
+    "DOI": "10.1088/1674-4926/24050040",
+    "type": "journal-article",
+    "volume": "45",
+    "author": "Li",
+    "year": "2024",
+    "journal-title": "J. Semicond"
+   },
+   {
+    "key": "OFC-2026-M2B.2-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "1155",
+    "DOI": "10.1109/JLT.2020.3039218",
+    "type": "journal-article",
+    "volume": "39",
+    "author": "Fathololoumi",
+    "year": "2021",
+    "journal-title": "J. Lightwave Technol"
+   },
+   {
+    "key": "OFC-2026-M2B.2-R10",
+    "doi-asserted-by": "publisher",
+    "first-page": "5706",
+    "DOI": "10.1364/OE.373454",
+    "type": "journal-article",
+    "volume": "28",
+    "author": "Moralis-Pegios",
+    "year": "2020",
+    "journal-title": "Opt. Express"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-M2B.2&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:25:54Z",
+   "timestamp": 1786987554000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-M2B.2"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 8,
+  "URL": "https://doi.org/10.1364/ofc.2026.m2b.2",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

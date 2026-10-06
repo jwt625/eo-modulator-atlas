@@ -192,4 +192,11 @@ entries:
   basis: derived
   locator: p.6 Sec. IV-C; Fig. 1(a)
   note: authors do not state the convention; single GSG feed, center electrode active, one arm in each gap
+- device_id: nelan2022-a
+  field: vpi_dc_freq_ghz
+  value: 0.00015
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. IV-C; p.7 Fig. 7(f)
+  note: 'source: A low speed (150 kHz) triangular voltage wave is applied to the GSG electrodes using an arbitrary waveform ...'
 derived: []

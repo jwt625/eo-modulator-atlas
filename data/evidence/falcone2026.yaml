@@ -96,13 +96,6 @@ entries:
   locator: p.7 text; Fig. 4(f)
   note: from several waveguide lengths; +-2 V*cm; 100 kHz triangular drive, quasi-static, after poling
 - device_id: falcone2026-a
-  field: bias_for_vpi_v
-  value: 60
-  unit: V
-  basis: measured
-  locator: p.6 text
-  note: DC poling bias, then switched off before AC modulation; 65 kV/cm for this sample
-- device_id: falcone2026-a
   field: prop_loss_db_per_cm
   value: 20
   unit: dB/cm
@@ -221,4 +214,25 @@ entries:
   basis: design_target
   locator: p.5-6 text; p.9 Simulations
   note: 350 nm imprinted height and 100 nm residual layer
+- device_id: falcone2026-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.6; p.7; p.9 Methods
+  note: 'source: Electro-optic modulation was driven by a triangular waveform ... amplified to a peak-to-peak voltage of Vpp = 360 ...'
+- device_id: falcone2026-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.6; p.7; p.9 Methods
+  note: 'source: Electro-optic modulation was driven by a triangular waveform ... amplified to a peak-to-peak voltage of Vpp = 360 ...'
+- device_id: falcone2026-a
+  field: r_eff_pm_per_v
+  value: 20.0
+  unit: pm/V
+  basis: derived
+  locator: p.7, Sec. on modulation, r_eff relation
+  note: From measured VpiL 35 V*cm, FEM overlap about 20 percent, n_eff; effective (not tensor-resolved) coefficient of polycrystalline sol-gel BTO.
 derived: []

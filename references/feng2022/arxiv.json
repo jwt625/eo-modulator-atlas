@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2202.12739",
+ "title": "Ultra-high-linearity integrated lithium niobate electro-optic modulators",
+ "authors": "Hanke Feng, Ke Zhang, Wenzhao Sun, Yangming Ren, Yiwen Zhang, Wenfu Zhang, Cheng Wang",
+ "doi": "10.1364/PRJ.464650",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Fri, 25 Feb 2022 14:59:31 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T19:57:07Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2202.12739\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2202.12739</identifier>\n        <datestamp>2022-10-28</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2202.12739</id>\n        <submitter>Hanke Feng</submitter>\n            <version version=\"v1\">\n                <date>Fri, 25 Feb 2022 14:59:31 GMT</date>\n                <size>944kb</size>\n            </version>\n        <title>Ultra-high-linearity integrated lithium niobate electro-optic modulators</title>\n        <authors>Hanke Feng, Ke Zhang, Wenzhao Sun, Yangming Ren, Yiwen Zhang, Wenfu Zhang, Cheng Wang</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <doi>10.1364/PRJ.464650</doi>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Integrated lithium niobate (LN) photonics is a promising platform for future chip-scale microwave photonics systems owing to its unique electro-optic properties, low optical loss and excellent scalability. A key enabler for such systems is a highly linear electro-optic modulator that could faithfully covert analog electrical signals into optical signals. In this work, we demonstrate a monolithic integrated LN modulator with an ultrahigh spurious-free dynamic range (SFDR) of 120.04 dB Hz4/5 at 1 GHz, using a ring-assisted Mach-Zehnder interferometer configuration. The excellent synergy between the intrinsically linear electro-optic response of LN and an optimized linearization strategy allows us to fully suppress the cubic terms of third-order intermodulation distortions (IMD3) without active feedback controls, leading to ~ 20 dB improvement over previous results in the thin-film LN platform. Our ultra-high-linearity LN modulators could become a core building block for future large-scale functional microwave photonic integrated circuits, by further integration with other high-performance components like low-loss delay lines, tunable filters and phase shifters available on the LN platform.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

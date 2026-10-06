@@ -1,0 +1,25 @@
+{
+ "arxiv_id": "2201.09730",
+ "title": "Thin-Film Lithium Niobate based Dual-Polarization IQ modulator for Single-Carrier 1.6 Tb/s Transmission",
+ "authors": "Xuanhao Wang, Chenglin Shang, An Pan, Xingran Cheng, Tao Gui, Shuai Yuan, Chengcheng Gui, Keshuang Zheng, Peijie Zhang, Xiaolu Song, Yanbo Li, Liangchuan Li, Cheng Zeng, Jinsong Xia",
+ "doi": "10.1063/5.0097296",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Fri, 21 Jan 2022 15:03:11 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Mon, 14 Feb 2022 04:41:28 GMT"
+  },
+  {
+   "version": "v3",
+   "date": "Thu, 21 Apr 2022 07:09:56 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:18:50Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2201.09730\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2201.09730</identifier>\n        <datestamp>2024-06-19</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2201.09730</id>\n        <submitter>Xuanhao Wang</submitter>\n            <version version=\"v1\">\n                <date>Fri, 21 Jan 2022 15:03:11 GMT</date>\n                <size>797kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Mon, 14 Feb 2022 04:41:28 GMT</date>\n                <size>718kb</size>\n            </version>\n            <version version=\"v3\">\n                <date>Thu, 21 Apr 2022 07:09:56 GMT</date>\n                <size>1484kb</size>\n            </version>\n        <title>Thin-Film Lithium Niobate based Dual-Polarization IQ modulator for Single-Carrier 1.6 Tb/s Transmission</title>\n        <authors>Xuanhao Wang, Chenglin Shang, An Pan, Xingran Cheng, Tao Gui, Shuai Yuan, Chengcheng Gui, Keshuang Zheng, Peijie Zhang, Xiaolu Song, Yanbo Li, Liangchuan Li, Cheng Zeng, Jinsong Xia</authors>\n        <categories>physics.app-ph physics.optics</categories>\n            <doi>10.1063/5.0097296</doi>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>We successfully demonstrate a monolithic integrated dual-polarization (DP) IQ modulator based on thin-film lithium niobate (TFLN) platform with a silicon substrate, which consists of IQ modulators, spot-size converters (SSCs) and a polarization rotator combiner (PRC). After coupled with polarization maintaining fibers, the measured insertion loss of the modulator is 12 dB. In addition, we experimentally achieve a single-carrier 1.6 Tb/s net bitrate transmission.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

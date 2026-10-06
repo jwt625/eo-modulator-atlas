@@ -154,6 +154,8 @@ Resolved by the user on 2026-10-03:
 
 Still open (coordinator / user):
 
+> 2026-10-05: items 1-6 below were decided by the user and applied; see [DevLog-020](DevLog-020-data-convention-decisions.md) (earliest-date rule, 1 GHz dc/rf Vpi cutoff, cleanroom in foundry_or_fab, discovered_via vocabulary, verified_on = check date, consolidated schema proposals, DOI-first identity for suceava2025/giambra2021, zhang2023 split, organization own-name rule).
+
 1. Rules to state before D2: `published_on` and `year` for preprint-sourced
    rows; dc/rf Vpi cutoff for quasi-static measurements; acknowledged-cleanroom
    rule (applied in p3_09/p3_14: a cleanroom the paper names as used goes in

@@ -272,9 +272,17 @@ entries:
   note: two arms driven by separate CLTW electrodes (GSGGSG)
 - device_id: guo2026-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.7; Fig. 5(d)
   note: Authors do not state the reference; Fig. 5(d) baseline sits near +1 dB with large ripple.
+  previous_value: unspecified
+- device_id: guo2026-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.7; p.8 Fig. 5(b)
+  note: 'source: The half-wave voltage (Vπ) of the modulator was measured using a 100-kHz sawtooth voltage sweep.'
 derived: []

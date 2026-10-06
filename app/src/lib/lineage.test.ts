@@ -43,4 +43,15 @@ describe('lineage heuristic', () => {
 		expect(orderRows(g, 2).map((p) => p.key)).toEqual(['pat advisor', 'ann junior']);
 		expect(orderRows(g, 1).map((p) => p.key)).toEqual(['pat advisor', 'ann junior', 'solo pi', 'lone pi']);
 	});
+
+	it('matches people by deduplicated person id when present', () => {
+		const withIds = (id: string, year: number, authors: string[], ids: string[]): Paper =>
+			({ ...paper(id, year, authors), author_ids: ids }) as unknown as Paper;
+		const g = buildLineage([
+			withIds('a', 2018, ['Ann Junior', 'P. Advisor'], ['ann-junior', '0000-0001']),
+			withIds('b', 2020, ['Bo Student', 'Pat Q. Advisor'], ['bo-student', '0000-0001'])
+		]);
+		expect(g.pis.map((p) => p.key)).toEqual(['0000-0001']);
+		expect(g.pis[0].papers.length).toBe(2);
+	});
 });

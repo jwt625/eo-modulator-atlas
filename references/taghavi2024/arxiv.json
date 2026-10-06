@@ -1,0 +1,25 @@
+{
+ "arxiv_id": "2405.08833",
+ "title": "GHz-rate optical phase shift in light matter interaction-engineered, silicon-ferroelectric nematic liquid crystals",
+ "authors": "Iman Taghavi, Omid Esmaeeli, Sheri Jahan Chowdhury, Kashif Awan, Mustafa Hammood, Matthew Mitchell, Donald Witt, Cory Pecinovsky, Jason Sickler, Jeff Young, Nicolas A.F. Jaeger, Sudip Shekhar, and Lukas Chrostowski",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Tue, 14 May 2024 02:30:10 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Thu, 03 Oct 2024 00:16:03 GMT"
+  },
+  {
+   "version": "v3",
+   "date": "Sat, 08 Feb 2025 19:06:01 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:14:58Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2405.08833\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2405.08833</identifier>\n        <datestamp>2025-02-11</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2405.08833</id>\n        <submitter>Iman Taghavi</submitter>\n            <version version=\"v1\">\n                <date>Tue, 14 May 2024 02:30:10 GMT</date>\n                <size>29815kb</size>\n                    <source_type>D</source_type>\n            </version>\n            <version version=\"v2\">\n                <date>Thu, 03 Oct 2024 00:16:03 GMT</date>\n                <size>25846kb</size>\n                    <source_type>D</source_type>\n            </version>\n            <version version=\"v3\">\n                <date>Sat, 08 Feb 2025 19:06:01 GMT</date>\n                <size>13774kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>GHz-rate optical phase shift in light matter interaction-engineered, silicon-ferroelectric nematic liquid crystals</title>\n        <authors>Iman Taghavi, Omid Esmaeeli, Sheri Jahan Chowdhury, Kashif Awan, Mustafa Hammood, Matthew Mitchell, Donald Witt, Cory Pecinovsky, Jason Sickler, Jeff Young, Nicolas A.F. Jaeger, Sudip Shekhar, and Lukas Chrostowski</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>25 pages, 5 figures</comments>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Organic electro-optic materials have demonstrated promising performance in developing electro-optic phase shifters. Their integration with other silicon photonic processes, nanofabrication complexities, and durability remains to be developed. While the required poling step in electro-optic polymers limits their potential and utilization on a large scale, devices made of paraelectric nematic liquid crystals suffer from slow bandwidth. In ferroelectric nematic liquid crystals, we report an additional GHz-fast phase shift that ultimately allows for significant second-order nonlinear optical coefficients related to the Pockels effect. It avoids poling issues and can pave the way for hybrid silicon-organic systems with CMOS-foundry compatibility. We report DC and AC modulation efficiencies of $\\approx$~0.25 V$\\cdot$mm (from liquid crystal orientation) and $\\approx$~25.7 V$\\cdot$mm (from Pockels effect), respectively, an on-chip insertion loss of $\\approx$~2.6 dB, and an electro-optic bandwidth of $f_\\text{-6dB}$&gt;4.18 GHz, employing improved light-matter interaction in a waveguide architecture that calls for only one lithography step.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

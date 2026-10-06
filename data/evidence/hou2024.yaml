@@ -92,11 +92,12 @@ entries:
   note: Ring-pair ER about 32 dB with resonances aligned; abstract states beyond 30 dB
 - device_id: hou2024-a
   field: drive
-  value: push_pull
+  value: not_applicable
   unit: ''
   basis: derived
   locator: p.4, Fig. 1b-c
   note: Authors state the two rings see inverse electric fields from one electrode pair; push_pull is our label
+  previous_value: push_pull
 - device_id: hou2024-a
   field: wavelength_nm
   value: 1561.36

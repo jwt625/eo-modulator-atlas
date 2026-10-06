@@ -1,0 +1,979 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 636,
+  "items": [
+   {
+    "DOI": "10.1109/ipc65510.2025.11282050",
+    "title": [
+     "Wafer-Scale Integration of Lithium Niobate on a Silicon Photonics 200-mm Platform"
+    ],
+    "author": [
+     {
+      "given": "Margot",
+      "family": "Niels",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ewoud",
+      "family": "Vissers",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tom",
+      "family": "Vanackere",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Arno",
+      "family": "Moerman",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiujun",
+      "family": "Zheng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xin",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Peter",
+      "family": "Geerinck",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Emadreza",
+      "family": "Soltanian",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jing",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sofie",
+      "family": "Janssen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Peter",
+      "family": "Verheyen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Neha",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Dieter",
+      "family": "Bode",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Martin",
+      "family": "Davi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Filippo",
+      "family": "Ferraro",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Philippe",
+      "family": "Absil",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sadhishkumar",
+      "family": "Balakrishnan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Joris",
+      "family": "Van Campenhout",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sebastian",
+      "family": "Hänsch",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Semiconductor Solutions ASMPT, AMICRA,Regensburg,Germany,93055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hanh",
+      "family": "Mai",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Semiconductor Solutions ASMPT, AMICRA,Regensburg,Germany,93055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Nishant",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Günther",
+      "family": "Roelkens",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sarah",
+      "family": "Uvin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Maximilien",
+      "family": "Billet",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       9
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/lpt.2023.3243477",
+    "title": [
+     "LAN Wavelength Division Multiplexer on Silicon-Lithium Niobate Hybrid Integration Platform"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-3782-9202",
+      "authenticated-orcid": false,
+      "given": "Zhiwen",
+      "family": "Zheng",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, Higher-Education Mega-Center, South China Academy of Advanced Optoelectronics, South China Normal University, Guangzhou, China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xi",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, Higher-Education Mega-Center, South China Academy of Advanced Optoelectronics, South China Normal University, Guangzhou, China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2538-6793",
+      "authenticated-orcid": false,
+      "given": "Kaixuan",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, Higher-Education Mega-Center, South China Academy of Advanced Optoelectronics, and the National Center for International Research on Green Optoelectronics, South China Normal University, Guangzhou, China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-4927-9562",
+      "authenticated-orcid": false,
+      "given": "Liu",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory for Modern Optical Instrumentation, College of Optical Science and Engineering, International Research Center for Advanced Photonics, Zhejiang University, Hangzhou, China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023,
+       3,
+       15
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/adpr.202200050",
+    "title": [
+     "Design of Ultracompact High‐Speed‐Integrated Lithium–Niobate Periodic Dielectric Waveguide Modulator"
+    ],
+    "author": [
+     {
+      "given": "Yifan",
+      "family": "Qi",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zheng",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wenhe",
+      "family": "Jia",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sai",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yuanmu",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1938-5858",
+      "authenticated-orcid": false,
+      "given": "Yang",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       5,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/adpr.202270027",
+    "title": [
+     "Design of Ultracompact High‐Speed‐Integrated Lithium–Niobate Periodic Dielectric Waveguide Modulator"
+    ],
+    "author": [
+     {
+      "given": "Yifan",
+      "family": "Qi",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zheng",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wenhe",
+      "family": "Jia",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sai",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuanmu",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1938-5858",
+      "authenticated-orcid": false,
+      "given": "Yang",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Measurement Technology and Instruments Department of Precision Instrument Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       9
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/siphotonics64386.2025.10985297",
+    "title": [
+     "Full Short-wave Infrared High-speed Thin-film Lithium Niobate Electro-optic Modulator"
+    ],
+    "author": [
+     {
+      "given": "Qiyuan",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information,Wuhan,China,430074"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Qiyuan",
+      "family": "Yi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information,Wuhan,China,430074"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "An",
+      "family": "Pan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information,Wuhan,China,430074"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Chenglin",
+      "family": "Shang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information,Wuhan,China,430074"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jinlai",
+      "family": "Cui",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute of Semiconductors, Chinese Academy of Sciences,Key Laboratory of Optoelectronic Materials and Devices,Beijing,China,100083"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yupeng",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute of Semiconductors, Chinese Academy of Sciences,Key Laboratory of Optoelectronic Materials and Devices,Beijing,China,100083"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jun",
+      "family": "Zheng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute of Semiconductors, Chinese Academy of Sciences,Key Laboratory of Optoelectronic Materials and Devices,Beijing,China,100083"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sizhe",
+      "family": "Xing",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Fudan University,Key Laboratory for Information Science of Electromagnetic Waves,Department of Communication Science and Engineering,Shanghai,China,200433"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Junwen",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Fudan University,Key Laboratory for Information Science of Electromagnetic Waves,Department of Communication Science and Engineering,Shanghai,China,200433"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Nan",
+      "family": "Chi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Fudan University,Key Laboratory for Information Science of Electromagnetic Waves,Department of Communication Science and Engineering,Shanghai,China,200433"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Zeng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information,Wuhan,China,430074"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jinsong",
+      "family": "Xia",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information,Wuhan,China,430074"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Li",
+      "family": "Shen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics and School of Optical and Electronic Information,Wuhan,China,430074"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       4,
+       14
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

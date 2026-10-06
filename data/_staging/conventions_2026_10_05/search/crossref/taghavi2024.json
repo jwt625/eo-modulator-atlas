@@ -1,0 +1,577 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 11,
+  "items": [
+   {
+    "DOI": "10.1038/s41467-025-63924-y",
+    "title": [
+     "GHz-rate optical phase shift in light-matter interaction-engineered, silicon-ferroelectric nematic liquid crystals"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-2955-9209",
+      "authenticated-orcid": false,
+      "given": "Iman",
+      "family": "Taghavi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Omid",
+      "family": "Esmaeeli",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0005-7980-5665",
+      "authenticated-orcid": false,
+      "given": "Sheri Jahan",
+      "family": "Chowdhury",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Kashif Masud",
+      "family": "Awan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Mustafa",
+      "family": "Hammood",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Matthew",
+      "family": "Mitchell",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0002-8250-4538",
+      "authenticated-orcid": false,
+      "given": "Donald",
+      "family": "Witt",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cory",
+      "family": "Pecinovsky",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jason",
+      "family": "Sickler",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jeff F.",
+      "family": "Young",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Nicolas A. F.",
+      "family": "Jaeger",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-0383-1929",
+      "authenticated-orcid": false,
+      "given": "Sudip",
+      "family": "Shekhar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2963-9284",
+      "authenticated-orcid": false,
+      "given": "Lukas",
+      "family": "Chrostowski",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       7
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/ofc.2026.th1h.3",
+    "title": [
+     "DC-to-GHz Modulators in Ferroelectric Nematic Liquid Crystal-on-Si Platforms"
+    ],
+    "author": [
+     {
+      "given": "Iman",
+      "family": "Taghavi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cory",
+      "family": "Pecinovsky",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Nicolas A.F.",
+      "family": "Jaeger",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lukas",
+      "family": "Chrostowski",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sudip",
+      "family": "Shekhar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/optica.591830",
+    "title": [
+     "DC-to-GHz modulation in microring modulators using ferroelectric nematic liquid crystal-on-silicon in a foundry photonic process"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-2955-9209",
+      "authenticated-orcid": true,
+      "given": "Iman",
+      "family": "Taghavi",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03rmrcq20",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       },
+       {
+        "name": "Dream Photonics Inc."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Alexander",
+      "family": "Tofini",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03rmrcq20",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0007-2090-3126",
+      "authenticated-orcid": true,
+      "given": "Edward K.",
+      "family": "Leung",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03rmrcq20",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cory",
+      "family": "Pecinovsky",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Polaris Electro-Optics"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Nicolas A. F.",
+      "family": "Jaeger",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03rmrcq20",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lukas",
+      "family": "Chrostowski",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03rmrcq20",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       },
+       {
+        "name": "Dream Photonics Inc."
+       },
+       {
+        "name": "University of British Columbia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sudip",
+      "family": "Shekhar",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03rmrcq20",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       },
+       {
+        "name": "Dream Photonics Inc."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       7,
+       15
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/adts.202300359",
+    "title": [
+     "Active Metasurfaces for Non‐Rigid Light Sail Interstellar Optical Communication"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-0210-4749",
+      "authenticated-orcid": false,
+      "given": "Mohammadrasoul",
+      "family": "Taghavi",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Metamaterials Laboratory Electrical and Computer Engineering Department Northeastern University Boston MA 02115 USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-5128-9308",
+      "authenticated-orcid": false,
+      "given": "Raana",
+      "family": "Sabri",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Metamaterials Laboratory Electrical and Computer Engineering Department Northeastern University Boston MA 02115 USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hossein",
+      "family": "Mosallaei",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Metamaterials Laboratory Electrical and Computer Engineering Department Northeastern University Boston MA 02115 USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023,
+       10,
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1080/13621718.2022.2122245",
+    "title": [
+     "Spinodal liquid phase separation enabling dissimilar resistance spot welding of immiscible iron and copper alloy system"
+    ],
+    "author": [
+     {
+      "given": "Sahand",
+      "family": "Taghavi",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Materials Science and Engineering, Sharif University of Technology, Tehran, Iran"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Majid",
+      "family": "Pouranvari",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Materials Science and Engineering, Sharif University of Technology, Tehran, Iran"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023,
+       2
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

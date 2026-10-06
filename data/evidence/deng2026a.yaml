@@ -157,8 +157,7 @@ entries:
   note: PDFA (O-band amplifier) in test setup; wavelength not stated
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing
-      Group
-    locator: p.1-3, page footer
-    note: printed in the page footer of pages 1-3
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: printed in the page footer of pages 1-3

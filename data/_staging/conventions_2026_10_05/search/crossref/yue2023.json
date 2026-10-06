@@ -1,0 +1,415 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 1304,
+  "items": [
+   {
+    "DOI": "10.1016/j.optlastec.2024.112396",
+    "title": [
+     "Breaking the baud rate ceiling of electro-optic modulators using optical equalization technique"
+    ],
+    "author": [
+     {
+      "given": "Hengsong",
+      "family": "Yue",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Nuo",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Haozhe",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-3190-7452",
+      "authenticated-orcid": false,
+      "given": "Tao",
+      "family": "Chu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.264246",
+    "title": [
+     "High-performance electro-optic polymers and their applications in high-speed electro-optic switches and modulators"
+    ],
+    "author": [
+     {
+      "given": "Yue",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alex K.Y.",
+      "family": "Jen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tian-An",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yue-Jin",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xuan-Qi",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "John T.",
+      "family": "Kenney",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       1997,
+       1,
+       22
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/isscc.2017.7870286",
+    "title": [
+     "6.2 A 60Gb/s 288mW NRZ transceiver with adaptive equalization and baud-rate clock and data recovery in 65nm CMOS technology"
+    ],
+    "author": [
+     {
+      "given": "Jaeduk",
+      "family": "Han",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yue",
+      "family": "Lu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Nicholas",
+      "family": "Sutardja",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Elad",
+      "family": "Alon",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2017,
+       2
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3390/nano14100867",
+    "title": [
+     "High-Speed Electro-Optic Modulators Based on Thin-Film Lithium Niobate"
+    ],
+    "author": [
+     {
+      "given": "Songyan",
+      "family": "Hou",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Guangzhou Institute of Technology, Xidian University, Guangzhou 510555, China"
+       },
+       {
+        "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, School of Microelectronics, Xidian University, Xi’an 710071, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hao",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National Key Laboratory of Microwave Photonics, Nanjing University of Aeronautics and Astronautics, Nanjing 211106, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhihong",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Guangzhou Institute of Technology, Xidian University, Guangzhou 510555, China"
+       },
+       {
+        "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, School of Microelectronics, Xidian University, Xi’an 710071, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Weichuan",
+      "family": "Xing",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Guangzhou Institute of Technology, Xidian University, Guangzhou 510555, China"
+       },
+       {
+        "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, School of Microelectronics, Xidian University, Xi’an 710071, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jincheng",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, School of Microelectronics, Xidian University, Xi’an 710071, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yue",
+      "family": "Hao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Wide Bandgap Semiconductor Devices and Integrated Technology, School of Microelectronics, Xidian University, Xi’an 710071, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       5,
+       16
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/oe.26.015045",
+    "title": [
+     "Transmitter skew tolerance and spectral efficiency tradeoff in high baud-rate QAM optical communication systems"
+    ],
+    "author": [
+     {
+      "given": "Yang",
+      "family": "Yue",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Qiang",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jon",
+      "family": "Anderson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2018,
+       5,
+       30
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

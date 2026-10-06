@@ -152,6 +152,13 @@ entries:
   basis: design_target
   locator: p.2; Supp. Note 1 (p.14)
   note: 'refractive indices at 1550 nm: InP 3.17, OEO 1.65, SiO2 1.44'
+- device_id: fukui2025-a
+  field: r_eff_pm_per_v
+  value: 20.0
+  unit: pm/V
+  basis: author_estimate
+  locator: p.3, Discussion
+  note: Author estimate from measured 18 pm/V shift assuming r33 = 3 r13; component r33; tensor-ratio assumption, borderline for entry.
 derived:
 - device_id: fukui2025-a
   field: electrode_gap_um

@@ -1,0 +1,1103 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     19
+    ]
+   ],
+   "date-time": "2026-09-19T08:24:13Z",
+   "timestamp": 1789806253277,
+   "version": "4.0.1"
+  },
+  "reference-count": 70,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       7
+      ]
+     ],
+     "date-time": "2025-10-07T00:00:00Z",
+     "timestamp": 1759795200000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       7
+      ]
+     ],
+     "date-time": "2025-10-07T00:00:00Z",
+     "timestamp": 1759795200000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat Commun"
+  ],
+  "abstract": "<jats:title>Abstract</jats:title>\n          <jats:p>Organic electro-optic materials have demonstrated promising performance in developing electro-optic phase shifters. Their integration with other silicon photonic processes, nanofabrication complexities, and durability remains to be developed. While the required poling step in electro-optic polymers limits their potential and large-scale utilization, devices made of paraelectric nematic liquid crystals suffer from slow bandwidth. In ferroelectric nematic liquid crystals, we report an additional GHz-fast phase shift that ultimately allows for significant second-order nonlinear optical coefficients related to the Pockels effect. It avoids poling issues and can pave the way for hybrid silicon-organic systems with CMOS foundry compatibility. We report DC and AC modulation efficiencies of  ≈ 0.25 V ⋅ mm (from liquid crystal orientation) and  ≈ 25.7 V ⋅ mm (from the Pockels effect), respectively, an on-chip insertion loss of  ≈ 2.6 dB, and an electro-optic bandwidth of <jats:italic>f</jats:italic>\n            <jats:sub>−6dB</jats:sub>&gt;4.18 GHz, employing improved light-matter interaction in a waveguide architecture that calls for only one lithography step.</jats:p>",
+  "DOI": "10.1038/s41467-025-63924-y",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     7
+    ]
+   ],
+   "date-time": "2025-10-07T13:47:55Z",
+   "timestamp": 1759844875000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 7,
+  "title": [
+   "GHz-rate optical phase shift in light-matter interaction-engineered, silicon-ferroelectric nematic liquid crystals"
+  ],
+  "prefix": "10.1038",
+  "volume": "16",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-2955-9209",
+    "authenticated-orcid": false,
+    "given": "Iman",
+    "family": "Taghavi",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Omid",
+    "family": "Esmaeeli",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0005-7980-5665",
+    "authenticated-orcid": false,
+    "given": "Sheri Jahan",
+    "family": "Chowdhury",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kashif Masud",
+    "family": "Awan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mustafa",
+    "family": "Hammood",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Matthew",
+    "family": "Mitchell",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0002-8250-4538",
+    "authenticated-orcid": false,
+    "given": "Donald",
+    "family": "Witt",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Cory",
+    "family": "Pecinovsky",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jason",
+    "family": "Sickler",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jeff F.",
+    "family": "Young",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nicolas A. F.",
+    "family": "Jaeger",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0383-1929",
+    "authenticated-orcid": false,
+    "given": "Sudip",
+    "family": "Shekhar",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2963-9284",
+    "authenticated-orcid": false,
+    "given": "Lukas",
+    "family": "Chrostowski",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     7
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "63924_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1038/s41467-024-44750-0",
+    "volume": "15",
+    "author": "S Shekhar",
+    "year": "2024",
+    "unstructured": "Shekhar, S. et al. Roadmapping the next generation of silicon photonics. Nat. Commun. 15, 1–15 (2024).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "63924_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "1269",
+    "DOI": "10.1109/LPT.2015.2416438",
+    "volume": "27",
+    "author": "Y Xing",
+    "year": "2015",
+    "unstructured": "Xing, Y. et al. Digitally controlled phase shifter using an SOI slot waveguide with liquid crystal infiltration. IEEE Photonics Technol. Lett. 27, 1269–1272 (2015).",
+    "journal-title": "IEEE Photonics Technol. Lett."
+   },
+   {
+    "key": "63924_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "042137",
+    "DOI": "10.1063/1.3662038",
+    "volume": "1",
+    "author": "Y Enami",
+    "year": "2011",
+    "unstructured": "Enami, Y., Luo, J. & Jen, A. K. Short hybrid polymer/sol-gel silica waveguide switches with high in-device electro-optic coefficient based on photostable chromophore. AIP Adv. 1, 042137 (2011).",
+    "journal-title": "AIP Adv."
+   },
+   {
+    "key": "63924_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "1559",
+    "DOI": "10.1515/nanoph-2019-0153",
+    "volume": "8",
+    "author": "MH Tahersima",
+    "year": "2019",
+    "unstructured": "Tahersima, M. H. et al. Coupling-enhanced dual ito layer electro-absorption modulator in silicon photonics. Nanophotonics 8, 1559–1566 (2019).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "63924_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "010901",
+    "DOI": "10.1063/5.0048712",
+    "volume": "130",
+    "author": "G Sinatkas",
+    "year": "2021",
+    "unstructured": "Sinatkas, G., Christopoulos, T., Tsilipakos, O. & Kriezis, E. E. Electro-optic modulation in integrated photonics. J. Appl. Phys. 130, 010901 (2021).",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "63924_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "158",
+    "DOI": "10.1038/s41566-019-0358-x",
+    "volume": "13",
+    "author": "AL Gaeta",
+    "year": "2019",
+    "unstructured": "Gaeta, A. L., Lipson, M. & Kippenberg, T. J. Photonic-chip-based frequency combs. Nat. Photonics 13, 158–169 (2019).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "63924_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "4001",
+    "DOI": "10.1515/nanoph-2021-0796",
+    "volume": "11",
+    "author": "Y Gui",
+    "year": "2022",
+    "unstructured": "Gui, Y. et al. 100 ghz micrometer-compact broadband monolithic ito mach-zehnder interferometer modulator enabling 3500 times higher packing density. Nanophotonics 11, 4001–4009 (2022).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "63924_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "333",
+    "DOI": "10.1364/OPTICA.389437",
+    "volume": "7",
+    "author": "R Amin",
+    "year": "2020",
+    "unstructured": "Amin, R. et al. Sub-wavelength ghz-fast broadband ito mach-zehnder modulator on silicon photonics. Optica 7, 333–335 (2020).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "63924_CR9",
+    "doi-asserted-by": "publisher",
+    "first-page": "081112",
+    "DOI": "10.1063/1.5109039",
+    "volume": "7",
+    "author": "R Amin",
+    "year": "2019",
+    "unstructured": "Amin, R. et al. Ito-based electro-absorption modulator for photonic neural activation function. APL Mater. 7, 081112 (2019).",
+    "journal-title": "APL Mater."
+   },
+   {
+    "key": "63924_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "volume": "13",
+    "author": "M He",
+    "year": "2019",
+    "unstructured": "He, M. et al. High-performance hybrid silicon and lithium niobate mach-zehnder modulators for 100 gbit s-1 and beyond. Nat. Photonics 13, 359–364 (2019).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "63924_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at cmos-compatible voltages. Nature 562, 101–104 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "63924_CR12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/ncomms2695",
+    "volume": "4",
+    "author": "S Abel",
+    "year": "2013",
+    "unstructured": "Abel, S. et al. A strong electro-optically active lead-free ferroelectric integrated on silicon. Nat. Commun. 4, 1671 (2013).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "63924_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "1456",
+    "DOI": "10.1109/JLT.2019.2893500",
+    "volume": "37",
+    "author": "F Eltes",
+    "year": "2019",
+    "unstructured": "Eltes, F. et al. A batio 3-based electro-optic pockels modulator monolithically integrated on an advanced silicon photonics platform. J. Light Technol. 37, 1456–1462 (2019).",
+    "journal-title": "J. Light Technol."
+   },
+   {
+    "key": "63924_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "42",
+    "DOI": "10.1038/s41563-018-0208-0",
+    "volume": "18",
+    "author": "S Abel",
+    "year": "2019",
+    "unstructured": "Abel, S. et al. Large pockels effect in micro-and nanostructured barium titanate integrated on silicon. Nat. Mater. 18, 42–47 (2019).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "63924_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "1164",
+    "DOI": "10.1038/s41563-020-0725-5",
+    "volume": "19",
+    "author": "F Eltes",
+    "year": "2020",
+    "unstructured": "Eltes, F. et al. An integrated optical modulator operating at cryogenic temperatures. Nat. Mater. 19, 1164–1168 (2020).",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "63924_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "100903",
+    "DOI": "10.1063/1.5109689",
+    "volume": "7",
+    "author": "M Miscuglio",
+    "year": "2019",
+    "unstructured": "Miscuglio, M., Adam, G. C., Kuzum, D. & Sorger, V. J. Roadmap on material-function mapping for photonic-electronic hybrid neural networks. APL Mater. 7, 100903 (2019).",
+    "journal-title": "APL Mater."
+   },
+   {
+    "key": "63924_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "3855",
+    "DOI": "10.1515/nanoph-2022-0141",
+    "volume": "11",
+    "author": "I Taghavi",
+    "year": "2022",
+    "unstructured": "Taghavi, I. et al. Polymer modulators in silicon photonics: review and projections. Nanophotonics 11, 3855–3871347 (2022).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "63924_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "261",
+    "DOI": "10.1039/D1MH01206A",
+    "volume": "9",
+    "author": "H Xu",
+    "year": "2022",
+    "unstructured": "Xu, H. et al. Design and synthesis of chromophores with enhanced electro-optic activities in both bulk and plasmonic-organic hybrid devices. Mater. Horiz. 9, 261–270 (2022).",
+    "journal-title": "Mater. Horiz."
+   },
+   {
+    "key": "63924_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "056106",
+    "DOI": "10.1063/1.5086868",
+    "volume": "4",
+    "author": "M Burla",
+    "year": "2019",
+    "unstructured": "Burla, M. et al. 500 ghz plasmonic mach-zehnder modulator enabling sub-thz microwave photonics. APL Photonics 4, 056106 (2019).",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "63924_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "173",
+    "DOI": "10.1038/lsa.2014.54",
+    "volume": "3",
+    "author": "L Alloatti",
+    "year": "2014",
+    "unstructured": "Alloatti, L. et al. 100 GHz silicon-organic hybrid modulator. Light Sci. Appl. 3, 173–173 (2014).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "63924_CR21",
+    "doi-asserted-by": "crossref",
+    "first-page": "1",
+    "DOI": "10.1038/s41467-019-13993-7",
+    "volume": "11",
+    "author": "G-W Lu",
+    "year": "2020",
+    "unstructured": "Lu, G.-W. et al. High-temperature-resistant silicon-polymer hybrid modulator operating at up to 200 gbits-1 for energy-efficient datacentres and harsh-environment applications. Nat. Commun. 11, 1–9 (2020).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "63924_CR22",
+    "unstructured": "Schwarzenberger, A. et al. Cryogenic operation of a silicon-organic hybrid (soh) modulator at 50 gbit/s and 4 k ambient temperature. In: IEEE 2022 European Conference on Optical Communication (ECOC), pp. 1–6 (2022)."
+   },
+   {
+    "key": "63924_CR23",
+    "unstructured": "Habegger, P. et al. Plasmonic 100-GHz electro-optic modulators for cryogenic applications. In: European Conference and Exhibition on Optical Communication, Optica Publishing Group, pp. 1–1 (2022)."
+   },
+   {
+    "key": "63924_CR24",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Hammond, S.R., O'Malleya, K.M., Xub, H., Elder, D.L. & Lewis, E.J. Organic electro-optic materials combining extraordinary nonlinearity with exceptional stability to enable commercial applications. In: SPIE Photonics West 11998, pp. 56–66 (2022).",
+    "DOI": "10.1117/12.2622099"
+   },
+   {
+    "key": "63924_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "667",
+    "DOI": "10.1063/1.114093",
+    "volume": "66",
+    "author": "C Teng",
+    "year": "1995",
+    "unstructured": "Teng, C., Mortazavi, M. & Boudoughian, G. Origin of the poling-induced optical loss in a nonlinear optical polymeric waveguide. Appl. Phys. Lett. 66, 667–669 (1995).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "63924_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "27841",
+    "DOI": "10.1364/OE.460830",
+    "volume": "30",
+    "author": "I Taghavi",
+    "year": "2022",
+    "unstructured": "Taghavi, I. et al. Enhanced poling and infiltration for highly efficient electro-optic polymer-based mach-zehnder modulators. Opt. Express 30, 27841–27857 (2022).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "63924_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "1653",
+    "DOI": "10.1364/OME.5.001653",
+    "volume": "5",
+    "author": "KM Schulz",
+    "year": "2015",
+    "unstructured": "Schulz, K. M. et al. Mechanism that governs the electro-optic response of second-order nonlinear polymers on silicon substrates. Opt. Mater. Express 5, 1653–1660 (2015).",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "63924_CR28",
+    "doi-asserted-by": "publisher",
+    "first-page": "94",
+    "DOI": "10.1063/1.4884829",
+    "volume": "104",
+    "author": "W Jin",
+    "year": "2014",
+    "unstructured": "Jin, W. et al. Benzocyclobutene barrier layer for suppressing conductance in nonlinear optical devices during electric field poling. Appl. Phys. Lett. 104, 94–1 (2014).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "63924_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "17776",
+    "DOI": "10.1364/OE.22.017776",
+    "volume": "22",
+    "author": "C-T Wang",
+    "year": "2014",
+    "unstructured": "Wang, C.-T. et al. Electrically tunable high q-factor micro-ring resonator based on blue phase liquid crystal cladding. Opt. Express 22, 17776–17781 (2014).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "63924_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "213",
+    "DOI": "10.1038/lsa.2014.94",
+    "volume": "3",
+    "author": "Z Zhang",
+    "year": "2014",
+    "unstructured": "Zhang, Z., You, Z. & Chu, D. Fundamentals of phase-only liquid crystal on silicon (lcos) devices. Light Sci. Appl. 3, 213–213 (2014).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "63924_CR31",
+    "doi-asserted-by": "publisher",
+    "first-page": "650",
+    "DOI": "10.3390/cryst9120650",
+    "volume": "9",
+    "author": "J Li",
+    "year": "2019",
+    "unstructured": "Li, J. & Chu, D. Liquid crystal-based enclosed coplanar waveguide phase shifter for 54-66 ghz applications. Crystals 9, 650 (2019).",
+    "journal-title": "Crystals"
+   },
+   {
+    "key": "63924_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "2008",
+    "DOI": "10.1364/OL.38.002008",
+    "volume": "38",
+    "author": "J Ptasinski",
+    "year": "2013",
+    "unstructured": "Ptasinski, J., Kim, S. W., Pang, L., Khoo, I.-C. & Fainman, Y. Optical tuning of silicon photonic structures with nematic liquid crystal claddings. Opt. Lett. 38, 2008–2010 (2013).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "63924_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "14629",
+    "DOI": "10.1073/pnas.2008947117",
+    "volume": "117",
+    "author": "OD Lavrentovich",
+    "year": "2020",
+    "unstructured": "Lavrentovich, O. D. Ferroelectric nematic liquid crystal, a century in waiting. Proc. Natl. Acad. Sci. 117, 14629–14631 (2020).",
+    "journal-title": "Proc. Natl. Acad. Sci."
+   },
+   {
+    "key": "63924_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "14021",
+    "DOI": "10.1073/pnas.2002290117",
+    "volume": "117",
+    "author": "X Chen",
+    "year": "2020",
+    "unstructured": "Chen, X. et al. First-principles experimental demonstration of ferroelectricity in a thermotropic nematic liquid crystal: Polar domains and striking electro-optics. Proc. Natl. Acad. Sci. 117, 14021–14031 (2020).",
+    "journal-title": "Proc. Natl. Acad. Sci."
+   },
+   {
+    "key": "63924_CR35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-023-36326-1",
+    "volume": "14",
+    "author": "P Kumari",
+    "year": "2023",
+    "unstructured": "Kumari, P., Basnet, B., Wang, H. & Lavrentovich, O. D. Ferroelectric nematic liquids with conics. Nat. Commun. 14, 748 (2023).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "63924_CR36",
+    "doi-asserted-by": "publisher",
+    "first-page": "899",
+    "DOI": "10.1080/02678292.2022.2056927",
+    "volume": "49",
+    "author": "CL Folcia",
+    "year": "2022",
+    "unstructured": "Folcia, C. L., Ortega, J., Vidal, R., Sierra, T. & Etxebarria, J. An optimum liquid crystal candidate for nonlinear optics. Liq. Cryst. 49, 899–906 (2022).",
+    "journal-title": "Liq. Cryst."
+   },
+   {
+    "key": "63924_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "10905",
+    "DOI": "10.1039/D3TC01384G",
+    "volume": "11",
+    "author": "R Xia",
+    "year": "2023",
+    "unstructured": "Xia, R. et al. Achieving enhanced second-harmonic generation in ferroelectric nematics by doping d-π-a chromophores. J. Mater. Chem. C. 11, 10905–10910 (2023).",
+    "journal-title": "J. Mater. Chem. C."
+   },
+   {
+    "key": "63924_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "e2104092118",
+    "DOI": "10.1073/pnas.2104092118",
+    "volume": "118",
+    "author": "X Chen",
+    "year": "2021",
+    "unstructured": "Chen, X. et al. Polar in-plane surface orientation of a ferroelectric nematic liquid crystal: polar monodomains and twisted state electro-optics. Proc. Natl Acad. Sci. 118, e2104092118 (2021).",
+    "journal-title": "Proc. Natl Acad. Sci."
+   },
+   {
+    "key": "63924_CR39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-14539-y",
+    "volume": "11",
+    "author": "M Thomaschewski",
+    "year": "2020",
+    "unstructured": "Thomaschewski, M., Zenin, V. A., Wolff, C. & Bozhevolnyi, S. I. Plasmonic monolithic lithium niobate directional coupler switches. Nat. Commun. 11, 748 (2020).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "63924_CR40",
+    "doi-asserted-by": "publisher",
+    "first-page": "034004",
+    "DOI": "10.1088/2058-9565/ab7eed",
+    "volume": "5",
+    "author": "JD Witmer",
+    "year": "2020",
+    "unstructured": "Witmer, J. D. et al. A silicon-organic hybrid platform for quantum microwave-to-optical transduction. Quantum Sci. Technol. 5, 034004 (2020).",
+    "journal-title": "Quantum Sci. Technol."
+   },
+   {
+    "key": "63924_CR41",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Singh, J. et al. Neuromorphic photonic circuit modeling in verilog-a. APL Photonics 7, 046103 (2022).",
+    "DOI": "10.1063/5.0079984"
+   },
+   {
+    "key": "63924_CR42",
+    "doi-asserted-by": "publisher",
+    "first-page": "291",
+    "DOI": "10.1364/OPTICA.384118",
+    "volume": "7",
+    "author": "J-H Kim",
+    "year": "2020",
+    "unstructured": "Kim, J.-H., Aghaeimeibodi, S., Carolan, J., Englund, D. & Waks, E. Hybrid integration methods for on-chip quantum photonics. Optica 7, 291–308 (2020).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "63924_CR43",
+    "doi-asserted-by": "publisher",
+    "first-page": "15618",
+    "DOI": "10.1364/OE.18.015618",
+    "volume": "18",
+    "author": "R Ding",
+    "year": "2010",
+    "unstructured": "Ding, R. et al. Demonstration of a low v π l modulator with ghz bandwidth based on electro-optic polymer-clad silicon slot waveguides. Opt. Express 18, 15618–15623 (2010).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "63924_CR44",
+    "doi-asserted-by": "publisher",
+    "first-page": "229",
+    "DOI": "10.1038/nphoton.2014.9",
+    "volume": "138",
+    "author": "A Melikyan",
+    "year": "2014",
+    "unstructured": "Melikyan, A. et al. High-speed plasmonic phase modulators. Nat. Photonics 138, 229–233 (2014).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "63924_CR45",
+    "doi-asserted-by": "publisher",
+    "first-page": "1700300",
+    "DOI": "10.1002/lpor.201700300",
+    "volume": "12",
+    "author": "Z Pan",
+    "year": "2018",
+    "unstructured": "Pan, Z. et al. High-speed modulator based on electro-optic polymer infiltrated subwavelength grating waveguide ring resonator. Laser Photonics Rev. 12, 1700300 (2018).",
+    "journal-title": "Laser Photonics Rev."
+   },
+   {
+    "key": "63924_CR46",
+    "doi-asserted-by": "publisher",
+    "first-page": "171101",
+    "DOI": "10.1063/1.4824421",
+    "volume": "103",
+    "author": "S-i Inoue",
+    "year": "2013",
+    "unstructured": "Inoue, S.-i & Otomo, A. Electro-optic polymer/silicon hybrid slow light modulator based on one- dimensional photonic crystal waveguides. Appl. Phys. Lett. 103, 171101 (2013).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "63924_CR47",
+    "doi-asserted-by": "publisher",
+    "first-page": "511",
+    "DOI": "10.1364/OPTICA.411161",
+    "volume": "8",
+    "author": "S Ummethala",
+    "year": "2021",
+    "unstructured": "Ummethala, S. et al. Hybrid electro-optic modulator combining silicon photonic slot waveguides with high-k radio-frequency slotlines. Optica 8, 511–519 (2021).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "63924_CR48",
+    "doi-asserted-by": "publisher",
+    "first-page": "2627",
+    "DOI": "10.1364/OE.25.002627",
+    "volume": "25",
+    "author": "W Heni",
+    "year": "2017",
+    "unstructured": "Heni, W. et al. Nonlinearities of organic electro-optic materials in nanoscale slots and implications for the optimum modulator design. Opt. Express 25, 2627–2653 (2017).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "63924_CR49",
+    "doi-asserted-by": "publisher",
+    "first-page": "143109",
+    "DOI": "10.1063/1.2793618",
+    "volume": "91",
+    "author": "G Wang",
+    "year": "2007",
+    "unstructured": "Wang, G., Baehr-Jones, T., Hochberg, M. & Scherer, A. Design and fabrication of segmented, slotted waveguides for electro-optic modulation. Appl. Phys. Lett. 91, 143109 (2007).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "63924_CR50",
+    "doi-asserted-by": "publisher",
+    "first-page": "1493",
+    "DOI": "10.1364/JOSAB.22.001493",
+    "volume": "22",
+    "author": "M Hochberg",
+    "year": "2005",
+    "unstructured": "Hochberg, M. et al. Segmented waveguides in thin silicon-on-insulator. J. Opt. Soc. Am. B 22, 1493–1497 (2005).",
+    "journal-title": "J. Opt. Soc. Am. B"
+   },
+   {
+    "key": "63924_CR51",
+    "doi-asserted-by": "publisher",
+    "first-page": "3952",
+    "DOI": "10.1364/OE.19.003952",
+    "volume": "19",
+    "author": "M Gould",
+    "year": "2011",
+    "unstructured": "Gould, M. et al. Silicon-polymer hybrid slot waveguide ring-resonator modulator. Opt. Express 19, 3952–3961 (2011).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "63924_CR52",
+    "doi-asserted-by": "publisher",
+    "first-page": "1408",
+    "DOI": "10.1021/acs.chemmater.9b03725",
+    "volume": "32",
+    "author": "H Xu",
+    "year": "2020",
+    "unstructured": "Xu, H. et al. Ultrahigh electro-optic coefficients, high index of refraction, and long-term stability from diels-alder cross-linkable binary molecular glasses. Chem. Mater. 32, 1408–1421 (2020).",
+    "journal-title": "Chem. Mater."
+   },
+   {
+    "key": "63924_CR53",
+    "doi-asserted-by": "publisher",
+    "first-page": "6457",
+    "DOI": "10.1021/acs.chemmater.7b02020",
+    "volume": "29",
+    "author": "DL Elder",
+    "year": "2017",
+    "unstructured": "Elder, D. L. et al. Effect of rigid bridge-protection units, quadrupolar interactions, and blending in organic electro-optic chromophores. Chem. Mater. 29, 6457–6471 (2017).",
+    "journal-title": "Chem. Mater."
+   },
+   {
+    "key": "63924_CR54",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Witt, D., Young, J. & Chrostowski, L. Reinforcement learning for photonic component design. APL Photonics 8, 106101 (2023).",
+    "DOI": "10.1063/5.0159928"
+   },
+   {
+    "key": "63924_CR55",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Darcie, A. et al. Siepicfab: the Canadian silicon photonics rapid-prototyping foundry for integrated optics and quantum computing. In: SPIE Silicon Photonics XVI, vol. 11691, pp. 31–50 (2021).",
+    "DOI": "10.1117/12.2583432"
+   },
+   {
+    "key": "63924_CR56",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JPHOT.2015.2505145",
+    "volume": "7",
+    "author": "Y Wang",
+    "year": "2015",
+    "unstructured": "Wang, Y. et al. Apodized focusing fully etched subwavelength grating couplers. IEEE Photonics J. 7, 1–10 (2015).",
+    "journal-title": "IEEE Photonics J."
+   },
+   {
+    "key": "63924_CR57",
+    "unstructured": "Chiang, L.-Y. et al. Ferroelectric nematic liquid crystal-based silicon photonic modulator demonstrated at 102 Gbit/s PAM-4. arXiv https://arxiv.org/abs/2507.14724 (2025)."
+   },
+   {
+    "key": "63924_CR58",
+    "doi-asserted-by": "publisher",
+    "first-page": "3883",
+    "DOI": "10.1109/JLT.2023.3266988",
+    "volume": "41",
+    "author": "Y Yamaguchi",
+    "year": "2023",
+    "unstructured": "Yamaguchi, Y. et al. Traveling-wave Mach-Zehnder modulator integrated with electro-optic frequency-domain equalizer for broadband modulation. J. Light. Technol. 41, 3883–3891 (2023).",
+    "journal-title": "J. Light. Technol."
+   },
+   {
+    "key": "63924_CR59",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-023-27724-y",
+    "volume": "13",
+    "author": "E Luan",
+    "year": "2023",
+    "unstructured": "Luan, E. et al. Towards a high-density photonic tensor core enabled by intensity-modulated microrings and photonic wire bonding. Sci. Rep. 13, 1260 (2023).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "63924_CR60",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Mitchell, M. et al. Photonic wire bonding for silicon photonics iii-v laser integration. In: 2021 IEEE 17th International Conference on Group IV Photonics (GFP), pp. 1–2 (2021).",
+    "DOI": "10.1109/GFP51802.2021.9673842"
+   },
+   {
+    "key": "63924_CR61",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Wang, T. et al. Semiconductor optical amplifier (soa) integrated on a silicon photonic chip using photonic wire bonds (pwbs). In: SPIE Integrated Optics: Devices, Materials, and Technologies XXVIII, vol. 12889, pp. 131–137 (2024).",
+    "DOI": "10.1117/12.2692241"
+   },
+   {
+    "key": "63924_CR62",
+    "doi-asserted-by": "publisher",
+    "first-page": "2726",
+    "DOI": "10.1109/JLT.2014.2321498",
+    "volume": "32",
+    "author": "R Palmer",
+    "year": "2014",
+    "unstructured": "Palmer, R. et al. High-speed, low drive-voltage silicon-organic hybrid modulator based on a binary-chromophore electro-optic material. J. Light. Technol. 32, 2726–2734 (2014).",
+    "journal-title": "J. Light. Technol."
+   },
+   {
+    "key": "63924_CR63",
+    "doi-asserted-by": "publisher",
+    "first-page": "255",
+    "DOI": "10.1038/lsa.2015.28",
+    "volume": "4",
+    "author": "S Koeber",
+    "year": "2015",
+    "unstructured": "Koeber, S. et al. Femtojoule electro-optic modulation using a silicon-organic hybrid device. Light Sci. Appl. 4, 255–255 (2015).",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "63924_CR64",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Taghavi, I. et al. Enhanced polling and infiltration of highly-linear Mach-Zehnder modulators on si/sin-organic hybrid platform. In: CLEO: Science and Innovations, Optical Society of America, pp. 1–1 (2018).",
+    "DOI": "10.1364/CLEO_SI.2018.SM1I.1"
+   },
+   {
+    "key": "63924_CR65",
+    "doi-asserted-by": "publisher",
+    "first-page": "4177",
+    "DOI": "10.1364/OE.16.004177",
+    "volume": "16",
+    "author": "J-M Brosi",
+    "year": "2008",
+    "unstructured": "Brosi, J.-M. et al. High-speed low-voltage electro-optic modulator with a polymer-infiltrated silicon photonic crystal waveguide. Opt. Express 16, 4177–4191 (2008).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "63924_CR66",
+    "doi-asserted-by": "publisher",
+    "first-page": "19771",
+    "DOI": "10.1364/OE.456271",
+    "volume": "30",
+    "author": "S Kamada",
+    "year": "2022",
+    "unstructured": "Kamada, S. et al. Superiorly low half-wave voltage electro-optic polymer modulator for visible photonics. Opt. Express 30, 19771–19780 (2022).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "63924_CR67",
+    "doi-asserted-by": "publisher",
+    "first-page": "2214",
+    "DOI": "10.1109/JPHOT.2012.2228477",
+    "volume": "4",
+    "author": "X Zhang",
+    "year": "2012",
+    "unstructured": "Zhang, X. et al. Highly linear broadband optical modulator based on electro-optic polymer. IEEE Photonics J. 4, 2214–2228 (2012).",
+    "journal-title": "IEEE Photonics J."
+   },
+   {
+    "key": "63924_CR68",
+    "doi-asserted-by": "publisher",
+    "first-page": "92",
+    "DOI": "10.1063/1.4931490",
+    "volume": "107",
+    "author": "F Qiu",
+    "year": "2015",
+    "unstructured": "Qiu, F. et al. Ultra-thin silicon/electro-optic polymer hybrid waveguide modulators. Appl. Phys. Lett. 107, 92–1 (2015).",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "63924_CR69",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Taghavi, I. GHz-rate optical phase shift in light matter interaction-engineered, silicon-ferroelectric nematic liquid crystals. Figshare. https://doi.org/10.6084/m9.figshare.29817221.v2 (2025).",
+    "DOI": "10.6084/m9.figshare.29817221.v2"
+   },
+   {
+    "key": "63924_CR70",
+    "doi-asserted-by": "publisher",
+    "first-page": "15520",
+    "DOI": "10.1364/OE.17.015520",
+    "volume": "17",
+    "author": "JW Park",
+    "year": "2009",
+    "unstructured": "Park, J. W., You, J.-B., Kim, I. G. & Kim, G. High-modulation efficiency silicon Mach-Zehnder optical modulator based on carrier depletion in a pn diode. Opt. Express 17, 15520–15524 (2009).",
+    "journal-title": "Opt. Express"
+   }
+  ],
+  "container-title": [
+   "Nature Communications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-63924-y.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-63924-y",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-63924-y.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     7
+    ]
+   ],
+   "date-time": "2025-10-07T15:38:32Z",
+   "timestamp": 1759851512000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41467-025-63924-y"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     7
+    ]
+   ]
+  },
+  "references-count": 70,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2025,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "63924"
+  ],
+  "URL": "https://doi.org/10.1038/s41467-025-63924-y",
+  "relation": {},
+  "ISSN": [
+   "2041-1723"
+  ],
+  "issn-type": [
+   {
+    "value": "2041-1723",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     7
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "11 May 2024",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "25 August 2025",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "7 October 2025",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ],
+  "article-number": "8902"
+ }
+}

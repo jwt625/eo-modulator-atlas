@@ -212,4 +212,11 @@ entries:
   basis: measured
   locator: p.4 text
   note: setup description lists AWG, cable, probe
+- device_id: wang2024a-a
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: p.4
+  note: 'source: For a 6 mm MZM with 100 Hz triangular voltage sweeps, the measured Vπ is 4.8 V at ...'
 derived: []

@@ -13,44 +13,14 @@ entries:
   unit: nm
   basis: extracted_from_figure
   locator: p.5, Fig. 2e
-  note: 0 V peak between 1559.18 and 1560.04 ticks; Fig. 2e tuning device, not necessarily the S21 device;
-    not in text
+  note: 0 V peak near 1559.8 nm between the 1559.18 and 1560.04 ticks; tuning device; not in text
 - device_id: zhang2023-a
   field: length_mm
   value: 0.15
   unit: mm
   basis: measured
   locator: p.5 text
-  note: Electrode length 150 um; cavity itself 140 um long (abstract)
-- device_id: zhang2023-a
-  field: drive_vpp_v
-  value: 2
-  unit: V
-  basis: measured
-  locator: p.9 Methods; Table 1 (p.8)
-  note: Eye-diagram driving peak-to-peak voltage about 2 V
-- device_id: zhang2023-a
-  field: bw3db_ghz
-  value: 104
-  unit: GHz
-  basis: measured
-  locator: p.6 text; Fig. 3d
-  note: -8 dB detuning point; 110 GHz LCA; others 37, 67, 87 GHz; S21 device Q 5400, 35 GHz photon-lifetime
-    limit (p.6)
-- device_id: zhang2023-a
-  field: il_onchip_db
-  value: 1.3
-  unit: dB
-  basis: measured
-  locator: p.5 text; Fig. 2d
-  note: Cavity without electrodes at resonance; definition and grating-coupler normalization not stated
-- device_id: zhang2023-a
-  field: extinction_ratio_db
-  value: 32
-  unit: dB
-  basis: measured
-  locator: p.5 text; Fig. 2d; Table 1
-  note: Cavity without electrodes, static dip; S21 device likely a different, Q 5400 device (p.6)
+  note: Electrode length 150 um stated for the topological modulator design; not given per device
 - device_id: zhang2023-a
   field: eo_film_thickness_nm
   value: 300
@@ -107,56 +77,11 @@ entries:
   note: Oriented along y to use r33
 - device_id: zhang2023-a
   field: epitaxy_or_stack
-  value: Si substrate / 2 um SiO2 / 300 nm x-cut LN / 300 nm PECVD SiN strip 1600 nm wide with rectangular
-    air holes (period 420 nm, 170 unit cells, D1 150 nm, D2 80 nm, D3 674 nm) / Ti-Au coplanar electrodes
-    beside the cavity
+  value: Si substrate / 2 um SiO2 / 300 nm x-cut LN / 300 nm PECVD SiN strip 1600 nm wide with rectangular air holes (period
+    420 nm, 170 unit cells, D1 150 nm, D2 80 nm, D3 674 nm) / Ti-Au coplanar electrodes beside the cavity
   unit: ''
   basis: measured
   locator: p.4 text; p.9 Methods; Fig. 1f
-- device_id: zhang2023-a
-  field: max_baud_gbd
-  value: 100
-  unit: GBd
-  basis: measured
-  locator: p.7-8 text; Fig. 4h
-  note: NRZ 100 Gbaud, BER below 3.8e-3 after offline DSP
-- device_id: zhang2023-a
-  field: modulation_format
-  value: NRZ up to 100 GBd (BER below 7% HD-FEC threshold 3.8e-3, offline DSP); PAM-4 100 Gb/s (50 GBd)
-    and 80 Gb/s (40 GBd); PAM-6 77 Gb/s (30 GBd); PAM-8 90 Gb/s (30 GBd)
-  unit: ''
-  basis: measured
-  locator: p.7-8; Fig. 4
-- device_id: zhang2023-a
-  field: max_line_rate_gbps
-  value: 100
-  unit: Gb/s
-  basis: measured
-  locator: p.8 text; Fig. 4d,h
-  note: 100 Gb/s NRZ and 100 Gb/s PAM-4
-- device_id: zhang2023-a
-  field: energy_per_bit_fj
-  value: 5.4
-  unit: fJ/bit
-  basis: derived
-  locator: p.8 text; Table 1
-  note: Author-computed C*Vpp^2/4 for NRZ, stated approximately
-- device_id: zhang2023-a
-  field: capacitance_ff
-  value: 5.4
-  unit: fF
-  basis: simulated
-  locator: p.4-5 text
-  note: Calculated 36 fF/mm for the microelectrodes times 150 um; derivation in Supplementary Note S5
-    not read
-- device_id: zhang2023-a
-  field: q_loaded
-  value: 9066
-  unit: '1'
-  basis: measured
-  locator: p.5 text; Fig. 2d
-  note: Cavity without electrodes (Fig. 2d); p.6 gives Q 5400 for the S21 device, so this likely differs
-    from it
 - device_id: zhang2023-a
   field: tuning_nm_per_v
   value: 0.011
@@ -164,4 +89,205 @@ entries:
   basis: measured
   locator: p.5 text; Fig. 2f
   note: 11 pm/V linear tuning, +-24 V
+- device_id: zhang2023-b
+  field: length_mm
+  value: 0.15
+  unit: mm
+  basis: measured
+  locator: p.5 text
+  note: Electrode length 150 um stated for the topological modulator design; not given per device
+- device_id: zhang2023-b
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.9 Methods; Table 1 (p.8)
+  note: Eye-diagram drive about 2 V; Fig. 4 device not named, assigned to the S21 device (judgment)
+- device_id: zhang2023-b
+  field: bw3db_ghz
+  value: 104
+  unit: GHz
+  basis: measured
+  locator: p.6 text; Fig. 3d
+  note: -8 dB detuning point; 110 GHz LCA; 37, 67, 87 GHz at -3, -4.5, -6.5 dB; Q 5400 device (p.6)
+- device_id: zhang2023-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.4 text; p.9 Methods
+  note: X-cut LNOI film
+- device_id: zhang2023-b
+  field: rib_width_nm
+  value: 1600
+  unit: nm
+  basis: measured
+  locator: p.4 text
+  note: SiN loading strip waveguide width; LN is not etched
+- device_id: zhang2023-b
+  field: electrode_thickness_um
+  value: 0.3
+  unit: um
+  basis: measured
+  locator: p.9 Methods
+  note: 300 nm Au on 10 nm Ti adhesion layer
+- device_id: zhang2023-b
+  field: electrode_metal
+  value: Ti/Au (10 nm / 300 nm)
+  unit: ''
+  basis: measured
+  locator: p.9 Methods
+- device_id: zhang2023-b
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.9 Methods
+  note: Buried silica of the LNOI wafer
+- device_id: zhang2023-b
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1f legend
+  note: Si layer labelled in the schematic; not stated in text
+- device_id: zhang2023-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.4 text; p.9 Methods
+- device_id: zhang2023-b
+  field: waveguide_orientation
+  value: cavity along crystal y axis
+  unit: ''
+  basis: measured
+  locator: p.4 text
+  note: Oriented along y to use r33
+- device_id: zhang2023-b
+  field: epitaxy_or_stack
+  value: Si substrate / 2 um SiO2 / 300 nm x-cut LN / 300 nm PECVD SiN strip 1600 nm wide with rectangular air holes (period
+    420 nm, 170 unit cells, D1 150 nm, D2 80 nm, D3 674 nm) / Ti-Au coplanar electrodes beside the cavity
+  unit: ''
+  basis: measured
+  locator: p.4 text; p.9 Methods; Fig. 1f
+- device_id: zhang2023-b
+  field: max_baud_gbd
+  value: 100
+  unit: GBd
+  basis: measured
+  locator: p.7-8 text; Fig. 4h
+  note: NRZ 100 Gbaud, BER below 3.8e-3 after offline DSP; Fig. 4 device not named (judgment)
+- device_id: zhang2023-b
+  field: modulation_format
+  value: NRZ up to 100 GBd (BER below 7% HD-FEC threshold 3.8e-3, offline DSP); PAM-4 100 Gb/s (50 GBd) and 80 Gb/s (40 GBd);
+    PAM-6 77 Gb/s (30 GBd); PAM-8 90 Gb/s (30 GBd)
+  unit: ''
+  basis: measured
+  locator: p.7-8; Fig. 4
+- device_id: zhang2023-b
+  field: max_line_rate_gbps
+  value: 100
+  unit: Gb/s
+  basis: measured
+  locator: p.8 text; Fig. 4d,h
+  note: 100 Gb/s NRZ and 100 Gb/s PAM-4
+- device_id: zhang2023-b
+  field: energy_per_bit_fj
+  value: 5.4
+  unit: fJ/bit
+  basis: derived
+  locator: p.8 text; Table 1
+  note: Author-computed C*Vpp^2/4 for NRZ, stated approximately
+- device_id: zhang2023-b
+  field: capacitance_ff
+  value: 5.4
+  unit: fF
+  basis: simulated
+  locator: p.4-5 text
+  note: Calculated 36 fF/mm for the microelectrodes times 150 um; derivation in Supplementary Note S5 not read
+- device_id: zhang2023-b
+  field: q_loaded
+  value: 5400
+  unit: '1'
+  basis: measured
+  locator: p.6 text
+  note: Another topological modulator device on the same chip with a lower Q of 5400; used for the Fig. 3d S21
+- device_id: zhang2023-c
+  field: wavelength_nm
+  value: 1558
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5, Fig. 2d
+  note: Resonance peak inside the stopband, between the 1540 and 1560 nm ticks near 1558; not in text
+- device_id: zhang2023-c
+  field: il_onchip_db
+  value: 1.3
+  unit: dB
+  basis: measured
+  locator: p.5 text; Fig. 2d
+  note: Electrode-free cavity at resonance; definition and grating-coupler normalization not stated
+- device_id: zhang2023-c
+  field: extinction_ratio_db
+  value: 32
+  unit: dB
+  basis: measured
+  locator: p.5 text; Fig. 2d; Table 1
+  note: Resonance peak versus stopband floor of the electrode-free cavity; Table 1 attributes it to the modulator
+- device_id: zhang2023-c
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.4 text; p.9 Methods
+  note: X-cut LNOI film
+- device_id: zhang2023-c
+  field: rib_width_nm
+  value: 1600
+  unit: nm
+  basis: measured
+  locator: p.4 text
+  note: SiN loading strip waveguide width; LN is not etched
+- device_id: zhang2023-c
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: measured
+  locator: p.9 Methods
+  note: Buried silica of the LNOI wafer
+- device_id: zhang2023-c
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.3, Fig. 1f legend
+  note: Si layer labelled in the schematic; not stated in text
+- device_id: zhang2023-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: measured
+  locator: p.4 text; p.9 Methods
+- device_id: zhang2023-c
+  field: waveguide_orientation
+  value: cavity along crystal y axis
+  unit: ''
+  basis: measured
+  locator: p.4 text
+  note: Oriented along y to use r33
+- device_id: zhang2023-c
+  field: epitaxy_or_stack
+  value: Si substrate / 2 um SiO2 / 300 nm x-cut LN / 300 nm PECVD SiN strip 1600 nm wide with rectangular air holes (period
+    420 nm, 170 unit cells, D1 150 nm, D2 80 nm, D3 674 nm); no electrodes
+  unit: ''
+  basis: measured
+  locator: p.4 text; p.9 Methods; Fig. 2d caption
+  note: Same stack and design as the modulators, without gold electrodes
+- device_id: zhang2023-c
+  field: q_loaded
+  value: 9066
+  unit: '1'
+  basis: measured
+  locator: p.5 text; Fig. 2d
+  note: Electrode-free cavity; 3 dB linewidth 0.172 nm
 derived: []

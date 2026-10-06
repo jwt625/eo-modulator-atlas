@@ -134,27 +134,27 @@ entries:
   note: Equalizer compensates AWG and cable, not the modulator
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1-3, page footer
-    note: Footer on pages 1-3; page 1 abstract also reads (c) 2025 The Author(s)
-  shifting_efficiency:
-    value: 25.5 GHz/V (FSR 279.5 GHz / 11.1 V per 2 pi)
-    locator: p.2 Sec. 2; Fig. 1(d)
-    note: Measured at 1560 nm fixed wavelength, -10 V to 10 V sweep
-  fsr:
-    value: 279.5 GHz
-    locator: p.2 Fig. 1(c)
-    note: Authors give GHz only
-  laser_power:
-    value: 4 dBm (6 dBm for 100 GBd PAM4); grating coupler 5.5 dB
-    locator: p.2 Sec. 3
-    note: Laser output, not on-chip power
-  other_points:
-    value: PAM8 40 GBd at 100 mVpp, 13 aJ/bit; PAM4 60 GBd 140 mVpp 60.5 aJ/bit; PAM8 20 GBd 110 mVpp 25 aJ/bit
-    locator: p.3 Sec. 3
-    note: Authors energy via W = k C U^2; printed energies imply swapped voltages (60.5 aJ fits 110 mVpp, 25 aJ fits 140 mVpp)
-  round_trip:
-    value: rho 0.906 (about 0.86 dB), kappa 0.379
-    locator: p.2 Sec. 2
-    note: Extracted from Q and ER
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: Footer on pages 1-3; page 1 abstract also reads (c) 2025 The Author(s)
+- item: shifting_efficiency
+  value: 25.5 GHz/V (FSR 279.5 GHz / 11.1 V per 2 pi)
+  locator: p.2 Sec. 2; Fig. 1(d)
+  note: Measured at 1560 nm fixed wavelength, -10 V to 10 V sweep
+- item: fsr
+  value: 279.5 GHz
+  locator: p.2 Fig. 1(c)
+  note: Authors give GHz only
+- item: laser_power
+  value: 4 dBm (6 dBm for 100 GBd PAM4); grating coupler 5.5 dB
+  locator: p.2 Sec. 3
+  note: Laser output, not on-chip power
+- item: other_points
+  value: PAM8 40 GBd at 100 mVpp, 13 aJ/bit; PAM4 60 GBd 140 mVpp 60.5 aJ/bit; PAM8 20 GBd 110 mVpp 25 aJ/bit
+  locator: p.3 Sec. 3
+  note: Authors energy via W = k C U^2; printed energies imply swapped voltages (60.5 aJ fits 110 mVpp, 25 aJ fits 140 mVpp)
+- item: round_trip
+  value: rho 0.906 (about 0.86 dB), kappa 0.379
+  locator: p.2 Sec. 2
+  note: Extracted from Q and ER

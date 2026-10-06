@@ -449,4 +449,46 @@ entries:
   basis: derived
   locator: Table 1 p.15; p.16
   note: authors label scheme SA or PP; mapping to the drive enum is ours
+- device_id: navarro2026-a
+  field: temperature_k
+  value: 300.0
+  unit: K
+  basis: simulated
+  locator: p.15, Table 1
+  note: Simulation temperature of the Kubo-conductivity model, not a measurement
+- device_id: navarro2026-b
+  field: temperature_k
+  value: 10.0
+  unit: K
+  basis: simulated
+  locator: p.15, Table 1
+  note: Simulation temperature of the Kubo-conductivity model, not a measurement
+- device_id: navarro2026-c
+  field: temperature_k
+  value: 10.0
+  unit: K
+  basis: simulated
+  locator: p.15, Table 1
+  note: Simulation temperature of the Kubo-conductivity model, not a measurement
+- device_id: navarro2026-d
+  field: temperature_k
+  value: 300.0
+  unit: K
+  basis: simulated
+  locator: p.15, Table 1
+  note: Simulation temperature of the Kubo-conductivity model, not a measurement
+- device_id: navarro2026-e
+  field: temperature_k
+  value: 10.0
+  unit: K
+  basis: simulated
+  locator: p.15, Table 1
+  note: Simulation temperature of the Kubo-conductivity model, not a measurement
+- device_id: navarro2026-f
+  field: temperature_k
+  value: 10.0
+  unit: K
+  basis: simulated
+  locator: p.15, Table 1
+  note: Simulation temperature of the Kubo-conductivity model, not a measurement
 derived: []

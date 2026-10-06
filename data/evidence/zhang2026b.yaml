@@ -340,11 +340,19 @@ entries:
   note: Rib thickness 200 nm above a 150 nm slab; equals 350 nm film minus 150 nm slab
 - device_id: zhang2026b-c
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.3, Fig. 3(d)
   note: Traces start near 0 dB; reference not stated
+  previous_value: unspecified
+- device_id: zhang2026b-a
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.2 Sec. 3; p.3 Fig. 3(a)
+  note: 'source: The DC Vπ of a 5-mm-long modulator with metal space of 5 μm is measured using a 1 ...'
 derived:
 - device_id: zhang2026b-a
   field: etch_depth_nm
@@ -364,7 +372,7 @@ derived:
   formula: eo_film_thickness_nm - slab_thickness_nm
   inputs: *id001
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1 page footer (repeated on every page)
-    note: printed page-footer copyright notice; basis for license publisher-copyright
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1 page footer (repeated on every page)
+  note: printed page-footer copyright notice; basis for license publisher-copyright

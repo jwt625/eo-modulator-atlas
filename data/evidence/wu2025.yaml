@@ -130,4 +130,11 @@ entries:
   basis: derived
   locator: p.3 Sec. BEOL integration; p.6 Sec. Modulator
   note: push-pull electrodes per authors; Vpi convention itself not stated
+- device_id: wu2025-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. Modulator; Fig. 3(a)
+  note: 'source: Figure 2a shows the measured half-wave voltage (Vπ) under a 100 kHz triangular voltage sweep.'
 derived: []

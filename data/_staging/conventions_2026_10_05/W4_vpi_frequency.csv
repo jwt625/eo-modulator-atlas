@@ -1,0 +1,338 @@
+device_id,field,value,class,to_field,freq_ghz,locator,quote,note
+aimone2026-a,vpi_dc_v,3.26,UNSTATED,,,"p.1, Sec. 2",The Vπ of the modulator is measured to be 3.26 V,no measurement method or frequency given; context does not say DC
+akazawa2026-a,vpi_dc_v,2.2,UNSTATED,,,"p.4, capacitance paragraph",The capacitance was 6.48 pF at a Vπ = 2.2 V for a 600-µm-long phase shifter,frequency not stated; static bias context (capacitance at Vpi bias) implies DC
+akazawa2026-a,vpil_dc_vcm,0.13,UNSTATED,,,p.3; Fig. 2,We first characterized the phase-modulation efficiency using asymmetric MZIs (AMZIs),frequency not stated; AMZI transmission vs applied voltage implies DC
+arabjuneghani2022-a,vpi_dc_v,4.4,FREQ,,1e-4,p.3 Sec. 3.1,Vπ is measured through a real-time modulation response by applying a 100 kHz triangular voltage sweep.,
+arabjuneghani2022-a,vpil_dc_vcm,2.2,FREQ,,1e-4,p.3 Sec. 3.1,Vπ is measured through a real-time modulation response by applying a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 0.5 cm
+arabjuneghani2022-b,vpi_dc_v,6.6,FREQ,,1e-4,p.3 Sec. 3.1,Vπ is measured through a real-time modulation response by applying a 100 kHz triangular voltage sweep.,
+arabjuneghani2022-b,vpil_dc_vcm,3.3,FREQ,,1e-4,p.3 Sec. 3.1,Vπ is measured through a real-time modulation response by applying a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 0.5 cm
+arabjuneghani2022-b,vpil_rf_vcm,4.1,OK,,100,"p.4 Sec. 3.3, Fig. 6",Modulator #2 ... has a Vπ.L of less than 4.1 V cm up to 100 GHz.,RF VpiL derived from EO response and DC Vpi; value is an upper bound over 0-100 GHz
+cai2025-a,vpi_dc_v,6,FREQ,,1e-7,p.3 Sec. II; Fig. 2(c),Figure 2(c) shows the measured output power while applying a 100 Hz triangle voltage wave via an RF probe.,Supplementary shows Vpi consistent from 1 Hz to 100 kHz (p.16)
+cai2025-a,vpil_dc_vcm,4.08,FREQ,,1e-7,p.3 Sec. II; Fig. 2(c),Figure 2(c) shows the measured output power while applying a 100 Hz triangle voltage wave via an RF probe.,VpiL from the 100 Hz Vpi x 6.8 mm
+celik2022-a,vpi_dc_v,4.2,OK,,,p.7 Fig. 4(c) caption,Normalized transmission on the bar-arm with respect to applied bias voltage showing a half-wave voltage of 4.2 V,"bias-voltage sweep, i.e. DC; no frequency to record"
+celik2022-a,vpil_dc_vcm,1.26,OK,,,p.6 Sec. Electro-optic MZI,"we measure a CMOS voltage-level compatible half-wave voltage of 𝑉𝜋= 4.2 V, which corresponds to a voltage-length product of 1.26 V-cm",derived from the DC bias-sweep Vpi
+chen2022-a,vpi_dc_v,4.45,FREQ,,1e-4,p.7 Sec. III,Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage sweep.,
+chen2022-a,vpil_dc_vcm,2.22,FREQ,,1e-4,p.7 Sec. III,Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage sweep.,
+chen2022-b,vpi_dc_v,3.22,FREQ,,1e-4,p.7 Sec. III,Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage sweep.,
+chen2022-b,vpil_dc_vcm,2.25,FREQ,,1e-4,p.7 Sec. III,Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage sweep.,
+chen2022-c,vpi_dc_v,2.20,FREQ,,1e-4,p.7 Sec. III,Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage sweep.,
+chen2022-c,vpil_dc_vcm,2.20,FREQ,,1e-4,p.7 Sec. III,Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage sweep.,
+chen2023a-air,vpil_dc_vcm,2.22,FREQ,,1e-3,p.9 Sec. 5.2 (Methods),An arbitrary signal generator (AWG: GW Instek AFG-3051) was employed to provide a 1 MHz triangular voltage sweep.,Methods sweep applies to all Vpi measurements in Fig. 6; value read from Fig. 6(d)
+chen2023a-glycerol,vpi_dc_v,3.52,FREQ,,1e-3,p.9 Sec. 5.2 (Methods),An arbitrary signal generator (AWG: GW Instek AFG-3051) was employed to provide a 1 MHz triangular voltage sweep.,
+chen2023a-glycerol,vpil_dc_vcm,1.41,FREQ,,1e-3,p.9 Sec. 5.2 (Methods),An arbitrary signal generator (AWG: GW Instek AFG-3051) was employed to provide a 1 MHz triangular voltage sweep.,
+chiang2025-a,vpi_rf_v,3,MOVE,vpi_dc_v,0.025,"p.2, Experimental Results; Fig. 3(a)",AC characterization with a 25 MHz sinusoidal driving signal was used to measure the half-wave voltage (Vπ),25 MHz < 1 GHz; also move vpi_rf_freq_ghz 0.025 to vpi_dc_freq_ghz; authors label it AC to exclude slow molecular response
+chiang2025-a,vpil_rf_vcm,0.3,MOVE,vpil_dc_vcm,0.025,abstract p.1; p.2,The MZM exhibits a modulation efficiency VπL(AC) of 0.3 V∙cm at 25 MHz,25 MHz < 1 GHz
+churaev2023-a,vpi_dc_v,22,UNSTATED,,,p.3 Sec. Results; Fig. 1h,"Measuring the phase shift with the use of a Mach-Zehnder interferometer, we extract a Vπ value of 22 V",frequency not stated
+churaev2023-a,vpil_dc_vcm,8.8,UNSTATED,,,p.3 Sec. Results,"we extract a Vπ value of 22 V, which corresponds to a VπL product of approximately 8.8 V ⋅cm",frequency not stated
+churaev2023-b,vpil_dc_vcm,5.6,UNSTATED,,,p.2 Fig. 1h; p.3,we improve the electro-optic performance even further and achieve a VπL ≃6 V ⋅cm (red line),frequency not stated
+deng2026-a,vpi_dc_v,7,FREQ,,1e-4,p.9 Methods,"For Vπ measurements, the MZI modulator was driven by a 100 kHz triangular voltage signal",
+deng2026-a,vpil_dc_vcm,0.7,FREQ,,1e-4,p.9 Methods; p.7,"For Vπ measurements, the MZI modulator was driven by a 100 kHz triangular voltage signal",VpiL = 100 kHz Vpi x 0.1 cm
+deng2026a-a,vpil_dc_vcm,1.5,UNSTATED,,,p.1,The TW-MZM exhibits a high modulation efficiency of 1.5V·cm but relatively limited 41GHz BW.,"frequency, DC or RF not stated"
+derose2012-c,vpil_dc_vcm,0.7,UNSTATED,,,p.2,a half-wave voltage of 0.7 V-cm was measured for a 2 mm long modulator,frequency not stated
+didier2026-a,vpi_dc_v,28,FREQ,,1e-4,p.3; p.5 Fig. 3(b),"To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an arbitrary function generator",
+didier2026-a,vpil_dc_vcm,22.4,FREQ,,1e-4,p.3; p.5 Fig. 3(b),"To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an arbitrary function generator",VpiL = 100 kHz Vpi x 0.8 cm
+didier2026-e,vpil_dc_vcm,25,FREQ,,1e-4,p.3; p.5 Fig. 3(d),"To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an arbitrary function generator",same static characterization method (Methods p.7) assumed for all experimental VpiL points; read from figure
+didier2026-f,vpil_dc_vcm,28,FREQ,,1e-4,p.3; p.5 Fig. 3(d),"To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an arbitrary function generator",same static characterization method (Methods p.7) assumed for all experimental VpiL points; read from figure
+didier2026-g,vpil_dc_vcm,18.4,FREQ,,1e-4,p.3; p.5 Fig. 3(c),"To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an arbitrary function generator",same static characterization method (Methods p.7) assumed for all experimental VpiL points
+didier2026-h,vpil_dc_vcm,31.4,FREQ,,1e-4,p.3; p.5 Fig. 3(c),"To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an arbitrary function generator",same static characterization method (Methods p.7) assumed for all experimental VpiL points
+dong2026-a,vpi_dc_v,7,UNSTATED,,,"p.1, Sec. 2","The effective Vπ, defined as the modulation efficiency (Vπ·L) divided by the phase-shifter length in the MZM, is approximately 7 V.","no measurement frequency; definitional value, no method given"
+falcone2026-a,vpil_dc_vcm,35,FREQ,,1e-4,p.6; p.7; p.9 Methods,"Electro-optic modulation was driven by a triangular waveform ... amplified to a peak-to-peak voltage of Vpp = 360 V, at a frequency of 100 kHz.",
+falcone2026-b,vpil_dc_vcm,52,FREQ,,1e-4,p.6; p.7; p.9 Methods,"Electro-optic modulation was driven by a triangular waveform ... amplified to a peak-to-peak voltage of Vpp = 360 V, at a frequency of 100 kHz.",
+gao2024-a,vpi_rf_v,3,OK,,12,p.3 Sec. text; Fig. 4(a),"Near the frequencies of 12 GHz, 16 GHz, 22 GHz, and 26 GHz the measured half-wave voltage is about 3 V","first of the stated RF Vpi frequencies; >= 1 GHz, correct column"
+geravand2025-a,vpi_dc_v,6.28,UNSTATED,,,p.8; p.24 Extended Data Fig. 4(a),"Phase shift of the MRM output as a function of applied voltage, showing a Vπ of 6.28 V.",frequency not stated; phase vs applied voltage implies DC
+geravand2025-a,vpil_dc_vcm,0.96,OK,,,p.9,A modulation efficiency of 0.96 V.cm at 0.5 V reverse bias is measured based on VπL = F SR·πR ∆λ/∆V,"derived from resonance shift per volt at 0.5 V reverse bias (static), i.e. DC; definition differs from vpi_dc_v"
+gong2026-a,vpil_dc_vcm,1.8,UNSTATED,,,"p.2, Sec. 3","The measured value of the voltage-length product, Vπ⋅L, is 1.80 V·cm","frequency, DC or RF not stated"
+gui2022-a,vpil_dc_vcm,0.0108,UNSTATED,,,Table I p.3,108 V*um in Table I,"simulated value, no measurement frequency applies"
+guo2026-a,vpi_dc_v,2.6,FREQ,,1e-4,p.7; p.8 Fig. 5(b),The half-wave voltage (Vπ) of the modulator was measured using a 100-kHz sawtooth voltage sweep.,
+guo2026-a,vpil_dc_vcm,0.78,FREQ,,1e-4,p.7,The half-wave voltage (Vπ) of the modulator was measured using a 100-kHz sawtooth voltage sweep.,VpiL = 100 kHz Vpi x 3 mm
+gupta2023-a,vpi_dc_v,1.4,UNSTATED,,,"p.5, Sec. V-A; Fig. 12(a)",Vπ can be deduced from the plot to be 1.4 V at a bias of -10 V,"read from a static (I,U) ER map; frequency not stated, implies DC"
+gupta2023-a,vpil_dc_vcm,0.7,UNSTATED,,,"p.5, Sec. V-A",which translates to a VπL of 0.7 V-cm,derived from the ER-map Vpi; implies DC
+gupta2023-d,vpi_dc_v,1.2,UNSTATED,,,"p.5, Sec. V-A; Fig. 12(c)",The half-wave voltages for 1530 nm and 1570 nm input are 1.2 V and 1.7 V respectively.,ER map; implies DC
+gupta2023-e,vpi_dc_v,1.7,UNSTATED,,,"p.5, Sec. V-A; Fig. 12(d)",The half-wave voltages for 1530 nm and 1570 nm input are 1.2 V and 1.7 V respectively.,ER map; implies DC
+he2019-a,vpi_dc_v,7.4,FREQ,,1e-4,p.4,2(a) shows the half-wave voltage measurements for both devices with a 100-kHz triangular voltage sweep,evidence notes caption says 4.5 V while text and figure say 7.4 V
+he2019-a,vpil_dc_vcm,2.2,FREQ,,1e-4,p.4,"the half-wave voltages Vπ for the 3-mm and 5-mm devices are 7.4 V and 5.1 V, corresponding to voltage–length products of 2.2 V∙cm",
+he2019-b,vpi_dc_v,5.1,FREQ,,1e-4,p.4,2(a) shows the half-wave voltage measurements for both devices with a 100-kHz triangular voltage sweep,
+he2019-b,vpil_dc_vcm,2.5,FREQ,,1e-4,p.4,"the half-wave voltages Vπ for the 3-mm and 5-mm devices are 7.4 V and 5.1 V, corresponding to voltage–length products of ... 2.5∙V cm",
+hsu2024-a,vpil_dc_vcm,0.12,OK,,,p.7,"Once the negative bias exceeds -1.5 V ... higher E-O efficiency of 117 pm/V, corresponding to a very low Vπ•L of 0.12 V•cm.","from resonance shift in spectra at static gate biases 0 to -1.5 V and beyond, i.e. DC; no frequency to record"
+hu2023-a,vpil_dc_vcm,0.8,UNSTATED,,,"p.3, Design of the Si-MRM",as high as 0.8 V cm,author estimate without data; frequency not stated
+hu2026-a,vpil_dc_vcm,0.57,OK,,,p.6 (text lines on Fig. 3b),"Normalized optical spectra with different bias voltages applied, from −4 V to 1 V ... (Δλ/ΔV) reaches 24.5 pm/V","derived from resonance shift in static-bias spectra, i.e. DC"
+hu2026a-ch1,vpi_dc_v,3.61,OK,,,p.10 Fig. 7,Static transfer curves are used to extract the half-wave voltages.,"static transfer curve, DC; no frequency stated"
+hu2026a-ch2,vpi_dc_v,3.6,OK,,,p.10 Fig. 7,Static transfer curves are used to extract the half-wave voltages.,"static transfer curve, DC; no frequency stated"
+hu2026a-ch3,vpi_dc_v,3.66,OK,,,p.10 Fig. 7,Static transfer curves are used to extract the half-wave voltages.,"static transfer curve, DC; no frequency stated"
+hu2026a-ch4,vpi_dc_v,3.74,OK,,,p.10 Fig. 7,Static transfer curves are used to extract the half-wave voltages.,"static transfer curve, DC; no frequency stated"
+hu2026a-ch5,vpi_dc_v,3.64,OK,,,p.10 Fig. 7,Static transfer curves are used to extract the half-wave voltages.,"static transfer curve, DC; no frequency stated"
+hu2026a-ch6,vpi_dc_v,3.6,OK,,,p.10 Fig. 7,Static transfer curves are used to extract the half-wave voltages.,"static transfer curve, DC; no frequency stated"
+hu2026a-ch7,vpi_dc_v,3.74,OK,,,p.10 Fig. 7,Static transfer curves are used to extract the half-wave voltages.,"static transfer curve, DC; no frequency stated"
+hu2026a-ch8,vpi_dc_v,3.83,OK,,,p.10 Fig. 7,Static transfer curves are used to extract the half-wave voltages.,"static transfer curve, DC; no frequency stated"
+huang2026-b,vpi_dc_v,4,UNSTATED,,,"p.2, Sec. 2",a V_pi of 4 V,packaged commercial EOM; frequency not stated
+hulyal2026-a,vpi_dc_v,4.71,OK,,,p.1 Fig. 1(c) caption; p.3 Sec. 2,Measured DC half-wave voltage (Vπ = 4.71 V) of the 7.6 mm-long Mach-Zehnder modulator,stated DC
+johnson2025-200g-a,vpi_dc_v,2.13,FREQ,,1e-4,"p.2, Modulator Characterization; Table 1",Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ and a 100 kHz differential triangle,
+johnson2025-200g-b,vpi_dc_v,2.33,FREQ,,1e-4,"p.2, Modulator Characterization; Table 1",Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ and a 100 kHz differential triangle,
+johnson2025-200g-best,vpi_dc_v,1.57,FREQ,,1e-4,"p.2, text below Table 1","The best Vπ,diff obtained on a single channel was 1.57V.",same low-frequency characterization (100 kHz triangle) as Table 1 per the Modulator Characterization paragraph
+johnson2025-200g-c,vpi_dc_v,2.46,FREQ,,1e-4,"p.2, Modulator Characterization; Table 1",Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ and a 100 kHz differential triangle,
+johnson2025-200g-design,vpi_dc_v,2.08,UNSTATED,,,"p.2, text below Table 1","Vπ of 2.08V, and insertion loss of 2.4 dB at 1310 nm","design target, not a measurement; no frequency applies"
+johnson2025-400g-a,vpi_dc_v,6.74,FREQ,,1e-4,"p.2, Modulator Characterization; Table 1",Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ and a 100 kHz differential triangle,
+johnson2025-400g-b,vpi_dc_v,7.5,FREQ,,1e-4,"p.2, Modulator Characterization; Table 1",Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ and a 100 kHz differential triangle,
+johnson2025-400g-design,vpi_dc_v,5.52,UNSTATED,,,"p.2, text after the SEPP paragraph","Higher design Vpi,diff 5.52 V (evidence paraphrase)","design target, not a measurement; no frequency applies"
+kharel2021-a,vpi_rf_v,2.3,OK,,1,p.4 Sec. III; p.5 Fig. 3(b),"10-mm: Vπ,1GHz = 2.3 V","at 1 GHz, which is >= 1 GHz under the rule (boundary case)"
+kharel2021-b,vpi_dc_v,1.35,FREQ,,1e-3,p.4 Sec. III; p.5 Fig. 3(a) label,"Vπ,20-mm, 1MHz = 1.35 V",text says DC Vpi on an oscilloscope; figure label gives 1 MHz; record 1e-3 if the figure label is taken
+kharel2021-b,vpi_rf_v,1.3,OK,,1,p.1 abstract; p.5 Fig. 3(b),"20-mm: Vπ,1GHz = 1.3 V","at 1 GHz, >= 1 GHz (boundary case)"
+kieninger2020-best-dc,vpi_dc_v,1.48,UNSTATED,,,"p.4, section 3",A low-speed triangular waveform from a function generator (FG) is used to drive the modulator in push-pull mode.,"quasi-static triangle, frequency not given; implies well below 1 GHz"
+kieninger2020-best-dc,vpil_dc_vcm,0.041,UNSTATED,,,"p.4, section 3",A low-speed triangular waveform from a function generator (FG) is used to drive the modulator in push-pull mode.,"quasi-static triangle, frequency not given"
+kieninger2020-system-dc,vpi_dc_v,1.5,UNSTATED,,,"p.8, section 5",The device is driven by a low-frequency triangular waveform that is provided by a function generator (FG),"quasi-static triangle, frequency not given (quote locator p.4)"
+kim2025-mzm,vpi_dc_v,1.44,UNSTATED,,,p.7; p.6 Fig. 3(d) caption,"Measured optical transmission as a function of voltage, indicating Vπ = 1.44 V",frequency not stated; implies DC sweep
+kim2025-mzm,vpil_dc_vcm,0.54,UNSTATED,,,p.7,we extract a half-wave voltage of Vπ = 1.44 V and Vπ × L = 0.54 V·cm,frequency not stated; implies DC sweep
+kohli2025-iq,vpi_dc_v,4,OK,,,p.5,We measure a Vπ of 4 V in the phase-shifter or 2 V in the Mach-Zehnder configuration at DC voltages.,stated DC
+kohli2025-iq,vpi_mzm_pushpull_dc_v,2,OK,,,p.5,We measure a Vπ of 4 V in the phase-shifter or 2 V in the Mach-Zehnder configuration at DC voltages.,stated DC
+kohli2025-mzm,vpi_dc_v,3.6,OK,,,p.4,We measure a Vπ of 3.6 V in the phase shifter or 1.8 V in the Mach-Zehnder configuration in push-pull configuration at DC.,stated DC
+kohli2025-mzm,vpi_mzm_pushpull_dc_v,1.8,OK,,,p.4; p.8,We measure a Vπ of 3.6 V in the phase shifter or 1.8 V in the Mach-Zehnder configuration in push-pull configuration at DC.,stated DC
+kohli2025-mzm,vpi_rf_v,6.4,OK,,40,p.4; Fig. 2d,leading to a V π of 6.4 V at 40 GHz.,
+kohli2025-rt,vpi_dc_v,3,OK,,,p.6,This corresponds to a V π of 3 V at DC.,"derived from 0.3 nm/V tuning, stated DC"
+kotz2026-a,vpi_dc_v,0.79,UNSTATED,,,p.1 abstract; p.2 Sec. 2,780 mV and 790 mV for the two nested MZMs (evidence paraphrase),measurement frequency not stated
+lee2026-a,vpi_dc_v,2.7,FREQ,,1e-4,p.2; p.5 Fig. 2(b),"We first characterize the near-DC half-wave voltage, namely Vπ, of our AM device at a low modulation frequency of 100 kHz.",
+lee2026-a,vpi_rf_v,5,OK,,27,p.6 Fig. 3(d) caption,Microwave Vπ are measured to be 5 V at 27 GHz and 5.26 V at 34 GHz,
+lee2026-b,vpi_dc_v,2.3,FREQ,,1e-4,p.5 Fig. 2(b) caption,The measured half-wave voltage (Vπ) at 100 kHz is 2.3 - 4.26 V across the optical span from 2.4 µm to 3.6 µm,
+lee2026-b,vpil_dc_vcm,4.6,FREQ,,1e-4,p.5 Fig. 2 caption,The measured half-wave voltage (Vπ) at 100 kHz is 2.3 - 4.26 V,VpiL = 100 kHz Vpi x 2 cm
+lee2026-c,vpi_dc_v,4.3,FREQ,,1e-4,p.5 Fig. 2(b) caption,The measured half-wave voltage (Vπ) at 100 kHz is 2.3 - 4.26 V across the optical span from 2.4 µm to 3.6 µm,caption gives 4.26 V; row 4.3 V matches the figure label/abstract rounding
+lee2026-c,vpil_dc_vcm,8.6,FREQ,,1e-4,p.5 Fig. 2 caption,The measured half-wave voltage (Vπ) at 100 kHz is 2.3 - 4.26 V,VpiL = 100 kHz Vpi x 2 cm
+lee2026-d,vpi_dc_v,1.8,FREQ,,1e-4,p.5 Fig. 2(b) caption,the suspended AM device is measured across more than an octave optical bandwidth with a half-wave voltage of 1.8 V at 1.55 µm,same Fig. 2 near-DC 100 kHz characterization
+li2022b-a,vpi_dc_v,3.3,UNSTATED,,,p.5 Sec. 3,The half-wave voltage (Vπ) of the fabricated modulator was measured using triangular waves.,"quasi-static triangle, frequency not given"
+li2022b-a,vpil_dc_vcm,1.1,UNSTATED,,,p.1 abstract,The half-wave voltage (Vπ) of the fabricated modulator was measured using triangular waves.,"quasi-static triangle, frequency not given (quote locator p.5)"
+li2025a-a,vpi_dc_v,4.4,FREQ,,5e-5,p.8; Fig. 3(e),characterized by applying a 50-kHz triangular wave signal from an arbitrary function generator (AFG),text also says Sweeping the DC voltage from -4 V to 4 V; the sweep is the 50 kHz triangle
+li2025a-a,vpil_dc_vcm,1.23,FREQ,,5e-5,p.8,"reveals a half-wave voltage (Vπ) of 4.4 V, corresponding to a modulation efficiency (VπL) of 1.23 V·cm",VpiL from the 50 kHz Vpi
+li2025b-a,vpi_dc_v,54.3,FREQ,,1e-3,p.4 Sec. III,"a modulation (AC) signal of frequency 1 MHz, and peak amplitude 1 V for PeM-MZM ... is applied",value is the fit of the 1 MHz lock-in AM spectrum; a DC sweep (Fig. 3(d)) also exists but its value is not printed
+li2025b-b,vpi_dc_v,31.9,FREQ,,1e-3,p.4 Sec. III,a modulation (AC) signal of frequency 1 MHz ... (0.25 V-2 V for the racetrack EOM) is applied,fit of the 1 MHz AM spectrum
+li2025b-c,vpi_dc_v,86,UNSTATED,,,p.5 Sec. III,"We extract the two Vπ to be, respectively 86 V for device (i) and 93 V for device (ii).","extraction method not stated; nearby Fig. 5(a) shows SeM-MZM AM spectra at 1 MHz, which suggests 1 MHz but is not explicit"
+li2025b-d,vpi_dc_v,93,UNSTATED,,,p.5 Sec. III,"We extract the two Vπ to be, respectively 86 V for device (i) and 93 V for device (ii).",extraction method not stated; nearby Fig. 5(a) AM spectra at 1 MHz suggests 1 MHz but is not explicit
+li2026-a,vpi_dc_v,5.1,FREQ,,1e-7,p.4 Fig. 2(a) caption; p.2,"Normalized optical transmission as a function of applied voltage at a carrier wavelength of 1550 nm, measured at 100 Hz with a sawtooth waveform.",VpiL flat from 10 mHz to 10 kHz (Fig. 2(b))
+li2026-a,vpil_dc_vcm,4,FREQ,,1e-7,p.1 abstract; p.2; p.4 Fig. 2,measured at 100 Hz with a sawtooth waveform.,VpiL = 100 Hz Vpi x 0.8 cm
+li2026a-a,vpi_dc_v,1.56,FREQ,,1e-7,Sec. 2; Sec. 4 (evidence),100 Hz drive (evidence note),"text.md and source.pdf absent locally (text-only local corpus); frequency from the audited evidence note, not re-verified here"
+li2026a-a,vpil_dc_vcm,2.8,FREQ,,1e-7,Sec. 2 (evidence),100 Hz drive (evidence note on vpi_dc_v),source absent locally; not re-verified
+li2026a-b,vpi_dc_v,1.28,FREQ,,1e-7,Sec. 2; Sec. 4 (evidence),100 Hz drive (evidence note),source absent locally; not re-verified
+li2026a-b,vpil_dc_vcm,2.3,FREQ,,1e-7,Sec. 2 (evidence),100 Hz drive (evidence note on vpi_dc_v),source absent locally; not re-verified
+li2026aa-a,vpi_dc_v,2.13,FREQ,,1e-4,p.5; Fig. 3(b),Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,
+li2026aa-a,vpil_dc_vcm,1.92,FREQ,,1e-4,p.5,Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 9 mm
+li2026aa-b,vpi_dc_v,2.66,FREQ,,1e-4,p.5; Fig. 3(b),Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,
+li2026aa-b,vpil_dc_vcm,2.39,FREQ,,1e-4,p.5,Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 9 mm
+li2026aa-c,vpi_dc_v,2.75,FREQ,,1e-4,p.5; Fig. 3(b),Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,
+li2026aa-c,vpil_dc_vcm,2.48,FREQ,,1e-4,p.5,Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 9 mm
+li2026aa-d,vpi_dc_v,2.9,FREQ,,1e-4,p.5; Fig. 3(b),Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,
+li2026aa-d,vpil_dc_vcm,2.61,FREQ,,1e-4,p.5,Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 9 mm
+li2026aa-e,vpi_dc_v,3.04,FREQ,,1e-4,p.5; Fig. 3(b),Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,
+li2026aa-e,vpil_dc_vcm,2.74,FREQ,,1e-4,p.5,Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 9 mm
+li2026aa-f,vpi_dc_v,3.21,FREQ,,1e-4,p.5; Fig. 3(b),Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,
+li2026aa-f,vpil_dc_vcm,2.89,FREQ,,1e-4,p.5,Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 9 mm
+li2026aa-g,vpi_dc_v,4.33,FREQ,,1e-4,p.5; Fig. 3(b),Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,
+li2026aa-g,vpil_dc_vcm,3.9,FREQ,,1e-4,p.5,Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 9 mm
+li2026aa-h,vpi_dc_v,4.38,FREQ,,1e-4,p.5; Fig. 3(b),Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,
+li2026aa-h,vpil_dc_vcm,3.94,FREQ,,1e-4,p.5,Figure 3b illustrates the half-wave voltage Vπ measurements with a 100 kHz triangular voltage sweep.,VpiL = 100 kHz Vpi x 9 mm
+li2026ba-a,vpi_dc_v,1.53,FREQ,,1e-7,p.5 Fig. 2(a) caption; p.4,Normalized optical transmission in logarithmic scale of an 18 mm-long modulator as a function of the drive voltage at 100 Hz.,
+li2026ba-a,vpil_dc_vcm,2.76,FREQ,,1e-7,p.5 Fig. 2(c),as a function of the drive voltage at 100 Hz.,wafer map VpiL; same 100 Hz low-frequency characterization assumed for the map
+li2026ba-b,vpi_dc_v,1.21,FREQ,,1e-7,p.5 Fig. 2(a),as a function of the drive voltage at 100 Hz.,
+li2026ba-b,vpil_dc_vcm,2.19,FREQ,,1e-7,p.5 Fig. 2(c),as a function of the drive voltage at 100 Hz.,wafer map VpiL; same 100 Hz low-frequency characterization assumed for the map
+lin2025-a,vpi_dc_v,1.7,FREQ,,1e-7,p.8; Fig. 3(a),"Figure 3 (a) shows the normalized transmission ... as a function of the applied voltage, linearly swept at 100 Hz",Vpi stable 1 Hz to 1 MHz (Fig. 3(b))
+lin2025-a,vpil_dc_vcm,2.7,FREQ,,1e-7,p.8,"linearly swept at 100 Hz, exhibiting a near-sinusoidal response with a Vπ of 1.7 V.",VpiL = 100 Hz Vpi x 16 mm
+lin2026a-a,vpi_dc_v,4.2,FREQ,,4e-4,p.8; p.9 Fig. 4 caption,"To investigate Vπ of each modulator, a triangular signal of 400 kHz is applied on the electrodes",
+lin2026a-a,vpil_dc_vcm,0.085,FREQ,,4e-4,p.8-9,a triangular signal of 400 kHz is applied on the electrodes to eliminate the impact of thermal and direct current (DC) drift.,
+liu2021-a,vpi_dc_v,3.4,FREQ,,1e-4,p.4; p.7 Supp.,"For half-wave-voltage characterization, a 100 kHz triangular wave signal is applied to the modulator",
+liu2021-a,vpil_dc_vcm,1.7,FREQ,,1e-4,p.7 Supp. Sec. 3,"For half-wave-voltage characterization, a 100 kHz triangular voltage signal is applied to the modulator",
+liu2025-a,vpi_dc_v,1.9,FREQ,,1e-3,p.10 Sec. 3.3; Fig. 8(a),"Figure 8(a) plots the modulation curves recorded at 1 MHz, indicating a Vπ of 1.9 V at the C band",
+liu2025-a,vpil_dc_vcm,1.33,FREQ,,1e-3,p.10 Sec. 3.3,"recorded at 1 MHz, indicating a Vπ of 1.9 V at the C band, corresponding to a low VπL of 1.33 Vcm",
+liu2025-b,vpi_dc_v,1.54,FREQ,,1e-3,p.10 Sec. 3.3; Fig. 8(a),Figure 8(a) plots the modulation curves recorded at 1 MHz,
+liu2025-b,vpil_dc_vcm,1.08,FREQ,,1e-3,p.10 Sec. 3.3,Figure 8(a) plots the modulation curves recorded at 1 MHz,
+liu2025b-a,vpi_dc_v,2.92,FREQ,,5e-4,p.4 Sec. Measurement and result,the half-wave voltages Vπ were also measured for the proposed modulator using a 500 kHz triangular voltage sweep.,"CONFLICT: Fig. 4(c) caption (p.5) says Half-wave voltage at 1 GHz, 2.92 V; method text says 500 kHz, taken here"
+liu2025b-a,vpil_dc_vcm,2.92,FREQ,,5e-4,p.4 Sec. Measurement and result,using a 500 kHz triangular voltage sweep ... corresponding to a VπL of 2.92V cm,same caption conflict (1 GHz in Fig. 4(c) caption)
+liu2026a-a,vpil_dc_vcm,0.538,OK,,,p.2 Sec. 2.1,"average wavelength shift around this resonance is 26.7 pm/V for bias from 0 V to –4 V, yielding ... (Vπ·L) of 0.538 V·cm","resonance shift under static bias, DC"
+liu2026b-a,vpi_dc_v,4,UNSTATED,,,p.2 Sec. 3,one junction was bypassed while monitoring the resulting phase shift ... yields a Vπ of 4 V under a -2 V bias,frequency not stated; static phase-shift monitoring implies DC
+liu2026b-a,vpil_dc_vcm,1.14,UNSTATED,,,p.2 Sec. 3,"yields a Vπ of 4 V under a -2 V bias, corresponding to a modulation efficiency of 1.14 V·cm",implies DC
+liu2026c-a,vpi_dc_v,4.5,OK,,,p.2 Sec. 3; Fig. 2(b),Fig. 2(b) presents the DC characterization results ... achieves a π phase shift at a bias voltage of 4.5 V,stated DC characterization
+liu2026c-a,vpil_dc_vcm,0.9,OK,,,p.2 Sec. 3,corresponding to a modulation efficiency of 0.9 V·cm,DC characterization
+liu2026c-b,vpi_dc_v,5.9,OK,,,p.2 Sec. 3; Fig. 2(b),whereas the conventional TWE-MZM requires 5.9 V to achieve the same phase shift,DC characterization
+liu2026c-b,vpil_dc_vcm,1.18,OK,,,p.2 Sec. 3,corresponding to a modulation efficiency of 1.18 V·cm (evidence paraphrase),DC characterization
+lu2020-a,vpi_dc_v,1.8,UNSTATED,,,p.7 Table 1,"stable performance of its static parameter (half-wave voltage, Vπ)","frequency not stated; authors call Vpi a static parameter, implies DC"
+lu2020-a,vpil_dc_vcm,1.44,UNSTATED,,,p.3 Sec. SPH modulator,of 1.44 V⋅cm at a wavelength of 1.55 μm,frequency not stated; implies DC (static parameter)
+luan2026-a,vpi_dc_v,22,OK,,,p.5 Fig. 3 caption,"with the applied d.c. voltages of 20 V and -2 V, π phase shift was obtained with 22-V voltage",stated d.c. (static characterization)
+luan2026-a,vpil_dc_vcm,0.022,OK,,,abstract p.1; p.5 Fig. 3,Static Characterization of the double-layer-graphene slot-waveguide micro-ring modulator,from d.c. resonance shift; 220 V um
+mao2024-1310,vpi_dc_v,2.3,FREQ,,1.4e-5,p.3; p.6 Methods,Both Vπ and modulation efficiency values were obtained using a function generator with a sinusoidal electric signal with a frequency of 14 kHz.,
+mao2024-1310,vpil_dc_vcm,0.58,FREQ,,1.4e-5,p.6 Methods,Both Vπ and modulation efficiency values were obtained using a function generator with a sinusoidal electric signal with a frequency of 14 kHz.,
+mao2024-1550,vpi_dc_v,2.8,FREQ,,1.4e-5,p.3; p.6 Methods,Both Vπ and modulation efficiency values were obtained using a function generator with a sinusoidal electric signal with a frequency of 14 kHz.,
+mao2024-1550,vpil_dc_vcm,0.7,FREQ,,1.4e-5,p.6 Methods,Both Vπ and modulation efficiency values were obtained using a function generator with a sinusoidal electric signal with a frequency of 14 kHz.,
+meng2023-a,vpi_dc_v,2.04,FREQ,,1e-4,p.9 Sec. 3.1; Fig. 5(a),where a 100 kHz sawtooth electric signal is applied onto the electrodes.,
+meng2023-a,vpil_dc_vcm,1.02,FREQ,,1e-4,p.9 Sec. 3.1,where a 100 kHz sawtooth electric signal is applied onto the electrodes.,
+montifiore2026-a,vpi_dc_v,2.8,OK,,,p.4 Sec. 2; Fig. 3(a),Static tuning of the PZT actuator.,"from static (DC) tuning coefficient 716 MHz/V; piezo-optomechanical, not EO"
+montifiore2026-a,vpil_dc_vcm,14,OK,,,p.4 Sec. 2,"measured tuning coefficient of 716 MHz/V (0.68 pm/V), corresponding to a Vπ of 2.8 V, VπL of 14.0 V·cm","static tuning, DC"
+montifiore2026-b,vpi_dc_v,2.8,UNSTATED,,,p.1 abstract; p.2 Sec. 1,The coil phase modulator operates at 493 nm with a Vπ of 2.8 V,method not stated for the phase modulator; same PZT coil as -a (static tuning) suggests DC
+montifiore2026-c,vpi_dc_v,20.7,OK,,,p.5 Sec. 2; Fig. 4,"linear tuning is observed at 0.92 GHz/V (0.75 pm/V), corresponding to Vπ of 20.7 V",from static tuning with applied DC voltages (Fig. 4 caption)
+montifiore2026-c,vpil_dc_vcm,9.75,OK,,,p.5 Sec. 2,"corresponding to Vπ of 20.7 V, VπL of 9.75 V·cm",static DC tuning
+montifiore2026-d,vpi_dc_v,18.8,OK,,,p.6 Sec. 2; Fig. 5,"linear tuning is observed at 1.01 GHz/V (2.1 pm/V), corresponding to Vπ of 18.8 V","from static tuning, applied DC voltages every 0.5 V"
+montifiore2026-d,vpil_dc_vcm,8.86,OK,,,p.6 Sec. 2,"corresponding to Vπ of 18.8 V, VπL of 8.86 V·cm",static DC tuning
+navarro2026-a,vpil_dc_vcm,0.0887,UNSTATED,,,Table 1 p.15,VpiL as tabulated (simulated),simulated value; no measurement frequency applies
+navarro2026-b,vpil_dc_vcm,0.0704,UNSTATED,,,Table 1 p.15,VpiL as tabulated (simulated),simulated value; no measurement frequency applies
+navarro2026-c,vpil_dc_vcm,0.0704,UNSTATED,,,Table 1 p.15,VpiL as tabulated (simulated),simulated value; no measurement frequency applies
+navarro2026-d,vpil_dc_vcm,0.1348,UNSTATED,,,Table 1 p.15,VpiL as tabulated (simulated),simulated value; no measurement frequency applies
+navarro2026-e,vpil_dc_vcm,0.1004,UNSTATED,,,Table 1 p.15,VpiL as tabulated (simulated),simulated value; no measurement frequency applies
+navarro2026-f,vpil_dc_vcm,0.1004,UNSTATED,,,Table 1 p.15,VpiL as tabulated (simulated),simulated value; no measurement frequency applies
+nelan2022-a,vpi_dc_v,2.98,FREQ,,1.5e-4,p.6 Sec. IV-C; p.7 Fig. 7(f),A low speed (150 kHz) triangular voltage wave is applied to the GSG electrodes using an arbitrary waveform generator,authors call it DC Vpi
+nelan2022-a,vpil_dc_vcm,3.3,FREQ,,1.5e-4,p.1 abstract,"DC half wave voltage (Vπ) of less than 3.0 V, or a modulation efficiency (Vπ·L) of 3.3 V·cm",measured by the 150 kHz triangle (p.6)
+nelan2022a-a,vpi_dc_v,3.75,UNSTATED,,,p.3 Sec. 3; Fig. 2(b),"The DC Vπ measures roughly 3.75 V, while the ER is >45 dB at each port.","authors call it DC Vpi; drive frequency not stated (same group as nelan2022, which used 150 kHz)"
+nenezic2026-case1,vpi_dc_v,1.78,UNSTATED,,,p.8 Table I,half-wave voltage in push-pull amplitude modulation (simulated),simulated value; no measurement frequency applies
+nenezic2026-case2,vpi_dc_v,2.25,UNSTATED,,,p.8 Table I,half-wave voltage in push-pull amplitude modulation (simulated),simulated value; no measurement frequency applies
+nenezic2026-case3,vpi_dc_v,1.025,UNSTATED,,,p.8 Table I,half-wave voltage in push-pull amplitude modulation (simulated),simulated value; no measurement frequency applies
+niels2025a-a,vpi_dc_v,3.2,FREQ,,1e-7,p.5-6 Sec. 4; Fig. 7(d),100 Hz sine waves with different peak-to-peak voltages (Vpp) are applied to the metal contacts of both coupons,
+niels2025a-a,vpil_dc_vcm,3.2,FREQ,,1e-7,p.6 Sec. 4,100 Hz sine waves with different peak-to-peak voltages (Vpp) are applied,VpiL = 100 Hz Vpi x 1 cm
+niels2026-a,vpi_dc_v,7.0,FREQ,,1e-4,p.3; p.4 Fig. 5(b),"The device is driven by a radio frequency (RF) triangular wave at 100 kHz, generated by an RF signal generator",
+niels2026-a,vpi_mzm_pushpull_dc_v,3.5,FREQ,,1e-4,p.3; p.4,The device is driven by a radio frequency (RF) triangular wave at 100 kHz,push-pull value derived from the 100 kHz single-arm Vpi
+ogiso2016-a,vpi_dc_v,2.0,OK,,,p.1 Experimental results,The Vπ for all the measured wavelengths was set at 2.0 V (DC) by adjusting the DC bias voltage,stated DC
+ogiso2024-a,vpi_dc_v,1.5,OK,,,p.2 Sec. 2; p.3 Table 1,"DC characteristics under 1.5-V Vπ condition (a) insertion loss, (b) extinction ratio, and (c) extinction curve (push-pull drive)",Table 1: DC measurement
+ogiso2024-a,vpil_dc_vcm,0.54,OK,,,p.3 Table 1,DC characteristics under 1.5-V Vπ condition,DC
+ogiso2024-b,vpi_dc_v,2.0,OK,,,p.2 Sec. 2; p.3 Table 1,DC characteristics under 2.0-V Vπ condition,DC
+ogiso2024-b,vpil_dc_vcm,0.72,OK,,,p.3 Table 1,DC characteristics under 2.0-V Vπ condition,DC
+ogiso2024-d,vpi_dc_v,2.0,OK,,,p.3 Table 1,DC characteristics under 2.0-V Vπ condition,DC measurement per Table 1
+ogiso2024-d,vpil_dc_vcm,0.72,OK,,,p.3 Table 1,DC characteristics under 2.0-V Vπ condition,DC
+porto2026-a,vpi_rf_v,1.5,UNSTATED,,,p.2 Sec. 4,The modulator is designed for RF Vπ less than 1.5 V,"RF Vpi design target, frequency not stated; vpi_rf_freq_ghz empty; stays in RF column"
+powell2024-a,vpi_dc_v,1.3,UNSTATED,,,p.3 Fig. 1(d) caption; p.2 Sec. III,Measured transfer function of the modulator with slowly varying applied voltage yields ... half-wave voltage (Vπ) of 1.3 V.,"quasi-static (slowly varying) sweep; rate not stated (0.1 Hz square wave on p.2 is the relaxation test, not the Vpi sweep)"
+powell2024-a,vpil_dc_vcm,0.65,UNSTATED,,,p.1 abstract; p.2 Sec. III,low half-wave voltage length product of 0.65 V·cm,derived from the slowly varying sweep Vpi; rate not stated
+powell2024a-a,vpil_dc_vcm,3.4,UNSTATED,,,p.1 Sec. III; Fig. 1(c),We measure low VπL of 3.4 Vcm at near-DC (Fig. 1c),near-DC stated; exact frequency not stated
+qi2024-d,vpi_dc_v,1.96,FREQ,,5e-6,p.6 Fig. 4(E) caption,"Measured normalized optical transmission of a 12.917-mm modulator, showing the half-wave voltage at 5 kHz frequency.",
+qi2024-d,vpil_dc_vcm,2.53,FREQ,,5e-6,p.6 Sec. 3,showing the half-wave voltage at 5 kHz frequency.,VpiL = 5 kHz Vpi x 1.2917 cm
+qiu2026-a,vpi_dc_v,6,UNSTATED,,,Sec. 2 (evidence),differential Vpi of 6 V (evidence quote),text.md and source.pdf absent locally (text-only local corpus); evidence note says DC or low-frequency not stated
+rahman2025-1,vpil_dc_vcm,4.29,FREQ,,1e-3,p.5 Sec. IV.B; p.6,"For a numerical estimate of Vπ(DC), we use the half-wave voltage at 1 MHz, measured as described in Section IV B.",authors state same Vpi at 1 kHz and 1 MHz (low-frequency 1 kHz-1 MHz); fit is to 1 MHz data
+rahman2025-2,vpil_dc_vcm,3.4,FREQ,,1e-3,p.5 Sec. IV.B; p.6,"For a numerical estimate of Vπ(DC), we use the half-wave voltage at 1 MHz, measured as described in Section IV B.",same method as rahman2025-3
+rahman2025-3,vpi_dc_v,6.4,FREQ,,1e-3,p.5 Fig. 3(c) caption,"The solid line is a fit to the 1 MHz data using the squared-cosine functional form, which yields Vπ as shown.",identical at 1 kHz
+rahman2025-3,vpil_dc_vcm,3.83,FREQ,,1e-3,p.5 Sec. IV.B; p.8,a low-frequency (1 kHz–1 MHz) half-wave voltage-length product (VπL) around 3.8 V.cm,
+renaud2023-2p5um-738,vpi_dc_v,0.47,FREQ,,1e-3,p.5 Methods; p.3 Fig. 2,"The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as a function of applied voltage.",Fig. 2 caption: measured low-frequency (1 MHz) Vpi
+renaud2023-3um-532,vpi_dc_v,0.42,FREQ,,1e-3,p.5 Methods; p.3 Fig. 2,"The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as a function of applied voltage.",Fig. 2 caption: measured low-frequency (1 MHz) Vpi
+renaud2023-3um-638,vpi_dc_v,0.45,FREQ,,1e-3,p.5 Methods; p.3 Fig. 2,"The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as a function of applied voltage.",Fig. 2 caption: measured low-frequency (1 MHz) Vpi
+renaud2023-3um-738,vpi_dc_v,0.55,FREQ,,1e-3,p.5 Methods; p.3 Fig. 2,"The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as a function of applied voltage.",Fig. 2 caption: measured low-frequency (1 MHz) Vpi
+renaud2023-3um-738,vpil_dc_vcm,0.55,FREQ,,1e-3,p.2; p.1 abstract,"At λ = 738 nm, the Vπ is 0.55 V at 1 MHz.",1 cm device
+renaud2023-3um-838,vpi_dc_v,0.85,FREQ,,1e-3,p.5 Methods; p.3 Fig. 2,"The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as a function of applied voltage.",Fig. 2 caption: measured low-frequency (1 MHz) Vpi
+renaud2023-3um-938,vpi_dc_v,0.8,FREQ,,1e-3,p.5 Methods; p.3 Fig. 2,"The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as a function of applied voltage.",Fig. 2 caption: measured low-frequency (1 MHz) Vpi
+renaud2023-4um-738,vpi_dc_v,0.79,FREQ,,1e-3,p.5 Methods; p.3 Fig. 2,"The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as a function of applied voltage.",Fig. 2 caption: measured low-frequency (1 MHz) Vpi
+renaud2023-5um-738,vpi_dc_v,0.93,FREQ,,1e-3,p.5 Methods; p.3 Fig. 2,"The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as a function of applied voltage.",Fig. 2 caption: measured low-frequency (1 MHz) Vpi
+renaud2023-pm,vpi_rf_v,1,MOVE,vpi_dc_v,0.1,p.4,"Our TFLN device is a 1 cm long, 3 μm gap phase modulator with a Vπ ~ 1 V at 100 MHz.",100 MHz < 1 GHz; also move vpi_rf_freq_ghz 0.1 to vpi_dc_freq_ghz; value approximate (~1 V)
+sabatti2024-fh,vpi_dc_v,2.5,OK,,,p.2 Sec. 3B; Fig. 3(b),optically characterised in the low-frequency range by applying a constant voltage to the electrodes,"constant voltage + power meter, i.e. DC; no frequency stated"
+sabatti2024-sh,vpi_dc_v,2.5,OK,,,p.2 Sec. 3B; Fig. 3(b),"The Vπ for the FH signal and the upconverted signal is 2.5 V, measured without termination of the modulator electrodes.",same DC constant-voltage method
+sayem2026a-m120,vpi_dc_v,3.4,UNSTATED,,,p.3; Fig. 2(c),we plot the normalized transmission from the device as a function of the applied voltage at three different operating temperatures,"AWG drive, frequency not stated"
+sayem2026a-m25,vpi_dc_v,3.8,UNSTATED,,,p.3; Fig. 2(c),we plot the normalized transmission from the device as a function of the applied voltage at three different operating temperatures,"AWG drive, frequency not stated"
+sayem2026a-m91,vpi_dc_v,3.6,UNSTATED,,,p.3; Fig. 2(c),we plot the normalized transmission from the device as a function of the applied voltage at three different operating temperatures,"AWG drive, frequency not stated"
+sayem2026b-cm,vpi_dc_v,3,OK,,,p.4; Fig. 2(b),"Relative transmission spectra at bias voltages of 0 V, 1 V, and 3 V.","from static bias spectra, DC"
+sayem2026b-cm,vpil_dc_vcm,0.6,OK,,,p.1 intro,"efficiency (VπL = 0.6 V·cm), requiring just 3 V Vπ for a 2 mm","from static bias spectra, DC"
+sayem2026c-a,vpi_dc_v,2.4,FREQ,,1e-7,p.2 Fig. 1(f) caption,Normalized transmission of the modulator as a function of applied triangular voltage at 100 Hz.,
+sayem2026c-a,vpil_dc_vcm,1.62,UNSTATED,,,p.3 Fig. 2,Transmission as a function of applied voltage for four different wavelengths of operation,Fig. 2 frequency not stated; same device's Fig. 1(f) Vpi was at 100 Hz
+sayem2026c-b,vpil_dc_vcm,1.45,UNSTATED,,,p.3 Fig. 2,Transmission as a function of applied voltage for four different wavelengths of operation,frequency not stated
+sayem2026c-c,vpil_dc_vcm,2.07,UNSTATED,,,p.3 Fig. 2,Transmission as a function of applied voltage for four different wavelengths of operation,frequency not stated
+sayem2026c-d,vpil_dc_vcm,2.57,UNSTATED,,,p.3 Fig. 2,Transmission as a function of applied voltage for four different wavelengths of operation,frequency not stated
+schwarzenberger2026-a,vpi_dc_v,2.4,UNSTATED,,,p.6 Sec. III,"After deposition and poling of the highly efficient OEO chromophore, we measure a Uπ of 2.4 V",frequency not stated
+schwarzenberger2026-a,vpil_dc_vcm,0.067,UNSTATED,,,p.6 Sec. III,"we measure a Uπ of 2.4 V, corresponding to a UπL of 0.67 Vmm",frequency not stated
+shamsansari2021-a,vpi_dc_v,4.3,UNSTATED,,,p.3; Fig. 4(c),A measured Vπ of 4.3 V demonstrates that the DFB emission can be modulated efficiently on-chip,"fit to transmission vs applied voltage; frequency not stated, implies DC"
+shen2021-a,vpil_dc_vcm,0.975,OK,,,p.3,"Resonant spectra under different reverse biases are also measured, and the resonant shift is 52.5 pm/V.","from static reverse-bias spectra, DC"
+shen2024-a,vpi_dc_v,0.042,UNSTATED,,,p.4; p.3 Fig. 2(d),"d, Room temperature Vπ measurement. The measured Vπ of three SEOM ... is 230 mV, 110 mV and 42 mV",frequency not stated
+shen2024-a,vpil_dc_vcm,2.2,UNSTATED,,,p.4,Following the convention to determine the voltage-length product (VπL) using the modulation length of one arm,frequency not stated
+shen2024-b,vpi_dc_v,0.11,UNSTATED,,,p.4; p.3 Fig. 2(d),"The measured Vπ of three SEOM ... 0.2 m, 0.4 m and 1.0 m is 230 mV, 110 mV and 42 mV",frequency not stated
+shen2024-b,vpil_dc_vcm,2.2,UNSTATED,,,p.4,Following the convention to determine the voltage-length product (VπL) using the modulation length of one arm,frequency not stated
+shen2024-c,vpi_dc_v,0.23,UNSTATED,,,p.4; p.3 Fig. 2(d),"The measured Vπ of three SEOM ... 0.2 m, 0.4 m and 1.0 m is 230 mV, 110 mV and 42 mV",frequency not stated; note Fig. S5 gives 220 mV at 300 K for a 0.2 m device
+shen2024-c,vpil_dc_vcm,2.2,UNSTATED,,,p.4,Following the convention to determine the voltage-length product (VπL) using the modulation length of one arm,frequency not stated
+shen2024-e,vpi_dc_v,0.38,UNSTATED,,,p.17 Fig. S5,A 0.2 m-long SEOM is measured at both room temperature and 4 K. Its Vπ increases from 220 mV to 380 mV.,frequency not stated
+shen2024-e,vpil_dc_vcm,3.8,UNSTATED,,,p.7 Fig. 5 caption,Its Vπ increases from 220 mV to 380 mV (p.17),frequency not stated
+shen2026-a,vpi_dc_v,3.1,FREQ,,2e-3,p.2 Sec. 4; p.3 Fig. 3(d),Transmission spectrum at null bias with 2 MHz sinusoidal modulation for Vπ extraction.,
+shen2026-a,vpil_dc_vcm,1.8,FREQ,,2e-3,p.2 Sec. 4,Figure 3(d) shows the time-domain optical modulation response under a 2 MHz sinusoidal electrical drive at the minimum-transmission bias point.,
+sia2022-a,vpil_dc_vcm,0.7,OK,,,p.3-4 Sec. static characterization; Fig. 4(d),DC bias voltage (Vbias) is applied to the racetrack phase shifter via a DC probe.,static DC-bias spectra; DC
+sia2022-b,vpil_dc_vcm,0.8,OK,,,p.3-4 Sec. static characterization; Fig. 4(d),DC bias voltage (Vbias) is applied to the racetrack phase shifter via a DC probe.,static DC-bias spectra; DC
+sia2022-c,vpil_dc_vcm,0.93,OK,,,p.3-4 Sec. static characterization; Fig. 4(d),DC bias voltage (Vbias) is applied to the racetrack phase shifter via a DC probe.,static DC-bias spectra; DC
+sia2022-d,vpil_dc_vcm,1.13,OK,,,p.3-4 Sec. static characterization; Fig. 4(d),DC bias voltage (Vbias) is applied to the racetrack phase shifter via a DC probe.,static DC-bias spectra; DC
+starnault2026-a,vpi_dc_v,2.2,UNSTATED,,,p.2 Sec. 3,The BW oDACs have a simulated 6 dB bandwidth well exceeding 100 GHz and a low-MHz differential Vπ of 2.2V.,"low-MHz (below 1 GHz, so dc column is right) but exact frequency not stated"
+starnault2026-b,vpi_dc_v,2.2,UNSTATED,,,p.2 Sec. 3,a low-MHz differential Vπ of 2.2V.,"low-MHz, exact frequency not stated"
+su2026-a,vpil_dc_vcm,1.3,FREQ,,1e-4,p.3 Sec. 3; Fig. 3(c),A 100-kHz sawtooth electric signal was applied to the electrodes to measure the half-wave voltage.,
+taghavi2022a-sim,vpil_dc_vcm,0.035,UNSTATED,,,p.14 Sec. 4,COMSOL ... predicts VpiL about 0.35 V.mm (evidence paraphrase),simulated; no measurement frequency applies
+taghavi2024-a,vpi_dc_v,0.5,OK,,,p.7; p.13 Methods,"The same SMU is used as a DC source ... which is 20 times greater than Vπ,DC = 0.5 V",SMU DC measurement; birefringence (LC reorientation) dominated
+taghavi2024-a,vpi_rf_v,51.4,UNSTATED,,,p.22 Table 2 (** AC metrics); p.11,an AC modulation efficiency of VπL ≈25.7 V·mm associated with a modest r33 ≈24 pmV−1 at f = 4.18 MHz.,"FLAG: p.11 says f = 4.18 MHz, but f-6dB > 4.18 GHz elsewhere (p.2, p.8, Fig. 2h at 4.18 GHz), likely a GHz typo; vpi_rf_freq_ghz empty. If 4.18 MHz is literal, it would move to dc columns but they already hold the 0.5 V DC value (needs a separate row)"
+taghavi2024-a,vpil_dc_vcm,0.025,OK,,,p.11 Discussion,we achieved a DC modulation efficiency of VπL ≈0.25 V·mm,DC
+taghavi2024-a,vpil_rf_vcm,2.57,UNSTATED,,,p.2 abstract; p.8; p.11,an AC modulation efficiency of VπL ≈25.7 V·mm associated with a modest r33 ≈24 pmV−1 at f = 4.18 MHz.,same ambiguity as vpi_rf_v (4.18 MHz vs 4.18 GHz); S21-based analytical estimate
+taghavi2026-a,vpi_dc_v,13.25,OK,,,p.5; p.7 Discussion,"At DC, we achieved a detuning efficiency of at least 150 pm/V",author estimate from DC resonance shift (-5 to 5 V)
+taghavi2026-a,vpil_dc_vcm,0.333,OK,,,p.7 Discussion,"At DC, we achieved a detuning efficiency of at least 150 pm/V ... and a modulation efficiency of V𝜋L ≈3.33 V · mm.",stated DC
+tan2024-a,vpil_dc_vcm,7,UNSTATED,,,p.4 Sec. 2; Fig. 2(a),COMSOL VpiL of the hybrid waveguide (evidence paraphrase),simulated; no measurement frequency applies
+tanaka2026-a,vpi_dc_v,3.6,OK,,,p.2 Sec. 2; p.3 Fig. 5,Fig. 5 shows the differential DC modulation characteristics of the RF modulation section,stated DC
+tanaka2026-a,vpil_dc_vcm,0.43,OK,,,p.2 Sec. 2,"bias voltage of -8 V, resulting in high modulation efficiency with a Vπ∙L of 0.43 V∙cm",from the DC characteristics
+tanaka2026-b,vpi_dc_v,5.4,UNSTATED,,,abstract; p.3 Fig. 6 caption,Measurement result of EO response at V of 5.4 V (Electrode length: 1.0 mm,frequency and method not stated
+tobing2026-a,vpi_dc_v,4.14,OK,,,p.3 Fig. 4(e),4(e) shows the DC response of the TFLN MZI modulator with 7 mm arm length,stated DC response
+tobing2026-a,vpil_dc_vcm,2.9,OK,,,p.3 Sec. 3,DC modulation efficiency of 2.9 V·cm,stated DC
+tran2026-a,vpi_dc_v,3.1,UNSTATED,,,p.2 Sec. 3,normalizing the response beyond the dip (~10 GHz) is justified and yields ... a Vπ = 3.1 V at 5 V bias,"FLAG: 3.1 V is tied to the LCA EO-response analysis (normalized near 10 GHz), not the static curve; Fig. 1 center static curve reads Vp=3.4 V; frequency not stated"
+tran2026-a,vpil_dc_vcm,0.62,UNSTATED,,,p.1 Sec. 1,a modulation efficiency of VπL = 0.62 V cm,frequency not stated; same ambiguity as vpi_dc_v
+ulrich2025-mzi,vpil_dc_vcm,1.04,FREQ,,2e-8,p.6; p.18 Methods,The data shown in the main figure were obtained by a 20 Hz and 16 V amplitude dropping over 10 μm electrode spacing.,derived from the 20 Hz poling-curve r_eff; response drops below 20-50 Hz (no true DC)
+ummethala2021-a,vpi_dc_v,1.3,UNSTATED,,,p.3 Sec. 3; p.4 Fig. 2(c),we measure the π-voltage of the MZM by driving it with a low-frequency triangular signal,"quasi-static triangle, frequency not given"
+ummethala2021-a,vpil_dc_vcm,0.13,UNSTATED,,,p.3 Sec. 3,driving it with a low-frequency triangular signal,"quasi-static, frequency not given"
+valdez2022-a,vpil_dc_vcm,3.1,FREQ,,1e-4;1e-2,p.7; Fig. 4(b),resulting in an average VπL of 3.1 V.cm in the range of 0.1 to 10 MHz,average over 0.1-10 MHz; single-value convention needed (range given as 1e-4;1e-2)
+valdez2023-cn1,vpi_dc_v,3.11,FREQ,,1e-6,p.9 Sec. 3.3; p.11 Fig. 7,"To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs were biased to quadrature",Vpi(DC) defined as the measured Vpi at 1 kHz (p.10)
+valdez2023-cn2,vpi_dc_v,5.78,FREQ,,1e-6,p.9 Sec. 3.3; p.11 Fig. 7,"To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs were biased to quadrature",Vpi(DC) defined as the measured Vpi at 1 kHz (p.10)
+valdez2023-cw1,vpi_dc_v,2.93,FREQ,,1e-6,p.9 Sec. 3.3; p.11 Fig. 7,"To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs were biased to quadrature",Vpi(DC) defined as the measured Vpi at 1 kHz (p.10)
+valdez2023-cw2,vpi_dc_v,5.59,FREQ,,1e-6,p.9 Sec. 3.3; p.11 Fig. 7,"To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs were biased to quadrature",Vpi(DC) defined as the measured Vpi at 1 kHz (p.10)
+valdez2023-on1,vpi_dc_v,2.6,FREQ,,1e-6,p.9 Sec. 3.3; p.11 Fig. 7,"To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs were biased to quadrature",Vpi(DC) defined as the measured Vpi at 1 kHz (p.10)
+valdez2023-on2,vpi_dc_v,4.37,FREQ,,1e-6,p.9 Sec. 3.3; p.11 Fig. 7,"To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs were biased to quadrature",Vpi(DC) defined as the measured Vpi at 1 kHz (p.10)
+valdez2023-ow1,vpi_dc_v,3.78,FREQ,,1e-6,p.9 Sec. 3.3; p.11 Fig. 7,"To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs were biased to quadrature",Vpi(DC) defined as the measured Vpi at 1 kHz (p.10)
+valdez2023-ow2,vpi_dc_v,2.01,FREQ,,1e-6,p.9 Sec. 3.3; p.11 Fig. 7,"To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs were biased to quadrature",Vpi(DC) defined as the measured Vpi at 1 kHz (p.10)
+valdez2023a-a,vpi_dc_v,2.0,FREQ,,1e-4,p.4 Sec. III; p.5 Fig. 3(c),a 100 kHz trapezoidal signal generated by a pulse pattern generator ... was used to drive the modulator,
+valdez2023a-a,vpil_dc_vcm,0.8,FREQ,,1e-4,p.5 Sec. IV.A,Vπ (DC) is taken as the value of Vπ at 100 kHz measured for each MZM as described earlier.,
+valdez2023a-b,vpi_dc_v,1.0,FREQ,,1e-4,p.4 Sec. III; p.5 Fig. 3(d),a 100 kHz trapezoidal signal generated by a pulse pattern generator ... was used to drive the modulator,
+valdez2023a-b,vpil_dc_vcm,0.8,FREQ,,1e-4,p.5 Sec. IV.A,Vπ (DC) is taken as the value of Vπ at 100 kHz measured for each MZM as described earlier.,
+valdez2026-a,vpi_dc_v,6.7,FREQ,,1e-3,p.2 Sec. 2; p.3 Fig. 2(b),An arbitrary waveform generator was used to apply a sinusoidal waveform with 20 Vpp at 1 MHz to both the MZM and RAMZM devices.,
+valdez2026-a,vpil_dc_vcm,1.36,FREQ,,1e-3,p.2 Sec. 2,a sinusoidal waveform with 20 Vpp at 1 MHz,
+valdez2026-b,vpi_dc_v,20.9,FREQ,,1e-3,p.3 Fig. 2(b) caption,Normalized transmission versus applied voltage under a sinusoidal-wave scan at 1 MHz for the MZM (blue) with a cosine-squared fit,fit extrapolated beyond the +-10 V scan
+valdez2026-b,vpil_dc_vcm,4.2,FREQ,,1e-3,p.2 Sec. 2,a sinusoidal waveform with 20 Vpp at 1 MHz,
+vanackere2023-a,vpi_dc_v,14.8,UNSTATED,,,p.4 Sec. IV; p.5 Fig. 2(b),A voltage sweep at the quadrature point indicates a Vπ of 14.8 V,low-speed measurement (Fig. 2: Low frequency measurement results); frequency not stated
+wang2018-mzi,vpi_dc_v,9,OK,,,p.3 Fig. 3c caption,"Optical transmission of a 2 mm long MZI modulator versus DC voltage applied, indicating a half-wave voltage (Vπ) of 9 V",stated DC
+wang2018-mzi,vpil_dc_vcm,1.8,OK,,,p.3 Fig. 3c caption,versus DC voltage applied ... and a voltage-length product of 1.8 V·cm,stated DC
+wang2022a-a,vpi_dc_v,2.18,FREQ,,1e-6,p.3 Sec. 2; Fig. 3(b),"When measuring the half-wave voltage of the modulator, a 1 kHz triangle electric signal is applied onto the MZMs.",
+wang2022a-a,vpil_dc_vcm,2.6,FREQ,,1e-6,p.3 Sec. 2,a 1 kHz triangle electric signal is applied onto the MZMs.,
+wang2024a-a,vpi_dc_v,4.8,FREQ,,1e-7,p.4,"For a 6 mm MZM with 100 Hz triangular voltage sweeps, the measured Vπ is 4.8 V at 1550 nm",
+wang2024a-a,vpil_dc_vcm,2.8,FREQ,,1e-7,p.4,"with 100 Hz triangular voltage sweeps, the measured Vπ is 4.8 V at 1550 nm, corresponding to VπL of 2.8 V · cm.",
+wang2024b-a,vpi_dc_v,7.6,FREQ,,1e-5,p.8 Methods; p.5,"For Vπ measurement, the MZM modulator was driven using a 10 kHz triangular voltage signal",
+wang2024b-a,vpil_dc_vcm,1.9,FREQ,,1e-5,p.5; p.4 Fig. 3(g),The transmission through the MZM with a 10 kHz triangular voltage sweep is plotted in Fig.,
+wang2024b-b,vpi_dc_v,6.4,FREQ,,1e-5,p.8 Methods; p.5,"For Vπ measurement, the MZM modulator was driven using a 10 kHz triangular voltage signal",
+wang2024b-b,vpil_dc_vcm,1.6,FREQ,,1e-5,p.5; p.4 Fig. 3(g),The transmission through the MZM with a 10 kHz triangular voltage sweep is plotted in Fig.,
+wang2025-a,vpi_dc_v,4.6,FREQ,,1e-4,p.3; p.4 Fig. 4,"To measure the Vπ of the modulator, a sawtooth wave with a peak-to-peak voltage of 20 V and a frequency of 100 kHz was applied",
+wang2025-a,vpil_dc_vcm,3.22,FREQ,,1e-4,p.3,a sawtooth wave with a peak-to-peak voltage of 20 V and a frequency of 100 kHz was applied to the electrodes.,
+wang2026a-a,vpi_dc_v,10.2,OK,,,p.2 Sec. 2,corresponding to a half-wave voltage (Vπ) of approximately 10.2 V under DC test condition.,stated DC
+wang2026a-a,vpil_dc_vcm,2.3,OK,,,p.2 Sec. 2,phase shift versus bias in transmission spectra (evidence paraphrase),"from static-bias transmission spectra, DC"
+wang2026a-b,vpi_dc_v,6,OK,,,p.2 Sec. 2,Corresponding Vpi approximately 6 V (evidence paraphrase),"derived from VpiL from static-bias spectra (0 to 6 V), DC"
+wang2026a-b,vpil_dc_vcm,1.36,OK,,,p.2 Sec. 2; Fig. 2(a),Extracted from transmission spectra at 0 to 6 V (evidence paraphrase),"static-bias spectra, DC"
+wang2026b-am,vpi_dc_v,2.2,UNSTATED,,,p.5; p.11 Fig. 3(c) caption,"under a triangular-waveform voltage input (top), indicating a low-frequency Vπ of 2.2 V.",low-frequency triangle; frequency not given
+wang2026b-am,vpi_rf_v,3.7,OK,,50,p.6,the RF Vπ of the AM ... extracted to be ~3.7 V at 50 GHz from the DC Vπ and the EO S21 data,
+wang2026b-am,vpil_dc_vcm,2.4,UNSTATED,,,p.5,by applying a low-frequency triangular modulation signal,low-frequency triangle; frequency not given
+wang2026b-pm,vpi_rf_v,3.9,OK,,50,p.6,The comb spectrum follows a typical Bessel shape with an estimated RF Vπ of ~3.9 V at 50 GHz,
+weigel2018-a,vpil_dc_vcm,6.7,OK,,,p.7; p.18 Fig. 3a caption,"(MZM), versus dc voltage at optical wavelength λ = 1560 nm. Fitted VπL = 6.7 V.cm",stated DC
+wolf2018a-static,vpi_dc_v,0.9,OK,,,p.5,Note that the π-voltage was measured at DC bias voltages above 2 V.,DC (transmission dips vs DC bias)
+wolf2018a-static,vpil_dc_vcm,0.1,OK,,,p.5,"a π-voltage of 0.9 V ... for a device phase shifter length of 1.1 mm, corresponds to a UπL-product of 1 Vmm",DC
+wu2025-a,vpi_dc_v,4.4,FREQ,,1e-4,p.6 Sec. Modulator; Fig. 3(a),Figure 2a shows the measured half-wave voltage (Vπ) under a 100 kHz triangular voltage sweep.,
+wu2025-a,vpil_dc_vcm,2.8,FREQ,,1e-4,p.6 Sec. Modulator,measured half-wave voltage (Vπ) under a 100 kHz triangular voltage sweep,
+xu2020-a,vpi_dc_v,1.9,FREQ,,1e-4,p.5; p.4 Fig. 3(a),"Next, we measured the Vπ for both devices with 100 kHz triangular voltage sweeps.",
+xu2020-a,vpil_dc_vcm,2.4,FREQ,,1e-4,p.5,"Next, we measured the Vπ for both devices with 100 kHz triangular voltage sweeps.",
+xu2020-b,vpi_dc_v,3.1,FREQ,,1e-4,p.5; p.4 Fig. 3(b),"Next, we measured the Vπ for both devices with 100 kHz triangular voltage sweeps.",
+xu2020-b,vpil_dc_vcm,2.3,FREQ,,1e-4,p.5,"Next, we measured the Vπ for both devices with 100 kHz triangular voltage sweeps.",
+xu2026a-a,vpi_dc_v,1.089,FREQ,,1e-8;1e-5,p.2 Sec. 2; p.3 Fig. 4(a),our TFLT device maintains a nearly constant Vπ with an average of 1.089 V (1.045 V at 10 Hz),average over 10 Hz-10 kHz; single-frequency alternative 1.045 V at 10 Hz (1e-8 GHz)
+xu2026a-a,vpil_dc_vcm,1.63,FREQ,,1e-8;1e-5,p.2 Sec. 2,corresponding to VπL = 1.63 V·cm (1.57 V·cm at 10 Hz),average over 10 Hz-10 kHz
+xu2026b-a,vpi_dc_v,1.35,FREQ,,1e-9;1e-5,p.2 Sec. 2; Fig. 3(b),"The measured Vπ remains stable across 1 Hz to 10 kHz, varying by only ±4% around an average value of 1.35 V.",average over 1 Hz-10 kHz
+yamaguchi2026-c,vpi_dc_v,2,UNSTATED,,,p.3 Sec. 3; Fig. 2(d),"Figure 2(d) displays the semi-static modulation curve of the modulator, with a measured half-wave voltage of 2 V",semi-static; frequency not stated
+yang2026-a,vpil_dc_vcm,0.66,OK,,,p.2 Sec. 3; Fig. 2(a),"Fig. 2(a) presents the static transmission spectra ... For a 500 μm long modulator, yielding a modulation efficiency of 0.66 V·cm.","from static spectra, DC"
+yu2024-s0,vpi_dc_v,4.95,FREQ,,1e-3,p.11; p.20 Methods,An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.,
+yu2024-s0,vpil_dc_vcm,1.98,FREQ,,1e-3,p.11,An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.,VpiL = 1 MHz Vpi x 4 mm
+yu2024-s1,vpi_dc_v,4.25,FREQ,,1e-3,p.11; p.20 Methods,An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.,
+yu2024-s2,vpi_dc_v,1.74,FREQ,,1e-3,p.11; p.20 Methods,An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.,
+yu2024-s3,vpi_dc_v,1.57,FREQ,,1e-3,p.11; p.20 Methods,An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.,
+yu2024-s3,vpil_dc_vcm,0.63,FREQ,,1e-3,p.11,An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.,VpiL = 1 MHz Vpi x 4 mm
+yu2026-a,vpi_dc_v,2,UNSTATED,,,p.1 Sec. 2; p.2 Sec. 3,designed low Vpi values (<2 V) (evidence paraphrase),"design target, no measurement; DC or RF not stated"
+yue2025-a,vpi_dc_v,54,OK,,,p.15 Sec. 3,measuring the dependence of the modulation phase on voltage using a DC voltage (see Section S4 for details),DC (author estimate from DC efficiency / length)
+yue2025-a,vpil_dc_vcm,4.86,OK,,,p.14 Table 2; p.15,measuring the dependence of the modulation phase on voltage using a DC voltage,DC
+zhang2022-a,vpi_rf_v,8.3,OK,,250,p.6 Sec. 3.C; Fig. 5(b),RF Vpi at 250 GHz from sideband-to-carrier ratio (evidence paraphrase),
+zhang2022-a,vpil_dc_vcm,2.3,OK,,,p.3 Sec. 2,The VπL product in the devices characterized in this work is 2.3 V cm at DC and 2.67 V cm at 1 GHz,stated DC
+zhang2022-b,vpi_rf_v,7.3,OK,,250,p.1 abstract; p.6 Sec. 3.C,RF Vpi at 250 GHz (evidence paraphrase),
+zhang2022-b,vpil_dc_vcm,2.3,OK,,,p.3 Sec. 2,The VπL product in the devices characterized in this work is 2.3 V cm at DC and 2.67 V cm at 1 GHz,stated DC
+zhang2026a-a,vpi_dc_v,6.7,FREQ,,1e-3,p.1 Sec. 2,The half-wave voltage of this device was measured using a 1 MHz sinusoidal driving signal and is 6.7 V.,
+zhang2026a-b,vpi_dc_v,3.2,FREQ,,1e-3,p.2 Fig. 2(b),(b) Vπ vs frequency in the low frequency ranges from 50mHz to 1MHz.,value is the 1 MHz point of Fig. 2(b) per evidence
+zhang2026b-a,vpi_dc_v,4.29,FREQ,,1e-6,p.2 Sec. 3; p.3 Fig. 3(a),The DC Vπ of a 5-mm-long modulator with metal space of 5 μm is measured using a 1 kHz sinusoidal signal.,"text says sinusoidal, Fig. 3(a) caption says 1 kHz triangular sweep; both 1 kHz"
+zhang2026b-a,vpil_dc_vcm,2.15,FREQ,,1e-6,p.2 Sec. 3,measured using a 1 kHz sinusoidal signal,
+zhang2026b-b,vpil_dc_vcm,1.87,UNSTATED,,,p.2-3 Sec. 3; Fig. 3(b); Table 1,lowest modulation efficiency VπL of 1.87 V·cm,wafer-map value; measurement frequency for the map not stated (single-device Vpi was 1 kHz)
+zheng2026-g4,vpi_dc_v,4,FREQ,,1e-4,p.10 Sec. V; Fig. 4(f),"The devices are driven by an RF signal generator, providing a triangular wave at a frequency of 100 kHz.",
+zheng2026-g5,vpi_dc_v,5.5,FREQ,,1e-4,p.10 Sec. V; p.9 Fig. 4(f),"The devices are driven by an RF signal generator, providing a triangular wave at a frequency of 100 kHz.",same Sec. V measurement for the gap-sweep box plot
+zheng2026-g6,vpi_dc_v,7.0,FREQ,,1e-4,p.10 Sec. V; p.9 Fig. 4(f),"The devices are driven by an RF signal generator, providing a triangular wave at a frequency of 100 kHz.",same Sec. V measurement for the gap-sweep box plot
+zhong2026-a,vpil_dc_vcm,0.38,OK,,,p.4 Sec. Fabrication and static characterization,From the 160 pm redshift between -2 V and -4 V (evidence paraphrase),static DC-bias resonance shift
+zhou2026-a,vpi_dc_v,2.7,UNSTATED,,,p.1 Sec. 2; Fig. 1,half-wave voltage (Vπ) of 2.7V. Fig.1 shows the measured EO S21 response and Vπ of TFLN MZM,frequency not stated

@@ -4,9 +4,9 @@
  "doi": "10.1021/acsphotonics.6c00340",
  "source_type": "arxiv_preprint",
  "source_version": "2601.20434v1",
- "license": "",
- "license_verified": false,
- "redistribution": "restricted_local_only",
+ "license": "CC-BY-4.0",
+ "license_verified": true,
+ "redistribution": "open_license_ok",
  "retrieved_on": "2026-10-03T06:09:13+00:00",
  "acquisition_origin": "public_primary_source",
  "identity_url": "https://arxiv.org/abs/2601.20434v1",
@@ -15,5 +15,6 @@
  "pages": 24,
  "text_chars": 45746,
  "n_figure_files": 20,
- "extracted_on": "2026-10-02"
+ "extracted_on": "2026-10-02",
+ "license_source": "references/prountzou2026/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

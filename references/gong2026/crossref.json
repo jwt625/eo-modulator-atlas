@@ -1,0 +1,449 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:25:00Z",
+   "timestamp": 1786991100212,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 9,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We report a push-pull Mach-Zehnder modulator in a 300-mm CMOS silicon photonics foundry with 60 GHz EO bandwidth. We demonstrate 2.9 dB TDECQ and 3.7 dB ER in 200 Gbps PAM-4 transmissions with 7-tap FFE.</jats:p>",
+  "DOI": "10.1364/ofc.2026.w1a.2",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:28:25Z",
+   "timestamp": 1780428505000
+  },
+  "page": "W1A.2",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "A 60 GHz EO Bandwidth Mach-Zehnder Modulator for 200G/λ O-band Datacom in 300-mm Monolithic CMOS Silicon Photonics Foundry"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Ming",
+    "family": "Gong",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Qidi",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hanyi",
+    "family": "Ding",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Minerva",
+    "family": "Webster-Pact",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kevin",
+    "family": "Dezfulian",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yusheng",
+    "family": "Bian",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sujith",
+    "family": "Chandran",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Teodor",
+    "family": "Stanev",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Massimo",
+    "family": "Sorbara",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Won Suk",
+    "family": "Lee",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Michal",
+    "family": "Rakowski",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Takako",
+    "family": "Hirokawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yahui",
+    "family": "Xiao",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bob",
+    "family": "Mulfinger",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Janet",
+    "family": "Tinkler",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Andrea",
+    "family": "Paganini",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ken",
+    "family": "Giewont",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Rick",
+    "family": "Carter",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ted",
+    "family": "Letavic",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-W1A.2-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "1678",
+    "DOI": "10.1109/JSTQE.2006.883151",
+    "type": "journal-article",
+    "volume": "12",
+    "author": "Soref",
+    "year": "2006",
+    "journal-title": "IEEE J. Sel. Top. Quan. Electron."
+   },
+   {
+    "key": "OFC-2026-W1A.2-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "4222",
+    "DOI": "10.1109/JLT.2005.858225",
+    "type": "journal-article",
+    "volume": "23",
+    "author": "Lipson",
+    "year": "2005",
+    "journal-title": "J. Lightw. Technol"
+   },
+   {
+    "key": "OFC-2026-W1A.2-R3",
+    "doi-asserted-by": "crossref",
+    "first-page": "PD104_7",
+    "DOI": "10.1364/CLEO_AT.2025.PD104_7",
+    "type": "journal-article",
+    "author": "Bian",
+    "year": "2025",
+    "journal-title": "CLEO Appl. Technol. 2025"
+   },
+   {
+    "key": "OFC-2026-W1A.2-R4",
+    "doi-asserted-by": "crossref",
+    "first-page": "ATu3H-1",
+    "DOI": "10.1364/CLEO_AT.2024.ATu3H.1",
+    "type": "journal-article",
+    "author": "Bian",
+    "year": "2024",
+    "journal-title": "CLEO Appl. Technol. 2024"
+   },
+   {
+    "key": "OFC-2026-W1A.2-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "6987",
+    "DOI": "10.1109/JLT.2023.3298604",
+    "type": "journal-article",
+    "volume": "41",
+    "author": "Gong",
+    "year": "2023",
+    "journal-title": "J. Lightw. Technol"
+   },
+   {
+    "key": "OFC-2026-W1A.2-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "109",
+    "DOI": "10.1364/PRJ.6.000109",
+    "type": "journal-article",
+    "volume": "6",
+    "author": "Li",
+    "year": "2018",
+    "journal-title": "Photonics Research"
+   },
+   {
+    "key": "OFC-2026-W1A.2-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "2240",
+    "DOI": "10.1109/JLT.2014.2323954",
+    "type": "journal-article",
+    "volume": "32",
+    "author": "Ding",
+    "year": "2014",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "key": "OFC-2026-W1A.2-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "123",
+    "DOI": "10.1109/JQE.1987.1073206",
+    "type": "journal-article",
+    "volume": "23",
+    "author": "Soref",
+    "year": "1987",
+    "journal-title": "IEEE J. of Quan. Electronics"
+   },
+   {
+    "key": "OFC-2026-W1A.2-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "2158",
+    "DOI": "10.1109/JPROC.2018.2877636",
+    "type": "journal-article",
+    "volume": "106",
+    "author": "Witzens",
+    "year": "2018",
+    "journal-title": "Proceedings of the IEEE"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-W1A.2&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:27:04Z",
+   "timestamp": 1786987624000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-W1A.2"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 9,
+  "URL": "https://doi.org/10.1364/ofc.2026.w1a.2",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

@@ -94,11 +94,12 @@ entries:
   note: X-cut LN device layer
 - device_id: shamsansari2021-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.3, Fig. 4(d)
   note: Authors do not state the reference frequency; the plotted trace starts near 0 dB at the origin.
+  previous_value: unspecified
 derived:
 - device_id: shamsansari2021-a
   field: etch_depth_nm

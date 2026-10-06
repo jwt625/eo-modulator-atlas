@@ -193,7 +193,7 @@ entries:
   note: Response normalized to about 0 dB at lowest frequency; reference not stated
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1 page footer (repeated on every page)
-    note: printed page-footer copyright notice; basis for license publisher-copyright
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1 page footer (repeated on every page)
+  note: printed page-footer copyright notice; basis for license publisher-copyright

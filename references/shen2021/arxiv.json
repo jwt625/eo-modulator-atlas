@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2104.01163",
+ "title": "High-speed silicon microring modulator at 2-um waveband",
+ "authors": "Weihong Shen, Gangqiang Zhou, Jiangbing Du, Linjie Zhou, Ke Xu, and Zuyuan He",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Fri, 12 Mar 2021 08:45:40 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:13:47Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2104.01163\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2104.01163</identifier>\n        <datestamp>2021-04-05</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2104.01163</id>\n        <submitter>Weihong Shen</submitter>\n            <version version=\"v1\">\n                <date>Fri, 12 Mar 2021 08:45:40 GMT</date>\n                <size>1368kb</size>\n            </version>\n        <title>High-speed silicon microring modulator at 2-um waveband</title>\n        <authors>Weihong Shen, Gangqiang Zhou, Jiangbing Du, Linjie Zhou, Ke Xu, and Zuyuan He</authors>\n        <categories>physics.app-ph physics.optics</categories>\n            <license>http://creativecommons.org/licenses/by-nc-nd/4.0/</license>\n            <abstract>We demonstrated a silicon integrated microring modulator working at the 2-um waveband with an L-shaped PN junction. 15-GHz 3-dB electro-optic bandwidth and &lt;1 Vcm modulation efficiency for 45-Gbps NRZ-OOK signaling is achieved at 1960 nm.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

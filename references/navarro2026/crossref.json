@@ -1,0 +1,190 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     17
+    ]
+   ],
+   "date-time": "2026-09-17T13:12:08Z",
+   "timestamp": 1789650728839,
+   "version": "4.0.0"
+  },
+  "reference-count": 0,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "J. Opt. Soc. Am. B"
+  ],
+  "DOI": "10.1364/josab.606905",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     17
+    ]
+   ],
+   "date-time": "2026-09-17T13:00:17Z",
+   "timestamp": 1789650017000
+  },
+  "update-policy": "https://doi.org/10.1364/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Cryogenic Graphene-Based Phase Modulators for Quantum Information Processing"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Leonard",
+    "family": "Barboza Navarro",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Maria Carolina",
+    "family": "Volpato",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alisson  Ronieri",
+    "family": "Cadore",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Pierre",
+    "family": "Assis",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     17
+    ]
+   ]
+  },
+  "container-title": [
+   "Journal of the Optical Society of America B"
+  ],
+  "original-title": [],
+  "language": "en",
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     17
+    ]
+   ],
+   "date-time": "2026-09-17T13:00:17Z",
+   "timestamp": 1789650017000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/josab/abstract.cfm?doi=10.1364/JOSAB.606905"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     17
+    ]
+   ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.1364/josab.606905",
+  "relation": {},
+  "ISSN": [
+   "0740-3224",
+   "1520-8540"
+  ],
+  "issn-type": [
+   {
+    "value": "0740-3224",
+    "type": "print"
+   },
+   {
+    "value": "1520-8540",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     17
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2 June 2026",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "12 September 2026",
+    "order": 1,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ]
+ }
+}

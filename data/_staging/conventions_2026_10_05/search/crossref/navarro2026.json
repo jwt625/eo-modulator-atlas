@@ -1,0 +1,247 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 7132,
+  "items": [
+   {
+    "DOI": "10.1364/josab.606905",
+    "title": [
+     "Cryogenic Graphene-Based Phase Modulators for Quantum Information Processing"
+    ],
+    "author": [
+     {
+      "given": "Leonard",
+      "family": "Barboza Navarro",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Maria Carolina",
+      "family": "Volpato",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Alisson  Ronieri",
+      "family": "Cadore",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Pierre",
+      "family": "Assis",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       9,
+       17
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1007/s11128-025-04732-7",
+    "title": [
+     "Thermal quantum information capacity in a topological insulator"
+    ],
+    "author": [
+     {
+      "given": "Leonardo A.",
+      "family": "Navarro-Labastida",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       4,
+       29
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.ipl.2011.02.010",
+    "title": [
+     "Fuzzy Role-Based Access Control"
+    ],
+    "author": [
+     {
+      "given": "Carles",
+      "family": "Martínez-García",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Guillermo",
+      "family": "Navarro-Arribas",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Joan",
+      "family": "Borrell",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2011,
+       4
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.ipl.2009.04.012",
+    "title": [
+     "Parameterized matching on non-linear structures"
+    ],
+    "author": [
+     {
+      "given": "Amihood",
+      "family": "Amir",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Gonzalo",
+      "family": "Navarro",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2009,
+       7
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.ipl.2005.07.004",
+    "title": [
+     "New bounds on D-ary optimal codes"
+    ],
+    "author": [
+     {
+      "given": "Gonzalo",
+      "family": "Navarro",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Nieves",
+      "family": "Brisaboa",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2005,
+       12
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

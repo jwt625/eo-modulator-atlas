@@ -50,11 +50,12 @@ entries:
   note: Authors state exceeds 110 GHz; Fig. 3(c) trace touches -3 dB near 103-104 GHz, ends near -2.5 dB
 - device_id: xu2026b-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.2 Fig. 3(c)
   note: Reference frequency not stated; response normalized near 0 dB at low frequency
+  previous_value: unspecified
 - device_id: xu2026b-a
   field: bw_measured_to_ghz
   value: 110

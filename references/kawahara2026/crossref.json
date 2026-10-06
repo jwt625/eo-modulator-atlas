@@ -1,0 +1,285 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:26:18Z",
+   "timestamp": 1786991178536,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 7,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>Built-in EO equalizer extended the Si slow-light Mach–Zehnder modulator bandwidth to 80 GHz, achieving DSP-free 112-Gb/s low-voltage OOK and 180-Gb/s PAM4 operation, further reaching 200 Gb/s with a low-complexity DSP.</jats:p>",
+  "DOI": "10.1364/ofc.2026.m2a.5",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:26:13Z",
+   "timestamp": 1780428373000
+  },
+  "page": "M2A.5",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Low-Voltage, Complex-DSP-Free 200G PAM4 / 140G OOK Operation of Si Photonic Crystal Slow-Light Modulator with Built-in EO Equalizer"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Keisuke",
+    "family": "Kawahara",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tai",
+    "family": "Tsuchizawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Noritsugu",
+    "family": "Yamamoto",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuriko",
+    "family": "Maegami",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Koji",
+    "family": "Yamada",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nobuhiko",
+    "family": "Nishiyama",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Toshihiko",
+    "family": "Baba",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-M2A.5-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "910",
+    "DOI": "10.1038/s41928-023-01048-1",
+    "type": "journal-article",
+    "volume": "6",
+    "author": "Li",
+    "year": "2023",
+    "journal-title": "Nature Electronics"
+   },
+   {
+    "key": "OFC-2026-M2A.5-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "127",
+    "DOI": "10.1109/JSTQE.2013.2265193",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Nguyen",
+    "year": "2013",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron"
+   },
+   {
+    "key": "OFC-2026-M2A.5-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JSTQE.2020.3026957",
+    "type": "journal-article",
+    "volume": "27",
+    "author": "Hinakura",
+    "year": "2021",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron"
+   },
+   {
+    "key": "OFC-2026-M2A.5-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "1212",
+    "DOI": "10.1364/OPTICA.531372",
+    "type": "journal-article",
+    "volume": "11",
+    "author": "Kawahara",
+    "year": "2024",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "OFC-2026-M2A.5-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "6547",
+    "DOI": "10.1038/s41467-025-61933-5",
+    "type": "journal-article",
+    "volume": "16",
+    "author": "Han",
+    "year": "2025",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "OFC-2026-M2A.5-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "1777",
+    "DOI": "10.1109/JLT.2020.3043131",
+    "type": "journal-article",
+    "volume": "39",
+    "author": "Breyne",
+    "year": "2021",
+    "journal-title": "J. Light. Technol"
+   },
+   {
+    "key": "OFC-2026-M2A.5-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "203",
+    "DOI": "10.1364/OPTICA.545011",
+    "type": "journal-article",
+    "volume": "12",
+    "author": "Yue",
+    "year": "2025",
+    "journal-title": "Optica"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-M2A.5&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:26:09Z",
+   "timestamp": 1786987569000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-M2A.5"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 7,
+  "URL": "https://doi.org/10.1364/ofc.2026.m2a.5",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

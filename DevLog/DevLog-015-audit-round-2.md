@@ -106,6 +106,8 @@ Notable value changes (all independently re-measured or re-read):
 
 ## Open items
 
+> 2026-10-05: decisions 1-6 below were resolved in [DevLog-020](DevLog-020-data-convention-decisions.md) (earliest year/published_on, Crossref author lists, DOI-first identity, arXiv licence from the OAI record with no unknown, soi_strip / ITU-T bands / resonance_dip, suceava2025 journal identity), and the valdez2022 / lu2020 source.json items were corrected. Still open: the sim-config follow-ups (engine owner) and the 23 missing local extracts.
+
 Decisions for the user (cells left unchanged, deferrals recorded in the disposition files):
 1. `year` / `published_on` rule for arXiv-sourced rows (journal vs preprint year; first public version vs version of record). liu2023 published_on was set to the accepted-preview date under the current wording.
 2. Author-list source: Crossref vs cached version (gao2024 vs hou2024).

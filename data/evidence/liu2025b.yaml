@@ -249,6 +249,13 @@ entries:
   basis: measured
   locator: p.6 Fig. 6(c)
   note: TDECQ 3.14 dB
+- device_id: liu2025b-a
+  field: vpi_dc_freq_ghz
+  value: 0.0005
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. Measurement and result
+  note: Fig. 4(c) caption says 1 GHz; methods text says 500 kHz triangular sweep (taken).
 derived:
 - device_id: liu2025b-b
   field: max_line_rate_gbps

@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2211.13348",
+ "title": "100 GHz Bandwidth, 1 Volt Near-infrared Electro-optic Mach-Zehnder Modulator",
+ "authors": "Forrest Valdez, Viphretuo Mere, and Shayan Mookherjea",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 23 Nov 2022 23:28:28 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:18:32Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2211.13348\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2211.13348</identifier>\n        <datestamp>2022-11-28</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2211.13348</id>\n        <submitter>Forrest Valdez</submitter>\n            <version version=\"v1\">\n                <date>Wed, 23 Nov 2022 23:28:28 GMT</date>\n                <size>1954kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>100 GHz Bandwidth, 1 Volt Near-infrared Electro-optic Mach-Zehnder Modulator</title>\n        <authors>Forrest Valdez, Viphretuo Mere, and Shayan Mookherjea</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>12 pages, 7 figures</comments>\n            <license>http://creativecommons.org/licenses/by-nc-nd/4.0/</license>\n            <abstract>An integrated hybrid thin-film lithium niobate (TFLN) electro-optic Mach-Zehnder modulator (MZM) is shown at near-infrared wavelengths. The design uses TFLN bonded to planarized silicon nitride waveguide circuits, and does not require etching or patterning of TFLN. The push-pull MZM achieves a half-wave voltage length product ($V_\\pi L$) of 0.8 V$.$cm at 784 nm. MZM devices with 0.4 cm and 0.8 cm modulation length show a broadband electro-optic response with a 3 dB bandwidth beyond 100 GHz, with the latter showing a bandwidth to half-wave voltage ratio of 100 GHz/V.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

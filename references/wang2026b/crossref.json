@@ -1,0 +1,1097 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     5
+    ]
+   ],
+   "date-time": "2026-10-05T16:55:09Z",
+   "timestamp": 1791219309947,
+   "version": "4.1.0"
+  },
+  "reference-count": 48,
+  "publisher": "Oxford University Press (OUP)",
+  "issue": "19",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       8,
+       10
+      ]
+     ],
+     "date-time": "2026-08-10T00:00:00Z",
+     "timestamp": 1786320000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62525507"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62525507"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "C1002-22Y"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "C1002-22Y"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "STG3/E-104/25-N"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "STG3/E-104/25-N"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "JRFS2526-1S01"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "JRFS2526-1S01"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "CityU 11204824"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "CityU 11204824"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "N_CityU141/23"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "N_CityU141/23"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001692",
+    "name": "Croucher Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "9509005"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9509005"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001692",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100007567",
+    "name": "City University of Hong Kong",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "9610682"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9610682"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100007567",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "Guangdong and Hong Kong Universities",
+    "award": [
+     "1 + 1 + 1"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "1 + 1 + 1"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Joint Research Collaboration Scheme",
+    "award": [
+     "9249005"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9249005"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Joint Research Collaboration Scheme",
+    "award": [
+     "9679005"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9679005"
+      ]
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     5
+    ]
+   ]
+  },
+  "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>To address the urgent need for multi-channel high-speed electrical interfacing of thin-film lithium niobate (TFLN) photonic circuits, we realize a flip-chip packaging platform capable of simultaneously delivering 13 high-speed and 32 low-speed electronic signals to a centimeter-sized TFLN chip. The platform exhibits low flip-chip bonding loss and low inter-channel crosstalk over a broad bandwidth up to 50 GHz. Leveraging this packaging platform, we demonstrate high-speed electrical interfacing with two proof-of-concept TFLN photonic circuits, namely a 2 × 8 optical switch and an electro-optic comb-based transmitter. The switch achieves arbitrary 8-channel routing with ∼3 dB insertion loss, &amp;lt;−20 dB crosstalk, and an equipment-limited switching time of ≤34 ps. The transmitter circuit includes a 50 GHz electro-optic comb generator with 2.8-dB flatness, a tunable microring to arbitrarily filter one comb line, and a modulator for data transmission at 20 Gbit/s. The packaging platform could significantly advance large-scale TFLN circuits in optical communications, microwave photonics, and photonic computing.</jats:p>",
+  "DOI": "10.1093/nsr/nwag480",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     9
+    ]
+   ],
+   "date-time": "2026-08-09T11:33:49Z",
+   "timestamp": 1786275229000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Multi-channel high-speed flip-chip packaging platform for thin-film lithium niobate photonic circuits"
+  ],
+  "prefix": "10.1093",
+  "volume": "13",
+  "author": [
+   {
+    "given": "Zhenzheng",
+    "family": "Wang",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xiangzhi",
+    "family": "Xie",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yikun",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yifan",
+    "family": "Wu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zeyu",
+    "family": "Luo",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hanke",
+    "family": "Feng",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yulong",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zengyi",
+    "family": "Xu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zixi",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuansong",
+    "family": "Zeng",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mandie",
+    "family": "Huang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ke",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yingxia",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1939-1422",
+    "authenticated-orcid": false,
+    "given": "Cheng",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "286",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     10
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "2026100511523878300_bib1",
+    "doi-asserted-by": "publisher",
+    "first-page": "242",
+    "DOI": "10.1364/AOP.411024",
+    "article-title": "Integrated photonics on thin-film lithium niobate",
+    "volume": "13",
+    "author": "Zhu",
+    "year": "2021",
+    "journal-title": "Adv Opt Photon"
+   },
+   {
+    "key": "2026100511523878300_bib2",
+    "doi-asserted-by": "publisher",
+    "first-page": "4856",
+    "DOI": "10.1038/s41467-023-40502-8",
+    "article-title": "High density lithium niobate photonic integrated circuits",
+    "volume": "14",
+    "author": "Li",
+    "year": "2023",
+    "journal-title": "Nat Commun"
+   },
+   {
+    "key": "2026100511523878300_bib3",
+    "doi-asserted-by": "publisher",
+    "first-page": "034001",
+    "DOI": "10.1117/1.AP.4.3.034001",
+    "article-title": "Applications of thin-film lithium niobate in nonlinear integrated photonics",
+    "volume": "4",
+    "author": "Vazimali",
+    "year": "2022",
+    "journal-title": "Adv Photon"
+   },
+   {
+    "key": "2026100511523878300_bib4",
+    "first-page": "131",
+    "author": "Wong",
+    "year": "2002",
+    "journal-title": "Properties of Lithium Niobate"
+   },
+   {
+    "key": "2026100511523878300_bib5",
+    "doi-asserted-by": "publisher",
+    "first-page": "518",
+    "DOI": "10.1038/nphoton.2010.179",
+    "article-title": "Silicon optical modulators",
+    "volume": "4",
+    "author": "Reed",
+    "year": "2010",
+    "journal-title": "Nat Photon"
+   },
+   {
+    "key": "2026100511523878300_bib6",
+    "doi-asserted-by": "publisher",
+    "first-page": "A82",
+    "DOI": "10.1364/PRJ.452936",
+    "article-title": "Silicon nitride passive and active photonic integrated circuits: trends and prospects",
+    "volume": "10",
+    "author": "Xiang",
+    "year": "2022",
+    "journal-title": "Photon Res"
+   },
+   {
+    "key": "2026100511523878300_bib7",
+    "doi-asserted-by": "publisher",
+    "first-page": "870",
+    "DOI": "10.1002/lpor.201500321",
+    "article-title": "GaAs integrated quantum photonics: towards compact and multi-functional quantum photonic integrated circuits",
+    "volume": "10",
+    "author": "Dietrich",
+    "year": "2016",
+    "journal-title": "Laser Photon Rev"
+   },
+   {
+    "key": "2026100511523878300_bib8",
+    "doi-asserted-by": "publisher",
+    "first-page": "1401",
+    "DOI": "10.1126/science.1077446",
+    "article-title": "Broadband modulation of light by using an electro-optic polymer",
+    "volume": "298",
+    "author": "Lee",
+    "year": "2002",
+    "journal-title": "Science"
+   },
+   {
+    "key": "2026100511523878300_bib9",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "article-title": "Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages",
+    "volume": "562",
+    "author": "Wang",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2026100511523878300_bib10",
+    "doi-asserted-by": "publisher",
+    "first-page": "3911",
+    "DOI": "10.1038/s41467-020-17806-0",
+    "article-title": "High-performance coherent optical modulators based on thin-film lithium niobate platform",
+    "volume": "11",
+    "author": "Xu",
+    "year": "2020",
+    "journal-title": "Nat Commun"
+   },
+   {
+    "key": "2026100511523878300_bib11",
+    "doi-asserted-by": "publisher",
+    "first-page": "2400809",
+    "DOI": "10.1002/lpor.202400809",
+    "article-title": "Thin-film lithium niobate modulators with ultra-high modulation efficiency",
+    "volume": "19",
+    "author": "Meng",
+    "year": "2025",
+    "journal-title": "Laser Photon Rev"
+   },
+   {
+    "key": "2026100511523878300_bib12",
+    "doi-asserted-by": "publisher",
+    "first-page": "357",
+    "DOI": "10.1364/OPTICA.416155",
+    "article-title": "Breaking voltage–bandwidth limits in integrated lithium niobate modulators using micro-structured electrodes",
+    "volume": "8",
+    "author": "Kharel",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2026100511523878300_bib13",
+    "doi-asserted-by": "publisher",
+    "first-page": "2402053",
+    "DOI": "10.1002/lpor.202402053",
+    "article-title": "Ultrahigh-efficiency dual-band thin-film lithium niobate modulator incorporating low-k underfill for 390 gbit s−1 PAM8 transmission",
+    "volume": "19",
+    "author": "Liu",
+    "year": "2025",
+    "journal-title": "Laser Photon Rev"
+   },
+   {
+    "key": "2026100511523878300_bib14",
+    "doi-asserted-by": "publisher",
+    "first-page": "373",
+    "DOI": "10.1038/s41586-019-1008-7",
+    "article-title": "Broadband electro-optic frequency comb generation in a lithium niobate microring resonator",
+    "volume": "568",
+    "author": "Zhang",
+    "year": "2019",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2026100511523878300_bib15",
+    "doi-asserted-by": "publisher",
+    "first-page": "17",
+    "DOI": "10.1038/s42005-023-01137-9",
+    "article-title": "A power-efficient integrated lithium niobate electro-optic comb generator",
+    "volume": "6",
+    "author": "Zhang",
+    "year": "2023",
+    "journal-title": "Commun Phys"
+   },
+   {
+    "key": "2026100511523878300_bib16",
+    "doi-asserted-by": "publisher",
+    "first-page": "270",
+    "DOI": "10.1038/s41377-025-01906-x",
+    "article-title": "Hybrid Kerr-electro-optic frequency combs on thin-film lithium niobate",
+    "volume": "14",
+    "author": "Song",
+    "year": "2025",
+    "journal-title": "Light Sci Appl"
+   },
+   {
+    "key": "2026100511523878300_bib17",
+    "doi-asserted-by": "publisher",
+    "first-page": "768",
+    "DOI": "10.1021/acsphotonics.4c01688",
+    "article-title": "High-efficiency and flat-top electro-optic frequency comb using a single modulator and drive on thin-film lithium niobate",
+    "volume": "12",
+    "author": "Chen",
+    "year": "2025",
+    "journal-title": "ACS Photon"
+   },
+   {
+    "key": "2026100511523878300_bib18",
+    "doi-asserted-by": "publisher",
+    "first-page": "679",
+    "DOI": "10.1038/s41566-022-01059-y",
+    "article-title": "High-efficiency and broadband on-chip electro-optic frequency comb generators",
+    "volume": "16",
+    "author": "Hu",
+    "year": "2022",
+    "journal-title": "Nat Photon"
+   },
+   {
+    "key": "2026100511523878300_bib19",
+    "doi-asserted-by": "publisher",
+    "first-page": "1536",
+    "DOI": "10.1364/OPTICA.4.001536",
+    "article-title": "Monolithic ultra-high-Q lithium niobate microring resonator",
+    "volume": "4",
+    "author": "Zhang",
+    "year": "2017",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2026100511523878300_bib20",
+    "doi-asserted-by": "publisher",
+    "first-page": "011902",
+    "DOI": "10.3788/COL202220.011902",
+    "article-title": "Lithium niobate microring with ultra-high Q factor above 10^8",
+    "volume": "20",
+    "author": "Gao",
+    "year": "2022",
+    "journal-title": "Chin Opt Lett"
+   },
+   {
+    "key": "2026100511523878300_bib21",
+    "doi-asserted-by": "publisher",
+    "first-page": "2208113",
+    "DOI": "10.1002/adma.202208113",
+    "article-title": "High-Q thin-film lithium niobate microrings fabricated with wet etching",
+    "volume": "35",
+    "author": "Zhuang",
+    "year": "2023",
+    "journal-title": "Adv Mater"
+   },
+   {
+    "key": "2026100511523878300_bib22",
+    "doi-asserted-by": "publisher",
+    "first-page": "4116",
+    "DOI": "10.1364/OL.43.004116",
+    "article-title": "Lithium niobate micro-disk resonators of quality factors above 107",
+    "volume": "43",
+    "author": "Wu",
+    "year": "2018",
+    "journal-title": "Opt Lett"
+   },
+   {
+    "key": "2026100511523878300_bib23",
+    "doi-asserted-by": "publisher",
+    "first-page": "3515",
+    "DOI": "10.1038/s41467-024-47907-z",
+    "article-title": "Empowering high-dimensional optical fiber communications with integrated photonic processors",
+    "volume": "15",
+    "author": "Lu",
+    "year": "2024",
+    "journal-title": "Nat Commun"
+   },
+   {
+    "key": "2026100511523878300_bib24",
+    "doi-asserted-by": "publisher",
+    "first-page": "2891",
+    "DOI": "10.1364/PRJ.537354",
+    "article-title": "100 nm broadband and ultra-compact multi-dimensional multiplexed photonic integrated circuit for high-capacity optical interconnects",
+    "volume": "12",
+    "author": "Shen",
+    "year": "2024",
+    "journal-title": "Photon Res"
+   },
+   {
+    "key": "2026100511523878300_bib25",
+    "doi-asserted-by": "publisher",
+    "first-page": "80",
+    "DOI": "10.1038/s41566-018-0310-5",
+    "article-title": "Integrated microwave photonics",
+    "volume": "13",
+    "author": "Marpaung",
+    "year": "2019",
+    "journal-title": "Nat Photon"
+   },
+   {
+    "key": "2026100511523878300_bib26",
+    "doi-asserted-by": "publisher",
+    "first-page": "066006",
+    "DOI": "10.1117/1.AP.6.6.066006",
+    "article-title": "On-chip optical vector analysis based on thin-film lithium niobate single-sideband modulators",
+    "volume": "6",
+    "author": "Feng",
+    "year": "2024",
+    "journal-title": "Adv Photon"
+   },
+   {
+    "key": "2026100511523878300_bib27",
+    "doi-asserted-by": "publisher",
+    "first-page": "5938",
+    "DOI": "10.1038/s41467-025-61234-x",
+    "article-title": "Thin-film lithium niobate photonic circuit for ray tracing acceleration",
+    "volume": "16",
+    "author": "Zhang",
+    "year": "2025",
+    "journal-title": "Nat Commun"
+   },
+   {
+    "key": "2026100511523878300_bib28",
+    "doi-asserted-by": "publisher",
+    "first-page": "2281",
+    "DOI": "10.1038/s41467-025-57441-1",
+    "article-title": "Programmable multifunctional integrated microwave photonic circuit on thin-film lithium niobate",
+    "volume": "16",
+    "author": "Wei",
+    "year": "2025",
+    "journal-title": "Nat Commun"
+   },
+   {
+    "key": "2026100511523878300_bib29",
+    "doi-asserted-by": "publisher",
+    "first-page": "eado9570",
+    "DOI": "10.1126/sciadv.ado9570",
+    "article-title": "Chip-scale high-performance photonic microwave oscillator",
+    "volume": "10",
+    "author": "He",
+    "year": "2024",
+    "journal-title": "Sci Adv"
+   },
+   {
+    "key": "2026100511523878300_bib30",
+    "doi-asserted-by": "publisher",
+    "first-page": "6603209",
+    "DOI": "10.1109/JPHOT.2019.2941960",
+    "article-title": "Silicon non-blocking 4× 4 optical switch chip integrated with both thermal and electro-optic tuners",
+    "volume": "11",
+    "author": "Lu",
+    "year": "2019",
+    "journal-title": "IEEE Photon J"
+   },
+   {
+    "key": "2026100511523878300_bib31",
+    "doi-asserted-by": "publisher",
+    "first-page": "42306",
+    "DOI": "10.1038/srep42306",
+    "article-title": "32 × 32 silicon electro-optic switch with built-in monitors and balanced-status units",
+    "volume": "7",
+    "author": "Qiao",
+    "year": "2017",
+    "journal-title": "Sci Rep"
+   },
+   {
+    "key": "2026100511523878300_bib32",
+    "doi-asserted-by": "publisher",
+    "first-page": "4463",
+    "DOI": "10.3390/electronics13224463",
+    "article-title": "Design of high-speed thin-film lithium niobate modulator utilizing flip-chip bonding with bump contacts",
+    "volume": "13",
+    "author": "Yin",
+    "year": "2024",
+    "journal-title": "Electronics"
+   },
+   {
+    "key": "2026100511523878300_bib33",
+    "doi-asserted-by": "publisher",
+    "first-page": "751",
+    "DOI": "10.1038/s41467-024-44750-0",
+    "article-title": "Roadmapping the next generation of silicon photonics",
+    "volume": "15",
+    "author": "Shekhar",
+    "year": "2024",
+    "journal-title": "Nat Commun"
+   },
+   {
+    "key": "2026100511523878300_bib34",
+    "doi-asserted-by": "publisher",
+    "first-page": "111",
+    "DOI": "10.1109/CSICS.2006.319915",
+    "article-title": "Characterization and Modeling of Wire Bond Interconnects up to 100 GHz",
+    "volume-title": "2006 IEEE Compound Semiconductor Integrated Circuit Symposium",
+    "author": "Jahn",
+    "year": "2006"
+   },
+   {
+    "key": "2026100511523878300_bib35",
+    "doi-asserted-by": "crossref",
+    "first-page": "67",
+    "DOI": "10.1007/978-3-031-26708-6_4",
+    "article-title": "Advanced flip chip packaging",
+    "volume-title": "Interconnect Reliability in Advanced Memory Device Packaging",
+    "author": "Gan",
+    "year": "2023"
+   },
+   {
+    "key": "2026100511523878300_bib36",
+    "first-page": "81",
+    "article-title": "Comparing flip-chip and wire-bond interconnection technologies",
+    "volume": "4",
+    "author": "Elenius",
+    "year": "2000",
+    "journal-title": "Chip Scale Rev"
+   },
+   {
+    "key": "2026100511523878300_bib37",
+    "doi-asserted-by": "publisher",
+    "first-page": "030802",
+    "DOI": "10.1115/1.4034037",
+    "article-title": "Recent advances and new trends in flip chip technology",
+    "volume": "138",
+    "author": "Lau",
+    "year": "2016",
+    "journal-title": "J Electron Packag"
+   },
+   {
+    "key": "2026100511523878300_bib38",
+    "doi-asserted-by": "publisher",
+    "first-page": "3700515",
+    "DOI": "10.1109/JSTQE.2025.3641790",
+    "article-title": "3D optoelectronics and co-packaged optics: innovations, challenges, and future trends",
+    "volume": "32",
+    "author": "Yi",
+    "year": "2026",
+    "journal-title": "IEEE J Sel Top Quantum Electron"
+   },
+   {
+    "key": "2026100511523878300_bib39",
+    "doi-asserted-by": "publisher",
+    "first-page": "1211",
+    "DOI": "10.3390/mi15101211",
+    "article-title": "Progress in research on co-packaged optics",
+    "volume": "15",
+    "author": "Tian",
+    "year": "2024",
+    "journal-title": "Micromachines"
+   },
+   {
+    "key": "2026100511523878300_bib40",
+    "doi-asserted-by": "publisher",
+    "first-page": "44272",
+    "DOI": "10.1364/OE.535076",
+    "article-title": "Integrated lithium niobate Vernier micro-ring filter with wide and fast tuning capabilities",
+    "volume": "32",
+    "author": "Wang",
+    "year": "2024",
+    "journal-title": "Opt Express"
+   },
+   {
+    "key": "2026100511523878300_bib41",
+    "doi-asserted-by": "publisher",
+    "first-page": "28622",
+    "DOI": "10.1364/OE.530175",
+    "article-title": "Mode-folded thin-film lithium niobate phase shifter for channel scalable optical interconnect with high switching efficiency",
+    "volume": "32",
+    "author": "Wang",
+    "year": "2024",
+    "journal-title": "Opt Express"
+   },
+   {
+    "key": "2026100511523878300_bib42",
+    "doi-asserted-by": "publisher",
+    "first-page": "712",
+    "DOI": "10.1364/PRJ.479499",
+    "article-title": "Ultra-low-loss multi-layer 8 × 8 microring optical switch",
+    "volume": "11",
+    "author": "Li",
+    "year": "2023",
+    "journal-title": "Photon Res"
+   },
+   {
+    "key": "2026100511523878300_bib43",
+    "doi-asserted-by": "publisher",
+    "first-page": "2200571",
+    "DOI": "10.1002/lpor.202200571",
+    "article-title": "A review of silicon-based integrated optical switches",
+    "volume": "17",
+    "author": "Chen",
+    "year": "2023",
+    "journal-title": "Laser Photon Rev"
+   },
+   {
+    "key": "2026100511523878300_bib44",
+    "doi-asserted-by": "publisher",
+    "first-page": "564",
+    "DOI": "10.3390/photonics10050564",
+    "article-title": "Review of 2 × 2 silicon photonic switches",
+    "volume": "10",
+    "author": "Yue",
+    "year": "2023",
+    "journal-title": "Photonics"
+   },
+   {
+    "key": "2026100511523878300_bib45",
+    "doi-asserted-by": "publisher",
+    "first-page": "2200353",
+    "DOI": "10.1002/lpor.202200353",
+    "article-title": "Electro-optic frequency combs: theory, characteristics, and applications",
+    "volume": "17",
+    "author": "Zhuang",
+    "year": "2023",
+    "journal-title": "Laser Photon Rev"
+   },
+   {
+    "key": "2026100511523878300_bib46",
+    "doi-asserted-by": "publisher",
+    "first-page": "95",
+    "DOI": "10.1038/s41566-021-00945-1",
+    "article-title": "Integrated optical frequency comb technologies",
+    "volume": "16",
+    "author": "Chang",
+    "year": "2022",
+    "journal-title": "Nat Photon"
+   },
+   {
+    "key": "2026100511523878300_bib47",
+    "doi-asserted-by": "publisher",
+    "first-page": "2301363",
+    "DOI": "10.1002/lpor.202301363",
+    "article-title": "Integrated electro-optic frequency combs: theory and current progress",
+    "volume": "18",
+    "author": "Zhang",
+    "year": "2024",
+    "journal-title": "Laser Photon Rev"
+   },
+   {
+    "key": "2026100511523878300_bib48",
+    "doi-asserted-by": "publisher",
+    "first-page": "11",
+    "DOI": "10.1007/s12200-025-00156-4",
+    "article-title": "Simulation and experimental investigation of liquid-cooling thermal management for high-bandwidth co-packaged optics",
+    "volume": "18",
+    "author": "Wu",
+    "year": "2025",
+    "journal-title": "Front Optoelectron"
+   }
+  ],
+  "container-title": [
+   "National Science Review"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://academic.oup.com/nsr/advance-article-pdf/doi/10.1093/nsr/nwag480/70603139/nwag480.pdf",
+    "content-type": "application/pdf",
+    "content-version": "am",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://academic.oup.com/nsr/article-pdf/13/19/nwag480/70603139/nwag480.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://academic.oup.com/nsr/article-pdf/13/19/nwag480/70603139/nwag480.pdf",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     5
+    ]
+   ],
+   "date-time": "2026-10-05T15:52:42Z",
+   "timestamp": 1791215562000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://academic.oup.com/nsr/article/doi/10.1093/nsr/nwag480/8758332"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     10
+    ]
+   ]
+  },
+  "references-count": 48,
+  "journal-issue": {
+   "issue": "19",
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      10,
+      5
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1093/nsr/nwag480",
+  "relation": {},
+  "ISSN": [
+   "2095-5138",
+   "2053-714X"
+  ],
+  "issn-type": [
+   {
+    "value": "2095-5138",
+    "type": "print"
+   },
+   {
+    "value": "2053-714X",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published-other": {
+   "date-parts": [
+    [
+     2026,
+     10
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     10
+    ]
+   ]
+  },
+  "article-number": "nwag480"
+ }
+}

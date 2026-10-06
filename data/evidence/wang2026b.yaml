@@ -95,11 +95,12 @@ entries:
   locator: p.6 Sec. EO comb transmitter; Fig. 4(b)
 - device_id: wang2026b-pm
   field: drive
-  value: unspecified
+  value: not_applicable
   unit: ''
   basis: derived
   locator: p.6 Sec. EO comb transmitter; Fig. 4(b)
   note: authors do not state the drive
+  previous_value: unspecified
 - device_id: wang2026b-switch
   field: il_onchip_db
   value: 3

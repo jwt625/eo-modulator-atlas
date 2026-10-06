@@ -28,11 +28,11 @@ entries:
   note: Fano fits, about 1370
 - device_id: sun2026a-a
   field: tuning_nm_per_v
-  value: 0.057
+  value: -0.057
   unit: nm/V
-  basis: derived
-  locator: p.7; Fig. 3b (p.8)
-  note: S_exp = |d lambda_res / dV| about 0.057 nm/V extracted from Fig. 3b
+  basis: measured
+  locator: p.7, Sec. 2.2
+  note: Blue shift for increasing positive voltage (0 to 100 V), so signed value is negative; text quotes magnitude 0.057 nm/V.
 - device_id: sun2026a-a
   field: eo_film_thickness_nm
   value: 280
@@ -120,11 +120,11 @@ entries:
   note: Fano fits, about 1320
 - device_id: sun2026a-b
   field: tuning_nm_per_v
-  value: 0.071
+  value: -0.071
   unit: nm/V
-  basis: derived
-  locator: p.10
-  note: S_exp about 0.071 nm/V evaluated at 100 V
+  basis: measured
+  locator: p.10, Sec. 2.3
+  note: Blue shift with increasing voltage, so signed value is negative; text quotes magnitude 0.071 nm/V (at 100 V).
 - device_id: sun2026a-b
   field: capacitance_ff
   value: 4330
@@ -196,4 +196,18 @@ entries:
   basis: design_target
   locator: p.5-6; p.12-13 Methods; Supp. Note 2 (p.25)
   note: electrode thickness 55 nm for this device
+- device_id: sun2026a-a
+  field: r_eff_pm_per_v
+  value: 122.0
+  unit: pm/V
+  basis: author_estimate
+  locator: p.3
+  note: authors state the in-device estimates "span 122-151 pm/V"; 122 is the lower device
+- device_id: sun2026a-b
+  field: r_eff_pm_per_v
+  value: 151.0
+  unit: pm/V
+  basis: author_estimate
+  locator: p.10, Sec. 2.3; Methods 4.9
+  note: Average of two author estimates (147 and 156 pm/V); effective coefficient, component not specified.
 derived: []

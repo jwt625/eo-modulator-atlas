@@ -1,0 +1,399 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 782,
+  "items": [
+   {
+    "DOI": "10.1109/acp55869.2022.10088766",
+    "title": [
+     "High-speed Integrated Graphene−silicon Slot Waveguide Electro-absorption Modulator at 1.5-μm and 2-μm Wavebands"
+    ],
+    "author": [
+     {
+      "given": "Chao",
+      "family": "Luan",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Technical University of Denmark,DTU Electro,Lyngby,Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Deming",
+      "family": "Kong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Technical University of Denmark,DTU Electro,Lyngby,Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yunhong",
+      "family": "Ding",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Technical University of Denmark,DTU Electro,Lyngby,Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hao",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Technical University of Denmark,DTU Electro,Lyngby,Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       11,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/lpor.71738",
+    "title": [
+     "High‐Speed Integrated Graphene‐Silicon Slot‐Waveguide Electro‐Absorption Modulator at 2 and 1.5 µm Wavebands"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0004-0177-8452",
+      "authenticated-orcid": false,
+      "given": "Chao",
+      "family": "Luan",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Kgs. Lyngby Denmark"
+       },
+       {
+        "name": "Research Laboratory of Electronics MIT Cambridge MA USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Deming",
+      "family": "Kong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Kgs. Lyngby Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-6823-4722",
+      "authenticated-orcid": false,
+      "given": "Yunhong",
+      "family": "Ding",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Kgs. Lyngby Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8859-0986",
+      "authenticated-orcid": false,
+      "given": "Hao",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "DTU Electro, Department of Electrical and Photonics Engineering Technical University of Denmark Kgs. Lyngby Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       8,
+       15
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2020.jth2f.34",
+    "title": [
+     "2-um high-speed graphene electro-optic modulator based on silicon slot microring resonator"
+    ],
+    "author": [
+     {
+      "given": "Chao",
+      "family": "Luan",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yong",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yunhong",
+      "family": "Ding",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hao",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2020
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/acp55869.2022.10088719",
+    "title": [
+     "Ultra-Compact Integrated Graphene-Silicon Slot-Waveguide Electro-Optic Modulator"
+    ],
+    "author": [
+     {
+      "given": "Chao",
+      "family": "Luan",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Technical University of Denmark,DTU Electro,Lyngby,Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Deming",
+      "family": "Kong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Technical University of Denmark,DTU Electro,Lyngby,Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yunhong",
+      "family": "Ding",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Technical University of Denmark,DTU Electro,Lyngby,Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hao",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Technical University of Denmark,DTU Electro,Lyngby,Denmark"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       11,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2022.jth6b.8",
+    "title": [
+     "High-modulation-efficiency graphene-silicon slot-waveguide micro-ring modulator"
+    ],
+    "author": [
+     {
+      "given": "Chao",
+      "family": "Luan",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Deming",
+      "family": "Kong",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yunhong",
+      "family": "Ding",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hao",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

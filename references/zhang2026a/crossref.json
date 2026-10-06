@@ -1,0 +1,419 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:24:39Z",
+   "timestamp": 1786991079090,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 5,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate a record net 400Gbps IMDD data transmission using a hybrid-integrated silicon and ferroelectric nematic glass modulator. Transmission of 200Gbaud PAM6 and 168Gbaud PAM8 is achieved below SD25-FEC over 100m of SSMF.</jats:p>",
+  "DOI": "10.1364/ofc.2026.m2b.4",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:26:07Z",
+   "timestamp": 1780428367000
+  },
+  "page": "M2B.4",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Ferroelectric Nematic Glass-Based Silicon Photonics Modulator for Net 400 Gbps IM/DD Transmission"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Kaibo",
+    "family": "Zhang",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Li-Yuan",
+    "family": "Chiang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ching-Wen",
+    "family": "Huang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Charles",
+    "family": "St-Arnault",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Benton",
+    "family": "Qiu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jerome",
+    "family": "Jahn",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "James",
+    "family": "Christensen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Santiago",
+    "family": "Bernal",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Codey",
+    "family": "Nacke",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Pao-Chieh",
+    "family": "Huang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Neda",
+    "family": "Bathaei",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Aleksandar",
+    "family": "Nikic",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yixiang",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Cory",
+    "family": "Pecinovsky",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chirag",
+    "family": "Patel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Pavel",
+    "family": "Savechenkov",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Morten",
+    "family": "Nissov",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mark",
+    "family": "Harrison",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Gianlorenzo",
+    "family": "Masini",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "David V.",
+    "family": "Plant",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-M2B.4-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "751",
+    "DOI": "10.1038/s41467-024-44750-0",
+    "type": "journal-article",
+    "volume": "15",
+    "author": "Shekhar",
+    "year": "2024",
+    "journal-title": "Nature Commun"
+   },
+   {
+    "key": "OFC-2026-M2B.4-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "850",
+    "DOI": "10.1109/LPT.2023.3285881",
+    "type": "journal-article",
+    "volume": "35",
+    "author": "Berikaa",
+    "year": "2023",
+    "journal-title": "IEEE Photon. Technol. Lett."
+   },
+   {
+    "key": "OFC-2026-M2B.4-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "024003",
+    "DOI": "10.1117/1.AP.3.2.024003",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Rahim",
+    "year": "2021",
+    "journal-title": "Adv. Photon."
+   },
+   {
+    "key": "OFC-2026-M2B.4-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "157",
+    "DOI": "10.1109/JLT.2015.2463719",
+    "type": "journal-article",
+    "volume": "34",
+    "author": "Kikuchi",
+    "year": "2016",
+    "journal-title": "J. Lightwave Technol"
+   },
+   {
+    "key": "OFC-2026-M2B.4-R10",
+    "doi-asserted-by": "publisher",
+    "first-page": "868",
+    "DOI": "10.1038/s41563-025-02158-1",
+    "type": "journal-article",
+    "volume": "24",
+    "author": "Chelladurai",
+    "year": "2025",
+    "journal-title": "Nat. Mater"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-M2B.4&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:26:08Z",
+   "timestamp": 1786987568000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-M2B.4"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 5,
+  "URL": "https://doi.org/10.1364/ofc.2026.m2b.4",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

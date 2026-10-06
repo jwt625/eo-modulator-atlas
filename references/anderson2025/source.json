@@ -4,9 +4,9 @@
  "doi": "10.1126/science.adx8657",
  "source_type": "arxiv_preprint",
  "source_version": "2502.15164v1",
- "license": "",
- "license_verified": false,
- "redistribution": "restricted_local_only",
+ "license": "CC-BY-4.0",
+ "license_verified": true,
+ "redistribution": "open_license_ok",
  "retrieved_on": "2026-10-03T03:21:25+00:00",
  "acquisition_origin": "public_primary_source",
  "identity_url": "https://arxiv.org/abs/2502.15164v1",
@@ -19,5 +19,6 @@
  "title": "Quantum critical electro-optic and piezo-electric nonlinearities",
  "identity_checked_on": "2026-10-02",
  "identity_check": "First-page title and authors checked against paper identity; source version retained separately.",
- "extraction_notes": []
+ "extraction_notes": [],
+ "license_source": "references/anderson2025/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

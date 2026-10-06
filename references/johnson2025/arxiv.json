@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2509.24825",
+ "title": "Multi-Channel Silicon-Organic Hybrid PICs for 200G/{\\lambda} and 400G/{\\lambda} PAM4 Transmission",
+ "authors": "Lewis E. Johnson, Ari Novack, Scott R. Hammond, Meisam Bahadori, Kevin M. O'Malley, Delwin L. Elder, Matthew Streshinsky, Brad Booth",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Mon, 29 Sep 2025 14:11:29 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:04:12Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2509.24825\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2509.24825</identifier>\n        <datestamp>2025-09-30</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2509.24825</id>\n        <submitter>Lewis Johnson</submitter>\n            <version version=\"v1\">\n                <date>Mon, 29 Sep 2025 14:11:29 GMT</date>\n                <size>2188kb</size>\n            </version>\n        <title>Multi-Channel Silicon-Organic Hybrid PICs for 200G/{\\lambda} and 400G/{\\lambda} PAM4 Transmission</title>\n        <authors>Lewis E. Johnson, Ari Novack, Scott R. Hammond, Meisam Bahadori, Kevin M. O&#39;Malley, Delwin L. Elder, Matthew Streshinsky, Brad Booth</authors>\n        <categories>physics.optics</categories>\n            <comments>4 pages, 4 figures</comments>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>We demonstrate open-eye 224G PAM4 transmission in a 1.6T-DR8 PIC implementing low-V{\\pi} silicon-organic hybrid modulators (V{\\pi}L &lt; 0.5 V-mm) with &gt;80 3 dB GHz bandwidth and a variant capable of 400G/{\\lambda} (&gt; 110 GHz) for 3.2T-DR8. Both PIC variants use commercial crosslinkable organic electro-optic materials.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

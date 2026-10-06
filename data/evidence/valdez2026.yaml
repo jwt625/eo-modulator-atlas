@@ -228,6 +228,20 @@ entries:
   basis: measured
   locator: p.3 Fig. 2(c) caption
   note: Measured up to 50 GHz; text claims over 50 GHz but Fig. 2(c) data reach -3 dB near 25 GHz; no 3 dB value entered
+- device_id: valdez2026-a
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.2 Sec. 2; p.3 Fig. 2(b)
+  note: 'source: An arbitrary waveform generator was used to apply a sinusoidal waveform with 20 Vpp at 1 MHz to ...'
+- device_id: valdez2026-b
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.3 Fig. 2(b) caption
+  note: 'source: Normalized transmission versus applied voltage under a sinusoidal-wave scan at 1 MHz for the MZM (blue) with a ...'
 derived: []
 context_values:
 - item: license_notice

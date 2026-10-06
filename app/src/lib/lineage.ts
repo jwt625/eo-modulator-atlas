@@ -1,7 +1,8 @@
 // Academic lineage derived from author order only (no advisor records exist in the database).
 // PI proxy: the last author of a paper. Candidate lineage A -> B: B is in the first half of the
 // author list of a paper whose last author is A, published before B's first last-author paper.
-// Other co-authorships between PIs are kept as collaboration links.
+// Other co-authorships between PIs are kept as collaboration links. People are matched by the
+// deduplicated person id (data/paper_authors.csv) when present, else by a normalized name key.
 import type { Paper } from './types';
 
 export interface PiNode {
@@ -39,13 +40,18 @@ export function nameKey(name: string): string {
 	return t.length >= 2 ? `${t[0]} ${t[t.length - 1]}` : name.trim().toLowerCase();
 }
 
+/** Person key of author i: the deduplicated person id when known, else the name key. */
+function personKey(p: Paper, i: number): string {
+	return p.author_ids?.[i] || nameKey(p.authors[i]);
+}
+
 export function buildLineage(papers: Paper[]): LineageGraph {
 	const pis = new Map<string, PiNode>();
 	const spellings = new Map<string, Map<string, number>>();
 	for (const p of papers) {
 		const a = p.authors;
 		if (!a.length) continue;
-		const k = nameKey(a[a.length - 1]);
+		const k = personKey(p, a.length - 1);
 		const node = pis.get(k) ?? { key: k, name: '', papers: [], first: p.year, last: p.year };
 		node.papers.push(p);
 		node.first = Math.min(node.first, p.year);
@@ -64,9 +70,9 @@ export function buildLineage(papers: Paper[]): LineageGraph {
 	for (const p of papers) {
 		const a = p.authors;
 		if (a.length < 2) continue;
-		const lead = nameKey(a[a.length - 1]);
+		const lead = personKey(p, a.length - 1);
 		for (let i = 0; i < a.length - 1; i++) {
-			const k = nameKey(a[i]);
+			const k = personKey(p, i);
 			const other = pis.get(k);
 			if (!other || k === lead) continue;
 			const kind = i < a.length / 2 && p.year < other.first ? 'lineage' : 'collab';

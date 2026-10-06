@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2605.28971",
+ "title": "Micro-Transfer Printing of Lithium Niobate on 200 mm Silicon Photonics: A High-Speed Heterogeneous Wafer-Scale Platform",
+ "authors": "Xiujun Zheng, Suzanne Bisschop, Arno Moerman, Margot Niels, Ewoud Vissers, Athina Papadopoulou, Philip Ekkels, Patrick Nenezic, Simone Atzeni, Elif Ozceri, Tiernan McCaughery, Ali Uzun, Ye Chen, Laurens Bogaert, Nishant Singh, Sandeep Seema Saseendran, Sofie Janssen, Natarajan Rajasekaran, Sadhishkumar Balakrishnan, Philippe Absil, Gunther Roelkens, Bart Kuyken, Sarah Uvin, and Maximilien Billet",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 27 May 2026 18:20:15 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Mon, 15 Jun 2026 07:49:22 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:21:13Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2605.28971\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2605.28971</identifier>\n        <datestamp>2026-06-16</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2605.28971</id>\n        <submitter>Xiujun Zheng</submitter>\n            <version version=\"v1\">\n                <date>Wed, 27 May 2026 18:20:15 GMT</date>\n                <size>4045kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Mon, 15 Jun 2026 07:49:22 GMT</date>\n                <size>18557kb</size>\n            </version>\n        <title>Micro-Transfer Printing of Lithium Niobate on 200 mm Silicon Photonics: A High-Speed Heterogeneous Wafer-Scale Platform</title>\n        <authors>Xiujun Zheng, Suzanne Bisschop, Arno Moerman, Margot Niels, Ewoud Vissers, Athina Papadopoulou, Philip Ekkels, Patrick Nenezic, Simone Atzeni, Elif Ozceri, Tiernan McCaughery, Ali Uzun, Ye Chen, Laurens Bogaert, Nishant Singh, Sandeep Seema Saseendran, Sofie Janssen, Natarajan Rajasekaran, Sadhishkumar Balakrishnan, Philippe Absil, Gunther Roelkens, Bart Kuyken, Sarah Uvin, and Maximilien Billet</authors>\n        <categories>physics.optics</categories>\n            <license>http://creativecommons.org/licenses/by-nc-sa/4.0/</license>\n            <abstract>The rapid growth of artificial intelligence (AI) and other data center applications is driving the demand for photonic interconnects that combine high-speed with low energy consumption, making scalability a critical requirement. Micro-transfer printing (MTP) has emerged as a promising technique for the wafer-scale heterogeneous integration of thin film lithium niobate (TFLN) onto silicon photonics (SiPho) platforms. Here, we demonstrate heterogeneous SiPho TFLN integration across four full 200 mm wafers with a 3sigma placement accuracy down to 420 nm and a printing yield of larger than 95percentage. Low insertion loss less than 2 dB over 600 phase modulators (300 amplitude modulators) is achieved. A half wave voltage of 4 V in push pull configuration, and high-speed modulation with a bandwith larger than 70 GHz is demonstrated on a subset of tested devices.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

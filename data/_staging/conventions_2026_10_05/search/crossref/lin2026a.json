@@ -1,0 +1,579 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 46165,
+  "items": [
+   {
+    "DOI": "10.1364/cleo_si.2022.sf4g.7",
+    "title": [
+     "Polarization-insensitive thin-film lithium niobate electro-optic modulator"
+    ],
+    "author": [
+     {
+      "given": "Ying",
+      "family": "Pan",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mingbo",
+      "family": "He",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mengyue",
+      "family": "Xu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zhongjin",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wei",
+      "family": "Ke",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yanmei",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Siyuan",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xinlun",
+      "family": "Cai",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/lpt.2021.3114993",
+    "title": [
+     "Integrated Electro-Optic Modulator in Z-Cut Lithium Niobate Thin Film With Vertical Structure"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0001-7388-7149",
+      "authenticated-orcid": false,
+      "given": "Guanyu",
+      "family": "Chen",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-6973-8674",
+      "authenticated-orcid": false,
+      "given": "Hong-Lin",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9296-3378",
+      "authenticated-orcid": false,
+      "given": "Jun Da",
+      "family": "Ng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9090-9626",
+      "authenticated-orcid": false,
+      "given": "Aaron J.",
+      "family": "Danner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2021,
+       12,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.21203/rs.3.rs-9959265/v1",
+    "title": [
+     "Integrated photon-pair sources on periodically poled thin-film lithium tantalate"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-0210-1860",
+      "authenticated-orcid": false,
+      "given": "Di",
+      "family": "Zhu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "National University of Singapore"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sakthi Sanjeev",
+      "family": "Mohanraj",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "NUS"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xiaodong",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Q.InC, A*STAR"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ran",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Agency for Science, Technology and Research"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lin",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "NUS"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "posted-content",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       6,
+       29
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3390/photonics13010033",
+    "title": [
+     "Mach–Zehnder Interferometer Electro-Optic Modulator Based on Thin-Film Lithium Niobate Valley Photonic Crystal"
+    ],
+    "author": [
+     {
+      "given": "Ying",
+      "family": "Yao",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "College of Physics and Optoelectronics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "Shanxi Key Laboratory of Precision Measurement Physics, Taiyuan University of Technology, Taiyuan 030024, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hongming",
+      "family": "Fei",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Physics and Optoelectronics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "Shanxi Key Laboratory of Precision Measurement Physics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "State Key Laboratory of Quantum Optics and Quantum Optics Devices, Shanxi University, Taiyuan 030006, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xin",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Physics and Optoelectronics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "Shanxi Key Laboratory of Precision Measurement Physics, Taiyuan University of Technology, Taiyuan 030024, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0004-3376-8486",
+      "authenticated-orcid": false,
+      "given": "Mingda",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Physics and Optoelectronics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "Shanxi Key Laboratory of Precision Measurement Physics, Taiyuan University of Technology, Taiyuan 030024, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Pengqi",
+      "family": "Dong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The Institute of Architectural Design and Research of Taiyuan University of Technology Co, Ltd., Taiyuan 030006, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Junjun",
+      "family": "Ren",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Shanxi Chenghaoxin Intelligent Technology Co., Ltd., Taiyuan 030006, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-6262-1959",
+      "authenticated-orcid": false,
+      "given": "Han",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Centre for Atomaterials and Nanomanufacturing, School of Science, Royal Melbourne Institute of Technology University, Melbourne, VIC 3000, Australia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       12,
+       30
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/oe.524932",
+    "title": [
+     "Dual-layer capacitance-loaded thin-film lithium niobate electro-optic modulator with high modulation efficiency"
+    ],
+    "author": [
+     {
+      "given": "Gongcheng",
+      "family": "Yue",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03cve4549",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-3819-5707",
+      "authenticated-orcid": true,
+      "given": "Hongzhi",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "China Academy of Aerospace Science and Innovation"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ziyue",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "China Academy of Aerospace Science and Innovation"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ting",
+      "family": "Hao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Advanced Fiber Resources (Zhuhai), Ltd."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lin",
+      "family": "Xiao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "China Academy of Aerospace Science and Innovation"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yang",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03cve4549",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       6,
+       10
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2609.21830",
+ "title": "Performance of Capacitively Loaded RF Electrodes on SiO2/Si Substrates for High-Speed Electro-Optic Modulators",
+ "authors": "Ayed Sayem, Ting-Chen Hu, Mark Cappuzzo, Alaric Tate, Rose Kopf, Mark Earnshaw",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Fri, 18 Sep 2026 14:29:34 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:13:16Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2609.21830\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2609.21830</identifier>\n        <datestamp>2026-09-21</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2609.21830</id>\n        <submitter>A Sayem</submitter>\n            <version version=\"v1\">\n                <date>Fri, 18 Sep 2026 14:29:34 GMT</date>\n                <size>9694kb</size>\n            </version>\n        <title>Performance of Capacitively Loaded RF Electrodes on SiO2/Si Substrates for High-Speed Electro-Optic Modulators</title>\n        <authors>Ayed Sayem, Ting-Chen Hu, Mark Cappuzzo, Alaric Tate, Rose Kopf, Mark Earnshaw</authors>\n        <categories>physics.optics</categories>\n            <comments>8 pages, 6 figures</comments>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>We experimentally investigate conventional and capacitively loaded traveling-wave RF electrodes fabricated on thermally grown SiO$_2$ on high-resistivity silicon substrates for high-speed electro-optic modulators. The capacitively loaded electrodes exhibit RF attenuation coefficients as low as approximately $0.23~\\mathrm{dB/cm}/\\sqrt{\\mathrm{GHz}}$, comparable to values reported for electrodes fabricated on insulating quartz substrates, while retaining the silicon handle and avoiding substrate removal or undercut processing. By varying the SiO$_2$ buried-oxide (BOX) thickness and the capacitive-loading geometry, the microwave effective index can be engineered over a broad range while maintaining low RF propagation loss. This enables microwave-optical velocity matching over a wide range of optical wavelengths, from the ultraviolet to the telecom C-band. These results demonstrate that thermally oxidized silicon provides a simple and scalable substrate platform for low-loss traveling-wave electrodes in thin-film lithium niobate and thin-film lithium tantalate electro-optic modulators, as well as for high-speed RF interconnects in integrated transceivers and co-packaged optical systems.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

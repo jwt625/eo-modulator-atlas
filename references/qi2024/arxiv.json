@@ -1,0 +1,29 @@
+{
+ "arxiv_id": "2308.03073",
+ "title": "110-GHz bandwidth integrated lithium niobate modulator without direct lithium niobate etching",
+ "authors": "Yifan Qi, Gongcheng Yue, Ting Hao, Yang Li",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sun, 06 Aug 2023 10:00:16 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Sun, 20 Aug 2023 10:38:38 GMT"
+  },
+  {
+   "version": "v3",
+   "date": "Tue, 14 Nov 2023 06:08:10 GMT"
+  },
+  {
+   "version": "v4",
+   "date": "Fri, 24 Nov 2023 08:44:03 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:11:55Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2308.03073\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2308.03073</identifier>\n        <datestamp>2023-11-27</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:ins-det</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2308.03073</id>\n        <submitter>Yifan Qi</submitter>\n            <version version=\"v1\">\n                <date>Sun, 06 Aug 2023 10:00:16 GMT</date>\n                <size>19273kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Sun, 20 Aug 2023 10:38:38 GMT</date>\n                <size>19275kb</size>\n            </version>\n            <version version=\"v3\">\n                <date>Tue, 14 Nov 2023 06:08:10 GMT</date>\n                <size>40020kb</size>\n            </version>\n            <version version=\"v4\">\n                <date>Fri, 24 Nov 2023 08:44:03 GMT</date>\n                <size>18640kb</size>\n            </version>\n        <title>110-GHz bandwidth integrated lithium niobate modulator without direct lithium niobate etching</title>\n        <authors>Yifan Qi, Gongcheng Yue, Ting Hao, Yang Li</authors>\n        <categories>physics.optics physics.ins-det</categories>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Integrated thin film lithium niobate (TFLN) modulators are emerging as an appealing solution to high-speed data processing and transmission due to their high modulation speed and low driving voltage. The key step in fabricating integrated TFLN modulators is the high-quality etching of TFLN, which typically requires long-term optimization of fabrication recipe and specialized equipment. Here we present an integrated TFLN modulator by incorporating low-index rib loaded waveguides onto TFLN without direct etching of TFLN. Based on our systematic investigation into the theory and design methodology of the proposed design, we experimentally demonstrated a TFLN etching-free Mach-Zehnder modulator, featuring a flat electro-optic response up to 110 GHz and a voltage-length product of 2.53 V cm. By significantly simplifying the fabrication process, our design opens up new ways of mass production of high-speed integrated TFLN modulators at low cost.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

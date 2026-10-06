@@ -1,0 +1,227 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     2
+    ]
+   ],
+   "date-time": "2026-10-02T17:13:59Z",
+   "timestamp": 1790961239397,
+   "version": "4.1.0"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 2,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate performances of 400G/lane with a high bandwidth efficient thin-film lithium niobate Mach-Zehnder modulator and practical equalizations. Our studies indicate the feasibility of 400G/lane for linear-drive optics applications in NPO/CPO with an enhanced CTLE.</jats:p>",
+  "DOI": "10.1364/ofc.2026.th1c.3",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:27:22Z",
+   "timestamp": 1780428442000
+  },
+  "page": "Th1C.3",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+   "400G/lane for Linear-drive Optics Applications"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Jianying",
+    "family": "Zhou",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Lei",
+    "family": "Xin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xuelei",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Fangyuan",
+    "family": "Meng",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yang",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Qisheng",
+    "family": "Zhao",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jin",
+    "family": "Hong",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-Th1C.3-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "1826",
+    "DOI": "10.1109/JLT.2025.3526822",
+    "type": "journal-article",
+    "volume": "43",
+    "author": "Ostrovskis",
+    "year": "2025",
+    "journal-title": "Journal of Lightwave Technology"
+   },
+   {
+    "key": "OFC-2026-Th1C.3-R6",
+    "first-page": "OIF2025.138.01",
+    "type": "journal-article",
+    "author": "Ito",
+    "year": "2025",
+    "journal-title": "Touchstone of 2D connector for 448G"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-Th1C.3&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:26:52Z",
+   "timestamp": 1786987612000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-Th1C.3"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 2,
+  "URL": "https://doi.org/10.1364/ofc.2026.th1c.3",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

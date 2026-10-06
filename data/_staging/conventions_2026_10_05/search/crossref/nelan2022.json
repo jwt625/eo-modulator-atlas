@@ -1,0 +1,599 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 7,
+  "items": [
+   {
+    "DOI": "10.1109/access.2022.3207764",
+    "title": [
+     "Ultra-High Extinction Dual-Output Thin-Film Lithium Niobate Intensity Modulator"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-4303-3294",
+      "authenticated-orcid": false,
+      "given": "Sean P.",
+      "family": "Nelan",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Computer Engineering, University of Delaware, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Andrew",
+      "family": "Mercante",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Phase Sensitive Innovations, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shouyuan",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Computer Engineering, University of Delaware, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Peng",
+      "family": "Yao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Phase Sensitive Innovations, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9641-2493",
+      "authenticated-orcid": false,
+      "given": "Eliezer",
+      "family": "Shahid",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Phase Sensitive Innovations, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Benjamin A.",
+      "family": "Shopp",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Phase Sensitive Innovations, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Cooper D.",
+      "family": "Hurley",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Computer Engineering, University of Delaware, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mathew",
+      "family": "Zablocki",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Phase Sensitive Innovations, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Dennis W.",
+      "family": "Prather",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Computer Engineering, University of Delaware, Newark, DE, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/oe.453050",
+    "title": [
+     "Compact thin film lithium niobate folded intensity modulator using a waveguide crossing"
+    ],
+    "author": [
+     {
+      "given": "Sean",
+      "family": "Nelan",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "University of Delaware"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Andrew",
+      "family": "Mercante",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cooper",
+      "family": "Hurley",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Delaware"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shouyuan",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Delaware"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peng",
+      "family": "Yao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Benjamin",
+      "family": "Shopp",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Dennis W.",
+      "family": "Prather",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Delaware"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       3,
+       4
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/ol.381892",
+    "title": [
+     "Subvolt electro-optical modulator on thin-film lithium niobate and silicon nitride hybrid platform"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-9218-3291",
+      "authenticated-orcid": true,
+      "given": "Abu Naim R.",
+      "family": "Ahmed",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sean",
+      "family": "Nelan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shouyuan",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peng",
+      "family": "Yao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Andrew",
+      "family": "Mercante",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Dennis W.",
+      "family": "Prather",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2020,
+       2,
+       19
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1063/5.0020040",
+    "title": [
+     "High-efficiency lithium niobate modulator for K band operation"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-9218-3291",
+      "authenticated-orcid": false,
+      "given": "Abu Naim R.",
+      "family": "Ahmed",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Computer Engineering, University of Delaware, Newark, Delaware 19716, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shouyuan",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Computer Engineering, University of Delaware, Newark, Delaware 19716, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Andrew",
+      "family": "Mercante",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Phase Sensitive Innovations, Newark, Delaware 19711, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sean",
+      "family": "Nelan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Computer Engineering, University of Delaware, Newark, Delaware 19716, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peng",
+      "family": "Yao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Phase Sensitive Innovations, Newark, Delaware 19711, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Dennis W.",
+      "family": "Prather",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Electrical and Computer Engineering, University of Delaware, Newark, Delaware 19716, USA"
+       },
+       {
+        "name": "Phase Sensitive Innovations, Newark, Delaware 19711, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2020,
+       9,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.2542458",
+    "title": [
+     "Low-voltage modulators using thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Abu Naim R.",
+      "family": "Ahmed",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shouyuan",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sean",
+      "family": "Nelan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Andrew J.",
+      "family": "Mercante",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Peng",
+      "family": "Yao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Dennis W.",
+      "family": "Prather",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2020,
+       2,
+       28
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

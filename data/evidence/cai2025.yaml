@@ -291,4 +291,11 @@ entries:
   basis: derived
   locator: p.3 Sec. II
   note: 6 V stated for a 6.8 mm long push-pull configuration
+- device_id: cai2025-a
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. II; Fig. 2(c)
+  note: 'source: Figure 2(c) shows the measured output power while applying a 100 Hz triangle voltage wave via an RF ...'
 derived: []

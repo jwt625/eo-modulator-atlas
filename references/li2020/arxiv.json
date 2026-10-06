@@ -1,0 +1,25 @@
+{
+ "arxiv_id": "2003.03259",
+ "title": "Lithium niobate photonic-crystal electro-optic modulator",
+ "authors": "Mingxiao Li, Jingwei Ling, Yang He, Usman A. Javid, Shixin Xue and Qiang Lin",
+ "doi": "10.1038/s41467-020-17950-7",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Tue, 18 Feb 2020 01:54:36 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Mon, 09 Mar 2020 01:03:20 GMT"
+  },
+  {
+   "version": "v3",
+   "date": "Wed, 10 Jun 2020 02:13:55 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-02T11:43:22Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2003.03259\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2003.03259</identifier>\n        <datestamp>2020-09-09</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>eess:eess:SP</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2003.03259</id>\n        <submitter>Mingxiao Li</submitter>\n            <version version=\"v1\">\n                <date>Tue, 18 Feb 2020 01:54:36 GMT</date>\n                <size>2270kb</size>\n                    <source_type>D</source_type>\n            </version>\n            <version version=\"v2\">\n                <date>Mon, 09 Mar 2020 01:03:20 GMT</date>\n                <size>2632kb</size>\n                    <source_type>D</source_type>\n            </version>\n            <version version=\"v3\">\n                <date>Wed, 10 Jun 2020 02:13:55 GMT</date>\n                <size>2634kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Lithium niobate photonic-crystal electro-optic modulator</title>\n        <authors>Mingxiao Li, Jingwei Ling, Yang He, Usman A. Javid, Shixin Xue and Qiang Lin</authors>\n        <categories>physics.app-ph eess.SP physics.optics</categories>\n            <doi>10.1038/s41467-020-17950-7</doi>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Modern advanced photonic integrated circuits require dense integration of high-speed electro-optic functional elements on a compact chip that consumes only moderate power. Energy efficiency, operation speed, and device dimension are thus crucial metrics underlying almost all current developments of photonic signal processing units. Recently, thin-film lithium niobate (LN) emerges as a promising platform for photonic integrated circuits. Here we make an important step towards miniaturizing functional components on this platform, reporting probably the smallest high-speed LN electro-optic modulators, based upon photonic crystal nanobeam resonators. The devices exhibit a significant tuning efficiency up to 1.98 GHz/V, a broad modulation bandwidth of 17.5 GHz, while with a tiny electro-optic modal volume of only 0.58 $\\mu {\\rm m}^3$. The modulators enable efficient electro-optic driving of high-Q photonic cavity modes in both adiabatic and non-adiabatic regimes, and allow us to achieve electro-optic switching at 11 Gb/s with a bit-switching energy as low as 22 fJ. The demonstration of energy efficient and high-speed electro-optic modulation at the wavelength scale paves a crucial foundation for realizing large-scale LN photonic integrated circuits that are of immense importance for broad applications in data communication, microwave photonics, and quantum photonics.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

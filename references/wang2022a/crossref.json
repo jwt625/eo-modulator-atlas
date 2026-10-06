@@ -1,0 +1,784 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     12
+    ]
+   ],
+   "date-time": "2026-09-12T14:05:20Z",
+   "timestamp": 1789221920365,
+   "version": "build-2803163510"
+  },
+  "reference-count": 28,
+  "publisher": "AIP Publishing",
+  "issue": "7",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       7,
+       1
+      ]
+     ],
+     "date-time": "2022-07-01T00:00:00Z",
+     "timestamp": 1656633600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       7,
+       1
+      ]
+     ],
+     "date-time": "2022-07-01T00:00:00Z",
+     "timestamp": 1656633600000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0/"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100012166",
+    "name": "National Key Research and Development Program of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "2021YFB2800104"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2021YFB2800104"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100012166",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100012166",
+    "name": "National Key Research and Development Program of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "2019YFB2203501"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "2019YFB2203501"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100012166",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "61835008"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "61835008"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "62175079"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "62175079"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "61905079"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "61905079"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001809",
+    "name": "National Natural Science Foundation of China",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "61905084"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "61905084"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001809",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "pubs.aip.org"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     1
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We successfully demonstrate a monolithic integrated dual-polarization in-phase/quadrature (IQ) modulator based on thin-film lithium niobate platform with a silicon substrate, which consists of IQ modulators, spot-size converters, and a polarization rotator combiner. When coupled with polarization maintaining fibers, the measured insertion loss of the modulator is 12 dB. In addition, we experimentally achieve a single-carrier 1.6 Tb/s net bitrate transmission.</jats:p>",
+  "DOI": "10.1063/5.0097296",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2022,
+     6,
+     9
+    ]
+   ],
+   "date-time": "2022-06-09T11:34:57Z",
+   "timestamp": 1654774497000
+  },
+  "update-policy": "https://doi.org/10.1063/aip-crossmark-policy-page",
+  "source": "Crossref",
+  "is-referenced-by-count": 44,
+  "title": [
+   "Thin-film lithium niobate dual-polarization IQ modulator on a silicon substrate for single-carrier 1.6 Tb/s transmission"
+  ],
+  "prefix": "10.1063",
+  "volume": "7",
+  "author": [
+   {
+    "given": "Xuanhao",
+    "family": "Wang",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chenglin",
+    "family": "Shang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "An",
+    "family": "Pan",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xingran",
+    "family": "Cheng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tao",
+    "family": "Gui",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shuai",
+    "family": "Yuan",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chengcheng",
+    "family": "Gui",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Huawei Technologies, B & P Laboratory 3 , Shenzhen 518000, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Keshuang",
+    "family": "Zheng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Peijie",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Huawei Technologies, B & P Laboratory 3 , Shenzhen 518000, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xiaolu",
+    "family": "Song",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Huawei Technologies, B & P Laboratory 3 , Shenzhen 518000, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yanbo",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Liangchuan",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Cheng",
+    "family": "Zeng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9650-7839",
+    "authenticated-orcid": false,
+    "given": "Jinsong",
+    "family": "Xia",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "317",
+  "published-online": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     1
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "2024031600341245600_c1"
+   },
+   {
+    "key": "2024031600341245600_c2",
+    "doi-asserted-by": "publisher",
+    "first-page": "919",
+    "DOI": "10.1109/jqe.1981.1071225",
+    "volume": "17",
+    "year": "1981",
+    "journal-title": "IEEE J. Quantum Electron."
+   },
+   {
+    "key": "2024031600341245600_c3",
+    "doi-asserted-by": "publisher",
+    "first-page": "157",
+    "DOI": "10.1109/jlt.2015.2463719",
+    "volume": "34",
+    "year": "2016",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2024031600341245600_c4",
+    "first-page": "F2D.4",
+    "article-title": "320 Gb/s Nyquist-shaped twin SSB 16-QAM signal transmission over 80 km SSMF with a silicon IQ modulator"
+   },
+   {
+    "key": "2024031600341245600_c5",
+    "first-page": "1",
+    "article-title": "Silicon IQ modulator for 120 Gbaud QAM",
+    "year": "2021"
+   },
+   {
+    "key": "2024031600341245600_c6",
+    "first-page": "Th4A.4"
+   },
+   {
+    "key": "2024031600341245600_c7",
+    "doi-asserted-by": "publisher",
+    "first-page": "1450",
+    "DOI": "10.1109/jlt.2016.2639542",
+    "volume": "35",
+    "year": "2017",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2024031600341245600_c8",
+    "doi-asserted-by": "publisher",
+    "first-page": "249",
+    "DOI": "10.1109/jlt.2019.2924671",
+    "volume": "38",
+    "year": "2020",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "2024031600341245600_c9",
+    "first-page": "M3A.2"
+   },
+   {
+    "key": "2024031600341245600_c10",
+    "doi-asserted-by": "publisher",
+    "first-page": "1694",
+    "DOI": "10.1038/s41467-019-09724-7",
+    "volume": "10",
+    "year": "2019",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2024031600341245600_c11",
+    "first-page": "1",
+    "article-title": "Ultra-compact plasmonic IQ-modulator",
+    "year": "2015"
+   },
+   {
+    "key": "2024031600341245600_c12",
+    "doi-asserted-by": "publisher",
+    "first-page": "13219",
+    "DOI": "10.1364/oe.21.013219",
+    "volume": "21",
+    "year": "2013",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2024031600341245600_c13",
+    "doi-asserted-by": "publisher",
+    "first-page": "220",
+    "DOI": "10.1364/oe.26.000220",
+    "volume": "26",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2024031600341245600_c14",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "2024031600341245600_c15",
+    "doi-asserted-by": "publisher",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "volume": "13",
+    "year": "2019",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "2024031600341245600_c16",
+    "doi-asserted-by": "publisher",
+    "first-page": "6320",
+    "DOI": "10.1364/oe.414250",
+    "volume": "29",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2024031600341245600_c17",
+    "doi-asserted-by": "publisher",
+    "first-page": "5986",
+    "DOI": "10.1364/ol.446222",
+    "volume": "46",
+    "year": "2021",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "2024031600341245600_c18",
+    "doi-asserted-by": "publisher",
+    "first-page": "3911",
+    "DOI": "10.1038/s41467-020-17806-0",
+    "volume": "11",
+    "year": "2020",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "2024031600341245600_c19",
+    "doi-asserted-by": "publisher",
+    "first-page": "357",
+    "DOI": "10.1364/optica.416155",
+    "volume": "8",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2024031600341245600_c20",
+    "first-page": "F3C.5",
+    "article-title": "Transmission of 200-Gbaud PDM probabilistically shaped 64-QAM signals modulated via a 100-GHz thin-film LiNbO3 I/Q modulator",
+    "volume-title": "2021 Optical Fiber Communications Conference",
+    "year": "2021"
+   },
+   {
+    "key": "2024031600341245600_c21",
+    "doi-asserted-by": "publisher",
+    "first-page": "61",
+    "DOI": "10.1364/optica.449691",
+    "volume": "9",
+    "year": "2022",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2024031600341245600_c22",
+    "doi-asserted-by": "publisher",
+    "first-page": "408",
+    "DOI": "10.1364/optica.448617",
+    "article-title": "Electrically pumped laser transmitter integrated on thin-film lithium niobate",
+    "volume": "9",
+    "year": "2022",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "2024031600341245600_c23",
+    "doi-asserted-by": "publisher",
+    "first-page": "026103",
+    "DOI": "10.1063/5.0077232",
+    "article-title": "High performance thin-film lithium niobate modulator on a silicon substrate using periodic capacitively loaded traveling-wave electrode",
+    "volume": "7",
+    "year": "2022",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "2024031600341245600_c24",
+    "doi-asserted-by": "publisher",
+    "first-page": "1818",
+    "DOI": "10.1364/ol.454277",
+    "volume": "47",
+    "year": "2022",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "2024031600341245600_c25",
+    "doi-asserted-by": "publisher",
+    "first-page": "5397",
+    "DOI": "10.1364/oe.416492",
+    "volume": "29",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2024031600341245600_c26",
+    "doi-asserted-by": "publisher",
+    "first-page": "38044",
+    "DOI": "10.1364/oe.443798",
+    "volume": "29",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "2024031600341245600_c27",
+    "first-page": "1",
+    "article-title": "100.5 Tb/s MLC-CS-256QAM transmission over 600-km single mode fiber with C+L band EDFA",
+    "volume-title": "2018 Asia Communications and Photonics Conference",
+    "year": "2018"
+   },
+   {
+    "key": "2024031600341245600_c28",
+    "first-page": "Tu6D.5",
+    "article-title": "Real time FPGA investigation of probabilistic shaping 16QAM with HiDM and OFEC"
+   }
+  ],
+  "container-title": [
+   "APL Photonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.aip.org/aip/app/article-pdf/doi/10.1063/5.0097296/19803222/076101_1_online.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://pubs.aip.org/aip/app/article-pdf/doi/10.1063/5.0097296/19803222/076101_1_online.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://pubs.aip.org/aip/app/article-pdf/doi/10.1063/5.0097296/19803222/076101_1_online.pdf",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     5,
+     28
+    ]
+   ],
+   "date-time": "2025-05-28T12:30:53Z",
+   "timestamp": 1748435453000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.aip.org/app/article/7/7/076101/2835170/Thin-film-lithium-niobate-dual-polarization-IQ"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     1
+    ]
+   ]
+  },
+  "references-count": 28,
+  "journal-issue": {
+   "issue": "7",
+   "published-print": {
+    "date-parts": [
+     [
+      2022,
+      7,
+      1
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1063/5.0097296",
+  "relation": {},
+  "ISSN": [
+   "2378-0967"
+  ],
+  "issn-type": [
+   {
+    "value": "2378-0967",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published-other": {
+   "date-parts": [
+    [
+     2022,
+     7
+    ]
+   ]
+  },
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     1
+    ]
+   ]
+  },
+  "article-number": "076101"
+ }
+}

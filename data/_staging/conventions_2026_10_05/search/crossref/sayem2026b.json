@@ -1,0 +1,459 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 20,
+  "items": [
+   {
+    "DOI": "10.1364/oe.418877",
+    "title": [
+     "Mitigating photorefractive effect in thin-film lithium niobate microring resonators"
+    ],
+    "author": [
+     {
+      "given": "Yuntao",
+      "family": "Xu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Yale University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Mohan",
+      "family": "Shen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Yale University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-1938-9119",
+      "authenticated-orcid": true,
+      "given": "Juanjuan",
+      "family": "Lu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Yale University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1232-1384",
+      "authenticated-orcid": true,
+      "given": "Joshua B.",
+      "family": "Surya",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Yale University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ayed Al",
+      "family": "Sayem",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Yale University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-5374-2137",
+      "authenticated-orcid": true,
+      "given": "Hong X.",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Yale University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2021,
+       2,
+       4
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/optica.403931",
+    "title": [
+     "Toward 1% single-photon anharmonicity with periodically poled lithium niobate microring resonators"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-1938-9119",
+      "authenticated-orcid": true,
+      "given": "Juanjuan",
+      "family": "Lu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ming",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chang-Ling",
+      "family": "Zou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ayed",
+      "family": "Al Sayem",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-5374-2137",
+      "authenticated-orcid": true,
+      "given": "Hong X.",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2020,
+       11,
+       23
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/oe.568466",
+    "title": [
+     "Periodically poled thin-film lithium niobate ring Mach Zehnder coupling interferometer as an efficient quantum light source"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0004-2670-3422",
+      "authenticated-orcid": true,
+      "given": "Mrinmoy",
+      "family": "Kundu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Bangladesh University of Engineering and Technology"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bejoy",
+      "family": "Sikder",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bangladesh University of Engineering and Technology"
+       },
+       {
+        "name": "Massachusetts Institute of Technology (MIT)"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Heqing",
+      "family": "Huang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/038km2573",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8996-1144",
+      "authenticated-orcid": true,
+      "given": "Mark",
+      "family": "Earnshaw",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/038km2573",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ayed",
+      "family": "Al Sayem",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/038km2573",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       2
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_si.2021.sm4l.4",
+    "title": [
+     "Bidirectional electro-optic conversion reaching 1% efficiency with thin film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Yuntao",
+      "family": "Xu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ayed Al",
+      "family": "Sayem",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Linran",
+      "family": "Fan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Changling",
+      "family": "Zou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hong X.",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2021
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.2061949",
+    "title": [
+     "Test and analysis of thin film photovoltaic (TFPV) for UAV application"
+    ],
+    "author": [
+     {
+      "given": "Mohammad",
+      "family": "Gadalla",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sayem",
+      "family": "Zafar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2014,
+       10,
+       7
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

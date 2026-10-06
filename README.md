@@ -1,9 +1,9 @@
 # EO Modulator Atlas
 
 A traceable literature database and static browser explorer for electro-optic
-modulators. The integrated atlas contains **184 papers (2012-2026), 403 device rows and
-232 organizations**, all papers with `audit_status: audited` (checked 2026-10-05). It also holds
-1,723 author-affiliation rows and 212 geolocated institution sites. The candidate index contains
+modulators. The integrated atlas contains **184 papers (2012-2026), 407 device rows and
+240 organizations**, all papers with `audit_status: audited` (checked 2026-10-05). It also holds
+1,723 author-affiliation rows, 212 geolocated institution sites and 1,278 deduplicated people. The candidate index contains
 461 records and distillation is continuing. Each reported metric has an evidence locator and
 basis. Missing values stay empty.
 
@@ -63,6 +63,10 @@ a generated view, not a second database. Refresh it after accepted data changes.
 The [distillation skill](.claude/skills/eo-modulator-distill/SKILL.md),
 [batch contract](data/_staging/BATCH_INSTRUCTIONS.md) and
 [manual download list](data/manual_downloads.md) describe ingestion.
+Identity, dates, author lists, licences, bands, the 1 GHz dc/rf Vpi split and organization names follow
+the 2026-10-05 conventions (schema header (l)-(gg); `scripts/refresh_metadata.py` fetches and applies the
+Crossref/arXiv metadata; `scripts/build_people.py` builds `data/people.csv` and `data/paper_authors.csv`); see
+[DevLog-020](DevLog/DevLog-020-data-convention-decisions.md).
 Per-author affiliations (`data/author_affiliations.csv`) and institution coordinates
 (`data/org_sites.csv`, Wikidata with OpenStreetMap fallback) feed the map; see
 [DevLog-018](DevLog/DevLog-018-author-affiliation-geolocation.md).
@@ -130,6 +134,7 @@ fixed group index are excluded from prediction comparisons. Each mesh has an
 2. Implement periodic-cell/EO-response stages and quantify scalar/vector limitations.
 3. Reconcile generated rankings with sample/loss-scope guards before merging reviewed batches.
 4. Continue ingestion, literature convergence studies and independent audits.
+5. Open data items from DevLog-020: hu2026a per-channel bandwidths, per-author affiliations for the 46 OFC 2026 papers.
 
 Current work and remaining phases are recorded in [DevLog-000](DevLog/DevLog-000-plan.md)
 and [DevLog-002](DevLog/DevLog-002-work-plan-and-ownership.md).
@@ -140,5 +145,6 @@ Latest audit corrections, sample guards and optical runner integration:
 [DevLog-011](DevLog/DevLog-011-audit-corrections-and-integration.md).
 Explore geography and lineage panels: [DevLog-017](DevLog/DevLog-017-explore-geo-and-lineage-panels.md).
 Latest ingestion (46 OFC 2026 papers, independent audit): [DevLog-019](DevLog/DevLog-019-ofc2026-retrieval-and-ingestion.md).
+Data convention decisions and their application: [DevLog-020](DevLog/DevLog-020-data-convention-decisions.md).
 Read [WORKBOARD.md](WORKBOARD.md) and the active claims under
 `coordination/claims/` before starting concurrent work.

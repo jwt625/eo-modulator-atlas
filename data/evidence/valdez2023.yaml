@@ -1167,4 +1167,60 @@ entries:
   basis: derived
   locator: p.10 Eq. (2)
   note: push-pull stated for VpiL equation; MZM-level Vpi from transmission fit
+- device_id: valdez2023-cn1
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.3; p.11 Fig. 7
+  note: 'source: To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs ...'
+- device_id: valdez2023-cn2
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.3; p.11 Fig. 7
+  note: 'source: To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs ...'
+- device_id: valdez2023-cw1
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.3; p.11 Fig. 7
+  note: 'source: To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs ...'
+- device_id: valdez2023-cw2
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.3; p.11 Fig. 7
+  note: 'source: To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs ...'
+- device_id: valdez2023-on1
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.3; p.11 Fig. 7
+  note: 'source: To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs ...'
+- device_id: valdez2023-on2
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.3; p.11 Fig. 7
+  note: 'source: To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs ...'
+- device_id: valdez2023-ow1
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.3; p.11 Fig. 7
+  note: 'source: To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs ...'
+- device_id: valdez2023-ow2
+  field: vpi_dc_freq_ghz
+  value: 1e-06
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.3; p.11 Fig. 7
+  note: 'source: To measure the near-DC (1 kHz) half-wave voltage (Vπ) of the O- and C-band modulators, these asymmetric MZMs ...'
 derived: []

@@ -1,0 +1,909 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     1
+    ]
+   ],
+   "date-time": "2026-08-01T02:23:41Z",
+   "timestamp": 1785551021325,
+   "version": "3.56.0"
+  },
+  "reference-count": 82,
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "issue": "49",
+  "funder": [
+   {
+    "DOI": "10.13039/501100001691",
+    "name": "Japan Society for the Promotion of Science",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "JP23H05444, JP23H00272, JP21J11982, JP21J10272"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "JP23H05444, JP23H00272, JP21J11982, JP21J10272"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001691",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100012389",
+    "name": "National Institute of Information and Communications Technology",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "JPJ012368C03601, JPJ012368C08801"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "JPJ012368C03601, JPJ012368C08801"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100012389",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "name": "Materials Education program for the future leaders in Research, Industry, and Technolo"
+   },
+   {
+    "name": "Materials Education program for the future leaders in Research, Industry, and Technolo"
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "www.science.org"
+   ],
+   "crossmark-restriction": true
+  },
+  "short-container-title": [
+   "Sci. Adv."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     5
+    ]
+   ]
+  },
+  "abstract": "<jats:p>\n                    High-speed active metasurfaces enable spatiotemporal light control within an ultrathin device layer, offering previously unexplored possibilities for optical communication, sensing, and computing. However, a trade-off between electrical conductivity and optical loss has hindered the realization of a high-speed, low-loss device. Here, we experimentally demonstrate an active metasurface operating at 1.5-μm wavelength range that achieves a record-high 17.5-GHz modulation bandwidth while maintaining a high quality (\n                    <jats:italic toggle=\"yes\">Q</jats:italic>\n                    ) factor of 102 and an ultralow optical loss of 0.56 dB. This is enabled by the indium phosphide (InP) membrane platform, where n-InP offers high electron mobility and low free-carrier absorption simultaneously. A high-\n                    <jats:italic toggle=\"yes\">Q</jats:italic>\n                    Friedrich-Wintgen quasi-bound-state-in-the-continuum mode within the InP-membrane high-contrast grating (InP HCG) traps light in the organic electro-optic material for efficient modulation. The InP HCG also functions as an ultralow-resistance interdigitated electrode, enabling 50-fold faster modulation than silicon-based counterparts. Our work paves the way toward active metasurfaces for high-speed spatiotemporal light control beyond the GHz regime.\n                  </jats:p>",
+  "DOI": "10.1126/sciadv.aea3538",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     5
+    ]
+   ],
+   "date-time": "2025-12-05T18:58:31Z",
+   "timestamp": 1764961111000
+  },
+  "update-policy": "https://doi.org/10.34133/aaas_crossmark",
+  "source": "Crossref",
+  "is-referenced-by-count": 4,
+  "title": [
+   "17-GHz lossless InP-membrane active metasurface"
+  ],
+  "prefix": "10.1126",
+  "volume": "11",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-6534-1477",
+    "authenticated-orcid": true,
+    "given": "Taichiro",
+    "family": "Fukui",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2720-5546",
+    "authenticated-orcid": true,
+    "given": "Kei",
+    "family": "Sumita",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0007-9307-0532",
+    "authenticated-orcid": true,
+    "given": "Hiroki",
+    "family": "Miyano",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9960-9937",
+    "authenticated-orcid": true,
+    "given": "Go",
+    "family": "Soma",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-3195-5569",
+    "authenticated-orcid": true,
+    "given": "Warakorn",
+    "family": "Yanwachirakul",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Eisaku",
+    "family": "Kato",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7205-3003",
+    "authenticated-orcid": true,
+    "given": "Ryota",
+    "family": "Tanomura",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jiahao",
+    "family": "Liu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9503-171X",
+    "authenticated-orcid": true,
+    "given": "Toshiki",
+    "family": "Yamada",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "National Institute of Information and Communications Technology, 588-2 Iwaoka, Nishi-ku, Kobe, Hyogo 651-2492, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0009-0005-2897-862X",
+    "authenticated-orcid": true,
+    "given": "Akira",
+    "family": "Otomo",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "National Institute of Information and Communications Technology, 588-2 Iwaoka, Nishi-ku, Kobe, Hyogo 651-2492, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4206-8698",
+    "authenticated-orcid": true,
+    "given": "Kasidit",
+    "family": "Toprasertpong",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9852-1474",
+    "authenticated-orcid": true,
+    "given": "Mitsuru",
+    "family": "Takenaka",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5601-2604",
+    "authenticated-orcid": true,
+    "given": "Shinichi",
+    "family": "Takagi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2713-9542",
+    "authenticated-orcid": true,
+    "given": "Yoshiaki",
+    "family": "Nakano",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-6086-1510",
+    "authenticated-orcid": true,
+    "given": "Takuo",
+    "family": "Tanemura",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "221",
+  "reference": [
+   {
+    "key": "e_1_3_2_2_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.1210713"
+   },
+   {
+    "key": "e_1_3_2_3_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.4.000139"
+   },
+   {
+    "key": "e_1_3_2_4_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.10.000180"
+   },
+   {
+    "key": "e_1_3_2_5_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2017-0129"
+   },
+   {
+    "key": "e_1_3_2_6_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.3c00457"
+   },
+   {
+    "key": "e_1_3_2_7_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41565-017-0052-4"
+   },
+   {
+    "key": "e_1_3_2_8_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41565-017-0034-6"
+   },
+   {
+    "key": "e_1_3_2_9_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.8b00368"
+   },
+   {
+    "key": "e_1_3_2_10_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.8b00362"
+   },
+   {
+    "key": "e_1_3_2_11_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.444255"
+   },
+   {
+    "key": "e_1_3_2_12_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.adn9000"
+   },
+   {
+    "key": "e_1_3_2_13_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.484318"
+   },
+   {
+    "key": "e_1_3_2_14_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.529389"
+   },
+   {
+    "key": "e_1_3_2_15_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2024.3374336"
+   },
+   {
+    "key": "e_1_3_2_16_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "K. Komatsu S. Ishimura C. Ren G. Soma H. Takahashi T. Tsuritani M. Suzuki Y. Nakano T. Tanemura “Metasurface-based coherent receiver insensitive to LO polarization” in Optical Fiber Communication Conference (OFC) 2024 (Optica Publishing Group 2024).",
+    "DOI": "10.1364/OFC.2024.Th4B.2"
+   },
+   {
+    "key": "e_1_3_2_17_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.541473"
+   },
+   {
+    "key": "e_1_3_2_18_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-025-62401-w"
+   },
+   {
+    "key": "e_1_3_2_19_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "G. Soma T. Akazawa E. Kato K. Komatsu M. Takenaka Y. Nakano T. Tanemura Ultrafast one-chip optical receiver with functional metasurface. arXiv:2503.02264 [physics.optics] (2025).",
+    "DOI": "10.1038/s41467-025-65984-6"
+   },
+   {
+    "key": "e_1_3_2_20_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.aat3100"
+   },
+   {
+    "key": "e_1_3_2_21_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsnano.0c01269"
+   },
+   {
+    "key": "e_1_3_2_22_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202000783"
+   },
+   {
+    "key": "e_1_3_2_23_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-022-01099-4"
+   },
+   {
+    "key": "e_1_3_2_24_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2022-0155"
+   },
+   {
+    "key": "e_1_3_2_25_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3788/PI.2024.R07"
+   },
+   {
+    "key": "e_1_3_2_26_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.adm7442"
+   },
+   {
+    "key": "e_1_3_2_27_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.29026/oea.2025.240159"
+   },
+   {
+    "key": "e_1_3_2_28_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.0c04888"
+   },
+   {
+    "key": "e_1_3_2_29_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-022-33449-9"
+   },
+   {
+    "key": "e_1_3_2_30_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.3c00999"
+   },
+   {
+    "key": "e_1_3_2_31_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2015.247"
+   },
+   {
+    "key": "e_1_3_2_32_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.7b01073"
+   },
+   {
+    "key": "e_1_3_2_33_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-022-01086-9"
+   },
+   {
+    "key": "e_1_3_2_34_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.optcom.2015.04.058"
+   },
+   {
+    "key": "e_1_3_2_35_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.25.030304"
+   },
+   {
+    "key": "e_1_3_2_36_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5054964"
+   },
+   {
+    "key": "e_1_3_2_37_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0173216"
+   },
+   {
+    "key": "e_1_3_2_38_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1587/elex.13.20160595"
+   },
+   {
+    "key": "e_1_3_2_39_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "M. Ogasawara Y. Kosugi J. Zhang Y. Okamoto Y. Mita A. Otomo Y. Nakano T. Tanemura “Electro-optic polymer surface-normal modulator using silicon high-contrast grating resonator” in Conference on Lasers and Electro-Optics (OSA 2019) p. JTh2A.48.",
+    "DOI": "10.1364/CLEO_AT.2019.JTh2A.48"
+   },
+   {
+    "key": "e_1_3_2_40_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-022-30451-z"
+   },
+   {
+    "key": "e_1_3_2_41_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-45544-0"
+   },
+   {
+    "key": "e_1_3_2_42_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41565-025-02000-4"
+   },
+   {
+    "key": "e_1_3_2_43_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/nl504389f"
+   },
+   {
+    "key": "e_1_3_2_44_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep00855"
+   },
+   {
+    "key": "e_1_3_2_45_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.5.000787"
+   },
+   {
+    "key": "e_1_3_2_46_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.24.026035"
+   },
+   {
+    "key": "e_1_3_2_47_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-019-11598-8"
+   },
+   {
+    "key": "e_1_3_2_48_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.4.000379"
+   },
+   {
+    "key": "e_1_3_2_49_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JQE.2016.2623270"
+   },
+   {
+    "key": "e_1_3_2_50_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/natrevmats.2016.48"
+   },
+   {
+    "key": "e_1_3_2_51_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2017-0127"
+   },
+   {
+    "key": "e_1_3_2_52_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.402470"
+   },
+   {
+    "key": "e_1_3_2_53_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JQE.2020.3041943"
+   },
+   {
+    "key": "e_1_3_2_54_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "T. Fukui K. Sumita M. Takenaka S. Takagi Y. Nakano T. Tanemura “Numerical investigation of high-speed surface-normal modulator using InP high-contrast grating” in 2022 28th International Semiconductor Laser Conference (ISLC) (IEEE 2022) p. TuP–40.",
+    "DOI": "10.23919/ISLC52947.2022.9943427"
+   },
+   {
+    "key": "e_1_3_2_55_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2007.25"
+   },
+   {
+    "key": "e_1_3_2_56_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/cr9000429"
+   },
+   {
+    "key": "e_1_3_2_57_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adma.202104174"
+   },
+   {
+    "key": "e_1_3_2_58_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/pola.24410"
+   },
+   {
+    "key": "e_1_3_2_59_2",
+    "doi-asserted-by": "crossref",
+    "unstructured": "H. Miyano T. Fukui G. Soma A. Otomo T. Tanemura Y. Nakano “Dimerized plasmonic-organic grating for high-speed metasurface modulator” in 2022 27th OptoElectronics and Communications Conference (OECC) and 2022 International Conference on Photonics in Switching and Computing (PSC) Institute of Electrical and Electronics Engineers (IEEE 2022) p. TuD3–2.",
+    "DOI": "10.23919/OECC/PSC53152.2022.9849960"
+   },
+   {
+    "key": "e_1_3_2_60_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.334786"
+   },
+   {
+    "key": "e_1_3_2_61_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/BF02655296"
+   },
+   {
+    "key": "e_1_3_2_62_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/0022-0248(83)90025-8"
+   },
+   {
+    "key": "e_1_3_2_63_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JQE.1987.1073206"
+   },
+   {
+    "key": "e_1_3_2_64_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.372274"
+   },
+   {
+    "key": "e_1_3_2_65_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/T-ED.1983.21207"
+   },
+   {
+    "key": "e_1_3_2_66_2",
+    "unstructured": "D. K. Schroder Semiconductor Material and Device Characterization (John Wiley & Sons 2015)."
+   },
+   {
+    "key": "e_1_3_2_67_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3597228"
+   },
+   {
+    "key": "e_1_3_2_68_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/cr00025a002"
+   },
+   {
+    "key": "e_1_3_2_69_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.476688"
+   },
+   {
+    "key": "e_1_3_2_70_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-021-26035-y"
+   },
+   {
+    "key": "e_1_3_2_71_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.2c03539"
+   },
+   {
+    "key": "e_1_3_2_72_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-023-01255-7"
+   },
+   {
+    "key": "e_1_3_2_73_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.1c00935"
+   },
+   {
+    "key": "e_1_3_2_74_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.1c01582"
+   },
+   {
+    "key": "e_1_3_2_75_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2023-0042"
+   },
+   {
+    "key": "e_1_3_2_76_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsnano.4c17030"
+   },
+   {
+    "key": "e_1_3_2_77_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.4c00711"
+   },
+   {
+    "key": "e_1_3_2_78_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.photonics.2005.09.012"
+   },
+   {
+    "key": "e_1_3_2_79_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.21.028233"
+   },
+   {
+    "key": "e_1_3_2_80_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.5.000739"
+   },
+   {
+    "key": "e_1_3_2_81_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0268-1242/28/9/094009"
+   },
+   {
+    "key": "e_1_3_2_82_2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/JOSAA.20.000569"
+   },
+   {
+    "key": "e_1_3_2_83_2",
+    "unstructured": "J. D. Joannopoulos S. G. Johnson J. N. Winn R. D. Maede Photonic Crystals: Molding the Flow of Light (Princeton Univ. Press ed. 2 2008)."
+   }
+  ],
+  "container-title": [
+   "Science Advances"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.science.org/doi/pdf/10.1126/sciadv.aea3538",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     5
+    ]
+   ],
+   "date-time": "2025-12-05T18:59:33Z",
+   "timestamp": 1764961173000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.science.org/doi/10.1126/sciadv.aea3538"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     5
+    ]
+   ]
+  },
+  "references-count": 82,
+  "journal-issue": {
+   "issue": "49",
+   "published-print": {
+    "date-parts": [
+     [
+      2025,
+      12,
+      5
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1126/sciadv.aea3538"
+  ],
+  "URL": "https://doi.org/10.1126/sciadv.aea3538",
+  "relation": {},
+  "ISSN": [
+   "2375-2548"
+  ],
+  "issn-type": [
+   {
+    "value": "2375-2548",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     5
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "2025-07-08",
+    "order": 0,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-11-05",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   },
+   {
+    "value": "2025-12-05",
+    "order": 3,
+    "name": "published",
+    "label": "Published",
+    "group": {
+     "name": "publication_history",
+     "label": "Publication History"
+    }
+   }
+  ],
+  "article-number": "eaea3538"
+ }
+}

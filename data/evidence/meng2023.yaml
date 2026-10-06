@@ -50,11 +50,12 @@ entries:
   note: x-axis end of the measured trace; instrument limit not stated
 - device_id: meng2023-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: measured
   locator: p.10 Fig. 6
   note: no reference frequency stated
+  previous_value: unspecified
 - device_id: meng2023-a
   field: extinction_ratio_db
   value: 5.34
@@ -223,6 +224,13 @@ entries:
   unit: Gb/s
   basis: measured
   locator: p.12 Fig. 8
+- device_id: meng2023-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 3.1; Fig. 5(a)
+  note: 'source: where a 100 kHz sawtooth electric signal is applied onto the electrodes.'
 derived:
 - device_id: meng2023-a
   field: eo_film_thickness_nm

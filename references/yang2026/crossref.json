@@ -1,0 +1,296 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:25:52Z",
+   "timestamp": 1786991152883,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 8,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>A 400 Gbps compact (500 μm) Mach-Zehnder modulator is demonstrated in a 300 mm silicon photonic platform, achieving a median insertion loss of 2.4 dB, and a median bandwidth of 94.7 GHz at 1310 nm.</jats:p>",
+  "DOI": "10.1364/ofc.2026.m2a.6",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:26:14Z",
+   "timestamp": 1780428374000
+  },
+  "page": "M2A.6",
+  "source": "Crossref",
+  "is-referenced-by-count": 2,
+  "title": [
+   "A Compact Mach-Zehnder Modulator in 300 mm Silicon Photonic Platform towards 400Gbps/lane Transmission"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Fenghe",
+    "family": "Yang",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Erse",
+    "family": "Jia",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ying",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xinran",
+    "family": "Zhao",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Weisheng",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Haiwen",
+    "family": "Cai",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wei",
+    "family": "Chu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-M2A.6-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "024003",
+    "DOI": "10.1117/1.AP.3.2.024003",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Rahim",
+    "year": "2021",
+    "journal-title": "Adv. Photonics"
+   },
+   {
+    "key": "OFC-2026-M2A.6-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "27",
+    "DOI": "10.1038/s44310-024-00024-7",
+    "type": "journal-article",
+    "volume": "1",
+    "author": "Zhou",
+    "year": "2024",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "OFC-2026-M2A.6-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "1354",
+    "DOI": "10.1364/OPTICA.5.001354",
+    "type": "journal-article",
+    "volume": "5",
+    "author": "Cheng",
+    "year": "2018",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "OFC-2026-M2A.6-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "751",
+    "DOI": "10.1038/s41467-024-44750-0",
+    "type": "journal-article",
+    "volume": "15",
+    "author": "Shekhar",
+    "year": "2024",
+    "journal-title": "Nat. Commun"
+   },
+   {
+    "key": "OFC-2026-M2A.6-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "6547",
+    "DOI": "10.1038/s41467-025-61933-5",
+    "type": "journal-article",
+    "volume": "16",
+    "author": "Han",
+    "year": "2025",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "OFC-2026-M2A.6-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "5074",
+    "DOI": "10.1109/JLT.2021.3083140",
+    "type": "journal-article",
+    "volume": "39",
+    "author": "Jafari",
+    "year": "2021",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "OFC-2026-M2A.6-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "eadi5339",
+    "DOI": "10.1126/sciadv.adi5339",
+    "type": "journal-article",
+    "volume": "9",
+    "author": "Han",
+    "year": "2023",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "OFC-2026-M2A.6-R10",
+    "doi-asserted-by": "publisher",
+    "first-page": "1212",
+    "DOI": "10.1364/OPTICA.531372",
+    "type": "journal-article",
+    "volume": "11",
+    "author": "Kawahara",
+    "year": "2024",
+    "journal-title": "Optica"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-M2A.6&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:25:51Z",
+   "timestamp": 1786987551000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-M2A.6"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 8,
+  "URL": "https://doi.org/10.1364/ofc.2026.m2a.6",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

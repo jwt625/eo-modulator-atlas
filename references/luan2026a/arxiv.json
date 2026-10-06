@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2604.03153",
+ "title": "Wideband integrated high-speed graphene-silicon slot-waveguide electro-absorption modulator at 2 {\\mu}m and 1.5 {\\mu}m wavebands",
+ "authors": "Chao Luan, Deming Kong, Yunhong Ding, and Hao Hu",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Fri, 03 Apr 2026 16:17:15 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:09:05Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2604.03153\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2604.03153</identifier>\n        <datestamp>2026-04-06</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2604.03153</id>\n        <submitter>Chao Luan</submitter>\n            <version version=\"v1\">\n                <date>Fri, 03 Apr 2026 16:17:15 GMT</date>\n                <size>35880kb</size>\n            </version>\n        <title>Wideband integrated high-speed graphene-silicon slot-waveguide electro-absorption modulator at 2 {\\mu}m and 1.5 {\\mu}m wavebands</title>\n        <authors>Chao Luan, Deming Kong, Yunhong Ding, and Hao Hu</authors>\n        <categories>physics.optics</categories>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>The 2-{\\mu}m waveband, emerging as a highly promising candidate for optical communication, offers an extended wavelength window for high-speed optical transmission. Despite its potential, the development of integrated electro-optic (E/O) modulators operating at this wavelength range has been limited. Such E/O modulators are crucial for high-speed optical communication systems at the 2-{\\mu}m waveband. In this work, we propose and experimentally demonstrate high-performance E/O absorption modulators based on a graphene-silicon slot waveguide. Our approach enables wideband, high-speed, efficient, robust and compact modulators at both 2-{\\mu}m and 1.5-{\\mu}m wavebands. This work represents a significant advancement towards the realization of high-speed integrated E/O modulators for optical communication systems operating at the 2-{\\mu}m wavelength range.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

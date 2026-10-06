@@ -36,11 +36,11 @@ entries:
   note: Stated close to 99 GHz
 - device_id: bhasker2026-a
   field: extinction_ratio_db
-  value: 3.8
+  value: 30.0
   unit: dB
   basis: measured
-  locator: p.3, Fig. 6
-  note: Dynamic RF ER at 160 GBd PAM4; PAM6 ER 3.3 dB
+  locator: p.1, Fig. 2
+  note: Static ER proposed per convention (x), qualifier gt; dynamic 3.8 dB PAM-4 at 160 GBd goes to notes
 - device_id: bhasker2026-a
   field: substrate
   value: semi-insulating InP
@@ -91,9 +91,16 @@ entries:
   basis: derived
   locator: p.2, Fig. 5
   note: SSD21 normalized to 0 dB at low frequency; reference not stated
+- device_id: bhasker2026-a
+  field: temperature_k
+  value: 328.15
+  unit: K
+  basis: derived
+  locator: p.2
+  note: K = 55 + 273.15; 55 C also for DC curve and eyes; temperature-controlled fixture
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1-3 page footer (repeated on every page)
-    note: printed page-footer copyright notice; basis for license publisher-copyright
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3 page footer (repeated on every page)
+  note: printed page-footer copyright notice; basis for license publisher-copyright

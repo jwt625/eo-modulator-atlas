@@ -1,0 +1,285 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:26:18Z",
+   "timestamp": 1786991178612,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 7,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We report graphene electro-absorption modulators on silicon waveguides with 67 GHz electro-optical 3 dB bandwidth, achieving non-return-to-zero optical modulation up to 80 Gb/s in C-band and 40 Gb/s in O-band.</jats:p>",
+  "DOI": "10.1364/ofc.2026.th2a.12",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:27:06Z",
+   "timestamp": 1780428426000
+  },
+  "page": "Th2A.12",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "67 GHz graphene electro-absorption modulators on silicon with 80 Gb/s C-band and 40 Gb/s O-band NRZ data rates"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Matteo",
+    "family": "Tiberi",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alberto",
+    "family": "Montanaro",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chao",
+    "family": "Wen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jincan",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Marco",
+    "family": "Romagnoli",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Vito",
+    "family": "Sorianello",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Andrea C.",
+    "family": "Ferrari",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-Th2A.12-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "6000116",
+    "DOI": "10.1109/JSTQE.2025.3539379",
+    "type": "journal-article",
+    "volume": "31",
+    "author": "Ossieur",
+    "year": "2025",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "OFC-2026-Th2A.12-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "392",
+    "DOI": "10.1038/s41578-018-0040-9",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Romagnoli",
+    "year": "2018",
+    "journal-title": "Nat. Rev. Mater."
+   },
+   {
+    "key": "OFC-2026-Th2A.12-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "1169",
+    "DOI": "10.1126/science.adg8017",
+    "type": "journal-article",
+    "volume": "380",
+    "author": "Koepfli",
+    "year": "2023",
+    "journal-title": "Science"
+   },
+   {
+    "key": "OFC-2026-Th2A.12-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "052008",
+    "DOI": "10.35848/1347-4065/ab8920",
+    "type": "journal-article",
+    "volume": "59",
+    "author": "Alessandri",
+    "year": "2020",
+    "journal-title": "Jpn. J. Appl. Phys."
+   },
+   {
+    "key": "OFC-2026-Th2A.12-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "3613",
+    "DOI": "10.1021/acsnano.1c04937",
+    "type": "journal-article",
+    "volume": "16",
+    "author": "Pogna",
+    "year": "2022",
+    "journal-title": "ACS Nano"
+   },
+   {
+    "key": "OFC-2026-Th2A.12-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "2308802",
+    "DOI": "10.1002/adma.202308802",
+    "type": "journal-article",
+    "volume": "36",
+    "author": "Zhu",
+    "year": "2024",
+    "journal-title": "Adv. Mater."
+   },
+   {
+    "key": "OFC-2026-Th2A.12-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "4011",
+    "DOI": "10.1515/nanoph-2021-0797",
+    "type": "journal-article",
+    "volume": "11",
+    "author": "Heidari",
+    "year": "2022",
+    "journal-title": "Nanophotonics"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-Th2A.12&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:27:12Z",
+   "timestamp": 1786987632000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-Th2A.12"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 7,
+  "URL": "https://doi.org/10.1364/ofc.2026.th2a.12",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

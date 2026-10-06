@@ -202,6 +202,20 @@ entries:
   basis: design_target
   locator: p.7 Sec. 3; Fig. 6(d)
   note: Air upper cladding in the comparison
+- device_id: chen2023a-air
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 5.2 (Methods)
+  note: 'source: An arbitrary signal generator (AWG: GW Instek AFG-3051) was employed to provide a 1 MHz triangular voltage sweep.'
+- device_id: chen2023a-glycerol
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. 5.2 (Methods)
+  note: 'source: An arbitrary signal generator (AWG: GW Instek AFG-3051) was employed to provide a 1 MHz triangular voltage sweep.'
 derived:
 - device_id: chen2023a-glycerol
   field: slab_thickness_nm

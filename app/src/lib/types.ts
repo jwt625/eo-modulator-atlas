@@ -75,6 +75,8 @@ export interface Paper {
 	label: string;
 	title: string;
 	authors: string[];
+	/** person ids parallel to authors (data/paper_authors.csv); '' when unknown */
+	author_ids?: string[];
 	year: number;
 	published_on: string | null;
 	venue: string | null;

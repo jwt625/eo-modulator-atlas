@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2605.28765",
+ "title": "A variability-aware simulation and design workflow for wafer-scale, heterogeneously integrated lithium niobate modulators",
+ "authors": "Patrick Nenezic, Ewoud Vissers, Arno Moerman, Laurens Bogaert, Maximilien Billet, Xiujun Zheng, Tom Vanackere, Margot Niels, Athina Papadopoulou, Sarah Uvin, Peter De Heyn, Sandeep Saseendran, Simone Atzeni, Bart Kuyken",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 27 May 2026 17:23:18 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Sun, 31 May 2026 19:02:56 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:09:54Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2605.28765\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2605.28765</identifier>\n        <datestamp>2026-06-02</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2605.28765</id>\n        <submitter>Patrick Nenezic</submitter>\n            <version version=\"v1\">\n                <date>Wed, 27 May 2026 17:23:18 GMT</date>\n                <size>2973kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Sun, 31 May 2026 19:02:56 GMT</date>\n                <size>1665kb</size>\n            </version>\n        <title>A variability-aware simulation and design workflow for wafer-scale, heterogeneously integrated lithium niobate modulators</title>\n        <authors>Patrick Nenezic, Ewoud Vissers, Arno Moerman, Laurens Bogaert, Maximilien Billet, Xiujun Zheng, Tom Vanackere, Margot Niels, Athina Papadopoulou, Sarah Uvin, Peter De Heyn, Sandeep Saseendran, Simone Atzeni, Bart Kuyken</authors>\n        <categories>physics.optics</categories>\n            <license>http://creativecommons.org/licenses/by-nc-sa/4.0/</license>\n            <abstract>We present a variability-aware simulation framework for heterogeneously integrated lithium niobate traveling-wave modulators. The framework incorporates fabrication-variation data obtained from our dedicated pilot line and enables efficient optimisation of geometric parameters to ensure stable device performance across wafer-scale manufacturing. The proposed multi-parameter optimisation method enables the efficient identification of modulator designs that simultaneously achieve target performance metrics (Vpi, optical insertion loss, and 3dB electro-optic bandwidth) while maintaining robustness against fabrication-induced variations. Using this methodology on two representative modulator architectures, we theoretically demonstrate that reliable wafer-scale integration of lithium niobate modulators on silicon photonics via micro-transfer printing is feasible and can be systematically engineered.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

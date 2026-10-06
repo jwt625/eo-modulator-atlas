@@ -1,0 +1,743 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 123,
+  "items": [
+   {
+    "DOI": "10.1364/ome.551748",
+    "title": [
+     "Centimetre-scale micro-transfer printing to enable heterogeneous integration of thin film lithium niobate with silicon photonics"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0003-9297-2156",
+      "authenticated-orcid": true,
+      "given": "Margot",
+      "family": "Niels",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00cv9y106",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-4692-9467",
+      "authenticated-orcid": true,
+      "given": "Tom",
+      "family": "Vanackere",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00cv9y106",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5639-9300",
+      "authenticated-orcid": true,
+      "given": "Tom",
+      "family": "Vandekerckhove",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00cv9y106",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       },
+       {
+        "name": "Université Libre de Bruxelles"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Stijn",
+      "family": "Poelman",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00cv9y106",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5223-5480",
+      "authenticated-orcid": true,
+      "given": "Tom",
+      "family": "Reep",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00cv9y106",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Günther",
+      "family": "Roelkens",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00cv9y106",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5784-5050",
+      "authenticated-orcid": true,
+      "given": "Maximilien",
+      "family": "Billet",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00cv9y106",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00cv9y106",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       2,
+       20
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.3048730",
+    "title": [
+     "Heterogeneous integration of thin-film lithium niobate and silicon photonics via micro-transfer printing"
+    ],
+    "author": [
+     {
+      "given": "Ying",
+      "family": "Tan",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shengpu",
+      "family": "Niu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tom",
+      "family": "Vanackere",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "maximilien",
+      "family": "billet",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Margot",
+      "family": "Niels",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Nishant",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Joris",
+      "family": "Van Kerrebrouck",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Kai-Wen",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Gunther",
+      "family": "Roelkens",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Dries",
+      "family": "Van Thourhout",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       12,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/fio.2023.fw5e.5",
+    "title": [
+     "Scalable cm-scale Micro-Transfer Printing for Heterogeneous Integration of Lithium Niobate"
+    ],
+    "author": [
+     {
+      "given": "Margot",
+      "family": "Niels",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Maximilien",
+      "family": "Billet",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tom",
+      "family": "Vandekerckhove",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tom",
+      "family": "Vanackere",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Günther",
+      "family": "Roelkens",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.3026043",
+    "title": [
+     "Towards scalable heterogeneous integration of thin-film lithium niobate on silicon photonics using microtransfer printing"
+    ],
+    "author": [
+     {
+      "given": "Tom",
+      "family": "Vanackere",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tom",
+      "family": "Vandekerckhove",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Maximilien",
+      "family": "Billet",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ying",
+      "family": "Tan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Margot",
+      "family": "Niels",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tingting",
+      "family": "Zhai",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Antonietta",
+      "family": "Parracino",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Valeria",
+      "family": "Bonito",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jorik",
+      "family": "Withouck",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Günther",
+      "family": "Roelkens",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Dries",
+      "family": "Van Thourhout",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Stéphane",
+      "family": "Clemmen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       6,
+       18
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/nap2.70042",
+    "title": [
+     "Advances in Micro‐Transfer Printing of Lithium Niobate Thin‐Films for Silicon Photonic Devices"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0003-9297-2156",
+      "authenticated-orcid": false,
+      "given": "Margot",
+      "family": "Niels",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Information Technology (INTEC) Photonics Research Group Ghent University—imec  Ghent Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-6372-8045",
+      "authenticated-orcid": false,
+      "given": "Tom",
+      "family": "Vandekerckhove",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Information Technology (INTEC) Photonics Research Group Ghent University—imec  Ghent Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0000-0998-8877",
+      "authenticated-orcid": false,
+      "given": "Lisa",
+      "family": "De Jaeger",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Information Technology (INTEC) Photonics Research Group Ghent University—imec  Ghent Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-3823-6639",
+      "authenticated-orcid": false,
+      "given": "Maximilien",
+      "family": "Billet",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Information Technology (INTEC) Photonics Research Group Ghent University—imec  Ghent Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8745-7833",
+      "authenticated-orcid": false,
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Information Technology (INTEC) Photonics Research Group Ghent University—imec  Ghent Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       3,
+       20
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -94,11 +94,11 @@ entries:
   note: FSR 9.73 nm; finesse 20.2.
 - device_id: geravand2025-a
   field: tuning_nm_per_v
-  value: 0.032
+  value: -0.032
   unit: nm/V
   basis: derived
-  locator: p.9
-  note: Authors give about 4 GHz/V; converted at 1550 nm (4e9 Hz * lambda^2/c).
+  locator: p.9, Fig. 5(a); p.9 text
+  note: 'verified correction: "at various reverse bias voltages" (p.8); Fig. 5(a) Vb 0-6 V, resonance red-shifts with increasing reverse bias, "~4 GHz/V"'
 - device_id: geravand2025-b
   field: eo_film_thickness_nm
   value: 220

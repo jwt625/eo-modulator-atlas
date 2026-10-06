@@ -28,11 +28,11 @@ entries:
   note: EO response at -1.7 V bias, 55 C, 100 mA laser
 - device_id: oe2026-a
   field: extinction_ratio_db
-  value: 5.2
+  value: 22.0
   unit: dB
   basis: measured
-  locator: p.3, Sec. 3; Fig. 5(c)
-  note: Dynamic ER at 113 GBd PAM4 after FFE
+  locator: p.2, Sec. 3; Fig. 3(c)
+  note: Static DC ER for 0 to -3 V; dynamic 5.2 dB at 113 GBd PAM4 2.0 Vpp (Fig. 5(c)) goes to notes
 - device_id: oe2026-a
   field: substrate
   value: semi-insulating InP
@@ -74,9 +74,16 @@ entries:
   basis: derived
   locator: p.3, Fig. 4(a)
   note: Trace normalized to about 0 dB at low frequency; reference not stated
+- device_id: oe2026-a
+  field: temperature_k
+  value: 328.15
+  unit: K
+  basis: derived
+  locator: p.2, Sec. 3
+  note: K = 55 + 273.15; carrier temperature, not on-chip junction temperature
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1-3 page footer (repeated on every page)
-    note: printed page-footer copyright notice; basis for license publisher-copyright
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3 page footer (repeated on every page)
+  note: printed page-footer copyright notice; basis for license publisher-copyright

@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2601.20434",
+ "title": "Electro-Optic Modulation in Polycrystalline Barium Titanate Metasurfaces Enhanced by Poling",
+ "authors": "Eleni Prountzou, Helena C. Weigand, Virginia Falcone, \\\"Ulle-Linda Talts, Rachel Grange",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 28 Jan 2026 09:46:17 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:11:43Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2601.20434\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2601.20434</identifier>\n        <datestamp>2026-01-29</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2601.20434</id>\n        <submitter>Eleni Prountzou</submitter>\n            <version version=\"v1\">\n                <date>Wed, 28 Jan 2026 09:46:17 GMT</date>\n                <size>1735kb</size>\n            </version>\n        <title>Electro-Optic Modulation in Polycrystalline Barium Titanate Metasurfaces Enhanced by Poling</title>\n        <authors>Eleni Prountzou, Helena C. Weigand, Virginia Falcone, \\&#34;Ulle-Linda Talts, Rachel Grange</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Electrically tunable metasurfaces leveraging the strong Pockel&#39;s effect in barium titanate (BaTiO$_3$ or BTO) are a promising platform for reconfigurable free-space optical devices. However, the high cost, limited scalability, and restricted substrate compatibility of epitaxial BTO films hinder its exploitation. Here, we demonstrate free-space optical modulators based on imprinted BTO metasurfaces with targeted designs for optical and electric field confinement within the active material. With resonances exhibiting high quality factors of up to 200, we demonstrate improved transmission modulation at sub-volt driving amplitudes and frequencies up to 5 MHz. Additional enhancement is achieved via ferroelectric domain alignment, resulting in up to 25 % higher modulation strength compared to the unbiased case and up to 75 % compared to previous demonstrations. This enhanced EO response, arising from the effective permittivity engineering and domain orientation in these polycrystalline metasurfaces, holds significant potential for scalable and efficient EO modulators and active metasurfaces.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

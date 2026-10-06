@@ -147,16 +147,24 @@ entries:
   note: designed slow-light MZM works with the push-pull configuration
 - device_id: li2025a-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 4(a)
   note: curve plotted from about 0 dB; reference frequency not stated
+  previous_value: unspecified
 - device_id: li2025a-a
   field: er_type
   value: dynamic
   basis: measured
   locator: p.9
   note: dynamic extinction ratios from eye diagrams
+- device_id: li2025a-a
+  field: vpi_dc_freq_ghz
+  value: 5e-05
+  unit: GHz
+  basis: measured
+  locator: p.8; Fig. 3(e)
+  note: 'source: characterized by applying a 50-kHz triangular wave signal from an arbitrary function generator (AFG)'
 derived:
 - device_id: li2025a-a
   field: max_baud_gbd

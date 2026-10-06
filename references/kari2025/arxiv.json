@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2502.10846",
+ "title": "Enabling High-Bandwidth Coherent Modulation Through Scalable Lithium Niobate Resonant Devices",
+ "authors": "Sadra Rahimi Kari, Paolo Pintus, John E. Bowers, Matt Robbins, Nathan Youngblood",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sat, 15 Feb 2025 16:28:18 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:05:44Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2502.10846\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2502.10846</identifier>\n        <datestamp>2025-02-18</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2502.10846</id>\n        <submitter>Nathan Youngblood</submitter>\n            <version version=\"v1\">\n                <date>Sat, 15 Feb 2025 16:28:18 GMT</date>\n                <size>8829kb</size>\n            </version>\n        <title>Enabling High-Bandwidth Coherent Modulation Through Scalable Lithium Niobate Resonant Devices</title>\n        <authors>Sadra Rahimi Kari, Paolo Pintus, John E. Bowers, Matt Robbins, Nathan Youngblood</authors>\n        <categories>physics.optics</categories>\n            <license>http://creativecommons.org/licenses/by-nc-sa/4.0/</license>\n            <abstract>We present a compact, resonant-based coherent modulator on a thin-film lithium niobate (TFLN) platform, addressing the growing demand for high-speed, energy-efficient modulators in modern telecommunications. The design incorporates Mach-Zehnder Interferometers (MZIs) with a Gires-Tournois etalon in each arm with a modulation region of only ~80 micrometers, eliminating the need for traveling-wave electrodes and enabling compatibility with wavelength-division multiplexing (WDM). Experimental results demonstrate a modulation bandwidth of 29 GHz, while ensuring low optical loss and high scalability. Our architecture supports in-phase and out-of-phase modulation, enabling differential control of amplitude and phase for advanced modulation formats such as quadrature amplitude modulation (QAM). Compared to previous designs, our approach enhances throughput, modulation density, and scalability, making it ideal for applications in coherent communications and optical computing. By combining the advantages of the TFLN platform with innovative resonator engineering, this work advances the development of compact, high-performance modulators for high-density on-chip communication networks.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

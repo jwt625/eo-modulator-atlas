@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2211.05208",
+ "title": "Integrated O- and C-band Silicon-Lithium Niobate Mach-Zehnder Modulators with 100 GHz Bandwidth, Low Voltage, and Low Loss",
+ "authors": "Forrest Valdez, Viphretuo Mere, Xiaoxi Wang, and Shayan Mookherjea",
+ "doi": "10.1364/OE.480519",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 09 Nov 2022 21:40:45 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Wed, 25 Jan 2023 19:04:51 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:17:56Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2211.05208\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2211.05208</identifier>\n        <datestamp>2023-02-15</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2211.05208</id>\n        <submitter>Forrest Valdez</submitter>\n            <version version=\"v1\">\n                <date>Wed, 09 Nov 2022 21:40:45 GMT</date>\n                <size>7777kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Wed, 25 Jan 2023 19:04:51 GMT</date>\n                <size>13763kb</size>\n            </version>\n        <title>Integrated O- and C-band Silicon-Lithium Niobate Mach-Zehnder Modulators with 100 GHz Bandwidth, Low Voltage, and Low Loss</title>\n        <authors>Forrest Valdez, Viphretuo Mere, Xiaoxi Wang, and Shayan Mookherjea</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>21 pages, 11 figures</comments>\n            <doi>10.1364/OE.480519</doi>\n            <license>http://creativecommons.org/licenses/by-nc-nd/4.0/</license>\n            <abstract>Broadband integrated thin-film lithium niobate (TFLN) electro-optic modulators (EOM) are desirable for optical communications and signal processing in both the O-band (1310 nm) and C-band (1550 nm). To address these needs, we design and demonstrate Mach-Zehnder (MZ) EOM devices in a hybrid platform based on TFLN bonded to foundry-fabricated silicon photonic waveguides. Using a single silicon lithography step and a single bonding step, we realize MZ EOM devices which cover both wavelength ranges on the same chip. The EOM devices achieve 100 GHz EO bandwidth (referenced to 1 GHz) and about 2-3 V$.$cm figure-of-merit ($V_\\pi L$) with low on-chip optical loss in both the O-band and C-band.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

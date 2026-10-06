@@ -158,9 +158,10 @@ entries:
   note: authors do not state it; inferred from drive geometry
 - device_id: valdez2022-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: measured
   locator: p.8 Fig. 5
   note: curve starts at 0 dB near 1 GHz; reference not stated
+  previous_value: unspecified
 derived: []

@@ -334,6 +334,20 @@ entries:
   basis: measured
   locator: p.4, Electro-optic Modulation
   note: approximately 10 dB
+- device_id: li2026ba-a
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: p.5 Fig. 2(a) caption; p.4
+  note: 'source: Normalized optical transmission in logarithmic scale of an 18 mm-long modulator as a function of the drive voltage ...'
+- device_id: li2026ba-b
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: p.5 Fig. 2(a)
+  note: 'source: as a function of the drive voltage at 100 Hz.'
 derived:
 - device_id: li2026ba-a
   field: max_line_rate_gbps

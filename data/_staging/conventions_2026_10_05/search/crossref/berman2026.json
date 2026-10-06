@@ -1,0 +1,252 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 87,
+  "items": [
+   {
+    "DOI": "10.1364/cleo.1986.thd1",
+    "title": [
+     "Theory of pump-probe and four-wave mixing spectroscopy"
+    ],
+    "author": [
+     {
+      "given": "P. R.",
+      "family": "Berman",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Galina",
+      "family": "Khitrova",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       1986
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo.1986.wk44",
+    "title": [
+     "Cooperative transient and self-action effects in nonlinear optical beam mixing"
+    ],
+    "author": [
+     {
+      "given": "F. P.",
+      "family": "Mattar",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Paul",
+      "family": "Berman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       1986
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2022.am4m.2",
+    "title": [
+     "Seeing the Big Picture: Basin-wide Methane Emissions Surveys Reveal the Problem and a Solution"
+    ],
+    "author": [
+     {
+      "given": "Elena",
+      "family": "Berman",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Petr",
+      "family": "Yakovlev",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Erin",
+      "family": "Wetherley",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/iqec.2004.itui32",
+    "title": [
+     "Atomic squeezing and quantum memory in a three-level system"
+    ],
+    "author": [
+     {
+      "given": "Aurelien",
+      "family": "Dantan",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Michel",
+      "family": "Pinard",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Paul R.",
+      "family": "Berman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2004
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo.1986.tuk18",
+    "title": [
+     "Strobed laser cinemicrographic method for study of the fluid mechanics of blood flow in small blood vessels"
+    ],
+    "author": [
+     {
+      "given": "S. B.",
+      "family": "Zisblatt",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "J.",
+      "family": "Thomas",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "H. J.",
+      "family": "Berman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       1986
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

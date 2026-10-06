@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2304.04413",
+ "title": "Improving Linewidth and Extinction Ratio Performances of Lithium Niobate Ring Modulator Using Ring-pair Structure",
+ "authors": "Songyan Hou",
+ "doi": "10.1002/adpr.202300169",
+ "journal_ref": "advanced photonics research 2024",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Mon, 10 Apr 2023 06:50:29 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Fri, 12 May 2023 03:12:54 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:01:06Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2304.04413\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2304.04413</identifier>\n        <datestamp>2024-03-05</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2304.04413</id>\n        <submitter>Songyan Hou</submitter>\n            <version version=\"v1\">\n                <date>Mon, 10 Apr 2023 06:50:29 GMT</date>\n                <size>1867kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Fri, 12 May 2023 03:12:54 GMT</date>\n                <size>1860kb</size>\n            </version>\n        <title>Improving Linewidth and Extinction Ratio Performances of Lithium Niobate Ring Modulator Using Ring-pair Structure</title>\n        <authors>Songyan Hou</authors>\n        <categories>physics.optics</categories>\n            <comments>14 pages</comments>\n            <journal-ref>advanced photonics research 2024</journal-ref>\n            <doi>10.1002/adpr.202300169</doi>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Electro-optic modulators lie at the heart of complex integration and high density electro-optic systems. One of the representative electro-optic modulators is thin film lithium niobate based microring modulator which has demonstrated advantages of compact footprint, low optical loss and high modulation efficiency. However, the linewidth and extinction ratio of ring modulators are fundamentally limited by the ring losses and coupling, respectively. To this end, we propose a novel type of electro-optic modulators with ring-pair structure on thin film lithium niobate platform, which brings substantially improvement of linewidth and extinction ratio. The ring-pair modulator exhibits a larger linewidth up to 22 GHz, 1.74-time larger than that of single ring resonator with same design parameters. Moreover, the experimental results also reveal that the added-up extinction ratio of ring-pair resonator goes beyond 30 dB, much larger than that in an individual ring resonator. These advantages of ring-pair modulator pave a new way for the application of compact ring-based modulators with large working wavelength window and high extinction ratio, to be exploited in quantum optics, programmable nanophotonics and optical sensors, etc.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

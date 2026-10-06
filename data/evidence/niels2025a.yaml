@@ -97,4 +97,11 @@ entries:
   basis: design_target
   locator: p.4 Sec. 3; p.5 Sec. 4; p.7 Fig. 7(a)
   note: mode power split 32 percent SiN, 62 percent LN (simulated, p.4)
+- device_id: niels2025a-a
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: p.5-6 Sec. 4; Fig. 7(d)
+  note: 'source: 100 Hz sine waves with different peak-to-peak voltages (Vpp) are applied to the metal contacts of both coupons'
 derived: []

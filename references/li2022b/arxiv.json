@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2202.13323",
+ "title": "High Modulation Efficiency and Large Bandwidth Thin-Film Lithium Niobate Modulator for Visible Light",
+ "authors": "Chijun Li, Bin Chen, Ziliang Ruan, Pengxin Chen, Kaixuan Chen, Changjian Guo and Liu Liu",
+ "doi": "10.1364/OE.469065",
+ "journal_ref": "Opt. Express 2022",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sun, 27 Feb 2022 09:27:58 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:07:23Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2202.13323\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2202.13323</identifier>\n        <datestamp>2022-09-28</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2202.13323</id>\n        <submitter>Chijun Li</submitter>\n            <version version=\"v1\">\n                <date>Sun, 27 Feb 2022 09:27:58 GMT</date>\n                <size>576kb</size>\n            </version>\n        <title>High Modulation Efficiency and Large Bandwidth Thin-Film Lithium Niobate Modulator for Visible Light</title>\n        <authors>Chijun Li, Bin Chen, Ziliang Ruan, Pengxin Chen, Kaixuan Chen, Changjian Guo and Liu Liu</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>7 pages, 6 figures</comments>\n            <report-no>Vol. 30, No. 20 pp. 36394-36402</report-no>\n            <journal-ref>Opt. Express 2022</journal-ref>\n            <doi>10.1364/OE.469065</doi>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>We experimentally demonstrate a visible light thin-film lithium niobate modulator at 532 nm. The waveguides feature a propagation loss of 2.2 dB/mm while a grating for fiber interface has a coupling loss of 5 dB. Our demonstrated modulator represents a low voltage-length product of 1.1 V*cm and a large bandwidth beyond 30 GHz.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

@@ -1,0 +1,421 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 409,
+  "items": [
+   {
+    "DOI": "10.1109/jlt.2025.3646212",
+    "title": [
+     "Integration of Hybrid Thin-Film Lithium Niobate Electro-Optic Modulators on a Wafer-Scale Silicon Nitride Photonics Platform"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0004-8037-2476",
+      "authenticated-orcid": false,
+      "given": "Arif",
+      "family": "Rahman",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Electrical and Computer Engineering, University of California, San Diego, La Jolla, CA, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Forrest",
+      "family": "Valdez",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "LIGENTEC SA, EPFL Innovation Park, Batiment L, Ch. de la Dent d&#x2019;Oche 1B, Ecublens VD, Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Viphretuo",
+      "family": "Mere",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "LIGENTEC SA, EPFL Innovation Park, Batiment L, Ch. de la Dent d&#x2019;Oche 1B, Ecublens VD, Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Camiel",
+      "family": "Op de Beeck",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "LIGENTEC SA, EPFL Innovation Park, Batiment L, Ch. de la Dent d&#x2019;Oche 1B, Ecublens VD, Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Pieter",
+      "family": "Wuytens",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "LIGENTEC SA, EPFL Innovation Park, Batiment L, Ch. de la Dent d&#x2019;Oche 1B, Ecublens VD, Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-9864-2367",
+      "authenticated-orcid": false,
+      "given": "Shayan",
+      "family": "Mookherjea",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical and Computer Engineering, University of California, San Diego, La Jolla, CA, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       3,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/jphot.2017.2757014",
+    "title": [
+     "Electro-Optic Plasmonic Modulator With Direct Coupling to Silicon Waveguides"
+    ],
+    "author": [
+     {
+      "given": "Abd Al Rahman",
+      "family": "Mohamed",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Lamees A.",
+      "family": "Shahada",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7962-2341",
+      "authenticated-orcid": false,
+      "given": "Mohamed A.",
+      "family": "Swillam",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2017,
+       12
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.3110151",
+    "title": [
+     "Integration of thin-film lithium niobate modulators on a SiN photonics platform"
+    ],
+    "author": [
+     {
+      "given": "Forrest",
+      "family": "Valdez",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Arif",
+      "family": "Rahman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Camiel",
+      "family": "Op de Beeck",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Viphretuo",
+      "family": "Mere",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Boris",
+      "family": "Zabelich",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Radha",
+      "family": "Krishnan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Pragati",
+      "family": "Aashna",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shayan",
+      "family": "Mookherjea",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Pieter",
+      "family": "Wuytens",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       29
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/iprsn.2013.it4a.2",
+    "title": [
+     "Interactions of Acoustic and Optical Waves in Silicon Slot Waveguides"
+    ],
+    "author": [
+     {
+      "given": "Azizur B.",
+      "family": "Rahman",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2013
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.2287218",
+    "title": [
+     "Design of phase change Ge2Sb2Te5 based on-off electro-optic switch"
+    ],
+    "author": [
+     {
+      "given": "Nikhil",
+      "family": "Dhingra",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Linjie",
+      "family": "Zhou",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Souvik",
+      "family": "Ghosh",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "B.M.A.",
+      "family": "Rahman",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Junchao",
+      "family": "Song",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2018,
+       2,
+       22
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

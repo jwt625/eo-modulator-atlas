@@ -136,6 +136,13 @@ entries:
   basis: derived
   locator: p.7; Fig. 4d; p.9 Methods
   note: 'inferred: authors do not say which arm the Vpi sweep drives or name the convention'
+- device_id: deng2026-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.9 Methods
+  note: 'source: For Vπ measurements, the MZI modulator was driven by a 100 kHz triangular voltage signal'
 derived: []
 context_values:
 - item: Pockels_coefficient_r42_film

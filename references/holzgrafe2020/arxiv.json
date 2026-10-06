@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2005.00939",
+ "title": "Cavity electro-optics in thin-film lithium niobate for efficient microwave-to-optical transduction",
+ "authors": "Jeffrey Holzgrafe, Neil Sinclair, Di Zhu, Amirhassan Shams-Ansari, Marco Colangelo, Yaowen Hu, Mian Zhang, Karl K. Berggren, Marko Lon\\v{c}ar",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sat, 02 May 2020 23:09:49 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Tue, 12 May 2020 00:39:09 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:01:00Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2005.00939\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2005.00939</identifier>\n        <datestamp>2020-05-13</datestamp>\n            <setSpec>physics:quant-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2005.00939</id>\n        <submitter>Jeffrey Holzgrafe</submitter>\n            <version version=\"v1\">\n                <date>Sat, 02 May 2020 23:09:49 GMT</date>\n                <size>1310kb</size>\n                    <source_type>D</source_type>\n            </version>\n            <version version=\"v2\">\n                <date>Tue, 12 May 2020 00:39:09 GMT</date>\n                <size>1310kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Cavity electro-optics in thin-film lithium niobate for efficient microwave-to-optical transduction</title>\n        <authors>Jeffrey Holzgrafe, Neil Sinclair, Di Zhu, Amirhassan Shams-Ansari, Marco Colangelo, Yaowen Hu, Mian Zhang, Karl K. Berggren, Marko Lon\\v{c}ar</authors>\n        <categories>quant-ph physics.optics</categories>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Linking superconducting quantum devices to optical fibers via microwave-optical quantum transducers may enable large scale quantum networks. For this application, transducers based on the Pockels electro-optic (EO) effect are promising for their direct conversion mechanism, high bandwidth, and potential for low-noise operation. However, previously demonstrated EO transducers require large optical pump power to overcome weak EO coupling and reach high efficiency. Here, we create an EO transducer in thin-film lithium niobate, leveraging the low optical loss and strong EO coupling in this platform. We demonstrate a transduction efficiency of up to $2.7\\times10^{-5}$, and a pump-power normalized efficiency of $1.9\\times10^{-6}/\\mathrm{\\mu W}$. The transduction efficiency can be improved by further reducing the microwave resonator&#39;s piezoelectric coupling to acoustic modes, increasing the optical resonator quality factor to previously demonstrated levels, and changing the electrode geometry for enhanced EO coupling. We expect that with further development, EO transducers in thin-film lithium niobate can achieve near-unity efficiency with low optical pump power.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

@@ -661,6 +661,20 @@ entries:
   basis: simulated
   locator: p.4 text
   note: Simulated optical group index of the modelled cross-section, stated as around 2.25
+- device_id: shen2024-d
+  field: temperature_k
+  value: 5.6
+  unit: K
+  basis: measured
+  locator: p.5, Fig. 3(d) caption and text
+  note: Headline 17.5 GHz point is at stated 5.6 K; other points 4.8 K 13.5, 6.4 K 16.8, 6.8 K 11.0 GHz.
+- device_id: shen2024-e
+  field: temperature_k
+  value: 4.0
+  unit: K
+  basis: measured
+  locator: p.6, Sec. link
+  note: Packaged module on the 4 K plate of the cryostat; 4 K as stated, not a sensor reading.
 derived: []
 context_values:
 - item: published_on_arxiv_v1_stamp

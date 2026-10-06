@@ -173,6 +173,13 @@ entries:
   basis: derived
   locator: p.3 Fig. 3(a); p.2 Fig. 2(b)
   note: not stated; Fig. 2(b) per-arm index change 2.4e-5/V gives about 1.6 V*cm push-pull vs 1.7 reported
+- device_id: liu2021-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.4; p.7 Supp.
+  note: 'source: For half-wave-voltage characterization, a 100 kHz triangular wave signal is applied to the modulator'
 derived:
 - device_id: liu2021-a
   field: slab_thickness_nm
@@ -182,35 +189,38 @@ derived:
   - eo_film_thickness_nm=600
   - etch_depth_nm=300
 context_values:
-  predicted_bw3db_ghz:
-    value: over 110
-    locator: p.1 abstract; p.8 Fig. S7
-    note: from measured S-parameters via transmission-line model; prediction, not entered
-  microwave_s21_electrode_rolloff:
-    value: below 2 dB to 67 GHz; 3.7 dB at 104 GHz
-    locator: p.4; p.7 Supp. Sec. 3
-    note: electrical S21 of the electrodes, not EO
-  microwave_6db_bandwidth_ghz:
-    value: over 110
-    locator: p.4; p.7 Supp. Sec. 3
-    note: electrical, limited by the 110 GHz VNA
-  ridge_width_um_simulation:
-    value: 1.0
-    locator: p.2 Fig. 1(c) discussion
-    note: 1-um-wide, 300-nm-thick ridge of the simulated waveguide; fabricated width not stated
-  s11_db:
-    value: below -18
-    locator: p.4; Fig. 4(d)
-  simulated_electrode_optical_loss_db_per_cm:
-    value: below 0.1 at 3 um gap with 100 nm silica
-    locator: p.2; Fig. 1(c)
-    note: FEM simulation, electrode-induced absorption only
-  t_rail_parameters_um:
-    period: 50
-    rail_length: 45
-    stem: 5
-    rail_width: 3
-    unloaded_spacing: 15
-    locator: p.6 Table S1; Fig. S3(a); SEM inset Fig. 4(a)
-    note: symbol meanings read from Fig. S3(a) and the SEM inset
-  license_and_rights_basis: No Crossref record and no license notice in the PDF; arXiv-nonexclusive appears only in the prefetch metadata; redistribution set restricted_local_only
+- item: predicted_bw3db_ghz
+  value: over 110
+  locator: p.1 abstract; p.8 Fig. S7
+  note: from measured S-parameters via transmission-line model; prediction, not entered
+- item: microwave_s21_electrode_rolloff
+  value: below 2 dB to 67 GHz; 3.7 dB at 104 GHz
+  locator: p.4; p.7 Supp. Sec. 3
+  note: electrical S21 of the electrodes, not EO
+- item: microwave_6db_bandwidth_ghz
+  value: over 110
+  locator: p.4; p.7 Supp. Sec. 3
+  note: electrical, limited by the 110 GHz VNA
+- item: ridge_width_um_simulation
+  value: 1.0
+  locator: p.2 Fig. 1(c) discussion
+  note: 1-um-wide, 300-nm-thick ridge of the simulated waveguide; fabricated width not stated
+- item: s11_db
+  value: below -18
+  locator: p.4; Fig. 4(d)
+- item: simulated_electrode_optical_loss_db_per_cm
+  value: below 0.1 at 3 um gap with 100 nm silica
+  locator: p.2; Fig. 1(c)
+  note: FEM simulation, electrode-induced absorption only
+- item: t_rail_parameters_um
+  period: 50
+  rail_length: 45
+  stem: 5
+  rail_width: 3
+  unloaded_spacing: 15
+  locator: p.6 Table S1; Fig. S3(a); SEM inset Fig. 4(a)
+  note: symbol meanings read from Fig. S3(a) and the SEM inset
+- item: license_and_rights_basis
+  value: No Crossref record and no license notice in the PDF; arXiv-nonexclusive appears only in the prefetch metadata; redistribution
+    set restricted_local_only
+  locator: references/liu2021/source.json

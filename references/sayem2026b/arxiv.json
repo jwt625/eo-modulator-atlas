@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2602.00922",
+ "title": "High-power handling and bias stability of thin-film Lithium Tantalate microring and coupling resonators",
+ "authors": "Ayed Sayem, Shiekh Zia Uddin, Ting-Chen Hu, Alaric Tate, Mark Cappuzzo, Rose Kopf, Mark Earnshaw",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sat, 31 Jan 2026 22:31:47 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Sun, 05 Apr 2026 12:47:04 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:13:27Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2602.00922\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2602.00922</identifier>\n        <datestamp>2026-04-07</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2602.00922</id>\n        <submitter>A Sayem</submitter>\n            <version version=\"v1\">\n                <date>Sat, 31 Jan 2026 22:31:47 GMT</date>\n                <size>6374kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Sun, 05 Apr 2026 12:47:04 GMT</date>\n                <size>6416kb</size>\n            </version>\n        <title>High-power handling and bias stability of thin-film Lithium Tantalate microring and coupling resonators</title>\n        <authors>Ayed Sayem, Shiekh Zia Uddin, Ting-Chen Hu, Alaric Tate, Mark Cappuzzo, Rose Kopf, Mark Earnshaw</authors>\n        <categories>physics.optics</categories>\n            <comments>5 pages, 3 figures</comments>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>In this paper, we demonstrate the ultra-high-power handling capability and DC bias stability of optical microring and electro-optic (EO) coupling resonators on the thin-film lithium tantalate (TFLT) platform. We show that, with annealing, oxide-cladded TFLT resonators can handle several watts (4W) of circulating power with minimal frequency shift and no observable photo-refractive effect. Furthermore, we demonstrate a compact 2mm coupling modulator achieving a low Vpi of 3V with stable bias and phase control in the telecom C-band.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

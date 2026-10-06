@@ -128,11 +128,12 @@ entries:
   note: OSA sideband-ratio extraction
 - device_id: gao2024-a
   field: drive
-  value: unspecified
+  value: not_applicable
   unit: ''
   basis: derived
   locator: p.1 abstract; p.3 Fig. 4(a)
   note: authors do not state a drive convention; dual-arm phase modulator on one GSG line
+  previous_value: unspecified
 derived:
 - device_id: gao2024-a
   field: slab_thickness_nm

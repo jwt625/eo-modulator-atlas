@@ -1,0 +1,440 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 267,
+  "items": [
+   {
+    "DOI": "10.1117/12.3099759",
+    "title": [
+     "Nanoimprinted electro-optic modulator with sol-gel barium titanate"
+    ],
+    "author": [
+     {
+      "given": "Virginia",
+      "family": "Falcone",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Eleni",
+      "family": "Prountzou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jost",
+      "family": "Kellner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ülle-Linda",
+      "family": "Talts",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Rachel",
+      "family": "Grange",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       29
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/cleo/europe-eqec65582.2025.11111153",
+    "title": [
+     "Electric Field Confinement Optimization in Polycrystalline Barium Titanate Metasurfaces for Electro-Optic Modulation"
+    ],
+    "author": [
+     {
+      "given": "Eleni",
+      "family": "Prountzou",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Institute for Quantum Electronics,Optical Nanomaterial Group, HPT H3,Department of Physics,Zurich,Switzerland,CH-8093"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Helena",
+      "family": "Weigand",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Institute for Quantum Electronics,Optical Nanomaterial Group, HPT H3,Department of Physics,Zurich,Switzerland,CH-8093"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Virginia",
+      "family": "Falcone",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Institute for Quantum Electronics,Optical Nanomaterial Group, HPT H3,Department of Physics,Zurich,Switzerland,CH-8093"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Elise",
+      "family": "Bailly",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Institute for Quantum Electronics,Optical Nanomaterial Group, HPT H3,Department of Physics,Zurich,Switzerland,CH-8093"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ülle-Linda",
+      "family": "Talts",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Institute for Quantum Electronics,Optical Nanomaterial Group, HPT H3,Department of Physics,Zurich,Switzerland,CH-8093"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Rachel",
+      "family": "Grange",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Institute for Quantum Electronics,Optical Nanomaterial Group, HPT H3,Department of Physics,Zurich,Switzerland,CH-8093"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       6,
+       23
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1021/acsphotonics.6c00340",
+    "title": [
+     "Electro-optic Modulation in Polycrystalline Barium Titanate Metasurfaces Enhanced by Poling"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0008-6204-2042",
+      "authenticated-orcid": true,
+      "given": "Eleni",
+      "family": "Prountzou",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Department of Physics",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       },
+       {
+        "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-0558-5899",
+      "authenticated-orcid": true,
+      "given": "Helena C.",
+      "family": "Weigand",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Department of Physics",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       },
+       {
+        "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Virginia",
+      "family": "Falcone",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Department of Physics",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       },
+       {
+        "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ülle-Linda",
+      "family": "Talts",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Department of Physics",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       },
+       {
+        "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-0240-0257",
+      "authenticated-orcid": true,
+      "given": "Morgan",
+      "family": "Trassin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Department of Materials",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       },
+       {
+        "name": "Multifunctional Ferroic Materials",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-7469-9756",
+      "authenticated-orcid": true,
+      "given": "Rachel",
+      "family": "Grange",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "ETH Zurich, Department of Physics",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       },
+       {
+        "name": "Institute for Quantum Electronics, Optical Nanomaterial Group",
+        "place": [
+         "Zurich, Switzerland"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2012.aw3j.1",
+    "title": [
+     "Enabling Science at the Advanced Light Source X-Ray Facility"
+    ],
+    "author": [
+     {
+      "given": "Roger",
+      "family": "Falcone",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2012
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/leos.2002.1159502",
+    "title": [
+     "Time-resolved x-ray scattering from excited matter"
+    ],
+    "author": [
+     {
+      "given": "R.W.",
+      "family": "Falcone",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       null
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -29,34 +29,6 @@ entries:
   locator: p.2 abstract; p.11 Discussion
   note: DC modulation efficiency about 0.25 V.mm stated as achieved for 500 um in a push-pull MZM; converted to V*cm; equals 0.5 V x 0.5 mm
 - device_id: taghavi2024-a
-  field: vpi_rf_v
-  value: 51.4
-  unit: V
-  basis: author_estimate
-  locator: p.22, Table 2 (AC metrics)
-  note: AC Vpi 51.4 V from S21-based analytical post-processing (r33 about 24 pm/V); measurement frequency ambiguous in the text
-- device_id: taghavi2024-a
-  field: vpil_rf_vcm
-  value: 2.57
-  unit: V*cm
-  basis: author_estimate
-  locator: p.2 abstract; p.8; p.11
-  note: AC modulation efficiency about 25.7 V.mm estimated from S21 and an analytical model (Methods Eq. 1-3); converted to V*cm
-- device_id: taghavi2024-a
-  field: bw6db_ghz
-  value: 4.18
-  unit: GHz
-  basis: measured
-  locator: p.8, Characterization; Fig. 4(d) p.26
-  note: f-6dB > 4.18 GHz from the VNA S21; RC-limited -3 dB bandwidth anticipated near 1.41 GHz (p.9, not entered)
-- device_id: taghavi2024-a
-  field: bw_measured_to_ghz
-  value: 4.18
-  unit: GHz
-  basis: extracted_from_figure
-  locator: p.26, Fig. 4(d)
-  note: FLS S21 trace ends near 4.2 GHz on the plot; the 18 GHz VNA span is not the plotted limit; not stated in text
-- device_id: taghavi2024-a
   field: il_onchip_db
   value: 2.6
   unit: dB
@@ -129,4 +101,91 @@ entries:
   basis: measured
   locator: p.6; p.12-13; Fig. 1 caption p.23; Fig. 2 caption p.24; Fig. 3 caption p.25
   note: Wc 300 nm, fingers 80 nm, df-c 100 nm, 2 um trench; doping about 5e14 cm^-3; delta L about 100 um
+- device_id: taghavi2024-b
+  field: length_mm
+  value: 0.5
+  unit: mm
+  basis: measured
+  locator: p.10; p.11; Fig. 4(b) p.26
+  note: Two 500 um long phase shifters in the push-pull MZM
+- device_id: taghavi2024-b
+  field: bw6db_ghz
+  value: 4.18
+  unit: GHz
+  basis: measured
+  locator: p.8, Characterization; Fig. 4(d) p.26
+  note: f-6dB > 4.18 GHz from the VNA S21; RC-limited -3 dB bandwidth anticipated near 1.41 GHz (p.9, not entered)
+- device_id: taghavi2024-b
+  field: bw_measured_to_ghz
+  value: 4.18
+  unit: GHz
+  basis: extracted_from_figure
+  locator: p.26, Fig. 4(d)
+  note: FLS S21 trace ends near 4.2 GHz on the plot; the 18 GHz VNA span is not the plotted limit; not stated in text
+- device_id: taghavi2024-b
+  field: rib_width_nm
+  value: 300
+  unit: nm
+  basis: measured
+  locator: p.6, LMI-engineered design
+  note: Core width Wc = 300 nm of the FLS waveguide (strip core, not a rib)
+- device_id: taghavi2024-b
+  field: electrode_thickness_um
+  value: 0.1
+  unit: um
+  basis: measured
+  locator: p.13, Methods
+  note: 100 nm gold atop 5 nm titanium
+- device_id: taghavi2024-b
+  field: electrode_metal
+  value: gold (100 nm) on 5 nm titanium adhesion
+  basis: measured
+  locator: p.13, Methods
+  note: Electrodes deposited 4.85 um from the core waveguide
+- device_id: taghavi2024-b
+  field: buffer_oxide_um
+  value: 3.5
+  unit: um
+  basis: measured
+  locator: p.12, Methods
+  note: Buried oxide 3.5 um
+- device_id: taghavi2024-b
+  field: substrate
+  value: SOI, 220 nm silicon device layer on 3.5 um buried oxide
+  basis: measured
+  locator: p.12, Methods
+  note: Standard 220 nm silicon-on-insulator wafer, 3.5 um BOX
+- device_id: taghavi2024-b
+  field: cladding
+  value: FN-LC PM-158 (Polaris Electro-Optics, Inc.), glass-capillary application at 70-80 C, cooled to 25 C
+  basis: measured
+  locator: p.13, Methods
+  note: PM-158 proprietary FN-LC from Polaris Electro-Optics; warmed to 70-80 C for application; chip cooled to 25 C before characterization
+- device_id: taghavi2024-b
+  field: epitaxy_or_stack
+  value: 'Finger-loaded strip (FLS) waveguide: core 300 nm wide between 80 nm wide fingers, finger-to-core gap 100 nm, 2 um trench around the waveguide, 10 um adiabatic strip-to-finger mode converters at each end; fingers weakly doped (about 5e14 cm^-3, Fig. 2(h)); Au electrodes 4.85 um from the core; 100 um path-length difference in one arm (FSR about 6.6 nm); 108 MZMs on one chip (Fig. 5)'
+  basis: measured
+  locator: p.6; p.12-13; Fig. 1 caption p.23; Fig. 2 caption p.24; Fig. 3 caption p.25
+  note: Wc 300 nm, fingers 80 nm, df-c 100 nm, 2 um trench; doping about 5e14 cm^-3; delta L about 100 um
+- device_id: taghavi2024-a
+  field: temperature_k
+  value: 298.15
+  unit: K
+  basis: derived
+  locator: p.13, Methods
+  note: '"the chip is cooled to 25 C before characterization"; 25 + 273.15'
+- device_id: taghavi2024-b
+  field: temperature_k
+  value: 298.15
+  unit: K
+  basis: derived
+  locator: p.13, Methods
+  note: '"the chip is cooled to 25 C before characterization"; 25 + 273.15'
+- device_id: taghavi2024-b
+  field: r_eff_pm_per_v
+  value: 24.0
+  unit: pm/V
+  basis: author_estimate
+  locator: p.8; p.11
+  note: r33 about 24 pm/V estimated from S21 and analytical post-processing (Eq. 3, Methods p.14)
 derived: []

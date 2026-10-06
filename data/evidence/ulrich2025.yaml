@@ -121,4 +121,25 @@ entries:
   basis: derived
   locator: p.6 Fig. 3b caption
   note: authors do not state a convention; only one arm carries the field
+- device_id: ulrich2025-mzi
+  field: vpi_dc_freq_ghz
+  value: 2e-08
+  unit: GHz
+  basis: measured
+  locator: p.6; p.18 Methods
+  note: 'source: The data shown in the main figure were obtained by a 20 Hz and 16 V amplitude dropping ...'
+- device_id: ulrich2025-mzi
+  field: temperature_k
+  value: 4.0
+  unit: K
+  basis: measured
+  locator: p.5, Sec. EO interaction strength
+  note: Stated as 4 K in main text; Supplement says the MZI is cooled below 5 K in the same cryostat.
+- device_id: ulrich2025-mzi
+  field: r_eff_pm_per_v
+  value: 345.0
+  unit: pm/V
+  basis: derived
+  locator: p.1 and p.6-7, Fig. 3(e)
+  note: Effective scalar Pockels coefficient from own MZI phase vs field, remanent zero-field value, uncertainty +-30; 140 +-30 pm/V at 1.6 V/um; meander-corrected (Supplement).
 derived: []

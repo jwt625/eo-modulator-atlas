@@ -1,0 +1,290 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:24:34Z",
+   "timestamp": 1786991074804,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 15,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>The progression of the development of all-silicon based microring resonator modulators for high bitrates is reviewed. Trade-offs and challenges are explored.</jats:p>",
+  "DOI": "10.1364/ofc.2026.m2a.7",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:26:07Z",
+   "timestamp": 1780428367000
+  },
+  "page": "M2A.7",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Si Microring Resonator Modulators at &gt;200Gb/s"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "David",
+    "family": "Patel",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-M2A.7-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "448",
+    "DOI": "10.1109/JSTQE.2002.1016347",
+    "type": "journal-article",
+    "volume": "8",
+    "author": "Mookherjea",
+    "year": "2002",
+    "journal-title": "IEEE J. Sel. Topics Quantum Electron"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "325–327",
+    "DOI": "10.1038/nature03569",
+    "type": "journal-article",
+    "volume": "435",
+    "author": "Xu",
+    "year": "2005",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R5",
+    "first-page": "1–4",
+    "volume-title": "Silicon Photonics Platform for Next Generation Data Communication Technologies",
+    "author": "Yeh",
+    "year": "2024"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "15741",
+    "DOI": "10.1364/OE.16.015741",
+    "type": "journal-article",
+    "volume": "16",
+    "author": "Sacher",
+    "year": "2008",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "7585",
+    "DOI": "10.1364/OE.24.007585",
+    "type": "journal-article",
+    "volume": "24",
+    "author": "Karimelahi",
+    "year": "2016",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/srep06310",
+    "type": "journal-article",
+    "volume": "4",
+    "author": "Müller",
+    "year": "2014",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "OFC-2026-M2A.7-R9",
+    "first-page": "1–6",
+    "type": "journal-article",
+    "volume": "15",
+    "author": "Kao",
+    "journal-title": "IEEE Photonics J."
+   },
+   {
+    "key": "OFC-2026-M2A.7-R10",
+    "doi-asserted-by": "publisher",
+    "first-page": "2462",
+    "DOI": "10.1364/OE.26.002462",
+    "type": "journal-article",
+    "volume": "26",
+    "author": "Ehrlichman",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R11",
+    "doi-asserted-by": "publisher",
+    "first-page": "15178",
+    "DOI": "10.1364/OE.22.015178",
+    "type": "journal-article",
+    "volume": "22",
+    "author": "Yu",
+    "year": "2014",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R13",
+    "first-page": "54",
+    "type": "journal-article",
+    "author": "Chen",
+    "year": "2025",
+    "journal-title": "Optical and Electrical Characterization of a Compact Universal Photonic Engine"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R14",
+    "doi-asserted-by": "publisher",
+    "first-page": "19",
+    "DOI": "10.1109/JSSC.2020.3022851",
+    "type": "journal-article",
+    "volume": "56",
+    "author": "Li",
+    "year": "2021",
+    "journal-title": "IEEE J. Solid-State Circuits"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R16",
+    "doi-asserted-by": "publisher",
+    "first-page": "24274",
+    "DOI": "10.1364/OE.27.024274",
+    "type": "journal-article",
+    "volume": "27",
+    "author": "Cea",
+    "year": "2019",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R17",
+    "doi-asserted-by": "publisher",
+    "first-page": "1006",
+    "DOI": "10.1109/TCPMT.2024.3489803",
+    "type": "journal-article",
+    "volume": "15",
+    "author": "Coenen",
+    "year": "2025",
+    "journal-title": "IEEE Trans. Compon., Packag. Manufact. Technol."
+   },
+   {
+    "key": "OFC-2026-M2A.7-R18",
+    "doi-asserted-by": "publisher",
+    "first-page": "29965",
+    "DOI": "10.1364/OE.525840",
+    "type": "journal-article",
+    "volume": "32",
+    "author": "Azhigulov",
+    "year": "2024",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-M2A.7-R19",
+    "doi-asserted-by": "publisher",
+    "first-page": "27599",
+    "DOI": "10.1364/OE.529044",
+    "type": "journal-article",
+    "volume": "OE 32",
+    "author": "Zhang",
+    "year": "2024",
+    "journal-title": "Opt. Express"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-M2A.7&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:25:57Z",
+   "timestamp": 1786987557000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-M2A.7"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 15,
+  "URL": "https://doi.org/10.1364/ofc.2026.m2a.7",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

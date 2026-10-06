@@ -158,11 +158,11 @@ entries:
   note: From the measured spectrum; Table 1 lists 2920.
 - device_id: zhong2026-a
   field: tuning_nm_per_v
-  value: 0.08
+  value: -0.08
   unit: nm/V
   basis: measured
-  locator: p.4; p.4, Fig. 2(c)
-  note: About 80 pm/V at -3 V, from a 160 pm shift between -2 V and -4 V.
+  locator: p.4, Fig. 2(c)
+  note: Reverse bias red-shifts (160 pm from -2 V to -4 V); with reverse bias as negative voltage the slope is -80 pm/V. Text quotes magnitude
 - device_id: zhong2026-a
   field: vpi_convention
   value: resonance_tuning_derived

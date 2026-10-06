@@ -1,0 +1,335 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:26:33Z",
+   "timestamp": 1786991193326,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 10,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>\n                    We present a barium titanate (BTO) dual polarization in-phase quadrature modulator (DP-IQM) enabling a record net 1 Tbps\n                    <jats:italic>/λ</jats:italic>\n                    over 80 km in a ZR modeled system and over 2 km in a coherent-lite system.\n                  </jats:p>",
+  "DOI": "10.1364/ofc.2026.th3j.4",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:28:43Z",
+   "timestamp": 1780428523000
+  },
+  "page": "Th3J.4",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Barium Titanate DP-IQM Enabling Net 1 Tbps/λ ZR and Coherent-Lite Data Center Networks"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Benton",
+    "family": "Qiu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Charles",
+    "family": "St-Arnault",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Santiago",
+    "family": "Bernal",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Aleksandar",
+    "family": "Nikic",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kaibo",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yixiang",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Pascal",
+    "family": "Stark",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wouter",
+    "family": "Diels",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Felix",
+    "family": "Eltes",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "David V.",
+    "family": "Plant",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-Th3J.4-R2",
+    "first-page": "13",
+    "type": "journal-article",
+    "volume": "43",
+    "author": "Ye",
+    "year": "2025",
+    "journal-title": "JLT"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R3",
+    "first-page": "1671",
+    "type": "journal-article",
+    "volume": "4",
+    "author": "Berikaa",
+    "year": "2023",
+    "journal-title": "JLT"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R4",
+    "first-page": "6",
+    "type": "journal-article",
+    "volume": "7",
+    "author": "Osman",
+    "year": "2018",
+    "journal-title": "Opt. Exp"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R5",
+    "first-page": "15",
+    "type": "journal-article",
+    "volume": "41",
+    "author": "Sozos",
+    "year": "2023",
+    "journal-title": "JLT"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R6",
+    "first-page": "3",
+    "type": "journal-article",
+    "volume": "42",
+    "author": "Li",
+    "year": "2023",
+    "journal-title": "JLT"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R9",
+    "first-page": "5",
+    "type": "journal-article",
+    "volume": "37",
+    "author": "Eltes",
+    "year": "2019",
+    "journal-title": "JLT"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R10",
+    "first-page": "16",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Jaru",
+    "year": "2025",
+    "journal-title": "LPR"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R11",
+    "doi-asserted-by": "publisher",
+    "first-page": "868",
+    "DOI": "10.1038/s41563-025-02158-1",
+    "type": "journal-article",
+    "volume": "24",
+    "author": "Chelladurai",
+    "year": "2025",
+    "journal-title": "Nature Materials"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R14",
+    "first-page": "43",
+    "type": "journal-article",
+    "volume": "18",
+    "author": "Nikic",
+    "year": "2025",
+    "journal-title": "JLT"
+   },
+   {
+    "key": "OFC-2026-Th3J.4-R15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/047174140X",
+    "volume-title": "Lightwave Technology: Telecommunication Systems",
+    "author": "Agrawal",
+    "year": "2005"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-Th3J.4&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:28:04Z",
+   "timestamp": 1786987684000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-Th3J.4"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 10,
+  "URL": "https://doi.org/10.1364/ofc.2026.th3j.4",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

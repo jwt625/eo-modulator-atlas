@@ -186,6 +186,13 @@ entries:
   basis: derived
   locator: p.1 abstract; p.4, Fig. 3(c)
   note: net rate from GMI and FEC code selection, PAM8 at 180 GBd; highest AIR 485 Gbit/s
+- device_id: li2026-a
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: p.4 Fig. 2(a) caption; p.2
+  note: 'source: Normalized optical transmission as a function of applied voltage at a carrier wavelength of 1550 nm, measured at ...'
 derived:
 - device_id: li2026-a
   field: max_line_rate_gbps

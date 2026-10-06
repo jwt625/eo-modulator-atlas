@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2412.19306",
+ "title": "Integrated Electro-Optic Absorption Modulator for Silicon Nitride Platform",
+ "authors": "Evgeniy S. Lotkov, Alexander S. Baburin, Ali S. Amiraslanov, Evgeniy Chubchev, Alexander Dorofeenko, Evgeniy Andrianov, Ilya A. Ryzhikov, Evgeny S. Sergeev, Kirill Buzaverov, Sergei S. Avdeev, Alex Kramarenko, Sergei Bukatin, Victor I. Polozov, Olga S. Sorokina, Yuri V. Panfilov, Daria P. Kulikova, Alexander V. Baryshev and Ilya A. Rodionov",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 26 Dec 2024 17:58:35 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Mon, 30 Dec 2024 17:30:59 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:08:50Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2412.19306\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2412.19306</identifier>\n        <datestamp>2024-12-31</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2412.19306</id>\n        <submitter>Evgeniy Lotkov S.</submitter>\n            <version version=\"v1\">\n                <date>Thu, 26 Dec 2024 17:58:35 GMT</date>\n                <size>2539kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Mon, 30 Dec 2024 17:30:59 GMT</date>\n                <size>2537kb</size>\n            </version>\n        <title>Integrated Electro-Optic Absorption Modulator for Silicon Nitride Platform</title>\n        <authors>Evgeniy S. Lotkov, Alexander S. Baburin, Ali S. Amiraslanov, Evgeniy Chubchev, Alexander Dorofeenko, Evgeniy Andrianov, Ilya A. Ryzhikov, Evgeny S. Sergeev, Kirill Buzaverov, Sergei S. Avdeev, Alex Kramarenko, Sergei Bukatin, Victor I. Polozov, Olga S. Sorokina, Yuri V. Panfilov, Daria P. Kulikova, Alexander V. Baryshev and Ilya A. Rodionov</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>6 pages, 4 figures</comments>\n            <acm-class>None</acm-class>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Silicon nitride (SiN) is currently the most prominent platform for photonics at visible and near-IR wavelength bandwidth. However, realizing fast electro-optic (EO) modulators, the key components of any integrated optics platform, remains challenging in SiN. Recently, transparent conductive oxides (TCO) have emerged as a promising platform for photonic integrated circuits. Here we make an important step towards exceeding possibilities of both platforms, reporting for the first-time high-speed ITO electro-optic modulators based on silicon nitride waveguides. The insertion losses of 5.7 dB and bandwidth of about 1 GHz are shown for 300 nm-thickness SiN waveguide platform with 9.3-um-length hybrid waveguide. The fabrication process of devices requires only standard clean room tools, is repeatable and compatible with the CMOS technology. Simulation results of optimized device designs indicate that further improvement is possible and offer promising opportunities towards silicon nitride photonic computation platforms based on ITO.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

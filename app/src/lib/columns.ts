@@ -5,6 +5,7 @@ import {
 	derivedMetric,
 	enumLabel,
 	fmt,
+	hz,
 	ilF2f,
 	ilOnchip,
 	isStatisticalReplicate,
@@ -117,6 +118,8 @@ function metricTip(a: Atlas, id: string, d: Device, m: Metric): string {
 		if (d.vpi_convention) parts.push(`convention: ${enumLabel(a, 'vpi_convention', d.vpi_convention)}`);
 		// An RF-derived voltage is a different quantity from a DC one; say so, with its frequency or that it is missing.
 		if (m.field === 'vpi_rf_v' || m.field === 'vpil_rf_vcm') parts.push(typeof d.vpi_rf_freq_ghz === 'number' ? `RF value at ${fmt(d.vpi_rf_freq_ghz)} GHz` : 'RF value; frequency not stated');
+		// Quasi-static (below 1 GHz) drive frequency of a DC value, when the paper states it (convention m).
+		if ((m.field === 'vpi_dc_v' || m.field === 'vpil_dc_vcm') && typeof d.vpi_dc_freq_ghz === 'number') parts.push(`measured with ${hz(d.vpi_dc_freq_ghz)} drive`);
 	}
 	if (id === 'bw3db') {
 		if (typeof d.bw_measured_to_ghz === 'number') {

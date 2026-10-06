@@ -1,0 +1,29 @@
+{
+ "arxiv_id": "2502.14349",
+ "title": "Engineering high Pockels coefficients in thin-film strontium titanate for cryogenic quantum electro-optic applications",
+ "authors": "Anja Ulrich, Kamal Brahim, Andries Boelen, Michiel Debaets, Conglin Sun, Yishu Huang, Sandeep Seema Saseendran, Marina Baryshnikova, Paola Favia, Thomas Nuytten, Stefanie Sergeant, Kasper Van Gasse, Bart Kuyken, Kristiaan De Greve, Clement Merckling, Christian Haffner",
+ "doi": "10.1126/science.adx3741",
+ "journal_ref": "Science 390,390-393(2025)",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 20 Feb 2025 08:03:19 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Mon, 24 Feb 2025 10:16:36 GMT"
+  },
+  {
+   "version": "v3",
+   "date": "Tue, 25 Feb 2025 07:30:09 GMT"
+  },
+  {
+   "version": "v4",
+   "date": "Sat, 08 Mar 2025 09:45:47 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:17:18Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2502.14349\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2502.14349</identifier>\n        <datestamp>2025-10-28</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:quant-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2502.14349</id>\n        <submitter>Anja Ulrich</submitter>\n            <version version=\"v1\">\n                <date>Thu, 20 Feb 2025 08:03:19 GMT</date>\n                <size>6111kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Mon, 24 Feb 2025 10:16:36 GMT</date>\n                <size>6111kb</size>\n            </version>\n            <version version=\"v3\">\n                <date>Tue, 25 Feb 2025 07:30:09 GMT</date>\n                <size>6155kb</size>\n            </version>\n            <version version=\"v4\">\n                <date>Sat, 08 Mar 2025 09:45:47 GMT</date>\n                <size>6098kb</size>\n            </version>\n        <title>Engineering high Pockels coefficients in thin-film strontium titanate for cryogenic quantum electro-optic applications</title>\n        <authors>Anja Ulrich, Kamal Brahim, Andries Boelen, Michiel Debaets, Conglin Sun, Yishu Huang, Sandeep Seema Saseendran, Marina Baryshnikova, Paola Favia, Thomas Nuytten, Stefanie Sergeant, Kasper Van Gasse, Bart Kuyken, Kristiaan De Greve, Clement Merckling, Christian Haffner</authors>\n        <categories>physics.optics quant-ph</categories>\n            <comments>Main text 7 pages, including supplement information 31 pages; v2:one reference updated; v3: typo corrected; v4: reference added</comments>\n            <journal-ref>Science 390,390-393(2025)</journal-ref>\n            <doi>10.1126/science.adx3741</doi>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Materials which exhibit the Pockels effect are notable for their strong electro-optic interaction and rapid response times and are therefore used extensively in classical electro-optic components for data and telecommunication applications. Yet many materials optimized for room-temperature operation see their Pockels coefficients at cryogenic temperatures significantly reduced - a major hurdle for emerging quantum technologies which have even more rigorous demands than their classical counterpart. A noted example is $\\mathrm{BaTiO_3}$, which features the strongest effective Pockels coefficient at room temperature, only to see it reduced to a third (i.e. $\\mathrm{r_{eff}} \\approx$ 170 pm/V) at a few Kelvin. Here, we show that this behaviour is not inherent and can even be reversed: Strontium titanate ($\\mathrm{SrTiO_3}$), a material normally not featuring a Pockels coefficient, can be engineered to exhibit an $\\mathrm{r_{eff}}$ of 345 pm/V at cryogenic temperatures - a record value in any thin-film electro-optic material. By adjusting the stoichiometry, we can increase the Curie temperature and realise a ferroelectric phase that yields a high Pockels coefficient, yet with limited optical losses - on the order of decibels per centimetre. Our findings position $\\mathrm{SrTiO_3}$ as one of the most promising materials for cryogenic quantum photonics applications.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

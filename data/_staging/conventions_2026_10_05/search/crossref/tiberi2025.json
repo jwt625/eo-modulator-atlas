@@ -1,0 +1,710 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 8,
+  "items": [
+   {
+    "DOI": "10.21203/rs.3.rs-6917505/v1",
+    "title": [
+     "Graphene Electro-Absorption Modulators for Energy-Efficient and High-Speed\nOptical Transceivers"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-0907-9993",
+      "authenticated-orcid": false,
+      "given": "Andrea",
+      "family": "Ferrari",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Matteo",
+      "family": "Tiberi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "A.",
+      "family": "Montanaro",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "CNIT"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chao",
+      "family": "Wen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "J.",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-2766-2197",
+      "authenticated-orcid": false,
+      "given": "Osman",
+      "family": "Balci",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "S.",
+      "family": "Shinde",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "S.",
+      "family": "Sharma",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "A.",
+      "family": "Meersha",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "H.",
+      "family": "Shekhar",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "J.",
+      "family": "Muench",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ben",
+      "family": "Conran",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "AIXTRON Ltd."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Kenneth",
+      "family": "Teo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Aixtron"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "M.",
+      "family": "Ebert",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Southampton"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "X.",
+      "family": "Yan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Southampton"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Y.",
+      "family": "Tran",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Southampton"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "M.",
+      "family": "Banakar",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Southampton"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Callum",
+      "family": "Littlejohns",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Southampton"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0002-5314-6604",
+      "authenticated-orcid": false,
+      "given": "Graham",
+      "family": "Reed",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Southampton"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marco",
+      "family": "Romagnoli",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "CamGraPhIC"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "A.",
+      "family": "Ruocco",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "V.",
+      "family": "Sorianello",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "CNIT"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "posted-content",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       6,
+       20
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/ofc.2026.th2a.12",
+    "title": [
+     "67 GHz graphene electro-absorption modulators on silicon with 80 Gb/s C-band and 40 Gb/s O-band NRZ data rates"
+    ],
+    "author": [
+     {
+      "given": "Matteo",
+      "family": "Tiberi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Alberto",
+      "family": "Montanaro",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chao",
+      "family": "Wen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jincan",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marco",
+      "family": "Romagnoli",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Vito",
+      "family": "Sorianello",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Andrea C.",
+      "family": "Ferrari",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/siphotonics64386.2025.10985595",
+    "title": [
+     "Design of Mid-Infrared Graphene Optical Modulators and Detectors with Gigahertz Bandwidth on Suspended Silicon Waveguides"
+    ],
+    "author": [
+     {
+      "given": "Matteo",
+      "family": "Tiberi",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "University of Cambridge,Cambridge Graphene Centre,Cambridge,U.K"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Chao",
+      "family": "Wen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Cambridge,Cambridge Graphene Centre,Cambridge,U.K"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       4,
+       14
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1007/jhep10(2025)060",
+    "title": [
+     "Connecting t-channel dark matter models to the Standard Model Effective Field Theory"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-2533-9003",
+      "authenticated-orcid": false,
+      "given": "S.",
+      "family": "Biondini",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/0245cg223",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ],
+        "name": "University of Freiburg"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0000-5898-0847",
+      "authenticated-orcid": false,
+      "given": "L.",
+      "family": "Tiberi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/00x27da85",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ],
+        "name": "Università degli studi di Perugia"
+       },
+       {
+        "id": [
+         {
+          "id": "https://ror.org/05478fx36",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ],
+        "name": "INFN, Sezione di Perugia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-4262-894X",
+      "authenticated-orcid": false,
+      "given": "O.",
+      "family": "Panella",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/05478fx36",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ],
+        "name": "INFN, Sezione di Perugia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.automatica.2012.11.046",
+    "title": [
+     "Energy-efficient sampling of networked control systems over IEEE 802.15.4 wireless networks"
+    ],
+    "author": [
+     {
+      "given": "U.",
+      "family": "Tiberi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "C.",
+      "family": "Fischione",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "K.H.",
+      "family": "Johansson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "M.D.",
+      "family": "Di Benedetto",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2013,
+       3
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

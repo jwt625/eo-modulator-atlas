@@ -48,11 +48,12 @@ entries:
   note: VNA limit 70 GHz
 - device_id: he2019-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: measured
   locator: p.5, Fig. 3b
   note: 0 dB reference not stated; traces start near 1 GHz (approximate figure reading); PD response de-embedded (p.9 Methods)
+  previous_value: unspecified
 - device_id: he2019-a
   field: il_onchip_db
   value: 2.5
@@ -258,11 +259,12 @@ entries:
   note: VNA limit 70 GHz
 - device_id: he2019-b
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: measured
   locator: p.5, Fig. 3b
   note: 0 dB reference not stated; traces start near 1 GHz (approximate figure reading); PD response de-embedded (p.9 Methods)
+  previous_value: unspecified
 - device_id: he2019-b
   field: prop_loss_db_per_cm
   value: 0.98
@@ -375,6 +377,20 @@ entries:
   basis: measured
   locator: p.4, Sec. Design
   note: GSG, traveling-wave operation
+- device_id: he2019-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.4
+  note: 'source: 2(a) shows the half-wave voltage measurements for both devices with a 100-kHz triangular voltage sweep'
+- device_id: he2019-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.4
+  note: 'source: 2(a) shows the half-wave voltage measurements for both devices with a 100-kHz triangular voltage sweep'
 derived:
 - device_id: he2019-a
   field: max_baud_gbd

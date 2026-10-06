@@ -1,0 +1,492 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 57623,
+  "items": [
+   {
+    "DOI": "10.1364/oe.459315",
+    "title": [
+     "Ultra-compact electro-optic modulator based on etchless lithium niobate photonic crystal nanobeam cavity"
+    ],
+    "author": [
+     {
+      "given": "Jiaxin",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Zhejiang University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bincheng",
+      "family": "Pan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Zhejiang University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9070-8584",
+      "authenticated-orcid": true,
+      "given": "Weixi",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Zhejiang University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Daoxin",
+      "family": "Dai",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Zhejiang University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-4489-8310",
+      "authenticated-orcid": true,
+      "given": "Yaocheng",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Zhejiang University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       5,
+       25
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3788/col202422.092201",
+    "title": [
+     "Low-loss and broadband complementary dual-output electro-optic modulator based on thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Tingan",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chenglin",
+      "family": "Shang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xuanhao",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Weiqiang",
+      "family": "Lü",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhiyao",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Zeng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yong",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jinsong",
+      "family": "Xia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/ofc.2025.w1g.4",
+    "title": [
+     "Flat-top electro-optic frequency comb using a single modulator and drive on thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Gengxin",
+      "family": "Chen",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ziliang",
+      "family": "Ruan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Liu",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3390/photonics11040325",
+    "title": [
+     "Broadband Thin-Film Lithium Niobate Electro-Optic Modulator"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-3853-8079",
+      "authenticated-orcid": false,
+      "given": "Jinming",
+      "family": "Tao",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Laboratory of Nano Optoelectronics, Institute of Semiconductors, Chinese Academy of Sciences, Beijing 100083, China"
+       },
+       {
+        "name": "College of Materials Science and Opto-Electronic Technology, University of Chinese Academy of Sciences, Beijing 100049, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yinuo",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Laboratory of Nano Optoelectronics, Institute of Semiconductors, Chinese Academy of Sciences, Beijing 100083, China"
+       },
+       {
+        "name": "School of Electronic, Electrical and Communication Engineering, University of Chinese Academy of Sciences, Beijing 100049, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5334-1170",
+      "authenticated-orcid": false,
+      "given": "Xintong",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Laboratory of Nano Optoelectronics, Institute of Semiconductors, Chinese Academy of Sciences, Beijing 100083, China"
+       },
+       {
+        "name": "College of Materials Science and Opto-Electronic Technology, University of Chinese Academy of Sciences, Beijing 100049, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peng",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Laboratory of Nano Optoelectronics, Institute of Semiconductors, Chinese Academy of Sciences, Beijing 100083, China"
+       },
+       {
+        "name": "School of Electronic, Electrical and Communication Engineering, University of Chinese Academy of Sciences, Beijing 100049, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jinye",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Laboratory of Nano Optoelectronics, Institute of Semiconductors, Chinese Academy of Sciences, Beijing 100083, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jianguo",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Laboratory of Nano Optoelectronics, Institute of Semiconductors, Chinese Academy of Sciences, Beijing 100083, China"
+       },
+       {
+        "name": "College of Materials Science and Opto-Electronic Technology, University of Chinese Academy of Sciences, Beijing 100049, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       3,
+       30
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1007/s11801-022-2049-y",
+    "title": [
+     "High performance electro-optic modulator based on thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Leshu",
+      "family": "Liu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ning",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jianfa",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhihong",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ken",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       10
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

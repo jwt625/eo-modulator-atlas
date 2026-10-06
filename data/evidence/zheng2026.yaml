@@ -333,4 +333,25 @@ entries:
   basis: derived
   locator: p.1 abstract
   note: abstract states Vpi of 4 V in push-pull configuration; convention not defined further
+- device_id: zheng2026-g4
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. V; Fig. 4(f)
+  note: 'source: The devices are driven by an RF signal generator, providing a triangular wave at a frequency of 100 ...'
+- device_id: zheng2026-g5
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. V; p.9 Fig. 4(f)
+  note: 'source: The devices are driven by an RF signal generator, providing a triangular wave at a frequency of 100 ...'
+- device_id: zheng2026-g6
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. V; p.9 Fig. 4(f)
+  note: 'source: The devices are driven by an RF signal generator, providing a triangular wave at a frequency of 100 ...'
 derived: []

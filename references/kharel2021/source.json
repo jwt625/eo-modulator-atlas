@@ -2,11 +2,16 @@
  "paper_id": "kharel2021",
  "url": "https://doi.org/10.1364/optica.416155",
  "doi": "10.1364/optica.416155",
- "license": "Optica OA License v1 (journal VOR, per Crossref); cached PDF is arXiv v1 and its license is not shown in the PDF (unverified)",
+ "license": "CC-BY-NC-ND-4.0",
  "local_origin": "local_corpus",
  "sha256": "9296fea00a56a010598f7e919016d7e11916ae66455228db271e92830b26fcd7",
  "pages": 7,
  "text_chars": 28270,
  "n_figure_files": 13,
- "extracted_on": "2026-10-01"
+ "extracted_on": "2026-10-01",
+ "license_note": "previous value: Optica OA License v1 (journal VOR, per Crossref); cached PDF is arXiv v1 and its license is not shown in the PDF (unverified)",
+ "redistribution": "restricted_local_only",
+ "source_version": "2011.13422v1",
+ "license_verified": true,
+ "license_source": "references/kharel2021/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

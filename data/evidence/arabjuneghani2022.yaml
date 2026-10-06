@@ -399,4 +399,18 @@ entries:
   basis: derived
   locator: p.2 Sec. 2; p.3 Sec. 3.1
   note: authors state push-pull MZMs; Vpi from the MZM transmission sweep
+- device_id: arabjuneghani2022-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. 3.1
+  note: 'source: Vπ is measured through a real-time modulation response by applying a 100 kHz triangular voltage sweep.'
+- device_id: arabjuneghani2022-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. 3.1
+  note: 'source: Vπ is measured through a real-time modulation response by applying a 100 kHz triangular voltage sweep.'
 derived: []

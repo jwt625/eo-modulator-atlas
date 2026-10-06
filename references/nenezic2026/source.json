@@ -4,8 +4,8 @@
  "doi": "",
  "source_type": "arxiv_preprint",
  "source_version": "2605.28765v1",
- "license": "",
- "license_verified": false,
+ "license": "CC-BY-NC-SA-4.0",
+ "license_verified": true,
  "redistribution": "restricted_local_only",
  "retrieved_on": "2026-10-03T03:20:35+00:00",
  "acquisition_origin": "public_primary_source",
@@ -19,5 +19,6 @@
  "title": "A variability-aware simulation and design workflow for wafer-scale, heterogeneously integrated lithium niobate modulators",
  "identity_checked_on": "2026-10-02",
  "identity_check": "First-page title and authors checked against paper identity; source version retained separately.",
- "extraction_notes": []
+ "extraction_notes": [],
+ "license_source": "references/nenezic2026/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

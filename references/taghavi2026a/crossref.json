@@ -1,0 +1,261 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:26:09Z",
+   "timestamp": 1786991169723,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 7,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We introduce a proof-of-concept of a foundry-compatible ferroelectric nematic liquid crystal-on-silicon platform for miniaturized optical modulators. Its operation is based on a dual-mechanism phase shift, negating the need for power-intensive thermo-optic heaters or electrical poling.</jats:p>",
+  "DOI": "10.1364/ofc.2026.th1h.3",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:27:11Z",
+   "timestamp": 1780428431000
+  },
+  "page": "Th1H.3",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "DC-to-GHz Modulators in Ferroelectric Nematic Liquid Crystal-on-Si Platforms"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Iman",
+    "family": "Taghavi",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Cory",
+    "family": "Pecinovsky",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nicolas A.F.",
+    "family": "Jaeger",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Lukas",
+    "family": "Chrostowski",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sudip",
+    "family": "Shekhar",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-Th1H.3-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "288",
+    "DOI": "10.1038/s41467-024-55162-5",
+    "type": "journal-article",
+    "volume": "16",
+    "author": "Hong",
+    "year": "2025",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "OFC-2026-Th1H.3-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "8178",
+    "DOI": "10.1038/s41467-025-62635-8",
+    "type": "journal-article",
+    "volume": "16",
+    "author": "Hu",
+    "year": "2025",
+    "journal-title": "Nature Communications"
+   },
+   {
+    "key": "OFC-2026-Th1H.3-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "15520",
+    "DOI": "10.1364/OE.17.015520",
+    "type": "journal-article",
+    "volume": "17",
+    "author": "Park",
+    "year": "2009",
+    "journal-title": "Optics express"
+   },
+   {
+    "key": "OFC-2026-Th1H.3-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "type": "journal-article",
+    "volume": "13",
+    "author": "He",
+    "year": "2019",
+    "journal-title": "Nature Photonics"
+   },
+   {
+    "key": "OFC-2026-Th1H.3-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "e255",
+    "DOI": "10.1038/lsa.2015.28",
+    "type": "journal-article",
+    "volume": "4",
+    "author": "Koeber",
+    "year": "2015",
+    "journal-title": "Light: Science  Applications"
+   },
+   {
+    "key": "OFC-2026-Th1H.3-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "899",
+    "DOI": "10.1080/02678292.2022.2056927",
+    "type": "journal-article",
+    "volume": "49",
+    "author": "Folcia",
+    "year": "2022",
+    "journal-title": "Liquid Crystals"
+   },
+   {
+    "key": "OFC-2026-Th1H.3-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "796",
+    "DOI": "10.1109/LPT.2021.3097202",
+    "type": "journal-article",
+    "volume": "33",
+    "author": "Chiang",
+    "year": "2021",
+    "journal-title": "IEEE Photonics Technology Letters"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-Th1H.3&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:26:51Z",
+   "timestamp": 1786987611000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-Th1H.3"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 7,
+  "URL": "https://doi.org/10.1364/ofc.2026.th1h.3",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

@@ -216,4 +216,18 @@ entries:
   basis: design_target
   locator: p.4-5 text
   note: two commercial BTO thicknesses used for photonic crystals
+- device_id: berman2026-a
+  field: r_eff_pm_per_v
+  value: 154.0
+  unit: pm/V
+  basis: derived
+  locator: p.4, Eq. (1)
+  note: Authors compute from own DC tuning slope with Eq. (1); lambda0 1550 nm, Gamma_eo 0.51 (simulated), n_eff 1.9, FSR 1.1 nm; a-b film r42-type
+- device_id: berman2026-b
+  field: r_eff_pm_per_v
+  value: 145.0
+  unit: pm/V
+  basis: derived
+  locator: p.6
+  note: Same relation as racetrack Eq. (1) applied to the FP cavity; derived from own measured tuning slope
 derived: []

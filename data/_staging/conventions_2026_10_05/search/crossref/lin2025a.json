@@ -1,0 +1,520 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 9004,
+  "items": [
+   {
+    "DOI": "10.1364/ome.577084",
+    "title": [
+     "Thermo-optic coefficient of single-crystal thin-film barium titanate on insulator"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-6973-8674",
+      "authenticated-orcid": true,
+      "given": "Hong-Lin",
+      "family": "Lin",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/01tgyzw49",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yuhui",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/01tgyzw49",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lea",
+      "family": "Roos",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Université Polytechnique Hauts de France, Institut d’Electronique, de Microélectronique et de Nanotechnologie - site de Valenciennes"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Elhadj",
+      "family": "Dogheche",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Université Polytechnique Hauts de France, Institut d’Electronique, de Microélectronique et de Nanotechnologie - site de Valenciennes"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9090-9626",
+      "authenticated-orcid": true,
+      "given": "Aaron J.",
+      "family": "Danner",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/01tgyzw49",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       27
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3390/photonics13010033",
+    "title": [
+     "Mach–Zehnder Interferometer Electro-Optic Modulator Based on Thin-Film Lithium Niobate Valley Photonic Crystal"
+    ],
+    "author": [
+     {
+      "given": "Ying",
+      "family": "Yao",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "College of Physics and Optoelectronics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "Shanxi Key Laboratory of Precision Measurement Physics, Taiyuan University of Technology, Taiyuan 030024, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hongming",
+      "family": "Fei",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Physics and Optoelectronics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "Shanxi Key Laboratory of Precision Measurement Physics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "State Key Laboratory of Quantum Optics and Quantum Optics Devices, Shanxi University, Taiyuan 030006, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xin",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Physics and Optoelectronics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "Shanxi Key Laboratory of Precision Measurement Physics, Taiyuan University of Technology, Taiyuan 030024, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0004-3376-8486",
+      "authenticated-orcid": false,
+      "given": "Mingda",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Physics and Optoelectronics, Taiyuan University of Technology, Taiyuan 030024, China"
+       },
+       {
+        "name": "Shanxi Key Laboratory of Precision Measurement Physics, Taiyuan University of Technology, Taiyuan 030024, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Pengqi",
+      "family": "Dong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The Institute of Architectural Design and Research of Taiyuan University of Technology Co, Ltd., Taiyuan 030006, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Junjun",
+      "family": "Ren",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Shanxi Chenghaoxin Intelligent Technology Co., Ltd., Taiyuan 030006, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-6262-1959",
+      "authenticated-orcid": false,
+      "given": "Han",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Centre for Atomaterials and Nanomanufacturing, School of Science, Royal Melbourne Institute of Technology University, Melbourne, VIC 3000, Australia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       12,
+       30
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/ipc65510.2025.11282331",
+    "title": [
+     "Mach-Zehnder Interferometor in Thin Film Barium Titanate on Insulator by Wet Etching"
+    ],
+    "author": [
+     {
+      "given": "Hong-Lin",
+      "family": "Lin",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "National University of Singapore,Department of Electrical and Computer Engineering,Singapore,119077"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuhui",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National University of Singapore,Department of Electrical and Computer Engineering,Singapore,119077"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yu",
+      "family": "Cao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National University of Singapore,Department of Electrical and Computer Engineering,Singapore,119077"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Aaron J.",
+      "family": "Danner",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National University of Singapore,Department of Electrical and Computer Engineering,Singapore,119077"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       9
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.optlaseng.2004.09.011",
+    "title": [
+     "Measurements of phase retardation and principal axis angle using an electro-optic modulated Mach–Zehnder interferometer"
+    ],
+    "author": [
+     {
+      "given": "S.Y.",
+      "family": "Lee",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "J.F.",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Y.L.",
+      "family": "Lo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2005,
+       6
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_si.2024.stu3e.5",
+    "title": [
+     "Periodic poling of single crystal thin film barium titanate-on-insulator"
+    ],
+    "author": [
+     {
+      "given": "Pragati",
+      "family": "Aashna",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hong-Lin",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yu",
+      "family": "Cao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuan",
+      "family": "Gao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sakthi Sanjeev",
+      "family": "Mohanraj",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Di",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Aaron",
+      "family": "Danner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

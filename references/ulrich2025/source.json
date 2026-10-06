@@ -4,8 +4,8 @@
  "doi": "10.1126/science.adx3741",
  "source_type": "arxiv_preprint",
  "source_version": "2502.14349v1",
- "license": "",
- "license_verified": false,
+ "license": "arXiv-nonexclusive-1.0",
+ "license_verified": true,
  "redistribution": "restricted_local_only",
  "retrieved_on": "2026-10-03T03:21:43+00:00",
  "acquisition_origin": "public_primary_source",
@@ -19,5 +19,6 @@
  "title": "Engineering high Pockels coefficients in thin-film strontium titanate for cryogenic quantum electro-optic applications",
  "identity_checked_on": "2026-10-02",
  "identity_check": "First-page title and authors checked against paper identity; source version retained separately.",
- "extraction_notes": []
+ "extraction_notes": [],
+ "license_source": "references/ulrich2025/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

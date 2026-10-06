@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2601.14938",
+ "title": "Solution-derived barium titanate waveguides for integrated electro-optic modulation",
+ "authors": "Virginia Falcone, Eleni Prountzou, Jost Kellner, \\\"Ulle-Linda Talts, Rachel Grange",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 21 Jan 2026 12:33:31 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T19:57:01Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2601.14938\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2601.14938</identifier>\n        <datestamp>2026-01-22</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2601.14938</id>\n        <submitter>Virginia Falcone</submitter>\n            <version version=\"v1\">\n                <date>Wed, 21 Jan 2026 12:33:31 GMT</date>\n                <size>32603kb</size>\n            </version>\n        <title>Solution-derived barium titanate waveguides for integrated electro-optic modulation</title>\n        <authors>Virginia Falcone, Eleni Prountzou, Jost Kellner, \\&#34;Ulle-Linda Talts, Rachel Grange</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Metal oxides with strong nonlinear optical properties and wide transparency window are key materials for the development of compact and efficient photonic integrated circuits used for electro-optic modulators and entangled photon sources. Among them, barium titanate (BaTiO$_{3}$) is particularly attractive due to its large Pockels coefficient. However, its use has been limited by challenges in material synthesis and in nanopatterning, owing to its chemical stability and inertness. Here, we demonstrate a monolithic electro-optic modulator entirely based on solution-deposited BaTiO$_{3}$, fabricated through a bottom-up soft nanoimprinting lithography process. Fine-tuning the synthesis and nanofabrication enhances the optical properties of the polycrystalline material. By optimizing the process parameters, we achieve a reduction in propagation losses of two orders of magnitude, enabling efficient electro-optic modulation. This scalable, etch-free approach enables direct patterning of high-quality BaTiO$_{3}$ structures, establishing a new route for low-cost, large-scale integrated electro-optic devices entirely based on oxide material compatible with a wide range of substrates.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

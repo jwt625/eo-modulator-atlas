@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2002.08176",
+ "title": "Silicon-Organic Hybrid (SOH) Mach-Zehnder Modulators for 100 GBd PAM4 Signaling With Sub-1 dB Phase-Shifter Loss",
+ "authors": "Clemens Kieninger, Christoph F\\\"ullner, Heiner Zwickel, Yasar Kutuvantavida, Juned N. Kemal, Carsten Eschenbaum, Delwin L. Elder, Larry R. Dalton, Wolfgang Freude, Sebastian Randel, and Christian Koos",
+ "doi": "10.1364/OE.390315",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 19 Feb 2020 13:36:23 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:06:43Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2002.08176\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2002.08176</identifier>\n        <datestamp>2020-08-26</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2002.08176</id>\n        <submitter>Clemens Kieninger</submitter>\n            <version version=\"v1\">\n                <date>Wed, 19 Feb 2020 13:36:23 GMT</date>\n                <size>1152kb</size>\n            </version>\n        <title>Silicon-Organic Hybrid (SOH) Mach-Zehnder Modulators for 100 GBd PAM4 Signaling With Sub-1 dB Phase-Shifter Loss</title>\n        <authors>Clemens Kieninger, Christoph F\\&#34;ullner, Heiner Zwickel, Yasar Kutuvantavida, Juned N. Kemal, Carsten Eschenbaum, Delwin L. Elder, Larry R. Dalton, Wolfgang Freude, Sebastian Randel, and Christian Koos</authors>\n        <categories>physics.app-ph</categories>\n            <doi>10.1364/OE.390315</doi>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>We report on compact and efficient silicon-organic hybrid (SOH) Mach-Zehnder modulators (MZM) with low phase shifter insertion loss of 0.7 dB. The 280 $\\mu$m-long phase shifters feature a $\\pi$-voltage-length product of 0.41 Vmm and a loss-efficiency product as small as $aU_{\\pi}L = 1.0\\space\\rm{VdB}$. The device performance is demonstrated in a data transmission experiment, where we generate on-off-keying (OOK) and four-level pulse-amplitude modulation (PAM4) signals at symbol rates of 100 GBd, resulting in line rates of up to 200 Gbit/s. Bit error ratios are below the threshold for hard-decision forward error correction (HD-FEC) with 7 % coding overhead, leading to net data rates of 187 Gbit/s. This is the highest PAM4 data rate ever achieved for a sub-1 mm silicon photonic MZM.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

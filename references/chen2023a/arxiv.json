@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2304.06946",
+ "title": "High-efficiency electro-optic modulator on thin-film lithium niobate with high-permittivity cladding",
+ "authors": "Nuo Chen, Kangping Lou, Yalong Yu, Xuanjian He, Tao Chu",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Fri, 14 Apr 2023 06:25:22 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T19:54:58Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2304.06946\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2304.06946</identifier>\n        <datestamp>2023-04-17</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2304.06946</id>\n        <submitter>Nuo Chen</submitter>\n            <version version=\"v1\">\n                <date>Fri, 14 Apr 2023 06:25:22 GMT</date>\n                <size>751kb</size>\n            </version>\n        <title>High-efficiency electro-optic modulator on thin-film lithium niobate with high-permittivity cladding</title>\n        <authors>Nuo Chen, Kangping Lou, Yalong Yu, Xuanjian He, Tao Chu</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>10 pages, 6 figures</comments>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Thin-film lithium niobate is a promising platform owing to its large electro-optic coefficients and low propagation loss. However, the large footprints of devices limit their application in large-scale integrated optical systems. A crucial challenge is how to maintain the performance advantage given the design space restrictions in this situation. This article proposes and demonstrates a high-efficiency lithium niobate electro-optic (EO) modulator with high-permittivity cladding to improve the electric field strength in waveguides and its overlap with optical fields while maintaining low optical loss and broad bandwidth. The proposed modulator exhibits considerable improvement, featuring a low half-wave voltage-length product of 1.41 Vcm, a low excess loss of 0.5 dB, and a broad 3 dB EO bandwidth of more than 40 GHz. This modulation efficiency is the highest reported for a broadband lithium niobate modulator so far. The design scheme of using high-permittivity cladding may provide a promising solution for improving the integration of photonic devices on the thin-film lithium niobate platform and these devices may serve as fundamental components in large-scale photonic integrated circuits in the future.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

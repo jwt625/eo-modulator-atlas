@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2206.13835",
+ "title": "Systematic Investigation of Millimeter-Wave Optic Modulation Performance in Thin-Film Lithium Niobate",
+ "authors": "Yiwen Zhang, Linbo Shao, Jingwei Yang, Zhaoxi Chen, Ke Zhang, Kam-Man Shum, Di Zhu, Chi Hou Chan, Marko Lon\\v{c}ar and Cheng Wang",
+ "doi": "10.1364/PRJ.468518",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Tue, 28 Jun 2022 09:07:45 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Tue, 05 Jul 2022 08:41:56 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:20:54Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2206.13835\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2206.13835</identifier>\n        <datestamp>2022-10-27</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2206.13835</id>\n        <submitter>Yiwen Zhang</submitter>\n            <version version=\"v1\">\n                <date>Tue, 28 Jun 2022 09:07:45 GMT</date>\n                <size>2910kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Tue, 05 Jul 2022 08:41:56 GMT</date>\n                <size>2398kb</size>\n            </version>\n        <title>Systematic Investigation of Millimeter-Wave Optic Modulation Performance in Thin-Film Lithium Niobate</title>\n        <authors>Yiwen Zhang, Linbo Shao, Jingwei Yang, Zhaoxi Chen, Ke Zhang, Kam-Man Shum, Di Zhu, Chi Hou Chan, Marko Lon\\v{c}ar and Cheng Wang</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <doi>10.1364/PRJ.468518</doi>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Millimeter-wave (mmWave) band (30 - 300 GHz) is an emerging spectrum range for wireless communication, short-range radar and sensor applications. mmWave-optic modulators that could efficiently convert mmWave signals into optical domain are crucial components for long-haul transmission of mmWave signals through optical networks. At these ultrahigh frequencies, however, the modulation performances are highly sensitive to the transmission line loss as well as the velocity- and impedance-matching conditions, while precise measurements and modeling of these parameters are often non-trivial. Here we present a systematic investigation of the mmWave-optic modulation performances of thin-film lithium niobate modulators through theoretical modeling, electrical verifications and electro-optic measurements at frequencies up to 325 GHz. Based on our experimentally verified model, we demonstrate thin-film lithium niobate mmWave-optic modulators with a measured 3-dB electro-optic bandwidth of 170 GHz and a 6-dB bandwidth of 295 GHz. The device also shows a low RF half-wave voltage of 7.3 V measured at an ultrahigh modulation frequency of 250 GHz. This work provides a comprehensive guideline for the design and characterization of mmWave-optic modulators and paves the way toward future integrated mmWave photonic systems for beyond-5G communication and radar applications.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

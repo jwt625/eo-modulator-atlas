@@ -1,0 +1,268 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:25:03Z",
+   "timestamp": 1786991103432,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 4,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate a compact EML array, featuring integrated RF routing and reduced channel spacing for high bandwidth density. The device delivers 770 Gb/s/mm, supports fiber reach of 11 km, and uncooled operation.</jats:p>",
+  "DOI": "10.1364/ofc.2026.tu3j.3",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:28:13Z",
+   "timestamp": 1780428493000
+  },
+  "page": "Tu3J.3",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "High-Bandwidth-Density Uncooled EML Array for up to 770 Gb/s/mm and 11 km Fiber Reach"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "M.",
+    "family": "Theurer",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "G. Vasudevan",
+    "family": "Rajeswari",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "J.",
+    "family": "Andree",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "C.",
+    "family": "Kottke",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "R.",
+    "family": "Freund",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "P.",
+    "family": "Runge",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "M.",
+    "family": "Moehrle",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Sigmund",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "M.",
+    "family": "Schell",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-Tu3J.3-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "11244",
+    "DOI": "10.1364/OE.549192",
+    "type": "journal-article",
+    "volume": "33",
+    "author": "Sun",
+    "year": "2025",
+    "journal-title": "Opt. Express, OE"
+   },
+   {
+    "key": "OFC-2026-Tu3J.3-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "3299",
+    "DOI": "10.1109/JLT.2022.3153648",
+    "type": "journal-article",
+    "volume": "40",
+    "author": "Diamantopoulos",
+    "year": "2022",
+    "journal-title": "Journal of Lightwave Technology"
+   },
+   {
+    "key": "OFC-2026-Tu3J.3-R4",
+    "first-page": "Th1E.5",
+    "author": "Theurer",
+    "journal-title": "ECOC 2022",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Tu3J.3-R5",
+    "first-page": "Tu.1.3.3",
+    "author": "Runge",
+    "journal-title": "ECOC 2015",
+    "type": "journal-article"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-Tu3J.3&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:27:18Z",
+   "timestamp": 1786987638000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-Tu3J.3"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 4,
+  "URL": "https://doi.org/10.1364/ofc.2026.tu3j.3",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,676 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 14435,
+  "items": [
+   {
+    "DOI": "10.1021/acsphotonics.5c00159",
+    "title": [
+     "Thin-Film Lithium Tantalate Modulator Operating at High Optical Power"
+    ],
+    "author": [
+     {
+      "given": "Haohua",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ao",
+      "family": "Cui",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bin",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, International Research Center for Advanced Photonics, Zhejiang University, East Bldg. No. 5, Zijingang Campus, Hangzhou 310058, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ziliang",
+      "family": "Ruan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, International Research Center for Advanced Photonics, Zhejiang University, East Bldg. No. 5, Zijingang Campus, Hangzhou 310058, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Changjian",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+       },
+       {
+        "name": "National Center for International Research on Green Optoelectronics",
+        "place": [
+         "Guangzhou, China"
+        ]
+       },
+       {
+        "name": "South China Normal University",
+        "place": [
+         "Guangzhou, China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2538-6793",
+      "authenticated-orcid": true,
+      "given": "Kaixuan",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Guangdong Provincial Key Laboratory of Optical Information Materials and Technology, South China Academy of Advanced Optoelectronics, South China Normal University, Sci. Bldg. No. 5, Higher-Education Mega-Center, Guangzhou 510006, China"
+       },
+       {
+        "name": "National Center for International Research on Green Optoelectronics",
+        "place": [
+         "Guangzhou, China"
+        ]
+       },
+       {
+        "name": "South China Normal University",
+        "place": [
+         "Guangzhou, China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-3651-544X",
+      "authenticated-orcid": true,
+      "given": "Liu",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, International Research Center for Advanced Photonics, Zhejiang University, East Bldg. No. 5, Zijingang Campus, Hangzhou 310058, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       6,
+       26
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/lpor.202502357",
+    "title": [
+     "Waveguide‐Integrated Broadband Pyroelectric Photodetector on Thin‐Film Lithium Tantalate"
+    ],
+    "author": [
+     {
+      "given": "Muchun",
+      "family": "Lin",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation College of Optical Science and Engineering International Research Center for Advanced Photonics East Bldg. No. 5 Zijingang Campus Zhejiang University  Hangzhou China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ziliang",
+      "family": "Ruan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation College of Optical Science and Engineering International Research Center for Advanced Photonics East Bldg. No. 5 Zijingang Campus Zhejiang University  Hangzhou China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bin",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation College of Optical Science and Engineering International Research Center for Advanced Photonics East Bldg. No. 5 Zijingang Campus Zhejiang University  Hangzhou China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xijie",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation College of Optical Science and Engineering International Research Center for Advanced Photonics East Bldg. No. 5 Zijingang Campus Zhejiang University  Hangzhou China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hengtai",
+      "family": "Xiang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation College of Optical Science and Engineering International Research Center for Advanced Photonics East Bldg. No. 5 Zijingang Campus Zhejiang University  Hangzhou China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Guowu",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Jiaxing Key Laboratory of Photonic Sensing &amp; Intelligent Imaging Intelligent Optics &amp; Photonics Research Center Jiaxing Research Institute Zhejiang University  Jiaxing China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lifeng",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Liobate Technology Co., Ltd.  Nanjing China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jingshu",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation College of Optical Science and Engineering International Research Center for Advanced Photonics East Bldg. No. 5 Zijingang Campus Zhejiang University  Hangzhou China"
+       },
+       {
+        "name": "Jiaxing Key Laboratory of Photonic Sensing &amp; Intelligent Imaging Intelligent Optics &amp; Photonics Research Center Jiaxing Research Institute Zhejiang University  Jiaxing China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Daoxin",
+      "family": "Dai",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation College of Optical Science and Engineering International Research Center for Advanced Photonics East Bldg. No. 5 Zijingang Campus Zhejiang University  Hangzhou China"
+       },
+       {
+        "name": "Jiaxing Key Laboratory of Photonic Sensing &amp; Intelligent Imaging Intelligent Optics &amp; Photonics Research Center Jiaxing Research Institute Zhejiang University  Jiaxing China"
+       },
+       {
+        "name": "Ningbo Research Institute Zhejiang University  Ningbo China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-3651-544X",
+      "authenticated-orcid": false,
+      "given": "Liu",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation College of Optical Science and Engineering International Research Center for Advanced Photonics East Bldg. No. 5 Zijingang Campus Zhejiang University  Hangzhou China"
+       },
+       {
+        "name": "Jiaxing Key Laboratory of Photonic Sensing &amp; Intelligent Imaging Intelligent Optics &amp; Photonics Research Center Jiaxing Research Institute Zhejiang University  Jiaxing China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       26
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.3087452",
+    "title": [
+     "Nonlinear wavelength conversion in periodically poled thin-film lithium tantalate"
+    ],
+    "author": [
+     {
+      "given": "Jingyan",
+      "family": "Guo",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Haoran",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Fei",
+      "family": "Huang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zejie",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Daoxin",
+      "family": "Dai",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       12,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/acp/ipoc63121.2024.10810069",
+    "title": [
+     "Broadband Thin-Film Lithium Niobate (TFLN) TE-Pass Waveguide Polarizer"
+    ],
+    "author": [
+     {
+      "given": "Yudan",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics,Wuhan,China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuzheng",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics,Wuhan,China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ge",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics,Wuhan,China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Lirong",
+      "family": "Huang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics,Wuhan,China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Qiaoyin",
+      "family": "Lu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics,Wuhan,China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Weihua",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huazhong University of Science and Technology,Wuhan National Laboratory for Optoelectronics,Wuhan,China"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       11,
+       2
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/1.oe.61.5.057101",
+    "title": [
+     "Modeling of thin-film lithium niobate modulator for visible light"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-2549-5903",
+      "authenticated-orcid": false,
+      "given": "Chijun",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "South China Normal University, South China Academy of Advanced Optoelectronics, Higher-Education Meg"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Pengxin",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "South China Normal Univ."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8958-9784",
+      "authenticated-orcid": false,
+      "given": "Jun",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "South China Normal Univ."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Kaixuan",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "South China Normal Univ."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Changjian",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "South China Normal Univ."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Liu",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Zhejiang Univ."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       5,
+       12
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

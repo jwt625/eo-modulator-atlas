@@ -29,11 +29,11 @@ entries:
   note: Product stated without length or formula; method not given
 - device_id: tran2026-a
   field: bias_for_vpi_v
-  value: 5
+  value: -5.0
   unit: V
-  basis: measured
-  locator: p.2, Sec. 3; Fig. 1 center
-  note: Bias polarity not stated
+  basis: derived
+  locator: p.2; Fig. 1
+  note: source "Vpi = 3.1 V at 5 V bias voltage", unsigned; reverse bias of a p-i-n MZM, negative per convention (v)
 - device_id: tran2026-a
   field: bw3db_ghz
   value: 76

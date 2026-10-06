@@ -1,0 +1,470 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 49,
+  "items": [
+   {
+    "DOI": "10.1109/iedm50572.2025.11353517",
+    "title": [
+     "Ultralow-power, High-speed Integrated Si Photonic Switch Enabled by III–V/Si Hybrid MOS Optical Phase Shifters"
+    ],
+    "author": [
+     {
+      "given": "T.",
+      "family": "Akazawa",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "R.",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "H.",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "M.",
+      "family": "Okano",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National Institute of Advanced Industrial Science and Technology (AIST),Ibaraki,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "N.",
+      "family": "Matsuda",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Tohoku University,Research Institute of Electrical Communication,Miyagi,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "K.",
+      "family": "Toprasertpong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "S.",
+      "family": "Takagi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "M.",
+      "family": "Takenaka",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       12,
+       6
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/vlsic.1989.1037506",
+    "title": [
+     "Jitter analysis of high speed sampling systems"
+    ],
+    "author": [
+     {
+      "family": "Shinagawa",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "family": "Akazawa",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "family": "Wakimoto",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       1989
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/ecoc66593.2025.11263031",
+    "title": [
+     "Phase-Error-Correctable 4×4 Programmable Photonic Integrated Circuit Enabled by Dual-Functional Si PIN Waveguides as Phase Shifter and Transparent Power Monitor"
+    ],
+    "author": [
+     {
+      "given": "Tomohiro",
+      "family": "Akazawa",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Rui",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuto",
+      "family": "Miyatake",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Makoto",
+      "family": "Okano",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National Institute of Advanced Industrial Science and Technology (AIST),Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Kasidit",
+      "family": "Toprasertpong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shinichi",
+      "family": "Takagi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mitsuru",
+      "family": "Takenaka",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Tokyo,Department of Electrical Engineering and Information Systems,Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       9,
+       28
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/4.50307",
+    "title": [
+     "Jitter analysis of high-speed sampling systems"
+    ],
+    "author": [
+     {
+      "given": "M.",
+      "family": "Shinagawa",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Y.",
+      "family": "Akazawa",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "T.",
+      "family": "Wakimoto",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1990
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/4.375959",
+    "title": [
+     "Data-dependent logic swing internal bus architecture for ultralow-power LSI's"
+    ],
+    "author": [
+     {
+      "given": "M.",
+      "family": "Hiraki",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "H.",
+      "family": "Kojima",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "H.",
+      "family": "Misawa",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "T.",
+      "family": "Akazawa",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Y.",
+      "family": "Hatano",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1995,
+       4
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

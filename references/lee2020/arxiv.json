@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2007.00955",
+ "title": "High performance integrated graphene electro-optic modulator at cryogenic temperature",
+ "authors": "Brian S. Lee, Bumho Kim, Alexandre P. Freitas, Aseema Mohanty, Yibo Zhu, Gaurang R. Bhatt, James Hone, Michal Lipson",
+ "doi": "10.1515/nanoph-2020-0363",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 02 Jul 2020 08:23:51 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:07:01Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2007.00955\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2007.00955</identifier>\n        <datestamp>2020-11-13</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2007.00955</id>\n        <submitter>Brian Lee</submitter>\n            <version version=\"v1\">\n                <date>Thu, 02 Jul 2020 08:23:51 GMT</date>\n                <size>5079kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>High performance integrated graphene electro-optic modulator at cryogenic temperature</title>\n        <authors>Brian S. Lee, Bumho Kim, Alexandre P. Freitas, Aseema Mohanty, Yibo Zhu, Gaurang R. Bhatt, James Hone, Michal Lipson</authors>\n        <categories>physics.app-ph physics.optics</categories>\n            <comments>10 pages, 4 figures, Supplementary Information</comments>\n            <doi>10.1515/nanoph-2020-0363</doi>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>High performance integrated electro-optic modulators operating at low temperature are critical for optical interconnects in cryogenic applications. Existing integrated modulators, however, suffer from reduced modulation efficiency or bandwidth at low temperatures because they rely on tuning mechanisms that degrade with decreasing temperature. Graphene modulators are a promising alternative, since graphene&#39;s intrinsic carrier mobility increases at low temperature. Here we demonstrate an integrated graphene-based electro-optic modulator whose 14.7 GHz bandwidth at 4.9 K exceeds the room-temperature bandwidth of 12.6 GHz. The bandwidth of the modulator is limited only by high contact resistance, and its intrinsic RC-limited bandwidth is 200 GHz at 4.9 K.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

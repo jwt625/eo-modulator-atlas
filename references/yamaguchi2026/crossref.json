@@ -1,0 +1,310 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:26:41Z",
+   "timestamp": 1786991201329,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 4,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We review electro-optic equalizer-integrated thin-film lithium-niobate modulators enabling bandwidths beyond 100 GHz with a low half-wave voltage. This design mitigates the efficiency–bandwidth trade-off, supporting ultra-high-baud-rate optical transmission beyond 200 GBaud.</jats:p>",
+  "DOI": "10.1364/ofc.2026.w1a.1",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:28:47Z",
+   "timestamp": 1780428527000
+  },
+  "page": "W1A.1",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Integrated Electro-Optic Frequency-Domain Equalizer for Ultra-Broadband Optical Modulator"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Yuya",
+    "family": "Yamaguchi",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Paikun",
+    "family": "Zhu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Pham Tien",
+    "family": "Dat",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shingo",
+    "family": "Takano",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shotaro",
+    "family": "Hirata",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yu",
+    "family": "Kataoka",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Junichiro",
+    "family": "Ichikawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ryo",
+    "family": "Shimizu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kouichi",
+    "family": "Akahane",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Naokatsu",
+    "family": "Yamamoto",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Atsushi",
+    "family": "Kanno",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tetsuya",
+    "family": "Kawanishi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-W1A.1-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "eabj4396",
+    "DOI": "10.1126/science.abj4396",
+    "type": "journal-article",
+    "volume": "379",
+    "author": "Boes",
+    "year": "2023",
+    "journal-title": "Science"
+   },
+   {
+    "key": "OFC-2026-W1A.1-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "488",
+    "DOI": "10.1002/lpor.201100035",
+    "type": "journal-article",
+    "volume": "6",
+    "author": "Poberaj",
+    "year": "2012",
+    "journal-title": "Laser and Photonics Reviews"
+   },
+   {
+    "key": "OFC-2026-W1A.1-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "type": "journal-article",
+    "volume": "562",
+    "author": "Wang",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "OFC-2026-W1A.1-R4",
+    "first-page": "3883",
+    "type": "journal-article",
+    "volume": "41",
+    "author": "Yamaguchi",
+    "year": "2023",
+    "journal-title": "JLT"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-W1A.1&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:27:35Z",
+   "timestamp": 1786987655000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-W1A.1"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 4,
+  "URL": "https://doi.org/10.1364/ofc.2026.w1a.1",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

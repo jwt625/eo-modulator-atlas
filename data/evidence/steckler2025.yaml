@@ -339,6 +339,34 @@ entries:
   unit: ''
   basis: design_target
   locator: p.2; Fig. 1(b) caption p.3; Fig. 2 caption p.4
+- device_id: steckler2025-a
+  field: temperature_k
+  value: 300.15
+  unit: K
+  basis: derived
+  locator: p.8, Methods
+  note: T(K) = 27 + 273.15; stated chuck temperature of the wafer prober for the optical/S-parameter measurements.
+- device_id: steckler2025-b
+  field: temperature_k
+  value: 300.15
+  unit: K
+  basis: derived
+  locator: p.8, Methods
+  note: T(K) = 27 + 273.15; stated chuck temperature of the wafer prober for the optical/S-parameter measurements.
+- device_id: steckler2025-c
+  field: temperature_k
+  value: 300.15
+  unit: K
+  basis: derived
+  locator: p.8, Methods
+  note: T(K) = 27 + 273.15; stated chuck temperature of the wafer prober for the optical/S-parameter measurements.
+- device_id: steckler2025-d
+  field: temperature_k
+  value: 300.15
+  unit: K
+  basis: derived
+  locator: p.7-8, Methods
+  note: T(K) = 27 + 273.15; chuck temperature stated for the DC/optical and S-parameter setups
 derived:
 - device_id: steckler2025-a
   field: max_baud_gbd

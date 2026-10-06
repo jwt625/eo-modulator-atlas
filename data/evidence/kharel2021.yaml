@@ -281,6 +281,13 @@ entries:
   basis: measured
   locator: p.4 Sec. III; Fig. 3(a)
   note: about 20 dB, DC voltage sweep
+- device_id: kharel2021-b
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.4 Sec. III; p.5 Fig. 3(a) label
+  note: 'source: Vπ,20-mm, 1MHz = 1.35 V'
 derived:
 - device_id: kharel2021-a
   field: slab_thickness_nm
@@ -297,34 +304,37 @@ derived:
   - eo_film_thickness_nm=600
   - etch_depth_nm=350
 context_values:
-  rf_phase_index_measured:
-    value: 2.23
-    locator: p.4 Sec. III
-    note: device not named; not entered on any row
-  rf_loss_fit_segmented_db_per_cm_per_sqrtghz:
-    value: 0.26
-    locator: p.4; Fig. 2(b)
-  rf_loss_fit_regular_db_per_cm_per_sqrtghz:
-    value: 0.69
-    locator: p.4; Fig. 2(b)
-    note: regular electrode on LN-on-silicon
-  vpi_50ghz_20mm_v:
-    value: 1.6
-    locator: p.2 Intro; p.4
-    note: stated by authors from 1.3 V and 1.8 dB roll-off; not entered (single-point column)
-  simulated_table_I_segmented_quartz:
-    vpi_l_vcm: 2.1
-    z_ohm: 42
-    rf_loss_db_per_cm_per_sqrtghz: 0.21
-    est_bw3db_ghz_for_vpi_dc_1v: 228
-    locator: p.3 Table I
-    note: HFSS simulation, signal width 100 um, gap 5 um
-  fig4_caption_vpi_l_vcm:
-    value: 2.3
-    locator: p.5 Fig. 4 caption
-    note: segmented thin-film device, not named; equals 2.3 V x 1 cm (10 mm arithmetic)
-  predicted_bw3db_20mm_ghz:
-    value: 180
-    locator: p.5 Discussion; Fig. 4(a)
-    note: authors extrapolation of measured loss; prediction
-  license_and_rights_basis: 'Crossref record: content-version vor, URL doi.org/10.1364/OA_License_v1#VOR-OA, start 2021-03-09; published-online 2021-03-09; arXiv v1 date from page-1 stamp 26 Nov 2020'
+- item: rf_phase_index_measured
+  value: 2.23
+  locator: p.4 Sec. III
+  note: device not named; not entered on any row
+- item: rf_loss_fit_segmented_db_per_cm_per_sqrtghz
+  value: 0.26
+  locator: p.4; Fig. 2(b)
+- item: rf_loss_fit_regular_db_per_cm_per_sqrtghz
+  value: 0.69
+  locator: p.4; Fig. 2(b)
+  note: regular electrode on LN-on-silicon
+- item: vpi_50ghz_20mm_v
+  value: 1.6
+  locator: p.2 Intro; p.4
+  note: stated by authors from 1.3 V and 1.8 dB roll-off; not entered (single-point column)
+- item: simulated_table_I_segmented_quartz
+  vpi_l_vcm: 2.1
+  z_ohm: 42
+  rf_loss_db_per_cm_per_sqrtghz: 0.21
+  est_bw3db_ghz_for_vpi_dc_1v: 228
+  locator: p.3 Table I
+  note: HFSS simulation, signal width 100 um, gap 5 um
+- item: fig4_caption_vpi_l_vcm
+  value: 2.3
+  locator: p.5 Fig. 4 caption
+  note: segmented thin-film device, not named; equals 2.3 V x 1 cm (10 mm arithmetic)
+- item: predicted_bw3db_20mm_ghz
+  value: 180
+  locator: p.5 Discussion; Fig. 4(a)
+  note: authors extrapolation of measured loss; prediction
+- item: license_and_rights_basis
+  value: 'Crossref record: content-version vor, URL doi.org/10.1364/OA_License_v1#VOR-OA, start 2021-03-09; published-online
+    2021-03-09; arXiv v1 date from page-1 stamp 26 Nov 2020'
+  locator: references/kharel2021/crossref.json

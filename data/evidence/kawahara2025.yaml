@@ -156,14 +156,6 @@ entries:
   basis: derived
   locator: p.8, Appendix C
   note: Sinusoid applied to one arm in the EO sweep; the authors do not name the transmitter drive scheme.
-- device_id: kawahara2025-a
-  field: bw3db_reference
-  value: 1ghz
-  unit: ''
-  basis: derived
-  locator: p.6, Fig. 4(c); p.8, Appendix C
-  note: Normalization frequency not stated; the sweep starts at 1 GHz and the -3 dB line is drawn on the
-    normalized axis.
 - device_id: kawahara2025-b
   field: drive
   value: single_ended
@@ -171,12 +163,4 @@ entries:
   basis: derived
   locator: p.8, Appendix C
   note: Sinusoid applied to one arm in the EO sweep; the authors do not name the transmitter drive scheme.
-- device_id: kawahara2025-b
-  field: bw3db_reference
-  value: 1ghz
-  unit: ''
-  basis: derived
-  locator: p.6, Fig. 4(c); p.8, Appendix C
-  note: Normalization frequency not stated; the sweep starts at 1 GHz and the -3 dB line is drawn on the
-    normalized axis.
 derived: []

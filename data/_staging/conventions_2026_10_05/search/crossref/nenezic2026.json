@@ -1,0 +1,750 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 2,
+  "items": [
+   {
+    "DOI": "10.1364/cleo_at.2025.pd104_5",
+    "title": [
+     "Lithium tantalate high-speed modulators on a silicon photonics platform"
+    ],
+    "author": [
+     {
+      "given": "Tom",
+      "family": "Vanackere",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Margot",
+      "family": "Niels",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ewoud",
+      "family": "Vissers",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Tingting",
+      "family": "Zhai",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Patrick",
+      "family": "Nenezic",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jakob",
+      "family": "Declercq",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cédric",
+      "family": "Bruynsteen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shengpu",
+      "family": "Niu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Arno",
+      "family": "Moerman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Olivier",
+      "family": "Caytan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Nishant",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sam",
+      "family": "Lemey",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xin",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sofie",
+      "family": "Janssen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peter",
+      "family": "Verheyen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Neha",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Dieter",
+      "family": "Bode",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Martin",
+      "family": "Davi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Filippo",
+      "family": "Ferraro",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Philippe",
+      "family": "Absil",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sadhishkumar",
+      "family": "Balakrishnan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Joris",
+      "family": "Van Campenhout",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Günther",
+      "family": "Roelkens",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Maximilien",
+      "family": "Billet",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/cleo/europe-eqec65582.2025.11111408",
+    "title": [
+     "High-Speed Lithium Tantalate-Based Silicon Photonic Modulators"
+    ],
+    "author": [
+     {
+      "given": "Margot",
+      "family": "Niels",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Photonics Research Group,Department of Information Technology (INTEC),Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Tom",
+      "family": "Vanackere",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Photonics Research Group,Department of Information Technology (INTEC),Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ewoud",
+      "family": "Vissers",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Photonics Research Group,Department of Information Technology (INTEC),Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Tingting",
+      "family": "Zhai",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Photonics Research Group,Department of Information Technology (INTEC),Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Patrick",
+      "family": "Nenezic",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Photonics Research Group,Department of Information Technology (INTEC),Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jakob",
+      "family": "Declercq",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cédric",
+      "family": "Bruynsteen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shengpu",
+      "family": "Niu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Arno",
+      "family": "Moerman",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Olivier",
+      "family": "Caytan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Nishant",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sam",
+      "family": "Lemey",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xin",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sofie",
+      "family": "Janssen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peter",
+      "family": "Verheyen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Neha",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Dieter",
+      "family": "Bode",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Martin",
+      "family": "Davi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Filippo",
+      "family": "Ferraro",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Philippe",
+      "family": "Absil",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sadhishkumar",
+      "family": "Balakrishnan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Joris",
+      "family": "Van Campenhout",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium,3001"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Günther",
+      "family": "Roelkens",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Photonics Research Group,Department of Information Technology (INTEC),Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Photonics Research Group,Department of Information Technology (INTEC),Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Maximilien",
+      "family": "Billet",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ghent University-imec,Photonics Research Group,Department of Information Technology (INTEC),Ghent,Belgium,9052"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       6,
+       23
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

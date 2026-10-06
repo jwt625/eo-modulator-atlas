@@ -198,6 +198,13 @@ entries:
   locator: p.4; p.14, Fig. 1
   note: Classified from the reported coplanar GSG transmission line; slab RC limitation does not independently
     establish distributed optical operation.
+- device_id: wolf2018a-static
+  field: r_eff_pm_per_v
+  value: 147.0
+  unit: pm/V
+  basis: derived
+  locator: p.5, Eq. (3)
+  note: In-device r33 from measured UpiL (push-pull), calculated field interaction factor and slot width; bulk SEO100 166 pm/V in note only
 derived:
 - device_id: wolf2018a-static
   field: vpil_dc_vcm

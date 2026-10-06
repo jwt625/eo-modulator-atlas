@@ -21,11 +21,11 @@ entries:
   note: FSR of the unbalanced MZI transmission spectrum
 - device_id: lin2025a-mzi
   field: tuning_nm_per_v
-  value: 0.0413
+  value: -0.0413
   unit: nm/V
   basis: measured
-  locator: p.3 text; p.4 Fig. 2(d)
-  note: 41.3 pm/V slope of linear fit, 0 to 20 V; the single 5 V point is 0.288 nm (57.6 pm/V)
+  locator: p.4, Fig. 2(c)-(e)
+  note: Blue shift for positive voltage, so signed value -41.3 pm/V; Fig. 2(d) plots shift magnitude and the text quotes 41.3 pm/V unsigned.
 - device_id: lin2025a-mzi
   field: eo_film_thickness_nm
   value: 500
@@ -81,6 +81,13 @@ entries:
   basis: derived
   locator: p.3, Fig. 1(e)
   note: Authors do not state; inferred from electrodes along one straight arm only
+- device_id: lin2025a-mzi
+  field: r_eff_pm_per_v
+  value: 1268.0
+  unit: pm/V
+  basis: derived
+  locator: p.4, Device characterization; p.12
+  note: Component r42, extracted by matching simulated to measured MZI resonance shift at 5 V (mode simulation, BTO tensor).
 derived:
 - device_id: lin2025a-mzi
   field: slab_thickness_nm

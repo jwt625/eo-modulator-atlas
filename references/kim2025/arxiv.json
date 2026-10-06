@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2507.17150",
+ "title": "Low loss monolithic barium titanate on insulator integrated photonics with intrinsic quality factor >1 million",
+ "authors": "Gwan In Kim, Jieun Yim, Gaurav Bahl",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 23 Jul 2025 02:30:02 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Mon, 28 Jul 2025 02:24:32 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:06:47Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2507.17150\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2507.17150</identifier>\n        <datestamp>2025-07-29</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2507.17150</id>\n        <submitter>Gwan In Kim</submitter>\n            <version version=\"v1\">\n                <date>Wed, 23 Jul 2025 02:30:02 GMT</date>\n                <size>4067kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Mon, 28 Jul 2025 02:24:32 GMT</date>\n                <size>4067kb</size>\n            </version>\n        <title>Low loss monolithic barium titanate on insulator integrated photonics with intrinsic quality factor &gt;1 million</title>\n        <authors>Gwan In Kim, Jieun Yim, Gaurav Bahl</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>16 pages and supplementary information is included</comments>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Barium titanate (BTO) has been experiencing a surge of interest for integrated photonics technologies because of its large nonlinear optical coefficients, especially the Pockels coefficient, and in part due to newly available thin-film substrates. In this work, we report on the development of a redeposition-free dry etching technique for monolithic BTO-on-insulator photonics, that produces very low-roughness and high-verticality waveguides. Using this, we experimentally demonstrate the first BTO microresonators with intrinsic Q-factor $&gt; 1$ million, and waveguide propagation loss as small as 0.32 dB/cm, representing the lowest losses reported in any BTO-based integrated platform to date. We additionally demonstrate Mach-Zehnder amplitude modulators with $V_{\\pi}L = 0.54$ V$\\cdot$cm and effective electro-optic coefficient $r_\\text{eff} = 162$ pm/V.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

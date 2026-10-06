@@ -4,8 +4,8 @@
  "doi": "10.1364/oe.460830",
  "source_type": "arxiv_preprint",
  "source_version": "2203.04756v2",
- "license": "",
- "license_verified": false,
+ "license": "CC-BY-NC-ND-4.0",
+ "license_verified": true,
  "redistribution": "restricted_local_only",
  "retrieved_on": "2026-10-03T06:09:35+00:00",
  "acquisition_origin": "public_primary_source",
@@ -15,5 +15,6 @@
  "pages": 16,
  "text_chars": 45539,
  "n_figure_files": 23,
- "extracted_on": "2026-10-02"
+ "extracted_on": "2026-10-02",
+ "license_source": "references/taghavi2022a/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

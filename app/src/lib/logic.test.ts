@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import atlasJson from '../../static/data/atlas.json';
 import type { Atlas } from './types';
-import { applyFilters, buildIndex, defaultFilters, fromHash, toHash, pickRep, sortRows, vpil, ilOnchip, ilF2f } from './logic';
+import { applyFilters, buildIndex, defaultFilters, fromHash, toHash, pickRep, sortRows, vpil, ilOnchip, ilF2f, hz } from './logic';
 
 const atlas = atlasJson as unknown as Atlas;
 const index = buildIndex(atlas);
@@ -32,5 +32,14 @@ describe('integrated atlas data in the app', () => {
   it('keeps unreported metrics last in both sort directions', () => {
     const rows = [{ value: null }, { value: 2 }, { value: 1 }];
     for (const dir of ['asc', 'desc'] as const) expect(sortRows(rows, [{ key: 'value', dir }], r => r.value).at(-1)?.value).toBeNull();
+  });
+});
+
+describe('hz', () => {
+  it('shows a GHz value in its natural unit', () => {
+    expect(hz(1e-4)).toBe('100 kHz');
+    expect(hz(0.025)).toBe('25 MHz');
+    expect(hz(1e-7)).toBe('100 Hz');
+    expect(hz(1)).toBe('1 GHz');
   });
 });

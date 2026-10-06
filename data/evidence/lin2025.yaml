@@ -362,6 +362,13 @@ entries:
   unit: ''
   basis: measured
   locator: p.5, Fabrication
+- device_id: lin2025-a
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: p.8; Fig. 3(a)
+  note: 'source: Figure 3 (a) shows the normalized transmission ... as a function of the applied voltage, linearly swept at ...'
 derived:
 - device_id: lin2025-c
   field: optical_power_handling_dbm

@@ -1,0 +1,877 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 1379,
+  "items": [
+   {
+    "DOI": "10.1117/12.3008414",
+    "title": [
+     "Wafer-scale graphene electro-absorption modulators fabricated in a 300 mm CMOS platform"
+    ],
+    "author": [
+     {
+      "given": "Didit",
+      "family": "Yudistira",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Chenghan",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Steven",
+      "family": "Brems",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Daire",
+      "family": "Cott",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alexey",
+      "family": "Milenin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Kevin",
+      "family": "Vandersmissen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Arantxa",
+      "family": "Maestre Caro",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alba",
+      "family": "Centeno",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Amaia",
+      "family": "Zurutuza",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Joris",
+      "family": "Van Campenhout",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Cedric",
+      "family": "Huyghebaert",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Inge",
+      "family": "Asselberghs",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Dries",
+      "family": "Van Thourhout",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Marianna",
+      "family": "Pantouvaki",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023,
+       11,
+       30
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.23919/vlsicircuits52068.2021.9492495",
+    "title": [
+     "Graphene electro-absorption modulators integrated at wafer-scale in a CMOS fab"
+    ],
+    "author": [
+     {
+      "given": "C. H.",
+      "family": "Wu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "S.",
+      "family": "Brems",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "D.",
+      "family": "Yudistira",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "D.",
+      "family": "Cott",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "A.",
+      "family": "Milenin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "K.",
+      "family": "Vandersmissen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "A.",
+      "family": "Maestre",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Graphenea Semiconductor SLU,San Sebastian,Spain"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "A.",
+      "family": "Centeno",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Graphenea Semiconductor SLU,San Sebastian,Spain"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "J.",
+      "family": "Van Campenhout",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "C.",
+      "family": "Huyghebaert",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "M.",
+      "family": "Pantouvaki",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec,Leuven,Belgium"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2021,
+       6,
+       13
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/lpor.202200789",
+    "title": [
+     "Wafer‐Scale Integration of Single Layer Graphene Electro‐Absorption Modulators in a 300 mm CMOS Pilot Line"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-4399-0772",
+      "authenticated-orcid": false,
+      "given": "Chenghan",
+      "family": "Wu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Photonics Research Group Department of Information Technology Ghent University‐imec Technologiepark‐Zwijnaarde 15 Gent 9052 Belgium"
+       },
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Steven",
+      "family": "Brems",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Didit",
+      "family": "Yudistira",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Daire",
+      "family": "Cott",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Alexey",
+      "family": "Milenin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Kevin",
+      "family": "Vandersmissen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Arantxa",
+      "family": "Maestre",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Graphenea Semiconductor SLU Mikeletegi Pasealekua 83 San Sebastian 20009 Spain"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Alba",
+      "family": "Centeno",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Graphenea Semiconductor SLU Mikeletegi Pasealekua 83 San Sebastian 20009 Spain"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Amaia",
+      "family": "Zurutuza",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Graphenea Semiconductor SLU Mikeletegi Pasealekua 83 San Sebastian 20009 Spain"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Joris",
+      "family": "Van Campenhout",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cedric",
+      "family": "Huyghebaert",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-0111-431X",
+      "authenticated-orcid": false,
+      "given": "Dries",
+      "family": "Van Thourhout",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Photonics Research Group Department of Information Technology Ghent University‐imec Technologiepark‐Zwijnaarde 15 Gent 9052 Belgium"
+       },
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marianna",
+      "family": "Pantouvaki",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec Kapeldreef 75 Leuven 3001 Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023,
+       4,
+       3
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/jstqe.2024.3411058",
+    "title": [
+     "Graphene-Based Silicon Photonic Electro-Absorption Modulators and Phase Modulators"
+    ],
+    "author": [
+     {
+      "given": "Chenghan",
+      "family": "Wu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Photonics Research Group, Department of Information Technology, Ghent University-imec, Ghent, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5223-5480",
+      "authenticated-orcid": false,
+      "given": "Tom",
+      "family": "Reep",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Photonics Research Group, Department of Information Technology, Ghent University-imec, Ghent, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Steven",
+      "family": "Brems",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec, Leuven, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-1440-5407",
+      "authenticated-orcid": false,
+      "given": "Didit",
+      "family": "Yudistira",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec, Leuven, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-0778-2669",
+      "authenticated-orcid": false,
+      "given": "Joris",
+      "family": "Van Campenhout",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec, Leuven, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-8371-3222",
+      "authenticated-orcid": false,
+      "given": "Inge",
+      "family": "Asselberghs",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec, Leuven, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cedric",
+      "family": "Huyghebaert",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec, Leuven, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marianna",
+      "family": "Pantouvaki",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "imec, Leuven, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2143-3847",
+      "authenticated-orcid": false,
+      "given": "Zheng",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Photonics Research Group, Department of Information Technology, Ghent University-imec, Ghent, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-0111-431X",
+      "authenticated-orcid": false,
+      "given": "Dries",
+      "family": "Van Thourhout",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Photonics Research Group, Department of Information Technology, Ghent University-imec, Ghent, Belgium"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       7
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/access.2019.2957184",
+    "title": [
+     "A Hybrid Vehicle Dispatching Approach for Unified Automated Material Handling System in 300mm Semiconductor Wafer Fabrication System"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-1977-8122",
+      "authenticated-orcid": false,
+      "given": "Lihui",
+      "family": "Wu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-6447-5334",
+      "authenticated-orcid": false,
+      "given": "Zhongwei",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jie",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2019
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -32,7 +32,7 @@ def make_db(tmp: Path) -> Path:
         source_type="journal",
         access="open_access",
         redistribution="restricted_local_only",
-        discovered_via="web",
+        discovered_via="web_search",
         cache_status="full_extract",
         audit_status="needs_audit",
         verified_on="2026-10-01",
@@ -46,7 +46,11 @@ def make_db(tmp: Path) -> Path:
         device_label="a",
         device_class="mzm",
         eo_material="lithium_niobate",
+        eo_effect="pockels",
+        row_kind="device",
         vpi_dc_v="2.5",
+        vpi_convention="per_arm_phase_shifter",
+        vpi_basis="measured",
         evidence_ref="data/evidence/test2026.yaml",
     )
     for name, cols, rows in (("papers.csv", p_cols, [paper]), ("devices.csv", d_cols, [dev])):

@@ -1,0 +1,367 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 3867,
+  "items": [
+   {
+    "DOI": "10.1364/cleo_si.2025.ss102_5",
+    "title": [
+     "BaTiO3/TiO2 Hybrid Metasurface for Free-space Electro‑optic Modulators"
+    ],
+    "author": [
+     {
+      "given": "Kerolos M. A.",
+      "family": "Yousef",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zhongpeng",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Michael",
+      "family": "Domm",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Agham",
+      "family": "Posadas",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Marcus",
+      "family": "Ossiander",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Maryna L.",
+      "family": "Meretska",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Moaz",
+      "family": "Waqar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiaoqing",
+      "family": "Pan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alexander A.",
+      "family": "Demkov",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Federico",
+      "family": "Capasso",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/prj.476688",
+    "title": [
+     "Polarization independent high-speed spatial modulators based on an electro-optic polymer and silicon hybrid metasurface"
+    ],
+    "author": [
+     {
+      "given": "Xinyu",
+      "family": "Sun",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "College of Optical Science and Engineering, Zhejiang University"
+       },
+       {
+        "name": "Institute of Advanced Technology, Westlake Institute for Advanced Study, Westlake University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Feng",
+      "family": "Qiu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/05qbk4x57",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       12,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_si.2021.sw2c.6",
+    "title": [
+     "Demonstration of on-chip gigahertz acousto-optic modulation at near-visible wavelengths"
+    ],
+    "author": [
+     {
+      "given": "Yue",
+      "family": "Yu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Lai",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiankai",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2021
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.2991/smont-19.2019.24",
+    "title": [
+     "Analysis of the Key Elements on the 2-D Electro-optic Modulation of BaTiO3 Crystal Thin-film Waveguide"
+    ],
+    "author": [
+     {
+      "given": "Mengxi",
+      "family": "Luo",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Degui",
+      "family": "Sun",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Na",
+      "family": "Sun",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2019
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/acpc.2016.af3f.2",
+    "title": [
+     "Hollow Hybrid Plasmonic Waveguide Used for Electro-optic Phase Modulation"
+    ],
+    "author": [
+     {
+      "given": "Xu",
+      "family": "Sun",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Lars",
+      "family": "Thylén",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Lech",
+      "family": "Wosinski",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2016
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

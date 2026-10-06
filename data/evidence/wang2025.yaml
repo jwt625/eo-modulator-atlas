@@ -43,11 +43,12 @@ entries:
   note: trace ends at 67 GHz; 70 GHz photodetector
 - device_id: wang2025-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: measured
   locator: p.4 Fig. 4(c)
   note: normalization not stated; trace starts at 0 dB near DC
+  previous_value: unspecified
 - device_id: wang2025-a
   field: il_onchip_db
   value: 2
@@ -236,6 +237,13 @@ entries:
   unit: ''
   basis: measured
   locator: p.5 Methods
+- device_id: wang2025-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3; p.4 Fig. 4
+  note: 'source: To measure the Vπ of the modulator, a sawtooth wave with a peak-to-peak voltage of 20 V and ...'
 derived:
 - device_id: wang2025-a
   field: max_baud_gbd

@@ -545,6 +545,27 @@ entries:
   basis: measured
   locator: Abstract; p.7; p.8 Table I
   note: ''
+- device_id: chen2022-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.7 Sec. III
+  note: 'source: Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage ...'
+- device_id: chen2022-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.7 Sec. III
+  note: 'source: Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage ...'
+- device_id: chen2022-c
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.7 Sec. III
+  note: 'source: Figure 4 shows the half-wave voltage Vπ measurements for the three devices with a 100 kHz triangular voltage ...'
 derived:
 - device_id: chen2022-c
   field: rf_loss_db_per_cm

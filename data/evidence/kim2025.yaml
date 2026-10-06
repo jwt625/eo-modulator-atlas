@@ -108,6 +108,13 @@ entries:
   basis: derived
   locator: p.6 text; Fig. 3(a)
   note: Authors do not state a Vpi convention; follows their single-arm MZM wording
+- device_id: kim2025-mzm
+  field: r_eff_pm_per_v
+  value: 162.0
+  unit: pm/V
+  basis: derived
+  locator: p.7, Fig. 3(d) and text
+  note: From measured VpiL 0.54 V*cm, gap 3.6 um, n 2.26, overlap Γ; effective coefficient r33cos^3φ+(r13+2r42)sin^2φ cosφ at φ=45 deg, [011] propagation.
 derived:
 - device_id: kim2025-mzm
   field: slab_thickness_nm

@@ -1,0 +1,1266 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 35,
+  "items": [
+   {
+    "DOI": "10.1063/5.0293940",
+    "title": [
+     "Silicon nitride integrated electro-optic absorption modulator"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0001-5386-7837",
+      "authenticated-orcid": false,
+      "given": "Evgeniy S.",
+      "family": "Lotkov",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       },
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-2806-018X",
+      "authenticated-orcid": false,
+      "given": "Aleksandr S.",
+      "family": "Baburin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       },
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0003-1744-6420",
+      "authenticated-orcid": false,
+      "given": "Ali Sh.",
+      "family": "Amiraslanov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-0860-5317",
+      "authenticated-orcid": false,
+      "given": "Eugeny D.",
+      "family": "Chubchev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-1796-6007",
+      "authenticated-orcid": false,
+      "given": "Alexander V.",
+      "family": "Dorofeenko",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       },
+       {
+        "name": "Institute for Theoretical and Applied Electromagnetics of Russian Academy of Science (ITAE RAS) 3 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Eugeny S.",
+      "family": "Andrianov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2272-2624",
+      "authenticated-orcid": false,
+      "given": "Evgeny V.",
+      "family": "Sergeev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5550-6880",
+      "authenticated-orcid": false,
+      "given": "Kirill A.",
+      "family": "Buzaverov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7296-367X",
+      "authenticated-orcid": false,
+      "given": "Sergey S.",
+      "family": "Avdeev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Aleksey B.",
+      "family": "Kramarenko",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0006-0557-2659",
+      "authenticated-orcid": false,
+      "given": "Sergey V.",
+      "family": "Bukatin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-1783-6333",
+      "authenticated-orcid": false,
+      "given": "Victor I.",
+      "family": "Polozov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Olga S.",
+      "family": "Sorokina",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Daria P.",
+      "family": "Kulikova",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alexander V.",
+      "family": "Baryshev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ilya A.",
+      "family": "Ryzhikov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       },
+       {
+        "name": "Institute for Theoretical and Applied Electromagnetics of Russian Academy of Science (ITAE RAS) 3 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuri V.",
+      "family": "Panfilov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8931-5142",
+      "authenticated-orcid": false,
+      "given": "Ilya A.",
+      "family": "Rodionov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory, Bauman Moscow State Technical University 1 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       },
+       {
+        "name": "Dukhov Automatics Research Institute (VNIIA) 2 , Moscow,",
+        "place": [
+         "Russia"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       2,
+       9
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.21203/rs.3.rs-885537/v1",
+    "title": [
+     "Silicon on-chip Electro-optic Modulation With Ito Film Stacks"
+    ],
+    "author": [
+     {
+      "given": "Evgeniy S.",
+      "family": "Lotkov",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alexander S.",
+      "family": "Baburin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ilya A.",
+      "family": "Ryzhikov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute for Theoretical and Applied Electromagnetics RAS"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Olga S.",
+      "family": "Sorokina",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Anton I.",
+      "family": "Ivanov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alexander V.",
+      "family": "Zverev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Igor V.",
+      "family": "Bykov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute for Theoretical and Applied Electromagnetics RAS"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alexander V.",
+      "family": "Baryshev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, (VNIIA)"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuri V.",
+      "family": "Panfilov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ilya A.",
+      "family": "Rodionov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "posted-content",
+    "issued": {
+     "date-parts": [
+      [
+       2021,
+       9,
+       17
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/iclo54117.2022.9839948",
+    "title": [
+     "Tunable low-loss silicon nitride integrated circuits"
+    ],
+    "author": [
+     {
+      "given": "A.S.",
+      "family": "Baburin",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, Federal State Unitary Enterprise, (VNIIA),Moscow,Russia,127055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "E.S.",
+      "family": "Lotkov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, Federal State Unitary Enterprise, (VNIIA),Moscow,Russia,127055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "E.V.",
+      "family": "Sergeev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, Federal State Unitary Enterprise, (VNIIA),Moscow,Russia,127055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "M.",
+      "family": "Andronic",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia,105005"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "D. A.",
+      "family": "Baklykov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, Federal State Unitary Enterprise, (VNIIA),Moscow,Russia,127055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "V. E.",
+      "family": "Stukalova",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, Federal State Unitary Enterprise, (VNIIA),Moscow,Russia,127055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "K. A.",
+      "family": "Buzaverov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, Federal State Unitary Enterprise, (VNIIA),Moscow,Russia,127055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "S.S",
+      "family": "Avdeev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, Federal State Unitary Enterprise, (VNIIA),Moscow,Russia,127055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "I.A.",
+      "family": "Ryzhikov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia,105005"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "I.V.",
+      "family": "Dyakonov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Quantum Technology Centre MSU,Moscow,Russia,119234"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "N.",
+      "family": "Skryabin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Quantum Technology Centre MSU,Moscow,Russia,119234"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "M. Yu.",
+      "family": "Saygin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Quantum Technology Centre MSU,Moscow,Russia,119234"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "S.P.",
+      "family": "Kulik",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Quantum Technology Centre MSU,Moscow,Russia,119234"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "I.A.",
+      "family": "Rodionov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dukhov Automatics Research Institute, Federal State Unitary Enterprise, (VNIIA),Moscow,Russia,127055"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       6,
+       20
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/acp/poem59049.2023.10369153",
+    "title": [
+     "Silicon Nitride High Confinement Thermally- and E/O Tuned Photonic Integrated Platfrom"
+    ],
+    "author": [
+     {
+      "given": "Aleksandr S.",
+      "family": "Baburin",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sergey S.",
+      "family": "Avdeev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Arseniy V.",
+      "family": "Belyaev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Kirill A.",
+      "family": "Buzaverov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Evgeniy S.",
+      "family": "Lotkov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Evgeny V.",
+      "family": "Sergeev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sergey V.",
+      "family": "Bukatin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ali Sh.",
+      "family": "Amiraslanov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ilya A.",
+      "family": "Ryzhikov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory,Moscow,Russia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ilya A.",
+      "family": "Rodionov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Bauman Moscow State Technical University,FMN Laboratory"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023,
+       11,
+       4
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/lpor.202400508",
+    "title": [
+     "Silicon Nitride Integrated Photonics from Visible to Mid‐Infrared Spectra"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-5550-6880",
+      "authenticated-orcid": false,
+      "given": "Kirill A.",
+      "family": "Buzaverov",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       },
+       {
+        "name": "Dukhov Research Institute of Automatics (VNIIA)  Moscow 127055 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-2806-018X",
+      "authenticated-orcid": false,
+      "given": "Aleksandr S.",
+      "family": "Baburin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       },
+       {
+        "name": "Dukhov Research Institute of Automatics (VNIIA)  Moscow 127055 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2272-2624",
+      "authenticated-orcid": false,
+      "given": "Evgeny V.",
+      "family": "Sergeev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7296-367X",
+      "authenticated-orcid": false,
+      "given": "Sergey S.",
+      "family": "Avdeev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-5386-7837",
+      "authenticated-orcid": false,
+      "given": "Evgeniy S.",
+      "family": "Lotkov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0006-0557-2659",
+      "authenticated-orcid": false,
+      "given": "Sergey V.",
+      "family": "Bukatin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-6533-4373",
+      "authenticated-orcid": false,
+      "given": "Ilya A.",
+      "family": "Stepanov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Aleksey B.",
+      "family": "Kramarenko",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0003-1744-6420",
+      "authenticated-orcid": false,
+      "given": "Ali Sh.",
+      "family": "Amiraslanov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Danil V.",
+      "family": "Kushnev",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ilya A.",
+      "family": "Ryzhikov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       },
+       {
+        "name": "Institute for Theoretical and Applied Electromagnetics Russia Academy of Science  Moscow 125412 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8931-5142",
+      "authenticated-orcid": false,
+      "given": "Ilya A.",
+      "family": "Rodionov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "FMN Laboratory Bauman Moscow State Technical University  Moscow 105005 Russia"
+       },
+       {
+        "name": "Dukhov Research Institute of Automatics (VNIIA)  Moscow 127055 Russia"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       7,
+       27
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

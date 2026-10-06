@@ -173,10 +173,11 @@ entries:
   note: arms in the two gaps of the GSG line; authors say differential field, antisymmetric phase
 - device_id: didier2026-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   basis: measured
   locator: Fig. 4(b)
   note: normalised S21; reference frequency not stated
+  previous_value: unspecified
 - device_id: didier2026-a
   field: er_type
   value: static
@@ -191,10 +192,11 @@ entries:
   note: ground-signal-ground coplanar microwave line, 50 ohm terminated
 - device_id: didier2026-a
   field: waveguide_platform
-  value: other
+  value: lnos_rib
   basis: measured
   locator: p.2
   note: lithium niobate on sapphire; no enum value for LNOS
+  previous_value: other
 - device_id: didier2026-b
   field: eo_film_thickness_nm
   value: 1500
@@ -776,6 +778,41 @@ entries:
   basis: extracted_from_figure
   locator: p.3; p.5 Fig. 3(c)
   note: '0.9 um-film gaps used: 13.2 and 15.6 um; 31.4 matches the 13.2 um marker'
+- device_id: didier2026-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3; p.5 Fig. 3(b)
+  note: 'source: To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an ...'
+- device_id: didier2026-e
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3; p.5 Fig. 3(d)
+  note: 'source: To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an ...'
+- device_id: didier2026-f
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3; p.5 Fig. 3(d)
+  note: 'source: To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an ...'
+- device_id: didier2026-g
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3; p.5 Fig. 3(c)
+  note: 'source: To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an ...'
+- device_id: didier2026-h
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3; p.5 Fig. 3(c)
+  note: 'source: To extract the half-wave voltage (Vπ), the MZM was driven with a 100 kHz triangular waveform from an ...'
 derived:
 - device_id: didier2026-a
   field: slab_thickness_nm

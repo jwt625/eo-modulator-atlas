@@ -1,0 +1,341 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     18
+    ]
+   ],
+   "date-time": "2026-08-18T02:54:25Z",
+   "timestamp": 1787021665728,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 8,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate the first silicon-photonics plasmonic O-band resonant ring modulator with on-chip losses of 2.2dB, reaching net 400Gbps by employing PAM8 signaling. We show improved temperature stability compared to pure SiPh rings, lowering control efforts.</jats:p>",
+  "DOI": "10.1364/ofc.2026.m2b.5",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:26:08Z",
+   "timestamp": 1780428368000
+  },
+  "page": "M2B.5",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+   "O-Band Silicon-Plasmonic Resonant Ring Modulator Demonstrating Net-Rates of 400 Gbps"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Samuel",
+    "family": "Hess",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Laurenz",
+    "family": "Kulmer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chenrui",
+    "family": "Xu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tobias",
+    "family": "Blatter",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Vladimir",
+    "family": "Shadymov",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Matthew",
+    "family": "Garrett",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Benedikt",
+    "family": "Baeuerle",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wolfgang",
+    "family": "Heni",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Claudia",
+    "family": "Hoessbacher",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Oskars",
+    "family": "Ozolins",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Juerg",
+    "family": "Leuthold",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-M2B.5-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "850",
+    "DOI": "10.1109/LPT.2023.3285881",
+    "type": "journal-article",
+    "volume": "35",
+    "author": "Berikaa",
+    "year": "2023",
+    "journal-title": "IEEE Photonics Technol. Lett"
+   },
+   {
+    "key": "OFC-2026-M2B.5-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "29253",
+    "DOI": "10.1364/OE.402427",
+    "type": "journal-article",
+    "volume": "28",
+    "author": "Tibaldi",
+    "year": "2020",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-M2B.5-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "338",
+    "DOI": "10.1038/s41928-020-0417-9",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Koch",
+    "year": "2020",
+    "journal-title": "Nat. Electron"
+   },
+   {
+    "key": "OFC-2026-M2B.5-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "W4",
+    "DOI": "10.1364/OFC.2024.W4H.5",
+    "type": "journal-article",
+    "article-title": "Single Carrier net 400 Gbit/s IM/DD over 400 m Fiber enabled by Plasmonic Mach-Zehnder Modulator",
+    "author": "Kulmer",
+    "year": "2024"
+   },
+   {
+    "key": "OFC-2026-M2B.5-R11",
+    "doi-asserted-by": "publisher",
+    "first-page": "6563",
+    "DOI": "10.1109/JLT.2025.3565851",
+    "type": "journal-article",
+    "volume": "43",
+    "author": "Zhou",
+    "year": "2025",
+    "journal-title": "J. Light. Technol"
+   },
+   {
+    "key": "OFC-2026-M2B.5-R12",
+    "doi-asserted-by": "publisher",
+    "first-page": "360",
+    "DOI": "10.1038/s41566-023-01161-9",
+    "type": "journal-article",
+    "volume": "17",
+    "author": "Eppenberger",
+    "year": "2023",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "OFC-2026-M2B.5-R13",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/SUM65312.2025.11121769",
+    "type": "journal-article",
+    "article-title": "448 Gbps Transmissions based on PAM4/6/8",
+    "author": "Pittala"
+   },
+   {
+    "key": "OFC-2026-M2B.5-R15",
+    "doi-asserted-by": "publisher",
+    "first-page": "4008",
+    "DOI": "10.1038/ncomms5008",
+    "type": "journal-article",
+    "volume": "5",
+    "author": "Timurdogan",
+    "year": "2014",
+    "journal-title": "Nat. Commun"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-M2B.5&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:25:59Z",
+   "timestamp": 1786987559000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-M2B.5"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 8,
+  "URL": "https://doi.org/10.1364/ofc.2026.m2b.5",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

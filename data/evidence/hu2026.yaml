@@ -153,11 +153,11 @@ entries:
   note: FSR about 7 nm near 1315 nm.
 - device_id: hu2026-a
   field: tuning_nm_per_v
-  value: 0.0245
+  value: -0.0245
   unit: nm/V
   basis: measured
-  locator: p.11; p.31, Fig. 3(b)
-  note: Average resonance shift 24.5 pm/V for 0 to -4 V; simulated 24.8 pm/V; wafer range 22.8 to 25.5 pm/V (p.42-43).
+  locator: p.11, Fig. 3(b)
+  note: 'Red shift toward negative bias, so blue shift per positive volt: negative sign; magnitude 24.5 pm/V (0 to -4 V average)'
 - device_id: hu2026-b
   field: wavelength_nm
   value: 1315
@@ -274,11 +274,12 @@ entries:
   note: Cj about 16 fF at -3 V; simulated, main text says estimated.
 - device_id: hu2026-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.31, Fig. 3(d)
   note: Normalized EO response; reference frequency of the 3 dB drop not stated.
+  previous_value: unspecified
 - device_id: hu2026-a
   field: vpi_convention
   value: resonance_tuning_derived
@@ -295,11 +296,12 @@ entries:
   note: Spectra at 1290-1330 nm; O-band laser (EXFO T200S-O).
 - device_id: hu2026-b
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.31, Fig. 3(d)
   note: Normalized EO response; reference frequency not stated.
+  previous_value: unspecified
 - device_id: hu2026-b
   field: band
   value: o_band

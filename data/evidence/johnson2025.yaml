@@ -288,4 +288,53 @@ entries:
   basis: measured
   locator: p.1, PIC Fabrication; p.2
   note: Slot 160 nm, rail 240 nm
+- device_id: johnson2025-200g-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.2, Modulator Characterization; Table 1
+  note: 'source: Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ ...'
+- device_id: johnson2025-200g-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.2, Modulator Characterization; Table 1
+  note: 'source: Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ ...'
+- device_id: johnson2025-200g-best
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.2, text below Table 1
+  note: 'source: The best Vπ,diff obtained on a single channel was 1.57V.'
+- device_id: johnson2025-200g-c
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.2, Modulator Characterization; Table 1
+  note: 'source: Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ ...'
+- device_id: johnson2025-400g-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.2, Modulator Characterization; Table 1
+  note: 'source: Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ ...'
+- device_id: johnson2025-400g-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.2, Modulator Characterization; Table 1
+  note: 'source: Low-frequency characterization of modulators to determine bias point and Vπ ... using the low-frequency overmodulation method[12] for Vπ ...'
+- device_id: johnson2025-200g-best
+  field: r_eff_pm_per_v
+  value: 343.0
+  unit: pm/V
+  basis: derived
+  locator: p.2, Eq. (1)
+  note: r33 from push-pull Pockels relation with n=1.9, confinement 0.14 (assumed inputs), 1290 nm, 1.57 V; family typical 200-250 pm/V
 derived: []

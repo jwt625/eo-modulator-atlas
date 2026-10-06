@@ -1,0 +1,250 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:25:03Z",
+   "timestamp": 1786991103415,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 6,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We reported a high-speed EML and its assembly technology for AI/ML applications. By employing the narrow high-mesa waveguide structure and flip chip bonding technology, the EML sub-assembly achieved a wide 3-dB bandwidth of 110 GHz.</jats:p>",
+  "DOI": "10.1364/ofc.2026.tu3j.1",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:28:30Z",
+   "timestamp": 1780428510000
+  },
+  "page": "Tu3J.1",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+   "High-Speed EMLs for AI/ML Applications"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Nobuo",
+    "family": "Ohata",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mizuki",
+    "family": "Shirao",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shinya",
+    "family": "Okuda",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kei",
+    "family": "Masuyama",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Asami",
+    "family": "Uchiyama",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kenichi",
+    "family": "Abe",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kiyotomo",
+    "family": "Hasegawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-Tu3J.1-R4",
+    "first-page": "Tu2J.4",
+    "author": "He",
+    "journal-title": "proc. OFC2025",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Tu3J.1-R5",
+    "first-page": "Th1E.3",
+    "author": "Asakura",
+    "journal-title": "proc. OFC2022",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Tu3J.1-R6",
+    "first-page": "M4",
+    "author": "Ohno",
+    "journal-title": "proc. OFC2022",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Tu3J.1-R7",
+    "first-page": "Tu2D.1",
+    "author": "Uchiyama",
+    "journal-title": "proc. OFC2024",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Tu3J.1-R8",
+    "first-page": "Tu2J.7",
+    "author": "Okuda",
+    "journal-title": "proc. OFC2025",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Tu3J.1-R10",
+    "first-page": "W.01.02.3",
+    "author": "Masuyama",
+    "journal-title": "proc. ECOC2025",
+    "type": "journal-article"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-Tu3J.1&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:27:15Z",
+   "timestamp": 1786987635000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-Tu3J.1"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 6,
+  "URL": "https://doi.org/10.1364/ofc.2026.tu3j.1",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

@@ -133,6 +133,8 @@ Opus verify -> serial merge with `audit_status: audited` -> build_views, tests, 
 
 ## Open items
 
+> 2026-10-05: Liobate added as an organization (CN, own site) and as zhou2026 foundry_or_fab; NTT row renamed NTT, Inc.; see [DevLog-020](DevLog-020-data-convention-decisions.md). Per-author affiliations for the 46 OFC papers remain open.
+
 - build_views warnings (3): aimone2026 (DE, US), sun2026 (US, IL), zhou2026 (US, CN) print company sites in two countries; papers.countries kept as printed, org rows hold one country. Per-author sites would resolve this on the map.
 - The 46 OFC papers have no rows in data/author_affiliations.csv yet (DevLog-018 pipeline: per-author affiliations, then geocoding with external Wikidata/OSM requests); they count in the country views but not on the author-level map.
 - Retrieval candidates: ohata2026 sources (Okuda et al. OFC 2025 Tu2J.7; JLT 10.1109/JLT.2025.3588689; Masuyama et al. ECOC 2025 W.01.02.3); weckenmann2026 Ref. 11 (arXiv 2509.20584).

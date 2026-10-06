@@ -886,14 +886,14 @@ entries:
   basis: measured
   locator: p.4
 - device_id: renaud2023-pm
-  field: vpi_rf_v
+  field: vpi_dc_v
   value: 1
   unit: V
   basis: measured
   locator: p.4
   note: about 1 V at 100 MHz
 - device_id: renaud2023-pm
-  field: vpi_rf_freq_ghz
+  field: vpi_dc_freq_ghz
   value: 0.1
   unit: GHz
   basis: measured
@@ -912,4 +912,60 @@ entries:
   basis: derived
   locator: p.4
   note: phase modulator; authors do not state the convention
+- device_id: renaud2023-2p5um-738
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Methods; p.3 Fig. 2
+  note: 'source: The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as ...'
+- device_id: renaud2023-3um-532
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Methods; p.3 Fig. 2
+  note: 'source: The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as ...'
+- device_id: renaud2023-3um-638
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Methods; p.3 Fig. 2
+  note: 'source: The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as ...'
+- device_id: renaud2023-3um-738
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Methods; p.3 Fig. 2
+  note: 'source: The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as ...'
+- device_id: renaud2023-3um-838
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Methods; p.3 Fig. 2
+  note: 'source: The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as ...'
+- device_id: renaud2023-3um-938
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Methods; p.3 Fig. 2
+  note: 'source: The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as ...'
+- device_id: renaud2023-4um-738
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Methods; p.3 Fig. 2
+  note: 'source: The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as ...'
+- device_id: renaud2023-5um-738
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Methods; p.3 Fig. 2
+  note: 'source: The DC performance is evaluated using a 1 MHz triangle waveform, and the normalized transmission is recorded as ...'
 derived: []

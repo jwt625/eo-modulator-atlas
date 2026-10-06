@@ -2,7 +2,7 @@
  "paper_id": "ummethala2021",
  "url": "https://arxiv.org/pdf/2011.09931v1",
  "doi": "10.1364/optica.411161",
- "license": "",
+ "license": "arXiv-nonexclusive-1.0",
  "local_origin": "open_access_download",
  "sha256": "407070398dc3643fa1cd74c04cfe733fdb9060d3de1ccd67b615de345d344435",
  "pages": 15,
@@ -15,12 +15,13 @@
  "retrieved_on": "2026-10-03T03:17:54+00:00",
  "notes": "Reacquired from the explicit arXiv v1 URL on 2026-10-02 (local date). SHA-256 matches the previously recorded source hash. License remains unverified; journal rights are not assigned to this cached preprint.",
  "source_version": "2011.09931v1",
- "license_verified": false,
+ "license_verified": true,
  "acquisition_origin": "public_primary_source",
  "identity_url": "https://arxiv.org/abs/2011.09931v1",
  "discovery_manifest": "data/_staging/discovery_2026_10_02/manifest.csv",
  "title": "Hybrid electro-optic modulator combining silicon photonic slot waveguides with high-k radio-frequency slotlines",
  "identity_checked_on": "2026-10-02",
  "identity_check": "First-page title and authors checked against paper identity; source version retained separately.",
- "extraction_notes": []
+ "extraction_notes": [],
+ "license_source": "references/ummethala2021/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

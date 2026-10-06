@@ -103,13 +103,6 @@ entries:
   basis: measured
   locator: p.6 Sec. IV.C; p.11 S3
   note: Design 1 curves normalized to value at 3 GHz
-- device_id: rahman2025-1
-  field: il_onchip_db
-  value: 2.95
-  unit: dB
-  basis: measured
-  locator: p.11 S2
-  note: mean across four chips (std 1.43); main text p.3 gives 3.1 dB
 - device_id: rahman2025-2
   field: wavelength_nm
   value: 1550
@@ -213,13 +206,6 @@ entries:
   basis: measured
   locator: p.6 Sec. IV.C; Fig. S3 p.13
   note: apparatus limit 111 GHz; Fig. S3 axis ends near 111 GHz
-- device_id: rahman2025-2
-  field: il_onchip_db
-  value: 6.43
-  unit: dB
-  basis: measured
-  locator: p.11 S2
-  note: mean across four chips (std 2.75); main text p.3 gives 6.6 dB
 - device_id: rahman2025-3
   field: wavelength_nm
   value: 1550
@@ -331,13 +317,6 @@ entries:
   locator: p.6 Sec. IV.C; Fig. 4(c)
   note: upper limit of the measurement apparatus
 - device_id: rahman2025-3
-  field: il_onchip_db
-  value: 3.77
-  unit: dB
-  basis: measured
-  locator: p.11 S2; Fig. S2
-  note: mean across four chips (std 0.83); abstract 3.8 dB; main text p.3 gives 4.0 dB
-- device_id: rahman2025-3
   field: extinction_ratio_db
   value: 34
   unit: dB
@@ -393,4 +372,25 @@ entries:
   basis: derived
   locator: p.7 Eq. (2)
   note: VpiL equation includes push-pull factor 2; Vpi convention not named otherwise
+- device_id: rahman2025-1
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. IV.B; p.6
+  note: 'source: For a numerical estimate of Vπ(DC), we use the half-wave voltage at 1 MHz, measured as described in ...'
+- device_id: rahman2025-2
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. IV.B; p.6
+  note: 'source: For a numerical estimate of Vπ(DC), we use the half-wave voltage at 1 MHz, measured as described in ...'
+- device_id: rahman2025-3
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.5 Fig. 3(c) caption
+  note: 'source: The solid line is a fit to the 1 MHz data using the squared-cosine functional form, which yields ...'
 derived: []

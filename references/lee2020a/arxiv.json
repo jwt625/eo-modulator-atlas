@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2011.08832",
+ "title": "Scalable graphene platform for Tbits/s data transmission",
+ "authors": "Brian S. Lee, Alexandre P. Freitas, Andres Gil-Molina, Euijae Shim, Yibo Zhu, James Hone, Michal Lipson",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 12 Nov 2020 17:23:37 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:07:04Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2011.08832\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2011.08832</identifier>\n        <datestamp>2020-11-18</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2011.08832</id>\n        <submitter>Brian Lee</submitter>\n            <version version=\"v1\">\n                <date>Thu, 12 Nov 2020 17:23:37 GMT</date>\n                <size>5702kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Scalable graphene platform for Tbits/s data transmission</title>\n        <authors>Brian S. Lee, Alexandre P. Freitas, Andres Gil-Molina, Euijae Shim, Yibo Zhu, James Hone, Michal Lipson</authors>\n        <categories>physics.app-ph physics.optics</categories>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>To date, no electro-optic platform enables devices with high bandwidth, small footprint, and low power consumption, while also enabling mass production. Here we demonstrate high-yield fabrication of high-speed graphene electro-absorption modulators using CVD-grown graphene. We minimize variation in device performance from graphene inhomogeneity over large area by engineering graphene-mode overlap and device capacitance to ensure high extinction ratio. We fabricate an 8 mm x 1 mm chip with 32 graphene electro-absorption modulators and measure 94% yield with bit error rate below the hard-decision forward error correction limit at 7 Gbits/s, amounting to a total aggregated data rate of 210 Gbits/s. Monte Carlo simulations show that data rates &gt; 0.6 Tbits/s are within reach by further optimizing device cross-section, paving the way for graphene-based ultra-high data rate applications.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

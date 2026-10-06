@@ -71,12 +71,12 @@ entries:
   locator: p.1, Sec. 2
 - device_id: theurer2026-a
   field: drive
-  value: single_ended
+  value: not_applicable
   unit: ''
   basis: derived
   locator: p.1, Sec. 2
-  note: GSG contacts described as the interface for single-side-driven transmitters; drive not stated
-    explicitly
+  note: GSG contacts described as the interface for single-side-driven transmitters; drive not stated explicitly
+  previous_value: single_ended
 - device_id: theurer2026-a
   field: bw3db_reference
   value: dc
@@ -84,9 +84,16 @@ entries:
   basis: derived
   locator: p.2, Fig. 2(c)
   note: Relative |S21|^2 normalized to about 0 dB at low frequency; reference not stated
+- device_id: theurer2026-a
+  field: temperature_k
+  value: 323.15
+  unit: K
+  basis: derived
+  locator: p.2, Fig. 2 caption
+  note: T(K) = 50 + 273.15; stated for Fig. 2 and Fig. 3 data (Fig. 4 uncooled data at 25-85 C).
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1-3 page footer (repeated on every page)
-    note: printed page-footer copyright notice; basis for license publisher-copyright
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3 page footer (repeated on every page)
+  note: printed page-footer copyright notice; basis for license publisher-copyright

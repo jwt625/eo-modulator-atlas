@@ -1,0 +1,528 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 6,
+  "items": [
+   {
+    "DOI": "10.1364/cleo_si.2021.sm4l.4",
+    "title": [
+     "Bidirectional electro-optic conversion reaching 1% efficiency with thin film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Yuntao",
+      "family": "Xu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ayed Al",
+      "family": "Sayem",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Linran",
+      "family": "Fan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Changling",
+      "family": "Zou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hong X.",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2021
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2025.aa124_8",
+    "title": [
+     "Multi-stage racetrack Mach Zehnder coupling interferometer on TFLN with thermal and electro-optic modulation"
+    ],
+    "author": [
+     {
+      "given": "Ayed Al",
+      "family": "Sayem",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Heqing",
+      "family": "Huang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ting-Chen",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mark",
+      "family": "Cappuzzo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alaric",
+      "family": "Tate",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Rose",
+      "family": "Kopf",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mark",
+      "family": "Earnshaw",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1103/physrevapplied.18.064045",
+    "title": [
+     "Light-Induced Dynamic Frequency Shifting of Microwave Photons in a Superconducting Electro-Optic Converter"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-7576-6022",
+      "authenticated-orcid": true,
+      "given": "Yuntao",
+      "family": "Xu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wei",
+      "family": "Fu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-5543-9211",
+      "authenticated-orcid": true,
+      "given": "Yiyu",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mingrui",
+      "family": "Xu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mohan",
+      "family": "Shen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ayed Al",
+      "family": "Sayem",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-5374-2137",
+      "authenticated-orcid": true,
+      "given": "Hong X.",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       12,
+       15
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1115/ajtec2011-44459",
+    "title": [
+     "Study on Simple and High-Speed Diesel Combustion Model for Driving Mode Simulator Available for Premixed and Diffusion Combustion of Sprays"
+    ],
+    "author": [
+     {
+      "given": "Takemi",
+      "family": "Chikahisa",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Hokkaido University, Sapporo, Hokkaido, Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yutaka",
+      "family": "Tabe",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Hokkaido University, Sapporo, Hokkaido, Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Kazushige",
+      "family": "Kikuta",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Tomakomai National College of Technology, Tomakomai, Hokkaido, Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "A. S. M.",
+      "family": "Sayem",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Hokkaido University, Sapporo, Hokkaido, Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2011,
+       1,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/becithcon64160.2024.10962739",
+    "title": [
+     "Comprehensive Analysis of RF-Based Wireless Power Transfer for Enhancing Implantable Medical Device Performance"
+    ],
+    "author": [
+     {
+      "given": "Swapnil",
+      "family": "Pranta",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Port City International University,Dept. of EEE,Chattogram,Bangladesh"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Nirzar",
+      "family": "Barua",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Chittagong Uni. of Engineering &#x0026; Technology,Dept. of ETE,Chittagong,Bangladesh"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Md. Sahidur",
+      "family": "Rahman",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Chittagong Uni. of Engineering &#x0026; Technology,Dept. of EEE,Chittagong,Bangladesh"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sultanus",
+      "family": "Salehin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Alabama,Dept. of ECE,Tuscaloosa,USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sayem Ul",
+      "family": "Alam",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The University of Alabama,Dept. of ECE,Tuscaloosa,USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Akib Jayed",
+      "family": "Islam",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Norwegian Uni. of Science &#x0026; Technology,Department of Computer Science,Gj&#x00F8;vik,Norway"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shreya",
+      "family": "Paul",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National Institute of Technology,Electrical &#x0026; Electronics Engineering,Trichy,Tamil Nadu,India"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Prithwi",
+      "family": "Chowdhury",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Ahsanullah Uni. of Science &#x0026; Technology,Electrical &#x0026; Electronic Engineering,Dhaka,Bangladesh"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       11,
+       28
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

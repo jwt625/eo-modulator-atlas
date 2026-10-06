@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2210.13521",
+ "title": "Sub-1 Volt and High-Bandwidth Visible to Near-Infrared Electro-Optic Modulators",
+ "authors": "Dylan Renaud, Daniel Rimoli Assumpcao, Graham Joe, Amirhassan Shams-Ansari, Di Zhu, Yaowen Hu, Neil Sinclair, Marko Loncar",
+ "doi": "10.1038/s41467-023-36870-w",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Mon, 24 Oct 2022 18:21:41 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Thu, 09 Feb 2023 02:36:41 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:12:24Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2210.13521\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2210.13521</identifier>\n        <datestamp>2023-04-19</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2210.13521</id>\n        <submitter>Dylan Renaud</submitter>\n            <version version=\"v1\">\n                <date>Mon, 24 Oct 2022 18:21:41 GMT</date>\n                <size>1550kb</size>\n                    <source_type>D</source_type>\n            </version>\n            <version version=\"v2\">\n                <date>Thu, 09 Feb 2023 02:36:41 GMT</date>\n                <size>294kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Sub-1 Volt and High-Bandwidth Visible to Near-Infrared Electro-Optic Modulators</title>\n        <authors>Dylan Renaud, Daniel Rimoli Assumpcao, Graham Joe, Amirhassan Shams-Ansari, Di Zhu, Yaowen Hu, Neil Sinclair, Marko Loncar</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>11 pages, 4 figures</comments>\n            <doi>10.1038/s41467-023-36870-w</doi>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Integrated electro-optic (EO) modulators are fundamental photonics components with utility in domains ranging from digital communications to quantum information processing. At telecommunication wavelengths, thin-film lithium niobate modulators exhibit state-of-the-art performance in voltage-length product ($V_\\pi$L), optical loss, and EO bandwidth. However, applications in optical imaging, optogenetics, and quantum science generally require devices operating in the visible-to-near-infrared (VNIR) wavelength range. In this work, we realize VNIR amplitude and phase modulators featuring $V_\\pi$L&#39;s of sub-1 V$\\cdot\\,$cm, low optical loss, and high bandwidth EO response. Our Mach-Zehnder modulators exhibit a $V_\\pi$L as low as 0.55 V$\\cdot\\,$cm at 738 nm, and EO bandwidths in excess of 35 GHz. Furthermore, we highlight the new opportunities these high-performance modulators offer by demonstrating the first integrated EO frequency combs at VNIR wavelengths, with over 50 lines and tunable spacing, and the first frequency shifting of pulsed light beyond its intrinsic bandwidth (up to 7x Fourier limit) by an EO shearing method.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

@@ -394,4 +394,18 @@ entries:
   basis: measured
   locator: p.5 Fig. 4(a)
   note: VNA sweep end; the 13 mm trace crosses -3 dB inside the range
+- device_id: xu2020-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; p.4 Fig. 3(a)
+  note: 'source: Next, we measured the Vπ for both devices with 100 kHz triangular voltage sweeps.'
+- device_id: xu2020-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5; p.4 Fig. 3(b)
+  note: 'source: Next, we measured the Vπ for both devices with 100 kHz triangular voltage sweeps.'
 derived: []

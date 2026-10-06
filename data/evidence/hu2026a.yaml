@@ -36,13 +36,6 @@ entries:
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
   note: all eight channels exceed 40 GHz; no crossing value stated
 - device_id: hu2026a-ch1
-  field: extinction_ratio_db
-  value: 25
-  unit: dB
-  basis: measured
-  locator: p.10 Sec. 4.2; p.11 Table 1
-  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
-- device_id: hu2026a-ch1
   field: electrode_gap_um
   value: 6.5
   unit: um
@@ -125,13 +118,6 @@ entries:
   basis: measured
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
   note: all eight channels exceed 40 GHz; no crossing value stated
-- device_id: hu2026a-ch2
-  field: extinction_ratio_db
-  value: 25
-  unit: dB
-  basis: measured
-  locator: p.10 Sec. 4.2; p.11 Table 1
-  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
 - device_id: hu2026a-ch2
   field: electrode_gap_um
   value: 6.5
@@ -216,13 +202,6 @@ entries:
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
   note: all eight channels exceed 40 GHz; no crossing value stated
 - device_id: hu2026a-ch3
-  field: extinction_ratio_db
-  value: 25
-  unit: dB
-  basis: measured
-  locator: p.10 Sec. 4.2; p.11 Table 1
-  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
-- device_id: hu2026a-ch3
   field: electrode_gap_um
   value: 6.5
   unit: um
@@ -305,13 +284,6 @@ entries:
   basis: measured
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
   note: all eight channels exceed 40 GHz; no crossing value stated
-- device_id: hu2026a-ch4
-  field: extinction_ratio_db
-  value: 25
-  unit: dB
-  basis: measured
-  locator: p.10 Sec. 4.2; p.11 Table 1
-  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
 - device_id: hu2026a-ch4
   field: electrode_gap_um
   value: 6.5
@@ -396,13 +368,6 @@ entries:
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
   note: all eight channels exceed 40 GHz; no crossing value stated
 - device_id: hu2026a-ch5
-  field: extinction_ratio_db
-  value: 25
-  unit: dB
-  basis: measured
-  locator: p.10 Sec. 4.2; p.11 Table 1
-  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
-- device_id: hu2026a-ch5
   field: electrode_gap_um
   value: 6.5
   unit: um
@@ -485,13 +450,6 @@ entries:
   basis: measured
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
   note: all eight channels exceed 40 GHz; no crossing value stated
-- device_id: hu2026a-ch6
-  field: extinction_ratio_db
-  value: 25
-  unit: dB
-  basis: measured
-  locator: p.10 Sec. 4.2; p.11 Table 1
-  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
 - device_id: hu2026a-ch6
   field: electrode_gap_um
   value: 6.5
@@ -576,13 +534,6 @@ entries:
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
   note: all eight channels exceed 40 GHz; no crossing value stated
 - device_id: hu2026a-ch7
-  field: extinction_ratio_db
-  value: 25
-  unit: dB
-  basis: measured
-  locator: p.10 Sec. 4.2; p.11 Table 1
-  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
-- device_id: hu2026a-ch7
   field: electrode_gap_um
   value: 6.5
   unit: um
@@ -665,13 +616,6 @@ entries:
   basis: measured
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
   note: all eight channels exceed 40 GHz; no crossing value stated
-- device_id: hu2026a-ch8
-  field: extinction_ratio_db
-  value: 25
-  unit: dB
-  basis: measured
-  locator: p.10 Sec. 4.2; p.11 Table 1
-  note: Stated once at array level (approximately 25 dB), copied to each channel; per-channel value not reported
 - device_id: hu2026a-ch8
   field: electrode_gap_um
   value: 6.5

@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2011.13422",
+ "title": "Breaking voltage-bandwidth limits in integrated lithium niobate modulators using micro-structured electrodes",
+ "authors": "Prashanta Kharel, Christian Reimer, Kevin Luke, Lingyan He, Mian Zhang",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 26 Nov 2020 18:26:12 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:06:35Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2011.13422\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2011.13422</identifier>\n        <datestamp>2020-11-30</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2011.13422</id>\n        <submitter>Mian Zhang</submitter>\n            <version version=\"v1\">\n                <date>Thu, 26 Nov 2020 18:26:12 GMT</date>\n                <size>4646kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Breaking voltage-bandwidth limits in integrated lithium niobate modulators using micro-structured electrodes</title>\n        <authors>Prashanta Kharel, Christian Reimer, Kevin Luke, Lingyan He, Mian Zhang</authors>\n        <categories>physics.app-ph physics.optics</categories>\n            <comments>7 pages, 4 figures</comments>\n            <license>http://creativecommons.org/licenses/by-nc-nd/4.0/</license>\n            <abstract>Electro-optic modulators with low voltage and large bandwidth are crucial for both analog and digital communications. Recently, thin-film lithium niobate modulators have enable dramatic performance improvements by reducing the required modulation voltage while maintaining high bandwidths. However, the reduced electrode gaps in such modulators leads to significantly higher microwave losses, which limit electro-optic performance at high frequencies. Here we overcome this limitation and achieve a record combination of low RF half-wave voltage of 1.3 V while maintaining electro-optic response with 1.8-dB roll-off at 50 GHz. This demonstration represents a significant improvement in voltage-bandwidth limit, one that is comparable to that achieved when switching from legacy bulk to thin-film lithium niobate modulators. Leveraging the low-loss electrode geometry, we show that sub-volt modulators with $&gt;$ 100 GHz bandwidth can be enabled.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

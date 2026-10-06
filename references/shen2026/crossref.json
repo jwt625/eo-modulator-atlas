@@ -1,0 +1,427 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     26
+    ]
+   ],
+   "date-time": "2026-08-26T15:32:53Z",
+   "timestamp": 1787758373469,
+   "version": "build-2784847793"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 6,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate the first fully integrated 1064 nm GaAs-on-TFLN transmitter combining widely tunable GaAs lasers with &gt;100 GHz thin-film lithium niobate modulators. The device achieves 100 Gb/s NRZ and 160 Gb/s PAM4 transmission.</jats:p>",
+  "DOI": "10.1364/ofc.2026.th4a.5",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:28:34Z",
+   "timestamp": 1780428514000
+  },
+  "page": "Th4A.5",
+  "source": "Crossref",
+  "is-referenced-by-count": 2,
+  "title": [
+   "Fully Integrated 1064 nm Transmitters with Widely Tunable GaAs Lasers and &gt; 100-GHz Thin-Film LiNbO3 Modulators"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Boqiang",
+    "family": "Shen",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kewei",
+    "family": "Bian",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kaustubh",
+    "family": "Asawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Igor",
+    "family": "Kudelin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Theodore",
+    "family": "Morin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bowen",
+    "family": "Song",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yang",
+    "family": "Shen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Joel",
+    "family": "Guo",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jonathan",
+    "family": "Peters",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Catherine",
+    "family": "Nguyen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Glenn",
+    "family": "Kim",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nathan",
+    "family": "Kim",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Stephen",
+    "family": "Didde",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ryohei",
+    "family": "Omori",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Daneil",
+    "family": "Lopez",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zeyu",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tin",
+    "family": "Komljenovic",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Minh",
+    "family": "Tran",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuan",
+    "family": "Yuan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chong",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-Th4A.5-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "6030",
+    "DOI": "10.1038/s41467-020-19910-7",
+    "type": "journal-article",
+    "volume": "11",
+    "author": "Sakr",
+    "year": "2020",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "OFC-2026-Th4A.5-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "1049",
+    "DOI": "10.1109/3.594865",
+    "type": "journal-article",
+    "volume": "33",
+    "author": "Paschotta",
+    "year": "1997",
+    "journal-title": "IEEE J. Quantum Electron"
+   },
+   {
+    "key": "OFC-2026-Th4A.5-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "5815",
+    "DOI": "10.1063/1.1368156",
+    "type": "journal-article",
+    "volume": "89",
+    "author": "Vurgaftman",
+    "year": "2001",
+    "journal-title": "J. Appl. Phys"
+   },
+   {
+    "key": "OFC-2026-Th4A.5-R6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1142/2508",
+    "volume-title": "GaAs and Related Materials: Bulk Semiconducting and Superlattice Properties",
+    "author": "Adachi",
+    "year": "1994"
+   },
+   {
+    "key": "OFC-2026-Th4A.5-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "type": "journal-article",
+    "volume": "562",
+    "author": "Wang",
+    "year": "2018",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "OFC-2026-Th4A.5-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "54",
+    "DOI": "10.1038/s41586-022-05119-9",
+    "type": "journal-article",
+    "volume": "610",
+    "author": "Tran",
+    "year": "2022",
+    "journal-title": "Nature"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-Th4A.5&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:27:00Z",
+   "timestamp": 1786987620000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-Th4A.5"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 6,
+  "URL": "https://doi.org/10.1364/ofc.2026.th4a.5",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

@@ -90,6 +90,8 @@ Both blocking findings were extrapolated bandwidths stored as measured: arabjune
 
 ## Open items
 
+> 2026-10-05: lnos_rib adopted (didier2026); liu2025 Crossref record still not adopted (title differs); powell2024 year 2024 / published_on 2025-05-01 under the earliest rule; wang2024a licence from the arXiv OAI record; see [DevLog-020](DevLog-020-data-convention-decisions.md). Rotated-cut sim support stays with the engine owner.
+
 - Network follow-ups (no requests were made): liu2025 article Crossref record (cached record is the issue cover; DOI cleared); powell2024 APL Photonics 10(9) 2025 record (row still points at the CLEO 2024 abstract DOI); wang2024a cached source.json/text.md header licence (CC-BY-4.0 from a batch hint vs Optica OA License v2).
 - Schema proposals: `lnos_rib` waveguide_platform (didier2026 LN on sapphire, entered as other); rotated-cut support in the sim contract (wang2025).
 - The DevLog-015 user decisions still apply to these rows (year/published_on, arXiv identity form, licence default).

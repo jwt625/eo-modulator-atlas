@@ -1,0 +1,395 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 2101,
+  "items": [
+   {
+    "DOI": "10.1364/oe.24.004640",
+    "title": [
+     "Electric-optical property of the proton exchanged phase modulator in single-crystal lithium niobate thin film"
+    ],
+    "author": [
+     {
+      "given": "Lutong",
+      "family": "Cai",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yun",
+      "family": "Kang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hui",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2016,
+       2,
+       24
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2026.am2d.7",
+    "title": [
+     "Ultra-Compact Electro-Optic Modulator on Thin-Film Lithium Niobate by Coupling Modulation"
+    ],
+    "author": [
+     {
+      "given": "Bingcheng",
+      "family": "Pan",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hao",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yunhong",
+      "family": "Ding",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/icocn63276.2024.10648358",
+    "title": [
+     "Large Bandwidth Thin Film Lithium Niobate Electro-Optic Modulator with Periodic Dual-Capacitance Structured Electrodes"
+    ],
+    "author": [
+     {
+      "given": "Hu",
+      "family": "Shuling",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "School of Instrumentation and Optoelectronics Engineering, Beihang University,Beijing,China,100191"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zhou",
+      "family": "Xiang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Instrumentation and Optoelectronics Engineering, Beihang University,Beijing,China,100191"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Qi",
+      "family": "Binzhi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Instrumentation and Optoelectronics Engineering, Beihang University,Beijing,China,100191"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sun",
+      "family": "Chuanqi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Instrumentation and Optoelectronics Engineering, Beihang University,Beijing,China,100191"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       7,
+       26
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.optlastec.2023.110432",
+    "title": [
+     "Design of optical phased array with low-sidelobe beam steering in thin film lithium niobate"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-9270-1941",
+      "authenticated-orcid": false,
+      "given": "Yang",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Huajiang",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Runhao",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shiyao",
+      "family": "Deng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jinmian",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yuanzhi",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Tiefeng",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Heyuan",
+      "family": "Guan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Huihui",
+      "family": "Lu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       4
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/icton.2016.7550466",
+    "title": [
+     "Integrated optics on single-crystal lithium niobate thin film: Some recent progress"
+    ],
+    "author": [
+     {
+      "given": "Lutong",
+      "family": "Cai",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Huangpu",
+      "family": "Han",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shuang",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "family": "Hui Hu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2016,
+       7
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

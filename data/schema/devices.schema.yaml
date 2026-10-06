@@ -7,36 +7,63 @@
 #     (b) Bounds and approximations: any source wording such as over, above, below, >, <, about, approximately, ~ produces a number plus a `qualifiers` entry (field:gt|lt|approx). The qualifier sits on the field the statement is about.
 #     (c) Bandwidth with no 3 dB crossing ("over 67 GHz"): bw3db_ghz = the measured-to value with qualifier bw3db_ghz:gt, and bw_measured_to_ghz = the same number with no qualifier. When the paper states a bound that differs from the measurement range ("exceeds 100 GHz" on a trace measured to 110 GHz) bw3db_ghz carries the paper's bound with gt and bw_measured_to_ghz the actual range. A claimed crossing at the instrument limit fills bw3db_ghz (with approx if the paper says "around") and bw_measured_to_ghz.
 #     (d) Row granularity: a new row is for a different physical device or a different measured operating point of Vpi/IL/bandwidth (length, wavelength, band, temperature); several baud/format points stay in modulation_format text with the extreme in max_* columns.
-#     (e) Org names: the institution's own official English name as in the paper ("ETH Zurich" is fine); expand pure acronyms; org_type foundry = primary business is contract fabrication, facility = shared cleanroom/centre; country of a facility from its host institution with a note. Hong Kong uses HK, Taiwan TW (own ISO code), not CN.
+#     (e) Org names (revised 2026-10-05): the organization's own preferred English name (its website, branding or ROR record; ror_id and name_source in organizations.csv), e.g. EPFL, NTT, Inc., Technische Universität Berlin; duplicates merged; country from the printed affiliation address; org_type foundry = primary business is contract fabrication, facility = shared cleanroom/centre; country of a facility from its host institution with a note. Hong Kong uses HK, Taiwan TW (own ISO code), not CN.
 #     (f) drive = how the two MZM arms are driven: push_pull (opposite fields in the arms, also for a single GSG feed), series_push_pull, differential, dual_drive, single_ended (only one arm driven); inferred values need an evidence entry with basis derived and a note that the authors do not state it.
 #     (g) eo_rolloff_db = positive number, the drop in dB at eo_rolloff_freq_ghz relative to the reference stated in bw3db_reference; one point only (other points go to notes). The sign in sims/SPEC.md targets (negative S21 values) is a separate convention.
 #     (h) Basis: values the authors compute or deduce from other measured numbers are `derived` (formula given in the paper) or `author_estimate` (paper says estimated), never `measured`; values read from a plot are `extracted_from_figure`. Row-level *_basis columns summarize the headline field; the evidence basis wins.
 #     (i) Locators: "p.N" is the PDF page index of references/<id>/text.md (the `<!-- page N -->` markers); add the journal page in parentheses only if useful; figures as Fig. 4(a); tables as Table I.
 #     (j) device_class is the most specific function (mzm, iq_mzm, phase_shifter, ring, eam); plasmonic or other design features go in `tags` and electrode_type. plasmonic_mzm is legacy: do not use for new rows.
 #     (k) Every published_on, license and redistribution claim needs references/<id>/crossref.json (or the paper's own notice quoted in the evidence note).
+#     (l) band (2026-10-05): the band of wavelength_nm per ITU-T G.Sup39 (o_band 1260-1360, e_band 1360-1460, s_band 1460-1530, c_band 1530-1565, l_band 1565-1625, u_band 1625-1675 nm; lower edge inclusive) and ISO 20473 outside it (uv < 380, visible 380-780, nir_below_o 780-1260, nir_above_u 1675-3000, mid_ir 3000-50000 nm). When wavelength_nm is set the validator requires the derived band; cl_band for a row characterized across C and L (a wavelength_nm, if set, lies in C or L); empty when neither a wavelength nor a band is stated (other only for a stated band outside these definitions).
+#     (m) Vpi frequency (2026-10-05): a Vpi measured below 1 GHz (DC, kHz/MHz triangle or sine, quasi-static) goes to vpi_dc_v / vpil_dc_vcm with its frequency in vpi_dc_freq_ghz when stated; at or above 1 GHz to vpi_rf_v / vpil_rf_vcm with vpi_rf_freq_ghz.
+#     (n) Identity, dates, authors, licence (2026-10-05): url = https://doi.org/<doi> when a version-of-record DOI exists (arXiv DataCite DOIs are not used), else https://arxiv.org/abs/<id> (unversioned); arxiv_id is the bare identifier and references/<id>/source.json records the cached version that locators cite. published_on = earliest full public-availability date across versions (arXiv v1 from references/<id>/arxiv.json; Crossref published-online, posted; print-issue cover dates published-print/issued only when none of these exists); year = earliest year over all candidates, print/issued included. authors = the Crossref list (membership and order) when Crossref has one; the printed spelling is kept where Crossref gives initials or a truncated name of the same person (matched by family name; overrides in AUTHOR_SPELLING). license and redistribution describe the cached copy: arXiv copies take the arXiv OAI licence; redistribution = open_license_ok for CC-BY, CC-BY-SA, CC0, else restricted_local_only (arXiv-nonexclusive-1.0, any NC or ND licence, publisher copyright). scripts/refresh_metadata.py applies these rules.
+#     (o) er_type resonance_dip = on/off-resonance depth of a resonator notch at fixed bias (not a voltage-switched contrast); static = DC transfer contrast of an interferometer (voltage or wavelength sweep); dynamic = eye/modulated contrast.
+#     (p) foundry_or_fab includes a cleanroom or nanofabrication facility the paper says was used (methods or acknowledgments), as the facility names itself.
+#     (q) Vpi definitions: per_arm_phase_shifter also covers a stand-alone phase modulator; resonance_tuning_derived = any Vpi/VpiL computed from a resonance or FSR-referenced shift (ring, cavity, unbalanced MZI); length_mm = electrode length per arm (two-arm totals in notes); a VpiL quoted with another length (ring circumference) stays in notes unless length_mm is that length; two mechanisms in one device (slow LC + Pockels) are separate rows.
+#     (r) drive_vpp_v = RF swing at the device during the reported modulation data (eye/BER/ER), after stated cable/probe loss when given (reference plane in the evidence note); never a required or predicted swing; S21 or Vpi-sweep amplitudes go to notes. energy_per_bit_fj states its scope (modulator CV^2 vs incl. driver) in the evidence note.
+#     (s) Insertion loss: il_onchip_scope says what il_onchip_db covers (device_total = whole device with only the couplers removed, e.g. cut-back or a coupler-pair test structure; phase_section_only; excess_over_reference = loss relative to an on-chip reference waveguide; free_space; undefined). "Insertion loss" with SSC/couplers at both facets, or packaged-chip passive loss -> il_fiber_to_fiber_db; an on-chip IL whose scope the paper does not define -> il_onchip_db with scope undefined.
+#     (t) Bandwidth: bw_method says how bw3db_ghz/bw6db_ghz/eo_rolloff_db were obtained (eo_s21 = VNA/LCA EO response, also a plotted measured small-signal EO response whose instrument is not named, sideband = optical sideband ratio, link_eoe = EOE link response, photon_lifetime_estimate, optical_linewidth, indirect); bw3db_reference applies to all response fields of the row; low_freq_unstated = normalized to the low-frequency plateau without a stated frequency.
+#     (u) sidewall_angle_deg = angle between sidewall and film plane (90 = vertical); an angle stated from the normal is converted with a derived entry; unstated reference -> empty.
+#     (v) bias_for_vpi_v: reverse bias negative; the paper's own sign quoted in the evidence note. tuning_nm_per_v: d(lambda)/dV with V in the database sign convention (reverse bias negative; a source axis of positive reverse-bias magnitude flips the sign); direction not stated -> value kept, note 'sign not stated'; GHz/V converted with a derived entry at the stated resonance wavelength. q_loaded: an unqualified "Q" goes here with note "type not stated"; intrinsic Q in notes.
+#     (w) Optical power: optical_input_power_dbm = launch/on-chip power at the device; scan-only, fiber-tip or EDFA-output powers -> notes; optical_power_handling_dbm = bus power, "stable up to X" = X with gt; intracavity power in notes.
+#     (x) Extinction ratio: when static and dynamic are both reported, extinction_ratio_db = static (er_type static); dynamic values in notes.
+#     (y) Source defects: a self-contradiction -> empty cell, all readings in notes; an abstract claim unsupported by the body -> notes only; batch hints never override the cached text; a table unit typo is entered only if unambiguous (derived + note); detuned-ring wavelength_nm = the printed operating/resonance wavelength.
+#     (z) statistic is set only when it describes every headline value of the row; a row mixing chip statistics with single-device values leaves it empty and says so in the notes. Row granularity additions to (d): operating-point rows repeat geometry and share physical_device_id; a row mixing metrics from different bias/power points needs a note; array-level statements are not copied to channel rows (one row + statistic); same-chip sibling devices are separate rows; row_kind design for simulated/projected rows.
+#     (aa) Figure reading: model curves are not entered; repeated markers -> median with statistic median, spread in notes; a crossing on a fit/co-simulation beyond the sweep -> basis simulated plus bw_measured_to_ghz.
+#     (bb) Basis for geometry: dimensions stated in the text are design_target unless the paper says measured (SEM/AFM/profilometer); authors' own result tables are measured with a table locator; values from earlier work go to notes only; a 3 dB point read from a fit is derived; an asymptotic/design-formula Z0 is derived.
+#     (cc) rf_loss_db_per_cm is power dB; amplitude coefficients (1/mm, Np) are converted with a derived entry (8.686 dB/Np). eo_film_thickness_nm = the EO film, or the Si/III-V device layer for carrier/QCSE devices. max_baud_gbd is derived from a line rate only for NRZ/OOK.
+#     (dd) Papers-only rule: no device row when the paper has no device-level metric in scope (transducers, SSB/IQ architecture without Vpi/BW/IL/ER, electrode-only test structures, reviews/models, results cited from earlier work).
+#     (ee) Class and material definitions: resonator = resonant modulator that is not a ring/racetrack/disk (Fabry-Perot, photonic-crystal or nanobeam cavity, coupled cavities); free_space = surface-normal/metasurface/vertical-cavity device; iq_mzm covers any IQ interferometer (MZ, Michelson, resonator-assisted); ring-assisted MZM = mzm + tag ring_assisted_mzm; germanium_silicon_eam covers Ge or GeSi (tag pure_ge); drive not_applicable for devices without MZM arm topology. Integration: polymer_backfill = any organic or LC material applied to a finished chip; an inorganic film deposited on a finished chip (ITO, HfO2 gate, sol-gel BTO) = monolithic + tag; a film grown on a donor then bonded/transferred (epitaxial BTO) = bonded_heterogeneous; transferred_2d = wet/dry-transferred 2D material; foundry_native = made in a foundry or CMOS line process the paper states (named or not), in-house fabrication = monolithic; integration stays empty for theory/design rows that describe no fabrication.
+#     (ff) Flag tags the views rely on (keep spelling): phase_only_loss, statistical_replicate, reference_device, ring_assisted_mzm, free_space, gssg, micro_transfer_printed, traveling_wave, fabry_perot_cavity. Other tags are free vocabulary.
+#     (gg) Bibliographic additions to (n): title follows the identity version (Crossref record when a DOI exists); a licence with NC or ND terms -> restricted_local_only for arXiv and version-of-record copies alike; a fab process known only by citation leaves foundry_or_fab empty; several facilities without layer assignment are all listed.
 #   - Units are in the column name. Dates are ISO (YYYY-MM-DD). Lists are ';'-separated.
-#   - Full organization names, no abbreviations (e.g. "International Business Machines Corporation Research Zurich" not "IBM").
+#   - Organization names follow convention (e): the organization's own preferred English name (no invented expansions or abbreviations).
 version: 1
 
 enums:
-  device_class: [mzm, iq_mzm, phase_shifter, ring, eam, plasmonic_mzm, other]
-  eo_material: [lithium_niobate, lithium_tantalate, barium_titanate, eo_polymer, ferroelectric_nematic_lc, pzt, plzt, strontium_titanate, ktn, inp_mqw, algaas_gaas, silicon_plasma_dispersion, germanium_silicon_eam, graphene_2d, other]
-  waveguide_platform: [lnoi_rib, lnoi_loaded_sin, lnoi_loaded_si, ltoi_rib, ltoi_loaded_sin, bto_on_si, bto_on_sin, bto_on_oxide_substrate, soi_slot, soi_rib, sin, inp, algaas, plasmonic_mim, suspended_lnoi, other]
-  integration: [monolithic, bonded_heterogeneous, micro_transfer_printed, epitaxial_on_silicon, polymer_backfill, wafer_bonded_iii_v, foundry_native, other]
-  electrode_type: [lumped, tw_cpw, tw_cps, tw_gsg, cl_twe, segmented, slow_wave, plasmonic_lumped, folded, coaxial, other]
-  drive: [single_ended, push_pull, series_push_pull, differential, dual_drive, unspecified]
+  device_class: [mzm, iq_mzm, phase_shifter, ring, eam, plasmonic_mzm, resonator, free_space, other]
+  eo_material: [lithium_niobate, lithium_tantalate, barium_titanate, eo_polymer, ferroelectric_nematic_lc, pzt, plzt, strontium_titanate, ktn, inp_mqw, algaas_gaas, silicon_plasma_dispersion, germanium_silicon_eam, graphene_2d, transparent_conducting_oxide, other]
+  waveguide_platform: [lnoi_rib, lnoi_loaded_sin, lnoi_loaded_si, ltoi_rib, ltoi_loaded_sin, bto_on_si, bto_on_sin, bto_on_oxide_substrate, soi_slot, soi_rib, soi_strip, sin, inp, algaas, plasmonic_mim, suspended_lnoi, lnos_rib, lnoi_loaded_oxide, other]
+  integration: [monolithic, bonded_heterogeneous, micro_transfer_printed, epitaxial_on_silicon, polymer_backfill, wafer_bonded_iii_v, foundry_native, transferred_2d, other]
+  electrode_type: [lumped, tw_cpw, tw_cps, tw_gsg, cl_twe, segmented, slow_wave, plasmonic_lumped, folded, coaxial, tw_gssg, other]
+  drive: [single_ended, push_pull, series_push_pull, differential, dual_drive, not_applicable, unspecified]
   vpi_convention: [per_arm_phase_shifter, mzm_push_pull, mzm_series_push_pull, mzm_differential, mzm_single_arm, resonance_tuning_derived, unspecified]
-  bw_reference: [dc, 1ghz, 10ghz, other, unspecified]
+  bw_reference: [dc, 1ghz, 10ghz, low_freq_unstated, other, unspecified]
   basis: [measured, simulated, predicted, extracted_from_figure, derived, author_estimate, design_target]
-  er_type: [static, dynamic, unspecified]
+  er_type: [static, dynamic, resonance_dip, unspecified]
   qualifier_ops: [lt, gt, approx]
-  band: [o_band, c_band, l_band, cl_band, one_um, visible_nir, mid_ir, other]
+  band: [uv, visible, nir_below_o, o_band, e_band, s_band, c_band, l_band, u_band, cl_band, nir_above_u, mid_ir, other]
   temperature_class: [room, elevated, cryogenic, unspecified]
   source_type: [journal, arxiv_preprint, conference, datasheet, thesis, review]
   access: [open_access, paywalled, arxiv, unknown]
   cache_status: [full_extract, metadata_only, needs_download]
   repro_grade: [A, B, C]
   redistribution: [open_license_ok, restricted_local_only, unknown]
+  row_kind: [device, design]
+  eo_effect: [pockels, plasma_dispersion, qcse, franz_keldysh, pauli_blocking, stress_optic, orientational, other]
+  bw_method: [eo_s21, sideband, link_eoe, photon_lifetime_estimate, optical_linewidth, indirect, unspecified]
+  il_onchip_scope: [device_total, phase_section_only, excess_over_reference, free_space, undefined]
+  statistic: [single, best, mean, median]
   audit_status: [audited, needs_recheck, needs_audit]
 
 papers_columns:
@@ -60,7 +87,7 @@ papers_columns:
   - {name: wafer_supplier, type: str, required: false}
   - {name: process_name, type: str, required: false}
   - {name: countries, type: list, required: false, desc: "countries of the author affiliations (ISO 3166 alpha-2 codes), derived from affiliations"}
-  - {name: discovered_via, type: list, required: true, desc: "tokens: drive_doc | tmp_eo_md | blog:<post-id> | local_corpus | ofc2026 | landmark | web | assigned"}
+  - {name: discovered_via, type: list, required: true, desc: "how the paper entered the candidate list; tokens: drive_doc | tmp_eo_md | blog:<post-id> | local_corpus | ofc2026 | landmark | web_search | author_group_followup | assigned"}
   - {name: cache_status, type: enum, enum: cache_status, required: true}
   - {name: repro_grade, type: enum, enum: repro_grade, required: false, desc: "A geometry+materials fully disclosed; B needs figure digitization; C metrics only"}
   - {name: sim_config, type: str, required: false, desc: "relative path sims/<paper_id>/config.yaml if one exists"}
@@ -73,21 +100,26 @@ devices_columns:
   - {name: device_id, type: str, required: true, desc: "<paper_id>-<label>, label a,b,c or short slug"}
   - {name: paper_id, type: str, required: true}
   - {name: device_label, type: str, required: true, desc: "short human label, e.g. '6 mm O-band' or 'DR4 chip'"}
+  - {name: physical_device_id, type: str, required: false, desc: "rows that are operating points of one physical device share this id (<paper_id>-<slug>); empty = not stated or a single row"}
   - {name: device_class, type: enum, enum: device_class, required: true}
+  - {name: row_kind, type: enum, enum: row_kind, required: true, desc: "device = fabricated and measured; design = simulated, projected or design-value row with no fabricated device behind the numbers"}
   - {name: tags, type: list, desc: "free vocabulary, ';'-separated: plasmonic, slow_light, folded, suspended, segmented, coaxial, poled, ..."}
   - {name: eo_material, type: enum, enum: eo_material, required: true}
+  - {name: eo_effect, type: enum, enum: eo_effect, required: true, desc: "primary modulation mechanism of the row (eo_material no longer implies it)"}
   - {name: waveguide_platform, type: enum, enum: waveguide_platform, required: false}
   - {name: integration, type: enum, enum: integration, required: false}
   - {name: electrode_type, type: enum, enum: electrode_type, required: false}
   - {name: drive, type: enum, enum: drive, required: false}
   - {name: vpi_convention, type: enum, enum: vpi_convention, required: false, desc: "how Vpi in this row is defined; critical for factor-of-2 comparisons"}
   - {name: temperature_class, type: enum, enum: temperature_class, required: false}
+  - {name: temperature_k, type: float, unit: K, evidence: true, desc: "device temperature during the reported measurement; C converted with a derived entry; empty = not reported (never assume room temperature)"}
   - {name: band, type: enum, enum: band, required: false}
   # operating point and size
   - {name: wavelength_nm, type: float, unit: nm, evidence: true}
   - {name: length_mm, type: float, unit: mm, evidence: true, desc: "active electrode / phase-shifter length"}
   # drive efficiency
   - {name: vpi_dc_v, type: float, unit: V, evidence: true}
+  - {name: vpi_dc_freq_ghz, type: float, unit: GHz, evidence: true, desc: "modulation frequency of a quasi-static Vpi measurement (below 1 GHz, convention m) when the paper states it; empty for true DC, unstated, or a band average"}
   - {name: vpi_rf_v, type: float, unit: V, evidence: true}
   - {name: vpi_rf_freq_ghz, type: float, unit: GHz, evidence: true}
   - {name: vpil_dc_vcm, type: float, unit: "V*cm", evidence: true, desc: "as reported; if absent and vpi_dc_v and length_mm known, build_views derives it into vpil_dc_vcm_derived"}
@@ -96,10 +128,12 @@ devices_columns:
   - {name: bias_for_vpi_v, type: float, unit: V, evidence: true, desc: "DC bias at which Vpi was measured (reverse bias, poling bias)"}
   - {name: drive_vpp_v, type: float, unit: V, evidence: true, desc: "RF drive amplitude used in the system demo"}
   - {name: vpi_basis, type: enum, enum: basis, required: false, desc: "basis of the headline Vpi; per-field basis in the evidence file wins when they disagree"}
+  - {name: r_eff_pm_per_v, type: float, unit: pm/V, evidence: true, desc: "in-device effective Pockels coefficient the authors extract from their own measurement; tensor component/definition in the evidence note; assumed or literature inputs are not entered"}
   # bandwidth
   - {name: bw3db_ghz, type: float, unit: GHz, evidence: true}
   - {name: bw3db_reference, type: enum, enum: bw_reference, required: false, desc: "frequency the 3 dB drop is referenced to"}
   - {name: bw3db_reference_freq_ghz, type: float, unit: GHz, evidence: true, desc: "numeric reference frequency when bw3db_reference is other"}
+  - {name: bw_method, type: enum, enum: bw_method, required: false, desc: "how the row's bandwidth fields were obtained; required when bw3db_ghz, bw6db_ghz or eo_rolloff_db is set"}
   - {name: bw6db_ghz, type: float, unit: GHz, evidence: true}
   - {name: bw_measured_to_ghz, type: float, unit: GHz, evidence: true, desc: "instrument / measurement limit; use when no crossing was observed"}
   - {name: eo_rolloff_db, type: float, unit: dB, evidence: true, desc: "measured EO response drop at eo_rolloff_freq_ghz relative to the stated reference (positive number = drop)"}
@@ -107,6 +141,7 @@ devices_columns:
   - {name: bw_basis, type: enum, enum: basis, required: false}
   # optical loss
   - {name: il_onchip_db, type: float, unit: dB, evidence: true}
+  - {name: il_onchip_scope, type: enum, enum: il_onchip_scope, required: false, desc: "what il_onchip_db covers (convention s); required when il_onchip_db is set"}
   - {name: il_onchip_includes, type: str, desc: "what the on-chip number includes (phase shifter, MMI, bends, ...)"}
   - {name: il_onchip_excludes, type: str, desc: "what the on-chip number excludes (couplers, splitters, ...)"}
   - {name: il_fiber_to_fiber_db, type: float, unit: dB, evidence: true}
@@ -115,6 +150,7 @@ devices_columns:
   - {name: er_type, type: enum, enum: er_type, required: false}
   - {name: optical_input_power_dbm, type: float, unit: dBm, evidence: true, desc: "launch/on-chip optical power used in the measurement (not the handling limit)"}
   - {name: il_basis, type: enum, enum: basis, required: false}
+  - {name: statistic, type: enum, enum: statistic, required: false, desc: "single, best, mean or median when the paper states how the headline values relate to several devices/channels/measurements (N, spread, yield in the evidence note); empty = not stated"}
   # RF
   - {name: rf_loss_db_per_cm, type: float, unit: "dB/cm", evidence: true}
   - {name: rf_loss_freq_ghz, type: float, unit: GHz, evidence: true}

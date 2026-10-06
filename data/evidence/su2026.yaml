@@ -134,16 +134,20 @@ entries:
   basis: derived
   locator: p.1, Sec. 2; p.3 Sec. 3
   note: authors state push-pull but not the Vpi*L convention; MZM-level assumed
-derived:
 - device_id: su2026-a
-  field: vpi_dc_v
-  value: 13
-  formula: VpiL / L = 1.3 V*cm / 0.1 cm (not entered in CSV)
-  inputs:
-  - vpil_dc_vcm=1.3
-  - length_mm=1
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.3 Sec. 3; Fig. 3(c)
+  note: 'source: A 100-kHz sawtooth electric signal was applied to the electrodes to measure the half-wave voltage.'
+derived: []
 context_values:
 - item: license_notice
   value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
   locator: p.1-3, page footer
   note: printed in the page footer of pages 1-3; abstract also reads '(c) 2026 The Author(s)'
+- item: su2026-a vpi_dc_v (coordinator arithmetic, not stated in the paper)
+  value: 13
+  locator: 'derived from: vpil_dc_vcm=1.3, length_mm=1'
+  note: VpiL / L = 1.3 V*cm / 0.1 cm (not entered in CSV)

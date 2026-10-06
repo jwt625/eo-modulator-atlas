@@ -397,4 +397,46 @@ entries:
   basis: measured
   locator: p.13 text; p.14, Table 3
   note: Phase-matched wavelength at 5 K
+- device_id: thiele2022-a
+  field: temperature_k
+  value: 296.0
+  unit: K
+  basis: measured
+  locator: p.7, Table 2
+  note: Table 2 ambient 296 K; no unit conversion.
+- device_id: thiele2022-b
+  field: temperature_k
+  value: 8.5
+  unit: K
+  basis: measured
+  locator: p.7, Table 2
+  note: Table 2 minimum 8.5 K; abstract says below 8.5 K.
+- device_id: thiele2022-c
+  field: temperature_k
+  value: 296.0
+  unit: K
+  basis: measured
+  locator: p.7, Table 2
+  note: Table 2 ambient 296 K.
+- device_id: thiele2022-d
+  field: temperature_k
+  value: 5.0
+  unit: K
+  basis: measured
+  locator: p.7, Table 2
+  note: Table 2 cryogenic 5 K.
+- device_id: thiele2022-e
+  field: temperature_k
+  value: 296.0
+  unit: K
+  basis: measured
+  locator: p.7, Table 2
+  note: Table 2 ambient 296 K; p.13 text writes 295 K once.
+- device_id: thiele2022-f
+  field: temperature_k
+  value: 5.0
+  unit: K
+  basis: measured
+  locator: p.7, Table 2
+  note: Table 2 cryogenic 5 K.
 derived: []

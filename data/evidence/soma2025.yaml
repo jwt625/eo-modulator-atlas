@@ -49,11 +49,11 @@ entries:
   note: approximately 2,400, nearly constant across voltages
 - device_id: soma2025-a
   field: tuning_nm_per_v
-  value: 0.26
+  value: -0.26
   unit: nm/V
-  basis: derived
-  locator: p.5
-  note: S = delta lambda / delta V with 5.1 nm over +-10 V, as computed by the authors
+  basis: measured
+  locator: p.5, Fig. 3(c)
+  note: 'Fig. 3(c): +10 V dip lies at shorter wavelength than -10 V, so blue shift per positive volt; text gives magnitude only.'
 - device_id: soma2025-a
   field: drive_vpp_v
   value: 0.2
@@ -147,11 +147,11 @@ entries:
   note: figure label 665; Extended Data Table I (p.13) lists 655
 - device_id: soma2025-b
   field: tuning_nm_per_v
-  value: 0.18
+  value: -0.18
   unit: nm/V
-  basis: derived
-  locator: p.6; Fig. 4d
-  note: S derived by the authors from the reflectance spectra versus voltage
+  basis: measured
+  locator: p.7, Fig. 4(d)
+  note: 'Fig. 4(d): +5 V trace lies at shorter wavelength than -5 V, so blue shift per positive volt; text gives magnitude only.'
 - device_id: soma2025-b
   field: drive_vpp_v
   value: 1.0
@@ -201,4 +201,11 @@ entries:
   basis: measured
   locator: p.6; Fig. 4g,h
   note: PAM4 with DSP-based equalization
+- device_id: soma2025-a
+  field: r_eff_pm_per_v
+  value: 58.0
+  unit: pm/V
+  basis: author_estimate
+  locator: p.5, Sec. Active modulation
+  note: In-device r33 of JRD1 estimated from measured S and simulated confinement factor; basis author_estimate.
 derived: []

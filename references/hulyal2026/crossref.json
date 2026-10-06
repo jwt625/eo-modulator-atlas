@@ -1,0 +1,262 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:26:09Z",
+   "timestamp": 1786991169936,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 5,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate a fully integrated photonic IMDD transmitter on a monolithic thin-film lithium tantalate platform, achieving an aggregate net data rate of 1.6 Tbit/s using wavelength-division multiplexing (WDM) with PAM-4 and PAM-8 modulation formats.</jats:p>",
+  "DOI": "10.1364/ofc.2026.w1a.7",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:29:09Z",
+   "timestamp": 1780428549000
+  },
+  "page": "W1A.7",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "A 1.6 Tbit/s WDM Integrated Photonic IMDD Transmitter on Thin-Film Lithium Tantalate"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Shivaprasad U.",
+    "family": "Hulyal",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Dengyang",
+    "family": "Fang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jiachen",
+    "family": "Cai",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alexander",
+    "family": "Kotz",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xin",
+    "family": "Ou",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Christian",
+    "family": "Koos",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tobias J.",
+    "family": "Kippenberg",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-W1A.7-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1007/s12200-022-00055-y",
+    "type": "journal-article",
+    "volume": "16",
+    "author": "Tan",
+    "year": "2023",
+    "journal-title": "Front. Optoelectron"
+   },
+   {
+    "key": "OFC-2026-W1A.7-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "236",
+    "DOI": "10.1109/2944.577370",
+    "type": "journal-article",
+    "volume": "2",
+    "author": "Smit",
+    "year": "1996",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "OFC-2026-W1A.7-R4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/50.996587",
+    "type": "journal-article",
+    "volume": "20",
+    "author": "Muñoz",
+    "year": "2002",
+    "journal-title": "J. Light. Technol"
+   },
+   {
+    "key": "OFC-2026-W1A.7-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "978",
+    "DOI": "10.1364/OPTICA.565570",
+    "type": "journal-article",
+    "volume": "12",
+    "author": "Hulyal",
+    "year": "2025",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "OFC-2026-W1A.7-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "2410345",
+    "DOI": "10.1002/advs.202410345",
+    "type": "journal-article",
+    "volume": "12",
+    "author": "Huang",
+    "year": "2025",
+    "journal-title": "Adv. Sci."
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-W1A.7&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:27:10Z",
+   "timestamp": 1786987630000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-W1A.7"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 5,
+  "URL": "https://doi.org/10.1364/ofc.2026.w1a.7",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

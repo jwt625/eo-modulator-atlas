@@ -203,4 +203,18 @@ entries:
   basis: measured
   locator: p.15 Methods; Fig. S2 (p.17)
   note: BER 0.5 erfc(Q/sqrt2); 7.4e-4 at 20 Gb/s
+- device_id: lee2020-a
+  field: temperature_k
+  value: 4.9
+  unit: K
+  basis: measured
+  locator: p.4, Fig. 3
+  note: Stated chip temperature of the measurement; no conversion needed.
+- device_id: lee2020-b
+  field: temperature_k
+  value: 293.0
+  unit: K
+  basis: measured
+  locator: p.4, Fig. 3
+  note: Stated chip temperature of the measurement; no conversion needed.
 derived: []

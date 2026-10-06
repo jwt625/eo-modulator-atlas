@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2112.10926",
+ "title": "100 GHz Micrometer compact broadband Monolithic ITO Mach Zehnder Interferometer Modulator enabling 3500 times higher Packing Density",
+ "authors": "Yaliang Gui, Behrouz Movahhed Nouri, Mario Miscuglio, Rubab Amin, Hao Wang, Jacob B. Khurgin, Hamed Dalir, and Volker J. Sorger",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Tue, 21 Dec 2021 01:06:56 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Thu, 24 Mar 2022 20:55:01 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T19:59:03Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2112.10926\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2112.10926</identifier>\n        <datestamp>2022-03-28</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2112.10926</id>\n        <submitter>Hamed Dalir</submitter>\n            <version version=\"v1\">\n                <date>Tue, 21 Dec 2021 01:06:56 GMT</date>\n                <size>1702kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Thu, 24 Mar 2022 20:55:01 GMT</date>\n                <size>1360kb</size>\n            </version>\n        <title>100 GHz Micrometer compact broadband Monolithic ITO Mach Zehnder Interferometer Modulator enabling 3500 times higher Packing Density</title>\n        <authors>Yaliang Gui, Behrouz Movahhed Nouri, Mario Miscuglio, Rubab Amin, Hao Wang, Jacob B. Khurgin, Hamed Dalir, and Volker J. Sorger</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>14 pages, 7 figures</comments>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Electro-optic modulators provide a key function in optical transceivers and increasingly in photonic programmable Application Specific Integrated Circuits (ASICs) for machine learning and signal processing. However, both foundry ready silicon based modulators and conventional material based devices utilizing Lithium niobate fall short in simultaneously providing high chip packaging density and fast speed. Current driven ITO based modulators have the potential to achieve both enabled by efficient light matter interactions. Here, we introduce micrometer compact Mach Zehnder Interferometer (MZI) based modulators capable of exceeding 100 GHz switching rates. Integrating ITO thin films atop a photonic waveguide, spectrally broadband, and compact MZI phase shifter. Remarkably, this allows integrating more than 3500 of these modulators within the same chip area as only one single silicon MZI modulator. The modulator design introduced here features a holistic photonic, electronic, and RF-based optimization and includes an asymmetric MZI tuning step to optimize the Extinction Ratio (ER) to Insertion Loss (IL) and dielectric thickness sweep to balance the tradeoffs between ER and speed. Driven by CMOS compatible bias voltage levels, this device is the first to address next generation modulator demands for processors of the machine intelligence revolution, in addition to the edge and cloud computing demands as well as optical transceivers alike.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

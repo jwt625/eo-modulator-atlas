@@ -113,39 +113,39 @@ entries:
   note: Maximum NRZ data rate in Table 1
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1-3, page footer
-    note: Footer on pages 1-3; page 1 abstract also reads (c) 2026 The Author(s)
-  bw6db_simulated:
-    value: about 100 GHz (RC model)
-    locator: p.2 Sec. 2; Fig. 2(b)
-    note: Simulated, not entered; RC model C = 0.0015 F/m2, contact resistance about 400 ohm um
-  max_static_er_simulated:
-    value: 4.8 dB (C), 3.6 dB (O), 40 um
-    locator: p.1 Sec. 2; Fig. 1(b)
-    note: Simulation, not entered
-  eye_er_db_table1:
-    value: C 40 um 1.05/1.02/0.82; C 100 um 1.89/1.74/1.41 (50/60/80 Gb/s); O 0.81 (40 Gb/s, both lengths)
-    locator: p.3 Table 1
-    note: Eye-diagram ER; C-band rows re-report tiberi2025 Table IV (filtered columns)
-  snr_table1:
-    value: C 40 um 5.17/4.02/2.38; C 100 um 4.84/3.75/2.31; O 40 um 4.62; O 100 um 4.81
-    locator: p.3 Table 1
-    note: SNR from eye diagrams; C-band values equal tiberi2025 Table IV filtered columns
-  static_er_c_band_40um:
-    value: about 3.5 dB at 1550 nm (ideal bias about 3.5 V)
-    locator: p.1 Sec. 2; p.2 Fig. 2(a)
-    note: Static; tiberi2025-a has 4 dB (Table I); 40 um C-band device not entered as a row
-  drive_estimate:
-    value: about 3 Vpp at the EAM, less than 100 fJ/bit
-    locator: p.2 Sec. 2
-    note: Author estimate from RF losses; tiberi2025 p.15 gives about 7 V and 58 fJ/bit for same BERs
-  c_band_rows_not_entered:
-    value: 40 um 67 GHz S21 (Fig. 2(b)); Table 1 C 40 um and C 100 um rows (50/60/80 Gb/s)
-    locator: p.2 Fig. 2(b); p.3 Table 1
-    note: Re-report tiberi2025 Fig. 9(b) and Table IV; kept on tiberi2025 only
-  o_band_static:
-    value: ER about 2 dB at 1310 nm, ideal bias about -6 V (40 um)
-    locator: p.1 Sec. 2; p.2 Fig. 2(a)
-    note: Entered on tiberi2026-c (ER); bias has no column
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: Footer on pages 1-3; page 1 abstract also reads (c) 2026 The Author(s)
+- item: bw6db_simulated
+  value: about 100 GHz (RC model)
+  locator: p.2 Sec. 2; Fig. 2(b)
+  note: Simulated, not entered; RC model C = 0.0015 F/m2, contact resistance about 400 ohm um
+- item: max_static_er_simulated
+  value: 4.8 dB (C), 3.6 dB (O), 40 um
+  locator: p.1 Sec. 2; Fig. 1(b)
+  note: Simulation, not entered
+- item: eye_er_db_table1
+  value: C 40 um 1.05/1.02/0.82; C 100 um 1.89/1.74/1.41 (50/60/80 Gb/s); O 0.81 (40 Gb/s, both lengths)
+  locator: p.3 Table 1
+  note: Eye-diagram ER; C-band rows re-report tiberi2025 Table IV (filtered columns)
+- item: snr_table1
+  value: C 40 um 5.17/4.02/2.38; C 100 um 4.84/3.75/2.31; O 40 um 4.62; O 100 um 4.81
+  locator: p.3 Table 1
+  note: SNR from eye diagrams; C-band values equal tiberi2025 Table IV filtered columns
+- item: static_er_c_band_40um
+  value: about 3.5 dB at 1550 nm (ideal bias about 3.5 V)
+  locator: p.1 Sec. 2; p.2 Fig. 2(a)
+  note: Static; tiberi2025-a has 4 dB (Table I); 40 um C-band device not entered as a row
+- item: drive_estimate
+  value: about 3 Vpp at the EAM, less than 100 fJ/bit
+  locator: p.2 Sec. 2
+  note: Author estimate from RF losses; tiberi2025 p.15 gives about 7 V and 58 fJ/bit for same BERs
+- item: c_band_rows_not_entered
+  value: 40 um 67 GHz S21 (Fig. 2(b)); Table 1 C 40 um and C 100 um rows (50/60/80 Gb/s)
+  locator: p.2 Fig. 2(b); p.3 Table 1
+  note: Re-report tiberi2025 Fig. 9(b) and Table IV; kept on tiberi2025 only
+- item: o_band_static
+  value: ER about 2 dB at 1310 nm, ideal bias about -6 V (40 um)
+  locator: p.1 Sec. 2; p.2 Fig. 2(a)
+  note: Entered on tiberi2026-c (ER); bias has no column

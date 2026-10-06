@@ -161,7 +161,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.10 Sec. 3.3, Fig. 8(b); p.12 Table II
-  note: "'far beyond 110 GHz'; Table II '> 110 (220a)'; extrapolated 220 GHz (analytical model) not entered"
+  note: '''far beyond 110 GHz''; Table II ''> 110 (220a)''; extrapolated 220 GHz (analytical model) not entered'
 - device_id: liu2025-a
   field: bw_measured_to_ghz
   value: 110
@@ -348,7 +348,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.10 Sec. 3.3, Fig. 8(b); p.12 Table II
-  note: "'far beyond 110 GHz'; Table II '> 110 (218a)'; extrapolated 218 GHz (analytical model) not entered"
+  note: '''far beyond 110 GHz''; Table II ''> 110 (218a)''; extrapolated 218 GHz (analytical model) not entered'
 - device_id: liu2025-b
   field: bw_measured_to_ghz
   value: 110
@@ -390,4 +390,18 @@ entries:
   basis: author_estimate
   locator: p.12 Sec. 4
   note: Vrms 97.6 mV, B = 390 Gbit/s; includes probe and cable
+- device_id: liu2025-a
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 3.3; Fig. 8(a)
+  note: 'source: Figure 8(a) plots the modulation curves recorded at 1 MHz, indicating a Vπ of 1.9 V at the ...'
+- device_id: liu2025-b
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.10 Sec. 3.3; Fig. 8(a)
+  note: 'source: Figure 8(a) plots the modulation curves recorded at 1 MHz'
 derived: []

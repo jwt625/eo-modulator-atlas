@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "1807.10362",
+ "title": "High-Performance Hybrid Silicon and Lithium Niobate Mach-Zehnder Modulators for 100 Gbit/s and Beyond",
+ "authors": "Mingbo He, Mengyue Xu, Yuxuan Ren, Jian Jian, Ziliang Ruan, Yongsheng Xu, Shengqian Gao, Shihao Sun, Xueqin Wen, Lidan Zhou, Lin Liu, Changjian Guo, Hui Chen, Siyuan Yu, Liu Liu and Xinlun Cai",
+ "doi": "10.1038/s41566-019-0378-6",
+ "journal_ref": "Nature Photonics 2019, 13(5): 359-364",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sat, 07 Jul 2018 08:33:45 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Fri, 02 Nov 2018 06:29:01 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:00:43Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:1807.10362\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:1807.10362</identifier>\n        <datestamp>2019-05-07</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>1807.10362</id>\n        <submitter>Mengyue Xu</submitter>\n            <version version=\"v1\">\n                <date>Sat, 07 Jul 2018 08:33:45 GMT</date>\n                <size>966kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Fri, 02 Nov 2018 06:29:01 GMT</date>\n                <size>1943kb</size>\n            </version>\n        <title>High-Performance Hybrid Silicon and Lithium Niobate Mach-Zehnder Modulators for 100 Gbit/s and Beyond</title>\n        <authors>Mingbo He, Mengyue Xu, Yuxuan Ren, Jian Jian, Ziliang Ruan, Yongsheng Xu, Shengqian Gao, Shihao Sun, Xueqin Wen, Lidan Zhou, Lin Liu, Changjian Guo, Hui Chen, Siyuan Yu, Liu Liu and Xinlun Cai</authors>\n        <categories>physics.app-ph</categories>\n            <comments>Main Manuscript: 4 figures, 1 table Supplementary Information: 9 figures</comments>\n            <journal-ref>Nature Photonics 2019, 13(5): 359-364</journal-ref>\n            <doi>10.1038/s41566-019-0378-6</doi>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Optical modulators are at the heart of optical communication links. Ideally, they should feature low insertion loss, low drive voltage, large modulation bandwidth, high linearity, compact footprint and low manufacturing cost. Unfortunately, these criteria have only been achieved on separate occasions.Based on a Silicon and Lithium Niobate hybrid integration platform, we demonstrate Mach-Zehnder modulators that simultaneously fulfill these criteria. The presented device exhibits an insertion loss of 2.5 dB, voltage-length product of 2.2 Vcm, high linearity, electro-optic bandwidth of at least 70 GHz and modulation rates up to 112 Gbit/s. The high-performance modulator is realized by seamless integration of high-contrast waveguide based on Lithium Niobate - the most mature modulator material - with compact, low-loss silicon circuits. The hybrid platform demonstrated here allows for the combination of &#39;best-in-breed&#39; active and passive components, opening up new avenues for enabling future high-speed, energy efficient and cost-effective optical communication networks.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

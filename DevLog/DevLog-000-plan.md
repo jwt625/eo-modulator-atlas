@@ -85,3 +85,4 @@ Integrity rule enforced by `scripts/validate_db.py`: every non-empty value in `d
 
 - 2026-10-01 coordination inspection: `fetch_source.py` shares a timestamp but does not lock concurrent requests. Cross-agent serialization remains unverified; D0 owns the fix. Use one fetch owner until its concurrency gate passes.
 - 2026-10-01 continuation: E1/U1 engine and sim-UI drafts are in progress under `codex-main`; analytic gates pass but paper reproduction is not established. Detailed implementation state, pending checks, tranche ownership and handoff rules are recorded in DevLog-002.
+- 2026-10-05 user decisions on all open data conventions applied (identity/dates/authors/licences from Crossref and arXiv, people dedup, ITU/ISO bands, 1 GHz Vpi split, organization own names, schema proposals adopted with a verified source re-read of all 405 rows, two independent audits): [DevLog-020](DevLog-020-data-convention-decisions.md).

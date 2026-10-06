@@ -501,4 +501,11 @@ entries:
   basis: derived
   locator: p.5 Sec. 3
   note: near 1550 nm per authors; band is derived from the wavelength
+- device_id: qi2024-d
+  field: vpi_dc_freq_ghz
+  value: 5e-06
+  unit: GHz
+  basis: measured
+  locator: p.6 Fig. 4(E) caption
+  note: 'source: Measured normalized optical transmission of a 12.917-mm modulator, showing the half-wave voltage at 5 kHz frequency.'
 derived: []

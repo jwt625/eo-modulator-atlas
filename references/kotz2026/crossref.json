@@ -1,0 +1,478 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:26:11Z",
+   "timestamp": 1786991171293,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 17,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate compact high-speed silicon-organic hybrid (SOH) IQ modulators offering π-voltages below 800 mV. Our devices reach symbol rates of 200 GBd for 16QAM and of 144 GBd for 64QAM transmission over 85 km – record-high values for IQ modulators on the silicon photonic platform.</jats:p>",
+  "DOI": "10.1364/ofc.2026.th3j.5",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:28:48Z",
+   "timestamp": 1780428528000
+  },
+  "page": "Th3J.5",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Silicon-Organic Hybrid (SOH) IQ Modulators with Sub-1 V π-Voltages Operating at 200 GBd 16QAM and 144 GBd 64QAM"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "A.",
+    "family": "Kotz",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "M.",
+    "family": "Kelany",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Schwarzenberger",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "H.",
+    "family": "Kholeif",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "C.",
+    "family": "Wilhelm",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "S.",
+    "family": "Singer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "C.",
+    "family": "Eschenbaum",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Mertens",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "M.",
+    "family": "Martens",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "S.",
+    "family": "Sarwar",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "P.",
+    "family": "Erk",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "A.",
+    "family": "Kuzmin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "S.",
+    "family": "Bräse",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "S.",
+    "family": "Randel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "W.",
+    "family": "Freude",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "C.",
+    "family": "Koos",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-Th3J.5-R1",
+    "first-page": "W3",
+    "author": "Zhou",
+    "journal-title": "Proc. OFC 2023",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "3674",
+    "DOI": "10.1109/JLT.2023.3269740",
+    "type": "journal-article",
+    "volume": "41",
+    "author": "Almonacil",
+    "year": "2023",
+    "journal-title": "J. Lightw. Technol"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R3",
+    "first-page": "F2",
+    "author": "Ziari",
+    "journal-title": "Proc. OFC 2021",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R4",
+    "doi-asserted-by": "publisher",
+    "first-page": "1819",
+    "DOI": "10.1109/JLT.2024.3472732",
+    "type": "journal-article",
+    "volume": "43",
+    "author": "Wakita",
+    "year": "2024",
+    "journal-title": "J. Lightw. Technol"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R5",
+    "first-page": "Tu2D.7.",
+    "author": "Ogiso",
+    "journal-title": "Proc. OFC 2024",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "4374",
+    "DOI": "10.1109/JLT.2021.3066203",
+    "type": "journal-article",
+    "volume": "39",
+    "author": "Siew",
+    "year": "2021",
+    "journal-title": "J. Lightw. Technol"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R7",
+    "first-page": "Th4C.1.",
+    "author": "Richter",
+    "journal-title": "Proc. OFC 2023",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "1192",
+    "DOI": "10.1109/JLT.2022.3191244",
+    "type": "journal-article",
+    "volume": "41",
+    "author": "Berikaa",
+    "year": "2023",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "740",
+    "DOI": "10.1038/s41566-025-01686-1",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Geravand",
+    "year": "2025",
+    "journal-title": "Nature Photon"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R10",
+    "first-page": "1449",
+    "author": "Kulmer",
+    "journal-title": "Proc. ECOC 2023",
+    "type": "journal-article"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R11",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1109/JSTQE.2024.3385375",
+    "type": "journal-article",
+    "volume": "30",
+    "author": "Freude",
+    "year": "2024",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R12",
+    "doi-asserted-by": "publisher",
+    "first-page": "220",
+    "DOI": "10.1364/OE.26.000220",
+    "type": "journal-article",
+    "volume": "26",
+    "author": "Wolf",
+    "year": "2018",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JPHOT.2013.2239283",
+    "type": "journal-article",
+    "volume": "5",
+    "author": "Palmer",
+    "year": "2013",
+    "journal-title": "IEEE Photon. J."
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R14",
+    "doi-asserted-by": "publisher",
+    "first-page": "12951",
+    "DOI": "10.1364/OE.383120",
+    "type": "journal-article",
+    "volume": "28",
+    "author": "Zwickel",
+    "year": "2020",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R15",
+    "doi-asserted-by": "publisher",
+    "first-page": "3011",
+    "DOI": "10.1109/TIT.2016.2543740",
+    "type": "journal-article",
+    "volume": "62",
+    "author": "Ivanov",
+    "year": "2016",
+    "journal-title": "IEEE Trans. Info. Theory"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/978-3-030-16250-4_7",
+    "article-title": "Forward Error Correction for Optical Transponders",
+    "volume-title": "Springer Handbook of Optical Networks",
+    "author": "GraellMukherjee",
+    "year": "2020"
+   },
+   {
+    "key": "OFC-2026-Th3J.5-R17",
+    "first-page": "18",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Mertens",
+    "year": "2024",
+    "journal-title": "PIC magazine"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-Th3J.5&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:27:17Z",
+   "timestamp": 1786987637000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-Th3J.5"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 17,
+  "URL": "https://doi.org/10.1364/ofc.2026.th3j.5",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

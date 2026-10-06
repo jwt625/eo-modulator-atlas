@@ -1,0 +1,317 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 31,
+  "items": [
+   {
+    "DOI": "10.1038/s41467-025-67932-w",
+    "title": [
+     "Integrated millimeter-wave cavity electro-optic transduction"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-5350-6502",
+      "authenticated-orcid": false,
+      "given": "Kevin K. S.",
+      "family": "Multani",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-4583-5496",
+      "authenticated-orcid": false,
+      "given": "Jason F.",
+      "family": "Herrmann",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1900-0778",
+      "authenticated-orcid": false,
+      "given": "Emilio A.",
+      "family": "Nanni",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-6176-1274",
+      "authenticated-orcid": false,
+      "given": "Amir H.",
+      "family": "Safavi-Naeini",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       1,
+       6
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/cjce.23099",
+    "title": [
+     "A review of the physicochemical properties and flotation of pyrrhotite superstructures (4C – Fe<sub>7</sub>S<sub>8</sub>/ 5C – Fe<sub>9</sub>S<sub>10</sub>) in Ni‐Cu sulphide mineral processing"
+    ],
+    "author": [
+     {
+      "given": "Ravinder S.",
+      "family": "Multani",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Mining and Materials Engineering McGill University, 3610 University Montréal, QC H3A 0C5 Canada"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8546-5688",
+      "authenticated-orcid": false,
+      "given": "Kristian E.",
+      "family": "Waters",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Mining and Materials Engineering McGill University, 3610 University Montréal, QC H3A 0C5 Canada"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2018,
+       1,
+       19
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1142/s0217984996000766",
+    "title": [
+     "A STUDY ON <font>Yb</font><sub>1−</sub><sub>x</sub>Dy<sub>x</sub><font>Ba</font><sub>2</sub><font>Cu</font><sub>3</sub><font>O</font><sub>7−</sub><sub>y</sub> SUPERCONDUCTOR"
+    ],
+    "author": [
+     {
+      "given": "S.",
+      "family": "SRINIVAS",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "School of Physics, University of Hyderabad, Hyderabad 500 046, India"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "A.K.",
+      "family": "BHATNAGAR",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Physics, University of Hyderabad, Hyderabad 500 046, India"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "V.R.",
+      "family": "PALKAR",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Materials Research Division, Tata Institute of Fundamental Research, Homibaba Road, Bombay 400 005, India"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "M.S.",
+      "family": "MULTANI",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Materials Research Division, Tata Institute of Fundamental Research, Homibaba Road, Bombay 400 005, India"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1996,
+       6,
+       30
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1557/jmr.1995.0461",
+    "title": [
+     "Effect of process variables on the grain growth and microstructure of ZnO–Bi<sub>2</sub>O<sub>3</sub> varistors and their nanosize ZnO precursors"
+    ],
+    "author": [
+     {
+      "given": "Sunita",
+      "family": "Hingorani",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "D.O.",
+      "family": "Shah",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "M.S.",
+      "family": "Multani",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1995,
+       2
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.59890/ijist.v3i5.51",
+    "title": [
+     "Breaking Barriers: Social Media Influencers and the Evolution of Men’s Grooming Preferences"
+    ],
+    "author": [
+     {
+      "family": "Indra Meghrajani",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "family": "Neela Multani",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       5,
+       30
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

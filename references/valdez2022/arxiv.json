@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2210.14785",
+ "title": "110 GHz, 110 mW Hybrid Silicon-Lithium Niobate Mach-Zehnder Modulator",
+ "authors": "Forrest Valdez, Viphretuo Mere, Xiaoxi Wang, Nicholas Boynton, Thomas A. Friedmann, Shawn Arterburn, Christina Dallo, Andrew T. Pomerene, Andrew L. Starbuck, Douglas C. Trotter, Anthony L. Lentine, and Shayan Mookherjea",
+ "doi": "10.1038/s41598-022-23403-6",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 26 Oct 2022 15:27:50 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:17:49Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2210.14785\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2210.14785</identifier>\n        <datestamp>2022-11-11</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2210.14785</id>\n        <submitter>Forrest Valdez</submitter>\n            <version version=\"v1\">\n                <date>Wed, 26 Oct 2022 15:27:50 GMT</date>\n                <size>4006kb</size>\n            </version>\n        <title>110 GHz, 110 mW Hybrid Silicon-Lithium Niobate Mach-Zehnder Modulator</title>\n        <authors>Forrest Valdez, Viphretuo Mere, Xiaoxi Wang, Nicholas Boynton, Thomas A. Friedmann, Shawn Arterburn, Christina Dallo, Andrew T. Pomerene, Andrew L. Starbuck, Douglas C. Trotter, Anthony L. Lentine, and Shayan Mookherjea</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>13 pages, 6 figures</comments>\n            <doi>10.1038/s41598-022-23403-6</doi>\n            <license>http://creativecommons.org/licenses/by-nc-nd/4.0/</license>\n            <abstract>High bandwidth, low voltage electro-optic modulators with high optical power handling capability are important for improving the performance of analog optical communications and RF photonic links. Here we designed and fabricated a thin-film lithium niobate (LN) Mach-Zehnder modulator (MZM) which can handle high optical power of 110 mW, while having 3-dB bandwidth greater than 110 GHz at 1550 nm. The design does not require etching of thin-film LN, and uses hybrid optical modes formed by bonding LN to planarized silicon photonic waveguide circuits. A high optical power handling capability in the MZM was achieved by carefully tapering the underlying Si waveguide to reduce the impact of optically-generated carriers, while retaining a high modulation efficiency. The MZM has a $V_\\pi L$ product of 3.1 V$.$cm and an on-chip optical insertion loss of 1.8 dB.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

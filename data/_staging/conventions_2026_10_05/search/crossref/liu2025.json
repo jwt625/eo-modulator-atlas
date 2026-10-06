@@ -1,0 +1,699 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 1857,
+  "items": [
+   {
+    "DOI": "10.1002/lpor.202402053",
+    "title": [
+     "Ultrahigh‐Efficiency Dual‐Band Thin‐Film Lithium Niobate Modulator Incorporating Low‐k Underfill for 390 Gbit s\n                    <sup>−1</sup>\n                    PAM8 Transmission"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-0174-252X",
+      "authenticated-orcid": false,
+      "given": "Hao",
+      "family": "Liu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yutong",
+      "family": "He",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1015-4578",
+      "authenticated-orcid": false,
+      "given": "Bing",
+      "family": "Xiong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Changzheng",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhibiao",
+      "family": "Hao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lai",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jian",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yanjun",
+      "family": "Han",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hongtao",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lin",
+      "family": "Gan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yi",
+      "family": "Luo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) State Key Laboratory of Space Network and Communications Department of Electronic Engineering Tsinghua University  Beijing 100084 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       3,
+       2
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/lpor.202570057",
+    "title": [
+     "Ultrahigh‐Efficiency Dual‐Band Thin‐Film Lithium Niobate Modulator Incorporating Low‐k Underfill for 390 Gbit s<sup>−1</sup> PAM8 Transmission (Laser Photonics Rev. 19(14)/2025)"
+    ],
+    "author": [
+     {
+      "given": "Hao",
+      "family": "Liu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yutong",
+      "family": "He",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bing",
+      "family": "Xiong",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Changzheng",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhibiao",
+      "family": "Hao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lai",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jian",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yanjun",
+      "family": "Han",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hongtao",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lin",
+      "family": "Gan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yi",
+      "family": "Luo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       7
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3788/col202422.092201",
+    "title": [
+     "Low-loss and broadband complementary dual-output electro-optic modulator based on thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Tingan",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chenglin",
+      "family": "Shang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xuanhao",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Weiqiang",
+      "family": "Lü",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhiyao",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Zeng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yong",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jinsong",
+      "family": "Xia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/ofc.2025.tu2j.4",
+    "title": [
+     "Dual-band 390 Gbps High Coupling Efficiency Thin Film Lithium Niobate Modulator with 3-dB Bandwidth Exceeding 110 GHz"
+    ],
+    "author": [
+     {
+      "given": "Yutong",
+      "family": "He",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hao",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Changzheng",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bing",
+      "family": "Xiong",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhibiao",
+      "family": "Hao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lai",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jian",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yanjun",
+      "family": "Han",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hongtao",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lin",
+      "family": "Gan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yi",
+      "family": "Luo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2026.jtu.58",
+    "title": [
+     "Ultra-Low-Voltage Thin-Film Lithium Niobate Modulator with Gaussian-Shaped Dual-Layer Electrodes"
+    ],
+    "author": [
+     {
+      "given": "Yaqi",
+      "family": "Liu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Haomiao",
+      "family": "Song",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zimiao",
+      "family": "Su",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lutong",
+      "family": "Cai",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lin",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

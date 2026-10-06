@@ -631,6 +631,34 @@ entries:
   basis: measured
   locator: p.3; p.7 Fig. 4(b)
   note: comb spectra at two pump wavelengths
+- device_id: lee2026-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.2; p.5 Fig. 2(b)
+  note: 'source: We first characterize the near-DC half-wave voltage, namely Vπ, of our AM device at a low modulation frequency ...'
+- device_id: lee2026-b
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5 Fig. 2(b) caption
+  note: 'source: The measured half-wave voltage (Vπ) at 100 kHz is 2.3 - 4.26 V across the optical span from ...'
+- device_id: lee2026-c
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5 Fig. 2(b) caption
+  note: 'source: The measured half-wave voltage (Vπ) at 100 kHz is 2.3 - 4.26 V across the optical span from ...'
+- device_id: lee2026-d
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: measured
+  locator: p.5 Fig. 2(b) caption
+  note: 'source: the suspended AM device is measured across more than an octave optical bandwidth with a half-wave voltage of ...'
 derived:
 - device_id: lee2026-a
   field: max_line_rate_gbps

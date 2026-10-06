@@ -192,16 +192,13 @@ entries:
   unit: ''
   basis: measured
   locator: p.1-2 Sec. 2; Fig. 1(c)
-derived:
-- device_id: xu2026a-a
-  field: slab_thickness_nm
-  value: 200
-  formula: 400 nm film - 200 nm trench depth; not entered in the CSV (not stated by authors)
-  inputs:
-  - eo_film_thickness_nm
-  - etch_depth_nm
+derived: []
 context_values:
 - item: license_notice
   value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
   locator: p.1-3, page footer
   note: printed in the page footer of pages 1-3
+- item: xu2026a-a slab_thickness_nm (coordinator arithmetic, not stated in the paper)
+  value: 200
+  locator: 'derived from: eo_film_thickness_nm, etch_depth_nm'
+  note: 400 nm film - 200 nm trench depth; not entered in the CSV (not stated by authors)

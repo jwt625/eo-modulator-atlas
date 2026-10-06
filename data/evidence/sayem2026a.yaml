@@ -243,6 +243,69 @@ entries:
   basis: design_target
   locator: p.4, Fig. 4 caption
   note: gap between ground and signal electrodes
+- device_id: sayem2026a-c25
+  field: tuning_nm_per_v
+  value: -0.000536
+  unit: nm/V
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(e)
+  note: 'Fig. 4(e): resonance shifts to shorter wavelength with positive voltage, -13.4 pm at 25 V; blue shift, sign negative'
+- device_id: sayem2026a-c25
+  field: temperature_k
+  value: 298.15
+  unit: K
+  basis: derived
+  locator: p.3-4, Fig. 4(b)-(d)
+  note: K = 25 + 273.15; hot-plate temperature of the device under test
+- device_id: sayem2026a-c95
+  field: tuning_nm_per_v
+  value: -0.001372
+  unit: nm/V
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(e)
+  note: 'Fig. 4(e): resonance shifts to shorter wavelength with positive voltage, -34.3 pm at 25 V; blue shift, sign negative'
+- device_id: sayem2026a-c95
+  field: temperature_k
+  value: 368.15
+  unit: K
+  basis: derived
+  locator: p.3-4, Fig. 4(b)-(d)
+  note: K = 95 + 273.15; hot-plate temperature of the device under test
+- device_id: sayem2026a-c125
+  field: tuning_nm_per_v
+  value: -0.001404
+  unit: nm/V
+  basis: extracted_from_figure
+  locator: p.4, Fig. 4(e)
+  note: 'Fig. 4(e): resonance shifts to shorter wavelength with positive voltage, -35.1 pm at 25 V; blue shift, sign negative'
+- device_id: sayem2026a-c125
+  field: temperature_k
+  value: 398.15
+  unit: K
+  basis: derived
+  locator: p.3-4, Fig. 4(b)-(d)
+  note: K = 125 + 273.15; hot-plate temperature of the device under test
+- device_id: sayem2026a-m25
+  field: temperature_k
+  value: 298.15
+  unit: K
+  basis: derived
+  locator: p.3, Fig. 2(c)
+  note: K = 25 + 273.15; hot-plate temperature; Fig. 3(b) legend shows 28/92/119 C
+- device_id: sayem2026a-m91
+  field: temperature_k
+  value: 364.15
+  unit: K
+  basis: derived
+  locator: p.3, Fig. 2(c)
+  note: K = 91 + 273.15; hot-plate temperature; Fig. 3(b) legend shows 28/92/119 C
+- device_id: sayem2026a-m120
+  field: temperature_k
+  value: 393.15
+  unit: K
+  basis: derived
+  locator: p.3, Fig. 2(c)
+  note: K = 120 + 273.15; hot-plate temperature; Fig. 3(b) legend shows 28/92/119 C
 derived:
 - device_id: sayem2026a-c25
   field: tuning_nm_per_v

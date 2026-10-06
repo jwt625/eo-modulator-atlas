@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2604.09825",
+ "title": "High bandwidth traveling wave electro-optic modulator at 1{\\mu}m on thin-film lithium tantalate",
+ "authors": "Ayed Al Sayem, Shiekh Zia Uddin, Ting-Chen Hu, Alaric Tate, Mark Cappuzzo, Rose Kopf, Mark Earnshaw",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Fri, 10 Apr 2026 18:57:18 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T17:54:11Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2604.09825\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2604.09825</identifier>\n        <datestamp>2026-04-14</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2604.09825</id>\n        <submitter>A Sayem</submitter>\n            <version version=\"v1\">\n                <date>Fri, 10 Apr 2026 18:57:18 GMT</date>\n                <size>6207kb</size>\n            </version>\n        <title>High bandwidth traveling wave electro-optic modulator at 1{\\mu}m on thin-film lithium tantalate</title>\n        <authors>Ayed Al Sayem, Shiekh Zia Uddin, Ting-Chen Hu, Alaric Tate, Mark Cappuzzo, Rose Kopf, Mark Earnshaw</authors>\n        <categories>physics.optics</categories>\n            <comments>6 pages, 4 figures</comments>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>We present the first experimental demonstration of a high-bandwidth thin-film lithium tantalate (TFLT) electro-optic modulator operating at 1 {\\mu}m, with a V{\\pi} of 2.4 V, and less than 2 dB electro-optic roll-off up to 50 GHz and stable DC bias operation.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

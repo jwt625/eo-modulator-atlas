@@ -1,0 +1,873 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 62050,
+  "items": [
+   {
+    "DOI": "10.1063/5.0097296",
+    "title": [
+     "Thin-film lithium niobate dual-polarization IQ modulator on a silicon substrate for single-carrier 1.6 Tb/s transmission"
+    ],
+    "author": [
+     {
+      "given": "Xuanhao",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chenglin",
+      "family": "Shang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "An",
+      "family": "Pan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xingran",
+      "family": "Cheng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Tao",
+      "family": "Gui",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shuai",
+      "family": "Yuan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chengcheng",
+      "family": "Gui",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huawei Technologies, B & P Laboratory 3 , Shenzhen 518000, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Keshuang",
+      "family": "Zheng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peijie",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huawei Technologies, B & P Laboratory 3 , Shenzhen 518000, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xiaolu",
+      "family": "Song",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huawei Technologies, B & P Laboratory 3 , Shenzhen 518000, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yanbo",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Liangchuan",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Huawei Technologies, Optical R&D Department 2 , Dongguan 523000, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Zeng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9650-7839",
+      "authenticated-orcid": false,
+      "given": "Jinsong",
+      "family": "Xia",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Wuhan National Laboratory for Optoelectronics, School of Optical and Electronic Information, Huazhong University of Science and Technology 1 , Wuhan 430074, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       7,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.2626411",
+    "title": [
+     "Thin-film lithium niobate based dual-polarization IQ modulator for single-carrier 1.6Tb/s transmission"
+    ],
+    "author": [
+     {
+      "given": "Xuanhao",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chenglin",
+      "family": "Shang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "An",
+      "family": "Pan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xingran",
+      "family": "Cheng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Tao",
+      "family": "Gui",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shuai",
+      "family": "Yuan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chengcheng",
+      "family": "Gui",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Keshuang",
+      "family": "Zheng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peijie",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xiaolu",
+      "family": "Song",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yanbo",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Liangchuan",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Zeng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jinsong",
+      "family": "Xia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.ijleo.2017.09.055",
+    "title": [
+     "Integrated polarization multiplexing IQ modulator based on lithium niobate thin film and all waveguide structure"
+    ],
+    "author": [
+     {
+      "given": "Junbao",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wei",
+      "family": "Ji",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Rui",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zisu",
+      "family": "Gong",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiao",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shicheng",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Chonghao",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2018,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3788/col202422.092201",
+    "title": [
+     "Low-loss and broadband complementary dual-output electro-optic modulator based on thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Tingan",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chenglin",
+      "family": "Shang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xuanhao",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Weiqiang",
+      "family": "Lü",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhiyao",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Zeng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yong",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jinsong",
+      "family": "Xia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/jlt.2024.3414937",
+    "title": [
+     "Optical Carrier-Suppressed Single Sideband Modulation Based on a Thin-Film Lithium Niobate IQ Modulator for FMCW Ranging Application"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0009-3643-0735",
+      "authenticated-orcid": false,
+      "given": "Xiaoyang",
+      "family": "Lei",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "College of Intelligence Science and Technology, National University of Defense Technology, Changsha, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2341-3030",
+      "authenticated-orcid": false,
+      "given": "Guochao",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Intelligence Science and Technology, National University of Defense Technology, Changsha, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-9433-5589",
+      "authenticated-orcid": false,
+      "given": "Heyun",
+      "family": "Tan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Optoelectronic Materials and Technologies and School of Electronics and Information Technology, Sun Yat-sen University, Guangzhou, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-7454-5204",
+      "authenticated-orcid": false,
+      "given": "Jian",
+      "family": "Tang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Intelligence Science and Technology, National University of Defense Technology, Changsha, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-4201-4470",
+      "authenticated-orcid": false,
+      "given": "Huankai",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Intelligence Science and Technology, National University of Defense Technology, Changsha, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0004-0079-9075",
+      "authenticated-orcid": false,
+      "given": "Mingyue",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Intelligence Science and Technology, National University of Defense Technology, Changsha, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhongjin",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Optoelectronic Materials and Technologies and School of Electronics and Information Technology, Sun Yat-sen University, Guangzhou, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9046-2465",
+      "authenticated-orcid": false,
+      "given": "Lingxiao",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Intelligence Science and Technology, National University of Defense Technology, Changsha, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7098-0249",
+      "authenticated-orcid": false,
+      "given": "Shuhua",
+      "family": "Yan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Intelligence Science and Technology, National University of Defense Technology, Changsha, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5544-7307",
+      "authenticated-orcid": false,
+      "given": "Xinlun",
+      "family": "Cai",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Optoelectronic Materials and Technologies and School of Electronics and Information Technology, Sun Yat-sen University, Guangzhou, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2571-9308",
+      "authenticated-orcid": false,
+      "given": "Jun",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "College of Intelligence Science and Technology, National University of Defense Technology, Changsha, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       10,
+       1
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

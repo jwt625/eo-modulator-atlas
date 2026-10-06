@@ -336,25 +336,28 @@ entries:
   note: Vpi read along the NW-SE diagonal of the ER map for push-pull operation.
 - device_id: gupta2023-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.6, Fig. 14
   note: Normalized EO curve; reference frequency not stated.
+  previous_value: unspecified
 - device_id: gupta2023-b
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.6, Fig. 14
   note: Normalized EO curve; reference frequency not stated.
+  previous_value: unspecified
 - device_id: gupta2023-c
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.6, Fig. 14
   note: Normalized EO curve; reference frequency not stated.
+  previous_value: unspecified
 - device_id: gupta2023-a
   field: electrode_type
   value: tw_cps

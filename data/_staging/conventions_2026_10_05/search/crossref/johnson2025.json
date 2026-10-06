@@ -1,0 +1,275 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 264,
+  "items": [
+   {
+    "DOI": "10.1215/ijm/1256052956",
+    "title": [
+     "Finite-dimensional Schauder decompositions in $\\pi_{\\lambda}$ and dual $\\pi_{\\lambda}$ spaces"
+    ],
+    "author": [
+     {
+      "given": "William B.",
+      "family": "Johnson",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Iowa State University, Ames, Iowa; University of Houston, Houston, Texas"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1970,
+       12,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.2210/pdb1rh6/pdb",
+    "title": [
+     "Bacteriophage Lambda Excisionase (Xis)-DNA Complex"
+    ],
+    "author": [
+     {
+      "given": "M.D.",
+      "family": "Sam",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "D.",
+      "family": "Cascio",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "R.C.",
+      "family": "Johnson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "R.T.",
+      "family": "Clubb",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "component",
+    "issued": {
+     "date-parts": [
+      [
+       2004,
+       6,
+       29
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.2172/4660769",
+    "title": [
+     "A STATISTICAL DETERMINATION OF THE REDUCED PROMPT NEUTRON GENERATION TIME,$lambda$//anti $beta$/, IN THE SPERT IV REACTOR"
+    ],
+    "author": [
+     {
+      "given": "R.",
+      "family": "Johnson",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "report",
+    "issued": {
+     "date-parts": [
+      [
+       1963,
+       8,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.2307/2335017",
+    "title": [
+     "Extended and Multivariate Tukey Lambda Distributions"
+    ],
+    "author": [
+     {
+      "given": "N. L.",
+      "family": "Johnson",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "S.",
+      "family": "Kotz",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1973,
+       12
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/ofc.2023.m2d.3",
+    "title": [
+     "200G per Lane Uncooled CWDM Hybrid CMBH-Ridge Electroabsorption Modulated Lasers for 2-km Transmission"
+    ],
+    "author": [
+     {
+      "given": "Prashanth",
+      "family": "Bhasker",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sumeeta",
+      "family": "Arora",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alex",
+      "family": "Robertson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tom",
+      "family": "McCaully",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Adrian",
+      "family": "Ni",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "John E.",
+      "family": "Johnson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

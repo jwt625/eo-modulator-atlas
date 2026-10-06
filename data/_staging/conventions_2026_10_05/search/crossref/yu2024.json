@@ -1,0 +1,772 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 12510,
+  "items": [
+   {
+    "DOI": "10.1103/physrevb.108.054440",
+    "title": [
+     "Electrical switchable room-temperature magnetic skyrmions in multiferroic MXene"
+    ],
+    "author": [
+     {
+      "given": "Liming",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yonglong",
+      "family": "Ga",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Peng",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Dongxing",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jiawei",
+      "family": "Jiang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jinghua",
+      "family": "Liang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shouguo",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-2627-0888",
+      "authenticated-orcid": true,
+      "given": "Hongxin",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023,
+       8,
+       29
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_si.2025.ss190_1",
+    "title": [
+     "Room-temperature optomechanical-resonator-based thermal sensor on thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Yue",
+      "family": "Yu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ran",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ian",
+      "family": "Anderson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jack",
+      "family": "Kramer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Chun-Ho",
+      "family": "Lee",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xinyi",
+      "family": "Ren",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Clayton",
+      "family": "Cheung",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ruochen",
+      "family": "Lu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mengjie",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1063/5.0301567",
+    "title": [
+     "Pockels effect-induced strong effective Kerr nonlinearity in a lithium niobate waveguide"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0004-0888-0791",
+      "authenticated-orcid": false,
+      "given": "Haoran",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Fei",
+      "family": "Huang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0009-9324-0276",
+      "authenticated-orcid": false,
+      "given": "Jingyan",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0007-4025-8638",
+      "authenticated-orcid": false,
+      "given": "He",
+      "family": "Gao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0001-6834-6783",
+      "authenticated-orcid": false,
+      "given": "Hanwen",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0004-6852-9506",
+      "authenticated-orcid": false,
+      "given": "Zhile",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0007-5006-5442",
+      "authenticated-orcid": false,
+      "given": "Xinmin",
+      "family": "Yao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0002-1761-2487",
+      "authenticated-orcid": false,
+      "given": "Zhengyuan",
+      "family": "Bao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8749-0385",
+      "authenticated-orcid": false,
+      "given": "Huan",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       },
+       {
+        "name": "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Zhejiang University 2 , Hangzhou 311215,",
+        "place": [
+         "China"
+        ]
+       },
+       {
+        "name": "Jiaxing Key Laboratory of Photonic Sensing & Intelligent Imaging, Intelligent Optics & Photonics Research Center, Jiaxing Research Institute, Zhejiang University 3 , Jiaxing 314000,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-4489-8310",
+      "authenticated-orcid": false,
+      "given": "Yaocheng",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       },
+       {
+        "name": "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Zhejiang University 2 , Hangzhou 311215,",
+        "place": [
+         "China"
+        ]
+       },
+       {
+        "name": "Jiaxing Key Laboratory of Photonic Sensing & Intelligent Imaging, Intelligent Optics & Photonics Research Center, Jiaxing Research Institute, Zhejiang University 3 , Jiaxing 314000,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0004-0455-7401",
+      "authenticated-orcid": false,
+      "given": "Zejie",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       },
+       {
+        "name": "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Zhejiang University 2 , Hangzhou 311215,",
+        "place": [
+         "China"
+        ]
+       },
+       {
+        "name": "Jiaxing Key Laboratory of Photonic Sensing & Intelligent Imaging, Intelligent Optics & Photonics Research Center, Jiaxing Research Institute, Zhejiang University 3 , Jiaxing 314000,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2769-3009",
+      "authenticated-orcid": false,
+      "given": "Daoxin",
+      "family": "Dai",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Extreme Photonics and Instrumentation, College of Optical Science and Engineering, Zhejiang University 1 , Hangzhou 310058,",
+        "place": [
+         "China"
+        ]
+       },
+       {
+        "name": "ZJU-Hangzhou Global Scientific and Technological Innovation Center, Zhejiang University 2 , Hangzhou 311215,",
+        "place": [
+         "China"
+        ]
+       },
+       {
+        "name": "Jiaxing Key Laboratory of Photonic Sensing & Intelligent Imaging, Intelligent Optics & Photonics Research Center, Jiaxing Research Institute, Zhejiang University 3 , Jiaxing 314000,",
+        "place": [
+         "China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       3,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_si.2026.sth4c.6",
+    "title": [
+     "Monolithic room-temperature mid-infrared detector based on thin-film lithium niobate optomechanical resonator"
+    ],
+    "author": [
+     {
+      "given": "Yue",
+      "family": "Yu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ran",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zarko",
+      "family": "Sakotic",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ian",
+      "family": "Anderson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Silvia",
+      "family": "Guadagnini",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yinan",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ian",
+      "family": "Christen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ruochen",
+      "family": "Lu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Michelle",
+      "family": "Povinelli",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Dan",
+      "family": "Wasserman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Mengjie",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1063/1.2729962",
+    "title": [
+     "Enhanced quantum confined Pockels effect in graded SiGe superlattices"
+    ],
+    "author": [
+     {
+      "given": "Pu",
+      "family": "Yu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jian",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Bang-Fen",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2007
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

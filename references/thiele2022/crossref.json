@@ -1,0 +1,1036 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     2
+    ]
+   ],
+   "date-time": "2025-11-02T02:18:14Z",
+   "timestamp": 1762049894102,
+   "version": "build-2065373602"
+  },
+  "reference-count": 55,
+  "publisher": "IOP Publishing",
+  "issue": "3",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       6,
+       7
+      ]
+     ],
+     "date-time": "2022-06-07T00:00:00Z",
+     "timestamp": 1654560000000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "http://creativecommons.org/licenses/by/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2022,
+       6,
+       7
+      ]
+     ],
+     "date-time": "2022-06-07T00:00:00Z",
+     "timestamp": 1654560000000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://iopscience.iop.org/info/page/text-and-data-mining"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100002347",
+    "name": "Bundesministerium für Bildung und Forschung",
+    "doi-asserted-by": "crossref",
+    "award": [
+     "13N14911"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "13N14911"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002347",
+      "id-type": "DOI",
+      "asserted-by": "crossref"
+     }
+    ]
+   },
+   {
+    "name": "European Research Council",
+    "award": [
+     "725366"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "725366"
+      ]
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "iopscience.iop.org"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "J. Phys. Photonics"
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     1
+    ]
+   ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>Lithium niobate is a promising platform for integrated quantum optics. In this platform, we aim to efficiently manipulate and detect quantum states by combining superconducting single photon detectors and modulators. The cryogenic operation of a superconducting single photon detector dictates the optimisation of the electro-optic modulators under the same operating conditions. To that end, we characterise a phase modulator, directional coupler, and polarisation converter at both ambient and cryogenic temperatures. The operation voltage <jats:inline-formula>\n                     <jats:tex-math/>\n                     <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\">\n                        <mml:msub>\n                           <mml:mi>V</mml:mi>\n                           <mml:mrow>\n                              <mml:mi>π</mml:mi>\n                              <mml:mrow>\n                                 <mml:mo>/</mml:mo>\n                              </mml:mrow>\n                              <mml:mn>2</mml:mn>\n                           </mml:mrow>\n                        </mml:msub>\n                     </mml:math>\n                     <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"jpphotonac6c63ieqn1.gif\" xlink:type=\"simple\"/>\n                  </jats:inline-formula> of these modulators increases, due to the decrease in the electro-optic effect, by 74% for the phase modulator, 84% for the directional coupler and 35% for the polarisation converter below 8.5<jats:inline-formula>\n                     <jats:tex-math/>\n                     <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\">\n                        <mml:mrow>\n                           <mml:mi mathvariant=\"normal\">K</mml:mi>\n                        </mml:mrow>\n                     </mml:math>\n                     <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"jpphotonac6c63ieqn2.gif\" xlink:type=\"simple\"/>\n                  </jats:inline-formula>. The phase modulator preserves its broadband nature and modulates light in the characterised wavelength range. The unbiased bar state of the directional coupler changed by a wavelength shift of 85<jats:inline-formula>\n                     <jats:tex-math/>\n                     <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\">\n                        <mml:mrow>\n                           <mml:mi mathvariant=\"normal\">n</mml:mi>\n                           <mml:mi mathvariant=\"normal\">m</mml:mi>\n                        </mml:mrow>\n                     </mml:math>\n                     <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"jpphotonac6c63ieqn3.gif\" xlink:type=\"simple\"/>\n                  </jats:inline-formula> while cooling the device down to 5<jats:inline-formula>\n                     <jats:tex-math/>\n                     <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\">\n                        <mml:mrow>\n                           <mml:mi mathvariant=\"normal\">K</mml:mi>\n                        </mml:mrow>\n                     </mml:math>\n                     <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"jpphotonac6c63ieqn4.gif\" xlink:type=\"simple\"/>\n                  </jats:inline-formula>. The polarisation converter uses periodic poling to phasematch the two orthogonal polarisations. The phasematched wavelength of the utilised poling changes by 112<jats:inline-formula>\n                     <jats:tex-math/>\n                     <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\">\n                        <mml:mrow>\n                           <mml:mi mathvariant=\"normal\">n</mml:mi>\n                           <mml:mi mathvariant=\"normal\">m</mml:mi>\n                        </mml:mrow>\n                     </mml:math>\n                     <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"jpphotonac6c63ieqn5.gif\" xlink:type=\"simple\"/>\n                  </jats:inline-formula> when cooling to 5<jats:inline-formula>\n                     <jats:tex-math/>\n                     <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\">\n                        <mml:mrow>\n                           <mml:mi mathvariant=\"normal\">K</mml:mi>\n                        </mml:mrow>\n                     </mml:math>\n                     <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"jpphotonac6c63ieqn6.gif\" xlink:type=\"simple\"/>\n                  </jats:inline-formula>.</jats:p>",
+  "DOI": "10.1088/2515-7647/ac6c63",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2022,
+     5,
+     3
+    ]
+   ],
+   "date-time": "2022-05-03T22:26:18Z",
+   "timestamp": 1651616778000
+  },
+  "page": "034004",
+  "update-policy": "https://doi.org/10.1088/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 9,
+  "title": [
+   "Cryogenic electro-optic modulation in titanium in-diffused lithium niobate waveguides"
+  ],
+  "prefix": "10.1088",
+  "volume": "4",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-0663-5587",
+    "authenticated-orcid": true,
+    "given": "Frederik",
+    "family": "Thiele",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Felix",
+    "family": "vom Bruch",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Julian",
+    "family": "Brockmeier",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Maximilian",
+    "family": "Protte",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Thomas",
+    "family": "Hummel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Raimund",
+    "family": "Ricken",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Viktor",
+    "family": "Quiring",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Sebastian",
+    "family": "Lengeling",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Harald",
+    "family": "Herrmann",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5693-3083",
+    "authenticated-orcid": true,
+    "given": "Christof",
+    "family": "Eigner",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Christine",
+    "family": "Silberhorn",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Tim J",
+    "family": "Bartley",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "member": "266",
+  "published-online": {
+   "date-parts": [
+    [
+     2022,
+     6,
+     7
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "jpphotonac6c63bib1",
+    "doi-asserted-by": "publisher",
+    "first-page": "165",
+    "DOI": "10.1038/nphoton.2007.22",
+    "article-title": "Quantum communication",
+    "volume": "1",
+    "author": "Gisin",
+    "year": "2007",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "jpphotonac6c63bib2",
+    "doi-asserted-by": "publisher",
+    "first-page": "1460",
+    "DOI": "10.1126/science.abe8770",
+    "article-title": "Quantum computational advantage using photons",
+    "volume": "370",
+    "author": "Zhong",
+    "year": "2020",
+    "journal-title": "Science"
+   },
+   {
+    "key": "jpphotonac6c63bib3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1116/5.0007577",
+    "article-title": "Photonic quantum metrology",
+    "volume": "2",
+    "author": "Polino",
+    "year": "2020",
+    "journal-title": "AVS Quantum Sci."
+   },
+   {
+    "key": "jpphotonac6c63bib4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0063294",
+    "article-title": "Scalable multiphoton quantum metrology with neither pre- nor post-selected measurements",
+    "volume": "8",
+    "author": "You",
+    "year": "2021",
+    "journal-title": "Appl. Phys. Rev."
+   },
+   {
+    "key": "jpphotonac6c63bib5",
+    "doi-asserted-by": "publisher",
+    "first-page": "111",
+    "DOI": "10.1364/OME.7.000111",
+    "article-title": "Material platforms for integrated quantum photonics",
+    "volume": "7",
+    "author": "Bogdanov",
+    "year": "2017",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "jpphotonac6c63bib6",
+    "doi-asserted-by": "publisher",
+    "first-page": "273",
+    "DOI": "10.1038/s41566-019-0532-1",
+    "article-title": "Integrated photonic quantum technologies",
+    "volume": "14",
+    "author": "Wang",
+    "year": "2019",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "jpphotonac6c63bib7",
+    "doi-asserted-by": "publisher",
+    "first-page": "285",
+    "DOI": "10.1038/s41566-020-0609-x",
+    "article-title": "Hybrid integrated quantum photonic circuits",
+    "volume": "14",
+    "author": "Elshaari",
+    "year": "2020",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "jpphotonac6c63bib8",
+    "doi-asserted-by": "publisher",
+    "first-page": "291",
+    "DOI": "10.1364/OPTICA.384118",
+    "article-title": "Hybrid integration methods for on-chip quantum photonics",
+    "volume": "7",
+    "author": "Kim",
+    "year": "2020",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "jpphotonac6c63bib9",
+    "doi-asserted-by": "publisher",
+    "first-page": "652",
+    "DOI": "10.1364/OPTICA.415762",
+    "article-title": "Integrated lithium niobate electro-optic modulators: when performance meets scalability",
+    "volume": "8",
+    "author": "Zhang",
+    "year": "2021",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "jpphotonac6c63bib10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2515-7647/ac1ef4",
+    "article-title": "Roadmap on integrated quantum photonics",
+    "volume": "4",
+    "author": "Moody",
+    "year": "2022",
+    "journal-title": "J. Phys. Photon."
+   },
+   {
+    "key": "jpphotonac6c63bib11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0045990",
+    "article-title": "Superconducting nanowire single-photon detectors: a perspective on evolution, state-of-the-art, future developments and applications",
+    "volume": "118",
+    "author": "Esmaeil Zadeh",
+    "year": "2021",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "jpphotonac6c63bib12",
+    "doi-asserted-by": "publisher",
+    "first-page": "1649",
+    "DOI": "10.1364/OPTICA.400751",
+    "article-title": "Superconducting nanowire single-photon detectors with 98% system detection efficiency at 1550 nm",
+    "volume": "7",
+    "author": "Reddy",
+    "year": "2020",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "jpphotonac6c63bib13",
+    "doi-asserted-by": "publisher",
+    "first-page": "250",
+    "DOI": "10.1038/s41566-020-0589-x",
+    "article-title": "Demonstration of sub-3 ps temporal resolution with a superconducting nanowire single-photon detector",
+    "volume": "14",
+    "author": "Korzh",
+    "year": "2020",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "jpphotonac6c63bib14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.123.151802",
+    "article-title": "Detecting sub-GeV dark matter with superconducting nanowires",
+    "volume": "123",
+    "author": "Hochberg",
+    "year": "2019",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "jpphotonac6c63bib15",
+    "doi-asserted-by": "publisher",
+    "first-page": "1725",
+    "DOI": "10.1515/nanoph-2018-0059",
+    "article-title": "Waveguide-integrated superconducting nanowire single-photon detectors",
+    "volume": "7",
+    "author": "Ferrari",
+    "year": "2018",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "jpphotonac6c63bib16",
+    "doi-asserted-by": "publisher",
+    "first-page": "9470",
+    "DOI": "10.1038/s41598-020-65971-5",
+    "article-title": "Photonic readout of superconducting nanowire single photon counting detectors",
+    "volume": "10",
+    "author": "de Cea",
+    "year": "2020",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "jpphotonac6c63bib17",
+    "doi-asserted-by": "publisher",
+    "first-page": "6847",
+    "DOI": "10.1038/s41467-021-27205-8",
+    "article-title": "Single-photon detection and cryogenic reconfigurability in lithium niobate nanophotonic circuits",
+    "volume": "12",
+    "author": "Lomonte",
+    "year": "2021",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "jpphotonac6c63bib18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2040-8978/18/10/104001",
+    "article-title": "Quantum photonics at telecom wavelengths based on lithium niobate waveguides",
+    "volume": "18",
+    "author": "Alibart",
+    "year": "2016",
+    "journal-title": "J. Opt."
+   },
+   {
+    "key": "jpphotonac6c63bib19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/1367-2630/aa9033",
+    "article-title": "Toolbox for the design of LiNbO3-based passive and active integrated quantum circuits",
+    "volume": "19",
+    "author": "Sharapova",
+    "year": "2017",
+    "journal-title": "New J. Phys."
+   },
+   {
+    "key": "jpphotonac6c63bib20",
+    "doi-asserted-by": "publisher",
+    "first-page": "108",
+    "DOI": "10.1364/OPTICA.445576",
+    "article-title": "Cryogenic integrated spontaneous parametric down-conversion",
+    "volume": "9",
+    "author": "Lange",
+    "year": "2022",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "jpphotonac6c63bib21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevApplied.15.024028",
+    "article-title": "Cryogenic second harmonic generation in periodically-poled lithium niobate waveguides",
+    "volume": "15",
+    "author": "Bartnick",
+    "year": "2021",
+    "journal-title": "Phys. Rev. Appl."
+   },
+   {
+    "key": "jpphotonac6c63bib22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5086276",
+    "article-title": "Integrated transition edge sensors on titanium in-diffused lithium niobate waveguides",
+    "volume": "4",
+    "author": "Höpker",
+    "year": "2019",
+    "journal-title": "APL Photonics"
+   },
+   {
+    "key": "jpphotonac6c63bib23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0957-4484/23/50/505201",
+    "article-title": "A superconducting nanowire single photon detector on lithium niobate",
+    "volume": "23",
+    "author": "Tanner",
+    "year": "2012",
+    "journal-title": "Nanotechnology"
+   },
+   {
+    "key": "jpphotonac6c63bib24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/1742-6596/1124/5/051025",
+    "article-title": "Superconducting nanowire single-photon detector on lithium niobate",
+    "volume": "1124",
+    "author": "Smirnov",
+    "year": "2018",
+    "journal-title": "J. Phys.: Conf. Ser."
+   },
+   {
+    "key": "jpphotonac6c63bib25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/2515-7647/ac105b",
+    "article-title": "Integrated superconducting nanowire single-photon detectors on titanium in-diffused lithium niobate waveguides",
+    "volume": "3",
+    "author": "Höpker",
+    "year": "2021",
+    "journal-title": "J. Phys. Photon."
+   },
+   {
+    "key": "jpphotonac6c63bib26",
+    "doi-asserted-by": "publisher",
+    "first-page": "pp 1",
+    "DOI": "10.1109/ICTON51198.2020.9203269",
+    "article-title": "On-chip manipulation and detection of single photons in lithium niobate nanophotonic circuits",
+    "author": "Lomonte",
+    "year": "2020"
+   },
+   {
+    "key": "jpphotonac6c63bib27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.5142852",
+    "article-title": "Lithium-niobate-on-insulator waveguide-integrated superconducting nanowire single-photon detectors",
+    "volume": "116",
+    "author": "Sayem",
+    "year": "2020",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "jpphotonac6c63bib28",
+    "article-title": "Superconducting nanowire single-photon detector on thin-film lithium niobate photonic waveguide",
+    "volume": "vol SM4O.4",
+    "author": "Colangelo",
+    "year": "2020"
+   },
+   {
+    "key": "jpphotonac6c63bib29",
+    "first-page": "894",
+    "article-title": "LiNbO3 optical modulator with superconducting electrodes",
+    "volume": "E75-C",
+    "author": "Yoshida",
+    "year": "1992",
+    "journal-title": "IEICE Trans. Electron."
+   },
+   {
+    "key": "jpphotonac6c63bib30",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1117/12.175011",
+    "article-title": "Characterization of lithium niobate electro-optic modulators at cryogenic temperatures",
+    "volume": "2150",
+    "author": "Morse",
+    "year": "1994",
+    "journal-title": "Proc. SPIE"
+   },
+   {
+    "key": "jpphotonac6c63bib31",
+    "doi-asserted-by": "publisher",
+    "first-page": "793",
+    "DOI": "10.1016/j.optcom.2007.10.031",
+    "article-title": "Electro-optic behavior of lithium niobate at cryogenic temperatures",
+    "volume": "281",
+    "author": "Herzog",
+    "year": "2008",
+    "journal-title": "Opt. Commun."
+   },
+   {
+    "key": "jpphotonac6c63bib32",
+    "doi-asserted-by": "publisher",
+    "first-page": "28961",
+    "DOI": "10.1364/OE.399818",
+    "article-title": "Electro-optic polarisation conversion at 0.8 K in titanium in-diffused lithium niobate waveguides",
+    "volume": "28",
+    "author": "Thiele",
+    "year": "2020",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "jpphotonac6c63bib33",
+    "doi-asserted-by": "publisher",
+    "first-page": "326",
+    "DOI": "10.1038/s41928-021-00570-4",
+    "article-title": "A cryogenic electro-optic interconnect for superconducting devices",
+    "volume": "4",
+    "author": "Youssefi",
+    "year": "2021",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "year": "1957",
+    "author": "Nye",
+    "key": "jpphotonac6c63bib34"
+   },
+   {
+    "key": "jpphotonac6c63bib35",
+    "doi-asserted-by": "publisher",
+    "first-page": "919",
+    "DOI": "10.1109/JQE.1973.1077767",
+    "article-title": "Coupled-mode theory for guided-wave optics",
+    "volume": "9",
+    "author": "Yariv",
+    "year": "1973",
+    "journal-title": "IEEE J. Quantum Electron."
+   },
+   {
+    "key": "jpphotonac6c63bib36",
+    "doi-asserted-by": "publisher",
+    "first-page": "1121",
+    "DOI": "10.1109/TMTT.1982.1131213",
+    "article-title": "Waveguide electrooptic modulators",
+    "volume": "30",
+    "author": "Alferness",
+    "year": "1982",
+    "journal-title": "IEEE Trans. Microw. Theory Tech."
+   },
+   {
+    "key": "jpphotonac6c63bib37",
+    "doi-asserted-by": "publisher",
+    "first-page": "1737",
+    "DOI": "10.1364/OPTICA.397235",
+    "article-title": "Cryogenic microwave-to-optical conversion using a triply resonant lithium-niobate-on-sapphire transducer",
+    "volume": "7",
+    "author": "McKenna",
+    "year": "2020",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "jpphotonac6c63bib38",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.4738989",
+    "article-title": "Thermo-optic coefficient of silicon at 1550 nm and cryogenic temperatures",
+    "volume": "101",
+    "author": "Komma",
+    "year": "2012",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "key": "jpphotonac6c63bib39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.22.010487",
+    "article-title": "Efficient, compact and low loss thermo-optic phase shifter in silicon",
+    "volume": "22",
+    "author": "Harris",
+    "year": "2014",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "jpphotonac6c63bib40",
+    "doi-asserted-by": "publisher",
+    "first-page": "374",
+    "DOI": "10.1364/OPTICA.4.000374",
+    "article-title": "Operation of high-speed silicon photonic micro-disk modulators at cryogenic temperatures",
+    "volume": "4",
+    "author": "Gehl",
+    "year": "2017",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "jpphotonac6c63bib41",
+    "doi-asserted-by": "publisher",
+    "first-page": "1385",
+    "DOI": "10.1364/OPTICA.403178",
+    "article-title": "Cryogenic operation of silicon photonic modulators based on the DC Kerr effect",
+    "volume": "7",
+    "author": "Chakraborty",
+    "year": "2020",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "jpphotonac6c63bib42",
+    "doi-asserted-by": "publisher",
+    "first-page": "1164",
+    "DOI": "10.1038/s41563-020-0725-5",
+    "article-title": "An integrated optical modulator operating at cryogenic temperatures",
+    "volume": "19",
+    "author": "Eltes",
+    "year": "2020",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "key": "jpphotonac6c63bib43",
+    "doi-asserted-by": "publisher",
+    "first-page": "99",
+    "DOI": "10.1515/nanoph-2020-0363",
+    "article-title": "High-performance integrated graphene electro-optic modulator at cryogenic temperature",
+    "volume": "10",
+    "author": "Lee",
+    "year": "2020",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "jpphotonac6c63bib44",
+    "doi-asserted-by": "publisher",
+    "first-page": "191",
+    "DOI": "10.1007/BF00614817",
+    "article-title": "Lithium niobate: summary of physical properties and crystal structure",
+    "volume": "37",
+    "author": "Weis",
+    "year": "1985",
+    "journal-title": "Appl. Phys. A"
+   },
+   {
+    "key": "jpphotonac6c63bib45",
+    "doi-asserted-by": "publisher",
+    "first-page": "1553",
+    "DOI": "10.1364/OL.22.001553",
+    "article-title": "Temperature-dependent Sellmeier equation for the index of refraction, n e , in congruent lithium niobate",
+    "volume": "22",
+    "author": "Jundt",
+    "year": "1997",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "jpphotonac6c63bib46",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/crat.2170250617",
+    "author": "Abrahams",
+    "year": "1989",
+    "edition": "1st edn"
+   },
+   {
+    "year": "2019",
+    "author": "Rsoft",
+    "key": "jpphotonac6c63bib47"
+   },
+   {
+    "key": "jpphotonac6c63bib48",
+    "doi-asserted-by": "publisher",
+    "first-page": "24",
+    "DOI": "10.1364/OPN.19.1.000024",
+    "article-title": "Integrated optical devices in lithium niobate",
+    "volume": "19",
+    "author": "Sohler",
+    "year": "2008",
+    "journal-title": "Opt. Photon. News"
+   },
+   {
+    "key": "jpphotonac6c63bib49",
+    "doi-asserted-by": "publisher",
+    "first-page": "1063",
+    "DOI": "10.1109/50.29633",
+    "article-title": "Overlap integral factors in integrated optic modulators and switches",
+    "volume": "7",
+    "author": "Kim",
+    "year": "1989",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "jpphotonac6c63bib50",
+    "doi-asserted-by": "publisher",
+    "first-page": "1627",
+    "DOI": "10.1063/1.1150508",
+    "article-title": "Accurate measurements of the electro-optic coefficients and birefringence changes using an external modulation signal",
+    "volume": "71",
+    "author": "Aillerie",
+    "year": "2000",
+    "journal-title": "Rev. Sci. Instrum."
+   },
+   {
+    "key": "jpphotonac6c63bib51",
+    "doi-asserted-by": "publisher",
+    "first-page": "eaat1451",
+    "DOI": "10.1126/sciadv.aat1451",
+    "article-title": "Nonlinear integrated quantum electro-optic circuits",
+    "volume": "5",
+    "author": "Luo",
+    "year": "2019",
+    "journal-title": "Sci. Adv."
+   },
+   {
+    "key": "jpphotonac6c63bib52",
+    "doi-asserted-by": "publisher",
+    "first-page": "326",
+    "DOI": "10.1038/s41928-021-00570-4",
+    "article-title": "A cryogenic electro-optic interconnect for superconducting devices",
+    "volume": "4",
+    "author": "Youssefi",
+    "year": "2021",
+    "journal-title": "Nat. Electron."
+   },
+   {
+    "key": "jpphotonac6c63bib53",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.3544069",
+    "article-title": "All-optical technique to measure the pyroelectric coefficient in electro-optic crystals",
+    "volume": "109",
+    "author": "Parravicini",
+    "year": "2011",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "jpphotonac6c63bib54",
+    "doi-asserted-by": "publisher",
+    "first-page": "1099",
+    "DOI": "10.1109/TCS.1979.1084592",
+    "article-title": "Directional coupler switches, modulators and filters using alternating Δβ techniques (Invited Paper)",
+    "volume": "26",
+    "author": "Schmidt",
+    "year": "2004",
+    "journal-title": "IEEE Trans. Circuits Syst."
+   },
+   {
+    "key": "jpphotonac6c63bib55",
+    "doi-asserted-by": "publisher",
+    "first-page": "396",
+    "DOI": "10.1109/JQE.1976.1069190",
+    "article-title": "Switched directional couplers with alternating dB",
+    "volume": "12",
+    "author": "Kogelnik",
+    "year": "1976",
+    "journal-title": "IEEE J. Quantum Electron."
+   }
+  ],
+  "container-title": [
+   "Journal of Physics: Photonics"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63",
+    "content-type": "text/html",
+    "content-version": "am",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63/pdf",
+    "content-type": "application/pdf",
+    "content-version": "am",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63/pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63/pdf",
+    "content-type": "application/pdf",
+    "content-version": "am",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63/pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63/pdf",
+    "content-type": "application/pdf",
+    "content-version": "am",
+    "intended-application": "similarity-checking"
+   },
+   {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63/pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2022,
+     6,
+     7
+    ]
+   ],
+   "date-time": "2022-06-07T07:44:12Z",
+   "timestamp": 1654587852000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://iopscience.iop.org/article/10.1088/2515-7647/ac6c63"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     6,
+     7
+    ]
+   ]
+  },
+  "references-count": 55,
+  "journal-issue": {
+   "issue": "3",
+   "published-online": {
+    "date-parts": [
+     [
+      2022,
+      6,
+      7
+     ]
+    ]
+   },
+   "published-print": {
+    "date-parts": [
+     [
+      2022,
+      7,
+      1
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1088/2515-7647/ac6c63",
+  "relation": {},
+  "ISSN": [
+   "2515-7647"
+  ],
+  "issn-type": [
+   {
+    "type": "electronic",
+    "value": "2515-7647"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2022,
+     6,
+     7
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "Cryogenic electro-optic modulation in titanium in-diffused lithium niobate waveguides",
+    "name": "article_title",
+    "label": "Article Title"
+   },
+   {
+    "value": "Journal of Physics: Photonics",
+    "name": "journal_title",
+    "label": "Journal Title"
+   },
+   {
+    "value": "paper",
+    "name": "article_type",
+    "label": "Article Type"
+   },
+   {
+    "value": "© 2022 The Author(s). Published by IOP Publishing Ltd",
+    "name": "copyright_information",
+    "label": "Copyright Information"
+   },
+   {
+    "value": "2021-12-14",
+    "name": "date_received",
+    "label": "Date Received",
+    "group": {
+     "name": "publication_dates",
+     "label": "Publication dates"
+    }
+   },
+   {
+    "value": "2022-04-13",
+    "name": "date_accepted",
+    "label": "Date Accepted",
+    "group": {
+     "name": "publication_dates",
+     "label": "Publication dates"
+    }
+   },
+   {
+    "value": "2022-06-07",
+    "name": "date_epub",
+    "label": "Online publication date",
+    "group": {
+     "name": "publication_dates",
+     "label": "Publication dates"
+    }
+   }
+  ]
+ }
+}

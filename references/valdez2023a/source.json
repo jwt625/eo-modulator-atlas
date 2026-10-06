@@ -4,8 +4,8 @@
  "doi": "10.1364/optica.484549",
  "source_type": "arxiv_preprint",
  "source_version": "2211.13348v1",
- "license": "",
- "license_verified": false,
+ "license": "CC-BY-NC-ND-4.0",
+ "license_verified": true,
  "redistribution": "restricted_local_only",
  "retrieved_on": "2026-10-03T03:23:59+00:00",
  "acquisition_origin": "public_primary_source",
@@ -19,5 +19,6 @@
  "title": "100 GHz bandwidth, 1 volt integrated electro-optic Mach\u2013Zehnder modulator at near-IR wavelengths",
  "identity_checked_on": "2026-10-02",
  "identity_check": "First-page title and authors checked against paper identity; source version retained separately.",
- "extraction_notes": []
+ "extraction_notes": [],
+ "license_source": "references/valdez2023a/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

@@ -125,25 +125,32 @@ entries:
   basis: measured
   locator: p.2 Sec. 2; p.3 Sec. 3
   note: JRD1 spin-coated, poled at elevated temperature
+- device_id: karakida2026-a
+  field: r_eff_pm_per_v
+  value: 43.0
+  unit: pm/V
+  basis: derived
+  locator: p.3, Sec. 3
+  note: r13 extracted from the measured resonance shift; r33 about 130 pm/V assumes r33 ~ 3 r13, not entered
 derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1-3, page footer
-    note: Footer on pages 1-3; page 1 abstract also reads (c) 2025 The Author(s)
-  eo_coefficient:
-    value: r13 43 pm/V derived; r33 about 130 pm/V assumed (r33 = 3 r13)
-    locator: p.3 Sec. 3
-    note: Author-derived; not a column
-  polarization_independence:
-    value: ER above 4 dB (4.1 dB at 0 deg) for all linear polarizations, 20 Vpp, 10 kHz, 1524.8 nm
-    locator: p.4 poster
-    note: Poster page; not entered
-  simulated_bandwidth_vs_size:
-    value: about 70 GHz at 20 um; above 100 GHz at 10 um (RC); Q below 100
-    locator: p.2 Fig. 1(c); p.4 poster
-    note: Simulated, not entered
-  loss_claim:
-    value: optical loss can be as small as 2 dB
-    locator: p.1 Sec. 1; p.3 Sec. 4
-    note: Claim in text; measured IL entered is 3.0 dB
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1-3, page footer
+  note: Footer on pages 1-3; page 1 abstract also reads (c) 2025 The Author(s)
+- item: eo_coefficient
+  value: r13 43 pm/V derived; r33 about 130 pm/V assumed (r33 = 3 r13)
+  locator: p.3 Sec. 3
+  note: Author-derived; not a column
+- item: polarization_independence
+  value: ER above 4 dB (4.1 dB at 0 deg) for all linear polarizations, 20 Vpp, 10 kHz, 1524.8 nm
+  locator: p.4 poster
+  note: Poster page; not entered
+- item: simulated_bandwidth_vs_size
+  value: about 70 GHz at 20 um; above 100 GHz at 10 um (RC); Q below 100
+  locator: p.2 Fig. 1(c); p.4 poster
+  note: Simulated, not entered
+- item: loss_claim
+  value: optical loss can be as small as 2 dB
+  locator: p.1 Sec. 1; p.3 Sec. 4
+  note: Claim in text; measured IL entered is 3.0 dB

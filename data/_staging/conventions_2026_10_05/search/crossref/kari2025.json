@@ -1,0 +1,382 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 33,
+  "items": [
+   {
+    "DOI": "10.1364/cleo_at.2026.am1c.7",
+    "title": [
+     "Compact Resonant Modulators for Multispectral Coherent Modulation on a Lithium Niobate Platform"
+    ],
+    "author": [
+     {
+      "given": "Max",
+      "family": "Hinkle",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sadra Rahimi",
+      "family": "Kari",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Paolo",
+      "family": "Pintus",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "John E.",
+      "family": "Bowers",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Matt",
+      "family": "Robbins",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Nathan",
+      "family": "Youngblood",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1145/3073763.3073773",
+    "title": [
+     "Enabling high performance rack-scale optical switching through global synchronisation"
+    ],
+    "author": [
+     {
+      "given": "Kari",
+      "family": "Clark",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Engineering University College London (UCL), United Kingdom"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Phill",
+      "family": "Watt",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Engineering University College London (UCL), United Kingdom"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2017,
+       1,
+       25
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.2649510",
+    "title": [
+     "Scalable and efficient coherent photonic unit cell for time-multiplexed multiplication and correlation detection"
+    ],
+    "author": [
+     {
+      "given": "Sadra",
+      "family": "Rahimi Kari",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Dominique",
+      "family": "Pantin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Nathan",
+      "family": "Youngblood",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023,
+       3,
+       17
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.37870/joqie.v8i12.154",
+    "title": [
+     "Enabling \"Quality Society\" through quality education for sustainable development"
+    ],
+    "author": [
+     {
+      "given": "JUHANI",
+      "family": "ANTTILA",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Kari",
+      "family": "JUSSILA",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2018,
+       12,
+       12
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/optica.507525",
+    "title": [
+     "Realization of an integrated coherent photonic platform for scalable matrix operations"
+    ],
+    "author": [
+     {
+      "given": "Sadra",
+      "family": "Rahimi Kari",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/01an3r305",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7990-236X",
+      "authenticated-orcid": true,
+      "given": "Nicholas A.",
+      "family": "Nobile",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/01an3r305",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Dominique",
+      "family": "Pantin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/01an3r305",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Vivswan",
+      "family": "Shah",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/01an3r305",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-2552-9376",
+      "authenticated-orcid": true,
+      "given": "Nathan",
+      "family": "Youngblood",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/01an3r305",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       18
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

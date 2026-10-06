@@ -286,18 +286,20 @@ entries:
     scheme.
 - device_id: sia2022-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.5, Fig. 6
   note: Fig. 6 response normalized near its lowest frequency (about 1 GHz); authors state no reference.
+  previous_value: unspecified
 - device_id: sia2022-b
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.5, Fig. 6
   note: Fig. 6 response normalized near its lowest frequency (about 1 GHz); authors state no reference.
+  previous_value: unspecified
 - device_id: sia2022-c
   field: bw3db_reference
   value: unspecified

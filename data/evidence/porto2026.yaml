@@ -47,6 +47,13 @@ entries:
   basis: measured
   locator: p.2 Sec. 3; p.3 Conclusion
   note: DC and RF characterisation at 60 degC
+- device_id: porto2026-a
+  field: temperature_k
+  value: 333.15
+  unit: K
+  basis: derived
+  locator: p.1-2
+  note: K = 60 + 273.15; DC characterization also at 60 C
 derived: []
 context_values:
 - item: design_bandwidth_statement

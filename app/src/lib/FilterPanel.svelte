@@ -172,7 +172,7 @@
 		{@render group('paper', 'Paper', paperBody)}
 
 		{#snippet flagBody()}
-			<label class="row" title="Hide devices whose Vpi, bandwidth or insertion loss is simulated, predicted or a design target. Figure-extracted and author-estimated values are kept.">
+			<label class="row" title="Hide design rows (row kind design) and devices whose Vpi, bandwidth or insertion loss is simulated, predicted or a design target. Figure-extracted and author-estimated values are kept.">
 				<input type="checkbox" checked={filters.measuredOnly} onchange={(e) => (filters.measuredOnly = e.currentTarget.checked)} />
 				<span class="lbl">Measured only</span>
 			</label>

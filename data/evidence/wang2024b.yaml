@@ -123,11 +123,12 @@ entries:
   note: plotted to 50 GHz; VNA 67 GHz, photodiode 50 GHz
 - device_id: wang2024b-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: extracted_from_figure
   locator: p.4 Fig. 3(f)
   note: normalization of S21 not stated; trace starts at 0 dB near DC
+  previous_value: unspecified
 - device_id: wang2024b-a
   field: n_rf
   value: 2.25
@@ -288,4 +289,18 @@ entries:
   basis: derived
   locator: p.4 Fig. 3(a); p.5 text
   note: voltage applied across two of four electrodes; not called lumped by the authors
+- device_id: wang2024b-a
+  field: vpi_dc_freq_ghz
+  value: 1e-05
+  unit: GHz
+  basis: measured
+  locator: p.8 Methods; p.5
+  note: 'source: For Vπ measurement, the MZM modulator was driven using a 10 kHz triangular voltage signal'
+- device_id: wang2024b-b
+  field: vpi_dc_freq_ghz
+  value: 1e-05
+  unit: GHz
+  basis: measured
+  locator: p.8 Methods; p.5
+  note: 'source: For Vπ measurement, the MZM modulator was driven using a 10 kHz triangular voltage signal'
 derived: []

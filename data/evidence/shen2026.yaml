@@ -131,6 +131,13 @@ entries:
   basis: derived
   locator: p.2, Sec. 4
   note: convention of Vpi*L not stated
+- device_id: shen2026-a
+  field: vpi_dc_freq_ghz
+  value: 0.002
+  unit: GHz
+  basis: measured
+  locator: p.2 Sec. 4; p.3 Fig. 3(d)
+  note: 'source: Transmission spectrum at null bias with 2 MHz sinusoidal modulation for Vπ extraction.'
 derived: []
 context_values:
 - item: license_notice

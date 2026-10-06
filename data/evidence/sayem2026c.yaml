@@ -466,4 +466,11 @@ entries:
   basis: derived
   locator: p.2 Fig. 1(a),(b)
   note: authors do not state it; follows the inferred push-pull drive
+- device_id: sayem2026c-a
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: p.2 Fig. 1(f) caption
+  note: 'source: Normalized transmission of the modulator as a function of applied triangular voltage at 100 Hz.'
 derived: []

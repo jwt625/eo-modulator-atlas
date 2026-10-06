@@ -51,11 +51,11 @@ entries:
   note: '''quality factor of the ring is around 1.118e4''; loaded or intrinsic not stated'
 - device_id: tan2024-a
   field: tuning_nm_per_v
-  value: 0.00389
+  value: -0.00389
   unit: nm/V
   basis: measured
-  locator: p.6 Sec. 3.1; Fig. 6(b),(c)
-  note: 3.89 pm/V resonance shift; sign negative in Fig. 6(c); simulation 3.81 pm/V
+  locator: p.6, Fig. 6(c)
+  note: Blue shift for positive voltage so negative sign; text states magnitude 3.89 pm/V only
 - device_id: tan2024-a
   field: max_baud_gbd
   value: 45
@@ -134,11 +134,12 @@ entries:
   note: Si width 370 nm, bend radius 15 um, straight length 400 um
 - device_id: tan2024-a
   field: drive
-  value: unspecified
+  value: not_applicable
   unit: ''
   basis: derived
   locator: p.4 Sec. 2; Fig. 2(a)
   note: ring modulator; authors do not state the drive
+  previous_value: unspecified
 - device_id: tan2024-a
   field: electrode_thickness_um
   value: 0.7

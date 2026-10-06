@@ -303,6 +303,27 @@ entries:
   basis: measured
   locator: p.4 text; Table 1 p.6; p.7 Methods
   note: 200 mVpp; drive swing range 100-270 mV (p.7, Supplementary Fig. 8)
+- device_id: mao2024-1310
+  field: vpi_dc_freq_ghz
+  value: 1.4e-05
+  unit: GHz
+  basis: measured
+  locator: p.3; p.6 Methods
+  note: 'source: Both Vπ and modulation efficiency values were obtained using a function generator with a sinusoidal electric signal with ...'
+- device_id: mao2024-1550
+  field: vpi_dc_freq_ghz
+  value: 1.4e-05
+  unit: GHz
+  basis: measured
+  locator: p.3; p.6 Methods
+  note: 'source: Both Vπ and modulation efficiency values were obtained using a function generator with a sinusoidal electric signal with ...'
+- device_id: mao2024-1550
+  field: r_eff_pm_per_v
+  value: 195.0
+  unit: pm/V
+  basis: derived
+  locator: p.7, Methods
+  note: From r_eff = (1/2) lambda d /(n^3 VpiL Gamma), parameters not shown in cached text; wavelength used not stated, so entered on 1550 row only
 derived:
 - device_id: mao2024-1550
   field: slab_thickness_nm

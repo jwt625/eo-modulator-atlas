@@ -1,0 +1,534 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 928,
+  "items": [
+   {
+    "DOI": "10.1126/sciadv.aea3538",
+    "title": [
+     "17-GHz lossless InP-membrane active metasurface"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-6534-1477",
+      "authenticated-orcid": true,
+      "given": "Taichiro",
+      "family": "Fukui",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2720-5546",
+      "authenticated-orcid": true,
+      "given": "Kei",
+      "family": "Sumita",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0007-9307-0532",
+      "authenticated-orcid": true,
+      "given": "Hiroki",
+      "family": "Miyano",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9960-9937",
+      "authenticated-orcid": true,
+      "given": "Go",
+      "family": "Soma",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-3195-5569",
+      "authenticated-orcid": true,
+      "given": "Warakorn",
+      "family": "Yanwachirakul",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Eisaku",
+      "family": "Kato",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-7205-3003",
+      "authenticated-orcid": true,
+      "given": "Ryota",
+      "family": "Tanomura",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jiahao",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9503-171X",
+      "authenticated-orcid": true,
+      "given": "Toshiki",
+      "family": "Yamada",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National Institute of Information and Communications Technology, 588-2 Iwaoka, Nishi-ku, Kobe, Hyogo 651-2492, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0005-2897-862X",
+      "authenticated-orcid": true,
+      "given": "Akira",
+      "family": "Otomo",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "National Institute of Information and Communications Technology, 588-2 Iwaoka, Nishi-ku, Kobe, Hyogo 651-2492, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-4206-8698",
+      "authenticated-orcid": true,
+      "given": "Kasidit",
+      "family": "Toprasertpong",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9852-1474",
+      "authenticated-orcid": true,
+      "given": "Mitsuru",
+      "family": "Takenaka",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5601-2604",
+      "authenticated-orcid": true,
+      "given": "Shinichi",
+      "family": "Takagi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2713-9542",
+      "authenticated-orcid": true,
+      "given": "Yoshiaki",
+      "family": "Nakano",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-6086-1510",
+      "authenticated-orcid": true,
+      "given": "Takuo",
+      "family": "Tanemura",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering and Information Systems, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       12,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1143/jjap.18.1651",
+    "title": [
+     "Field Effect of InP Photoluminescence in InP-Electrolyte Structure"
+    ],
+    "author": [
+     {
+      "given": "Takashi",
+      "family": "Fukui",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yoshiji",
+      "family": "Horikoshi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1979,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1080/00207210110071279",
+    "title": [
+     "Versatile voltage-mode active-only biquad with lossless and lossy integrator loop"
+    ],
+    "author": [
+     {
+      "given": "Takao",
+      "family": "Tsukutani",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Masami",
+      "family": "Higashimura",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Nobuo",
+      "family": "Takahashi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yasuaki",
+      "family": "Sumi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yutaka",
+      "family": "Fukui",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2001,
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1063/1.2189203",
+    "title": [
+     "Fabrication of InP∕InAs∕InP core-multishell heterostructure nanowires by selective area metalorganic vapor phase epitaxy"
+    ],
+    "author": [
+     {
+      "given": "Premila",
+      "family": "Mohan",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Hokkaido University Research Center for Integrated Quantum Electronics, Graduate School of Information Science and Technology, , North 13 West 8, Sapporo 060-8628, Japan"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Junichi",
+      "family": "Motohisa",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Hokkaido University Research Center for Integrated Quantum Electronics, Graduate School of Information Science and Technology, , North 13 West 8, Sapporo 060-8628, Japan"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Takashi",
+      "family": "Fukui",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Hokkaido University Research Center for Integrated Quantum Electronics, Graduate School of Information Science and Technology, , North 13 West 8, Sapporo 060-8628, Japan"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2006,
+       3,
+       27
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1049/el:19870361",
+    "title": [
+     "Novel method for realising lossless floating immittance using current conveyors"
+    ],
+    "author": [
+     {
+      "given": "M.",
+      "family": "Higashimura",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering, Matsue College of Technology, Nishi-ikuma, Matsue, Shimane 690, Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Y.",
+      "family": "Fukui",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical Engineering, Faculty of Engineering, Tottori University, Koyama, Tottori, Tottori 680, Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1987,
+       5,
+       7
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

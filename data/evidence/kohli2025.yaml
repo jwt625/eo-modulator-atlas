@@ -464,11 +464,12 @@ entries:
   note: 'Bound: stated ''more than 6 dB''; resonance dip in on-chip spectrum; gt'
 - device_id: kohli2025-rt
   field: er_type
-  value: static
+  value: resonance_dip
   unit: ''
   basis: measured
   locator: p.6 Fig. 4b
   note: Read from transmission spectrum, not a dynamic measurement
+  previous_value: static
 - device_id: kohli2025-rt
   field: vpi_convention
   value: resonance_tuning_derived
@@ -496,6 +497,13 @@ entries:
   basis: measured
   locator: p.10 Methods
   note: Approx; stated as applied to all modulators
+- device_id: kohli2025-mzm
+  field: r_eff_pm_per_v
+  value: 180.0
+  unit: pm/V
+  basis: derived
+  locator: p.4, Sec. C-band MZ modulator
+  note: Effective Pockels coefficient at 40 GHz from measured Vpi vs simulation; DC value not given
 derived:
 - device_id: kohli2025-rt
   field: max_line_rate_gbps

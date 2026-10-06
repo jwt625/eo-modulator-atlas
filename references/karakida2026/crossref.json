@@ -1,0 +1,305 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:25:29Z",
+   "timestamp": 1786991129908,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 12,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>Ultracompact polarization-independent surface-reflective modulator with an organic electro-optic thin film is demonstrated. A 30-μm-diameter vertically coupled Fabry-Perot resonator is employed to experimentally demonstrate high modulation efficiency of 0.30 nm/V and 3-dB bandwidth of 40 GHz.</jats:p>",
+  "DOI": "10.1364/ofc.2026.w2a.5",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:29:41Z",
+   "timestamp": 1780428581000
+  },
+  "page": "W2A.5",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Ultracompact High-Speed Surface-Reflective Modulator with Organic Electro-Optic Thin Film"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Seidai",
+    "family": "Karakida",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Koto",
+    "family": "Ariu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yusuke",
+    "family": "Tsubai",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Go",
+    "family": "Soma",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Takuo",
+    "family": "Tanemura",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-W2A.5-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "502",
+    "DOI": "10.1038/s41566-025-01633-0",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Daudlin",
+    "year": "2025",
+    "journal-title": "Nature Photon."
+   },
+   {
+    "key": "OFC-2026-W2A.5-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "Tu3J.6",
+    "DOI": "10.1364/OFC.2025.Tu3J.6",
+    "type": "journal-article",
+    "author": "Baghdadi",
+    "year": "2025",
+    "journal-title": "OFC"
+   },
+   {
+    "key": "OFC-2026-W2A.5-R3",
+    "doi-asserted-by": "publisher",
+    "first-page": "Th4C.4",
+    "DOI": "10.1364/OFC.2024.Th4C.4",
+    "type": "journal-article",
+    "author": "Le",
+    "year": "2024",
+    "journal-title": "OFC"
+   },
+   {
+    "key": "OFC-2026-W2A.5-R5",
+    "doi-asserted-by": "publisher",
+    "first-page": "804",
+    "DOI": "10.1109/JLT.2019.2951290",
+    "type": "journal-article",
+    "volume": "38",
+    "author": "Grillanda",
+    "year": "2020",
+    "journal-title": "J. Lightw. Technol."
+   },
+   {
+    "key": "OFC-2026-W2A.5-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "30304",
+    "DOI": "10.1364/OE.25.030304",
+    "type": "journal-article",
+    "volume": "25",
+    "author": "Zhang",
+    "year": "2017",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "OFC-2026-W2A.5-R7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41565-025-02000-4",
+    "type": "journal-article",
+    "author": "Soma",
+    "year": "2025",
+    "journal-title": "Nature Nanotechnol."
+   },
+   {
+    "key": "OFC-2026-W2A.5-R8",
+    "first-page": "Tu.03.02.2",
+    "type": "journal-article",
+    "author": "Ariu",
+    "year": "2025",
+    "journal-title": "ECOC"
+   },
+   {
+    "key": "OFC-2026-W2A.5-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "4442",
+    "DOI": "10.1364/AO.28.004442",
+    "type": "journal-article",
+    "volume": "28",
+    "author": "Eldering",
+    "year": "1989",
+    "journal-title": "Appl. Opt."
+   },
+   {
+    "key": "OFC-2026-W2A.5-R10",
+    "first-page": "TuF3-6",
+    "type": "journal-article",
+    "author": "Karakida",
+    "year": "2025",
+    "journal-title": "OECC/PSC"
+   },
+   {
+    "key": "OFC-2026-W2A.5-R11",
+    "doi-asserted-by": "crossref",
+    "first-page": "1503",
+    "DOI": "10.1515/nanoph-2023-0865",
+    "type": "journal-article",
+    "volume": "13",
+    "author": "Liu",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "OFC-2026-W2A.5-R12",
+    "doi-asserted-by": "publisher",
+    "first-page": "e173",
+    "DOI": "10.1038/lsa.2014.54",
+    "type": "journal-article",
+    "volume": "3",
+    "author": "Alloatt",
+    "year": "2014",
+    "journal-title": "Light Sci. Appl."
+   },
+   {
+    "key": "OFC-2026-W2A.5-R13",
+    "doi-asserted-by": "publisher",
+    "first-page": "739",
+    "DOI": "10.1364/OPTICA.5.000739",
+    "type": "journal-article",
+    "volume": "5",
+    "author": "Kieninger",
+    "year": "2017",
+    "journal-title": "Optica"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-W2A.5&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:28:22Z",
+   "timestamp": 1786987702000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-W2A.5"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 12,
+  "URL": "https://doi.org/10.1364/ofc.2026.w2a.5",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

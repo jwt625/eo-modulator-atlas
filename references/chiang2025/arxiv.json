@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2507.14724",
+ "title": "Ferroelectric Nematic Liquid Crystal-Based Silicon Photonic Modulator Demonstrated at 102 Gbit/s PAM-4",
+ "authors": "Li-Yuan Chiang, Gianlorenzo Masini, Rih-You Chen, Chirag Patel, Pavel Savechenkov, Yi-Jen Chiu, Cory Pecinovsky, and Jason W. Sickler",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sat, 19 Jul 2025 19:07:10 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T19:55:06Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2507.14724\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2507.14724</identifier>\n        <datestamp>2025-07-22</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2507.14724</id>\n        <submitter>Li-Yuan Chiang</submitter>\n            <version version=\"v1\">\n                <date>Sat, 19 Jul 2025 19:07:10 GMT</date>\n                <size>457kb</size>\n            </version>\n        <title>Ferroelectric Nematic Liquid Crystal-Based Silicon Photonic Modulator Demonstrated at 102 Gbit/s PAM-4</title>\n        <authors>Li-Yuan Chiang, Gianlorenzo Masini, Rih-You Chen, Chirag Patel, Pavel Savechenkov, Yi-Jen Chiu, Cory Pecinovsky, and Jason W. Sickler</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>4 pages, 5 figures, ECOC 2024 postdeadline</comments>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>We present the first demonstration of a hybrid integrated silicon and ferroelectric nematic liquid crystal modulator achieving 102~Gbit per second PAM-4 modulation. Operating within the C-band at a 3.5 V DC bias, this Pockels-based Mach-Zehnder modulator exhibits a $V_\\pi L_\\mathrm{AC}$ of 0.3 V$\\cdot$cm.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

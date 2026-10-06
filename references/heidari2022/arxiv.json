@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2109.07476",
+ "title": "Integrated ultra-high-performance graphene optical modulator",
+ "authors": "Elham Heidari, Hamed Dalir, Farzad Mokhtari-Koushyar, Behrouz Movahhed Nouri, Chandraman Patil, Mario Miscuglio, Deji Akinwande and Volker Sorger",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 15 Sep 2021 14:27:03 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Mon, 28 Feb 2022 16:15:58 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:00:49Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2109.07476\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2109.07476</identifier>\n        <datestamp>2022-03-01</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2109.07476</id>\n        <submitter>Hamed Dalir</submitter>\n            <version version=\"v1\">\n                <date>Wed, 15 Sep 2021 14:27:03 GMT</date>\n                <size>533kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Mon, 28 Feb 2022 16:15:58 GMT</date>\n                <size>630kb</size>\n            </version>\n        <title>Integrated ultra-high-performance graphene optical modulator</title>\n        <authors>Elham Heidari, Hamed Dalir, Farzad Mokhtari-Koushyar, Behrouz Movahhed Nouri, Chandraman Patil, Mario Miscuglio, Deji Akinwande and Volker Sorger</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <comments>8 pages, 3 figures</comments>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>With the increasing need for large volumes of data processing, transport, and storage, optimizing the trade-off between high-speed and energy consumption in today&#39;s optoelectronic devices is getting increasingly difficult. Heterogeneous material integration into Silicon- and Nitride-based photonics has showed high-speed promise, albeit at the expense of millimeter- to centimeter-scale footprints. The hunt for an electro-optic modulator that combines high speed, energy efficiency, and compactness to support high component density on-chip continues. Using a double-layer graphene optical modulator integrated on a Silicon photonics platform, we are able to achieve 60 GHz speed (3 dB roll-off), micrometer compactness, and efficiency of 2.25 fJ/bit in this paper. The electro-optic response is boosted further by a vertical distributed-Bragg-reflector cavity, which reduces the driving voltage by about 40 times while maintaining a sufficient modulation depth (5.2 dB/V). Modulators that are small, efficient, and quick allow high photonic chip density and performance, which is critical for signal processing, sensor platforms, and analog- and neuromorphic photonic processors.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

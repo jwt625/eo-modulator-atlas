@@ -7,13 +7,6 @@ source_files:
 - references/kari2025/figures/page_08.png
 entries:
 - device_id: kari2025-a
-  field: bw3db_ghz
-  value: 29.0
-  unit: GHz
-  basis: measured
-  locator: p.8, Fig. 4c; p.5, Fig. 2e; p.1 abstract
-  note: Presented as experimental (abstract, Fig. 4c, Fig. 2e VNA marker), but Methods give a 7.5 GHz VNA and 12 GHz photodetector; equals Q-limited estimate
-- device_id: kari2025-a
   field: il_onchip_db
   value: 1.0
   unit: dB

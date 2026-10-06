@@ -198,6 +198,20 @@ entries:
   unit: ''
   basis: measured
   locator: Sec. 2
+- device_id: li2026a-a
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: Sec. 2; Sec. 4 (evidence)
+  note: 'source: 100 Hz drive (evidence note)'
+- device_id: li2026a-b
+  field: vpi_dc_freq_ghz
+  value: 1e-07
+  unit: GHz
+  basis: measured
+  locator: Sec. 2; Sec. 4 (evidence)
+  note: 'source: 100 Hz drive (evidence note)'
 derived:
 - device_id: li2026a-a
   field: electrode_gap_um

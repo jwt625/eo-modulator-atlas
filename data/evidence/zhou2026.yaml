@@ -64,8 +64,9 @@ entries:
   note: Dynamic ER from DCA at 182.5 GBd read from the ER line on the right axis; about 4.4 dB at 140 GBd
 - device_id: zhou2026-a
   field: modulation_format
-  value: PAM4, PRBSQ, 140 to 182.5 GBd; TDECQ 3.7 dB at 160 GBd with 15-tap FFE (KP4 FEC threshold 2.4e-4); at 180 GBd 2.5 dB with 15 taps, 2.3 dB with 23 taps, 1.9 dB with 23-tap FFE plus 1-tap DFE (KP4+Hamming
-    threshold 4.85e-3); 2.6 dB at 182.5 GBd with 23 taps
+  value: PAM4, PRBSQ, 140 to 182.5 GBd; TDECQ 3.7 dB at 160 GBd with 15-tap FFE (KP4 FEC threshold 2.4e-4); at 180 GBd 2.5
+    dB with 15 taps, 2.3 dB with 23 taps, 1.9 dB with 23-tap FFE plus 1-tap DFE (KP4+Hamming threshold 4.85e-3); 2.6 dB at
+    182.5 GBd with 23 taps
   unit: ''
   basis: measured
   locator: p.2, Sec. 2; Fig. 2
@@ -86,20 +87,19 @@ entries:
   note: Convention for Vpi not stated
 - device_id: zhou2026-a
   field: bw3db_reference
-  value: unspecified
+  value: low_freq_unstated
   unit: ''
   basis: derived
   locator: p.1, Sec. 2; Fig. 1
   note: Reference not stated; trace starts near 0 dB
-derived:
-- device_id: zhou2026-a
-  field: max_line_rate_gbps
-  value: 365
-  formula: max_baud_gbd * 2 bits per PAM4 symbol
-  inputs:
-  - max_baud_gbd
+  previous_value: unspecified
+derived: []
 context_values:
-  license_notice:
-    value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
-    locator: p.1 page footer (repeated on every page)
-    note: printed page-footer copyright notice; basis for license publisher-copyright
+- item: license_notice
+  value: Optical Fiber Communication Conference (OFC) (c) 2026 Optica Publishing Group
+  locator: p.1 page footer (repeated on every page)
+  note: printed page-footer copyright notice; basis for license publisher-copyright
+- item: zhou2026-a max_line_rate_gbps (coordinator arithmetic, not stated in the paper)
+  value: 365
+  locator: 'derived from: max_baud_gbd'
+  note: max_baud_gbd * 2 bits per PAM4 symbol

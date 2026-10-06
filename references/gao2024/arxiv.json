@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2406.08744",
+ "title": "Compact low-half-wave-voltage thin film lithium niobate electro-optic phase modulator fabricated by photolithography assisted chemo-mechanical etching",
+ "authors": "Lang Gao, Youting Liang, Jinming Chen, Jianping Yu, Jia Qi, Lvbin Song, Jian Liu, Zhaoxiang Liu, Hongxin Qi, Ya Cheng",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 13 Jun 2024 02:04:02 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T19:58:19Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2406.08744\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2406.08744</identifier>\n        <datestamp>2024-06-14</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2406.08744</id>\n        <submitter>Hongxin Qi</submitter>\n            <version version=\"v1\">\n                <date>Thu, 13 Jun 2024 02:04:02 GMT</date>\n                <size>1250kb</size>\n            </version>\n        <title>Compact low-half-wave-voltage thin film lithium niobate electro-optic phase modulator fabricated by photolithography assisted chemo-mechanical etching</title>\n        <authors>Lang Gao, Youting Liang, Jinming Chen, Jianping Yu, Jia Qi, Lvbin Song, Jian Liu, Zhaoxiang Liu, Hongxin Qi, Ya Cheng</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>This paper presents a compact dual-arm thin film lithium niobate (TFLN) electro-optic phase modulator fabricated using the photolithography-assisted chemo-mechanical etching (PLACE) technique. The design of the device allows for complete utilization of the microwave electric field, doubling the modulation efficiency compared to single-arm modulators in theory. With a half-wave voltage of approximately 3 V and a modulation length of 1 cm, the device outperforms conventional phase modulators. Furthermore, the phase modulator exhibits low sensitivity to optical wavelengths in the range of 1510-1600 nm and offers a low insertion loss of 2.8 dB. The capability to generate multiple sideband signals for optical frequency comb applications is also demonstrated, producing 29 sideband signals at an input microwave power of 2 W.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

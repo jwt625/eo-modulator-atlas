@@ -4,9 +4,9 @@
  "doi": "10.1038/s41467-020-17950-7",
  "source_type": "arxiv_preprint",
  "source_version": "2003.03259v3",
- "license": "",
- "license_verified": false,
- "redistribution": "restricted_local_only",
+ "license": "CC-BY-4.0",
+ "license_verified": true,
+ "redistribution": "open_license_ok",
  "retrieved_on": "2026-10-03T03:17:30+00:00",
  "acquisition_origin": "public_primary_source",
  "identity_url": "https://arxiv.org/abs/2003.03259v3",
@@ -19,5 +19,6 @@
  "title": "Lithium niobate photonic-crystal electro-optic modulator",
  "identity_checked_on": "2026-10-02",
  "identity_check": "First-page title and authors checked against paper identity; source version retained separately.",
- "extraction_notes": []
+ "extraction_notes": [],
+ "license_source": "references/li2020/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

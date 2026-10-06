@@ -1,0 +1,316 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T18:24:24Z",
+   "timestamp": 1786991064092,
+   "version": "build-2736575974"
+  },
+  "publisher-location": "Washington, D.C.",
+  "reference-count": 8,
+  "publisher": "Optica Publishing Group",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "abstract": "<jats:p>We demonstrate the first Nyquist super-channel transmission using silicon microring-based I/Q modulators. A net bit rate of 612.9 Gbps per polarization is achieved back-to-back and exceeds 500 Gbps after 20 km using two wavelength sub-carriers.</jats:p>",
+  "DOI": "10.1364/ofc.2026.m1b.3",
+  "type": "proceedings-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     2
+    ]
+   ],
+   "date-time": "2026-06-02T19:25:39Z",
+   "timestamp": 1780428339000
+  },
+  "page": "M1B.3",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Super-Channel Transmission with Ultra-Compact Microring Modulators Achieving Net 612.9 Gbps per Polarization"
+  ],
+  "prefix": "10.1364",
+  "author": [
+   {
+    "given": "Erwan",
+    "family": "Weckenmann",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Arman",
+    "family": "Safarnejadian",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alireza",
+    "family": "Geravand",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jean-Michel",
+    "family": "Vallée",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zibo",
+    "family": "Zheng",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Simon",
+    "family": "Levasseur",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ming",
+    "family": "Zeng",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Leslie A.",
+    "family": "Rusch",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wei",
+    "family": "Shi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "285",
+  "reference": [
+   {
+    "key": "OFC-2026-M1B.3-R1",
+    "doi-asserted-by": "publisher",
+    "first-page": "4629",
+    "DOI": "10.1515/nanoph-2020-0309",
+    "type": "journal-article",
+    "volume": "9",
+    "author": "Shi",
+    "year": "2020",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "OFC-2026-M1B.3-R2",
+    "doi-asserted-by": "publisher",
+    "first-page": "1679",
+    "DOI": "10.1109/JPROC.2022.3206268",
+    "type": "journal-article",
+    "volume": "110",
+    "author": "Kobayashi",
+    "year": "2022",
+    "journal-title": "Proc. IEEE"
+   },
+   {
+    "key": "OFC-2026-M1B.3-R6",
+    "doi-asserted-by": "publisher",
+    "first-page": "1495",
+    "DOI": "10.1109/LPT.2018.2856767",
+    "type": "journal-article",
+    "volume": "30",
+    "author": "Lin",
+    "year": "2018",
+    "journal-title": "IEEE PTL"
+   },
+   {
+    "key": "OFC-2026-M1B.3-R7",
+    "doi-asserted-by": "publisher",
+    "first-page": "s12",
+    "DOI": "10.1109/MCOM.2012.6146481",
+    "type": "journal-article",
+    "volume": "50",
+    "author": "Gerstel",
+    "year": "2012",
+    "journal-title": "IEEE Comm. Magazine"
+   },
+   {
+    "key": "OFC-2026-M1B.3-R8",
+    "doi-asserted-by": "publisher",
+    "first-page": "781",
+    "DOI": "10.1038/s41566-023-01244-7",
+    "type": "journal-article",
+    "volume": "17",
+    "author": "Rizzo",
+    "year": "2023",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "OFC-2026-M1B.3-R9",
+    "doi-asserted-by": "publisher",
+    "first-page": "502",
+    "DOI": "10.1038/s41566-025-01633-0",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Daudlin",
+    "year": "2025",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "OFC-2026-M1B.3-R10",
+    "doi-asserted-by": "publisher",
+    "first-page": "740",
+    "DOI": "10.1038/s41566-025-01686-1",
+    "type": "journal-article",
+    "volume": "19",
+    "author": "Geravand",
+    "year": "2025",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "OFC-2026-M1B.3-R13",
+    "first-page": "ThC7",
+    "author": "Geravand",
+    "journal-title": "IEEE SiPhotonics 2025",
+    "type": "journal-article"
+   }
+  ],
+  "event": {
+   "name": "Optical Fiber Communication Conference",
+   "location": "Los Angeles, California",
+   "acronym": "OFC",
+   "sponsor": [
+    "The Optical Society"
+   ],
+   "start": {
+    "date-parts": [
+     [
+      2026
+     ]
+    ]
+   }
+  },
+  "container-title": [
+   "Optical Fiber Communication Conference (OFC) 2026"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "https://opg.optica.org/viewmedia.cfm?URI=OFC-2026-M1B.3&seq=0",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     17
+    ]
+   ],
+   "date-time": "2026-08-17T17:25:31Z",
+   "timestamp": 1786987531000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://opg.optica.org/abstract.cfm?URI=OFC-2026-M1B.3"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "references-count": 8,
+  "URL": "https://doi.org/10.1364/ofc.2026.m1b.3",
+  "relation": {},
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ }
+}

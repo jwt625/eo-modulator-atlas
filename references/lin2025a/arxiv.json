@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2505.21927",
+ "title": "Giant electro-optic coefficient in single crystal barium titanate on oxide insulator based Mach-Zehnder interferometer",
+ "authors": "Hong-Lin Lin, Pragati Aashna, Yu Cao, Aaron Danner",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 28 May 2025 03:22:01 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Fri, 20 Jun 2025 03:41:40 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:08:05Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2505.21927\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2505.21927</identifier>\n        <datestamp>2025-06-23</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2505.21927</id>\n        <submitter>Yu Cao</submitter>\n            <version version=\"v1\">\n                <date>Wed, 28 May 2025 03:22:01 GMT</date>\n                <size>672kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Fri, 20 Jun 2025 03:41:40 GMT</date>\n                <size>744kb</size>\n            </version>\n        <title>Giant electro-optic coefficient in single crystal barium titanate on oxide insulator based Mach-Zehnder interferometer</title>\n        <authors>Hong-Lin Lin, Pragati Aashna, Yu Cao, Aaron Danner</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Electro-optic modulators are indispensable components of modern day photonic integrated circuits (PICs). Recently lithium niobate has emerged as a key material to realize large-bandwidth high-speed modulation, but next-generation modulators require high-density integration, low cost, low power and high performance simultaneously, which are difficult to achieve with established integrated lithium niobate photonics platforms due to its limited electro-optic coefficient. Leveraging its exceptional Pockels coefficient, barium titanate (BTO) in the thin film form has emerged as a promising alternative but the electro-optic coefficients reported in thin-film BTO often fall short of bulk values due to challenges in film growth and waveguide fabrication. Here, we report, to the best of our knowledge, the largest Pockels coefficient (r42) of 1268 pm/V in thin film BTO platform, which is very close to the bulk value. We measure it by using an unbalanced Mach-Zehnder interferometer, fabricated by an optimized wet-etching method for realising single-mode waveguides in single-crystal barium titanate-on-insulator grown by pulsed laser deposition. This giant r42 is extracted from a device in which the optical mode is fully confined within a single-crystal BTO waveguide. This approach contrasts with previous designs where the core material - typically silicon or silicon nitride - supports only partial confinement, resulting in an evanescent overlap with a multi-crystalline BTO layer. This highly confined BTO on insulator electro-optic modulation technology may significantly advance the field of ultra-low-power integrated photonic devices and allows for the realization of next-generation efficient and compact photonic circuits.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

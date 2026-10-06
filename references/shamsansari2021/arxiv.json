@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2111.08473",
+ "title": "Electrically-pumped high-power laser transmitter integrated on thin-film lithium niobate",
+ "authors": "Amirhassan Shams-Ansari, Dylan Renaud, Rebecca Cheng, Linbo Shao, Lingyan He, Di Zhu, Mengjie Yu, Hannah R. Grant, Leif Johansson, Mian Zhang, Marko Loncar",
+ "doi": "10.1364/OPTICA.448617",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Tue, 16 Nov 2021 15:15:45 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Thu, 25 Nov 2021 18:07:25 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-05",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-05T20:13:42Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2111.08473\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2111.08473</identifier>\n        <datestamp>2022-04-22</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2111.08473</id>\n        <submitter>Amirhassan Shams-Ansari</submitter>\n            <version version=\"v1\">\n                <date>Tue, 16 Nov 2021 15:15:45 GMT</date>\n                <size>4055kb</size>\n                    <source_type>D</source_type>\n            </version>\n            <version version=\"v2\">\n                <date>Thu, 25 Nov 2021 18:07:25 GMT</date>\n                <size>4055kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Electrically-pumped high-power laser transmitter integrated on thin-film lithium niobate</title>\n        <authors>Amirhassan Shams-Ansari, Dylan Renaud, Rebecca Cheng, Linbo Shao, Lingyan He, Di Zhu, Mengjie Yu, Hannah R. Grant, Leif Johansson, Mian Zhang, Marko Loncar</authors>\n        <categories>physics.app-ph physics.optics</categories>\n            <doi>10.1364/OPTICA.448617</doi>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Integrated thin-film lithium niobate (TFLN) photonics has emerged as a promising platform for realization of high-performance chip-scale optical systems. Of particular importance are TFLN electro-optic modulators featuring high-linearity, low driving voltage and lowpropagation loss. However, fully integrated system requires integration of high power, low noise, and narrow linewidth lasers on TFLN chip. Here we achieve this goal, and demonstrate integrated high-power lasers on TFLN platform with up to 60 mW of optical power in the waveguides. We use this platform to realize a highpower transmitter consisting an electrically-pumped laser integrated with a 50 GHz modulator.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

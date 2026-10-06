@@ -4,8 +4,8 @@
  "doi": "10.1364/oe.460119",
  "source_type": "arxiv_preprint",
  "source_version": "2204.03138v1",
- "license": "",
- "license_verified": false,
+ "license": "arXiv-nonexclusive-1.0",
+ "license_verified": true,
  "redistribution": "restricted_local_only",
  "retrieved_on": "2026-10-03T03:17:42+00:00",
  "acquisition_origin": "public_primary_source",
@@ -19,5 +19,6 @@
  "title": "High-bandwidth CMOS-voltage-level electro-optic modulation of 780 nm light in thin-film lithium niobate",
  "identity_checked_on": "2026-10-02",
  "identity_check": "First-page title and authors checked against paper identity; source version retained separately.",
- "extraction_notes": []
+ "extraction_notes": [],
+ "license_source": "references/celik2022/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

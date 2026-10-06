@@ -12,6 +12,7 @@ import argparse
 import csv
 import datetime as dt
 import math
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -19,7 +20,7 @@ from typing import Any
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-ORG_COLUMNS = ["org_name", "org_type", "country", "region", "parent_org", "notes"]
+ORG_COLUMNS = ["org_name", "org_type", "country", "region", "parent_org", "notes", "ror_id", "name_source"]
 ORG_TYPES = {
     "university",
     "company",
@@ -31,6 +32,50 @@ ORG_TYPES = {
     "other",
 }
 REGIONS = {"north_america", "europe", "east_asia", "south_asia", "southeast_asia", "oceania", "middle_east", "other"}
+
+
+# Convention (l): ITU-T G.Sup39 telecom bands, ISO 20473 regions outside them; lower edge inclusive (nm).
+BAND_EDGES_NM = [
+    ("uv", 0.0, 380.0),
+    ("visible", 380.0, 780.0),
+    ("nir_below_o", 780.0, 1260.0),
+    ("o_band", 1260.0, 1360.0),
+    ("e_band", 1360.0, 1460.0),
+    ("s_band", 1460.0, 1530.0),
+    ("c_band", 1530.0, 1565.0),
+    ("l_band", 1565.0, 1625.0),
+    ("u_band", 1625.0, 1675.0),
+    ("nir_above_u", 1675.0, 3000.0),
+    ("mid_ir", 3000.0, 50000.0),
+]
+# V3: headline group -> row basis column; V5 and the 2026-10-05 columns: field set -> companion required.
+BASIS_GROUPS = [
+    (["vpi_dc_v", "vpi_rf_v", "vpil_dc_vcm", "vpil_rf_vcm"], "vpi_basis"),
+    (["bw3db_ghz", "bw6db_ghz"], "bw_basis"),
+    (["il_onchip_db", "il_fiber_to_fiber_db"], "il_basis"),
+]
+REQUIRED_WITH = [
+    ("extinction_ratio_db", "er_type"),
+    ("vpi_dc_v", "vpi_convention"),
+    ("vpi_rf_v", "vpi_convention"),
+    ("vpil_dc_vcm", "vpi_convention"),
+    ("vpil_rf_vcm", "vpi_convention"),
+    ("il_onchip_db", "il_onchip_scope"),
+    ("bw3db_ghz", "bw_method"),
+    ("bw6db_ghz", "bw_method"),
+    ("eo_rolloff_db", "bw_method"),
+]
+DISCOVERED_VIA = {"drive_doc", "tmp_eo_md", "local_corpus", "ofc2026", "landmark", "web_search", "author_group_followup", "assigned"}
+
+
+WARNINGS: list[str] = []
+
+
+def band_for_wavelength(nm: float) -> str:
+    for name, lo, hi in BAND_EDGES_NM:
+        if lo <= nm < hi:
+            return name
+    return "other"
 
 
 def load_schema(path: Path) -> dict[str, Any]:
@@ -130,6 +175,9 @@ def validate_orgs(path: Path) -> tuple[set[str], list[str]]:
             errs.append(f"organizations.csv:{i} country must be ISO alpha-2 uppercase, got {r['country']!r}")
         if r["region"] not in REGIONS:
             errs.append(f"organizations.csv:{i} region {r['region']!r} not in {sorted(REGIONS)}")
+    for i, r in enumerate(rows, start=2):
+        if r["parent_org"].strip() and r["parent_org"].strip() not in names:
+            errs.append(f"organizations.csv:{i} parent_org {r['parent_org']!r} has no organizations.csv row")
     return names, errs
 
 
@@ -154,7 +202,12 @@ def validate_evidence(
         entries = {(e.get("device_id"), e.get("field")): e for e in ev.get("entries") or []}
         derived = {(e.get("device_id"), e.get("field")): e for e in ev.get("derived") or []}
         valid_devices = {d["device_id"] for d in devs}
+        dev_cells = {d["device_id"]: d for d in devs}
         for key, e in entries.items():
+            dv = dev_cells.get(str(key[0]))
+            if dv is not None and key[1] in dv and key[1] not in ev_cols and dv[key[1]].strip() != "":
+                if not values_match(dv[key[1]].strip(), e.get("value")):
+                    errs.append(f"{ev_path.name}: {key} value {e.get('value')!r} != CSV {dv[key[1]]!r} (non-evidence column)")
             if key[0] not in valid_devices:
                 errs.append(f"{ev_path.name}: entry for unknown device_id {key[0]!r}")
             if key[1] not in all_cols:
@@ -166,6 +219,19 @@ def validate_evidence(
         for key, e in derived.items():
             if not str(e.get("formula", "")).strip():
                 errs.append(f"{ev_path.name}: derived {key} missing formula")
+        cv = ev.get("context_values")
+        if cv is not None and not (
+            isinstance(cv, list) and all(isinstance(c, dict) and {"item", "locator"} <= set(c) and len(c) > 2 for c in cv)
+        ):
+            errs.append(f"{ev_path.name}: context_values must be a list of {{item, locator, value or named values, ...}} (V7)")
+        dev_by_id = {d["device_id"]: d for d in devs}
+        for key in derived:
+            dv = dev_by_id.get(str(key[0]))
+            if dv is not None and key[1] in dv and not dv[key[1]].strip():
+                WARNINGS.append(f"{ev_path.name}: derived {key} has no CSV value (move to context_values if intentional)")
+        for e in ev.get("entries") or []:
+            if len(str(e.get("note", "")).split()) > 25:
+                WARNINGS.append(f"{ev_path.name}: note on {(e.get('device_id'), e.get('field'))} exceeds 25 words")
         for d in devs:
             for field in ev_cols:
                 cell = d[field].strip()
@@ -259,7 +325,33 @@ def validate_geo(data: Path, papers: list[dict[str, str]], org_names: set[str]) 
     return errs
 
 
+def validate_people(data: Path, papers: list[dict[str, str]]) -> list[str]:
+    """Optional tables from scripts/build_people.py: people.csv and paper_authors.csv (one row per author slot)."""
+    pa_path, pe_path = data / "paper_authors.csv", data / "people.csv"
+    if not pa_path.exists():
+        return []
+    errs: list[str] = []
+    _, people = read_csv(pe_path) if pe_path.exists() else ([], [])
+    ids = {r["person_id"] for r in people}
+    if len(ids) != len(people):
+        errs.append("people.csv: duplicate person_id")
+    _, pa = read_csv(pa_path)
+    slots = {(r["paper_id"], int(r["author_index"])): r for r in pa}
+    for p in papers:
+        names = split_list(p["authors"])
+        for i, n in enumerate(names, 1):
+            r = slots.pop((p["paper_id"], i), None)
+            if r is None or r["author"] != n:
+                errs.append(f"paper_authors.csv: {p['paper_id']} author {i} {n!r} missing or different (run build_people.py)")
+            elif r["person_id"] not in ids:
+                errs.append(f"paper_authors.csv: {p['paper_id']} author {i} person_id {r['person_id']!r} not in people.csv")
+    for k in slots:
+        errs.append(f"paper_authors.csv: extra slot {k}")
+    return errs
+
+
 def validate(data: Path) -> list[str]:
+    WARNINGS.clear()
     schema = load_schema(data / "schema" / "devices.schema.yaml")
     enums: dict[str, list[str]] = schema["enums"]
     errs: list[str] = []
@@ -295,6 +387,17 @@ def validate(data: Path) -> list[str]:
             errs.append(f"papers.csv:{i} {pid} sim_config {p['sim_config']} does not exist")
         if "tweet" in p["url"] or "x.com" in p["url"] or "twitter.com" in p["url"]:
             errs.append(f"papers.csv:{i} {pid} url must be a primary source, not a tweet")
+        doi, aid = p["doi"].strip(), p["arxiv_id"].strip()
+        if doi.lower().startswith("10.48550/"):
+            errs.append(f"papers.csv:{i} {pid} doi must be a version-of-record DOI, not an arXiv DataCite DOI (convention n)")
+        want = f"https://doi.org/{doi}" if doi else (f"https://arxiv.org/abs/{aid}" if aid else p["url"])
+        if p["url"] != want:
+            errs.append(f"papers.csv:{i} {pid} url must be {want!r} (convention n), got {p['url']!r}")
+        if aid and re.search(r"v\d+$", aid):
+            errs.append(f"papers.csv:{i} {pid} arxiv_id must be unversioned (convention n), got {aid!r}")
+        for tok in split_list(p["discovered_via"]):
+            if tok not in DISCOVERED_VIA and not tok.startswith("blog:"):
+                errs.append(f"papers.csv:{i} {pid} discovered_via token {tok!r} not in the vocabulary")
 
     dev_ids: set[str] = set()
     for i, d in enumerate(devices, start=2):
@@ -312,10 +415,29 @@ def validate(data: Path) -> list[str]:
                 errs.append(f"devices.csv:{i} {did} bad qualifier {q!r} (field:op with op in lt|gt|approx)")
             elif d[fld].strip() == "":
                 errs.append(f"devices.csv:{i} {did} qualifier on empty field {fld!r}")
+        ops: dict[str, set[str]] = {}
+        for q in split_list(d["qualifiers"]):
+            fld, _, op = q.partition(":")
+            ops.setdefault(fld, set()).add(op)
+        for fld, o in ops.items():
+            if len(o) > 1:
+                errs.append(f"devices.csv:{i} {did} two qualifier ops on {fld}: {sorted(o)}")
+        for group, basis_col in BASIS_GROUPS:
+            if any(d[f].strip() for f in group) and not d[basis_col].strip():
+                errs.append(f"devices.csv:{i} {did} {basis_col} required when {group[0]} (or its group) is set")
+        for field, need in REQUIRED_WITH:
+            if d[field].strip() and not d[need].strip():
+                errs.append(f"devices.csv:{i} {did} {need} required when {field} is set")
+        if d["wavelength_nm"].strip():
+            want_band = band_for_wavelength(float(d["wavelength_nm"]))
+            ok = d["band"] == want_band or (d["band"] == "cl_band" and want_band in ("c_band", "l_band"))
+            if not ok:
+                errs.append(f"devices.csv:{i} {did} band {d['band']!r} != {want_band!r} for {d['wavelength_nm']} nm (convention l)")
         if d["evidence_ref"] != f"data/evidence/{d['paper_id']}.yaml":
             errs.append(f"devices.csv:{i} {did} evidence_ref must be data/evidence/{d['paper_id']}.yaml")
     errs += validate_evidence(data, devices, schema["devices_columns"], enums)
     errs += validate_geo(data, papers, org_names)
+    errs += validate_people(data, papers)
     return errs
 
 
@@ -324,9 +446,11 @@ def main() -> int:
     ap.add_argument("--data", default=str(ROOT / "data"))
     args = ap.parse_args()
     errs = validate(Path(args.data))
+    for w in WARNINGS:
+        print("WARNING", w)
     for e in errs:
         print("ERROR", e)
-    print(f"{len(errs)} error(s)")
+    print(f"{len(errs)} error(s), {len(WARNINGS)} warning(s)")
     return 1 if errs else 0
 
 

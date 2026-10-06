@@ -1,0 +1,319 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 77011,
+  "items": [
+   {
+    "DOI": "10.5220/0013426400003944",
+    "title": [
+     "PacketZapper: A Scalable and Automated Platform for IoT Traffic Collection and Analysis"
+    ],
+    "author": [
+     {
+      "given": "Mathias",
+      "family": "Hedberg",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Information Security and Communication Technology, Norwegian University of Science and Technology (NTNU), Gjøvik, Norway"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jia-Chun",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Information Security and Communication Technology, Norwegian University of Science and Technology (NTNU), Gjøvik, Norway"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ming-Chang",
+      "family": "Lee",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Information Security and Communication Technology, Norwegian University of Science and Technology (NTNU), Gjøvik, Norway"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1162/2e3983f5.189ebbfe",
+    "title": [
+     "Review 2: \"Octopi 2.0: Open and Scalable Microscopy Platform for AI-powered Diagnostic Applications\""
+    ],
+    "author": [
+     {
+      "given": "Steve",
+      "family": "Lee",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "The Australian National University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "peer-review",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       8,
+       12
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/infcomw.2012.6193471",
+    "title": [
+     "GridDataBus: Information-centric platform for scalable secure resilient phasor-data sharing"
+    ],
+    "author": [
+     {
+      "given": "Young-Jin",
+      "family": "Kim",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jaehwan",
+      "family": "Lee",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Gary",
+      "family": "Atkinson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Marina",
+      "family": "Thottan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2012,
+       3
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.2139/ssrn.5570571",
+    "title": [
+     "EasyTrack: A Scalable and General Purpose Platform for Reliable Data Collection in mHealth Studies"
+    ],
+    "author": [
+     {
+      "given": "Kobiljon",
+      "family": "Toshnazarov",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Muhammad",
+      "family": "Salman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Donggeun",
+      "family": "Oh",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yugyeong",
+      "family": "Jung",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Uichin",
+      "family": "Lee",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Youngtae",
+      "family": "Noh",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "posted-content",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.12792/iciae2016.028",
+    "title": [
+     "Container-based Management Platform for Scalable Service Clusters Provisioning"
+    ],
+    "author": [
+     {
+      "given": "Cheng-Che",
+      "family": "Lee",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Fu-Min",
+      "family": "Chang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shang-Juh",
+      "family": "Kao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2016
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

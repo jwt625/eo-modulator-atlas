@@ -175,6 +175,13 @@ entries:
   basis: author_estimate
   locator: p.5, Sec. 4
   note: Peak-to-peak drive at 100 GBd estimated by authors; reference point not stated.
+- device_id: ummethala2021-a
+  field: r_eff_pm_per_v
+  value: 34.0
+  unit: pm/V
+  basis: author_estimate
+  locator: p.3, Sec. 3
+  note: r33 of YLD124 in-device from measured Vpi L with assumed n 1.75 and simulated field overlap 0.32; paper says estimate
 derived:
 - device_id: ummethala2021-a
   field: vpil_dc_vcm

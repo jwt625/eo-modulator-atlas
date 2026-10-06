@@ -14,21 +14,21 @@ entries:
   locator: p.2, Design and Fabrication
   note: phase shifters are 1 mm long
 - device_id: chiang2025-a
-  field: vpi_rf_v
+  field: vpi_dc_v
   value: 3
   unit: V
   basis: measured
   locator: p.2, Experimental Results; Fig. 3(a)
   note: V_pi(AC) at 25 MHz, fitted from waveforms at different wavelengths, 5 Vpp drive
 - device_id: chiang2025-a
-  field: vpi_rf_freq_ghz
+  field: vpi_dc_freq_ghz
   value: 0.025
   unit: GHz
   basis: measured
   locator: p.2, Experimental Results
   note: 25 MHz sinusoid, chosen to preclude slow molecular response
 - device_id: chiang2025-a
-  field: vpil_rf_vcm
+  field: vpil_dc_vcm
   value: 0.3
   unit: V*cm
   basis: measured
@@ -126,4 +126,11 @@ entries:
   basis: derived
   locator: p.2 Experimental Results
   note: authors do not say whether the 3 V is per phase shifter or MZM-level; GSGSG asymmetric loading of two phase shifters
+- device_id: chiang2025-a
+  field: r_eff_pm_per_v
+  value: 29.5
+  unit: pm/V
+  basis: derived
+  locator: p.2, Experimental Results
+  note: Component r33, extracted from Vpi(AC), TEM waveguide dimensions and Lumerical MODE simulation.
 derived: []

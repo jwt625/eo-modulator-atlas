@@ -375,4 +375,32 @@ entries:
   basis: derived
   locator: p.10 Fig. 4(b)
   note: authors do not state a convention
+- device_id: yu2024-s0
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.11; p.20 Methods
+  note: 'source: An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.'
+- device_id: yu2024-s1
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.11; p.20 Methods
+  note: 'source: An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.'
+- device_id: yu2024-s2
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.11; p.20 Methods
+  note: 'source: An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.'
+- device_id: yu2024-s3
+  field: vpi_dc_freq_ghz
+  value: 0.001
+  unit: GHz
+  basis: measured
+  locator: p.11; p.20 Methods
+  note: 'source: An arbitrary signal generator (AWG: GW Instek AFG-3051) was utilized to provide a voltage sweep at 1 MHz.'
 derived: []
