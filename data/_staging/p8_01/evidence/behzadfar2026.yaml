@@ -1,0 +1,471 @@
+paper_id: behzadfar2026
+verified_on: '2026-10-07'
+source_files:
+- references/behzadfar2026/text.md
+- references/behzadfar2026/figures/page_06.png
+- references/behzadfar2026/figures/page_07.png
+- references/behzadfar2026/figures/page_08.png
+entries:
+- device_id: behzadfar2026-a
+  field: vpi_dc_v
+  value: 0.84
+  unit: V
+  basis: simulated
+  locator: p.9 Table 1
+  note: 'design #1; also abstract and p.7 Sec. V.B'
+- device_id: behzadfar2026-a
+  field: vpil_dc_vcm
+  value: 0.84
+  unit: V*cm
+  basis: simulated
+  locator: p.7 Sec. V.C
+  note: stated for the quartz/air/glycerol G = 5 um case
+- device_id: behzadfar2026-a
+  field: bw3db_ghz
+  value: 219
+  unit: GHz
+  basis: simulated
+  locator: p.9 Table 1
+  note: 3-dB EO bandwidth, DC reference (p.2 Eq. 3 text); text states 219 four times; Fig. 6(a)/(b) about 207, Fig. 7(a) about 210 (read from figures)
+- device_id: behzadfar2026-a
+  field: rf_loss_db_per_cm
+  value: 4.7
+  unit: dB/cm
+  basis: simulated
+  locator: p.6 Sec. V.B; p.6 Fig. 3(b)
+  note: quartz/air/glycerol, G = 5 um, at 219 GHz
+- device_id: behzadfar2026-a
+  field: rf_loss_freq_ghz
+  value: 219
+  unit: GHz
+  basis: simulated
+  locator: p.6 Sec. V.B
+  note: ''
+- device_id: behzadfar2026-a
+  field: ng_opt
+  value: 4.3
+  unit: '1'
+  basis: design_target
+  locator: p.4 Sec. IV; p.9 Table 1
+  note: slow-light group index held fixed
+- device_id: behzadfar2026-a
+  field: electrode_gap_um
+  value: 5.0
+  unit: um
+  basis: design_target
+  locator: p.9 Table 1
+  note: rail-gap G
+- device_id: behzadfar2026-a
+  field: length_mm
+  value: 10
+  unit: mm
+  basis: design_target
+  locator: p.9 Table 1
+  note: arm length of the three designs
+- device_id: behzadfar2026-a
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: 600-nm X-cut film
+- device_id: behzadfar2026-a
+  field: etch_depth_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: rib etch depth t_g
+- device_id: behzadfar2026-a
+  field: rib_width_nm
+  value: 950
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: grating-waveguide rib width w_g
+- device_id: behzadfar2026-a
+  field: signal_width_um
+  value: 120
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: signal electrode width Ws widened from 105 um of the earlier design
+- device_id: behzadfar2026-a
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: T2 = 1.0 um electroplated gold (T1 = 500 nm)
+- device_id: behzadfar2026-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: electroplated gold
+- device_id: behzadfar2026-a
+  field: buffer_oxide_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: identical 150-nm SiO2 buffer beneath the electrodes in all studied devices
+- device_id: behzadfar2026-a
+  field: substrate
+  value: quartz, 500 um thick, with a 4 um air undercut
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: quartz substrate 500 um thick, air undercut depth 4 um
+- device_id: behzadfar2026-a
+  field: cladding
+  value: glycerol (eps_r 44) upper cladding over SiO2; air bottom cladding (undercut)
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV; p.6 Fig. 4 legend
+  note: glycerol eps 44 upper cladding; air bottom cladding
+- device_id: behzadfar2026-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: ''
+- device_id: behzadfar2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Eq. (1); p.3 Sec. III.B
+  note: Eq. (1) is for push-pull on X-cut; GSG electrodes described as used for push-pull
+- device_id: behzadfar2026-b
+  field: vpi_dc_v
+  value: 0.91
+  unit: V
+  basis: simulated
+  locator: p.9 Table 1
+  note: 'design #2'
+- device_id: behzadfar2026-b
+  field: bw3db_ghz
+  value: 219
+  unit: GHz
+  basis: simulated
+  locator: p.9 Table 1
+  note: 'design #2'
+- device_id: behzadfar2026-b
+  field: ng_opt
+  value: 3.7
+  unit: '1'
+  basis: design_target
+  locator: p.9 Table 1
+  note: 'design #2'
+- device_id: behzadfar2026-b
+  field: electrode_gap_um
+  value: 5.0
+  unit: um
+  basis: design_target
+  locator: p.9 Table 1
+  note: ''
+- device_id: behzadfar2026-b
+  field: length_mm
+  value: 10
+  unit: mm
+  basis: design_target
+  locator: p.9 Table 1
+  note: arm length of the three designs
+- device_id: behzadfar2026-b
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: 600-nm X-cut film
+- device_id: behzadfar2026-b
+  field: etch_depth_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: rib etch depth t_g
+- device_id: behzadfar2026-b
+  field: rib_width_nm
+  value: 950
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: grating-waveguide rib width w_g
+- device_id: behzadfar2026-b
+  field: signal_width_um
+  value: 120
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: signal electrode width Ws widened from 105 um of the earlier design
+- device_id: behzadfar2026-b
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: T2 = 1.0 um electroplated gold (T1 = 500 nm)
+- device_id: behzadfar2026-b
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: electroplated gold
+- device_id: behzadfar2026-b
+  field: buffer_oxide_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: identical 150-nm SiO2 buffer beneath the electrodes in all studied devices
+- device_id: behzadfar2026-b
+  field: substrate
+  value: quartz, 500 um thick, with a 4 um air undercut
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: quartz substrate 500 um thick, air undercut depth 4 um
+- device_id: behzadfar2026-b
+  field: cladding
+  value: glycerol (eps_r 44) upper cladding over SiO2; air bottom cladding (undercut)
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV; p.6 Fig. 4 legend
+  note: glycerol eps 44 upper cladding; air bottom cladding
+- device_id: behzadfar2026-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: ''
+- device_id: behzadfar2026-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Eq. (1); p.3 Sec. III.B
+  note: Eq. (1) is for push-pull on X-cut; GSG electrodes described as used for push-pull
+- device_id: behzadfar2026-c
+  field: vpi_dc_v
+  value: 0.64
+  unit: V
+  basis: simulated
+  locator: p.9 Table 1
+  note: 'design #3'
+- device_id: behzadfar2026-c
+  field: bw3db_ghz
+  value: 187
+  unit: GHz
+  basis: simulated
+  locator: p.9 Table 1
+  note: 'design #3'
+- device_id: behzadfar2026-c
+  field: ng_opt
+  value: 4.3
+  unit: '1'
+  basis: design_target
+  locator: p.9 Table 1
+  note: 'design #3'
+- device_id: behzadfar2026-c
+  field: electrode_gap_um
+  value: 4.0
+  unit: um
+  basis: design_target
+  locator: p.9 Table 1
+  note: ''
+- device_id: behzadfar2026-c
+  field: length_mm
+  value: 10
+  unit: mm
+  basis: design_target
+  locator: p.9 Table 1
+  note: arm length of the three designs
+- device_id: behzadfar2026-c
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: 600-nm X-cut film
+- device_id: behzadfar2026-c
+  field: etch_depth_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: rib etch depth t_g
+- device_id: behzadfar2026-c
+  field: rib_width_nm
+  value: 950
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: grating-waveguide rib width w_g
+- device_id: behzadfar2026-c
+  field: signal_width_um
+  value: 120
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: signal electrode width Ws widened from 105 um of the earlier design
+- device_id: behzadfar2026-c
+  field: electrode_thickness_um
+  value: 1
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: T2 = 1.0 um electroplated gold (T1 = 500 nm)
+- device_id: behzadfar2026-c
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: electroplated gold
+- device_id: behzadfar2026-c
+  field: buffer_oxide_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: identical 150-nm SiO2 buffer beneath the electrodes in all studied devices
+- device_id: behzadfar2026-c
+  field: substrate
+  value: quartz, 500 um thick, with a 4 um air undercut
+  unit: ''
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: quartz substrate 500 um thick, air undercut depth 4 um
+- device_id: behzadfar2026-c
+  field: cladding
+  value: glycerol (eps_r 44) upper cladding over SiO2; air bottom cladding (undercut)
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV; p.6 Fig. 4 legend
+  note: glycerol eps 44 upper cladding; air bottom cladding
+- device_id: behzadfar2026-c
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: ''
+- device_id: behzadfar2026-c
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Eq. (1); p.3 Sec. III.B
+  note: Eq. (1) is for push-pull on X-cut; GSG electrodes described as used for push-pull
+- device_id: behzadfar2026-d
+  field: length_mm
+  value: 20
+  unit: mm
+  basis: design_target
+  locator: p.7 Sec. V.B
+  note: 20-mm-long MZM
+- device_id: behzadfar2026-d
+  field: vpi_dc_v
+  value: 0.63
+  unit: V
+  basis: simulated
+  locator: p.7 Sec. V.B; p.9
+  note: ''
+- device_id: behzadfar2026-d
+  field: vpil_dc_vcm
+  value: 1.25
+  unit: V*cm
+  basis: simulated
+  locator: p.7 Sec. V.C
+  note: stated for the Si/SiO2/air G = 5 um case
+- device_id: behzadfar2026-d
+  field: rf_loss_db_per_cm
+  value: 6.8
+  unit: dB/cm
+  basis: simulated
+  locator: p.6 Sec. V.B; p.6 Fig. 3(b)
+  note: Si/SiO2/air at 219 GHz
+- device_id: behzadfar2026-d
+  field: rf_loss_freq_ghz
+  value: 219
+  unit: GHz
+  basis: simulated
+  locator: p.6 Sec. V.B
+  note: ''
+- device_id: behzadfar2026-d
+  field: ng_opt
+  value: 4.3
+  unit: '1'
+  basis: design_target
+  locator: p.4 Sec. IV
+  note: group index held at 4.3 for every structure
+- device_id: behzadfar2026-d
+  field: electrode_gap_um
+  value: 5.0
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. V.B
+  note: G = 5.0 um in the Si/SiO2/air comparison
+- device_id: behzadfar2026-d
+  field: eo_film_thickness_nm
+  value: 600
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: benchmark waveguide dimensions
+- device_id: behzadfar2026-d
+  field: etch_depth_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: ''
+- device_id: behzadfar2026-d
+  field: rib_width_nm
+  value: 950
+  unit: nm
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: ''
+- device_id: behzadfar2026-d
+  field: buffer_oxide_um
+  value: 0.15
+  unit: um
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: identical 150-nm SiO2 buffer in all studied devices
+- device_id: behzadfar2026-d
+  field: substrate
+  value: Si with SiO2 bottom cladding
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: ''
+- device_id: behzadfar2026-d
+  field: cladding
+  value: air top cladding
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: ''
+- device_id: behzadfar2026-d
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5 Sec. IV
+  note: ''
+- device_id: behzadfar2026-d
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.2 Eq. (1)
+  note: Eq. (1) is for push-pull on X-cut
+derived: []

@@ -2,10 +2,11 @@
 
 Contract between three parties: the distillation skill (writes configs), the browser engine in `engine/` (runs them), the app `/sim` route (shows them). Status: draft 1, 2026-10-01. The engine author may refine it; every change must be recorded in the Changelog at the bottom and mirrored in `engine/schema/sim.schema.json`.
 
-**Implemented subset:** E1 runs electrostatics and optional scalar optical modes.
-The full-chain example and physics roadmap below include future stages; they are
-not claims of implemented EO overlap, RF loss, loaded-line or EO-response support.
-The example uses placeholder coordinates and is not itself a runnable config.
+**Implemented subset:** electrostatics, scalar optical modes, DC EO overlap with
+explicit arm windows (`eo_overlap`) and the uniform RF line with explicit loss
+declarations (`rf_line`); see "Stage contract (E2i.2, E3i, U3)" below. Loaded-line
+cascades and the EO response are recognised but not implemented. The example uses
+placeholder coordinates and is not itself a runnable config.
 
 Rules
 - A config holds inputs only: geometry, materials, line and optical settings, and the paper-reported targets with tolerances. Solver outputs are never stored.
@@ -38,8 +39,8 @@ materials:                          # name -> properties (tensors in the crystal
     n_e: 2.138
     eps_r: {perp: 43.0, par: 28.0}        # RF relative permittivity
     r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
-    tan_delta_rf: 0.0
-  silicon_dioxide: {n: 1.444, eps_r: 3.9, tan_delta_rf: 0.0}
+    # tan_delta_rf: only when a source gives it; absent = unknown, never zero
+  silicon_dioxide: {n: 1.444, eps_r: 3.9}
   gold: {conductor: true, sigma_Sm: 4.1e7, n_complex: null}
   air: {n: 1.0, eps_r: 1.0}
 
@@ -59,7 +60,7 @@ geometry:                           # cross-section; origin on the optical axis;
 
 line:
   length_mm: 10
-  conductor_loss_model: skin_effect_wheeler    # | from_paper_alpha | none
+  conductor_loss_model: skin_effect_wheeler    # see "Stage contract": none | rprime_reference | skin_effect_* | from_paper_alpha
   rf_loss_table: null                          # [{f_ghz: .., alpha_db_per_cm: ..}] only when taken from the paper
   source_ohm: 50
   load_ohm: 50
@@ -100,10 +101,11 @@ Known approximation labels (must appear in `limitations` or in engine output): `
 
 ## E1 cross-section execution contract
 
-`runCrossSection(yaml, {section, optical, meshScale, onProgress})` is shared by the
-Node CLI and browser worker. It always solves electrostatics. `optical: true`
-additionally requests the scalar optical stage; `chain` records the intended
-device pipeline and does not cause the unimplemented stages to execute.
+`runCrossSection(yaml, {section, stages, optical, meshScale, onProgress})` is shared
+by the Node CLI and browser worker. It always solves electrostatics. `stages` selects
+further implemented stages; `optical: true` is the legacy form of adding
+`optical_mode`. `chain` records the intended device pipeline and does not cause any
+stage to execute.
 
 `inspectConfig(yaml)` is a separate, display-only path returning `{preview,
 solveError}`. It validates YAML, metadata, material declarations and geometry,
@@ -130,7 +132,8 @@ Inputs and numerical controls:
 - Electrode `weight` is the potential pattern, normalized to one volt of full
   terminal difference. For odd mirror symmetry this is twice the largest absolute
   weight; half-domain energy is doubled. `line.differential` does not add a second
-  capacitance/voltage factor. This does not yet define optical arm/push-pull factors.
+  capacitance/voltage factor. Optical arm and push-pull factors are defined only by
+  the `optics.eo` block of the EO stage (below).
 - `symmetry` defaults to `none`; supported mirror values are `x_mirror_odd` and
   `x_mirror_even`, with `mirror_x_um` defaulting to 0. Symmetry is a user-supplied
   geometry assumption, not inferred or independently verified by the runner.
@@ -151,6 +154,9 @@ Inputs and numerical controls:
   `section.mjs`: max local edge = domain diagonal/40, electrode corner edge =
   min(max edge, thickness/6), face edge = min(max edge, 8×corner), optical-window
   refinement = min(max edge, 0.05 µm), far edge = max(local edge, diagonal/12).
+  Every `optics.eo.arm_windows` entry that meets the solved domain gets the same
+  window refinement whenever `optics.eo` is declared (independent of the stages
+  requested), so both arms sample a refined field (2026-10-07, Q2 N1).
 - Optical mode solving requires `optical_window` within the domain and an `optics`
   block with positive `wavelength_nm`, TE/TM (or quasi-TE/quasi-TM), mode index 0–4
   (default 0), and `group_index_from`. Fixed group index requires positive
@@ -185,7 +191,8 @@ Result and target semantics:
 
 - Outputs include `scope: cross_section`, completed `stages`, declared
   `pendingStages`, unit-labelled `metrics`, mesh diagnostics, warnings, elapsed
-  time and `targets`. Physical arrays/fields are not serialized by this runner.
+  time and `targets`. Physical field arrays are not serialized by this runner; the
+  RF stage returns its frequency sweep (one value per sweep point).
 - Electrostatic metrics: C′ and C₀′ in pF/m, L′ in nH/m, static section nRF and Z₀.
   The optional optical stage adds scalar effective index and group index.
 - Optical diagnostics report selected `modeIndex`, `converged`, E/H `form`,
@@ -198,13 +205,15 @@ Result and target semantics:
   windows for truncation convergence. Labels and limitations also enter top-level
   `warnings`, including when a metal option is explicitly chosen with no metal in
   the window. Physical field arrays are not included in the runner result.
-- `targetSummary` reports total/evaluated/passed/failed separately. Missing
-  predictions are `actual: null`, `status: not_evaluated`, with an explicit reason.
+- `targetSummary` reports total/evaluated/passed/failed separately, plus `flagged`
+  (evaluated targets with a numerical `diagnostic`). Missing predictions are
+  `actual: null`, `status: not_evaluated`, with an explicit reason.
 - A target needs finite `value` and nonnegative `tol_abs` and/or `tol_rel`.
   When both are present, the tolerance is max(tol_abs, |value|×tol_rel). Comparison
   is inclusive. Future metric names are accepted only from the recognized list.
-- Alternate-section targets, targets with `at_ghz`, and unimplemented metrics
-  are not evaluated. Static RF targets require explicitly uniform topology
+- Alternate-section targets, `source.comparable: false` targets and unimplemented
+  metrics are not evaluated; `at_ghz` targets follow the RF stage rules below.
+  Static RF targets require explicitly uniform topology
   (`line.loading.type: none`); periodic or unspecified topology is not comparable.
   A configured fixed group index is never tested against a target as a prediction.
 - Requested-stage failure aborts the run with an error; no partial success result
@@ -214,7 +223,135 @@ Result and target semantics:
   1 = input/solver error, 2 = one or more evaluated targets failed. A zero exit
   code is not evidence of literature reproduction.
 
+## Stage contract (E2i.2, E3i, U3; 2026-10-07)
+
+Stage selection. `stages` is a subset of `electrostatics, optical_mode, eo_overlap,
+rf_line` (run in that order; electrostatics always). `loaded_line` and `eo_response`
+error as not implemented. Every requested stage's inputs are checked before any solve.
+`inspectConfig` returns `stageErrors` (per stage: `null` or the blocking input
+message); the CLI prints it with `--check` and runs stages with `--stages a,b`. A
+`null` readiness means the input boundary passed, not that meshing, metal handling,
+mode convergence or a Wheeler recess will succeed. Readiness and the run share the same
+input checks (cross-section construction, arm windows against the selected section and
+its mirror-cropped half, `rf_line` on a loaded T-rail cut), so a stage reported ready is
+never rejected by them at run time.
+
+Strict keys. Material keys are `conductor, eps_r, n, n_o, n_e, sigma_Sm, crystal,
+r_pm_per_v, tan_delta_rf, dispersion, thickness_um, n_complex` (`n_complex` and
+`thickness_um` are accepted but not used by the solver); target keys are `metric, value,
+tol_abs, tol_rel, at_ghz, vpi_convention, source` (`source` stays open). Any other key is
+an error at the solver boundary (Q2 M4: a typo such as `at_GHz` or `r_pm_per_V` would
+otherwise change the meaning silently).
+
+Crystal frame. `materials.<m>.crystal` takes `cut`, `propagation` and optional
+`rotation_deg`: a CCW rotation of the LAB frame about the propagation axis seen from
++z, `x' = cos t x + sin t y`, `y' = -sin t x + cos t y` (y = film normal). Before
+2026-10-07 the code applied the opposite sense (Q2 F6); no config used it. The optical
+solver still rejects rotations that make the lab permittivity non-diagonal.
+`r_pm_per_v` takes named `r13, r22, r33, r51` (3m with c = crystal z) or a 6x3
+`voigt` matrix (pm/V); other keys are errors, not ignored.
+
+EO overlap (`eo_overlap`). Required block:
+
+```yaml
+optics:
+  eo:
+    arm_drive: two_arm_field_resolved   # or single_arm (arm A only)
+    terminal_drive: single_ended        # or differential; label only, must agree with line.differential
+    arm_windows:
+      A: {x_um: [..], y_um: [..]}
+      B: {x_um: [..], y_um: [..]}       # two_arm_field_resolved only
+```
+
+- Arm windows are explicit (never inferred), inside the domain, non-overlapping, and
+  inside the domain and solved half of the selected cross-section when a mirror symmetry
+  crops the electrostatics (checked by readiness and before any solve). They refine the
+  electrostatic mesh like `optical_window` (see the mesh defaults above). Each arm gets
+  its own scalar mode (same polarization, mode index, metal policy as `optics`); an
+  unconverged arm mode is an error. The arm A mode equal to `optical_window` reuses the
+  `optical_mode` solve.
+- Conventions (`eo-atlas.eo-overlap/v2`, see `engine/src/eo-overlap.mjs`): first-order
+  Pockels, `dn = -(1/2) n^3 r E` sign, static field per volt of the full terminal
+  difference V_t, `delta_phi = phi_A - phi_B`, `VpiL = lambda / (2 |dn_A - dn_B|)`
+  (DC, lossless, no RF mismatch). Push-pull is never assumed; it shows as
+  `pushPullBalance = dn_B / dn_A` near -1. Any negative balance is push-pull comparable
+  (the V_pi is the field-resolved value for any balance); `|balance + 1| > 0.1` adds the
+  warning `push_pull_balance_deviates_from_-1_by_more_than_0.1` and
+  `result.eo.pushPullBalanceDeviates`.
+- Metrics: `vpi_l_dc_vcm`; `vpi_dc_v = VpiL / line.length_mm` (electrode length per arm)
+  when `length_mm` is set. `result.eo` carries per-arm window, n_eff, signed dn/V,
+  phase/V/m, convergence, window-margin fraction, metal policy, per-region power
+  fraction and dn, the balance, gain, labels, limitations and assumptions.
+- Vpi targets are evaluated only with a target-level `vpi_convention` (data-schema
+  enum) the engine result matches: `single_arm` matches `per_arm_phase_shifter` and
+  `mzm_single_arm`; two arms of opposite sign match `mzm_push_pull` (single-ended) or
+  `mzm_differential` (differential). `mzm_differential` follows data schema convention (q)
+  (`data/schema/devices.schema.yaml`, 2026-10-07): MZM V_pi against the full terminal
+  difference V+ - V-, which is the engine V_t; a per-side amplitude is half of that and is
+  never converted. Same-sign arms and `mzm_series_push_pull` match nothing. There is no
+  implicit factor-of-2 conversion.
+
+RF line (`rf_line`). Uniform quasi-TEM line from the section C', C0' (L' = 1/(c^2 C0')).
+No loss is ever defaulted; unknown is not zero.
+
+| Input | Meaning |
+|---|---|
+| `materials.<m>.tan_delta_rf` | finite >= 0; absent = unknown (dielectrics only) |
+| `materials.<m>.sigma_Sm` on a dielectric | conduction loss `tan d = sigma / (omega eps0 eps_r)`; scalar `eps_r` only; excludes `tan_delta_rf` |
+| `line.conductor_loss_model` | `none` (declared lossless), `rprime_reference` (`r_pul_ref_ohm_per_m` at `r_pul_ref_ghz`, scaled sqrt f), `skin_effect_geometry_factor` (`R' = R_s conductor_k_per_m`), `skin_effect_perimeter` (`R' = R_s (1/P_signal + 1/P_ground)` from electrode polygons, roles signal/ground only, `perimeters_cover_carrying_surfaces` labels the bound condition), `skin_effect_wheeler` (Wheeler incremental inductance: every electrode surface recessed by delta/2, faces on the domain boundary or mirror plane kept, L' = 1/(c^2 C0') from recessed solves at 0.25/0.5/1 x delta/2; the scale-1 value at the highest sweep/target frequency is scaled with R_s; step-check spread reported, warning above 1e-2; a recess that collapses a conductor edge is an error), `from_paper_alpha` (`rf_loss_table` or `rf_loss_law`, with a provenance locator) |
+| `line.include_internal_inductance` | required boolean for `rprime_reference` and `skin_effect_*` |
+| `line.dielectric_loss_model` | `none` or `tan_delta_regions` (G' = omega C' sum p_i tan d_i with E1 region energy fractions; every region material needs a loss entry); required unless `from_paper_alpha`, rejected with it |
+| `sweep` | `f_start_ghz`, `f_stop_ghz`, `n_points` (1-4001, inclusive linear grid) |
+
+- `rf_line` is an input error on the loaded cut of a `periodic_t_rail` line
+  (`line.loading.loaded_cross_section`, default `geometry`): its T-rail conductors carry no
+  line current in a 2D section, so a uniform-line L', R' and loss of that cut are not
+  meaningful and the Wheeler recess would treat the pads as current-carrying surfaces.
+  Run it on the unloaded cut; the loaded line needs `loaded_line` (Q2 C2).
+- Wheeler details: the reference frequency ignores `source.comparable: false` targets but
+  still depends on the sweep end (R' at a fixed frequency moves by about the step-check
+  spread, Q2 M1); recessed solves are vacuum-only and keep the nominal section's
+  electrode-thickness mesh hint and refinement windows (Q2 M8). A step-check spread above
+  1e-2 keeps every frequency target evaluated but sets its `diagnostic` and counts it in
+  `targetSummary.flagged` (Q2 M2).
+- A `dirichlet` outer side acts as a grounded return conductor whose surface the
+  `skin_effect_wheeler` and `skin_effect_perimeter` models omit; such a run carries the
+  warning `dirichlet_outer_boundary_acts_as_return_conductor_its_loss_not_included` (Q2 M3).
+- Skin-effect models take the common `sigma_Sm` of all electrode materials (mixed
+  values are an error) and check `thickness >= 3 delta` using the smallest electrode
+  bounding-box dimension (labelled). A model-specific field under another model, and
+  unknown `line`/`sweep` keys, are errors.
+- `result.rf`: loss source, `independentPrediction`, labels, per-region energy
+  fraction and loss, sweep arrays (alpha dB/cm, n_rf, Re/Im Z0) and the values at every
+  RF target frequency. Attenuation is positive: dB/cm = 8.686 x alpha [Np/cm] with
+  alpha the field-amplitude constant, which equals the power loss in dB (data
+  convention (cc)); `eo_rolloff_db` targets keep the signed S21 convention of this
+  file (data convention (g) notes the difference) and are not evaluated.
+- `at_ghz` targets of `rf_loss_db_per_cm`, `n_rf`, `z0_ohm` (Re Z0) are evaluated at
+  exactly that frequency when `rf_line` ran on the configured section with
+  `line.loading.type: none` and the loss is an independent model (not
+  `from_paper_alpha`, not `rprime_reference`); `rf_loss_db_per_cm` additionally needs a
+  conductor model other than `none`. Response metrics (`eo_rolloff_db`, `bw3db_ghz`,
+  `bw6db_ghz`, RF Vpi) stay `not_evaluated` until `eo_response` exists.
+
 ## Changelog
+- 2026-10-07 Q2 corrections (audit `DevLog/audits/e2i2-e3i-u3-q2-claude-audit-2026-10-07.md`):
+  EO arm windows refine the electrostatic mesh (N1); `rf_line` blocked on the loaded
+  T-rail cut (C2); `mzm_differential` cites data convention (q) (C1); strict material and
+  target keys (M4); push-pull balance warning (M5); readiness checks arm windows against
+  the selected section (M6); Wheeler spread flags targets (`diagnostic`,
+  `targetSummary.flagged`) (M2); Wheeler reference frequency ignores non-comparable
+  targets (M1); dirichlet-side warning (M3); vacuum-only recessed solves with the nominal
+  thickness hint (M8). Schema mirrored in `engine/schema/sim.schema.json`.
+- 2026-10-07 E2i.2/E3i/U3: stage selection (`stages`, CLI `--stages`, `--check`,
+  `inspectConfig().stageErrors`); `optics.eo` arm windows/drive and the `eo_overlap`
+  stage with convention-gated Vpi targets; `skin_effect_wheeler` implemented with
+  recessed-geometry solves; `rotation_deg` sense fixed to the documented
+  CCW lab-frame rotation (Q2 F6); crystal and Pockels keys validated; `tan_delta_rf`
+  absent = unknown (was 0), dielectric `sigma_Sm`, line loss models, `rf_loss_law`,
+  `sweep` validation and the `rf_line` stage with frequency targets;
+  `source.comparable: false` honoured; unknown `optics`, `line`, `sweep` keys rejected.
+  Schema mirrored in `engine/schema/sim.schema.json`.
 - 2026-10-02 E2i.1: YAML/schema/runner support for explicit scalar optical metal
   policies and selected-mode diagnostics, carrying all E2 limitations to the
   browser/CLI. Default rejection unchanged. EO-overlap and RF-line modules remain

@@ -32,7 +32,7 @@ entries:
   unit: GHz
   basis: derived
   locator: p.4; Fig. 4(d)
-  note: from fit of the response; raw trace noisy, reaches about -6 dB near 1.5 GHz, briefly back above -3 dB near 1.8, 1.9 and 2.1 GHz (approx. reading)
+  note: Fit of the response; noisy raw trace reaches about -6 dB near 1.5 GHz, briefly above -3 dB near 1.8, 1.9, 2.1 GHz (approx. reading).
 - device_id: lotkov2024-a
   field: il_onchip_db
   value: 5.7

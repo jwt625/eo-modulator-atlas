@@ -1,0 +1,60 @@
+# Analytic test input for the eo_overlap and rf_line stages, not a literature device. All material numbers are
+# ILLUSTRATIVE round values (same set as tests/eo-overlap.test.mjs), not lithium niobate or gold reference data.
+# G-S-G vertical plates spanning the full height h = 2 um with zero-flux top/bottom: uniform E_x = V_t / g, g = 2 um,
+# +x in the right gap (arm A), -x in the left gap (arm B). x-cut, propagation y: lab x = crystal z (n_e, r33).
+# Closed forms (independent script, DevLog-012): box TE mode n_eff = sqrt(n_e^2 - (lambda/2W)^2 - (lambda/2H)^2) = 1.985135;
+# dn_A = -n_e^4 r33 E / (2 n_eff) = -dn_B; VpiL = lambda n_eff g / (2 n_e^4 r33) = 0.5273796 V cm; Vpi(10 mm) = 0.5273796 V.
+# C' = 2 eps0 eps_r h / g = 531.2513 pF/m, Z0 = (g / 2h) eta0 / sqrt(eps_r) = 34.39062 ohm, static n_rf = sqrt(30).
+# K = integral |J_s|^2 dl / I^2 = 1/h (current I/2 on each gap-facing face of height h). At 50 GHz with R' = R_s K and
+# G' = omega C' tan_delta: alpha = 44.43277 dB/cm, n_rf = 5.498451, Re Z0 = 34.52691 ohm (polar-form complex root).
+schema: eo-atlas.sim/v1
+id: analytic-gsg-eo-rf
+title: Synthetic G-S-G plates for EO overlap and RF line gates
+chain: [electrostatics, optical_mode, eo_overlap, rf_line]
+materials:
+  eo_medium:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.2
+    n_e: 2.1
+    eps_r: 30
+    r_pm_per_v: {r13: 10, r22: 4, r33: 30, r51: 25}
+    tan_delta_rf: 0.001
+  metal: {conductor: true, sigma_Sm: 4.0e+7}
+geometry:
+  domain: {x_um: [-5, 5], y_um: [-1, 1]}
+  regions:
+    - {name: medium, material: eo_medium, rect: {x_um: [-5, 5], y_um: [-1, 1]}}
+  electrodes:
+    - {name: ground_l, role: ground, material: metal, weight: 0, rect: {x_um: [-5, -3], y_um: [-1, 1]}}
+    - {name: signal, role: signal, material: metal, weight: 1, rect: {x_um: [-1, 1], y_um: [-1, 1]}}
+    - {name: ground_r, role: ground, material: metal, weight: 0, rect: {x_um: [3, 5], y_um: [-1, 1]}}
+  optical_window: {x_um: [1.2, 2.8], y_um: [-0.8, 0.8]}
+  mesh: {max_edge_um: 0.5, electrode_edge_um: 0.25, electrode_face_um: 0.5, window_edge_um: 0.25}
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: fixed
+  ng_fixed: 2.2
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [1.2, 2.8], y_um: [-0.8, 0.8]}
+      B: {x_um: [-2.8, -1.2], y_um: [-0.8, 0.8]}
+line:
+  length_mm: 10
+  differential: false
+  loading: {type: none}
+  conductor_loss_model: skin_effect_geometry_factor
+  conductor_k_per_m: 5.0e+5
+  include_internal_inductance: false
+  dielectric_loss_model: tan_delta_regions
+sweep: {f_start_ghz: 20, f_stop_ghz: 100, n_points: 9}
+targets:
+  - {metric: vpi_l_dc_vcm, value: 0.5273796, tol_rel: 0.002, vpi_convention: mzm_push_pull, source: {locator: 'closed form, header'}}
+  - {metric: vpi_dc_v, value: 0.5273796, tol_rel: 0.002, vpi_convention: per_arm_phase_shifter, source: {locator: 'convention-mismatch gate: never evaluated'}}
+  - {metric: z0_ohm, value: 34.39062, tol_rel: 0.000001, source: {locator: 'closed form, header'}}
+  - {metric: rf_loss_db_per_cm, at_ghz: 50, value: 44.43277, tol_rel: 0.000001, source: {locator: 'closed form, header'}}
+  - {metric: n_rf, at_ghz: 50, value: 5.498451, tol_rel: 0.000001, source: {locator: 'closed form, header'}}
+  - {metric: eo_rolloff_db, at_ghz: 50, value: -1, tol_abs: 0.5, source: {locator: 'eo_response gate: never evaluated'}}

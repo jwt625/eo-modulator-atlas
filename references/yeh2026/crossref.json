@@ -1,0 +1,886 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     7
+    ]
+   ],
+   "date-time": "2026-10-07T14:55:09Z",
+   "timestamp": 1791384909180,
+   "version": "4.3.3"
+  },
+  "reference-count": 38,
+  "publisher": "American Chemical Society (ACS)",
+  "issue": "39",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       9,
+       22
+      ]
+     ],
+     "date-time": "2026-09-22T00:00:00Z",
+     "timestamp": 1790035200000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       9,
+       22
+      ]
+     ],
+     "date-time": "2026-09-22T00:00:00Z",
+     "timestamp": 1790035200000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       9,
+       22
+      ]
+     ],
+     "date-time": "2026-09-22T00:00:00Z",
+     "timestamp": 1790035200000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-045"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100000185",
+    "name": "Defense Advanced Research Projects Agency",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "HR0011-24-2-0360"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "HR0011-24-2-0360"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000185",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100006229",
+    "name": "Oak Ridge Institute for Science and Education",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "Intelligence Community Postdoctoral Research Fello"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "Intelligence Community Postdoctoral Research Fello"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100006229",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100014037",
+    "name": "National Defense Science and Engineering Graduate",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "NDSEG Fellowship"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "NDSEG Fellowship"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100014037",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/na",
+    "name": "National Science Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EEC-1941583"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EEC-1941583"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/na",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/na",
+    "name": "National Science Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "OSI-2137723"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "OSI-2137723"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/na",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     7
+    ]
+   ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>The electro-optic (EO) effect is crucially important for low power and efficient tuning of integrated photonic circuits. However, in EO materials such as lithium niobate, dc biasing for an extended duration of time results in the emergence of numerous nonidealities, including hysteresis─a persistent degradation of the magnitude and linearity of the dc EO response. We show that EO hysteresis can be reversed under both zero-bias and reverse-bias conditions, given sufficient time or reverse voltage and consistent with a defect model of the underlying physics. Specifically, we infer that drift phenomena at short time scales may arise from charge trapping dynamics near the contact junction and thereby devise an active reset protocol that restores the magnitude of the response and partially restores the drift time scales.</jats:p>",
+  "DOI": "10.1021/acs.nanolett.6c03406",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     23
+    ]
+   ],
+   "date-time": "2026-09-23T04:02:19Z",
+   "timestamp": 1790136139000
+  },
+  "page": "13450-13456",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Hysteresis\nand Trap Emission in dc-Biased Integrated\nLithium Niobate Electro-optic Modulators"
+  ],
+  "prefix": "10.1021",
+  "volume": "26",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-8711-6505",
+    "authenticated-orcid": true,
+    "given": "Matthew",
+    "family": "Yeh",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Harvard University , , , ,",
+      "place": [
+       "Cambridge, Massachusetts, United States, 02138"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "C. J.",
+    "family": "Xin",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Harvard University , , , ,",
+      "place": [
+       "Cambridge, Massachusetts, United States, 02138"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Donald",
+    "family": "Witt",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Harvard University , , , ,",
+      "place": [
+       "Cambridge, Massachusetts, United States, 02138"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5409-8512",
+    "authenticated-orcid": true,
+    "suffix": "III",
+    "given": "David R.",
+    "family": "Barton",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Harvard University , , , ,",
+      "place": [
+       "Cambridge, Massachusetts, United States, 02138"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Evelyn L.",
+    "family": "Hu",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Harvard University , , , ,",
+      "place": [
+       "Cambridge, Massachusetts, United States, 02138"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Marko",
+    "family": "Lončar",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Harvard University , , , ,",
+      "place": [
+       "Cambridge, Massachusetts, United States, 02138"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "316",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     22
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "issue": "1",
+    "key": "2026100710105713300_cit1",
+    "doi-asserted-by": "publisher",
+    "first-page": "69",
+    "DOI": "10.1109/2944.826874",
+    "article-title": "A Review of Lithium\nNiobate Modulators for Fiber-Optic Communications Systems",
+    "volume": "6",
+    "author": "Wooten",
+    "year": "2000",
+    "journal-title": "IEEE J. Select. Topics Quantum Electron."
+   },
+   {
+    "issue": "2",
+    "key": "2026100710105713300_cit2",
+    "doi-asserted-by": "publisher",
+    "first-page": "242",
+    "DOI": "10.1364/AOP.411024",
+    "article-title": "Integrated\nPhotonics on Thin-Film Lithium Niobate",
+    "volume": "13",
+    "author": "Zhu",
+    "year": "2021",
+    "journal-title": "Adv.\nOpt. Photon."
+   },
+   {
+    "issue": "5",
+    "key": "2026100710105713300_cit3",
+    "doi-asserted-by": "publisher",
+    "first-page": "237",
+    "DOI": "10.1038/s42254-025-00825-5",
+    "article-title": "Integrated\nElectro-Optics\non Thin-Film Lithium Niobate",
+    "volume": "7",
+    "author": "Hu",
+    "year": "2025",
+    "journal-title": "Nat. Rev. Phys."
+   },
+   {
+    "issue": "17",
+    "key": "2026100710105713300_cit4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.401959",
+    "article-title": "Wafer-Scale\nLow-Loss Lithium Niobate Photonic Integrated Circuits",
+    "volume": "28",
+    "author": "Luke",
+    "year": "2020",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "issue": "8002",
+    "key": "2026100710105713300_cit5",
+    "doi-asserted-by": "publisher",
+    "first-page": "80",
+    "DOI": "10.1038/s41586-024-07078-9",
+    "article-title": "Integrated Lithium Niobate Microwave Photonic Processing Engine",
+    "volume": "627",
+    "author": "Feng",
+    "year": "2024",
+    "journal-title": "Nature"
+   },
+   {
+    "issue": "5",
+    "key": "2026100710105713300_cit6",
+    "doi-asserted-by": "publisher",
+    "first-page": "1822",
+    "DOI": "10.1109/JLT.2025.3646212",
+    "article-title": "Integration\nof Hybrid Thin-Film Lithium\nNiobate Electro-Optic Modulators on a Wafer-Scale Silicon Nitride\nPhotonics Platform",
+    "volume": "44",
+    "author": "Rahman",
+    "year": "2026",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "issue": "10",
+    "key": "2026100710105713300_cit7",
+    "doi-asserted-by": "publisher",
+    "first-page": "1522",
+    "DOI": "10.1109/JLT.2011.2136322",
+    "article-title": "Analysis and\nControl of the DC Drift in LiNbO3 Based Mach–Zehnder\nModulators",
+    "volume": "29",
+    "author": "Salvestrini",
+    "year": "2011",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "issue": "3",
+    "key": "2026100710105713300_cit8",
+    "doi-asserted-by": "publisher",
+    "first-page": "3619",
+    "DOI": "10.1364/OE.507536",
+    "article-title": "Relaxation of the Electro-Optic Response\nin Thin-Film Lithium Niobate Modulators",
+    "volume": "32",
+    "author": "Holzgrafe",
+    "year": "2024",
+    "journal-title": "Opt.\nExpress"
+   },
+   {
+    "issue": "21",
+    "key": "2026100710105713300_cit9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.538150",
+    "article-title": "Roles of\nTemperature, Materials,\nand Domain Inversion in High-Performance, Low-Bias-Drift Thin Film\nLithium Niobate Blue Light Modulators",
+    "volume": "32",
+    "author": "Celik",
+    "year": "2024",
+    "journal-title": "Opt.\nExpress"
+   },
+   {
+    "key": "2026100710105713300_cit10",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Yeh, M.; Barton, D.; Smith, G.; Day, A.; Raun, A.; Renaud, D.; Assumpcao, D.; Hu, E.; Loncar, M.\n          Interface-Mediated\nDc Electro-Optic Instability in Lithium Niobate Nanophotonics.  Preprint available at Research Square, 2025. 10.21203/rs.3.rs-5775859/v1.",
+    "DOI": "10.21203/rs.3.rs-5775859/v1"
+   },
+   {
+    "issue": "5",
+    "key": "2026100710105713300_cit11",
+    "doi-asserted-by": "publisher",
+    "first-page": "1343",
+    "DOI": "10.1364/OME.590419",
+    "article-title": "Comparative\nAnalysis of Electro-Optic\nProperties in Monocrystalline and Polycrystalline AlN",
+    "volume": "16",
+    "author": "Rahman",
+    "year": "2026",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "issue": "1",
+    "key": "2026100710105713300_cit12",
+    "doi-asserted-by": "publisher",
+    "first-page": "42",
+    "DOI": "10.1038/s41563-018-0208-0",
+    "article-title": "Large Pockels\nEffect in Micro- and Nanostructured Barium Titanate Integrated on\nSilicon",
+    "volume": "18",
+    "author": "Abel",
+    "year": "2019",
+    "journal-title": "Nat. Mater."
+   },
+   {
+    "issue": "6771",
+    "key": "2026100710105713300_cit13",
+    "doi-asserted-by": "publisher",
+    "first-page": "390",
+    "DOI": "10.1126/science.adx3741",
+    "article-title": "Engineering High Pockels Coefficients\nin Thin-Film\nStrontium Titanate for Cryogenic Quantum Electro-Optic Applications",
+    "volume": "390",
+    "author": "Ulrich",
+    "year": "2025",
+    "journal-title": "Science"
+   },
+   {
+    "issue": "10",
+    "key": "2026100710105713300_cit14",
+    "doi-asserted-by": "publisher",
+    "first-page": "2233",
+    "DOI": "10.1109/LPT.2004.834486",
+    "article-title": "DC Drift of X-Cut LiNbO3 Modulators",
+    "volume": "16",
+    "author": "Nagata",
+    "year": "2004",
+    "journal-title": "IEEE Photon. Technol. Lett."
+   },
+   {
+    "issue": "3",
+    "key": "2026100710105713300_cit15",
+    "doi-asserted-by": "publisher",
+    "first-page": "301",
+    "DOI": "10.1063/1.116066",
+    "article-title": "Applied-voltage\nInduced Fatigue of Lithium Niobate Waveguide",
+    "volume": "68",
+    "author": "Nagata",
+    "year": "1996",
+    "journal-title": "Appl. Phys. Lett."
+   },
+   {
+    "issue": "4",
+    "key": "2026100710105713300_cit16",
+    "doi-asserted-by": "publisher",
+    "first-page": "5497",
+    "DOI": "10.1364/OE.418877",
+    "article-title": "Mitigating Photorefractive Effect in Thin-Film Lithium\nNiobate Microring Resonators",
+    "volume": "29",
+    "author": "Xu",
+    "year": "2021",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "issue": "1",
+    "key": "2026100710105713300_cit17",
+    "doi-asserted-by": "publisher",
+    "first-page": "132",
+    "DOI": "10.1109/TED.2010.2087339",
+    "article-title": "A Current-Transient\nMethodology for Trap Analysis for\nGaN High Electron Mobility Transistors",
+    "volume": "58",
+    "author": "Joh",
+    "year": "2011",
+    "journal-title": "IEEE\nTrans. Electron Devices"
+   },
+   {
+    "issue": "18",
+    "key": "2026100710105713300_cit18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.111.187403",
+    "article-title": "Persistent\nPhotoconductivity in Strontium\nTitanate",
+    "volume": "111",
+    "author": "Tarun",
+    "year": "2013",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "issue": "9",
+    "key": "2026100710105713300_cit19",
+    "doi-asserted-by": "publisher",
+    "first-page": "510",
+    "DOI": "10.1038/nphoton.2009.142",
+    "article-title": "Optical Cleaning\nof Congruent Lithium Niobate Crystals",
+    "volume": "3",
+    "author": "Kösters",
+    "year": "2009",
+    "journal-title": "Nature\nPhoton"
+   },
+   {
+    "issue": "12",
+    "key": "2026100710105713300_cit20",
+    "doi-asserted-by": "publisher",
+    "first-page": "960",
+    "DOI": "10.1364/OL.23.000960",
+    "article-title": "Lifetimes\nof Thermally Fixed Holograms\nin LiNbO3:Fe Crystals",
+    "volume": "23",
+    "author": "Arizmendi",
+    "year": "1998",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "issue": "16",
+    "key": "2026100710105713300_cit21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.20.017667",
+    "article-title": "Photonic Wire\nBonding: A Novel Concept for Chip-Scale Interconnects",
+    "volume": "20",
+    "author": "Lindenmann",
+    "year": "2012",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "issue": "7886",
+    "key": "2026100710105713300_cit22",
+    "doi-asserted-by": "publisher",
+    "first-page": "587",
+    "DOI": "10.1038/s41586-021-03999-x",
+    "article-title": "On-Chip Electro-Optic Frequency Shifters and Beam Splitters",
+    "volume": "599",
+    "author": "Hu",
+    "year": "2021",
+    "journal-title": "Nature"
+   },
+   {
+    "issue": "1",
+    "key": "2026100710105713300_cit23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.4858400",
+    "article-title": "The Physics\nand Chemistry of the Schottky Barrier Height",
+    "volume": "1",
+    "author": "Tung",
+    "year": "2014",
+    "journal-title": "Applied Physics Reviews"
+   },
+   {
+    "issue": "12",
+    "key": "2026100710105713300_cit24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.2148622",
+    "article-title": "Metal-Ferroelectric-Metal\nHeterostructures with Schottky Contacts.\nI. Influence of the Ferroelectric Properties",
+    "volume": "98",
+    "author": "Pintilie",
+    "year": "2005",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "key": "2026100710105713300_cit25",
+    "doi-asserted-by": "publisher",
+    "first-page": "143",
+    "DOI": "10.1117/12.388198",
+    "article-title": "Micro- and\nNanoscale Domain Engineering in Lithium Niobate and Lithium Tantalate",
+    "volume-title": "Smart Structures and Materials",
+    "author": "Shur",
+    "year": "2000"
+   },
+   {
+    "issue": "3",
+    "key": "2026100710105713300_cit26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevApplied.17.034042",
+    "article-title": "Steadily Decreasing Power Loss of a Double Schottky Barrier Originating\nfrom the Dynamics of Mobile Ions with Stable Interface States",
+    "volume": "17",
+    "author": "Cheng",
+    "year": "2022",
+    "journal-title": "Phys. Rev. Applied"
+   },
+   {
+    "issue": "7",
+    "key": "2026100710105713300_cit27",
+    "doi-asserted-by": "publisher",
+    "first-page": "3023",
+    "DOI": "10.1063/1.1663719",
+    "article-title": "Deep-level\nTransient Spectroscopy: A New Method to Characterize Traps in Semiconductors",
+    "volume": "45",
+    "author": "Lang",
+    "year": "1974",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "issue": "12",
+    "key": "2026100710105713300_cit28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0953-8984/21/12/123201",
+    "article-title": "Electron Small Polarons\nand Bipolarons in LiNbO3",
+    "volume": "21",
+    "author": "Schirmer",
+    "year": "2009",
+    "journal-title": "J. Phys.:\nCondens. Matter"
+   },
+   {
+    "issue": "2",
+    "key": "2026100710105713300_cit29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRevLett.109.026603",
+    "article-title": "Hidden Reservoir\nof Photoactive Electrons\nin LiNbO3 Crystals",
+    "volume": "109",
+    "author": "Luedtke",
+    "year": "2012",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "issue": "19",
+    "key": "2026100710105713300_cit30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0089099",
+    "article-title": "High-Temperature\nElectrical Conductivity in Piezoelectric Lithium Niobate",
+    "volume": "131",
+    "author": "Lucas",
+    "year": "2022",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "issue": "11",
+    "key": "2026100710105713300_cit31",
+    "doi-asserted-by": "publisher",
+    "first-page": "6414",
+    "DOI": "10.1063/1.1719264",
+    "article-title": "Poole-Frenkel Electron\nEmission from the Traps in AlGaN/GaN\nTransistors",
+    "volume": "95",
+    "author": "Mitrofanov",
+    "year": "2004",
+    "journal-title": "J. Appl. Phys."
+   },
+   {
+    "issue": "3",
+    "key": "2026100710105713300_cit32",
+    "doi-asserted-by": "publisher",
+    "first-page": "657",
+    "DOI": "10.1103/PhysRev.155.657",
+    "article-title": "Poole-Frenkel\nEffect and Schottky Effect in Metal-Insulator-Metal Systems",
+    "volume": "155",
+    "author": "Simmons",
+    "year": "1967",
+    "journal-title": "Phys. Rev."
+   },
+   {
+    "issue": "11",
+    "key": "2026100710105713300_cit33",
+    "doi-asserted-by": "publisher",
+    "first-page": "1477",
+    "DOI": "10.1109/68.887689",
+    "article-title": "DC Drift Failure\nRate Estimation on 10 Gb/s x-Cut Lithium Niobate Modulators",
+    "volume": "12",
+    "author": "Nagata",
+    "year": "2000",
+    "journal-title": "IEEE Photonics Technology Letters"
+   },
+   {
+    "key": "2026100710105713300_cit34",
+    "doi-asserted-by": "publisher",
+    "first-page": "1",
+    "DOI": "10.1364/OFC.2023.Th3B.1",
+    "article-title": "Silicon Photonics\nfor Next-Generation\nOptical Connectivity",
+    "volume-title": "OFC 2023",
+    "author": "Liao",
+    "year": "2023"
+   },
+   {
+    "key": "2026100710105713300_cit35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/CLEO_SI.2024.SF3G.7",
+    "article-title": "Mitigating Electron Beam Induced Defects\nfor Low-Loss and Stable Active Photonic Circuits",
+    "volume-title": "CLEO 2024",
+    "author": "Renaud",
+    "year": "2024"
+   },
+   {
+    "issue": "5",
+    "key": "2026100710105713300_cit36",
+    "doi-asserted-by": "publisher",
+    "first-page": "1703",
+    "DOI": "10.1364/OL.549975",
+    "article-title": "Alleviation\nof DC Drift in a Thin-Film Lithium Niobate\nModulator Utilizing Ar+ Ion Milling",
+    "volume": "50",
+    "author": "Shi",
+    "year": "2025",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "issue": "4",
+    "key": "2026100710105713300_cit37",
+    "doi-asserted-by": "publisher",
+    "first-page": "733",
+    "DOI": "10.1143/JJAP.20.733",
+    "article-title": "DC Drift Phenomena\nin LiNbO3 Optical Waveguide\nDevices",
+    "volume": "20",
+    "author": "Yamada",
+    "year": "1981",
+    "journal-title": "Jpn. J. Appl. Phys."
+   },
+   {
+    "issue": "25",
+    "key": "2026100710105713300_cit38",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.538870",
+    "article-title": "DC-Stable\nElectro-Optic Modulators Using Thin-Film Lithium Tantalate",
+    "volume": "32",
+    "author": "Powell",
+    "year": "2024",
+    "journal-title": "Opt. Express"
+   }
+  ],
+  "container-title": [
+   "Nano Letters"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acs.nanolett.6c03406",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "unspecified"
+   },
+   {
+    "URL": "https://pubs.acs.org/nalefd/article-pdf/26/39/13450/68611648/acs.nanolett.6c03406.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "syndication"
+   },
+   {
+    "URL": "https://pubs.acs.org/nalefd/article-pdf/26/39/13450/68611648/acs.nanolett.6c03406.pdf",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     7
+    ]
+   ],
+   "date-time": "2026-10-07T14:16:33Z",
+   "timestamp": 1791382593000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.acs.org/nalefd/article/26/39/13450/5436048/Hysteresis-and-Trap-Emission-in-dc-Biased"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     22
+    ]
+   ]
+  },
+  "references-count": 38,
+  "journal-issue": {
+   "issue": "39",
+   "published-online": {
+    "date-parts": [
+     [
+      2026,
+      9,
+      22
+     ]
+    ]
+   },
+   "published-print": {
+    "date-parts": [
+     [
+      2026,
+      10,
+      7
+     ]
+    ]
+   }
+  },
+  "URL": "https://doi.org/10.1021/acs.nanolett.6c03406",
+  "relation": {},
+  "ISSN": [
+   "1530-6984",
+   "1530-6992"
+  ],
+  "issn-type": [
+   {
+    "value": "1530-6984",
+    "type": "print"
+   },
+   {
+    "value": "1530-6992",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     22
+    ]
+   ]
+  }
+ }
+}

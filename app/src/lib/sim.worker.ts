@@ -1,6 +1,6 @@
 import { runCrossSection } from '../../../engine/src/run.mjs';
 
-self.onmessage = (event: MessageEvent<{ text: string; section: string; optical: boolean; meshScale: number }>) => {
+self.onmessage = (event: MessageEvent<{ text: string; section: string; stages: string[]; meshScale: number }>) => {
   try {
     const { text, ...options } = event.data;
     const result = runCrossSection(text, {

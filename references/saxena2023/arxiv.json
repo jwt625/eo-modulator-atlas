@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2311.16174",
+ "title": "Compact Modeling and Rapid Simulation of Silicon Photonic Micro-Disk and Ring Modulators",
+ "authors": "Vishal Saxena and Md Jubayer Shawon",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 23 Nov 2023 06:42:01 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:34:24Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2311.16174\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2311.16174</identifier>\n        <datestamp>2023-11-29</datestamp>\n            <setSpec>eess:eess:SY</setSpec>\n            <setSpec>cs:cs:SY</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2311.16174</id>\n        <submitter>Vishal Saxena</submitter>\n            <version version=\"v1\">\n                <date>Thu, 23 Nov 2023 06:42:01 GMT</date>\n                <size>2052kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>Compact Modeling and Rapid Simulation of Silicon Photonic Micro-Disk and Ring Modulators</title>\n        <authors>Vishal Saxena and Md Jubayer Shawon</authors>\n        <categories>eess.SY cs.SY physics.optics</categories>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Microdisk or microring modulators (MDMs or MRMs) realize compact electro-optic modulation in active silicon photonics (SiP) foundry platforms. A key advantage of these resonant modulators is that they readily implement dense wavelength division multiplexing (DWDM) in optical interconnects by tuning and locking the MDMs/MRMs to the DWDM wavelength grid. Compact modeling of static and transient dynamics of these modulators is important for co-simulation with CMOS drivers and wavelength stabilization circuits. This work presents the first compact model for microdisk modulators with a novel approach that uses experimental measurements and allows rapid and accurate simulation. This approach employs coupled real-valued differential equations with analytic signals in Verilog-A, leading to a 7X speed up in transient simulation time over the current art while enhancing accuracy. Since the model is generalized, it can also model microring resonators in addition to MDMs. The model also includes thermo-optic tuning for MDM/MRM with an embedded microheater, which is essential for simulations involving resonant wavelength stabilization.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

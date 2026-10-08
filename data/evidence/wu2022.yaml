@@ -1,0 +1,136 @@
+paper_id: wu2022
+verified_on: '2026-10-07'
+source_files:
+- references/wu2022/text.md
+- references/wu2022/figures/page_03.png
+- references/wu2022/figures/page_04.png
+- references/wu2022/figures/page_05.png
+- references/wu2022/figures/page_06.png
+entries:
+- device_id: wu2022-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.5 Sec. 4
+  note: laser at 1550 nm
+- device_id: wu2022-a
+  field: length_mm
+  value: 7
+  unit: mm
+  basis: design_target
+  locator: p.4 Fig. 3(b); p.5 Sec. 4
+  note: 7 mm traveling-wave electrodes
+- device_id: wu2022-a
+  field: vpi_dc_v
+  value: 3.1
+  unit: V
+  basis: measured
+  locator: p.6 Sec. 4; p.6 Fig. 6(a)
+  note: 100 kHz triangle sweep
+- device_id: wu2022-a
+  field: vpi_dc_freq_ghz
+  value: 0.0001
+  unit: GHz
+  basis: derived
+  locator: p.6 Sec. 4
+  note: 100 kHz triangle wave converted to GHz
+- device_id: wu2022-a
+  field: vpil_dc_vcm
+  value: 2.16
+  unit: V*cm
+  basis: derived
+  locator: p.6 Sec. 4
+  note: extracted from the measured Vpi and the 7 mm length; formula not printed
+- device_id: wu2022-a
+  field: bw3db_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.6 Sec. 4; p.6 Fig. 6(c)
+  note: beyond 50 GHz, limited by the VNA; Fig. 6(c) trace touches -3 dB near 28, 35 and 50 GHz (authors' claim kept)
+- device_id: wu2022-a
+  field: bw_measured_to_ghz
+  value: 50
+  unit: GHz
+  basis: measured
+  locator: p.5 Sec. 4; p.6 Fig. 6(c)
+  note: VNA sweep 10 MHz to 50 GHz
+- device_id: wu2022-a
+  field: il_onchip_db
+  value: 0.6
+  unit: dB
+  basis: author_estimate
+  locator: p.4 Sec. 3
+  note: on-chip propagation loss, fiber-to-fiber minus 2 x 1.0 dB coupling
+- device_id: wu2022-a
+  field: il_fiber_to_fiber_db
+  value: 2.6
+  unit: dB
+  basis: measured
+  locator: p.4 Sec. 3; p.1 abstract
+  note: ''
+- device_id: wu2022-a
+  field: extinction_ratio_db
+  value: 18
+  unit: dB
+  basis: measured
+  locator: p.6 Sec. 4; p.6 Fig. 6(b)
+  note: printed as -18 dB, static sweep
+- device_id: wu2022-a
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: commercial wafer specification
+- device_id: wu2022-a
+  field: etch_depth_nm
+  value: 210
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: chosen waveguide etching depth 0.21 um
+- device_id: wu2022-a
+  field: electrode_gap_um
+  value: 5.5
+  unit: um
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: chosen electrode-pair gap
+- device_id: wu2022-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(b)
+  note: G (Au), S (Au) labels
+- device_id: wu2022-a
+  field: substrate
+  value: Si substrate with SiO2 bottom cladding
+  unit: ''
+  basis: design_target
+  locator: p.3 Fig. 2(b)
+  note: layers labelled Si and SiO2
+- device_id: wu2022-a
+  field: cladding
+  value: SiON
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: SiON layer deposited over waveguides and electrodes
+- device_id: wu2022-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.3 Sec. 2
+  note: ''
+- device_id: wu2022-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: p.4 Fig. 3(b)
+  note: not stated by the authors; inferred from the GSG layout with one arm in each gap
+derived: []

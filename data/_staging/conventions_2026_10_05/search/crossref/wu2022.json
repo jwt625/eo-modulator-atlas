@@ -1,0 +1,899 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 3114,
+  "items": [
+   {
+    "DOI": "10.3390/mi13030378",
+    "title": [
+     "High-Production-Rate Fabrication of Low-Loss Lithium Niobate Electro-Optic Modulators Using Photolithography Assisted Chemo-Mechanical Etching (PLACE)"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0001-8012-0456",
+      "authenticated-orcid": false,
+      "given": "Rongbo",
+      "family": "Wu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China"
+       },
+       {
+        "name": "University of Chinese Academy of Sciences, Beijing 100049, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lang",
+      "family": "Gao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China"
+       },
+       {
+        "name": "University of Chinese Academy of Sciences, Beijing 100049, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Youting",
+      "family": "Liang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy, East China Normal University, Shanghai 200062, China"
+       },
+       {
+        "name": "XXL—The Extreme Optoelectromechanics Laboratory, School of Physics and Electronics Science, East China Normal University, Shanghai 200241, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yong",
+      "family": "Zheng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy, East China Normal University, Shanghai 200062, China"
+       },
+       {
+        "name": "XXL—The Extreme Optoelectromechanics Laboratory, School of Physics and Electronics Science, East China Normal University, Shanghai 200241, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Junxia",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy, East China Normal University, Shanghai 200062, China"
+       },
+       {
+        "name": "XXL—The Extreme Optoelectromechanics Laboratory, School of Physics and Electronics Science, East China Normal University, Shanghai 200241, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hongxin",
+      "family": "Qi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy, East China Normal University, Shanghai 200062, China"
+       },
+       {
+        "name": "XXL—The Extreme Optoelectromechanics Laboratory, School of Physics and Electronics Science, East China Normal University, Shanghai 200241, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Difeng",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China"
+       },
+       {
+        "name": "University of Chinese Academy of Sciences, Beijing 100049, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2410-9495",
+      "authenticated-orcid": false,
+      "given": "Min",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy, East China Normal University, Shanghai 200062, China"
+       },
+       {
+        "name": "XXL—The Extreme Optoelectromechanics Laboratory, School of Physics and Electronics Science, East China Normal University, Shanghai 200241, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhiwei",
+      "family": "Fang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy, East China Normal University, Shanghai 200062, China"
+       },
+       {
+        "name": "XXL—The Extreme Optoelectromechanics Laboratory, School of Physics and Electronics Science, East China Normal University, Shanghai 200241, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-8269-5907",
+      "authenticated-orcid": false,
+      "given": "Ya",
+      "family": "Cheng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China"
+       },
+       {
+        "name": "University of Chinese Academy of Sciences, Beijing 100049, China"
+       },
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy, East China Normal University, Shanghai 200062, China"
+       },
+       {
+        "name": "XXL—The Extreme Optoelectromechanics Laboratory, School of Physics and Electronics Science, East China Normal University, Shanghai 200241, China"
+       },
+       {
+        "name": "Collaborative Innovation Center of Light Manipulations and Applications, Shandong Normal University, Jinan 250358, China"
+       },
+       {
+        "name": "Shanghai Research Center for Quantum Sciences, Shanghai 201315, China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       2,
+       26
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1088/2515-7647/ac0cc0",
+    "title": [
+     "Monolithically integrated electro-optic modulator fabricated on lithium niobate on insulator by photolithography assisted chemo-mechanical etching"
+    ],
+    "author": [
+     {
+      "given": "Youting",
+      "family": "Liang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Junxia",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Difeng",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yong",
+      "family": "Zheng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hongxin",
+      "family": "Qi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2410-9495",
+      "authenticated-orcid": false,
+      "given": "Min",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhiwei",
+      "family": "Fang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-8012-0456",
+      "authenticated-orcid": false,
+      "given": "Rongbo",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-8269-5907",
+      "authenticated-orcid": false,
+      "given": "Ya",
+      "family": "Cheng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2021,
+       7,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.35848/1347-4065/aba0d6",
+    "title": [
+     "High-index-contrast single-mode optical waveguides fabricated on lithium niobate by photolithography assisted chemo-mechanical etching (PLACE)"
+    ],
+    "author": [
+     {
+      "given": "Jianhao",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Rongbo",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Min",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhiwei",
+      "family": "Fang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jintian",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Junxia",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Renhong",
+      "family": "Gao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wei",
+      "family": "Chu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-8269-5907",
+      "authenticated-orcid": false,
+      "given": "Ya",
+      "family": "Cheng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2020,
+       7,
+       17
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1515/nanoph-2021-0737",
+    "title": [
+     "A high‐gain cladded waveguide amplifier on erbium doped thin‐film lithium niobate fabricated using photolithography assisted chemo‐mechanical etching"
+    ],
+    "author": [
+     {
+      "given": "Youting",
+      "family": "Liang",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy East China Normal University Shanghai 200062 China"
+       },
+       {
+        "name": "The Extreme Optoelectromechanics Laboratory (XXL) School of Physics and Electronic Sciences East China Normal University Shanghai 200241 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Junxia",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy East China Normal University Shanghai 200062 China"
+       },
+       {
+        "name": "The Extreme Optoelectromechanics Laboratory (XXL) School of Physics and Electronic Sciences East China Normal University Shanghai 200241 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhaoxiang",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The Extreme Optoelectromechanics Laboratory (XXL) School of Physics and Electronic Sciences East China Normal University Shanghai 200241 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-7823-6257",
+      "authenticated-orcid": false,
+      "given": "Haisu",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy East China Normal University Shanghai 200062 China"
+       },
+       {
+        "name": "The Extreme Optoelectromechanics Laboratory (XXL) School of Physics and Electronic Sciences East China Normal University Shanghai 200241 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8047-1763",
+      "authenticated-orcid": false,
+      "given": "Zhiwei",
+      "family": "Fang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The Extreme Optoelectromechanics Laboratory (XXL) School of Physics and Electronic Sciences East China Normal University Shanghai 200241 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yuan",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics and CAS Center for Excellence in Ultra‐Intense Laser Science Shanghai Institute of Optics and Fine Mechanics (SIOM), Chinese Academy of Sciences (CAS) Shanghai 201800 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Difeng",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics and CAS Center for Excellence in Ultra‐Intense Laser Science Shanghai Institute of Optics and Fine Mechanics (SIOM), Chinese Academy of Sciences (CAS) Shanghai 201800 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jintian",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics and CAS Center for Excellence in Ultra‐Intense Laser Science Shanghai Institute of Optics and Fine Mechanics (SIOM), Chinese Academy of Sciences (CAS) Shanghai 201800 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jianping",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics and CAS Center for Excellence in Ultra‐Intense Laser Science Shanghai Institute of Optics and Fine Mechanics (SIOM), Chinese Academy of Sciences (CAS) Shanghai 201800 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Rongbo",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of High Field Laser Physics and CAS Center for Excellence in Ultra‐Intense Laser Science Shanghai Institute of Optics and Fine Mechanics (SIOM), Chinese Academy of Sciences (CAS) Shanghai 201800 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Min",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "The Extreme Optoelectromechanics Laboratory (XXL) School of Physics and Electronic Sciences East China Normal University Shanghai 200241 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ya",
+      "family": "Cheng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "State Key Laboratory of Precision Spectroscopy East China Normal University Shanghai 200062 China"
+       },
+       {
+        "name": "The Extreme Optoelectromechanics Laboratory (XXL) School of Physics and Electronic Sciences East China Normal University Shanghai 200241 China"
+       },
+       {
+        "name": "State Key Laboratory of High Field Laser Physics and CAS Center for Excellence in Ultra‐Intense Laser Science Shanghai Institute of Optics and Fine Mechanics (SIOM), Chinese Academy of Sciences (CAS) Shanghai 201800 China"
+       },
+       {
+        "name": "Shanghai Research Center for Quantum Sciences Shanghai 201315 China"
+       },
+       {
+        "name": "Collaborative Innovation Center of Extreme Optics Shanxi University Taiyuan 030006 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       1,
+       17
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1088/0256-307x/37/8/084201",
+    "title": [
+     "Electro-Optically Switchable Optical True Delay Lines of Meter-Scale Lengths Fabricated on Lithium Niobate on Insulator Using Photolithography Assisted Chemo-Mechanical Etching"
+    ],
+    "author": [
+     {
+      "given": "Jun-xia",
+      "family": "Zhou",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ren-hong",
+      "family": "Gao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jintian",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Min",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wei",
+      "family": "Chu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wen-bo",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Di-feng",
+      "family": "Yin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Li",
+      "family": "Deng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhi-wei",
+      "family": "Fang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jian-hao",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Rong-bo",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ya",
+      "family": "Cheng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2020,
+       7,
+       1
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2209.08332",
+ "title": "2D material platform for overcoming the amplitude-phase tradeoff in ring modulators",
+ "authors": "Ipshita Datta, Andres Gil-Molina, Sang Hoon Chae, James Hone, Michal Lipson",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Sat, 17 Sep 2022 14:03:42 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Fri, 02 Dec 2022 01:15:45 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:33:49Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2209.08332\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2209.08332</identifier>\n        <datestamp>2022-12-05</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2209.08332</id>\n        <submitter>Ipshita Datta</submitter>\n            <version version=\"v1\">\n                <date>Sat, 17 Sep 2022 14:03:42 GMT</date>\n                <size>1286kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Fri, 02 Dec 2022 01:15:45 GMT</date>\n                <size>1286kb</size>\n            </version>\n        <title>2D material platform for overcoming the amplitude-phase tradeoff in ring modulators</title>\n        <authors>Ipshita Datta, Andres Gil-Molina, Sang Hoon Chae, James Hone, Michal Lipson</authors>\n        <categories>physics.optics</categories>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Compact, high-speed electro-optic phase modulators play a vital role in various large-scale applications including phased arrays, quantum and neural networks, and optical communication links. Conventional phase modulators suffer from a fundamental tradeoff between device length and optical loss that limits their scaling capabilities. High-finesse ring resonators have been traditionally used as compact intensity modulators, but their use for phase modulation have been limited due to the high insertion loss associated with the phase change. Here, we show that high-finesse resonators can achieve a strong phase change with low insertion loss by simultaneous modulation of the real and imaginary parts of the refractive index, to the same extent i.e. $\\frac{\\Delta n}{\\Delta k} \\sim 1$. To implement this strategy, we utilize a hybrid platform that combines a low-loss SiN ring resonator with electro-absorptive graphene (Gr) and electro-refractive WSe$_2$. We achieve a phase modulation efficiency ($V_{\\frac{\\pi}{2}} \\cdot L_{\\frac{\\pi}{2}}$) of 0.045 V $\\cdot$ cm with an insertion loss (IL$_{\\frac{\\pi}{2}}$) of 4.7 dB for a phase change of $\\frac{\\pi}{2}$ radians, in a 25 $\\mu$m long Gr-Al$_2$O$_3$-WSe$_2$ capacitor embedded on a SiN ring of 50 $\\mu$m radius. We find that our Gr-Al$_2$O$_3$-WSe$_2$ capacitor can support an electro-optic bandwidth of 14.9 $\\pm$ 0.1 GHz. We further show that the $V_{\\frac{\\pi}{2}} \\cdot L_{\\frac{\\pi}{2}}$ of our SiN-2D platform is at least an order of magnitude lower than that of electro-optic phase modulators based on silicon, III-V on silicon, graphene on silicon and lithium niobate. This SiN-2D hybrid platform provides the impetus to design compact and high-speed reconfigurable circuits with graphene and transition metal dichalcogenide (TMD) monolayers that can enable large-scale photonic systems.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

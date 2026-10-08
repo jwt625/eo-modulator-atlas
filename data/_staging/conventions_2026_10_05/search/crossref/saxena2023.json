@@ -1,0 +1,259 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 124,
+  "items": [
+   {
+    "DOI": "10.1109/mwscas.2018.8623839",
+    "title": [
+     "Design and Compact Modeling of Silicon-Photonic Coupling-Based Ring Modulators for Optical Interconnects"
+    ],
+    "author": [
+     {
+      "given": "Rui",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "MD Jubayer",
+      "family": "Shawon",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Vishal",
+      "family": "Saxena",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2018,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/mwscas.2019.8885372",
+    "title": [
+     "Rapid Simulation of Photonic Integrated Circuits using Verilog-A Compact Models"
+    ],
+    "author": [
+     {
+      "given": "Md Jubayer",
+      "family": "Shawon",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Vishal",
+      "family": "Saxena",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2019,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/mwscas.2014.6908490",
+    "title": [
+     "Compact Verilog-A modeling of silicon traveling-wave modulator for hybrid CMOS photonic circuit design"
+    ],
+    "author": [
+     {
+      "given": "Kehan",
+      "family": "Zhu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Vishal",
+      "family": "Saxena",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wan",
+      "family": "Kuang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2014,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/tcsi.2020.2983303",
+    "title": [
+     "Rapid Simulation of Photonic Integrated Circuits Using Verilog-A Compact Models"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-1138-6442",
+      "authenticated-orcid": false,
+      "given": "Md Jubayer",
+      "family": "Shawon",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Vishal",
+      "family": "Saxena",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2020,
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/mwscas.2018.8623835",
+    "title": [
+     "Design and Modeling of Silicon Photonic Ring-Based Linearized RF-to-Optical Modulator"
+    ],
+    "author": [
+     {
+      "given": "Md Jubayer",
+      "family": "Shawon",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Rui",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Vishal",
+      "family": "Saxena",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2018,
+       8
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

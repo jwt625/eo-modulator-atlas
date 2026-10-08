@@ -135,15 +135,17 @@ export function normalizeWeights(electrodes, symmetry) {
 /**
  * Solve a cross-section.
  * @param {import('./section.mjs').CrossSection} section
- * @param {{mesh?:any, meshScale?:number, resolvedMaterials:Object<string,any>}} opts
+ * @param {{mesh?:any, meshScale?:number, resolvedMaterials:Object<string,any>, vacuumOnly?:boolean}} opts
+ *   vacuumOnly: solve only the all-eps-1 problem and return {mesh, vline, c0Pul, lPul, stats} (Wheeler recessed sections,
+ *   which use C0' only; Q2 M8). No material is read.
  */
 export function solveElectrostatics(section, opts) {
   const t0 = performance.now();
   const g = section.geom;
   const mesh = opts.mesh ?? section.buildMesh({ scale: opts.meshScale ?? 1 });
   const tMesh = performance.now();
-  const regionMats = section.regions.map((r) => opts.resolvedMaterials[r.material]);
-  for (let i = 0; i < regionMats.length; i++) if (!regionMats[i]) throw new Error(`region ${section.regions[i].name}: unknown material ${section.regions[i].material}`);
+  const regionMats = opts.vacuumOnly ? section.regions.map(() => null) : section.regions.map((r) => opts.resolvedMaterials[r.material]);
+  if (!opts.vacuumOnly) for (let i = 0; i < regionMats.length; i++) if (!regionMats[i]) throw new Error(`region ${section.regions[i].name}: unknown material ${section.regions[i].material}`);
   const geo = triangleGeometry(mesh);
   const pat = buildPattern(mesh.nNodes, mesh.tri);
   const { vline, phi: elecPhi } = normalizeWeights(section.electrodes, g.symmetry);
@@ -177,8 +179,13 @@ export function solveElectrostatics(section, opts) {
     }
   }
   const nElec = section.electrodes.length;
-  const epsT = epsTriangles(mesh, regionMats);
   const epsAir = epsTriangles(mesh, regionMats, true);
+  if (opts.vacuumOnly) {
+    const solverVac = new PoissonSolver(mesh, epsAir, isD, geo, pat);
+    const c0 = EPS0 * solverVac.energyForm(solverVac.solve(phiD).phi) * symFactor; // 2 W0' for V_line = 1 V
+    return { mesh, vline, c0Pul: c0, lPul: 1 / (C_LIGHT * C_LIGHT * c0), stats: { nNodes: mesh.nNodes, nTris: mesh.nTris } };
+  }
+  const epsT = epsTriangles(mesh, regionMats);
   const solver = new PoissonSolver(mesh, epsT, isD, geo, pat);
   const sol = solver.solve(phiD);
   const solver0 = new PoissonSolver(mesh, epsAir, isD, geo, pat);

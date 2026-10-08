@@ -125,7 +125,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.4, Fig. 3(d)
-  note: smoothed (5 GHz moving average), normalized to 1 GHz; authors attribute the roll-off above 60 GHz to an inadvertent optical path imbalance used as spectral bias
+  note: Smoothed (5 GHz moving average), normalized to 1 GHz; authors attribute roll-off above 60 GHz to inadvertent optical path imbalance used as spectral bias.
 - device_id: li2026ba-a
   field: bw6db_ghz
   value: 100

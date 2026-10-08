@@ -1,0 +1,637 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     19
+    ]
+   ],
+   "date-time": "2026-09-19T02:33:40Z",
+   "timestamp": 1789785220872,
+   "version": "4.0.1"
+  },
+  "reference-count": 60,
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "issue": "1",
+  "funder": [
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "CityU 11212721,CityU 11204022,C1002-22Y,N_CityUI13/20"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "CityU 11212721,CityU 11204022,C1002-22Y,N_CityUI13/20"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001692",
+    "name": "Croucher Foundation",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "9509005"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9509005"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001692",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100007567",
+    "name": "City University of Hong Kong",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "9610682"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "9610682"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100007567",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Electromag. Sci."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     3
+    ]
+   ]
+  },
+  "DOI": "10.23919/emsci.2024.0046",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     4,
+     23
+    ]
+   ],
+   "date-time": "2025-04-23T13:54:03Z",
+   "timestamp": 1745416443000
+  },
+  "page": "0090462-1-0090462-10",
+  "source": "Crossref",
+  "is-referenced-by-count": 14,
+  "title": [
+   "Broadband Millimeter-Wave Frequency Mixer Based on Thin-Film Lithium Niobate Photonics"
+  ],
+  "prefix": "10.23919",
+  "volume": "3",
+  "author": [
+   {
+    "given": "Xiangzhi",
+    "family": "Xie",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hanke",
+    "family": "Feng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuansheng",
+    "family": "Tao",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yiwen",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yikun",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ke",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhaoxi",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Cheng",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "263",
+  "reference": [
+   {
+    "key": "ref1",
+    "volume-title": "Microwave Mixer Technology and Applications",
+    "author": "Henderson",
+    "year": "2013"
+   },
+   {
+    "key": "ref2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nphoton.2013.275"
+   },
+   {
+    "key": "ref3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-023-42194-6"
+   },
+   {
+    "key": "ref4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature13078"
+   },
+   {
+    "key": "ref5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-023-01245-6"
+   },
+   {
+    "key": "ref6",
+    "article-title": "Integrated lithium niobate photonic millimeter-wave radar",
+    "author": "Zhu",
+    "year": "2023",
+    "journal-title": "arXiv preprint"
+   },
+   {
+    "key": "ref7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/MMM.2015.2441619"
+   },
+   {
+    "key": "ref8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.201800350"
+   },
+   {
+    "key": "ref9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2011.2158806"
+   },
+   {
+    "key": "ref10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.3390/s23094380"
+   },
+   {
+    "key": "ref11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.22.000183"
+   },
+   {
+    "key": "ref12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.20.008047"
+   },
+   {
+    "key": "ref13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.446158"
+   },
+   {
+    "key": "ref14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2012.2223197"
+   },
+   {
+    "key": "ref15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AO.53.003687"
+   },
+   {
+    "key": "ref16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/TMTT.2016.2594278"
+   },
+   {
+    "key": "ref17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.25.004519"
+   },
+   {
+    "key": "ref18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JPHOT.2015.2448522"
+   },
+   {
+    "key": "ref19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2016.2550180"
+   },
+   {
+    "key": "ref20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-018-0310-5"
+   },
+   {
+    "key": "ref21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2022.3201776"
+   },
+   {
+    "key": "ref22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.522220"
+   },
+   {
+    "key": "ref23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/PRJ.452631"
+   },
+   {
+    "key": "ref24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2018.2870252"
+   },
+   {
+    "key": "ref25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2020.3023496"
+   },
+   {
+    "key": "ref26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.420689"
+   },
+   {
+    "key": "ref27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2021.3135861"
+   },
+   {
+    "key": "ref28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2019.2930466"
+   },
+   {
+    "key": "ref29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1117/12.3008119"
+   },
+   {
+    "key": "ref30",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/LPT.2016.2570520"
+   },
+   {
+    "key": "ref31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-021-00945-1"
+   },
+   {
+    "key": "ref32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.415762"
+   },
+   {
+    "key": "ref33",
+    "article-title": "Integrated electro-optics on thin-film lithium niobate",
+    "author": "Hu",
+    "year": "2024",
+    "journal-title": "arXiv preprint"
+   },
+   {
+    "key": "ref34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsphotonics.4c00622"
+   },
+   {
+    "key": "ref35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-019-0378-6"
+   },
+   {
+    "key": "ref36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adpr.202200216"
+   },
+   {
+    "key": "ref37",
+    "article-title": "Hybrid thin-film lithium niobate micro-ring acousto-optic modulator for microwave-to-optical conversion",
+    "author": "Wan",
+    "year": "2024",
+    "journal-title": "arXiv preprint"
+   },
+   {
+    "key": "ref38",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.abj4396"
+   },
+   {
+    "key": "ref39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.401959"
+   },
+   {
+    "key": "ref40",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.411024"
+   },
+   {
+    "key": "ref41",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-022-01059-y"
+   },
+   {
+    "key": "ref42",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-48222-3"
+   },
+   {
+    "key": "ref43",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-023-39229-3"
+   },
+   {
+    "key": "ref44",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-019-1008-7"
+   },
+   {
+    "key": "ref45",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.382052"
+   },
+   {
+    "key": "ref46",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-020-03063-0"
+   },
+   {
+    "key": "ref47",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2018.2805814"
+   },
+   {
+    "key": "ref48",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-022-04579-3"
+   },
+   {
+    "key": "ref49",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-022-05345-1"
+   },
+   {
+    "key": "ref50",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.486715"
+   },
+   {
+    "key": "ref51",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.4.001536"
+   },
+   {
+    "key": "ref52",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41586-024-07078-9"
+   },
+   {
+    "key": "ref53",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OL.485780"
+   },
+   {
+    "key": "ref54",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s42005-023-01137-9"
+   },
+   {
+    "key": "ref55",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OPTICA.416155"
+   },
+   {
+    "key": "ref56",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41566-023-01227-8"
+   },
+   {
+    "key": "ref57",
+    "article-title": "Monolithic lithium niobate photonic chip for efficient terahertz-optic modulation and terahertz generation",
+    "author": "Zhang",
+    "year": "2024",
+    "journal-title": "arXiv preprint"
+   },
+   {
+    "key": "ref58",
+    "volume-title": "Harmonic mixer, 33 GHz-50 GHz, LO frequency 2 GHz-20 GHz",
+    "author": "Wave",
+    "year": "2021"
+   },
+   {
+    "key": "ref59",
+    "volume-title": "Level 15, SMT double balanced mixer, RF/LO Freq 20000–50000 MHz | MDB-54H+ | mini-circuits",
+    "year": "2024"
+   },
+   {
+    "key": "ref60",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1049/PBTE009E"
+   }
+  ],
+  "container-title": [
+   "Electromagnetic Science"
+  ],
+  "original-title": [],
+  "link": [
+   {
+    "URL": "http://xplorestaging.ieee.org/ielx8/10105875/10974619/10974620.pdf?arnumber=10974620",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     4,
+     24
+    ]
+   ],
+   "date-time": "2025-04-24T01:01:09Z",
+   "timestamp": 1745456469000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://ieeexplore.ieee.org/document/10974620/"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     3
+    ]
+   ]
+  },
+  "references-count": 60,
+  "journal-issue": {
+   "issue": "1"
+  },
+  "URL": "https://doi.org/10.23919/emsci.2024.0046",
+  "relation": {},
+  "ISSN": [
+   "2836-8282",
+   "2836-9440"
+  ],
+  "issn-type": [
+   {
+    "value": "2836-8282",
+    "type": "electronic"
+   },
+   {
+    "value": "2836-9440",
+    "type": "print"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     3
+    ]
+   ]
+  }
+ }
+}

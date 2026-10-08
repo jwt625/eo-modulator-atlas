@@ -1,0 +1,675 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     9,
+     17
+    ]
+   ],
+   "date-time": "2026-09-17T02:52:49Z",
+   "timestamp": 1789613569580,
+   "version": "build-2803163510"
+  },
+  "reference-count": 45,
+  "publisher": "American Chemical Society (ACS)",
+  "issue": "28",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       7,
+       1
+      ]
+     ],
+     "date-time": "2025-07-01T00:00:00Z",
+     "timestamp": 1751328000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-029"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       7,
+       1
+      ]
+     ],
+     "date-time": "2025-07-01T00:00:00Z",
+     "timestamp": 1751328000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-037"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       7,
+       1
+      ]
+     ],
+     "date-time": "2025-07-01T00:00:00Z",
+     "timestamp": 1751328000000
+    },
+    "content-version": "stm-asf",
+    "delay-in-days": 0,
+    "URL": "https://doi.org/10.15223/policy-045"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/100019827",
+    "name": "Meta",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "C-834952"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "C-834952"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100019827",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100021856",
+    "name": "Meta Research",
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "id": "10.13039/100021856",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100000181",
+    "name": "Air Force Office of Scientific Research",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "FA9550-21-1-0312"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "FA9550-21-1-0312"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/100000181",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100000038",
+    "name": "Natural Sciences and Engineering Research Council of Canada",
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "id": "10.13039/501100000038",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/100006961",
+    "name": "California Institute of Technology",
+    "doi-asserted-by": "publisher",
+    "id": [
+     {
+      "id": "10.13039/100006961",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nano Lett."
+  ],
+  "published-print": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     16
+    ]
+   ]
+  },
+  "DOI": "10.1021/acs.nanolett.5c02279",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     1
+    ]
+   ],
+   "date-time": "2025-07-01T12:15:47Z",
+   "timestamp": 1751372147000
+  },
+  "page": "11089-11096",
+  "source": "Crossref",
+  "is-referenced-by-count": 4,
+  "title": [
+   "Spalled Barium Titanate Single Crystal Thin Films for Functional Device Applications"
+  ],
+  "prefix": "10.1021",
+  "volume": "25",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3852-3395",
+    "authenticated-orcid": true,
+    "given": "Prachi",
+    "family": "Thureja",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Thomas J. Watson Laboratories of Applied Physics",
+      "place": [
+       "Pasadena, United States"
+      ]
+     },
+     {
+      "name": "California Institute of Technology",
+      "place": [
+       "Pasadena, United States"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Andrew W.",
+    "family": "Nyholm",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Thomas J. Watson Laboratories of Applied Physics",
+      "place": [
+       "Pasadena, United States"
+      ]
+     },
+     {
+      "name": "California Institute of Technology",
+      "place": [
+       "Pasadena, United States"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2545-1468",
+    "authenticated-orcid": true,
+    "given": "Martin",
+    "family": "Thomaschewski",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Thomas J. Watson Laboratories of Applied Physics",
+      "place": [
+       "Pasadena, United States"
+      ]
+     },
+     {
+      "name": "California Institute of Technology",
+      "place": [
+       "Pasadena, United States"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Phillip R.",
+    "family": "Jahelka",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Thomas J. Watson Laboratories of Applied Physics",
+      "place": [
+       "Pasadena, United States"
+      ]
+     },
+     {
+      "name": "California Institute of Technology",
+      "place": [
+       "Pasadena, United States"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Julie",
+    "family": "Belleville",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Thomas J. Watson Laboratories of Applied Physics",
+      "place": [
+       "Pasadena, United States"
+      ]
+     },
+     {
+      "name": "California Institute of Technology",
+      "place": [
+       "Pasadena, United States"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-9435-0201",
+    "authenticated-orcid": true,
+    "given": "Harry A.",
+    "family": "Atwater",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Thomas J. Watson Laboratories of Applied Physics",
+      "place": [
+       "Pasadena, United States"
+      ]
+     },
+     {
+      "name": "California Institute of Technology",
+      "place": [
+       "Pasadena, United States"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "316",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     1
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "ref1/cit1",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s42254-023-00645-5"
+   },
+   {
+    "key": "ref2/cit2",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-45982-w"
+   },
+   {
+    "key": "ref3/cit3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2017.2647779"
+   },
+   {
+    "key": "ref4/cit4",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/adom.202070094"
+   },
+   {
+    "key": "ref5/cit5",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/5.0050117"
+   },
+   {
+    "key": "ref6/cit6",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41578-024-00668-z"
+   },
+   {
+    "key": "ref7/cit7",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2020-0063"
+   },
+   {
+    "key": "ref8/cit8",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/nature11727"
+   },
+   {
+    "key": "ref9/cit9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1002/lpor.202300980"
+   },
+   {
+    "key": "ref10/cit10",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JPROC.2009.2015337"
+   },
+   {
+    "key": "ref11/cit11",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-022-29976-0"
+   },
+   {
+    "key": "ref12/cit12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acs.nanolett.3c00032"
+   },
+   {
+    "key": "ref13/cit13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/1361-6633/ac45f9"
+   },
+   {
+    "key": "ref14/cit14",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AOP.411024"
+   },
+   {
+    "key": "ref15/cit15",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/science.abj4396"
+   },
+   {
+    "key": "ref16/cit16",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-14539-y"
+   },
+   {
+    "key": "ref17/cit17",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/OE.26.001547"
+   },
+   {
+    "key": "ref18/cit18",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2020-0013"
+   },
+   {
+    "key": "ref19/cit19",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1007/s40974-023-00286-5"
+   },
+   {
+    "key": "ref20/cit20",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1039/C8CS00583D"
+   },
+   {
+    "key": "ref21/cit21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1103/PhysRev.111.143"
+   },
+   {
+    "key": "ref22/cit22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2015.2510282"
+   },
+   {
+    "key": "ref23/cit23",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JQE.2017.2718222"
+   },
+   {
+    "key": "ref24/cit24",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JLT.2015.2388738"
+   },
+   {
+    "key": "ref25/cit25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JSTQE.2020.2976562"
+   },
+   {
+    "key": "ref26/cit26",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1515/nanoph-2022-0155"
+   },
+   {
+    "key": "ref27/cit27",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1146/annurev.matsci.37.052506.084226"
+   },
+   {
+    "key": "ref28/cit28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-018-0208-0"
+   },
+   {
+    "key": "ref29/cit29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.solmat.2021.111018"
+   },
+   {
+    "key": "ref30/cit30",
+    "volume-title": "Advances in Applied Mechanics",
+    "volume": "29",
+    "author": "Hutchinson J. W.",
+    "year": "1992"
+   },
+   {
+    "key": "ref31/cit31",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1126/sciadv.adq8561"
+   },
+   {
+    "key": "ref32/cit32",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsaelm.5c00411"
+   },
+   {
+    "key": "ref33/cit33",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1021/acsami.8b10943"
+   },
+   {
+    "key": "ref34/cit34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1109/JPHOTOV.2012.2184267"
+   },
+   {
+    "key": "ref35/cit35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1088/0022-3727/46/15/152002"
+   },
+   {
+    "key": "ref36/cit36",
+    "unstructured": "Crouse, D. Controlled Spalling in (100)-Oriented Germanium by Electroplating. Thesis, Colorado School of Mines, 2017."
+   },
+   {
+    "key": "ref37/cit37",
+    "unstructured": "Sweet, C. A. Spalling Fracture Behavior in (100) Gallium Arsenide. Thesis, Colorado School of Mines, 2016."
+   },
+   {
+    "key": "ref38/cit38",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1080/00150197708237807"
+   },
+   {
+    "key": "ref39/cit39",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/S0955-2219(96)00211-7"
+   },
+   {
+    "key": "ref40/cit40",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.103107"
+   },
+   {
+    "key": "ref41/cit41",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1364/AO.29.002839"
+   },
+   {
+    "key": "ref42/cit42",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1063/1.359429"
+   },
+   {
+    "key": "ref43/cit43",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/j.optcom.2010.03.038"
+   },
+   {
+    "key": "ref44/cit44",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41563-025-02158-1"
+   },
+   {
+    "key": "ref45/cit45",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1016/0038-1098(94)90322-0"
+   }
+  ],
+  "container-title": [
+   "Nano Letters"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acs.nanolett.5c02279",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "unspecified"
+   },
+   {
+    "URL": "https://pubs.acs.org/doi/pdf/10.1021/acs.nanolett.5c02279",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     16
+    ]
+   ],
+   "date-time": "2025-07-16T08:11:25Z",
+   "timestamp": 1752653485000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://pubs.acs.org/doi/10.1021/acs.nanolett.5c02279"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     1
+    ]
+   ]
+  },
+  "references-count": 45,
+  "journal-issue": {
+   "issue": "28",
+   "published-print": {
+    "date-parts": [
+     [
+      2025,
+      7,
+      16
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "10.1021/acs.nanolett.5c02279"
+  ],
+  "URL": "https://doi.org/10.1021/acs.nanolett.5c02279",
+  "relation": {},
+  "ISSN": [
+   "1530-6984",
+   "1530-6992"
+  ],
+  "issn-type": [
+   {
+    "value": "1530-6984",
+    "type": "print"
+   },
+   {
+    "value": "1530-6992",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     1
+    ]
+   ]
+  }
+ }
+}

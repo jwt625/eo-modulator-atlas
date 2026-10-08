@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2311.16679",
+ "title": "A new bandwidth-voltage trade-off paradigm in low-loss LNOI electro-optic modulators, using equalizer configuration",
+ "authors": "Fatemeh Ghavami, Sara Darbari, Mohammad Kazem Moravvej-Farshi",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Tue, 28 Nov 2023 10:50:16 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:33:56Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2311.16679\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2311.16679</identifier>\n        <datestamp>2023-11-29</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2311.16679</id>\n        <submitter>Fatemeh Ghavami</submitter>\n            <version version=\"v1\">\n                <date>Tue, 28 Nov 2023 10:50:16 GMT</date>\n                <size>435kb</size>\n                    <source_type>D</source_type>\n            </version>\n        <title>A new bandwidth-voltage trade-off paradigm in low-loss LNOI electro-optic modulators, using equalizer configuration</title>\n        <authors>Fatemeh Ghavami, Sara Darbari, Mohammad Kazem Moravvej-Farshi</authors>\n        <categories>physics.optics physics.app-ph</categories>\n            <license>http://creativecommons.org/licenses/by-nc-nd/4.0/</license>\n            <abstract>As a crucial element for various applications, including optical communications and analog photonic links, electro-optic modulators have a small size, low voltage, and wide bandwidth.\n  Electro-optic modulators based on the thin-film lithium niobate (TFLN) are highly efficient and have a large modulation bandwidth. However, there is a tradeoff between driving voltage and modulation bandwidth. In this study, we present the electro-optical modulator based on the TFLN platform by using the electro-optic equalizer. Using the electro-optic equalizer causes that the proposed modulator has a broad bandwidth while the driving voltage is not compromised. In this proposed modulator, to compensate for the velocity mismatch and minimize interference of the electrode with the waveguide, a two-layer metallization method is used. This proposed modulator results in minimal optical and microwave losses and allows for a large electro-optic bandwidth of up to 300GHz for a 5 mm-long device. Additionally, an efficiency of 4.5 V.cm.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

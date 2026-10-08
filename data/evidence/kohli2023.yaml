@@ -26,14 +26,14 @@ entries:
   unit: V
   basis: measured
   locator: p.5, Section IV-B
-  note: DC half-wave voltage extracted from the MZM resonance shift caused by the phase difference between the arms (200 um arm-length asymmetry, p.2); arm drive scheme not stated
+  note: DC half-wave voltage extracted from MZM resonance shift from the arm phase difference (200 um arm-length asymmetry, p.2); arm drive scheme not stated.
 - device_id: kohli2023-a
   field: vpi_convention
   value: resonance_tuning_derived
   unit: ''
   basis: derived
   locator: p.2, Section II; p.5, Section IV-B
-  note: Headline DC Vpi from the fringe shift of the unbalanced MZM; the RF Vpi 9.6 V uses the sideband-ratio method (Eq. 3) at MZM level; arm drive not stated
+  note: Headline DC Vpi from fringe shift of unbalanced MZM; RF Vpi 9.6 V uses sideband-ratio method (Eq. 3) at MZM level; arm drive not stated.
 - device_id: kohli2023-a
   field: vpil_dc_vcm
   value: 0.0048

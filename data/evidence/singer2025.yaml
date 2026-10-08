@@ -40,7 +40,7 @@ entries:
   unit: dB
   basis: derived
   locator: p.6; p.8; Table 2 p.17
-  note: On-chip excess loss stated by the authors (p.6, p.8); equals the Table 2 sum of the on-chip elements (cutback test structures) and 10.8 dB minus two estimated 3.3 dB photonic wire bonds (p.16)
+  note: Authors' on-chip excess loss; equals Table 2 sum of on-chip elements (cutback test structures) and 10.8 dB minus two estimated 3.3 dB photonic wire bonds.
 - device_id: singer2025-a
   field: il_fiber_to_fiber_db
   value: 10.8

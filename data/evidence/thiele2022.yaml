@@ -27,13 +27,6 @@ entries:
   locator: p.5
   note: Bulk z-cut LN with titanium in-diffusion
 - device_id: thiele2022-a
-  field: buffer_oxide_um
-  value: 0.4
-  unit: um
-  basis: design_target
-  locator: p.6, Table 1
-  note: SiO2 buffer 400 nm
-- device_id: thiele2022-a
   field: electrode_metal
   value: Au (10 nm Cr adhesion)
   unit: ''
@@ -89,13 +82,6 @@ entries:
   basis: design_target
   locator: p.5
   note: Bulk z-cut LN with titanium in-diffusion
-- device_id: thiele2022-b
-  field: buffer_oxide_um
-  value: 0.4
-  unit: um
-  basis: design_target
-  locator: p.6, Table 1
-  note: SiO2 buffer 400 nm
 - device_id: thiele2022-b
   field: electrode_metal
   value: Au (10 nm Cr adhesion)
@@ -153,13 +139,6 @@ entries:
   locator: p.5
   note: Bulk z-cut LN with titanium in-diffusion
 - device_id: thiele2022-c
-  field: buffer_oxide_um
-  value: 0.4
-  unit: um
-  basis: design_target
-  locator: p.6, Table 1
-  note: SiO2 buffer 400 nm
-- device_id: thiele2022-c
   field: electrode_metal
   value: Au (10 nm Cr adhesion)
   unit: ''
@@ -216,13 +195,6 @@ entries:
   locator: p.5
   note: Bulk z-cut LN with titanium in-diffusion
 - device_id: thiele2022-d
-  field: buffer_oxide_um
-  value: 0.4
-  unit: um
-  basis: design_target
-  locator: p.6, Table 1
-  note: SiO2 buffer 400 nm
-- device_id: thiele2022-d
   field: electrode_metal
   value: Au (10 nm Cr adhesion)
   unit: ''
@@ -278,13 +250,6 @@ entries:
   basis: design_target
   locator: p.5
   note: Bulk z-cut LN with titanium in-diffusion
-- device_id: thiele2022-e
-  field: buffer_oxide_um
-  value: 0.4
-  unit: um
-  basis: design_target
-  locator: p.6, Table 1
-  note: SiO2 buffer 400 nm
 - device_id: thiele2022-e
   field: electrode_metal
   value: Au (10 nm Cr adhesion)
@@ -348,13 +313,6 @@ entries:
   basis: design_target
   locator: p.5
   note: Bulk z-cut LN with titanium in-diffusion
-- device_id: thiele2022-f
-  field: buffer_oxide_um
-  value: 0.4
-  unit: um
-  basis: design_target
-  locator: p.6, Table 1
-  note: SiO2 buffer 400 nm
 - device_id: thiele2022-f
   field: electrode_metal
   value: Au (10 nm Cr adhesion)
@@ -439,4 +397,46 @@ entries:
   basis: measured
   locator: p.7, Table 2
   note: Table 2 cryogenic 5 K.
+- device_id: thiele2022-a
+  field: cladding
+  value: SiO2 buffer 400 nm under the Cr/Au electrodes (bulk Ti:LN, no buried oxide)
+  unit: ''
+  basis: design_target
+  locator: p.6 Table 1
+  note: buffer re-read 2026-10-07
+- device_id: thiele2022-b
+  field: cladding
+  value: SiO2 buffer 400 nm under the Cr/Au electrodes (bulk Ti:LN, no buried oxide)
+  unit: ''
+  basis: design_target
+  locator: p.6 Table 1
+  note: buffer re-read 2026-10-07
+- device_id: thiele2022-c
+  field: cladding
+  value: SiO2 buffer 400 nm under the Cr/Au electrodes (bulk Ti:LN, no buried oxide)
+  unit: ''
+  basis: design_target
+  locator: p.6 Table 1
+  note: buffer re-read 2026-10-07
+- device_id: thiele2022-d
+  field: cladding
+  value: SiO2 buffer 400 nm under the Cr/Au electrodes (bulk Ti:LN, no buried oxide)
+  unit: ''
+  basis: design_target
+  locator: p.6 Table 1
+  note: buffer re-read 2026-10-07
+- device_id: thiele2022-e
+  field: cladding
+  value: SiO2 buffer 400 nm under the Cr/Au electrodes (bulk Ti:LN, no buried oxide)
+  unit: ''
+  basis: design_target
+  locator: p.6 Table 1
+  note: buffer re-read 2026-10-07
+- device_id: thiele2022-f
+  field: cladding
+  value: SiO2 buffer 400 nm under the Cr/Au electrodes (bulk Ti:LN, no buried oxide)
+  unit: ''
+  basis: design_target
+  locator: p.6 Table 1
+  note: buffer re-read 2026-10-07
 derived: []

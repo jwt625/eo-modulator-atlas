@@ -47,7 +47,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.6 Fig. 4(a)
-  note: 67 GHz photodetector and VNA range; the measured trace dips below -3 dB at about 57, 64 and 66-67 GHz (Fig. 4(a)), so no 3 dB bound is entered
+  note: 67 GHz photodetector/VNA range; trace dips below -3 dB at about 57, 64, 66-67 GHz (Fig. 4(a)), so no 3 dB bound entered.
 - device_id: chen2026-a
   field: n_rf
   value: 2.2

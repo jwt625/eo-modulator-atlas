@@ -109,7 +109,7 @@ entries:
   unit: nm/V
   basis: measured
   locator: p.5 Sec. 3; p.5 Fig. 3(g); supplement p.5 Fig. S2(b)
-  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -24.33 pm/V; the label and text quote the magnitude 24.33 pm/V
+  note: 'Reversed voltage axis (Fig. 3(g)/Fig. S2): blue shift for positive voltage, so signed -24.33 pm/V; label and text quote magnitude.'
 - device_id: chen2025-a
   field: q_loaded
   value: 2200
@@ -137,7 +137,7 @@ entries:
   unit: dB
   basis: extracted_from_figure
   locator: supplement p.3, Fig. S1(a)
-  note: N70 at 3.5 um gap, about -13.7 dB; Fig. 3(e) shows about -14 dB, Fig. 3(d) spectra are normalized to about 0 dB outside the stop band
+  note: N70, 3.5 um gap, about -13.7 dB; Fig. 3(e) shows about -14 dB; Fig. 3(d) normalized to about 0 dB outside the stop band.
 - device_id: chen2025-a
   field: drive_vpp_v
   value: 3
@@ -277,7 +277,7 @@ entries:
   unit: nm/V
   basis: measured
   locator: supplement p.5, Fig. S2(d)
-  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -20.15 pm/V; the label and text quote the magnitude 20.15 pm/V
+  note: 'Reversed voltage axis (Fig. 3(g)/Fig. S2): blue shift for positive voltage, so signed -20.15 pm/V; label and text quote magnitude.'
 - device_id: chen2025-b
   field: wavelength_nm
   value: 1569.2
@@ -382,7 +382,7 @@ entries:
   unit: nm/V
   basis: measured
   locator: supplement p.5, Fig. S2(f)
-  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -17.53 pm/V; the label and text quote the magnitude 17.53 pm/V
+  note: 'Reversed voltage axis (Fig. 3(g)/Fig. S2): blue shift for positive voltage, so signed -17.53 pm/V; label and text quote magnitude.'
 - device_id: chen2025-c
   field: wavelength_nm
   value: 1569.3
@@ -487,7 +487,7 @@ entries:
   unit: nm/V
   basis: measured
   locator: supplement p.5, Fig. S2(h)
-  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -15.36 pm/V; the label and text quote the magnitude 15.36 pm/V
+  note: 'Reversed voltage axis (Fig. 3(g)/Fig. S2): blue shift for positive voltage, so signed -15.36 pm/V; label and text quote magnitude.'
 - device_id: chen2025-d
   field: wavelength_nm
   value: 1569.3
@@ -592,7 +592,7 @@ entries:
   unit: nm/V
   basis: measured
   locator: supplement p.5, Fig. S2(j); p.5 Sec. 3
-  note: Blue shift for positive voltage (reversed voltage axis in Fig. 3(g) / Fig. S2), so signed value -11.05 pm/V; the label and text quote the magnitude 11.05 pm/V
+  note: 'Reversed voltage axis (Fig. 3(g)/Fig. S2): blue shift for positive voltage, so signed -11.05 pm/V; label and text quote magnitude.'
 - device_id: chen2025-e
   field: wavelength_nm
   value: 1568.2
@@ -704,7 +704,7 @@ entries:
   unit: nm
   basis: extracted_from_figure
   locator: p.5, Fig. 3(d)
-  note: Peak of the N = 50 trace read from Fig. 3(d), about 0.5 nm reading uncertainty; the gap of the Fig. 3(d) devices is not stated, assignment by N only
+  note: N = 50 trace peak read from Fig. 3(d), about 0.5 nm uncertainty; gap of Fig. 3(d) devices not stated, assigned by N only.
 - device_id: chen2025-f
   field: q_loaded
   value: 1118
@@ -802,7 +802,7 @@ entries:
   unit: nm
   basis: extracted_from_figure
   locator: p.5, Fig. 3(d)
-  note: Peak of the N = 60 trace read from Fig. 3(d), about 0.5 nm reading uncertainty; the gap of the Fig. 3(d) devices is not stated, assignment by N only
+  note: N = 60 trace peak read from Fig. 3(d), about 0.5 nm uncertainty; gap of Fig. 3(d) devices not stated, assigned by N only.
 - device_id: chen2025-h
   field: eo_film_thickness_nm
   value: 400
@@ -889,11 +889,11 @@ entries:
   note: Magnitude; sign not stated
 - device_id: chen2025-h
   field: wavelength_nm
-  value: 1568.5
+  value: 1569.4
   unit: nm
   basis: extracted_from_figure
   locator: p.5, Fig. 3(d)
-  note: Peak of the N = 80 trace read from Fig. 3(d), about 0.5 nm reading uncertainty; the gap of the Fig. 3(d) devices is not stated, assignment by N only
+  note: N = 80 peak read from Fig. 3(d), about 0.5 nm uncertainty (apex partly hidden by N50); devices' gap not stated, assigned by N only.
 - device_id: chen2025-i
   field: eo_film_thickness_nm
   value: 400
@@ -984,7 +984,7 @@ entries:
   unit: nm
   basis: extracted_from_figure
   locator: p.5, Fig. 3(d)
-  note: Peak of the N = 90 trace read from Fig. 3(d), about 0.5 nm reading uncertainty; the gap of the Fig. 3(d) devices is not stated, assignment by N only
+  note: N = 90 trace peak read from Fig. 3(d), about 0.5 nm uncertainty; gap of Fig. 3(d) devices not stated, assigned by N only.
 - device_id: chen2025-i
   field: q_loaded
   value: 3848

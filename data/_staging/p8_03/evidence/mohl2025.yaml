@@ -1,0 +1,104 @@
+paper_id: mohl2025
+verified_on: '2026-10-07'
+source_files:
+- references/mohl2025/text.md
+- references/mohl2025/figures/page_26.png
+- references/mohl2025/figures/page_29.png
+- references/mohl2025/figures/page_05.png
+- references/mohl2025/crossref.json
+entries:
+- device_id: mohl2025-a
+  field: wavelength_nm
+  value: 1603.5
+  unit: nm
+  basis: design_target
+  locator: p.4
+  note: resonance pair selected for transduction; pump near 1603.5 nm (p.5)
+- device_id: mohl2025-a
+  field: r_eff_pm_per_v
+  value: 13
+  unit: pm/V
+  basis: derived
+  locator: p.7; p.10 Conclusion
+  note: effective material Pockels coefficient from g0/2pi = 406 Hz via the simulated g0(r) relation (Fig. 1h); tensor component not stated
+- device_id: mohl2025-a
+  field: eo_film_thickness_nm
+  value: 225
+  unit: nm
+  basis: design_target
+  locator: p.4; p.20 Appendix C
+  note: BaTiO3 film
+- device_id: mohl2025-a
+  field: etch_depth_nm
+  value: 125
+  unit: nm
+  basis: design_target
+  locator: p.20, Appendix C
+  note: 125 nm ridge on a 100 nm slab
+- device_id: mohl2025-a
+  field: slab_thickness_nm
+  value: 100
+  unit: nm
+  basis: design_target
+  locator: p.20, Appendix C
+- device_id: mohl2025-a
+  field: buffer_oxide_um
+  value: 3
+  unit: um
+  basis: design_target
+  locator: p.20, Appendix C
+  note: SiO2 under the BaTiO3 film
+- device_id: mohl2025-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.20, Appendix C
+- device_id: mohl2025-a
+  field: cladding
+  value: SiO2, 1.5 um
+  unit: ''
+  basis: design_target
+  locator: p.20, Appendix C
+  note: dome-shaped cladding
+- device_id: mohl2025-a
+  field: electrode_metal
+  value: Nb (sputtered)
+  unit: ''
+  basis: design_target
+  locator: p.4; p.20
+  note: electrodes in contact with the BaTiO3 slab, Nb air bridges
+- device_id: mohl2025-a
+  field: epitaxy_or_stack
+  value: 225 nm BaTiO3 bonded on 3 um SiO2 on Si; 125 nm ridge on 100 nm slab; SiO2 clad; Nb electrodes on the slab
+  unit: ''
+  basis: design_target
+  locator: p.4; p.20
+derived:
+- device_id: mohl2025-a
+  field: fsr_nm
+  value: 1.87
+  formula: lambda^2/c * FSR; lambda = 1603.5 nm, FSR = 218 GHz (p.4; Fig. 2(e), p.5); room temperature, unbiased
+  inputs:
+  - wavelength_nm
+context_values:
+- item: offchip_transduction_efficiency_pulsed
+  locator: p.1 abstract; p.10-11
+  value:
+    efficiency: 1.0e-06
+    db: -60
+    per_mw_db: -72
+    pump_dbm: 12.5
+  note: pulsed optical-to-microwave; includes about -5 dB fiber-to-chip; the p.10 linear trend line (Fig. 5c) gives -73 dB/mW
+- item: microwave_resonator
+  locator: p.4; p.6
+  value:
+    omega_b_ghz: 6.82
+    kappa_b0_mhz: 10
+    kappa_b_ex_mhz: 7.2
+    transduction_bandwidth_mhz: 14
+  note: 8 mK, -120 dBm probe
+- item: g0_over_2pi_hz
+  locator: p.7; p.29 Table V
+  value: 406
+  note: extracted from dc tuning (Appendix E2)

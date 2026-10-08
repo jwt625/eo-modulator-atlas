@@ -186,7 +186,7 @@ entries:
   unit: Gb/s
   basis: derived
   locator: p.5 Sec. III, Fig. 3(d)
-  note: 'Stated maximum: "The highest NDR amounts to 323.5 Gbit/s for 176 GBd PAM4 signaling, with a drive voltage swing of 1.17 Vpp"; AIR 340.5 Gbit/s; NDR computed by the authors from NGMI with the FEC overheads of their ref. 44. This maximum belongs to the 176 GBd point (1.17 Vpp), not to the 192 GBd / 384 Gbit/s / 0.95 Vpp point of max_baud, max_line_rate and drive_vpp; the best NDR under sub-1 Vpp drive is 310.9 Gbit/s at 192 GBd'
+  note: Highest NDR, 176 GBd PAM4, 1.17 Vpp (AIR 340.5 Gbit/s); not the 192 GBd, 0.95 Vpp point of max_baud/drive_vpp; NDR from NGMI, ref. 44 overheads.
 derived:
 - device_id: schwarzenberger2026a-a
   field: vpil_dc_vcm

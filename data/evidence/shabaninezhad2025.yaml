@@ -1,0 +1,258 @@
+paper_id: shabaninezhad2025
+verified_on: '2026-10-07'
+source_files:
+- references/shabaninezhad2025/text.md
+- references/shabaninezhad2025/figures/page_03.png
+- references/shabaninezhad2025/figures/page_13.png
+- references/shabaninezhad2025/figures/page_16.png
+entries:
+- device_id: shabaninezhad2025-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: operating free-space wavelength
+- device_id: shabaninezhad2025-a
+  field: eo_film_thickness_nm
+  value: 20
+  unit: nm
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: ITO layer 20 nm
+- device_id: shabaninezhad2025-a
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: Si waveguide width 500 nm; thickness 300 nm
+- device_id: shabaninezhad2025-a
+  field: electrode_metal
+  value: Al (bottom, anode) / Au (top, cathode)
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: 30 nm Al bottom, 50 nm Au top
+- device_id: shabaninezhad2025-a
+  field: epitaxy_or_stack
+  value: 'Si waveguide 300 nm x 500 nm planarized in SiO2 / MIM stacks on both sides:
+    30 nm Al / 3.6 nm Al2O3 / 20 nm ITO (bulk 2.65e20 cm^-3) / 50 nm Au; FIB-milled
+    gap g with 20 nm over-mill into Si; taper gap 520 nm to gmin; W_slab 175 nm (Fig.
+    1(b))'
+  basis: design_target
+  locator: p.2-3 Sec. 2; Fig. 1(b)
+  note: layer stack of the MOS-in-MIM section; W_slab label of Fig. 1(b)
+- device_id: shabaninezhad2025-a
+  field: il_onchip_includes
+  value: back-to-back tapers and MIM section between the Si-waveguide ports (TM0 to
+    TM0)
+  basis: design_target
+  locator: p.8 Sec. 4.2; p.17 Table 1
+  note: TM0-to-TM0 transmittance through the full structure
+- device_id: shabaninezhad2025-a
+  field: length_mm
+  value: 0.0062
+  unit: mm
+  basis: derived
+  locator: p.17 Table 1
+  note: 2 x LT = 2 x 3.10 um (two back-to-back tapers)
+- device_id: shabaninezhad2025-a
+  field: bw3db_ghz
+  value: 123.9
+  unit: GHz
+  basis: simulated
+  locator: p.17 Table 1; Sec. 4.5 p.15
+  note: RC-limited, Eq. 12
+- device_id: shabaninezhad2025-a
+  field: il_onchip_db
+  value: 6.4
+  unit: dB
+  basis: simulated
+  locator: p.17 Table 1; p.8
+  note: IL_total; 6.4 dB at flat band for LT = 3.1 um
+- device_id: shabaninezhad2025-a
+  field: extinction_ratio_db
+  value: 25.7
+  unit: dB
+  basis: simulated
+  locator: p.17 Table 1
+  note: SPC model ER_max at Vg = 2.8 V
+- device_id: shabaninezhad2025-a
+  field: electrode_type
+  value: plasmonic_lumped
+  basis: derived
+  locator: p.15 Sec. 4.5
+  note: modulator of about 6 um treated as a lumped element
+- device_id: shabaninezhad2025-a
+  field: cladding
+  value: SiO2
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: Si strip planarized in SiO2
+- device_id: shabaninezhad2025-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: operating free-space wavelength
+- device_id: shabaninezhad2025-b
+  field: eo_film_thickness_nm
+  value: 20
+  unit: nm
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: ITO layer 20 nm
+- device_id: shabaninezhad2025-b
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: Si waveguide width 500 nm; thickness 300 nm
+- device_id: shabaninezhad2025-b
+  field: electrode_metal
+  value: Al (bottom, anode) / Au (top, cathode)
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: 30 nm Al bottom, 50 nm Au top
+- device_id: shabaninezhad2025-b
+  field: epitaxy_or_stack
+  value: 'Si waveguide 300 nm x 500 nm planarized in SiO2 / MIM stacks on both sides:
+    30 nm Al / 3.6 nm Al2O3 / 20 nm ITO (bulk 2.65e20 cm^-3) / 50 nm Au; FIB-milled
+    gap g with 20 nm over-mill into Si; taper gap 520 nm to gmin; W_slab 175 nm (Fig.
+    1(b))'
+  basis: design_target
+  locator: p.2-3 Sec. 2; Fig. 1(b)
+  note: layer stack of the MOS-in-MIM section; W_slab label of Fig. 1(b)
+- device_id: shabaninezhad2025-b
+  field: il_onchip_includes
+  value: back-to-back tapers and MIM section between the Si-waveguide ports (TM0 to
+    TM0)
+  basis: design_target
+  locator: p.8 Sec. 4.2; p.17 Table 1
+  note: TM0-to-TM0 transmittance through the full structure
+- device_id: shabaninezhad2025-b
+  field: length_mm
+  value: 0.0041
+  unit: mm
+  basis: derived
+  locator: p.17 Table 1
+  note: 2 x LT = 2 x 2.05 um (two back-to-back tapers)
+- device_id: shabaninezhad2025-b
+  field: bw3db_ghz
+  value: 185.4
+  unit: GHz
+  basis: simulated
+  locator: p.17 Table 1; Sec. 4.5 p.15
+  note: RC-limited, Eq. 12
+- device_id: shabaninezhad2025-b
+  field: il_onchip_db
+  value: 4.6
+  unit: dB
+  basis: simulated
+  locator: p.17 Table 1
+  note: IL_total
+- device_id: shabaninezhad2025-b
+  field: extinction_ratio_db
+  value: 9.8
+  unit: dB
+  basis: simulated
+  locator: p.17 Table 1
+  note: SPC model ER_max at Vg = 2.6 V
+- device_id: shabaninezhad2025-b
+  field: electrode_type
+  value: plasmonic_lumped
+  basis: derived
+  locator: p.15 Sec. 4.5
+  note: modulator of about 6 um treated as a lumped element
+- device_id: shabaninezhad2025-b
+  field: cladding
+  value: SiO2
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: Si strip planarized in SiO2
+- device_id: shabaninezhad2025-c
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: operating free-space wavelength
+- device_id: shabaninezhad2025-c
+  field: eo_film_thickness_nm
+  value: 20
+  unit: nm
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: ITO layer 20 nm
+- device_id: shabaninezhad2025-c
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: Si waveguide width 500 nm; thickness 300 nm
+- device_id: shabaninezhad2025-c
+  field: electrode_metal
+  value: Al (bottom, anode) / Au (top, cathode)
+  basis: design_target
+  locator: p.2 Sec. 2
+  note: 30 nm Al bottom, 50 nm Au top
+- device_id: shabaninezhad2025-c
+  field: epitaxy_or_stack
+  value: 'Si waveguide 300 nm x 500 nm planarized in SiO2 / MIM stacks on both sides:
+    30 nm Al / 3.6 nm Al2O3 / 20 nm ITO (bulk 2.65e20 cm^-3) / 50 nm Au; FIB-milled
+    gap g with 20 nm over-mill into Si; taper gap 520 nm to gmin; W_slab 175 nm (Fig.
+    1(b))'
+  basis: design_target
+  locator: p.2-3 Sec. 2; Fig. 1(b)
+  note: layer stack of the MOS-in-MIM section; W_slab label of Fig. 1(b)
+- device_id: shabaninezhad2025-c
+  field: il_onchip_includes
+  value: back-to-back tapers and MIM section between the Si-waveguide ports (TM0 to
+    TM0)
+  basis: design_target
+  locator: p.8 Sec. 4.2; p.17 Table 1
+  note: TM0-to-TM0 transmittance through the full structure
+- device_id: shabaninezhad2025-c
+  field: length_mm
+  value: 0.0036
+  unit: mm
+  basis: derived
+  locator: p.17 Table 1; abstract
+  note: 2 x LT = 2 x 1.80 um; abstract says overall length under 4 um
+- device_id: shabaninezhad2025-c
+  field: bw3db_ghz
+  value: 210.3
+  unit: GHz
+  basis: simulated
+  locator: p.17 Table 1; abstract
+  note: RC-limited, Eq. 12
+- device_id: shabaninezhad2025-c
+  field: il_onchip_db
+  value: 3.3
+  unit: dB
+  basis: simulated
+  locator: p.17 Table 1
+  note: IL_total
+- device_id: shabaninezhad2025-c
+  field: extinction_ratio_db
+  value: 5.4
+  unit: dB
+  basis: simulated
+  locator: p.17 Table 1
+  note: SPC model ER_max at Vg = 2.6 V
+- device_id: shabaninezhad2025-c
+  field: electrode_type
+  value: plasmonic_lumped
+  basis: derived
+  locator: p.15 Sec. 4.5
+  note: modulator of about 6 um treated as a lumped element
+- device_id: shabaninezhad2025-c
+  field: cladding
+  value: SiO2
+  basis: design_target
+  locator: p.3 Fig. 1(b)
+  note: Si strip planarized in SiO2
+derived: []

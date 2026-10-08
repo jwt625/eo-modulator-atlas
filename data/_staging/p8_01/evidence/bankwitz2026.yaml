@@ -1,0 +1,43 @@
+paper_id: bankwitz2026
+verified_on: '2026-10-07'
+source_files:
+- references/bankwitz2026/text.md
+- references/bankwitz2026/figures/page_08.png
+- references/bankwitz2026/figures/page_09.png
+entries:
+- device_id: bankwitz2026-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.18 Methods
+  note: Vpi quoted at 1550 nm
+- device_id: bankwitz2026-a
+  field: vpi_dc_v
+  value: 3.4
+  unit: V
+  basis: measured
+  locator: p.18 Methods
+  note: approximately 3.4 V; stage not specified
+- device_id: bankwitz2026-a
+  field: extinction_ratio_db
+  value: 51
+  unit: dB
+  basis: measured
+  locator: p.7 Results; p.8 Fig. 3; p.19 Methods
+  note: equal to the measurement noise floor; abstract says over 50 dB
+- device_id: bankwitz2026-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.18 Methods
+  note: standard x-cut LNOI process
+- device_id: bankwitz2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: design_target
+  locator: p.5 Results; p.18 Methods
+  note: each MZI driven push-pull
+derived: []

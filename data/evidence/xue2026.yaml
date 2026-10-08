@@ -262,7 +262,7 @@ entries:
   unit: dB
   basis: measured
   locator: p.1 abstract; p.7 text; Fig. 5(a)
-  note: flat from 2 GHz; a 1 dB drop below 2 GHz is attributed to impedance mismatch; reference of the 1.3 dB (low-frequency plateau or about 2 GHz) not stated and not resolvable from Fig. 5(a)
+  note: 1 dB drop below 2 GHz (impedance mismatch), flat after; 1.3 dB reference (low-frequency plateau or 2 GHz) not stated, unresolvable in Fig. 5(a).
 - device_id: xue2026-b
   field: eo_rolloff_freq_ghz
   value: 67

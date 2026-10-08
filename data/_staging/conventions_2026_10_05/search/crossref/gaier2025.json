@@ -1,0 +1,662 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 21,
+  "items": [
+   {
+    "DOI": "10.1364/cleo_at.2025.aa119_1",
+    "title": [
+     "High-Speed Wireless Terahertz Electro-Optic Modulators on Thin-Film Lithium Niobate"
+    ],
+    "author": [
+     {
+      "given": "Aleksei",
+      "family": "Gaier",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Karen",
+      "family": "Mamian",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shima",
+      "family": "Rajabali",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yazan",
+      "family": "Lampert",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Leticia",
+      "family": "Magalhaes",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Amirhassan",
+      "family": "Shams-Ansari",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Marko",
+      "family": "Lončar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ileana-Cristina",
+      "family": "Benea-Chelmus",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/ecoc66593.2025.11263183",
+    "title": [
+     "Wireless Millimeter-Wave Electro-Optic Modulators on Thin-Film Lithium Niobate"
+    ],
+    "author": [
+     {
+      "given": "Aleksei",
+      "family": "Gaier",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Hybrid photonic laboratory, EPFL,Switzerland,1015-CH"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Karen",
+      "family": "Mamian",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Hybrid photonic laboratory, EPFL,Switzerland,1015-CH"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yazan",
+      "family": "Lampert",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Hybrid photonic laboratory, EPFL,Switzerland,1015-CH"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shima",
+      "family": "Rajabali",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Delft University of Technology,Department of Quantum and Computer Engineering,Netherlands"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Leticia",
+      "family": "Magalhaes",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard School of Engineering and Applied Sciences, Harvard University,MA,USA,02138"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Amirhassan",
+      "family": "Shams-Ansari",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard School of Engineering and Applied Sciences, Harvard University,MA,USA,02138"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Marko",
+      "family": "Loncar",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard School of Engineering and Applied Sciences, Harvard University,MA,USA,02138"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ileana-Cristina",
+      "family": "Benea-Chelmus",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Hybrid photonic laboratory, EPFL,Switzerland,1015-CH"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       9,
+       28
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/np.2024.npw2e.2",
+    "title": [
+     "Terahertz generation and detection using Thin-film Lithium Niobate"
+    ],
+    "author": [
+     {
+      "given": "Yazan",
+      "family": "Lampert",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Amirhassan",
+      "family": "Shams-Ansari",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Aleksei",
+      "family": "Gaier",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alessandro",
+      "family": "Tomasino",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xuhui",
+      "family": "Cao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shima",
+      "family": "Rajabali",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Marko",
+      "family": "Lončar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ileana-Cristina",
+      "family": "Benea-Chelmus",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/cleo/europe-eqec65582.2025.11111432",
+    "title": [
+     "Monolithic Millimeter Wave Generation and Detection from Resonant Lithium Niobate Circuits"
+    ],
+    "author": [
+     {
+      "given": "Jiawen",
+      "family": "Liu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "&#x00C9;cole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne (EPFL),Hybrid Photonics Laboratory,Switzerland,CH-1015"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Tianyi",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "&#x00C9;cole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne (EPFL),Hybrid Photonics Laboratory,Switzerland,CH-1015"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ghalia",
+      "family": "Dhaoui",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "&#x00C9;cole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne (EPFL),Hybrid Photonics Laboratory,Switzerland,CH-1015"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yazan",
+      "family": "Lampert",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "&#x00C9;cole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne (EPFL),Hybrid Photonics Laboratory,Switzerland,CH-1015"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Aleksei",
+      "family": "Gaier",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "&#x00C9;cole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne (EPFL),Hybrid Photonics Laboratory,Switzerland,CH-1015"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ileana-Cristina",
+      "family": "Benea-Chelmus",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "&#x00C9;cole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne (EPFL),Hybrid Photonics Laboratory,Switzerland,CH-1015"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       6,
+       23
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/cleo/europe-eqec65582.2025.11111440",
+    "title": [
+     "Phased Antenna Arrays Beyond 1 THz from Lithium Niobate Photonic Circuits"
+    ],
+    "author": [
+     {
+      "given": "Yazan",
+      "family": "Lampert",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "EPF Lausanne, Hybrid Photonics Laboratory,Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shima",
+      "family": "Rajabali",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University,,Cambridge,MA,USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xuhui",
+      "family": "Cao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "EPF Lausanne, Hybrid Photonics Laboratory,Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Amirhassan",
+      "family": "Shams-Ansari",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University,,Cambridge,MA,USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Alessandro",
+      "family": "Tomasino",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "EPF Lausanne, Hybrid Photonics Laboratory,Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Aleksei",
+      "family": "Gaier",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "EPF Lausanne, Hybrid Photonics Laboratory,Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Leticia",
+      "family": "Magalhaes",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University,,Cambridge,MA,USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Marko",
+      "family": "Lončar",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University,,Cambridge,MA,USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ileana-Cristina",
+      "family": "Benea-Chelmus",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "EPF Lausanne, Hybrid Photonics Laboratory,Switzerland"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       6,
+       23
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

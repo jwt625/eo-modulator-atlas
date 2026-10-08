@@ -1,9 +1,9 @@
 # EO Modulator Atlas
 
 A traceable literature database and static browser explorer for electro-optic
-modulators. The integrated atlas contains **208 papers (2012-2026), 479 device rows and
-258 organizations**, all papers with `audit_status: audited` (checked 2026-10-05). It also holds
-1,723 author-affiliation rows, 212 geolocated institution sites and 1,385 deduplicated people. The candidate index contains
+modulators. The integrated atlas contains **233 papers (2012-2026), 519 device rows and
+284 organizations**, all papers with `audit_status: audited` (checked 2026-10-07). It also holds
+2,880 author-affiliation rows (231 papers), 310 institution sites (308 with coordinates) and 1,509 deduplicated people. The candidate index contains
 461 records and distillation is continuing. Each reported metric has an evidence locator and
 basis. Missing values stay empty.
 
@@ -100,12 +100,18 @@ gates cover parallel plates, differential/half-domain capacitance, anisotropic
 rotation, TE/TM slab modes and waveguide group index. CLI results go to stdout;
 browser results stay in memory. Do not commit solver outputs.
 
-EO overlap and uniform RF loss now have separate tested modules; their shared
-runner integration remains pending. Periodic loaded-line and EO-response stages
-remain unimplemented.
+The shared runner also has selectable `eo_overlap` (explicit arm windows, Vpi gated
+on the data `vpi_convention`) and `rf_line` stages (declared dielectric/conductor
+loss models including the Wheeler incremental-inductance model, frequency sweep,
+Re(Z0) targets), with per-stage readiness in the CLI (`--stages`, `--check`) and the
+browser (2026-10-07, DevLog-012, independent Q2 audit and corrections). No paper
+config runs these two stages yet: each needs explicit arm windows and loss
+declarations (proposed changes listed in DevLog-012). Periodic loaded-line and
+EO-response stages remain unimplemented; `rf_line` is blocked on the loaded cut of
+periodic T-rail lines.
 A cross-section's RF index and impedance are not the effective values of a
 periodically loaded device. Such targets are reported as `not_evaluated`.
-All 28 simulation configs under `sims/` are `unvalidated` (2026-10-05). The Chen config remains `unvalidated`. Its optical window intersects gold, so
+All 40 simulation configs under `sims/` are `unvalidated` (2026-10-07). The Chen config remains `unvalidated`. Its optical window intersects gold, so
 `--optical` stops by default with an explicit unsupported-material error. Session
 YAML may explicitly select `optics.metal_in_window: absent` or `pec_scalar` to
 explore scalar sensitivity limits. Outputs disclose the policy, scalar limits,
@@ -130,11 +136,11 @@ fixed group index are excluded from prediction comparisons. Each mesh has an
 
 ## Next work
 
-1. Integrate explicit EO arm/voltage and RF loss/sweep contracts into the shared runner.
-2. Implement periodic-cell/EO-response stages and quantify scalar/vector limitations.
-3. Reconcile generated rankings with sample/loss-scope guards before merging reviewed batches.
-4. Continue ingestion, literature convergence studies and independent audits.
-5. Open data items (DevLog-020/021): hu2026a per-channel bandwidths; per-author affiliations for the 46 OFC 2026 papers and the 31 papers ingested 2026-10-05; arXiv preprint search for the 13 second-wave papers (arXiv returned HTTP 429).
+1. Add arm windows, target `vpi_convention` and sourced loss declarations to the paper configs (DevLog-012 list) so `eo_overlap`/`rf_line` can run on them.
+2. Implement EO-response and periodic loaded-line stages and quantify scalar/vector limitations.
+3. Source material constants (LN/LT mm-wave permittivity, gold conductivity) from primary references for the sim configs.
+4. Continue ingestion (priority-2 candidates, retrieval lists), literature convergence studies and independent audits.
+5. Open data items (DevLog-022): substrate evidence-basis sweep (measured vs design_target under convention bb); retrieval of zhang2025, yang2024, zhang2021b, liu2026d SI and the schwarzenberger2026a version of record.
 
 Current work and remaining phases are recorded in [DevLog-000](DevLog/DevLog-000-plan.md)
 and [DevLog-002](DevLog/DevLog-002-work-plan-and-ownership.md).
@@ -147,5 +153,6 @@ Explore geography and lineage panels: [DevLog-017](DevLog/DevLog-017-explore-geo
 Latest ingestion (46 OFC 2026 papers, independent audit): [DevLog-019](DevLog/DevLog-019-ofc2026-retrieval-and-ingestion.md).
 Data convention decisions and their application: [DevLog-020](DevLog/DevLog-020-data-convention-decisions.md).
 Latest ingestion (papers retrieved by the user 2026-10-05, batches p6/p7, independent audit and verification): [DevLog-021](DevLog/DevLog-021-inbox-ingestion-2026-10-05.md).
+Continuation 2026-10-07 (claims and workboard, p8 ingestion, affiliations and sites for 96 papers, arXiv/Crossref metadata, data rulings, engine stages): [DevLog-022](DevLog/DevLog-022-continuation-2026-10-07.md).
 Read [WORKBOARD.md](WORKBOARD.md) and the active claims under
 `coordination/claims/` before starting concurrent work.

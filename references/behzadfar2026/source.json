@@ -4,9 +4,9 @@
  "doi": "",
  "source_type": "arxiv_preprint",
  "source_version": "2609.16379v1",
- "license": "",
- "license_verified": false,
- "redistribution": "restricted_local_only",
+ "license": "CC0-1.0",
+ "license_verified": true,
+ "redistribution": "open_license_ok",
  "retrieved_on": "2026-10-03T06:02:53+00:00",
  "acquisition_origin": "public_primary_source",
  "identity_url": "https://arxiv.org/abs/2609.16379v1",
@@ -15,5 +15,6 @@
  "pages": 11,
  "text_chars": 47259,
  "n_figure_files": 22,
- "extracted_on": "2026-10-02"
+ "extracted_on": "2026-10-02",
+ "license_source": "references/behzadfar2026/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

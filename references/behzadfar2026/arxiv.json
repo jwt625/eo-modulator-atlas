@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2609.16379",
+ "title": "Ultimate Performance of Thin-Film Lithium Niobate Mach-Zehnder Modulators",
+ "authors": "Shiva Behzadfar, Fatemeh Karami, Pooja Kulkarni, and Sasan Fathpour",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Mon, 14 Sep 2026 21:41:18 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:33:34Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2609.16379\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2609.16379</identifier>\n        <datestamp>2026-09-16</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2609.16379</id>\n        <submitter>Shiva Behzadfar Ms</submitter>\n            <version version=\"v1\">\n                <date>Mon, 14 Sep 2026 21:41:18 GMT</date>\n                <size>1503kb</size>\n            </version>\n        <title>Ultimate Performance of Thin-Film Lithium Niobate Mach-Zehnder Modulators</title>\n        <authors>Shiva Behzadfar, Fatemeh Karami, Pooja Kulkarni, and Sasan Fathpour</authors>\n        <categories>physics.optics</categories>\n            <license>http://creativecommons.org/publicdomain/zero/1.0/</license>\n            <abstract>In thin-film lithium niobate Mach-Zehnder modulators, half-wave voltage and bandwidth are tied to the same design parameters; hence, improving one usually costs the other. Several methods have been pursued in the past to alleviate this tradeoff. Specifically, the bias voltage can be reduced through non-centered placement of optical waveguides with respect to electrodes, slow-wave optical gratings, and high-permittivity cladding layers. Bandwidth can be enhanced through implementing periodic segmented electrodes and exploiting low-permittivity bottom cladding and substrate materials. The objective of this work is to study the augmentative impact of these methods. We pursue a rigorous modeling and optimization approach to achieve this objective, estimate the impact of each augmentation, and evaluate the ultimate performance of TFLN MZMs based on these methods. It is shown that a co-designed structure that incorporates all these enhancing methods can attain a drive voltage of 0.84 V and a modulation bandwidth of almost 220 GHz.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

@@ -35,7 +35,7 @@ entries:
   unit: ''
   basis: derived
   locator: p.3, Section II
-  note: 'Paper: "The HSPS adopts a single-ended drive scheme enabling standard push-pull driving with a Vpi of 3.6 V"; the authors do not label the 3.6 V as MZM-level explicitly'
+  note: 'Paper: ''single-ended drive scheme enabling standard push-pull driving with a Vpi of 3.6 V''; authors do not explicitly label the 3.6 V MZM-level.'
 - device_id: li2024-c
   field: vpi_dc_freq_ghz
   value: 0.01
@@ -147,7 +147,7 @@ entries:
   unit: Gb/s
   basis: measured
   locator: p.5, Table I
-  note: 106 GBd PAM-6 over 2 km SSMF below HD-FEC (6.7% overhead), 1291 to 1321 nm; Table I also lists 250 Gb/s over 10 km with 106 GBd PAM-6, 6.7% overhead, 1311 to 1321 nm
+  note: 106 GBd PAM-6, 2 km SSMF, below HD-FEC (6.7% OH), 1291-1321 nm; Table I also lists 250 Gb/s over 10 km, same format, 1311-1321 nm.
 - device_id: li2024-ps
   field: length_mm
   value: 1.5

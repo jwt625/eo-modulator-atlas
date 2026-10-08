@@ -1,0 +1,77 @@
+paper_id: zhu2022
+verified_on: '2026-10-07'
+source_files:
+- references/zhu2022/text.md
+- references/zhu2022/figures/page_09.png
+- references/zhu2022/crossref.json
+entries:
+- device_id: zhu2022-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.9, Fig. S1 caption
+  note: Vpi characterisation wavelength; the photons of the experiment are at 1560 nm
+- device_id: zhu2022-a
+  field: vpi_rf_v
+  value: 2.5
+  unit: V
+  basis: measured
+  locator: p.3, Fig. 3 caption
+  note: Vpi approx 2.5 V at 27.5 GHz; 2.3-2.8 V at phase-matched frequencies 10-40 GHz (p.2; p.9 Fig. S1b)
+- device_id: zhu2022-a
+  field: vpi_rf_freq_ghz
+  value: 27.5
+  unit: GHz
+  basis: measured
+  locator: p.3, Fig. 3 caption; p.9, Fig. S1b
+  note: RF drive frequency of the shearing experiment, where Vpi approx 2.5 V is quoted
+- device_id: zhu2022-a
+  field: il_fiber_to_fiber_db
+  value: 11
+  unit: dB
+  basis: measured
+  locator: p.7, Methods a
+  note: total insertion loss with lensed fibers; about 4.5 dB per facet fiber-to-chip coupling; no added loss with RF
+- device_id: zhu2022-a
+  field: electrode_metal
+  value: Au
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.9, Fig. S1a
+  note: label in the schematic cross-section
+- device_id: zhu2022-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: extracted_from_figure
+  locator: p.9, Fig. S1a
+  note: label in the schematic cross-section (LN on SiO2 on Si)
+derived: []
+context_values:
+- item: frequency_shift_max_ghz
+  locator: p.3, Fig. 3c
+  value:
+    value: 641
+    unit: GHz
+    also_nm: 5.2
+  note: +- shift at 27.5 GHz and 8.1 Vpi; photon 1560 nm, 6.5 nm FWHM
+- item: hom_visibility_percent
+  locator: p.4, Fig. 4b
+  value:
+    shifted: 90.5
+    unshifted: 23.1
+  note: background subtracted; 13.6 GHz, 4.0 Vpi, 154 GHz detuning
+- item: bandwidth_compression
+  locator: p.4-5, Fig. 5
+  value:
+    input_nm: 6.55
+    output_nm: 0.35
+    factor: 18.7
+  note: 13.6 GHz, 4.0 Vpi, 1/B about 10.9 ps^2
+- item: rf_timing_jitter_ps
+  locator: p.7, Methods b
+  value:
+    value: 15
+    unit: ps FWHM
+  note: measured at about 5 GHz; not measured at 13.6 or 27.5 GHz

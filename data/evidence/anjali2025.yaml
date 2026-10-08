@@ -1,0 +1,445 @@
+paper_id: anjali2025
+verified_on: '2026-10-07'
+source_files:
+- references/anjali2025/figures/page_03.png
+- references/anjali2025/text.md
+- references/anjali2025/figures/page_07.png
+- references/anjali2025/figures/page_09.png
+- references/anjali2025/figures/page_10.png
+- references/anjali2025/figures/page_11.png
+entries:
+- device_id: anjali2025-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2.1
+  note: targeted wavelength
+- device_id: anjali2025-a
+  field: length_mm
+  value: 6.45
+  unit: mm
+  basis: design_target
+  locator: p.8 Sec. 2.3; p.9
+  note: '''around 6.45 mm'' / ''~6.45 mm'', same length on all three substrates'
+- device_id: anjali2025-a
+  field: optical_input_power_dbm
+  value: 10
+  unit: dBm
+  basis: derived
+  locator: p.8 Sec. 2.3
+  note: 10 mW input CW signal power = 10 dBm
+- device_id: anjali2025-a
+  field: electrode_metal
+  value: Aluminum
+  basis: design_target
+  locator: p.8 Sec. 2.3
+  note: aluminum vias and contact pads
+- device_id: anjali2025-a
+  field: cladding
+  value: SiO2
+  basis: design_target
+  locator: p.2 Sec. 2.1; p.8
+  note: Si rib embedded in SiO2 outer cladding; upper SiO2 cladding
+- device_id: anjali2025-a
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: p.8 Fig. 10
+  note: phase shifter in one MZM arm only; authors do not name the drive mode
+- device_id: anjali2025-a
+  field: vpi_convention
+  value: per_arm_phase_shifter
+  basis: derived
+  locator: p.7 Table 2
+  note: VpiL quoted for the phase shifter; authors do not name the convention
+- device_id: anjali2025-a
+  field: vpil_dc_vcm
+  value: 88
+  unit: V*cm
+  basis: simulated
+  locator: p.7 Table 2
+  note: phase shifter VpiL, substrate I; 0 to 5 V reverse bias
+- device_id: anjali2025-a
+  field: bw3db_ghz
+  value: 3.5
+  unit: GHz
+  basis: simulated
+  locator: p.10 Fig. 13; Sec. 2.3.2
+  note: INTERCONNECT S21, 3 dB marker 3.5 GHz
+- device_id: anjali2025-a
+  field: extinction_ratio_db
+  value: 13.17
+  unit: dB
+  basis: simulated
+  locator: p.10 Fig. 12(a)
+  note: wavelength-sweep notch depth annotation at 0 V
+- device_id: anjali2025-a
+  field: drive_vpp_v
+  value: 2.5
+  unit: V
+  basis: simulated
+  locator: p.11 Fig. 14 caption
+  note: RF signal of 2.5 V; peak vs peak-to-peak not stated
+- device_id: anjali2025-a
+  field: eo_film_thickness_nm
+  value: 5000
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: Si thickness H
+- device_id: anjali2025-a
+  field: etch_depth_nm
+  value: 2250
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: etch depth h
+- device_id: anjali2025-a
+  field: rib_width_nm
+  value: 5000
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: rib width w
+- device_id: anjali2025-a
+  field: slab_thickness_nm
+  value: 2750
+  unit: nm
+  basis: derived
+  locator: p.2 Table 1
+  note: H - h = 5000 - 2250 nm
+- device_id: anjali2025-a
+  field: electrode_gap_um
+  value: 8
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.2
+  note: chosen gap for substrate I
+- device_id: anjali2025-a
+  field: electrode_thickness_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.8 Sec. 2.3
+  note: contact pad thickness 2 um
+- device_id: anjali2025-a
+  field: epitaxy_or_stack
+  value: Slightly p-doped device layer 1e15 cm^-3; p-i-n with moderate doping 5e18
+    cm^-3 covering part of rib and slab, p++/n++ 1e20 cm^-3 contacts in the slab
+  basis: design_target
+  locator: p.3 Sec. 2.2; p.4
+  note: doping levels; 5e18 cm^-3 maximum-dn_eff choice for substrate I
+- device_id: anjali2025-a
+  field: modulation_format
+  value: NRZ OOK, PRBS; eyes at 0.1 Gb/s (BER 8.4e-117) and 5 Gb/s (BER 6.2e-4, closed
+    eye)
+  basis: simulated
+  locator: p.11 Fig. 14
+  note: eye diagrams at 100 Mb/s and 5 Gb/s
+- device_id: anjali2025-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 2(a),(b)
+  note: 2 um BOX layer label in both cross-sections
+- device_id: anjali2025-a
+  field: substrate
+  value: Silicon
+  basis: design_target
+  locator: p.3 Fig. 2(a),(b)
+  note: Silicon label under the BOX layer
+- device_id: anjali2025-a
+  field: electrode_type
+  value: lumped
+  basis: simulated
+  locator: p.10 Sec. 2.3.2
+  note: INTERCONNECT uses a lumped electrode for substrate I within its bandwidth
+    limit
+- device_id: anjali2025-b
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2.1
+  note: targeted wavelength
+- device_id: anjali2025-b
+  field: length_mm
+  value: 6.45
+  unit: mm
+  basis: design_target
+  locator: p.8 Sec. 2.3; p.9
+  note: '''around 6.45 mm'' / ''~6.45 mm'', same length on all three substrates'
+- device_id: anjali2025-b
+  field: optical_input_power_dbm
+  value: 10
+  unit: dBm
+  basis: derived
+  locator: p.8 Sec. 2.3
+  note: 10 mW input CW signal power = 10 dBm
+- device_id: anjali2025-b
+  field: electrode_metal
+  value: Aluminum
+  basis: design_target
+  locator: p.8 Sec. 2.3
+  note: aluminum vias and contact pads
+- device_id: anjali2025-b
+  field: cladding
+  value: SiO2
+  basis: design_target
+  locator: p.2 Sec. 2.1; p.8
+  note: Si rib embedded in SiO2 outer cladding; upper SiO2 cladding
+- device_id: anjali2025-b
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: p.8 Fig. 10
+  note: phase shifter in one MZM arm only; authors do not name the drive mode
+- device_id: anjali2025-b
+  field: bw3db_ghz
+  value: 6.5
+  unit: GHz
+  basis: simulated
+  locator: p.10 Fig. 13; Sec. 2.3.2
+  note: INTERCONNECT S21, 3 dB marker 6.5 GHz
+- device_id: anjali2025-b
+  field: extinction_ratio_db
+  value: 14.89
+  unit: dB
+  basis: simulated
+  locator: p.10 Fig. 12(b)
+  note: wavelength-sweep notch depth annotation at 0 V
+- device_id: anjali2025-b
+  field: drive_vpp_v
+  value: 0.8
+  unit: V
+  basis: simulated
+  locator: p.11 Fig. 15 caption
+  note: RF signal of 0.8 V; peak vs peak-to-peak not stated
+- device_id: anjali2025-b
+  field: eo_film_thickness_nm
+  value: 3000
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: Si thickness H
+- device_id: anjali2025-b
+  field: etch_depth_nm
+  value: 1750
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: etch depth h
+- device_id: anjali2025-b
+  field: rib_width_nm
+  value: 2250
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: rib width w
+- device_id: anjali2025-b
+  field: slab_thickness_nm
+  value: 1250
+  unit: nm
+  basis: derived
+  locator: p.2 Table 1
+  note: H - h = 3000 - 1750 nm
+- device_id: anjali2025-b
+  field: electrode_gap_um
+  value: 5
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.2
+  note: chosen gap for substrate II
+- device_id: anjali2025-b
+  field: electrode_thickness_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.8 Sec. 2.3
+  note: contact pad thickness 2 um
+- device_id: anjali2025-b
+  field: epitaxy_or_stack
+  value: Slightly p-doped device layer 1e15 cm^-3; p-i-n with moderate doping 5e17
+    cm^-3 covering part of rib and slab (text p.4; the Fig. 7(b) legend prints 1e17
+    cm^-3), p++/n++ 1e20 cm^-3 contacts in the slab
+  basis: design_target
+  locator: p.3 Sec. 2.2; p.4
+  note: doping levels; 5e17 cm^-3 maximum-dn_eff choice for substrate II
+- device_id: anjali2025-b
+  field: modulation_format
+  value: NRZ OOK, PRBS; eyes at 1 Gb/s (BER 2.14e-25) and 10 Gb/s (BER 9.81e-4, closed
+    eye)
+  basis: simulated
+  locator: p.11 Fig. 15
+  note: eye diagrams at 1 Gb/s and 10 Gb/s
+- device_id: anjali2025-b
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 2(a),(b)
+  note: 2 um BOX layer label in both cross-sections
+- device_id: anjali2025-b
+  field: substrate
+  value: Silicon
+  basis: design_target
+  locator: p.3 Fig. 2(a),(b)
+  note: Silicon label under the BOX layer
+- device_id: anjali2025-c
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.2 Sec. 2.1
+  note: targeted wavelength
+- device_id: anjali2025-c
+  field: length_mm
+  value: 6.45
+  unit: mm
+  basis: design_target
+  locator: p.8 Sec. 2.3; p.9
+  note: '''around 6.45 mm'' / ''~6.45 mm'', same length on all three substrates'
+- device_id: anjali2025-c
+  field: optical_input_power_dbm
+  value: 10
+  unit: dBm
+  basis: derived
+  locator: p.8 Sec. 2.3
+  note: 10 mW input CW signal power = 10 dBm
+- device_id: anjali2025-c
+  field: electrode_metal
+  value: Aluminum
+  basis: design_target
+  locator: p.8 Sec. 2.3
+  note: aluminum vias and contact pads
+- device_id: anjali2025-c
+  field: cladding
+  value: SiO2
+  basis: design_target
+  locator: p.2 Sec. 2.1; p.8
+  note: Si rib embedded in SiO2 outer cladding; upper SiO2 cladding
+- device_id: anjali2025-c
+  field: drive
+  value: single_ended
+  basis: derived
+  locator: p.8 Fig. 10
+  note: phase shifter in one MZM arm only; authors do not name the drive mode
+- device_id: anjali2025-c
+  field: vpi_convention
+  value: per_arm_phase_shifter
+  basis: derived
+  locator: p.7 Table 2
+  note: VpiL quoted for the phase shifter; authors do not name the convention
+- device_id: anjali2025-c
+  field: vpil_dc_vcm
+  value: 3.17
+  unit: V*cm
+  basis: simulated
+  locator: p.7 Table 2
+  note: phase shifter VpiL, substrate III; 0 to 5 V reverse bias
+- device_id: anjali2025-c
+  field: bw3db_ghz
+  value: 9.5
+  unit: GHz
+  basis: simulated
+  locator: p.10 Fig. 13; Sec. 2.3.2
+  note: INTERCONNECT S21, 3 dB marker 9.5 GHz
+- device_id: anjali2025-c
+  field: extinction_ratio_db
+  value: 13.5
+  unit: dB
+  basis: simulated
+  locator: p.10 Fig. 12(c)
+  note: wavelength-sweep notch depth annotation at 0 V
+- device_id: anjali2025-c
+  field: drive_vpp_v
+  value: 0.5
+  unit: V
+  basis: simulated
+  locator: p.11 Fig. 16 caption
+  note: RF signal of 0.5 V; peak vs peak-to-peak not stated
+- device_id: anjali2025-c
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: Si thickness H
+- device_id: anjali2025-c
+  field: etch_depth_nm
+  value: 130
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: etch depth h
+- device_id: anjali2025-c
+  field: rib_width_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.2 Table 1
+  note: rib width w
+- device_id: anjali2025-c
+  field: slab_thickness_nm
+  value: 90
+  unit: nm
+  basis: derived
+  locator: p.2 Table 1
+  note: H - h = 220 - 130 nm
+- device_id: anjali2025-c
+  field: electrode_gap_um
+  value: 6
+  unit: um
+  basis: design_target
+  locator: p.6 Sec. 2.2
+  note: chosen gap for substrate III
+- device_id: anjali2025-c
+  field: electrode_thickness_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.8 Sec. 2.3
+  note: contact pad thickness 2 um
+- device_id: anjali2025-c
+  field: epitaxy_or_stack
+  value: Entire device layer doped (p-n), moderate doping 1e17 cm^-3 as loss trade-off,
+    p++/n++ 1e20 cm^-3 contacts in the slab
+  basis: design_target
+  locator: p.3 Sec. 2.2; p.4
+  note: full-layer doping; 1e17 cm^-3 chosen for loss
+- device_id: anjali2025-c
+  field: modulation_format
+  value: NRZ OOK, PRBS; eyes at 1 Gb/s (BER 0) and 20 Gb/s (BER 1.32e-9, open eye)
+  basis: simulated
+  locator: p.11 Fig. 16
+  note: eye diagrams at 1 Gb/s and 20 Gb/s
+- device_id: anjali2025-c
+  field: max_baud_gbd
+  value: 20
+  unit: GBd
+  basis: derived
+  locator: p.11 Fig. 16(b)
+  note: NRZ at 20 Gb/s
+- device_id: anjali2025-c
+  field: max_line_rate_gbps
+  value: 20
+  unit: Gb/s
+  basis: simulated
+  locator: p.11 Fig. 16(b)
+  note: highest rate shown; open eye, BER 1.32e-9
+- device_id: anjali2025-c
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.3 Fig. 2(a),(b)
+  note: 2 um BOX layer label in both cross-sections
+- device_id: anjali2025-c
+  field: substrate
+  value: Silicon
+  basis: design_target
+  locator: p.3 Fig. 2(a),(b)
+  note: Silicon label under the BOX layer
+derived: []

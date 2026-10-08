@@ -1,0 +1,562 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 2557,
+  "items": [
+   {
+    "DOI": "10.1126/science.adx3741",
+    "title": [
+     "Engineering high Pockels coefficients in thin-film strontium titanate for cryogenic quantum electro-optic applications"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-7767-6039",
+      "authenticated-orcid": true,
+      "given": "Anja",
+      "family": "Ulrich",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8687-8302",
+      "authenticated-orcid": true,
+      "given": "Kamal",
+      "family": "Brahim",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Electrical Engineering (ESAT), KU Leuven, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5380-7348",
+      "authenticated-orcid": true,
+      "given": "Andries",
+      "family": "Boelen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Materials Engineering (MTM), KU Leuven, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0009-0005-5853-9548",
+      "authenticated-orcid": true,
+      "given": "Michiel",
+      "family": "Debaets",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7971-8781",
+      "authenticated-orcid": true,
+      "given": "Ahmed",
+      "family": "Khalil",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Physics and Astronomy, KU Leuven, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Conglin",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Physics and Astronomy, KU Leuven, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yishu",
+      "family": "Huang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sandeep Seema",
+      "family": "Saseendran",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marina",
+      "family": "Baryshnikova",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1019-3497",
+      "authenticated-orcid": true,
+      "given": "Paola",
+      "family": "Favia",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5921-6928",
+      "authenticated-orcid": true,
+      "given": "Thomas",
+      "family": "Nuytten",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-9923-0903",
+      "authenticated-orcid": true,
+      "given": "Stefanie",
+      "family": "Sergeant",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-4286-585X",
+      "authenticated-orcid": true,
+      "given": "Kasper",
+      "family": "Van Gasse",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Bart",
+      "family": "Kuyken",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Information Technology (INTEC), Photonics Research Group, Ghent University, Ghent, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1314-9715",
+      "authenticated-orcid": true,
+      "given": "Kristiaan",
+      "family": "De Greve",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Electrical Engineering (ESAT), KU Leuven, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-3084-2543",
+      "authenticated-orcid": true,
+      "given": "Clement",
+      "family": "Merckling",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       },
+       {
+        "name": "Department of Materials Engineering (MTM), KU Leuven, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8947-5293",
+      "authenticated-orcid": true,
+      "given": "Christian",
+      "family": "Haffner",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Imec, Leuven, Belgium."
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       10,
+       23
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1140/epjd/s10053-022-00462-y",
+    "title": [
+     "Evaluating the impact of substrate deposition on optical properties of perovskite barium strontium titanate (Ba0.5Sr0.5TiO3) thin films prepared by pulsed laser deposition technique"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-0807-5109",
+      "authenticated-orcid": false,
+      "given": "Hamed A.",
+      "family": "Gatea",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sarah M.",
+      "family": "Khalil",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/s0040-6090(01)01110-5",
+    "title": [
+     "Organic variable capacitor as direct application of piezoelectric effect"
+    ],
+    "author": [
+     {
+      "given": "Khalil",
+      "family": "El Hami",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hirofumi",
+      "family": "Yamada",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Kazumi",
+      "family": "Matsushige",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2001,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3390/s20800347",
+    "title": [
+     "Gamma Radiation Dosimetry Using Tellurium Dioxide Thin Film Structures"
+    ],
+    "author": [
+     {
+      "given": "Khalil",
+      "family": "Arshak",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Electronic & Computer Engineering Dept., University of Limerick, Limerick, Ireland"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Olga",
+      "family": "Korostynska",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Electronic & Computer Engineering Dept., University of Limerick, Limerick, Ireland"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2002,
+       8,
+       23
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/ted.2013.2259240",
+    "title": [
+     "Wafer-Level Integration of High-Quality Bulk Piezoelectric Ceramics on Silicon"
+    ],
+    "author": [
+     {
+      "given": "Ethem Erkan",
+      "family": "Aktakka",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Rebecca L.",
+      "family": "Peterson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Khalil",
+      "family": "Najafi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2013,
+       6
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -150,36 +150,43 @@ test('same-sign arm fields cancel in the phase difference (common-mode) and V_pi
 });
 
 // --- tensor frame rotation by 90 degrees swaps the r33 / r13 roles -------------------------------------------------
-test('rotation_deg = 90 (as implemented: crystal rotated CCW about the propagation axis) swaps r33/r13 and TE/TM roles (x-cut, y-prop)', () => {
+test('rotation_deg = 90 (CCW rotation of the lab frame about the propagation axis) swaps r33/r13 and TE/TM roles (x-cut, y-prop)', () => {
   // rotation 0 : lab x = crystal z, lab y = crystal x.  Rows of A: lab axes in crystal coordinates.
-  // rotation 90: lab x' = -crystal x (n_o), lab y' = +crystal z (n_e)   [row0' = c*lx - s*n = -n, row1' = s*lx + c*n = lx = z].
-  // Same physical field along crystal z in both cases: lab x (rotation 0) and lab y' (rotation 90).
+  // rotation 90 (lab frame CCW, fixed sense since 2026-10-07): row0' = c*lx + s*n = n = +crystal x (n_o),
+  //   row1' = -s*lx + c*n = -lx = -crystal z (n_e). A lab field +E along y' is a crystal field -E along z.
+  // Hand derivation: TE (lab x' = crystal x): d(1/n^2)_xx = r13 E_z = -r13 E, so delta_eps_xx = +n_o^4 r13 E.
+  //   TM (lab y' = -crystal z): d(1/n^2)_y'y' = d_zz = r33 E_z = -r33 E, so delta_eps_yy = +n_e^4 r33 E.
   const r0 = solved({ medium: crystalMat('x', 'y', 0) }, 'TE');
   const a0 = arm(r0.model, r0.mode, uniformTriField(r0.nT, [EFIELD, 0, 0]));
   assert.ok(relErr(a0.dnEffPerV, (-(N_E ** 4) * R.r33 * PM * EFIELD) / (2 * r0.mode.neff[0])) < 1e-12, 'rot 0, TE: r33 with n_e');
   const r90te = solved({ medium: crystalMat('x', 'y', 90) }, 'TE');
   const a90te = arm(r90te.model, r90te.mode, uniformTriField(r90te.nT, [0, EFIELD, 0]));
-  assert.ok(relErr(a90te.dnEffPerV, (-(N_O ** 4) * R.r13 * PM * EFIELD) / (2 * r90te.mode.neff[0])) < 1e-12, 'rot 90, TE: r13 with n_o');
+  assert.ok(relErr(a90te.dnEffPerV, ((N_O ** 4) * R.r13 * PM * EFIELD) / (2 * r90te.mode.neff[0])) < 1e-12, 'rot 90, TE: r13 with n_o, field along -crystal z');
   const r90tm = solved({ medium: crystalMat('x', 'y', 90) }, 'TM');
   const a90tm = arm(r90tm.model, r90tm.mode, uniformTriField(r90tm.nT, [0, EFIELD, 0]));
-  assert.ok(relErr(a90tm.dnEffPerV, (r90tm.mode.neff[0] * -(N_E ** 4) * R.r33 * PM * EFIELD) / (2 * N_E ** 2)) < 1e-12, 'rot 90, TM: r33 with n_e');
-  // and the lateral field in the rotated frame (crystal -x) produces no first-order TE index change
+  assert.ok(relErr(a90tm.dnEffPerV, (r90tm.mode.neff[0] * (N_E ** 4) * R.r33 * PM * EFIELD) / (2 * N_E ** 2)) < 1e-12, 'rot 90, TM: r33 with n_e, field along -crystal z');
+  // and the lateral field in the rotated frame (crystal +x) produces no first-order TE index change
   const none = arm(r90te.model, r90te.mode, uniformTriField(r90te.nT, [EFIELD, 0, 0]));
   assert.ok(Math.abs(none.dnEffPerV) < 1e-18);
+  // -90 deg is the opposite sense: lab y' = +crystal z, so the TE sign is the reverse of +90 deg.
+  const rm90 = solved({ medium: crystalMat('x', 'y', -90) }, 'TE');
+  const am90 = arm(rm90.model, rm90.mode, uniformTriField(rm90.nT, [0, EFIELD, 0]));
+  assert.ok(relErr(am90.dnEffPerV, -a90te.dnEffPerV) < 1e-12, 'rot -90 reverses the sign of rot +90');
 });
 
 // --- independent representative anisotropic calculation ---------------------------------------------------------------
 test('z-cut rotated 30 deg: Pockels delta_eps_xx equals an independent exact-inverse crystal-frame calculation', () => {
   // INDEPENDENT DERIVATION (no matrix helper from materials.mjs). Crystal frame (1,2,3 = x,y,z), diagonal eps_c = diag(n_o^2, n_o^2, n_e^2).
-  // z-cut, propagation along crystal y: lab x = -x_c, lab y = z_c, lab z = y_c. Rotating the lab frame by theta about lab z (CCW):
-  //   lab x' axis in crystal coordinates = c*(-1,0,0) - s*(0,0,1) = (-c, 0, -s);  lab y' axis = s*(-1,0,0) + c*(0,0,1) = (-s, 0, c).
-  // Lab field (Ex', Ey', 0) in crystal components: E_cx = -c Ex' - s Ey', E_cz = -s Ex' + c Ey'.
+  // z-cut, propagation along crystal y: lab x = -x_c, lab y = z_c, lab z = y_c. Rotating the lab frame by theta about lab z (CCW,
+  // x' = c x + s y, y' = -s x + c y; sense fixed 2026-10-07):
+  //   lab x' axis in crystal coordinates = c*(-1,0,0) + s*(0,0,1) = (-c, 0, s);  lab y' axis = -s*(-1,0,0) + c*(0,0,1) = (s, 0, c).
+  // Lab field (Ex', Ey', 0) in crystal components: E_cx = -c Ex' + s Ey', E_cz = s Ex' + c Ey'.
   // Pockels (3m): d(1/eps)_xx = r13 E_z, d(1/eps)_yy = r13 E_z, d(1/eps)_zz = r33 E_z, d(1/eps)_xz = r51 E_x (and r22 terms
   // d_xx = -r22 E_y etc. vanish for E_cy = 0).  Perturbed permittivity is the EXACT inverse of (diag(1/eps_c) + d(1/eps)).
-  // delta_eps_xx' = e_x'^T [ (diag + d)^-1 - diag^-1 ] e_x' with e_x' = (-c, 0, -s).
+  // delta_eps_xx' = e_x'^T [ (diag + d)^-1 - diag^-1 ] e_x' with e_x' = (-c, 0, s).
   const theta = (30 * Math.PI) / 180, c = Math.cos(theta), s = Math.sin(theta);
   const Ex = 0.8 * EFIELD, Ey = 0.6 * EFIELD;
-  const Ecx = -c * Ex - s * Ey, Ecz = -s * Ex + c * Ey;
+  const Ecx = -c * Ex + s * Ey, Ecz = s * Ex + c * Ey;
   const eo2 = N_O ** 2, ee2 = N_E ** 2;
   const d = (v) => v * PM;
   const inv0 = [1 / eo2, 0, 0, 0, 1 / eo2, 0, 0, 0, 1 / ee2];
@@ -191,7 +198,7 @@ test('z-cut rotated 30 deg: Pockels delta_eps_xx equals an independent exact-inv
     return [e * i - f * h, cc * h - b * i, b * f - cc * e, f * g - dd * i, a * i - cc * g, cc * dd - a * f, dd * h - e * g, b * g - a * h, a * e - b * dd].map((v) => v / det);
   };
   const epsP = inv3(sum), eps0 = inv3(inv0);
-  const ex = [-c, 0, -s];
+  const ex = [-c, 0, s];
   const quad = (m) => ex.reduce((acc, vi, i) => acc + ex.reduce((a2, vj, j) => a2 + vi * m[3 * i + j] * vj, 0), 0);
   const expectedDeltaEpsXX = quad(epsP) - quad(eps0);
   // engine: the scalar overlap of a uniform field with the same material on a TE mode is delta_eps_xx / (2 n_eff) (uniform weight).

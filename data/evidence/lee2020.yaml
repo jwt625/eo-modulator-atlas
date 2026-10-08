@@ -32,7 +32,7 @@ entries:
   field: buffer_oxide_um
   value: 4.3
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.12 Sec. 2.1
   note: 4.3 um thermal SiO2
 - device_id: lee2020-a
@@ -109,7 +109,7 @@ entries:
   field: buffer_oxide_um
   value: 4.3
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.12 Sec. 2.1
   note: 4.3 um thermal SiO2
 - device_id: lee2020-b

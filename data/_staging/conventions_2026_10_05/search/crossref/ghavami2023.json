@@ -1,0 +1,104 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 1,
+  "items": [
+   {
+    "DOI": "10.1364/oe.524557",
+    "title": [
+     "Bandwidth-voltage trade-off paradigm in low-loss LNOI electro-optic modulators, using equalizer configuration"
+    ],
+    "author": [
+     {
+      "given": "Fatemeh",
+      "family": "Ghavami",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03mwgfy56",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-3769-0215",
+      "authenticated-orcid": true,
+      "given": "Sara",
+      "family": "Darbari",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03mwgfy56",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8954-6418",
+      "authenticated-orcid": true,
+      "given": "Mohammad",
+      "family": "Kazem Moravvej-Farshi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03mwgfy56",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       8,
+       1
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

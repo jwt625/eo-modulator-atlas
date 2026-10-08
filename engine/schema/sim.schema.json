@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://eo-atlas.local/schema/sim.schema.json",
   "title": "EO atlas simulation inputs v1",
-  "description": "Cross-section input structure. Runtime validation additionally checks positive material tensors, geometry coverage, references, voltage normalization and numerical limits. Future chain settings are retained but are not implemented by the cross-section runner.",
+  "description": "Cross-section input structure. Runtime validation additionally checks positive material tensors, geometry coverage, references, voltage normalization, numerical limits, model/field consistency of the line block and stage completeness (EO arm windows, RF loss declarations) when a stage is requested. loaded_line and eo_response are recognised but not implemented.",
   "type": "object",
   "required": [
     "schema",
@@ -74,7 +74,11 @@
       "type": "object",
       "properties": {
         "metal_in_window": {
-          "enum": ["reject", "absent", "pec_scalar"],
+          "enum": [
+            "reject",
+            "absent",
+            "pec_scalar"
+          ],
           "default": "reject",
           "description": "Explicit scalar optical metal policy. Absent and PEC are sensitivity limits, not real-metal loss models."
         },
@@ -107,6 +111,91 @@
             "null"
           ],
           "exclusiveMinimum": 0
+        },
+        "eo_axis": {
+          "enum": [
+            "auto"
+          ]
+        },
+        "eo": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "EO overlap inputs (required by the eo_overlap stage). Arm windows are explicit; terminal_drive is a label (V_t is the full terminal difference) and must agree with line.differential.",
+          "required": [
+            "arm_drive",
+            "terminal_drive",
+            "arm_windows"
+          ],
+          "properties": {
+            "arm_drive": {
+              "enum": [
+                "single_arm",
+                "two_arm_field_resolved"
+              ]
+            },
+            "terminal_drive": {
+              "enum": [
+                "single_ended",
+                "differential"
+              ]
+            },
+            "arm_windows": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "A"
+              ],
+              "properties": {
+                "A": {
+                  "$ref": "#/$defs/window"
+                },
+                "B": {
+                  "$ref": "#/$defs/window"
+                }
+              }
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "arm_drive": {
+                    "const": "two_arm_field_resolved"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "arm_windows": {
+                    "required": [
+                      "A",
+                      "B"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "arm_drive": {
+                    "const": "single_arm"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "arm_windows": {
+                    "not": {
+                      "required": [
+                        "B"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
         }
       },
       "required": [
@@ -135,7 +224,8 @@
             }
           }
         }
-      ]
+      ],
+      "additionalProperties": false
     },
     "targets": {
       "type": "array",
@@ -257,6 +347,137 @@
               }
             }
           ]
+        },
+        "length_mm": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "electrode length per arm (mm); vpi_dc_v = VpiL / length"
+        },
+        "source_ohm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "load_ohm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "conductor_loss_model": {
+          "enum": [
+            "none",
+            "rprime_reference",
+            "skin_effect_geometry_factor",
+            "skin_effect_perimeter",
+            "skin_effect_wheeler",
+            "from_paper_alpha"
+          ],
+          "description": "Explicit conductor loss model; skin_effect_wheeler uses recessed-geometry solves (DevLog-012 item 4)."
+        },
+        "dielectric_loss_model": {
+          "enum": [
+            "none",
+            "tan_delta_regions"
+          ],
+          "description": "Required by rf_line unless from_paper_alpha. tan_delta_regions needs tan_delta_rf (or a dielectric sigma_Sm) on every region material."
+        },
+        "include_internal_inductance": {
+          "type": "boolean"
+        },
+        "r_pul_ref_ohm_per_m": {
+          "type": "number",
+          "minimum": 0
+        },
+        "r_pul_ref_ghz": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "conductor_k_per_m": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "integral |J_s|^2 dl / I^2 (1/m) for skin_effect_geometry_factor"
+        },
+        "perimeters_cover_carrying_surfaces": {
+          "type": "boolean"
+        },
+        "rf_loss_table": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "f_ghz",
+                  "alpha_db_per_cm"
+                ],
+                "properties": {
+                  "f_ghz": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "alpha_db_per_cm": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                }
+              }
+            }
+          ],
+          "description": "Paper attenuation input (from_paper_alpha); never an independent prediction; needs a provenance locator."
+        },
+        "rf_loss_law": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "alpha0_db_per_cm_per_sqrt_ghz"
+              ],
+              "properties": {
+                "alpha0_db_per_cm_per_sqrt_ghz": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "sweep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "f_start_ghz",
+        "f_stop_ghz",
+        "n_points"
+      ],
+      "properties": {
+        "f_start_ghz": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "f_stop_ghz": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "n_points": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4001
         }
       }
     }
@@ -500,6 +721,86 @@
         "sigma_Sm": {
           "type": "number",
           "exclusiveMinimum": 0
+        },
+        "crystal": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "cut",
+            "propagation"
+          ],
+          "properties": {
+            "cut": {
+              "type": "string"
+            },
+            "propagation": {
+              "type": "string"
+            },
+            "rotation_deg": {
+              "type": "number",
+              "description": "CCW rotation of the lab frame about the propagation axis seen from +z: x' = cos t x + sin t y (fixed sense 2026-10-07)"
+            }
+          }
+        },
+        "r_pm_per_v": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "voigt"
+              ],
+              "properties": {
+                "voigt": {
+                  "type": "array",
+                  "minItems": 6,
+                  "maxItems": 6,
+                  "items": {
+                    "type": "array",
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "r13": {
+                  "type": "number"
+                },
+                "r22": {
+                  "type": "number"
+                },
+                "r33": {
+                  "type": "number"
+                },
+                "r51": {
+                  "type": "number"
+                }
+              }
+            }
+          ]
+        },
+        "tan_delta_rf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "RF loss tangent; absent = unknown (never zero)"
+        },
+        "dispersion": {
+          "type": "string",
+          "description": "Library dispersion key (defaults to the material name when the library has it)"
+        },
+        "thickness_um": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "n_complex": {
+          "description": "Reserved; not used by the engine (real-metal optics is not modelled)"
         }
       },
       "if": {
@@ -516,7 +817,8 @@
         "required": [
           "eps_r"
         ]
-      }
+      },
+      "additionalProperties": false
     },
     "target": {
       "type": "object",
@@ -559,7 +861,25 @@
           "exclusiveMinimum": 0
         },
         "source": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "comparable": {
+              "type": "boolean",
+              "description": "false: never evaluated"
+            }
+          }
+        },
+        "vpi_convention": {
+          "enum": [
+            "per_arm_phase_shifter",
+            "mzm_push_pull",
+            "mzm_series_push_pull",
+            "mzm_differential",
+            "mzm_single_arm",
+            "resonance_tuning_derived",
+            "unspecified"
+          ],
+          "description": "Required for a Vpi target to be evaluated; must match the engine drive convention (no silent conversion). mzm_differential = MZM V_pi against the full terminal difference V+ - V- (data/schema/devices.schema.yaml convention (q), 2026-10-07), the engine V_t."
         }
       },
       "anyOf": [
@@ -573,7 +893,8 @@
             "tol_rel"
           ]
         }
-      ]
+      ],
+      "additionalProperties": false
     },
     "mesh": {
       "type": "object",

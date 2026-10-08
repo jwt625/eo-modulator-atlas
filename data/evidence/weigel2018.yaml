@@ -115,11 +115,11 @@ entries:
   note: Aluminum coplanar waveguide electrodes
 - device_id: weigel2018-a
   field: buffer_oxide_um
-  value: 0.05
+  value: 3.0
   unit: um
-  basis: measured
-  locator: p.17, Fig. 1 caption
-  note: Aluminum electrodes on a 50 nm SiO2 layer over the LN film
+  basis: design_target
+  locator: p.3 text
+  note: SOI wafer oxide under the Si waveguides; was 0.05 (top buffer), corrected 2026-10-07
 - device_id: weigel2018-a
   field: substrate
   value: high-resistivity silicon handle (about 6e3 ohm cm measured after HF); SOI with 3 um oxide, Si thinned to 150 nm
@@ -163,6 +163,13 @@ entries:
   basis: measured
   locator: p.4, Sec. text; p.17, Fig. 1d
   note: Coplanar waveguide electrodes, GSG probes for launch and termination
+- device_id: weigel2018-a
+  field: cladding
+  value: SiO2 50 nm between the LN film and the Al electrodes
+  unit: ''
+  basis: design_target
+  locator: p.17 Fig. 1 caption
+  note: buffer re-read 2026-10-07
 derived: []
 context_values:
 - item: z_c_range

@@ -181,3 +181,4 @@ Not done: a code-level DC floor for R'(f); polygon offsetting for a runner-built
 - [x] Analytic tests, including two real E1 section solves.
 - [x] Handoff and interface proposals.
 - [ ] Independent review (Q2); runner/config wiring after the proposals are decided.
+- 2026-10-07 status note: Q2-E2/E3 module audit done (DevLog/audits); runner/config wiring is E3i in DevLog-012 (taken over 2026-10-07, DevLog-022).

@@ -2,7 +2,7 @@
 
 - Agent: Claude Code session (coordinator); subagents read-only except their own staging outputs
 - Task: apply the user's 2026-10-05 decisions on data conventions (DevLog-020)
-- Status: claimed 2026-10-05; ready_for_review 2026-10-05 (all decisions applied, validator 0 errors; final audit pending)
+- Status: complete (accepted by the user 2026-10-07); was ready_for_review 2026-10-05
 - Plan and progress: `DevLog/DevLog-020-data-convention-decisions.md`
 
 ## Owned write paths

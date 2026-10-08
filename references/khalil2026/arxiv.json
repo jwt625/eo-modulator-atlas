@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2602.17152",
+ "title": "Cryogenic piezoelectric effects in thin film strontium titanate devices",
+ "authors": "Ahmed Khalil, Anja Ulrich, Kamal Brahim, Andries Boelen, Danut-Valentin Dinu, Halil Cuma, Ioannis Petrides, Sandeep Seema Saseendran, Xavier Rottenberg, Pol Van Dorpe, Kristiaan De Greve, Oskar Painter, Clement Merckling, Fr\\'ed\\'eric Peyskens, Christian Haffner",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Thu, 19 Feb 2026 07:55:19 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Wed, 18 Mar 2026 23:58:29 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:33:59Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2602.17152\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2602.17152</identifier>\n        <datestamp>2026-03-20</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2602.17152</id>\n        <submitter>Ahmed Khalil</submitter>\n            <version version=\"v1\">\n                <date>Thu, 19 Feb 2026 07:55:19 GMT</date>\n                <size>14433kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Wed, 18 Mar 2026 23:58:29 GMT</date>\n                <size>14447kb</size>\n            </version>\n        <title>Cryogenic piezoelectric effects in thin film strontium titanate devices</title>\n        <authors>Ahmed Khalil, Anja Ulrich, Kamal Brahim, Andries Boelen, Danut-Valentin Dinu, Halil Cuma, Ioannis Petrides, Sandeep Seema Saseendran, Xavier Rottenberg, Pol Van Dorpe, Kristiaan De Greve, Oskar Painter, Clement Merckling, Fr\\&#39;ed\\&#39;eric Peyskens, Christian Haffner</authors>\n        <categories>physics.optics</categories>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>Next generation quantum technologies will need to rely on efficient transduction between electrical, optical, and mechanical quantum degrees of freedom to generate large-scale entanglement over large distances. The performance of such transducers is fundamentally limited by the cryogenic properties of the underlying materials. Here, we demonstrate that engineering strain in ferroelectric thin-film strontium titanate ($\\mathrm{SrTiO_3}$) not only results in an exceptionally large Pockels coefficient, but also in a robust linear piezoelectric response at cryogenic temperatures, surpassing previous thin-film benchmarks. We measure piezoelectric tensor elements of $d_{15} = 151.8 \\pm 1.5$ pm/V and $d_{33} = 54.8 \\pm 4$ pm/V, and an effective photoelastic coefficient of $p_{\\mathrm{eff}}$ = 0.56 at 5~K. Utilizing these enhanced properties, we demonstrate the first $\\mathrm{SrTiO_3}$-on-oxide acousto-optic modulator with a voltage-length product ($V_{\\pi}L$) of $0.874 \\pm 0.084$ V cm, outperforming state-of-the-art unreleased modulators that typically feature a $V_{\\pi}L$ of a few V cm. Our results establish thin-film $\\mathrm{SrTiO_3}$ as a promising material system for integrated quantum photonics operating at cryogenic temperatures.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

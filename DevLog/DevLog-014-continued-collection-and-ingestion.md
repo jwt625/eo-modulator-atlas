@@ -29,6 +29,7 @@ the section below. Claim: `coordination/claims/claude-ingest-2026-10-02.md`.
 - [x] Canonical merge of all staged batches with `audit_status` (user request 2026-10-03)
 - [ ] Coordinator decisions listed below
 - [ ] Second audit round on corrected batches (sampled) before any D2 merge
+- 2026-10-07 status note: raw materials retrieved in part (DevLog-021; open list in RETRIEVAL_REQUESTS*.md); coordinator decisions answered (DevLog-020); second audit round done (DevLog-015).
 
 ## Progress log (timestamps are session-local, 2026-10-02 to 2026-10-03)
 

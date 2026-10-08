@@ -57,9 +57,9 @@ entries:
   field: buffer_oxide_um
   value: 4
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2 Sec. II
-  note: thermal oxide on the 100 mm Si wafer before Damascene preform
+  note: thermal oxide on the 100 mm Si wafer before Damascene preform; thermal oxide under Si3N4; LTOI donor BOX removed
 - device_id: cai2025-a
   field: substrate
   value: silicon (525 um)
@@ -255,9 +255,9 @@ entries:
   field: buffer_oxide_um
   value: 4
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2 Sec. II
-  note: thermal oxide on the 100 mm Si wafer before Damascene preform
+  note: thermal oxide on the 100 mm Si wafer before Damascene preform; thermal oxide under Si3N4; LTOI donor BOX removed
 - device_id: cai2025-b
   field: substrate
   value: silicon (525 um)

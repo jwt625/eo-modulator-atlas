@@ -2,7 +2,7 @@
 
 - Agent: Claude Code session (coordinator); Sonnet subagents extract/correct, Opus subagents audit/review
 - Task: per-author affiliations, institution coordinates, clustered map (user request 2026-10-04)
-- Status: ready_for_review (2026-10-04); results in DevLog-018
+- Status: complete (accepted by the user 2026-10-07); was ready_for_review 2026-10-04
 - Plan and progress: `DevLog/DevLog-018-author-affiliation-geolocation.md`
 
 ## Owned write paths

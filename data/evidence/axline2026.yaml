@@ -1,0 +1,507 @@
+paper_id: axline2026
+verified_on: '2026-10-07'
+source_files:
+- references/axline2026/text.md
+- references/axline2026/source.pdf (p.16 Table B.1 rendered for reading)
+- references/axline2026/figures/page_04.png
+entries:
+- device_id: axline2026-d1
+  field: wavelength_nm
+  value: 1560.7
+  unit: nm
+  basis: design_target
+  locator: p.16, Table B.1
+  note: operating optical wavelength of the transduction measurement
+- device_id: axline2026-d1
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: X-cut lithium tantalate film
+- device_id: axline2026-d1
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: rib about 200 nm deep
+- device_id: axline2026-d1
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.13, A.4
+  note: about 200 nm slab remains within about 2 um of the rib
+- device_id: axline2026-d1
+  field: electrode_metal
+  value: NbN (superconducting); Nb air bridges
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d1
+  field: electrode_thickness_um
+  value: 0.05
+  unit: um
+  basis: design_target
+  locator: p.13, A.4
+  note: NbN film
+- device_id: axline2026-d1
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: SiO2 under the LT film
+- device_id: axline2026-d1
+  field: substrate
+  value: Si (525 um, high resistivity)
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d1
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d1
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d2
+  field: wavelength_nm
+  value: 1562.74
+  unit: nm
+  basis: design_target
+  locator: p.16, Table B.1
+  note: operating optical wavelength of the transduction measurement
+- device_id: axline2026-d2
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: X-cut lithium tantalate film
+- device_id: axline2026-d2
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: rib about 200 nm deep
+- device_id: axline2026-d2
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.13, A.4
+  note: about 200 nm slab remains within about 2 um of the rib
+- device_id: axline2026-d2
+  field: electrode_metal
+  value: NbN (superconducting); Nb air bridges
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d2
+  field: electrode_thickness_um
+  value: 0.05
+  unit: um
+  basis: design_target
+  locator: p.13, A.4
+  note: NbN film
+- device_id: axline2026-d2
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: SiO2 under the LT film
+- device_id: axline2026-d2
+  field: substrate
+  value: Si (525 um, high resistivity)
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d2
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d2
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d3
+  field: wavelength_nm
+  value: 1562.0
+  unit: nm
+  basis: design_target
+  locator: p.16, Table B.1
+  note: operating optical wavelength of the transduction measurement
+- device_id: axline2026-d3
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: X-cut lithium tantalate film
+- device_id: axline2026-d3
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: rib about 200 nm deep
+- device_id: axline2026-d3
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.13, A.4
+  note: about 200 nm slab remains within about 2 um of the rib
+- device_id: axline2026-d3
+  field: electrode_metal
+  value: NbN (superconducting); Nb air bridges
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d3
+  field: electrode_thickness_um
+  value: 0.05
+  unit: um
+  basis: design_target
+  locator: p.13, A.4
+  note: NbN film
+- device_id: axline2026-d3
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: SiO2 under the LT film
+- device_id: axline2026-d3
+  field: substrate
+  value: Si (525 um, high resistivity)
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d3
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d3
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d4
+  field: wavelength_nm
+  value: 1560.77
+  unit: nm
+  basis: design_target
+  locator: p.16, Table B.1
+  note: operating optical wavelength of the transduction measurement
+- device_id: axline2026-d4
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: X-cut lithium tantalate film
+- device_id: axline2026-d4
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: rib about 200 nm deep
+- device_id: axline2026-d4
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.13, A.4
+  note: about 200 nm slab remains within about 2 um of the rib
+- device_id: axline2026-d4
+  field: electrode_metal
+  value: NbN (superconducting); Nb air bridges
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d4
+  field: electrode_thickness_um
+  value: 0.05
+  unit: um
+  basis: design_target
+  locator: p.13, A.4
+  note: NbN film
+- device_id: axline2026-d4
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: SiO2 under the LT film
+- device_id: axline2026-d4
+  field: substrate
+  value: Si (525 um, high resistivity)
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d4
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d4
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d5
+  field: wavelength_nm
+  value: 1560.92
+  unit: nm
+  basis: design_target
+  locator: p.16, Table B.1
+  note: operating optical wavelength of the transduction measurement
+- device_id: axline2026-d5
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: X-cut lithium tantalate film
+- device_id: axline2026-d5
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: rib about 200 nm deep
+- device_id: axline2026-d5
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.13, A.4
+  note: about 200 nm slab remains within about 2 um of the rib
+- device_id: axline2026-d5
+  field: electrode_metal
+  value: NbN (superconducting); Nb air bridges
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d5
+  field: electrode_thickness_um
+  value: 0.05
+  unit: um
+  basis: design_target
+  locator: p.13, A.4
+  note: NbN film
+- device_id: axline2026-d5
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: SiO2 under the LT film
+- device_id: axline2026-d5
+  field: substrate
+  value: Si (525 um, high resistivity)
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d5
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d5
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d6
+  field: wavelength_nm
+  value: 1560.96
+  unit: nm
+  basis: design_target
+  locator: p.16, Table B.1
+  note: operating optical wavelength of the transduction measurement
+- device_id: axline2026-d6
+  field: eo_film_thickness_nm
+  value: 400
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: X-cut lithium tantalate film
+- device_id: axline2026-d6
+  field: etch_depth_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: rib about 200 nm deep
+- device_id: axline2026-d6
+  field: slab_thickness_nm
+  value: 200
+  unit: nm
+  basis: design_target
+  locator: p.13, A.4
+  note: about 200 nm slab remains within about 2 um of the rib
+- device_id: axline2026-d6
+  field: electrode_metal
+  value: NbN (superconducting); Nb air bridges
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d6
+  field: electrode_thickness_um
+  value: 0.05
+  unit: um
+  basis: design_target
+  locator: p.13, A.4
+  note: NbN film
+- device_id: axline2026-d6
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.5; p.13 A.4
+  note: SiO2 under the LT film
+- device_id: axline2026-d6
+  field: substrate
+  value: Si (525 um, high resistivity)
+  unit: ''
+  basis: design_target
+  locator: p.5; p.13 A.4
+- device_id: axline2026-d6
+  field: cladding
+  value: air (no cladding)
+  unit: ''
+  basis: design_target
+  locator: p.5
+- device_id: axline2026-d6
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.5
+derived:
+- device_id: axline2026-d1
+  field: tuning_nm_per_v
+  value: 0.00256
+  formula: lambda^2/c * tunability_cold; lambda = 1560.7 nm, tunability_cold = 0.315 GHz/V (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d1
+  field: fsr_nm
+  value: 0.504
+  formula: lambda^2/c * FSR; lambda = 1560.7 nm, FSR = 62 GHz (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d2
+  field: tuning_nm_per_v
+  value: 0.00146
+  formula: lambda^2/c * tunability_cold; lambda = 1562.74 nm, tunability_cold = 0.179 GHz/V (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d2
+  field: fsr_nm
+  value: 0.562
+  formula: lambda^2/c * FSR; lambda = 1562.74 nm, FSR = 69 GHz (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d3
+  field: tuning_nm_per_v
+  value: 0.00245
+  formula: lambda^2/c * tunability_cold; lambda = 1562.0 nm, tunability_cold = 0.301 GHz/V (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d3
+  field: fsr_nm
+  value: 0.594
+  formula: lambda^2/c * FSR; lambda = 1562.0 nm, FSR = 73 GHz (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d4
+  field: tuning_nm_per_v
+  value: 0.00203
+  formula: lambda^2/c * tunability_cold; lambda = 1560.77 nm, tunability_cold = 0.25 GHz/V (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d4
+  field: fsr_nm
+  value: 0.561
+  formula: lambda^2/c * FSR; lambda = 1560.77 nm, FSR = 69 GHz (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d5
+  field: tuning_nm_per_v
+  value: 0.00296
+  formula: lambda^2/c * tunability_cold; lambda = 1560.92 nm, tunability_cold = 0.364 GHz/V (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d5
+  field: fsr_nm
+  value: 0.593
+  formula: lambda^2/c * FSR; lambda = 1560.92 nm, FSR = 73 GHz (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d6
+  field: tuning_nm_per_v
+  value: 0.00274
+  formula: lambda^2/c * tunability_cold; lambda = 1560.96 nm, tunability_cold = 0.337 GHz/V (Table B.1)
+  inputs:
+  - wavelength_nm
+- device_id: axline2026-d6
+  field: fsr_nm
+  value: 0.593
+  formula: lambda^2/c * FSR; lambda = 1560.96 nm, FSR = 73 GHz (Table B.1)
+  inputs:
+  - wavelength_nm
+context_values:
+- item: transduction_efficiency_on_chip_max
+  locator: p.2
+  value:
+    value_percent: 0.04
+    g0_over_2pi_khz_max: 1.1
+  note: approximate; Devices 1 and 4 for g0
+- item: process_bandwidth_mhz
+  locator: p.6, Fig. 3b
+  value:
+    value: 15
+    err: 1
+    device: 1
+  note: Lorentzian 3 dB bandwidth, both directions
+- item: optical_intrinsic_loss_post_process_median_mhz
+  locator: p.5; p.13 A.3
+  value:
+    median: 229
+    log_sigma: 0.34
+    n_resonances: 941
+  note: primary distribution (91 %); 11 chips from 2 wafers, 1550-1564 nm
+- item: equivalent_propagation_loss_best_db_per_cm
+  locator: p.2
+  value: 0.25
+  note: as low as; device not attributed
+- item: added_noise
+  locator: p.2; p.6-7
+  value:
+    photons_below: 1
+    pulse_us: 100
+  note: at the highest on-chip efficiencies

@@ -88,7 +88,7 @@ entries:
   field: buffer_oxide_um
   value: 4
   unit: um
-  basis: measured
+  basis: extracted_from_figure
   locator: p.3 Fig. 2(b)
   note: SiO2 of the SiN chip; process schematic label
 - device_id: valdez2023a-a
@@ -209,7 +209,7 @@ entries:
   field: buffer_oxide_um
   value: 4
   unit: um
-  basis: measured
+  basis: extracted_from_figure
   locator: p.3 Fig. 2(b)
   note: SiO2 of the SiN chip; process schematic label
 - device_id: valdez2023a-b

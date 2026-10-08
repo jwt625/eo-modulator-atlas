@@ -113,13 +113,6 @@ entries:
   basis: measured
   locator: p.15 Sec. 4.2
 - device_id: valdez2023-cw1
-  field: buffer_oxide_um
-  value: 0
-  unit: um
-  basis: measured
-  locator: p.15 Sec. 4.2
-  note: no oxide between Au electrodes and LN
-- device_id: valdez2023-cw1
   field: substrate
   value: HR Si; BOX thickness not stated; CMP SiO2 about 40 nm between Si waveguide and LN
   unit: ''
@@ -127,10 +120,11 @@ entries:
   locator: p.3 Fig. 1(b); p.2
 - device_id: valdez2023-cw1
   field: cladding
-  value: none above LN (Au electrodes patterned directly on LN)
+  value: PECVD oxide cladding with an edge on the chip (p.3, Fig. 1(c)); Au electrodes patterned directly on the LN, no oxide between electrode and LN (p.15)
   unit: ''
-  basis: measured
-  locator: p.3 Fig. 1(b); p.15
+  basis: design_target
+  locator: p.3 Fig. 1(c); p.15
+  note: replaces "none above LN" (2026-10-07 BOX verifier follow-up)
 - device_id: valdez2023-cw1
   field: epitaxy_or_stack
   value: HR Si / SiO2 (BOX, thickness not stated) / 150 nm Si strip (300 nm wide in phase shifter) / CMP SiO2 about 40 nm / about 580 nm LN (unetched) / 0.75 um Au electrodes directly on LN
@@ -254,13 +248,6 @@ entries:
   basis: measured
   locator: p.15 Sec. 4.2
 - device_id: valdez2023-cw2
-  field: buffer_oxide_um
-  value: 0
-  unit: um
-  basis: measured
-  locator: p.15 Sec. 4.2
-  note: no oxide between Au electrodes and LN
-- device_id: valdez2023-cw2
   field: substrate
   value: HR Si; BOX thickness not stated; CMP SiO2 about 40 nm between Si waveguide and LN
   unit: ''
@@ -268,10 +255,11 @@ entries:
   locator: p.3 Fig. 1(b); p.2
 - device_id: valdez2023-cw2
   field: cladding
-  value: none above LN (Au electrodes patterned directly on LN)
+  value: PECVD oxide cladding with an edge on the chip (p.3, Fig. 1(c)); Au electrodes patterned directly on the LN, no oxide between electrode and LN (p.15)
   unit: ''
-  basis: measured
-  locator: p.3 Fig. 1(b); p.15
+  basis: design_target
+  locator: p.3 Fig. 1(c); p.15
+  note: replaces "none above LN" (2026-10-07 BOX verifier follow-up)
 - device_id: valdez2023-cw2
   field: epitaxy_or_stack
   value: HR Si / SiO2 (BOX, thickness not stated) / 150 nm Si strip (300 nm wide in phase shifter) / CMP SiO2 about 40 nm / about 580 nm LN (unetched) / 0.75 um Au electrodes directly on LN
@@ -395,13 +383,6 @@ entries:
   basis: measured
   locator: p.15 Sec. 4.2
 - device_id: valdez2023-cn1
-  field: buffer_oxide_um
-  value: 0
-  unit: um
-  basis: measured
-  locator: p.15 Sec. 4.2
-  note: no oxide between Au electrodes and LN
-- device_id: valdez2023-cn1
   field: substrate
   value: HR Si; BOX thickness not stated; CMP SiO2 about 40 nm between Si waveguide and LN
   unit: ''
@@ -409,10 +390,11 @@ entries:
   locator: p.3 Fig. 1(b); p.2
 - device_id: valdez2023-cn1
   field: cladding
-  value: none above LN (Au electrodes patterned directly on LN)
+  value: PECVD oxide cladding with an edge on the chip (p.3, Fig. 1(c)); Au electrodes patterned directly on the LN, no oxide between electrode and LN (p.15)
   unit: ''
-  basis: measured
-  locator: p.3 Fig. 1(b); p.15
+  basis: design_target
+  locator: p.3 Fig. 1(c); p.15
+  note: replaces "none above LN" (2026-10-07 BOX verifier follow-up)
 - device_id: valdez2023-cn1
   field: epitaxy_or_stack
   value: HR Si / SiO2 (BOX, thickness not stated) / 150 nm Si strip (275 nm wide in phase shifter) / CMP SiO2 about 40 nm / about 580 nm LN (unetched) / 0.75 um Au electrodes directly on LN
@@ -550,13 +532,6 @@ entries:
   basis: measured
   locator: p.15 Sec. 4.2
 - device_id: valdez2023-cn2
-  field: buffer_oxide_um
-  value: 0
-  unit: um
-  basis: measured
-  locator: p.15 Sec. 4.2
-  note: no oxide between Au electrodes and LN
-- device_id: valdez2023-cn2
   field: substrate
   value: HR Si; BOX thickness not stated; CMP SiO2 about 40 nm between Si waveguide and LN
   unit: ''
@@ -564,10 +539,11 @@ entries:
   locator: p.3 Fig. 1(b); p.2
 - device_id: valdez2023-cn2
   field: cladding
-  value: none above LN (Au electrodes patterned directly on LN)
+  value: PECVD oxide cladding with an edge on the chip (p.3, Fig. 1(c)); Au electrodes patterned directly on the LN, no oxide between electrode and LN (p.15)
   unit: ''
-  basis: measured
-  locator: p.3 Fig. 1(b); p.15
+  basis: design_target
+  locator: p.3 Fig. 1(c); p.15
+  note: replaces "none above LN" (2026-10-07 BOX verifier follow-up)
 - device_id: valdez2023-cn2
   field: epitaxy_or_stack
   value: HR Si / SiO2 (BOX, thickness not stated) / 150 nm Si strip (275 nm wide in phase shifter) / CMP SiO2 about 40 nm / about 580 nm LN (unetched) / 0.75 um Au electrodes directly on LN
@@ -705,13 +681,6 @@ entries:
   basis: measured
   locator: p.15 Sec. 4.2
 - device_id: valdez2023-ow1
-  field: buffer_oxide_um
-  value: 0
-  unit: um
-  basis: measured
-  locator: p.15 Sec. 4.2
-  note: no oxide between Au electrodes and LN
-- device_id: valdez2023-ow1
   field: substrate
   value: HR Si; BOX thickness not stated; CMP SiO2 about 40 nm between Si waveguide and LN
   unit: ''
@@ -719,10 +688,11 @@ entries:
   locator: p.3 Fig. 1(b); p.2
 - device_id: valdez2023-ow1
   field: cladding
-  value: none above LN (Au electrodes patterned directly on LN)
+  value: PECVD oxide cladding with an edge on the chip (p.3, Fig. 1(c)); Au electrodes patterned directly on the LN, no oxide between electrode and LN (p.15)
   unit: ''
-  basis: measured
-  locator: p.3 Fig. 1(b); p.15
+  basis: design_target
+  locator: p.3 Fig. 1(c); p.15
+  note: replaces "none above LN" (2026-10-07 BOX verifier follow-up)
 - device_id: valdez2023-ow1
   field: epitaxy_or_stack
   value: HR Si / SiO2 (BOX, thickness not stated) / 150 nm Si strip (250 nm wide in phase shifter) / CMP SiO2 about 40 nm / about 580 nm LN (unetched) / 0.75 um Au electrodes directly on LN
@@ -846,13 +816,6 @@ entries:
   basis: measured
   locator: p.15 Sec. 4.2
 - device_id: valdez2023-ow2
-  field: buffer_oxide_um
-  value: 0
-  unit: um
-  basis: measured
-  locator: p.15 Sec. 4.2
-  note: no oxide between Au electrodes and LN
-- device_id: valdez2023-ow2
   field: substrate
   value: HR Si; BOX thickness not stated; CMP SiO2 about 40 nm between Si waveguide and LN
   unit: ''
@@ -860,10 +823,11 @@ entries:
   locator: p.3 Fig. 1(b); p.2
 - device_id: valdez2023-ow2
   field: cladding
-  value: none above LN (Au electrodes patterned directly on LN)
+  value: PECVD oxide cladding with an edge on the chip (p.3, Fig. 1(c)); Au electrodes patterned directly on the LN, no oxide between electrode and LN (p.15)
   unit: ''
-  basis: measured
-  locator: p.3 Fig. 1(b); p.15
+  basis: design_target
+  locator: p.3 Fig. 1(c); p.15
+  note: replaces "none above LN" (2026-10-07 BOX verifier follow-up)
 - device_id: valdez2023-ow2
   field: epitaxy_or_stack
   value: HR Si / SiO2 (BOX, thickness not stated) / 150 nm Si strip (250 nm wide in phase shifter) / CMP SiO2 about 40 nm / about 580 nm LN (unetched) / 0.75 um Au electrodes directly on LN
@@ -987,13 +951,6 @@ entries:
   basis: measured
   locator: p.15 Sec. 4.2
 - device_id: valdez2023-on1
-  field: buffer_oxide_um
-  value: 0
-  unit: um
-  basis: measured
-  locator: p.15 Sec. 4.2
-  note: no oxide between Au electrodes and LN
-- device_id: valdez2023-on1
   field: substrate
   value: HR Si; BOX thickness not stated; CMP SiO2 about 40 nm between Si waveguide and LN
   unit: ''
@@ -1001,10 +958,11 @@ entries:
   locator: p.3 Fig. 1(b); p.2
 - device_id: valdez2023-on1
   field: cladding
-  value: none above LN (Au electrodes patterned directly on LN)
+  value: PECVD oxide cladding with an edge on the chip (p.3, Fig. 1(c)); Au electrodes patterned directly on the LN, no oxide between electrode and LN (p.15)
   unit: ''
-  basis: measured
-  locator: p.3 Fig. 1(b); p.15
+  basis: design_target
+  locator: p.3 Fig. 1(c); p.15
+  note: replaces "none above LN" (2026-10-07 BOX verifier follow-up)
 - device_id: valdez2023-on1
   field: epitaxy_or_stack
   value: HR Si / SiO2 (BOX, thickness not stated) / 150 nm Si strip (225 nm wide in phase shifter) / CMP SiO2 about 40 nm / about 580 nm LN (unetched) / 0.75 um Au electrodes directly on LN
@@ -1128,13 +1086,6 @@ entries:
   basis: measured
   locator: p.15 Sec. 4.2
 - device_id: valdez2023-on2
-  field: buffer_oxide_um
-  value: 0
-  unit: um
-  basis: measured
-  locator: p.15 Sec. 4.2
-  note: no oxide between Au electrodes and LN
-- device_id: valdez2023-on2
   field: substrate
   value: HR Si; BOX thickness not stated; CMP SiO2 about 40 nm between Si waveguide and LN
   unit: ''
@@ -1142,10 +1093,11 @@ entries:
   locator: p.3 Fig. 1(b); p.2
 - device_id: valdez2023-on2
   field: cladding
-  value: none above LN (Au electrodes patterned directly on LN)
+  value: PECVD oxide cladding with an edge on the chip (p.3, Fig. 1(c)); Au electrodes patterned directly on the LN, no oxide between electrode and LN (p.15)
   unit: ''
-  basis: measured
-  locator: p.3 Fig. 1(b); p.15
+  basis: design_target
+  locator: p.3 Fig. 1(c); p.15
+  note: replaces "none above LN" (2026-10-07 BOX verifier follow-up)
 - device_id: valdez2023-on2
   field: epitaxy_or_stack
   value: HR Si / SiO2 (BOX, thickness not stated) / 150 nm Si strip (225 nm wide in phase shifter) / CMP SiO2 about 40 nm / about 580 nm LN (unetched) / 0.75 um Au electrodes directly on LN

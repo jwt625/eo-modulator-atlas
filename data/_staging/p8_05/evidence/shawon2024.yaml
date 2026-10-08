@@ -1,0 +1,88 @@
+paper_id: shawon2024
+verified_on: '2026-10-07'
+source_files:
+- references/shawon2024/text.md
+- references/shawon2024/figures/page_06.png
+- references/shawon2024/figures/page_07.png
+- references/shawon2024/figures/page_09.png
+- references/shawon2024/figures/page_10.png
+entries:
+- device_id: shawon2024-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.9 Sec. VII-B
+  note: reconfigured at lambda_c = 1550 nm
+- device_id: shawon2024-a
+  field: length_mm
+  value: 1.555
+  unit: mm
+  basis: design_target
+  locator: p.6 Sec. V-B
+  note: 1555 um long phase modulator in each ring
+- device_id: shawon2024-a
+  field: bw3db_ghz
+  value: 2.5
+  unit: GHz
+  basis: measured
+  locator: p.9 Sec. VII-C; Fig. 21(c) p.10
+  note: '''approximately 2.5 GHz'' from EOS21 (link response, Fig. 21(c) axis Link
+    Gain S21); 50 GHz PD, no PD de-embedding stated'
+- device_id: shawon2024-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.6 Sec. V-B
+  note: 220 nm rib waveguide height
+- device_id: shawon2024-a
+  field: etch_depth_nm
+  value: 110
+  unit: nm
+  basis: design_target
+  locator: p.6 Sec. V-B; Fig. 11
+  note: about 110 nm etched silicon
+- device_id: shawon2024-a
+  field: rib_width_nm
+  value: 450
+  unit: nm
+  basis: design_target
+  locator: p.6 Sec. V-B; Fig. 11
+  note: 450 nm
+- device_id: shawon2024-a
+  field: slab_thickness_nm
+  value: 110
+  unit: nm
+  basis: design_target
+  locator: p.6 Fig. 11
+  note: Fig. 11 labels the slab 110 nm; text gives about 110 nm etch of a 220 nm film
+- device_id: shawon2024-a
+  field: fsr_nm
+  value: 0.224
+  unit: nm
+  basis: derived
+  locator: p.7 Sec. V-C
+  note: FSR about 28 GHz x lambda^2/c at 1550 nm
+- device_id: shawon2024-a
+  field: epitaxy_or_stack
+  value: Each ring loaded with a lateral p-n phase modulator (moderate doping region
+    1.225 um from the waveguide centre); tunable-coupler MZI per ring; thermal phase
+    shifters; 1 percent and 10 percent Ge monitor taps
+  basis: design_target
+  locator: p.6 Fig. 10-11; Sec. V-B
+  note: ring-loaded pn phase modulators, tunable couplers, monitor taps
+- device_id: shawon2024-a
+  field: drive
+  value: differential
+  basis: design_target
+  locator: p.2 Sec. III; p.8-9 Sec. VII-A
+  note: RF balun differential pair applied to one electrode of each ring
+- device_id: shawon2024-a
+  field: electrode_type
+  value: lumped
+  basis: derived
+  locator: p.6 Sec. V-B
+  note: 1555 um length chosen to allow lumped drive; authors do not name the electrode
+    type
+derived: []

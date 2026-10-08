@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2609.17489",
+ "title": "Hysteresis and trap emission in dc-biased integrated lithium niobate electro-optic modulators",
+ "authors": "Matthew Yeh, CJ Xin, Donald Witt, David R. Barton, Evelyn L. Hu, Marko Lon\\v{c}ar",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Tue, 15 Sep 2026 17:31:55 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:35:08Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2609.17489\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2609.17489</identifier>\n        <datestamp>2026-09-16</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2609.17489</id>\n        <submitter>Matthew Yeh</submitter>\n            <version version=\"v1\">\n                <date>Tue, 15 Sep 2026 17:31:55 GMT</date>\n                <size>718kb</size>\n            </version>\n        <title>Hysteresis and trap emission in dc-biased integrated lithium niobate electro-optic modulators</title>\n        <authors>Matthew Yeh, CJ Xin, Donald Witt, David R. Barton, Evelyn L. Hu, Marko Lon\\v{c}ar</authors>\n        <categories>physics.optics</categories>\n            <comments>13 pages, 4 figures</comments>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>The electro-optic effect is crucially important for low power and efficient tuning of integrated photonic circuits. However, in electro-optic materials such as lithium niobate, dc biasing for an extended duration of time results in the emergence of numerous nonidealities, including hysteresis -- a persistent degradation of the magnitude and linearity of the dc electro-optic response. We show that electro-optic hysteresis can be reversed under both zero-bias and reverse-bias conditions, given sufficient time or reverse voltage and consistent with a defect model of the underlying physics. Specifically, we find that drift phenomena at short time scales can be explained by charge trapping dynamics near the contact junction, and thereby devise an active reset protocol that restores the magnitude of the response and partially restores the drift time scales.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

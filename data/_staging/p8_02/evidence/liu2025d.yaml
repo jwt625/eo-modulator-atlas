@@ -1,0 +1,50 @@
+paper_id: liu2025d
+verified_on: '2026-10-07'
+source_files:
+- references/liu2025d/text.md
+- references/liu2025d/figures/page_05.png
+- references/liu2025d/figures/page_07.png
+entries:
+- device_id: liu2025d-a
+  field: wavelength_nm
+  value: 1554.4
+  unit: nm
+  basis: extracted_from_figure
+  locator: p.5 Fig. 2(d),(e)
+  note: approximate carrier position on the wavelength axes; not stated in text
+- device_id: liu2025d-a
+  field: q_loaded
+  value: 440000
+  unit: '1'
+  basis: measured
+  locator: p.5 Fig. 2(d) inset
+  note: inset label Q_L = 4.4e5
+- device_id: liu2025d-a
+  field: max_baud_gbd
+  value: 1
+  unit: GBd
+  basis: measured
+  locator: p.7 Fig. 3(e)
+  note: 1 GBaud QPSK
+- device_id: liu2025d-a
+  field: modulation_format
+  value: QPSK on LFM carrier, 1 GBd, 2 Gb/s, wireless link at 23, 33 and 43 cm; EVM 15.5, 16.1, 16.8 %
+  unit: ''
+  basis: measured
+  locator: p.7 Fig. 3(e); p.9
+  note: LFM-QPSK constant-envelope signal; EVM below 17.5 % 3GPP threshold
+- device_id: liu2025d-a
+  field: max_line_rate_gbps
+  value: 2
+  unit: Gb/s
+  basis: measured
+  locator: p.7 Fig. 3(e)
+  note: data rate 2 Gbps
+derived:
+- device_id: liu2025d-a
+  field: fsr_nm
+  value: 0.2458
+  formula: dlambda = lambda^2 x FSR / c = (1554.4 nm)^2 x 30.5 GHz / c; FSR 30.5 GHz printed on Fig. 2(d) and p.6
+  inputs:
+  - wavelength_nm
+  - FSR 30.5 GHz

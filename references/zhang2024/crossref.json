@@ -1,0 +1,967 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     3
+    ]
+   ],
+   "date-time": "2026-10-03T04:41:36Z",
+   "timestamp": 1791002496443,
+   "version": "4.1.0"
+  },
+  "reference-count": 60,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       24
+      ]
+     ],
+     "date-time": "2025-11-24T00:00:00Z",
+     "timestamp": 1763942400000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       24
+      ]
+     ],
+     "date-time": "2025-11-24T00:00:00Z",
+     "timestamp": 1763942400000
+    },
+    "content-version": "vor",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+   }
+  ],
+  "funder": [
+   {
+    "DOI": "10.13039/501100002920",
+    "name": "Research Grants Council, University Grants Committee",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "CityU 11204820, CityU 11212721, CityU 11204022"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "CityU 11204820, CityU 11212721, CityU 11204022"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100002920",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Nat Commun"
+  ],
+  "DOI": "10.1038/s41467-025-65293-y",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     24
+    ]
+   ],
+   "date-time": "2025-11-24T13:37:49Z",
+   "timestamp": 1763991469000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 18,
+  "title": [
+   "Monolithic lithium niobate photonic chip for efficient terahertz-optic modulation and terahertz generation"
+  ],
+  "prefix": "10.1038",
+  "volume": "16",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-0507-4175",
+    "authenticated-orcid": false,
+    "given": "Yiwen",
+    "family": "Zhang",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jingwei",
+    "family": "Yang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yuansong",
+    "family": "Zeng",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhaoxi",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3579-5352",
+    "authenticated-orcid": false,
+    "given": "Hanke",
+    "family": "Feng",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-6725-5145",
+    "authenticated-orcid": false,
+    "given": "Sha",
+    "family": "Zhu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8750-8581",
+    "authenticated-orcid": false,
+    "given": "Kam-Man",
+    "family": "Shum",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-9718-0831",
+    "authenticated-orcid": false,
+    "given": "Chi Hou",
+    "family": "Chan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-1939-1422",
+    "authenticated-orcid": false,
+    "given": "Cheng",
+    "family": "Wang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     24
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "65293_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "20",
+    "DOI": "10.1038/s41928-019-0355-6",
+    "volume": "3",
+    "author": "S Dang",
+    "year": "2020",
+    "unstructured": "Dang, S., Amin, O., Shihada, B. & Alouini, M.-S. What should 6G be?. Nat. Electron 3, 20–29 (2020).",
+    "journal-title": "Nat. Electron"
+   },
+   {
+    "key": "65293_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "201",
+    "DOI": "10.1109/TTHZ.2011.2159551",
+    "volume": "1",
+    "author": "ZD Taylor",
+    "year": "2011",
+    "unstructured": "Taylor, Z. D. et al. THz medical imaging: in vivo hydration sensing. IEEE Trans. terahertz Sci. Technol. 1, 201–219 (2011).",
+    "journal-title": "IEEE Trans. terahertz Sci. Technol."
+   },
+   {
+    "key": "65293_CR3",
+    "doi-asserted-by": "publisher",
+    "first-page": "1592",
+    "DOI": "10.1109/JPROC.2007.898904",
+    "volume": "95",
+    "author": "BM Fischer",
+    "year": "2007",
+    "unstructured": "Fischer, B. M., Helm, H. & Jepsen, P. U. Chemical recognition with broadband THz spectroscopy. Proc. IEEE 95, 1592–1604 (2007).",
+    "journal-title": "Proc. IEEE"
+   },
+   {
+    "key": "65293_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "169",
+    "DOI": "10.1109/TTHZ.2011.2159556",
+    "volume": "1",
+    "author": "KB Cooper",
+    "year": "2011",
+    "unstructured": "Cooper, K. B. et al. THz imaging radar for standoff personnel screening. IEEE Trans. terahertz Sci. Technol. 1, 169–182 (2011).",
+    "journal-title": "IEEE Trans. terahertz Sci. Technol."
+   },
+   {
+    "key": "65293_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "080901",
+    "DOI": "10.1063/5.0146912",
+    "volume": "8",
+    "author": "S Rajabali",
+    "year": "2023",
+    "unstructured": "Rajabali, S. & Benea-Chelmus, I. C. Present and future of terahertz integrated photonic devices. Apl. Photonics 8, 080901 (2023).",
+    "journal-title": "Apl. Photonics"
+   },
+   {
+    "key": "65293_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "202300045",
+    "DOI": "10.1002/adpr.202370015",
+    "volume": "4",
+    "author": "S Zhu",
+    "year": "2023",
+    "unstructured": "Zhu, S. et al. Waveguide-Integrated Two-Dimensional Material Photodetectors in Thin-Film Lithium Niobate. Adv. Photon Res 4, 202300045 (2023).",
+    "journal-title": "Adv. Photon Res"
+   },
+   {
+    "key": "65293_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "1063",
+    "DOI": "10.1364/OPTICA.6.001063",
+    "volume": "6",
+    "author": "T Harter",
+    "year": "2019",
+    "unstructured": "Harter, T. et al. Wireless THz link with optoelectronic transmitter and receiver. Optica 6, 1063–1070 (2019).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "65293_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "622",
+    "DOI": "10.1038/s41928-018-0173-2",
+    "volume": "1",
+    "author": "K Sengupta",
+    "year": "2018",
+    "unstructured": "Sengupta, K., Nagatsuma, T. & Mittleman, D. M. Terahertz integrated electronic and hybrid electronic-photonic systems. Nat. Electron 1, 622–635 (2018).",
+    "journal-title": "Nat. Electron"
+   },
+   {
+    "key": "65293_CR9",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Han, C. H. et al. Ultra-compact silicon modulator with 110 GHz bandwidth. 2022 Optical Fiber Communications Conference and Exhibition (Ofc) (2022).",
+    "DOI": "10.1364/OFC.2022.Th4C.5"
+   },
+   {
+    "key": "65293_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "249",
+    "DOI": "10.1109/JLT.2019.2924671",
+    "volume": "38",
+    "author": "Y Ogiso",
+    "year": "2020",
+    "unstructured": "Ogiso, Y. et al. 80-GHz Bandwidth and 1.5-V V InP-Based IQ Modulator. J. Lightwave Technol. 38, 249–255 (2020).",
+    "journal-title": "J. Lightwave Technol."
+   },
+   {
+    "key": "65293_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "325",
+    "DOI": "10.1364/OPTICA.544016",
+    "volume": "12",
+    "author": "Y Horst",
+    "year": "2025",
+    "unstructured": "Horst, Y. et al. Ultra-wideband MHz to THz plasmonic EO modulator. Optica 12, 325–328 (2025).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "65293_CR12",
+    "doi-asserted-by": "publisher",
+    "first-page": "173",
+    "DOI": "10.1038/lsa.2014.54",
+    "volume": "3",
+    "author": "L Alloatti",
+    "year": "2014",
+    "unstructured": "Alloatti, L. et al. 100 GHz silicon–organic hybrid modulator. Light.: Sci. Appl. 3, 173 (2014).",
+    "journal-title": "Light.: Sci. Appl."
+   },
+   {
+    "key": "65293_CR13",
+    "doi-asserted-by": "publisher",
+    "first-page": "360",
+    "DOI": "10.1038/s41566-023-01161-9",
+    "volume": "17",
+    "author": "M Eppenberger",
+    "year": "2023",
+    "unstructured": "Eppenberger, M. et al. Resonant plasmonic micro-racetrack modulators with high bandwidth and high temperature tolerance. Nat. Photonics 17, 360–367 (2023).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "65293_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "101",
+    "DOI": "10.1038/s41586-018-0551-y",
+    "volume": "562",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages. Nature 562, 101–104 (2018).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "65293_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "1342",
+    "DOI": "10.1063/1.1399305",
+    "volume": "79",
+    "author": "M Lee",
+    "year": "2001",
+    "unstructured": "Lee, M. Dielectric constant and loss tangent in LiNbO crystals from 90 to 147 GHz. Appl Phys. Lett. 79, 1342–1344 (2001).",
+    "journal-title": "Appl Phys. Lett."
+   },
+   {
+    "key": "65293_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "24452",
+    "DOI": "10.1364/OE.401959",
+    "volume": "28",
+    "author": "K Luke",
+    "year": "2020",
+    "unstructured": "Luke, K. et al. Wafer-scale low-loss lithium niobate photonic integrated circuits. Opt. Express 28, 24452–24458 (2020).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "373",
+    "DOI": "10.1038/s41586-019-1008-7",
+    "volume": "568",
+    "author": "M Zhang",
+    "year": "2019",
+    "unstructured": "Zhang, M. et al. Broadband electro-optic frequency comb generation in a lithium niobate microring resonator. Nature 568, 373–377 (2019).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "65293_CR18",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Wu, T. H. et al. Visible-to-ultraviolet frequency comb generation in lithium niobate nanophotonic waveguides. Nat. Photonics 18, 218–223 (2024).",
+    "DOI": "10.1038/s41566-023-01364-0"
+   },
+   {
+    "key": "65293_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "084201",
+    "DOI": "10.1088/0256-307X/37/8/084201",
+    "volume": "37",
+    "author": "J-x Zhou",
+    "year": "2020",
+    "unstructured": "Zhou, J. -x et al. Electro-Optically Switchable Optical True Delay Lines of Meter-Scale Lengths Fabricated on Lithium Niobate on Insulator Using Photolithography Assisted Chemo-Mechanical Etching. Chin. Phys. Lett. 37, 084201 (2020).",
+    "journal-title": "Chin. Phys. Lett."
+   },
+   {
+    "key": "65293_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "80",
+    "DOI": "10.1038/s41586-024-07078-9",
+    "volume": "627",
+    "author": "H Feng",
+    "year": "2024",
+    "unstructured": "Feng, H. et al. Integrated lithium niobate microwave photonic processing engine. Nature 627, 80–87 (2024).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "65293_CR21",
+    "first-page": "202200216",
+    "volume": "4",
+    "author": "FA Juneghani",
+    "year": "2023",
+    "unstructured": "Juneghani, F. A. et al. Thin-Film Lithium Niobate Optical Modulators with an Extrapolated Bandwidth of 170 GHZ. Adv. Photon Res 4, 202200216 (2023).",
+    "journal-title": "Adv. Photon Res"
+   },
+   {
+    "key": "65293_CR22",
+    "doi-asserted-by": "publisher",
+    "first-page": "359",
+    "DOI": "10.1038/s41566-019-0378-6",
+    "volume": "13",
+    "author": "MB He",
+    "year": "2019",
+    "unstructured": "He, M. B. et al. High-performance hybrid silicon and lithium niobate Mach-Zehnder modulators for 100 Gbit s(-1) and beyond. Nat. Photonics 13, 359–364 (2019).",
+    "journal-title": "Nat. Photonics"
+   },
+   {
+    "key": "65293_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "14810",
+    "DOI": "10.1364/OE.26.014810",
+    "volume": "26",
+    "author": "AJ Mercante",
+    "year": "2018",
+    "unstructured": "Mercante, A. J. et al. Thin film lithium niobate electro-optic modulator with terahertz operating bandwidth. Opt. Express 26, 14810–14816 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "41798",
+    "DOI": "10.1364/OE.442091",
+    "volume": "29",
+    "author": "X Liu",
+    "year": "2021",
+    "unstructured": "Liu, X. et al. Sub-terahertz bandwidth capactively-loaded thin-film lithium niobate electro-optic modulators based on an undercut structure. Opt. Express 29, 41798–41807 (2021).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR25",
+    "doi-asserted-by": "publisher",
+    "first-page": "578",
+    "DOI": "10.1364/OPTICA.484549",
+    "volume": "10",
+    "author": "F Valdez",
+    "year": "2023",
+    "unstructured": "Valdez, F., Mere, V. & Mookherjea, S. 100 GHz bandwidth, 1 volt integrated electro-optic Mach-Zehnder modulator at near-IR wavelengths. Optica 10, 578–584 (2023).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "65293_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "357",
+    "DOI": "10.1364/OPTICA.416155",
+    "volume": "8",
+    "author": "P Kharel",
+    "year": "2021",
+    "unstructured": "Kharel, P., Reimer, C., Luke, K., He, L. & Zhang, M. Breaking voltage–bandwidth limits in integrated lithium niobate modulators using micro-structured electrodes. Optica 8, 357–363 (2021).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "65293_CR27",
+    "unstructured": "Liu, X. et al. Capacitively-loaded Thin-film Lithium Niobate Modulator with Ultra-flat Frequency Response. IEEE Photonic Tech. L. 1-1 (2022)."
+   },
+   {
+    "key": "65293_CR28",
+    "doi-asserted-by": "publisher",
+    "first-page": "0065437",
+    "DOI": "10.1063/5.0065437",
+    "volume": "6",
+    "author": "XR Huang",
+    "year": "2021",
+    "unstructured": "Huang, X. R., Liu, Y., Li, Z. Y., Fan, Z. C. & Han, W. H. High-performance and compact integrated photonics platform based on silicon rich nitride-lithium niobate on insulator. Apl. Photonics 6, 0065437 (2021).",
+    "journal-title": "Apl. Photonics"
+   },
+   {
+    "key": "65293_CR29",
+    "doi-asserted-by": "publisher",
+    "first-page": "2380",
+    "DOI": "10.1364/PRJ.468518",
+    "volume": "10",
+    "author": "YW Zhang",
+    "year": "2022",
+    "unstructured": "Zhang, Y. W. et al. Systematic investigation of millimeter-wave optic modulation performance in thin-film lithium niobate. Photonics Res 10, 2380–2387 (2022).",
+    "journal-title": "Photonics Res"
+   },
+   {
+    "key": "65293_CR30",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Bodrov, S., Bakunov, M. & Hangyo, M. Efficient Cherenkov emission of broadband terahertz radiation from an ultrashort laser pulse in a sandwich structure with nonlinear core. J. Appl. Phys. 104, 093105 (2008).",
+    "DOI": "10.1063/1.3005987"
+   },
+   {
+    "key": "65293_CR31",
+    "doi-asserted-by": "publisher",
+    "first-page": "5762",
+    "DOI": "10.1364/OL.40.005762",
+    "volume": "40",
+    "author": "S Carbajo",
+    "year": "2015",
+    "unstructured": "Carbajo, S. et al. Efficient narrowband terahertz generation in cryogenically cooled periodically poled lithium niobate. Opt. Lett. 40, 5762–5765 (2015).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "65293_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "5403",
+    "DOI": "10.1364/OL.39.005403",
+    "volume": "39",
+    "author": "X Wu",
+    "year": "2014",
+    "unstructured": "Wu, X. et al. Terahertz generation in lithium niobate driven by Ti: sapphire laser pulses and its limitations. Opt. Lett. 39, 5403–5406 (2014).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "65293_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "5634",
+    "DOI": "10.1364/OL.44.005634",
+    "volume": "44",
+    "author": "D Jang",
+    "year": "2019",
+    "unstructured": "Jang, D. et al. Scalable terahertz generation by large-area optical rectification at 80 TW laser power. Opt. Lett. 44, 5634–5637 (2019).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "65293_CR34",
+    "doi-asserted-by": "publisher",
+    "first-page": "796",
+    "DOI": "10.1364/OL.38.000796",
+    "volume": "38",
+    "author": "S-W Huang",
+    "year": "2013",
+    "unstructured": "Huang, S.-W. et al. High conversion efficiency, high energy terahertz pulses by optical rectification in cryogenically cooled lithium niobate. Opt. Lett. 38, 796–798 (2013).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "65293_CR35",
+    "doi-asserted-by": "publisher",
+    "first-page": "27112",
+    "DOI": "10.1364/OE.18.027112",
+    "volume": "18",
+    "author": "M Scheller",
+    "year": "2010",
+    "unstructured": "Scheller, M. et al. Room temperature continuous wave milliwatt terahertz source. Opt. Express 18, 27112–27117 (2010).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR36",
+    "doi-asserted-by": "publisher",
+    "first-page": "4374",
+    "DOI": "10.1364/OL.36.004374",
+    "volume": "36",
+    "author": "J Kiessling",
+    "year": "2011",
+    "unstructured": "Kiessling, J., Fuchs, F., Buse, K. & Breunig, I. Pump-enhanced optical parametric oscillator generating continuous wave tunable terahertz radiation. Opt. Lett. 36, 4374–4376 (2011).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "65293_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "22303",
+    "DOI": "10.1364/OE.17.022303",
+    "volume": "17",
+    "author": "R Sowade",
+    "year": "2009",
+    "unstructured": "Sowade, R. et al. Continuous-wave optical parametric terahertz source. Opt. Express 17, 22303–22310 (2009).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "1161",
+    "DOI": "10.1364/OE.10.001161",
+    "volume": "10",
+    "author": "J Hebling",
+    "year": "2002",
+    "unstructured": "Hebling, J., Almási, G., Kozma, I. Z. & Kuhl, J. Velocity matching by pulse front tilting for large-area THz-pulse generation. Opt. Express 10, 1161–1166 (2002).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR39",
+    "doi-asserted-by": "publisher",
+    "first-page": "10427",
+    "DOI": "10.1364/OE.16.010427",
+    "volume": "16",
+    "author": "A Marandi",
+    "year": "2008",
+    "unstructured": "Marandi, A., Darcie, T. E. & So, P. P. M. Design of a continuous-wave tunable terahertz source using waveguide-phase-matched GaAs. Opt. Express 16, 10427–10433 (2008).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR40",
+    "doi-asserted-by": "publisher",
+    "first-page": "5353",
+    "DOI": "10.1364/OPEX.13.005353",
+    "volume": "13",
+    "author": "T Löffler",
+    "year": "2005",
+    "unstructured": "Löffler, T., Hahn, T., Thomson, M., Jacob, F. & Roskos, H. Large-area electro-optic ZnTe terahertz emitters. Opt. express 13, 5353–5362 (2005).",
+    "journal-title": "Opt. express"
+   },
+   {
+    "key": "65293_CR41",
+    "doi-asserted-by": "publisher",
+    "first-page": "705",
+    "DOI": "10.1109/JSTQE.2007.895279",
+    "volume": "13",
+    "author": "YJ Ding",
+    "year": "2007",
+    "unstructured": "Ding, Y. J. High-power tunable terahertz sources based on parametric processes and applications. IEEE J. Sel. Top. Quantum Electron. 13, 705–720 (2007).",
+    "journal-title": "IEEE J. Sel. Top. Quantum Electron."
+   },
+   {
+    "key": "65293_CR42",
+    "doi-asserted-by": "publisher",
+    "first-page": "6478",
+    "DOI": "10.1364/OE.15.006478",
+    "volume": "15",
+    "author": "D Creeden",
+    "year": "2007",
+    "unstructured": "Creeden, D. et al. Compact, high average power, fiber-pumped terahertz source for active real-time imaging of concealed objects. Opt. Express 15, 6478–6483 (2007).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR43",
+    "doi-asserted-by": "publisher",
+    "first-page": "2356",
+    "DOI": "10.1364/OL.31.002356",
+    "volume": "31",
+    "author": "D Bigourd",
+    "year": "2006",
+    "unstructured": "Bigourd, D. et al. Detection and quantification of multiple molecular species in mainstream cigarette smoke by continuous-wave terahertz spectroscopy. Opt. Lett. 31, 2356–2358 (2006).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "65293_CR44",
+    "doi-asserted-by": "publisher",
+    "first-page": "16477",
+    "DOI": "10.1364/OE.419965",
+    "volume": "29",
+    "author": "JW Yang",
+    "year": "2021",
+    "unstructured": "Yang, J. W. & Wang, C. Efficient terahertz generation scheme in a thin-film lithium niobate-silicon hybrid platform. Opt. Express 29, 16477–16486 (2021).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR45",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Herter, A. et al. Terahertz waveform synthesis in integrated thin-film lithium niobate platform. Nat. Commun. 14, 11 (2023).",
+    "DOI": "10.1038/s41467-022-35517-6"
+   },
+   {
+    "key": "65293_CR46",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Lampert, Y. et al. Photonics-integrated terahertz transmission lines. arXiv:2406.15651 (2024).",
+    "DOI": "10.1038/s41467-025-62267-y"
+   },
+   {
+    "key": "65293_CR47",
+    "doi-asserted-by": "publisher",
+    "first-page": "169",
+    "DOI": "10.1364/AOP.5.000169",
+    "volume": "5",
+    "author": "S Atakaramians",
+    "year": "2013",
+    "unstructured": "Atakaramians, S., Afshar, V. S., Monro, T. M. & Abbott, D. Terahertz dielectric waveguides. Adv. Opt. Photonics 5, 169–215 (2013).",
+    "journal-title": "Adv. Opt. Photonics"
+   },
+   {
+    "key": "65293_CR48",
+    "unstructured": "Inder, B., Maurizio, B. & Ramesh, G. Microstrip Lines and Slotlines, Third Edition. (Artech, 2013)."
+   },
+   {
+    "key": "65293_CR49",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Tomasino, A., Shams-Ansari, A., Loncar, M. & Benea-Chelmus, I. C. 500 GHz field-resolved detection in thin-film lithium niobate devices. 2023 48th International Conference on Infrared, Millimeter, and Terahertz Waves, Irmmw-Thz, (2023).",
+    "DOI": "10.1109/IRMMW-THz57677.2023.10298946"
+   },
+   {
+    "key": "65293_CR50",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Boyd, R. W. In Nonlinear Optics (Third Edition) (ed Robert W. B.) 69–133 (Academic Press, 2008).",
+    "DOI": "10.1016/B978-0-12-369470-6.00002-2"
+   },
+   {
+    "key": "65293_CR51",
+    "doi-asserted-by": "publisher",
+    "first-page": "16971",
+    "DOI": "10.1103/PhysRevB.49.16971",
+    "volume": "49",
+    "author": "E Bringuier",
+    "year": "1994",
+    "unstructured": "Bringuier, E., Bourdon, A., Piccioli, N. & Chevy, A. Optical second-harmonic generation in lossy media: Application to GaSe and InSe. Phys. Rev. B 49, 16971–16982 (1994).",
+    "journal-title": "Phys. Rev. B"
+   },
+   {
+    "key": "65293_CR52",
+    "doi-asserted-by": "publisher",
+    "first-page": "1438",
+    "DOI": "10.1364/OPTICA.5.001438",
+    "volume": "5",
+    "author": "C Wang",
+    "year": "2018",
+    "unstructured": "Wang, C. et al. Ultrahigh-efficiency wavelength conversion in nanophotonic periodically poled lithium niobate waveguides. Optica 5, 1438–1441 (2018).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "65293_CR53",
+    "doi-asserted-by": "publisher",
+    "first-page": "2940",
+    "DOI": "10.1364/OL.426083",
+    "volume": "46",
+    "author": "J Hu",
+    "year": "2021",
+    "unstructured": "Hu, J. et al. Folded thin-film lithium niobate modulator based on a poled Mach–Zehnder interferometer structure. Opt. Lett. 46, 2940–2943 (2021).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "65293_CR54",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Brasch, V., Lucas, E., Jost, J. D., Geiselmann, M. & Kippenberg, T. J. Self-referenced photonic chip soliton Kerr frequency comb. Light-Sci. Appl. 6, e16202 (2017).",
+    "DOI": "10.1038/lsa.2016.202"
+   },
+   {
+    "key": "65293_CR55",
+    "doi-asserted-by": "publisher",
+    "first-page": "13769",
+    "DOI": "10.1364/OE.20.013769",
+    "volume": "20",
+    "author": "K Iwakuni",
+    "year": "2012",
+    "unstructured": "Iwakuni, K. et al. Narrow linewidth comb realized with a mode-locked fiber laser using an intra-cavity waveguide electro-optic modulator for highspeed control. Opt. Express 20, 13769–13776 (2012).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "65293_CR56",
+    "doi-asserted-by": "publisher",
+    "first-page": "1536",
+    "DOI": "10.1364/OPTICA.4.001536",
+    "volume": "4",
+    "author": "M Zhang",
+    "year": "2017",
+    "unstructured": "Zhang, M., Wang, C., Cheng, R., Shams-Ansari, A. & Loncar, M. Monolithic ultra-high- lithium niobate microring resonator. Optica 4, 1536–1537 (2017).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "65293_CR57",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Gao, R. H. et al. Lithium niobate microring with ultra-high factor above 108. China Opt. Lett. 20, 011902 (2022).",
+    "DOI": "10.3788/COL202220.011902"
+   },
+   {
+    "key": "65293_CR58",
+    "doi-asserted-by": "publisher",
+    "first-page": "1203",
+    "DOI": "10.1007/s10762-015-0165-5",
+    "volume": "36",
+    "author": "M Unferdorben",
+    "year": "2015",
+    "unstructured": "Unferdorben, M., Szaller, Z., Hajdara, I., Hebling, J. & Pálfalvi, L. Measurement of Refractive Index and Absorption Coefficient of Congruent and Stoichiometric Lithium Niobate in the Terahertz Range. J. Infrared Millim. Te 36, 1203–1209 (2015).",
+    "journal-title": "J. Infrared Millim. Te"
+   },
+   {
+    "key": "65293_CR59",
+    "doi-asserted-by": "publisher",
+    "first-page": "2006",
+    "DOI": "10.1364/JOSAB.7.002006",
+    "volume": "7",
+    "author": "D Grischkowsky",
+    "year": "1990",
+    "unstructured": "Grischkowsky, D., Keiding, S., Vanexter, M. & Fattinger, C. Far-Infrared Time-Domain Spectroscopy with Terahertz Beams of Dielectrics and Semiconductors. J. Opt. Soc. Am. B 7, 2006–2015 (1990).",
+    "journal-title": "J. Opt. Soc. Am. B"
+   },
+   {
+    "key": "65293_CR60",
+    "unstructured": "Seiler, I. P. S. Dielectric material characterization up to terahertz frequencies using planar transmission lines. (2019)."
+   }
+  ],
+  "container-title": [
+   "Nature Communications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-65293-y.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-65293-y",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s41467-025-65293-y.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     29
+    ]
+   ],
+   "date-time": "2025-11-29T02:01:51Z",
+   "timestamp": 1764381711000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s41467-025-65293-y"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     24
+    ]
+   ]
+  },
+  "references-count": 60,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2025,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "65293"
+  ],
+  "URL": "https://doi.org/10.1038/s41467-025-65293-y",
+  "relation": {},
+  "ISSN": [
+   "2041-1723"
+  ],
+  "issn-type": [
+   {
+    "value": "2041-1723",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     24
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "15 June 2024",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "6 October 2025",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "24 November 2025",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "The authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ],
+  "article-number": "10330"
+ }
+}

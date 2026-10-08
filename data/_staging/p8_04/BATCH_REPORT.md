@@ -1,0 +1,37 @@
+# Batch p8_04 report (2026-10-07)
+
+Validation: `uv run python scripts/merge_staging.py data/_staging/p8_04` -> merge counts papers 5, devices 7, orgs 3, evidence 5; conflicts 0; validation errors 0 (dry run only). No sim configs (no dielectric TWE device in the batch). audit_status needs_audit for all five. No network, no git. All five sources are cached arXiv copies (v1, v2, v1, v1, v1); datta2020, datta2024, taki2024 have a version-of-record DOI (identity from crossref.json, values from the arXiv copy); thureja2025 and tian2026 have none.
+
+## thureja2025 - no_device_rows (NEW)
+- Papers row only (full_extract, repro_grade empty, no sim). Reason (convention dd, chelladurai2025 precedent): the EO structure is a reflective Teng-Man test capacitor (ITO / about 20 um spalled BTO / Ni), no waveguide or modulator; only material Pockels coefficients. Numbers kept in papers notes and evidence context_values: r33 = 42 +/- 3 (as spalled), 55 +/- 5 (poled), 160 +/- 40 pm/V (single-domain area), all at 10 kHz, 1500 nm; r42 = 680 pm/V is a projection.
+- Source defects: abstract "1980 pm/V for r42" is not in the body (notes only; equals 160 x 1300/105 = 1981, the p.9 projection applied to the single-domain value); abstract film thickness range 100 nm to 15 um versus about 20 um for the measured film; SI says measurements at 1520 nm (bulk calibration) versus 1500 nm for the film in the main text.
+- Batch CSV hints: class other and priority 2 kept; the abstract-level 55/160 claims verified in the body (p.9).
+
+## tian2026 - no_device_rows (NEW)
+- Papers row only. Reason (convention dd): film test structure (Pt coplanar electrodes, 10 um gap, transmission probe at 1550 nm); no waveguide, no Vpi/loss/bandwidth. r_eff 32 / 248 / 220 pm/V (hMBE_1 / hMBE_2 / PLD) in notes and context_values (p.17, Fig. 4(e)); growth rate and resistivity noted.
+- Source note: abstract "exceeding 75 nm/h" versus body 70 to 100 nm/h, about 75 nm/h for hMBE_2. Batch CSV class eam is wrong for this paper (materials/growth paper, no modulator class).
+
+## datta2020 - distilled (NEW), 3 rows, repro_grade C, sim none
+- Rows a (unclad WS2 capacitor, VpiL 1.33 V cm, 3 dB 0.3 GHz at 1550 nm), b (SU-8-clad WS2, VpiL 0.8 V cm), c (unclad MoS2, VpiL 1.7 V cm). No Vpi reported, only VpiL (derived by the authors from the MZI fringe shift, formula in SI Section V, not cached) so basis derived, convention resonance_tuning_derived, drive single_ended (longer arm only).
+- Judgment calls: (1) bandwidth assigned to row a only (Fig. 3 caption: unclad device) although the abstract pairs 0.8 V cm with 0.3 GHz; (2) eo_material graphene_2d (the 2D-material class, label 'Graphene / 2D') / eo_effect other for monolayer TMDs; (3) the ionic-liquid ring and ionic-liquid MZI are material probes (Delta n = 0.53, Delta k = 0.004) and get no rows; (4) length_mm 0.5 for rows a and b is a design statement ("500 um ... on each arm") and device lengths vary between MZIs (Fig. 3 caption); the device behind the bandwidth has no stated length; (5) year 2019 from the arXiv id (1906.xxxxx), published_on empty; (6) discovered_via token continuation_2026_10_02 from the batch CSV dropped because it is not in the validator vocabulary.
+- Not reported: IL, propagation loss, ER, optical power, ITO thickness, capacitor width, temperature. Could not read: Supplementary Sections I-XI (not in the cache).
+- Crossref author spelling "Mohammad Amin Tadayon" used over the printed "Mohammad A. Tadayon". Facilities from the acknowledgements: ASRC NanoFab, Cornell NanoScale Facility, Columbia Nano Initiative (all existing orgs).
+
+## datta2024 - distilled (NEW), 3 rows, repro_grade C, sim none
+- Rows a (device I, 40 um, critical-coupling resonance 1538.71 nm: IL 4.78 dB, Q about 20,870), b (same physical device I, 8 V, 1569.6 nm: 3 dB EO bandwidth 14.9 GHz, Q about 12000), c (device II, 25 um, 1646.22 nm: Q about 18,730; no IL, no bandwidth).
+- Judgment calls: (1) headline V_pi/2 L_pi/2 = 0.045 V cm is a half-wave product and is not entered in vpil_* (no conversion; stays in notes); (2) device II IL 2.96 +/- 0.34 dB (Fig. 2) entered with scope undefined; IL_pi/2 4.7 dB (abstract, p.7, Fig. 4) equals IL 2.96 + Delta T 1.73 dB (auditor arithmetic; SI XI not cached) and is not entered; (3) the abstract does not name the device for 14.9 GHz (it follows the 25 um sentence); measured on device I (p.5, Fig. 2(b) caption); (4) a and b are separate rows sharing physical_device_id because the IL/phase point (1538.71 nm) and the bandwidth point (1569.6 nm) are different resonances; (5) IL scope undefined (paper does not define it beyond the probe detuning and 6 V reference); (6) eo_material graphene_2d (hybrid Gr + WSe2), eo_effect other; (7) facility "City University of New York Advanced Science Research Facility" mapped to the existing ASRC NanoFabrication Facility; (8) year 2022 from the arXiv id (2209.xxxxx), published_on empty.
+- Version differences: Crossref title "ring resonators" and author Vivian Zhou are not in the cached arXiv v2 (title "ring modulators"); identity follows Crossref per (n)/(gg).
+- Not reported: Vpi and Vpi L at pi, propagation loss of the composite section, ER, optical power, temperature. Could not read: Supplementary Sections I-XI (not cached).
+
+## taki2024 - distilled (NEW), 1 row, repro_grade C, sim none
+- Row a: 4.5 mm HZO/Al2O3-clad SiN phase shifter in an asymmetric MZI. Entered: length, wavelength, geometry, 6.1 dB/cm. The paper's metric (non-volatile Delta n_eff about -1.5e-4 after 210 V) has no column and no Vpi is reported; the numbers are in the row and papers notes.
+- Judgment calls: (0) substrate Si filled (p.11 Methods, Fig. 1(b)); (1) keep a device row although the only device-level column value is the propagation loss (alternative: papers-only per convention dd); chosen because it is a fabricated EO phase shifter with a measured index change and the same group's akazawa2026 and lin2025a-style rows exist; (2) prop_loss 6.1 dB/cm is from straight SiN test waveguides with grating couplers and the text does not say whether they carry the HZO stack (caveat in the evidence note); (3) eo_material other, eo_effect other (mechanism by the authors: polarization-axis rotation and birefringence of orthorhombic HZO, Pockels not observed); (4) integration monolithic (ALD film on finished waveguide); (5) foundry_or_fab empty (ARIM is funding/infrastructure, no facility named); (6) year 2023 from the arXiv id (2309.xxxxx), published_on empty.
+- Not reported: Vpi, bandwidth, insertion loss, electrode gap. The cached abstract page is empty, so no abstract wording was checked; batch CSV platform hint silicon_plasma_dispersion is wrong (SiN with ferroelectric HZO; no carrier effect, shown null on a 10 mm device up to 210 V).
+
+## Organizations added (3, no ror_id or name_source: none printed in the papers or Crossref)
+North Carolina State University, University of Chicago (not University of Illinois Chicago), National Center for Nanoscience and Technology.
+
+## Schema/skill gaps
+- No column for an index change Delta n_eff (non-volatile or doping-induced) or for the pi/2 half-wave product V_pi/2 L_pi/2; both stay in notes.
+- discovered_via vocabulary lacks the continuation_2026_10_02 token carried by the batch CSV.
+- eo_material enum has no transition-metal-dichalcogenide or ferroelectric hafnia entry: TMD rows use graphene_2d (2D class, audit F2), the HZO row uses other.

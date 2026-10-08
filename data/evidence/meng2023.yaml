@@ -111,13 +111,6 @@ entries:
   basis: measured
   locator: p.6; Fig. 2(a)
 - device_id: meng2023-a
-  field: buffer_oxide_um
-  value: 0.1
-  unit: um
-  basis: measured
-  locator: p.5 Sec. 2.2
-  note: 100 nm silicon oxide buffer
-- device_id: meng2023-a
   field: substrate
   value: Si (Fig. 2(a)); BOX thickness not stated
   unit: ''
@@ -125,10 +118,11 @@ entries:
   locator: p.6 Fig. 2(a)
 - device_id: meng2023-a
   field: cladding
-  value: SiO2 (Fig. 2(a)); thickness not stated
+  value: SiO2 (Fig. 2(a)), over-cladding thickness not stated; 100 nm SiO2 buffer between the LN and the ITO/Au electrodes
   unit: ''
-  basis: extracted_from_figure
-  locator: p.6 Fig. 2(a)
+  basis: design_target
+  locator: p.5 Sec. 2.2; p.6 Fig. 2(a)
+  note: 'buffer re-read 2026-10-07 (buffer_oxide_um = buried oxide only); previous cell: SiO2 (Fig. 2(a)); thickness not stated'
 - device_id: meng2023-a
   field: crystal_cut
   value: x-cut

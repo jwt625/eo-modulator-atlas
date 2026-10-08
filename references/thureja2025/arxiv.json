@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2505.04045",
+ "title": "Spalled barium titanate single crystal thin films for functional device applications",
+ "authors": "Prachi Thureja, Andrew W. Nyholm, Martin Thomaschewski, Phillip R. Jahelka, Julie Belleville, and Harry A. Atwater",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 07 May 2025 01:11:08 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:34:51Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2505.04045\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2505.04045</identifier>\n        <datestamp>2025-05-08</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2505.04045</id>\n        <submitter>Prachi Thureja</submitter>\n            <version version=\"v1\">\n                <date>Wed, 07 May 2025 01:11:08 GMT</date>\n                <size>1672kb</size>\n            </version>\n        <title>Spalled barium titanate single crystal thin films for functional device applications</title>\n        <authors>Prachi Thureja, Andrew W. Nyholm, Martin Thomaschewski, Phillip R. Jahelka, Julie Belleville, and Harry A. Atwater</authors>\n        <categories>physics.app-ph</categories>\n            <comments>21 pages, 10 figures</comments>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>We report a scalable approach for fabricating single-crystal barium titanate (BTO) thin films through spalling from bulk substrates. Conventional thin film growth techniques often face challenges in achieving high-quality single crystal microstructure over large areas, resulting in reduced performance in functional devices. In contrast, spalling - i.e., performing stress-induced exfoliation of bulk single crystals - enables the separation of single crystal thin films with controllable thicknesses ranging from 100 nm to 15 um and lateral dimensions up to several millimeters. Electro-optic characterization of the spalled films yields a Pockels coefficient of r33 = 55 pm/V in multi-domain regions and 160 pm/V in single-domain regions, leading to projections up to 1980 pm/V for r42 under conditions of unclamped excitation. Our results indicate that spalled BTO single-crystal thin films preserve bulk electro-optic properties and exceed the performance of commercially available thin-film lithium niobate, making them suitable for integration in advanced photonic and optoelectronic devices.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

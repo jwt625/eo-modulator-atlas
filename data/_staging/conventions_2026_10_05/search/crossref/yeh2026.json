@@ -1,0 +1,688 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 54,
+  "items": [
+   {
+    "DOI": "10.1021/acs.nanolett.6c03406",
+    "title": [
+     "Hysteresis\nand Trap Emission in dc-Biased Integrated\nLithium Niobate Electro-optic Modulators"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0001-8711-6505",
+      "authenticated-orcid": true,
+      "given": "Matthew",
+      "family": "Yeh",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Harvard University , , , ,",
+        "place": [
+         "Cambridge, Massachusetts, United States, 02138"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "C. J.",
+      "family": "Xin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University , , , ,",
+        "place": [
+         "Cambridge, Massachusetts, United States, 02138"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Donald",
+      "family": "Witt",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University , , , ,",
+        "place": [
+         "Cambridge, Massachusetts, United States, 02138"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5409-8512",
+      "authenticated-orcid": true,
+      "suffix": "III",
+      "given": "David R.",
+      "family": "Barton",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University , , , ,",
+        "place": [
+         "Cambridge, Massachusetts, United States, 02138"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Evelyn L.",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University , , , ,",
+        "place": [
+         "Cambridge, Massachusetts, United States, 02138"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marko",
+      "family": "Lončar",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University , , , ,",
+        "place": [
+         "Cambridge, Massachusetts, United States, 02138"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       9,
+       22
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.21203/rs.3.rs-5775859/v1",
+    "title": [
+     "Interface-mediated dc electro-optic instability in lithium niobate nanophotonics"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0001-8711-6505",
+      "authenticated-orcid": false,
+      "given": "Matthew",
+      "family": "Yeh",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Harvard University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-5409-8512",
+      "authenticated-orcid": false,
+      "given": "David",
+      "family": "Barton",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Northwestern University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Gavin",
+      "family": "Smith",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-2973-9434",
+      "authenticated-orcid": false,
+      "given": "Aaron",
+      "family": "Day",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Alexander",
+      "family": "Raun",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7709-9606",
+      "authenticated-orcid": false,
+      "given": "Dylan",
+      "family": "Renaud",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "renaud@g.harvard.edu"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-0374-9901",
+      "authenticated-orcid": false,
+      "given": "Daniel",
+      "family": "Assumpcao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8805-1405",
+      "authenticated-orcid": false,
+      "given": "Evelyn",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marko",
+      "family": "Loncar",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Harvard University"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "posted-content",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       1,
+       22
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/ol.527659",
+    "title": [
+     "Single-drive electro-optic frequency comb source on a photonic-wire-bonded thin-film lithium niobate platform"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0007-8954-9495",
+      "authenticated-orcid": true,
+      "given": "Rebecca",
+      "family": "Cheng",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03vek6s52",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xinyi",
+      "family": "Ren",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Southern California"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8038-7561",
+      "authenticated-orcid": true,
+      "given": "Christian",
+      "family": "Reimer",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "HyperLight"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Matthew",
+      "family": "Yeh",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03vek6s52",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Victoria",
+      "family": "Rosborough",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Freedom Photonics"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Juergen",
+      "family": "Musolf",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Freedom Photonics"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Leif",
+      "family": "Johansson",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Freedom Photonics"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-9838-3895",
+      "authenticated-orcid": true,
+      "given": "Mian",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "HyperLight"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7815-4195",
+      "authenticated-orcid": true,
+      "given": "Mengjie",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of Southern California"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marko",
+      "family": "Lončar",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "id": [
+         {
+          "id": "https://ror.org/03vek6s52",
+          "id-type": "ROR",
+          "asserted-by": "publisher"
+         }
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       6,
+       14
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.252992",
+    "title": [
+     "&lt;title&gt;Analytical model of surface electrode performance for the transverse electro-optic modulator&lt;/title&gt;"
+    ],
+    "author": [
+     {
+      "given": "Yuxu",
+      "family": "Yeh",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "QingJi",
+      "family": "Zeng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       1996,
+       10,
+       3
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.measurement.2025.117971",
+    "title": [
+     "Modulation parameters characterization of electro-optic phase modulators for space-based gravitational wave detection"
+    ],
+    "author": [
+     {
+      "given": "Sicheng",
+      "family": "Jiang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yingzi",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hao",
+      "family": "Yan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ming",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Fengchun",
+      "family": "Qiu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xiang",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-7912-9143",
+      "authenticated-orcid": false,
+      "given": "Yuanbo",
+      "family": "Du",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hsien-chi",
+      "family": "Yeh",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       12
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -23,7 +23,7 @@ entries:
   unit: pm/V
   basis: derived
   locator: abstract; p.3, Fig. 2b; p.2, Fig. 1f caption; supplement p.10, Fig. S3
-  note: Hysteresis fit of Delta n vs E (SI Eq. 3); peak at 45 deg device angle; 300 K peak about 365. Attributed to the SiN design because the Fig. 1f caption (16.7 MV/m = 150 V) implies the 9.0 um SiN-design gap and Fig. S3 is a hysteresis fit 'measured in a BaTiO3-SiN device' (321 pm/V at 300 K, Table S1)
+  note: 'Hysteresis fit (SI Eq. 3), 45 deg; 300 K about 365. SiN design: Fig. 1f caption field/voltage implies 9.0 um gap; Fig. S3 is BaTiO3-SiN.'
 - device_id: eltes2020-a
   field: prop_loss_db_per_cm
   value: 5.6
@@ -104,7 +104,7 @@ entries:
   unit: GHz
   basis: measured
   locator: abstract; supplement p.17, Fig. S9
-  note: Fig. S9 plots EOE |S21| and the dashed cut-off marker is at -6 dB; paper says 'cut-off at ~30 GHz' (approx) and attributes it to the photon lifetime (32 GHz predicted for Q about 6000); the value coincides with the stated 30 GHz measurement limit
+  note: 'EOE |S21| marker at -6 dB (Fig. S9); paper: ''~30 GHz'', photon-lifetime limited (32 GHz predicted, Q about 6000); coincides with 30 GHz setup limit.'
 - device_id: eltes2020-b
   field: bw_measured_to_ghz
   value: 30

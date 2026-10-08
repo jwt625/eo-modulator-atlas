@@ -33,14 +33,14 @@ entries:
   unit: ''
   basis: derived
   locator: p.2, Section 2
-  note: 'Paper: MZM with Vpi of 3.6 V and "a single-ended drive scheme enabling standard push-pull driving"; the authors do not label the 3.6 V as push-pull explicitly'
+  note: MZM Vpi 3.6 V with "single-ended drive scheme enabling standard push-pull driving"; 3.6 V not explicitly labeled push-pull.
 - device_id: eltes2023-a
   field: integration
   value: foundry_native
   unit: ''
   basis: derived
   locator: p.3, Section 5 (Conclusions); p.1, Fig. 1a
-  note: 'Paper: "the manufacturing process we have established at a 200 mm SiPh-compatible line"; Fig. 1a shows a Lumiphase 200 mm wafer; fab line not named further; measured MZMs are stand-alone devices without SiPh components'
+  note: '''process we have established at a 200 mm SiPh-compatible line''; Fig. 1a: Lumiphase 200 mm wafer; fab line not named; MZMs stand-alone without SiPh components.'
 - device_id: eltes2023-a
   field: vpi_dc_freq_ghz
   value: 0.01

@@ -1,0 +1,257 @@
+paper_id: zhang2024
+verified_on: '2026-10-07'
+source_files:
+- references/zhang2024/text.md
+- references/zhang2024/figures/page_04.png
+- references/zhang2024/figures/page_07.png
+- references/zhang2024/figures/img_p16_1.png
+- references/zhang2024/figures/img_p16_2.png
+entries:
+- device_id: zhang2024-a
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.16 SI Table 1 (tLN); Methods p.11
+- device_id: zhang2024-a
+  field: etch_depth_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.11 Methods; p.16 SI Table 1 (tLN,w)
+  note: dry etching 250 nm of the LN film
+- device_id: zhang2024-a
+  field: rib_width_nm
+  value: 1200
+  unit: nm
+  basis: design_target
+  locator: p.3; p.11 Methods; p.16 SI Table 1 (wLN)
+  note: top width of the ridge
+- device_id: zhang2024-a
+  field: electrode_gap_um
+  value: 5.5
+  unit: um
+  basis: design_target
+  locator: p.4; p.16 SI Table 1 (G)
+  note: optimized electrode gap
+- device_id: zhang2024-a
+  field: signal_width_um
+  value: 50
+  unit: um
+  basis: design_target
+  locator: p.4; p.16 SI Table 1 (w)
+- device_id: zhang2024-a
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: design_target
+  locator: p.16 SI Table 1 (tCu, labelled gold thickness)
+  note: metal named Cu in Fig. 1(g) and Gold in SI Table 1
+- device_id: zhang2024-a
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.11 Methods; p.16 SI Table 1
+  note: 2 um buried oxide
+- device_id: zhang2024-a
+  field: substrate
+  value: quartz, 500 um
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods; p.16 SI Table 1
+- device_id: zhang2024-a
+  field: cladding
+  value: SiO2 500 nm (PECVD)
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods; p.16 SI Table 1 (tSiO2,t)
+- device_id: zhang2024-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods
+- device_id: zhang2024-a
+  field: epitaxy_or_stack
+  value: 'T-shaped capacitive loading: period P 20 um, period gap T 2 um, slot heights H 2 um and S 2 um'
+  unit: ''
+  basis: design_target
+  locator: p.4; p.16 SI Table 1
+  note: symbol roles read from the SEM label set, not defined in the text
+- device_id: zhang2024-a
+  field: length_mm
+  value: 8
+  unit: mm
+  basis: design_target
+  locator: p.5; p.6
+  note: 8 mm long MZI modulator
+- device_id: zhang2024-a
+  field: vpi_dc_v
+  value: 3.04
+  unit: V
+  basis: measured
+  locator: p.5; Fig. 2(a)
+  note: low-frequency Vpi under kHz triangular/sawtooth sweep; frequency not stated
+- device_id: zhang2024-a
+  field: vpil_dc_vcm
+  value: 2.43
+  unit: V*cm
+  basis: derived
+  locator: p.5
+  note: authors state VpiL 2.43 V cm for 8 mm and 3.04 V
+- device_id: zhang2024-a
+  field: bw3db_ghz
+  value: 145
+  unit: GHz
+  basis: derived
+  locator: p.7; Fig. 3(d)
+  note: derived EO S21 from OSA RF Vpi vs DC Vpi; Fig. 3(d) raw points scatter, calculated curve crosses -3 dB near 150 GHz
+- device_id: zhang2024-a
+  field: bw6db_ghz
+  value: 310
+  unit: GHz
+  basis: derived
+  locator: p.7; Fig. 3(d)
+  note: same EO S21; calculated curve crosses -6 dB near 330 GHz
+- device_id: zhang2024-a
+  field: prop_loss_db_per_cm
+  value: 0.1
+  unit: dB/cm
+  basis: measured
+  locator: p.4
+  note: optical rib waveguide loss stated as below 0.1 dB/cm
+- device_id: zhang2024-a
+  field: rf_loss_db_per_cm
+  value: 14
+  unit: dB/cm
+  basis: measured
+  locator: p.5; Fig. 2(c)
+  note: text 14 dB/cm at 300 GHz; Fig. 2(c) dots about 13.5-14, fit about 13
+- device_id: zhang2024-a
+  field: rf_loss_freq_ghz
+  value: 300
+  unit: GHz
+  basis: measured
+  locator: p.5
+- device_id: zhang2024-a
+  field: z0_ohm
+  value: 46
+  unit: ohm
+  basis: derived
+  locator: p.5
+  note: from the 0.4 dB low-frequency mismatch intercept; text says approximately 46 ohm
+- device_id: zhang2024-a
+  field: n_rf
+  value: 2.26
+  unit: '1'
+  basis: measured
+  locator: p.5; Fig. 2(b)
+  note: THz phase index about 2.26 over 220-320 GHz for H = 2 um
+- device_id: zhang2024-b
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.16 SI Table 1 (tLN); Methods p.11
+- device_id: zhang2024-b
+  field: etch_depth_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.11 Methods; p.16 SI Table 1 (tLN,w)
+  note: dry etching 250 nm of the LN film
+- device_id: zhang2024-b
+  field: rib_width_nm
+  value: 1200
+  unit: nm
+  basis: design_target
+  locator: p.3; p.11 Methods; p.16 SI Table 1 (wLN)
+  note: top width of the ridge
+- device_id: zhang2024-b
+  field: electrode_gap_um
+  value: 5.5
+  unit: um
+  basis: design_target
+  locator: p.4; p.16 SI Table 1 (G)
+  note: optimized electrode gap
+- device_id: zhang2024-b
+  field: signal_width_um
+  value: 50
+  unit: um
+  basis: design_target
+  locator: p.4; p.16 SI Table 1 (w)
+- device_id: zhang2024-b
+  field: electrode_thickness_um
+  value: 0.5
+  unit: um
+  basis: design_target
+  locator: p.16 SI Table 1 (tCu, labelled gold thickness)
+  note: metal named Cu in Fig. 1(g) and Gold in SI Table 1
+- device_id: zhang2024-b
+  field: buffer_oxide_um
+  value: 2
+  unit: um
+  basis: design_target
+  locator: p.11 Methods; p.16 SI Table 1
+  note: 2 um buried oxide
+- device_id: zhang2024-b
+  field: substrate
+  value: quartz, 500 um
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods; p.16 SI Table 1
+- device_id: zhang2024-b
+  field: cladding
+  value: SiO2 500 nm (PECVD)
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods; p.16 SI Table 1 (tSiO2,t)
+- device_id: zhang2024-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods
+- device_id: zhang2024-b
+  field: epitaxy_or_stack
+  value: 'T-shaped capacitive loading: period P 20 um, period gap T 2 um, slot heights H 2 um and S 2 um'
+  unit: ''
+  basis: design_target
+  locator: p.4; p.16 SI Table 1
+  note: symbol roles read from the SEM label set, not defined in the text
+- device_id: zhang2024-b
+  field: length_mm
+  value: 8
+  unit: mm
+  basis: design_target
+  locator: p.5; p.6
+  note: 8 mm long MZI modulator
+- device_id: zhang2024-b
+  field: vpi_rf_v
+  value: 6
+  unit: V
+  basis: measured
+  locator: p.6; Fig. 3(c)
+  note: RF Vpi 6 V at 300 GHz; Fig. 3(c) smoothed about 6 V
+- device_id: zhang2024-b
+  field: vpi_rf_freq_ghz
+  value: 300
+  unit: GHz
+  basis: measured
+  locator: p.6
+derived:
+- device_id: zhang2024-a
+  field: slab_thickness_nm
+  value: 250
+  formula: slab = LN film 500 nm - etch depth 250 nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: zhang2024-b
+  field: slab_thickness_nm
+  value: 250
+  formula: slab = LN film 500 nm - etch depth 250 nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm

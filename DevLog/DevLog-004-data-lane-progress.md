@@ -94,6 +94,7 @@ Ingestion stopped: no data-lane agents are running. The p1_02 audit was stopped 
 - [ ] Interface follow-ups for the schema/SPEC owners (not applied here): `comparable` flag on sim targets and a placeholder/unverified provenance class (several configs already use them); eo_rolloff and `bw3db_reference` for plots normalized at an unstated low frequency; an `integration` value for epitaxy-then-transfer BTO; a place for paper-level RF numbers not tied to a device; sim target schema requires `eps_r` for every dielectric, so configs with honestly omitted constants fail schema validation
 - [ ] Sourcing the missing material constants (LN, LT, SiO2, Si, BTO, LSAT, Au) from cited primary references so sim configs can run
 - [ ] R1: confirm the tracked-PDF reference-cache policy before any public spin-off (publisher-copyright PDFs are in `references/`)
+- 2026-10-07 status note: this lane is closed. p1_02..p1_11 were audited and merged (DevLog-015, DevLog-016 as p4_01..p4_05); manual downloads ingested (DevLog-021); priority-2 tranche continues in DevLog-014/022; org names unified (DevLog-020 W3); interface follow-ups consolidated in W2 (DevLog-020); tracked-PDF policy decided (DevLog-020 #11, DevLog-021); material constants remain open (DevLog-022).
 
 ### How to review
 

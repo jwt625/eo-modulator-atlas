@@ -9,10 +9,9 @@
 //   with c = 3. materials.labFromCrystal returns A with v_lab = A v_crystal; ROWS of A are the lab axes written in
 //   crystal coordinates. Rank-2 tensors transform T_lab = A T_crystal A^T; a lab field maps to the crystal frame
 //   by E_c = A^T E_lab. materials.deltaEpsLab implements exactly this chain; it is reused here, not re-derived.
-//   rotation_deg SENSE (Q2 F6): materials.labFromCrystal applies A' = R(theta) A with R = [[c,-s],[s,c]], i.e. row0' = c lx - s n,
-//   row1' = s lx + c n. This rotates the CRYSTAL CCW about the propagation axis (the lab axes move clockwise in the crystal frame);
-//   the comment in materials.mjs calls it a CCW rotation of the lab frame, which is the opposite sense (sign of dn flips for 90/180 deg).
-//   This module takes the implemented sense as the contract; the doc/code mismatch is a proposal to the materials.mjs owner (DevLog-007 P9).
+//   rotation_deg SENSE (Q2 F6, fixed 2026-10-07 by DevLog-007 P9 option b): materials.labFromCrystal rotates the LAB frame CCW
+//   about the propagation axis (seen from +z): row0' = c lx + s n, row1' = -s lx + c n (lx, n = unrotated lab x and film normal in
+//   crystal coordinates). Before 2026-10-07 the code applied the opposite sense (crystal CCW); no config set rotation_deg.
 // Pockels. Delta(1/n^2)_I = sum_j r_Ij E_j, I = 1..6 contracted (xx, yy, zz, yz, xz, xy), j = crystal x,y,z
 //   (materials.pockelsVoigt, coefficients in pm/V converted to m/V). No clamped/unclamped distinction is made by
 //   the engine: the supplied r values are used as given. First order: Delta(eps) = -eps Delta(1/eps) eps (lab frame).
@@ -51,9 +50,10 @@ export const ARM_DRIVE_MODES = ['single_arm', 'two_arm_field_resolved'];
 export const TERMINAL_DRIVES = ['single_ended', 'differential'];
 
 export const EO_CONVENTIONS = Object.freeze({
-  id: 'eo-atlas.eo-overlap/v1',
+  id: 'eo-atlas.eo-overlap/v2',
   lab_frame: 'x lateral, y film normal (up), z propagation',
   crystal_to_lab: 'v_lab = A v_crystal; rows of A are lab axes in crystal coordinates (materials.labFromCrystal); T_lab = A T A^T',
+  rotation_deg: 'CCW rotation of the lab frame about the propagation axis seen from +z: x\' = cos t x + sin t y, y\' = -sin t x + cos t y (v2, 2026-10-07; v1 applied the opposite sense)',
   pockels: 'delta(1/n^2)_I = sum_j r_Ij E_j, I contracted xx,yy,zz,yz,xz,xy; j crystal x,y,z; r in m/V; coefficients used as supplied',
   delta_n_sign: 'delta(eps) = -eps delta(1/eps) eps; delta n = -(1/2) n^3 r E (positive r*E lowers the index)',
   field: 'E = -grad(phi), V/m per volt of terminal voltage, lab frame, E_z = 0',

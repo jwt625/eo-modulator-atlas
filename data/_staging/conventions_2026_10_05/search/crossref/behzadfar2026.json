@@ -1,0 +1,460 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 6,
+  "items": [
+   {
+    "DOI": "10.1117/12.3078795",
+    "title": [
+     "Segmented electrodes and high permittivity claddings for high-performance thin-film lithium niobate modulators"
+    ],
+    "author": [
+     {
+      "given": "S.",
+      "family": "Behzadfar",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "F.",
+      "family": "Karami",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "J.",
+      "family": "Haefner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "F.",
+      "family": "Juneghani",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "P.",
+      "family": "Kulkarni",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "S.",
+      "family": "Fathpour",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.3063183",
+    "title": [
+     "Efficient electro-optic modulators on thin-film lithium niobate with non-centered waveguides and high-permittivity cladding"
+    ],
+    "author": [
+     {
+      "given": "Shiva",
+      "family": "Behzadfar",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Fatemeh",
+      "family": "Karami",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Farzaneh",
+      "family": "Arab Juneghani",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Mr. Joseph",
+      "family": "Haefner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sasan",
+      "family": "Fathpour",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       9,
+       16
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.3063422",
+    "title": [
+     "Broadband and low-loss waveguide crossings on thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Fatemeh",
+      "family": "Karami",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Shiva",
+      "family": "Behzadfar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sasan",
+      "family": "Fathpour",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       9,
+       16
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_si.2026.sm4k.7",
+    "title": [
+     "Heterogeneous Integration of Single and Balanced Photodiodes on Thin-Film Lithium Niobate Waveguides"
+    ],
+    "author": [
+     {
+      "given": "Mohammadhassan",
+      "family": "Maghsoudian",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Robert",
+      "family": "Kwolek",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Parash",
+      "family": "Thapalia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Fatemeh",
+      "family": "Karami",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jaber",
+      "family": "Balalhabashi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Aditya",
+      "family": "Tripathi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xiangwen",
+      "family": "Guo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shiva",
+      "family": "Behzadfar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Farzaneh A.",
+      "family": "Juneghani",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Oanh Hoang",
+      "family": "Vo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sasan",
+      "family": "Fathpour",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Rajveer",
+      "family": "Nehra",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Andreas",
+      "family": "Beling",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/icccr61138.2024.10585360",
+    "title": [
+     "Innovative Design for Enhanced Adaptability and Performance of Soft Inchworm Robot"
+    ],
+    "author": [
+     {
+      "given": "Mahtab",
+      "family": "Behzadfar",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Beijing Institute of Technology,Department of Mechanical and Electrical Systems Engineering,Beijing,China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ki-Young",
+      "family": "Song",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Beijing Institute of Technology,Department of Mechanical and Electrical Systems Engineering,Beijing,China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       4,
+       19
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

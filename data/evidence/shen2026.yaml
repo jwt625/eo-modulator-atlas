@@ -39,7 +39,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.2, Sec. 4; p.3 Fig. 3(c)
-  note: '''exceeding 100 GHz'' is the paper''s stated bound, kept as gt 100; Fig. 3(c) fit crosses -3 dB near 105 GHz (above the bound), VNA+OSA data to 110 GHz'
+  note: Paper's stated bound 'exceeding 100 GHz', kept as gt 100; Fig. 3(c) fit crosses -3 dB near 105 GHz; VNA+OSA data to 110 GHz.
 - device_id: shen2026-a
   field: bw_measured_to_ghz
   value: 110

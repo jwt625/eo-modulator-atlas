@@ -1,0 +1,634 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 5370,
+  "items": [
+   {
+    "DOI": "10.23919/emsci.2024.0046",
+    "title": [
+     "Broadband Millimeter-Wave Frequency Mixer Based on Thin-Film Lithium Niobate Photonics"
+    ],
+    "author": [
+     {
+      "given": "Xiangzhi",
+      "family": "Xie",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hanke",
+      "family": "Feng",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yuansheng",
+      "family": "Tao",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yiwen",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yikun",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ke",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhaoxi",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "City University of Hong Kong,Department of Electrical Engineering &#x0026; State Key Laboratory of Terahertz and Millimeter Waves,Hong Kong,China,999077"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       3
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_si.2025.ss165_2",
+    "title": [
+     "Photonic-assisted millimeter-wave frequency conversion based on thin-film lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Xiangzhi",
+      "family": "Xie",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hanke",
+      "family": "Feng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuansheng",
+      "family": "Tao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yiwen",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yikun",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ke",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zhaoxi",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/lpor.202200059",
+    "title": [
+     "Integrated Photonics Based on Rare‐Earth Ion‐Doped Thin‐Film Lithium Niobate"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-3852-7302",
+      "authenticated-orcid": false,
+      "given": "Yuechen",
+      "family": "Jia",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "School of Physics State Key Laboratory of Crystal Materials Shandong University Jinan 250100 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jiangwei",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute of Optical Science and Technology School of Physics and Astronomy School of Physics and Astronomy Shanghai Jiao Tong University 800 Dongchuan Road Shanghai 200240 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xiaoli",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Physics State Key Laboratory of Crystal Materials Shandong University Jinan 250100 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xiongshuo",
+      "family": "Yan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute of Optical Science and Technology School of Physics and Astronomy School of Physics and Astronomy Shanghai Jiao Tong University 800 Dongchuan Road Shanghai 200240 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ranran",
+      "family": "Xie",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Physics State Key Laboratory of Crystal Materials Shandong University Jinan 250100 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lei",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Physics State Key Laboratory of Crystal Materials Shandong University Jinan 250100 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yuping",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute of Optical Science and Technology School of Physics and Astronomy School of Physics and Astronomy Shanghai Jiao Tong University 800 Dongchuan Road Shanghai 200240 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Feng",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "School of Physics State Key Laboratory of Crystal Materials Shandong University Jinan 250100 China"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       7,
+       22
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/lpor.202270044",
+    "title": [
+     "Integrated Photonics Based on Rare‐Earth Ion‐Doped Thin‐Film Lithium Niobate (Laser Photonics Rev. 16(9)/2022)"
+    ],
+    "author": [
+     {
+      "given": "Yuechen",
+      "family": "Jia",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jiangwei",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiaoli",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Xiongshuo",
+      "family": "Yan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ranran",
+      "family": "Xie",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Lei",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yuping",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Feng",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       9
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_si.2026.sth1b.3",
+    "title": [
+     "A Thin-film Lithium Niobate Photonic Architecture for Broadband Microwave Arbitrary Waveform Generation"
+    ],
+    "author": [
+     {
+      "given": "Shanshan",
+      "family": "Cheng",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zexing",
+      "family": "Zhao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yiran",
+      "family": "Guan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Kunpeng",
+      "family": "Jia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Shining",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhenda",
+      "family": "Xie",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jianping",
+      "family": "Yao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -1,0 +1,362 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 6516,
+  "items": [
+   {
+    "DOI": "10.1109/jssc.2007.907167",
+    "title": [
+     "Nonlinear Shaping SC Oscillator With Enhanced Linearity"
+    ],
+    "author": [
+     {
+      "given": "Sang Wook",
+      "family": "Park",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "JosÉ L.",
+      "family": "Ausin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Faramarz",
+      "family": "Bahmani",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Edgar",
+      "family": "Sanchez-Sinencio",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2007,
+       11
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_fs.2026.fm1a.5",
+    "title": [
+     "Packaged Programmable Electro-Optic Photonic Circuit on Thin-Film Lithium Tantalate for Quantum Simulation"
+    ],
+    "author": [
+     {
+      "given": "Uijoon",
+      "family": "Park",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jinil",
+      "family": "Lee",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Sunghyun",
+      "family": "Moon",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hyeyoon",
+      "family": "Jeon",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yong-su",
+      "family": "Kim",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hojoong",
+      "family": "Jung",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hyounghan",
+      "family": "Kwon",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1016/j.ssc.2021.114624",
+    "title": [
+     "Carrier screening effects on intersubband nonlinear optical rectification in wurtzite InGaN/GaN coupling quantum wells"
+    ],
+    "author": [
+     {
+      "given": "Woo-Pyo",
+      "family": "Hong",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-2134-1627",
+      "authenticated-orcid": false,
+      "given": "Seoung-Hwan",
+      "family": "Park",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       2
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/jssc.2007.906327",
+    "title": [
+     "Introduction to the Special Issue on the 2006 Asian Solid-State Circuits Conference (A-SSCC'06)"
+    ],
+    "author": [
+     {
+      "given": "Sung Bae",
+      "family": "Park",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Suhwan",
+      "family": "Kim",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2007,
+       11
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1142/s0218863504002018",
+    "title": [
+     "ELECTRO-OPTIC AND ELECTRO-GYRATION EFFECTS IN CHIRAL MOLECULAR SYSTEMS"
+    ],
+    "author": [
+     {
+      "given": "AHYOUNG",
+      "family": "KIM",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Physics, Ewha Womans University, Seoul 120-750, Korea"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "J. W.",
+      "family": "WU",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Physics, Ewha Womans University, Seoul 120-750, Korea"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "S. H.",
+      "family": "HAN",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Advanced Photonics Research Institute, GIST, Gwangju 500-712, Korea"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "BYOUNGCHOO",
+      "family": "PARK",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Quantum Photonic Science Research Center, Hanyang University, Seoul 133-791, Korea"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "HIDEO",
+      "family": "TAKEZOE",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Organic &amp; Polymeric Materials, Tokyo Institute of Technology, Tokyo 152-5882, Japan"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2004,
+       12
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

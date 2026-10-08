@@ -205,7 +205,7 @@ entries:
   unit: dB/cm
   basis: derived
   locator: p.6 Sec. 3; Fig. 6(f)
-  note: Authors' fit 0.0133 dB/um (unit conversion only) on separate SL waveguides of the same design (W 0.4 um, P 20, ng 4.00), not the MZM itself
+  note: Authors' fit 0.0133 dB/um (unit conversion only) on separate SL waveguides of same design (W 0.4 um, P 20, ng 4.00), not the MZM.
 derived:
 - device_id: chen2023-a
   field: slab_thickness_nm

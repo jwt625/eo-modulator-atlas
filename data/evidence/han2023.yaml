@@ -33,7 +33,7 @@ entries:
   unit: V
   basis: derived
   locator: supplement p.8 Sec. S6; Fig. S4
-  note: Sinusoidal fit of transmission versus voltage; 10 percent change over 0-5 V; text says 0.1 pi but 78 V implies about 0.064 pi over 5 V (source inconsistency); bias point not stated
+  note: Sinusoidal fit, 10 percent transmission change over 0-5 V; text says 0.1 pi but 78 V implies about 0.064 pi (source inconsistency); bias not stated.
 - device_id: han2023-a
   field: vpil_dc_vcm
   value: 0.96
@@ -343,7 +343,7 @@ entries:
   unit: GHz
   basis: measured
   locator: supplement p.11-12 Sec. S8; supplement p.22 Fig. S11
-  note: 'Authors: 3 dB bandwidth ''could further exceed 110 GHz'' at 4 V reverse bias; measured trace to 110 GHz stays above -3 dB (lowest about -2.7 dB, figure read); fit not extended beyond the sweep'
+  note: '''could further exceed 110 GHz'' at 4 V; measured trace (to 110 GHz) above -3 dB, lowest about -2.7 dB (figure read); fit not extended.'
 - device_id: han2023-c
   field: bw_measured_to_ghz
   value: 110

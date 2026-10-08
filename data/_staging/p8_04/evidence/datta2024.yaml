@@ -1,0 +1,195 @@
+paper_id: datta2024
+verified_on: '2026-10-07'
+source_files:
+- references/datta2024/text.md
+- references/datta2024/crossref.json
+- references/datta2024/figures/img_p11_1.png
+- references/datta2024/figures/img_p14_1.png
+entries:
+- device_id: datta2024-a
+  field: wavelength_nm
+  value: 1538.71
+  unit: nm
+  basis: measured
+  locator: p.4
+  note: Resonance at critical coupling; probe lambda_p 0.03 nm blue of it
+- device_id: datta2024-a
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: design_target
+  locator: p.4; p.21
+  note: 40 um Gr-Al2O3-WSe2 capacitor in the ring (device I)
+- device_id: datta2024-a
+  field: il_onchip_db
+  value: 4.78
+  unit: dB
+  basis: measured
+  locator: p.4; Fig. 2(a) caption p.12
+  note: +/- 0.40 dB; ring insertion loss at the probe detuning for a 0.46 pi phase change; scope not defined
+- device_id: datta2024-a
+  field: q_loaded
+  value: 20870
+  unit: '1'
+  basis: measured
+  locator: p.4
+  note: Approximately 20,870 at 8 V (critical coupling); paper words it as 'designed to achieve'
+- device_id: datta2024-a
+  field: rib_width_nm
+  value: 1300
+  unit: nm
+  basis: design_target
+  locator: p.21 Methods; p.3
+  note: 1.3 um wide SiN waveguide, 330 nm high
+- device_id: datta2024-a
+  field: buffer_oxide_um
+  value: 4.2
+  unit: um
+  basis: design_target
+  locator: p.21 Methods
+  note: Thermally oxidized SiO2 under the SiN
+- device_id: datta2024-a
+  field: electrode_metal
+  value: Cr/Pd/Au (0.5/30/80 nm) to WSe2; Cr/Pd/Au (5/20/50 nm) to graphene
+  unit: ''
+  basis: design_target
+  locator: p.22 Methods
+  note: Contacts placed 1.5 um from the waveguide
+- device_id: datta2024-a
+  field: cladding
+  value: 180 +/- 15 nm planarized PECVD SiO2 over the SiN, plus 15 nm ALD Al2O3, under the 2D stack
+  unit: ''
+  basis: design_target
+  locator: p.3; p.22 Methods
+- device_id: datta2024-a
+  field: epitaxy_or_stack
+  value: SiN ring (1.3 um x 330 nm, 50 um radius) / 180 nm SiO2 / 15 nm Al2O3 / monolayer WSe2 / 45 nm ALD Al2O3 / monolayer CVD graphene
+  unit: ''
+  basis: design_target
+  locator: p.3-4; p.22 Methods; Fig. 1(c)
+  note: Dielectric 45 nm stated on p.4 (10 nm + 35 nm ALD on p.22)
+- device_id: datta2024-b
+  field: wavelength_nm
+  value: 1569.6
+  unit: nm
+  basis: measured
+  locator: p.5
+  note: Bandwidth measured at 1569.6 nm, 8 V bias
+- device_id: datta2024-b
+  field: length_mm
+  value: 0.04
+  unit: mm
+  basis: design_target
+  locator: p.4; p.21
+  note: 40 um capacitor (device I)
+- device_id: datta2024-b
+  field: bw3db_ghz
+  value: 14.9
+  unit: GHz
+  basis: measured
+  locator: p.5; Fig. 2(b)
+  note: +/- 0.1 GHz; normalized S21, 70 GHz photodiode and VNA, 10 dBm RF swing; contact-resistance limited
+- device_id: datta2024-b
+  field: q_loaded
+  value: 12000
+  unit: '1'
+  basis: derived
+  locator: p.5
+  note: Approximately 12000 from the stated 15.8 GHz optical bandwidth at 8 V
+- device_id: datta2024-b
+  field: rib_width_nm
+  value: 1300
+  unit: nm
+  basis: design_target
+  locator: p.21 Methods; p.3
+  note: 1.3 um wide SiN waveguide, 330 nm high
+- device_id: datta2024-b
+  field: buffer_oxide_um
+  value: 4.2
+  unit: um
+  basis: design_target
+  locator: p.21 Methods
+  note: Thermally oxidized SiO2 under the SiN
+- device_id: datta2024-b
+  field: electrode_metal
+  value: Cr/Pd/Au (0.5/30/80 nm) to WSe2; Cr/Pd/Au (5/20/50 nm) to graphene
+  unit: ''
+  basis: design_target
+  locator: p.22 Methods
+  note: Contacts placed 1.5 um from the waveguide
+- device_id: datta2024-b
+  field: cladding
+  value: 180 +/- 15 nm planarized PECVD SiO2 over the SiN, plus 15 nm ALD Al2O3, under the 2D stack
+  unit: ''
+  basis: design_target
+  locator: p.3; p.22 Methods
+- device_id: datta2024-b
+  field: epitaxy_or_stack
+  value: SiN ring (1.3 um x 330 nm, 50 um radius) / 180 nm SiO2 / 15 nm Al2O3 / monolayer WSe2 / 45 nm ALD Al2O3 / monolayer CVD graphene
+  unit: ''
+  basis: design_target
+  locator: p.3-4; p.22 Methods; Fig. 1(c)
+  note: Dielectric 45 nm stated on p.4 (10 nm + 35 nm ALD on p.22)
+- device_id: datta2024-c
+  field: wavelength_nm
+  value: 1646.22
+  unit: nm
+  basis: measured
+  locator: p.6
+  note: Resonance at critical coupling; probe lambda_p 0.04 nm blue of it
+- device_id: datta2024-c
+  field: length_mm
+  value: 0.025
+  unit: mm
+  basis: design_target
+  locator: p.5; p.21
+  note: 25 um Gr-Al2O3-WSe2 capacitor in the ring (device II)
+- device_id: datta2024-c
+  field: il_onchip_db
+  value: 2.96
+  unit: dB
+  basis: measured
+  locator: p.5-6; Fig. 2(a) caption p.12
+  note: +/- 0.34 dB; ring IL at the probe detuning for 0.50 pi; scope not defined
+- device_id: datta2024-c
+  field: q_loaded
+  value: 18730
+  unit: '1'
+  basis: measured
+  locator: p.6
+  note: Approximately 18,730 at 8.5 V (critical coupling)
+- device_id: datta2024-c
+  field: rib_width_nm
+  value: 1300
+  unit: nm
+  basis: design_target
+  locator: p.21 Methods; p.3
+  note: 1.3 um wide SiN waveguide, 330 nm high
+- device_id: datta2024-c
+  field: buffer_oxide_um
+  value: 4.2
+  unit: um
+  basis: design_target
+  locator: p.21 Methods
+  note: Thermally oxidized SiO2 under the SiN
+- device_id: datta2024-c
+  field: electrode_metal
+  value: Cr/Pd/Au (0.5/30/80 nm) to WSe2; Cr/Pd/Au (5/20/50 nm) to graphene
+  unit: ''
+  basis: design_target
+  locator: p.22 Methods
+  note: Contacts placed 1.5 um from the waveguide
+- device_id: datta2024-c
+  field: cladding
+  value: 180 +/- 15 nm planarized PECVD SiO2 over the SiN, plus 15 nm ALD Al2O3, under the 2D stack
+  unit: ''
+  basis: design_target
+  locator: p.3; p.22 Methods
+- device_id: datta2024-c
+  field: epitaxy_or_stack
+  value: SiN ring (1.3 um x 330 nm, 50 um radius) / 180 nm SiO2 / 15 nm Al2O3 / monolayer WSe2 / 45 nm ALD Al2O3 / monolayer CVD graphene
+  unit: ''
+  basis: design_target
+  locator: p.3-4; p.22 Methods; Fig. 1(c)
+  note: Dielectric 45 nm stated on p.4 (10 nm + 35 nm ALD on p.22)
+derived: []

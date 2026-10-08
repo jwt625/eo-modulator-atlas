@@ -10,6 +10,14 @@ The browser-copy link is a primary publisher, university, author or repository r
 
 ## Start here
 
+> **2026-10-07 update (DevLog-022):** open now: zhang2021b (rank 10 below), plus two open-access papers whose
+> publisher blocked the script download (HTTP 403) and that a browser can fetch: `zhang2025.pdf`
+> ([512 Gbps/λ dual-polarization TFLN modulators based on an EO equalizer](https://doi.org/10.1515/nanoph-2025-0472),
+> Nanophotonics, CC-BY-4.0, priority 1) and `yang2024.pdf`
+> ([High-Bandwidth Lumped Mach-Zehnder Modulators Based on Thin-Film Lithium Niobate](https://doi.org/10.3390/photonics11050399),
+> MDPI Photonics, CC-BY-4.0). Also wanted: `liu2026d_supplement.pdf` (electrode geometry) and the
+> schwarzenberger2026a version of record (current copy is the accepted manuscript).
+
 | Rank | Paper | Save as | Why it matters |
 |---|---|---|---|
 | 1 | [han2023 — Slow-light silicon modulator with 110-GHz bandwidth](https://doi.org/10.1126/sciadv.adi5339) | `han2023.pdf` | Unblocks the already-staged p2_02 slow-light silicon comparison; need primary text and Supplementary Materials. |

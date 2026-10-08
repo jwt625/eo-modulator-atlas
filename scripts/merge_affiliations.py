@@ -2,9 +2,12 @@
 
 Usage: uv run python scripts/merge_affiliations.py data/_staging/geo_01 ... [--apply] [--sites-out PATH]
 Dry run by default: prints counts and problems. With --apply, writes data/author_affiliations.csv
-(sorted by paper_id, author_index, aff_order) and appends staged new organizations to
-data/organizations.csv (skipping names already present). --sites-out writes the unique
-(org_name, locality, country) site list for scripts/geocode_sites.py.
+(sorted by paper_id, author_index, aff_order): canonical rows are kept, and the rows of every paper present
+in the staged batches replace that paper's canonical rows (2026-10-07; earlier versions rebuilt the table
+from the given batches only). A staged paper must cover every author that has canonical rows (else a
+problem is reported). Staged new organizations are appended to data/organizations.csv (skipping
+names already present). --sites-out writes the unique (org_name, locality, country) site list of the
+whole merged table (canonical + staged) for scripts/geocode_sites.py.
 """
 
 import argparse
@@ -43,6 +46,15 @@ def main() -> int:
                 if o["org_name"] not in names:
                     names.add(o["org_name"])
                     new_orgs.append(o)
+    staged_papers = {r["paper_id"] for r in rows}
+    canonical = read(data / "author_affiliations.csv")[1]
+    staged_authors = {(r["paper_id"], r["author_index"]) for r in rows}
+    for r in canonical:  # a partial batch must not silently drop the other authors' canonical rows
+        if r["paper_id"] in staged_papers and (r["paper_id"], r["author_index"]) not in staged_authors:
+            problems.append(f"canonical author not in batch {(r['paper_id'], r['author_index'], r['author'])}")
+    kept = [r for r in canonical if r["paper_id"] not in staged_papers]
+    n_staged = len(rows)
+    rows = kept + rows
     papers = {p["paper_id"]: [x.strip() for x in p["authors"].split(";") if x.strip()] for p in read(data / "papers.csv")[1]}
     seen = set()
     for r in rows:
@@ -59,7 +71,11 @@ def main() -> int:
             problems.append(f"source {r['source']!r} {k}")
     rows.sort(key=lambda r: (r["paper_id"], int(r["author_index"]), int(r["aff_order"])))
     sites = sorted({(r["org_name"], r["locality"], r["country"]) for r in rows})
-    print(f"rows {len(rows)}, papers {len({r['paper_id'] for r in rows})}, new orgs {len(new_orgs)}, sites {len(sites)}, problems {len(problems)}")
+    print(
+        f"staged rows {n_staged}, staged papers {len(staged_papers)}, kept canonical rows {len(kept)}; "
+        f"rows {len(rows)}, papers {len({r['paper_id'] for r in rows})}, new orgs {len(new_orgs)}, "
+        f"sites {len(sites)}, problems {len(problems)}"
+    )
     for p in problems[:30]:
         print("PROBLEM", p)
     if a.sites_out:

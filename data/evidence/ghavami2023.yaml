@@ -1,0 +1,59 @@
+paper_id: ghavami2023
+verified_on: '2026-10-07'
+source_files:
+- references/ghavami2023/text.md
+- references/ghavami2023/figures/img_p03_1.png
+- references/ghavami2023/figures/page_03.png
+- references/ghavami2023/figures/page_04.png
+- references/ghavami2023/figures/page_05.png
+entries:
+- device_id: ghavami2023-a
+  field: length_mm
+  value: 5
+  unit: mm
+  basis: design_target
+  locator: p.1 abstract
+  note: stated only in the abstract
+- device_id: ghavami2023-a
+  field: bw3db_ghz
+  value: 300
+  unit: GHz
+  basis: simulated
+  locator: p.1 abstract; p.3 Fig. 1(c)
+  note: abstract up to 300 GHz; introduction and conclusion over 300 GHz; figure crosses -3 dB near 298 GHz (read)
+- device_id: ghavami2023-a
+  field: electrode_metal
+  value: gold
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2.2
+  note: ''
+- device_id: ghavami2023-a
+  field: substrate
+  value: silicon
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2.2
+  note: thickness printed as x
+- device_id: ghavami2023-a
+  field: cladding
+  value: SiO2
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2.2
+  note: thickness printed as x
+- device_id: ghavami2023-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.4 Sec. 2.2
+  note: ''
+- device_id: ghavami2023-b
+  field: bw3db_ghz
+  value: 70
+  unit: GHz
+  basis: simulated
+  locator: p.3 Sec. 2.1.1; p.3 Fig. 1(c)
+  note: regular modulator without equalizer
+derived: []

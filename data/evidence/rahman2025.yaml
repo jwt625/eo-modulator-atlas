@@ -53,9 +53,9 @@ entries:
   field: buffer_oxide_um
   value: 4
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.3 Sec. III
-  note: nominal oxide below SiN1
+  note: nominal oxide below SiN1; nominal; LNOI 2 um BOX removed
 - device_id: rahman2025-1
   field: substrate
   value: silicon handle, about 10 ohm cm resistivity, about 700 um; no undercut trench
@@ -149,9 +149,9 @@ entries:
   field: buffer_oxide_um
   value: 4
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.3 Sec. III
-  note: nominal oxide below SiN1
+  note: nominal oxide below SiN1; nominal; LNOI 2 um BOX removed
 - device_id: rahman2025-2
   field: substrate
   value: silicon handle, about 10 ohm cm resistivity, about 700 um; air trenches undercut the phase shifters (about 80 um)
@@ -252,9 +252,9 @@ entries:
   field: buffer_oxide_um
   value: 4
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.3 Sec. III
-  note: nominal oxide below SiN1
+  note: nominal oxide below SiN1; nominal; LNOI 2 um BOX removed
 - device_id: rahman2025-3
   field: substrate
   value: silicon handle, about 10 ohm cm resistivity, about 700 um; air trenches undercut the phase shifters (about 80 um)

@@ -127,7 +127,7 @@ entries:
   unit: ohm
   basis: derived
   locator: p.9 Sec. 3; Fig. 3(a); p.8 Fig. 2(d)
-  note: Authors state Z0 is rather insensitive to gate voltage (p.9); measured Re Z0 at 300 V only in 3D Fig. 3(a), not read; limit about 50 ohm.
+  note: 'Authors: Z0 rather insensitive to gate voltage (p.9); measured Re Z0 at 300 V only in 3D Fig. 3(a), not read; limit about 50 ohm.'
 - device_id: zwickel2020-gate300
   field: rf_loss_freq_ghz
   value: 50

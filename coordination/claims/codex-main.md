@@ -2,7 +2,7 @@
 
 - Agent: Codex in the conversation that inspected the repository on 2026-10-01
 - Task IDs: C0, E1, U1, U2a, R0, D1.12, U2c, E2i.1
-- Status: D1.12 corrections, U2c and E2i.1 ready_for_review; earlier handoffs retained
+- Status: released 2026-10-07 (inactive per the user; no update since 2026-10-02): C0, R0, E1, U1, U2a, U2c, D1.12, E2i.1 complete (accepted); E2i.2/E3i taken over by claude-continuation-2026-10-07 (no progress had been recorded)
 - Updated: 2026-10-02
 - Active checkout: standalone `jwt625/eo-modulator-atlas`, baseline `3602290`
 - Migration/ingestion progress: `DevLog/DevLog-006-standalone-continuation.md`

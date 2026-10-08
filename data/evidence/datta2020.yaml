@@ -1,0 +1,157 @@
+paper_id: datta2020
+verified_on: '2026-10-07'
+source_files:
+- references/datta2020/text.md
+- references/datta2020/crossref.json
+- references/datta2020/figures/page_09.png
+- references/datta2020/figures/page_10.png
+entries:
+- device_id: datta2020-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: measured
+  locator: p.8; Fig. 3(d) caption p.10
+  note: Frequency response measured at 1550 nm; MZI fringes plotted 1520 to 1600 nm
+- device_id: datta2020-a
+  field: length_mm
+  value: 0.5
+  unit: mm
+  basis: design_target
+  locator: p.7
+  note: 500 um WS2-HfO2-ITO capacitor on each arm; device lengths vary between MZIs (Fig. 3 caption p.10)
+- device_id: datta2020-a
+  field: vpil_dc_vcm
+  value: 1.33
+  unit: V*cm
+  basis: derived
+  locator: p.7; Fig. 3(c)
+  note: Authors' VpiL from Delta n_eff vs voltage of the MZI fringe shift (formula in SI Section V, not cached); unclad device
+- device_id: datta2020-a
+  field: bw3db_ghz
+  value: 0.3
+  unit: GHz
+  basis: measured
+  locator: p.8; Fig. 3(d)
+  note: VNA and 40 GHz photodiode, RC limited by monolayer WS2 resistance; Fig. label reads 0.33 GHz
+- device_id: datta2020-a
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.15 Methods (capacitive devices); p.6
+  note: 1 um wide SiN waveguide, 360 nm high
+- device_id: datta2020-a
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: design_target
+  locator: p.15 Methods (capacitive devices)
+  note: Thermally oxidized SiO2 under the SiN
+- device_id: datta2020-a
+  field: electrode_metal
+  value: Ti/Au (30 nm / 50 nm) contacts to WS2 and ITO; sputtered ITO top gate
+  unit: ''
+  basis: design_target
+  locator: p.15 Methods (capacitive devices)
+- device_id: datta2020-a
+  field: cladding
+  value: None over the capacitor (unclad); 260 nm planarized PECVD SiO2 and 45 nm ALD Al2O3 between SiN and WS2
+  unit: ''
+  basis: design_target
+  locator: p.6; p.15 Methods; Fig. 3(c) caption p.10
+- device_id: datta2020-a
+  field: epitaxy_or_stack
+  value: SiN (1 um x 360 nm) / 260 nm SiO2 / 45 nm Al2O3 / CVD monolayer WS2 / 26 nm ALD HfO2 / sputtered ITO
+  unit: ''
+  basis: design_target
+  locator: p.6; p.7; p.15 Methods
+  note: HfO2 26 nm stated on p.7
+- device_id: datta2020-b
+  field: length_mm
+  value: 0.5
+  unit: mm
+  basis: design_target
+  locator: p.7
+  note: 500 um capacitor on each arm; SU-8 added to the same WS2 platform
+- device_id: datta2020-b
+  field: vpil_dc_vcm
+  value: 0.8
+  unit: V*cm
+  basis: derived
+  locator: p.7; Fig. 3(c) caption p.10; abstract p.1
+  note: Authors' VpiL with SU-8 cladding, Delta n_eff 1.35e-3 (text) or 1.3e-3 (caption); formula in SI Section V, not cached
+- device_id: datta2020-b
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.15 Methods (capacitive devices); p.6
+  note: 1 um wide SiN waveguide, 360 nm high
+- device_id: datta2020-b
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: design_target
+  locator: p.15 Methods (capacitive devices)
+  note: Thermally oxidized SiO2 under the SiN
+- device_id: datta2020-b
+  field: electrode_metal
+  value: Ti/Au (30 nm / 50 nm) contacts to WS2 and ITO; sputtered ITO top gate
+  unit: ''
+  basis: design_target
+  locator: p.15 Methods (capacitive devices)
+- device_id: datta2020-b
+  field: cladding
+  value: SU-8 (3.5 um) over the capacitor; 260 nm planarized PECVD SiO2 and 45 nm ALD Al2O3 between SiN and WS2
+  unit: ''
+  basis: design_target
+  locator: p.7; p.15 Methods
+- device_id: datta2020-b
+  field: epitaxy_or_stack
+  value: SiN (1 um x 360 nm) / 260 nm SiO2 / 45 nm Al2O3 / CVD monolayer WS2 / 26 nm ALD HfO2 / sputtered ITO / SU-8
+  unit: ''
+  basis: design_target
+  locator: p.6; p.7; p.15 Methods
+  note: Same stack as the unclad device plus SU-8
+- device_id: datta2020-c
+  field: vpil_dc_vcm
+  value: 1.7
+  unit: V*cm
+  basis: derived
+  locator: p.8; Fig. 4(b)
+  note: Authors' VpiL for the MoS2 device, Delta n_eff 6.4e-4 at 8 V; formula in SI Section VIII, not cached
+- device_id: datta2020-c
+  field: rib_width_nm
+  value: 1000
+  unit: nm
+  basis: design_target
+  locator: p.15 Methods (capacitive devices); p.6
+  note: 1 um wide SiN waveguide, 360 nm high
+- device_id: datta2020-c
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: design_target
+  locator: p.15 Methods (capacitive devices)
+  note: Thermally oxidized SiO2 under the SiN
+- device_id: datta2020-c
+  field: electrode_metal
+  value: Ti/Au (30 nm / 50 nm) contacts to MoS2 and ITO; sputtered ITO top gate
+  unit: ''
+  basis: design_target
+  locator: p.15 Methods (capacitive devices)
+- device_id: datta2020-c
+  field: cladding
+  value: None over the capacitor (unclad); 40 nm planarized PECVD SiO2 and 5 nm ALD Al2O3 between SiN and MoS2
+  unit: ''
+  basis: design_target
+  locator: p.15 Methods; Fig. 4 caption p.10
+  note: Curly-bracket values are the MoS2 dimensions (p.16)
+- device_id: datta2020-c
+  field: epitaxy_or_stack
+  value: SiN (1 um x 360 nm) / 40 nm SiO2 / 5 nm Al2O3 / CVD monolayer MoS2 / 37 nm ALD HfO2 / sputtered ITO
+  unit: ''
+  basis: design_target
+  locator: p.15 Methods; p.16 note
+derived: []

@@ -1,0 +1,32 @@
+# p8_02 audit dispositions (corrector, 2026-10-07)
+
+Audit: `data/_staging/audits/p8_02-claude-audit-2026-10-07.md`. Coordinator decisions applied as given; every finding re-read in the source (text.md, rendered pages, zoomed figures) before the change.
+Counts: 13 applied, 2 adjusted, 0 rejected. Merge dry run after the corrections: 0 conflicts, 0 validation errors.
+
+| id | disposition | change | evidence |
+|---|---|---|---|
+| N1 | applied | zhang2024-a: vpi_rf_v and vpi_rf_freq_ghz cleared (no VpiL RF existed); both evidence entries removed; label now "...DC Vpi and bandwidth"; notes and papers notes carry all readings (text/abstract/SI Table 2 8 V; Fig. 3(c) measured about 9.6-11.7 V, smoothed about 10.5 V, calculated about 8.3 V). -b (6 V at 300 GHz) kept, note adds smoothed about 6 V / calculated about 5.9 V. | text p.6; page_07.png Fig. 3(c); img_p16_2.png SI Table 2 (8@500 GHz, 6@300 GHz) |
+| N1b | applied (check) | THz-generation numbers in the -a notes re-read: 2.90e-6 /W at 300 GHz, 4.13e-6 at 400 GHz, 4.86e-6 at 500 GHz for 10 mm (p.8), about -65 dBm at 8 dBm on-chip pump (p.8, Fig. 4c), abstract 4.8e-6 /W (p.1), electro-THz modulation to 35 GHz (p.3). All correct; page locator p.8 added to the papers notes. | text p.8; page_08.png Fig. 4(c),(d) |
+| N2 | applied | liu2025d-a/-b: bw3db_ghz, bw3db_reference, bw3db_reference_freq_ghz, bw_method, bw_basis cleared; the four evidence entries removed; widths (1.5 / 1.6 GHz RF band-pass, around 30.5 GHz, dashed fit, response includes horn, LNA, free-space path) in notes and papers notes. | p.5 Fig. 2(f) (page_05.png): arrows span the full width of the band-pass peak; text p.6 |
+| N3 | applied | gaier2025-b: bw3db_ghz, bw_measured_to_ghz, bw3db_reference, bw_method, bw_basis and qualifier bw3db_ghz:gt cleared; both evidence entries removed; IF detection flatness (+-3 dB about the mean, 10 MHz-6 GHz, 278.1 GHz carrier, setup-limited) in notes. | p.9-10, Fig. 4(c) (page_09.png) |
+| N4 | applied | xie2024-a: extinction_ratio_db and er_type cleared; evidence entry removed; readings in notes (19.3 dB annotation; carriers differ by about 9 dB, arrow spans about 8 dB; legend vs caption colours conflict) and in the papers notes. | p.3; img_p03_2.png Fig. 2(c) zoomed (blue = maximum point peak about -43 dBm, red = null point about -34 dBm, arrow about -42.6 to -34.5 dBm) |
+| N5 | applied | gaier2025-a/-b: eo_film_thickness_nm 600 (design_target), slab_thickness_nm 300 (design_target), etch_depth_nm 300 (derived 600 - 300), sidewall_angle_deg 60 (design_target, from the film plane). Cladding thickness stays empty (800 nm Methods vs 1 um Table 1, in notes). The old "contradiction" text removed except the cladding. | p.13 Methods; Table 1 p.22; Fig. S1(b) re-rendered at 9x from source.pdf p.22: h_TF spans the slab beside the electrodes (about half the ridge height), h_wg the ridge top to the LN/BOX interface, theta_wg at the ridge foot against the dashed film-plane line |
+| N6 | adjusted (moot) | gaier2025-c dropped (m1), so no fsr_nm. The designed FSR 30.79 GHz is kept in the papers notes; no derived nm value is stored. | 0.24675 nm per the audit arithmetic; not entered |
+| M1 | adjusted | gaier2025 repro_grade C -> B (geometry resolved per N5, only cladding conflicts). The sim config is deferred by the coordinator: papers notes and BATCH_REPORT state "sim config deferred (DevLog-022)"; sim_config stays empty. | Table 1 + Fig. S1(b) |
+| m1 | applied | gaier2025-c row, its 8 evidence entries and 2 derived entries removed; comb/Q facts (designed FSR 30.79 GHz, pump 123.2 / 307.9 GHz, 1.5 mm line, kappa/2pi 220 MHz, derived Q about 8.8e5, slope 0.05 dB/GHz over about 2 THz, g0, mmWave-cavity Q) kept in the papers notes; "Three rows" text updated. | p.10-12, SI Table 2 |
+| m2 | applied | gaier2025-a/-b notes and vpil_rf_vcm evidence notes: eta estimated via Eq. 1 (model-dependent), Z_TL value not stated; basis stays derived. | p.7 |
+| m3 | applied | park2026-a/-b drive = push_pull with a derived evidence entry (authors do not state it; one GSG electrode, arms in the two gaps); vpi_convention stays unspecified. | page_26.png Fig. 3(a); Fig. 1(c) |
+| m4 | applied | park2026-a gets etch 240, rib 2082 (design_target evidence) and slab 60 (derived), same note as -b (sabatti2024 precedent); both rows now consistent. | p.7, Fig. 2(b) |
+| m5 | applied | zhang2024-a rf_loss_db_per_cm and rf_loss_freq_ghz basis derived -> measured (Fig. 2(c), p.5); fit-coefficient remark (about 13 dB/cm) kept in the evidence note and notes. | page_06.png Fig. 2(c): dots at sqrt(300) = 17.3 lie at about 13.5-14 dB/cm |
+| m6 | applied | sims/zhang2024/config.yaml provenance geometry.electrodes.signal class paper_exact -> project_inference, note says width/thickness are paper_exact and the x-position rests on the inferred G/H/S roles. | audit; Fig. 1(f) |
+| m7 | applied | xie2024-a notes: "67 GHz is the RF source limit (Anritsu 2-67 GHz; GSGSG probe rated 50 GHz, p.6)"; bw3db evidence note aligned. | text p.6 Methods |
+| m8 | applied | xie2024-a electrode_type other -> cl_twe, with a note (type from citation [56], Kharel et al. micro-structured electrodes, cl_twe as for kharel2021 rows, and the periodic loading features along both gaps in Fig. 2(a)); geometry stays unstated. | p.3; img_p03_2.png Fig. 2(a) zoomed; ref. [56]; data/devices.csv kharel2021-a/-b |
+| W | applied | wafer_supplier NANOLN -> NanoLN (xie2024, zhang2024 papers rows; xie2024-a notes; sims/zhang2024 provenance note), per the 2026-10-07 coordinator rule. | coordinator |
+
+Other edits: zhang2024-a z0_ohm evidence note reworded (no value change); the zhang2024 bandwidth note now records that raw OSA points scatter past -3 dB from about 100 GHz and the calculated curve crosses -3 / -6 dB near 150 / 330 GHz (audit ruling, basis derived kept).
+
+Open items for the coordinator:
+- liu2025d-b has no device-level metric left after N2 (no evidence entries); kept as the reference configuration per the instruction, drop it if convention dd is applied strictly.
+- University of Ottawa is now present in data/organizations.csv (added after the distiller's check); the staged row is untouched and the merge accepts it (orgs counted 10, not 11).
+- Device notes in devices.csv remain long (about 140-290 words for the larger rows); the 25-word target was applied to evidence notes only.
+- Coordinator 2026-10-07: liu2025d-b dropped under convention (dd) (no in-scope metric after N2); its 15.2 dB sideband comparison moved to the papers notes.

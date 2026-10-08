@@ -46,8 +46,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.9; Fig. 3(d)
-  note: text value; small-signal EO response to 110 GHz, normalization not stated; the Fig. 3(d) 16 mm trace (0 dB at 1 GHz) reads about -2.3 dB at 40 GHz and reaches -3 dB near 50 GHz, so text and figure
-    differ
+  note: Text value (normalization not stated); Fig. 3(d) 16 mm trace reads about -2.3 dB at 40 GHz, -3 dB near 50 GHz, so they differ.
 - device_id: lin2025-a
   field: bw_measured_to_ghz
   value: 110
@@ -130,7 +129,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.5, Fabrication
 - device_id: lin2025-a
   field: substrate
@@ -239,7 +238,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.5, Fabrication
 - device_id: lin2025-b
   field: substrate
@@ -342,7 +341,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.5, Fabrication
 - device_id: lin2025-c
   field: substrate

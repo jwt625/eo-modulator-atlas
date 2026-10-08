@@ -1,0 +1,62 @@
+paper_id: xie2024
+verified_on: '2026-10-07'
+source_files:
+- references/xie2024/text.md
+- references/xie2024/figures/page_03.png
+entries:
+- device_id: xie2024-a
+  field: vpi_dc_v
+  value: 3
+  unit: V
+  basis: measured
+  locator: p.3; Methods p.6
+  note: approximately 3 V; frequency not stated
+- device_id: xie2024-a
+  field: bw3db_ghz
+  value: 67
+  unit: GHz
+  basis: measured
+  locator: p.3
+  note: EO bandwidth exceeding 67 GHz; no EO S21 shown, method not stated; 67 GHz is the source limit
+- device_id: xie2024-a
+  field: eo_film_thickness_nm
+  value: 500
+  unit: nm
+  basis: design_target
+  locator: p.6 Methods
+  note: commercial x-cut LNOI wafer specification
+- device_id: xie2024-a
+  field: etch_depth_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.6 Methods
+  note: approximately 250 nm
+- device_id: xie2024-a
+  field: slab_thickness_nm
+  value: 250
+  unit: nm
+  basis: design_target
+  locator: p.6 Methods
+  note: leaving a 250-nm-thick slab
+- device_id: xie2024-a
+  field: buffer_oxide_um
+  value: 4.7
+  unit: um
+  basis: design_target
+  locator: p.6 Methods
+  note: buried SiO2 layer
+- device_id: xie2024-a
+  field: substrate
+  value: Si, 500 um
+  unit: ''
+  basis: design_target
+  locator: p.6 Methods
+  note: 500-um silicon substrate
+- device_id: xie2024-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.6 Methods
+derived: []

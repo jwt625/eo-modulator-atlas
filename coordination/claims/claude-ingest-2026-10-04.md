@@ -2,7 +2,7 @@
 
 - Agent: Claude Code session (coordinator); Sonnet subagents distill and correct, Opus subagents audit and verify
 - Task IDs: D1.34-D1.38 (batches p4_01..p4_05)
-- Status: ready_for_review (2026-10-04); 21 papers merged as audited; open items in DevLog-016. Claimed 2026-10-04 on direct user instruction ("go on ingest them")
+- Status: complete (accepted by the user 2026-10-07); was ready_for_review 2026-10-04
 - Plan and progress: `DevLog/DevLog-016-ingest-paused-priority-1.md`
 
 The 21 papers come from the paused data-lane batches p1_03 and p1_05..p1_11 (paused by the user

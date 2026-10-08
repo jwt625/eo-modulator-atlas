@@ -1,0 +1,76 @@
+paper_id: taki2024
+verified_on: '2026-10-07'
+source_files:
+- references/taki2024/text.md
+- references/taki2024/crossref.json
+- references/taki2024/figures/page_20.png
+entries:
+- device_id: taki2024-a
+  field: wavelength_nm
+  value: 1550
+  unit: nm
+  basis: design_target
+  locator: p.4
+  note: SiN waveguide operating at 1.55 um; spectra 1480 to 1580 nm
+- device_id: taki2024-a
+  field: length_mm
+  value: 4.5
+  unit: mm
+  basis: design_target
+  locator: p.4; Fig. 3(b) p.20
+  note: Phase modulator in the longer arm of the asymmetric MZI
+- device_id: taki2024-a
+  field: prop_loss_db_per_cm
+  value: 6.1
+  unit: dB/cm
+  basis: measured
+  locator: p.6; Extended Data Fig. 5 p.27
+  note: Straight SiN test waveguides with grating couplers; HZO cladding of the test waveguides not stated
+- device_id: taki2024-a
+  field: rib_width_nm
+  value: 1200
+  unit: nm
+  basis: design_target
+  locator: p.4; Extended Data Fig. 2 p.24
+  note: SiN width designed for single-mode operation; SiN 330 nm thick
+- device_id: taki2024-a
+  field: eo_film_thickness_nm
+  value: 30
+  unit: nm
+  basis: design_target
+  locator: p.4
+  note: Three 10 nm Hf0.5Zr0.5O2 layers separated by 1 nm Al2O3; 30 nm total ferroelectric
+- device_id: taki2024-a
+  field: substrate
+  value: Si
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods; Fig. 1(b) p.18
+  note: Thermally oxidized Si wafer; Fig. 1(b) labels Si substrate
+- device_id: taki2024-a
+  field: buffer_oxide_um
+  value: 4
+  unit: um
+  basis: design_target
+  locator: p.11 Methods
+  note: Thermally oxidized SiO2 on the Si wafer
+- device_id: taki2024-a
+  field: electrode_metal
+  value: Al (sputtered, lift-off)
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods
+- device_id: taki2024-a
+  field: cladding
+  value: 600 nm PECVD SiO2 passivation over the HZO/Al2O3 stack
+  unit: ''
+  basis: design_target
+  locator: p.11 Methods
+- device_id: taki2024-a
+  field: epitaxy_or_stack
+  value: Si / 4 um thermal SiO2 / 330 nm PECVD SiN / 3 x [10 nm Hf0.5Zr0.5O2 + 1 nm Al2O3] ALD, conformal / 600 nm SiO2
+  unit: ''
+  basis: design_target
+  locator: p.4; p.11 Methods
+  note: TiN-capped 400 C anneal for 1 min, TiN removed before the SiO2
+derived: []

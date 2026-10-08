@@ -47,20 +47,25 @@ export const mat3 = {
  * lab_x = n x p so that (x,y,z) is right handed.
  * @param {string} cut crystal axis normal to the film (x|y|z, optional sign)
  * @param {string} propagation crystal axis of propagation
- * @param {number} [rotationDeg] additional rotation of the lab frame about z (propagation axis), CCW
+ * @param {number} [rotationDeg] CCW rotation of the LAB frame about the propagation axis (lab z), seen from +z:
+ *   new lab axes x' = cos(t) x + sin(t) y, y' = -sin(t) x + cos(t) y, with x, y the unrotated lab axes (y = film
+ *   normal). Equivalently the crystal turns clockwise relative to the lab. Fixed 2026-10-07 (Q2 F6, DevLog-007 P9
+ *   option b): the code previously applied the opposite sense.
  */
 export function labFromCrystal(cut, propagation, rotationDeg = 0) {
   const n = AXIS[String(cut).toLowerCase()];
   const p = AXIS[String(propagation).toLowerCase()];
   if (!n || !p) throw new Error(`crystal cut/propagation must be one of x,y,z (optionally signed); got ${cut}, ${propagation}`);
   if (Math.abs(dot3(n, p)) > 1e-12) throw new Error('crystal cut and propagation axes must be orthogonal');
+  if (typeof rotationDeg !== 'number' || !Number.isFinite(rotationDeg)) throw new Error(`crystal rotation_deg must be a finite number; got ${rotationDeg}`);
   const lx = cross(n, p);
   let A = [...lx, ...n, ...p];
   if (rotationDeg) {
     const th = (rotationDeg * Math.PI) / 180;
     const c = Math.cos(th),
       s = Math.sin(th);
-    A = mat3.mul([c, -s, 0, s, c, 0, 0, 0, 1], A);
+    // Rows of A are the lab axes in crystal coordinates: row0' = c row0 + s row1, row1' = -s row0 + c row1.
+    A = mat3.mul([c, s, 0, -s, c, 0, 0, 0, 1], A);
   }
   return A;
 }
@@ -193,7 +198,9 @@ export function resolveMaterial(name, cfg) {
     name,
     conductor: !!cfg.conductor,
     sigmaS: cfg.sigma_Sm ?? null,
-    tanDelta: cfg.tan_delta_rf ?? 0,
+    // RF loss inputs: absent means unknown (null), never zero. Only the rf_line stage reads them.
+    tanDelta: cfg.tan_delta_rf ?? null,
+    dielectricSigmaS: !cfg.conductor && cfg.sigma_Sm != null ? cfg.sigma_Sm : null,
     thicknessUm: cfg.thickness_um ?? null,
     A: mat3.identity(),
     hasCrystal: false,

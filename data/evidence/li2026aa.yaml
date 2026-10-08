@@ -80,7 +80,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2
   note: 4.7 um thermally grown SiO2 on a silicon base
 - device_id: li2026aa-a
@@ -247,7 +247,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2
   note: 4.7 um thermally grown SiO2 on a silicon base
 - device_id: li2026aa-b
@@ -393,7 +393,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2
   note: 4.7 um thermally grown SiO2 on a silicon base
 - device_id: li2026aa-c
@@ -539,7 +539,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2
   note: 4.7 um thermally grown SiO2 on a silicon base
 - device_id: li2026aa-d
@@ -720,7 +720,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2
   note: 4.7 um thermally grown SiO2 on a silicon base
 - device_id: li2026aa-e
@@ -866,7 +866,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2
   note: 4.7 um thermally grown SiO2 on a silicon base
 - device_id: li2026aa-f
@@ -1012,7 +1012,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2
   note: 4.7 um thermally grown SiO2 on a silicon base
 - device_id: li2026aa-g
@@ -1179,7 +1179,7 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2
   note: 4.7 um thermally grown SiO2 on a silicon base
 - device_id: li2026aa-h

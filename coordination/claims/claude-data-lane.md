@@ -2,7 +2,7 @@
 
 - Agent: Claude (original orchestrator conversation: survey, proposal, skill, schema, candidates, pilots, batch launch)
 - Task IDs: D0, D1.01-D1.11 (via at most 3 concurrent subagents), D2 (serial integrator), Q1 (via fresh-context auditors)
-- Status: claimed; D0 in progress
+- Status: closed 2026-10-07: D0 and Q1 complete (accepted); D1.01-D1.11 finished as p4_01..p4_05 (claude-ingest-2026-10-04); D2 superseded by per-wave merges; no write paths held
 - Updated: 2026-10-01
 - Progress/handoff: `DevLog/DevLog-004-data-lane-progress.md`
 

@@ -205,7 +205,7 @@ entries:
   unit: dB
   basis: derived
   locator: p.2, Table 1; Fig. 3(b)
-  note: IL at ER=3.5 dB from the authors' static-IL regression trend vs BW; Fig. 3(b) trend line reads about 2.0 dB at the 72 GHz marker vs 1.8 dB in Table 1
+  note: At ER=3.5 dB, from authors' static-IL/BW regression trend; Fig. 3(b) line reads about 2.0 dB at 72 GHz marker vs 1.8 dB (Table 1).
 - device_id: rakowski2026-b
   field: il_onchip_excludes
   value: Grating couplers, routing and off-resonance waveguide loss (IL is relative to off-resonance transmission, Fig. 2b)

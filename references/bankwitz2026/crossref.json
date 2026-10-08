@@ -1,0 +1,1044 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     15
+    ]
+   ],
+   "date-time": "2026-06-15T06:52:38Z",
+   "timestamp": 1781506358879,
+   "version": "3.54.1"
+  },
+  "reference-count": 59,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       8
+      ]
+     ],
+     "date-time": "2026-05-08T00:00:00Z",
+     "timestamp": 1778198400000
+    },
+    "content-version": "tdm",
+    "delay-in-days": 0,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   },
+   {
+    "start": {
+     "date-parts": [
+      [
+       2026,
+       6,
+       15
+      ]
+     ],
+     "date-time": "2026-06-15T00:00:00Z",
+     "timestamp": 1781481600000
+    },
+    "content-version": "vor",
+    "delay-in-days": 38,
+    "URL": "https://creativecommons.org/licenses/by/4.0"
+   }
+  ],
+  "funder": [
+   {
+    "name": "European Union’s Horizon 2020 research and innovation programme",
+    "award": [
+     "101017237"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101017237"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "European Union’s Innovation Council Pathfinder programme",
+    "award": [
+     "101046878"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "101046878"
+      ]
+     }
+    ]
+   },
+   {
+    "DOI": "10.13039/501100001659",
+    "name": "Deutsche Forschungsgemeinschaft",
+    "doi-asserted-by": "publisher",
+    "award": [
+     "EXC 2181/1 – 390900948"
+    ],
+    "award-info": [
+     {
+      "award-number": [
+       "EXC 2181/1 – 390900948"
+      ]
+     }
+    ],
+    "id": [
+     {
+      "id": "10.13039/501100001659",
+      "id-type": "DOI",
+      "asserted-by": "publisher"
+     }
+    ]
+   }
+  ],
+  "content-domain": {
+   "domain": [
+    "link.springer.com"
+   ],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "npj Nanophoton."
+  ],
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    Controlling the statistical properties of light, namely the fluctuations in photon arrival, entropy and number, is essential for both classical and quantum photonics. While integrated systems provide tunable control over amplitude, phase, and wavelength, real-time modulation of photon statistics has remained a long-standing challenge. Herein, we introduce the concept and experimental realization of a photon statistics transducer: a high-extinction, broadband electro-optic device capable of deterministically shaping photon-number distributions at nanosecond timescales. Our approach employs a cascaded thin-film lithium niobate (TFLN) Mach–Zehnder amplitude modulator delivering &gt; 50 dB extinction, enabling precise suppression and release of coherent seed light from an integrated InP laser. By exploiting the interplay between seed suppression and erbium-doped fiber amplifier dynamics, we demonstrate smooth, voltage-controlled switching between Poissonian and super-Poissonian photon statistics, with second-order coherence\n                    <jats:inline-formula>\n                      <jats:alternatives>\n                        <jats:tex-math>$${g}^{\\left(2\\right)}(0)$$</jats:tex-math>\n                        <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\">\n                          <mml:mrow>\n                            <mml:msup>\n                              <mml:mrow>\n                                <mml:mi>g</mml:mi>\n                              </mml:mrow>\n                              <mml:mrow>\n                                <mml:mfenced>\n                                  <mml:mrow>\n                                    <mml:mn>2</mml:mn>\n                                  </mml:mrow>\n                                </mml:mfenced>\n                              </mml:mrow>\n                            </mml:msup>\n                            <mml:mo>(</mml:mo>\n                            <mml:mn>0</mml:mn>\n                            <mml:mo>)</mml:mo>\n                          </mml:mrow>\n                        </mml:math>\n                      </jats:alternatives>\n                    </jats:inline-formula>\n                    tunable from 1.0 to 1.7. Complementary measurements with superconducting nanowire single-photon detectors further show photon-flux control down to sub-photon levels, highlighting the potential for future operation with non-classical sources. The photon statistics transducer thus establishes statistical modulation as a new functional primitive in integrated photonics. Applications range from entropy generation and secure communication to neuromorphic and hybrid quantum-classical processing, where controlled randomness and entropy are essential resources. By enabling programmable transitions between statistical regimes using only electronic drive signals, our work lays the foundation for adaptive, entropy-aware photonic systems that bridge classical and quantum domains.\n                  </jats:p>",
+  "DOI": "10.1038/s44310-026-00129-1",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     8
+    ]
+   ],
+   "date-time": "2026-05-08T03:13:50Z",
+   "timestamp": 1778210030000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+   "Voltage-programmable photon statistics using a high-extinction thin-film lithium niobate modulator"
+  ],
+  "prefix": "10.1038",
+  "volume": "3",
+  "author": [
+   {
+    "given": "Julian Rasmus",
+    "family": "Bankwitz",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ravi",
+    "family": "Pradip",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Julius",
+    "family": "Römer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Frank",
+    "family": "Brückerhoff-Plückelmann",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Falk",
+    "family": "Ebert",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Lennart",
+    "family": "Meyer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Liam",
+    "family": "McRae",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jan",
+    "family": "Brandes",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Akhil",
+    "family": "Varri",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wladick",
+    "family": "Hartmann",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wolfram H. P.",
+    "family": "Pernice",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xinyu",
+    "family": "Ma",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "297",
+  "published-online": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     8
+    ]
+   ]
+  },
+  "reference": [
+   {
+    "key": "129_CR1",
+    "doi-asserted-by": "publisher",
+    "first-page": "1199",
+    "DOI": "10.1088/0022-3700/9/8/007",
+    "volume": "9",
+    "author": "HJ Carmichael",
+    "year": "1976",
+    "unstructured": "Carmichael, H. J. & Walls, D. F. A quantum-mechanical master equation treatment of the dynamical Stark effect. J. Phys. B: Atm. Mol. Phys. 9, 1199–1219 (1976).",
+    "journal-title": "J. Phys. B: Atm. Mol. Phys."
+   },
+   {
+    "key": "129_CR2",
+    "doi-asserted-by": "publisher",
+    "first-page": "55",
+    "DOI": "10.1038/s41586-024-07590-y",
+    "volume": "632",
+    "author": "B Dong",
+    "year": "2024",
+    "unstructured": "Dong, B. et al. Partial coherence enhances parallelized photonic computing. Nature 632, 55–62 (2024).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "129_CR3",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/ncomms10249",
+    "volume": "6",
+    "author": "M Esposito",
+    "year": "2015",
+    "unstructured": "Esposito, M. et al. Photon number statistics uncover the fluctuations in non-equilibrium lattice dynamics. Nat. Commun. 6, 10249 (2015).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "129_CR4",
+    "doi-asserted-by": "publisher",
+    "first-page": "1900279",
+    "DOI": "10.1002/lpor.201900279",
+    "volume": "14",
+    "author": "E Zubizarreta Casalengua",
+    "year": "2020",
+    "unstructured": "Zubizarreta Casalengua, E., López Carreño, J. C., Laussy, F. P. & Valle, E. D. Conventional and unconventional photon statistics. Laser Photonics Rev. 14, 1900279 (2020).",
+    "journal-title": "Laser Photonics Rev."
+   },
+   {
+    "key": "129_CR5",
+    "doi-asserted-by": "publisher",
+    "first-page": "183601",
+    "DOI": "10.1103/PhysRevLett.131.183601",
+    "volume": "131",
+    "author": "M Cordier",
+    "year": "2023",
+    "unstructured": "Cordier, M., Schemmer, M., Schneeweiss, P., Volz, J. & Rauschenbeutel, A. Tailoring photon statistics with an atom-based two-photon interferometer. Phys. Rev. Lett. 131, 183601 (2023).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "129_CR6",
+    "doi-asserted-by": "publisher",
+    "first-page": "013120",
+    "DOI": "10.1103/PhysRevResearch.7.013120",
+    "volume": "7",
+    "author": "MS Mirmoosa",
+    "year": "2025",
+    "unstructured": "Mirmoosa, M. S., Setälä, T. & Norrman, A. Quantum state engineering and photon statistics at electromagnetic time interfaces. Phys. Rev. Res. 7, 013120 (2025).",
+    "journal-title": "Phys. Rev. Res."
+   },
+   {
+    "key": "129_CR7",
+    "doi-asserted-by": "publisher",
+    "first-page": "044138",
+    "DOI": "10.1103/PhysRevE.111.044138",
+    "volume": "111",
+    "author": "LS Tey",
+    "year": "2025",
+    "unstructured": "Tey, L. S., Muniandy, S. V. & Chong, W. Y. Distinguishing photon-count fluctuation characteristics of classical and quantum light sources using non-Markovian processes. Phys. Rev. E 111, 044138 (2025).",
+    "journal-title": "Phys. Rev. E"
+   },
+   {
+    "key": "129_CR8",
+    "doi-asserted-by": "publisher",
+    "first-page": "231",
+    "DOI": "10.1103/RevModPhys.37.231",
+    "volume": "37",
+    "author": "L Mandel",
+    "year": "1965",
+    "unstructured": "Mandel, L. & Wolf, E. Coherence properties of optical fields. Rev. Mod. Phys. 37, 231–287 (1965).",
+    "journal-title": "Rev. Mod. Phys."
+   },
+   {
+    "key": "129_CR9",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-024-54931-6",
+    "volume": "15",
+    "author": "F Brückerhoff-Plückelmann",
+    "year": "2024",
+    "unstructured": "Brückerhoff-Plückelmann, F. et al. Probabilistic photonic computing with chaotic light. Nat. Commun. 15, 10445 (2024).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "129_CR10",
+    "doi-asserted-by": "publisher",
+    "first-page": "5991",
+    "DOI": "10.1364/OE.26.005991",
+    "volume": "26",
+    "author": "Y Guo",
+    "year": "2018",
+    "unstructured": "Guo, Y. et al. Photon statistics and bunching of a chaotic semiconductor laser. Opt. Express 26, 5991 (2018).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "129_CR11",
+    "doi-asserted-by": "publisher",
+    "first-page": "103602",
+    "DOI": "10.1103/PhysRevLett.118.103602",
+    "volume": "118",
+    "author": "J Goetz",
+    "year": "2017",
+    "unstructured": "Goetz, J. et al. Photon statistics of propagating thermal microwaves. Phys. Rev. Lett. 118, 103602 (2017).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "129_CR12",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41534-019-0195-2",
+    "volume": "5",
+    "author": "OS Magaña-Loaiza",
+    "year": "2019",
+    "unstructured": "Magaña-Loaiza, O. S. et al. Multiphoton quantum-state engineering using conditional measurements. npj Quantum Inf. 5, 80 (2019).",
+    "journal-title": "npj Quantum Inf."
+   },
+   {
+    "key": "129_CR13",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-025-56040-4",
+    "volume": "16",
+    "author": "AL Pankratov",
+    "year": "2025",
+    "unstructured": "Pankratov, A. L. et al. Detection of single-mode thermal microwave photons using an underdamped Josephson junction. Nat. Commun. 16, 3457 (2025).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "129_CR14",
+    "doi-asserted-by": "publisher",
+    "first-page": "10991",
+    "DOI": "10.1364/OE.27.010991",
+    "volume": "27",
+    "author": "IV Doronin",
+    "year": "2019",
+    "unstructured": "Doronin, I. V. et al. Second-order coherence properties of amplified spontaneous emission. Opt. Express 27, 10991 (2019).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "129_CR15",
+    "doi-asserted-by": "publisher",
+    "first-page": "24",
+    "DOI": "10.1038/s44172-022-00024-5",
+    "volume": "1",
+    "author": "K Sozos",
+    "year": "2022",
+    "unstructured": "Sozos, K. et al. High-speed photonic neuromorphic computing using recurrent optical spectrum slicing neural networks. Commun. Eng. 1, 24 (2022).",
+    "journal-title": "Commun. Eng."
+   },
+   {
+    "key": "129_CR16",
+    "doi-asserted-by": "publisher",
+    "first-page": "201",
+    "DOI": "10.1364/OPTICAQ.553294",
+    "volume": "3",
+    "author": "S Nerenberg",
+    "year": "2025",
+    "unstructured": "Nerenberg, S., Neill, O. D., Marcucci, G. & Faccio, D. Photon number-resolving quantum reservoir computing. Opt. Quantum 3, 201 (2025).",
+    "journal-title": "Opt. Quantum"
+   },
+   {
+    "key": "129_CR17",
+    "doi-asserted-by": "publisher",
+    "first-page": "439",
+    "DOI": "10.1038/s42254-025-00843-3",
+    "volume": "7",
+    "author": "I Bente",
+    "year": "2025",
+    "unstructured": "Bente, I. et al. The potential of multidimensional photonic computing. Nat. Rev. Phys. 7, 439–450 (2025).",
+    "journal-title": "Nat. Rev. Phys."
+   },
+   {
+    "key": "129_CR18",
+    "doi-asserted-by": "publisher",
+    "first-page": "377",
+    "DOI": "10.1038/s43588-025-00800-1",
+    "volume": "5",
+    "author": "F Brückerhoff-Plückelmann",
+    "year": "2025",
+    "unstructured": "Brückerhoff-Plückelmann, F. et al. Probabilistic photonic computing for AI. Nat. Comput. Sci. 5, 377–387 (2025).",
+    "journal-title": "Nat. Comput. Sci."
+   },
+   {
+    "key": "129_CR19",
+    "doi-asserted-by": "publisher",
+    "first-page": "3553",
+    "DOI": "10.1364/OME.502179",
+    "volume": "13",
+    "author": "R Xu",
+    "year": "2023",
+    "unstructured": "Xu, R. et al. Hybrid photonic integrated circuits for neuromorphic computing [Invited]. Opt. Mater. Express 13, 3553 (2023).",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "129_CR20",
+    "doi-asserted-by": "publisher",
+    "first-page": "23584",
+    "DOI": "10.1364/OE.18.023584",
+    "volume": "18",
+    "author": "CRS Williams",
+    "year": "2010",
+    "unstructured": "Williams, C. R. S., Salevan, J. C., Li, X., Roy, R. & Murphy, T. E. Fast physical random number generator using amplified spontaneous emission. Opt. Express 18, 23584 (2010).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "129_CR21",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-025-03680-7",
+    "volume": "15",
+    "author": "B Wang",
+    "year": "2025",
+    "unstructured": "Wang, B. et al. Efficient quantum random number generation via simultaneously detecting photons in temporal and spatial dimensions. Sci. Rep. 15, 18996 (2025).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "129_CR22",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41598-022-19503-y",
+    "volume": "12",
+    "author": "A Allevi",
+    "year": "2022",
+    "unstructured": "Allevi, A. & Bondani, M. Novel scheme for secure data transmission based on mesoscopic twin beams and photon-number-resolving detectors. Sci. Rep. 12, 15621 (2022).",
+    "journal-title": "Sci. Rep."
+   },
+   {
+    "key": "129_CR23",
+    "doi-asserted-by": "publisher",
+    "first-page": "318",
+    "DOI": "10.1038/s41566-022-00973-5",
+    "volume": "16",
+    "author": "M Spagnolo",
+    "year": "2022",
+    "unstructured": "Spagnolo, M. et al. Experimental photonic quantum memristor. Nat. Photon. 16, 318–323 (2022).",
+    "journal-title": "Nat. Photon."
+   },
+   {
+    "key": "129_CR24",
+    "doi-asserted-by": "publisher",
+    "first-page": "29",
+    "DOI": "10.1038/s44335-025-00045-1",
+    "volume": "2",
+    "author": "T Austin",
+    "year": "2025",
+    "unstructured": "Austin, T. et al. Hybrid quantum-classical photonic neural networks. npj Unconv. Comput. 2, 29 (2025).",
+    "journal-title": "npj Unconv. Comput."
+   },
+   {
+    "key": "129_CR25",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-019-0225-z",
+    "volume": "8",
+    "author": "X Guo",
+    "year": "2019",
+    "unstructured": "Guo, X., Ding, Y., Duan, Y. & Ni, X. Nonreciprocal metasurface with space–time phase modulation. Light Sci. Appl 8, 123 (2019).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR26",
+    "doi-asserted-by": "publisher",
+    "first-page": "3667",
+    "DOI": "10.1364/OME.503340",
+    "volume": "13",
+    "author": "JR Bankwitz",
+    "year": "2023",
+    "unstructured": "Bankwitz, J. R. et al. Towards “smart transceivers” in FPGA-controlled lithium-niobate-on-insulator integrated circuits for edge computing applications [Invited]. Opt. Mater. Express 13, 3667 (2023).",
+    "journal-title": "Opt. Mater. Express"
+   },
+   {
+    "key": "129_CR27",
+    "doi-asserted-by": "publisher",
+    "first-page": "270",
+    "DOI": "10.1126/science.abq8271",
+    "volume": "378",
+    "author": "A Sludds",
+    "year": "2022",
+    "unstructured": "Sludds, A. et al. Delocalized photonic deep learning on the internet’s edge. Science 378, 270–276 (2022).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "129_CR28",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-021-27205-8",
+    "volume": "12",
+    "author": "E Lomonte",
+    "year": "2021",
+    "unstructured": "Lomonte, E. et al. Single-photon detection and cryogenic reconfigurability in lithium niobate nanophotonic circuits. Nat. Commun. 12, 6847 (2021).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "129_CR29",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-022-01029-7",
+    "volume": "11",
+    "author": "D Zhu",
+    "year": "2022",
+    "unstructured": "Zhu, D. et al. Spectral control of nonclassical light pulses using an integrated thin-film lithium niobate modulator. Light Sci. Appl 11, 327 (2022).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR30",
+    "doi-asserted-by": "publisher",
+    "first-page": "587",
+    "DOI": "10.1038/s41586-021-03999-x",
+    "volume": "599",
+    "author": "Y Hu",
+    "year": "2021",
+    "unstructured": "Hu, Y. et al. On-chip electro-optic frequency shifters and beam splitters. Nature 599, 587–593 (2021).",
+    "journal-title": "Nature"
+   },
+   {
+    "key": "129_CR31",
+    "doi-asserted-by": "publisher",
+    "first-page": "396",
+    "DOI": "10.1364/OPTICA.3.000396",
+    "volume": "3",
+    "author": "R Bruck",
+    "year": "2016",
+    "unstructured": "Bruck, R. et al. All-optical spatial light modulator for reconfigurable silicon photonic circuits. Optica 3, 396 (2016).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "129_CR32",
+    "doi-asserted-by": "publisher",
+    "first-page": "173603",
+    "DOI": "10.1103/PhysRevLett.122.173603",
+    "volume": "122",
+    "author": "AP Foster",
+    "year": "2019",
+    "unstructured": "Foster, A. P. et al. Tunable photon statistics exploiting the fano effect in a waveguide. Phys. Rev. Lett. 122, 173603 (2019).",
+    "journal-title": "Phys. Rev. Lett."
+   },
+   {
+    "key": "129_CR33",
+    "doi-asserted-by": "publisher",
+    "first-page": "e16088",
+    "DOI": "10.1038/lsa.2016.88",
+    "volume": "5",
+    "author": "L Jumpertz",
+    "year": "2016",
+    "unstructured": "Jumpertz, L., Schires, K., Carras, M., Sciamanna, M. & Grillot, F. Chaotic light at mid-infrared wavelength. Light Sci. Appl 5, e16088–e16088 (2016).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR34",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-024-01641-9",
+    "volume": "14",
+    "author": "J Zhang",
+    "year": "2025",
+    "unstructured": "Zhang, J. et al. One-sided device-independent random number generation through fiber channels. Light Sci. Appl 14, 25 (2025).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR35",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-025-01749-6",
+    "volume": "14",
+    "author": "Z Pang",
+    "year": "2025",
+    "unstructured": "Pang, Z. & Arie, A. Coherence synthesis in nonlinear optics. Light Sci. Appl 14, 101 (2025).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR36",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-024-01411-7",
+    "volume": "13",
+    "author": "P Li",
+    "year": "2024",
+    "unstructured": "Li, P. et al. Scalable parallel ultrafast optical random bit generation based on a single chaotic microcomb. Light Sci. Appl 13, 66 (2024).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR37",
+    "doi-asserted-by": "publisher",
+    "first-page": "11254",
+    "DOI": "10.1364/OE.25.011254",
+    "volume": "25",
+    "author": "S Liu",
+    "year": "2017",
+    "unstructured": "Liu, S. et al. High speed ultra-broadband amplitude modulators with ultrahigh extinction >65 dB. Opt. Express 25, 11254 (2017).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "129_CR38",
+    "doi-asserted-by": "publisher",
+    "first-page": "1265",
+    "DOI": "10.1364/OL.44.001265",
+    "volume": "44",
+    "author": "M Jin",
+    "year": "2019",
+    "unstructured": "Jin, M., Chen, J.-Y., Sua, Y. M. & Huang, Y.-P. High-extinction electro-optic modulation on lithium niobate thin film. Opt. Lett. 44, 1265–1268 (2019).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "129_CR39",
+    "doi-asserted-by": "publisher",
+    "first-page": "578",
+    "DOI": "10.1364/OPTICA.484549",
+    "volume": "10",
+    "author": "F Valdez",
+    "year": "2023",
+    "unstructured": "Valdez, F., Mere, V. & Mookherjea, S. 100 GHz bandwidth, 1 volt integrated electro-optic Mach–Zehnder modulator at near-IR wavelengths. Optica 10, 578 (2023).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "129_CR40",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-020-17806-0",
+    "volume": "11",
+    "author": "M Xu",
+    "year": "2020",
+    "unstructured": "Xu, M. et al. High-performance coherent optical modulators based on thin-film lithium niobate platform. Nat. Commun. 11, 3911 (2020).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "129_CR41",
+    "doi-asserted-by": "publisher",
+    "first-page": "5555",
+    "DOI": "10.1364/OE.384018",
+    "volume": "28",
+    "author": "M Wang",
+    "year": "2020",
+    "unstructured": "Wang, M., Ribero, A., Xing, Y. & Bogaerts, W. Tolerant, broadband tunable 2 × 2 coupler circuit. Opt. Express 28, 5555 (2020).",
+    "journal-title": "Opt. Express"
+   },
+   {
+    "key": "129_CR42",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Agarwal, G.P. Fiber Amplifiers. in Applications of Nonlinear Fiber Optics 131–178 https://doi.org/10.1016/B978-012374302-2.50005-X. (Elsevier, 2008).",
+    "DOI": "10.1016/B978-012374302-2.50005-X"
+   },
+   {
+    "key": "129_CR43",
+    "doi-asserted-by": "publisher",
+    "first-page": "148693",
+    "DOI": "10.1109/ACCESS.2024.3476520",
+    "volume": "12",
+    "author": "S Caputo",
+    "year": "2024",
+    "unstructured": "Caputo, S. et al. Noise level modulation for secure optical communications. IEEE Access 12, 148693–148705 (2024).",
+    "journal-title": "IEEE Access"
+   },
+   {
+    "key": "129_CR44",
+    "doi-asserted-by": "publisher",
+    "first-page": "013811",
+    "DOI": "10.1103/PhysRevA.101.013811",
+    "volume": "101",
+    "author": "KG Katamadze",
+    "year": "2020",
+    "unstructured": "Katamadze, K. G., Avosopiants, G. V., Bogdanova, N. A., Bogdanov, Y.uI. & Kulik, S. P. Multimode thermal states with multiphoton subtraction: Study of the photon-number distribution in the selected subsystem. Phys. Rev. A 101, 013811 (2020).",
+    "journal-title": "Phys. Rev. A"
+   },
+   {
+    "key": "129_CR45",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-025-01821-1",
+    "volume": "14",
+    "author": "X Xie",
+    "year": "2025",
+    "unstructured": "Xie, X. et al. A 3.584 Tbps coherent receiver chip on InP-LiNbO3 wafer-level integration platform. Light Sci. Appl 14, 172 (2025).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR46",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41377-024-01389-2",
+    "volume": "13",
+    "author": "J Sun",
+    "year": "2024",
+    "unstructured": "Sun, J. et al. High-power, electrically-driven continuous-wave 1.55-μm Si-based multi-quantum well lasers with a wide operating temperature range grown on wafer-scale InP-on-Si (100) heterogeneous substrate. Light Sci. Appl 13, 71 (2024).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR47",
+    "doi-asserted-by": "publisher",
+    "first-page": "652",
+    "DOI": "10.1364/OPTICA.415762",
+    "volume": "8",
+    "author": "M Zhang",
+    "year": "2021",
+    "unstructured": "Zhang, M., Wang, C., Kharel, P., Zhu, D. & Lončar, M. Integrated lithium niobate electro-optic modulators: when performance meets scalability. Optica 8, 652 (2021).",
+    "journal-title": "Optica"
+   },
+   {
+    "key": "129_CR48",
+    "doi-asserted-by": "publisher",
+    "first-page": "1309",
+    "DOI": "10.1126/science.abo2631",
+    "volume": "376",
+    "author": "Y Liu",
+    "year": "2022",
+    "unstructured": "Liu, Y. et al. A photonic integrated circuit–based erbium-doped amplifier. Science 376, 1309–1313 (2022).",
+    "journal-title": "Science"
+   },
+   {
+    "key": "129_CR49",
+    "doi-asserted-by": "publisher",
+    "first-page": "e338",
+    "DOI": "10.1038/lsa.2015.111",
+    "volume": "4",
+    "author": "P Rath",
+    "year": "2015",
+    "unstructured": "Rath, P. et al. Superconducting single-photon detectors integrated with diamond nanophotonic circuits. Light Sci. Appl 4, e338–e338 (2015).",
+    "journal-title": "Light Sci. Appl"
+   },
+   {
+    "key": "129_CR50",
+    "doi-asserted-by": "publisher",
+    "first-page": "1703",
+    "DOI": "10.1364/OL.549975",
+    "volume": "50",
+    "author": "J Shi",
+    "year": "2025",
+    "unstructured": "Shi, J. et al. Alleviation of DC drift in a thin-film lithium niobate modulator utilizing Ar+ ion milling. Opt. Lett. 50, 1703–1706 (2025).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "129_CR51",
+    "doi-asserted-by": "publisher",
+    "unstructured": "Yu, Y., Ren, Y., Chen, N. & Chu, T. Suppressing DC drift in thin-film lithium niobate modulators via multiferroic skyrmion excitation. Preprint at https://doi.org/10.48550/arXiv.2503.19044. (2025).",
+    "DOI": "10.48550/arXiv.2503.19044"
+   },
+   {
+    "key": "129_CR52",
+    "doi-asserted-by": "publisher",
+    "first-page": "1958",
+    "DOI": "10.1364/PRJ.403167",
+    "volume": "8",
+    "author": "S Sun",
+    "year": "2020",
+    "unstructured": "Sun, S. et al. Bias-drift-free Mach–Zehnder modulators based on a heterogeneous silicon and lithium niobate platform. Photon. Res. 8, 1958–1963 (2020).",
+    "journal-title": "Photon. Res."
+   },
+   {
+    "key": "129_CR53",
+    "doi-asserted-by": "publisher",
+    "first-page": "3844",
+    "DOI": "10.1364/OL.561750",
+    "volume": "50",
+    "author": "P Lohmann",
+    "year": "2025",
+    "unstructured": "Lohmann, P., Wendland, D., Lenzini, F. & Pernice, W. H. P. High system efficiency nonlinear frequency conversion on thin-film lithium niobate. Opt. Lett. 50, 3844 (2025).",
+    "journal-title": "Opt. Lett."
+   },
+   {
+    "key": "129_CR54",
+    "doi-asserted-by": "publisher",
+    "first-page": "2400765",
+    "DOI": "10.1002/lpor.202400765",
+    "volume": "19",
+    "author": "R Bao",
+    "year": "2025",
+    "unstructured": "Bao, R. et al. An erbium-doped waveguide amplifier on thin film lithium niobate with an output power exceeding 100 mW. Laser Photonics Rev. 19, 2400765 (2025).",
+    "journal-title": "Laser Photonics Rev."
+   },
+   {
+    "key": "129_CR55",
+    "doi-asserted-by": "publisher",
+    "first-page": "4923",
+    "DOI": "10.1021/acsphotonics.4c01433",
+    "volume": "11",
+    "author": "M Cai",
+    "year": "2024",
+    "unstructured": "Cai, M. et al. Gain dynamics in integrated waveguide amplifier based on erbium-doped thin-film lithium niobate. ACS Photonics 11, 4923–4932 (2024).",
+    "journal-title": "ACS Photonics"
+   },
+   {
+    "key": "129_CR56",
+    "doi-asserted-by": "publisher",
+    "DOI": "10.1038/s41467-025-65460-1",
+    "volume": "16",
+    "author": "Y Wang",
+    "year": "2025",
+    "unstructured": "Wang, Y. et al. Unifying optical gain and electro-optical dynamics in Er-doped thin-film lithium niobate platform. Nat. Commun. 16, 10462 (2025).",
+    "journal-title": "Nat. Commun."
+   },
+   {
+    "key": "129_CR57",
+    "doi-asserted-by": "publisher",
+    "first-page": "4739",
+    "DOI": "10.1515/nanoph-2025-0458",
+    "volume": "14",
+    "author": "M Li",
+    "year": "2025",
+    "unstructured": "Li, M. et al. Heterogeneously-integrated lasers on thin film lithium niobate. Nanophotonics 14, 4739–4748 (2025).",
+    "journal-title": "Nanophotonics"
+   },
+   {
+    "key": "129_CR58",
+    "doi-asserted-by": "crossref",
+    "unstructured": "Liu, Y. et al. Modeling EDFA Gain: approaches and challenges. Photonics 8, 417 (2021).",
+    "DOI": "10.3390/photonics8100417"
+   },
+   {
+    "key": "129_CR59",
+    "doi-asserted-by": "publisher",
+    "first-page": "13539",
+    "DOI": "10.1364/OE.20.013539",
+    "volume": "20",
+    "author": "H Tünnermann",
+    "year": "2012",
+    "unstructured": "Tünnermann, H., Neumann, J., Kracht, D. & Weßels, P. Gain dynamics and refractive index changes in fiber amplifiers: a frequency domain approach. Opt. Express 20, 13539–13550 (2012).",
+    "journal-title": "Opt. Express"
+   }
+  ],
+  "container-title": [
+   "npj Nanophotonics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "https://www.nature.com/articles/s44310-026-00129-1",
+    "content-type": "text/html",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s44310-026-00129-1.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "text-mining"
+   },
+   {
+    "URL": "https://www.nature.com/articles/s44310-026-00129-1.pdf",
+    "content-type": "application/pdf",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2026,
+     6,
+     15
+    ]
+   ],
+   "date-time": "2026-06-15T06:03:32Z",
+   "timestamp": 1781503412000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://www.nature.com/articles/s44310-026-00129-1"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     8
+    ]
+   ]
+  },
+  "references-count": 59,
+  "journal-issue": {
+   "issue": "1",
+   "published-online": {
+    "date-parts": [
+     [
+      2026,
+      12
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "129"
+  ],
+  "URL": "https://doi.org/10.1038/s44310-026-00129-1",
+  "relation": {},
+  "ISSN": [
+   "2948-216X"
+  ],
+  "issn-type": [
+   {
+    "value": "2948-216X",
+    "type": "electronic"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     8
+    ]
+   ]
+  },
+  "assertion": [
+   {
+    "value": "11 September 2025",
+    "order": 1,
+    "name": "received",
+    "label": "Received",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "24 April 2026",
+    "order": 2,
+    "name": "accepted",
+    "label": "Accepted",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "8 May 2026",
+    "order": 3,
+    "name": "first_online",
+    "label": "First Online",
+    "group": {
+     "name": "ArticleHistory",
+     "label": "Article History"
+    }
+   },
+   {
+    "value": "W.H. and W.H.P.P. are involved in developing single photon detectors at Pixel Photonics GmbH. J.R.B., J.R., and W.H.P.P. are involved in developing electro-optic modulators at Linq Photonics GmbH. The remaining authors declare no competing interests.",
+    "order": 1,
+    "name": "Ethics",
+    "group": {
+     "name": "EthicsHeading",
+     "label": "Competing interests"
+    }
+   }
+  ],
+  "article-number": "34"
+ }
+}

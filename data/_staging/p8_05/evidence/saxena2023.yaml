@@ -1,0 +1,73 @@
+paper_id: saxena2023
+verified_on: '2026-10-07'
+source_files:
+- references/saxena2023/text.md
+- references/saxena2023/figures/page_05.png
+- references/saxena2023/figures/page_06.png
+- references/saxena2023/figures/page_07.png
+entries:
+- device_id: saxena2023-a
+  field: wavelength_nm
+  value: 1566.65
+  unit: nm
+  basis: measured
+  locator: p.6 Sec. V-A
+  note: laser line at 1566.65 nm, -50 pm offset from unbiased resonance
+- device_id: saxena2023-a
+  field: drive_vpp_v
+  value: 2
+  unit: V
+  basis: measured
+  locator: p.6 Sec. V-A; Fig. 10 caption
+  note: 2 Vpp AWG setting into unterminated GS probe
+- device_id: saxena2023-a
+  field: eo_film_thickness_nm
+  value: 220
+  unit: nm
+  basis: design_target
+  locator: p.1 Sec. II-A
+  note: 220 nm SOI layer of the AIM process; disk etch not stated
+- device_id: saxena2023-a
+  field: max_baud_gbd
+  value: 28
+  unit: GBd
+  basis: derived
+  locator: p.6 Fig. 10(c)
+  note: NRZ at 28 Gb/s
+- device_id: saxena2023-a
+  field: modulation_format
+  value: NRZ PRBS-13 at 20, 25 and 28 Gb/s; PAM4 at 20 GSps (40 Gb/s); all at 2 Vpp,
+    laser detuned -50 pm from the unbiased resonance
+  basis: measured
+  locator: p.6 Fig. 10; p.7 Fig. 11
+  note: measured eyes
+- device_id: saxena2023-a
+  field: max_line_rate_gbps
+  value: 40
+  unit: Gb/s
+  basis: derived
+  locator: p.7 Fig. 11
+  note: PAM4 at 20 GSps x 2 bit/symbol; dispersed eye openings, no eye metric stated
+- device_id: saxena2023-a
+  field: capacitance_ff
+  value: 143
+  unit: fF
+  basis: derived
+  locator: p.5 Table I; Fig. 6(c)
+  note: Cj0 fitted to measured S11 and C-V points
+- device_id: saxena2023-a
+  field: tuning_nm_per_v
+  value: -0.088
+  unit: nm/V
+  basis: derived
+  locator: p.5 Fig. 7(a); p.6
+  note: polyfit slope 8.8004e-11 m/V of measured lambda0(v), red shift with reverse
+    bias; sign flipped to database convention
+- device_id: saxena2023-a
+  field: epitaxy_or_stack
+  value: Microdisk diameter about 5 um (D = 2R), depletion-mode pn junction, integrated
+    silicon heater; AIM Photonics 220 nm SOI process
+  basis: design_target
+  locator: p.2 Sec. II-B
+  note: diameter about 5 um, depletion pn, integrated heater
+derived: []

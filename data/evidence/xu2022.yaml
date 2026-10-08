@@ -119,7 +119,7 @@ entries:
   unit: um
   basis: design_target
   locator: p.2; p.1 Fig. 1(c)
-  note: 0.7 um SiO2 cladding under the CL-TWE (text value); in Fig. 1(c) the 0.7 um arrows may span the electrode bottom to the quartz top instead (alternative reading, about 0.52 um SiO2 over the slab), not adopted
+  note: 0.7 um SiO2 under CL-TWE (text value); Fig. 1(c) arrows may span electrode bottom to quartz top (about 0.52 um SiO2 over slab), not adopted.
 - device_id: xu2022-a
   field: substrate
   value: quartz 500 um
@@ -172,7 +172,7 @@ entries:
   unit: fJ/bit
   basis: author_estimate
   locator: p.2 conclusion
-  note: Formula and scope (modulator vs driver) not stated; auditor check, not stated by the authors, 4 x (0.161 V)^2 / 50 ohm / (130 GBd x 15.38 bit/symbol) = 1.04 fJ/bit, consistent with RF power of the four sub-MZMs into 50 ohm (modulator load only, DAC excluded)
+  note: Authors give no formula or scope (modulator vs driver); auditor check 4*(0.161 V)^2/50 ohm/(130 GBd*15.38 bit/symbol) = 1.04 fJ/bit fits four sub-MZM 50 ohm loads.
 - device_id: xu2022-a
   field: drive
   value: push_pull

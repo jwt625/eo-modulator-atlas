@@ -106,7 +106,7 @@ entries:
   unit: V*cm
   basis: derived
   locator: p.5 Table 1; p.5 Results
-  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+  note: 'Asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (Table 1: ''extracted from high-frequency fits''); relaxation-free quasi-static plateau, not GHz; no frequency.'
 - device_id: liu2026d-b
   field: length_mm
   value: 1.35
@@ -204,7 +204,7 @@ entries:
   unit: V*cm
   basis: derived
   locator: p.5 Table 1; p.5 Results
-  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+  note: 'Asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (Table 1: ''extracted from high-frequency fits''); relaxation-free quasi-static plateau, not GHz; no frequency.'
 - device_id: liu2026d-b
   field: bw3db_ghz
   value: 26.5
@@ -330,7 +330,7 @@ entries:
   unit: V*cm
   basis: derived
   locator: p.5 Table 1; p.5 Results
-  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+  note: 'Asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (Table 1: ''extracted from high-frequency fits''); relaxation-free quasi-static plateau, not GHz; no frequency.'
 - device_id: liu2026d-c
   field: bw3db_ghz
   value: 26.5
@@ -365,7 +365,7 @@ entries:
   unit: V
   basis: derived
   locator: p.3, Fig. 2(c)
-  note: Asymptote label Vpi = 6.71 V of the high-pass fit at 488 nm (data 10-100 kHz); frequency not applicable; the 7.64 V at 100 kHz, 20 C point of Fig. 2(a) inset is in the row notes only
+  note: Fit-asymptote label at 488 nm (data 10-100 kHz); frequency not applicable; 7.64 V at 100 kHz, 20 C (Fig. 2(a) inset) in row notes only.
 - device_id: liu2026d-c
   field: il_onchip_db
   value: 10
@@ -477,7 +477,7 @@ entries:
   unit: V*cm
   basis: derived
   locator: p.5 Table 1; p.5 Results
-  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+  note: 'Asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (Table 1: ''extracted from high-frequency fits''); relaxation-free quasi-static plateau, not GHz; no frequency.'
 - device_id: liu2026d-d
   field: bw3db_ghz
   value: 26.5
@@ -603,7 +603,7 @@ entries:
   unit: V*cm
   basis: derived
   locator: p.5 Table 1; p.5 Results
-  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+  note: 'Asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (Table 1: ''extracted from high-frequency fits''); relaxation-free quasi-static plateau, not GHz; no frequency.'
 - device_id: liu2026d-e
   field: bw3db_ghz
   value: 26.5
@@ -729,7 +729,7 @@ entries:
   unit: V*cm
   basis: derived
   locator: p.5 Table 1; p.5 Results
-  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+  note: 'Asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (Table 1: ''extracted from high-frequency fits''); relaxation-free quasi-static plateau, not GHz; no frequency.'
 - device_id: liu2026d-f
   field: bw3db_ghz
   value: 26.5
@@ -869,7 +869,7 @@ entries:
   unit: V*cm
   basis: derived
   locator: p.5 Table 1; p.5 Results
-  note: EO VpiL from the asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (p.4 low-frequency drive, p.5 model, Table 1 footnote 'extracted from high-frequency fits'); relaxation-free quasi-static plateau, not a GHz measurement; no frequency
+  note: 'Asymptote (f -> infinity) of high-pass-filter fits to <= 100 kHz data (Table 1: ''extracted from high-frequency fits''); relaxation-free quasi-static plateau, not GHz; no frequency.'
 - device_id: liu2026d-g
   field: bw3db_ghz
   value: 26.5
@@ -1030,7 +1030,7 @@ entries:
   unit: V
   basis: derived
   locator: p.7
-  note: Amplifier maximum output 7.0 Vpp in digital mode (p.7), inferred to be the drive used because ER was limited by the maximum amplifier swing (p.8); not a measured swing
+  note: Stated amplifier maximum 7.0 Vpp (digital mode, p.7), inferred as the drive because ER was limited by maximum amplifier swing (p.8); not a measured swing.
 - device_id: liu2026d-h
   field: extinction_ratio_db
   value: 25

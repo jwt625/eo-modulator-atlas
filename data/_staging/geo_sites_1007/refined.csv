@@ -1,0 +1,33 @@
+org_name,locality,country,lat,lon,precision,source,source_ref,source_label,verified_on,notes
+Chongqing University,Chongqing,CN,30.05518,107.87487,city,nominatim,,locality centre: Chongqing,2026-10-07,institution not resolved; locality centre
+Ciena Corporation,"Ottawa, ON",CA,45.34522,-75.92858,campus,nominatim,osm:way/625289953,"Ciena, 385, Terry Fox Drive, Kanata, Kanata North, Ottawa, Eastern Ontario, Ontario, K2K 3K1, Canada",2026-10-07,20.4 km from locality centre
+Coherent Corp.,"Santa Clara, CA",US,37.40455,-121.98436,city,nominatim,osm:way/417683811,"5100, Patrick Henry Drive, Santa Clara, Santa Clara County, California, 95054, United States",2026-10-07,32.6 km from locality centre
+"Furukawa FITEL Optical Components Co., Ltd.","Chiyoda-ku, Tokyo",JP,35.69091,139.76748,city,nominatim,osm:relation/3546503,"内神田, 千代田区, 東京都, 102-0000, 日本",2026-10-07,1.3 km from locality centre
+Genuine Optics,"San Jose, CA",US,37.38509,-121.92695,city,nominatim,osm:way/416214087,"2580, North 1st Street, North San Jose, San Jose, Santa Clara County, California, 95131, United States",2026-10-07,6.3 km from locality centre
+Institute of Microelectronics,Singapore,SG,1.29846,103.78875,building,nominatim,osm:way/448605477,"Innovis, 2, Fusionopolis Way, One North, Fusionopolis, Queenstown, Central Region, Singapore, 138634, Singapore",2026-10-07,7.1 km from locality centre
+"Ligent Technologies, Inc.",Qingdao,CN,36.06632,120.37777,city,nominatim,,locality centre: Qingdao,2026-10-07,institution not resolved; locality centre
+"Ligent Technologies, Inc.","San Jose, CA",US,37.38509,-121.92695,city,nominatim,osm:way/416214087,"2580, North 1st Street, North San Jose, San Jose, Santa Clara County, California, 95131, United States",2026-10-07,6.3 km from locality centre
+Mitsubishi Electric Corporation,"Itami, Hyogo",JP,34.79402,135.39454,city,nominatim,osm:node/7389267396,"瑞原一丁目, 伊丹市, 兵庫県, 664-0016, 日本",2026-10-07,1.2 km from locality centre
+Mitsubishi Electric Corporation,"Kamakura, Kanagawa",JP,35.35506,139.53037,city,nominatim,osm:relation/16825570,"大船, 鎌倉市, 神奈川県, 日本",2026-10-07,4.3 km from locality centre
+MultiLane Inc.,,LB,,,unresolved,,,,2026-10-07,unresolved
+National Semiconductor Translation and Innovation Centre,Singapore,SG,1.29848,103.78917,campus,nominatim,osm:node/7252074968,"One Man Coffee, 4, Fusionopolis Way, One North, Fusionopolis, Queenstown, Central Region, Singapore, 138635, Singapore",2026-10-07,7.0 km from locality centre
+Nokia Bell Labs,Stuttgart,DE,48.81643,9.17403,building,nominatim,osm:way/794337392,"Nokia, 8, Magirusstraße, Industriegebiet Feuerbach-Ost, Feuerbach-Ost, Feuerbach, Stuttgart, Baden-Württemberg, 70469, Deutschland",2026-10-07,4.2 km from locality centre
+Polariton Technologies AG,Adliswil,CH,47.32047,8.52219,campus,nominatim,osm:way/37247171,"Sood 52 Adliswil, 52, Soodstrasse, Soodmatte, Adliswil, Bezirk Horgen, Zürich, 8134, Schweiz/Suisse/Svizzera/Svizra",2026-10-07,1.0 km from locality centre
+"Sumitomo Electric Device Innovations, Inc.",Yokohama,JP,35.36704,139.52384,city,nominatim,osm:relation/3830453,"田谷町, 栄区, 横浜市, 神奈川県, 244-0844, 日本",2026-10-07,13.6 km from locality centre
+"Sumitomo Osaka Cement Co., Ltd.","Funabashi, Chiba",JP,35.69458,139.98254,city,nominatim,,"locality centre: Funabashi, Chiba",2026-10-07,institution not resolved; locality centre
+Taiwan Semiconductor Research Institute,Hsinchu,TW,24.80663,120.96868,city,nominatim,,locality centre: Hsinchu,2026-10-07,institution not resolved; locality centre
+University of Copenhagen,,DK,55.66266,12.58943,city,nominatim,osm:node/8617334701,"8, Karen Blixens Plads, Islands Brygge, Ballonparken, København, Københavns Kommune, Region Hovedstaden, 2300, Danmark",2026-10-07,no locality to check
+Waseda University,"Shinjuku, Tokyo",JP,35.70464,139.70528,city,nominatim,osm:relation/17081787,"大久保, 新宿区, 東京都, 169-0072, 日本",2026-10-07,1.2 km from locality centre
+"Wuhan HGGenuine Optics Tech Co., Ltd","Wuhan, Hubei",CN,30.44964,114.3952,campus,nominatim,osm:way/1234250711,"华中科技大学科技园, 关东街道, 东湖新技术开发区, 洪山区, 武汉市, 湖北省, 中国",2026-10-07,17.4 km from locality centre
+Broadcom Inc.,"Breinigsville, PA",US,40.54314,-75.6598,city,nominatim,osm:way/845569480,"9999, Hamilton Boulevard, Newtown, Upper Macungie Township, Lehigh County, Pennsylvania, 18031, United States",2026-10-07,2.6 km from locality centre
+Changchun University,Changchun,CN,43.83081,125.31472,building,nominatim,osm:way/374517049,"长春大学, 南部快速路, 南湖街道, 朝阳区, 长春市, 绿园区, 吉林省, 130000, 中国",2026-10-07,6.0 km from locality centre
+Changchun University of Science and Technology,Changchun,CN,43.88448,125.31817,city,nominatim,,locality centre: Changchun,2026-10-07,institution not resolved; locality centre
+GlobalFoundries,"Essex Junction, VT",US,44.47713,-73.0966,city,nominatim,osm:node/12668834616,"1000, River Street, Global Foundries Fab 9, Essex Junction, Chittenden County, Vermont, 05452, United States",2026-10-07,1.9 km from locality centre
+GlobalFoundries,"Santa Clara, CA",US,37.4153,-121.97433,building,nominatim,osm:way/314941627,"2600, Great America Way, Santa Clara, Santa Clara County, California, 95054, United States",2026-10-07,32.6 km from locality centre
+"Institute of Microelectronics, Chinese Academy of Sciences",Beijing,CN,39.97657,116.38321,campus,nominatim,osm:way/673865197,"中国科学院微电子研究所, 北辰西路, 华严厂, 亚运村街道, 朝阳区, 北京市, 100011, 中国",2026-10-07,7.9 km from locality centre
+Keysight Technologies,"Santa Clara, CA",US,37.32546,-121.99903,campus,nominatim,osm:way/97242337,"Agilent Technologies, 5301, Stevens Creek Boulevard, Santa Clara, Santa Clara County, California, 95051, United States",2026-10-07,29.6 km from locality centre
+Max Planck Institute of Microstructure Physics,Halle (Saale),DE,51.4955,11.94093,building,nominatim,osm:way/39726299,"Max-Planck-Institut für Mikrostrukturphysik, 2, Weinberg, Weinberg-Campus, Kröllwitz, Halle (Saale), Sachsen-Anhalt, 06120, Deutschland",2026-10-07,2.6 km from locality centre
+Mitsubishi Electric Corporation,"Amagasaki, Hyogo",JP,34.73398,135.4064,city,nominatim,,"locality centre: Amagasaki, Hyogo",2026-10-07,institution not resolved; locality centre
+Nanzhi Institute of Advanced Optoelectronic Integration,Nanjing,CN,32.04383,118.77886,city,nominatim,,locality centre: Nanjing,2026-10-07,institution not resolved; locality centre
+Nexus Photonics,"Goleta, CA",US,34.43122,-119.85557,building,nominatim,osm:way/619020483,"6500, Hollister Avenue, Goleta, Santa Barbara County, California, 93117, United States",2026-10-07,2.6 km from locality centre
+"Suzhou Institute of Nano-Tech and Nano-Bionics, Chinese Academy of Sciences","Suzhou, Jiangsu",CN,31.31112,120.62129,city,nominatim,,"locality centre: Suzhou, Jiangsu",2026-10-07,institution not resolved; locality centre

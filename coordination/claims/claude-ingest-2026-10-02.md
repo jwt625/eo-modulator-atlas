@@ -2,7 +2,7 @@
 
 - Agent: Claude Code session (coordinator) plus fresh-context subagents, one per batch
 - Task IDs: C1 (continued literature collection), D1.15..D1.24 (batches p3_01..p3_10), D1.13 addendum (han2023)
-- Status: ready_for_review (2026-10-03); corrections applied, second audit round and D2 merge not done
+- Status: complete (accepted by the user 2026-10-07); second audit round done in DevLog-015, merged 2026-10-03
 - Commits/pushes: none. The user commits.
 
 User request (2026-10-02): continue the new-references collection and start ingesting in parallel with subagents.

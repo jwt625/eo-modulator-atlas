@@ -48,14 +48,14 @@ entries:
   unit: V
   basis: derived
   locator: p.4; p.1 abstract
-  note: 'authors: 7.0 V per arm corresponds to 3.5 V in push-pull; the push-pull VpiL of 2.3 V cm (3.5 V x 6.6 mm, abstract and p.4) has no column and is kept in notes'
+  note: 7.0 V per arm corresponds to 3.5 V push-pull; push-pull VpiL 2.3 V cm (3.5 V x 6.6 mm) has no column, kept in notes.
 - device_id: niels2026-a
   field: bw3db_ghz
   value: 70
   unit: GHz
   basis: measured
   locator: p.4, Fig. 4(d)
-  note: no 3 dB crossing observed on the high-resistivity substrate; limited by VNA and photodetector; the noisy trace touches about -3 dB near 65 GHz; EOE definition of 3 dB not stated
+  note: No 3 dB crossing, high-resistivity substrate (VNA and photodetector limited); noisy trace touches about -3 dB near 65 GHz; EOE 3 dB definition not stated.
 - device_id: niels2026-a
   field: bw_measured_to_ghz
   value: 70

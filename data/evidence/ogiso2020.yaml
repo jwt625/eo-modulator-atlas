@@ -89,15 +89,14 @@ entries:
   unit: ''
   basis: derived
   locator: p.2 Fig. 2(b); p.3 Fig. 6 caption, Fig. 7(a)
-  note: Series arms on a common n-layer with differential GSSG input; the paper says "differential drive" / "push-pull drive", not "series"; ogiso2024 (same group, same n-i-p-n CL-TWE) is series_push_pull
+  note: Series arms on common n-layer, differential GSSG input; paper says 'differential drive' or 'push-pull drive', not 'series'; ogiso2024 (same group and CL-TWE) is series_push_pull.
 - device_id: ogiso2020-a
   field: vpi_convention
   value: mzm_series_push_pull
   unit: ''
   basis: derived
   locator: p.2 Fig. 2(b); p.3 Fig. 6 caption, Fig. 7(a)
-  note: Vpi is the voltage between the two differential signal lines (series push-pull); series arms on a common n-layer with differential GSSG input; the paper says "differential drive" / "push-pull drive",
-    not "series"; ogiso2024 (same group, same n-i-p-n CL-TWE) is series_push_pull
+  note: Vpi between the two differential signal lines; arms in series on common n-layer; paper says 'differential'/'push-pull drive', not 'series'; ogiso2024 (same CL-TWE) is series_push_pull.
 - device_id: ogiso2020-b
   field: wavelength_nm
   value: 1550
@@ -146,7 +145,7 @@ entries:
   unit: ''
   basis: derived
   locator: p.2 Fig. 2(b); p.3 Fig. 7(a); p.5 Sec. IV
-  note: Almost the same electrical design as the twin-IQ PIC (series arms on a common n-layer, differential input from the driver IC); the paper says "differential", not "series"
+  note: Almost same electrical design as twin-IQ PIC (series arms on common n-layer, differential input from driver IC); paper says 'differential', not 'series'.
 derived:
 - device_id: ogiso2020-b
   field: temperature_k

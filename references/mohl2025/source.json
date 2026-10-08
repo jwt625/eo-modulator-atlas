@@ -4,8 +4,8 @@
  "doi": "10.1103/1gvf-w6lx",
  "source_type": "arxiv_preprint",
  "source_version": "2501.09728v2",
- "license": "",
- "license_verified": false,
+ "license": "arXiv-nonexclusive-1.0",
+ "license_verified": true,
  "redistribution": "restricted_local_only",
  "retrieved_on": "2026-10-03T06:08:32+00:00",
  "acquisition_origin": "public_primary_source",
@@ -15,5 +15,6 @@
  "pages": 31,
  "text_chars": 138558,
  "n_figure_files": 54,
- "extracted_on": "2026-10-02"
+ "extracted_on": "2026-10-02",
+ "license_source": "references/mohl2025/arxiv.json (arXiv OAI-PMH arXivRaw license element)"
 }

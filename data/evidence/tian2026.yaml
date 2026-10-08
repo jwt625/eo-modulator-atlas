@@ -1,0 +1,28 @@
+paper_id: tian2026
+verified_on: '2026-10-07'
+source_files:
+- references/tian2026/text.md
+- references/tian2026/source.json
+entries: []
+derived: []
+context_values:
+- item: r_eff_hMBE_1
+  value: 32 pm/V
+  locator: p.17; Fig. 4(e)
+  note: TTIP/Ba 38:1; coplanar Pt electrodes, gap about 10 um, 1550 nm
+- item: r_eff_hMBE_2
+  value: 248 pm/V
+  locator: p.17; Fig. 4(e)
+  note: TTIP/Ba 32:1; 220 nm film
+- item: r_eff_PLD
+  value: 220 pm/V
+  locator: p.17; Fig. 4(e)
+  note: PLD BTO on hMBE STO/Si
+- item: film_resistivity
+  value: 2.0 to 2.2 x 10^4 ohm cm
+  locator: p.16
+  note: three films
+- item: growth_rate
+  value: 70 to 100 nm/h; about 75 nm/h for hMBE_2
+  locator: p.10
+  note: 'abstract: exceeding 75 nm/h'

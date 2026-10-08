@@ -1,0 +1,314 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 175,
+  "items": [
+   {
+    "DOI": "10.1109/lpt.2024.3488699",
+    "title": [
+     "Micro-Ring Modulator Linearity Enhancement for Analog and Digital Optical Links"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0009-0006-1250-0338",
+      "authenticated-orcid": false,
+      "given": "Sumilak",
+      "family": "Chaudhury",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Electrical and Computer Engineering, University of California, San Diego, La Jolla, CA, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1362-7633",
+      "authenticated-orcid": false,
+      "given": "Karl",
+      "family": "Johnson",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical and Computer Engineering, University of California, San Diego, La Jolla, CA, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Vladimir",
+      "family": "Fedorov",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical and Computer Engineering, University of California, San Diego, La Jolla, CA, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-0965-7247",
+      "authenticated-orcid": false,
+      "given": "Bill",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical and Computer Engineering, University of California, San Diego, La Jolla, CA, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-0019-9972",
+      "authenticated-orcid": false,
+      "given": "Yeshaiahu",
+      "family": "Fainman",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical and Computer Engineering, University of California, San Diego, La Jolla, CA, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8596-6976",
+      "authenticated-orcid": false,
+      "given": "Tzu-Chien",
+      "family": "Hsueh",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Electrical and Computer Engineering, University of California, San Diego, La Jolla, CA, USA"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024,
+       12,
+       15
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1002/mop.31479",
+    "title": [
+     "Dual‐mode bandpass filter based on substrate‐integrated waveguide loaded with complementary split ring resonators"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-6617-3815",
+      "authenticated-orcid": false,
+      "given": "Soumit Samadder",
+      "family": "Chaudhury",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Indian Institute of Information Technology Allahabad  Allahabad Uttar Pradesh India"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Seema",
+      "family": "Awasthi",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Indian Institute of Information Technology Allahabad  Allahabad Uttar Pradesh India"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Rajat Kumar",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Indian Institute of Information Technology Allahabad  Allahabad Uttar Pradesh India"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2018,
+       10,
+       3
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3389/fphys.2015.00402",
+    "title": [
+     "VIP in HIV Diarrhea: Finding Links for the “Slim Disease”"
+    ],
+    "author": [
+     {
+      "given": "Arun",
+      "family": "Chaudhury",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2015,
+       12,
+       23
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1007/s10470-017-0997-0",
+    "title": [
+     "A novel 9T SRAM architecture for low leakage and high performance"
+    ],
+    "author": [
+     {
+      "given": "Rohit",
+      "family": "Lorenzo",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Saurabh",
+      "family": "Chaudhury",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2017,
+       5,
+       30
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.4043/6903-ms",
+    "title": [
+     "Fatigue Life Enhancement of Semisubmersible Rigs"
+    ],
+    "author": [
+     {
+      "given": "G.K.",
+      "family": "Chaudhury",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Sedco Forex"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       1992,
+       5,
+       4
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

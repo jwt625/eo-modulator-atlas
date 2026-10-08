@@ -1,0 +1,468 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 17640,
+  "items": [
+   {
+    "DOI": "10.1038/s41467-025-65293-y",
+    "title": [
+     "Monolithic lithium niobate photonic chip for efficient terahertz-optic modulation and terahertz generation"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0003-0507-4175",
+      "authenticated-orcid": false,
+      "given": "Yiwen",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jingwei",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yuansong",
+      "family": "Zeng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zhaoxi",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0003-3579-5352",
+      "authenticated-orcid": false,
+      "given": "Hanke",
+      "family": "Feng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-6725-5145",
+      "authenticated-orcid": false,
+      "given": "Sha",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-8750-8581",
+      "authenticated-orcid": false,
+      "given": "Kam-Man",
+      "family": "Shum",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-9718-0831",
+      "authenticated-orcid": false,
+      "given": "Chi Hou",
+      "family": "Chan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1939-1422",
+      "authenticated-orcid": false,
+      "given": "Cheng",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       24
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.3724/sp.j.1010.2011.00221",
+    "title": [
+     "Generation of arbitrary terahertz pulse in nonperiodically poled lithium niobate"
+    ],
+    "author": [
+     {
+      "given": "Xue",
+      "family": "WU",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Qiao-Fen",
+      "family": "ZHU",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Yan",
+      "family": "ZHANG",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2012,
+       3,
+       19
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1038/s41467-019-08969-6",
+    "title": [
+     "Monolithic lithium niobate photonic circuits for Kerr frequency comb generation and modulation"
+    ],
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0002-1939-1422",
+      "authenticated-orcid": false,
+      "given": "Cheng",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-9838-3895",
+      "authenticated-orcid": false,
+      "given": "Mian",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Mengjie",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Rongrong",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Han",
+      "family": "Hu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Marko",
+      "family": "Loncar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2019,
+       2,
+       28
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.757692",
+    "title": [
+     "Terahertz generation in an aperiodically poled lithium-niobate parametric oscillator"
+    ],
+    "author": [
+     {
+      "given": "H.",
+      "family": "Su",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "S. C.",
+      "family": "Ruan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "M.",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "L. Z.",
+      "family": "Xia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "H.",
+      "family": "Zhou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2007,
+       11,
+       29
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2024.jtu2a.52",
+    "title": [
+     "500 GHz Terahertz Wave-Optic Modulators in Thin Film Lithium Niobate"
+    ],
+    "author": [
+     {
+      "given": "Yiwen",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Zhaoxi",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Jingwei",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Hanke",
+      "family": "Feng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Sha",
+      "family": "Zhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Cheng",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2024
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

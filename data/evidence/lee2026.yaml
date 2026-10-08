@@ -60,9 +60,9 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
-  locator: p.2; p.4 Fig. 1(f) caption
-  note: oxide removed around the waveguide; h_air = 4.7 um
+  basis: design_target
+  locator: p.2 (wafer); p.4 Fig. 1(f) caption
+  note: wafer BOX (p.2); oxide removed around the waveguide; h_air = 4.7 um
 - device_id: lee2026-a
   field: substrate
   value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
@@ -269,9 +269,9 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
-  locator: p.2; p.4 Fig. 1(f) caption
-  note: oxide removed around the waveguide; h_air = 4.7 um
+  basis: design_target
+  locator: p.2 (wafer); p.4 Fig. 1(f) caption
+  note: wafer BOX (p.2); oxide removed around the waveguide; h_air = 4.7 um
 - device_id: lee2026-b
   field: substrate
   value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
@@ -381,9 +381,9 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
-  locator: p.2; p.4 Fig. 1(f) caption
-  note: oxide removed around the waveguide; h_air = 4.7 um
+  basis: design_target
+  locator: p.2 (wafer); p.4 Fig. 1(f) caption
+  note: wafer BOX (p.2); oxide removed around the waveguide; h_air = 4.7 um
 - device_id: lee2026-c
   field: substrate
   value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
@@ -493,9 +493,9 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
-  locator: p.2; p.4 Fig. 1(f) caption
-  note: oxide removed around the waveguide; h_air = 4.7 um
+  basis: design_target
+  locator: p.2 (wafer); p.4 Fig. 1(f) caption
+  note: wafer BOX (p.2); oxide removed around the waveguide; h_air = 4.7 um
 - device_id: lee2026-d
   field: substrate
   value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)
@@ -592,9 +592,9 @@ entries:
   field: buffer_oxide_um
   value: 4.7
   unit: um
-  basis: measured
-  locator: p.2; p.4 Fig. 1(f) caption
-  note: oxide removed around the waveguide; h_air = 4.7 um
+  basis: design_target
+  locator: p.2 (wafer); p.4 Fig. 1(f) caption
+  note: wafer BOX (p.2); oxide removed around the waveguide; h_air = 4.7 um
 - device_id: lee2026-e
   field: substrate
   value: silicon; oxide removed around the waveguide (air gap 4.7 um beneath it)

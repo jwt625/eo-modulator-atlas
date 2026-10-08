@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2201.10790",
+ "title": "High-production-rate fabrication of low-loss lithium niobate electro-optic modulators using photolithography assisted chemo-mechanical etching (PLACE)",
+ "authors": "Rongbo Wu, Lang Gao, Youting Liang, Yong Zheng, Junxia Zhou, Hongxin Qi, Difeng Yin, Min Wang, Zhiwei Fang, and Ya Cheng",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 26 Jan 2022 07:51:13 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:35:02Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2201.10790\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2201.10790</identifier>\n        <datestamp>2022-01-27</datestamp>\n            <setSpec>physics:physics:app-ph</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2201.10790</id>\n        <submitter>Rongbo Wu</submitter>\n            <version version=\"v1\">\n                <date>Wed, 26 Jan 2022 07:51:13 GMT</date>\n                <size>925kb</size>\n            </version>\n        <title>High-production-rate fabrication of low-loss lithium niobate electro-optic modulators using photolithography assisted chemo-mechanical etching (PLACE)</title>\n        <authors>Rongbo Wu, Lang Gao, Youting Liang, Yong Zheng, Junxia Zhou, Hongxin Qi, Difeng Yin, Min Wang, Zhiwei Fang, and Ya Cheng</authors>\n        <categories>physics.app-ph physics.optics</categories>\n            <license>http://creativecommons.org/licenses/by/4.0/</license>\n            <abstract>Integrated thin-film lithium niobate (LN) electro-optic (EO) modulators of broad bandwidth, low insertion loss, low cost and high production rate are essential elements in contemporary inter-connection industries and disruptive applications. Here, we demonstrated the design and fabri-cation of a high performance thin-film LN EO modulator using photolithography assisted chemo-mechanical etching (PLACE) technology. Our device shows a 3-dB bandwidth over 50 GHz, along with a comparable low half wave voltage-length product of 2.16 Vcm. We obtain a fiber-to-fiber insertion loss of 2.6 dB.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

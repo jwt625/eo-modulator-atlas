@@ -16,16 +16,29 @@ import { pointInPolygon, polygonBBox, rectToPolygon } from './geometry.mjs';
  * @property {{left:string,right:string,top:string,bottom:string}} boundary
  */
 
+const sameRect = (a, b) => !!a && !!b && a.x[0] === b.x[0] && a.x[1] === b.x[1] && a.y[0] === b.y[0] && a.y[1] === b.y[1];
+
 export class CrossSection {
-  /** @param {NormGeometry} geom */
-  constructor(geom, name = 'geometry') {
+  /**
+   * @param {NormGeometry} geom
+   * @param {string} [name]
+   * @param {{refineWindows?:{x:[number,number],y:[number,number]}[], thicknessUm?:number|null}} [options]
+   *   refineWindows: extra electrostatic refinement windows (the EO arm windows, Q2 N1), refined by the same rule as
+   *   optical_window; windows that miss the solved domain are ignored. thicknessUm: pins the electrode-thickness mesh
+   *   hint (used by the Wheeler recessed sections so their meshes follow the nominal section, Q2 M8).
+   */
+  constructor(geom, name = 'geometry', { refineWindows = [], thicknessUm = null } = {}) {
     this.name = name;
     this.geom = geom;
+    this.thicknessHintUm = thicknessUm;
     this.regions = geom.regions.map((r) => ({ ...r, bbox: polygonBBox(r.poly) }));
     this.electrodes = geom.electrodes.map((e) => ({ ...e, bbox: polygonBBox(e.poly) }));
     const d = geom.domain;
     this.fullRect = { x0: d.x[0], x1: d.x[1], y0: d.y[0], y1: d.y[1] };
     this.rect = this._halfRect();
+    const r = this.rect;
+    this.refineWindows = refineWindows.filter((w) => w && !sameRect(w, geom.optical_window)
+      && w.x[0] < r.x1 && w.x[1] > r.x0 && w.y[0] < r.y1 && w.y[1] > r.y0);
   }
 
   /** Domain actually meshed (cropped to the half-plane when a mirror symmetry is declared). */
@@ -92,7 +105,7 @@ export class CrossSection {
     const h = opts.hints ?? g.mesh ?? {};
     const rect = opts.windowOnly && opts.window ? { x0: opts.window.x[0], x1: opts.window.x[1], y0: opts.window.y[0], y1: opts.window.y[1] } : this.rect;
     const diag = Math.hypot(rect.x1 - rect.x0, rect.y1 - rect.y0);
-    const thick = this.electrodes.length ? this.minElectrodeThickness() : diag / 50;
+    const thick = this.thicknessHintUm ?? (this.electrodes.length ? this.minElectrodeThickness() : diag / 50);
     const maxEdge = (h.max_edge_um ?? diag / 40) * scale;
     const corner = (h.electrode_edge_um ?? Math.min(maxEdge, thick / 6)) * scale;
     const face = Math.min(maxEdge, (h.electrode_face_um ?? 8 * (h.electrode_edge_um ?? thick / 6)) * scale);
@@ -107,11 +120,16 @@ export class CrossSection {
       sources.push({ poly: e.poly, filled: true, h0: maxEdge, grade: gFar });
     }
     const win = opts.window ?? g.optical_window;
-    if (win && !opts.windowOnly && !opts.sourcesOnly) {
-      const wp = rectToPolygon(win.x, win.y);
+    if (!opts.windowOnly && !opts.sourcesOnly) {
+      // optical_window and every EO arm window: same window_edge_um rule (an arm off the optical window would
+      // otherwise sample the field from the coarser mesh, Q2 N1).
       const we = Math.min(maxEdge, (h.window_edge_um ?? 0.05) * scale);
-      sources.push({ poly: wp, filled: true, h0: we });
-      sources.push({ poly: wp, filled: true, h0: maxEdge, grade: gFar });
+      for (const w of [win, ...this.refineWindows]) {
+        if (!w) continue;
+        const wp = rectToPolygon(w.x, w.y);
+        sources.push({ poly: wp, filled: true, h0: we });
+        sources.push({ poly: wp, filled: true, h0: maxEdge, grade: gFar });
+      }
     }
     if (h.regions && !opts.sourcesOnly) {
       for (const [rname, edge] of Object.entries(h.regions)) {

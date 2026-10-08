@@ -2,7 +2,7 @@
 
 - Agent: Claude Code session (coordinator); Sonnet subagents distill/correct, Opus subagents audit/verify
 - Task: ingest the papers the user retrieved on 2026-10-05 (batches p6_01..p6_05)
-- Status: claimed 2026-10-05; ready_for_review 2026-10-05 (p6 + p7 merged, all audited, checks green)
+- Status: complete (accepted by the user 2026-10-07); was ready_for_review 2026-10-05
 - Plan and progress: `DevLog/DevLog-021-inbox-ingestion-2026-10-05.md`
 
 ## Owned write paths

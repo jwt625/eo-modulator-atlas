@@ -1,0 +1,32 @@
+paper_id: thureja2025
+verified_on: '2026-10-07'
+source_files:
+- references/thureja2025/text.md
+- references/thureja2025/source.json
+entries: []
+derived: []
+context_values:
+- item: teng_man_r33_as_spalled
+  value: 42 +/- 3 pm/V at 1500 nm, 10 kHz, Vm 5 V
+  locator: p.9
+  note: unclamped; film about 20 um thick, ITO/BTO/Ni reflective capacitor
+- item: teng_man_r33_poled_multidomain
+  value: 55 +/- 5 pm/V after 20 V for 1 h out-of-plane poling
+  locator: p.7; p.9
+  note: probe below 300 um (irises)
+- item: teng_man_r33_single_domain_region
+  value: 160 +/- 40 pm/V
+  locator: p.9; Fig. 4(d)
+  note: probe tens of um (lenses), fewer domains
+- item: r42_projection
+  value: 680 pm/V from bulk r42/r33 ratio
+  locator: p.9
+  note: authors' projection; abstract 1980 pm/V not in body
+- item: bulk_bto_teng_man_calibration
+  value: r33 = 96.4 pm/V after in-plane poling
+  locator: p.9; SI p.19
+  note: literature 105 +/- 10 pm/V
+- item: cutoff_frequency
+  value: about 18 kHz (-3 dB, RC limited)
+  locator: p.9; SI Fig. S6 p.20
+  note: theoretical estimate 592 kHz

@@ -58,7 +58,7 @@ entries:
   unit: nm
   basis: measured
   locator: Sec. 2
-  note: 'text: 400 nm high waveguide with 200 nm slab on a 600 nm film, read as etch depth (600 - 200); the later arXiv version (li2026ba) states 440 nm etch / 160 nm slab'
+  note: 'Text: 400 nm waveguide height, 200 nm slab, 600 nm film; etch depth read as 600-200; li2026ba (arXiv) states 440 nm etch, 160 nm slab.'
 - device_id: li2026a-a
   field: slab_thickness_nm
   value: 200
@@ -172,7 +172,7 @@ entries:
   unit: nm
   basis: measured
   locator: Sec. 2
-  note: 'text: 400 nm high waveguide with 200 nm slab on a 600 nm film, read as etch depth (600 - 200); the later arXiv version (li2026ba) states 440 nm etch / 160 nm slab'
+  note: 'Text: 400 nm waveguide height, 200 nm slab, 600 nm film; etch depth read as 600-200; li2026ba (arXiv) states 440 nm etch, 160 nm slab.'
 - device_id: li2026a-b
   field: slab_thickness_nm
   value: 200

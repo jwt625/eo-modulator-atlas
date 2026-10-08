@@ -8,10 +8,17 @@
   import { staticUrl, link } from '../../lib/paths';
   import { fmt } from '../../lib/logic';
   import CrossSection from '../../lib/CrossSection.svelte';
+  import SimStageResults from '../../lib/SimStageResults.svelte';
 
   let text = $state('');
   let section = $state('geometry');
-  let optical = $state(false);
+  // Optional stages in run order; electrostatics always runs.
+  const OPTIONAL = [
+    { id: 'optical_mode', label: 'Optical mode' },
+    { id: 'eo_overlap', label: 'EO overlap' },
+    { id: 'rf_line', label: 'RF line' }
+  ] as const;
+  let selected = $state<string[]>([]);
   let meshScale = $state(1);
   let busy = $state(false);
   let loading = $state(false);
@@ -25,15 +32,20 @@
   const chosen = $derived(requested ? sims.find(s => s.id === requested || s.path === requested) : sims[0]);
   const parsed = $derived.by(() => {
     if (!text) return { config: null, error: '' };
-    try { const { preview, solveError } = inspectConfig(text); return { config: preview, error: solveError }; }
-    catch (e) { return { config: null, error: e instanceof Error ? e.message : String(e) }; }
+    try { const { preview, solveError, stageErrors } = inspectConfig(text, section); return { config: preview, error: solveError, stages: stageErrors }; }
+    catch (e) { return { config: null, error: e instanceof Error ? e.message : String(e), stages: null }; }
   });
+  const stageError = (id: string) => parsed.stages?.[id] ?? null;
+  const blocked = $derived(selected.filter(id => stageError(id)));
+  function toggleStage(id: string, on: boolean) { selected = on ? [...new Set([...selected, id])] : selected.filter(s => s !== id); }
   const geometry = $derived(parsed.config?.geometries[section]);
-  const currentInput = $derived(JSON.stringify([text, section, optical, meshScale]));
+  const runStages = $derived(OPTIONAL.map(s => s.id).filter(id => selected.includes(id)));
+  const currentInput = $derived(JSON.stringify([text, section, runStages, meshScale]));
   const stale = $derived(result !== null && currentInput !== runInput);
   const labels: Record<string, string> = {
     c_pul_pf_per_m: "C′ (pF/m)", c0_pul_pf_per_m: "C₀′ (pF/m)", l_pul_nh_per_m: "L′ (nH/m)",
-    n_rf: 'RF index (section)', z0_ohm: 'Z₀ (Ω, section)', n_eff: 'Effective optical index', ng_opt: 'Optical group index'
+    n_rf: 'RF index (section)', z0_ohm: 'Z₀ (Ω, section)', n_eff: 'Effective optical index', ng_opt: 'Optical group index',
+    vpi_l_dc_vcm: 'VπL (V·cm, DC)', vpi_dc_v: 'Vπ (V, DC)'
   };
 
   function stopWorker() {
@@ -74,7 +86,7 @@
         if (worker !== activeWorker) return;
         error = event.message || 'Worker failed'; stopWorker(); progress = 'Solve stopped';
       };
-      activeWorker.postMessage({ text, section, optical, meshScale });
+      activeWorker.postMessage({ text, section, stages: $state.snapshot(runStages), meshScale });
     } catch (e) { error = String(e); stopWorker(); progress = 'Solve stopped'; }
   }
 </script>
@@ -83,8 +95,8 @@
 <div class="sim-page">
   <div class="intro">
     <h1>Cross-section simulator</h1>
-    <p>Run electrostatics and optional scalar optical modes locally in your browser. Results stay in memory.</p>
-    <p class="muted">EO overlap, RF loss, periodic loaded-line response and bandwidth are still pending. Section values do not establish reproduction of a complete modulator.</p>
+    <p>Run electrostatics, scalar optical modes, DC EO overlap and the uniform RF line locally in your browser. Results stay in memory.</p>
+    <p class="muted">Periodic loaded-line cascades and the EO response (bandwidth) are not implemented. Section values do not establish reproduction of a complete modulator.</p>
   </div>
   {#if store.error}<p class="error" role="alert">{store.error}</p>{/if}
   {#if store.loading}<p>Loading atlas…</p>
@@ -105,18 +117,32 @@
         <div class="toolbar">
           <label>Cross-section <select aria-label="Cross-section" bind:value={section} disabled={busy}>{#each Object.keys(parsed.config?.geometries ?? {}) as name}<option value={name}>{name}</option>{/each}</select></label>
           <label>Mesh <select aria-label="Mesh resolution" bind:value={meshScale} disabled={busy}><option value={2}>Coarse (2× edge)</option><option value={1}>Configured</option><option value={0.5}>Fine (½ edge)</option></select></label>
-          <label><input type="checkbox" bind:checked={optical} disabled={busy} /> Include optical mode</label>
         </div>
+        <fieldset class="stages" aria-label="Stages">
+          <legend>Stages</legend>
+          <label title="Always runs"><input type="checkbox" checked disabled /> Electrostatics</label>
+          {#each OPTIONAL as s}
+            {@const err = stageError(s.id)}
+            <label title={err ?? 'Inputs pass the input boundary'} class:blocked={!!err}><input type="checkbox" checked={selected.includes(s.id)} disabled={busy || (!!err && !selected.includes(s.id))} onchange={e => toggleStage(s.id, e.currentTarget.checked)} /> {s.label}</label>
+          {/each}
+          <span class="muted" title="Recognised in chain, not implemented">Loaded line, EO response: not implemented</span>
+        </fieldset>
+        {#if parsed.config && !parsed.error}
+          <ul class="readiness" aria-label="Stage readiness">
+            {#each OPTIONAL as s}{#if stageError(s.id)}<li data-stage-blocked={s.id}><strong>{s.label}</strong> blocked: {stageError(s.id)}</li>{/if}{/each}
+          </ul>
+        {/if}
         {#if geometry}<CrossSection {geometry} />{/if}
         <label class="editor-label" for="config-yaml">Input YAML · edits apply to this session</label>
         <textarea id="config-yaml" bind:value={text} spellcheck="false" disabled={busy || loading}></textarea>
         {#if parsed.error}<p class="error" role="alert">{`${parsed.config ? 'Preview only. Solve blocked: ' : ''}${parsed.error}`}</p>{/if}
         <div class="toolbar actions">
-          <button class="on" onclick={run} disabled={busy || loading || !geometry || !!parsed.error}>Run cross-section</button>
+          <button class="on" onclick={run} disabled={busy || loading || !geometry || !!parsed.error || blocked.length > 0}>Run cross-section</button>
           {#if busy}<button onclick={cancel}>Cancel</button>{/if}
           <span role="status">{#if busy}<span class="spinner"></span> {/if}{progress}</span>
         </div>
-        {#if optical}<p class="muted">Optical metal policy: <strong>{parsed.config?.raw.optics?.metal_in_window ?? 'reject'}</strong>. Metal in the window is rejected by default. Explicit YAML options <code>optics.metal_in_window: absent</code> or <code>pec_scalar</code> test scalar sensitivity limits; neither predicts real-metal absorption. A failed requested stage stops the run.</p>{/if}
+        {#if blocked.length}<p class="error" role="alert">Selected stage blocked: {blocked.join(', ').replaceAll('_', ' ')}. Clear it or fix its inputs.</p>{/if}
+        {#if selected.includes('optical_mode') || selected.includes('eo_overlap')}<p class="muted">Optical metal policy: <strong>{parsed.config?.raw.optics?.metal_in_window ?? 'reject'}</strong>. Metal in the window is rejected by default. Explicit YAML options <code>optics.metal_in_window: absent</code> or <code>pec_scalar</code> test scalar sensitivity limits; neither predicts real-metal absorption. A failed requested stage stops the run.</p>{/if}
         {#if error}<p class="error" role="alert">{error}</p>{/if}
       </section>
       <section class="outputs">
@@ -133,13 +159,16 @@
               <p class="muted">Scalar PEC is exact on horizontal faces only: {fmt(100 * result.optical.metal.pecFaces.validFaceFraction)}% of the modelled metal perimeter is horizontal.</p>
             {/if}
           {/if}
+          <p class="muted" data-stages={result.stages.join(' ')}>Stages run: {result.stages.join(', ').replaceAll('_', ' ')}.</p>
+          <SimStageResults {result} />
           <h3>Paper targets</h3>
-          <p class="target-summary">{result.targetSummary.evaluated} of {result.targetSummary.total} targets evaluated · {result.targetSummary.passed} passed · {result.targetSummary.failed} failed</p>
+          <p class="target-summary">{result.targetSummary.evaluated} of {result.targetSummary.total} targets evaluated · {result.targetSummary.passed} passed · {result.targetSummary.failed} failed{#if result.targetSummary.flagged} · <span class="notice" data-targets-flagged={result.targetSummary.flagged}>{result.targetSummary.flagged} flagged</span>{/if}</p>
           <p class="muted">Pass/fail applies only to an independently evaluated metric. “Not evaluated” is never counted as a pass.</p>
           <div class="table-scroll"><table><thead><tr><th>Metric</th><th>Target</th><th>Actual</th><th>Status</th></tr></thead><tbody>
-            {#each result.targets as t}<tr title={t.reason ?? JSON.stringify(t.source)}><td>{t.metric}{t.at_ghz ? ` @ ${t.at_ghz} GHz` : ''}</td><td class="num">{fmt(t.value)} ± {fmt(t.tolerance)}</td><td class="num">{fmt(t.actual)}</td><td class:failed={t.status === 'fail'}>{t.status.replaceAll('_', ' ')}</td></tr>{/each}
+            {#each result.targets as t}<tr title={t.reason ?? t.diagnostic ?? JSON.stringify(t.source)}><td>{t.metric}{t.at_ghz ? ` @ ${t.at_ghz} GHz` : ''}</td><td class="num">{fmt(t.value)} ± {fmt(t.tolerance)}</td><td class="num">{fmt(t.actual)}</td><td class:failed={t.status === 'fail'}>{t.status.replaceAll('_', ' ')}{#if t.diagnostic}<span class="notice" title={t.diagnostic}> · flagged</span>{/if}</td></tr>{/each}
           </tbody></table></div>
           {#each [...new Set(result.targets.map(t => t.reason).filter(Boolean))] as reason}<p class="muted">{reason}</p>{/each}
+          {#each [...new Set(result.targets.map(t => t.diagnostic).filter(Boolean))] as diagnostic}<p class="notice">Flagged: {diagnostic}</p>{/each}
           <h3>Model limitations</h3>
           <ul>{#each result.warnings as warning}<li>{warning.replaceAll('_', ' ')}</li>{/each}</ul>
           <p>Pending stages: {result.pendingStages.join(', ').replaceAll('_', ' ') || 'none'}.</p>
@@ -172,6 +201,9 @@
   .metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .metrics div { background: var(--bg); padding: 10px; } .metrics span { display: block; color: var(--ink-3); }
   .metrics strong { display: block; font-size: 22px; font-weight: 500; margin-top: 4px; }
+  fieldset.stages { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; border: 1px solid var(--border); margin: 10px 0; padding: 6px 10px; }
+  legend { color: var(--ink-3); padding: 0 4px; } label.blocked { color: var(--ink-3); }
+  .readiness { margin: 0 0 8px; color: var(--ink-3); font-size: 11px; overflow-wrap: anywhere; } .readiness li { margin: 3px 0; }
   .table-scroll { overflow: auto; } table { width: 100%; border-collapse: collapse; }
   th, td { padding: 6px; text-align: left; border-bottom: 1px solid var(--border); } th { color: var(--ink-3); }
   details { border-top: 1px solid var(--border); margin-top: 16px; padding-top: 12px; overflow-wrap: anywhere; }

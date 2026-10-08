@@ -81,7 +81,7 @@ entries:
   unit: dB
   basis: extracted_from_figure
   locator: supplement Section 7, Fig. S9
-  note: 'read from Fig. S9 (docx image word/media/image36.jpeg, transmission vs wavelength) at 1547.1 nm; about +/-0.3 dB, at the end of the plotted trace (-12.2 to -12.6 dB); the paper calls it on-chip loss and does not say whether the grating couplers are included'
+  note: Read from Fig. S9 at 1547.1 nm, about +/-0.3 dB, end of plotted trace (-12.2 to -12.6 dB); called on-chip loss, grating-coupler inclusion not stated.
 - device_id: shen2025-a
   field: il_onchip_scope
   value: undefined
@@ -455,7 +455,7 @@ entries:
   unit: dB
   basis: extracted_from_figure
   locator: supplement Section 7, Fig. S9
-  note: 'read from Fig. S9 (docx image word/media/image36.jpeg, transmission vs wavelength) at 1546.1 nm; about +/-0.3 dB, near the local minimum of the trace at about 1546.07 nm; the paper calls it on-chip loss and does not say whether the grating couplers are included'
+  note: Read from Fig. S9 at 1546.1 nm, about +/-0.3 dB, near trace local minimum at about 1546.07 nm; called on-chip loss, grating-coupler inclusion not stated.
 - device_id: shen2025-d
   field: il_onchip_scope
   value: undefined

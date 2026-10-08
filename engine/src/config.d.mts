@@ -15,5 +15,9 @@ export interface ParsedConfig {
   geometries: Record<string, Geometry>;
 }
 export function parseConfig(text: string): ParsedConfig;
+export const STAGES: string[];
+export const IMPLEMENTED_STAGES: string[];
+/** Per stage: null when its inputs pass the input boundary, else the blocking message. */
+export type StageErrors = Record<string, string | null>;
 /** Geometry and disclosures only; never use preview as solver input. */
-export function inspectConfig(text: string): { preview: ParsedConfig; solveError: string };
+export function inspectConfig(text: string, section?: string): { preview: ParsedConfig; solveError: string; stageErrors: StageErrors };

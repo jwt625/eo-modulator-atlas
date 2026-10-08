@@ -59,7 +59,7 @@ entries:
   unit: GHz
   basis: extracted_from_figure
   locator: p.4, Fig. 2(f) as captioned (rendered panel e)
-  note: raw EO data end near 110 GHz (110 GHz probes); the smoothed fit continues to about 114 GHz; claimed 3 dB crossing lies at the end of the raw data
+  note: Raw data end near 110 GHz (110 GHz probes); smoothed fit continues to about 114 GHz; claimed 3 dB crossing at end of raw data.
 - device_id: li2026-a
   field: extinction_ratio_db
   value: 20
@@ -119,8 +119,7 @@ entries:
   unit: um
   basis: design_target
   locator: p.2, Device Design; Fig. 1(e)
-  note: parameter G of the T-segment CPW, gap between facing T-bars where the waveguide sits (reading of the Fig. 1(e) schematic, consistent with the SEM in li2026ba; the caption mentions T-segments on
-    the ground electrodes only, so the opposing element may be the signal-electrode edge, still a metal-to-metal gap across the waveguide)
+  note: 'G of T-segment CPW, metal-to-metal gap across waveguide (Fig. 1(e), consistent with li2026ba SEM); caption: T-segments on grounds only; opposite element may be signal edge.'
 - device_id: li2026-a
   field: signal_width_um
   value: 70

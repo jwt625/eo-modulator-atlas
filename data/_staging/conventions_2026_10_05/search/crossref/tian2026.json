@@ -1,0 +1,588 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 30260,
+  "items": [
+   {
+    "DOI": "10.1017/s1431927600034498",
+    "title": [
+     "Strained BaTiO3 / SrTiO3 Superlattice Grwon by Reactive Molecular Beam Epitaxy"
+    ],
+    "author": [
+     {
+      "given": "W",
+      "family": "Tian",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Dept. of Materials Science and Engineering, The University of Michigan , Ann Arbor, MI-48109"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "J C",
+      "family": "Jiang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dept. of Materials Science and Engineering, The University of Michigan , Ann Arbor, MI-48109"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "J H",
+      "family": "Haeni",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dept. of Materials Science and Engineering, Perm State University , University Park, PA-16802"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "D G",
+      "family": "Schlom",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dept. of Materials Science and Engineering, Perm State University , University Park, PA-16802"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "X Q",
+      "family": "Pan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Dept. of Materials Science and Engineering, The University of Michigan , Ann Arbor, MI-48109"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2000,
+       8,
+       1
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.2738/engtm.2026.0010",
+    "title": [
+     "Wafer-scale Hybrid Molecular Beam Epitaxy of BaTiO\n                    <sub>3</sub>\n                    and SrTiO\n                    <sub>3</sub>\n                    on Silicon"
+    ],
+    "author": [
+     {
+      "given": "Xiaodong",
+      "family": "Tian",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yan",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Hanbin",
+      "family": "Gao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Han",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Yunpeng",
+      "family": "Ma",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ruiqi",
+      "family": "Liang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Changfu",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wei",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Chenguang",
+      "family": "Deng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Qiang",
+      "family": "Zheng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Qian",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1063/1.124035",
+    "title": [
+     "Abrupt PbTiO3/SrTiO3 superlattices grown by reactive molecular beam epitaxy"
+    ],
+    "author": [
+     {
+      "given": "J. C.",
+      "family": "Jiang",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Department of Materials Science and Engineering, The University of Michigan, Ann Arbor, Michigan 48109-2136"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "X. Q.",
+      "family": "Pan",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Materials Science and Engineering, The University of Michigan, Ann Arbor, Michigan 48109-2136"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "W.",
+      "family": "Tian",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Materials Science and Engineering, The University of Michigan, Ann Arbor, Michigan 48109-2136"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "C. D.",
+      "family": "Theis",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Materials Science and Engineering, Penn State University, University Park, Pennsylvania 16802-5005"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "D. G.",
+      "family": "Schlom",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Department of Materials Science and Engineering, Penn State University, University Park, Pennsylvania 16802-5005"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       1999,
+       5,
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1063/1.4922213",
+    "title": [
+     "Self-regulated growth of LaVO3 thin films by hybrid molecular beam epitaxy"
+    ],
+    "author": [
+     {
+      "given": "Hai-Tian",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Pennsylvania State University 1 Department of Materials Science and Engineering and Materials Research Institute, , University Park, Pennsylvania 16802, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Liv R.",
+      "family": "Dedon",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of California 2 Department of Materials Science and Engineering, , Berkeley, California 94720, USA"
+       },
+       {
+        "name": "Lawrence Berkeley National Laboratory 3 Materials Science Division, , Berkeley, California 94720, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lane W.",
+      "family": "Martin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of California 2 Department of Materials Science and Engineering, , Berkeley, California 94720, USA"
+       },
+       {
+        "name": "Lawrence Berkeley National Laboratory 3 Materials Science Division, , Berkeley, California 94720, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Roman",
+      "family": "Engel-Herbert",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Pennsylvania State University 1 Department of Materials Science and Engineering and Materials Research Institute, , University Park, Pennsylvania 16802, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2015,
+       6,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1063/1.4962388",
+    "title": [
+     "Mapping growth windows in quaternary perovskite oxide systems by hybrid molecular beam epitaxy"
+    ],
+    "author": [
+     {
+      "given": "Matthew",
+      "family": "Brahlek",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Pennsylvania State University 1 Department of Materials Science and Engineering, , University Park, Pennsylvania 16801, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1559-8469",
+      "authenticated-orcid": false,
+      "given": "Lei",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Pennsylvania State University 1 Department of Materials Science and Engineering, , University Park, Pennsylvania 16801, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0002-1122-8647",
+      "authenticated-orcid": false,
+      "given": "Hai-Tian",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Pennsylvania State University 1 Department of Materials Science and Engineering, , University Park, Pennsylvania 16801, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jason",
+      "family": "Lapano",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Pennsylvania State University 1 Department of Materials Science and Engineering, , University Park, Pennsylvania 16801, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Liv R.",
+      "family": "Dedon",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of California 2 Department of Materials Science and Engineering, , Berkeley, California 94720, USA"
+       },
+       {
+        "name": "Lawrence Berkeley National Laboratory 3 Materials Science Division, , Berkeley, California 94720, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lane W.",
+      "family": "Martin",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "University of California 2 Department of Materials Science and Engineering, , Berkeley, California 94720, USA"
+       },
+       {
+        "name": "Lawrence Berkeley National Laboratory 3 Materials Science Division, , Berkeley, California 94720, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Roman",
+      "family": "Engel-Herbert",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Pennsylvania State University 1 Department of Materials Science and Engineering, , University Park, Pennsylvania 16801, USA"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2016,
+       9,
+       5
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -32,9 +32,9 @@ entries:
   field: bw3db_ghz
   value: 40
   unit: GHz
-  basis: measured
+  basis: extracted_from_figure
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
-  note: all eight channels exceed 40 GHz; no crossing value stated
+  note: 'text: all channels exceed 40 GHz; Fig. 7 traces first dip below -3 dB at 39.2-39.7 GHz (ripple); undefined labels 43.1-43.6 near the final crossing'
 - device_id: hu2026a-ch1
   field: electrode_gap_um
   value: 6.5
@@ -115,9 +115,9 @@ entries:
   field: bw3db_ghz
   value: 40
   unit: GHz
-  basis: measured
+  basis: extracted_from_figure
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
-  note: all eight channels exceed 40 GHz; no crossing value stated
+  note: 'text: all channels exceed 40 GHz; Fig. 7 traces first dip below -3 dB at 39.2-39.7 GHz (ripple); undefined labels 43.1-43.6 near the final crossing'
 - device_id: hu2026a-ch2
   field: electrode_gap_um
   value: 6.5
@@ -198,9 +198,9 @@ entries:
   field: bw3db_ghz
   value: 40
   unit: GHz
-  basis: measured
+  basis: extracted_from_figure
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
-  note: all eight channels exceed 40 GHz; no crossing value stated
+  note: 'text: all channels exceed 40 GHz; Fig. 7 traces first dip below -3 dB at 39.2-39.7 GHz (ripple); undefined labels 43.1-43.6 near the final crossing'
 - device_id: hu2026a-ch3
   field: electrode_gap_um
   value: 6.5
@@ -281,9 +281,9 @@ entries:
   field: bw3db_ghz
   value: 40
   unit: GHz
-  basis: measured
+  basis: extracted_from_figure
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
-  note: all eight channels exceed 40 GHz; no crossing value stated
+  note: 'text: all channels exceed 40 GHz; Fig. 7 traces first dip below -3 dB at 39.2-39.7 GHz (ripple); undefined labels 43.1-43.6 near the final crossing'
 - device_id: hu2026a-ch4
   field: electrode_gap_um
   value: 6.5
@@ -364,9 +364,9 @@ entries:
   field: bw3db_ghz
   value: 40
   unit: GHz
-  basis: measured
+  basis: extracted_from_figure
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
-  note: all eight channels exceed 40 GHz; no crossing value stated
+  note: 'text: all channels exceed 40 GHz; Fig. 7 traces first dip below -3 dB at 39.2-39.7 GHz (ripple); undefined labels 43.1-43.6 near the final crossing'
 - device_id: hu2026a-ch5
   field: electrode_gap_um
   value: 6.5
@@ -447,9 +447,9 @@ entries:
   field: bw3db_ghz
   value: 40
   unit: GHz
-  basis: measured
+  basis: extracted_from_figure
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
-  note: all eight channels exceed 40 GHz; no crossing value stated
+  note: 'text: all channels exceed 40 GHz; Fig. 7 traces first dip below -3 dB at 39.2-39.7 GHz (ripple); undefined labels 43.1-43.6 near the final crossing'
 - device_id: hu2026a-ch6
   field: electrode_gap_um
   value: 6.5
@@ -530,9 +530,9 @@ entries:
   field: bw3db_ghz
   value: 40
   unit: GHz
-  basis: measured
+  basis: extracted_from_figure
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
-  note: all eight channels exceed 40 GHz; no crossing value stated
+  note: 'text: all channels exceed 40 GHz; Fig. 7 traces first dip below -3 dB at 39.2-39.7 GHz (ripple); undefined labels 43.1-43.6 near the final crossing'
 - device_id: hu2026a-ch7
   field: electrode_gap_um
   value: 6.5
@@ -613,9 +613,9 @@ entries:
   field: bw3db_ghz
   value: 40
   unit: GHz
-  basis: measured
+  basis: extracted_from_figure
   locator: p.10 Sec. 4.2; Fig. 7; p.11 Table 1
-  note: all eight channels exceed 40 GHz; no crossing value stated
+  note: 'text: all channels exceed 40 GHz; Fig. 7 traces first dip below -3 dB at 39.2-39.7 GHz (ripple); undefined labels 43.1-43.6 near the final crossing'
 - device_id: hu2026a-ch8
   field: electrode_gap_um
   value: 6.5

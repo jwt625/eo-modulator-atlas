@@ -367,7 +367,8 @@ test('D2 EO overlap results carry the scalar-optical and metal-policy labels of 
   assert.match(text, /optical_metal_pec_scalar_approximation/);
 });
 
-test('D3 rotation_deg is documented as a CCW rotation of the LAB frame about the propagation axis: lab x\' must move toward the film normal', { todo: 'Q2 finding F6: implemented sense is opposite (crystal rotated CCW); sign of dn flips for 90 and 180 deg' }, () => {
+// fixed 2026-10-07 by engine owner (DevLog-012 item 1, DevLog-007 P9 option b)
+test('D3 rotation_deg is documented as a CCW rotation of the LAB frame about the propagation axis: lab x\' must move toward the film normal', () => {
   const th = 90;
   const A = labFromCrystal('x', 'y', th); // rows: lab axes in crystal coordinates; unrotated lab x = z, lab y (film normal) = x
   const unrotated = labFromCrystal('x', 'y', 0);

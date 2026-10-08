@@ -236,7 +236,7 @@ entries:
   unit: GHz
   basis: extracted_from_figure
   locator: p.6 Fig. 4d; p.9 Methods
-  note: Data plotted to the axis end at about +/-75 GHz (figure read; last labelled tick 70 GHz), flat response; no 3 dB crossing and no bandwidth number stated
+  note: Data plotted to axis end at about +/-75 GHz (figure read; last labelled tick 70 GHz), flat; no 3 dB crossing, no bandwidth number stated.
 - device_id: kohli2025-rt
   field: il_fiber_to_fiber_db
   value: 9.4

@@ -112,7 +112,7 @@ entries:
   field: buffer_oxide_um
   value: 2
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.2 Sec. II
 - device_id: powell2024-a
   field: substrate

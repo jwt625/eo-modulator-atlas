@@ -13,11 +13,34 @@ Implemented stages:
   vacuum capacitance and quasi-TEM section estimates of L′, nRF and Z₀.
 - Scalar E/H optical FEM and finite-difference group index, with explicit metal
   sensitivity options and window-edge diagnostics.
+- `eo_overlap` stage (`eo-overlap.mjs` via `stages.mjs`): first-order Pockels overlap
+  of each explicit arm window's own scalar mode with the static field, push-pull only
+  when the field-resolved arms give it, DC `VpiL` and `Vpi`. Vpi targets need a
+  matching `vpi_convention`.
+- `rf_line` stage (`rf-line.mjs` via `stages.mjs`): uniform quasi-TEM line with
+  explicit conductor and region-weighted dielectric loss, frequency sweep and
+  frequency-specific RF targets. Paper attenuation and configured R' are inputs and
+  never evaluated as predictions.
 
-EO overlap (`eo-overlap.mjs`) and uniform RF line/loss (`rf-line.mjs`) are separate
-audited modules; they are not yet wired into the shared runner. Periodic-cell
-ABCD and traveling-wave EO response remain future work. `line`/`sweep` inputs do
-not cause these stages to execute automatically.
+Stages are selected explicitly: `runCrossSection(text, {stages: ['eo_overlap',
+'rf_line']})` or `node cli.mjs CONFIG.yaml --stages eo_overlap,rf_line`;
+electrostatics always runs and `--optical` still adds `optical_mode`. `--check`
+prints the per-stage input readiness (`inspectConfig().stageErrors`) without solving.
+`skin_effect_wheeler` recesses every electrode surface by delta/2 (`recess.mjs`;
+faces on the domain boundary or mirror plane stay) and takes R' from three extra
+vacuum-only solves with a step check (spread above 1e-2 flags the evaluated RF targets).
+`rf_line` is blocked on the loaded cut of a `periodic_t_rail` line (its T-rail pads carry
+no line current in 2D); run it on the unloaded cut. EO arm windows refine the
+electrostatic mesh like `optical_window`. `mzm_differential` targets follow data schema
+convention (q): V_pi against V+ - V-, the engine V_t. Material and target keys are strict.
+Q2 corrections of 2026-10-07 are listed in DevLog-012. Periodic-cell ABCD (`loaded_line`) and
+traveling-wave EO response (`eo_response`) are not implemented and error when
+requested. `chain` never causes a stage to execute.
+
+`rotation_deg` is a CCW rotation of the lab frame about the propagation axis
+(`x' = cos t x + sin t y`); the code applied the opposite sense before 2026-10-07
+(audit Q2 F6). `tests/fixtures/gsg-eo-rf.yaml` is a synthetic analytic input for the
+EO and RF stages (illustrative constants, closed forms in its header).
 
 Metal in the optical window is rejected by default, including for the unchanged
 Chen config. Explicit YAML `optics.metal_in_window: absent` or `pec_scalar`

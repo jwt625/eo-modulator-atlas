@@ -32,7 +32,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.2, Sec. 2; Fig. 1(c)
-  note: 'paper: ''above 100 GHz'' (Sec. 2), ''100 GHz'' (Secs. 1, 4); authors'' stated bandwidth kept. Fig. 1(c) packaged trace first touches -3 dB near 72 GHz and runs at about -2.6 to -3.7 dB from 82 to 110 GHz (verifier pixel reading, approximate)'
+  note: '''above 100 GHz'' (Sec. 2), ''100 GHz'' (Secs. 1, 4), authors'' value kept; Fig. 1(c) packaged trace first touches -3 dB near 72 GHz (approx.).'
 - device_id: huang2026-b
   field: il_fiber_to_fiber_db
   value: 4.2
@@ -81,7 +81,7 @@ entries:
   unit: GHz
   basis: extracted_from_figure
   locator: p.2, Fig. 1(c)
-  note: data end at about 110 GHz; dashed trace about -2.6 dB there (lowest about -2.8 dB), no crossing visible; bw3db_ghz 110 is the paper's claimed crossing at the instrument limit
+  note: Data end near 110 GHz at about -2.6 dB (lowest about -2.8 dB), no crossing; bw3db_ghz 110 is the paper's claimed crossing at instrument limit.
 - device_id: huang2026-a
   field: device_class
   value: mzm

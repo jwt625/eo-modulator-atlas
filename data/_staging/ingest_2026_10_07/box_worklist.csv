@@ -1,0 +1,68 @@
+paper_id,device_id,value,locator,note,keyword_class,cladding
+berman2026,berman2026-a,3,p.4 text,3 um silica layer of the BTO wafer,unclear,
+berman2026,berman2026-b,3,p.4 text,3 um silica layer of the BTO wafer,unclear,
+berman2026,berman2026-c,3,p.4 text,3 um silica layer of the BTO wafer,unclear,
+cai2025,cai2025-a,4,p.2 Sec. II,thermal oxide on the 100 mm Si wafer before Damascene preform,unclear,
+cai2025,cai2025-b,4,p.2 Sec. II,thermal oxide on the 100 mm Si wafer before Damascene preform,unclear,
+falcone2026,falcone2026-a,2,p.9 Simulations,SiO2 thickness of the simulated device stack,unclear,none (air above)
+falcone2026,falcone2026-b,2,p.9 Simulations,SiO2 thickness of the simulated device stack,unclear,none (air above)
+hou2024,hou2024-a,2.0,"p.11, Methods",2 um silicon dioxide on silicon wafer,unclear,"SiO2, 1.5 um PECVD"
+hou2024,hou2024-b,2.0,"p.11, Methods",2 um silicon dioxide on silicon wafer,unclear,"SiO2, 1.5 um PECVD"
+lee2020,lee2020-a,4.3,p.12 Sec. 2.1,4.3 um thermal SiO2,unclear,PECVD SiO2 planarized by CMP; 40 nm Al2O3 over the top graphene
+lee2020,lee2020-b,4.3,p.12 Sec. 2.1,4.3 um thermal SiO2,unclear,PECVD SiO2 planarized by CMP; 40 nm Al2O3 over the top graphene
+lee2020a,lee2020a-a,4.3,p.3,4.3 um thermal SiO2,unclear,PECVD SiO2 planarized by CMP; 10 nm ALD Al2O3 under bottom graphene; 30 nm Al2O3 gate; 30 nm Al2O3 over top graphene
+lee2020a,lee2020a-b,4.3,p.3,"4.3 um thermal SiO2, unchanged",unclear,HfO2 gate dielectric 45 nm (simulated design); other layers as in Fig. 5(a)
+lee2026,lee2026-a,4.7,p.2; p.4 Fig. 1(f) caption,oxide removed around the waveguide; h_air = 4.7 um,unclear,air
+lee2026,lee2026-b,4.7,p.2; p.4 Fig. 1(f) caption,oxide removed around the waveguide; h_air = 4.7 um,unclear,air
+lee2026,lee2026-c,4.7,p.2; p.4 Fig. 1(f) caption,oxide removed around the waveguide; h_air = 4.7 um,unclear,air
+lee2026,lee2026-d,4.7,p.2; p.4 Fig. 1(f) caption,oxide removed around the waveguide; h_air = 4.7 um,unclear,air
+lee2026,lee2026-e,4.7,p.2; p.4 Fig. 1(f) caption,oxide removed around the waveguide; h_air = 4.7 um,unclear,air
+li2022b,li2022b-a,2,p.2 Sec. 2,thermal oxide,unclear,"SiO2, 315 nm"
+li2026aa,li2026aa-a,4.7,p.2,4.7 um thermally grown SiO2 on a silicon base,unclear,SiO2 2 um (PECVD)
+li2026aa,li2026aa-b,4.7,p.2,4.7 um thermally grown SiO2 on a silicon base,unclear,SiO2 2 um (PECVD)
+li2026aa,li2026aa-c,4.7,p.2,4.7 um thermally grown SiO2 on a silicon base,unclear,SiO2 2 um (PECVD)
+li2026aa,li2026aa-d,4.7,p.2,4.7 um thermally grown SiO2 on a silicon base,unclear,SiO2 2 um (PECVD)
+li2026aa,li2026aa-e,4.7,p.2,4.7 um thermally grown SiO2 on a silicon base,unclear,SiO2 2 um (PECVD)
+li2026aa,li2026aa-f,4.7,p.2,4.7 um thermally grown SiO2 on a silicon base,unclear,SiO2 2 um (PECVD)
+li2026aa,li2026aa-g,4.7,p.2,4.7 um thermally grown SiO2 on a silicon base,unclear,SiO2 2 um (PECVD)
+li2026aa,li2026aa-h,4.7,p.2,4.7 um thermally grown SiO2 on a silicon base,unclear,SiO2 2 um (PECVD)
+lin2025,lin2025-a,4.7,"p.5, Fabrication",,unclear,"SiO2 2.5 um (PECVD, embeds the Cu) with 100 nm Si3N4 passivation"
+lin2025,lin2025-b,4.7,"p.5, Fabrication",,unclear,"SiO2 2.5 um (PECVD, embeds the Cu) with 100 nm Si3N4 passivation"
+lin2025,lin2025-c,4.7,"p.5, Fabrication",,unclear,"SiO2 2.5 um (PECVD, embeds the Cu) with 100 nm Si3N4 passivation"
+mao2024,mao2024-1550,2.0,p.2 text,thermally oxidized SiO2,unclear,"SiO2, 1 um (CVD)"
+mao2024,mao2024-1310,2.0,p.2 text,thermally oxidized SiO2,unclear,"SiO2, 1 um (CVD)"
+meng2023,meng2023-a,0.1,p.5 Sec. 2.2,100 nm silicon oxide buffer,top,SiO2 (Fig. 2(a)); thickness not stated
+pan2021,pan2021-a,2,p.4 Sec. 2,silica layer of the LNOI wafer,unclear,
+powell2024,powell2024-a,2,p.2 Sec. II,,unclear,800 nm PECVD SiO2
+rahman2025,rahman2025-1,4,p.3 Sec. III,nominal oxide below SiN1,unclear,
+rahman2025,rahman2025-2,4,p.3 Sec. III,nominal oxide below SiN1,unclear,
+rahman2025,rahman2025-3,4,p.3 Sec. III,nominal oxide below SiN1,unclear,
+sabatti2024,sabatti2024-fh,2,p.4 Sec. 5A,2 um SiO2 insulation layer,unclear,
+sabatti2024,sabatti2024-sh,2,p.4 Sec. 5A,2 um SiO2 insulation layer,unclear,
+shen2021,shen2021-a,2,p.2,,unclear,
+tan2024,tan2024-a,2,p.3 Fig. 1(b),SiO2 below the 220 nm Si layer labelled 2 um in the schematic,unclear,SiO2 1 um
+thiele2022,thiele2022-a,0.4,"p.6, Table 1",SiO2 buffer 400 nm,top,
+thiele2022,thiele2022-b,0.4,"p.6, Table 1",SiO2 buffer 400 nm,top,
+thiele2022,thiele2022-c,0.4,"p.6, Table 1",SiO2 buffer 400 nm,top,
+thiele2022,thiele2022-d,0.4,"p.6, Table 1",SiO2 buffer 400 nm,top,
+thiele2022,thiele2022-e,0.4,"p.6, Table 1",SiO2 buffer 400 nm,top,
+thiele2022,thiele2022-f,0.4,"p.6, Table 1",SiO2 buffer 400 nm,top,
+ulrich2025,ulrich2025-mzi,2,p.10 Methods,2 um SiO2 on Si,unclear,"PMMA (about 480 nm), loads the waveguide"
+valdez2023,valdez2023-cw1,0,p.15 Sec. 4.2,no oxide between Au electrodes and LN,top,none above LN (Au electrodes patterned directly on LN)
+valdez2023,valdez2023-cw2,0,p.15 Sec. 4.2,no oxide between Au electrodes and LN,top,none above LN (Au electrodes patterned directly on LN)
+valdez2023,valdez2023-cn1,0,p.15 Sec. 4.2,no oxide between Au electrodes and LN,top,none above LN (Au electrodes patterned directly on LN)
+valdez2023,valdez2023-cn2,0,p.15 Sec. 4.2,no oxide between Au electrodes and LN,top,none above LN (Au electrodes patterned directly on LN)
+valdez2023,valdez2023-ow1,0,p.15 Sec. 4.2,no oxide between Au electrodes and LN,top,none above LN (Au electrodes patterned directly on LN)
+valdez2023,valdez2023-ow2,0,p.15 Sec. 4.2,no oxide between Au electrodes and LN,top,none above LN (Au electrodes patterned directly on LN)
+valdez2023,valdez2023-on1,0,p.15 Sec. 4.2,no oxide between Au electrodes and LN,top,none above LN (Au electrodes patterned directly on LN)
+valdez2023,valdez2023-on2,0,p.15 Sec. 4.2,no oxide between Au electrodes and LN,top,none above LN (Au electrodes patterned directly on LN)
+valdez2023a,valdez2023a-a,4,p.3 Fig. 2(b),SiO2 of the SiN chip; process schematic label,unclear,air above LN; Au electrodes directly on LN
+valdez2023a,valdez2023a-b,4,p.3 Fig. 2(b),SiO2 of the SiN chip; process schematic label,unclear,air above LN; Au electrodes directly on LN
+wang2022,wang2022-a,0.65,p.3,650 nm SiO2 over-cladding between LN and electrode,top,650 nm PECVD SiO2 over-cladding on the LN
+wang2024b,wang2024b-a,4.7,p.8 Methods LTOI wafer fabrication,thermal SiO2,unclear,
+wang2024b,wang2024b-b,4.7,p.8 Methods LTOI wafer fabrication,thermal SiO2,unclear,
+wang2024b,wang2024b-c,4.7,p.8 Methods LTOI wafer fabrication,,unclear,
+wang2025,wang2025-a,4.7,p.2 Design text,,unclear,SiO2 900 nm (PECVD) between the LT layer and the metal electrodes
+weigel2018,weigel2018-a,0.05,"p.17, Fig. 1 caption",Aluminum electrodes on a 50 nm SiO2 layer over the LN film,top,
+zhang2022,zhang2022-a,2,p.4 Sec. 3.A,thermal oxide,unclear,SiO2 0.6 um (PECVD)
+zhang2022,zhang2022-b,2,p.4 Sec. 3.A,thermal oxide,unclear,SiO2 0.6 um (PECVD)

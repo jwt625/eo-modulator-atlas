@@ -2,7 +2,7 @@
 
 - Agent: Claude Code session in the standalone checkout (coordinator) plus fresh-context subagents it launches, one per task below
 - Task IDs: E2, E3, U2b, Q1-p2_01, D1.13 (stretch)
-- Status: E2, E3, U2b, Q1-p2_01 (audit report delivered), D1.13 = ready_for_review; Q1-p2_02 and Q2-E2/E3 audits done, corrections applied; none complete (2026-10-02)
+- Status: complete (accepted by the user 2026-10-07): E2, E3, U2b, D1.13, Q1-p2_01, Q1-p2_02, Q2-E2/E3; files released
 - Updated: 2026-10-02
 - Base revision: `97ca0d1` (clean worktree; baseline engine 20, app 15, Python 28 tests pass)
 - Commits/pushes: none. The user commits.

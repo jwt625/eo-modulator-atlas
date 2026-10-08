@@ -86,7 +86,7 @@ entries:
   field: buffer_oxide_um
   value: 4.3
   unit: um
-  basis: measured
+  basis: design_target
   locator: p.3
   note: 4.3 um thermal SiO2
 - device_id: lee2020a-a
@@ -143,7 +143,7 @@ entries:
   value: 4.3
   unit: um
   basis: design_target
-  locator: p.3
+  locator: p.3 (fabricated stack); p.7 Fig. 5(a)
   note: 4.3 um thermal SiO2, unchanged
 - device_id: lee2020a-b
   field: substrate

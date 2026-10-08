@@ -26,8 +26,7 @@ entries:
   unit: GHz
   basis: measured
   locator: p.1, abstract; p.2, Sec. 2; Fig. 1(b)
-  note: Authors state above 67 GHz; Fig. 1(b) notch about -3.2 dB near 46.6 GHz (below -2 dB about 45-48 GHz), trace ends near -2 dB at 67
-    GHz
+  note: Authors state above 67 GHz; Fig. 1(b) notch about -3.2 dB near 46.6 GHz; trace ends near -2 dB at 67 GHz.
 - device_id: li2026b-a
   field: bw_measured_to_ghz
   value: 67

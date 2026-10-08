@@ -14,6 +14,8 @@ const appDir = fileURLToPath(new URL('../', import.meta.url));
 const base = process.env.BASE_PATH ?? '';
 const chen = await readFile(new URL('../../sims/chen2022/config.yaml', import.meta.url), 'utf8');
 const analytic = await readFile(new URL('../../engine/tests/fixtures/parallel-plates.yaml', import.meta.url), 'utf8');
+const gsg = await readFile(new URL('../../engine/tests/fixtures/gsg-eo-rf.yaml', import.meta.url), 'utf8');
+const expectedStages = runCrossSection(gsg, { stages: ['optical_mode', 'eo_overlap', 'rf_line'] });
 const expected = runCrossSection(chen);
 const expectedOptical = runCrossSection(analytic, { optical: true });
 const preview = spawn(process.execPath, [fileURLToPath(new URL('../node_modules/vite/bin/vite.js', import.meta.url)), 'preview', '--host', '127.0.0.1', '--port', '0'], { cwd: appDir, env: process.env, stdio: ['ignore', 'pipe', 'pipe'] });
@@ -194,6 +196,19 @@ try {
   console.log('PASS incomplete paper config previews geometry and disclosures with solve disabled');
 
   await loadSim();
+  // Stage readiness of a paper config: EO overlap needs explicit arm windows; RF line is blocked on the loaded T-rail cut
+  // (Q2 C2) and needs an explicit dielectric loss model on the unloaded cut.
+  await page.locator('[data-stage-blocked="eo_overlap"]').filter({ hasText: 'optics.eo' }).waitFor();
+  await page.locator('[data-stage-blocked="rf_line"]').filter({ hasText: 'loaded cut of a periodic_t_rail line' }).waitFor();
+  assert.equal(await page.getByLabel('EO overlap', { exact: true }).isDisabled(), true);
+  assert.equal(await page.getByLabel('RF line', { exact: true }).isDisabled(), true);
+  assert.equal(await page.getByLabel('Optical mode', { exact: true }).isDisabled(), false);
+  const sectionSelect = page.getByLabel('Cross-section', { exact: true });
+  await sectionSelect.selectOption('unloaded');
+  await page.locator('[data-stage-blocked="rf_line"]').filter({ hasText: 'dielectric_loss_model' }).waitFor();
+  await sectionSelect.selectOption('geometry');
+  await page.locator('[data-stage-blocked="rf_line"]').filter({ hasText: 'loaded cut of a periodic_t_rail line' }).waitFor();
+  console.log('PASS per-stage readiness of a paper config (loaded and unloaded cuts)');
   const published = await page.request.get(url('sims/chen2022/config.yaml'));
   assert.equal(await published.text(), chen, 'published config must equal the tracked input');
   await runButton.click(); await complete();
@@ -223,7 +238,7 @@ try {
   assert.ok(await runButton.isEnabled());
   console.log('PASS cancellation clears the active worker and discards the run');
 
-  await page.getByLabel('Include optical mode').check();
+  await page.getByLabel('Optical mode', { exact: true }).check();
   await runButton.click();
   await page.getByRole('alert').filter({ hasText: 'metal optical modes are unsupported' }).waitFor();
   await until(() => page.workers().length === 0, 'failed worker terminated');
@@ -261,6 +276,41 @@ try {
     await screenshot(`sim-optical-${policy}`);
   }
   console.log('PASS explicit optical policies, limitations and browser/Node diagnostics');
+
+  // Synthetic analytic EO/RF fixture: all implemented stages in the worker, compared with Node.
+  await editor.fill(gsg);
+  await page.getByLabel('EO overlap', { exact: true }).check();
+  await page.getByLabel('RF line', { exact: true }).check();
+  await runButton.click(); await complete();
+  await page.locator('[data-stages="electrostatics optical_mode eo_overlap rf_line"]').waitFor();
+  for (const metric of ['vpi_l_dc_vcm', 'vpi_dc_v', 'n_eff', 'z0_ohm']) {
+    const actual = Number(await page.locator(`[data-metric="${metric}"]`).getAttribute('data-value'));
+    assert.ok(Math.abs(actual - expectedStages.metrics[metric]) <= Math.abs(expectedStages.metrics[metric]) * 1e-9, `browser/Node disagreement: ${metric}`);
+  }
+  for (const arm of ['A', 'B']) {
+    const dn = Number(await page.locator(`[data-arm-dn="${arm}"]`).getAttribute('data-value'));
+    assert.ok(Math.abs(dn - expectedStages.eo.arms[arm].dnEffPerV) <= Math.abs(dn) * 1e-9, `arm ${arm} dn`);
+  }
+  const alpha = Number(await page.locator('[data-rf-alpha="50"]').getAttribute('data-value'));
+  assert.ok(Math.abs(alpha - expectedStages.rf.atTargets[0].alphaDbPerCm) <= alpha * 1e-12);
+  await page.locator('[data-eo-convention="mzm_push_pull"]').waitFor();
+  await page.locator('[aria-label="RF sweep"] .js-plotly-plot').waitFor();
+  assert.match(await page.locator('.target-summary').innerText(), /4 of 6 targets evaluated · 4 passed · 0 failed/);
+  await screenshot('sim-eo-rf');
+  // Q2 M5: an opposite-sign pair far from -1 stays comparable and shows the balance warning.
+  const unbalanced = gsg.replace('{name: ground_l, role: ground, material: metal, weight: 0,', '{name: ground_l, role: ground, material: metal, weight: 0.5,');
+  assert.notEqual(unbalanced, gsg);
+  await editor.fill(unbalanced);
+  await runButton.click(); await complete();
+  await page.locator('[data-balance-warning]').waitFor();
+  await page.locator('[data-eo-convention="mzm_push_pull"]').waitFor();
+  // Breaking an RF input blocks the selected stage before any worker starts.
+  await editor.fill(gsg.replace('  dielectric_loss_model: tan_delta_regions\n', ''));
+  await page.locator('[data-stage-blocked="rf_line"]').filter({ hasText: 'dielectric_loss_model' }).waitFor();
+  assert.equal(await runButton.isEnabled(), false);
+  await page.getByLabel('RF line', { exact: true }).uncheck();
+  assert.equal(await runButton.isEnabled(), true);
+  console.log('PASS EO overlap and RF line stages in the browser, Node agreement, convention gating, balance warning and blocked-stage guard');
 
   await page.goto(url('sim?id=unknown-config'));
   await page.getByText('The requested config is not in this atlas.').waitFor();

@@ -1,0 +1,35 @@
+# Batch p8_05 report (distiller, 2026-10-07)
+
+Dry run (after audit corrections, 2026-10-07): `uv run python scripts/merge_staging.py data/_staging/p8_05` -> merge counts: papers 5, devices 8, orgs 6, evidence 4; conflicts 0; validation errors 0. Audit findings and dispositions: `AUDIT_DISPOSITIONS.md` (supersedes the judgment calls below where noted).
+No sim configs (all five are silicon or ITO-plasmonic papers; no dielectric traveling-wave device), so no `sims/` files. No SPEC_PROPOSALS.md, no needs_download.md.
+All five sources are cached arXiv copies (v1; anjali2025 v2). Two have crossref.json (shawon2024, shabaninezhad2025): identity from the DOI version, every value and locator from the cached arXiv version. license left empty (not in source.json or the papers), redistribution restricted_local_only, audit_status needs_audit.
+`discovered_via` = web_search;author_group_followup (`continuation_2026_10_02` dropped).
+
+## anjali2025 - distilled (3 design rows, grade B, no sim)
+- Design study (Lumerical): carrier-depletion SOI MZMs, phase shifter in one arm, 6.45 mm, device layer 5 um (-a), 3 um (-b), 220 nm (-c). VpiL (Table 2) 88 / empty / 3.17 V cm, simulated INTERCONNECT S21 3 dB bandwidth 3.5 / 6.5 / 9.5 GHz (DC reference), static ER 13.17 / 14.89 / 13.5 dB (Fig. 12 annotations), drive 2.5 / 0.8 / 0.5 V, 20 Gb/s NRZ eye for -c only.
+- Judgment calls: (1) -b vpil_dc_vcm left empty: Table 2 (4.5 V cm) contradicts the paper's own dn_eff 7.4e-6 and Fig. 9(b) phase (both give about 52 V cm); -a and -c agree with Fig. 9 within about 10 percent and are entered. (2) ER = notch depth of the unbalanced MZI (100 um arm mismatch) from Fig. 12, er_type static; the eye-diagram "ER" values are unitless and not entered. (3) drive_vpp_v from "RF signal of X V" (peak vs peak-to-peak not stated). (4) max_line_rate/max_baud only for -c (open eye at 20 Gb/s); thick-film maxima not stated numerically. (5) electrode_type: -a lumped (p.10 Sec. 2.3.2, INTERCONNECT lumped electrode for substrate I); -b/-c empty (travelling-wave type not stated). Superseded by audit F6. (6) signal width not entered (pad width 50 um vs Fig. 7 electrode width 1 um ambiguous); electrode_thickness 2 um = contact pad. (7) 10 mW input entered as 10 dBm (derived). (8) bw_method eo_s21 for the INTERCONNECT S21 (RC estimates 3.6/8.9/12.9 GHz in notes). (9) Fig. 9(a) carrier loss (about 1.75/1.0/2.0 dB/cm) not entered, bias dependent.
+- BOX 2 um and silicon substrate entered on all rows (Fig. 2, audit F1). Not reported: chosen doping depth, electrode width, any measurement.
+
+## chaudhury2024 - no_device_rows (papers row only, grade C)
+- Dual-MRM linearity architecture; results are SFDR/INL/DNL improvements within a self-chosen 4.8 dB ER window (simulated GF45SPCLO MRMs; measured passive racetrack test chip from Applied Nanotools). No Vpi, bandwidth, IL or device ER. Judgment call: papers-only (convention dd) rather than a design row. process_name = 220 nm SOI SiPh process (passive racetrack test chip); GF45SPCLO simulation remark in notes (audit F14). Authors label the test-chip racetracks C-band (Fig. 5 caption); the Fig. 5 axis (1574.9 to 1575.9 nm) is l_band under convention (l); both stated in notes (audit F8, adjusted).
+
+## saxena2023 - distilled (1 device row, grade C, no sim)
+- Compact-model paper; the one measured device is the AIM MPW silicon microdisk modulator. Row: tuning -0.088 nm/V (polyfit slope of measured lambda0(v), reverse-bias axis, sign flipped to the database convention), Cj0 143 fF (S11 fit, Table I), 2 Vpp, NRZ 28 Gb/s (max_baud 28, derived), PAM4 20 GSps eye in modulation_format; max_line_rate 40 Gb/s (derived, 20 GSps x 2 bit, audit F2).
+- Judgment calls: (1) fitted parameters entered as basis derived; (2) PDK-cited figures (8 GHz/V, 25 Gbps, over 4 dB ER) not entered (earlier work); (3) 2 Vpp is the AWG setting into an unterminated probe; (4) wavelength_nm = laser line 1566.65 nm (l_band); (5) eye quality is not numeric, no ER/BER entered; (6) waveguide_platform left empty (disk etch not stated), eo_film_thickness 220 nm from the process description.
+- Not reported: Q, ER, optical power, temperature, doping, disk radius beyond "diameter about 5 um".
+
+## shawon2024 - distilled (1 device row, grade C, no sim)
+- Fabricated AIM ring-assisted MZM at the linearized bias, 1550 nm: link-response (authors' EOS21) 3 dB bandwidth about 2.5 GHz, bw_method link_eoe (audit F7; low-frequency reference unstated, pn bias unstated), phase-modulator length 1.555 mm, rib 220 x 450 nm. SFDR 113.67 dB Hz^(2/3), CDR, gain-enhanced bias results in notes (no SFDR column).
+- Judgment calls: (1) year 2023 and published_on 2023-08-30 from the arXiv v1 stamp (batch year 2024 is the JLT issue year). (2) 110 nm entered as etch depth (text, approx) and slab thickness (Fig. 11 label), consistent for a 220 nm film (audit F9). (3) drive differential (RF balun pair, Sec. VII-A), electrode_type lumped (derived from "to allow lumped drive"). (4) simulated link-level SFDR and Table I assumptions (Vpi 8 V, IL 6 dB) not entered. (5) fsr_nm derived from the stated 28 GHz.
+- Not reported: Vpi, IL, ER, optical power at device, temperature setpoint, doping.
+
+## shabaninezhad2025 - distilled (3 design rows, grade B, no sim)
+- ITO plasmonic back-to-back taper EAM-type modulator (COMSOL). Rows by minimum gap 340/400/415 nm from Table 1: IL 6.4/4.6/3.3 dB (device_total), RC bandwidth 123.9/185.4/210.3 GHz, SPC-model max ER 25.7/9.8/5.4 dB, length 2 x LT = 6.2/4.1/3.6 um. CDD-model ER in notes.
+- Judgment calls: (1) batch hints device_class ring and platform eo_polymer are wrong; class eam, material transparent_conducting_oxide, eo_effect plasma_dispersion (as gui2022). (2) waveguide_platform plasmonic_mim (audit F3; SOI not stated), electrode_type plasmonic_lumped (p.15, F4), cladding SiO2 and W_slab 175 nm (Fig. 1(b), F11). (3) bandwidth is an RC estimate (bw_method indirect, as gui2022). (4) length = 2 x LT derived (consistent with the Eq. 12 numbers). (5) year 2024 from arXiv id (no stamp printed; Crossref online 2025-01-29), published_on empty; coordinator refresh should settle both. (6) Table 1 read from text only (no page render exists for p.17); values agree with Sec. 4.2/4.4/4.6 prose and Fig. 7. (7) IL_total is at flat band for all three gaps (Sec. 4.2 for 340 nm; Fig. 9 figure reading matches Table 1, audit F10).
+- Not reported: contact widths, any measurement.
+
+## Organizations (new; ror_id and name_source empty)
+Indian Institute of Technology Kharagpur (IN), AIM Photonics (US, foundry), Applied Nanotools Inc. (CA, foundry) (country from the organization's own address, not printed in the paper), University of Ottawa (CA), NEXQT Institute (CA, research_institute, name as printed), Huawei Technologies Canada (CA; parent_org Huawei Technologies Co., Ltd., audit F5). Reused: University of California San Diego, University of Delaware.
+
+## CSV hints
+shabaninezhad2025: platform_guess eo_polymer and device_class_guess ring wrong. shawon2024: batch year 2024 vs earliest 2023. Others confirmed.

@@ -1,0 +1,140 @@
+paper_id: park2026
+verified_on: '2026-10-07'
+source_files:
+- references/park2026/text.md
+- references/park2026/figures/page_26.png
+entries:
+- device_id: park2026-a
+  field: wavelength_nm
+  value: 1064
+  unit: nm
+  basis: measured
+  locator: p.5
+  note: 1064 nm CW pump into the EO MZI
+- device_id: park2026-a
+  field: vpi_dc_v
+  value: 3.98
+  unit: V
+  basis: measured
+  locator: p.9; Fig. 3(b)
+  note: Vpi from the DC bias sweep; for 1064 nm
+- device_id: park2026-a
+  field: extinction_ratio_db
+  value: 23.2
+  unit: dB
+  basis: measured
+  locator: p.9; Fig. 3(d)
+  note: ER of the pump through the MZI vs DC bias
+- device_id: park2026-a
+  field: il_fiber_to_fiber_db
+  value: 14.3
+  unit: dB
+  basis: measured
+  locator: p.8
+  note: total fiber-to-fiber loss at the pump wavelength through the MZI
+- device_id: park2026-a
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.16 Methods
+  note: 300-nm-thick TFLN film
+- device_id: park2026-a
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.7
+  note: X-cut TFLN device
+- device_id: park2026-b
+  field: wavelength_nm
+  value: 532
+  unit: nm
+  basis: measured
+  locator: p.5; p.9
+  note: 532 nm second-harmonic output
+- device_id: park2026-b
+  field: vpi_dc_v
+  value: 3.98
+  unit: V
+  basis: measured
+  locator: p.9; Fig. 3(c)
+  note: Vpi extracted from the SH transmission vs DC bias (532 nm)
+- device_id: park2026-b
+  field: extinction_ratio_db
+  value: 42.2
+  unit: dB
+  basis: measured
+  locator: p.9; Fig. 3(e)
+  note: SH ER, limited by detector noise floor
+- device_id: park2026-b
+  field: etch_depth_nm
+  value: 240
+  unit: nm
+  basis: design_target
+  locator: p.7; Fig. 2(b)
+  note: PPLN ridge design point
+- device_id: park2026-b
+  field: rib_width_nm
+  value: 2082
+  unit: nm
+  basis: design_target
+  locator: p.7; Fig. 2(b)
+  note: PPLN ridge top width design point
+- device_id: park2026-b
+  field: eo_film_thickness_nm
+  value: 300
+  unit: nm
+  basis: design_target
+  locator: p.16 Methods
+  note: 300-nm-thick TFLN film
+- device_id: park2026-b
+  field: crystal_cut
+  value: x-cut
+  unit: ''
+  basis: design_target
+  locator: p.7
+  note: X-cut TFLN device
+- device_id: park2026-a
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: Fig. 3(a) p.26; Fig. 1(c)
+  note: authors do not state the drive; one GSG electrode with the two MZI arms in the two gaps
+- device_id: park2026-b
+  field: drive
+  value: push_pull
+  unit: ''
+  basis: derived
+  locator: Fig. 3(a) p.26; Fig. 1(c)
+  note: authors do not state the drive; one GSG electrode with the two MZI arms in the two gaps
+- device_id: park2026-a
+  field: etch_depth_nm
+  value: 240
+  unit: nm
+  basis: design_target
+  locator: p.7; Fig. 2(b)
+  note: PPLN ridge design point, repeated from -b; MZI geometry not stated
+- device_id: park2026-a
+  field: rib_width_nm
+  value: 2082
+  unit: nm
+  basis: design_target
+  locator: p.7; Fig. 2(b)
+  note: PPLN ridge top width design point, repeated from -b
+derived:
+- device_id: park2026-b
+  field: slab_thickness_nm
+  value: 60
+  formula: slab = film 300 nm - etch depth 240 nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm
+- device_id: park2026-a
+  field: slab_thickness_nm
+  value: 60
+  formula: slab = film 300 nm - etch depth 240 nm
+  inputs:
+  - eo_film_thickness_nm
+  - etch_depth_nm

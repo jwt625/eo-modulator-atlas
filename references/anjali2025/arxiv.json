@@ -1,0 +1,21 @@
+{
+ "arxiv_id": "2510.25530",
+ "title": "Design of Carrier-Depletion-based Modulators on Commercially Available SOI Substrates of Varying Device-Layer Thickness",
+ "authors": "Anjali A R, Syamsundar De, and Pranabendu Ganguly",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Wed, 29 Oct 2025 13:56:07 GMT"
+  },
+  {
+   "version": "v2",
+   "date": "Wed, 17 Dec 2025 07:53:21 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:33:22Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2510.25530\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2510.25530</identifier>\n        <datestamp>2025-12-18</datestamp>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2510.25530</id>\n        <submitter>Anjali A R</submitter>\n            <version version=\"v1\">\n                <date>Wed, 29 Oct 2025 13:56:07 GMT</date>\n                <size>1188kb</size>\n            </version>\n            <version version=\"v2\">\n                <date>Wed, 17 Dec 2025 07:53:21 GMT</date>\n                <size>1188kb</size>\n            </version>\n        <title>Design of Carrier-Depletion-based Modulators on Commercially Available SOI Substrates of Varying Device-Layer Thickness</title>\n        <authors>Anjali A R, Syamsundar De, and Pranabendu Ganguly</authors>\n        <categories>physics.optics</categories>\n            <comments>14 pages, corrected Equation (2)</comments>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>We compare modulator designs on thick-film and thin-film silicon-on-insulator (SOI) substrates based on the carrier-depletion effect. This effect exhibits a lower junction capacitance as compared to its injection counterparts, leading to a higher electro-optic bandwidth, although the effective refractive index change is low. In this work, commercially available standard SOI substrates with device layer thicknesses of 5 {\\mu}m, 3 {\\mu}m, and 0.22 {\\mu}m are chosen for designing carrier-depletion-based phase shifters, which are then utilized for the design of Mach-Zehnder modulators (MZMs). These MZMs are tested for various on-off-keying (OOK) modulation bit rates employing non-return-to-zero (NRZ) pseudo-random binary signal (PRBS). For the comparison of given designs, we find that the thick-film MZMs, which can provide higher fabrication tolerance and high power handling capabilities, support maximum modulation speeds in the order of a few Gbps, whereas it can go up to 20 Gbps for thin-film MZMs.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}

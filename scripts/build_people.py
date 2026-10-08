@@ -1,6 +1,7 @@
 """Deduplicate people across papers (DevLog-020, decision 2): data/people.csv and data/paper_authors.csv.
 
-Merge rules, in order (two groups with different ORCIDs are never merged):
+Merge rules, in order (two groups with different ORCIDs are never merged; reviewed duplicate iDs in DUPLICATE_ORCID
+are mapped to one iD first):
   1. same ORCID (Crossref author record, only when the Crossref list matches papers.csv by family name);
   2. same normalized full name (accents, case, punctuation folded); for very common family names this also needs
      shared evidence: a shared organization (author affiliation, else the paper's organization lists) or a shared coauthor;
@@ -35,6 +36,10 @@ COMMON = set(
 
 
 SUFFIXES = {"jr", "sr", "ii", "iii", "iv"}
+# One person registered twice in ORCID (reviewed against both public ORCID records): duplicate -> kept iD.
+# 0009-0007-1328-1082 (Fangchen Hu: Fudan University education, Zhangjiang Laboratory since 2023) and
+# 0000-0003-3859-1558 (Fangchen Hu: hu2023 Fudan work, liu2026a Zhangjiang group); 2026-10-07, DevLog-022.
+DUPLICATE_ORCID = {"0009-0007-1328-1082": "0000-0003-3859-1558"}
 
 
 def fold(s: str) -> str:
@@ -110,6 +115,7 @@ def build(data: Path = DATA) -> tuple[list[dict[str, str]], list[dict[str, str]]
                 a = cr_auth[i - 1]
                 if tokens(str(a.get("family", "")))[1] == tokens(n)[1] and a.get("ORCID"):
                     orcid = str(a["ORCID"]).rsplit("/", 1)[-1]
+                    orcid = DUPLICATE_ORCID.get(orcid, orcid)
             g, fam = tokens(n)
             slots.append(
                 {

@@ -40,8 +40,7 @@ entries:
   unit: V
   basis: measured
   locator: p.2; p.2 Fig. 1(g)
-  note: Stated drive setting of the PAM4 70 GBd eye ("generated with 1.4 Vpp peak-to-peak drive voltage"); on-chip versus amplifier-output reference plane not stated for this value (the OOK voltages are
-    the ones the authors call estimated on-chip values)
+  note: Stated drive setting of PAM4 70 GBd eye; reference plane (on-chip vs amplifier output) not stated, unlike OOK voltages that authors call estimated on-chip.
 - device_id: schwarzenberger2023a-a
   field: optical_input_power_dbm
   value: 2

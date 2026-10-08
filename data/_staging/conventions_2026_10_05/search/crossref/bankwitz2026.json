@@ -1,0 +1,478 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 10,
+  "items": [
+   {
+    "DOI": "10.1038/s44310-026-00129-1",
+    "title": [
+     "Voltage-programmable photon statistics using a high-extinction thin-film lithium niobate modulator"
+    ],
+    "author": [
+     {
+      "given": "Julian Rasmus",
+      "family": "Bankwitz",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Ravi",
+      "family": "Pradip",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Julius",
+      "family": "Römer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Frank",
+      "family": "Brückerhoff-Plückelmann",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Falk",
+      "family": "Ebert",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Lennart",
+      "family": "Meyer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Liam",
+      "family": "McRae",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Jan",
+      "family": "Brandes",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Akhil",
+      "family": "Varri",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wladick",
+      "family": "Hartmann",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wolfram H. P.",
+      "family": "Pernice",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xinyu",
+      "family": "Ma",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "journal-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       8
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2023.jw2a.27",
+    "title": [
+     "High Extinction Ratio Integrated Reconfigurable Distributed Bragg-Reflector from Lithium-Niobate-on-Insulator for Precise Pulse Shaping at Strontium Spectral Lines"
+    ],
+    "author": [
+     {
+      "given": "Rasmus",
+      "family": "Bankwitz",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Francesco",
+      "family": "Lenzini",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wolfram",
+      "family": "Pernice",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1109/cleo/europe-eqec65582.2025.11110237",
+    "title": [
+     "Analog Inverse Discrete Fourier Transform for Optical Pattern Generation Using Thin-Film Lithium Niobate Waveguides with Phase-Change Material"
+    ],
+    "author": [
+     {
+      "given": "Ivonne",
+      "family": "Bente",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Institute of Physics, University of M&#x00FC;nster,M&#x00FC;nster,Germany,48155"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "J. Rasmus",
+      "family": "Bankwitz",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Kirchhoff-Institute for Physics, Heidelberg University,Heidelberg,Germany,69120"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Daniel",
+      "family": "Wendland",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute of Physics, University of M&#x00FC;nster,M&#x00FC;nster,Germany,48155"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wolfram",
+      "family": "Pernice",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Institute of Physics, University of M&#x00FC;nster,M&#x00FC;nster,Germany,48155"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       6,
+       23
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1117/12.3099523",
+    "title": [
+     "Integration of periodically poled thin-film lithium niobate and electro-optic modulators for on-chip photonic neural networks"
+    ],
+    "author": [
+     {
+      "given": "Jan",
+      "family": "Brandes",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Gunho Jason Gabriel",
+      "family": "Jun",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Philipp",
+      "family": "Lohmann",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Erik",
+      "family": "Jung",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Rasmus",
+      "family": "Bankwitz",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Xinyu",
+      "family": "Ma",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Wolfram",
+      "family": "Pernice",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2026,
+       5,
+       29
+      ]
+     ]
+    }
+   },
+   {
+    "DOI": "10.1364/cleo_at.2023.jw2a.63",
+    "title": [
+     "Integrated Reconfigurable Photonic Matrix Processor from Lithium-Niobate-on-Insulator"
+    ],
+    "author": [
+     {
+      "given": "Rasmus",
+      "family": "Bankwitz",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Seongmin",
+      "family": "Jo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Francesco",
+      "family": "Lenzini",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Wolfram",
+      "family": "Pernice",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "type": "proceedings-article",
+    "issued": {
+     "date-parts": [
+      [
+       2023
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 5,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

@@ -67,6 +67,7 @@ Integrity rule enforced by `scripts/validate_db.py`: every non-empty value in `d
 - [ ] P2 Sim engine in browser (analytic gates first), configs for dielectric TWE papers
 - [ ] P3 App: expandable table + plots + sim runner
 - [ ] P4 Fresh-context audits (twice), audit corrections section below, README
+- 2026-10-07 status note: P1-P4 were delivered by the later tranches (pilots and batches DevLog-004..021, engine and app DevLog-003/005/007/008/009/011/012, audits DevLog-011/015/020/021); current state in WORKBOARD.md and DevLog-022.
 
 ## Progress log
 

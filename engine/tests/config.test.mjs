@@ -88,7 +88,7 @@ test('runner computes analytic input and excludes fixed group index from target 
   const result = runCrossSection(fixture, { optical: true });
   assert.ok(Math.abs(result.metrics.n_rf - 2) < 1e-8);
   assert.deepEqual(result.stages, ['electrostatics', 'optical_mode']);
-  assert.deepEqual(result.targetSummary, { total: 2, evaluated: 1, passed: 1, failed: 0 });
+  assert.deepEqual(result.targetSummary, { total: 2, evaluated: 1, passed: 1, failed: 0, flagged: 0 });
   assert.equal(result.targets[1].actual, null);
   assert.ok(result.warnings.includes('group_index_is_configured_not_predicted'));
   assert.throws(() => runCrossSection(fixture, { meshScale: 0 }), /meshScale/);

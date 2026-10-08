@@ -93,7 +93,7 @@ entries:
   unit: dB
   basis: author_estimate
   locator: p.5 text
-  note: Estimated 9.1 +/- 0.8 dB for the full 1 mm device excluding 2.5 dB per facet; sentence does not name the geometry, may cover several 1 mm devices
+  note: Estimated 9.1 +/- 0.8 dB, full 1 mm device excluding 2.5 dB per facet; sentence does not name geometry, may cover several 1 mm devices.
 - device_id: hillier2025-1mm-q1
   field: extinction_ratio_db
   value: 20.1
@@ -562,7 +562,7 @@ entries:
   unit: GBd
   basis: measured
   locator: p.10 text; Fig. 5(a)
-  note: OOK below the 25 % OH HD-FEC threshold up to 192 GBd (crossing between 192 and 200 GBd, p.10); PAM4 below it up to 160 GBd; max over formats
+  note: OOK below 25 % OH HD-FEC up to 192 GBd (crossing between 192 and 200, p.10); PAM4 likewise to 160 GBd; max over formats.
 - device_id: hillier2025-2mm-data
   field: modulation_format
   value: OOK below the 25 % OH HD-FEC threshold to 192 GBd (no bit errors detected below 160 GBd; threshold crossed between 192 and 200 GBd); PAM4 below the threshold to 160 GBd (320 Gbit/s line rate); PAM8 also measured; 96-200 GBd tested, offline DSP with equalization

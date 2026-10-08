@@ -1,0 +1,17 @@
+{
+ "arxiv_id": "2407.11172",
+ "title": "Micro-Ring Modulator Linearity Enhancement for Analog and Digital Optical Links",
+ "authors": "Sumilak Chaudhury, Karl Johnson, Chengkuan Gao, Bill Lin, Yeshaiahu Fainman, Tzu-Chien Hsueh",
+ "doi": "",
+ "journal_ref": "",
+ "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "Mon, 15 Jul 2024 18:49:47 GMT"
+  }
+ ],
+ "fetched_from": "https://export.arxiv.org/oai2 (GetRecord, arXivRaw)",
+ "fetched_on": "2026-10-07",
+ "raw_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\">\n    <responseDate>2026-10-08T05:33:39Z</responseDate>\n                <request verb=\"GetRecord\" identifier=\"oai:arXiv.org:2407.11172\" metadataPrefix=\"arXivRaw\">http://oaipmh.arxiv.org/oai</request>\n\n\n    <GetRecord>\n                <record>\n                <header>\n        <identifier>oai:arXiv.org:2407.11172</identifier>\n        <datestamp>2024-07-17</datestamp>\n            <setSpec>eess:eess:SY</setSpec>\n            <setSpec>cs:cs:SY</setSpec>\n            <setSpec>physics:physics:optics</setSpec>\n    </header>\n\n            <metadata>\n                        <arXivRaw xmlns=\"http://arxiv.org/OAI/arXivRaw/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://arxiv.org/OAI/arXivRaw/ https://oaipmh.arxiv.org/OAI/arXivRaw.xsd\">\n        <id>2407.11172</id>\n        <submitter>Tzu-Chien Hsueh</submitter>\n            <version version=\"v1\">\n                <date>Mon, 15 Jul 2024 18:49:47 GMT</date>\n                <size>710kb</size>\n            </version>\n        <title>Micro-Ring Modulator Linearity Enhancement for Analog and Digital Optical Links</title>\n        <authors>Sumilak Chaudhury, Karl Johnson, Chengkuan Gao, Bill Lin, Yeshaiahu Fainman, Tzu-Chien Hsueh</authors>\n        <categories>eess.SY cs.SY physics.optics</categories>\n            <comments>4 pages, 5 figures</comments>\n            <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>\n            <abstract>An energy/area-efficient low-cost broadband linearity enhancement technique for electro-optic micro-ring modulators (MRM) is proposed to achieve 6.1-dB dynamic linearity improvement in spurious-free-dynamic-range with intermodulation distortions (IMD) and 17.9-dB static linearity improvement in integral nonlinearity over a conventional notch-filter MRM within a 4.8-dB extinction-ratio (ER) full-scale range based on rapid silicon-photonics fabrication results for the emerging applications of various analog and digital optical communication systems.</abstract>\n    </arXivRaw>\n\n            </metadata>\n        </record>\n\n    </GetRecord>\n</OAI-PMH>"
+}
