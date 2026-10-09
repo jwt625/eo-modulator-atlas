@@ -21,6 +21,14 @@ This is a discovery and source-cache pass, not an exhaustive systematic review o
 | Gupta; Ogiso; Hillier | Martin Schell / Fraunhofer HHI; NTT; Kevin Williams / Eindhoven / SMART | Recovered Gupta's [accepted manuscript](https://ict-poetics.eu/wp-content/uploads/2023/02/D.-Gupta-et-al_JTL_2023.pdf). Eindhoven Hillier PDF returned 403. Ogiso remains a manual request. BTO McGill/Lumiphase follow-up used [Plant's publication list](https://www.photonics.ece.mcgill.ca/Plant/dvp_publications/dvplant_inv_journals.html). |
 | Yue 2025 | Tao Chu, Bo Xiong; Zhejiang; Shilong Pan; NUAA | Recovered Yue's preprint; added Yu 2024 enhanced-Pockels material study. Keep material enhancement context separate from a fully characterized communications modulator. |
 
+## Pending group routes (not yet followed)
+
+Groups and authors queued for a publication-list sweep. When a route is followed, move it to the table above with its result.
+
+| Added | Starting point | Authors / group to follow | Why | Route to follow |
+|---|---|---|---|---|
+| 2026-10-08 | liu2021b (candidate; [Opt. Express 29(5) 6320](https://doi.org/10.1364/oe.414250)) | Weihua Guo, Qiaoyin Lu, Ye Liu, Heng Li, Jia Liu, Su Tan; HUST (Crossref affiliation; WNLO sub-unit unverified until PDF) | New group: no author in people.csv; HUST present only via Zeng/Xia and Shen/Zhang groups. Photolithography-defined TFLN MZM | Guo group publication list and coauthor follow-up for 2020+ TFLN / III-V modulator papers; forward citations of liu2021b |
+
 ## Scope and unfinished search branches
 
 - Years use journal/conference year for a published work and submission year for a preprint-only work. Thus a 2019-online/2020-issue paper can be in scope. Exact arXiv versions and publication dates are separate fields.
