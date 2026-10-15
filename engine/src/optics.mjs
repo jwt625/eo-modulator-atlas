@@ -21,7 +21,7 @@
 // License: GPL-3.0-or-later.
 
 import { assemble, restrictMatrix, triangleGeometry } from './fem.mjs';
-import { buildPattern, ndOrder, SparseCholesky, jacobiEigen, matVec } from './sparse.mjs';
+import { buildPattern, SparseCholesky, jacobiEigen, matVec, recordTiming } from './sparse.mjs';
 import { CrossSection } from './section.mjs';
 import { epsOptLab, opticalIndexAt, libraryIndex } from './materials.mjs';
 
@@ -50,6 +50,7 @@ const OFFDIAG_TOL = 1e-9; // relative to the largest diagonal entry; rotation by
  * Electrode regions are retained so that a metal intersecting the window is rejected.
  */
 export function buildOpticalModel(section, mats, opts) {
+  const tStart = performance.now();
   const { window: win, polarization, lambda0Um } = opts;
   const metalPolicy = opts.metal ?? 'reject';
   if (!METAL_POLICIES.includes(metalPolicy)) throw new Error(`optical: metal policy must be one of ${METAL_POLICIES.join(', ')}; got ${metalPolicy}`);
@@ -102,14 +103,20 @@ export function buildOpticalModel(section, mats, opts) {
   const sources = core.map((r) => ({ poly: r.poly, filled: true, h0: coreEdge, grade }));
   const mesh = os.buildMesh({ sourcesOnly: true, hints: { max_edge_um: maxEdge, grade, max_vertices: g.mesh?.max_vertices ?? 80000 }, extraSources: sources, scale: 1, minAngleBound: 1.35 });
   mesh.rect = os.rect;
+  const tMesh = performance.now();
   const geo = triangleGeometry(mesh);
+  const tGeo = performance.now();
   const pat = buildPattern(mesh.nNodes, mesh.tri);
+  const tPat = performance.now();
   // conductors actually present in the optical mesh (mesh membership, not bounding boxes)
   const usedRegions = new Set(mesh.triRegion);
   const metalNames = regions.filter((r, i) => mats[r.material]?.conductor && usedRegions.has(i)).map((r) => r.name);
   const omittedMetal = metalPolicy === 'absent' ? g.electrodes.filter((e) => polygonBBoxHits(e.poly, wnd)).map((e) => `electrode:${e.name}`) : [];
   const metal = { policy: metalPolicy, inMesh: metalNames, omittedFromModel: omittedMetal, labels: METAL_LABELS[metalPolicy] ? [METAL_LABELS[metalPolicy]] : [] };
-  return { section, os, mats, mesh, geo, pat, regions, polarization, lambda0Um, window: wnd, boundary: opts.boundary ?? {}, nMax, coreNames: core.map((c) => c.name), coreEdge, maxEdge, metal };
+  const tEnd = performance.now();
+  const timing = { mesh_ms: tMesh - tStart, geometry_ms: tGeo - tMesh, pattern_ms: tPat - tGeo, total_ms: tEnd - tStart, nNodes: mesh.nNodes, nTris: mesh.nTris, mesh: mesh.stats ? { ...mesh.stats } : null };
+  recordTiming('optical_model', timing);
+  return { section, os, mats, mesh, geo, pat, regions, polarization, lambda0Um, window: wnd, boundary: opts.boundary ?? {}, nMax, coreNames: core.map((c) => c.name), coreEdge, maxEdge, metal, timing };
 }
 
 function polygonBBoxHits(poly, w) {
@@ -164,6 +171,91 @@ export function n2Triangles(model, lambdaUm, compOverride = null) {
   return out;
 }
 
+/**
+ * Dense Rayleigh-Ritz of the projected pencil (H, M), p x p row-major symmetric, M positive definite:
+ * Cholesky M = L L^T, eigen-decomposition of L^-1 H L^-T (Jacobi), V = L^-T W. Same arithmetic as the legacy loop.
+ */
+function rayleighRitz(H, M, p) {
+  const L = new Float64Array(p * p);
+  for (let i = 0; i < p; i++)
+    for (let j = 0; j <= i; j++) {
+      let s = M[i * p + j];
+      for (let k = 0; k < j; k++) s -= L[i * p + k] * L[j * p + k];
+      if (i === j) {
+        if (!(s > 0)) throw new Error('optics: subspace became rank deficient');
+        L[i * p + i] = Math.sqrt(s);
+      } else L[i * p + j] = s / L[j * p + j];
+    }
+  const T = new Float64Array(p * p);
+  for (let c = 0; c < p; c++)
+    for (let i = 0; i < p; i++) {
+      let s = H[i * p + c];
+      for (let k = 0; k < i; k++) s -= L[i * p + k] * T[k * p + c];
+      T[i * p + c] = s / L[i * p + i];
+    }
+  const G = new Float64Array(p * p);
+  for (let r = 0; r < p; r++)
+    for (let i = 0; i < p; i++) {
+      let s = T[r * p + i];
+      for (let k = 0; k < i; k++) s -= L[i * p + k] * G[r * p + k];
+      G[r * p + i] = s / L[i * p + i];
+    }
+  for (let i = 0; i < p; i++) for (let j = 0; j < i; j++) G[i * p + j] = G[j * p + i] = 0.5 * (G[i * p + j] + G[j * p + i]);
+  const { values, vectors } = jacobiEigen(G, p);
+  const V = new Float64Array(p * p);
+  for (let c = 0; c < p; c++)
+    for (let i = p - 1; i >= 0; i--) {
+      let s = vectors[i * p + c];
+      for (let k = i + 1; k < p; k++) s -= L[k * p + i] * V[k * p + c];
+      V[i * p + c] = s / L[i * p + i];
+    }
+  return { values, V };
+}
+
+/** ||A x_k - theta_k B x_k|| / (|theta_k| ||B x_k||) for the first m vectors (B x_k given). */
+function modeResiduals(sp, Av, X, BX, theta, m, nf, mv) {
+  const out = [];
+  for (let k = 0; k < m; k++) {
+    const ax = mv(Av, X[k]),
+      bx = BX[k];
+    let rr = 0,
+      bb = 0;
+    for (let q = 0; q < nf; q++) {
+      const r = ax[q] - theta[k] * bx[q];
+      rr += r * r;
+      bb += bx[q] * bx[q];
+    }
+    out.push(Math.sqrt(rr / bb) / Math.abs(theta[k]));
+  }
+  return out;
+}
+
+/** Columns of Y V: out[c] = sum_i V[i, c] Y[i] (p vectors of length nf). */
+function combine(Y, V, p, nf) {
+  const out = [];
+  for (let c = 0; c < p; c++) {
+    const v = new Float64Array(nf);
+    for (let i = 0; i < p; i++) {
+      const w = V[i * p + c];
+      const yi = Y[i];
+      for (let q = 0; q < nf; q++) v[q] += w * yi[q];
+    }
+    out.push(v);
+  }
+  return out;
+}
+
+/** Cheap exact key of a free-node mask (length plus run-length boundaries) for symbolic-analysis reuse. */
+function freeKey(isFree) {
+  let k = `${isFree.length}:`;
+  let prev = 1;
+  for (let i = 0; i < isFree.length; i++) if (isFree[i] !== prev) {
+    k += `${i},`;
+    prev = isFree[i];
+  }
+  return k;
+}
+
 function dot(a, b) {
   let s = 0;
   for (let i = 0; i < a.length; i++) s += a[i] * b[i];
@@ -172,9 +264,18 @@ function dot(a, b) {
 
 /**
  * Solve for the guided modes at one wavelength.
- * @returns {{neff:number[], psi:Float64Array[], theta:number[], iterations:number, form:string, warm:any}}
+ * Options: numModes (lowest modes returned), tol (relative eigenvalue change, twice in a row), maxIter (default 300;
+ * legacy 120), subspace (block size, default numModes + 3), warm (previous
+ * result's `warm`: start vectors and symbolic analysis), eigenMethod 'shifted' (default since 2026-10-14, DevLog-024
+ * S3.7: adaptive shift, eigenvector residual criterion resTol on the first residualModes modes) or 'legacy' (the
+ * pre-2026-10-14 iteration: one shift update, eigenvalue criterion only; kept for comparison). The result carries
+ * `residual[k]` (||A x - theta B x|| / (|theta| ||B x||)) and `modeConverged[k]` (residual < resTol and eigenvalue
+ * change < tol) for every returned mode; `converged` is true only when the first residualModes modes met both.
+ * @returns {{neff:number[], psi:Float64Array[], theta:number[], iterations:number, form:string, warm:any, timing:any}}
  */
-export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm = null, tol = 1e-11, maxIter = 120, marginUm = null } = {}) {
+export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm = null, tol = 1e-11, maxIter = null, marginUm = null, eigenMethod = 'shifted', resTol = 1e-12, residualModes = numModes, subspace = null } = {}) {
+  const tStart = performance.now();
+  maxIter = maxIter ?? (eigenMethod === 'legacy' ? 120 : 300);
   const { mesh, geo, pat } = model;
   const pol = model.polarization;
   const useForm = form ?? (pol === 'TM' ? 'H' : 'E');
@@ -211,8 +312,10 @@ export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm 
       mB[t] = 1 / n2[t];
     }
   }
+  const tCoef = performance.now();
   const Afull = assemble(mesh, geo, pat, cTri, mA);
   const Bfull = assemble(mesh, geo, pat, null, mB);
+  const tAsm = performance.now();
 
   // Dirichlet at window boundary (per side)
   const bc = model.boundary ?? {};
@@ -239,15 +342,14 @@ export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm 
   const Av = sub.val;
   const Bv = new Float64Array(sub.pat.nnz);
   for (let q = 0; q < Bv.length; q++) Bv[q] = Bfull[sub.src[q]];
-  const fx = new Float64Array(nf),
-    fy = new Float64Array(nf);
-  for (let i = 0; i < mesh.nNodes; i++)
-    if (sub.map[i] >= 0) {
-      fx[sub.map[i]] = mesh.x[i];
-      fy[sub.map[i]] = mesh.y[i];
-    }
-  const perm = warm?.perm && warm.nf === nf ? warm.perm : ndOrder(sub.pat, fx, fy);
-  const chol = new SparseCholesky(sub.pat, perm);
+  const tRestrict = performance.now();
+  // symbolic analysis depends only on the free-node pattern: reuse it across wavelengths and shifts on this model
+  const symKey = freeKey(isFree);
+  const cached = (warm?.sym && warm.symKey === symKey ? warm.sym : null) ?? (model._sym?.key === symKey ? model._sym.sym : null);
+  let chol = new SparseCholesky(sub.pat, null, { sym: cached });
+  if (!cached) Object.defineProperty(model, '_sym', { value: { key: symKey, sym: chol.sym }, writable: true, configurable: true, enumerable: false });
+  const perm = chol.sym.perm;
+  const tOrder = performance.now();
   const Cv = new Float64Array(sub.pat.nnz);
   const factorShift = (sigma) => {
     for (let q = 0; q < Cv.length; q++) Cv[q] = Av[q] - sigma * Bv[q];
@@ -257,7 +359,8 @@ export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm 
   // lower bound of spectrum:  lambda_min >= -k0^2 n_max^2  (E form);  H form: -k0^2 n_max^2 as well
   let sigma = -k0 * k0 * nMax2 * (1 + 1e-3);
   if (!factorShift(sigma)) throw new Error('optics: shifted matrix not positive definite (check mesh / materials)');
-  const p = numModes + 3;
+  const initialFactorMs = chol.timing.factor_ms;
+  const p = subspace ?? numModes + 3;
   // initial vectors
   let X;
   if (warm?.X && warm.nf === nf && warm.X.length >= p) X = warm.X.slice(0, p).map((v) => Float64Array.from(v));
@@ -276,97 +379,180 @@ export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm 
     }
   }
   const sp = { n: nf, rowptr: sub.pat.rowptr, colidx: sub.pat.colidx };
-  const mv = (val, x) => matVec(sp, val, x);
+  let matvec_ms = 0,
+    nMatVec = 0;
+  const mv = (val, x) => {
+    const tm = performance.now();
+    const r = matVec(sp, val, x);
+    matvec_ms += performance.now() - tm;
+    nMatVec++;
+    return r;
+  };
+  const tLoop = performance.now();
   let theta = new Float64Array(p).fill(Infinity);
   let iters = 0;
   let converged = false;
   let shiftUpdated = false;
   let stable = 0;
-  for (let it = 1; it <= maxIter; it++) {
-    iters = it;
-    const Y = X.map((x) => chol.solve(mv(Bv, x)));
-    // Rayleigh-Ritz
-    const AY = Y.map((y) => mv(Av, y));
-    const BY = Y.map((y) => mv(Bv, y));
-    const H = new Float64Array(p * p),
-      M = new Float64Array(p * p);
-    for (let i = 0; i < p; i++)
-      for (let j = i; j < p; j++) {
-        const h = dot(Y[i], AY[j]),
-          m = dot(Y[i], BY[j]);
-        H[i * p + j] = H[j * p + i] = h;
-        M[i * p + j] = M[j * p + i] = m;
+  let cholAlt = null;
+  let nShift = 0;
+  const lastChange = new Float64Array(numModes).fill(0); // per-mode relative eigenvalue change of the last iteration
+  if (eigenMethod === 'legacy') {
+    for (let it = 1; it <= maxIter; it++) {
+      iters = it;
+      const Y = chol.solveMany(X.map((x) => mv(Bv, x)));
+      // Rayleigh-Ritz
+      const AY = Y.map((y) => mv(Av, y));
+      const BY = Y.map((y) => mv(Bv, y));
+      const H = new Float64Array(p * p),
+        M = new Float64Array(p * p);
+      for (let i = 0; i < p; i++)
+        for (let j = i; j < p; j++) {
+          const h = dot(Y[i], AY[j]),
+            m = dot(Y[i], BY[j]);
+          H[i * p + j] = H[j * p + i] = h;
+          M[i * p + j] = M[j * p + i] = m;
+        }
+      // Cholesky of M (dense)
+      const L = new Float64Array(p * p);
+      let okc = true;
+      for (let i = 0; i < p && okc; i++)
+        for (let j = 0; j <= i; j++) {
+          let s = M[i * p + j];
+          for (let k = 0; k < j; k++) s -= L[i * p + k] * L[j * p + k];
+          if (i === j) {
+            if (!(s > 0)) {
+              okc = false;
+              break;
+            }
+            L[i * p + i] = Math.sqrt(s);
+          } else L[i * p + j] = s / L[j * p + j];
+        }
+      if (!okc) throw new Error('optics: subspace became rank deficient');
+      // G = L^-1 H L^-T
+      const T = new Float64Array(p * p);
+      for (let c = 0; c < p; c++)
+        for (let i = 0; i < p; i++) {
+          let s = H[i * p + c];
+          for (let k = 0; k < i; k++) s -= L[i * p + k] * T[k * p + c];
+          T[i * p + c] = s / L[i * p + i];
+        }
+      const G = new Float64Array(p * p);
+      for (let r = 0; r < p; r++)
+        for (let i = 0; i < p; i++) {
+          let s = T[r * p + i];
+          for (let k = 0; k < i; k++) s -= L[i * p + k] * G[r * p + k];
+          G[r * p + i] = s / L[i * p + i];
+        }
+      for (let i = 0; i < p; i++) for (let j = 0; j < i; j++) G[i * p + j] = G[j * p + i] = 0.5 * (G[i * p + j] + G[j * p + i]);
+      const { values, vectors } = jacobiEigen(G, p);
+      // back-transform vectors: V = L^-T W
+      const V = new Float64Array(p * p);
+      for (let c = 0; c < p; c++)
+        for (let i = p - 1; i >= 0; i--) {
+          let s = vectors[i * p + c];
+          for (let k = i + 1; k < p; k++) s -= L[k * p + i] * V[k * p + c];
+          V[i * p + c] = s / L[i * p + i];
+        }
+      const Xn = [];
+      for (let c = 0; c < p; c++) {
+        const v = new Float64Array(nf);
+        for (let i = 0; i < p; i++) {
+          const w = V[i * p + c];
+          const yi = Y[i];
+          for (let q = 0; q < nf; q++) v[q] += w * yi[q];
+        }
+        Xn.push(v);
       }
-    // Cholesky of M (dense)
-    const L = new Float64Array(p * p);
-    let okc = true;
-    for (let i = 0; i < p && okc; i++)
-      for (let j = 0; j <= i; j++) {
-        let s = M[i * p + j];
-        for (let k = 0; k < j; k++) s -= L[i * p + k] * L[j * p + k];
-        if (i === j) {
-          if (!(s > 0)) {
-            okc = false;
-            break;
-          }
-          L[i * p + i] = Math.sqrt(s);
-        } else L[i * p + j] = s / L[j * p + j];
+      let dmax = 0;
+      for (let k = 0; k < numModes; k++) dmax = Math.max(dmax, Math.abs(values[k] - theta[k]) / Math.max(1, Math.abs(values[k])));
+      theta = Float64Array.from(values);
+      X = Xn;
+      if (dmax < tol) {
+        stable++;
+        if (stable >= 2) {
+          converged = true;
+          break;
+        }
+      } else stable = 0;
+      // one-time shift update closer to the lowest eigenvalue
+      if (!shiftUpdated && it >= 4 && dmax < 1e-4) {
+        const s2 = theta[0] - 0.15 * (theta[0] - sigma);
+        if (factorShift(s2)) sigma = s2;
+        else factorShift(sigma);
+        shiftUpdated = true;
       }
-    if (!okc) throw new Error('optics: subspace became rank deficient');
-    // G = L^-1 H L^-T
-    const T = new Float64Array(p * p);
-    for (let c = 0; c < p; c++)
-      for (let i = 0; i < p; i++) {
-        let s = H[i * p + c];
-        for (let k = 0; k < i; k++) s -= L[i * p + k] * T[k * p + c];
-        T[i * p + c] = s / L[i * p + i];
-      }
-    const G = new Float64Array(p * p);
-    for (let r = 0; r < p; r++)
-      for (let i = 0; i < p; i++) {
-        let s = T[r * p + i];
-        for (let k = 0; k < i; k++) s -= L[i * p + k] * G[r * p + k];
-        G[r * p + i] = s / L[i * p + i];
-      }
-    for (let i = 0; i < p; i++) for (let j = 0; j < i; j++) G[i * p + j] = G[j * p + i] = 0.5 * (G[i * p + j] + G[j * p + i]);
-    const { values, vectors } = jacobiEigen(G, p);
-    // back-transform vectors: V = L^-T W
-    const V = new Float64Array(p * p);
-    for (let c = 0; c < p; c++)
-      for (let i = p - 1; i >= 0; i--) {
-        let s = vectors[i * p + c];
-        for (let k = i + 1; k < p; k++) s -= L[k * p + i] * V[k * p + c];
-        V[i * p + c] = s / L[i * p + i];
-      }
-    const Xn = [];
-    for (let c = 0; c < p; c++) {
-      const v = new Float64Array(nf);
-      for (let i = 0; i < p; i++) {
-        const w = V[i * p + c];
-        const yi = Y[i];
-        for (let q = 0; q < nf; q++) v[q] += w * yi[q];
-      }
-      Xn.push(v);
     }
-    let dmax = 0;
-    for (let k = 0; k < numModes; k++) dmax = Math.max(dmax, Math.abs(values[k] - theta[k]) / Math.max(1, Math.abs(values[k])));
-    theta = Float64Array.from(values);
-    X = Xn;
-    if (dmax < tol) {
-      stable++;
-      if (stable >= 2) {
-        converged = true;
-        break;
+  } else {
+    // Shift-invert subspace iteration (DevLog-024 S3.7). Y = (A - sigma B)^-1 B X; Rayleigh-Ritz with
+    // Y^T A Y = Y^T B X + sigma Y^T B Y (no A products) and B X_new = (B Y) V (no extra B products). The shift moves
+    // toward the lowest Ritz value (an upper bound of the lowest eigenvalue) while that still speeds up the slowest
+    // requested mode; a candidate shift is accepted only if its Cholesky succeeds (positive definite, so still below the
+    // spectrum); the previous factorization is kept in a second numeric object, so a rejected shift costs no refactor.
+    let BX = X.map((x) => mv(Bv, x));
+    lastChange.fill(Infinity);
+    let shiftFrac = 0.15,
+      nFail = 0;
+    for (let it = 1; it <= maxIter; it++) {
+      iters = it;
+      const Y = chol.solveMany(BX);
+      const BY = Y.map((y) => mv(Bv, y));
+      const H = new Float64Array(p * p),
+        M = new Float64Array(p * p);
+      for (let i = 0; i < p; i++)
+        for (let j = i; j < p; j++) {
+          const m = dot(Y[i], BY[j]);
+          const h = 0.5 * (dot(Y[i], BX[j]) + dot(Y[j], BX[i])) + sigma * m;
+          H[i * p + j] = H[j * p + i] = h;
+          M[i * p + j] = M[j * p + i] = m;
+        }
+      const ritz = rayleighRitz(H, M, p);
+      const { values, V } = ritz;
+      const Xn = combine(Y, V, p, nf);
+      const BXn = combine(BY, V, p, nf);
+      let dmax = 0;
+      for (let k = 0; k < numModes; k++) {
+        lastChange[k] = Math.abs(values[k] - theta[k]) / Math.max(1, Math.abs(values[k]));
+        dmax = Math.max(dmax, lastChange[k]);
       }
-    } else stable = 0;
-    // one-time shift update closer to the lowest eigenvalue
-    if (!shiftUpdated && it >= 4 && dmax < 1e-4) {
-      const s2 = theta[0] - 0.15 * (theta[0] - sigma);
-      if (factorShift(s2)) sigma = s2;
-      else factorShift(sigma);
-      shiftUpdated = true;
+      theta = Float64Array.from(values);
+      X = Xn;
+      BX = BXn;
+      if (dmax < tol) {
+        stable++;
+        // eigenvalues stable: also require small eigenvector residuals of the requested modes (the EO overlap and
+        // the window diagnostics use the vectors, which converge only as the square root of the eigenvalues)
+        // (first `residualModes` modes; no bypass: unmet at maxIter means converged false, audit P3)
+        if (stable >= 2 && modeResiduals(sp, Av, X, BX, theta, residualModes, nf, mv).every((r) => r < resTol)) {
+          converged = true;
+          break;
+        }
+      } else stable = 0;
+      if (!converged && nFail < 3 && it >= 3 && dmax < 1e-2 && nShift < 8) {
+        const slow = numModes - 1;
+        const rho = (theta[slow] - sigma) / (theta[p - 1] - sigma);
+        const s2 = theta[0] - shiftFrac * (theta[0] - sigma);
+        const rho2 = (theta[slow] - s2) / (theta[p - 1] - s2);
+        // shift only while it still speeds up the slowest requested mode by >= 10 % (its ratio tends to
+        // (theta_slow - theta_0) / (theta_p - theta_0) as sigma -> theta_0; audit P3: 2-mode solves hit the cap)
+        if (rho > 0.05 && rho2 < 0.9 * rho) {
+          cholAlt = cholAlt ?? new SparseCholesky(sub.pat, null, { sym: chol.sym });
+          for (let q = 0; q < Cv.length; q++) Cv[q] = Av[q] - s2 * Bv[q];
+          if (cholAlt.factor(Cv)) {
+            const tmp = chol;
+            chol = cholAlt;
+            cholAlt = tmp;
+            sigma = s2;
+            nShift++;
+          } else {
+            nFail++;
+            shiftFrac = Math.min(0.9, 3 * shiftFrac);
+          }
+        }
+      }
     }
   }
+  const tIter = performance.now();
   // assemble outputs
   const neff = [];
   const psi = [];
@@ -391,8 +577,45 @@ export function solveModesAt(model, lambdaUm, { numModes = 2, form = null, warm 
   const labels = [...OPTICAL_LABELS, ...(model.metal?.labels ?? [])];
   const limitations = OPTICAL_LIMITATIONS.filter((c) => useForm === 'H' || c !== 'scalar_tm_lateral_gradient_uses_eps_zz_approximation');
   const metal = model.metal ? { ...model.metal, excludedTriangles: nExcluded, pecFaces } : null;
-  return { neff, psi, theta: Array.from(theta).slice(0, numModes), iterations: iters, converged, form: useForm, n2, excluded, k0, lambdaUm, warm: { X, nf, perm }, labels, limitations,
-    metal, boundaryMarginFraction: { marginUm: margin, perMode: boundaryMarginFraction } };
+  const tEnd = performance.now();
+  // timing of both numeric objects (the second exists only when the shift moved)
+  const ct = { ...chol.timing };
+  if (cholAlt) for (const f of ['factor_ms', 'nFactor', 'solve_ms', 'nSolve']) ct[f] += cholAlt.timing[f];
+  // eigen residual of every requested mode; modeConverged[k]: run converged and residual below resTol (audit P3)
+  const residual = modeResiduals(sp, Av, X, X.map((x) => matVec(sp, Bv, x)), theta, numModes, nf, (v, x) => matVec(sp, v, x));
+  const modeConverged = residual.map((r, k) => r < resTol && lastChange[k] < tol);
+  const timing = {
+    coefficients_ms: tCoef - tStart,
+    assemble_ms: tAsm - tCoef,
+    restrict_ms: tRestrict - tAsm,
+    ordering_ms: ct.ordering_ms,
+    symbolicReused: ct.symbolicReused,
+    symbolic_ms: ct.symbolic_ms,
+    factor_ms: ct.factor_ms,
+    nFactor: ct.nFactor,
+    solve_ms: ct.solve_ms,
+    nSolve: ct.nSolve,
+    matvec_ms,
+    nMatVec,
+    eigen_ms: tIter - tLoop,
+    rayleighRitz_ms: tIter - tLoop - ct.solve_ms - matvec_ms - (ct.factor_ms - initialFactorMs),
+    iterations: iters,
+    subspace: p,
+    eigenMethod,
+    nShift,
+    residual,
+    post_ms: tEnd - tIter,
+    total_ms: tEnd - tStart,
+    nFree: nf,
+    nnzA: ct.nnzA,
+    nnzL: ct.nnzL,
+    fill: ct.fill,
+    flops: ct.flops,
+    nsuper: ct.nsuper,
+  };
+  recordTiming('modes', timing);
+  return { neff, psi, theta: Array.from(theta).slice(0, numModes), iterations: iters, converged, form: useForm, n2, excluded, k0, lambdaUm, warm: { X, nf, perm, sym: chol.sym, symKey }, labels, limitations,
+    metal, boundaryMarginFraction: { marginUm: margin, perMode: boundaryMarginFraction }, residual, modeConverged, resTol, timing };
 }
 
 /** Fraction of integral psi^2 in triangles whose centroid lies within `margin` of a Dirichlet window side (leakage/truncation diagnostic). */
@@ -432,13 +655,103 @@ function pecFaceSummary(mesh, excluded) {
   return { horizontalUm: horizontal, verticalUm: vertical, obliqueUm: oblique, validFaceFraction: total > 0 ? horizontal / total : NaN };
 }
 
-/** Group index by central finite difference of n_eff(lambda) with material dispersion included. */
-export function groupIndex(model, lambdaUm, modeIndex, { delta = 0.01, ...solveOpts } = {}) {
-  const base = solveModesAt(model, lambdaUm, { numModes: modeIndex + 2, ...solveOpts });
-  const lo = solveModesAt(model, lambdaUm - delta, { numModes: modeIndex + 2, warm: base.warm, ...solveOpts });
-  const hi = solveModesAt(model, lambdaUm + delta, { numModes: modeIndex + 2, warm: base.warm, ...solveOpts });
-  const dn = (hi.neff[modeIndex] - lo.neff[modeIndex]) / (2 * delta);
-  return { ng: base.neff[modeIndex] - lambdaUm * dn, dneffDlambda: dn, base, lo, hi };
+/**
+ * Group index of mode `modeIndex` at lambdaUm, material dispersion included.
+ *
+ * method 'perturbation' (default since 2026-10-14, DevLog-024 S3): one eigen solve; d(theta)/d(lambda) of the DISCRETE
+ * pencil A(lambda) x = theta B(lambda) x by first-order perturbation (Hellmann-Feynman for a symmetric pencil):
+ *   theta' = x^T (A' - theta B') x / (x^T B x),   theta = -beta^2,   ng = c d(beta)/d(omega) = -(lambda / k0) d(beta)/d(lambda),
+ * with A', B' assembled element by element from d(k0^2 n^2)/d(lambda) (form E) or d(1/n_z^2)/d(lambda), d(k0^2)/d(lambda),
+ * d(1/n_y^2)/d(lambda) (form H). The material slope dn^2/d(lambda) is a central difference of the material model at
+ * +-1e-4 lambda (a closed-form dispersion, no eigen solve). Same mesh and same discrete problem as the finite-difference
+ * path, which differs only by its O(delta^2) truncation error (agreement gate 1e-4 relative, tests/perf-ng.test.mjs).
+ * method 'finite_difference': central difference of n_eff over +-delta (three eigen solves; kept as the test oracle).
+ * For the perturbation method `lo` and `hi` are the base solve object (no extra solves were made).
+ */
+export function groupIndex(model, lambdaUm, modeIndex, { delta = 0.01, method = 'perturbation', ...solveOpts } = {}) {
+  const tStart = performance.now();
+  if (method === 'finite_difference') {
+    const fdOpts = { numModes: modeIndex + 2, residualModes: modeIndex + 1, ...solveOpts };
+    const base = solveModesAt(model, lambdaUm, fdOpts);
+    const lo = solveModesAt(model, lambdaUm - delta, { ...fdOpts, warm: base.warm });
+    const hi = solveModesAt(model, lambdaUm + delta, { ...fdOpts, warm: base.warm });
+    const dn = (hi.neff[modeIndex] - lo.neff[modeIndex]) / (2 * delta);
+    const timing = { method, total_ms: performance.now() - tStart, nEigenSolves: 3, solves: [base.timing, lo.timing, hi.timing] };
+    recordTiming('group_index', { method, total_ms: timing.total_ms, nEigenSolves: 3 });
+    return { ng: base.neff[modeIndex] - lambdaUm * dn, dneffDlambda: dn, method, converged: base.converged && lo.converged && hi.converged, base, lo, hi, timing };
+  }
+  if (method !== 'perturbation') throw new Error(`groupIndex: method must be perturbation or finite_difference; got ${method}`);
+  // only the requested mode must converge (the FD path tracks the next mode as well)
+  const base = solveModesAt(model, lambdaUm, { numModes: modeIndex + 1, ...solveOpts });
+  const d = modeLambdaDerivative(model, base, modeIndex);
+  const timing = { method, total_ms: performance.now() - tStart, nEigenSolves: 1, solves: [base.timing] };
+  recordTiming('group_index', { method, total_ms: timing.total_ms, nEigenSolves: 1 });
+  return { ng: d.ng, dneffDlambda: d.dneffDlambda, method, converged: base.converged, base, lo: base, hi: base, timing };
+}
+
+/**
+ * d(n_eff)/d(lambda) and ng of one solved mode from its eigenvector (first-order perturbation of the discrete pencil;
+ * see groupIndex). `mode` is a solveModesAt result on `model` (its psi is zero on the Dirichlet nodes, so the
+ * element sums below equal the free-node quadratic forms).
+ */
+export function modeLambdaDerivative(model, mode, k) {
+  const { mesh, geo } = model;
+  const lam = mode.lambdaUm;
+  const k0 = mode.k0;
+  const h = 1e-4 * lam;
+  const nT = mesh.nTris;
+  const psi = mode.psi[k];
+  const theta = mode.theta[k];
+  const excluded = mode.excluded;
+  const sq = triIntegralSquare(mesh, geo, psi);
+  // d(eps)/d(lambda) per triangle of a lab component (central difference of the closed-form material model)
+  const slope = (comp) => {
+    const p = n2Triangles(model, lam + h, comp),
+      m = n2Triangles(model, lam - h, comp);
+    const out = new Float64Array(nT);
+    for (let t = 0; t < nT; t++) out[t] = (p[t] - m[t]) / (2 * h);
+    return out;
+  };
+  const dk02 = (-2 * k0 * k0) / lam; // d(k0^2)/d(lambda)
+  let num = 0,
+    den = 0;
+  if (mode.form === 'E') {
+    // A = S - k0^2 M[n^2], B = M[1] (live triangles)
+    const n2 = mode.n2;
+    const dn2 = slope(null);
+    for (let t = 0; t < nT; t++) {
+      if (excluded[t]) continue;
+      num -= (dk02 * n2[t] + k0 * k0 * dn2[t]) * sq[t];
+      den += sq[t];
+    }
+  } else {
+    // A = S[1/n_z^2] - k0^2 M[1], B = M[1/n_y^2] (live triangles)
+    const n2y = mode.n2;
+    const n2z = n2Triangles(model, lam, 8);
+    const dn2y = slope(null),
+      dn2z = slope(8);
+    for (let t = 0; t < nT; t++) {
+      if (excluded[t]) continue;
+      let gx = 0,
+        gy = 0;
+      for (let a = 0; a < 3; a++) {
+        const v = psi[mesh.tri[3 * t + a]];
+        gx += geo.gx[3 * t + a] * v;
+        gy += geo.gy[3 * t + a] * v;
+      }
+      const grad2 = geo.area[t] * (gx * gx + gy * gy);
+      const dInvZ = -dn2z[t] / (n2z[t] * n2z[t]);
+      const dInvY = -dn2y[t] / (n2y[t] * n2y[t]);
+      num += dInvZ * grad2 - dk02 * sq[t] - theta * dInvY * sq[t];
+      den += sq[t] / n2y[t];
+    }
+  }
+  const dTheta = num / den;
+  const beta = Math.sqrt(Math.max(-theta, 0));
+  const dBeta = -dTheta / (2 * beta);
+  const neff = beta / k0;
+  const ng = -(lam / k0) * dBeta;
+  return { dThetaDlambda: dTheta, dneffDlambda: (neff - ng) / lam, ng };
 }
 
 /** Integral of f^2 over each triangle for a P1 field. */

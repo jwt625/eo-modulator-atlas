@@ -55,13 +55,27 @@ export function recessPolygon(poly, d, keep = () => false) {
 
 /**
  * Normalised geometry with every electrode recessed by d (um). Edges on the outer domain boundary and, with a mirror
- * symmetry, on the mirror plane are kept. Regions are unchanged: the vacated metal takes the region underneath, which is
- * irrelevant for L' = 1/(c^2 C0') (all permittivities 1).
+ * symmetry, on the mirror plane are kept.
+ *
+ * Regions (option `regions`): the recessed sections feed only the vacuum solve L' = 1/(c^2 C0') (all permittivities
+ * 1), where material interfaces carry no physics. With 'background' (default since 2026-10-15, DevLog-024 R2.2) the
+ * regions are replaced by one background region covering the domain (plus the regions named in `mesh.regions` size
+ * hints, kept as refinement intent). Keeping the interfaces ('keep', the former behaviour) leaves slivers of thickness d
+ * wherever a material interface coincided with an electrode face (e.g. a cladding top flush with the electrode top),
+ * which the quality mesher must resolve at element size ~d along the whole face: lin2025 at 0.25 x delta/2 needed
+ * 86,278 vertices (budget 80,000) against 58,797 without interfaces, for an L' difference of 4e-6 relative.
  */
-export function recessGeometry(geom, d) {
+export function recessGeometry(geom, d, { regions = 'background' } = {}) {
+  if (regions !== 'background' && regions !== 'keep') throw new Error(`recessGeometry: regions must be background or keep; got ${regions}`);
   const tol = 1e-9 * Math.max(geom.domain.x[1] - geom.domain.x[0], geom.domain.y[1] - geom.domain.y[0]);
   const on = (a, b, k, v) => Math.abs(a[k] - v) < tol && Math.abs(b[k] - v) < tol;
   const keep = (a, b) => on(a, b, 0, geom.domain.x[0]) || on(a, b, 0, geom.domain.x[1]) || on(a, b, 1, geom.domain.y[0]) || on(a, b, 1, geom.domain.y[1])
     || (geom.symmetry !== 'none' && on(a, b, 0, geom.mirror_x_um));
-  return { ...geom, electrodes: geom.electrodes.map((e) => ({ ...e, poly: recessPolygon(e.poly, d, keep) })) };
+  const electrodes = geom.electrodes.map((e) => ({ ...e, poly: recessPolygon(e.poly, d, keep) }));
+  if (regions === 'keep') return { ...geom, electrodes };
+  const [x0, x1] = geom.domain.x,
+    [y0, y1] = geom.domain.y;
+  const hinted = new Set(Object.keys(geom.mesh?.regions ?? {}));
+  const background = { ...geom.regions[0], name: geom.regions[0]?.name ?? 'background', poly: [[x0, y0], [x1, y0], [x1, y1], [x0, y1]] };
+  return { ...geom, regions: [background, ...geom.regions.filter((r, i) => i > 0 && hinted.has(r.name))], electrodes };
 }

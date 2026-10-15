@@ -63,9 +63,16 @@ class Heap {
     return out;
   }
   _swap(i, j) {
-    [this.p[i], this.p[j]] = [this.p[j], this.p[i]];
-    [this.t[i], this.t[j]] = [this.t[j], this.t[i]];
-    [this.s[i], this.s[j]] = [this.s[j], this.s[i]];
+    const { p, t, s } = this;
+    const pi = p[i],
+      ti = t[i],
+      si = s[i];
+    p[i] = p[j];
+    t[i] = t[j];
+    s[i] = s[j];
+    p[j] = pi;
+    t[j] = ti;
+    s[j] = si;
   }
 }
 
@@ -78,6 +85,12 @@ class Triangulation {
     this.px = new Float64Array(cap);
     this.py = new Float64Array(cap);
     this.vtri = new Int32Array(cap);
+    // per-vertex scratch of commit(): new triangle starting / ending at a cavity-boundary vertex (stamped)
+    this.vStartT = new Int32Array(cap);
+    this.vEndT = new Int32Array(cap);
+    this.vStartS = new Uint32Array(cap);
+    this.vEndS = new Uint32Array(cap);
+    this.commitStamp = 0;
     this.nt = 0; // slots used
     this.tv = new Int32Array(3 * cap);
     this.tn = new Int32Array(3 * cap);
@@ -100,6 +113,10 @@ class Triangulation {
     this.px = g(this.px, Float64Array);
     this.py = g(this.py, Float64Array);
     this.vtri = g(this.vtri, Int32Array);
+    this.vStartT = g(this.vStartT, Int32Array);
+    this.vEndT = g(this.vEndT, Int32Array);
+    this.vStartS = g(this.vStartS, Uint32Array);
+    this.vEndS = g(this.vEndS, Uint32Array);
   }
   _growT() {
     const cap = this.alive.length * 2;
@@ -238,8 +255,8 @@ class Triangulation {
   commit(v, cav, bnd) {
     const x = this.px[v],
       y = this.py[v];
-    const byStart = new Map(),
-      byEnd = new Map();
+    const cs = ++this.commitStamp;
+    const { vStartT, vEndT, vStartS, vEndS } = this;
     const created = [];
     const info = [];
     for (const e of bnd) {
@@ -247,15 +264,17 @@ class Triangulation {
       const t = this._newTri(v, e.a, e.b);
       this.tn[3 * t] = e.outer;
       created.push(t);
-      byStart.set(e.a, t);
-      byEnd.set(e.b, t);
-      info.push({ t, e });
+      vStartT[e.a] = t;
+      vStartS[e.a] = cs;
+      vEndT[e.b] = t;
+      vEndS[e.b] = cs;
+      info.push(t, e);
     }
-    for (const { t, e } of info) {
-      const n2 = byEnd.get(e.a); // across edge (v,a): opposite b -> index 2
-      if (n2 !== undefined) this.tn[3 * t + 2] = n2;
-      const n1 = byStart.get(e.b); // across edge (b,v): opposite a -> index 1
-      if (n1 !== undefined) this.tn[3 * t + 1] = n1;
+    for (let k = 0; k < info.length; k += 2) {
+      const t = info[k],
+        e = info[k + 1];
+      if (vEndS[e.a] === cs) this.tn[3 * t + 2] = vEndT[e.a]; // across edge (v,a): opposite b -> index 2
+      if (vStartS[e.b] === cs) this.tn[3 * t + 1] = vStartT[e.b]; // across edge (b,v): opposite a -> index 1
       if (e.outer >= 0) {
         for (let i = 0; i < 3; i++) if (this.tn[3 * e.outer + i] === e.ct) this.tn[3 * e.outer + i] = t;
       }
@@ -346,6 +365,9 @@ export function meshDomain(spec) {
   const regionMax = spec.regionMaxEdge ?? [];
 
   const pslg = buildPslg(loops, rect, tol);
+  const tPslg = performance.now();
+  let nSizeAt = 0,
+    nClassify = 0;
   const T = new Triangulation(Math.max(1024, pslg.verts.length * 8));
 
   // vertices: rect corners first (ids 0..3), then PSLG verts mapped
@@ -371,9 +393,26 @@ export function meshDomain(spec) {
     vmap[i] = v;
   }
 
+  const tInsert = performance.now();
   // subsegments: key -> {elec, mask}
   const seg = new Map();
-  for (const s of pslg.segs) seg.set(ekey(vmap[s.a], vmap[s.b]), { a: vmap[s.a], b: vmap[s.b], mask: s.mask, elec: s.elec });
+  // segVert[v] = 1 when v is an endpoint of some subsegment (never cleared: a split keeps both pieces). An edge can be a
+  // subsegment only if both endpoints are flagged, which skips the Map lookups for the vast majority of edges.
+  let segVert = new Uint8Array(Math.max(1024, 2 * T.nv));
+  const flagSegVert = (v) => {
+    if (v >= segVert.length) {
+      const g = new Uint8Array(Math.max(2 * segVert.length, v + 1));
+      g.set(segVert);
+      segVert = g;
+    }
+    segVert[v] = 1;
+  };
+  const maybeSeg = (a, b) => a < segVert.length && b < segVert.length && segVert[a] === 1 && segVert[b] === 1;
+  for (const s of pslg.segs) {
+    seg.set(ekey(vmap[s.a], vmap[s.b]), { a: vmap[s.a], b: vmap[s.b], mask: s.mask, elec: s.elec });
+    flagSegVert(vmap[s.a]);
+    flagSegVert(vmap[s.b]);
+  }
   // initial DT may lack some segments: handled via encroachment splitting.
 
   const segQueue = [];
@@ -426,15 +465,85 @@ export function meshDomain(spec) {
     if (segEncroached(s.a, s.b)) enqueueSeg(s.a, s.b);
   }
 
-  // size evaluation
-  const sizeAt = (x, y) => {
+  // size evaluation. Sources are visited in ascending h0 (min is order independent) and skipped when a lower bound
+  // of their size at (x, y), from the distance to their bounding box, cannot beat the running minimum (relative margin
+  // 1e-9 against round-off), so the returned size is identical to the exhaustive minimum.
+  const srcOrder = sources.map((s, i) => i).sort((i, j) => sources[i].h0 - sources[j].h0 || i - j);
+  const nSrc = sources.length;
+  const sPoly = srcOrder.map((i) => sources[i].poly);
+  const sFilled = srcOrder.map((i) => sources[i].filled);
+  const sH0 = Float64Array.from(srcOrder, (i) => sources[i].h0);
+  const sG = Float64Array.from(srcOrder, (i) => sources[i].grade ?? grade);
+  const sBox = new Float64Array(4 * nSrc);
+  srcOrder.forEach((i, k) => {
+    const b = polygonBBox(sources[i].poly);
+    sBox[4 * k] = b.x0;
+    sBox[4 * k + 1] = b.y0;
+    sBox[4 * k + 2] = b.x1;
+    sBox[4 * k + 3] = b.y1;
+  });
+  const hasRegionMax = regionMax.length > 0;
+  const prune = sG.every((g) => g >= 0); // the bounds below assume non-negative grading
+  // Uniform grid of candidate sources: in each cell, a source whose lower bound (h0 + g * distance from the cell to
+  // its bounding box) exceeds the cell's upper bound of the minimum (min over sources of h0 + g * (distance from the
+  // cell centre + half diagonal), and maxEdge) can never be the minimum anywhere in the cell and is dropped.
+  const GN = prune && nSrc > 2 ? 48 : 0;
+  const gdx = (rect.x1 - rect.x0) / (GN || 1),
+    gdy = (rect.y1 - rect.y0) / (GN || 1);
+  const cells = new Array(GN * GN).fill(null); // candidate lists, built on first use of a cell
+  const half = 0.5 * Math.hypot(gdx, gdy);
+  const cellList = (ci, cj) => {
+    const x0 = rect.x0 + ci * gdx,
+      y0 = rect.y0 + cj * gdy,
+      x1 = x0 + gdx,
+      y1 = y0 + gdy;
+    const cx = 0.5 * (x0 + x1),
+      cy = 0.5 * (y0 + y1);
+    let hub = maxEdge;
+    for (let k = 0; k < nSrc; k++) {
+      const u = sH0[k] + sG[k] * (distPointPolygon(cx, cy, sPoly[k], sFilled[k]) + half);
+      if (u < hub) hub = u;
+    }
+    const keep = [];
+    for (let k = 0; k < nSrc; k++) {
+      const bx = Math.max(sBox[4 * k] - x1, 0, x0 - sBox[4 * k + 2]),
+        by = Math.max(sBox[4 * k + 1] - y1, 0, y0 - sBox[4 * k + 3]);
+      if (sH0[k] + sG[k] * Math.sqrt(bx * bx + by * by) <= hub * (1 + 1e-9)) keep.push(k);
+    }
+    return Int32Array.from(keep);
+  };
+  const allSrc = Int32Array.from({ length: nSrc }, (_, k) => k);
+  const sizeAt = (x, y, cls = null) => {
+    nSizeAt++;
     let h = maxEdge;
-    const c = classify(x, y);
-    const rm = regionMax[c.region];
-    if (rm !== undefined && rm < h) h = rm;
-    for (const s of sources) {
-      const d = distPointPolygon(x, y, s.poly, s.filled);
-      const hh = s.h0 + (s.grade ?? grade) * d;
+    if (hasRegionMax) {
+      if (!cls) nClassify++;
+      const c = cls ?? classify(x, y);
+      const rm = regionMax[c.region];
+      if (rm !== undefined && rm < h) h = rm;
+    }
+    let list = allSrc,
+      q0 = 0,
+      q1 = nSrc;
+    if (GN) {
+      const ci = Math.floor((x - rect.x0) / gdx),
+        cj = Math.floor((y - rect.y0) / gdy);
+      if (ci >= 0 && cj >= 0 && ci < GN && cj < GN && x >= rect.x0 + ci * gdx && x <= rect.x0 + (ci + 1) * gdx && y >= rect.y0 + cj * gdy && y <= rect.y0 + (cj + 1) * gdy) {
+        const c = cj * GN + ci;
+        list = cells[c] ?? (cells[c] = cellList(ci, cj));
+        q1 = list.length;
+      }
+    }
+    for (let q = q0; q < q1; q++) {
+      const k = list[q];
+      const h0 = sH0[k];
+      if (prune) {
+        if (h0 >= h) break; // sorted by h0 and d >= 0: no later source can win
+        const bx = Math.max(sBox[4 * k] - x, 0, x - sBox[4 * k + 2]),
+          by = Math.max(sBox[4 * k + 1] - y, 0, y - sBox[4 * k + 3]);
+        if (h0 + sG[k] * Math.sqrt(bx * bx + by * by) > h * (1 + 1e-9)) continue;
+      }
+      const hh = h0 + sG[k] * distPointPolygon(x, y, sPoly[k], sFilled[k]);
       if (hh < h) h = hh;
     }
     return h;
@@ -447,7 +556,7 @@ export function meshDomain(spec) {
     retries.set(ser, n);
     if (n <= 3) bad.push(0.5, t, ser);
   };
-  const frozen = (x, y) => classify(x, y).electrode >= 0;
+
 
   const evalTri = (t) => {
     if (!T.alive[t]) return;
@@ -456,7 +565,9 @@ export function meshDomain(spec) {
       c = T.tv[3 * t + 2];
     const cx = (T.px[a] + T.px[b] + T.px[c]) / 3,
       cy = (T.py[a] + T.py[b] + T.py[c]) / 3;
-    if (frozen(cx, cy)) return;
+    nClassify++;
+    const cls = classify(cx, cy);
+    if (cls.electrode >= 0) return; // frozen (inside a conductor)
     const lab = Math.hypot(T.px[a] - T.px[b], T.py[a] - T.py[b]),
       lbc = Math.hypot(T.px[b] - T.px[c], T.py[b] - T.py[c]),
       lca = Math.hypot(T.px[c] - T.px[a], T.py[c] - T.py[a]);
@@ -465,7 +576,7 @@ export function meshDomain(spec) {
     if (lmax < 2 * minEdge) return;
     const cc = T.circum(t);
     const ratio = cc.r / lmin;
-    const h = sizeAt(cx, cy);
+    const h = sizeAt(cx, cy, cls);
     const sz = lmax / h;
     let pri = 0;
     if (sz > 1) pri = Math.max(pri, 10 + sz);
@@ -478,10 +589,17 @@ export function meshDomain(spec) {
       // new triangle (v,a,b): edge (a,b) opposite v could be an encroached subsegment
       const a = T.tv[3 * t + 1],
         b = T.tv[3 * t + 2];
+      if (!maybeSeg(a, b)) continue;
       const k = ekey(a, b);
       if (seg.has(k) && encroaches(a, b, T.px[v], T.py[v])) enqueueSeg(a, b);
     }
     for (const t of created) evalTri(t);
+  };
+
+  /** Edge i of cavity triangle tr is interior to the current cavity (both adjacent triangles will be removed). */
+  const interiorToCavity = (tr, i) => {
+    const n = T.tn[3 * tr + i];
+    return n >= 0 && T.stampIn[n] === T.stamp;
   };
 
   const splitSeg = (a, b) => {
@@ -514,10 +632,11 @@ export function meshDomain(spec) {
       for (let i = 0; i < 3; i++) {
         const ea = T.tv[3 * tr + ((i + 1) % 3)],
           eb = T.tv[3 * tr + ((i + 2) % 3)];
+        if (!maybeSeg(ea, eb)) continue;
         const ek = ekey(ea, eb);
         if (ek === k || seenE.has(ek)) continue;
         seenE.add(ek);
-        if (seg.has(ek) && encroaches(ea, eb, x, y)) enqueueSeg(ea, eb);
+        if (seg.has(ek) && (encroaches(ea, eb, x, y) || interiorToCavity(tr, i))) enqueueSeg(ea, eb);
       }
     const v = T.addVertex(x, y);
     const created = T.commit(v, cav, bnd);
@@ -525,6 +644,7 @@ export function meshDomain(spec) {
     segQueued.delete(k);
     seg.set(ekey(a, v), { a, b: v, mask: s.mask, elec: s.elec });
     seg.set(ekey(v, b), { a: v, b, mask: s.mask, elec: s.elec });
+    flagSegVert(v);
     vertDegree.set(v, 2);
     // new subsegments may be non-Gabriel / not DT edges
     for (const [p, q] of [
@@ -557,12 +677,15 @@ export function meshDomain(spec) {
     }
   };
   processSegs();
+  const tSegs = performance.now();
 
   // classify all initial triangles
   for (let t = 0; t < T.nt; t++) if (T.alive[t]) evalTri(t);
 
   let nInsert = 0;
   let guard = 0;
+  let nRepair = 0;
+  for (;;) {
   while (bad.size) {
     if (T.nv > maxVertices) throw new Error('mesh: vertex budget exceeded (check hints / small input angles)');
     if (++guard > 5e7) throw new Error('mesh: iteration guard');
@@ -594,10 +717,14 @@ export function meshDomain(spec) {
       for (let i = 0; i < 3; i++) {
         const a = T.tv[3 * tr + ((i + 1) % 3)],
           b = T.tv[3 * tr + ((i + 2) % 3)];
+        if (!maybeSeg(a, b)) continue;
         const k = ekey(a, b);
         if (seen.has(k)) continue;
         seen.add(k);
-        if (seg.has(k) && encroaches(a, b, cc.x, cc.y)) {
+        // A subsegment is lost if it is encroached or if it is an interior edge of the cavity: the latter happens for
+        // points on (or, by round-off, just inside) the diametral circle, where the tolerant encroachment test and
+        // the exact incircle test disagree (DevLog-024 R2.1). Either way the segment is split instead.
+        if (seg.has(k) && (encroaches(a, b, cc.x, cc.y) || interiorToCavity(tr, i))) {
           enqueueSeg(a, b, true);
           enc = true;
         }
@@ -618,7 +745,21 @@ export function meshDomain(spec) {
     afterInsert(v, created);
     processSegs();
   }
+    // Conformity check: every subsegment must be an edge of the triangulation. A missing one is split (which also
+    // re-queues the triangles around it) and refinement resumes. Defect-free runs pass this once and are unchanged.
+    let missing = 0;
+    for (const s of [...seg.values()]) {
+      if (T.findEdge(s.a, s.b) || T.findEdge(s.b, s.a)) continue;
+      enqueueSeg(s.a, s.b, true);
+      missing++;
+    }
+    if (!missing) break;
+    nRepair += missing;
+    if (nRepair > 1e5) throw new Error('mesh: interface segments could not be recovered (conformity repair limit)');
+    processSegs();
+  }
 
+  const tRefine = performance.now();
   // ---- extract mesh ----
   const triList = [];
   const triRegion = [];
@@ -636,7 +777,29 @@ export function meshDomain(spec) {
     triElec.push(cl.electrode);
   }
 
-  return { T, seg, triList, triRegion, triElec, stats: { nSegSplits, nInsert, ms: performance.now() - t0 } };
+  const tEnd = performance.now();
+  nClassify += triList.length;
+  return {
+    T,
+    seg,
+    triList,
+    triRegion,
+    triElec,
+    stats: {
+      nSegSplits,
+      nInsert,
+      nRepair,
+      ms: tEnd - t0,
+      pslg_ms: tPslg - t0,
+      insert_ms: tInsert - tPslg,
+      segments_ms: tSegs - tInsert,
+      refine_ms: tRefine - tSegs,
+      classify_ms: tEnd - tRefine,
+      nSizeAt,
+      nClassify,
+      nSources: sources.length,
+    },
+  };
 }
 
 /**
@@ -645,6 +808,7 @@ export function meshDomain(spec) {
  *  nodeElectrode:Int16Array, edges:{a:number,b:number,tri:number,electrode:number}[], domainEdges:number[]}}
  */
 export function extractMesh(raw, { keepConductors = false } = {}) {
+  const tStart = performance.now();
   const { T, seg, triList, triRegion, triElec } = raw;
   const used = new Int32Array(T.nv).fill(-1);
   const tris = [];
@@ -692,7 +856,7 @@ export function extractMesh(raw, { keepConductors = false } = {}) {
     electrodeEdges: edgeInfo,
     nNodes: nn,
     nTris: tris.length,
-    stats: raw.stats,
+    stats: { ...raw.stats, extract_ms: performance.now() - tStart },
   };
 }
 
