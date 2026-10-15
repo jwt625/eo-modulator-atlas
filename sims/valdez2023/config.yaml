@@ -12,13 +12,14 @@ title: 'Valdez 2023, CN1: 1.0 cm C-band hybrid Si/LN MZM (275 nm Si), slot slow-
 repro_grade: B
 validation_status: unvalidated
 chain: [electrostatics, optical_mode, eo_overlap, rf_line, loaded_line, eo_response]
-optics: {wavelength_nm: 1550, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null, eo_axis: auto}
+optics: {wavelength_nm: 1550, polarization: TE, mode_index: 0, group_index_from: perturbation, ng_fixed: null, eo_axis: auto}
 materials:
   lithium_niobate:
+    library: lithium_niobate_congruent   # RF eps_r and Pockels coefficients (clamped) from the engine library; config keys override
     crystal: {cut: x, propagation: y}
     r_pm_per_v: {r33: 30.8}
-  silicon_dioxide: {}
-  silicon: {}
+  silicon_dioxide: {library: silicon_dioxide}
+  silicon: {library: silicon}
   gold: {conductor: true, n_complex: null}
   air: {n: 1.0, eps_r: 1.0}
 geometry:
@@ -184,9 +185,12 @@ targets:
   source: {device_id: valdez2023-cn1, field: bw3db_ghz}
 reported_curves: []
 provenance:
+  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r: Zhu et al. 2021 Table 1, clamped; r: Veithen et al. arXiv:cond-mat/0311240 Table I, clamped, citing Rauber 1978)", note: "the paper states no LN RF permittivity and only r33; library values added 2026-10-14 (DevLog-026) so the config parses: eps_r 44 / 27.9 and r13 8.6, r22 3.4, r51 28 (clamped) come from the library; r33 stays the paper value (listed 2026-10-15, round-6 audit G4)"}
+  materials.silicon_dioxide.library: {class: standard_reference, citation: "engine/data/materials.json library silicon_dioxide (eps_r 3.9: Zhu et al. 2021 Table 1; optical: Malitson 1965)"}
+  materials.silicon.library: {class: standard_reference, citation: "engine/data/materials.json library silicon (eps_r 11.7: Zhu et al. 2021 Table 1)"}
   optics.wavelength_nm: {class: project_inference, locator: p.4, note: nominal C-band 1550 nm; actual laser wavelength at quadrature not stated}
   optics.polarization: {class: paper_exact, locator: 'p.10 Eq. (2) (TE0, r33)'}
-  optics.group_index_from: {class: project_inference, note: paper simulates ng = 2.31 for CN (p.4); engine derives it}
+  optics.group_index_from: {class: project_inference, note: "paper simulates ng = 2.31 for CN (p.4); engine derives it; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: project_inference, locator: p.10 Eq. (2) (r33 along crystal z); p.15 mentions x-cut LN modulators generally, note: cut not stated for these devices; x-cut inferred from the earlier valdez2022 paper (p.5) and
       the r33/TE reading}
   materials.lithium_niobate.r_pm_per_v.r33: {class: paper_exact, locator: p.10 Sec. 3.3 (r33 = 30.8 pm/V)}
@@ -212,6 +216,6 @@ provenance:
 missing: ['lithium_niobate n_o, n_e (1550 nm), RF permittivity and the other Pockels coefficients (r13, r51, r22)', 'silicon_dioxide refractive index and RF permittivity; silicon refractive index, RF permittivity and handle resistivity', gold conductivity,
   'BOX thickness (hBOX in Fig. 1(b), no value; 3 um used from valdez2022)', signal electrode width and ground widths (not stated), waveguide lateral position in the gap, sidewall/edge profile of the slot recesses; unit-cell geometry is read from schematics,
   exact laser wavelength at the Vpi and bandwidth measurements, temperature]
-limitations: [scalar_optical_not_full_vector, quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, Config is not runnable until material constants are supplied from verified sources and the BOX thickness is confirmed, 'Only
+limitations: [quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, Config is not runnable until material constants are supplied from verified sources and the BOX thickness is confirmed, 'Only
     the CN1 design is configured; CW, OW and ON differ in Si width (300/250/225 nm), gap (7/6/8 um) and loading (T-rail t = 10/5 um or slot) and need separate configs', Slot loading is represented with the periodic_t_rail two-section form (see SPEC_PROPOSALS),
   The 3 dB bandwidth target is a bar-chart reading of a noisy trace that does not cleanly cross -3 dB; use with the stated tolerance only, 'Measured RF index, loss and Z0 curves (Fig. 4) were not digitized']

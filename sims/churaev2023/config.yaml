@@ -19,7 +19,7 @@ optics:
   wavelength_nm: 1550              # NOT stated for the Vpi measurement; paper quotes the 12 percent design participation at 1550 nm (p.3). See provenance.
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -68,7 +68,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: project_inference, locator: "not stated for Vpi; p.3 (participation quoted at 1550 nm)", note: "C-band 1550 nm assumed"}
   optics.polarization: {class: project_inference, note: "TE assumed; LN participation and r33 coupling imply the TE mode with x-cut LN; paper does not name the polarization for the EO measurement"}
-  optics.group_index_from: {class: project_inference, note: "no group index reported for these devices; engine finite difference"}
+  optics.group_index_from: {class: project_inference, note: "no group index reported for these devices; engine finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.7 Methods (x-cut LNOI, NanoLN)", note: "propagation along crystal y is project_inference (not stated)"}
   geometry.regions.ln_film: {class: paper_exact, locator: "p.7 Methods, Waveguide geometry (300 nm LN)", note: "unetched in the modulation section; slab etched below 50 nm only at the chip edges and tapers (p.7)"}
   geometry.regions.sin_core: {class: figure_digitized, locator: "p.7 Methods (600 nm Si3N4); p.2 Fig. 1i", note: "thickness 600 nm from text; width 1.5 um digitized from the Fig. 1i FEM drawing by anchoring on the stated 6 um gap (98 px against 385 px, about 64 px/um); text only gives the range 1.0-2.0 um. CONFLICT: the drawing's own 1 um scale bar gives a 4.0 um gap, a 1.0 um strip and about 0.4 um strip height, so the drawing contradicts the stated 6 um gap and 600 nm thickness; the strip width could be 1.0-1.5 um"}
@@ -97,7 +97,6 @@ missing:
   - "RF line behaviour (no S21, Z0 or n_RF reported; electrode type lumped vs traveling-wave not stated)"
   - "Supplementary Information section IV (loss and VpiL trade-off simulations) not in the cache"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

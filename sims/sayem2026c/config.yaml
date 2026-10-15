@@ -18,7 +18,7 @@ optics:
   wavelength_nm: 1071
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -72,7 +72,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.2 Sec. Device geometry (all Fig. 1 measurements at 1071 nm)"}
   optics.polarization: {class: project_inference, note: "TE assumed for lateral-field GSG electrodes; polarization is not stated"}
-  optics.group_index_from: {class: project_inference, note: "paper shows a simulated group index near 2.25 (Fig. 3(c)); engine finite difference"}
+  optics.group_index_from: {class: project_inference, note: "paper shows a simulated group index near 2.25 (Fig. 3(c)); engine finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_tantalate.crystal: {class: project_inference, note: "crystal cut and propagation direction are not stated in the paper; x-cut with y propagation assumed from the lateral-field TE geometry"}
   geometry.regions.lt_slab: {class: figure_digitized, locator: "p.2 Fig. 1(b) caption (td about 240 nm)", note: "td is labelled on the slab in the schematic; interpreted as slab thickness; the sketch is not to scale"}
   geometry.regions.lt_rib_r: {class: project_inference, locator: "p.2 Fig. 1(b) caption (tf = 600 nm film, w_MZI = 1.6 um)", note: "rib height 0.36 um = 600 - 240 nm (my subtraction); width 1.6 um read as the top width; vertical sidewalls assumed; sidewall angle not stated"}
@@ -103,7 +103,6 @@ missing:
   - "ground electrode width (100 um assumed) and rib lateral position in the gap (centred assumed)"
   - "polarization of the measurement (TE assumed)"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

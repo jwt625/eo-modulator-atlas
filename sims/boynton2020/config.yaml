@@ -18,17 +18,21 @@ optics:
   wavelength_nm: 1551.64
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-1.9, 1.9], y_um: [-1, 1]}   # = optical_window (sinx_core_r)
+      B: {x_um: [-11.9, -8.1], y_um: [-1, 1]}   # mirror of A onto sinx_core_l (x = -10 um)
 
 materials:
   lithium_niobate:
+    library: lithium_niobate_congruent   # optical (Zelmon), eps_r 44/27.9 and r13/r22/r51 clamped from the engine library (was SPEC placeholders)
     crystal: {cut: x, propagation: y}
-    n_o: 2.211
-    n_e: 2.138
-    eps_r: {perp: 43.0, par: 28.0}
-    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 31.0, r51: 28.0}
+    r_pm_per_v: {r33: 31.0}              # paper value (p.7) overrides the library r33 (30.8)
   silicon_nitride_top: {n: 1.91, eps_r: 7.0}
   silicon_dioxide: {n: 1.444, eps_r: 3.9}
   silicon: {n: 3.476, eps_r: 11.7}
@@ -55,6 +59,8 @@ geometry:
 line:
   length_mm: 5
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -65,24 +71,25 @@ alt_geometries: {}
 
 targets:
   # Measured (devices.csv row boynton2020-a)
-  - {metric: vpi_l_dc_vcm, value: 6.67, tol_rel: 0.15, source: {device_id: boynton2020-a, field: vpil_dc_vcm, note: "push-pull MZM; LN tensor and SiN RF permittivity are UNVERIFIED placeholders; the paper itself predicts 4.88 V cm"}}
+  - {metric: vpi_l_dc_vcm, value: 6.67, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: boynton2020-a, field: vpil_dc_vcm, drive_frequency_hz: 50000, drive_locator: "p.11 (50 kHz sawtooth)", note: "push-pull MZM; SiN RF permittivity is an UNVERIFIED placeholder; LN constants from the engine library"}}
   - {metric: bw3db_ghz, value: 30.55, tol_rel: 0.15, source: {device_id: boynton2020-a, field: bw3db_ghz}}
   - {metric: z0_ohm, value: 50, tol_abs: 5.0, source: {device_id: boynton2020-a, field: z0_ohm, basis: design_target}}
   # Authors' own simulations (basis simulated), cross-solver references
-  - {metric: vpi_l_dc_vcm, value: 4.88, tol_rel: 0.10, source: {paper_id: boynton2020, locator: "p.7 Sec. 2, Eq. (1)", basis: simulated, note: "123 nm SiO2 above the SiNx, overlap 19.03 percent"}}
+  - {metric: vpi_l_dc_vcm, value: 4.88, tol_rel: 0.10, vpi_convention: mzm_push_pull, source: {paper_id: boynton2020, locator: "p.7 Sec. 2, Eq. (1)", basis: simulated, comparable: false, note: "123 nm SiO2 above the SiNx, overlap 19.03 percent; not compared (2026-10-15, DevLog-029): Eq. (1) with the paper's stated inputs gives 3.87 V cm, not 4.88, and uses n_e = 2.21 (an ordinary-index value), so the quoted value cannot be reproduced from the paper's own formula"}}
   - {metric: ng_opt, value: 2.051, tol_abs: 0.1, source: {device_id: boynton2020-a, field: ng_opt, basis: simulated}}
   - {metric: n_eff, value: 1.757, tol_abs: 0.03, source: {paper_id: boynton2020, locator: "p.7 Sec. 2", basis: simulated, note: "simulated effective index at 1550 nm"}}
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on sinx_core_r, B mirrored onto sinx_core_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: "p.11 Sec. 3 (bias wavelength 1551.64 nm)"}
   optics.polarization: {class: paper_exact, locator: "p.7 Sec. 2 (TE direction, r33)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes a simulated ng of 2.051; engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes a simulated ng of 2.051; engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.5 Sec. 2 (x-cut TFLN)", note: "propagation along y is a project_inference from TE with r33 on x-cut (p.7)"}
-  materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED SPEC.md placeholder; the paper quotes n_e = 2.21 at 1550 nm (p.7) which is not used"}
-  materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED SPEC.md placeholder; see n_o"}
-  materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED SPEC.md placeholder 43/28; the paper states no RF permittivity of LN"}
-  materials.lithium_niobate.r_pm_per_v: {class: unknown, locator: "p.7 Sec. 2 (r33 = 31 pm/V)", note: "r33 = 31 stated; r13, r22, r51 are UNVERIFIED SPEC.md placeholders"}
+  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (optical: Zelmon et al. 1997; eps_r: Zhu et al. 2021 Table 1, clamped; r13/r22/r51: Veithen et al. Table I, clamped)", note: "replaced the SPEC.md placeholders n 2.211/2.138, eps 43/28, r 8.6/3.4/28 on 2026-10-15 (DevLog-029 proposal 6); the paper quotes n_e = 2.21 at 1550 nm (p.7), an ordinary-index value, not used"}
+  materials.lithium_niobate.r_pm_per_v: {class: paper_exact, locator: "p.7 Sec. 2 (r33 = 31 pm/V)", note: "r33 = 31 stated; r13, r22, r51 from the library"}
   materials.silicon_nitride_top.n: {class: paper_exact, locator: "p.4 Sec. 2 (n = 1.91 at 1546 nm)"}
   materials.silicon_nitride_top.eps_r: {class: unknown, note: "UNVERIFIED placeholder 7.0; the paper states no RF permittivity of SiNx"}
   materials.silicon_dioxide: {class: unknown, note: "UNVERIFIED placeholder n = 1.444, eps_r = 3.9; the paper states neither"}
@@ -117,10 +124,13 @@ missing:
   - temperature
   - optical input power at the chip
 limitations:
-  - scalar_optical_not_full_vector
+  - "Transition tapers: two 250 um vertical tapers plus a 100 um top-layer taper per end (p.4), drawn inside the 5 mm bonded region (Fig. 4(b)); the full-overlap length is shorter than 5 mm (DevLog-029 estimate 4.3-5.0 mm)"
+  - "Bottom Si-rich SiNx layer (n 2.11 at 1546 nm, p.4; Fig. 4(a)) is not under the core in the model; if it were present under the core VpiL rises about 26 % (DevLog-029 run, not supported by the text)"
+  - "Vpi measured at 50 kHz (p.11) is compared with clamped Pockels constants; result.targets[].lowFrequencyRange gives the r33-scaled unclamped estimate"
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
   - "The hybrid fundamental mode competes with the TFLN slab mode; the paper stresses this design constraint (p.10). The scalar solver on a cropped window may select a slab-like mode"
   - "Vertical SiNx transitions, bottom routing layer, MMIs and the TFLN edge are not modelled; the measured bandwidth includes group-index variation along the length that a single cross-section cannot reproduce"
   - "Ti/TiN/Al stack lumped into one conductor; high-resistivity Si substrate loss and the interface sheet charge cited on p.11 are not representable"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

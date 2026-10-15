@@ -16,9 +16,15 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-2.4, 2.4], y_um: [-1.5, 1.5]}   # = optical_window (ln_rib_r)
+      B: {x_um: [-47.4, -42.6], y_um: [-1.5, 1.5]}   # mirror of A onto ln_rib_l (x = -45 um)
 
 materials:
   lithium_niobate:
@@ -52,6 +58,8 @@ geometry:
 line:
   length_mm: 12
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 38
@@ -61,14 +69,17 @@ sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
 alt_geometries: {}
 
 targets:
-  - {metric: vpi_l_dc_vcm, value: 2.6, tol_rel: 0.15, source: {device_id: wang2022a-a, field: vpil_dc_vcm, comparable: false, note: "NON-COMPARABLE until LN constants, rib width definition and the cladding stack are known"}}
+  - {metric: vpi_l_dc_vcm, value: 2.6, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: wang2022a-a, field: vpil_dc_vcm, comparable: false, note: "NON-COMPARABLE until LN constants, rib width definition and the cladding stack are known"}}
   - {metric: eo_rolloff_db, at_ghz: 67, value: -5, tol_abs: 1.0, source: {device_id: wang2022a-a, field: eo_rolloff_db, comparable: false, note: "includes RF probe effects; reference frequency not stated"}}
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on ln_rib_r, B mirrored onto ln_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: project_inference, locator: "p.3 Sec. 2 (polarization ER measured at 1550 nm)", note: "1550 nm assumed for the Vpi sweep; its wavelength is not stated"}
   optics.polarization: {class: paper_exact, locator: "p.3 Sec. 2 (polarization-maintaining fibre ensures TE coupling)"}
-  optics.group_index_from: {class: project_inference, note: "no group index is quoted; engine derives it"}
+  optics.group_index_from: {class: project_inference, note: "no group index is quoted; engine derives it; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 Sec. 2 (X-cut)", note: "x-cut stated; propagation along y is a project_inference from the standard x-cut convention"}
   materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
   materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
@@ -106,7 +117,6 @@ missing:
   - "RF characteristic impedance and effective index (not reported)"
   - "temperature"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
@@ -114,3 +124,4 @@ limitations:
   - "Cladding modelled as a flat layer to electrode top + 2 um (reference surface not stated)"
   - "The stated 38 ohm termination is entered as load_ohm; the 50 ohm source impedance is assumed (project_inference)"
   - "S21 in Fig. 3(c) includes RF probes; target is non-comparable"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

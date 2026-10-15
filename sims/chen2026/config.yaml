@@ -15,9 +15,15 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-2.9, 2.9], y_um: [-1.5, 1.5]}   # = optical_window (lt_rib_r)
+      B: {x_um: [-38.9, -33.1], y_um: [-1.5, 1.5]}   # mirror of A onto lt_rib_l (x = -36 um)
 
 materials:
   lithium_tantalate:
@@ -50,6 +56,8 @@ geometry:
 line:
   length_mm: 7.5
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -60,15 +68,18 @@ alt_geometries: {}
 
 targets:
   # Measured, 7.5 mm device (devices.csv row chen2026-a)
-  - {metric: vpi_l_dc_vcm, value: 2.4, tol_rel: 0.15, source: {device_id: chen2026-a, field: vpil_dc_vcm}}
+  - {metric: vpi_l_dc_vcm, value: 2.4, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: chen2026-a, field: vpil_dc_vcm}}
   - {metric: n_rf, at_ghz: 47, value: 2.2, tol_abs: 0.1, source: {device_id: chen2026-a, field: n_rf}}
   # Not targets: the 3 dB bandwidth claim (exceeds 67 GHz) is contradicted by the measured trace and not entered; Z0 has no single value (ripples above 45 GHz); RF loss entries are inconsistent in the paper
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on lt_rib_r, B mirrored onto lt_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: "p.3 (simulation at 1550 nm); p.5 (input light at 1550 nm)"}
   optics.polarization: {class: paper_exact, locator: "p.5 Sec. 3 (TE polarization, r33)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.2 without a source (p.5); engine derives it by finite difference"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.2 without a source (p.5); engine derives it by finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_tantalate.crystal: {class: paper_exact, locator: "p.2 (x-cut LTOI); p.5 (light propagates along y)"}
   materials.lithium_tantalate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.119; paper states no LT indices"}
   materials.lithium_tantalate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.123"}
@@ -106,9 +117,9 @@ missing:
   - gold film conductivity (4.1e7 S/m is an UNVERIFIED placeholder)
   - termination impedance; temperature
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
   - "The wide probing region (about 10 percent of the length), tapers and the 1 um to 2.2 um waveguide tapers near the MMIs are not modelled"
   - "Lossless silicon substrate (resistivity not stated)"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

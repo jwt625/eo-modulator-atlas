@@ -16,9 +16,15 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-2.9, 2.9], y_um: [-1.5, 2]}   # = optical_window (ln_rib_r)
+      B: {x_um: [-33.9, -28.1], y_um: [-1.5, 2]}   # mirror of A onto ln_rib_l (x = -31 um)
 
 materials:
   lithium_niobate:
@@ -52,6 +58,8 @@ geometry:                          # uniform cross-section (plain CPW, no loadin
 line:
   length_mm: 9
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 38
@@ -68,8 +76,8 @@ alt_geometries: {}
 
 targets:
   # Measured, 1550 nm row li2026aa-d (VpiL is the authors' Vpi x 9 mm)
-  - {metric: vpi_l_dc_vcm, value: 2.61, tol_rel: 0.15, source: {device_id: li2026aa-d, field: vpil_dc_vcm}}
-  - {metric: vpi_dc_v, value: 2.90, tol_rel: 0.15, source: {device_id: li2026aa-d, field: vpi_dc_v}}
+  - {metric: vpi_l_dc_vcm, value: 2.61, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: li2026aa-d, field: vpil_dc_vcm}}
+  - {metric: vpi_dc_v, value: 2.90, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: li2026aa-d, field: vpi_dc_v}}
   # Authors' own FDE/FEM design values (Fig. 2(g)); cross-solver references, not measurements
   - {metric: z0_ohm, value: 42, tol_abs: 3.0, source: {device_id: li2026aa-d, field: z0_ohm}}
   - {metric: n_rf, value: 2.13, tol_abs: 0.1, source: {device_id: li2026aa-d, field: n_rf, note: "paper value is the plateau at 50 GHz (Fig. 2(g)); static section value compared"}}
@@ -78,9 +86,12 @@ targets:
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on ln_rib_r, B mirrored onto ln_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: "p.5 Fig. 3(b) (1550 nm panel; Vpi 2.90 V)"}
   optics.polarization: {class: paper_exact, locator: "p.2 (TE mode of the SiON/LN structures); p.5 (TE coupling losses)", note: "TE stated for the edge coupler; modulation-region polarization taken as TE for x-cut with propagation along y"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.13 at 1550 nm (Fig. 2(g), simulated); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.13 at 1550 nm (Fig. 2(g), simulated); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 (x-cut TFLN); propagation along y is a project_inference from the standard x-cut convention"}
   materials.lithium_niobate.n_o: {class: standard_reference, citation: "Zelmon, Small, Jundt, J. Opt. Soc. Am. B 14, 3319 (1997)", note: "value taken from SPEC.md example; not verified against the source here; paper states no LN indices"}
   materials.lithium_niobate.n_e: {class: standard_reference, citation: "Zelmon, Small, Jundt, J. Opt. Soc. Am. B 14, 3319 (1997)", note: "value taken from SPEC.md example; not verified against the source here"}
@@ -123,7 +134,6 @@ missing:
   - measured Z0, RF loss and RF index (only simulated design values are in the main text)
   - temperature (not stated)
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
@@ -132,3 +142,4 @@ limitations:
   - "Silicon is lossless in the model (conductivity unknown); substrate loss is absent"
   - "Ti heater layer, thermo-optic phase shifter, spot-size converters and splitters are outside the 2D cut"
   - "The paper's Z0 (42 ohm) and nRF (2.13) are its own simulation outputs; agreement shows only consistency of the two solvers on the inferred geometry"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

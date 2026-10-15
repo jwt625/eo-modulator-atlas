@@ -16,9 +16,15 @@ optics:
   wavelength_nm: 1579
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-2.4, 2.4], y_um: [-1.5, 1.5]}   # = optical_window (ln_rib_r)
+      B: {x_um: [-27.4, -22.6], y_um: [-1.5, 1.5]}   # mirror of A onto ln_rib_l (x = -25 um)
 
 materials:
   lithium_niobate:
@@ -27,10 +33,11 @@ materials:
     n_e: 2.138
     eps_r: {perp: 43.0, par: 28.0}
     r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
-  silicon_dioxide: {n: 1.444, eps_r: 3.9}
-  silicon: {n: 3.476, eps_r: 11.7}
+    tan_delta_rf: 0.008             # paper p.5 (cites its ref. [31])
+  silicon_dioxide: {n: 1.444, eps_r: 3.9, tan_delta_rf: 0.006}   # deposited SiO2, paper p.5 (ref. [32])
+  silicon: {n: 3.476, eps_r: 11.7, tan_delta_rf: 0.013}          # paper p.5 (ref. [30])
   copper: {conductor: true, sigma_Sm: 5.8e7, n_complex: null}
-  air: {n: 1.0, eps_r: 1.0}
+  air: {n: 1.0, eps_r: 1.0, tan_delta_rf: 0.0}   # air treated as lossless (assumption)
 
 geometry:
   symmetry: none
@@ -52,6 +59,8 @@ geometry:
 line:
   length_mm: 5.8
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: tan_delta_regions
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -70,9 +79,16 @@ targets:
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on ln_rib_r, B mirrored onto ln_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: paper_exact, locator: "p.5 Sec. 3.B (loss tangents 0.013 Si, 0.008 LN, 0.006 deposited SiO2, cited from refs. [30]-[32]; average 0.012 extracted for the line mode)", note: "per-region tan delta with energy participation (corrected 2026-10-15, audit A1: the round-1 note wrongly said no loss tangent was stated)"}
+  materials.lithium_niobate.tan_delta_rf: {class: paper_exact, locator: "p.5 Sec. 3.B (0.008 for LN, ref. [31])", note: "frequency of the cited value not stated"}
+  materials.silicon_dioxide.tan_delta_rf: {class: paper_exact, locator: "p.5 Sec. 3.B (0.006 for deposited SiO2, ref. [32])", note: "used for both the BOX and the cladding"}
+  materials.silicon.tan_delta_rf: {class: paper_exact, locator: "p.5 Sec. 3.B (0.013 for silicon, ref. [30])"}
+  materials.air.tan_delta_rf: {class: project_inference, note: "air treated as lossless"}
   optics.wavelength_nm: {class: figure_digitized, locator: "p.5 Fig. 4(a) inset", note: "carrier of the example OSA spectrum read at about 1579 nm (axis 1577-1582 nm; sidebands about 2 nm away, consistent with 250 GHz); the text states only the 1500-1630 nm tunable laser, L-band, and no wavelength per data point"}
   optics.polarization: {class: paper_exact, locator: "p.5 Sec. 3.C (TE mode excitation; p.3 TE modes with r33)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.26 (simulated, Fig. 2(a)); engine derives it and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.26 (simulated, Fig. 2(a)); engine derives it and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.4 Sec. 3.A (x-cut)", note: "x-cut stated; propagation along y is a project_inference from the standard x-cut convention"}
   materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
   materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
@@ -110,12 +126,11 @@ missing:
   - "temperature"
   - "silicon substrate resistivity"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
   - "PECVD cladding modelled as a flat layer to electrode top + 0.6 um; its RF permittivity (5.5 inferred by the authors) is not applied"
-  - "Silicon is lossless in the model; the dielectric loss tangent 0.012 the authors extract is not an input"
+  - "Dielectric loss uses the per-material tan delta values the paper quotes (p.5), fixed with frequency; the paper notes the measured loss above 200 GHz exceeds its own fixed-tan-delta model; the line-average 0.012 the authors extract is not an input"
   - "EO response above 100 GHz needs the dispersive RF line and probe launch, which this static 2D cut does not contain"
   - "The 30 nm gold cap on the copper is ignored"
   - "Vpi*L 2.3 V cm (DC) vs 2.67 V cm (1 GHz) quoted by the authors; the DC value is used as the target"

@@ -10,7 +10,7 @@ title: Pan 2021, 5 mm 1957 nm TFLN MZM on silicon (GSG traveling-wave electrode,
 repro_grade: A
 validation_status: unvalidated
 chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
-optics: {wavelength_nm: 1957, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null, eo_axis: auto}
+optics: {wavelength_nm: 1957, polarization: TE, mode_index: 0, group_index_from: perturbation, ng_fixed: null, eo_axis: auto, eo: {arm_drive: two_arm_field_resolved, terminal_drive: single_ended, arm_windows: {A: {x_um: [-3.1, 3.1], y_um: [-1.5, 1.5]}, B: {x_um: [-26.6, -20.4], y_um: [-1.5, 1.5]}}}}
 materials:
   lithium_niobate:
     crystal: {cut: x, propagation: y}
@@ -89,6 +89,8 @@ geometry:
 line:
   length_mm: 5
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -98,10 +100,12 @@ sweep: {f_start_ghz: 0.1, f_stop_ghz: 100, n_points: 200}
 alt_geometries: {}
 targets:
 - metric: vpi_l_dc_vcm
+  vpi_convention: mzm_push_pull
   value: 3.67
   tol_rel: 0.15
   source: {device_id: pan2021-a, field: vpil_dc_vcm, comparable: false, note: NON-COMPARABLE until LN constants at 1957 nm are verified; fabricated electrodes were wider than designed}
 - metric: vpi_l_dc_vcm
+  vpi_convention: mzm_push_pull
   value: 4.06
   tol_rel: 0.1
   source: {paper_id: pan2021, locator: 'p.3 Sec. 2; Fig. 2(c) (g = 6.5 um, h = 300 nm)', basis: simulated, note: paper's own simulation of the designed cross-section; cross-solver reference}
@@ -115,9 +119,12 @@ targets:
   source: {device_id: pan2021-a, field: z0_ohm, note: 'paper-simulated Re[Z0] plateau at 50 ohm (Fig. 4(a))'}
 reported_curves: []
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on ln_rib_r, B mirrored onto ln_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: p.6 Sec. 3 (1957 nm laser), note: design wavelength 1.95 um (p.2)}
   optics.polarization: {class: paper_exact, locator: p.2 Sec. 2 (TE0 mode of the x-cut waveguide)}
-  optics.group_index_from: {class: project_inference, note: paper quotes ng 2.276 (p.4 Fig. 4(c)); the engine derives it by finite difference}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng 2.276 (p.4 Fig. 4(c)); the engine derives it by finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: p.2 Sec. 2 (x-cut), note: propagation along y is a project_inference (light travels in the x-z plane per Fig. 1 axes)}
   materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example value perp 43, par 28); the paper states no RF permittivity of LN"}
   materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values r13 8.6, r22 3.4, r33 30.8, r51 28.0); the paper states no Pockels coefficients; the wavelength of the SPEC.md example set is not stated in any repo source; the device is at 1957 nm"}
@@ -142,4 +149,4 @@ provenance:
   geometry.mesh: {class: project_inference}
 missing: [LN ordinary and extraordinary indices at 1957 nm (left out; optical stage cannot run), SiO2 and Si optical indices at 1957 nm (left out), 'RF permittivity and Pockels coefficients of LN, SiO2 and Si, gold conductivity (all UNVERIFIED placeholders: the numeric values in materials are kept only so the electrostatic stage can run; none is read from a source in this repo)', electrode metal named only in the Fig. 1(b) legend (Au), waveguide position inside the 6.5 um gap (assumed centred), fabricated
     (as opposed to designed) electrode and rib dimensions, cladding (none drawn in Fig. 1(b); air assumed), temperature]
-limitations: [scalar_optical_not_full_vector, quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, 'Optical stage blocked: no LN indices at 1957 nm are given in the paper', Measured EO bandwidth (>22 GHz) is limited by the 18 GHz photodetector and is not a target, Sidewall angle reading (30 deg from the vertical) is an interpretation of Fig. 1(b); the text gives no reference]
+limitations: [quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, 'Optical stage blocked: no LN indices at 1957 nm are given in the paper', Measured EO bandwidth (>22 GHz) is limited by the 18 GHz photodetector and is not a target, Sidewall angle reading (30 deg from the vertical) is an interpretation of Fig. 1(b); the text gives no reference, 'dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only']

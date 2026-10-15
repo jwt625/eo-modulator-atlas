@@ -16,9 +16,15 @@ optics:
   wavelength_nm: 375
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-0.6, 0.6], y_um: [-1, 1]}   # = optical_window (lt_rib_r)
+      B: {x_um: [-66.1, -64.9], y_um: [-1, 1]}   # mirror of A onto lt_rib_l (x = -65.5 um)
 
 materials:
   lithium_tantalate:
@@ -48,6 +54,7 @@ geometry:
 line:
   length_mm: 0.2
   conductor_loss_model: none
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -60,8 +67,8 @@ alt_geometries: {}
 
 targets:
   # Measured, 200 um electrode (devices.csv row lin2026a-a); VpiL uses the push-pull MZM Vpi x one-arm electrode length
-  - {metric: vpi_l_dc_vcm, value: 0.085, tol_rel: 0.15, source: {device_id: lin2026a-a, field: vpil_dc_vcm}}
-  - {metric: vpi_dc_v, value: 4.2, tol_rel: 0.15, source: {device_id: lin2026a-a, field: vpi_dc_v}}
+  - {metric: vpi_l_dc_vcm, value: 0.085, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: lin2026a-a, field: vpil_dc_vcm}}
+  - {metric: vpi_dc_v, value: 4.2, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: lin2026a-a, field: vpi_dc_v}}
   # Extracted from the measured S-parameters of the 200 um lumped electrode; a static infinite-line cross-section is only an indicative comparison
   - {metric: z0_ohm, value: 23, tol_abs: 5.0, source: {device_id: lin2026a-a, field: z0_ohm}}
   - {metric: n_rf, value: 2.3, tol_abs: 0.2, source: {device_id: lin2026a-a, field: n_rf}}
@@ -71,9 +78,11 @@ targets:
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on lt_rib_r, B mirrored onto lt_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: "p.5 text; p.1 abstract"}
   optics.polarization: {class: paper_exact, locator: "p.6 text (TE mode, r33 along z)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes a calculated optical group index 2.8 (p.10, Fig. 5e); the engine derives it and compares it as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes a calculated optical group index 2.8 (p.10, Fig. 5e); the engine derives it and compares it as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_tantalate.crystal: {class: paper_exact, locator: "p.6 text; Fig. 2(e)", note: "x-cut film, propagation along y, TE along z"}
   materials.lithium_tantalate.r_pm_per_v.r33: {class: paper_exact, locator: "p.10 text", note: "r33 = 35 pm/V at 375 nm used in the authors simulation, citing Juvalta et al. 2006 (ref. 20)"}
   materials.lithium_tantalate.eps_r: {class: unknown, note: "UNVERIFIED: 41 / 43 are recalled values with no opened source; the paper does not state RF permittivity. Kept only so the config can be inspected, same convention as sims/lin2025 and sims/li2026ba; results depending on it must not be quoted as reproduction."}
@@ -104,7 +113,6 @@ missing:
   - Ti adhesion layer thickness; Ti/Au film conductivity
   - whether the electrodes sit on the slab or on a deeper etched surface (Fig. 2(d))
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
@@ -113,3 +121,4 @@ limitations:
   - "Optical stage needs LT n_o/n_e at 375 nm, which are not in the paper or the engine library (see sims/SPEC.md optical inputs); the config is electrostatics-ready only"
   - "Push-pull convention: the overlap integral must be evaluated on both arms with opposite fields; the SPEC leaves the push-pull factor open"
   - "Zero-field optical window boundary inside the 1.5 um gaps over-confines a 375 nm mode on a 420 nm waveguide"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

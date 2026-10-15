@@ -10,13 +10,14 @@ title: Meng 2023, 5 mm O-band LN MZM with ITO/Au composite electrode, one arm cr
 repro_grade: B
 validation_status: unvalidated
 chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
-optics: {wavelength_nm: 1310, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null, eo_axis: auto}
+optics: {wavelength_nm: 1310, polarization: TE, mode_index: 0, group_index_from: perturbation, ng_fixed: null, eo_axis: auto}
 materials:
   lithium_niobate:
+    library: lithium_niobate_congruent   # RF eps_r and Pockels coefficients (clamped) from the engine library; config keys override
     crystal: {cut: x, propagation: y}
     r_pm_per_v: {r33: 31}
-  silicon_dioxide: {}
-  silicon: {}
+  silicon_dioxide: {library: silicon_dioxide}
+  silicon: {library: silicon}
   ito: {conductor: true, sigma_Sm: 400, n: 1.5}
   gold: {conductor: true, n_complex: null}
   air: {n: 1.0, eps_r: 1.0}
@@ -114,9 +115,12 @@ targets:
   source: {device_id: meng2023-a, field: bw3db_ghz}
 reported_curves: []
 provenance:
+  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r: Zhu et al. 2021 Table 1, clamped; r: Veithen et al. arXiv:cond-mat/0311240 Table I, clamped, citing Rauber 1978)", note: "the paper states no LN RF permittivity and only r33; library values added 2026-10-14 (DevLog-026) so the config parses: eps_r 44 / 27.9 and r13 8.6, r22 3.4, r51 28 (clamped) come from the library; r33 stays the paper value (listed 2026-10-15, round-6 audit G4)"}
+  materials.silicon_dioxide.library: {class: standard_reference, citation: "engine/data/materials.json library silicon_dioxide (eps_r 3.9: Zhu et al. 2021 Table 1; optical: Malitson 1965)"}
+  materials.silicon.library: {class: standard_reference, citation: "engine/data/materials.json library silicon (eps_r 11.7: Zhu et al. 2021 Table 1)"}
   optics.wavelength_nm: {class: paper_exact, locator: p.9 (IL at 1310 nm); p.5 (ITO index at 1310 nm)}
   optics.polarization: {class: project_inference, locator: p.10 (TE0 launched into the grating coupler); p.3 Eq. (1) (gamma33)}
-  optics.group_index_from: {class: project_inference, note: paper simulates ng ~ 2.29 (Fig. 2(b)); engine derives it}
+  optics.group_index_from: {class: project_inference, note: "paper simulates ng ~ 2.29 (Fig. 2(b)); engine derives it; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: p.3 Sec. 2.1 (X-cut LN), note: propagation along y assumed (standard for x-cut TE/r33)}
   materials.lithium_niobate.r_pm_per_v.r33: {class: paper_exact, locator: p.2 Sec. 1 (about 31 pm/V), note: '"approximately 31 pm/V" stated in the introduction'}
   materials.ito.sigma_Sm: {class: paper_exact, locator: p.5 Sec. 2.2 (400 S/m assumed in simulation), note: measured film conductivity 477 S/m on p.8}
@@ -143,6 +147,6 @@ provenance:
 missing: ['lithium_niobate n_o, n_e at 1310 nm, RF permittivity (anisotropic) and the other Pockels coefficients', silicon_dioxide refractive index and RF permittivity; silicon properties, ITO RF permittivity; gold conductivity, BOX thickness and cladding
     thickness (Fig. 2(a) schematic has no scale), sidewall angle of the ridge and top/bottom width, signal and ground widths of Au; ITO extent under the Au (not stated), whether the 100 nm buffer also covers the ridge top, 'Z0, RF index and RF loss of
     the line (not reported)', temperature and optical input power]
-limitations: [scalar_optical_not_full_vector, quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, 'Config is not runnable until material constants, the BOX/cladding thicknesses and electrode widths are supplied from verified
+limitations: [quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, 'Config is not runnable until material constants, the BOX/cladding thicknesses and electrode widths are supplied from verified
     sources', ITO is modelled as a lossy conductor with the simulation conductivity; the engine does not yet treat finite-conductivity conductors in the quasi-static RF solve (see SPEC_PROPOSALS), 'One arm of the GSG push-pull MZM only; the eye-diagram
     comparison devices (meng2023-b,c) are not configured', The paper shows a CST-simulated S21 (Fig. 6) that is not stored]

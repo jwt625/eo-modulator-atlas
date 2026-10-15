@@ -15,9 +15,15 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-2.9, 2.9], y_um: [-1.5, 1.6]}   # = optical_window (lt_rib_r)
+      B: {x_um: [-27.9, -22.1], y_um: [-1.5, 1.6]}   # mirror of A onto lt_rib_l (x = -25 um)
 
 materials:
   lithium_tantalate:
@@ -51,6 +57,8 @@ geometry:
 line:
   length_mm: 6
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -61,16 +69,19 @@ alt_geometries: {}
 
 targets:
   # Measured, 6 mm device (devices.csv row wang2024a-a)
-  - {metric: vpi_l_dc_vcm, value: 2.8, tol_rel: 0.15, source: {device_id: wang2024a-a, field: vpil_dc_vcm, comparable: false, note: "author-stated from V_pi 4.8 V x 6 mm; NON-COMPARABLE until rib width definition, etch depth, cladding/electrode stack and LT constants are confirmed"}}
+  - {metric: vpi_l_dc_vcm, value: 2.8, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: wang2024a-a, field: vpil_dc_vcm, comparable: false, note: "author-stated from V_pi 4.8 V x 6 mm; NON-COMPARABLE until rib width definition, etch depth, cladding/electrode stack and LT constants are confirmed"}}
   - {metric: n_rf, value: 2.22, tol_abs: 0.10, source: {device_id: wang2024a-a, field: n_rf, comparable: false, note: "measured at 50 GHz on the SiO2-clad device; the static section solve is quasi-static"}}
   - {metric: ng_opt, value: 2.25, tol_abs: 0.05, source: {device_id: wang2024a-a, field: ng_opt, basis: simulated, note: "paper's own simulated group index"}}
   - {metric: bw3db_ghz, value: 110, tol_rel: 0.15, source: {device_id: wang2024a-a, field: bw3db_ghz, comparable: false, note: "authors' stated approximate 110 GHz, claimed crossing at the measurement limit; referenced to 10 MHz. Measured S21 first dips below -3 dB near 90 GHz (Fig. 2(c), approx. reading); 110 GHz matches the EE-derived simulated curve."}}
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on lt_rib_r, B mirrored onto lt_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: "p.3-4 Static V_pi characterization (light at 1550 nm)"}
   optics.polarization: {class: project_inference, note: "TE assumed for the x-cut film with propagation along y; the preprint does not name the polarization"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes simulated ng = 2.25 (Fig. 1(b)); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes simulated ng = 2.25 (Fig. 1(b)); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_tantalate.crystal: {class: project_inference, locator: "p.2 text (x-cut); Fig. 1(a) axes", note: "x-cut stated; propagation along crystal y read from the Fig. 1(a) axis labels, not stated in the text"}
   materials.lithium_tantalate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (p.15 of references/wang2024b/text.md), 1550 nm", note: "2.119; same authors' platform paper, not stated in wang2024a"}
   materials.lithium_tantalate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1, 1550 nm", note: "2.123"}
@@ -112,7 +123,6 @@ missing:
   - "which device (air- or SiO2-clad) the V_pi and EO bandwidth were measured on"
   - "temperature"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
@@ -121,3 +131,4 @@ limitations:
   - "Slab/rib split (300/300 nm) and 68 deg sidewall are inferences; the SEM inset conflicts with the stated 1.2 um width"
   - "Cladding modelled as a flat 1.4 um layer above the slab with the 0.8 um Ag embedded; the sketch shows a different stack"
   - "Measured n_rf is at 50 GHz; the static section solve returns the quasi-static value"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

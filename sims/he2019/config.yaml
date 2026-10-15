@@ -20,9 +20,15 @@ optics:
   wavelength_nm: 1550              # wavelength of the paper's own design simulation (Supp. I); EO measurement wavelength not stated
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [10, 16], y_um: [-1, 1.6]}   # = optical_window (ln_rib_r)
+      B: {x_um: [-16, -10], y_um: [-1, 1.6]}   # mirror of A onto ln_rib_l (x = -13 um)
 
 materials:
   lithium_niobate:
@@ -55,6 +61,7 @@ geometry:
 line:
   length_mm: 3
   conductor_loss_model: none        # gold conductivity not given; the paper's simulated alpha_m(f) is kept only as a target
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -71,8 +78,8 @@ alt_geometries: {}
 
 targets:
   # Measured, 3 mm device (devices.csv row he2019-a; Vpi and VpiL are MZM-level push-pull values from a 100 kHz sweep)
-  - {metric: vpi_l_dc_vcm, value: 2.2, tol_rel: 0.15, source: {device_id: he2019-a, field: vpil_dc_vcm}}
-  - {metric: vpi_dc_v, value: 7.4, tol_rel: 0.15, source: {device_id: he2019-a, field: vpi_dc_v}}
+  - {metric: vpi_l_dc_vcm, value: 2.2, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: he2019-a, field: vpil_dc_vcm}}
+  - {metric: vpi_dc_v, value: 7.4, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: he2019-a, field: vpi_dc_v}}
   # The paper's own simulations of the same structure (Supplementary Information); compare as cross-solver references, not as measurements
   - {metric: vpi_l_dc_vcm, value: 2.46, tol_rel: 0.10, source: {paper_id: he2019, locator: "p.16, Supp. II ('simulated Vpi.L = 2.46 V.cm')", basis: simulated}}
   - {metric: ng_opt, value: 2.21, tol_abs: 0.05, source: {device_id: he2019-a, field: ng_opt}}
@@ -83,9 +90,11 @@ targets:
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on ln_rib_r, B mirrored onto ln_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: "p.12, Supp. I (fundamental TE mode at 1550 nm in the design simulations)", note: "EO measurement wavelength is not stated; Fig. 2(b) spectra span 1530-1570 nm"}
   optics.polarization: {class: paper_exact, locator: "p.9, Methods (polarization controller to ensure TE input); p.12, Supp. I"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes n_o about 2.21 (Supp. II); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes n_o about 2.21 (Supp. II); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2, Results (x-cut LN membrane)", note: "propagation along crystal y is not stated; assumed (standard x-cut y-propagating TE/r33 geometry), project_inference"}
   materials.gold: {class: project_inference, locator: "p.3, Fig. 1(b) legend (Au)", note: "text says only 'metal'; conductivity not given and left out"}
   materials.air: {class: project_inference, note: "no top cladding is drawn in Fig. 1(b) and none is described; air as vacuum (n = 1, eps_r = 1 by definition)"}
@@ -130,7 +139,6 @@ missing:
   - electrode edge and sidewall profile (rectangular assumed)
   - EO roll-off (the 3 dB bandwidth was not crossed; > 70 GHz)
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
@@ -139,3 +147,4 @@ limitations:
   - "he2019-b (5 mm) has the same cross-section; no variants mechanism in SPEC, so length_mm 3 is the he2019-a value."
   - "Si taper tips under the LN, if present in the phase-shifter section, are not modelled and would perturb the optical mode."
   - "RF targets from Fig. S4 are the paper's own 3D/EM simulation of the experimental structure read from a figure (about +-0.02 on n_m, +-0.5 ohm on Z0, +-0.3 dB/cm on alpha_m); the quasi-static 2D solve has no frequency dependence."
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

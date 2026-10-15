@@ -17,7 +17,7 @@ optics:
   wavelength_nm: 1550              # paper_exact (p.5 testing paragraph)
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -104,7 +104,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.5 testing paragraph (TE polarized incident light at 1550 nm)"}
   optics.polarization: {class: paper_exact, locator: "p.5 testing paragraph (TE polarized incident light)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes ng about 2.25 (Fig. 4(e), p.4); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng about 2.25 (Fig. 4(e), p.4); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.4 fabrication paragraph (X-cut TFLN); propagation along y is a project_inference from the standard x-cut convention"}
   materials.lithium_niobate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.21; the paper states no LN indices"}
   materials.lithium_niobate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.14"}
@@ -155,7 +155,6 @@ missing:
   - characteristic impedance and RF loss coefficient of the fabricated electrodes (S21 and S11 plots only)
   - temperature; the Supplementary Material (not cached in the journal copy; the arXiv supplement is cached in references/liu2021/arxiv/)
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

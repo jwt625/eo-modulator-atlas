@@ -15,9 +15,15 @@ optics:
   wavelength_nm: 1550              # NOT stated for the Vpi / EO measurements; the IMDD laser is 1550 nm (p.13). See provenance and missing.
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-2.9, 2.9], y_um: [-1.5, 2]}   # = optical_window (lt_rib_r)
+      B: {x_um: [-35.9, -30.1], y_um: [-1.5, 2]}   # mirror of A onto lt_rib_l (x = -33 um)
 
 materials:
   lithium_tantalate:
@@ -50,6 +56,8 @@ geometry:
 line:
   length_mm: 16
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -61,19 +69,22 @@ alt_geometries: {}
 
 targets:
   # Measured, 16 mm device (devices.csv row lin2025-a)
-  - {metric: vpi_l_dc_vcm, value: 2.7, tol_rel: 0.15, source: {device_id: lin2025-a, field: vpil_dc_vcm}}
+  - {metric: vpi_l_dc_vcm, value: 2.7, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: lin2025-a, field: vpil_dc_vcm}}
   - {metric: ng_opt, value: 2.22, tol_abs: 0.05, source: {device_id: lin2025-a, field: ng_opt}}
   # Paper's own COMSOL simulation (cross-solver reference, not a measurement)
-  - {metric: vpi_l_dc_vcm, value: 2.64, tol_rel: 0.10, source: {paper_id: lin2025, locator: "p.8", basis: simulated, note: "simulated VpiL for the 6 um gap / 4 um waveguide design"}}
+  - {metric: vpi_l_dc_vcm, value: 2.64, tol_rel: 0.10, vpi_convention: mzm_push_pull, source: {paper_id: lin2025, locator: "p.8", basis: simulated, note: "simulated VpiL for the 6 um gap / 4 um waveguide design"}}
   # Test CPW (no waveguide, 16 mm, 6 um gap, 27 um signal, Cu 2.04 uOhm cm), simulation and measurement agree
   - {metric: rf_loss_db_per_cm, at_ghz: 67, value: 5.3, tol_rel: 0.2, source: {paper_id: lin2025, locator: "p.25 Fig. 2(d)", basis: extracted_from_figure, note: "test CPW structure, not the MZM; 2.04 uOhm cm Cu"}}
   # Not evaluated by the static cross-section: 3 dB EO bandwidth 40 GHz (16 mm), 100 GHz (6 mm device)
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on lt_rib_r, B mirrored onto lt_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: project_inference, locator: "p.13 Methods (ECL 17.8 dBm at 1550 nm for the IMDD experiment)", note: "wavelength of the Vpi and EO-response measurements is not stated in the main text; C-band 1550 nm assumed"}
   optics.polarization: {class: project_inference, note: "TE assumed for the x-cut film; polarization is not stated for the Vpi measurement (an FPC is used in Fig. 4(a))"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes an optical group index of 2.22 (p.11); the engine derives it and compares it as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes an optical group index of 2.22 (p.11); the engine derives it and compares it as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_tantalate.crystal: {class: project_inference, locator: "p.5 (X-cut TFLT wafer)", note: "propagation direction is not stated; y propagation assumed"}
   materials.lithium_tantalate.eps_r: {class: unknown, note: "UNVERIFIED: 41 / 43 are recalled values with no opened source (no LT permittivity in any cached paper); the paper does not state RF permittivity. Kept only so the config is runnable; replace after a LiTaO3 reference is opened. Any result depending on it must not be quoted as reproduction."}
   materials.lithium_tantalate.r_pm_per_v.r33: {class: standard_reference, citation: "r33 = 30.5 pm/V is the EO coefficient of LiTaO3 as stated in references/niels2026 text.md p.9", note: "value used in another paper's model; not stated in lin2025"}
@@ -110,7 +121,6 @@ missing:
   - Pockels coefficients r13, r22 and r51 of LiTaO3 (not in config; the engine treats missing keys as 0; r13 acts on the TM-like response and is expected to be small for this TE geometry, not verified)
   - polarization of the measurement
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
@@ -119,3 +129,4 @@ limitations:
   - "LT RF permittivity (41 / 43) is an UNVERIFIED recalled placeholder; only r33 is given (cross-checked against niels2026); r13, r22, r51 omitted"
   - "6 mm variant lin2025-b and the system row lin2025-c share this cross-section; no variants mechanism in SPEC yet"
   - "Fig. 1(h) of the paper (a simulation sketch) and Fig. 1(f) (SEM) are not consistent with the stated 4 um / 6 um dimensions at their scale bars; text values are used"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

@@ -18,7 +18,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -108,7 +108,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.6 (static characterization and calculation at 1550 nm)"}
   optics.polarization: {class: paper_exact, locator: "p.4 (TE0 mode input)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes calculated ng 2.26 (p.6); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes calculated ng 2.26 (p.6); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 (x-cut NANOLN wafer); p.3 Fig. 1(c) axes (propagation along y)"}
   materials.lithium_niobate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.21; paper states no LN indices"}
   materials.lithium_niobate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.14"}
@@ -157,7 +157,6 @@ missing:
   - gold film conductivity (4.1e7 S/m is an UNVERIFIED placeholder); silicon resistivity
   - temperature
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

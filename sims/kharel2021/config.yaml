@@ -17,7 +17,7 @@ optics:
   wavelength_nm: 1560              # paper_exact for the EO measurements (p.4); Vpi/RF-line statements do not name a wavelength
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -105,7 +105,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.4 Sec. III (tunable laser at 1560 nm for the EO measurements)"}
   optics.polarization: {class: project_inference, note: "polarization not stated; TE assumed for an x-cut film with propagation along y (r33 axis along the in-plane electrode field)"}
-  optics.group_index_from: {class: project_inference, note: "paper gives only 'typical optical group index of about 2.2' (p.3); engine derives it by finite difference"}
+  optics.group_index_from: {class: project_inference, note: "paper gives only 'typical optical group index of about 2.2' (p.3); engine derives it by finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2; p.3 Sec. III (x-cut LN film); propagation along y is a project_inference from the standard x-cut convention"}
   materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder 2.211, copied from the chen2022 config; not given in the paper or a cached source; kept only so the cross-section can be solved"}
   materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder 2.138, copied from the chen2022 config; not given in the paper or a cached source"}
@@ -155,7 +155,6 @@ missing:
   - measurement termination and probe de-embedding details for the EO response
   - temperature (not stated)
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

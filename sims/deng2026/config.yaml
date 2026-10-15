@@ -18,7 +18,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto                      # engine derives the Pockels contraction from crystal + cut; BTO in-plane <110> field is not a supported contraction (see SPEC_PROPOSALS)
 
@@ -74,7 +74,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.7; Fig. 4d (Vpi at 1550 nm)"}
   optics.polarization: {class: paper_exact, locator: "p.7 (single TE mode; only TE modulated for field along <110>)"}
-  optics.group_index_from: {class: project_inference, note: "paper reports no group index; engine derives it"}
+  optics.group_index_from: {class: project_inference, note: "paper reports no group index; engine derives it; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.barium_titanate.crystal: {class: paper_exact, locator: "p.9 Methods ((001) LSAT); p.7 text (field along <110>); p.8 Fig. 4a axes", note: "propagation [1-10] read from the micrograph axes (figure reading)"}
   materials.barium_titanate.n: {class: paper_exact, locator: "p.2 (n = 2.26 at 1550 nm)", note: "single isotropic value as quoted in the introduction"}
   materials.barium_titanate.r_pm_per_v: {class: project_inference, locator: "abstract; p.5 (r42 calculated 358 pm/V); Supplementary Note 4 not available", note: "paper states a bound (exceeding 358 pm/V, calculated from an effective coefficient on a separate 180 nm film; Fig. 3c: 253 pm/V along <110>); 358 is used as that bound, not as a device value; effective device coefficient along <110> and the tensor projection are in the unavailable Supplementary"}
@@ -111,7 +111,6 @@ missing:
   - DC bias applied during the Vpi measurement
   - temperature (not stated)
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

@@ -16,9 +16,15 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-3.4, 3.4], y_um: [-1.5, 1.5]}   # = optical_window (silica_rib_r)
+      B: {x_um: [-30.4, -23.6], y_um: [-1.5, 1.5]}   # mirror of A onto silica_rib_l (x = -27 um)
 
 materials:
   lithium_niobate:
@@ -51,6 +57,8 @@ geometry:
 line:
   length_mm: 12.917
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -64,9 +72,12 @@ targets:
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on silica_rib_r, B mirrored onto silica_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: project_inference, locator: "p.5 Sec. 3 (CW light near 1550 nm)", note: "nominal wavelength"}
   optics.polarization: {class: paper_exact, locator: "p.5 Sec. 3 (TE mode excited by 3-paddle polarization controller)"}
-  optics.group_index_from: {class: project_inference, note: "design simulation plots Fig. 3(c) show group index near 2.3 versus frequency but no number is quoted; engine derives it"}
+  optics.group_index_from: {class: project_inference, note: "design simulation plots Fig. 3(c) show group index near 2.3 versus frequency but no number is quoted; engine derives it; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.5 Sec. 3 (x-cut TFLN)", note: "x-cut stated; propagation along y is a project_inference from the standard x-cut convention"}
   materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
   materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
@@ -101,10 +112,10 @@ missing:
   - "Ti adhesion layer treatment"
   - "temperature"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
   - "Ti 100 nm / Au 700 nm stack entered as one 800 nm gold-conductor block"
   - "Optical overlap needs a PECVD silica index; the placeholder SiO2 index is used for both rib and BOX"
   - "Targets are Vpi*L only; bandwidth (3 mm: > 110 GHz) belongs to the 3 mm variant and cannot be compared without the loaded-line stage"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

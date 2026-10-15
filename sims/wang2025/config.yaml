@@ -17,7 +17,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -106,7 +106,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.2 Design text (simulated at 1550 nm)", note: "measurement wavelength is not stated"}
   optics.polarization: {class: paper_exact, locator: "p.2 Design text; p.2 Measurement text (fundamental TE mode)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes simulated ng = 2.19 (Fig. 2d); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes simulated ng = 2.19 (Fig. 2d); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_tantalate.crystal: {class: project_inference, locator: "p.2 Design text (X-112 deg Y cut; waveguide along the 112 deg Y axis)", note: "x-cut with propagation along y is the closest representable frame; real cut is rotated 22 deg, EO efficiency 0.83 of optimum per the authors"}
   materials.lithium_tantalate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1, 1550 nm", note: "2.119; not stated in wang2025"}
   materials.lithium_tantalate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1, 1550 nm", note: "2.123"}
@@ -155,7 +155,6 @@ missing:
   - "RF permittivity of LT at mm-wave frequencies, RF loss tangents of LT and SiO2, silicon resistivity, gold film conductivity"
   - "temperature"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

@@ -12,12 +12,13 @@ title: Valdez 2022, 5 mm hybrid Si/LN MZM, inductively loaded slow-wave GSG elec
 repro_grade: B
 validation_status: unvalidated
 chain: [electrostatics, optical_mode, eo_overlap, rf_line, loaded_line, eo_response]
-optics: {wavelength_nm: 1550, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null, eo_axis: auto}
+optics: {wavelength_nm: 1550, polarization: TE, mode_index: 0, group_index_from: perturbation, ng_fixed: null, eo_axis: auto}
 materials:
   lithium_niobate:
+    library: lithium_niobate_congruent   # RF eps_r and Pockels coefficients (clamped) from the engine library; config keys override
     crystal: {cut: x, propagation: y}
-  silicon_dioxide: {}
-  silicon: {}
+  silicon_dioxide: {library: silicon_dioxide}
+  silicon: {library: silicon}
   gold: {conductor: true, n_complex: null}
   air: {n: 1.0, eps_r: 1.0}
 geometry:
@@ -184,9 +185,12 @@ targets:
   source: {paper_id: valdez2022, locator: p.8 Sec. High-Speed Measurements, basis: unspecified, note: paper does not say whether simulated or measured}
 reported_curves: []
 provenance:
+  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r: Zhu et al. 2021 Table 1, clamped; r: Veithen et al. arXiv:cond-mat/0311240 Table I, clamped, citing Rauber 1978)", note: "the paper states no LN RF permittivity or Pockels tensor; library values added 2026-10-14 (DevLog-026) so the config parses"}
+  materials.silicon_dioxide.library: {class: standard_reference, citation: "engine/data/materials.json library silicon_dioxide (eps_r 3.9: Zhu et al. 2021 Table 1; optical: Malitson 1965)"}
+  materials.silicon.library: {class: standard_reference, citation: "engine/data/materials.json library silicon (eps_r 11.7: Zhu et al. 2021 Table 1)"}
   optics.wavelength_nm: {class: paper_exact, locator: p.1 abstract}
   optics.polarization: {class: paper_exact, locator: p.2 Sec. Theory and Design (TE-polarized hybrid mode)}
-  optics.group_index_from: {class: project_inference, note: paper simulates ng = 2.32 (p.6); engine derives it by finite difference and compares as a target}
+  optics.group_index_from: {class: project_inference, note: "paper simulates ng = 2.32 (p.6); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: p.5 (x-cut LNOI); p.2 Fig. 1(a) axes, note: propagation along y per Fig. 1(a) axes (figure reading)}
   geometry.regions.ln_film: {class: paper_exact, locator: 'p.5 (600 nm x-cut LN, unetched)'}
   geometry.regions.box: {class: paper_exact, locator: p.5 (3 um SiO2 of the SOI)}
@@ -213,6 +217,6 @@ missing: ['lithium_niobate n_o, n_e at 1550 nm, RF permittivity (anisotropic) an
     and handle-wafer resistivity (high-resistivity only; not stated)', gold conductivity / film quality (not stated), ground electrode width (Fig. 3(c) micrograph only; scale of the micrograph is inconsistent with the stated 55 um signal / 9 um gap; 100
     um assumed), lateral position of the waveguides inside the 9 um gaps, 'exact slot/protrusion layout on the signal and ground edges (Fig. 1(a), 3(d): recess assumed on all four gap-facing edges)', sidewall angle of the Au electrodes and electrode edge
     profile, RF loss of the line (not reported; no fit given), whether Z0 = 42 ohm is simulated or measured (stated only for the 9 um gap line), DC bias and temperature (not stated)]
-limitations: [scalar_optical_not_full_vector, quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, Config is not runnable until material constants are supplied from a verified source; the engine rejects dielectrics without
+limitations: [quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, Config is not runnable until material constants are supplied from a verified source; the engine rejects dielectrics without
     eps_r by design, Slot loading is represented as a two-section periodic cascade (protrusion/slotted) using the periodic_t_rail form; this is an inductive-loading structure with no T-rail bars, Z0 target of 42 ohm has unspecified provenance in the paper;
     treat with care, Only the right-hand optical arm is solved; both arms are in the electrostatic domain so the push-pull field comes from the geometry, The 3 dB bandwidth (110 GHz) is a lower-bound-type claim at the measurement limit and is not a target]

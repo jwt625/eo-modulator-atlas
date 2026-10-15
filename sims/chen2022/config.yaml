@@ -16,7 +16,7 @@ optics:
   wavelength_nm: 1550              # NOT reported by the paper; see provenance and missing
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -122,7 +122,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: project_inference, locator: "not stated; p.5-7 (grating couplers, EDFA receiver)", note: "C-band 1550 nm assumed; paper gives only 'peak coupling wavelength' of the GCs"}
   optics.polarization: {class: paper_exact, locator: "p.5 Sec. II, fundamental TE mode"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.2 (Fig. 2(d)); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.2 (Fig. 2(d)); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.5 Sec. II, x-cut LNOI; propagation along crystal y inferred from Fig. 1 axes (Y propagation)"}
   materials.lithium_niobate.n_o: {class: standard_reference, citation: "Zelmon, Small, Jundt, J. Opt. Soc. Am. B 14, 3319 (1997)", note: "value taken from SPEC.md example; not verified against the source in this pilot"}
   materials.lithium_niobate.n_e: {class: standard_reference, citation: "Zelmon, Small, Jundt, J. Opt. Soc. Am. B 14, 3319 (1997)", note: "value taken from SPEC.md example; not verified against the source in this pilot"}
@@ -179,7 +179,6 @@ missing:
   - EO roll-off at 67 GHz for the 5 mm and 7 mm devices (not reported)
   - EO 3 dB bandwidth (not observed; > 67 GHz)
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

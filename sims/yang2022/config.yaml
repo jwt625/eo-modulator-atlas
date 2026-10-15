@@ -15,16 +15,22 @@ optics:
   wavelength_nm: 1550              # simulation wavelength of the paper (p.2); Vpi and EO S21 measurement wavelength not stated
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-3, 3], y_um: [-1.5, 1.5]}   # = optical_window (ln_rib_r)
+      B: {x_um: [-30, -24], y_um: [-1.5, 1.5]}   # mirror of A onto ln_rib_l (x = -27 um)
 
 materials:
   lithium_niobate:
+    library: lithium_niobate_congruent   # eps_r 44/27.9 (clamped) and r13/r22 from the engine library (2026-10-15, DevLog-029 proposal 7)
     crystal: {cut: x, propagation: y}
     n_o: 2.21
     n_e: 2.14
-    eps_r: {perp: 38.0, par: 28.0}
     r_pm_per_v: {r33: 30.9, r51: 32.6}
   silicon_dioxide: {n: 1.444, eps_r: 3.9}
   silicon: {n: 3.475, eps_r: 11.9}
@@ -51,6 +57,8 @@ geometry:
 line:
   length_mm: 5
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -61,7 +69,7 @@ alt_geometries: {}
 
 targets:
   # Measured, 5 mm device (devices.csv row yang2022-a)
-  - {metric: vpi_l_dc_vcm, value: 2.37, tol_rel: 0.15, source: {device_id: yang2022-a, field: vpil_dc_vcm}}
+  - {metric: vpi_l_dc_vcm, value: 2.37, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: yang2022-a, field: vpil_dc_vcm, drive_frequency_hz: 5000000, drive_locator: "p.4 (5 MHz triangular wave)"}}
   - {metric: n_rf, value: 2.23, tol_abs: 0.1, source: {device_id: yang2022-a, field: n_rf}}
   - {metric: z0_ohm, value: 50, tol_abs: 5.0, source: {device_id: yang2022-a, field: z0_ohm, note: "authors extraction from EE S-parameters, ripples 45 to 65 ohm"}}
   - {metric: ng_opt, value: 2.24, tol_abs: 0.05, source: {device_id: yang2022-a, field: ng_opt, note: "author simulation (Lumerical mode solution, p.2), basis simulated; not a measurement"}}
@@ -70,14 +78,17 @@ targets:
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on ln_rib_r, B mirrored onto ln_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: "p.2 Sec. 2 (group index simulated for the TE mode at 1550 nm)", note: "design wavelength; measurement wavelength not stated"}
   optics.polarization: {class: paper_exact, locator: "p.2 Sec. 2 (TE mode ridge waveguides)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes No about 2.24 (p.2, Fig. 4(e)); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes No about 2.24 (p.2, Fig. 4(e)); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: project_inference, locator: "p.1-2 (x-cut TFLN, field along z)", note: "x-cut stated; propagation along crystal y inferred (field along the z axis in the plane, r33 used)"}
   materials.lithium_niobate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.21; paper states no LN indices"}
   materials.lithium_niobate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.14"}
-  materials.lithium_niobate.eps_r: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm, 100 kHz", note: "eps_11,22 = 38, eps_33 = 28; low-frequency permittivity, not at mm-wave; paper states none"}
-  materials.lithium_niobate.r_pm_per_v: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "r33 = 30.9, r51 = 32.6 only; r13 and r22 not given there and left out (see missing)"}
+  materials.lithium_niobate.eps_r: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r 44 / 27.9, clamped; Zhu et al. 2021 Table 1, corroborated by the Crystal Technology data sheet)", note: "replaced the Wang et al. 2024 Extended Data Table 1 value 38 / 28 (100 kHz) on 2026-10-15 for consistency with the clamped Pockels constants (DevLog-029 proposal 7; effect on VpiL -0.3 %)"}
+  materials.lithium_niobate.r_pm_per_v: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "r33 = 30.9, r51 = 32.6 from Wang 2024 (not given there: r13, r22); since 2026-10-15 r13 8.6 and r22 3.4 are merged from the engine library lithium_niobate_congruent (clamped, Veithen et al. Table I), which lowers the vector VpiL by 0.78 % (round-6 audit G4); the scalar TE overlap does not use them"}
   materials.silicon_dioxide.n: {class: standard_reference, citation: "Mao et al., APL Photon. 7, 126103 (2022) (references/mao2022/text.md p.3, printed 126103-2: nSiO2 = 1.444)", note: "the paper gives no SiO2 index"}
   materials.silicon_dioxide.eps_r: {class: paper_exact, locator: "p.2 Sec. 2 (SiO2 eps about 3.9)"}
   materials.silicon.eps_r: {class: paper_exact, locator: "p.2 Sec. 2 (Si eps about 11.9)"}
@@ -111,10 +122,10 @@ missing:
   - measurement wavelength of Vpi and EO S21; temperature
   - source impedance of the VNA
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
   - "Electrode tapers (100 um straight), bends and pads are not modelled"
   - "Ti adhesion layer merged into the gold; lossless silicon (resistivity not stated)"
   - "The ridge profile is idealized as rectangular"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

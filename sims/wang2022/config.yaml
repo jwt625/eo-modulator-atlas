@@ -19,7 +19,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -125,7 +125,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.3 (finite element analysis at 1550 nm wavelength); supplement p.2 (modes at 1550 nm)"}
   optics.polarization: {class: paper_exact, locator: "p.2-3 (fundamental TE mode of the hybrid waveguide, Fig. 1(d), 2(a))"}
-  optics.group_index_from: {class: project_inference, note: "paper marks a simulated optical group index of about 2.5 in Fig. 2(d) (and supplement Fig. S1(a) vs width); engine derives it by finite difference and compares as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper marks a simulated optical group index of about 2.5 in Fig. 2(d) (and supplement Fig. S1(a) vs width); engine derives it by finite difference and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: project_inference, locator: "p.2 (500 nm thick x-cut TFLN, paper_exact for the cut); propagation along crystal y inferred from the Ez / z-axis field in supplement p.3 (Delta n_z = -n_e^3 r33 Ez / 2) and Fig. 1(a)"}
   materials.lithium_niobate.n_o: {class: standard_reference, citation: "Mao et al., APL Photon. 7, 126103 (2022) (references/mao2022/text.md p.3, printed 126103-2: n_ord,LN = 2.211)", note: "paper states no LN indices; value used by another Si-LN hybrid paper at 1550 nm"}
   materials.lithium_niobate.n_e: {class: standard_reference, citation: "Mao et al., APL Photon. 7, 126103 (2022) (references/mao2022/text.md p.3, printed 126103-2: n_ext,LN = 2.138)", note: "paper states no LN indices"}
@@ -185,7 +185,6 @@ missing:
   - fabricated SiO2 over-cladding thickness (paper infers it is thinner than 650 nm from the lower Vpi*L, p.4) and the actual electrode misalignment
   - 3D vs 2D formulation of the paper's COMSOL simulation
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

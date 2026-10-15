@@ -20,7 +20,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -76,7 +76,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.5 Sec. IV-A; p.9 Sec. IV-E (1550 nm TE light)"}
   optics.polarization: {class: paper_exact, locator: "p.3 Sec. II-A; p.9 Sec. IV-E (TE, RF field along crystal Z, r33)"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes n_og roughly 2.14 (p.5); engine derives it by finite difference and compares it as a target"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes n_og roughly 2.14 (p.5); engine derives it by finite difference and compares it as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.3 Sec. II-A (x-cut, optical mode along crystal Y, RF field along +/- Z)"}
   materials.lithium_niobate.r_pm_per_v.r33: {class: paper_exact, locator: "p.3 Sec. II-A (maximum r33 = 31 pm/V for the TE mode)", note: "only r33 is stated"}
   materials.silicon_nitride.n: {class: paper_exact, locator: "p.5 Sec. III (refractive index 1.943 at 1550 nm)"}
@@ -110,7 +110,6 @@ missing:
   - "temperature"
   - "electrode loss and Z0 as single numbers (only curves in Fig. 5)"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

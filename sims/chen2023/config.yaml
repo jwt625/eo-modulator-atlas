@@ -17,9 +17,15 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A: {x_um: [-2.5, 2.5], y_um: [-1.5, 1.5]}   # = optical_window (ln_rib_r)
+      B: {x_um: [-23.8, -18.8], y_um: [-1.5, 1.5]}   # mirror of A onto ln_rib_l (x = -21.3 um)
 
 materials:
   lithium_niobate:
@@ -52,6 +58,8 @@ geometry:
 line:
   length_mm: 0.37
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -68,9 +76,12 @@ targets:
 reported_curves: []
 
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on ln_rib_r, B mirrored onto ln_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: project_inference, locator: "p.2 Sec. 2 (Bragg wavelength designed around 1550 nm); Fig. 7(b) spans 1557-1565 nm", note: "nominal wavelength; the DC and data wavelengths are not stated"}
   optics.polarization: {class: paper_exact, locator: "p.2 Sec. 2 (TE0)"}
-  optics.group_index_from: {class: project_inference, note: "uniform rib group index is computed by the engine; the measured SL ng of about 4.0 is not a target"}
+  optics.group_index_from: {class: project_inference, note: "uniform rib group index is computed by the engine; the measured SL ng of about 4.0 is not a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 Sec. 2 (x-cut, propagation along y, z axis perpendicular to the waveguide)"}
   materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder from the chen2022 config; the paper states no value"}
   materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder from the chen2022 config; the paper states no value"}
@@ -109,10 +120,10 @@ missing:
   - LN refractive indices, RF permittivity, Pockels tensor, SiO2 and Si constants, Au conductivity (UNVERIFIED placeholders)
   - temperature
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
   - "Slow-light corrugated waveguide (fishbone gratings, pi-phase shifters, ng enhancement to about 4.0) cannot be represented in a uniform 2D cross-section; Vpi*L and EO response of this config describe an unperturbed rib, not the paper device"
   - "No bandwidth target: with ng about 4.0 versus n_rf 2.18 the EO response of the real device depends on the slow-light group index, which the cross-section solver does not provide"
   - "Ti 5 nm adhesion layer lumped into the 400 nm Au conductor"
+  - "dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only"

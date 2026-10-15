@@ -19,7 +19,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -113,7 +113,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.4 Sec. Measurement and result (tunable laser set to 1550 nm for the EO response)", note: "wavelength of the Vpi sweep not stated"}
   optics.polarization: {class: project_inference, note: "TE assumed for an x-cut rib with r33 along z; the paper does not state the polarization"}
-  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.23-2.25 (range, p.2); engine derives it by finite difference"}
+  optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.23-2.25 (range, p.2); engine derives it by finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.3 Sec. Design and fabrication (x-cut TFLN)", note: "propagation along crystal y is a project_inference from the standard x-cut convention"}
   materials.lithium_niobate.n_o: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
   materials.lithium_niobate.n_e: {class: unknown, note: "UNVERIFIED placeholder copied from the chen2022 config; the paper states no value"}
@@ -158,7 +158,6 @@ missing:
   - "wavelength and polarization of the Vpi sweep"
   - "temperature"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

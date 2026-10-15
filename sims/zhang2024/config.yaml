@@ -18,7 +18,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -107,7 +107,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: project_inference, note: "C-band only is stated (p.12 Methods); 1550 nm assumed"}
   optics.polarization: {class: paper_exact, locator: "p.3 (TE0 mode, field along z for the largest chi(2) component)"}
-  optics.group_index_from: {class: project_inference, note: "paper plots a simulated optical group index (Fig. 2(b)) without printing a value; engine derives it by finite difference"}
+  optics.group_index_from: {class: project_inference, note: "paper plots a simulated optical group index (Fig. 2(b)) without printing a value; engine derives it by finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.11 Methods (x-cut NanoLN wafer); propagation along y is the x-cut convention (project_inference), p.3 Fig. 1(a) axes"}
   materials.lithium_niobate.n_o: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.21; this paper states no LN indices"}
   materials.lithium_niobate.n_e: {class: standard_reference, citation: "Wang et al., Nature 629, 784 (2024), Extended Data Table 1 (references/wang2024b/text.md p.15, table image img_p15_1.png), 1550 nm", note: "2.14"}
@@ -156,7 +156,6 @@ missing:
   - LN r13 / r22 (not in the cited table); LN THz permittivity (the 100 kHz value is used); quartz type, optical index and RF loss
   - temperature
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

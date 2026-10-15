@@ -10,7 +10,7 @@ title: Xue 2023, 8 mm full-visible TFLN push-pull MZM at 630 nm (electrodes on t
 repro_grade: B
 validation_status: unvalidated
 chain: [electrostatics, optical_mode, eo_overlap, rf_line, eo_response]
-optics: {wavelength_nm: 630, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null, eo_axis: auto}
+optics: {wavelength_nm: 630, polarization: TE, mode_index: 0, group_index_from: perturbation, ng_fixed: null, eo_axis: auto, eo: {arm_drive: two_arm_field_resolved, terminal_drive: single_ended, arm_windows: {A: {x_um: [-1.25, 1.25], y_um: [-0.8, 0.9]}, B: {x_um: [-22.85, -20.35], y_um: [-0.8, 0.9]}}}}
 materials:
   lithium_niobate:
     crystal: {cut: x, propagation: y}
@@ -83,6 +83,8 @@ geometry:
 line:
   length_mm: 8
   conductor_loss_model: skin_effect_wheeler
+  include_internal_inductance: true
+  dielectric_loss_model: none
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -92,14 +94,18 @@ sweep: {f_start_ghz: 0.1, f_stop_ghz: 50, n_points: 100}
 alt_geometries: {}
 targets:
 - metric: vpi_l_dc_vcm
+  vpi_convention: mzm_push_pull
   value: 0.48
   tol_rel: 0.15
   source: {device_id: xue2023-a, field: vpil_dc_vcm, comparable: false, note: NON-COMPARABLE until LN Pockels coefficients at 630 nm are supplied; the paper states r33 rises toward shorter wavelength}
 reported_curves: []
 provenance:
+  optics.eo: {class: project_inference, note: "arm windows from the waveguide polygons (A = optical_window on ln_rib_r, B mirrored onto ln_rib_l); single_ended G-S-G drive (DevLog-026, 2026-10-14)"}
+  line.include_internal_inductance: {class: project_inference, note: "skin-effect conductor: internal inductance omega L_i = R' included (modelling choice, DevLog-026)"}
+  line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.wavelength_nm: {class: paper_exact, locator: p.1 abstract; p.2 Fig. 2(a) (630 nm)}
   optics.polarization: {class: project_inference, note: TE assumed for x-cut with in-plane electrodes; the paper's phase formula uses r33 (p.1)}
-  optics.group_index_from: {class: project_inference, note: paper plots simulated optical group indices at 400/550/700 nm (Fig. 1(e)); none at 630 nm}
+  optics.group_index_from: {class: project_inference, note: "paper plots simulated optical group indices at 400/550/700 nm (Fig. 1(e)); none at 630 nm; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: p.1 text (x-cut LN-on-insulator), note: propagation along y is a project_inference from the standard x-cut convention}
   materials.lithium_niobate.eps_r: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example value perp 43, par 28); the paper states no RF permittivity of LN"}
   materials.lithium_niobate.r_pm_per_v: {class: unknown, note: "UNVERIFIED placeholder (SPEC.md example values r13 8.6, r22 3.4, r33 30.8, r51 28.0); the paper states no Pockels coefficients; r33 appears in the phase formula (p.1) without a value"}
@@ -122,5 +128,5 @@ provenance:
   geometry.mesh: {class: project_inference}
 missing: [LN ordinary and extraordinary indices at 630 nm (left out; optical stage cannot run), SiO2 optical index at 630 nm (left out), 'RF permittivity and Pockels coefficients of LN and SiO2, gold conductivity (all UNVERIFIED placeholders: the numeric values in materials are kept only so the electrostatic stage can run; none is read from a source in this repo)', BOX thickness and substrate material, ground electrode widths (not stated in the text; about 19 um read from the Fig. 1(a) SEM, figure_digitized) and electrode thickness (read from
     the inset), over-cladding (none drawn; air assumed), rib sidewall angle (inset trapezoid only), temperature]
-limitations: [scalar_optical_not_full_vector, quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, 'Optical stage blocked: no LN indices at 630 nm are given in the paper', Paper's Vpi.L (0.48 V cm at 630 nm) comes from one device whose actual WEG may be smaller than designed (p.2), 'Measured bandwidth (>20 GHz, detector-deconvolved) has no stated wavelength and is not
-    a target']
+limitations: [quasi_static_2d_rf, rectangular_or_polygon_sidewalls_only, no_3d_launch_pad_effects, 'Optical stage blocked: no LN indices at 630 nm are given in the paper', Paper's Vpi.L (0.48 V cm at 630 nm) comes from one device whose actual WEG may be smaller than designed (p.2), 'Measured bandwidth (>20 GHz, detector-deconvolved) has no stated wavelength and is not
+    a target', 'dielectric_loss_model none is an assumption (no loss tangent stated): the predicted RF attenuation is conductor-only']

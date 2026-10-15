@@ -19,7 +19,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
@@ -65,7 +65,7 @@ reported_curves: []
 provenance:
   optics.wavelength_nm: {class: paper_exact, locator: "p.3 Sec. II (TE mode at 1550 nm); p.4 Sec. IV (CW source 1550 nm)"}
   optics.polarization: {class: paper_exact, locator: "p.3 Sec. II (fundamental TE mode)"}
-  optics.group_index_from: {class: project_inference, note: "paper plots a target optical group index as a line in Fig. 3(b) without a number; engine finite difference"}
+  optics.group_index_from: {class: project_inference, note: "paper plots a target optical group index as a line in Fig. 3(b) without a number; engine finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.3 Sec. II (x-cut LN)", note: "propagation along crystal y is project_inference (not stated)"}
   geometry.regions.ln_slab: {class: paper_exact, locator: "p.3 Sec. II (300 nm slab of x-cut LN on top); Fig. 1(a) caption", note: "unetched slab within the coupon"}
   geometry.regions.sin_core: {class: paper_exact, locator: "p.3 Sec. II (300 nm thick SiN strip, 1 um wide); Fig. 1(a) caption", note: "flush with the LN bottom per the Fig. 1(a) inset (no interlayer drawn)"}
@@ -93,7 +93,6 @@ missing:
   - "RF loss from substrate ohmic loss (about 2 dB/mm measured, mechanism in Supplementary Information, not in the cache)"
   - "Ti adhesion layer (15 nm) electrical properties"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects

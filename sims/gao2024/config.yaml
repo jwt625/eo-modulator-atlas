@@ -19,16 +19,17 @@ optics:
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0
-  group_index_from: finite_difference_wavelength
+  group_index_from: perturbation
   ng_fixed: null
   eo_axis: auto
 
 materials:
   lithium_niobate:
+    library: lithium_niobate_congruent   # RF eps_r and Pockels coefficients (clamped) from the engine library; config keys override
     crystal: {cut: x, propagation: y}
     # n_o, n_e: engine library; RF eps_r and Pockels tensor not stated in the paper (omitted, see missing)
-  silicon_dioxide: {}              # optical n from engine library; RF eps_r not stated (omitted)
-  silicon: {}                      # optical n from engine library; RF eps_r and resistivity not stated (omitted)
+  silicon_dioxide: {library: silicon_dioxide}              # optical n from engine library; RF eps_r not stated (omitted)
+  silicon: {library: silicon}                      # optical n from engine library; RF eps_r and resistivity not stated (omitted)
   gold: {conductor: true}          # conductivity not stated (omitted)
   air: {n: 1.0, eps_r: 1.0}
 
@@ -67,9 +68,12 @@ targets:
 reported_curves: []
 
 provenance:
+  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r: Zhu et al. 2021 Table 1, clamped; r: Veithen et al. arXiv:cond-mat/0311240 Table I, clamped, citing Rauber 1978)", note: "the paper states no LN RF permittivity or Pockels tensor; library values added 2026-10-14 (DevLog-026) so the config parses"}
+  materials.silicon_dioxide.library: {class: standard_reference, citation: "engine/data/materials.json library silicon_dioxide (eps_r 3.9: Zhu et al. 2021 Table 1; optical: Malitson 1965)"}
+  materials.silicon.library: {class: standard_reference, citation: "engine/data/materials.json library silicon (eps_r 11.7: Zhu et al. 2021 Table 1)"}
   optics.wavelength_nm: {class: project_inference, locator: "p.3 Sec. 3 (Vpi measured over 1510-1600 nm; comb centred near 193.55 THz in Fig. 4(c))", note: "1550 nm assumed; the wavelength of the Vpi-versus-frequency sweep is not stated"}
   optics.polarization: {class: project_inference, note: "TE assumed from the x-cut r33 geometry; the paper does not name the polarization"}
-  optics.group_index_from: {class: project_inference, note: "no group index reported; engine finite difference"}
+  optics.group_index_from: {class: project_inference, note: "no group index reported; engine finite difference; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 Sec. 2 (X-cut TFLN)", note: "propagation along crystal y is project_inference (axes in Fig. 2(c) show X vertical, Z lateral)"}
   materials.silicon_dioxide: {class: standard_reference, citation: "engine/data/materials.json library entry (Malitson 1965); paper states no SiO2 constants"}
   materials.silicon: {class: standard_reference, citation: "engine/data/materials.json library entry; paper states no silicon constants"}
@@ -102,7 +106,6 @@ missing:
   - "silicon substrate thickness"
   - "RF line behaviour (no S21, Z0 or n_RF reported)"
 limitations:
-  - scalar_optical_not_full_vector
   - quasi_static_2d_rf
   - rectangular_or_polygon_sidewalls_only
   - no_3d_launch_pad_effects
