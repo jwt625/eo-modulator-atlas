@@ -31,8 +31,10 @@
 
 	$effect(() => {
 		if (!ready) return;
+		// Filters and table sort live in the hash only on the routes that use them (/table, /explore).
+		const route = page.url.pathname.replace(link('/').replace(/\/$/, ''), '') || '/';
+		if (!route.startsWith('/table') && !route.startsWith('/explore')) return;
 		const h = toHash(filters, { sort: tableState.sort });
-		void page.url.pathname;
 		const want = h ? `#${h}` : '';
 		if (location.hash !== want) {
 			try {

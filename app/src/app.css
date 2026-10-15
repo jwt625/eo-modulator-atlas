@@ -44,8 +44,24 @@
 	box-sizing: border-box;
 }
 
-*:not(.spinner) {
-	border-radius: 0 !important;
+/* Sharp corners: user-agent styles round some form controls; components set their own rules (no global override). */
+button,
+input,
+select,
+textarea,
+fieldset,
+legend,
+details,
+summary,
+dialog,
+progress,
+meter,
+pre,
+code,
+kbd,
+mark,
+img {
+	border-radius: 0;
 }
 
 html,
@@ -153,7 +169,20 @@ input[type='checkbox'] {
 	background: var(--bg);
 }
 
-/* Plotly chrome: sharp corners */
+/* Map attribution control inside Plotly map charts (MapLibre CSS rounds it). */
+.js-plotly-plot .maplibregl-ctrl.maplibregl-ctrl-attrib .maplibregl-ctrl-attrib-button,
+.js-plotly-plot .maplibregl-ctrl.maplibregl-ctrl-attrib.maplibregl-compact,
+.js-plotly-plot .maplibregl-ctrl-group {
+	border-radius: 0;
+}
+
+/* Plotly chrome: sharp corners (modebar tooltips are ::after / ::before pseudo-elements) */
+/* Plotly injects `.js-plotly-plot .plotly [data-title]:after` at runtime; this selector is one class more specific. */
+.js-plotly-plot .plotly .modebar-btn[data-title]::before,
+.js-plotly-plot .plotly .modebar-btn[data-title]::after {
+	border-radius: 0;
+}
+
 .js-plotly-plot .modebar,
 .js-plotly-plot .modebar-btn,
 .js-plotly-plot .modebar-group,
