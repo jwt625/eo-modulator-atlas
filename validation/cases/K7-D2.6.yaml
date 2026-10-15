@@ -1,0 +1,131 @@
+# Canonical case K7-D2.6 (K7 family, DevLog-028 round 3; DevLog-029 waveguide-position question), written by
+# validation/scripts/make_cases.py (lane L-REF). Source: references/arabjuneghani2022 (Sec. 2 p.2, Table 1, Fig. 1(a),
+# Fig. 3(c)) and sims/arabjuneghani2022/config.yaml (device #2).
+# LN film 0.5 um x-cut, etch 0.2 um (slab y 0..0.3), rib 0.8 um wide, vertical walls (angle not stated;
+#   width taken as the top width as in the config). Rib A centred at x = +13.4, rib B at -13.4 um:
+#   D = 2.6 um from the gap centre toward the signal (paper text p.2: D is the distance between the waveguide centre
+#   and the gap centre; Fig. 3(c) caption wording differs, text definition used as in the config).
+# Electrodes Au, Tg 1 um, bottom at slab top + Tb 0.2 um (y 0.5..1.5); signal Wc 22 um centred at
+#   x = 0, gap G 10 um, grounds Wg 40 um. SiO2 cladding flat from the slab top to y = 1.1 um (Tc 0.8 um
+#   from the slab top, config reading of Fig. 1(a)); the buffer is the cladding under the electrodes; air above.
+# BOX 2 um (NOT stated in the paper; config placeholder), Si substrate 500 um, air to y = 500 um,
+#   domain x +-500 um, zero-flux outer boundary (K4 conventions; the config truncates differently).
+# RF permittivity and Pockels values: engine library lithium_niobate_congruent as used by the config (eps perp/par
+#   44 / 27.9 clamped, Zhu 2021 Table 1; r13 8.6, r22 3.4, r33 30.8, r51 28.0 pm/V clamped, Veithen Table I),
+#   SiO2 3.9, Si 11.7; lab xx = par for x-cut. Gold perfect conductor, metal absent in the optical problem.
+# Optical window per arm x +-4 um around the rib, y -1.9..2.5 um (inside the BOX: substrate leakage neglected).
+# VpiL convention as K4: V_t = signal minus ground, VpiL = lambda / (2 |dn_A - dn_B|). line.length_mm = 5 (paper).
+# Frame: x lateral, y film normal (up), z propagation. x-cut LN, propagation along crystal y:
+#   lab x = crystal z (n_e, eps par), lab y = crystal x (n_o, eps perp), lab z = crystal y (n_o).
+# Optical constants at 1550 nm from the Sellmeier fits in engine/data/materials.json: LN Zelmon 1997 congruent
+#   n_o = 2.211111009, n_e = 2.13755965; SiO2 Malitson 1965 n = 1.444023622; Si Salzberg/Tatian n = 3.477723756.
+#   Material names match library keys, so the engine can take dispersion slopes from the library for ng.
+schema: eo-atlas.sim/v1
+id: K7-D2.6
+title: 'Canonical K7-D2.6: arabjuneghani2022 #2 cross-section, ribs D = 2.6 um from the gap centre toward the signal'
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap]
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+  metal_in_window: absent
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A:
+        x_um: [9.4, 17.4]
+        y_um: [-1.9, 2.5]
+      B:
+        x_um: [-17.4, -9.4]
+        y_um: [-1.9, 2.5]
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211111009
+    n_e: 2.13755965
+    eps_r: {perp: 44.0, par: 27.9}
+    r_pm_per_v: {r13: 8.6, r22: 3.4, r33: 30.8, r51: 28.0}
+  silicon_dioxide: {n: 1.444023622, eps_r: 3.9}
+  silicon: {n: 3.477723756, eps_r: 11.7}
+  air: {n: 1.0, eps_r: 1.0}
+  gold: {conductor: true}
+geometry:
+  symmetry: none
+  domain:
+    x_um: [-500.0, 500.0]
+    y_um: [-502.0, 500.0]
+  regions:
+  - name: ambient
+    material: air
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [-502.0, 500.0]
+  - name: substrate
+    material: silicon
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [-502.0, -2.0]
+  - name: box
+    material: silicon_dioxide
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [-2.0, 0.0]
+  - name: cladding
+    material: silicon_dioxide
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [0.3, 1.1]
+  - name: ln_slab
+    material: lithium_niobate
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [0.0, 0.3]
+  - name: ln_rib_a
+    material: lithium_niobate
+    polygon_um:
+    - [13.0, 0.3]
+    - [13.8, 0.3]
+    - [13.8, 0.5]
+    - [13.0, 0.5]
+  - name: ln_rib_b
+    material: lithium_niobate
+    polygon_um:
+    - [-13.8, 0.3]
+    - [-13.0, 0.3]
+    - [-13.0, 0.5]
+    - [-13.8, 0.5]
+  electrodes:
+  - name: signal
+    role: signal
+    weight: 1.0
+    material: gold
+    rect:
+      x_um: [-11.0, 11.0]
+      y_um: [0.5, 1.5]
+  - name: ground_r
+    role: ground
+    weight: 0.0
+    material: gold
+    rect:
+      x_um: [21.0, 61.0]
+      y_um: [0.5, 1.5]
+  - name: ground_l
+    role: ground
+    weight: 0.0
+    material: gold
+    rect:
+      x_um: [-61.0, -21.0]
+      y_um: [0.5, 1.5]
+  optical_window:
+    x_um: [9.4, 17.4]
+    y_um: [-1.9, 2.5]
+  mesh: {max_edge_um: 20.0, electrode_edge_um: 0.05, window_edge_um: 0.05}
+line:
+  length_mm: 5.0
+  differential: false
+  loading: {type: none}

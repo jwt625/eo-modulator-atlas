@@ -1,0 +1,125 @@
+# Canonical case K5-g4 (DevLog-023 O3 K4/K5), written by validation/scripts/make_cases.py (lane L-REF, DevLog-028).
+# Two K2 ribs (film 600 nm, etch 300 nm, top 1.0 um, 60 deg) in a G-S-G line, one rib centred in each gap.
+# Electrodes: Au, 0.8 um thick, sitting on the LN slab top (y 0.3..1.1 um); signal 20 um wide centred
+#   at x = 0; gap 4 um (edge to edge); grounds 100 um wide. Rib A (right gap) centred at x = +12 um,
+#   rib B (left gap) at x = -12 um. Push-pull by geometry: single-ended drive, signal 1 V, grounds 0 V.
+# Stack: LN slab 0.3 um everywhere, SiO2 BOX 4.7 um, Si substrate 500 um (bottom at y = -504.7 um),
+#   air above to y = 500 um. Domain x in [-500, 500] um. Outer boundaries: engine default
+#   (zero normal flux, Neumann) on all four sides; no backside metal.
+# RF permittivity (case inputs, DevLog-023 O3): LN eps perp/par = 44/28 (lab xx = par = 28, yy = zz = 44),
+#   SiO2 3.9, Si 11.7 (lossless dielectric, no conduction), air 1. Au is a perfect conductor.
+# Pockels (case inputs): r33 30.9, r13 9.6, r22 6.8, r51 32.6 pm/V, 3m point group, crystal z = c axis.
+# Optical model of each arm: window of 10 x 6 um centred on the rib, metal_in_window: absent (electrodes
+#   removed from the optical problem, replaced by the underlying air); Si substrate is outside the window, so
+#   each arm mode equals the K2 mode. References use the full-vector mode and the full Pockels tensor.
+# VpiL convention: V_t = full terminal difference (signal minus ground), VpiL = lambda / (2 |dn_A - dn_B|),
+#   dn per volt of V_t (engine eo-overlap/v2 convention, SPEC). line.length_mm = 10 only sets Vpi = VpiL / L.
+# Frame: x lateral, y film normal (up), z propagation. x-cut LN, propagation along crystal y:
+#   lab x = crystal z (n_e, eps par), lab y = crystal x (n_o, eps perp), lab z = crystal y (n_o).
+# Optical constants at 1550 nm from the Sellmeier fits in engine/data/materials.json: LN Zelmon 1997 congruent
+#   n_o = 2.211111009, n_e = 2.13755965; SiO2 Malitson 1965 n = 1.444023622; Si Salzberg/Tatian n = 3.477723756.
+#   Material names match library keys, so the engine can take dispersion slopes from the library for ng.
+schema: eo-atlas.sim/v1
+id: K5-g4
+title: 'Canonical K5-g4: x-cut LN rib pair in G-S-G, Au 0.8 um on slab, gap 4 um, push-pull'
+validation_status: unvalidated
+chain: [electrostatics, optical_mode, eo_overlap]
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: finite_difference_wavelength
+  ng_fixed: null
+  eo_axis: auto
+  metal_in_window: absent
+  eo:
+    arm_drive: two_arm_field_resolved
+    terminal_drive: single_ended
+    arm_windows:
+      A:
+        x_um: [7.0, 17.0]
+        y_um: [-3.0, 3.0]
+      B:
+        x_um: [-17.0, -7.0]
+        y_um: [-3.0, 3.0]
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211111009
+    n_e: 2.13755965
+    eps_r: {perp: 44.0, par: 28.0}
+    r_pm_per_v: {r13: 9.6, r22: 6.8, r33: 30.9, r51: 32.6}
+  silicon_dioxide: {n: 1.444023622, eps_r: 3.9}
+  silicon: {n: 3.477723756, eps_r: 11.7}
+  air: {n: 1.0, eps_r: 1.0}
+  gold: {conductor: true}
+geometry:
+  symmetry: none
+  domain:
+    x_um: [-500.0, 500.0]
+    y_um: [-504.7, 500.0]
+  regions:
+  - name: ambient
+    material: air
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [-504.7, 500.0]
+  - name: substrate
+    material: silicon
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [-504.7, -4.7]
+  - name: box
+    material: silicon_dioxide
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [-4.7, 0.0]
+  - name: ln_slab
+    material: lithium_niobate
+    rect:
+      x_um: [-500.0, 500.0]
+      y_um: [0.0, 0.3]
+  - name: ln_rib_a
+    material: lithium_niobate
+    polygon_um:
+    - [11.326794919, 0.3]
+    - [12.673205081, 0.3]
+    - [12.5, 0.6]
+    - [11.5, 0.6]
+  - name: ln_rib_b
+    material: lithium_niobate
+    polygon_um:
+    - [-12.673205081, 0.3]
+    - [-11.326794919, 0.3]
+    - [-11.5, 0.6]
+    - [-12.5, 0.6]
+  electrodes:
+  - name: signal
+    role: signal
+    weight: 1.0
+    material: gold
+    rect:
+      x_um: [-10.0, 10.0]
+      y_um: [0.3, 1.1]
+  - name: ground_r
+    role: ground
+    weight: 0.0
+    material: gold
+    rect:
+      x_um: [14.0, 114.0]
+      y_um: [0.3, 1.1]
+  - name: ground_l
+    role: ground
+    weight: 0.0
+    material: gold
+    rect:
+      x_um: [-114.0, -14.0]
+      y_um: [0.3, 1.1]
+  optical_window:
+    x_um: [7.0, 17.0]
+    y_um: [-3.0, 3.0]
+  mesh: {max_edge_um: 20.0, electrode_edge_um: 0.05, window_edge_um: 0.05}
+line:
+  length_mm: 10.0
+  differential: false
+  loading: {type: none}

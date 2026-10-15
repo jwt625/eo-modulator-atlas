@@ -1,0 +1,2467 @@
+{
+ "date": "2026-10-15",
+ "note": "reference values; U = extrapolation uncertainty (DevLog-028 round-2 rule); primary values are the vector FEM / scikit-fem results; tidy3d entries are sanity only, not a gate; for K4/K5 the primary EO comparands are vpil_vcm and dn_mean_abs_per_V, per-arm dn and balance are informational; vpil_scalar_vcm is a definitional comparison, not an engine target",
+ "cases": {
+  "K1": {
+   "case_sha256": "8e4c4fe2919335110479ee3ff2113d625f0eec43f231ab0eb3c4d95fc9480bbe",
+   "fem": {
+    "n_eff": {
+     "value": 2.447223377761226,
+     "U": 5.856132498927025e-07,
+     "f_finest": 2.4472231825568094,
+     "method": "formal_order_safety3",
+     "p": 4.0
+    },
+    "ng_opt": {
+     "value": 4.196166972670274,
+     "U": 8.572780085813747e-07,
+     "f_finest": 4.196166686910938,
+     "method": "formal_order_safety3",
+     "p": 4.0
+    },
+    "ng_opt_fd10nm": {
+     "value": 4.196161537501746,
+     "U": 8.57301067469507e-07,
+     "f_finest": 4.196161251734724,
+     "method": "formal_order_safety3",
+     "p": 4.0
+    },
+    "te_fraction": {
+     "value": 0.983442415476937,
+     "U": 9.141096309894792e-07,
+     "f_finest": 0.9834421107737267,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    },
+    "power_fraction_core": {
+     "value": 0.7832470418484686,
+     "U": 1.3037179869002102e-06,
+     "f_finest": 0.7832466072758063,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    },
+    "window_1p5x_shift_n_eff": 2.964540879446531e-08
+   },
+   "tidy3d": {
+    "role": "sanity_only_not_a_gate",
+    "n_eff": {
+     "value": 2.446549055725809,
+     "U": 0.03566401099673433,
+     "f_finest": 2.4750802645231964,
+     "method": "observed_order_gci1.25",
+     "p": 0.977193298947866
+    },
+    "ng_opt": {
+     "value": 4.195879438673062,
+     "U": 0.0014983278294167235,
+     "f_finest": 4.194680776409529,
+     "method": "observed_order_gci1.25",
+     "p": 1.39765900697772
+    },
+    "ng_opt_fd10nm": {
+     "value": 4.195827989089393,
+     "U": 0.0014976036153957484,
+     "f_finest": 4.194629906197076,
+     "method": "observed_order_gci1.25",
+     "p": 1.3977526577996335
+    },
+    "te_fraction": {
+     "value": 0.9828503287414069,
+     "U": 0.0031985811937151887,
+     "f_finest": 0.985409193696379,
+     "method": "observed_order_gci1.25",
+     "p": 0.7661844586817649
+    }
+   },
+   "delta_fem_minus_tidy3d": {
+    "n_eff": 0.0006743220354170631,
+    "ng_opt": 0.0002875339972119306,
+    "te_fraction": 0.0005920867355301285
+   }
+  },
+  "K2": {
+   "case_sha256": "10e2b3543627506ea08d1f0a0a079ad8f62bfa66b27c77be77471f8a18d595d4",
+   "fem": {
+    "n_eff": {
+     "value": 1.894167067063121,
+     "U": 5.811805980915352e-08,
+     "f_finest": 1.8941670205686731,
+     "method": "observed_order_gci1.25",
+     "p": 2.8912571769696687
+    },
+    "ng_opt": {
+     "value": 2.2908498810056908,
+     "U": 2.0463780170398849e-07,
+     "f_finest": 2.2908497172954494,
+     "method": "observed_order_gci1.25",
+     "p": 2.765575167664886
+    },
+    "ng_opt_fd10nm": {
+     "value": 2.2908487431872575,
+     "U": 2.0463693739536382e-07,
+     "f_finest": 2.2908485794777076,
+     "method": "observed_order_gci1.25",
+     "p": 2.765642205718052
+    },
+    "te_fraction": {
+     "value": 0.9906074384655582,
+     "U": 6.006860314711204e-08,
+     "f_finest": 0.9906073904106757,
+     "method": "observed_order_gci1.25",
+     "p": 2.8778866629743916
+    },
+    "power_fraction_core": {
+     "value": 0.8885563601180061,
+     "U": 7.164360341649356e-07,
+     "f_finest": 0.8885561213059947,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    },
+    "window_1p5x_shift_n_eff": -1.7263520835086865e-08
+   },
+   "tidy3d": {
+    "role": "sanity_only_not_a_gate",
+    "n_eff": {
+     "value": 1.8942388017402074,
+     "U": 0.004152696750105711,
+     "f_finest": 1.897560959140292,
+     "method": "observed_order_gci1.25",
+     "p": 1.0146277892950726
+    },
+    "ng_opt": {
+     "value": 2.2909194473393812,
+     "U": 0.0006023420878298325,
+     "f_finest": 2.2904375736691174,
+     "method": "observed_order_gci1.25",
+     "p": 0.7756442750383564
+    },
+    "ng_opt_fd10nm": {
+     "value": 2.2909092686806916,
+     "U": 0.0006022849606707181,
+     "f_finest": 2.290427440712155,
+     "method": "observed_order_gci1.25",
+     "p": 0.7756007879423126
+    },
+    "te_fraction": {
+     "value": 0.9903931572178755,
+     "U": 0.00043296547558899223,
+     "f_finest": 0.9907395295983467,
+     "method": "observed_order_gci1.25",
+     "p": 0.649028125339532
+    }
+   },
+   "delta_fem_minus_tidy3d": {
+    "n_eff": -7.173467708643244e-05,
+    "ng_opt": -6.956633369048504e-05,
+    "te_fraction": 0.00021428124768274603
+   }
+  },
+  "K3": {
+   "case_sha256": "efecaaaea0103649ae3b0a9b0b341b5b610c67cf7191b5e7dd6664918faec1ea",
+   "fem": {
+    "n_eff": {
+     "value": 1.9123754879347499,
+     "U": 1.854762157749157e-07,
+     "f_finest": 1.9123753395537773,
+     "method": "observed_order_gci1.25",
+     "p": 2.3785784467880484
+    },
+    "ng_opt": {
+     "value": 2.265028607498945,
+     "U": 6.279886816118463e-07,
+     "f_finest": 2.2650281051079997,
+     "method": "observed_order_gci1.25",
+     "p": 2.3661620287559137
+    },
+    "ng_opt_fd10nm": {
+     "value": 2.265027789526583,
+     "U": 6.280349595932933e-07,
+     "f_finest": 2.2650272870986154,
+     "method": "observed_order_gci1.25",
+     "p": 2.366128296655361
+    },
+    "te_fraction": {
+     "value": 0.9939895400133559,
+     "U": 4.821454123449254e-07,
+     "f_finest": 0.9939891542970261,
+     "method": "observed_order_gci1.25",
+     "p": 1.2065171230080793
+    },
+    "power_fraction_core": {
+     "value": 0.8688205845143299,
+     "U": 6.596666402014506e-07,
+     "f_finest": 0.8688200567810177,
+     "method": "observed_order_gci1.25",
+     "p": 2.3352722080641786
+    },
+    "window_1p5x_shift_n_eff": -3.103421075678625e-09
+   },
+   "tidy3d": {
+    "role": "sanity_only_not_a_gate",
+    "n_eff": {
+     "value": 1.9124811164073376,
+     "U": 0.003657917599775573,
+     "f_finest": 1.915407450487158,
+     "method": "observed_order_gci1.25",
+     "p": 1.0217019183017684
+    },
+    "ng_opt": {
+     "value": 2.2649815753266545,
+     "U": 0.00022075990423342517,
+     "f_finest": 2.2650546952328456,
+     "method": "formal_order_safety3",
+     "p": 1.0
+    },
+    "ng_opt_fd10nm": {
+     "value": 2.264973870626733,
+     "U": 0.0002207951123702756,
+     "f_finest": 2.2650470070334614,
+     "method": "formal_order_safety3",
+     "p": 1.0
+    },
+    "te_fraction": {
+     "value": 0.9939612903516719,
+     "U": 0.0001622931250871984,
+     "f_finest": 0.9940911248517417,
+     "method": "observed_order_gci1.25",
+     "p": 0.9705712908720051
+    }
+   },
+   "delta_fem_minus_tidy3d": {
+    "n_eff": -0.00010562847258777097,
+    "ng_opt": 4.703217229051759e-05,
+    "te_fraction": 2.82496616840211e-05
+   }
+  },
+  "K4": {
+   "case_sha256": "50288924a7876ed8d976db4530c4e738a4b3538798f89c93db8d34126e35dae5",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 146.5187173148401,
+    "U": 0.012140394156290313,
+    "f_finest": 146.52842963016514,
+    "method": "observed_order_gci1.25",
+    "p": 1.6551705431800845
+   },
+   "C0_pF_per_m": {
+    "value": 36.95207981270793,
+    "U": 0.0006076647083741449,
+    "f_finest": 36.95256594447463,
+    "method": "observed_order_gci1.25",
+    "p": 1.2929575041065082
+   },
+   "n_rf": {
+    "value": 1.9912549861618363,
+    "U": 6.746377741367882e-05,
+    "f_finest": 1.9913089571837672,
+    "method": "observed_order_gci1.25",
+    "p": 1.7121138557616378
+   },
+   "Z0_ohm": {
+    "value": 45.33285941091313,
+    "U": 0.002226483429037529,
+    "f_finest": 45.3310782241699,
+    "method": "observed_order_gci1.25",
+    "p": 1.611478005913388
+   },
+   "vpil_vcm": {
+    "value": 2.278604396033844,
+    "U": 0.0005383089975380395,
+    "f_finest": 2.2781737488358136,
+    "method": "observed_order_gci1.25",
+    "p": 1.4852203691445467
+   },
+   "dn_mean_abs_per_V": {
+    "value": 1.7006025241792868e-05,
+    "U": 4.016222485230512e-09,
+    "f_finest": 1.7009238219781052e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.4862020922709152
+   },
+   "vpil_r33only_vcm": {
+    "value": 2.3807905054462752,
+    "U": 0.0005951086426886354,
+    "f_finest": 2.3803144185321243,
+    "method": "observed_order_gci1.25",
+    "p": 1.5320481805301729
+   },
+   "vpil_scalar_vcm": {
+    "value": 2.5635229720963535,
+    "U": 0.000640784929600291,
+    "f_finest": 2.5630103441526733,
+    "method": "observed_order_gci1.25",
+    "p": 1.5320481805296453
+   },
+   "gamma_mean_abs": {
+    "value": 0.5008657506862378,
+    "U": 0.00012515034123680713,
+    "f_finest": 0.5009658709592273,
+    "method": "observed_order_gci1.25",
+    "p": 1.5331402514757695
+   },
+   "dn_A_per_V": {
+    "value": -1.7004794706997226e-05,
+    "U": 5.528328054110629e-09,
+    "f_finest": -1.7009217369440514e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.193257034596513
+   },
+   "dn_B_per_V": {
+    "value": 1.7006833409717177e-05,
+    "U": 3.03207550551202e-09,
+    "f_finest": 1.7009259070121586e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.7767283958409616
+   },
+   "gamma_A": {
+    "value": 0.5008394037914309,
+    "U": 0.00015660258246869008,
+    "f_finest": 0.5009646858574058,
+    "method": "observed_order_gci1.25",
+    "p": 1.3192211382039922
+   },
+   "gamma_B": {
+    "value": -0.5008855203862367,
+    "U": 0.00010191959351521507,
+    "f_finest": -0.5009670560610489,
+    "method": "observed_order_gci1.25",
+    "p": 1.7459612782710516
+   },
+   "push_pull_balance": {
+    "value": -1.0000142540874164,
+    "U": 3.5407306374191094e-05,
+    "f_finest": -1.0000024516519583,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.894166940424576,
+     "te_fraction": 0.9906073081825948,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 12.5,
+     "power_fraction_ln": 0.8885558824930917
+    },
+    "B": {
+     "n_eff": 1.894166940419468,
+     "te_fraction": 0.9906073081765564,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -12.5,
+     "power_fraction_ln": 0.8885558824916641
+    }
+   },
+   "optical_mesh_check_d_vpil_vcm": 1.0290665404255606e-06,
+   "domain_study": {
+    "scale": 2.0,
+    "rows": [
+     {
+      "domain_half_um": 250.0,
+      "C_pF_per_m": 146.5395622641891,
+      "C0_pF_per_m": 36.95037884114749,
+      "n_rf": 1.9914435359596423,
+      "Z0_ohm": 45.33069779565733
+     },
+     {
+      "domain_half_um": 1000.0,
+      "C_pF_per_m": 146.549234792561,
+      "C0_pF_per_m": 36.953396699801786,
+      "n_rf": 1.991427937178724,
+      "Z0_ohm": 45.32735083588867
+     },
+     {
+      "domain_half_um": 2000.0,
+      "C_pF_per_m": 146.54958488176348,
+      "C0_pF_per_m": 36.95340011640727,
+      "n_rf": 1.9914302237620447,
+      "Z0_ohm": 45.32729459966564
+     }
+    ],
+    "yaml_domain_500_same_scale": {
+     "C_pF_per_m": 146.5493072640163,
+     "C0_pF_per_m": 36.95327098064034,
+     "n_rf": 1.9914318171069012,
+     "Z0_ohm": 45.32741673253751
+    }
+   }
+  },
+  "K5-g3": {
+   "case_sha256": "bab7cdecdbeb780612cc3428c88249168ab5291b1cc43db7faeae677b67ca3fa",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 181.12616412710113,
+    "U": 0.04560233325157981,
+    "f_finest": 181.1626459937024,
+    "method": "observed_order_gci1.25",
+    "p": 1.2460318270934219
+   },
+   "C0_pF_per_m": {
+    "value": 43.81817711757323,
+    "U": 0.0015791627197998537,
+    "f_finest": 43.818703505146495,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "n_rf": {
+    "value": 2.0331394952465747,
+    "U": 0.00021880318205991234,
+    "f_finest": 2.0333145377922226,
+    "method": "observed_order_gci1.25",
+    "p": 1.2866079383555682
+   },
+   "Z0_ohm": {
+    "value": 37.44255037434115,
+    "U": 0.0054112841855324945,
+    "f_finest": 37.43822134699273,
+    "method": "observed_order_gci1.25",
+    "p": 1.212312354942529
+   },
+   "vpil_vcm": {
+    "value": 1.278318604520359,
+    "U": 0.0006951102572522183,
+    "f_finest": 1.2777625163145572,
+    "method": "observed_order_gci1.25",
+    "p": 1.2397227509425512
+   },
+   "dn_mean_abs_per_V": {
+    "value": 3.0313270244255165e-05,
+    "U": 1.6473654887273055e-08,
+    "f_finest": 3.0326449168164984e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.2414329806827853
+   },
+   "vpil_r33only_vcm": {
+    "value": 1.3350298410309653,
+    "U": 0.0007166127207292039,
+    "f_finest": 1.334456550854382,
+    "method": "observed_order_gci1.25",
+    "p": 1.3128225188947429
+   },
+   "vpil_scalar_vcm": {
+    "value": 1.437497191831044,
+    "U": 0.0007716147924380357,
+    "f_finest": 1.4368798999970935,
+    "method": "observed_order_gci1.25",
+    "p": 1.3128225188888063
+   },
+   "gamma_mean_abs": {
+    "value": 0.5359236754682061,
+    "U": 0.0002874878310478446,
+    "f_finest": 0.5361536657330443,
+    "method": "observed_order_gci1.25",
+    "p": 1.314662978446455
+   },
+   "dn_A_per_V": {
+    "value": -3.031186113482077e-05,
+    "U": 1.8033993346858763e-08,
+    "f_finest": -3.0326288329498258e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.1665336452985962
+   },
+   "dn_B_per_V": {
+    "value": 3.0314533139098784e-05,
+    "U": 1.5096084666160766e-08,
+    "f_finest": 3.0326610006831713e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.3165564109098675
+   },
+   "gamma_A": {
+    "value": 0.5359083185327134,
+    "U": 0.00030375122362452656,
+    "f_finest": 0.536151319511613,
+    "method": "observed_order_gci1.25",
+    "p": 1.2643817311668148
+   },
+   "gamma_B": {
+    "value": -0.5359379918579125,
+    "U": 0.0002725251207041923,
+    "f_finest": -0.5361560119544758,
+    "method": "observed_order_gci1.25",
+    "p": 1.3647433281773795
+   },
+   "push_pull_balance": {
+    "value": -1.0000173796723497,
+    "U": 2.031738461338861e-05,
+    "f_finest": -1.000010607210812,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8941669404245756,
+     "te_fraction": 0.9906073081825948,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 11.5,
+     "power_fraction_ln": 0.8885558824930919
+    },
+    "B": {
+     "n_eff": 1.894166940419468,
+     "te_fraction": 0.9906073081765564,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -11.5,
+     "power_fraction_ln": 0.8885558824916645
+    }
+   },
+   "optical_mesh_check_d_vpil_vcm": 8.640196298426162e-07
+  },
+  "K5-g4": {
+   "case_sha256": "4ace998543caee8d7dff4a98f96f9c17c306c4a1170e45ed15d1b3277a1cf781",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 159.6989260251351,
+    "U": 0.03416786050333798,
+    "f_finest": 159.72626031353778,
+    "method": "observed_order_gci1.25",
+    "p": 1.0699484709570208
+   },
+   "C0_pF_per_m": {
+    "value": 39.79488735270632,
+    "U": 0.001171143231545102,
+    "f_finest": 39.7952777337835,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "n_rf": {
+    "value": 2.0032785927327765,
+    "U": 0.00017898949705219547,
+    "f_finest": 2.0034217843304183,
+    "method": "observed_order_gci1.25",
+    "p": 1.1092607872123026
+   },
+   "Z0_ohm": {
+    "value": 41.842611278833814,
+    "U": 0.005228268471926256,
+    "f_finest": 41.83842866405627,
+    "method": "observed_order_gci1.25",
+    "p": 1.0386235828646442
+   },
+   "vpil_vcm": {
+    "value": 1.769901610766616,
+    "U": 0.0009548450531196018,
+    "f_finest": 1.7695833290822427,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_mean_abs_per_V": {
+    "value": 2.1893870968115303e-05,
+    "U": 1.1817910404498465e-08,
+    "f_finest": 2.189781027158347e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_r33only_vcm": {
+    "value": 1.8490603178235154,
+    "U": 0.001085678628344633,
+    "f_finest": 1.8486984249474006,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_scalar_vcm": {
+    "value": 1.9909809748858343,
+    "U": 0.0011690075618606688,
+    "f_finest": 1.9905913056985474,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_mean_abs": {
+    "value": 0.5159187866114012,
+    "U": 0.00030310048022519354,
+    "f_finest": 0.5160198201048096,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_A_per_V": {
+    "value": -2.1893546744478903e-05,
+    "U": 1.2467810893524258e-08,
+    "f_finest": -2.189770268144341e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_B_per_V": {
+    "value": 2.1890879945771015e-05,
+    "U": 8.797394940634637e-09,
+    "f_finest": 2.1897917861723523e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.2250728913632125
+   },
+   "gamma_A": {
+    "value": 0.5159107711081151,
+    "U": 0.0003194908361633386,
+    "f_finest": 0.5160172680535029,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_B": {
+    "value": -0.5158461562831028,
+    "U": 0.0002202698412669124,
+    "f_finest": -0.5160223721561163,
+    "method": "observed_order_gci1.25",
+    "p": 1.2502536102923831
+   },
+   "push_pull_balance": {
+    "value": -1.000029610681069,
+    "U": 5.935220006003661e-05,
+    "f_finest": -1.0000098266143824,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8941669404245753,
+     "te_fraction": 0.9906073081825952,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 12.0,
+     "power_fraction_ln": 0.8885558824930928
+    },
+    "B": {
+     "n_eff": 1.894166940419468,
+     "te_fraction": 0.9906073081765564,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -12.0,
+     "power_fraction_ln": 0.8885558824916644
+    }
+   },
+   "optical_mesh_check_d_vpil_vcm": -2.561906464748631e-06
+  },
+  "K5-g5": {
+   "case_sha256": "e02f79f9b4e9604c9422dd46d11d67649273bed0e45142b636c6103f25a6bd5e",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 146.51871731474708,
+    "U": 0.012140394262267762,
+    "f_finest": 146.5284296301569,
+    "method": "observed_order_gci1.25",
+    "p": 1.6551705351761068
+   },
+   "C0_pF_per_m": {
+    "value": 36.95207981270655,
+    "U": 0.0006076647097597032,
+    "f_finest": 36.95256594447436,
+    "method": "observed_order_gci1.25",
+    "p": 1.2929575019370683
+   },
+   "n_rf": {
+    "value": 1.9912549861612625,
+    "U": 6.746377806982062e-05,
+    "f_finest": 1.9913089571837184,
+    "method": "observed_order_gci1.25",
+    "p": 1.71211384674904
+   },
+   "Z0_ohm": {
+    "value": 45.332859410928776,
+    "U": 0.0022264834468010974,
+    "f_finest": 45.331078224171335,
+    "method": "observed_order_gci1.25",
+    "p": 1.611477998653681
+   },
+   "vpil_vcm": {
+    "value": 2.2786043960330735,
+    "U": 0.00053830899674423,
+    "f_finest": 2.278173748835678,
+    "method": "observed_order_gci1.25",
+    "p": 1.4852203703731648
+   },
+   "dn_mean_abs_per_V": {
+    "value": 1.700602524179859e-05,
+    "U": 4.016222479339398e-09,
+    "f_finest": 1.700923821978206e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.4862020934919147
+   },
+   "vpil_r33only_vcm": {
+    "value": 2.3807905054455256,
+    "U": 0.0005951086419309082,
+    "f_finest": 2.380314418531981,
+    "method": "observed_order_gci1.25",
+    "p": 1.5320481815984182
+   },
+   "vpil_scalar_vcm": {
+    "value": 2.563522972095546,
+    "U": 0.0006407849287831668,
+    "f_finest": 2.5630103441525196,
+    "method": "observed_order_gci1.25",
+    "p": 1.5320481816002391
+   },
+   "gamma_mean_abs": {
+    "value": 0.5008657506863948,
+    "U": 0.000125150341078184,
+    "f_finest": 0.5009658709592574,
+    "method": "observed_order_gci1.25",
+    "p": 1.5331402525391964
+   },
+   "dn_A_per_V": {
+    "value": -1.700479470700732e-05,
+    "U": 5.52832804295944e-09,
+    "f_finest": -1.7009217369441687e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.1932570360988939
+   },
+   "dn_B_per_V": {
+    "value": 1.700683340972058e-05,
+    "U": 3.032075502322941e-09,
+    "f_finest": 1.7009259070122437e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.7767283967791367
+   },
+   "gamma_A": {
+    "value": 0.5008394037916866,
+    "U": 0.00015660258219224454,
+    "f_finest": 0.5009646858574404,
+    "method": "observed_order_gci1.25",
+    "p": 1.3192211395934783
+   },
+   "gamma_B": {
+    "value": -0.5008855203863313,
+    "U": 0.00010191959342889523,
+    "f_finest": -0.5009670560610744,
+    "method": "observed_order_gci1.25",
+    "p": 1.7459612790020895
+   },
+   "push_pull_balance": {
+    "value": -1.000014254087375,
+    "U": 3.540730630757771e-05,
+    "f_finest": -1.0000024516519392,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8941669404245751,
+     "te_fraction": 0.9906073081825948,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 12.5,
+     "power_fraction_ln": 0.8885558824930917
+    },
+    "B": {
+     "n_eff": 1.894166940419468,
+     "te_fraction": 0.9906073081765562,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -12.5,
+     "power_fraction_ln": 0.8885558824916635
+    }
+   },
+   "optical_mesh_check_d_vpil_vcm": 1.0290666865309106e-06
+  },
+  "K5-g6": {
+   "case_sha256": "90cd03b3a045c862afde01674b063b2c10d66427f229053429234b3bd2bca642",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 137.42687423270004,
+    "U": 0.013742807439740545,
+    "f_finest": 137.43786847865184,
+    "method": "observed_order_gci1.25",
+    "p": 1.2597226372024677
+   },
+   "C0_pF_per_m": {
+    "value": 34.789289182528954,
+    "U": 0.0006417862805996322,
+    "f_finest": 34.789802611553434,
+    "method": "observed_order_gci1.25",
+    "p": 1.0672955379217954
+   },
+   "n_rf": {
+    "value": 1.9875265287930612,
+    "U": 8.174257666637708e-05,
+    "f_finest": 1.9875919228543943,
+    "method": "observed_order_gci1.25",
+    "p": 1.2924883031566488
+   },
+   "Z0_ohm": {
+    "value": 48.241476684203874,
+    "U": 0.0028441400668022254,
+    "f_finest": 48.23920137215043,
+    "method": "observed_order_gci1.25",
+    "p": 1.2349832467408892
+   },
+   "vpil_vcm": {
+    "value": 2.8058059595059572,
+    "U": 0.000811413925499993,
+    "f_finest": 2.8051568283655572,
+    "method": "observed_order_gci1.25",
+    "p": 1.115047776040485
+   },
+   "dn_mean_abs_per_V": {
+    "value": 1.3810650148908681e-05,
+    "U": 3.992838533305016e-09,
+    "f_finest": 1.3813844419735325e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.1158264310923283
+   },
+   "vpil_r33only_vcm": {
+    "value": 2.931863821469121,
+    "U": 0.0009990240905738412,
+    "f_finest": 2.931064602196662,
+    "method": "observed_order_gci1.25",
+    "p": 1.098506811509471
+   },
+   "vpil_scalar_vcm": {
+    "value": 3.156892738021662,
+    "U": 0.0010757020409701834,
+    "f_finest": 3.156032176388886,
+    "method": "observed_order_gci1.25",
+    "p": 1.0985068115196992
+   },
+   "gamma_mean_abs": {
+    "value": 0.4880676108555001,
+    "U": 0.00016625586594001818,
+    "f_finest": 0.4882006155482521,
+    "method": "observed_order_gci1.25",
+    "p": 1.0994049095067164
+   },
+   "dn_A_per_V": {
+    "value": -1.3812326765219252e-05,
+    "U": 2.0060682143951894e-09,
+    "f_finest": -1.3813931619790768e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.7160208876656415
+   },
+   "dn_B_per_V": {
+    "value": 1.3812044948174447e-05,
+    "U": 5.136814516305639e-09,
+    "f_finest": 1.3813757219679883e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_A": {
+    "value": 0.4881280849148034,
+    "U": 9.445597818714957e-05,
+    "f_finest": 0.48820364969735314,
+    "method": "observed_order_gci1.25",
+    "p": 1.5702530589869443
+   },
+   "gamma_B": {
+    "value": -0.4881288622972737,
+    "U": 0.00020615730563233736,
+    "f_finest": -0.48819758139915115,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "push_pull_balance": {
+    "value": -0.9999578218683383,
+    "U": 8.865956347048343e-05,
+    "f_finest": -0.9999873750561618,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8941669404245756,
+     "te_fraction": 0.990607308182595,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 13.0,
+     "power_fraction_ln": 0.8885558824930921
+    },
+    "B": {
+     "n_eff": 1.8941669404194683,
+     "te_fraction": 0.9906073081765562,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -13.0,
+     "power_fraction_ln": 0.8885558824916635
+    }
+   },
+   "optical_mesh_check_d_vpil_vcm": -3.800392630370908e-06
+  },
+  "K5-g8": {
+   "case_sha256": "95efdcbd399b1a1b70a644d2187dabb499d3dea301a7e69baf383dfd52c40617",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 125.49592647307654,
+    "U": 0.007877976478383175,
+    "f_finest": 125.50222885425924,
+    "method": "observed_order_gci1.25",
+    "p": 1.4555579691717984
+   },
+   "C0_pF_per_m": {
+    "value": 31.642499845291315,
+    "U": 0.00037548234603779207,
+    "f_finest": 31.642800231168145,
+    "method": "observed_order_gci1.25",
+    "p": 1.3547147087389297
+   },
+   "n_rf": {
+    "value": 1.991495834638169,
+    "U": 5.0798859354828085e-05,
+    "f_finest": 1.991536473725653,
+    "method": "observed_order_gci1.25",
+    "p": 1.4760701027721495
+   },
+   "Z0_ohm": {
+    "value": 52.9333130729065,
+    "U": 0.001973592099888677,
+    "f_finest": 52.93173419922659,
+    "method": "observed_order_gci1.25",
+    "p": 1.4407449711869038
+   },
+   "vpil_vcm": {
+    "value": 3.9196235259318333,
+    "U": 0.0005342517773948563,
+    "f_finest": 3.9191961245099174,
+    "method": "observed_order_gci1.25",
+    "p": 1.5783876324562893
+   },
+   "dn_mean_abs_per_V": {
+    "value": 9.886153891965868e-06,
+    "U": 1.3472087656936759e-09,
+    "f_finest": 9.887231658978423e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.5790127307303805
+   },
+   "vpil_r33only_vcm": {
+    "value": 4.095824509973549,
+    "U": 0.0007638987009928044,
+    "f_finest": 4.095213391012755,
+    "method": "observed_order_gci1.25",
+    "p": 1.4466238348254643
+   },
+   "vpil_scalar_vcm": {
+    "value": 4.410190731596649,
+    "U": 0.0008225301066355772,
+    "f_finest": 4.409532707511341,
+    "method": "observed_order_gci1.25",
+    "p": 1.446623834839118
+   },
+   "gamma_mean_abs": {
+    "value": 0.4658232227641131,
+    "U": 8.685677744979525e-05,
+    "f_finest": 0.4658927081860729,
+    "method": "observed_order_gci1.25",
+    "p": 1.4473669798658444
+   },
+   "dn_A_per_V": {
+    "value": -9.886397985937309e-06,
+    "U": 1.1049244964421437e-09,
+    "f_finest": -9.887281925534462e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.7348292447651668
+   },
+   "dn_B_per_V": {
+    "value": 9.88587753188829e-06,
+    "U": 1.6298256676201417e-09,
+    "f_finest": 9.887181392422386e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.4369395115286419
+   },
+   "gamma_A": {
+    "value": 0.46583273799473507,
+    "U": 7.794171959105145e-05,
+    "f_finest": 0.4658950913704079,
+    "method": "observed_order_gci1.25",
+    "p": 1.5192091160593142
+   },
+   "gamma_B": {
+    "value": -0.4658131899538952,
+    "U": 9.641880980341966e-05,
+    "f_finest": -0.46589032500173794,
+    "method": "observed_order_gci1.25",
+    "p": 1.3801492888317484
+   },
+   "push_pull_balance": {
+    "value": -0.9999784188387943,
+    "U": 3.423971741500775e-05,
+    "f_finest": -0.9999898320779327,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8941669404245756,
+     "te_fraction": 0.9906073081825948,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 14.0,
+     "power_fraction_ln": 0.8885558824930917
+    },
+    "B": {
+     "n_eff": 1.8941669404194683,
+     "te_fraction": 0.9906073081765564,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -14.0,
+     "power_fraction_ln": 0.8885558824916635
+    }
+   },
+   "optical_mesh_check_d_vpil_vcm": 2.3031240561355304e-05
+  },
+  "K7-D0": {
+   "case_sha256": "2d0f0ee06c429873fb547d730967a1feb6ab6a5ca0f7dacc24e7daa7007d39c8",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 139.48600674809853,
+    "U": 0.002718705320532422,
+    "f_finest": 139.48818171235496,
+    "method": "observed_order_gci1.25",
+    "p": 1.4453017135430857
+   },
+   "C0_pF_per_m": {
+    "value": 29.990885902592467,
+    "U": 0.00023470967512650986,
+    "f_finest": 29.991073670332568,
+    "method": "observed_order_gci1.25",
+    "p": 2.0585552602284842
+   },
+   "n_rf": {
+    "value": 2.156611483804232,
+    "U": 1.1713260179124774e-05,
+    "f_finest": 2.1566153882242918,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "Z0_ohm": {
+    "value": 51.57260719684928,
+    "U": 0.0006684922929345305,
+    "f_finest": 51.572072403014936,
+    "method": "observed_order_gci1.25",
+    "p": 1.7009372297602685
+   },
+   "vpil_vcm": {
+    "value": 5.213009700135444,
+    "U": 0.00021569643763874602,
+    "f_finest": 5.212837142985333,
+    "method": "observed_order_gci1.25",
+    "p": 1.9078444895370659
+   },
+   "dn_mean_abs_per_V": {
+    "value": 7.433325926540361e-06,
+    "U": 3.075374741622079e-10,
+    "f_finest": 7.433571956519691e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.9081073996850908
+   },
+   "vpil_r33only_vcm": {
+    "value": 5.329496319789682,
+    "U": 0.00035734753226268623,
+    "f_finest": 5.3292104417638715,
+    "method": "observed_order_gci1.25",
+    "p": 1.816896747510707
+   },
+   "vpil_scalar_vcm": {
+    "value": 5.969332057221044,
+    "U": 0.0004002490951537929,
+    "f_finest": 5.969011857944921,
+    "method": "observed_order_gci1.25",
+    "p": 1.816896747720998
+   },
+   "gamma_mean_abs": {
+    "value": 0.43158915556492583,
+    "U": 2.8934524952950458e-05,
+    "f_finest": 0.4316123031848882,
+    "method": "observed_order_gci1.25",
+    "p": 1.8172873257967583
+   },
+   "dn_A_per_V": {
+    "value": -7.43329098124738e-06,
+    "U": 3.545904709628659e-10,
+    "f_finest": -7.43357465362415e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.7964985716762456
+   },
+   "dn_B_per_V": {
+    "value": 7.43335745358873e-06,
+    "U": 2.6475728312814903e-10,
+    "f_finest": 7.433569259415232e-06,
+    "method": "observed_order_gci1.25",
+    "p": 2.0296075039169432
+   },
+   "gamma_A": {
+    "value": 0.4315905690373938,
+    "U": 2.7266393412689327e-05,
+    "f_finest": 0.43161238215212394,
+    "method": "observed_order_gci1.25",
+    "p": 1.9167227628750048
+   },
+   "gamma_B": {
+    "value": -0.431587472490596,
+    "U": 3.093965882064453e-05,
+    "f_finest": -0.4316122242176525,
+    "method": "observed_order_gci1.25",
+    "p": 1.711528097763896
+   },
+   "push_pull_balance": {
+    "value": -1.000003156855193,
+    "U": 1.1647529894243114e-05,
+    "f_finest": -0.9999992743452283,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.845665883235574,
+     "te_fraction": 0.9954624151832226,
+     "labels": [
+      "ambient",
+      "box",
+      "cladding",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 16.0,
+     "power_fraction_ln": 0.7870356129501404
+    },
+    "B": {
+     "n_eff": 1.845665883795684,
+     "te_fraction": 0.9954624123505545,
+     "labels": [
+      "ambient",
+      "box",
+      "cladding",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -16.0,
+     "power_fraction_ln": 0.7870356062989786
+    }
+   }
+  },
+  "K7-D1": {
+   "case_sha256": "95df3bda4cc5f259bc5c33cd4694f7e86fd3400d362dc4e03dd426b832b9979c",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 139.51386216012307,
+    "U": 0.004618506806480127,
+    "f_finest": 139.5154016623919,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "C0_pF_per_m": {
+    "value": 29.990777042871542,
+    "U": 0.0003596130529892605,
+    "f_finest": 29.991064733313934,
+    "method": "observed_order_gci1.25",
+    "p": 1.551994461497824
+   },
+   "n_rf": {
+    "value": 2.1568215914646056,
+    "U": 1.3591689589809164e-05,
+    "f_finest": 2.156826122027802,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "Z0_ohm": {
+    "value": 51.56798906147915,
+    "U": 0.0011752098075046291,
+    "f_finest": 51.56704889363315,
+    "method": "observed_order_gci1.25",
+    "p": 1.1506583073370158
+   },
+   "vpil_vcm": {
+    "value": 4.894579175806356,
+    "U": 0.00036295016851539685,
+    "f_finest": 4.894288815671544,
+    "method": "observed_order_gci1.25",
+    "p": 1.2534739910440884
+   },
+   "dn_mean_abs_per_V": {
+    "value": 7.916921748178596e-06,
+    "U": 5.870192353909523e-10,
+    "f_finest": 7.917391363566909e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.253710938687543
+   },
+   "vpil_r33only_vcm": {
+    "value": 5.0038937281599445,
+    "U": 0.0005952563147926249,
+    "f_finest": 5.00341752310811,
+    "method": "observed_order_gci1.25",
+    "p": 1.198144934775254
+   },
+   "vpil_scalar_vcm": {
+    "value": 5.604639070973899,
+    "U": 0.000666720154380851,
+    "f_finest": 5.604105694850395,
+    "method": "observed_order_gci1.25",
+    "p": 1.1981449348205169
+   },
+   "gamma_mean_abs": {
+    "value": 0.45967259919090664,
+    "U": 5.467528327016136e-05,
+    "f_finest": 0.45971633941752277,
+    "method": "observed_order_gci1.25",
+    "p": 1.1985004367538858
+   },
+   "dn_A_per_V": {
+    "value": -7.916754110204949e-06,
+    "U": 7.608651701226261e-10,
+    "f_finest": -7.917362802341047e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.0378863097093913
+   },
+   "dn_B_per_V": {
+    "value": 7.917046231038516e-06,
+    "U": 4.671171928188723e-10,
+    "f_finest": 7.91741992479277e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.4669275199880927
+   },
+   "gamma_A": {
+    "value": 0.4596912040877845,
+    "U": 7.08678497655102e-05,
+    "f_finest": 0.459714826704373,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_B": {
+    "value": -0.459685723812459,
+    "U": 4.016039776691405e-05,
+    "f_finest": -0.4597178521306725,
+    "method": "observed_order_gci1.25",
+    "p": 1.4741860729672418
+   },
+   "push_pull_balance": {
+    "value": -1.0000092215776317,
+    "U": 6.0202334011272285e-06,
+    "f_finest": -1.0000072148331647,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8456658837956812,
+     "te_fraction": 0.9954624123505532,
+     "labels": [
+      "ambient",
+      "box",
+      "cladding",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 15.0,
+     "power_fraction_ln": 0.7870356062989625
+    },
+    "B": {
+     "n_eff": 1.8456658837956854,
+     "te_fraction": 0.9954624123505545,
+     "labels": [
+      "ambient",
+      "box",
+      "cladding",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -15.0,
+     "power_fraction_ln": 0.787035606298979
+    }
+   }
+  },
+  "K7-D2.6": {
+   "case_sha256": "756c4e264cfb0d7e0154424dc7b7f72dd1a901169b9da1e693f87452f1efd8de",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 139.62595476463432,
+    "U": 0.005036287161260589,
+    "f_finest": 139.6276335270214,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "C0_pF_per_m": {
+    "value": 29.990793937539348,
+    "U": 0.0003322396060978505,
+    "f_finest": 29.991059729224226,
+    "method": "observed_order_gci1.25",
+    "p": 1.6316877700217152
+   },
+   "n_rf": {
+    "value": 2.1576879454897897,
+    "U": 1.7104458493566455e-05,
+    "f_finest": 2.1576936469759542,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "Z0_ohm": {
+    "value": 51.54723174069138,
+    "U": 0.001134196497787343,
+    "f_finest": 51.54632438349315,
+    "method": "observed_order_gci1.25",
+    "p": 1.232540058889466
+   },
+   "vpil_vcm": {
+    "value": 4.024533730522383,
+    "U": 0.0002585191907611417,
+    "f_finest": 4.024326915169774,
+    "method": "observed_order_gci1.25",
+    "p": 1.5714827176269177
+   },
+   "dn_mean_abs_per_V": {
+    "value": 9.628444659378566e-06,
+    "U": 6.184282745089556e-10,
+    "f_finest": 9.628939401998173e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.5717751631509458
+   },
+   "vpil_r33only_vcm": {
+    "value": 4.113495370801532,
+    "U": 0.0005196926097472687,
+    "f_finest": 4.113079616713734,
+    "method": "observed_order_gci1.25",
+    "p": 1.2653209314376983
+   },
+   "vpil_scalar_vcm": {
+    "value": 4.607343421223611,
+    "U": 0.0005820846044035655,
+    "f_finest": 4.606877753540088,
+    "method": "observed_order_gci1.25",
+    "p": 1.265320931814199
+   },
+   "gamma_mean_abs": {
+    "value": 0.5591723436851755,
+    "U": 7.063494011985694e-05,
+    "f_finest": 0.5592288516372714,
+    "method": "observed_order_gci1.25",
+    "p": 1.2657303923676364
+   },
+   "dn_A_per_V": {
+    "value": -9.628391623381458e-06,
+    "U": 7.125774936648194e-10,
+    "f_finest": -9.62896168537639e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.3869413302700726
+   },
+   "dn_B_per_V": {
+    "value": 9.62847629995789e-06,
+    "U": 5.510233275835802e-10,
+    "f_finest": 9.628917118619958e-06,
+    "method": "observed_order_gci1.25",
+    "p": 1.7395145508280305
+   },
+   "gamma_A": {
+    "value": 0.5591981484933253,
+    "U": 9.576741395533883e-05,
+    "f_finest": 0.5592300709646437,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_B": {
+    "value": -0.5591867495403856,
+    "U": 5.1103461892049173e-05,
+    "f_finest": -0.5592276323098992,
+    "method": "observed_order_gci1.25",
+    "p": 1.600426038548828
+   },
+   "push_pull_balance": {
+    "value": -0.9999940329077742,
+    "U": 1.0125080579848067e-05,
+    "f_finest": -0.9999953715927129,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.845665883792719,
+     "te_fraction": 0.9954624123447524,
+     "labels": [
+      "ambient",
+      "box",
+      "cladding",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 13.399999999999999,
+     "power_fraction_ln": 0.7870356062876805
+    },
+    "B": {
+     "n_eff": 1.8456658855447814,
+     "te_fraction": 0.9954624117098172,
+     "labels": [
+      "ambient",
+      "box",
+      "cladding",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -13.399999999999999,
+     "power_fraction_ln": 0.7870356135335778
+    }
+   }
+  },
+  "K7-D3.6": {
+   "case_sha256": "11ec328f2c075536bdc7fbdae2c67dd7edb63db35a1e02ce4959df5a5b132846",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 139.78727255009736,
+    "U": 0.0035872268742309643,
+    "f_finest": 139.79014233159674,
+    "method": "observed_order_gci1.25",
+    "p": 1.4274120286031735
+   },
+   "C0_pF_per_m": {
+    "value": 29.990892402055174,
+    "U": 0.0002182380133897155,
+    "f_finest": 29.991066992465885,
+    "method": "observed_order_gci1.25",
+    "p": 2.106398520852359
+   },
+   "n_rf": {
+    "value": 2.1589412339650935,
+    "U": 2.2280748327663247e-05,
+    "f_finest": 2.1589486608812027,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "Z0_ohm": {
+    "value": 51.51698790031769,
+    "U": 0.0008003480973428623,
+    "f_finest": 51.51634762183981,
+    "method": "observed_order_gci1.25",
+    "p": 1.6643283747621853
+   },
+   "vpil_vcm": {
+    "value": 3.403547982974894,
+    "U": 0.0003009827210914695,
+    "f_finest": 3.403307196798021,
+    "method": "observed_order_gci1.25",
+    "p": 1.4948182672614323
+   },
+   "dn_mean_abs_per_V": {
+    "value": 1.138517827291313e-05,
+    "U": 1.0066851182505367e-09,
+    "f_finest": 1.138598362100773e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.4951894819648202
+   },
+   "vpil_r33only_vcm": {
+    "value": 3.475421720676212,
+    "U": 0.00041489475694100886,
+    "f_finest": 3.475089804870659,
+    "method": "observed_order_gci1.25",
+    "p": 1.4830451067566373
+   },
+   "vpil_scalar_vcm": {
+    "value": 3.8926654723852576,
+    "U": 0.0004647051853623463,
+    "f_finest": 3.8922937082369677,
+    "method": "observed_order_gci1.25",
+    "p": 1.4830451068026242
+   },
+   "gamma_mean_abs": {
+    "value": 0.6618341698532042,
+    "U": 7.899600726835043e-05,
+    "f_finest": 0.6618973666590189,
+    "method": "observed_order_gci1.25",
+    "p": 1.4835399417753217
+   },
+   "dn_A_per_V": {
+    "value": -1.138498617218708e-05,
+    "U": 1.291366859465815e-09,
+    "f_finest": -1.1386019265674653e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.2720537584198592
+   },
+   "dn_B_per_V": {
+    "value": 1.1385309313669318e-05,
+    "U": 7.983283393624039e-10,
+    "f_finest": 1.1385947976340808e-05,
+    "method": "observed_order_gci1.25",
+    "p": 1.7218299401270947
+   },
+   "gamma_A": {
+    "value": 0.6618325732045925,
+    "U": 8.232806050390007e-05,
+    "f_finest": 0.6618984356529957,
+    "method": "observed_order_gci1.25",
+    "p": 1.4542625620268235
+   },
+   "gamma_B": {
+    "value": -0.6618356842075336,
+    "U": 7.576682188550898e-05,
+    "f_finest": -0.661896297665042,
+    "method": "observed_order_gci1.25",
+    "p": 1.513461343831126
+   },
+   "push_pull_balance": {
+    "value": -0.9999982270612031,
+    "U": 1.3464570194798853e-05,
+    "f_finest": -0.9999937388711382,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8456658837927196,
+     "te_fraction": 0.9954624123447524,
+     "labels": [
+      "ambient",
+      "box",
+      "cladding",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 12.399999999999999,
+     "power_fraction_ln": 0.7870356062876802
+    },
+    "B": {
+     "n_eff": 1.8456658855447812,
+     "te_fraction": 0.9954624117098172,
+     "labels": [
+      "ambient",
+      "box",
+      "cladding",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -12.399999999999999,
+     "power_fraction_ln": 0.7870356135335776
+    }
+   }
+  },
+  "K7K4-D0": {
+   "case_sha256": "292142cb729d5b679657e875a75f9923755b91a5f89666a68d84127d94cc63e0",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 146.522600499104,
+    "U": 0.04006014736208385,
+    "f_finest": 146.53595388155802,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "C0_pF_per_m": {
+    "value": 36.95219253750559,
+    "U": 0.0008102976566437547,
+    "f_finest": 36.952840775630904,
+    "method": "observed_order_gci1.25",
+    "p": 1.4687086559504983
+   },
+   "n_rf": {
+    "value": 1.9912735394210768,
+    "U": 0.00023741652869535557,
+    "f_finest": 1.9913526782639752,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "Z0_ohm": {
+    "value": 45.33207491446527,
+    "U": 0.0069872728906048565,
+    "f_finest": 45.32974582350173,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_vcm": {
+    "value": 2.278368917577354,
+    "U": 0.0014552417273843155,
+    "f_finest": 2.2778838370015593,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_mean_abs_per_V": {
+    "value": 1.7007779638221524e-05,
+    "U": 1.0870166437228836e-08,
+    "f_finest": 1.7011403027033933e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_r33only_vcm": {
+    "value": 2.3805480856723613,
+    "U": 0.0017016076415257153,
+    "f_finest": 2.379980883125186,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_scalar_vcm": {
+    "value": 2.563261945912867,
+    "U": 0.0018322108848165541,
+    "f_finest": 2.5626512089512614,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_mean_abs": {
+    "value": 0.500916640803975,
+    "U": 0.000358309622596642,
+    "f_finest": 0.5010360773448406,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_A_per_V": {
+    "value": -1.7008057186152813e-05,
+    "U": 1.0276128678507636e-08,
+    "f_finest": -1.7011482562378983e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_B_per_V": {
+    "value": 1.700750209029023e-05,
+    "U": 1.14642041959602e-08,
+    "f_finest": 1.7011323491688884e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_A": {
+    "value": 0.5007842031218972,
+    "U": 0.00031637907174295044,
+    "f_finest": 0.5010373063792916,
+    "method": "observed_order_gci1.25",
+    "p": 1.0785376058502532
+   },
+   "gamma_B": {
+    "value": -0.5009106906837852,
+    "U": 0.00037247287981267974,
+    "f_finest": -0.5010348483103895,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "push_pull_balance": {
+    "value": -0.9999673721465618,
+    "U": 6.983120987724689e-05,
+    "f_finest": -0.9999906492165209,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.894166940424576,
+     "te_fraction": 0.9906073081825948,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 12.5,
+     "power_fraction_ln": 0.8885558824930917
+    },
+    "B": {
+     "n_eff": 1.894166940419468,
+     "te_fraction": 0.9906073081765562,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -12.5,
+     "power_fraction_ln": 0.8885558824916636
+    }
+   }
+  },
+  "K7K4-D0.9": {
+   "case_sha256": "cd348813a58b3c7cf0db5eea00b713894d618c03685488ef8f172debe96dbe90",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 146.99874520756217,
+    "U": 0.0410362290653552,
+    "f_finest": 147.01242395058395,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "C0_pF_per_m": {
+    "value": 36.95202782770693,
+    "U": 0.0010144093660358067,
+    "f_finest": 36.95283935519976,
+    "method": "observed_order_gci1.25",
+    "p": 1.254793702060703
+   },
+   "n_rf": {
+    "value": 1.9945067290513325,
+    "U": 0.00024257665111337978,
+    "f_finest": 1.994587587935037,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "Z0_ohm": {
+    "value": 45.25860577946653,
+    "U": 0.007127961509844738,
+    "f_finest": 45.25622979229658,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_vcm": {
+    "value": 2.1022583032847755,
+    "U": 0.0014049630200814178,
+    "f_finest": 2.1017899822780817,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_mean_abs_per_V": {
+    "value": 1.8432557070087266e-05,
+    "U": 1.2326924756091802e-08,
+    "f_finest": 1.8436666045005964e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_r33only_vcm": {
+    "value": 2.196118877331478,
+    "U": 0.0016493210441699269,
+    "f_finest": 2.195569103650088,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_scalar_vcm": {
+    "value": 2.3646772694270046,
+    "U": 0.001775911141876918,
+    "f_finest": 2.364085299046379,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_mean_abs": {
+    "value": 0.542983418871912,
+    "U": 0.00040809587757295596,
+    "f_finest": 0.543119450831103,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_A_per_V": {
+    "value": -1.8432691024765454e-05,
+    "U": 1.2069721519853788e-08,
+    "f_finest": -1.843671426527207e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_B_per_V": {
+    "value": 1.843242311540907e-05,
+    "U": 1.2584127992350144e-08,
+    "f_finest": 1.8436617824739852e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_A": {
+    "value": 0.542986904568647,
+    "U": 0.0003993821080786608,
+    "f_finest": 0.5431200319380065,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_B": {
+    "value": -0.5429799331751768,
+    "U": 0.00041680964706791723,
+    "f_finest": -0.5431188697241994,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "push_pull_balance": {
+    "value": -0.9999854695916253,
+    "U": 2.7898537560799852e-05,
+    "f_finest": -0.9999947691041455,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8941669404259693,
+     "te_fraction": 0.9906073081840535,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 11.600000000000001,
+     "power_fraction_ln": 0.8885558824954114
+    },
+    "B": {
+     "n_eff": 1.894166940419459,
+     "te_fraction": 0.9906073081765887,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -11.600000000000001,
+     "power_fraction_ln": 0.8885558824916361
+    }
+   }
+  },
+  "K7K4-D1.8": {
+   "case_sha256": "2b9947d1240bdf9607e08ce814f94f35798bb69c2276c43f6b6dcdb78c3857d0",
+   "comparands": {
+    "primary": [
+     "vpil_vcm",
+     "dn_mean_abs_per_V",
+     "C_pF_per_m",
+     "C0_pF_per_m",
+     "n_rf",
+     "Z0_ohm"
+    ],
+    "informational": [
+     "dn_A_per_V",
+     "dn_B_per_V",
+     "push_pull_balance",
+     "gamma_A",
+     "gamma_B",
+     "vpil_r33only_vcm"
+    ],
+    "definitional_not_an_engine_target": [
+     "vpil_scalar_vcm",
+     "gamma_mean_abs"
+    ],
+    "note": "vpil_scalar uses Gamma without the n_e/n_eff power-normalisation factor; its +12.5 % vs the full-vector VpiL is a definitional comparison"
+   },
+   "C_pF_per_m": {
+    "value": 148.72558282957007,
+    "U": 0.0292798019209215,
+    "f_finest": 148.7330429509367,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "C0_pF_per_m": {
+    "value": 36.95244290427929,
+    "U": 0.00046228408266735244,
+    "f_finest": 36.95281273154542,
+    "method": "observed_order_gci1.25",
+    "p": 1.9885909508244881
+   },
+   "n_rf": {
+    "value": 2.00618623209722,
+    "U": 0.00017761539680583027,
+    "f_finest": 2.0062265852227403,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "Z0_ohm": {
+    "value": 44.99506275652359,
+    "U": 0.004872670804836332,
+    "f_finest": 44.993711039923774,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_vcm": {
+    "value": 1.7785881210265027,
+    "U": 0.0008474381103038553,
+    "f_finest": 1.7784352342145409,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_mean_abs_per_V": {
+    "value": 2.1786943794966805e-05,
+    "U": 1.0389275782769503e-08,
+    "f_finest": 2.178881707610467e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_r33only_vcm": {
+    "value": 1.8433006412858992,
+    "U": 0.0010016192149007175,
+    "f_finest": 1.8431005025970324,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "vpil_scalar_vcm": {
+    "value": 1.9847792246287308,
+    "U": 0.001078496347325375,
+    "f_finest": 1.9845637247244012,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_mean_abs": {
+    "value": 0.646913602843195,
+    "U": 0.00035186616477300703,
+    "f_finest": 0.6469838651889401,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_A_per_V": {
+    "value": -2.1787975561725085e-05,
+    "U": 1.0758386655058429e-08,
+    "f_finest": -2.1789129637158875e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "dn_B_per_V": {
+    "value": 2.1785912028208525e-05,
+    "U": 1.0020164910480578e-08,
+    "f_finest": 2.1788504515050466e-05,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_A": {
+    "value": 0.6469469919507821,
+    "U": 0.00036414023259323525,
+    "f_finest": 0.6469937821899907,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "gamma_B": {
+    "value": -0.6468802137356078,
+    "U": 0.0003395920969527788,
+    "f_finest": -0.6469739481878896,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "push_pull_balance": {
+    "value": -0.9999052972524922,
+    "U": 0.00019803934686513092,
+    "f_finest": -0.9999713103681139,
+    "method": "formal_order_safety3",
+    "p": 2.0
+   },
+   "arm_modes": {
+    "A": {
+     "n_eff": 1.8941669404245758,
+     "te_fraction": 0.990607308182595,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_a",
+      "ln_slab"
+     ],
+     "window_centre_x_um": 10.7,
+     "power_fraction_ln": 0.8885558824930917
+    },
+    "B": {
+     "n_eff": 1.8941669387870863,
+     "te_fraction": 0.9906073051305547,
+     "labels": [
+      "ambient",
+      "box",
+      "ln_rib_b",
+      "ln_slab"
+     ],
+     "window_centre_x_um": -10.7,
+     "power_fraction_ln": 0.8885558802127129
+    }
+   }
+  },
+  "K6a": {
+   "case_sha256": "657c90218336544224a604211c759a8def2b2e7d88d54b2ffb87de6e7870cd54",
+   "closed_form_t0_infinite": {
+    "k0": 0.6666666666666666,
+    "q1": 0.5,
+    "eps_eff": 6.35,
+    "C_pF_per_m": 213.7269193399719,
+    "C0_pF_per_m": 33.65778257322392,
+    "n_rf": 2.5199206336708304,
+    "Z0_ohm": 39.32845936007282
+   },
+   "fem_line_R500": {
+    "C_pF_per_m": {
+     "value": 213.65363756646272,
+     "U": 0.012422863401013728,
+     "f_finest": 213.66357585718353,
+     "method": "observed_order_gci1.25",
+     "p": 1.0833294715171982
+    },
+    "C0_pF_per_m": {
+     "value": 33.64713671702558,
+     "U": 0.0021293423432808822,
+     "f_finest": 33.647846497806675,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    },
+    "n_rf": {
+     "value": 2.5199190374002036,
+     "U": 1.7822601510175673e-06,
+     "f_finest": 2.519919162953482,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    },
+    "Z0_ohm": {
+     "value": 39.34205046906691,
+     "U": 0.002443263564666509,
+     "f_finest": 39.34009585821518,
+     "method": "observed_order_gci1.25",
+     "p": 1.0230509581285423
+    }
+   },
+   "fem_area_R500": {
+    "C_pF_per_m": {
+     "value": 214.26084901913202,
+     "U": 0.011271234798698515,
+     "f_finest": 214.26460609739826,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    },
+    "C0_pF_per_m": {
+     "value": 34.19647835839219,
+     "U": 0.00047627356584456493,
+     "f_finest": 34.19663711624747,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    },
+    "n_rf": {
+     "value": 2.5031145172539038,
+     "U": 4.8406136489820284e-05,
+     "f_finest": 2.5031306526327337,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    },
+    "Z0_ohm": {
+     "value": 38.96881453717732,
+     "U": 0.0012963010164170896,
+     "f_finest": 38.96838243683852,
+     "method": "formal_order_safety3",
+     "p": 2.0
+    }
+   },
+   "fem_line_R_inf": {
+    "C_pF_per_m": {
+     "value": 213.7289913063593,
+     "U": 0.013500554720581986,
+     "method": "domain 1/R Richardson at scale sd + mesh correction at R=500",
+     "p": 2.077735637721084
+    },
+    "C0_pF_per_m": {
+     "value": 33.658939795852525,
+     "U": 0.0022815638203353677,
+     "method": "domain 1/R Richardson at scale sd + mesh correction at R=500",
+     "p": 2.0851799876964705
+    },
+    "n_rf": {
+     "value": 2.5199212705126164,
+     "U": 2.1942807566899837e-06,
+     "method": "domain 1/R Richardson at scale sd + mesh correction at R=500",
+     "p": 2.0
+    },
+    "Z0_ohm": {
+     "value": 39.3282191604069,
+     "U": 0.0026267687574687633,
+     "method": "domain 1/R Richardson at scale sd + mesh correction at R=500",
+     "p": 2.0819249925874743
+    }
+   },
+   "closed_form_minus_fem_rel": {
+    "C_pF_per_m": -9.694362822498803e-06,
+    "C0_pF_per_m": -3.438084014606435e-05,
+    "n_rf": -2.527228899484868e-07,
+    "Z0_ohm": 6.107565281299188e-06
+   }
+  },
+  "K6b": {
+   "case_sha256": "e50d6370ca959c35ec5756d792aa3f61ce7c7b74bf1e322f5548563419c30db1",
+   "closed_form_t0_infinite": {
+    "k0": 0.6666666666666666,
+    "q1": 0.38366324953324127,
+    "eps_eff": 5.105196770005682,
+    "C_pF_per_m": 171.82960287837628,
+    "C0_pF_per_m": 33.65778257322392,
+    "n_rf": 2.259468249390923,
+    "Z0_ohm": 43.86191142922566
+   },
+   "fem_line_R500": {
+    "C_pF_per_m": {
+     "value": 173.72445641480712,
+     "U": 0.012871998046932731,
+     "f_finest": 173.73475401324467,
+     "method": "observed_order_gci1.25",
+     "p": 1.1348732053505268
+    },
+    "C0_pF_per_m": {
+     "value": 33.646075991701636,
+     "U": 0.002080663004990768,
+     "f_finest": 33.64774052210563,
+     "method": "observed_order_gci1.25",
+     "p": 1.1059956607945318
+    },
+    "n_rf": {
+     "value": 2.2722872053461782,
+     "U": 1.4229056711778654e-05,
+     "f_finest": 2.2722985885915477,
+     "method": "observed_order_gci1.25",
+     "p": 1.2539521399564337
+    },
+    "Z0_ohm": {
+     "value": 43.629637313862645,
+     "U": 0.0029648585394692617,
+     "f_finest": 43.62726542703107,
+     "method": "observed_order_gci1.25",
+     "p": 1.1218084918622153
+    }
+   },
+   "fem_area_R500": {
+    "C_pF_per_m": {
+     "value": 174.32071113008777,
+     "U": 0.006146839393110781,
+     "f_finest": 174.32562860160226,
+     "method": "observed_order_gci1.25",
+     "p": 1.3848579240411096
+    },
+    "C0_pF_per_m": {
+     "value": 34.196431557153765,
+     "U": 0.00022974117660723437,
+     "f_finest": 34.19661535009505,
+     "method": "observed_order_gci1.25",
+     "p": 1.5694890804619936
+    },
+    "n_rf": {
+     "value": 2.2577926355729185,
+     "U": 3.253227168154016e-05,
+     "f_finest": 2.2578186613902638,
+     "method": "observed_order_gci1.25",
+     "p": 1.3293739400317335
+    },
+    "Z0_ohm": {
+     "value": 43.203047301466015,
+     "U": 0.0009034045393185863,
+     "f_finest": 43.20232457783456,
+     "method": "observed_order_gci1.25",
+     "p": 1.4193902942900936
+    }
+   },
+   "fem_line_R_inf": {
+    "C_pF_per_m": {
+     "value": 173.73654128095933,
+     "U": 0.012924206232480445,
+     "method": "domain 1/R Richardson at scale sd + mesh correction at R=500",
+     "p": 1.8511521615696556
+    },
+    "C0_pF_per_m": {
+     "value": 33.65798529572036,
+     "U": 0.0022992234600169676,
+     "method": "domain 1/R Richardson at scale sd + mesh correction at R=500",
+     "p": 1.9637232044811708
+    },
+    "n_rf": {
+     "value": 2.2719641328734252,
+     "U": 2.9219266970861416e-05,
+     "method": "domain 1/R Richardson at scale sd + mesh correction at R=500",
+     "p": 1.9920267266777274
+    },
+    "Z0_ohm": {
+     "value": 43.62040326202426,
+     "U": 0.003065266560968936,
+     "method": "domain 1/R Richardson at scale sd + mesh correction at R=500",
+     "p": 1.9454123715121363
+    }
+   },
+   "closed_form_minus_fem_rel": {
+    "C_pF_per_m": -0.010976035257310834,
+    "C0_pF_per_m": -6.02301339958089e-06,
+    "n_rf": -0.005500035542681858,
+    "Z0_ohm": 0.0055365872193036125
+   }
+  }
+ },
+ "ratios": {
+  "K7": {
+   "K7-D0/K7-D1": {
+    "value": 1.0650577941211112,
+    "U": 9.044066356168847e-05
+   },
+   "K7-D0/K7-D2.6": {
+    "value": 1.2953077422608152,
+    "U": 9.897252845686434e-05
+   },
+   "K7-D0/K7-D3.6": {
+    "value": 1.531639843543201,
+    "U": 0.00014953894371360434
+   }
+  },
+  "K7K4": {
+   "K7K4-D0/K7K4-D0.9": {
+    "value": 1.0837721102194748,
+    "U": 0.0010018910984208567
+   },
+   "K7K4-D0/K7K4-D1.8": {
+    "value": 1.280998613811952,
+    "U": 0.0010207757763352615
+   }
+  }
+ }
+}

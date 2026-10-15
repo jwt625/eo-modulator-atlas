@@ -1,0 +1,28 @@
+[project]
+name = "eo-atlas-validation"
+version = "0.1.0"
+description = "Open-source reference solvers (femwell, scikit-fem, tidy3d local mode solver) for the eo-atlas simulator canonical cases"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy",
+  "scipy",
+  "pyyaml",
+  "scikit-fem",
+  "femwell",
+  "gmsh",
+  "shapely",
+  "tidy3d",
+  "matplotlib",
+  "pyamg",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+ignore = ["E501"]  # long physics comments and log lines; same rule as the root project

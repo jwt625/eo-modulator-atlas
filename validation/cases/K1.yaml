@@ -1,0 +1,54 @@
+# Canonical case K1 (DevLog-023 O3), written by validation/scripts/make_cases.py (lane L-REF, DevLog-028).
+# Si strip 500 nm wide x 220 nm tall, centred on the origin, fully embedded in SiO2. TE0 (E_x dominant).
+# Fixed details: SiO2 everywhere outside the core; optical window x,y in [-2, 2] um with zero tangential E
+#   (PEC) on the window edge in the references; electrodes are dummy pads outside the window (schema needs
+#   >= 1 electrode); electrostatic outputs of K1 are not reference quantities. RF eps values are placeholders.
+# ng: central wavelength difference with Sellmeier dispersion in every material.
+# Optical constants at 1550 nm (engine/data/materials.json fits): Si Salzberg/Tatian n = 3.477723756,
+#   SiO2 Malitson n = 1.444023622. Material names match library keys (dispersion slopes for ng).
+schema: eo-atlas.sim/v1
+id: K1
+title: 'Canonical K1: Si strip 500 x 220 nm in SiO2, 1550 nm, TE0'
+validation_status: unvalidated
+chain: [electrostatics, optical_mode]
+optics: {wavelength_nm: 1550, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null,
+  eo_axis: auto}
+materials:
+  silicon: {n: 3.477723756, eps_r: 11.7}
+  silicon_dioxide: {n: 1.444023622, eps_r: 3.9}
+  gold: {conductor: true}
+geometry:
+  symmetry: none
+  domain:
+    x_um: [-4.0, 4.0]
+    y_um: [-3.0, 3.0]
+  regions:
+  - name: cladding
+    material: silicon_dioxide
+    rect:
+      x_um: [-4.0, 4.0]
+      y_um: [-3.0, 3.0]
+  - name: core
+    material: silicon
+    rect:
+      x_um: [-0.25, 0.25]
+      y_um: [-0.11, 0.11]
+  electrodes:
+  - name: dummy_signal
+    role: signal
+    weight: 1.0
+    material: gold
+    rect:
+      x_um: [3.0, 3.8]
+      y_um: [2.5, 2.8]
+  - name: dummy_ground
+    role: ground
+    weight: 0.0
+    material: gold
+    rect:
+      x_um: [-3.8, -3.0]
+      y_um: [2.5, 2.8]
+  optical_window:
+    x_um: [-2.0, 2.0]
+    y_um: [-2.0, 2.0]
+  mesh: {max_edge_um: 0.5, window_edge_um: 0.02}

@@ -1,0 +1,76 @@
+# Canonical case K2 (DevLog-023 O3), written by validation/scripts/make_cases.py (lane L-REF, DevLog-028).
+# x-cut LN rib: film 600 nm (y 0..0.6 um), etch 300 nm (slab y 0..0.3 um), top width 1.0 um, sidewalls 60 deg
+#   from horizontal, so the rib base is 1.346410162 um wide (half-width 0.673205081 um). Rib centred at x = 0.
+# Fixed details: SiO2 below the film fills y < 0 to the window edge (semi-infinite BOX for the mode; no Si
+#   substrate inside the window); air above the film.
+#   Slab extends across the whole domain. Optical window x in [-5, 5], y in [-3, 3] um, zero tangential E
+#   (PEC) on its edge in the references. TE0 = E_x-dominant fundamental mode (n_e lateral).
+#   Dummy electrodes outside the window (schema needs >= 1 electrode); ES outputs are not reference quantities.
+# Frame: x lateral, y film normal (up), z propagation. x-cut LN, propagation along crystal y:
+#   lab x = crystal z (n_e, eps par), lab y = crystal x (n_o, eps perp), lab z = crystal y (n_o).
+# Optical constants at 1550 nm from the Sellmeier fits in engine/data/materials.json: LN Zelmon 1997 congruent
+#   n_o = 2.211111009, n_e = 2.13755965; SiO2 Malitson 1965 n = 1.444023622; Si Salzberg/Tatian n = 3.477723756.
+#   Material names match library keys, so the engine can take dispersion slopes from the library for ng.
+schema: eo-atlas.sim/v1
+id: K2
+title: 'Canonical K2: x-cut LN rib 600/300 nm, 1.0 um top, 60 deg, air clad, TE0'
+validation_status: unvalidated
+chain: [electrostatics, optical_mode]
+optics: {wavelength_nm: 1550, polarization: TE, mode_index: 0, group_index_from: finite_difference_wavelength, ng_fixed: null,
+  eo_axis: auto}
+materials:
+  lithium_niobate:
+    crystal: {cut: x, propagation: y}
+    n_o: 2.211111009
+    n_e: 2.13755965
+    eps_r: {perp: 44.0, par: 28.0}
+  silicon_dioxide: {n: 1.444023622, eps_r: 3.9}
+  air: {n: 1.0, eps_r: 1.0}
+  gold: {conductor: true}
+geometry:
+  symmetry: none
+  domain:
+    x_um: [-7.0, 7.0]
+    y_um: [-4.0, 4.0]
+  regions:
+  - name: ambient
+    material: air
+    rect:
+      x_um: [-7.0, 7.0]
+      y_um: [-4.0, 4.0]
+  - name: box
+    material: silicon_dioxide
+    rect:
+      x_um: [-7.0, 7.0]
+      y_um: [-4.0, 0.0]
+  - name: ln_slab
+    material: lithium_niobate
+    rect:
+      x_um: [-7.0, 7.0]
+      y_um: [0.0, 0.3]
+  - name: ln_rib
+    material: lithium_niobate
+    polygon_um:
+    - [-0.673205081, 0.3]
+    - [0.673205081, 0.3]
+    - [0.5, 0.6]
+    - [-0.5, 0.6]
+  electrodes:
+  - name: dummy_signal
+    role: signal
+    weight: 1.0
+    material: gold
+    rect:
+      x_um: [5.5, 6.5]
+      y_um: [3.5, 3.8]
+  - name: dummy_ground
+    role: ground
+    weight: 0.0
+    material: gold
+    rect:
+      x_um: [-6.5, -5.5]
+      y_um: [3.5, 3.8]
+  optical_window:
+    x_um: [-5.0, 5.0]
+    y_um: [-3.0, 3.0]
+  mesh: {max_edge_um: 0.5, window_edge_um: 0.02}
