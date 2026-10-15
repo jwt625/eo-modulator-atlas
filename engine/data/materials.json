@@ -1,6 +1,6 @@
 {
   "schema": "eo-atlas.materials/v1",
-  "note": "Optical dispersion library only. Every entry carries a citation and a validity range. RF permittivity, loss tangent and Pockels coefficients are intentionally NOT built in: they are device inputs that carry provenance in the sim config. Entries for which no verified coefficients are available are listed under `missing`.",
+  "note": "Optical dispersion library (`materials`) plus an RF/EO/conductor constants library (`library`, referenced from a sim config as `materials.<name>.library: <key>`). Every value carries the source actually read, its locator and condition. Values for which no accessible source could be read are listed under `missing`.",
   "verified_on": "2026-10-01",
   "verification": "Coefficients compared against the refractiveindex.info database entries (CC0) cited in `source` for each item; n(1550 nm) cross-check is in engine/tests/materials.test.mjs.",
   "formulas": {
@@ -94,6 +94,157 @@
   "missing": {
     "barium_titanate": "Only Wemple-DiDomenico-Camlibel single-term fits (valid 0.4-0.7 um) found; not valid at 1550 nm; BTO thin-film indices depend on growth. Provide n in the sim config with provenance.",
     "lithium_tantalate_sellmeier": "No verified Sellmeier fit in hand; tabulated Bond data used instead.",
-    "rf_and_eo_coefficients": "Not built in (device inputs with provenance in the config)."
-  }
+    "lithium_tantalate_rf_eo": "RF permittivity and Pockels coefficients of LiTaO3 not entered: the only accessible table read (Zhu et al. 2021, Table 1) gives eps11,22 = 38.3, eps33 = 46.2 and r13 6.2, r22 0, r33 28.5, r51 8.4 without a clamped/unclamped condition or primary reference; not verifiable here.",
+    "lithium_niobate_unclamped_rf_permittivity": "No accessible source read for eps^T (constant stress) of LiNbO3.",
+    "lithium_niobate_primary_sources": "Weis and Gaylord, Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817, could not be read (publisher login required, 2026-10-14); the LN RF and EO entries are therefore secondary_open_access. Replace with the primary table when a copy is available in references/.",
+    "rf_loss_tangents": "No loss tangent entered; tan_delta_rf stays a per-config sourced input.",
+    "thin_film_gold": "No thin-film gold conductivity entered; bulk 293 K value only."
+  },
+  "library_schema": {
+    "fields": "eps_r (RF relative permittivity, crystal frame: number or {perp, par} with perp = eps11 = eps22, par = eps33), r_pm_per_v (named 3m Pockels coefficients, crystal frame, pm/V), conductor + sigma_Sm (S/m), dispersion (key of `materials` used for the optical index)",
+    "entry": "each field is {value, condition, source_read, locator, primary_cited, verification, verified_on}; verification is `primary` (the original data source was read), `secondary_open_access` (an accessible compilation was read; its primary reference was not read) or `secondary_vendor` (a manufacturer data sheet was read)",
+    "override": "config keys override library keys; eps_r {perp, par} and named r_pm_per_v coefficients merge one level deep"
+  },
+  "library": {
+    "lithium_niobate_congruent": {
+      "description": "congruent LiNbO3, trigonal 3m, c = crystal z (axis 3)",
+      "dispersion": "lithium_niobate",
+      "eps_r": {
+        "value": {
+          "perp": 44.0,
+          "par": 27.9
+        },
+        "condition": "clamped (constant strain), high-frequency response, as labelled in the source; temperature and frequency not stated",
+        "source_read": "D. Zhu, L. Shao, M. Yu, R. Cheng, B. Desiatov, C. J. Xin, Y. Hu, J. Holzgrafe, S. Ghosh, A. Shams-Ansari, E. Puma, N. Sinclair, C. Reimer, M. Zhang, M. Loncar, 'Integrated photonics on thin-film lithium niobate', Adv. Opt. Photon. 13, 242 (2021); read as arXiv:2102.11956",
+        "locator": "Table 1, LiNbO3 row, column 'RF dielectric Constant' (eps11,22 = 44, eps33 = 27.9, '(clamped, high-frequency response)'), arXiv PDF p.5, read from the rendered page image 2026-10-15; p.17 text: 'eps_r,z = 28 and eps_r,x/y = 44 for clamped, high-frequency response' (extracted text, 2026-10-15); p.19 repeats 28 / 44 without the clamped label",
+        "primary_cited": "not given for the table entries",
+        "verification": "secondary_open_access",
+        "verified_on": "2026-10-15",
+        "corroborated_by": "same clamped values (eps11 44, eps33 27.9, 'clamped (v > 10 MHz)') in Crystal Technology, Inc. (an EPCOS company), 'Lithium Niobate optical crystals' data sheet DC-12 8/99, hosted at https://sphotonics.ru/LNmatProperties.pdf, p.2 (read 2026-10-15)",
+        "corroborated_by_copy": "a83393d0ef69c9a92133668b5a9b1a47fe6a83f80300156ece57cfe6338e384d"
+      },
+      "r_pm_per_v": {
+        "value": {
+          "r13": 8.6,
+          "r22": 3.4,
+          "r33": 30.8,
+          "r51": 28.0
+        },
+        "condition": "clamped (constant strain, high-frequency) experimental values; wavelength not stated in the compiling table. Caveat from the same source (p.3): the piezoelectric contribution 'was not entirely eliminated during the measurement of r51', and the clamped r51 'might be closer to the theoretical 14.94 pm/V'; r51 enters only shear (off-diagonal) terms, used by the vector overlap",
+        "source_read": "M. Veithen, X. Gonze, Ph. Ghosez, 'First-principles study of the electrooptic effect in ferroelectric oxides', arXiv:cond-mat/0311240v1 (2003)",
+        "locator": "Table I (p.3), row 'Clamped / Exp. [22]': r13 8.6, r33 30.8, r22 3.4, r51 28",
+        "primary_cited": "A. Rauber, in Current Topics in Materials Science, vol. 1, ed. E. Kaldis (North-Holland, 1978), p. 481 (ref. [22] of the source; not read)",
+        "verification": "secondary_open_access",
+        "verified_on": "2026-10-14"
+      },
+      "alternatives": {
+        "r_pm_per_v_unclamped": {
+          "value": {
+            "r13": 10.0,
+            "r22": 6.8,
+            "r33": 32.2,
+            "r51": 32.6
+          },
+          "condition": "unclamped (constant stress, low-frequency) experimental values; wavelength not stated in the compiling table",
+          "source_read": "M. Veithen, X. Gonze, Ph. Ghosez, 'First-principles study of the electrooptic effect in ferroelectric oxides', arXiv:cond-mat/0311240v1 (2003)",
+          "locator": "Table I (p.3), row 'Unclamped / Exp. [22]': r13 10.0, r33 32.2, r22 6.8, r51 32.6",
+          "primary_cited": "A. Rauber 1978 (ref. [22] of the source; not read)",
+          "verification": "secondary_open_access",
+          "verified_on": "2026-10-14",
+          "use": "not applied by `library:`; copy into a config r_pm_per_v override with provenance when the unclamped condition applies"
+        },
+        "eps_r_unclamped_vendor": {
+          "value": {
+            "perp": 85.0,
+            "par": 28.7
+          },
+          "condition": "unclamped, 'v < 500 kHz', 25 C (data sheet wording); congruent composition",
+          "source_read": "Crystal Technology, Inc. (an EPCOS company), 'Lithium Niobate optical crystals' data sheet DC-12 8/99, hosted at https://sphotonics.ru/LNmatProperties.pdf",
+          "locator": "p.2 'Dielectric Constants (@ 25 C)': unclamped (v < 500 kHz) eps11 = 85, eps33 = 28.7; clamped (v > 10 MHz) eps11 = 44, eps33 = 27.9; read from the rendered page image 2026-10-15",
+          "primary_cited": "the data sheet lists as sources: Properties of Lithium Niobate, EMIS Data Reviews No. 5 (INSPEC 1989); Weis and Gaylord, Appl. Phys. A 37, 191-203 (1985); Rauber 1978; Landolt-Bornstein III/16, III/28a (none read)",
+          "verification": "secondary_vendor",
+          "verified_on": "2026-10-15",
+          "use": "not applied by library:; low-frequency Vpi diagnostic and config overrides with provenance",
+          "source_copy": {
+            "url": "https://sphotonics.ru/LNmatProperties.pdf",
+            "accessed": "2026-10-15",
+            "sha256": "a83393d0ef69c9a92133668b5a9b1a47fe6a83f80300156ece57cfe6338e384d",
+            "bytes": 50022,
+            "server_last_modified": "2026-08-10",
+            "document": "Crystal Technology, Inc. data sheet DC-12 8/99, 2 pages",
+            "retained": "no local copy kept (redistribution rights not established); re-fetch and compare the sha256 to check",
+            "how_read": "page 2 rendered to an image (macOS sips) and read by L-PARAM on 2026-10-15 (DevLog-026 round 5); not independently re-read by an auditor (round-6 audit G11)"
+          },
+          "verification_note": "single reading by the library author; no independent audit reading; values not applied by library:"
+        },
+        "r_pm_per_v_unclamped_vendor": {
+          "value": {
+            "r13": 10.0,
+            "r22": 7.0,
+            "r33": 33.0,
+            "r51": 33.0
+          },
+          "condition": "unclamped, 633 nm (data sheet: 'Electro-optic Coefficients (pm/V @ 633 nm)'); the same table lists clamped r13 9, r22 3, r33 31, r51 28",
+          "source_read": "Crystal Technology, Inc. (an EPCOS company), 'Lithium Niobate optical crystals' data sheet DC-12 8/99, hosted at https://sphotonics.ru/LNmatProperties.pdf",
+          "locator": "p.2 'Electro-optic Coefficients (pm/V @ 633 nm)' table, rows unclamped / clamped; read from the rendered page image 2026-10-15",
+          "primary_cited": "the data sheet lists as sources: Properties of Lithium Niobate, EMIS Data Reviews No. 5 (INSPEC 1989); Weis and Gaylord, Appl. Phys. A 37, 191-203 (1985); Rauber 1978; Landolt-Bornstein III/16, III/28a (none read)",
+          "verification": "secondary_vendor",
+          "verified_on": "2026-10-15",
+          "use": "not applied by library:; low-frequency Vpi diagnostic (r33 bracket)",
+          "source_copy": {
+            "url": "https://sphotonics.ru/LNmatProperties.pdf",
+            "accessed": "2026-10-15",
+            "sha256": "a83393d0ef69c9a92133668b5a9b1a47fe6a83f80300156ece57cfe6338e384d",
+            "bytes": 50022,
+            "server_last_modified": "2026-08-10",
+            "document": "Crystal Technology, Inc. data sheet DC-12 8/99, 2 pages",
+            "retained": "no local copy kept (redistribution rights not established); re-fetch and compare the sha256 to check",
+            "how_read": "page 2 rendered to an image (macOS sips) and read by L-PARAM on 2026-10-15 (DevLog-026 round 5); not independently re-read by an auditor (round-6 audit G11)"
+          },
+          "verification_note": "single reading by the library author; no independent audit reading; values not applied by library:"
+        }
+      }
+    },
+    "silicon_dioxide": {
+      "description": "amorphous SiO2",
+      "dispersion": "silicon_dioxide",
+      "eps_r": {
+        "value": 3.9,
+        "condition": "RF dielectric constant as tabulated; deposition method, frequency and temperature not stated",
+        "source_read": "D. Zhu, L. Shao, M. Yu, R. Cheng, B. Desiatov, C. J. Xin, Y. Hu, J. Holzgrafe, S. Ghosh, A. Shams-Ansari, E. Puma, N. Sinclair, C. Reimer, M. Zhang, M. Loncar, 'Integrated photonics on thin-film lithium niobate', Adv. Opt. Photon. 13, 242 (2021); read as arXiv:2102.11956",
+        "locator": "Table 1, SiO2 row, column 'RF dielectric Constant' (3.9); arXiv PDF p.5, read from the rendered page image 2026-10-15",
+        "primary_cited": "not given for the table entries",
+        "verification": "secondary_open_access",
+        "verified_on": "2026-10-15"
+      }
+    },
+    "silicon": {
+      "description": "crystalline silicon (RF permittivity only; resistivity and loss are device inputs)",
+      "dispersion": "silicon",
+      "eps_r": {
+        "value": 11.7,
+        "condition": "RF dielectric constant as tabulated; doping, frequency and temperature not stated",
+        "source_read": "D. Zhu, L. Shao, M. Yu, R. Cheng, B. Desiatov, C. J. Xin, Y. Hu, J. Holzgrafe, S. Ghosh, A. Shams-Ansari, E. Puma, N. Sinclair, C. Reimer, M. Zhang, M. Loncar, 'Integrated photonics on thin-film lithium niobate', Adv. Opt. Photon. 13, 242 (2021); read as arXiv:2102.11956",
+        "locator": "Table 1, Si row, column 'RF dielectric Constant' (11.7); arXiv PDF p.5, read from the rendered page image 2026-10-15",
+        "primary_cited": "not given for the table entries",
+        "verification": "secondary_open_access",
+        "verified_on": "2026-10-15"
+      }
+    },
+    "gold_bulk_293k": {
+      "description": "bulk gold, total electrical resistivity at 293 K",
+      "conductor": true,
+      "sigma_Sm": {
+        "value": 45167000.0,
+        "derivation": "sigma = 1 / rho with rho = 2.214e-8 ohm m (4 significant figures of 1/rho)",
+        "condition": "annealed 99.999 % pure or purer bulk gold, 293 K, corrected for thermal expansion (Table 5 footnotes a, c); evaporated thin films are generally less conductive and are not covered by this value",
+        "source_read": "R. A. Matula, 'Electrical resistivity of copper, gold, palladium, and silver', J. Phys. Chem. Ref. Data 8, 1147-1298 (1979), NIST SRD copy https://srd.nist.gov/JPCRD/jpcrd155.pdf",
+        "locator": "Table 5 'Recommended values for the electrical resistivity of gold', p.1209, solid, T = 293 K: rho = 2.214 x 10^-8 ohm m (intrinsic 2.192)",
+        "primary_cited": "this compilation is the evaluated reference itself",
+        "verification": "primary",
+        "verified_on": "2026-10-14"
+      }
+    }
+  },
+  "verified_on_rf_eo": "2026-10-14"
 }

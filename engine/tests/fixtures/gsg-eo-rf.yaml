@@ -31,6 +31,7 @@ geometry:
   optical_window: {x_um: [1.2, 2.8], y_um: [-0.8, 0.8]}
   mesh: {max_edge_um: 0.5, electrode_edge_um: 0.25, electrode_face_um: 0.5, window_edge_um: 0.25}
 optics:
+  solver: scalar          # the closed forms in this header are for the scalar box mode (vector default since 2026-10-15)
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0

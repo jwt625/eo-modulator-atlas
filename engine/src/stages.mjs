@@ -1,9 +1,9 @@
 // EO-overlap and RF-line stages of the cross-section runner (DevLog-012 items 1 and 2).
 // Inputs come from the validated config (config.mjs eoOptions/rfOptions); nothing physical is defaulted here.
-// Results are small serializable objects; no field arrays leave this module. License: GPL-3.0-or-later.
+// Results are small serializable objects; field arrays leave this module only through `models` (field export). License: GPL-3.0-or-later.
 
-import { buildOpticalModel, solveModesAt } from './optics.mjs';
-import { eoOverlapFromEngine, combineArms, vpiAtLength, EO_CONVENTIONS } from './eo-overlap.mjs';
+import { combineArms, vpiAtLength, EO_CONVENTIONS } from './eo-overlap.mjs';
+import { solveOptical, armOverlap, scalarModeConverged, warmGet, warmSet } from './optical-stage.mjs';
 import { createRfLine, propagationAt, lineParamsFromElectrostatics, electrodePerimetersM, skinDepthM, surfaceResistanceOhm, lPulFromC0, wheelerStepCheck } from './rf-line.mjs';
 import { solveElectrostatics } from './electrostatics.mjs';
 import { CrossSection } from './section.mjs';
@@ -23,20 +23,20 @@ export const PUSH_PULL_BALANCE_TOLERANCE = 0.1;
  * windows and electrode-thickness hint (the recess must not change the default corner size; Q2 M8). Returns the value
  * and the step check.
  */
-export function wheelerResistance({ section, meshScale, sigmaSm, fRefHz, lPulNominal, onProgress = () => {} }) {
+export function wheelerResistance({ section, meshScale, sigmaSm, fRefHz, lPulNominal, onProgress = () => {}, elementOrder = 1 }) {
   const halfDeltaUm = (skinDepthM(fRefHz, sigmaSm) / 2) * 1e6;
   const thicknessUm = section.thicknessHintUm ?? section.minElectrodeThickness();
   const solves = WHEELER_SCALES.map((scale) => {
     onProgress(`Wheeler recessed solve (${scale} x delta/2 = ${(scale * halfDeltaUm).toPrecision(3)} um)`);
     const recessed = new CrossSection(recessGeometry(section.geom, scale * halfDeltaUm), `${section.name}:recessed`,
       { refineWindows: section.refineWindows, thicknessUm });
-    const es = solveElectrostatics(recessed, { meshScale, vacuumOnly: true });
-    return { scale, lPul: lPulFromC0(es.c0Pul) };
+    const es = solveElectrostatics(recessed, { meshScale, vacuumOnly: true, elementOrder });
+    return { scale, lPul: lPulFromC0(es.c0Pul), timing: es.timing ?? null };
   });
   const check = wheelerStepCheck(fRefHz, lPulNominal, solves);
   return { fRefGhz: fRefHz / 1e9, halfSkinDepthUm: halfDeltaUm, rPrimeOhmPerM: check.rPrimeOhmPerM[WHEELER_SCALES.indexOf(1)],
     scales: WHEELER_SCALES, rPrimeByScaleOhmPerM: check.rPrimeOhmPerM, maxRelativeSpread: check.maxRelativeSpread,
-    spreadWarningLevel: WHEELER_SPREAD_WARNING };
+    spreadWarningLevel: WHEELER_SPREAD_WARNING, solveTiming: solves.map((x) => x.timing) };
 }
 
 const sameWindow = (a, b) => !!a && !!b && a.x[0] === b.x[0] && a.x[1] === b.x[1] && a.y[0] === b.y[0] && a.y[1] === b.y[1];
@@ -61,34 +61,36 @@ export function compatibleVpiConventions(drive, terminalDrive, pushPullBalance) 
  * @param {{config:any, section:any, es:any, eo:any, opts:any, meshScale:number, onProgress:(m:string)=>void,
  *   reuse?:{window:any, model:any, mode:any}|null}} p
  */
-export function runEoStage({ config, section, es, eo, opts, meshScale, onProgress, reuse = null }) {
+export function runEoStage({ config, section, es, eo, opts, meshScale, onProgress, reuse = null, cache = null }) {
   const lambda = opts.lambda0Um;
   const modeIndex = opts.modeIndex;
   const arms = {};
+  const timing = {};
   checkArmWindows(eo, section);
   for (const name of ['A', 'B']) {
     const w = eo.windows[name];
     if (!w) continue;
-    onProgress(`Solving the scalar optical mode of arm ${name}`);
-    let model, mode;
-    if (reuse && sameWindow(reuse.window, w)) ({ model, mode } = reuse);
-    else {
-      model = buildOpticalModel(section, config.materials, { ...opts, window: w, meshScale });
-      mode = solveModesAt(model, lambda, { numModes: modeIndex + 1 });
-    }
-    if (!mode.converged) throw new Error(`Optical mode solve of arm ${name} did not converge`);
-    const arm = eoOverlapFromEngine({ es, model, mode, modeIndex, arm: name });
+    onProgress(`Solving the ${opts.solver} optical mode of arm ${name}`);
+    const reused = !!(reuse && sameWindow(reuse.window, w));
+    const wk = `${opts.solver}:arm:${JSON.stringify(w)}`;
+    const solved = reused ? reuse.solved : solveOptical(section, config.materials, opts, { meshScale, window: w, warm: warmGet(cache, wk) });
+    if (!reused && solved.res?.warm) warmSet(cache, wk, solved.res.warm);
+    if (solved.kind === 'scalar' ? !scalarModeConverged(solved.mode, modeIndex) : !solved.res.converged) throw new Error(`Optical mode solve of arm ${name} did not converge`);
+    timing[name] = reused ? { reusedOpticalStage: true } : solved.timing;
+    const arm = armOverlap(es, solved, name, lambda);
+    const d = solved.diagnostics;
     arms[name] = {
-      arm,
+      arm, solved,
       diagnostics: {
         window: { x_um: [...w.x], y_um: [...w.y] }, neff: arm.neff, dnEffPerV: arm.dnEffPerV, phasePerVPerM: arm.phasePerVPerM,
-        form: arm.form, modeIndex, converged: arm.converged, iterations: mode.iterations, nNodes: model.mesh.nNodes, nTris: model.mesh.nTris,
+        form: arm.form, modeIndex, converged: arm.converged, iterations: d.iterations ?? null, nNodes: d.nNodes, nTris: d.nTris,
         boundaryMarginFraction: arm.boundaryMarginFraction, metal: arm.metal, byRegion: arm.byRegion,
+        solver: solved.kind, ...(solved.kind === 'vector' ? { order: d.order, nDof: d.nDof, teFraction: d.teFraction, residual: d.residual } : {}),
       },
     };
   }
   onProgress('Combining arm overlaps');
-  const combined = combineArms({ armA: arms.A.arm, armB: arms.B?.arm ?? null, drive: eo.armDrive, lambdaUm: lambda, terminalDrive: eo.terminalDrive });
+  const combined = combineArms({ armA: arms.A.arm, armB: arms.B?.arm ?? null, drive: eo.armDrive, lambdaUm: lambda, terminalDrive: eo.terminalDrive, ...(opts.solver === 'vector' ? { baseLabels: [] } : {}) });
   const lengthMm = config.raw.line?.length_mm ?? null;
   const vpiDcV = lengthMm == null ? null : vpiAtLength(combined.vpiLVcm, lengthMm / 10);
   const compatible = compatibleVpiConventions(eo.armDrive, eo.terminalDrive, combined.pushPullBalance);
@@ -99,7 +101,8 @@ export function runEoStage({ config, section, es, eo, opts, meshScale, onProgres
   if (balanceDeviates) warnings.push('push_pull_balance_deviates_from_-1_by_more_than_0.1');
   return {
     metrics: { vpi_l_dc_vcm: combined.vpiLVcm, ...(vpiDcV == null ? {} : { vpi_dc_v: vpiDcV }) },
-    warnings,
+    warnings, timing,
+    models: { A: arms.A.solved, B: arms.B ? arms.B.solved : null },
     result: {
       status: combined.status, drive: combined.drive, terminalDrive: combined.terminalDrive,
       arms: { A: arms.A.diagnostics, B: arms.B?.diagnostics ?? null },
@@ -108,7 +111,7 @@ export function runEoStage({ config, section, es, eo, opts, meshScale, onProgres
       pushPullBalanceTolerance: PUSH_PULL_BALANCE_TOLERANCE, pushPullBalanceDeviates: balanceDeviates,
       vpiLVcm: combined.vpiLVcm, vpiDcV, lengthMm, compatibleVpiConventions: compatible,
       converged: combined.converged, labels: combined.labels, limitations: combined.limitations,
-      assumptions: arms.A.arm.assumptions, convention: EO_CONVENTIONS.id,
+      assumptions: arms.A.arm.assumptions, convention: EO_CONVENTIONS.id, solver: opts.solver,
     },
   };
 }
@@ -123,12 +126,12 @@ const summarize = (p) => ({
  * sweep and every frequency-specific RF target frequency.
  * @param {{section:any, es:any, rf:any, targets:any[], onProgress:(m:string)=>void}} p
  */
-export function runRfStage({ section, es, rf, targets, onProgress, meshScale = 1 }) {
+export function runRfStage({ section, es, rf, targets, onProgress, meshScale = 1, elementOrder = 1 }) {
   const params = lineParamsFromElectrostatics(es, section);
   let wheeler = null;
   if (rf.conductor?.model === 'wheeler') {
     const { fRefHz, ...rest } = rf.conductor;
-    wheeler = wheelerResistance({ section, meshScale, sigmaSm: rest.sigmaSm, fRefHz, lPulNominal: params.lPul, onProgress });
+    wheeler = wheelerResistance({ section, meshScale, sigmaSm: rest.sigmaSm, fRefHz, lPulNominal: params.lPul, onProgress, elementOrder });
     // R' proportional to R_s: the effective geometry factor R'/R_s carries the Wheeler value to every frequency.
     rf = { ...rf, conductor: { ...rest, model: 'surface_resistance_geometry_factor', kPerM: wheeler.rPrimeOhmPerM / surfaceResistanceOhm(fRefHz, rest.sigmaSm) } };
   }
@@ -169,10 +172,12 @@ export function runRfStage({ section, es, rf, targets, onProgress, meshScale = 1
   if (!independent) warnings.push(rf.paper ? 'paper_loss_is_input_not_prediction' : 'conductor_resistance_is_configured_input');
   return {
     warnings,
+    timing: wheeler ? { wheelerSolves: wheeler.solveTiming } : null,
     result: {
       lossSource: rf.paper ? 'paper_input' : 'model', independentPrediction: independent,
       conductorModel: rf.conductorModel, dielectricModel: rf.dielectricModel, lossLabels,
-      sigmaSm: conductor?.sigmaSm ?? null, thicknessUm: rf.thicknessUm, kPerM: conductor?.kPerM ?? null, wheeler,
+      sigmaSm: conductor?.sigmaSm ?? null, thicknessUm: rf.thicknessUm, kPerM: conductor?.kPerM ?? null,
+      wheeler: wheeler && (({ solveTiming, ...w }) => w)(wheeler),
       perimetersM: conductor?.signalPerimeterM != null ? { signal: conductor.signalPerimeterM, ground: conductor.returnPerimeterM } : null,
       regions: regions.map((r) => ({ name: r.name, material: r.material, energyFraction: r.energyFraction, loss: r.loss })),
       paper: rf.paper ? { source: rf.paper.source, citation: rf.paper.citation } : null,

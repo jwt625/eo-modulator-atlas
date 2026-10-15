@@ -2,13 +2,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://eo-atlas.local/schema/sim.schema.json",
   "title": "EO atlas simulation inputs v1",
-  "description": "Cross-section input structure. Runtime validation additionally checks positive material tensors, geometry coverage, references, voltage normalization, numerical limits, model/field consistency of the line block and stage completeness (EO arm windows, RF loss declarations) when a stage is requested. loaded_line and eo_response are recognised but not implemented.",
+  "description": "Cross-section input structure. Runtime validation additionally checks positive material tensors, geometry coverage, references, voltage normalization, numerical limits, model/field consistency of the line block and stage completeness (EO arm windows, RF loss declarations) when a stage is requested. loaded_line and eo_response are recognised but not implemented. Since 2026-10-14 (DevLog-026): params with '=' expressions, template (generates geometry), study/studies (parametric sweeps), materials.<m>.library.",
   "type": "object",
   "required": [
     "schema",
     "id",
-    "materials",
-    "geometry"
+    "materials"
   ],
   "properties": {
     "schema": {
@@ -77,14 +76,23 @@
           "enum": [
             "reject",
             "absent",
-            "pec_scalar"
+            "pec_scalar",
+            "pec",
+            "lossy"
           ],
           "default": "reject",
-          "description": "Explicit scalar optical metal policy. Absent and PEC are sensitivity limits, not real-metal loss models."
+          "description": "Metal in the optical window. Scalar: reject | absent | pec_scalar. Vector: reject | absent | pec (pec_scalar maps to pec) | lossy (needs metal_permittivity with a provenance entry)."
         },
         "wavelength_nm": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "polarization": {
           "enum": [
@@ -95,22 +103,39 @@
           ]
         },
         "mode_index": {
-          "type": "integer",
           "minimum": 0,
-          "maximum": 4
+          "maximum": 4,
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "group_index_from": {
           "enum": [
-            "fixed",
-            "finite_difference_wavelength"
-          ]
+            "perturbation",
+            "finite_difference_wavelength",
+            "fixed"
+          ],
+          "default": "perturbation",
+          "description": "perturbation (default): first-order d n_eff / d lambda of the same eigen solve (scalar: optics.groupIndex perturbation; vector: mode.ng); finite_difference_wavelength: central difference over +-min(0.01 um, lambda/100) (extra eigen solves); fixed: ng_fixed is a configured input"
         },
         "ng_fixed": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "eo_axis": {
           "enum": [
@@ -120,11 +145,10 @@
         "eo": {
           "type": "object",
           "additionalProperties": false,
-          "description": "EO overlap inputs (required by the eo_overlap stage). Arm windows are explicit; terminal_drive is a label (V_t is the full terminal difference) and must agree with line.differential.",
+          "description": "EO overlap inputs (required by the eo_overlap stage). Arm windows are explicit; terminal_drive is a label (V_t is the full terminal difference) and must agree with line.differential. arm_windows is required by the eo_overlap stage unless a template generates it.",
           "required": [
             "arm_drive",
-            "terminal_drive",
-            "arm_windows"
+            "terminal_drive"
           ],
           "properties": {
             "arm_drive": {
@@ -196,12 +220,72 @@
               }
             }
           ]
+        },
+        "solver": {
+          "enum": [
+            "vector",
+            "scalar"
+          ],
+          "default": "vector",
+          "description": "Optical mode solver: full-vector Nedelec/Lagrange FEM (default since 2026-10-15, DevLog-026 round 5) or the approximate scalar FEM (results labelled scalar_optical_approximate; rejected for TM EO runs). The run option `solver` overrides it."
+        },
+        "vector_order": {
+          "enum": [
+            1,
+            2
+          ],
+          "default": 2,
+          "description": "Element order of the vector solver"
+        },
+        "metal_permittivity": {
+          "type": "object",
+          "description": "Optical relative permittivity per metal, [eps', eps''] with eps = eps' - j eps'' at the configured wavelength; only with metal_in_window: lossy; each needs provenance optics.metal_permittivity.<metal> with a locator or citation (no default exists)",
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            }
+          }
+        },
+        "mode_select": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "by"
+          ],
+          "properties": {
+            "by": {
+              "enum": [
+                "te_fraction",
+                "confinement"
+              ],
+              "description": "te_fraction (default): the mode_index-th mode of the polarisation family by n_eff; confinement: the mode_index-th of the family ranked by power in `region` (vector only)"
+            },
+            "region": {
+              "type": "string"
+            }
+          }
+        },
+        "max_metal_power_fraction": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1,
+          "default": 0.05,
+          "description": "lossy metal only: largest power fraction in conductor regions accepted for the selected mode; above it (or when the mode is closer to a planar surface-plasmon index than to the metal-absent mode) the run fails"
         }
       },
       "required": [
         "wavelength_nm",
-        "polarization",
-        "group_index_from"
+        "polarization"
       ],
       "allOf": [
         {
@@ -218,8 +302,15 @@
             ],
             "properties": {
               "ng_fixed": {
-                "type": "number",
-                "exclusiveMinimum": 0
+                "exclusiveMinimum": 0,
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "$ref": "#/$defs/expression"
+                  }
+                ]
               }
             }
           }
@@ -290,18 +381,32 @@
               ]
             },
             "period_um": {
-              "type": [
-                "number",
-                "null"
-              ],
-              "exclusiveMinimum": 0
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
             },
             "loaded_length_um": {
-              "type": [
-                "number",
-                "null"
-              ],
-              "exclusiveMinimum": 0
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
             },
             "loaded_cross_section": {
               "type": [
@@ -333,12 +438,26 @@
                 ],
                 "properties": {
                   "period_um": {
-                    "type": "number",
-                    "exclusiveMinimum": 0
+                    "exclusiveMinimum": 0,
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
                   },
                   "loaded_length_um": {
-                    "type": "number",
-                    "exclusiveMinimum": 0
+                    "exclusiveMinimum": 0,
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
                   },
                   "unloaded_cross_section": {
                     "type": "string"
@@ -349,23 +468,44 @@
           ]
         },
         "length_mm": {
-          "type": "number",
           "exclusiveMinimum": 0,
-          "description": "electrode length per arm (mm); vpi_dc_v = VpiL / length"
+          "description": "electrode length per arm (mm); vpi_dc_v = VpiL / length",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "source_ohm": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "load_ohm": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "conductor_loss_model": {
           "enum": [
@@ -389,17 +529,38 @@
           "type": "boolean"
         },
         "r_pul_ref_ohm_per_m": {
-          "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "r_pul_ref_ghz": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "conductor_k_per_m": {
-          "type": "number",
           "exclusiveMinimum": 0,
-          "description": "integral |J_s|^2 dl / I^2 (1/m) for skin_effect_geometry_factor"
+          "description": "integral |J_s|^2 dl / I^2 (1/m) for skin_effect_geometry_factor",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "perimeters_cover_carrying_surfaces": {
           "type": "boolean"
@@ -421,12 +582,26 @@
                 ],
                 "properties": {
                   "f_ghz": {
-                    "type": "number",
-                    "exclusiveMinimum": 0
+                    "exclusiveMinimum": 0,
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
                   },
                   "alpha_db_per_cm": {
-                    "type": "number",
-                    "minimum": 0
+                    "minimum": 0,
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
                   }
                 }
               }
@@ -447,8 +622,15 @@
               ],
               "properties": {
                 "alpha0_db_per_cm_per_sqrt_ghz": {
-                  "type": "number",
-                  "exclusiveMinimum": 0
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 }
               }
             }
@@ -467,18 +649,93 @@
       ],
       "properties": {
         "f_start_ghz": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "f_stop_ghz": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "n_points": {
-          "type": "integer",
           "minimum": 1,
-          "maximum": 4001
+          "maximum": 4001,
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         }
+      }
+    },
+    "params": {
+      "type": "object",
+      "description": "name -> {value, unit, description}; value is a number or an expression of other params (cycles are errors). Overridable per run (runCrossSection params option) and swept by studies.",
+      "propertyNames": {
+        "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+      },
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "$ref": "#/$defs/expression"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "value"
+            ],
+            "properties": {
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "$ref": "#/$defs/expression"
+                  }
+                ]
+              },
+              "unit": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "template": {
+      "$ref": "#/$defs/template"
+    },
+    "study": {
+      "$ref": "#/$defs/study"
+    },
+    "studies": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/study"
       }
     }
   },
@@ -488,7 +745,14 @@
       "minItems": 2,
       "maxItems": 2,
       "items": {
-        "type": "number"
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "$ref": "#/$defs/expression"
+          }
+        ]
       }
     },
     "window": {
@@ -575,7 +839,14 @@
           ]
         },
         "mirror_x_um": {
-          "type": "number"
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "regions": {
           "type": "array",
@@ -598,7 +869,14 @@
                 ],
                 "properties": {
                   "weight": {
-                    "type": "number"
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
                   }
                 }
               }
@@ -658,10 +936,17 @@
           "type": "boolean"
         },
         "eps_r": {
-          "oneOf": [
+          "anyOf": [
             {
-              "type": "number",
-              "exclusiveMinimum": 0
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
             },
             {
               "type": "object",
@@ -672,12 +957,26 @@
               "additionalProperties": false,
               "properties": {
                 "perp": {
-                  "type": "number",
-                  "exclusiveMinimum": 0
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 },
                 "par": {
-                  "type": "number",
-                  "exclusiveMinimum": 0
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 }
               }
             },
@@ -691,36 +990,115 @@
               "additionalProperties": false,
               "properties": {
                 "xx": {
-                  "type": "number",
-                  "exclusiveMinimum": 0
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 },
                 "yy": {
-                  "type": "number",
-                  "exclusiveMinimum": 0
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 },
                 "zz": {
-                  "type": "number",
-                  "exclusiveMinimum": 0
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 }
               }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "minProperties": 1,
+              "properties": {
+                "perp": {
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
+                },
+                "par": {
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
+                }
+              },
+              "description": "Partial {perp} or {par}: only together with library (merges one level deep over the library value)"
             }
           ]
         },
         "n": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "n_o": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "n_e": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "sigma_Sm": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "crystal": {
           "type": "object",
@@ -737,8 +1115,15 @@
               "type": "string"
             },
             "rotation_deg": {
-              "type": "number",
-              "description": "CCW rotation of the lab frame about the propagation axis seen from +z: x' = cos t x + sin t y (fixed sense 2026-10-07)"
+              "description": "CCW rotation of the lab frame about the propagation axis seen from +z: x' = cos t x + sin t y (fixed sense 2026-10-07)",
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
             }
           }
         },
@@ -760,7 +1145,14 @@
                     "minItems": 3,
                     "maxItems": 3,
                     "items": {
-                      "type": "number"
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "$ref": "#/$defs/expression"
+                        }
+                      ]
                     }
                   }
                 }
@@ -771,36 +1163,82 @@
               "additionalProperties": false,
               "properties": {
                 "r13": {
-                  "type": "number"
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 },
                 "r22": {
-                  "type": "number"
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 },
                 "r33": {
-                  "type": "number"
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 },
                 "r51": {
-                  "type": "number"
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
                 }
               }
             }
           ]
         },
         "tan_delta_rf": {
-          "type": "number",
           "minimum": 0,
-          "description": "RF loss tangent; absent = unknown (never zero)"
+          "description": "RF loss tangent; absent = unknown (never zero)",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "dispersion": {
           "type": "string",
           "description": "Library dispersion key (defaults to the material name when the library has it)"
         },
         "thickness_um": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "n_complex": {
           "description": "Reserved; not used by the engine (real-metal optics is not modelled)"
+        },
+        "library": {
+          "type": "string",
+          "description": "Key of engine/data/materials.json `library` (e.g. lithium_niobate_congruent, silicon_dioxide, silicon, gold_bulk_293k). Supplies eps_r, r_pm_per_v, sigma_Sm, conductor and dispersion; config keys override (eps_r perp/par and named r coefficients merge one level deep). Provenance class standard_reference."
         }
       },
       "if": {
@@ -814,8 +1252,17 @@
         }
       },
       "else": {
-        "required": [
-          "eps_r"
+        "anyOf": [
+          {
+            "required": [
+              "eps_r"
+            ]
+          },
+          {
+            "required": [
+              "library"
+            ]
+          }
         ]
       },
       "additionalProperties": false
@@ -846,19 +1293,47 @@
           ]
         },
         "value": {
-          "type": "number"
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "tol_abs": {
-          "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "tol_rel": {
-          "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "at_ghz": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "source": {
           "type": "object",
@@ -901,59 +1376,748 @@
       "additionalProperties": false,
       "properties": {
         "max_edge_um": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "electrode_edge_um": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "electrode_face_um": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "window_edge_um": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "far_edge_um": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "min_edge_um": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "grade": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "grade_far": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "grade_corner": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "min_angle_bound": {
-          "type": "number",
-          "minimum": 1
+          "minimum": 1,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "max_vertices": {
-          "type": "integer",
           "minimum": 4,
           "maximum": 80000,
-          "default": 80000
+          "default": 80000,
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
         },
         "regions": {
           "type": "object",
           "additionalProperties": {
-            "type": "number",
-            "exclusiveMinimum": 0
+            "exclusiveMinimum": 0,
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "$ref": "#/$defs/expression"
+              }
+            ]
+          }
+        },
+        "element_order": {
+          "enum": [
+            1,
+            2
+          ],
+          "default": 2,
+          "description": "Electrostatic element order: 1 = P1, 2 = P2 Lagrange on the same mesh (default 2 since 2026-10-15, DevLog-026 round 2)"
+        },
+        "p2_mesh_factor": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 4,
+          "default": 2,
+          "description": "Electrostatic mesh-scale factor applied when element_order is 2 (default 2: P2 at about P1 cost; DevLog-026 round 5); run option p2MeshFactor overrides it"
+        }
+      }
+    },
+    "expression": {
+      "type": "string",
+      "pattern": "^=",
+      "description": "Arithmetic expression of params with a leading '=' (numbers, params, + - * / ^, parentheses, unary minus, min, max, sqrt, abs, sin, cos, tan, pi); evaluated before validation. The unit implied by the key suffix must match the units of the params in a sum of param terms."
+    },
+    "template": {
+      "type": "object",
+      "description": "Parametric cross-section generating `geometry` and optics.eo.arm_windows (engine/src/templates.mjs). Frame: y = 0 at the BOX top, x = 0 at arm A; signal electrode left of arm A; arm B mirrored about the signal centre.",
+      "required": [
+        "type",
+        "materials",
+        "film_thickness_um",
+        "etch_depth_um",
+        "box_thickness_um",
+        "substrate_thickness_um",
+        "electrodes",
+        "arms",
+        "domain"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "tfln_rib_gsg"
+          ]
+        },
+        "materials": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "film",
+            "box",
+            "substrate",
+            "ambient",
+            "electrode"
+          ],
+          "properties": {
+            "film": {
+              "type": "string"
+            },
+            "box": {
+              "type": "string"
+            },
+            "substrate": {
+              "type": "string"
+            },
+            "ambient": {
+              "type": "string"
+            },
+            "cladding": {
+              "type": "string"
+            },
+            "electrode": {
+              "type": "string"
+            },
+            "strip": {
+              "type": "string"
+            }
+          }
+        },
+        "film_thickness_um": {
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
+        },
+        "etch_depth_um": {
+          "minimum": 0,
+          "description": "0 = unetched film",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
+        },
+        "rib_top_width_um": {
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
+        },
+        "sidewall_angle_deg": {
+          "exclusiveMinimum": 0,
+          "maximum": 90,
+          "description": "from horizontal; 90 = vertical",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
+        },
+        "loading_strip": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "width_um",
+            "thickness_um"
+          ],
+          "properties": {
+            "width_um": {
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "thickness_um": {
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            }
+          }
+        },
+        "box_thickness_um": {
+          "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
+        },
+        "substrate_thickness_um": {
+          "exclusiveMinimum": 0,
+          "description": "substrate kept in the model; the domain bottom is at -(box + substrate) unless domain.y_um is given",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
+        },
+        "cladding": {
+          "anyOf": [
+            {
+              "const": "none"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "thickness_um"
+              ],
+              "properties": {
+                "thickness_um": {
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
+                },
+                "from": {
+                  "enum": [
+                    "slab_top",
+                    "film_top"
+                  ],
+                  "default": "slab_top"
+                }
+              }
+            }
+          ]
+        },
+        "electrodes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "placement",
+            "gap_um",
+            "signal_width_um",
+            "ground_width_um",
+            "thickness_um"
+          ],
+          "properties": {
+            "placement": {
+              "enum": [
+                "on_slab",
+                "on_buffer",
+                "on_cladding"
+              ]
+            },
+            "buffer_thickness_um": {
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "gap_um": {
+              "exclusiveMinimum": 0,
+              "description": "edge to edge",
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "signal_width_um": {
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "ground_width_um": {
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "thickness_um": {
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "waveguide_offset_um": {
+              "default": 0,
+              "description": "displacement of the waveguide from the gap centre toward the signal electrode",
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "layout": {
+              "enum": [
+                "gsg",
+                "gs"
+              ],
+              "default": "gsg"
+            }
+          }
+        },
+        "arms": {
+          "enum": [
+            "push_pull",
+            "single"
+          ]
+        },
+        "domain": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "margin_x_um",
+                "air_above_um"
+              ],
+              "properties": {
+                "margin_x_um": {
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
+                },
+                "air_above_um": {
+                  "exclusiveMinimum": 0,
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "$ref": "#/$defs/expression"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "x_um",
+                "y_um"
+              ],
+              "properties": {
+                "x_um": {
+                  "$ref": "#/$defs/interval"
+                },
+                "y_um": {
+                  "$ref": "#/$defs/interval"
+                }
+              }
+            }
+          ]
+        },
+        "optical_window": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "half_width_um": {
+              "exclusiveMinimum": 0,
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "y_um": {
+              "$ref": "#/$defs/interval"
+            }
+          },
+          "description": "defaults (numerical): half width = min(gap-edge distance - 0.1 um, footprint half width + 2 um); y from -min(BOX, 1.5 um) to film (strip) top + 1 um"
+        },
+        "symmetry": {
+          "enum": [
+            "none"
+          ]
+        },
+        "mesh": {
+          "$ref": "#/$defs/mesh"
+        },
+        "boundary": {
+          "type": "object"
+        }
+      }
+    },
+    "study": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "sweep"
+      ],
+      "description": "Parametric study over params (engine/src/sweep.mjs). Axes nest: the first axis is outermost, the last varies fastest.",
+      "properties": {
+        "type": {
+          "const": "parametric"
+        },
+        "description": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "electrostatics",
+              "optical_mode",
+              "eo_overlap",
+              "rf_line",
+              "loaded_line",
+              "eo_response"
+            ]
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sweep": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "param"
+            ],
+            "properties": {
+              "param": {
+                "type": "string"
+              },
+              "values": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "number"
+                }
+              },
+              "range": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "start",
+                  "stop",
+                  "n"
+                ],
+                "properties": {
+                  "start": {
+                    "type": "number"
+                  },
+                  "stop": {
+                    "type": "number"
+                  },
+                  "n": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              }
+            },
+            "oneOf": [
+              {
+                "required": [
+                  "values"
+                ]
+              },
+              {
+                "required": [
+                  "range"
+                ]
+              }
+            ]
+          }
+        },
+        "sweep_targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "metric",
+              "value",
+              "at"
+            ],
+            "properties": {
+              "metric": {
+                "enum": [
+                  "vpi_l_dc_vcm",
+                  "vpi_dc_v",
+                  "n_eff",
+                  "ng_opt",
+                  "n_rf",
+                  "z0_ohm",
+                  "c_pul_pf_per_m",
+                  "c0_pul_pf_per_m",
+                  "l_pul_nh_per_m",
+                  "rf_loss_db_per_cm",
+                  "eo_rolloff_db",
+                  "bw3db_ghz",
+                  "bw6db_ghz",
+                  "optical_confinement_in_region"
+                ]
+              },
+              "value": {
+                "type": "number"
+              },
+              "tol_abs": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tol_rel": {
+                "type": "number",
+                "minimum": 0
+              },
+              "at_ghz": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "comparable": {
+                    "type": "boolean",
+                    "description": "false: never evaluated"
+                  }
+                }
+              },
+              "vpi_convention": {
+                "enum": [
+                  "per_arm_phase_shifter",
+                  "mzm_push_pull",
+                  "mzm_series_push_pull",
+                  "mzm_differential",
+                  "mzm_single_arm",
+                  "resonance_tuning_derived",
+                  "unspecified"
+                ],
+                "description": "Required for a Vpi target to be evaluated; must match the engine drive convention (no silent conversion). mzm_differential = MZM V_pi against the full terminal difference V+ - V- (data/schema/devices.schema.yaml convention (q), 2026-10-07), the engine V_t."
+              },
+              "at": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                  "type": "number"
+                },
+                "description": "param values of the sweep point this target belongs to"
+              }
+            },
+            "anyOf": [
+              {
+                "required": [
+                  "tol_abs"
+                ]
+              },
+              {
+                "required": [
+                  "tol_rel"
+                ]
+              }
+            ],
+            "additionalProperties": false
           }
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "anyOf": [
+        {
+          "required": [
+            "geometry"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ]
+    },
+    {
+      "not": {
+        "required": [
+          "geometry",
+          "template"
+        ]
+      }
+    }
+  ]
 }

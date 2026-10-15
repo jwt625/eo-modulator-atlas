@@ -17,6 +17,7 @@ geometry:
 line:
   loading: {type: none}
 optics:
+  solver: scalar          # the closed forms in this header are for the scalar box mode (vector default since 2026-10-15)
   wavelength_nm: 1550
   polarization: TE
   mode_index: 0

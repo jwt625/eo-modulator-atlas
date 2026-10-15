@@ -9,14 +9,17 @@ DevLogs. `robust-predicates` and `yaml` retain their upstream licenses.
 Implemented stages:
 
 - Conforming triangle meshing in JavaScript (not a WASM backend).
-- Anisotropic P1 electrostatic FEM, terminal-charge and energy capacitance,
-  vacuum capacitance and quasi-TEM section estimates of L′, nRF and Z₀.
-- Scalar E/H optical FEM and finite-difference group index, with explicit metal
-  sensitivity options and window-edge diagnostics.
-- `eo_overlap` stage (`eo-overlap.mjs` via `stages.mjs`): first-order Pockels overlap
-  of each explicit arm window's own scalar mode with the static field, push-pull only
-  when the field-resolved arms give it, DC `VpiL` and `Vpi`. Vpi targets need a
-  matching `vpi_convention`.
+- Anisotropic electrostatic FEM, P2 by default on a mesh coarsened by
+  `mesh.p2_mesh_factor` (default 2; P1 with `mesh.element_order: 1`), terminal-charge and
+  energy capacitance, vacuum capacitance and quasi-TEM section estimates of L′, nRF and Z₀.
+- Optical modes: full-vector FEM by default (`src/vector-mode.mjs`, Nedelec/Lagrange order 2),
+  group index by first-order perturbation (default) or finite difference; the scalar E/H FEM
+  stays selectable (`optics.solver: scalar`, labelled approximate). Metal policies, window-edge
+  diagnostics, lossy metal anchored on the metal-absent mode with a surface-plasmon guard.
+- `eo_overlap` stage (`eo-overlap.mjs` / `optical-stage.mjs` via `stages.mjs`): first-order
+  Pockels overlap of each explicit arm window's own mode with the static field (vector: full
+  tensor including shear), push-pull only when the field-resolved arms give it, DC `VpiL` and
+  `Vpi`. Vpi targets need a matching `vpi_convention`. Scalar TM is rejected for EO runs.
 - `rf_line` stage (`rf-line.mjs` via `stages.mjs`): uniform quasi-TEM line with
   explicit conductor and region-weighted dielectric loss, frequency sweep and
   frequency-specific RF targets. Paper attenuation and configured R' are inputs and
@@ -36,6 +39,26 @@ convention (q): V_pi against V+ - V-, the engine V_t. Material and target keys a
 Q2 corrections of 2026-10-07 are listed in DevLog-012. Periodic-cell ABCD (`loaded_line`) and
 traveling-wave EO response (`eo_response`) are not implemented and error when
 requested. `chain` never causes a stage to execute.
+
+Optical solver (DevLog-026 round 2): `optics.solver: vector` (or the run option `solver`) routes the optical and EO
+stages through the full-vector FEM of `src/vector-mode.mjs` (`src/optical-stage.mjs` dispatches; default scalar).
+`group_index_from: perturbation` is the default (one eigen solve); `finite_difference_wavelength` selects the
+finite-difference path. Electrostatics default to P2 (`mesh.element_order: 2`; option `elementOrder`), chosen from the
+reference tests `tests/reference-cases.test.mjs` (validation/cases K1-K6 against validation/reference/summary.json;
+`ENGINE_REFERENCE_FULL=1` adds K5). `src/mesh-entry.mjs` (`buildSectionMesh`) and `src/yaml-edit.mjs` serve the
+workbench.
+
+Parameters, templates and sweeps (DevLog-026): a config may declare `params` and use
+`"=expr"` strings anywhere a number goes (`src/params.mjs`, own parser, no `eval`);
+`template: {type: tfln_rib_gsg, ...}` generates the cross-section and the EO arm windows
+(`src/templates.mjs`); `studies` run parametric sweeps (`src/sweep.mjs`: `enumerateSweep`,
+`runSweepPoint` by index for worker pools, async `runSweep` with cancellation; CLI
+`--sweep STUDY`, `--list-points`, `--param name=value`). Wavelength-only sweeps reuse the
+electrostatic solution (content hashes in `src/fields.mjs`). `materials.<m>.library: <key>`
+pulls sourced RF/EO/conductor constants from `data/materials.json` (`library`; each value
+names the source actually read, its locator, condition and verification level). Field export:
+`runCrossSection(text, {fields: true})` adds typed-array meshes, potential, per-triangle E and
+optical mode fields; `result.timing` passes the solver timing objects through.
 
 `rotation_deg` is a CCW rotation of the lab frame about the propagation axis
 (`x' = cos t x + sin t y`); the code applied the opposite sense before 2026-10-07

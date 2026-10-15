@@ -14,7 +14,9 @@ function withMetal(policy) {
 
 test('YAML/runtime/schema optical policy agrees and defaults to explicit rejection', () => {
   const schema = JSON.parse(readFileSync(new URL('../schema/sim.schema.json', import.meta.url), 'utf8'));
-  assert.deepEqual(schema.properties.optics.properties.metal_in_window.enum, ['reject', 'absent', 'pec_scalar']);
+  // DevLog-026 round 2: the enum adds the vector policies pec and lossy (rejected by the scalar solver, see below).
+  assert.deepEqual(schema.properties.optics.properties.metal_in_window.enum, ['reject', 'absent', 'pec_scalar', 'pec', 'lossy']);
+  for (const vectorOnly of ['pec', 'lossy']) assert.throws(() => opticalOptions(withMetal(vectorOnly)), /needs optics.solver: vector|lossy needs/);
   assert.equal(schema.properties.optics.properties.metal_in_window.default, 'reject');
   assert.equal(opticalOptions(withMetal()).metal, 'reject');
   for (const policy of ['absent', 'pec_scalar', 'reject']) {

@@ -40,7 +40,7 @@
 // ---------------------------------------------------------------------------------------------------------
 
 import { epsOptLab, deltaEpsLab } from './materials.mjs';
-import { TriLocator } from './electrostatics.mjs';
+import { TriLocator, gradientAt } from './electrostatics.mjs';
 import { triIntegralSquare, OPTICAL_LABELS, OPTICAL_LIMITATIONS } from './optics.mjs';
 
 /** Status marker carried by every EO result: analytic-gate level only, no validation_status promotion, draft inputs unverified. */
@@ -94,6 +94,7 @@ export function uniformTriField(nTris, E) {
  * Static field per optical-mesh triangle (V/m per volt of terminal voltage) sampled at triangle centroids of the
  * optical mesh from the electrostatic solution (E = -grad phi, piecewise constant per electrostatic triangle).
  * A centroid inside an electrode polygon gets E = 0 (ideal conductor interior; no electrostatic triangle exists there).
+ * P1: the constant triangle gradient; P2 (es.elementOrder 2): electrostatics.gradientAt at the optical centroid.
  * Nearest-triangle sampling error is O(h_electrostatic) near material interfaces and electrodes; the two meshes are
  * different, so convergence of both must be checked by the caller.
  * @param {{mesh:any, geo?:any, grad:{gx:Float64Array, gy:Float64Array}}} es electrostatic result (solveElectrostatics)
@@ -118,8 +119,15 @@ export function sampleFieldOnOpticalMesh(es, model) {
       if (inElectrode) continue;
     }
     if (k < 0) fail(`optical triangle ${t} centroid (${cx.toFixed(4)}, ${cy.toFixed(4)}) um lies outside the electrostatic mesh (cropped half-domain or window outside the domain)`);
-    out[3 * t] = -grad.gx[k] * 1e6; // V/um -> V/m
-    out[3 * t + 1] = -grad.gy[k] * 1e6;
+    if (es.elementOrder === 2) {
+      // P2 potential: sample its linear gradient at the optical centroid (DevLog-024 request 2), not the centroid value.
+      const [gx, gy] = gradientAt(es, k, cx, cy);
+      out[3 * t] = -gx * 1e6;
+      out[3 * t + 1] = -gy * 1e6;
+    } else {
+      out[3 * t] = -grad.gx[k] * 1e6; // V/um -> V/m
+      out[3 * t + 1] = -grad.gy[k] * 1e6;
+    }
   }
   return out;
 }
@@ -279,7 +287,8 @@ export function combineArms(p) {
   const vpiLVm = (lambdaUm * 1e-6) / (2 * Math.abs(dnDiff));
   const armsUsed = armB ? [armA, armB] : [armA];
   const converged = armsUsed.map((a) => a.converged ?? null);
-  const labels = [...new Set([...OPTICAL_LABELS, ...armsUsed.flatMap((a) => a.labels ?? []), ...(converged.includes(false) ? ['mode_not_converged'] : [])])];
+  // baseLabels: the scalar solver labels by default; a vector result passes [] (the scalar limitation codes do not apply).
+  const labels = [...new Set([...(p.baseLabels ?? OPTICAL_LABELS), ...armsUsed.flatMap((a) => a.labels ?? []), ...(converged.includes(false) ? ['mode_not_converged'] : [])])];
   const limitations = [...new Set(armsUsed.flatMap((a) => a.limitations ?? []))];
   return {
     status: EO_STATUS_LABEL,
@@ -327,14 +336,16 @@ export function eoOverlapFromEngine({ es, model, mode, modeIndex, arm, acceptUnc
   need(model, 'model');
   need(mode, 'mode');
   if (!Number.isInteger(modeIndex) || modeIndex < 0 || modeIndex >= mode.neff.length) fail(`modeIndex must be an integer in [0, ${mode.neff.length - 1}]`);
-  if (mode.converged !== true && acceptUnconverged !== true) fail(`mode did not converge (converged = ${mode.converged}); refusing to compute an overlap from it (pass acceptUnconverged: true to accept it explicitly)`);
+  // Per-mode convergence when the eigen result provides it (DevLog-024 round 2), else the run flag.
+  const modeOk = Array.isArray(mode.modeConverged) ? mode.modeConverged[modeIndex] === true : mode.converged === true;
+  if (!modeOk && acceptUnconverged !== true) fail(`mode ${modeIndex} did not converge (converged = ${mode.converged}); refusing to compute an overlap from it (pass acceptUnconverged: true to accept it explicitly)`);
   return eoOverlapArm({
     modeInfo: {
       labels: mode.labels,
       limitations: mode.limitations,
       metal: mode.metal ?? null,
       boundaryMarginFraction: mode.boundaryMarginFraction ? { marginUm: mode.boundaryMarginFraction.marginUm, value: mode.boundaryMarginFraction.perMode[modeIndex] } : null,
-      converged: mode.converged === true,
+      converged: modeOk,
       modeIndex,
     },
     mesh: model.mesh,

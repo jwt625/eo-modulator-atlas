@@ -2,7 +2,9 @@
 // Numerical meshing defaults are documented in sims/SPEC.md. GPL-3.0-or-later.
 import { parseDocument } from 'yaml';
 import { rectToPolygon } from './geometry.mjs';
-import { resolveMaterial } from './materials.mjs';
+import { resolveMaterial, MATERIAL_LIBRARY } from './materials.mjs';
+import { resolveParams, substituteExpressions } from './params.mjs';
+import { expandTemplate } from './templates.mjs';
 import { normalizeWeights } from './electrostatics.mjs';
 import { CrossSection } from './section.mjs';
 
@@ -21,7 +23,21 @@ export const DIELECTRIC_LOSS_MODELS = ['none', 'tan_delta_regions'];
 export const MAX_SWEEP_POINTS = 4001;
 /** Metrics whose frequency-specific (at_ghz) targets the rf_line stage evaluates. */
 export const RF_FREQUENCY_METRICS = ['rf_loss_db_per_cm', 'n_rf', 'z0_ohm'];
-const OPTICS_KEYS = ['wavelength_nm', 'polarization', 'mode_index', 'group_index_from', 'ng_fixed', 'eo_axis', 'metal_in_window', 'eo'];
+const OPTICS_KEYS = ['wavelength_nm', 'polarization', 'mode_index', 'group_index_from', 'ng_fixed', 'eo_axis', 'metal_in_window', 'eo', 'solver', 'vector_order', 'metal_permittivity', 'mode_select', 'max_metal_power_fraction'];
+/** Optical solver switch: vector (default since DevLog-026 round 5, audit F1) or the approximate scalar FEM. */
+export const OPTICAL_SOLVERS = ['scalar', 'vector'];
+export const DEFAULT_OPTICAL_SOLVER = 'vector';
+export const VECTOR_SOLVER_AVAILABLE = true;
+/** Group index methods: perturbation (default, one eigen solve), finite_difference_wavelength (+-delta solves), fixed. */
+export const GROUP_INDEX_METHODS = ['perturbation', 'finite_difference_wavelength', 'fixed'];
+/** Metal-in-window policies. Scalar: reject | absent | pec_scalar. Vector: reject | absent | pec | lossy (pec_scalar maps to pec). */
+export const METAL_POLICIES_ALL = ['reject', 'absent', 'pec_scalar', 'pec', 'lossy'];
+/** Electrostatic element orders (mesh.element_order): 1 = P1, 2 = P2 Lagrange (DevLog-024 S3.9). */
+export const ELEMENT_ORDERS = [1, 2];
+/** Default electrostatic element order when mesh.element_order is absent (decision and evidence: DevLog-026 round 2). */
+export const DEFAULT_ELEMENT_ORDER = 2;
+/** Electrostatic mesh-scale factor applied with P2 (mesh.p2_mesh_factor; DevLog-026 round 5, audit F4). P1 uses 1. */
+export const DEFAULT_P2_MESH_FACTOR = 2;
 const LINE_KEYS = ['length_mm', 'conductor_loss_model', 'dielectric_loss_model', 'include_internal_inductance', 'r_pul_ref_ohm_per_m', 'r_pul_ref_ghz',
   'conductor_k_per_m', 'perimeters_cover_carrying_surfaces', 'rf_loss_table', 'rf_loss_law', 'source_ohm', 'load_ohm', 'differential', 'loading'];
 const POCKELS_KEYS = ['r13', 'r22', 'r33', 'r51', 'voigt'];
@@ -30,6 +46,9 @@ const MATERIAL_KEYS = ['conductor', 'eps_r', 'n', 'n_o', 'n_e', 'sigma_Sm', 'cry
 /** Target keys (Q2 M4: a typo such as at_GHz must not turn a frequency target into a static one). `source` stays open. */
 const TARGET_KEYS = ['metric', 'value', 'tol_abs', 'tol_rel', 'at_ghz', 'vpi_convention', 'source'];
 
+/** Never expanded as expressions (audit A13): metadata and free-text blocks at the top level, and free-text keys at any depth. */
+export const FREE_TEXT_TOP_LEVEL = ['schema', 'id', 'title', 'paper_id', 'device_id', 'repro_grade', 'validation_status', 'chain', 'params', 'study', 'studies', 'provenance', 'missing', 'limitations', 'reported_curves'];
+export const FREE_TEXT_KEYS = ['source', 'note', 'notes', 'description', 'locator', 'citation', 'name', 'material', 'role'];
 const fail = (path, message) => { throw new Error(`${path}: ${message}`); };
 const object = (v, p) => {
   if (!v || typeof v !== 'object' || Array.isArray(v)) fail(p, 'expected an object');
@@ -99,7 +118,7 @@ export function normalizeGeometry(raw, materials, path = 'geometry') {
     });
   };
   const mesh = { ...object(raw.mesh ?? {}, `${path}.mesh`) };
-  keys(mesh, ['max_edge_um', 'electrode_edge_um', 'electrode_face_um', 'window_edge_um', 'far_edge_um', 'min_edge_um', 'grade', 'grade_far', 'grade_corner', 'min_angle_bound', 'max_vertices', 'regions'], `${path}.mesh`);
+  keys(mesh, ['max_edge_um', 'electrode_edge_um', 'electrode_face_um', 'window_edge_um', 'far_edge_um', 'min_edge_um', 'grade', 'grade_far', 'grade_corner', 'min_angle_bound', 'max_vertices', 'regions', 'element_order', 'p2_mesh_factor'], `${path}.mesh`);
   for (const [k, v] of Object.entries(mesh)) {
     if (k === 'regions') { Object.values(object(v, `${path}.mesh.regions`)).forEach((x) => number(x, `${path}.mesh.regions`, true)); }
     else number(v, `${path}.mesh.${k}`, true);
@@ -107,6 +126,8 @@ export function normalizeGeometry(raw, materials, path = 'geometry') {
   // Explicit resource ceiling for an interactive solve; never silently coarsen the mesh.
   mesh.max_vertices ??= MAX_VERTICES;
   if (!Number.isInteger(mesh.max_vertices) || mesh.max_vertices < 4 || mesh.max_vertices > MAX_VERTICES) fail(`${path}.mesh.max_vertices`, `expected an integer from 4 to ${MAX_VERTICES}`);
+  if (mesh.element_order != null && !ELEMENT_ORDERS.includes(mesh.element_order)) fail(`${path}.mesh.element_order`, 'expected 1 (P1) or 2 (P2)');
+  if (mesh.p2_mesh_factor != null && !(mesh.p2_mesh_factor >= 0.5 && mesh.p2_mesh_factor <= 4)) fail(`${path}.mesh.p2_mesh_factor`, 'expected a number from 0.5 to 4');
   if (mesh.min_angle_bound != null && mesh.min_angle_bound < 1) fail(`${path}.mesh.min_angle_bound`, 'radius/edge bound must be at least 1');
   const boundary = { left: 'neumann', right: 'neumann', top: 'neumann', bottom: 'neumann', ...object(raw.boundary ?? {}, `${path}.boundary`) };
   keys(boundary, ['left', 'right', 'top', 'bottom'], `${path}.boundary`);
@@ -127,8 +148,91 @@ function readDocument(text) {
   return doc.toJS({ maxAliasCount: 100 });
 }
 
-export function parseConfig(text) {
-  return normalizeConfig(readDocument(text));
+/**
+ * Strict solver input. `params` overrides replace parameter values before expressions and templates are expanded.
+ * @param {string} text
+ * @param {{params?: Record<string, number>}} [options]
+ */
+export function parseConfig(text, { params = {} } = {}) {
+  const expanded = expandConfig(readDocument(text), { params });
+  return { ...normalizeConfig(expanded.raw), ...expanded.meta };
+}
+
+// ---- expansion: params, expressions, template, material library (DevLog-026) -----------------------------------
+
+/**
+ * Expand a parsed YAML document into the plain config the validators consume: resolve `params` (with overrides),
+ * substitute every `=expr` string, generate `geometry` (and EO arm windows) from `template`, and merge library
+ * material constants. The input object is not modified.
+ * @returns {{raw:any, meta:{source:any, params:{values:Record<string,number>, defs:any}, substitutions:any[], template:any, materialSources:Record<string, any>}}}
+ */
+export function expandConfig(source, { params: overrides = {} } = {}) {
+  object(source, 'config');
+  const { values, defs } = resolveParams(source.params, overrides);
+  const units = Object.fromEntries(Object.entries(defs).map(([k, d]) => [k, d.unit]));
+  const { tree: raw, substitutions } = substituteExpressions(source, values, units, { skip: FREE_TEXT_TOP_LEVEL, skipKeys: FREE_TEXT_KEYS });
+  let template = null;
+  if (raw.template != null) {
+    if (raw.geometry != null) fail('template', 'give either template or geometry, not both (the template generates geometry)');
+    const out = expandTemplate(raw.template);
+    raw.geometry = out.geometry;
+    template = { type: raw.template.type, arms: out.arms, armWindows: out.armWindows, summary: out.summary };
+    const eo = raw.optics?.eo;
+    if (eo != null && typeof eo === 'object' && !Array.isArray(eo)) {
+      const want = out.arms === 'push_pull' ? 'two_arm_field_resolved' : 'single_arm';
+      if (eo.arm_drive != null && eo.arm_drive !== want) fail('optics.eo.arm_drive', `${eo.arm_drive} does not match template arms ${out.arms} (expected ${want})`);
+      if (eo.arm_windows == null) raw.optics = { ...raw.optics, eo: { ...eo, arm_windows: out.armWindows.B ? { A: out.armWindows.A, B: out.armWindows.B } : { A: out.armWindows.A } } };
+    }
+  }
+  const materialSources = Object.create(null);
+  if (raw.materials != null && typeof raw.materials === 'object' && !Array.isArray(raw.materials)) {
+    const merged = {};
+    for (const [name, m] of Object.entries(raw.materials)) {
+      if (m && typeof m === 'object' && !Array.isArray(m) && m.library != null) {
+        const r = libraryMaterial(name, m);
+        merged[name] = r.material;
+        materialSources[name] = r.source;
+      } else merged[name] = m;
+    }
+    raw.materials = merged;
+  }
+  return { raw, meta: { source, params: { values, defs }, substitutions, template, materialSources } };
+}
+
+const LIBRARY_FIELDS = ['eps_r', 'r_pm_per_v', 'sigma_Sm'];
+
+/** Merge a library entry under the config keys (config wins; eps_r {perp, par} and named r_pm_per_v merge one level). */
+function libraryMaterial(name, m) {
+  const p = `materials.${name}.library`;
+  const key = m.library;
+  if (typeof key !== 'string' || !Object.hasOwn(MATERIAL_LIBRARY.library ?? {}, key)) fail(p, `unknown library key ${key} (available: ${Object.keys(MATERIAL_LIBRARY.library ?? {}).join(', ')})`);
+  const lib = MATERIAL_LIBRARY.library[key];
+  const { library: _drop, ...cfg } = m;
+  const out = {};
+  const fromLibrary = [];
+  const overridden = [];
+  const citations = {};
+  if (lib.conductor) out.conductor = true;
+  if (lib.dispersion && cfg.dispersion == null) { out.dispersion = lib.dispersion; fromLibrary.push('dispersion'); }
+  if (lib.conductor && cfg.conductor === false) fail(p, `${key} is a conductor`);
+  Object.assign(out, cfg);
+  for (const f of LIBRARY_FIELDS) {
+    const entry = lib[f];
+    if (!entry) continue;
+    const v = entry.value;
+    const c = cfg[f];
+    const mergeable = v && typeof v === 'object' && c && typeof c === 'object' && !Array.isArray(c) && !(f === 'r_pm_per_v' && c.voigt != null);
+    if (c == null) { out[f] = structuredClone(v); fromLibrary.push(f); }
+    else if (mergeable) {
+      out[f] = { ...v, ...c };
+      fromLibrary.push(...Object.keys(v).filter((k) => !Object.hasOwn(c, k)).map((k) => `${f}.${k}`));
+      overridden.push(...Object.keys(c).filter((k) => Object.hasOwn(v, k)).map((k) => `${f}.${k}`));
+    } else overridden.push(f);
+    citations[f] = { source: entry.source_read, locator: entry.locator, condition: entry.condition, verification: entry.verification, primaryCited: entry.primary_cited ?? null };
+  }
+  // Round-6 audit G4: report the merged values themselves, so additions (e.g. r13/r22 next to a paper r33) are visible.
+  const addedFromLibrary = Object.fromEntries(fromLibrary.map((f) => [f, f.split('.').reduce((o, k) => o?.[k], out)]));
+  return { material: out, source: { library: key, provenanceClass: 'standard_reference', fromLibrary, addedFromLibrary, overridden, citations } };
 }
 
 function validateMetadata(raw) {
@@ -170,13 +274,14 @@ function normalizeGeometries(raw, materials) {
 // A geometric preview is not a solver input. It supplies no material constants,
 // resolves no library materials and never changes the raw document or its status.
 // Invalid metadata/geometry still throws; physics errors are returned separately.
-export function inspectConfig(text, section = 'geometry') {
-  const raw = readDocument(text);
+export function inspectConfig(text, section = 'geometry', { params = {}, solver = null } = {}) {
+  const expanded = expandConfig(readDocument(text), { params });
+  const raw = expanded.raw;
   validateMetadata(raw);
-  const preview = { raw, geometries: normalizeGeometries(raw, materialDeclarations(raw)) };
+  const preview = { raw, geometries: normalizeGeometries(raw, materialDeclarations(raw)), ...expanded.meta };
   let solveError = '';
   let stages = null;
-  try { stages = stageErrors(normalizeConfig(raw), section); }
+  try { stages = stageErrors({ ...normalizeConfig(raw), ...expanded.meta }, section, { solver }); }
   catch (e) { solveError = e instanceof Error ? e.message : String(e); }
   // When the input boundary fails, every stage is blocked by that same error.
   if (!stages) stages = Object.fromEntries(STAGES.map((s) => [s, IMPLEMENTED_STAGES.includes(s) ? solveError : `${s} is not implemented in this engine`]));
@@ -225,28 +330,40 @@ export function normalizeConfig(raw) {
   }
   if (raw.optics?.eo != null) eoOptions(raw, geometries);
   if (raw.sweep != null) sweepFrequencies(raw.sweep);
-  for (const [i, t] of array(raw.targets ?? [], 'targets').entries()) {
-    const p = `targets[${i}]`;
-    keys(t, TARGET_KEYS, p);
-    number(t.value, `${p}.value`);
-    oneOf(t.metric, TARGET_METRICS, `${p}.metric`);
-    if (t.vpi_convention != null) {
-      if (!VPI_METRICS.includes(t.metric)) fail(`${p}.vpi_convention`, `only meaningful for ${VPI_METRICS.join(', ')}`);
-      oneOf(t.vpi_convention, VPI_CONVENTIONS, `${p}.vpi_convention`);
-    }
-    if (t.source != null) {
-      object(t.source, `${p}.source`);
-      if (t.source.comparable != null && typeof t.source.comparable !== 'boolean') fail(`${p}.source.comparable`, 'expected a boolean');
-    }
-    if (t.at_ghz != null) number(t.at_ghz, `${p}.at_ghz`, true);
-    if (t.tol_abs == null && t.tol_rel == null) fail(p, 'tolerance is required');
-    for (const k of ['tol_abs', 'tol_rel']) if (t[k] != null && number(t[k], `${p}.${k}`) < 0) fail(p, 'tolerance cannot be negative');
-    if (!Number.isFinite(Math.max(t.tol_abs ?? 0, Math.abs(t.value) * (t.tol_rel ?? 0)))) fail(p, 'tolerance must remain finite');
+  for (const [i, t] of array(raw.targets ?? [], 'targets').entries()) validateTarget(t, `targets[${i}]`);
+  if (raw.study != null || raw.studies != null) {
+    // Structure of study blocks is validated by sweep.mjs studyOf(); here only their container types.
+    if (raw.study != null) object(raw.study, 'study');
+    if (raw.studies != null) object(raw.studies, 'studies');
   }
   return { raw, materials, geometries };
 }
 
-export function opticalOptions(raw) {
+/** One paper target (config `targets` and study `sweep_targets` without their `at`). */
+export function validateTarget(t, p) {
+  keys(t, TARGET_KEYS, p);
+  number(t.value, `${p}.value`);
+  oneOf(t.metric, TARGET_METRICS, `${p}.metric`);
+  if (t.vpi_convention != null) {
+    if (!VPI_METRICS.includes(t.metric)) fail(`${p}.vpi_convention`, `only meaningful for ${VPI_METRICS.join(', ')}`);
+    oneOf(t.vpi_convention, VPI_CONVENTIONS, `${p}.vpi_convention`);
+  }
+  if (t.source != null) {
+    object(t.source, `${p}.source`);
+    if (t.source.comparable != null && typeof t.source.comparable !== 'boolean') fail(`${p}.source.comparable`, 'expected a boolean');
+  }
+  if (t.at_ghz != null) number(t.at_ghz, `${p}.at_ghz`, true);
+  if (t.tol_abs == null && t.tol_rel == null) fail(p, 'tolerance is required');
+  for (const k of ['tol_abs', 'tol_rel']) if (t[k] != null && number(t[k], `${p}.${k}`) < 0) fail(p, 'tolerance cannot be negative');
+  if (!Number.isFinite(Math.max(t.tol_abs ?? 0, Math.abs(t.value) * (t.tol_rel ?? 0)))) fail(p, 'tolerance must remain finite');
+}
+
+/**
+ * Validated optical inputs. `override.solver` (run option) replaces `optics.solver`.
+ * @returns {{polarization:string, lambda0Um:number, modeIndex:number, metal:string, solver:'scalar'|'vector',
+ *   vectorOrder:1|2, groupIndex:'perturbation'|'finite_difference_wavelength'|'fixed', metalPermittivity:Record<string,[number,number]>|null}}
+ */
+export function opticalOptions(raw, override = {}) {
   const o = object(raw.optics, 'optics');
   keys(o, OPTICS_KEYS, 'optics');
   if (o.eo_axis != null) oneOf(o.eo_axis, ['auto'], 'optics.eo_axis');
@@ -254,11 +371,59 @@ export function opticalOptions(raw) {
   const polarization = oneOf(o.polarization, ['TE', 'TM', 'quasi-TE', 'quasi-TM'], 'optics.polarization').replace('quasi-', '');
   const modeIndex = number(o.mode_index ?? 0, 'optics.mode_index');
   if (!Number.isInteger(modeIndex) || modeIndex < 0 || modeIndex > 4) fail('optics.mode_index', 'expected an integer from 0 to 4');
-  oneOf(o.group_index_from, ['fixed', 'finite_difference_wavelength'], 'optics.group_index_from');
-  if (o.group_index_from === 'fixed') number(o.ng_fixed, 'optics.ng_fixed', true);
-  const metal = o.metal_in_window === undefined ? 'reject'
-    : oneOf(o.metal_in_window, ['reject', 'absent', 'pec_scalar'], 'optics.metal_in_window');
-  return { polarization, lambda0Um: o.wavelength_nm / 1000, modeIndex, metal };
+  const groupIndex = oneOf(o.group_index_from ?? 'perturbation', GROUP_INDEX_METHODS, 'optics.group_index_from');
+  if (groupIndex === 'fixed') number(o.ng_fixed, 'optics.ng_fixed', true);
+  const solver = oneOf(override.solver ?? o.solver ?? DEFAULT_OPTICAL_SOLVER, OPTICAL_SOLVERS, override.solver != null ? 'solver (run option)' : 'optics.solver');
+  if (solver === 'vector' && !VECTOR_SOLVER_AVAILABLE) fail('optics.solver', 'the full-vector mode solver is not available');
+  let metal = o.metal_in_window === undefined ? 'reject' : oneOf(o.metal_in_window, METAL_POLICIES_ALL, 'optics.metal_in_window');
+  if (solver === 'scalar' && (metal === 'pec' || metal === 'lossy')) fail('optics.metal_in_window', `${metal} needs optics.solver: vector (the scalar solver offers reject, absent, pec_scalar)`);
+  if (solver === 'vector' && metal === 'pec_scalar') metal = 'pec';
+  const vectorOrder = o.vector_order == null ? 2 : oneOf(o.vector_order, [1, 2], 'optics.vector_order');
+  let metalPermittivity = null;
+  if (o.metal_permittivity != null && metal !== 'lossy') fail('optics.metal_permittivity', 'only used with metal_in_window: lossy');
+  if (o.metal_permittivity != null) {
+    object(o.metal_permittivity, 'optics.metal_permittivity');
+    metalPermittivity = {};
+    for (const [m, v] of Object.entries(o.metal_permittivity)) {
+      const p = `optics.metal_permittivity.${m}`;
+      if (!Array.isArray(v) || v.length !== 2) fail(p, "expected [eps', eps''] (relative permittivity eps = eps' - j eps'' at the optical wavelength)");
+      v.forEach((x) => number(x, p));
+      if (v[1] < 0) fail(p, "eps'' must be >= 0 (passive metal)");
+      // A metal permittivity is a physical input: it needs a sourced provenance entry (no default exists).
+      const pr = raw.provenance?.[p] ?? raw.provenance?.['optics.metal_permittivity'];
+      if (!pr || !(pr.locator || pr.citation)) fail(p, 'needs a provenance entry with a locator or citation (no metal permittivity is defaulted)');
+      metalPermittivity[m] = [v[0], v[1]];
+    }
+  }
+  if (metal === 'lossy') {
+    if (solver !== 'vector') fail('optics.metal_in_window', 'lossy needs optics.solver: vector');
+    if (!metalPermittivity) fail('optics.metal_permittivity', 'metal_in_window: lossy needs a sourced optical permittivity per metal');
+  }
+  let modeSelect = null;
+  if (o.mode_select != null) {
+    keys(o.mode_select, ['by', 'region'], 'optics.mode_select');
+    const by = oneOf(o.mode_select.by, ['te_fraction', 'confinement'], 'optics.mode_select.by');
+    if (solver !== 'vector' && by !== 'te_fraction') fail('optics.mode_select.by', 'confinement selection needs optics.solver: vector');
+    if (by === 'confinement' && (typeof o.mode_select.region !== 'string' || !o.mode_select.region)) fail('optics.mode_select.region', 'a region name is required for by: confinement');
+    if (by === 'te_fraction' && o.mode_select.region != null) fail('optics.mode_select.region', 'only used with by: confinement');
+    modeSelect = { by, ...(by === 'confinement' ? { region: o.mode_select.region } : {}) };
+  }
+  let maxMetalPowerFraction = null;
+  if (o.max_metal_power_fraction != null) {
+    if (metal !== 'lossy') fail('optics.max_metal_power_fraction', 'only used with metal_in_window: lossy');
+    maxMetalPowerFraction = number(o.max_metal_power_fraction, 'optics.max_metal_power_fraction', true);
+    if (maxMetalPowerFraction > 1) fail('optics.max_metal_power_fraction', 'expected a fraction in (0, 1]');
+  }
+  return { polarization, lambda0Um: o.wavelength_nm / 1000, modeIndex, metal, solver, vectorOrder, groupIndex, metalPermittivity, modeSelect, maxMetalPowerFraction };
+}
+
+/**
+ * Audit F3 (round 5): the scalar TM overlap keeps only H_x / d eps_yy and drops E_z (d eps_zz = r13 E) and the hybrid
+ * E_x content (r33, r51); on the K4 geometry it is 35 % low in |dn|. TM EO runs therefore need the vector solver.
+ */
+export function checkEoSolver(opts) {
+  if (opts.solver === 'scalar' && opts.polarization === 'TM')
+    fail('optics.solver', 'eo_overlap with polarization TM needs optics.solver: vector (the scalar TM overlap omits E_z and the shear/hybrid Pockels terms; about -35 % in dn on the K4 geometry, audit F3)');
 }
 
 // ---- material physics fields (crystal frame, Pockels, RF loss) ------------------------------------------------
@@ -505,7 +670,7 @@ export function rfOptions(raw, materials, geometry, sectionName = 'geometry') {
  * against the selected section, rf_line on a loaded T-rail cut). Mesh-dependent failures (metal in the optical
  * window, mode convergence, a Wheeler recess that collapses a conductor) are only found by running the stage.
  */
-export function stageErrors(config, sectionName = 'geometry') {
+export function stageErrors(config, sectionName = 'geometry', { solver = null } = {}) {
   const { raw, materials, geometries } = config;
   const g = Object.hasOwn(geometries, sectionName) ? geometries[sectionName] : null;
   const out = {};
@@ -521,11 +686,11 @@ export function stageErrors(config, sectionName = 'geometry') {
   }
   out.electrostatics = null;
   check('optical_mode', () => {
-    opticalOptions(raw);
+    opticalOptions(raw, { solver });
     if (!g?.optical_window) fail(`${sectionName}.optical_window`, 'required for the optical mode stage');
   });
   check('eo_overlap', () => {
-    opticalOptions(raw);
+    checkEoSolver(opticalOptions(raw, { solver }));
     checkArmWindows(eoOptions(raw, geometries), section);
     if (!Object.values(materials).some((m) => m.r)) fail('materials', 'no material has Pockels coefficients (r_pm_per_v)');
   });

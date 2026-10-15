@@ -2,7 +2,7 @@
 
 Contract between three parties: the distillation skill (writes configs), the browser engine in `engine/` (runs them), the app `/sim` route (shows them). Status: draft 1, 2026-10-01. The engine author may refine it; every change must be recorded in the Changelog at the bottom and mirrored in `engine/schema/sim.schema.json`.
 
-**Implemented subset:** electrostatics, scalar optical modes, DC EO overlap with
+**Implemented subset:** electrostatics (P2 default), full-vector optical modes (default; scalar selectable), DC EO overlap with
 explicit arm windows (`eo_overlap`) and the uniform RF line with explicit loss
 declarations (`rf_line`); see "Stage contract (E2i.2, E3i, U3)" below. Loaded-line
 cascades and the EO response are recognised but not implemented. The example uses
@@ -28,7 +28,7 @@ optics:
   wavelength_nm: 1550
   polarization: TE                  # quasi-TE | quasi-TM
   mode_index: 0
-  group_index_from: finite_difference_wavelength   # or: fixed
+  group_index_from: perturbation    # default; or finite_difference_wavelength, fixed
   ng_fixed: null
   eo_axis: auto                     # engine derives the Pockels contraction from crystal + cut
 
@@ -91,13 +91,13 @@ Recognized target `metric` names: `vpi_l_dc_vcm`, `vpi_dc_v`, `n_eff`, `ng_opt`,
 
 Planned physics chain (each implemented stage reports its assumptions)
 1. Electrostatics 2D (anisotropic eps tensor) -> C' (with dielectrics) and C0' (all eps = 1) -> `n_rf = sqrt(C'/C0')`, `Z0 = 1/(c sqrt(C' C0'))`.
-2. Optical mode (quasi-TE/TM on the window) -> n_eff, group index via wavelength finite difference, mode profile.
+2. Optical mode (full-vector by default, scalar selectable; quasi-TE/TM on the window) -> n_eff, group index by first-order perturbation (default) or wavelength finite difference, mode fields.
 3. EO overlap: refractive-index change from the Pockels tensor with the static field, perturbation integral -> `Vpi*L`. Convention flag: differential vs per-arm; push-pull factor explicit.
 4. RF line: conductor loss from skin-effect / incremental inductance, dielectric loss from tan_delta -> alpha(f), complex gamma(f), Z(f).
 5. Loaded line (optional): ABCD cascade of loaded/unloaded unit cells -> effective gamma, Z, Bragg limit.
 6. EO response: traveling-wave integral with velocity mismatch, loss, source/load mismatch -> `S21_EO(f)`, 3 dB / 6 dB bandwidth. Optical-group velocity from stage 2.
 
-Known approximation labels (must appear in `limitations` or in engine output): `scalar_optical_not_full_vector`, `quasi_static_2d_rf`, `rectangular_or_polygon_sidewalls_only`, `no_3d_launch_pad_effects`.
+Known approximation labels (must appear in `limitations` or in engine output): `quasi_static_2d_rf`, `rectangular_or_polygon_sidewalls_only`, `no_3d_launch_pad_effects`; `scalar_optical_not_full_vector` and `scalar_optical_approximate` are added by the engine to scalar-solver results only (since 2026-10-15 the configs no longer list the scalar label statically, round-6 audit G8).
 
 ## E1 cross-section execution contract
 
@@ -159,8 +159,11 @@ Inputs and numerical controls:
   requested), so both arms sample a refined field (2026-10-07, Q2 N1).
 - Optical mode solving requires `optical_window` within the domain and an `optics`
   block with positive `wavelength_nm`, TE/TM (or quasi-TE/quasi-TM), mode index 0–4
-  (default 0), and `group_index_from`. Fixed group index requires positive
-  `ng_fixed`. Finite differences use ±min(0.01 µm, wavelength/100).
+  (default 0), and optionally `group_index_from` (`perturbation` default: first-order
+  d n_eff / d lambda from the same eigen solve; `finite_difference_wavelength`: central
+  difference with ±min(0.01 µm, wavelength/100), extra eigen solves; `fixed`: requires
+  positive `ng_fixed`). Before 2026-10-15 `finite_difference_wavelength` was required
+  wording for the engine's only method; it now selects the finite-difference path.
 - Optical boundaries are zero-field Dirichlet on the window; scalar slab tests
   use lower-level APIs with Neumann side boundaries. Optical mesh defaults use
   core edge λ/(22 nmax), far edge λ/8 and grading 0.25, scaled by `meshScale`.
@@ -191,8 +194,9 @@ Result and target semantics:
 
 - Outputs include `scope: cross_section`, completed `stages`, declared
   `pendingStages`, unit-labelled `metrics`, mesh diagnostics, warnings, elapsed
-  time and `targets`. Physical field arrays are not serialized by this runner; the
-  RF stage returns its frequency sweep (one value per sweep point).
+  time and `targets`. Physical field arrays are returned only with `fields: true`
+  (section "Parameters, templates, studies, material library"); the RF stage returns
+  its frequency sweep (one value per sweep point).
 - Electrostatic metrics: C′ and C₀′ in pF/m, L′ in nH/m, static section nRF and Z₀.
   The optional optical stage adds scalar effective index and group index.
 - Optical diagnostics report selected `modeIndex`, `converged`, E/H `form`,
@@ -334,7 +338,159 @@ No loss is ever defaulted; unknown is not zero.
   conductor model other than `none`. Response metrics (`eo_rolloff_db`, `bw3db_ghz`,
   `bw6db_ghz`, RF Vpi) stay `not_evaluated` until `eo_response` exists.
 
+## Parameters, templates, studies, material library (DevLog-026, 2026-10-14)
+
+Expansion order before the strict input boundary: `params` -> `=` expressions -> `template` -> `materials.<m>.library`.
+`config.raw` is the expanded document; the original is kept as `source`. Readiness, the run and `inspectConfig` see the
+same expansion. Field export and sweep APIs are listed in `DevLog/DevLog-026-params-templates-sweeps.md` (APIs section).
+
+Parameters and expressions:
+
+```yaml
+params:
+  gap_um: {value: 3.0, unit: um, description: electrode gap}
+  half_gap_um: {value: "=gap_um / 2", unit: um}      # params may reference params (cycles are errors)
+geometry:
+  electrodes:
+    - {name: signal, rect: {x_um: ["=-half_gap_um - 50", "=-half_gap_um"], y_um: [0, 0.8]}, ...}
+```
+
+- A string value starting with `=` is an expression; every other string keeps its literal meaning. Grammar (own
+  recursive-descent parser in `engine/src/params.mjs`, no `eval`): numbers (incl. exponents), param names, `+ - * / ^`
+  (`^` right associative, binds tighter than unary minus: `-2^2 = -4`), parentheses, unary minus/plus, `min max sqrt
+  abs sin cos tan` (radians), `pi`. Division by zero and non-finite results are errors. At most 500 characters, nesting
+  depth 64. Expressions are allowed anywhere in the config except `params` keys/units, `study`/`studies`, `provenance`,
+  `missing`, `limitations`.
+- Units: the key-suffix convention stays authoritative (values are in the unit of the key). Param `unit` is for
+  display and checking: when an expression is a sum of numbers, params and number*param terms, every param with a
+  unit must have the key-suffix unit (`_um`, `_nm`, `_mm`, `_ghz`, `_ohm`, `_deg`, `_Sm`); other shapes are not checked.
+- Param overrides (`runCrossSection(text, {params})`, CLI `--param name=value`) replace values before expansion.
+
+Template `tfln_rib_gsg` (`engine/src/templates.mjs`) replaces `geometry` (giving both is an error) and fills
+`optics.eo.arm_windows` when `optics.eo` omits them (arm_drive must match `arms`). Frame as in the hand-written
+configs: y = 0 at the BOX top, x = 0 at arm A (right waveguide), signal electrode left of arm A, arm B (push-pull) and
+`ground_l` mirrored about the signal centre. Keys (physical inputs required, never defaulted):
+`materials {film, box, substrate, ambient, electrode, cladding?, strip?}`, `film_thickness_um`, `etch_depth_um`
+(0 = unetched), `rib_top_width_um` and `sidewall_angle_deg` (from horizontal, 90 = vertical; etched only),
+`loading_strip {width_um, thickness_um}` (unetched only), `box_thickness_um`, `substrate_thickness_um` (truncated),
+`cladding {thickness_um, from: slab_top | film_top}` or `none`, `electrodes {placement: on_slab | on_buffer |
+on_cladding, buffer_thickness_um, gap_um (edge to edge), signal_width_um, ground_width_um, thickness_um,
+waveguide_offset_um (from the gap centre toward the signal, default 0), layout: gsg | gs}`, `arms: push_pull | single`,
+`domain {margin_x_um, air_above_um}` or `{x_um, y_um}`, optional `optical_window {half_width_um, y_um}`, `mesh`,
+`boundary`, `symmetry: none`. Numerical defaults: optical window half width = min(distance to the nearest electrode
+edge - 0.1 um, waveguide footprint half width + 2 um), y from -min(BOX, 1.5 um) to the film (strip) top + 1 um. Region
+names: `ambient, substrate, box, slab | film, cladding, rib_r, rib_l | strip_r, strip_l`; electrodes `signal,
+ground_r, ground_l`. Generated geometry passes the ordinary validators.
+
+Studies (`engine/src/sweep.mjs`):
+
+```yaml
+studies:                 # or a single `study:` block (named "study")
+  gap:
+    type: parametric
+    stages: [electrostatics, optical_mode, eo_overlap]   # optional; caller may override
+    sweep: [{param: gap_um, values: [2.5, 3, 4, 5]}]     # or range: {start, stop, n}; several axes nest
+    outputs: [vpi_dc_v, n_eff]                           # optional subset reported per point
+    sweep_targets:
+      - {at: {gap_um: 2.5}, metric: vpi_dc_v, value: 0.47, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: ...}}
+```
+
+- Sweeps act on `params` only. Points are row-major over the axes (first axis outermost, last fastest), at most 2000.
+- At a sweep point the base `targets` are not compared (the point is not the configured device); `sweep_targets` whose
+  `at` matches the point's param values (relative 1e-9) are compared with the ordinary target rules.
+- Reuse: the electrostatic solution is reused when the geometry hash and the RF-material hash are unchanged (a
+  wavelength-only sweep solves electrostatics once); the mesh alone is reused when only RF permittivities change. The
+  optical mesh is rebuilt per point (its sizing scales with the wavelength). `result.geometryHash`, `materialHash`,
+  `reused` report this.
+- A failing point records `error` and the sweep continues (unless `stopOnError`); cancellation via AbortSignal is
+  checked between points. CLI: `--sweep [STUDY]`, `--list-points`.
+
+Material library (`materials.<m>.library: <key>`, keys in `engine/data/materials.json` `library`): supplies
+`eps_r`, `r_pm_per_v`, `sigma_Sm`, `conductor`, `dispersion`. Config keys override; `eps_r {perp, par}` and named
+`r_pm_per_v` coefficients merge one level deep (a partial `eps_r: {par: 28}` is allowed only with a library). Each
+library value records the source actually read, locator, condition (clamped/unclamped, temperature) and verification
+level (`primary` or `secondary_open_access`); `result.materialSources` reports which fields came from the library and
+their citations, and runs using it carry the warning `library_material_constants_used`. Provenance class of library
+values is `standard_reference`.
+
+Field export (`runCrossSection(text, {fields: true})`, DevLog-023 O4): `result.fields = {es, optical, arms}` with
+typed-array copies: `es {x, y, tri, triRegion, regionNames, regionMaterials, electrodeNames, nodeElectrode, phi (V per
+V_t, nodal), ex, ey (V/m per V_t, per triangle), rect}`, `optical` and `arms.A/B {x, y, tri, triRegion, regionNames,
+window, solver, polarization, form, lambdaUm, modes: [{n_eff, components: {psi}}]}` (scalar psi = E_x for form E, H_x
+for form H, max |psi| = 1). Absent unless requested. `result.timing` passes the solver timing objects through
+(DevLog-024 contract). `optics.solver: scalar | vector` (superseded: `vector` was an input error until the DevLog-025 solver was
+integrated).
+
+## Round 2 additions (DevLog-026, 2026-10-15)
+
+- `optics.solver: scalar | vector` (run option `solver` overrides it; default scalar in round 2, vector since round 5, see below). The vector path uses the
+  full-vector FEM of `engine/src/vector-mode.mjs` (DevLog-025): Nedelec/Lagrange order `optics.vector_order` (default
+  2), PEC window walls, mode chosen by TE fraction (`TE`: TE fraction >= 0.5) and `mode_index` within that family,
+  group index from the same solve (perturbation) or by finite difference, EO overlap with the full Pockels tensor
+  (shear terms included) and the static field at 6 quadrature points per optical triangle (P2-aware). Scalar limitation
+  codes are not attached to vector results; `full_vector_optical` and the element label are. Metal policies: scalar
+  `reject | absent | pec_scalar`; vector `reject | absent | pec | lossy` (`pec_scalar` maps to `pec`); `lossy` needs
+  `optics.metal_permittivity: {<metal>: [eps', eps'']}` (eps = eps' - j eps'') with a provenance entry per metal.
+- `mesh.element_order: 1 | 2` (electrostatics, also the Wheeler recessed solves; run option `elementOrder`). Default
+  2 since 2026-10-15: on the reference cases K4/K6 P2 is 5-10x closer to the scikit-fem references than P1 on the
+  same mesh for about 2.3x the solve time (DevLog-026 round 2, Reference tests). Field export adds
+  `fields.es.elementOrder` and, for P2, `fields.es.p2 {phiDof, elem}`; `ex, ey` stay centroid values.
+- `group_index_from: perturbation` is the default (above).
+- Pockels field export (round 3): with `fields: true`, `fields.optical.pockels` and `fields.arms.A/B.pockels` hold
+  per optical-mesh triangle `dnXX, dnYY, dnZZ` (index change of the lab x, y, z principal axes, 1/V per volt of
+  terminal voltage) and `dEpsXY` (in-plane shear of the relative permittivity, 1/V), from the static field at the
+  triangle centroid (P2-aware) and the lab-frame Pockels tensor: d eps = -eps d(1/eps) eps (full 3m Voigt matrix,
+  crystal rotation), dn_ii = d eps_ii / (2 n_ii) at the solved wavelength; a positive r E lowers the index (engine
+  sign convention). Materials without Pockels coefficients, conductors and PEC-excluded triangles carry 0. Same
+  definition for the scalar and vector solvers.
+- `engine/src/yaml-edit.mjs` prints flow collections without inner padding (`{a: 1}`).
+- Free text is never expanded as an expression: top-level `schema, id, title, paper_id, device_id, repro_grade,
+  validation_status, chain, params, study, studies, provenance, missing, limitations, reported_curves` and keys
+  `source, note, notes, description, locator, citation, name, material, role` at any depth.
+- Unit check of expressions: exact-unit expressions (a param, +- a param, 1 * param, sums of those) must carry the
+  key-suffix unit; a param scaled by another number may be a unit conversion and is not checked; exact params in
+  different units inside any sum, min, max or abs are rejected at any depth, also in param value expressions.
+- Template `tfln_rib_gsg`: the waveguide footprint must clear the electrodes strictly; the default optical window must
+  contain the footprint; an unetched film requires `loading_strip`; with `on_cladding` electrodes the default window
+  stops at the electrode bottom; generated regions are clipped to the domain.
+- Engine helpers: `buildSectionMesh(text, {section, meshScale, params})` (`engine/src/mesh-entry.mjs`) and YAML
+  round-trip edits `getIn / setIn / deleteIn / applyOverrides` (`engine/src/yaml-edit.mjs`), both typed.
+
+## Round 5 changes (DevLog-026, 2026-10-15)
+
+- Default optical solver is `vector` (audit F1: the scalar forms return non-physical modes on hybrid Si/LN sections).
+  `optics.solver: scalar` stays available; its results carry `scalar_optical_approximate`. `eo_overlap` with
+  `polarization: TM` requires the vector solver (audit F3: the scalar TM overlap omits E_z and shear terms).
+- Vector mode selection: `optics.mode_select: {by: te_fraction | confinement, region}`; the mode count doubles up to 4
+  times until the family index is found; `result.optical.windowMarginPowerFraction` (warning label above 1e-2).
+- Lossy metal (`metal_in_window: lossy`): the solve is anchored on the same window with the metal absent (shift just
+  above that mode, nearest family mode selected); the run fails when the selected mode carries more than
+  `optics.max_metal_power_fraction` (default 0.05) of its power in metal or lies closer to a planar surface-plasmon
+  index than to the reference. `result.optical.lossy` reports the metal fraction, reference n_eff and SPP indices.
+- Electrostatics: P2 runs on a mesh coarsened by `mesh.p2_mesh_factor` (default 2; run option `p2MeshFactor`);
+  `result.electrostaticMeshScale`, `result.p2MeshFactor`. Optical meshes are not affected.
+- Run option `modeOnly` (CLI `--mode-only`): `optical_mode` without electrostatics (mode-only cases).
+- Warm-start data between runs are an LRU of at most 4 entries and 64 MB.
+- Measured kHz-MHz Vpi targets may carry `source.drive_frequency_hz` (with a locator); the result then reports
+  `target.lowFrequencyRange`, an r33-scaled VpiL range from the clamped value used to the unclamped library alternatives
+  (diagnostic only; pass/fail unchanged).
+
 ## Changelog
+- 2026-10-15 DevLog-026 round 5: vector solver default; scalar TM EO rejected; mode_select, lossy anchoring and
+  surface-plasmon guard; `mesh.p2_mesh_factor` (default 2); `modeOnly`; bounded warm cache; low-frequency Vpi range
+  diagnostic; schema mirrored.
+- 2026-10-15 DevLog-026 round 3: `fields.*.pockels` (dnXX, dnYY, dnZZ, dEpsXY per optical triangle, 1/V); YAML
+  helpers print unpadded flow collections; `run.d.mts` vector optical result types.
+- 2026-10-15 DevLog-026 round 2: optics.solver vector wired; `group_index_from: perturbation` (default) and
+  finite-difference selection; `mesh.element_order` with P2 default; vector metal policies and `metal_permittivity`;
+  free-text keys never expanded; unit-check rules; template guards; mesh-only and YAML helper entry points. Schema mirrored
+  (`optics.group_index_from` no longer required).
+- 2026-10-14 DevLog-026 (L-PARAM): `params` with `=` expressions (own parser, unit check against key suffixes),
+  `template: tfln_rib_gsg` generating `geometry` and EO arm windows, `study`/`studies` parametric sweeps with
+  `sweep_targets`, `materials.<m>.library` (engine/data/materials.json `library`, sourced RF/EO/conductor constants),
+  `optics.solver` switch, field export (`fields: true`), `result.timing`, `params`, `materialSources`, `geometryHash`,
+  `materialHash`, `reused`. Schema mirrored in `engine/schema/sim.schema.json` (numbers accept `=` expressions;
+  `geometry` or `template` required).
 - 2026-10-07 Q2 corrections (audit `DevLog/audits/e2i2-e3i-u3-q2-claude-audit-2026-10-07.md`):
   EO arm windows refine the electrostatic mesh (N1); `rf_line` blocked on the loaded
   T-rail cut (C2); `mzm_differential` cites data convention (q) (C1); strict material and
