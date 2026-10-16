@@ -10,6 +10,7 @@ import { chromium } from 'playwright-core';
 import { runCrossSection } from '../../engine/src/run.mjs';
 import { parseConfig } from '../../engine/src/config.mjs';
 import { setIn as yamlSetIn } from '../../engine/src/yaml-edit.mjs';
+import { createSolutionStore, evaluateDerived, evaluatePlot, modeTable } from '../../engine/src/postproc/index.mjs';
 
 const appDir = fileURLToPath(new URL('../', import.meta.url));
 const base = process.env.BASE_PATH ?? '';
@@ -27,6 +28,10 @@ try { runCrossSection(chen, { stages: ['optical_mode'] }); } catch (e) { chenOpt
 if (!chenOpticalError) throw new Error('smoke precondition: chen2022 optical_mode is expected to stop on metal in the window');
 const expectedVector = runCrossSection(vectorText, { optical: true });
 const gsgFields = runCrossSection(gsg, { stages: ['optical_mode', 'eo_overlap'], fields: true }).fields;
+// Engine store in Node (DevLog-031) for browser/Node agreement of Results evaluations (R-UI, DevLog-032).
+const gsgKept = runCrossSection(gsg, { stages: ['optical_mode', 'eo_overlap'], keep: true });
+const gsgStore = createSolutionStore(gsgKept);
+const gsgModes2 = yamlSetIn(gsg, 'optics.num_modes', 2);
 const preview = spawn(process.execPath, [fileURLToPath(new URL('../node_modules/vite/bin/vite.js', import.meta.url)), 'preview', '--host', '127.0.0.1', '--port', '0'], { cwd: appDir, env: process.env, stdio: ['ignore', 'pipe', 'pipe'] });
 let browser;
 let serverOutput = '';
@@ -56,7 +61,7 @@ try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1050 } });
   page.setDefaultTimeout(30000);
   const errors = [];
-  page.on('pageerror', error => errors.push(error.message));
+  page.on('pageerror', error => { errors.push(error.message); if (process.env.SMOKE_TRACE) console.log(`PAGEERROR ${error.message}`); });
   page.on('response', response => { if (response.status() >= 400) errors.push(`HTTP ${response.status()}: ${response.url()}`); });
   const url = path => `${origin}${base}/${path}`;
   // /sim workbench helpers (DevLog-027): Compute in the toolbar, YAML in the Settings YAML tab, status in the bottom bar.
@@ -68,6 +73,18 @@ try {
   const settingsTab = async () => { await page.getByRole('tab', { name: 'Settings', exact: true }).click(); };
   const bottom = async name => { await page.getByRole('tab', { name, exact: false }).filter({ hasText: name }).first().click(); };
   const metric = async key => { await node('results.derived'); await settingsTab(); return Number(await page.locator(`[data-metric="${key}"]`).getAttribute('data-value')); };
+  // Results (DevLog-032): graphics view = plot group; wait for its evaluations; select a view by label prefix.
+  const viewSelect = page.getByLabel('Graphics view', { exact: true });
+  const settled = () => until(async () => (await page.locator('.gfx').getAttribute('data-pending')) === 'false', 'plot evaluations settled');
+  const showView = async prefix => {
+    const v = (await viewSelect.locator('option').evaluateAll(os => os.map(o => [o.value, o.textContent]))).find(([, l]) => l.startsWith(prefix));
+    assert.ok(v, `view ${prefix}`);
+    await viewSelect.selectOption(v[0]);
+    await until(async () => (await page.locator('.gfx').getAttribute('data-view')) === v[0], `view ${prefix}`);
+    await settled();
+    return v[0];
+  };
+  const workersBesidesSolution = async () => page.workers().length - Number(await page.locator('.sim-page').getAttribute('data-solution') ?? 0);
   const loadSim = async (query = 'id=chen2022-c') => {
     await page.goto(url(`sim?${query}${query.includes('pool=') ? '' : '&pool=2'}`));
     await until(() => runButton.isEnabled(), 'config loaded');
@@ -211,7 +228,7 @@ try {
   await page.getByRole('button', { name: 'Build mesh', exact: true }).click();
   await page.locator('[data-status="Mesh built"]').waitFor();
   await until(async () => Number(await page.locator('.gfx').getAttribute('data-ntris')) > 0, 'draft mesh drawn');
-  assert.equal(await page.locator('.gfx').getAttribute('data-quantity'), 'mesh');
+  assert.equal(await page.locator('.gfx').getAttribute('data-view'), 'mesh');
   await screenshot('sim-incomplete');
   console.log('PASS incomplete paper config previews geometry, disclosures and mesh with solve disabled');
 
@@ -254,26 +271,24 @@ try {
   }
   await node('results.targets');
   assert.match(await page.locator('.target-summary').innerText(), /0 of 11 targets evaluated/);
-  // Field view: the solve switches the graphics to the potential; hovering probes value, region and material.
+  // Field view: the solve creates the default plot groups and shows Electric Potential; hovering probes value and region.
   const gfx = page.locator('.gfx');
-  await until(async () => (await gfx.getAttribute('data-quantity')) === 'phi', 'potential shown after the solve');
+  await until(async () => /^pg/.test(await gfx.getAttribute('data-view') ?? '') && Number(await gfx.getAttribute('data-layers')) > 0, 'default plot group shown after the solve');
+  await settled();
+  assert.match(await page.locator('.stage .title').getAttribute('data-title'), /Surface: es\.V \(V\)\s+Contour: es\.V/);
   assert.ok(Number(await gfx.getAttribute('data-ntris')) > 1000);
   console.log(`INFO graphics renderer ${await gfx.getAttribute('data-renderer')}`);
   const stage = page.locator('.stage');
   const sb = await stage.boundingBox();
   await page.mouse.move(sb.x + sb.width / 2, sb.y + sb.height / 2);
-  await until(async () => /Potential .* V/.test(await page.locator('.probe').getAttribute('data-probe') ?? ''), 'probe shows the potential');
-  for (const q of ['enorm', 'ex', 'mesh', 'mesh_quality']) {
-    await page.getByLabel('Plot quantity', { exact: true }).selectOption(q);
-    await until(async () => (await gfx.getAttribute('data-quantity')) === q, `quantity ${q}`);
-  }
-  await page.getByLabel('Plot quantity', { exact: true }).selectOption('phi');
+  await page.mouse.move(sb.x + sb.width / 2 + 3, sb.y + sb.height / 2 + 2);
+  await until(async () => /es\.V -?[\d.e-]+ V/.test(await page.locator('.probe').getAttribute('data-probe') ?? ''), 'probe shows the potential');
+  for (const v of ['Electric Field', 'Mesh', 'Electric Potential']) await showView(v);
+  await page.getByLabel('Mesh coloring').waitFor({ state: 'detached' });
   await screenshot('sim-desktop');
-  // Element order (U2): a P2 solution is drawn on elements split into 4 and labelled P2.
+  // Element order (U2): a P2 potential is drawn on elements split into 4 (exact values at the refined nodes).
   if (chenFields.elementOrder === 2) {
-    await page.getByLabel('Plot quantity', { exact: true }).selectOption('phi');
     assert.equal(Number(await gfx.getAttribute('data-ntris')), 4 * (chenFields.tri.length / 3), 'P2 refined display mesh');
-    assert.match(await page.getByLabel('Plot quantity', { exact: true }).locator('option[value="phi"]').innerText(), /\(P2\)/);
     await node('results.derived'); await settingsTab();
     assert.match(await page.locator('[data-run-solver]').innerText(), /P2 electrostatics/);
   }
@@ -290,11 +305,12 @@ try {
     assert.equal(await gfx.getAttribute('data-renderer'), 'webgl2');
     await page.evaluate(() => { const c = document.querySelector('.stage canvas.gl'); window.__lose2 = c.getContext('webgl2').getExtension('WEBGL_lose_context'); window.__lose2.loseContext(); });
     const pngWhileLost = page.waitForEvent('download');
-    await page.locator('.gfx .bar button', { hasText: 'PNG' }).click();
+    await page.getByRole('button', { name: 'Image', exact: true }).click();
+    await page.getByRole('button', { name: 'Export PNG', exact: true }).click();
     const lostPng = await pngWhileLost;
     await lostPng.delete();
     await bottom('Log');
-    await page.locator('.bottom .row').filter({ hasText: 'PNG rendered with the Canvas 2D renderer' }).first().waitFor();
+    await page.locator('.bottom .row').filter({ hasText: 'Image rendered with the Canvas 2D renderer' }).first().waitFor();
     await bottom('Messages');
     await page.locator('.bottom .row.msg').filter({ hasText: 'switched to the Canvas 2D renderer' }).first().waitFor();
     await until(async () => (await gfx.getAttribute('data-renderer')) === 'canvas2d', 'Canvas 2D fallback');
@@ -307,16 +323,17 @@ try {
     console.log('PASS WebGL context loss: restore and repaint, Canvas 2D fallback, PNG export while lost');
   } else console.log('SKIP WebGL context loss (renderer is not WebGL2 in this browser)');
 
-  // Cut Line 2D: drag across the canvas; the sampled potential appears as a 1D plot.
+  // Cut Line 2D dataset: drag across the canvas; Line Graph of the potential in a new 1D plot group.
   await page.getByRole('button', { name: 'Cut line', exact: true }).click();
   await page.mouse.move(sb.x + sb.width * 0.15, sb.y + sb.height * 0.55);
   await page.mouse.down();
   await page.mouse.move(sb.x + sb.width * 0.85, sb.y + sb.height * 0.55, { steps: 6 });
   await page.mouse.up();
   await page.locator('.settings .title').filter({ hasText: 'Cut Line 2D' }).waitFor();
-  await page.getByRole('img', { name: 'Cut line plot' }).waitFor();
-  assert.ok(Number(await page.locator('[data-cut-valid]').getAttribute('data-cut-valid')) > 50, 'cut line samples inside the mesh');
-  console.log('PASS cut line sampling and 1D plot');
+  await page.getByRole('button', { name: 'Line Graph', exact: true }).click();
+  await until(async () => Number(await page.locator('.p1').getAttribute('data-series')) === 1, 'line graph series');
+  await page.getByRole('img', { name: /1D plot group Line Graph/ }).waitFor();
+  console.log('PASS cut line dataset and Line Graph');
 
   await yaml();
   await editor.fill(`${chen}\n# Edited locally for smoke validation\n`);
@@ -357,8 +374,8 @@ try {
   assert.ok(Math.abs(neff - expectedOptical.metrics.n_eff) < 1e-8);
   await node('results.targets');
   assert.match(await page.locator('.target-summary').innerText(), /1 of 2 targets evaluated · 1 passed · 0 failed/);
-  await node('results.field:opt_int');
-  await until(async () => (await gfx.getAttribute('data-quantity')) === 'opt_int', 'optical mode shown');
+  await showView('Mode, optical');
+  assert.ok(Number(await gfx.getAttribute('data-layers')) > 0, 'optical mode shown');
   const miss = parseConfig(analytic).raw;
   miss.targets[0].value = 20;
   await yaml();
@@ -378,10 +395,15 @@ try {
   await runButton.click(); await complete();
   assert.ok(Math.abs(await metric('n_eff') - expectedVector.metrics.n_eff) < 1e-8, 'vector n_eff browser/Node');
   assert.match(await page.locator('[data-run-solver]').innerText(), /vector optical solver/);
-  await node('results.field:opt_int');
-  assert.match(await page.getByLabel('Plot quantity', { exact: true }).locator('option[value="opt_int"]').innerText(), /vector/);
-  await page.getByLabel('Plot quantity', { exact: true }).selectOption('opt:hy');
-  await until(async () => (await gfx.getAttribute('data-quantity')) === 'opt:hy', 'vector H component shown');
+  // Vector components through the expression of the Optical Mode surface (registry of the vector solver).
+  const optView = await showView('Mode, optical');
+  await node(`pg:${optView}`);
+  await page.locator('.settings button.link', { hasText: 'Surface' }).click();
+  const optExpr = page.getByLabel('Expression', { exact: true });
+  await optExpr.fill('abs(opt.Hy)'); await optExpr.press('Enter');
+  await settled();
+  await until(async () => (await page.locator('.stage .title').getAttribute('data-title')).includes('abs(opt.Hy)'), 'vector H component shown');
+  assert.equal(await page.locator('.stage .errs').count(), 0, 'no evaluation error for opt.Hy');
   console.log('PASS vector optical solver selection, browser/Node n_eff, vector labels and H components');
 
   // W1: group-index choices come from the engine list (includes the default perturbation, re-selectable).
@@ -421,6 +443,7 @@ try {
     const actual = Number(await page.locator(`[data-metric="${key}"]`).getAttribute('data-value'));
     assert.ok(Math.abs(actual - expectedStages.metrics[key]) <= Math.abs(expectedStages.metrics[key]) * 1e-9, `browser/Node disagreement: ${key}`);
   }
+  await node('res.eo');
   for (const arm of ['A', 'B']) {
     const dn = Number(await page.locator(`[data-arm-dn="${arm}"]`).getAttribute('data-value'));
     assert.ok(Math.abs(dn - expectedStages.eo.arms[arm].dnEffPerV) <= Math.abs(dn) * 1e-9, `arm ${arm} dn`);
@@ -440,7 +463,7 @@ try {
   await yaml();
   await editor.fill(unbalanced);
   await runButton.click(); await complete();
-  await node('results.derived'); await settingsTab();
+  await node('res.eo'); await settingsTab();
   await page.locator('[data-balance-warning]').waitFor();
   await page.locator('[data-eo-convention="mzm_push_pull"]').waitFor();
   // Breaking an RF input blocks the selected stage before any worker starts.
@@ -461,9 +484,9 @@ try {
   await page.getByLabel('Optical mode', { exact: true }).check();
   await page.getByLabel('EO overlap', { exact: true }).check();
   await runButton.click(); await complete();
-  await node('results.field:pk:dnXX');
-  await until(async () => (await gfx.getAttribute('data-quantity')) === 'pk:dnXX', 'Pockels view shown');
-  assert.match(await page.getByLabel('Plot quantity', { exact: true }).locator('option[value="pk:dnXX"]').innerText(), /Pockels dn_xx \(per V\)/);
+  const pkView = await showView('Pockels dn');
+  const pkDs = (await page.locator('.stage .title').getAttribute('data-title'));
+  assert.match(pkDs, /Surface: eo\.dnxx \(1\/V\)/);
   const opt = gsgFields.optical;
   const probes = [];
   for (let t = 0; t < opt.tri.length / 3 && probes.length < 6; t += 997) {
@@ -471,23 +494,194 @@ try {
     const [a, b, c] = [opt.tri[3 * t], opt.tri[3 * t + 1], opt.tri[3 * t + 2]];
     probes.push({ t, x: (opt.x[a] + opt.x[b] + opt.x[c]) / 3, y: (opt.y[a] + opt.y[b] + opt.y[c]) / 3 });
   }
-  assert.ok(probes.length >= 3, 'non-zero Pockels triangles found');
+  assert.ok(probes.length >= 3, 'non-zero Pockels points found');
   for (const p of probes) {
     const got = await page.evaluate(([x, y]) => window.__simProbe(x, y), [p.x, p.y]);
-    assert.ok(got && got.unit === '1/V' && /per element/.test(got.label), `probe label/unit at triangle ${p.t}`);
-    assert.ok(Math.abs(got.value - opt.pockels.dnXX[p.t]) <= Math.abs(opt.pockels.dnXX[p.t]) * 1e-12, `dn_xx browser ${got.value} vs Node ${opt.pockels.dnXX[p.t]}`);
+    const want = evaluateDerived(gsgStore, { kind: 'point', dataset: got.dataset, expr: 'eo.dnxx', unit: '1/V', selection: { point: [p.x, p.y] } }).value;
+    assert.ok(got && got.unit === '1/V' && /eo\.dnxx/.test(got.label), `probe label/unit at point ${p.t}`);
+    assert.ok(Math.abs(got.value - want) <= Math.abs(want) * 1e-12, `dn_xx browser ${got.value} vs Node store ${want}`);
   }
-  // W7: the dataset picker stays visible for Pockels quantities and the arm is named in the label.
-  const picker = page.getByLabel('Optical mode index', { exact: true });
-  await picker.waitFor();
-  const armB = (await picker.locator('option').evaluateAll(os => os.map(o => o.value))).find(v => v.startsWith('B:'));
-  assert.ok(armB, 'arm B dataset offered');
-  await picker.selectOption(armB);
-  const p0 = probes[0];
-  const armBProbe = await page.evaluate(([x, y]) => window.__simProbe(x, y), [p0.x, p0.y]);
-  assert.ok(armBProbe === null || /\[arm B\]/.test(armBProbe.label), 'arm B named in the label');
-  await picker.selectOption((await picker.locator('option').evaluateAll(os => os.map(o => o.value)))[0]);
-  console.log(`PASS Pockels delta n view: ${probes.length} probes equal the Node export, unit 1/V, per-element label, arm picker`);
+  // The plot group dataset picker switches the arm; the dataset is named in the title.
+  await node(`pg:${pkView}`);
+  await page.getByLabel('Plot group dataset').selectOption('armB');
+  await settled();
+  assert.match(await page.locator('.stage .title').getAttribute('data-title'), /Dataset: Arm B mode/);
+  console.log(`PASS Pockels dn plot: ${probes.length} browser probes equal the Node engine store, unit 1/V, arm dataset picker`);
+
+  // Results UI (DevLog-032): plot groups from the context menu, layered features of two datasets, expression units
+  // and errors, selection by click + Surface Integration (= Node engine store), EO page values, export.
+  const selNode = async () => page.locator('.tree .row.sel [data-node]').getAttribute('data-node');
+  const nViews = async () => viewSelect.locator('option').count();
+  const v0 = await nViews();
+  await page.locator('[data-node="results"]').click({ button: 'right' });
+  await page.locator('.menu [data-action="pg2d"]').click();
+  await until(async () => (await nViews()) === v0 + 1, 'plot group added');
+  const gid = (await selNode()).slice(3);
+  await page.getByRole('button', { name: '+ Surface', exact: true }).click();
+  const fExpr = () => page.getByLabel('Expression', { exact: true });
+  await fExpr().fill('es.Ex'); await fExpr().press('Enter');
+  await page.getByLabel('Unit', { exact: true }).fill('V/um'); await page.getByLabel('Unit', { exact: true }).press('Enter');
+  await page.locator('[data-expr-check="ok"]').filter({ hasText: 'V/µm' }).waitFor();
+  await node(`pg:${gid}`);
+  await page.getByRole('button', { name: '+ Contour', exact: true }).click();
+  await page.getByLabel('Feature dataset').selectOption('opt');
+  await fExpr().fill('opt.normE^2'); await fExpr().press('Enter');
+  await until(async () => (await page.getByLabel('Unit', { exact: true }).inputValue()) === '', 'incompatible unit cleared');
+  await settled();
+  assert.equal(Number(await gfx.getAttribute('data-layers')), 2, 'surface and contour layers');
+  assert.match(await page.locator('.stage .title').getAttribute('data-title'), /Dataset: Electrostatics.*; Optical mode, k=\d.*Surface: es\.Ex \(V\/µm\).*Contour: opt\.normE\^2/);
+  await screenshot('sim-layered');
+  await fExpr().fill('opt.normE^2 + es.V');
+  await page.locator('[data-expr-check="error"]').filter({ hasText: 'incompatible units' }).waitFor();
+  await fExpr().fill('opt.normE^2'); await fExpr().press('Enter');
+  await page.locator(`[data-node="pg:${gid}"]`).click({ button: 'right' });
+  await page.locator('.menu [data-action="dup"]').click();
+  await until(async () => (await nViews()) === v0 + 2, 'plot group duplicated');
+  const dupNode = await selNode();
+  assert.notEqual(dupNode, `pg:${gid}`);
+  await page.locator(`[data-node="${dupNode}"]`).click({ button: 'right' });
+  await page.locator('.menu [data-action="delete"]').click();
+  await until(async () => (await nViews()) === v0 + 1, 'plot group deleted');
+  console.log('PASS plot groups: add, duplicate, delete; layered surface and contour of two datasets; expression unit check and error');
+
+  // Selection by clicking a domain, then Surface Integration over it equals the Node engine store.
+  await showView('Electric Potential');
+  await page.getByRole('button', { name: 'Select', exact: true }).click();
+  const vw = await page.evaluate(() => window.__simView());
+  const sbx = await stage.boundingBox();
+  await page.mouse.click(sbx.x + vw.W / 2 + (2 - vw.cx) * vw.scale, sbx.y + vw.H / 2 - (0 - vw.cy) * vw.scale);
+  await until(async () => (await page.locator('[data-selection-regions]').getAttribute('data-selection-regions')) === 'medium', 'domain selected by click');
+  await page.getByRole('button', { name: 'Pan', exact: true }).click();
+  await node('results.derived'); await settingsTab();
+  await page.getByRole('button', { name: '+ Surface Integration', exact: true }).click();
+  const dExpr = page.getByLabel('Derived expression');
+  await dExpr.fill('es.We'); await dExpr.press('Enter');
+  await page.getByRole('button', { name: 'Evaluate', exact: true }).click();
+  await page.locator('[data-eval-msg]').filter({ hasText: 'Evaluated' }).waitFor();
+  const wantWe = evaluateDerived(gsgStore, { kind: 'surface_int', dataset: 'es', expr: 'es.We', selection: { regions: ['medium'] } }).value;
+  const bottomCell = page.locator('[data-bottom-table] td[data-value]').last();
+  await bottomCell.waitFor();
+  const gotWe = Number(await bottomCell.getAttribute('data-value'));
+  assert.ok(Math.abs(gotWe - wantWe) <= Math.abs(wantWe) * 1e-12, `surface integral browser ${gotWe} vs Node ${wantWe}`);
+  console.log('PASS selection by click and Surface Integration over it (browser = Node engine store), table window');
+
+  // EO Coupling page: engine values and conventional Gamma equal Node; quick plots.
+  await node('res.eo');
+  assert.ok(Math.abs(Number(await page.locator('[data-eo-vpil]').getAttribute('data-eo-vpil')) - gsgKept.eo.vpiLVcm) <= gsgKept.eo.vpiLVcm * 1e-9, 'EO VpiL');
+  const gA = gsgKept.eo.arms.A.conventional.gamma;
+  assert.ok(Math.abs(Number(await page.locator('[data-gamma="A"]').innerText()) - gA) <= 1e-3, `Gamma A ${gA}`);
+  await page.locator('[data-eo-breakdown="A"]').waitFor();
+  await page.getByRole('button', { name: 'Integrand across arm', exact: true }).click();
+  await until(async () => Number(await page.locator('.p1').getAttribute('data-series')) === 1, 'integrand line graph');
+  await node('res.eo');
+  await page.getByRole('button', { name: 'EO overlap plot', exact: true }).click();
+  await settled();
+  assert.match(await page.locator('.stage .title').getAttribute('data-title'), /Surface: eo\.integrand/);
+  console.log('PASS EO Coupling page equals the Node engine (VpiL, Gamma), breakdown table, integrand line graph and overlap plot');
+
+  // Export: plotted data CSV, table CSV, image at a chosen size.
+  await node('res.export');
+  let dl = page.waitForEvent('download');
+  await page.locator('.settings button.link').first().click();
+  assert.match((await dl).suggestedFilename(), /\.csv$/);
+  dl = page.waitForEvent('download');
+  await page.locator('.settings button.link', { hasText: 'rows)' }).first().click();
+  assert.match((await dl).suggestedFilename(), /Surface_Integration_1\.csv$/);
+  await page.getByRole('button', { name: 'Image', exact: true }).click();
+  await page.getByLabel('Image width (px)').fill('800');
+  await page.getByLabel('Image height (px)').fill('500');
+  dl = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Export PNG', exact: true }).click();
+  assert.match((await dl).suggestedFilename(), /-800x500\.png$/);
+  console.log('PASS export of plotted data, table and image at a chosen size');
+
+  // Mode Analysis: two modes; selecting a row re-plots the dataset at that mode (browser = Node store).
+  await yaml();
+  await editor.fill(gsgModes2);
+  await runButton.click(); await complete();
+  // F3: a delete right after Compute is its own undo step; Undo never removes the defaults of the new solution.
+  await page.locator('.sim-page[data-registry="1"]').waitFor();
+  const firstPg = page.locator('[data-node^="pg:"]').first();
+  const nDefaults = await page.locator('[data-node^="pg:"]').count();
+  await firstPg.click({ button: 'right' });
+  await page.locator('.menu [data-action="delete"]').click();
+  await until(async () => (await page.locator('[data-node^="pg:"]').count()) === nDefaults - 1, 'group deleted right after Compute');
+  await page.getByRole('button', { name: 'Undo', exact: true }).click();
+  await until(async () => (await page.locator('[data-node^="pg:"]').count()) === nDefaults, 'undo restores the deleted group only');
+  assert.equal(await page.getByRole('button', { name: 'Undo', exact: true }).isDisabled(), true, 'no undo step removes the defaults');
+  console.log(`PASS undo after Compute: delete then Undo restores ${nDefaults} default groups, defaults are not an undo step (F3)`);
+  await node('res.modes');
+  const optRows = page.locator('[data-mode-table="opt"] [data-mode-row]');
+  await until(async () => (await optRows.count()) === 2, 'two modes listed');
+  const other = await page.locator('[data-mode-table="opt"] [data-mode-row][aria-selected="false"]').getAttribute('data-mode-row');
+  await page.locator(`[data-mode-table="opt"] [data-mode-row="${other}"]`).click();
+  await until(async () => (await page.locator(`[data-mode-table="opt"] [data-mode-row="${other}"]`).getAttribute('aria-selected')) === 'true', 'mode row selected');
+  await showView('Mode, optical');
+  const store2 = createSolutionStore(runCrossSection(gsgModes2, { stages: ['optical_mode', 'eo_overlap'], keep: true }));
+  const pm = await page.evaluate(() => window.__simProbe(2, 0.1));
+  const wantMode = evaluateDerived(store2, { kind: 'point', dataset: `opt:${other}`, expr: pm.label.split(' [')[0], selection: { point: [2, 0.1] } }).value;
+  assert.ok(Math.abs(pm.value - wantMode) <= Math.abs(wantMode) * 1e-9, `mode ${other} probe ${pm.value} vs Node ${wantMode}`);
+  console.log(`PASS Mode Analysis table: mode ${other} selected, plot equals the Node store at that mode`);
+
+  // X3: one mode labelling: the table labels (k and family) and the EO page name the solved mode the same way.
+  await node('res.modes');
+  const labels = await page.locator('[data-mode-table="opt"] [data-mode-label]').allInnerTexts();
+  assert.ok(labels.every(l => /^k=\d/.test(l)), `mode labels ${labels.join(', ')}`);
+  const solvedLabel = await page.locator('[data-mode-table="opt"] tr', { hasText: 'solved' }).locator('[data-mode-label]').innerText();
+  await node('res.eo');
+  assert.ok((await page.locator('[data-arm-mode="A"]').innerText()).startsWith(solvedLabel), 'EO page names the solved mode as the mode table');
+  // X8: the title states the mode of an optical dataset.
+  await showView('Mode, optical');
+  assert.match(await page.locator('.stage .title').getAttribute('data-title'), /Optical mode, k=\d.*n_eff/);
+  console.log('PASS mode labels (X3) on the mode table, EO page and plot titles (X8)');
+
+  // X2: Enter keeps the typed name (no silent completion to a longer name).
+  await node('results.derived'); await settingsTab();
+  await page.getByRole('button', { name: '+ Global Evaluation', exact: true }).click();
+  const g2 = page.getByLabel('Derived expression');
+  await g2.click(); await g2.pressSequentially('Vpi'); await g2.press('Enter');
+  await delay(200);
+  assert.equal(await g2.inputValue(), 'Vpi', 'typed name kept on Enter');
+  console.log('PASS expression input keeps the typed name on Enter (X2)');
+
+  // X4: the Select tool never changes a feature filter; it edits or creates a Selection node (logged).
+  const potView = await showView('Electric Potential');
+  await node(`pg:${potView}`);
+  await page.locator('.settings button.link', { hasText: 'Surface' }).first().click();
+  const featSel = await page.getByLabel('Feature selection').inputValue();
+  await page.getByRole('button', { name: 'Select', exact: true }).click();
+  const vw2 = await page.evaluate(() => window.__simView());
+  const sb2 = await stage.boundingBox();
+  await page.mouse.click(sb2.x + vw2.W / 2 + (2 - vw2.cx) * vw2.scale, sb2.y + vw2.H / 2 - (0 - vw2.cy) * vw2.scale);
+  await page.locator('.settings .title').filter({ hasText: 'Selection:' }).waitFor();
+  await page.getByRole('button', { name: 'Pan', exact: true }).click();
+  await page.locator(`[data-node="pg:${potView}"]`).click();
+  await page.locator('.settings button.link', { hasText: 'Surface' }).first().click();
+  assert.equal(await page.getByLabel('Feature selection').inputValue(), featSel, 'feature filter unchanged by the Select tool');
+  await bottom('Log');
+  await page.locator('.bottom .row').filter({ hasText: 'created by the Select tool' }).first().waitFor();
+  console.log('PASS Select tool edits only Selection nodes and logs the change (X4)');
+
+  // Undo / redo of tree operations.
+  const nv = await nViews();
+  await page.locator(`[data-node="pg:${potView}"]`).click({ button: 'right' });
+  await page.locator('.menu [data-action="delete"]').click();
+  await until(async () => (await nViews()) === nv - 1, 'group deleted');
+  await page.getByRole('button', { name: 'Undo', exact: true }).click();
+  await until(async () => (await nViews()) === nv, 'group restored by undo');
+  await page.getByRole('button', { name: 'Redo', exact: true }).click();
+  await until(async () => (await nViews()) === nv - 1, 'deletion redone');
+  await page.getByRole('button', { name: 'Undo', exact: true }).click();
+  await until(async () => (await nViews()) === nv, 'group restored again');
+  console.log('PASS undo and redo of tree operations');
+
+  // Custom sharp-cornered tooltip instead of native titles.
+  await page.getByRole('button', { name: 'Zoom box', exact: true }).hover();
+  await page.locator('.tip-pop').filter({ hasText: 'Zoom box' }).waitFor();
+  assert.equal(await page.locator('.tip-pop').evaluate(el => getComputedStyle(el).borderTopLeftRadius), '0px');
+  assert.equal(await page.locator('.sim-page [title]').count(), 0, 'no native title tooltips in the sim UI');
+  assert.equal(await page.locator('header [title]').count(), 0, 'no native title tooltips in the app shell');
+  console.log('PASS custom tooltip (no native title attributes in the sim UI)');
 
   // W2: on a template config the element order is written to template.mesh (not to the generated geometry).
   await loadSim('id=renaud2023-3um-738');
@@ -503,10 +697,10 @@ try {
   console.log('PASS template config: element order edits template.mesh');
 
   // W4: Canvas 2D fallback with a P2 mesh above the triangle budget draws gap-free (raster sampling, no speckle).
-  await loadSim('id=mao2022-a&renderer=canvas');
+  await loadSim('id=mao2022-a&renderer=canvas&debug=1');
   await runButton.click(); await complete();
   await until(async () => (await gfx.getAttribute('data-renderer')) === 'canvas2d' && Number(await gfx.getAttribute('data-ntris')) > 60000, 'canvas fallback over budget');
-  await page.locator('.gfx .bar button', { hasText: 'Window' }).click();
+  await page.getByRole('button', { name: 'Window', exact: true }).click();
   await page.waitForTimeout(300);
   const holes = await page.evaluate(() => {
     const c = document.querySelector('.stage canvas.gl');
@@ -541,10 +735,8 @@ try {
   await page.getByLabel('Sweep parameter', { exact: true }).fill('materials.eo_medium.eps_r');
   await page.getByLabel('Sweep values', { exact: true }).fill(sweepValues.join(', '));
   await page.getByRole('button', { name: 'Run sweep', exact: true }).click();
-  await page.locator('.settings .title').filter({ hasText: 'Sweep Plot' }).waitFor();
+  await page.locator('.settings .title').filter({ hasText: 'Parametric Sweep (dataset)' }).waitFor();
   await until(async () => await page.locator('[data-sweep-progress]').count() === 0 && !(await page.locator('[data-node="study.sweep"] .tag').count()), 'sweep finished', 60000);
-  await page.getByLabel('Sweep metric', { exact: true }).selectOption('z0_ohm');
-  await page.getByRole('img', { name: 'Sweep plot' }).waitFor();
   const rows = page.locator('.settings .scroll tbody tr');
   assert.equal(await rows.count(), 3);
   const header = await page.locator('.settings .scroll thead th').allInnerTexts();
@@ -554,16 +746,236 @@ try {
     assert.ok(Math.abs(shown - sweepNode[i]) <= Math.abs(sweepNode[i]) * 1e-3, `sweep point ${i} z0 ${shown} vs ${sweepNode[i]}`);
   }
   await screenshot('sim-sweep');
+  // Global Evaluation over the sweep points into a table, and the default 1D Sweep plot group.
+  await node('results.derived'); await settingsTab();
+  await page.getByRole('button', { name: '+ Global Evaluation', exact: true }).click();
+  const gExpr = page.getByLabel('Derived expression');
+  await gExpr.fill('Z0'); await gExpr.press('Enter');
+  await page.getByLabel('Derived unit').fill('ohm'); await page.getByLabel('Derived unit').press('Enter');
+  await page.getByRole('button', { name: 'Evaluate over sweep', exact: true }).click();
+  // X1: wide table, one numeric column per swept parameter and one per evaluated quantity.
+  const bt = page.locator('[data-bottom-table]');
+  await until(async () => (await bt.locator('tbody tr').count()) === 3, 'three sweep rows');
+  const bHead = await bt.locator('thead th').allInnerTexts();
+  const pCol = bHead.findIndex(h => h.startsWith('materials.eo_medium.eps_r')), vCol = bHead.findIndex(h => h.startsWith('Z0 ('));
+  assert.ok(pCol >= 0 && vCol >= 0, `parameter and value columns: ${bHead.join(' | ')}`);
+  for (let i = 0; i < 3; i++) {
+    const cells = bt.locator('tbody tr').nth(i).locator('td');
+    assert.equal(Number(await cells.nth(pCol).getAttribute('data-value')), sweepValues[i], 'numeric parameter column');
+    const v = Number(await cells.nth(vCol).getAttribute('data-value'));
+    assert.ok(Math.abs(v - sweepNode[i]) <= Math.abs(sweepNode[i]) * 1e-3, `sweep Global Evaluation ${i}: ${v} vs ${sweepNode[i]}`);
+  }
+  // Table Graph of the table: x = the parameter column.
+  await node(`tbl:${await bt.getAttribute('data-bottom-table')}`);
+  await page.getByRole('button', { name: 'Table Graph', exact: true }).click();
+  await until(async () => Number(await page.locator('.p1').getAttribute('data-series')) === 1, 'table graph series');
+  await showView('Sweep');
+  assert.equal(Number(await page.locator('.p1').getAttribute('data-series')), 1, 'Sweep 1D plot group');
+  // X5: comma-separated Global expressions are accepted without an error.
+  const swGroup = await page.locator('.gfx').getAttribute('data-view');
+  await node(`pg:${swGroup}`);
+  await page.locator('.settings button.link', { hasText: 'Global' }).first().click();
+  const gl = page.getByLabel('Global expressions');
+  await gl.fill('Z0, Z0/2'); await gl.press('Enter');
+  await delay(500);
+  assert.equal(await page.locator('[data-expr-check="error"]').count(), 0, 'no false error for a list of Global expressions');
+  await until(async () => Number(await page.locator('.p1').getAttribute('data-series')) === 2, 'two Global series');
+  // Parametric dataset: a 2D plot group shows the fields of sweep point 3 (recomputed on demand).
+  const pot = await showView('Electric Potential');
+  await node(`pg:${pot}`);
+  await page.getByLabel('Parameter value').selectOption('2');
+  await page.locator('[data-point-status="ready"]').waitFor({ timeout: 60000 });
+  await settled();
+  assert.ok(Number(await page.locator('.gfx').getAttribute('data-layers')) > 0, 'sweep point fields plotted');
+  assert.match(await page.locator('.stage .title').getAttribute('data-title'), /eps_r = 40/);
+  // F1: the probe and __simProbe evaluate the shown sweep point (browser = Node keep-run of that point).
+  const store40 = createSolutionStore(runCrossSection(gsg.replace('    eps_r: 30\n', '    eps_r: 40\n'), { keep: true }));
+  const pp = await page.evaluate(() => window.__simProbe(2, 0.3));
+  const want40 = evaluateDerived(store40, { kind: 'point', dataset: 'es', expr: 'es.V', unit: 'V', selection: { point: [2, 0.3] } }).value;
+  assert.equal(pp.sol, 'sweep:2', 'probe addresses the sweep point');
+  assert.ok(Math.abs(pp.value - want40) <= Math.abs(want40) * 1e-9, `sweep-point probe ${pp.value} vs Node ${want40}`);
+  // F2: Export > Data writes the shown point's values and names it.
+  await node('res.export');
+  const dlp = page.waitForEvent('download');
+  await page.locator('.settings button.link').first().click();
+  const dl3 = await dlp;
+  assert.match(dl3.suggestedFilename(), /-p3-materials\.eo_medium\.eps_r=40\.csv$/);
+  const csv3 = await readFile(await dl3.path(), 'utf8');
+  assert.match(csv3.split('\n')[0], /sweep point 3 \(materials\.eo_medium\.eps_r = 40\)/);
+  const nP2 = evaluatePlot(store40, { dataset: 'es', expr: 'es.V', unit: 'V', location: 'p2nodes' }).values.length;
+  assert.equal(csv3.trim().split('\n').length - 2, nP2, 'one row per P2 node of the sweep point solution');
+  await dl3.delete();
+  console.log('PASS sweep-point probe equals Node (F1) and Export > Data of the sweep point (F2)');
+  // G1: a cut line drawn on the sweep-point view samples that point; Line Integration there equals Node; tables carry the solution.
+  await showView('Electric Potential');
+  await page.getByRole('button', { name: 'Cut line', exact: true }).click();
+  const vw3 = await page.evaluate(() => window.__simView());
+  const sb3 = await stage.boundingBox();
+  const sx = x => sb3.x + vw3.W / 2 + (x - vw3.cx) * vw3.scale, sy = y => sb3.y + vw3.H / 2 - (y - vw3.cy) * vw3.scale;
+  await page.mouse.move(sx(1.3), sy(0.2)); await page.mouse.down(); await page.mouse.move(sx(2.7), sy(0.2), { steps: 5 }); await page.mouse.up();
+  await page.locator('.settings .title').filter({ hasText: 'Cut Line 2D' }).waitFor();
+  await page.locator('[data-solution-label^="Sweep point 3"]').first().waitFor();
+  await page.getByRole('button', { name: '+ Line Integration', exact: true }).click();
+  const liExpr = page.getByLabel('Derived expression');
+  await liExpr.fill('-es.Ex'); await liExpr.press('Enter');
+  await page.getByRole('button', { name: 'Evaluate', exact: true }).click();
+  await page.locator('[data-eval-msg]').filter({ hasText: 'Evaluated' }).waitFor();
+  const cl3 = await page.evaluate(() => { const c = window.__simWorkbench.results.cutLines.at(-1); return { ax: c.ax, ay: c.ay, bx: c.bx, by: c.by, point: c.point }; });
+  assert.equal(cl3.point, 2, 'cut line inherits the sweep point of the view');
+  const wantLi = evaluateDerived(store40, { kind: 'line_int', dataset: 'es', expr: '-es.Ex', selection: { polyline: [[cl3.ax, cl3.ay], [cl3.bx, cl3.by]] } }).value;
+  const liRow = page.locator('[data-bottom-table] tbody tr').last();
+  assert.match(await liRow.locator('td').first().innerText(), /^Sweep point 3 \(/, 'Solution column names the sweep point');
+  const gotLi = Number(await liRow.locator('td[data-value]').last().getAttribute('data-value'));
+  assert.ok(Math.abs(gotLi - wantLi) <= Math.abs(wantLi) * 1e-9, `line integral on the sweep point ${gotLi} vs Node ${wantLi}`);
+  console.log('PASS cut line on a sweep-point view: Line Integration equals Node at that point, table Solution column (G1)');
+  // H1: two cut lines and two cut points on different solutions; + Line Integration / + Line Average / + Point Evaluation
+  // target the one shown (and its solution). H2/H3: the Line Graph group names the same solution in settings, header and CSV.
+  const cl3id = await page.evaluate(() => window.__simWorkbench.results.cutLines.at(-1).id);
+  const store20 = createSolutionStore(runCrossSection(gsg.replace('    eps_r: 30\n', '    eps_r: 20\n'), { keep: true }));
+  const onPoint = async (opt, label) => {
+    await node(`pg:${pot}`);
+    await page.getByLabel('Parameter value').selectOption(opt);
+    await page.locator(`[data-solution-label^="${label}"][data-point-status="ready"]`).first().waitFor({ timeout: 60000 });
+    await settled();
+  };
+  // Screen mapping taken right before the mouse action (the layout can shift when the tool or node changes).
+  const mapper = async () => {
+    const vw = await page.evaluate(() => window.__simView());
+    const sb = await stage.boundingBox();
+    return { X: x => sb.x + vw.W / 2 + (x - vw.cx) * vw.scale, Y: y => sb.y + vw.H / 2 - (y - vw.cy) * vw.scale };
+  };
+  const evalDerived = async (button, expr) => {
+    await page.getByRole('button', { name: button, exact: true }).click();
+    const de = page.getByLabel('Derived expression');
+    await de.fill(expr); await de.press('Enter');
+    await page.getByRole('button', { name: 'Evaluate', exact: true }).click();
+    await page.locator('[data-eval-msg]').filter({ hasText: 'Evaluated' }).waitFor();
+    const d = await page.evaluate(() => { const x = window.__simWorkbench.results.derived.at(-1); return { target: x.target }; });
+    const row = page.locator('[data-bottom-table] tbody tr').last();
+    return { target: d.target, sol: await row.locator('td').first().innerText(), value: Number(await row.locator('td[data-value]').last().getAttribute('data-value')) };
+  };
+  const relOk = (a, b, tol, what) => assert.ok(Math.abs(a - b) <= Math.abs(b) * tol, `${what}: ${a} vs ${b}`);
+  await onPoint('0', 'Sweep point 1');
+  await page.getByRole('button', { name: 'Cut line', exact: true }).click();
+  let m = await mapper();
+  await page.mouse.move(m.X(1.1), m.Y(0.5)); await page.mouse.down(); await page.mouse.move(m.X(2.9), m.Y(0.5), { steps: 5 }); await page.mouse.up();
+  await page.locator('.settings [data-solution-label^="Sweep point 1"]').first().waitFor();
+  const cl1 = await page.evaluate(() => { const c = window.__simWorkbench.results.cutLines.at(-1); return { id: c.id, ax: c.ax, ay: c.ay, bx: c.bx, by: c.by, point: c.point }; });
+  assert.equal(cl1.point, 0, 'second cut line on sweep point 1');
+  let r = await evalDerived('+ Line Integration', '-es.Ex');
+  assert.equal(r.target, cl1.id, '+ Line Integration targets the shown cut line');
+  assert.match(r.sol, /^Sweep point 1 \(/);
+  relOk(r.value, evaluateDerived(store20, { kind: 'line_int', dataset: 'es', expr: '-es.Ex', selection: { polyline: [[cl1.ax, cl1.ay], [cl1.bx, cl1.by]] } }).value, 1e-9, 'line integral on sweep point 1');
+  await node(`ds:${cl3id}`);
+  await page.locator('.settings [data-solution-label^="Sweep point 3"]').first().waitFor();
+  r = await evalDerived('+ Line Average', 'es.V');
+  const cl3b = await page.evaluate(id => { const c = window.__simWorkbench.results.cutLines.find(x => x.id === id); return [[c.ax, c.ay], [c.bx, c.by]]; }, cl3id);
+  assert.equal(r.target, cl3id, '+ Line Average targets the shown cut line');
+  assert.match(r.sol, /^Sweep point 3 \(/);
+  relOk(r.value, evaluateDerived(store40, { kind: 'line_avg', dataset: 'es', expr: 'es.V', selection: { polyline: cl3b } }).value, 1e-9, 'line average on sweep point 3');
+  const cps = [];
+  for (const [opt, label, store, y] of [['0', 'Sweep point 1', store20, 0.3], ['2', 'Sweep point 3', store40, 0.6]]) {
+    await onPoint(opt, label);
+    await page.getByRole('button', { name: 'Cut point', exact: true }).click();
+    m = await mapper();
+    await page.mouse.click(m.X(2.05), m.Y(y));
+    await page.locator(`.settings [data-solution-label^="${label}"]`).first().waitFor();
+    const cp = await page.evaluate(() => { const c = window.__simWorkbench.results.cutPoints.at(-1); return { id: c.id, x: c.x, y: c.y, point: c.point }; });
+    assert.ok(Math.abs(cp.x - 2.05) < 0.05 && Math.abs(cp.y - y) < 0.05, `cut point placed at (${cp.x}, ${cp.y})`);
+    cps.push(cp.id);
+    r = await evalDerived('+ Point Evaluation', 'es.V');
+    assert.equal(r.target, cp.id, '+ Point Evaluation targets the shown cut point');
+    assert.ok(r.sol.startsWith(label), `point evaluation Solution column ${r.sol}`);
+    relOk(r.value, evaluateDerived(store, { kind: 'point', dataset: 'es', expr: 'es.V', selection: { point: [cp.x, cp.y] } }).value, 1e-9, `point evaluation on ${label} at (${cp.x}, ${cp.y})`);
+  }
+  assert.notEqual(cps[0], cps[1]);
+  console.log('PASS two cut lines and two cut points on different solutions: + Line Integration / Line Average / Point Evaluation target the shown one and equal Node (H1)');
+  await node(`ds:${cl1.id}`);
+  await page.getByRole('button', { name: 'Line Graph', exact: true }).click();
+  await until(async () => Number(await page.locator('.p1').getAttribute('data-series')) === 1, 'line graph series');
+  const solSettings = await page.locator('.settings [data-solution-label]').first().getAttribute('data-solution-label');
+  const solHeader = await page.locator('.p1 [data-solution-label]').first().getAttribute('data-solution-label');
+  assert.equal(solSettings, solHeader, 'Line Graph settings and header name the same solution');
+  assert.match(solHeader, /^Sweep point 1 \(/);
+  assert.equal(await page.locator('.settings').getByText('(RF', { exact: false }).count(), 0, 'no RF wording without RF features');
+  const dlg = page.waitForEvent('download');
+  await page.locator('.p1 button', { hasText: 'CSV' }).click();
+  const dlG = await dlg;
+  assert.match(dlG.suggestedFilename(), /-p1-materials\.eo_medium\.eps_r=20\.csv$/, `Line Graph CSV filename ${dlG.suggestedFilename()}`);
+  const csvG = (await readFile(await dlG.path(), 'utf8')).split('\n');
+  assert.equal(csvG[0], `# Solution: ${solHeader}`);
+  const hG = csvG[1].split(',').map(c => c.replace(/^"|"$/g, ''));
+  assert.equal(hG.length, 2);
+  assert.match(hG[1], /\(V\) \[Cut Line/, `y column names its series and unit: ${hG[1]}`);
+  await dlG.delete();
+  console.log('PASS Line Graph names its solution in settings, header and CSV; CSV y column carries the series and unit (H2, H3)');
+  await node(`pg:${pot}`);
+  await page.getByLabel('Parameter value').selectOption('-1');
+  console.log('PASS wide sweep table and Table Graph (X1), Global expression list (X5), Parametric dataset point fields on demand');
   // Sweep cancel: the pool is terminated, finished points stay, the rest are marked cancelled.
   await node('study.sweep');
   await page.getByLabel('Sweep values', { exact: true }).fill('10:2:40');
   await page.getByRole('button', { name: 'Run sweep', exact: true }).click();
   await until(async () => page.workers().length > 0, 'sweep workers started');
   await page.getByRole('button', { name: 'Cancel', exact: true }).click();
-  await until(() => page.workers().length === 0, 'sweep workers terminated');
+  await until(async () => (await workersBesidesSolution()) === 0, 'sweep workers terminated');
   await node('study.sweep');
   assert.ok(await page.locator('[data-sweep-row="cancelled"]').count() > 0, 'cancelled points marked');
   console.log('PASS form edit YAML round trip, custom parametric sweep on a worker pool with Node agreement, sweep cancel');
+
+  // G2: EO page and Mode Analysis of a selected sweep point (optical + EO sweep of n_e) equal Node at that point.
+  await page.getByLabel('Optical mode', { exact: true }).check();
+  await page.getByLabel('EO overlap', { exact: true }).check();
+  await node('study.sweep'); await settingsTab();
+  await page.getByLabel('Sweep parameter', { exact: true }).fill('materials.eo_medium.n_e');
+  await page.getByLabel('Sweep values', { exact: true }).fill('2.1, 2.2');
+  await page.getByRole('button', { name: 'Run sweep', exact: true }).click();
+  await until(async () => await page.locator('[data-sweep-progress]').count() === 0 && !(await page.locator('[data-node="study.sweep"] .tag').count()), 'n_e sweep finished', 90000);
+  const textNow = await page.evaluate(() => window.__simWorkbench.text);
+  const nodeNe = runCrossSection(yamlSetIn(textNow, 'materials.eo_medium.n_e', 2.2), { stages: ['optical_mode', 'eo_overlap'], keep: true });
+  await node('res.eo');
+  await page.getByLabel('Parameter value', { exact: true }).selectOption('1');
+  await page.locator('[data-solution-label^="Sweep point 2"]').first().waitFor();
+  await until(async () => Number(await page.locator('[data-eo-vpil]').getAttribute('data-eo-vpil').catch(() => 'NaN')) > 0, 'EO values of the sweep point', 60000);
+  const vpilPoint = Number(await page.locator('[data-eo-vpil]').getAttribute('data-eo-vpil'));
+  assert.ok(Math.abs(vpilPoint - nodeNe.eo.vpiLVcm) <= nodeNe.eo.vpiLVcm * 1e-6, `EO VpiL on sweep point 2 ${vpilPoint} vs Node ${nodeNe.eo.vpiLVcm}`);
+  // H6: the sweep-point EO page carries the Compute page content (warm-start tolerance 1e-6, DevLog-032 H5).
+  const nA = nodeNe.eo.arms.A, numAttr = async sel => Number((await page.locator(sel).first().getAttribute('data-value')) ?? NaN);
+  const eoSels = ['[data-arm-vpil="A"]', '[data-component-sum="A"]', '[data-gamma-ex="A"]', '[data-gamma-equiv="A"]', '[data-arm-vpil-tb="A"]', ...Object.keys(nA.byRegion).map(k => `[data-power-fraction="${k}"]`)];
+  await until(async () => (await Promise.all(eoSels.map(q => numAttr(q).catch(() => NaN)))).every(Number.isFinite), 'sweep-point EO breakdown', 60000);
+  relOk(await numAttr('[data-arm-vpil="A"]'), 1.55e-6 / (2 * Math.abs(nA.dnEffPerV)) * 100, 1e-6, 'arm A VpiL');
+  relOk(await numAttr('[data-component-sum="A"]'), nA.breakdown.componentSum, 1e-6, 'component sum A');
+  relOk(await numAttr('[data-gamma-ex="A"]'), nA.conventional.gammaEx, 1e-6, 'Gamma(E_x) A');
+  relOk(await numAttr('[data-gamma-equiv="A"]'), nA.conventional.gammaEquiv, 1e-6, 'Gamma equiv A');
+  relOk(await numAttr('[data-arm-vpil-tb="A"]'), nA.conventional.vpiLVcmTextbook, 1e-6, 'arm A textbook VpiL');
+  for (const [reg, v] of Object.entries(nA.byRegion)) if (v.powerFraction != null) assert.ok(Math.abs(await numAttr(`[data-power-fraction="${reg}"]`) - v.powerFraction) <= 1e-6, `power fraction ${reg}`);
+  relOk(Number(await page.locator('[data-eo-length]').getAttribute('data-eo-length')), nodeNe.eo.lengthMm, 1e-9, 'L of Vpi at L');
+  assert.match(await page.locator('[data-eo-length]').innerText(), /Vπ at L = 10 mm/);
+  assert.ok(await page.locator('details summary', { hasText: 'Formulas' }).count() > 0, 'formulas on the sweep-point EO page');
+  // H4: the status bar shows the point's fields as ready, not a stale progress message.
+  assert.match(await page.locator('[role=status]').getAttribute('data-status'), /^Sweep point 2 field solution (ready|reused)/);
+  await node('res.modes');
+  await page.getByLabel('Parameter value', { exact: true }).selectOption('1');
+  const mrow = page.locator('[data-mode-table="opt"][data-mode-point="1"] [data-mode-row]').first();
+  await mrow.waitFor({ timeout: 60000 });
+  const neffShown = Number((await mrow.locator('td').nth(2).innerText()));
+  const neffNode = createSolutionStore(nodeNe);
+  const wantNeff = modeTable(neffNode, 'opt')[0].neff;
+  assert.ok(Math.abs(neffShown - wantNeff) <= 1e-5, `mode table n_eff on sweep point 2 ${neffShown} vs Node ${wantNeff}`);
+  assert.match(await page.locator('[data-mode-help]').innerText(), /plot groups showing this same solution/);
+  console.log('PASS EO Coupling page and Mode Analysis of a selected sweep point equal Node at that point (G2, G3 text)');
+  // Every dataset-consuming view states its solution.
+  const viewsToScan = ['res.modes', 'res.eo', 'results.derived', 'results.rf', 'results.targets'];
+  for (const id of viewsToScan) {
+    await node(id);
+    assert.ok(await page.locator('.settings [data-solution-label]').count() > 0, `solution label on ${id}`);
+  }
+  const pgIds = await page.locator('[data-node^="pg:"]').evaluateAll(els => els.map(e => e.getAttribute('data-node')));
+  for (const id of pgIds) {
+    await node(id);
+    await until(async () => (await page.locator('.gfx [data-solution-label], .p1 [data-solution-label]').count()) > 0, `solution label on ${id}`, 10000);
+  }
+  console.log(`PASS solution label on every dataset-consuming view (${viewsToScan.length} pages, ${pgIds.length} plot groups)`);
 
   await page.goto(url('sim?id=unknown-config'));
   await page.getByText('The requested config is not in this atlas.').waitFor();

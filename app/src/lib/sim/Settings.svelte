@@ -5,8 +5,13 @@
 	import TargetsTable from './TargetsTable.svelte';
 	import SweepSettings from './SweepSettings.svelte';
 	import SweepPlot from './SweepPlot.svelte';
-	import CutLinePanel from './CutLinePanel.svelte';
-	import PlotSettings from './PlotSettings.svelte';
+	import PlotGroupSettings from './PlotGroupSettings.svelte';
+	import ResultsPages from './ResultsPages.svelte';
+	import EoCoupling from './EoCoupling.svelte';
+	import SolutionSelect from './SolutionSelect.svelte';
+	import RfPoint from './RfPoint.svelte';
+	import { DERIVED_LABEL, FEATURE_LABEL } from './results.svelte';
+	import type { DerivedKind } from './post/contract';
 	import SimStageResults from '../SimStageResults.svelte';
 	import { leaves, unitOf } from './units';
 	import { triMinAngle, triSize } from './fieldmath';
@@ -31,24 +36,45 @@
 		model: 'Model', params: 'Parameters', materials: 'Materials', geometry: 'Geometry', mesh: 'Mesh',
 		'physics.es': 'Electrostatics', 'physics.mode': 'Mode Analysis', 'physics.eo': 'EO Coupling', 'physics.rf': 'RF Line',
 		study: 'Study', 'study.stationary': 'Stationary + Mode', 'study.sweep': 'Parametric Sweep', results: 'Results',
-		'results.cutline': 'Cut Line 2D', 'results.derived': 'Derived Values', 'results.targets': 'Targets', 'results.rf': 'RF Line results',
-		'results.sweep': 'Sweep Plot'
+		'results.derived': 'Derived Values', 'results.targets': 'Targets', 'results.rf': 'RF Line results',
+		'results.sweep': 'Parametric Sweep (dataset)', 'res.datasets': 'Datasets', 'res.selections': 'Selections', 'res.tables': 'Tables',
+		'res.modes': 'Mode Analysis', 'res.eo': 'EO Coupling (results)', 'res.export': 'Export'
 	};
+	const R = $derived(wb.results);
+	function resultTitle(n: string): string | null {
+		const id = n.slice(n.indexOf(':') + 1);
+		if (n.startsWith('pg:')) {
+			const g = R.group(id);
+			return g ? `${g.kind === '2d' ? '2D' : '1D'} Plot Group: ${g.name}` : 'Plot Group';
+		}
+		if (n.startsWith('pf:')) {
+			const [, gid, fid] = n.split(':');
+			const f = R.feature(gid, fid);
+			return f ? `${FEATURE_LABEL[f.type]}: ${f.name}` : 'Plot feature';
+		}
+		if (n.startsWith('ds:')) return R.dataset(id) ? `Dataset: ${R.dataset(id)!.label}` : R.cutLines.some((c) => c.id === id) ? `Cut Line 2D: ${R.dsLabel(id)}` : `Cut Point 2D: ${R.dsLabel(id)}`;
+		if (n.startsWith('sel:')) return `Selection: ${R.selections.find((s) => s.id === id)?.name ?? ''}`;
+		if (n.startsWith('dv:')) {
+			const d = R.derived.find((x) => x.id === id);
+			return d ? `${DERIVED_LABEL[d.kind]}: ${d.name}` : 'Derived value';
+		}
+		if (n.startsWith('tbl:')) return `Table: ${R.tables.find((t) => t.id === id)?.name ?? ''}`;
+		return null;
+	}
 	const title = $derived(
 		titles[node] ??
 			(node.startsWith('material:') ? `Material: ${node.slice(9)}`
 			: node.startsWith('region:') ? `Region: ${g?.regions[Number(node.slice(7))]?.name ?? ''}`
 			: node.startsWith('electrode:') ? `Electrode: ${g?.electrodes[Number(node.slice(10))]?.name ?? ''}`
-			: node.startsWith('results.field:') ? 'Field plot'
-			: node)
+			: resultTitle(node) ?? node)
 	);
 	const meshStats = $derived.by(() => {
-		const m = wb.fields?.es ?? wb.mesh;
+		const m = wb.meshes.es ?? wb.mesh;
 		if (!m) return null;
 		const size = triSize(m), ang = triMinAngle(m);
 		let smin = Infinity, smax = 0, amin = 180, asum = 0;
 		for (let i = 0; i < size.length; i++) { smin = Math.min(smin, size[i]); smax = Math.max(smax, size[i]); amin = Math.min(amin, ang[i]); asum += ang[i]; }
-		return { nodes: m.x.length, tris: size.length, smin, smax, amin, amean: asum / size.length, solved: m === wb.fields?.es };
+		return { nodes: m.x.length, tris: size.length, smin, smax, amin, amean: asum / size.length, solved: m === wb.meshes.es };
 	});
 	const POLS = ENUMS.polarization;
 	const GI = ENUMS.groupIndex;
@@ -74,7 +100,7 @@
 
 {#snippet stageToggle(id: string, label: string)}
 	{@const err = wb.stageError(id)}
-	<label class="toggle" title={err ?? 'Include this stage in Compute'}><input type="checkbox" checked={wb.selected.includes(id)} disabled={!!wb.busy || (!!err && !wb.selected.includes(id))} onchange={(e) => wb.toggleStage(id, e.currentTarget.checked)} /> Include {label} in Compute</label>
+	<label class="toggle" data-tip={err ?? 'Include this stage in Compute'}><input type="checkbox" checked={wb.selected.includes(id)} disabled={!!wb.busy || (!!err && !wb.selected.includes(id))} onchange={(e) => wb.toggleStage(id, e.currentTarget.checked)} /> Include {label} in Compute</label>
 {/snippet}
 
 {#snippet rectFields(base: string, obj: Record<string, unknown> | undefined)}
@@ -84,17 +110,17 @@
 		<Field {wb} readonly={ro} path="{base}.rect.y_um.0" label="y min" unit="µm" />
 		<Field {wb} readonly={ro} path="{base}.rect.y_um.1" label="y max" unit="µm" />
 	{:else if Array.isArray(obj?.polygon_um)}
-		<p class="muted mono small" title="Polygon vertices (µm); edit in the YAML tab">polygon_um: {JSON.stringify(obj.polygon_um)}</p>
+		<p class="muted mono small" data-tip="Polygon vertices (µm); edit in the YAML tab">polygon_um: {JSON.stringify(obj.polygon_um)}</p>
 	{/if}
 {/snippet}
 
 <div class="settings">
 	<div class="head">
-		<span class="title" title={title}>{title}</span>
+		<span class="title" data-tip={title}>{title}</span>
 		<span class="grow"></span>
 		<div class="tabs" role="tablist" aria-label="Settings view">
 			<button role="tab" aria-selected={wb.settingsTab === 'settings'} class:on={wb.settingsTab === 'settings'} onclick={() => (wb.settingsTab = 'settings')}>Settings</button>
-			<button role="tab" aria-selected={wb.settingsTab === 'yaml'} class:on={wb.settingsTab === 'yaml'} onclick={() => (wb.settingsTab = 'yaml')} title="Canonical YAML; form edits write here">YAML</button>
+			<button role="tab" aria-selected={wb.settingsTab === 'yaml'} class:on={wb.settingsTab === 'yaml'} onclick={() => (wb.settingsTab = 'yaml')} data-tip="Canonical YAML; form edits write here">YAML</button>
 		</div>
 	</div>
 	<div class="body">
@@ -122,7 +148,7 @@
 				<table class="grid"><thead><tr><th>Name</th><th>Value</th><th>Unit</th></tr></thead><tbody>
 					{#each Object.entries(raw.params) as [name, p]}
 						{@const pp = (p ?? {}) as Record<string, unknown>}
-						<tr title={String(pp.description ?? '')}><td class="mono">{name}</td><td><Field {wb} path="params.{name}.value" label={name} bare tip={String(pp.description ?? '')} /></td><td>{pp.unit === 'um' ? 'µm' : pp.unit ?? ''}</td></tr>
+						<tr data-tip={String(pp.description ?? '')}><td class="mono">{name}</td><td><Field {wb} path="params.{name}.value" label={name} bare tip={String(pp.description ?? '')} /></td><td>{pp.unit === 'um' ? 'µm' : pp.unit ?? ''}</td></tr>
 					{/each}
 				</tbody></table>
 				<p class="muted small">Values may be numbers or expressions (engine syntax). Sweeps can target <span class="mono">params.&lt;name&gt;.value</span>.</p>
@@ -183,7 +209,7 @@
 			<Field {wb} readonly={ro} path="{base}.material" label="material" options={Object.keys(raw.materials ?? {})} />
 			{@render rectFields(base, wb.rawAt(base))}
 		{:else if node === 'mesh'}
-			<label class="f2" title="Scales every mesh edge length (engine meshScale)">Mesh level
+			<label class="f2" data-tip="Scales every mesh edge length (engine meshScale)">Mesh level
 				<select aria-label="Mesh level" value={wb.meshScale} disabled={!!wb.busy} onchange={(e) => (wb.meshScale = Number(e.currentTarget.value))}>{#each MESH_LEVELS as m}<option value={m.value}>{m.label}</option>{/each}</select></label>
 			<h4>Size hints</h4>
 			{#each ['max_edge_um', 'electrode_edge_um', 'electrode_face_um', 'window_edge_um', 'far_edge_um', 'min_edge_um', 'grade', 'grade_far', 'max_vertices'] as k}
@@ -222,7 +248,7 @@
 			<Field {wb} path="optics.solver" label="solver" options={SOLVERS} tip="scalar: P1 scalar FEM (forms E/H); vector: full-vector edge-element solver" />
 			{#if solver === 'vector'}<Field {wb} path="optics.vector_order" label="vector order" options={VORDERS} tip="Element order of the vector solver (engine schema default 2)" />{/if}
 			<Field {wb} path="optics.metal_in_window" label="metal in window" options={METAL} tip="reject (default) stops the solve; the other policies are explicit limits or need a sourced optical permittivity (lossy)" />
-			{#if raw.optics?.metal_in_window === 'lossy'}<p class="muted small mono" title="optics.metal_permittivity (edit in the YAML tab; needs a provenance entry)">metal_permittivity: {JSON.stringify(raw.optics?.metal_permittivity ?? null)}</p>{/if}
+			{#if raw.optics?.metal_in_window === 'lossy'}<p class="muted small mono" data-tip="optics.metal_permittivity (edit in the YAML tab; needs a provenance entry)">metal_permittivity: {JSON.stringify(raw.optics?.metal_permittivity ?? null)}</p>{/if}
 			<p class="muted small">Optical metal policy: <strong>{raw.optics?.metal_in_window ?? 'reject'}</strong>; solver <strong>{solver}</strong>. Only <span class="mono">lossy</span> with a sourced permittivity models metal absorption.</p>
 		{:else if node === 'physics.eo'}
 			{@render stageToggle('eo_overlap', 'EO overlap')}
@@ -264,16 +290,23 @@
 			{#if wb.result}<p class="small">Last run: {wb.result.id} · {wb.result.section} · {fmt(wb.result.elapsed_ms / 1000)} s engine{#if wb.stale} · <span class="warn">stale</span>{/if}</p>{/if}
 		{:else if node === 'study.sweep'}
 			<SweepSettings {wb} />
-		{:else if node === 'results' || node.startsWith('results.field:')}
-			<PlotSettings {wb} />
-		{:else if node === 'results.cutline'}
-			<CutLinePanel {wb} />
+		{:else if node.startsWith('pg:') || node.startsWith('pf:')}
+			{@const parts = node.split(':')}
+			<PlotGroupSettings {wb} gid={parts[1]} fid={parts[2] ?? null} />
+		{:else if node === 'res.eo'}
+			<EoCoupling {wb} />
 		{:else if node === 'results.derived'}
+			<div class="actions">{#each Object.keys(DERIVED_LABEL) as k}<button onclick={() => { const d = R.addDerived(k as DerivedKind, { target: k.startsWith('surface') ? (R.selections[0]?.id ?? '') : k.startsWith('line') ? (R.cutLines[0]?.id ?? '') : k === 'point' ? (R.cutPoints[0]?.id ?? '') : '' }); wb.node = `dv:${d.id}`; }} class="small">+ {DERIVED_LABEL[k as DerivedKind]}</button>{/each}</div>
 			<DerivedValues {wb} />
+		{:else if node === 'results' || node.startsWith('res.') || node.startsWith('ds:') || node.startsWith('sel:') || node.startsWith('dv:') || node.startsWith('tbl:')}
+			<ResultsPages {wb} {node} />
 		{:else if node === 'results.targets'}
+			<p class="muted small" data-solution-label={wb.solutionLabel(-1)}>Solution: {wb.solutionLabel(-1)} (paper targets of the last Compute; sweep targets are on the Sweep plot group).</p>
 			<TargetsTable {wb} />
 		{:else if node === 'results.rf'}
-			{#if wb.result?.rf}<SimStageResults result={wb.result} part="rf" />{:else}<p class="muted">No RF line result. Include the RF line stage and Compute.</p>{/if}
+			<SolutionSelect {wb} value={wb.rfPoint} onchange={(p) => (wb.rfPoint = p)} />
+			{#if wb.rfPoint >= 0}<RfPoint {wb} point={wb.rfPoint} />
+			{:else if wb.result?.rf}<SimStageResults result={wb.result} part="rf" />{:else}<p class="muted">No RF line result. Include the RF line stage and Compute.</p>{/if}
 		{:else if node === 'results.sweep'}
 			<SweepPlot {wb} />
 		{/if}
@@ -307,7 +340,7 @@
 	.toggle { display: flex; align-items: center; gap: 6px; margin: 4px 0; }
 	.f2 { display: flex; align-items: center; gap: 8px; margin: 6px 0; color: var(--ink-2); }
 	.f2 select { border-radius: 0; }
-	.actions { display: flex; align-items: center; gap: 8px; margin: 10px 0; }
+	.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin: 10px 0; }
 	.actions button { border-radius: 0; }
 	button:disabled { opacity: 0.5; cursor: default; }
 	a { color: var(--accent); }

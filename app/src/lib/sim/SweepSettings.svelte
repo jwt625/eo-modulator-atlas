@@ -22,7 +22,7 @@
 	const metric = $derived(wb.sweepMetric);
 </script>
 
-<label class="f" title="A study declared in the config (engine enumerates and runs its points, with its stages and sweep targets), or a custom one-parameter sweep">Study
+<label class="f" data-tip="A study declared in the config (engine enumerates and runs its points, with its stages and sweep targets), or a custom one-parameter sweep">Study
 	<select aria-label="Sweep study" bind:value={wb.sweepStudy} disabled={wb.sweepRunning}>
 		<option value="">custom (one parameter)</option>
 		{#each wb.configStudies as st}<option value={st}>config: {st}</option>{/each}
@@ -32,10 +32,10 @@
 	{@const def = (wb.raw?.studies?.[wb.sweepStudy] ?? wb.raw?.study ?? {}) as Record<string, any>}
 	{#if def.description}<p class="small">{def.description}</p>{/if}
 	<p class="muted small mono">{JSON.stringify(def.sweep ?? [])}</p>
-	<p class="muted small">Stages: {(def.stages ?? ['config default']).join(', ')}. {def.sweep_targets?.length ?? 0} sweep target(s) are overlaid on the Sweep Plot. Points run on up to {workers} worker(s).</p>
+	<p class="muted small">Stages: {(def.stages ?? ['config default']).join(', ')}. {def.sweep_targets?.length ?? 0} sweep target(s) are overlaid on the Sweep plot group. Points run on up to {workers} worker(s).</p>
 {:else}
 <p class="muted small">Each point re-runs the selected stages with one value changed (same section and mesh level), on up to {workers} worker(s). A <span class="mono">params.NAME.value</span> path is passed to the engine as a param override.</p>
-<label class="f" title="A params entry (params.NAME.value), any numeric YAML path, or meshScale (mesh level, for convergence)">Parameter
+<label class="f" data-tip="A params entry (params.NAME.value), any numeric YAML path, or meshScale (mesh level, for convergence)">Parameter
 	<input type="text" list="sweep-paths" aria-label="Sweep parameter" placeholder="params.gap_um.value" bind:value={wb.sweepPath} spellcheck="false" disabled={wb.sweepRunning} />
 </label>
 <datalist id="sweep-paths">
@@ -44,7 +44,7 @@
 	{#each leaves as p}<option value={p}></option>{/each}
 </datalist>
 {#if wb.sweepPath}<p class="muted small">Current value: <span class="mono">{current === undefined ? 'not set in this config' : JSON.stringify(current)}</span></p>{/if}
-<label class="f" title="List: 3, 4, 5. Range: start:step:stop. Or linspace(a, b, n)">Values
+<label class="f" data-tip="List: 3, 4, 5. Range: start:step:stop. Or linspace(a, b, n)">Values
 	<input type="text" aria-label="Sweep values" placeholder="3, 4, 5  or  2:0.5:5" bind:value={wb.sweepSpec} spellcheck="false" disabled={wb.sweepRunning} />
 </label>
 {/if}
@@ -58,7 +58,7 @@
 	<div class="bar"><i style:width="{(100 * wb.sweepDone) / wb.sweepRows.length}%"></i></div>
 	{#if wb.sweepStale}<p class="small stale">Inputs changed since this sweep ran.</p>{/if}
 	<table class="grid"><thead><tr><th>#</th>{#each wb.sweepAxes as a}<th>{wb.axisLabel(a)}</th>{/each}<th>Status</th><th>{metric || 'metric'}</th><th>ms</th></tr></thead><tbody>
-		{#each wb.sweepRows as r}<tr data-sweep-row={r.status}><td>{r.index + 1}</td>{#each wb.sweepAxes as a}<td class="num">{fmt(r.values[a], 6)}</td>{/each}<td class:crit={r.status === 'error'} title={r.error ?? (r.reused?.electrostatics ? 'electrostatics reused' : '')}>{r.status}</td><td class="num">{r.metrics && metric ? fmt(r.metrics[metric], 5) : ''}</td><td class="num">{r.ms == null ? '' : Math.round(r.ms)}</td></tr>{/each}
+		{#each wb.sweepRows as r}<tr data-sweep-row={r.status}><td>{r.index + 1}</td>{#each wb.sweepAxes as a}<td class="num">{fmt(r.values[a], 6)}</td>{/each}<td class:crit={r.status === 'error'} data-tip={r.error ?? (r.reused?.electrostatics ? 'electrostatics reused' : '')}>{r.status}</td><td class="num">{r.metrics && metric ? fmt(r.metrics[metric], 5) : ''}</td><td class="num">{r.ms == null ? '' : Math.round(r.ms)}</td></tr>{/each}
 	</tbody></table>
 {/if}
 

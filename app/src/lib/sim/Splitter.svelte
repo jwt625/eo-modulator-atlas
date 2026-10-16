@@ -26,7 +26,7 @@
 </script>
 
 <!-- Drag handle; arrow keys resize when focused. -->
-<button type="button" class="split {dir}" aria-label={label} title={label}
+<button type="button" class="split {dir}" aria-label={label} data-tip={label}
 	onpointerdown={down} onpointermove={move} onpointerup={up} onpointercancel={up} onkeydown={key}></button>
 
 <style>

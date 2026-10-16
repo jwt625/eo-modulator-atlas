@@ -7,6 +7,7 @@
 	import { filters, loadAtlas, store, tableState, ui } from '../lib/state.svelte';
 	import { fromHash, toHash } from '../lib/logic';
 	import ThemeToggle from '../lib/ThemeToggle.svelte';
+	import Tooltip from '../lib/sim/Tooltip.svelte';
 
 	let { children }: { children: Snippet } = $props();
 	let ready = $state(false);
@@ -54,7 +55,7 @@
 
 <div class="app">
 	<header>
-		<a class="brand" href={link('/')} title="EO modulator atlas">EO Modulator Atlas</a>
+		<a class="brand" href={link('/')} data-tip="EO modulator atlas">EO Modulator Atlas</a>
 		<nav>
 			{#each nav as n}
 				<a href={link(n.href)} class:active={isActive(n.href)}>{n.label}</a>
@@ -62,7 +63,7 @@
 		</nav>
 		<div class="grow"></div>
 		{#if store.atlas}
-			<span class="muted num" title="Papers / devices in the loaded database">
+			<span class="muted num" data-tip="Papers / devices in the loaded database">
 				{store.atlas.integrity.counts.papers} papers, {store.atlas.integrity.counts.devices} devices
 			</span>
 		{:else if store.loading}
@@ -73,6 +74,7 @@
 	<main>
 		{@render children()}
 	</main>
+	<Tooltip />
 	<footer>
 		Created by Wentao Jiang
 		<span class="sep">|</span><a href="https://outside5sigma.com" target="_blank" rel="noopener">homepage</a>

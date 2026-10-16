@@ -5,7 +5,7 @@
 <button
 	class="theme"
 	aria-label={ui.theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-	title={ui.theme === 'dark' ? 'Light theme' : 'Dark theme'}
+	data-tip={ui.theme === 'dark' ? 'Light theme' : 'Dark theme'}
 	onclick={() => setTheme(ui.theme === 'dark' ? 'light' : 'dark')}
 >
 	{#if ui.theme === 'dark'}

@@ -39,7 +39,7 @@
 	}
 </script>
 
-<label class="f" class:bare class:inh={inherited} title={`${tip ? tip + '\n' : ''}${note ? note + '\n' : ''}YAML: ${path} (empty = remove the key)`}>
+<label class="f" class:bare class:inh={inherited} data-tip={`${tip ? tip + '\n' : ''}${note ? note + '\n' : ''}YAML: ${path} (empty = remove the key)`}>
 	{#if !bare}<span class="k">{label}</span>{/if}
 	{#if bool}
 		<input type="checkbox" checked={value === true} disabled={!editable} onchange={(e) => wb.edit(path, e.currentTarget.checked)} />

@@ -20,7 +20,7 @@
 {#if eo}
 	<h3>EO overlap (DC, first-order Pockels, {result.opticalSolver === 'vector' ? 'vector' : 'scalar'} mode)</h3>
 	<div class="table-scroll"><table data-eo-arms>
-		<thead><tr><th>Arm</th><th>Window x, y (µm)</th><th>n eff</th><th title="d n_eff / d V_t, signed">dn/dV (1/V)</th><th title="Squared mode within the margin of a Dirichlet window side">Edge fraction</th></tr></thead>
+		<thead><tr><th>Arm</th><th>Window x, y (µm)</th><th>n eff</th><th data-tip="d n_eff / d V_t, signed">dn/dV (1/V)</th><th data-tip="Squared mode within the margin of a Dirichlet window side">Edge fraction</th></tr></thead>
 		<tbody>{#each (['A', 'B'] as const) as k}{@const a = eo.arms[k]}{#if a}<tr>
 			<td>{k}</td><td class="num">{a.window.x_um.join('…')}, {a.window.y_um.join('…')}</td><td class="num">{fmt(a.neff, 6)}</td>
 			<td class="num" data-arm-dn={k} data-value={a.dnEffPerV}>{fmt(a.dnEffPerV, 4)}</td><td class="num">{fmt(a.boundaryMarginFraction?.value ?? null)}</td>
@@ -33,7 +33,7 @@
 		{#if eo.lengthMm == null} · no line length, Vπ not computed{:else} · L = {fmt(eo.lengthMm)} mm per arm{/if}
 	</p>
 	{#if eo.pushPullBalanceDeviates}
-		<p class="warn" data-balance-warning={eo.pushPullBalance} title="The field-resolved Vπ is still the MZM value; the arms are far from a symmetric push-pull pair">dn_B/dn_A = {fmt(eo.pushPullBalance, 4)} deviates from −1 by more than {fmt(eo.pushPullBalanceTolerance)}.</p>
+		<p class="warn" data-balance-warning={eo.pushPullBalance} data-tip="The field-resolved Vπ is still the MZM value; the arms are far from a symmetric push-pull pair">dn_B/dn_A = {fmt(eo.pushPullBalance, 4)} deviates from −1 by more than {fmt(eo.pushPullBalanceTolerance)}.</p>
 	{/if}
 {/if}
 
@@ -48,12 +48,12 @@
 	{#if rf.wheeler}
 		<p class="muted" data-wheeler-spread={rf.wheeler.maxRelativeSpread}>Wheeler R′ {fmt(rf.wheeler.rPrimeOhmPerM, 5)} Ω/m at {fmt(rf.wheeler.fRefGhz)} GHz (recess δ/2 = {fmt(rf.wheeler.halfSkinDepthUm)} µm), scaled with R<sub>s</sub>; step check over {rf.wheeler.scales.join(', ')} × δ/2: relative spread {fmt(rf.wheeler.maxRelativeSpread, 2)}.</p>
 		{#if rf.wheeler.maxRelativeSpread > rf.wheeler.spreadWarningLevel}
-			<p class="warn" data-wheeler-flag title="Step-check spread is an uncertainty proxy, not a bound">Spread above {fmt(rf.wheeler.spreadWarningLevel)}: frequency targets are evaluated and flagged.</p>
+			<p class="warn" data-wheeler-flag data-tip="Step-check spread is an uncertainty proxy, not a bound">Spread above {fmt(rf.wheeler.spreadWarningLevel)}: frequency targets are evaluated and flagged.</p>
 		{/if}
 	{/if}
 	{#if rf.dielectricModel === 'tan_delta_regions'}
 		<div class="table-scroll"><table>
-			<thead><tr><th>Region</th><th>Material</th><th title="Electric energy fraction of the section">Energy fraction</th><th>Loss</th></tr></thead>
+			<thead><tr><th>Region</th><th>Material</th><th data-tip="Electric energy fraction of the section">Energy fraction</th><th>Loss</th></tr></thead>
 			<tbody>{#each rf.regions as r}<tr><td>{r.name}</td><td>{r.material}</td><td class="num">{fmt(r.energyFraction, 4)}</td><td>{loss(r.loss)}</td></tr>{/each}</tbody>
 		</table></div>
 	{/if}

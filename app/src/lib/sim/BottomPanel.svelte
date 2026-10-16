@@ -85,27 +85,33 @@
 			{#each messages as m (m.key)}
 				<div class="row msg {m.kind}" role={m.alert ? 'alert' : undefined} data-stage-blocked={m.stage}><span class="t">{clock(seenAt(m))}</span><span>{m.text}</span></div>
 			{/each}
-			{#if wb.notices.length}<button class="clear" onclick={() => (wb.notices = [])} title="Clear runtime notices">Clear notices</button>{/if}
+			{#if wb.notices.length}<button class="clear" onclick={() => (wb.notices = [])} data-tip="Clear runtime notices">Clear notices</button>{/if}
 			{#if !messages.length}<p class="muted">No messages.</p>{/if}
 		{:else if wb.bottomTab === 'progress'}
 			{#if wb.sweepRows.length}
-				<div class="pbar" title="Sweep points finished"><i style:width="{(100 * wb.sweepDone) / wb.sweepRows.length}%"></i></div>
+				<div class="pbar" data-tip="Sweep points finished"><i style:width="{(100 * wb.sweepDone) / wb.sweepRows.length}%"></i></div>
 			{/if}
 			{#each wb.progressRows as e}<div class="row {e.level}"><span class="t">{clock(e.t)}</span><span>{e.msg}</span></div>{/each}
 			{#if !wb.progressRows.length}<p class="muted">Idle.</p>{/if}
 		{:else if wb.bottomTab === 'log'}
-			<div class="logtools"><button onclick={saveLog} title="Download the log as a timestamped text file">Save</button><button onclick={() => (wb.log = [])}>Clear</button></div>
+			<div class="logtools"><button onclick={saveLog} data-tip="Download the log as a timestamped text file">Save</button><button onclick={() => (wb.log = [])}>Clear</button></div>
 			{#each wb.log as e}<div class="row {e.level}"><span class="t">{clock(e.t)}</span><span>{e.msg}</span></div>{/each}
 		{:else}
-			{#if wb.result}
+			{@const t = wb.results.tables.find((x) => x.id === wb.results.lastTable)}
+			{#if t}
+				<div class="logtools"><span class="muted">{t.name} · {t.rows.length} rows</span><button onclick={() => downloadText(`${wb.raw?.id ?? 'sim'}-${t.name.replace(/[^\w.-]+/g, '_')}.csv`, toCsv(t.columns, t.rows))}>CSV</button><button onclick={() => (wb.results.lastTable = '')} data-tip="Show the section values of the run">Run values</button></div>
+				<table class="grid" aria-label="Results table" data-bottom-table={t.id}><thead><tr>{#each t.columns as c}<th>{c}</th>{/each}</tr></thead><tbody>
+					{#each t.rows as row}<tr>{#each row as v, ci}<td class:num={typeof v === 'number'} class:clip={ci < 3} data-tip={String(v)} data-value={typeof v === 'number' ? v : undefined}>{typeof v === 'number' ? fmt(v, 6) : v}</td>{/each}</tr>{/each}
+				</tbody></table>
+			{:else if wb.result}
 				<div class="logtools"><span class="muted">{wb.result.id} · {wb.result.section}{wb.stale ? ' · stale' : ''}</span><button onclick={exportDerived}>CSV</button></div>
 				<table class="grid" aria-label="Derived values table"><tbody>
-					<tr>{#each Object.keys(wb.result.metrics) as k}<th title={METRIC_LABELS[k]?.[2] ?? k}>{METRIC_LABELS[k]?.[0] ?? k}{METRIC_LABELS[k]?.[1] ? ` (${METRIC_LABELS[k][1]})` : ''}</th>{/each}</tr>
+					<tr>{#each Object.keys(wb.result.metrics) as k}<th data-tip={METRIC_LABELS[k]?.[2] ?? k}>{METRIC_LABELS[k]?.[0] ?? k}{METRIC_LABELS[k]?.[1] ? ` (${METRIC_LABELS[k][1]})` : ''}</th>{/each}</tr>
 					<tr>{#each Object.values(wb.result.metrics) as v}<td class="num">{fmt(v, 6)}</td>{/each}</tr>
 				</tbody></table>
 			{:else}<p class="muted">No results.</p>{/if}
 			{#if wb.sweepRows.length}
-				<p class="muted">Sweep: {wb.sweepDone}/{wb.sweepRows.length} points (Results, Sweep Plot has the table and CSV).</p>
+				<p class="muted">Sweep: {wb.sweepDone}/{wb.sweepRows.length} points (Results, Datasets, Parametric Sweep has the table and CSV; the plot is the 1D group Sweep).</p>
 			{/if}
 		{/if}
 	</div>
@@ -134,5 +140,5 @@
 	.logtools button { height: 20px; font-size: 11px; border-radius: 0; }
 	.pbar { height: 3px; background: var(--grid); margin: 2px 0 6px; }
 	.pbar i { display: block; height: 100%; background: var(--accent); }
-	.grid { border-collapse: collapse; } .grid th, .grid td { padding: 2px 8px; text-align: left; border: 1px solid var(--border); white-space: nowrap; } .grid th { color: var(--ink-3); font-weight: 500; }
+	.grid { border-collapse: collapse; } .grid td.clip { max-width: 220px; overflow: hidden; text-overflow: ellipsis; } .grid th, .grid td { padding: 2px 8px; text-align: left; border: 1px solid var(--border); white-space: nowrap; } .grid th { color: var(--ink-3); font-weight: 500; }
 </style>

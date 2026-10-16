@@ -23,7 +23,7 @@ const SUB = [[0, 3, 5], [3, 1, 4], [5, 4, 2], [3, 4, 5]] as const;
 const LOC: [number, number, number][] = [[1, 0, 0], [0, 1, 0], [0, 0, 1], [0.5, 0.5, 0], [0, 0.5, 0.5], [0.5, 0, 0.5]];
 
 /** Barycentric gradients of triangle (x, y) arrays at nodes a, b, c: [dL0/dx, dL0/dy, dL1/dx, ...]. */
-function baryGrad(x: ArrayLike<number>, y: ArrayLike<number>, a: number, b: number, c: number): number[] {
+export function baryGrad(x: ArrayLike<number>, y: ArrayLike<number>, a: number, b: number, c: number): number[] {
 	const d = (x[b] - x[a]) * (y[c] - y[a]) - (x[c] - x[a]) * (y[b] - y[a]);
 	return [(y[b] - y[c]) / d, (x[c] - x[b]) / d, (y[c] - y[a]) / d, (x[a] - x[c]) / d, (y[a] - y[b]) / d, (x[b] - x[a]) / d];
 }

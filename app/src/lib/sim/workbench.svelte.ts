@@ -3,13 +3,17 @@
 import { inspectConfig } from '../../../../engine/src/config.mjs';
 import type { Geometry, ParsedConfig } from '../../../../engine/src/config.mjs';
 import type { SimulationResult } from '../../../../engine/src/run.mjs';
-import { applyOverrides, deleteIn, setIn, splitPath } from './yamlEdit';
+import { applyOverrides, deleteIn, getIn, setIn, splitPath } from './yamlEdit';
 import { parseSweepValues } from './sweepValues';
 import { unitOf } from './units';
 import { SweepPool, type SweepJob } from './pool';
 import { enumerateSweep } from '../../../../engine/src/sweep.mjs';
-import type { ColormapName } from './colormap';
-import type { FieldMesh, ScaleMode, SimFields, WorkerOut } from './types';
+import type { FieldMesh, WorkerOut } from './types';
+import { Results } from './results.svelte';
+import { PostCache } from './plots.svelte';
+import { PostClient } from './post/client';
+import type { DatasetInfo, PointSolution, VariableInfo } from './post/contract';
+import { GLOBAL_VARIABLES, METRIC_GLOBAL } from './post/ui';
 
 export const OPTIONAL = [
 	{ id: 'optical_mode', label: 'Optical mode' },
@@ -24,7 +28,7 @@ export const MESH_LEVELS = [
 	{ value: 0.5, label: 'Fine (1/2 edge)' }
 ];
 
-export type Quantity = 'geometry' | 'mesh' | 'mesh_size' | 'mesh_quality' | 'phi' | 'enorm' | 'ex' | 'ey' | 'opt_int' | `opt:${string}` | `pk:${string}`;
+export type Tool = 'pan' | 'zoombox' | 'select' | 'measure' | 'cutline' | 'cutpoint';
 
 export interface LogEntry {
 	t: number;
@@ -40,6 +44,8 @@ export interface SweepRow {
 	value: number;
 	status: 'pending' | 'running' | 'done' | 'error' | 'cancelled';
 	metrics: Record<string, number> | null;
+	/** SI run globals of the point (engine runGlobals; Global plots and evaluations). */
+	globals: Record<string, number> | null;
 	error: string | null;
 	ms: number | null;
 	reused: { mesh: boolean; electrostatics: boolean } | null;
@@ -67,7 +73,6 @@ export class Workbench {
 	error = $state('');
 	missingConfig = $state(false);
 	result = $state.raw<SimulationResult | null>(null);
-	fields = $state.raw<SimFields | null>(null);
 	mesh = $state.raw<FieldMesh | null>(null);
 	meshMs = $state<number | null>(null);
 	runKey = $state('');
@@ -78,27 +83,32 @@ export class Workbench {
 	progressRows = $state<LogEntry[]>([]);
 	bottomTab = $state<'messages' | 'progress' | 'log' | 'table'>('messages');
 	// graphics
-	quantity = $state<Quantity>('geometry');
-	modeIndex = $state(0);
-	opticalSet = $state<'optical' | 'A' | 'B'>('optical');
-	scaleMode = $state<ScaleMode | 'auto'>('auto');
-	colormap = $state<ColormapName | 'auto'>('auto');
-	lockRange = $state(false);
-	rangeMin = $state(0);
-	rangeMax = $state(1);
-	contours = $state(0);
-	arrows = $state(false);
+	/** Graphics view: 'geometry', 'mesh' or a plot group id (COMSOL: the selected plot group is shown). */
+	view = $state<string>('geometry');
+	meshColor = $state<'material' | 'size' | 'quality'>('material');
+	tool = $state<Tool>('pan');
 	wire = $state(false);
-	smooth = $state(false);
 	showWindows = $state(true);
-	cutLine = $state<{ ax: number; ay: number; bx: number; by: number } | null>(null);
-	cutTool = $state(false);
+	domainLabels = $state(false);
+	ruler = $state<{ ax: number; ay: number; bx: number; by: number } | null>(null);
 	highlight = $state<{ regions: string[]; electrodes: string[] } | null>(null);
 	/** Transient highlight while hovering a tree node. */
 	hoverHighlight = $state<{ regions: string[]; electrodes: string[] } | null>(null);
 	zoomRequest = $state<{ kind: 'extents' | 'window'; n: number }>({ kind: 'extents', n: 0 });
 	paintInfo = $state<{ afterResultMs: number; quantity: string } | null>(null);
 	resultAt = 0;
+	// results (DevLog-032): the solution stays in the run worker; the main thread holds display meshes only.
+	results = new Results();
+	cache = new PostCache();
+	post = $state.raw<PostClient | null>(null);
+	meshes = $state.raw<Record<string, FieldMesh>>({});
+	vars = $state.raw<Record<string, VariableInfo[]>>({});
+	/** Color range shown per plot feature (prefill of the manual range). */
+	ranges = $state.raw<Record<string, { min: number; max: number }>>({});
+	/** SI run globals of the shown result (engine runGlobals). */
+	runGlobals = $state.raw<Record<string, number> | null>(null);
+	/** Wall time from the result message to the registry being ready (ms). */
+	registryMs = $state<number | null>(null);
 	// sweep
 	sweepStudy = $state('');
 	sweepAxis = $state('');
@@ -172,7 +182,8 @@ export class Workbench {
 	}
 	axisLabel(key: string): string {
 		const u = this.axisUnit(key);
-		return u ? `${key} (${u})` : key;
+		const name = key.replace(/^params\.([^.]+)\.value$/, '$1');
+		return u ? `${name} (${u})` : name;
 	}
 	geometrySnapshot() {
 		return this.geometry ? { geometry: $state.snapshot(this.geometry) as Geometry, armWindows: (this.raw?.optics?.eo?.arm_windows ? $state.snapshot(this.raw.optics.eo.arm_windows) : null) as Record<string, { x_um: number[]; y_um: number[] }> | null } : null;
@@ -209,13 +220,14 @@ export class Workbench {
 	load(text: string, overrides: [string, number | string][] = []) {
 		this.stopAll();
 		this.result = null;
-		this.fields = null;
 		this.mesh = null;
 		this.error = '';
 		this.progress = '';
 		this.overrides = [];
-		this.cutLine = null;
 		this.sweepRows = [];
+		this.results.reset();
+		this.clearSolution();
+		this.view = 'geometry';
 		let t = text;
 		if (overrides.length) {
 			try {
@@ -264,7 +276,159 @@ export class Workbench {
 		}
 	}
 
+	/** Drop the held solution (worker terminated with stopWorker). */
+	clearSolution() {
+		this.post?.dispose();
+		this.post = null;
+		this.meshes = {};
+		this.vars = {};
+		this.points = {};
+		this.registryMs = null;
+		this.results.clear();
+		this.cache.reset(this.results.gen);
+	}
+
+	// ---- sweep point solutions (Parametric dataset, fields on demand) ----
+	/** Status of the field solution of each sweep point loaded in the solution worker. */
+	points = $state.raw<Record<number, { status: 'loading' | 'ready' | 'error'; error?: string; datasets?: DatasetInfo[] }>>({});
+	/** Sweep job messages of the last sweep (point fields are recomputed from them). */
+	sweepJobs: SweepJob[] = [];
+
+	/** Run global of the study's targeted quantity (default Sweep plot), with its display unit. */
+	get sweepMetricGlobal(): { name: string; unit: string } | null {
+		const m = this.sweepTargets[0]?.metric;
+		const g = m ? METRIC_GLOBAL[m] : null;
+		const v = g ? GLOBAL_VARIABLES.find((x) => x.name === g[0]) : null;
+		return v ? { name: v.name, unit: v.displayUnit } : null;
+	}
+
+	/** A worker for Results requests: the solution worker, or a post-only worker when no solution is held. */
+	private ensurePostWorker(): PostClient {
+		if (this.post) return this.post;
+		const w = this.newWorker();
+		this.worker = w;
+		const client = new PostClient(w);
+		this.post = client;
+		w.onmessage = (ev: MessageEvent<WorkerOut>) => {
+			if (this.worker !== w) return;
+			const d = ev.data;
+			if (d.type === 'post') client.handle(d);
+			else if (d.type === 'progress') {
+				this.progress = d.message;
+				this.addLog(d.message);
+			}
+		};
+		w.postMessage({ type: 'idle' });
+		return client;
+	}
+
+	/** Parameter value of the pages that are not plot groups (COMSOL: every view selects its solution; -1 = last Compute). */
+	eoPoint = $state(-1);
+	modesPoint = $state(-1);
+	rfPoint = $state(-1);
+	derivedPoint = $state(-1);
+
+	/** Values of the swept axes (or the numeric form overrides) of the last Compute, from the text it ran on. */
+	get computeValues(): Record<string, number> {
+		const out: Record<string, number> = {};
+		const text = (() => {
+			try {
+				return (JSON.parse(this.runKey || '[]') as unknown[])[0] as string;
+			} catch {
+				return '';
+			}
+		})();
+		const axes = this.sweepAxes.length ? this.sweepAxes : this.overrides.filter(([, v]) => typeof v === 'number').map(([k]) => k);
+		for (const k of axes) {
+			const name = k.replace(/^params\.([^.]+)\.value$/, '$1');
+			let v: unknown;
+			if (k === 'meshScale') v = this.result?.meshScale;
+			else if (this.result?.params && name in this.result.params) v = this.result.params[name];
+			else if (text) {
+				try {
+					v = getIn(text, splitPath(k.includes('.') ? k : `params.${k}.value`));
+				} catch {
+					v = undefined;
+				}
+			}
+			if (typeof v === 'number') out[k] = v;
+		}
+		return out;
+	}
+	/** Parameter values of a solution as text with units: 'gap_um = 3 µm'. */
+	solutionValues(point: number): string {
+		const vals = point >= 0 ? (this.sweepRows[point]?.values ?? {}) : this.computeValues;
+		return Object.entries(vals).map(([k, v]) => { const u = this.axisUnit(k); return `${k.replace(/^params\.([^.]+)\.value$/, '$1')} = ${Number(v.toPrecision(6))}${u ? ` ${u}` : ''}`; }).join(', ');
+	}
+	/** Explicit solution label (COMSOL: the solution / parameter value of a view): 'Compute (gap_um = 3 µm)'. */
+	solutionLabel(point: number): string {
+		const v = this.solutionValues(point);
+		return point >= 0 ? `Sweep point ${point + 1}${v ? ` (${v})` : ''}` : `Compute${v ? ` (${v})` : ''}`;
+	}
+	/** Resolves when the field solution of sweep point i is loaded (computed on demand). */
+	pointReady(i: number): Promise<void> {
+		if (i < 0 || this.points[i]?.status === 'ready') return Promise.resolve();
+		this.ensurePoint(i);
+		return new Promise((resolve, reject) => {
+			const t = setInterval(() => {
+				const st = this.points[i]?.status;
+				if (st === 'ready') { clearInterval(t); resolve(); }
+				else if (st === 'error' || !st) { clearInterval(t); reject(new Error(this.points[i]?.error ?? 'sweep point fields not available')); }
+			}, 50);
+		});
+	}
+
+	/** Fields of sweep point i (recomputed in the worker on first use; at most 2 kept). */
+	ensurePoint(i: number) {
+		if (this.points[i]?.status === 'loading' || this.points[i]?.status === 'ready') return;
+		const job = this.sweepJobs.find((j) => j.index === i);
+		if (!job) {
+			this.points = { ...this.points, [i]: { status: 'error', error: 'no sweep job for this point (run the sweep again)' } };
+			return;
+		}
+		const client = this.ensurePostWorker();
+		this.points = { ...this.points, [i]: { status: 'loading' } };
+		const at = Object.entries(this.sweepRows[i]?.values ?? {}).map(([k, v]) => `${k} = ${v}`).join(', ');
+		this.addLog(`Sweep point ${i + 1} (${at}): computing its field solution`);
+		const t0 = performance.now();
+		const msg = job.msg.type === 'run' || job.msg.type === 'point' ? { ...job.msg, pointIndex: i } : job.msg;
+		client
+			.request<PointSolution>({ op: 'loadPoint', job: msg })
+			.then((r) => {
+				if (this.post !== client) return;
+				this.meshes = { ...this.meshes, ...r.meshes };
+				// Points evicted by the worker's LRU (2 kept) are marked unloaded.
+				const kept = Object.fromEntries(Object.entries(this.points).filter(([k, v]) => Number(k) === i || v.status !== 'ready').slice(-3));
+				this.points = { ...kept, [i]: { status: 'ready', datasets: r.datasets } };
+				const done = `Sweep point ${i + 1} field solution ${r.reused ? 'reused' : `ready in ${Math.round(performance.now() - t0)} ms`}`;
+				// H4: the status bar must not keep the worker's last progress message once the fields are ready.
+				this.progress = done;
+				this.addLog(done);
+			})
+			.catch((e: unknown) => {
+				this.points = { ...this.points, [i]: { status: 'error', error: e instanceof Error ? e.message : String(e) } };
+				if (this.post === client) this.progress = `Sweep point ${i + 1} fields failed`;
+				this.addLog(`Sweep point ${i + 1} fields failed: ${e instanceof Error ? e.message : e}`, 'error');
+			});
+	}
+
+	/** True when a worker holds a solution (smoke: worker count). */
+	get holdsSolution(): boolean {
+		return !!this.post;
+	}
+
+	/** Display mesh of a dataset (by its mesh id). */
+	meshOf(ds: DatasetInfo | null, point = -1): FieldMesh | null {
+		return ds?.mesh ? (this.meshes[point >= 0 ? `sweep:${point}/${ds.mesh}` : ds.mesh] ?? null) : null;
+	}
+
+	has(ds: string, name: string): boolean {
+		return !!this.vars[ds]?.some((v) => v.name === name);
+	}
+
 	private stopWorker() {
+		this.post?.dispose();
+		this.post = null;
 		if (this.worker) {
 			this.worker.onmessage = null;
 			this.worker.onerror = null;
@@ -291,8 +455,8 @@ export class Workbench {
 
 	cancel() {
 		const what = this.busy;
-		this.stopWorker();
-		this.stopMeshWorker();
+		if (what === 'run') this.stopWorker();
+		if (what === 'mesh') this.stopMeshWorker();
 		if (what) {
 			this.progress = 'Cancelled';
 			this.addLog(`Cancelled ${what === 'run' ? 'solve' : 'mesh build'}`, 'warn');
@@ -328,7 +492,7 @@ export class Workbench {
 					const nT = d.mesh.tri.length / 3;
 					this.progress = 'Mesh built';
 					this.addLog(`Mesh built: ${d.mesh.x.length.toLocaleString()} nodes, ${nT.toLocaleString()} triangles in ${Math.round(performance.now() - started)} ms`);
-					if (this.quantity === 'geometry') this.quantity = 'mesh';
+					if (this.view === 'geometry') this.view = 'mesh';
 				} else if (d.type === 'error') {
 					this.error = d.message;
 					this.progress = 'Mesh build stopped';
@@ -354,7 +518,7 @@ export class Workbench {
 		this.stopWorker();
 		this.error = '';
 		this.result = null;
-		this.fields = null;
+		this.clearSolution();
 		this.paintInfo = null;
 		this.busy = 'run';
 		this.progress = 'Starting solver';
@@ -374,6 +538,10 @@ export class Workbench {
 				if (this.worker !== w) return;
 				const d = ev.data;
 				const now = performance.now();
+				if (d.type === 'post') {
+					this.post?.handle(d);
+					return;
+				}
 				if (d.type === 'progress') {
 					this.progress = d.message;
 					const row = { t: Date.now(), level: 'info' as const, msg: `${d.message} (previous step ${Math.round(now - last)} ms)` };
@@ -385,11 +553,16 @@ export class Workbench {
 				if (d.type === 'result') {
 					this.resultAt = now;
 					this.result = d.result;
-					this.fields = d.fields;
+					this.runGlobals = d.globals ?? null;
 					this.progress = 'Cross-section solve complete';
 					this.progressRows = [...this.progressRows, { t: Date.now(), level: 'info', msg: `Complete in ${Math.round(now - started)} ms (engine ${Math.round(d.result.elapsed_ms)} ms)` }];
 					this.addLog(`Solve complete in ${Math.round(now - started)} ms wall (engine elapsed ${Math.round(d.result.elapsed_ms)} ms)${d.result.reused?.electrostatics ? '; electrostatics reused from the previous run' : ''}`);
-					if (d.fields?.es && ['geometry', 'mesh'].includes(this.quantity)) this.quantity = 'phi';
+					if (d.meshes && d.datasets) {
+						// The worker keeps the solution and serves Results requests (DevLog-030 P1).
+						this.busy = null;
+						this.adoptSolution(w, d.meshes, d.datasets);
+						return;
+					}
 				} else if (d.type === 'error') {
 					this.error = d.message;
 					this.progress = 'Solve stopped';
@@ -404,11 +577,39 @@ export class Workbench {
 				this.addLog(this.error, 'error');
 				this.stopWorker();
 			};
-			w.postMessage({ type: 'run', text: this.text, section: this.section, stages, meshScale: this.meshScale, fields: true });
+			w.postMessage({ type: 'run', text: this.text, section: this.section, stages, meshScale: this.meshScale, fields: true, keep: true });
 		} catch (e) {
 			this.error = String(e);
 			this.progress = 'Solve stopped';
 			this.stopWorker();
+		}
+	}
+
+	/** A worker now holds a solution: datasets, variable registry, default plot groups. */
+	private async adoptSolution(w: Worker, meshes: Record<string, FieldMesh>, datasets: DatasetInfo[]) {
+		const t0 = performance.now();
+		const client = new PostClient(w);
+		this.post = client;
+		this.meshes = meshes;
+		this.results.setSolution(datasets);
+		this.cache.reset(this.results.gen);
+		try {
+			const lists = await Promise.all(datasets.map((ds) => client.request<VariableInfo[]>({ op: 'variables', dataset: ds.id })));
+			if (this.post !== client) return;
+			this.vars = Object.fromEntries(datasets.map((ds, i) => [ds.id, lists[i]]));
+			this.registryMs = performance.now() - t0;
+			const before = new Set(this.results.groups.map((g) => g.id));
+			this.results.defaults((ds, v) => this.has(ds, v), { rf: !!this.result?.rf?.sweep, sweep: this.sweepRows.find((r) => r.globals)?.globals ?? null, sweepMetric: this.sweepMetricGlobal });
+			// F3: the defaults are part of the new solution's baseline, not an undo step.
+			this.results.rebase();
+			const added = this.results.groups.filter((g) => !before.has(g.id));
+			if (added.length) this.addLog(`Default plot groups: ${added.map((g) => g.name).join(', ')}`);
+			if (this.view === 'geometry' || this.view === 'mesh' || !this.results.group(this.view)) {
+				const first = this.results.groups.find((g) => g.kind === '2d');
+				if (first) this.view = first.id;
+			}
+		} catch (e) {
+			this.addLog(`Results registry failed: ${e instanceof Error ? e.message : e}`, 'error');
 		}
 	}
 
@@ -447,7 +648,7 @@ export class Workbench {
 				// Config study: the engine enumerates the points and runs each one by index (DevLog-026 sweep API).
 				const e = enumerateSweep(this.text, { study: this.raw?.studies ? this.sweepStudy : null });
 				axisValues = e.points.map((p) => p.values);
-				jobs = e.points.map((p) => ({ index: p.index, msg: { type: 'point', text: this.text, study: e.study, index: p.index, section: e.section ?? this.section, meshScale: this.meshScale, stages: null } }));
+				jobs = e.points.map((p, i) => ({ index: i, msg: { type: 'point', text: this.text, study: e.study, index: p.index, section: e.section ?? this.section, meshScale: this.meshScale, stages: null } }));
 				this.sweepAxis = e.axes[0]?.param ?? '';
 				this.sweepTargets = e.sweepTargets.map((t) => ({ at: t.at, metric: t.metric, value: t.value, label: String((t.source as Record<string, unknown> | undefined)?.device_id ?? (t.source as Record<string, unknown> | undefined)?.locator ?? 'sweep target') }));
 				if (this.sweepTargets.length) this.sweepMetric = this.sweepTargets[0].metric;
@@ -471,7 +672,10 @@ export class Workbench {
 			return;
 		}
 		this.error = '';
-		this.sweepRows = axisValues.map((values, index) => ({ index, values, value: Object.values(values)[0] ?? NaN, status: 'pending', metrics: null, error: null, ms: null, reused: null }));
+		this.sweepJobs = jobs;
+		if (this.post) void this.post.request({ op: 'clearPoints' }).catch(() => {});
+		this.points = {};
+		this.sweepRows = axisValues.map((values, index) => ({ index, values, value: Object.values(values)[0] ?? NaN, status: 'pending', metrics: null, globals: null, error: null, ms: null, reused: null }));
 		this.sweepRunning = true;
 		this.sweepKey = this.currentSweepKey;
 		this.sweepStarted = performance.now();
@@ -484,7 +688,7 @@ export class Workbench {
 		this.pool.run(jobs, {
 			onStart: (i) => this.patchRow(i, { status: 'running' }),
 			onResult: (i, out, ms) => {
-				this.patchRow(i, out.error ? { status: 'error', error: out.error, ms } : { status: 'done', metrics: out.metrics, ms, reused: out.reused ?? null });
+				this.patchRow(i, out.error ? { status: 'error', error: out.error, ms } : { status: 'done', metrics: out.metrics, globals: out.globals ?? null, ms, reused: out.reused ?? null });
 				const at = Object.entries(axisValues[i]).map(([k, v]) => `${k} = ${v}`).join(', ');
 				const msg = `Sweep point ${i + 1}/${n} (${at}) ${out.error ? `failed: ${out.error}` : `done in ${Math.round(ms)} ms${out.reused?.electrostatics ? ', electrostatics reused' : ''}`}`;
 				this.progressRows = [...this.progressRows, { t: Date.now(), level: out.error ? 'error' : 'info', msg }];
@@ -497,6 +701,8 @@ export class Workbench {
 				this.pool = null;
 				this.progress = `Sweep complete (${this.sweepRows.filter((r) => r.status === 'done').length}/${n} points)`;
 				this.addLog(`Sweep finished in ${Math.round(performance.now() - this.sweepStarted)} ms wall`);
+				this.results.defaults((ds, v) => this.has(ds, v), { rf: !!this.result?.rf?.sweep, sweep: this.sweepRows.find((r) => r.globals)?.globals ?? null, sweepMetric: this.sweepMetricGlobal });
+				this.results.rebase();
 			}
 		});
 	}

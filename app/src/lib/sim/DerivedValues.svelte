@@ -1,14 +1,13 @@
 <script lang="ts">
 	import type { Workbench } from './workbench.svelte';
-	import SimStageResults from '../SimStageResults.svelte';
 	import { fmt } from '../logic';
 	import { downloadText, toCsv } from './exportUtil';
 	import { METRIC_LABELS } from './labels';
+	import SolutionSelect from './SolutionSelect.svelte';
 
 	let { wb }: { wb: Workbench } = $props();
 	const r = $derived(wb.result);
 
-	const armVpiL = (dn: number) => (wb.runWavelengthUm != null && dn !== 0 ? (wb.runWavelengthUm * 1e-4) / (2 * Math.abs(dn)) : null);
 	const timing = $derived(r?.timing);
 	const timingRows = $derived.by(() => {
 		const out: [string, number][] = [];
@@ -32,13 +31,23 @@
 	}
 </script>
 
-{#if r}
+<SolutionSelect {wb} value={wb.derivedPoint} onchange={(p) => (wb.derivedPoint = p)} />
+{#if wb.derivedPoint >= 0}
+	{@const row = wb.sweepRows[wb.derivedPoint]}
+	<table class="grid"><thead><tr><th>Quantity</th><th>Value</th><th>Unit</th></tr></thead><tbody>
+		{#each Object.entries(row?.metrics ?? {}) as [key, value]}
+			{@const l = METRIC_LABELS[key]}
+			<tr data-tip={l?.[2] ?? key}><td>{l?.[0] ?? key}</td><td class="num" data-metric={key} data-value={value}>{fmt(value, 5)}</td><td class="muted">{l?.[1] ?? ''}</td></tr>
+		{/each}
+	</tbody></table>
+	<p class="muted small">Section values of the sweep point (computed by the sweep). Field quantities of this point: plot groups and derived value nodes with this Parameter value.</p>
+{:else if r}
 	{#if wb.stale}<p class="notice">Inputs changed. These results belong to the previous run.</p>{/if}
-	<div class="line"><span data-run-info>{r.id} · {r.section} · {fmt(r.elapsed_ms / 1000)} s</span><span class="muted small" data-run-solver title="Electrostatic element order and optical solver of this result">{r.electrostatics ? `P${r.elementOrder ?? 1} electrostatics` : 'no electrostatics'}{r.opticalSolver ? ` · ${r.opticalSolver} optical solver` : ''}</span><span class="grow"></span><button onclick={exportCsv} title="Download derived values as CSV">CSV</button></div>
+	<div class="line"><span data-run-info>{r.id} · {r.section} · {fmt(r.elapsed_ms / 1000)} s</span><span class="muted small" data-run-solver data-tip="Electrostatic element order and optical solver of this result">{r.electrostatics ? `P${r.elementOrder ?? 1} electrostatics` : 'no electrostatics'}{r.opticalSolver ? ` · ${r.opticalSolver} optical solver` : ''}</span><span class="grow"></span><button onclick={exportCsv} data-tip="Download derived values as CSV">CSV</button></div>
 	<table class="grid"><thead><tr><th>Quantity</th><th>Value</th><th>Unit</th></tr></thead><tbody>
 		{#each Object.entries(r.metrics) as [key, value]}
 			{@const l = METRIC_LABELS[key]}
-			<tr title={l?.[2] ?? key}><td>{l?.[0] ?? key}</td><td class="num" data-metric={key} data-value={value}>{fmt(value, 5)}</td><td class="muted">{l?.[1] ?? ''}</td></tr>
+			<tr data-tip={l?.[2] ?? key}><td>{l?.[0] ?? key}</td><td class="num" data-metric={key} data-value={value}>{fmt(value, 5)}</td><td class="muted">{l?.[1] ?? ''}</td></tr>
 		{/each}
 	</tbody></table>
 	{#if r.electrostatics}
@@ -58,21 +67,7 @@
 			{#if o.metal?.pecFaces}<p class="muted small">Scalar PEC is exact on horizontal faces only: {fmt(100 * o.metal.pecFaces.validFaceFraction)}% of the modelled metal perimeter is horizontal.</p>{/if}
 		{/if}
 	{/if}
-	{#if r.eo}
-		<h4>Per arm</h4>
-		<table class="grid"><thead><tr><th>Arm</th><th>n_eff</th><th title="dn_eff/dV, signed">dn/dV (1/V)</th><th title="Single-arm phase-shifter VπL = λ / (2 |dn_eff/dV|), λ from the run input; not the MZM value">VπL arm (V·cm)</th></tr></thead><tbody>
-			{#each ['A', 'B'] as const as k}{@const a = r.eo.arms[k]}{#if a}
-				<tr><td>{k}</td><td class="num">{fmt(a.neff, 6)}</td><td class="num">{fmt(a.dnEffPerV, 4)}</td><td class="num" data-arm-vpil={k}>{fmt(armVpiL(a.dnEffPerV), 4)}</td></tr>
-			{/if}{/each}
-		</tbody></table>
-		{#each ['A', 'B'] as const as k}{@const a = r.eo.arms[k]}{#if a?.byRegion}
-			<h4>Arm {k}: optical power fraction by region</h4>
-			<table class="grid"><thead><tr><th>Region</th><th title="Fraction of the mode power in the region (confinement factor)">Power fraction</th><th>dn/dV (1/V)</th></tr></thead><tbody>
-				{#each Object.entries(a.byRegion) as [name, v]}<tr><td>{name}</td><td class="num">{fmt(v.powerFraction, 4)}</td><td class="num">{fmt(v.dnEffPerV, 4)}</td></tr>{/each}
-			</tbody></table>
-		{/if}{/each}
-		<SimStageResults result={r} part="eo" />
-	{/if}
+	{#if r.eo}<p class="small">EO coupling (per-arm dn/V, VπL, balance, breakdown): <button class="link" onclick={() => (wb.node = 'res.eo')}>Derived Values, EO Coupling</button>.</p>{/if}
 	{#if timingRows.length}
 		<h4>Timing</h4>
 		<table class="grid"><tbody>{#each timingRows as [k, v]}<tr><td class="mono small">{k}</td><td class="num">{fmt(v, 4)} ms</td></tr>{/each}</tbody></table>
@@ -95,5 +90,6 @@
 	p { margin: 6px 0; line-height: 1.5; overflow-wrap: anywhere; }
 	.small { font-size: 11px; }
 	.notice { color: var(--warn); }
+	.link { border: 0; background: none; padding: 0; height: auto; color: var(--accent); border-radius: 0; }
 	ul { padding-left: 16px; margin: 4px 0; font-size: 11px; color: var(--ink-3); }
 </style>

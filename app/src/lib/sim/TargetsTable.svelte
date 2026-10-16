@@ -19,14 +19,14 @@
 	{#if wb.stale}<p class="notice">Inputs changed. These results belong to the previous run.</p>{/if}
 	<div class="line">
 		<span class="target-summary">{r.targetSummary.evaluated} of {r.targetSummary.total} targets evaluated · {r.targetSummary.passed} passed · {r.targetSummary.failed} failed{#if r.targetSummary.flagged} · <span class="notice" data-targets-flagged={r.targetSummary.flagged}>{r.targetSummary.flagged} flagged</span>{/if}</span>
-		<span class="grow"></span><button onclick={exportCsv} title="Download targets as CSV">CSV</button>
+		<span class="grow"></span><button onclick={exportCsv} data-tip="Download targets as CSV">CSV</button>
 	</div>
 	<p class="muted small">Pass/fail applies only to an independently evaluated metric. Not evaluated is never counted as a pass. Hover a row for its reason.</p>
 	<div class="scroll"><table class="grid"><thead><tr><th>Metric</th><th>Target</th><th>Actual</th><th>Status</th></tr></thead><tbody>
 		{#each r.targets as t}
-			<tr title={t.reason ?? t.diagnostic ?? JSON.stringify(t.source)}>
+			<tr data-tip={t.reason ?? t.diagnostic ?? JSON.stringify(t.source)}>
 				<td>{t.metric}{t.at_ghz ? ` @ ${t.at_ghz} GHz` : ''}</td><td class="num">{fmt(t.value)} ± {fmt(t.tolerance)}</td><td class="num">{fmt(t.actual)}</td>
-				<td class:failed={t.status === 'fail'} class:passed={t.status === 'pass'}>{t.status.replaceAll('_', ' ')}{#if t.diagnostic}<span class="notice" title={t.diagnostic}> · flagged</span>{/if}</td>
+				<td class:failed={t.status === 'fail'} class:passed={t.status === 'pass'}>{t.status.replaceAll('_', ' ')}{#if t.diagnostic}<span class="notice" data-tip={t.diagnostic}> · flagged</span>{/if}</td>
 			</tr>
 		{/each}
 	</tbody></table></div>

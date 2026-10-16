@@ -14,6 +14,8 @@ export interface FieldMesh {
 	regionMaterials?: string[];
 	/** Triangle bin index built off the main thread (P2 display, W13). */
 	index?: import('./fieldmath').TriIndex;
+	/** Optical and arm meshes: their window (µm). */
+	window?: { x: number[]; y: number[] };
 }
 
 export interface EsFields extends FieldMesh {
@@ -42,6 +44,9 @@ export interface OpticalFields extends FieldMesh {
 	location?: string;
 	convention?: unknown;
 	order?: number;
+	lambdaUm?: number;
+	/** Vector solver: index of the mode the engine selected. */
+	selectedMode?: number;
 	/** Pockels index change on this optical mesh, per triangle centroid, 1/V per volt of terminal voltage. */
 	pockels?: PockelsField;
 }
@@ -54,13 +59,17 @@ export interface SimFields {
 }
 
 export type WorkerIn =
-	| { type: 'run'; text: string; section: string; stages: string[]; meshScale: number; fields: boolean; params?: Record<string, number> }
-	| { type: 'point'; text: string; study: string; index: number; section: string; meshScale: number; stages: string[] | null }
-	| { type: 'mesh'; text: string; section: string; meshScale: number };
+	| { type: 'run'; text: string; section: string; stages: string[]; meshScale: number; fields: boolean; params?: Record<string, number>; keep?: boolean; pointIndex?: number }
+	| { type: 'point'; text: string; study: string; index: number; section: string; meshScale: number; stages: string[] | null; pointIndex?: number }
+	| { type: 'mesh'; text: string; section: string; meshScale: number }
+	| { type: 'post'; id: number; req: import('./post/contract').PostRequest }
+	| { type: 'cancel'; ids: number[] }
+	| { type: 'idle' };
 
 export type WorkerOut =
 	| { type: 'progress'; message: string }
-	| { type: 'result'; result: import('../../../../engine/src/run.mjs').SimulationResult; fields: SimFields | null }
+	| { type: 'result'; result: import('../../../../engine/src/run.mjs').SimulationResult; fields: SimFields | null; meshes?: Record<string, FieldMesh>; datasets?: import('./post/contract').DatasetInfo[]; globals?: Record<string, number> }
+	| { type: 'post'; id: number; ok: boolean; data?: unknown; error?: string; ms: number }
 	| { type: 'point'; point: import('../../../../engine/src/sweep.mjs').SweepPoint }
 	| { type: 'mesh'; mesh: FieldMesh; ms: number }
 	| { type: 'error'; message: string };

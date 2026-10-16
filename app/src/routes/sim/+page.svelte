@@ -30,18 +30,8 @@
 		} catch {
 			/* storage unavailable */
 		}
-		// Diagnostics for renderer measurements (DevLog-027): dev server or ?debug=1 only; synthetic code loads lazily.
-		if (import.meta.env.DEV || page.url.searchParams.get('debug') === '1') {
-			const w = window as unknown as Record<string, unknown>;
-			w.__simWorkbench = wb;
-			w.__simSynthetic = async (n: number) => {
-				const { syntheticEs } = await import('../../lib/sim/synthetic');
-				wb.fields = { es: syntheticEs(n) };
-				wb.resultAt = performance.now();
-				wb.paintInfo = null;
-				wb.quantity = 'phi';
-			};
-		}
+		// Diagnostics (dev server or ?debug=1): the workbench object for measurements and checks.
+		if (import.meta.env.DEV || page.url.searchParams.get('debug') === '1') (window as unknown as Record<string, unknown>).__simWorkbench = wb;
 	});
 	function saveSizes() {
 		try {
@@ -53,6 +43,19 @@
 	const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
 
 	onDestroy(() => wb.stopAll());
+	// Undo history of the Results model: every change is recorded (edits within 400 ms form one step).
+	$effect(() => {
+		const snap = wb.results.snapshotJson();
+		untrack(() => wb.results.commit(snap));
+	});
+	function onKey(e: KeyboardEvent) {
+		if (!(e.metaKey || e.ctrlKey) || e.key.toLowerCase() !== 'z') return;
+		const t = e.target as HTMLElement | null;
+		if (t && (t.closest('input, textarea, select, [contenteditable]') )) return;
+		e.preventDefault();
+		const done = e.shiftKey ? wb.results.redo() : wb.results.undo();
+		if (done) wb.addLog(e.shiftKey ? 'Redo' : 'Undo');
+	}
 	$effect(() => {
 		wb.missingConfig = !!requested && !chosen && sims.length > 0;
 	});
@@ -64,7 +67,6 @@
 			wb.stopAll();
 			wb.text = '';
 			wb.result = null;
-			wb.fields = null;
 			wb.error = '';
 			wb.section = 'geometry';
 			wb.progress = '';
@@ -129,32 +131,33 @@
 </script>
 
 <svelte:head><title>Simulation · EO Modulator Atlas</title></svelte:head>
-<div class="sim-page" style:--tree-w="{treeW}px" style:--set-w="{setW}px" style:--bot-h="{botH}px">
+<svelte:window onkeydown={onKey} />
+<div class="sim-page" data-solution={wb.holdsSolution ? 1 : 0} data-registry={wb.registryMs != null ? 1 : 0} style:--tree-w="{treeW}px" style:--set-w="{setW}px" style:--bot-h="{botH}px">
 	<div class="toolbar">
-		<label title="Simulation config (sims/*/config.yaml)">Config
+		<label data-tip="Simulation config (sims/*/config.yaml)">Config
 			<select aria-label="Simulation config" value={chosen?.id ?? ''} disabled={store.loading} onchange={(e) => switchConfig(e.currentTarget.value)}>
 				{#if !chosen}<option value="">{store.loading ? 'Loading atlas...' : 'Unknown config'}</option>{/if}
 				{#each sims as s}<option value={s.id}>{s.id} · {s.paper_id}</option>{/each}
 			</select>
 		</label>
-		<label title="Cross-section (geometry or alt_geometries)">Section
+		<label data-tip="Cross-section (geometry or alt_geometries)">Section
 			<select aria-label="Cross-section" bind:value={wb.section} disabled={!!wb.busy}>{#each wb.sections as name}<option value={name}>{name}</option>{/each}</select>
 		</label>
-		<label title="Scales every mesh edge length">Mesh
+		<label data-tip="Scales every mesh edge length">Mesh
 			<select aria-label="Mesh resolution" bind:value={wb.meshScale} disabled={!!wb.busy}>{#each MESH_LEVELS as m}<option value={m.value}>{m.label}</option>{/each}</select>
 		</label>
 		<fieldset class="stages" aria-label="Stages">
-			<label title="Always runs"><input type="checkbox" checked disabled /> Electrostatics</label>
+			<label data-tip="Always runs"><input type="checkbox" checked disabled /> Electrostatics</label>
 			{#each OPTIONAL as s}
 				{@const err = wb.stageError(s.id)}
-				<label title={err ?? 'Inputs pass the input boundary'} class:blocked={!!err}><input type="checkbox" checked={wb.selected.includes(s.id)} disabled={!!wb.busy || (!!err && !wb.selected.includes(s.id))} onchange={(e) => wb.toggleStage(s.id, e.currentTarget.checked)} /> {s.label}</label>
+				<label data-tip={err ?? 'Inputs pass the input boundary'} class:blocked={!!err}><input type="checkbox" checked={wb.selected.includes(s.id)} disabled={!!wb.busy || (!!err && !wb.selected.includes(s.id))} onchange={(e) => wb.toggleStage(s.id, e.currentTarget.checked)} /> {s.label}</label>
 			{/each}
 		</fieldset>
 		<div class="acts">
-			<button onclick={() => wb.buildMesh()} disabled={!!wb.busy || wb.sweepRunning || wb.loading || !wb.geometry} title="Build the electrostatic mesh only (Mesh node shows statistics)">Build mesh</button>
-			<button class="on" onclick={() => wb.compute()} disabled={!wb.canRun} title="Run the study: electrostatics plus the selected stages">Compute</button>
-			<button onclick={() => wb.cancel()} disabled={!wb.busy && !wb.sweepRunning} title="Stop the running solve, mesh build or sweep">Cancel</button>
-			<button onclick={copyLink} disabled={!chosen} title="Copy a link with config, section, mesh level, stages, form overrides and sweep. Free YAML-tab edits and removed keys are not encoded (a log warning says so when present).">Link</button>
+			<button onclick={() => wb.buildMesh()} disabled={!!wb.busy || wb.sweepRunning || wb.loading || !wb.geometry} data-tip="Build the electrostatic mesh only (Mesh node shows statistics)">Build mesh</button>
+			<button class="on" onclick={() => wb.compute()} disabled={!wb.canRun} data-tip="Run the study: electrostatics plus the selected stages">Compute</button>
+			<button onclick={() => wb.cancel()} disabled={!wb.busy && !wb.sweepRunning} data-tip="Stop the running solve, mesh build or sweep">Cancel</button>
+			<button onclick={copyLink} disabled={!chosen} data-tip="Copy a link with config, section, mesh level, stages, form overrides and sweep. Free YAML-tab edits and removed keys are not encoded (a log warning says so when present).">Link</button>
 		</div>
 	</div>
 	<div class="busyline" class:on={!!wb.busy || wb.sweepRunning}></div>

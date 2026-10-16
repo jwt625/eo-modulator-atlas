@@ -10,6 +10,8 @@ export interface SweepJob {
 
 export interface PointOutcome {
 	metrics: Record<string, number> | null;
+	/** SI run globals (engine runGlobals; DevLog-031). */
+	globals?: Record<string, number> | null;
 	error: string | null;
 	/** Engine-reported reuse of mesh/electrostatics (config studies). */
 	reused?: { mesh: boolean; electrostatics: boolean } | null;
@@ -47,8 +49,8 @@ export class SweepPool {
 				const d = ev.data;
 				if (d.type === 'progress') return;
 				const ms = performance.now() - t0;
-				if (d.type === 'result') cb.onResult(job.index, { metrics: d.result.metrics, error: null, reused: d.result.reused ?? null }, ms);
-				else if (d.type === 'point') cb.onResult(job.index, { metrics: d.point.metrics, error: d.point.error, reused: d.point.reused, targets: d.point.targets }, ms);
+				if (d.type === 'result') cb.onResult(job.index, { metrics: d.result.metrics, globals: d.globals ?? null, error: null, reused: d.result.reused ?? null }, ms);
+				else if (d.type === 'point') cb.onResult(job.index, { metrics: d.point.metrics, globals: d.point.globals ?? null, error: d.point.error, reused: d.point.reused, targets: d.point.targets }, ms);
 				else if (d.type === 'error') cb.onResult(job.index, { metrics: null, error: d.message }, ms);
 				else return;
 				next(w);

@@ -8,7 +8,8 @@ import { parseSweepValues, guessDeviceX } from './sweepValues';
 import { readUrlState, writeUrlState } from './urlState';
 import type { EsFields, FieldMesh, ScalarField } from './types';
 import { p2Display } from './p2';
-import { viewSpec } from './fieldsView';
+import { contourLevels, featureRange } from './layers';
+import { newFeature, nextName, Results } from './results.svelte';
 
 /** Structured n x n grid on [0, 1]^2, two triangles per cell. */
 function grid(n: number): FieldMesh {
@@ -76,7 +77,7 @@ describe('mesh index and probe', () => {
 
 describe('colormap and ticks', () => {
 	it('builds 256-entry tables that hit both anchors', () => {
-		const lut = colormapLut('viridis');
+		const lut = colormapLut('Viridis');
 		expect(lut.length).toBe(1024);
 		expect(Array.from(lut.slice(0, 3))).toEqual([0x44, 0x01, 0x54]);
 		expect(Array.from(lut.slice(1020, 1023))).toEqual([0xfd, 0xe7, 0x25]);
@@ -172,20 +173,71 @@ describe('P2 display (U2)', () => {
 	const phiDof = Float64Array.from(dofX.map((px, i) => f(px, dofY[i])));
 	const elem = new Int32Array([0, 1, 2, 4, 5, 6, 0, 2, 3, 6, 7, 8]);
 	const es: EsFields = { x, y, tri, triRegion: new Int32Array(2), regionNames: ['r'], phi: phiDof.slice(0, 4), ex: new Float64Array(2), ey: new Float64Array(2), elementOrder: 2, p2: { phiDof, elem } };
-	it('evaluates the quadratic potential exactly and E linearly at sub-triangle corners', () => {
+	it('splits elements at the edge midpoints and keeps the exact quadratic potential at the refined nodes', () => {
 		const d = p2Display(es)!;
 		expect(d.mesh.tri.length).toBe(24);
-		const spec = viewSpec('phi', { es }, null, 0);
-		const idx = buildTriIndex(spec.mesh!);
+		for (let i = 0; i < d.mesh.x.length; i++) expect(d.phi[i]).toBeCloseTo(f(d.mesh.x[i], d.mesh.y[i]), 12);
+		const idx = buildTriIndex(d.mesh);
 		for (const [px, py] of [[0.3, 0.1], [0.8, 0.45], [0.2, 0.9], [0.55, 0.5]]) {
-			const loc = locate(spec.mesh!, idx, px, py)!;
-			expect(valueAt(spec.field!, loc, px, py)).toBeCloseTo(f(px, py), 12);
-			const ex = viewSpec('ex', { es }, null, 0).field!;
-			// E_x = -(2x + y), linear: exact by corner interpolation
-			expect(valueAt(ex, locate(ex.mesh, buildTriIndex(ex.mesh), px, py)!)).toBeCloseTo(-(2 * px + py), 12);
-			// W8: |E| probed as the magnitude of the interpolated components, exact for the P2 gradient
-			const en = viewSpec('enorm', { es }, null, 0).field!;
-			expect(valueAt(en, locate(en.mesh, buildTriIndex(en.mesh), px, py)!, px, py)).toBeCloseTo(Math.hypot(2 * px + py, px - 2), 12);
+			const loc = locate(d.mesh, idx, px, py)!;
+			expect(d.phiAt(loc.t, px, py)).toBeCloseTo(f(px, py), 12);
+			// E_x = -(2x + y), linear per element: exact by corner interpolation
+			expect(loc.w0 * d.ex[3 * loc.t] + loc.w1 * d.ex[3 * loc.t + 1] + loc.w2 * d.ex[3 * loc.t + 2]).toBeCloseTo(-(2 * px + py), 12);
 		}
+	});
+});
+
+describe('plot feature layers', () => {
+	it('computes ranges and contour levels', () => {
+		const f = newFeature('contour', { count: 4 });
+		const p = { values: Float64Array.of(-2, 1, 3), location: 'node' as const, mesh: 'm', unit: 'V', min: -2, max: 3, minAt: null, maxAt: null };
+		expect(featureRange(f, p)).toEqual({ min: -2, max: 3 });
+		f.range.scale = 'symmetric';
+		expect(featureRange(f, p)).toEqual({ min: -3, max: 3 });
+		expect(contourLevels(f, { min: -3, max: 3 }).map((v) => Number(v.toFixed(6)))).toEqual([-1.8, -0.6, 0.6, 1.8]);
+		f.levelsMode = 'list';
+		f.list = '0, 1.5 2';
+		expect(contourLevels(f, { min: -3, max: 3 })).toEqual([0, 1.5, 2]);
+		f.range = { manual: true, min: -1, max: 1, scale: 'linear' };
+		expect(featureRange(f, p)).toEqual({ min: -1, max: 1 });
+	});
+});
+
+describe('results model (round 2)', () => {
+	it('numbers new names like COMSOL', () => {
+		expect(nextName('Surface', [])).toBe('Surface 1');
+		expect(nextName('Surface', ['Surface 1', 'Surface 3', 'Contour 1'])).toBe('Surface 4');
+		const R = new Results();
+		const g = R.addGroup('2d');
+		expect(R.addFeature(g.id, 'surface')!.name).toBe('Surface 1');
+		expect(R.addFeature(g.id, 'surface')!.name).toBe('Surface 2');
+		expect(R.addDerived('surface_int').name).toBe('Surface Integration 1');
+		expect(R.addDerived('surface_int').name).toBe('Surface Integration 2');
+	});
+	it('writes wide tables with numeric parameter columns', () => {
+		const R = new Results();
+		const t = R.addTable();
+		R.appendRow(t, { dataset: 'sweep', 'gap_um (µm)': 2.5, 'Z0 (Ω)': 40 }, { 'gap_um (µm)': 'param', 'Z0 (Ω)': 'value' });
+		R.appendRow(t, { dataset: 'sweep', 'gap_um (µm)': 3, 'C (pF/m)': 120 }, { 'C (pF/m)': 'value' });
+		expect(t.columns).toEqual(['dataset', 'gap_um (µm)', 'Z0 (Ω)', 'C (pF/m)']);
+		expect(t.rows).toEqual([['sweep', 2.5, 40, ''], ['sweep', 3, '', 120]]);
+		expect(t.roles['gap_um (µm)']).toBe('param');
+	});
+	it('undoes and redoes model edits', () => {
+		const R = new Results();
+		R.commit(R.snapshotJson());
+		const g = R.addGroup('2d', '', 'A');
+		(R as unknown as { lastAt: number }).lastAt = 0;
+		R.commit(R.snapshotJson());
+		R.deleteGroup(g.id);
+		(R as unknown as { lastAt: number }).lastAt = 0;
+		R.commit(R.snapshotJson());
+		expect(R.groups.length).toBe(0);
+		expect(R.undo()).toBe(true);
+		expect(R.groups.map((x) => x.name)).toEqual(['A']);
+		expect(R.undo()).toBe(true);
+		expect(R.groups.length).toBe(0);
+		expect(R.redo()).toBe(true);
+		expect(R.groups.map((x) => x.name)).toEqual(['A']);
 	});
 });
