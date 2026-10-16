@@ -94,34 +94,38 @@
   "missing": {
     "barium_titanate": "Only Wemple-DiDomenico-Camlibel single-term fits (valid 0.4-0.7 um) found; not valid at 1550 nm; BTO thin-film indices depend on growth. Provide n in the sim config with provenance.",
     "lithium_tantalate_sellmeier": "No verified Sellmeier fit in hand; tabulated Bond data used instead.",
-    "lithium_tantalate_rf_eo": "RF permittivity and Pockels coefficients of LiTaO3 not entered: the only accessible table read (Zhu et al. 2021, Table 1) gives eps11,22 = 38.3, eps33 = 46.2 and r13 6.2, r22 0, r33 28.5, r51 8.4 without a clamped/unclamped condition or primary reference; not verifiable here.",
-    "lithium_niobate_unclamped_rf_permittivity": "No accessible source read for eps^T (constant stress) of LiNbO3.",
-    "lithium_niobate_primary_sources": "Weis and Gaylord, Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817, could not be read (publisher login required, 2026-10-14); the LN RF and EO entries are therefore secondary_open_access. Replace with the primary table when a copy is available in references/.",
+    "lithium_tantalate_rf_eo": "RF permittivity and Pockels coefficients of LiTaO3 not entered. The only accessible table read (Zhu et al. 2021, Table 1) gives eps11,22 = 38.3, eps33 = 46.2 and r13 6.2, r22 0, r33 28.5, r51 8.4 without a clamped/unclamped condition or primary reference. Open-access search 2026-10-15 (DevLog-038): no primary full text readable (paywalled, a repository under maintenance, one anti-bot block); candidate primary sources with verified DOIs are listed in DevLog-038 for download.",
+    "lithium_niobate_original_measurements": "Weis and Gaylord 1985 read 2026-10-15 (Tables 1 and 4, rendered page images); the original measurements they tabulate ([23] Warner et al. 1967, [45] Turner 1966, [11] Kaminow et al. 1980, [37], [41], [42], [46]) were not read.",
+    "lithium_niobate_eo_1550nm": "No Pockels coefficient at 1550 nm in Weis and Gaylord Table 4 (clamped rows at 633 and 3390 nm; unclamped at 633, 1150 (r22 only) and 3390 nm (r22 only)); the default is the 633 nm clamped row.",
+    "lithium_niobate_rf_eo_composition": "Weis and Gaylord do not label the Table 1 / Table 4 samples congruent or stoichiometric (only T_c = 1165 C for Table 1 row [23]); the RF/EO entries of library key lithium_niobate_congruent are therefore not established as congruent-composition values.",
     "rf_loss_tangents": "No loss tangent entered; tan_delta_rf stays a per-config sourced input.",
     "thin_film_gold": "No thin-film gold conductivity entered; bulk 293 K value only."
   },
   "library_schema": {
     "fields": "eps_r (RF relative permittivity, crystal frame: number or {perp, par} with perp = eps11 = eps22, par = eps33), r_pm_per_v (named 3m Pockels coefficients, crystal frame, pm/V), conductor + sigma_Sm (S/m), dispersion (key of `materials` used for the optical index)",
-    "entry": "each field is {value, condition, source_read, locator, primary_cited, verification, verified_on}; verification is `primary` (the original data source was read), `secondary_open_access` (an accessible compilation was read; its primary reference was not read) or `secondary_vendor` (a manufacturer data sheet was read)",
+    "entry": "each field is {value, condition, source_read, locator, primary_cited, verification, verified_on}; verification is `primary` (the original data source or a critically evaluated compilation that checked the original sources was read: Matula 1979, Weis and Gaylord 1985), `secondary_open_access` (an accessible compilation was read; its primary reference was not read) or `secondary_vendor` (a manufacturer data sheet was read)",
     "override": "config keys override library keys; eps_r {perp, par} and named r_pm_per_v coefficients merge one level deep"
   },
   "library": {
     "lithium_niobate_congruent": {
-      "description": "congruent LiNbO3, trigonal 3m, c = crystal z (axis 3)",
+      "description": "LiNbO3, trigonal 3m, c = crystal z (axis 3); RF and EO constants from Weis and Gaylord 1985 (evaluated compilation); the key name is kept for config compatibility, the RF/EO rows used do not state the sample composition (see composition_note); the optical dispersion (Zelmon 1997) is congruent",
       "dispersion": "lithium_niobate",
+      "composition_note": "Weis and Gaylord 1985, p.197: differences between the Table 1 permittivities 'may be due to stoichiometric differences between samples', the stoichiometry being indicated by the Curie temperature, which is given for row [23] only (T_c = 1165 C); p.199: within the experimental accuracy (+-5 %) the free (unclamped) EO coefficients do not depend on melt composition [28]. No row of Table 1 or Table 4 is labelled congruent or stoichiometric.",
       "eps_r": {
         "value": {
-          "perp": 44.0,
+          "perp": 44.3,
           "par": 27.9
         },
-        "condition": "clamped (constant strain), high-frequency response, as labelled in the source; temperature and frequency not stated",
-        "source_read": "D. Zhu, L. Shao, M. Yu, R. Cheng, B. Desiatov, C. J. Xin, Y. Hu, J. Holzgrafe, S. Ghosh, A. Shams-Ansari, E. Puma, N. Sinclair, C. Reimer, M. Zhang, M. Loncar, 'Integrated photonics on thin-film lithium niobate', Adv. Opt. Photon. 13, 242 (2021); read as arXiv:2102.11956",
-        "locator": "Table 1, LiNbO3 row, column 'RF dielectric Constant' (eps11,22 = 44, eps33 = 27.9, '(clamped, high-frequency response)'), arXiv PDF p.5, read from the rendered page image 2026-10-15; p.17 text: 'eps_r,z = 28 and eps_r,x/y = 44 for clamped, high-frequency response' (extracted text, 2026-10-15); p.19 repeats 28 / 44 without the clamped label",
-        "primary_cited": "not given for the table entries",
-        "verification": "secondary_open_access",
+        "condition": "clamped (constant strain, eps^S/eps0), from capacitance measured at frequencies well above the mechanical resonance (p.197 text: 'Capacitance measurements at frequencies well above the mechanical resonance can be used to determine directly the clamped values of permittivity (eps^S) [23]'); measurement frequency and temperature not given in the source; sample T_c 1165 C",
+        "source_read": "R. S. Weis, T. K. Gaylord, 'Lithium niobate: summary of physical properties and crystal structure', Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817 (subscription copy, local only: references/_inbox/weis1985.pdf, git-ignored)",
+        "locator": "Table 1 'Relative permittivity coefficients', p.197, row Ref. [23]: eps^T_11 85.2, eps^T_33 28.7, eps^S_11 44.3, eps^S_33 27.9, T_c 1165 C; read from the rendered page image (PyMuPDF, 260 dpi) 2026-10-15",
+        "primary_cited": "[23] A. W. Warner, M. Onoe, G. A. Coquin, J. Acoust. Soc. Am. 42, 1223-1231 (1967), doi:10.1121/1.1910709 (not read)",
+        "verification": "primary",
+        "verification_note": "Weis and Gaylord is an evaluated compilation that checked values against the original sources (p.198: 'some of the parameter values in [34] were found to be in error after comparison with the original sources'); classed primary as the Matula 1979 gold entry; the original measurement [23] was not read",
         "verified_on": "2026-10-15",
-        "corroborated_by": "same clamped values (eps11 44, eps33 27.9, 'clamped (v > 10 MHz)') in Crystal Technology, Inc. (an EPCOS company), 'Lithium Niobate optical crystals' data sheet DC-12 8/99, hosted at https://sphotonics.ru/LNmatProperties.pdf, p.2 (read 2026-10-15)",
-        "corroborated_by_copy": "a83393d0ef69c9a92133668b5a9b1a47fe6a83f80300156ece57cfe6338e384d"
+        "why_this_row": "[23] is the row the source names as the direct capacitance measurement of the clamped values (p.197) and the only row with clamped and unclamped values and a Curie temperature for one sample",
+        "other_rows": "same table, eps^S_11 / eps^S_33: [22] Savage 1966 44 / 29; [25] Yamada et al. 1967 43.9 / 23.7; [26] Teague et al. 1975 46.5 / 27.3",
+        "replaces": "Zhu et al., Adv. Opt. Photon. 13, 242 (2021), Table 1 (secondary_open_access): perp 44.0, par 27.9; replaced 2026-10-15 (DevLog-038)"
       },
       "r_pm_per_v": {
         "value": {
@@ -130,78 +134,89 @@
           "r33": 30.8,
           "r51": 28.0
         },
-        "condition": "clamped (constant strain, high-frequency) experimental values; wavelength not stated in the compiling table. Caveat from the same source (p.3): the piezoelectric contribution 'was not entirely eliminated during the measurement of r51', and the clamped r51 'might be closer to the theoretical 14.94 pm/V'; r51 enters only shear (off-diagonal) terms, used by the vector overlap",
-        "source_read": "M. Veithen, X. Gonze, Ph. Ghosez, 'First-principles study of the electrooptic effect in ferroelectric oxides', arXiv:cond-mat/0311240v1 (2003)",
-        "locator": "Table I (p.3), row 'Clamped / Exp. [22]': r13 8.6, r33 30.8, r22 3.4, r51 28",
-        "primary_cited": "A. Rauber, in Current Topics in Materials Science, vol. 1, ed. E. Kaldis (North-Holland, 1978), p. 481 (ref. [22] of the source; not read)",
-        "verification": "secondary_open_access",
-        "verified_on": "2026-10-14"
+        "condition": "clamped (r^S, constant strain), wavelength 633 nm; p.199: 'A measurement made with a high frequency (rf) electric field corresponds to the clamped condition'; modulation frequency not given; no 1550 nm value in the source (clamped rows at 633 and 3390 nm only). The source rates [11] (r51) and [44] (r22, r13, r33) 'probably the most accurate' (fringing-field corrections, p.199); that set is alternatives.r_pm_per_v_clamped_kaminow1980 and is not applied (DevLog-038). r51 enters only shear (off-diagonal) terms, used by the vector overlap",
+        "source_read": "R. S. Weis, T. K. Gaylord, 'Lithium niobate: summary of physical properties and crystal structure', Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817 (subscription copy, local only: references/_inbox/weis1985.pdf, git-ignored)",
+        "locator": "Table 4 'Linear electro-optic coefficients [x 10^-12 m/V]', p.199, row r^S, 633 nm, Ref. [45]: r51 28, r22 3.4, r13 8.6, r33 30.8; read from the rendered page image (PyMuPDF, 260 dpi) 2026-10-15",
+        "primary_cited": "[45] E. H. Turner, Appl. Phys. Lett. 8, 303-304 (1966) (not read)",
+        "verification": "primary",
+        "verification_note": "evaluated compilation (see eps_r.verification_note); the original measurement [45] was not read; values identical to the previous secondary entry (Veithen et al. 2003, Table I 'Clamped Exp.', citing Rauber 1978)",
+        "verified_on": "2026-10-15",
+        "replaces": "Veithen, Gonze, Ghosez, arXiv:cond-mat/0311240v1, Table I (secondary_open_access), same values; provenance replaced 2026-10-15 (DevLog-038)"
       },
       "alternatives": {
+        "r_pm_per_v_clamped_kaminow1980": {
+          "value": {
+            "r13": 7.7,
+            "r22": 3.4,
+            "r33": 28.8,
+            "r51": 18.2
+          },
+          "condition": "clamped (r^S), 633 nm; composite of two rows: r51 from [11], r22, r13, r33 from [44]; the source (p.199): 'The values from [11] and [44] are probably the most accurate. These more recent values were obtained using refined experimental methods that correct for fringing fields present in previous measurements.'",
+          "source_read": "R. S. Weis, T. K. Gaylord, Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817",
+          "locator": "Table 4, p.199, rows r^S 633 nm Ref. [11]: r51 +18.2; Ref. [44]: r22 +3.4, r13 +7.7, r33 +28.8; text p.199 left column bottom; read from the rendered page image 2026-10-15",
+          "primary_cited": "[11] I. P. Kaminow, E. H. Turner, R. L. Barns, J. L. Bernstein, J. Appl. Phys. 51, 4379-4384 (1980); [44] 'E. H. Turner cited in [11]' (reference list p.203); neither read",
+          "verification": "primary",
+          "verified_on": "2026-10-15",
+          "use": "not applied by library:; sensitivity set (the source's preferred clamped values); copy into a config r_pm_per_v override with provenance to use"
+        },
+        "r_pm_per_v_clamped_3390nm": {
+          "value": {
+            "r13": 6.5,
+            "r22": 3.1,
+            "r33": 28.0,
+            "r51": 23.0
+          },
+          "condition": "clamped (r^S), 3390 nm",
+          "source_read": "R. S. Weis, T. K. Gaylord, Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817",
+          "locator": "Table 4, p.199, row r^S 3390 nm Ref. [46]: r51 23, r22 3.1, r13 6.5, r33 28; read from the rendered page image 2026-10-15",
+          "primary_cited": "[46] E. H. Turner, J. Opt. Soc. Am. 56, 1426 (1966) (not read)",
+          "verification": "primary",
+          "verified_on": "2026-10-15",
+          "use": "not applied by library:; wavelength-dependence reference (no 1550 nm row in the source)"
+        },
+        "eps_r_unclamped": {
+          "value": {
+            "perp": 85.2,
+            "par": 28.7
+          },
+          "condition": "unclamped (constant stress, eps^T/eps0), capacitance at very low frequencies (p.197 text: 'Capacitance measurements at very low frequencies are used to determine the unclamped values of permittivity (eps^T) [23-25]'); same sample as the default (T_c 1165 C); frequency and temperature not given in the source",
+          "source_read": "R. S. Weis, T. K. Gaylord, Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817",
+          "locator": "Table 1, p.197, row Ref. [23]: eps^T_11 85.2, eps^T_33 28.7; other rows eps^T_11 / eps^T_33: [22] 84 / 30, [24] 84.6 / 28.6, [26] 84.1 / 28.1; read from the rendered page image 2026-10-15",
+          "primary_cited": "[23] A. W. Warner, M. Onoe, G. A. Coquin, J. Acoust. Soc. Am. 42, 1223-1231 (1967), doi:10.1121/1.1910709 (not read)",
+          "verification": "primary",
+          "verified_on": "2026-10-15",
+          "use": "not applied by library:; low-frequency diagnostics and config overrides with provenance",
+          "replaces": "eps_r_unclamped_vendor (Crystal Technology data sheet DC-12 8/99, secondary_vendor: perp 85.0, par 28.7); removed 2026-10-15 (DevLog-038)"
+        },
         "r_pm_per_v_unclamped": {
           "value": {
             "r13": 10.0,
-            "r22": 6.8,
+            "r22": 6.81,
             "r33": 32.2,
-            "r51": 32.6
+            "r51": 32.0
           },
-          "condition": "unclamped (constant stress, low-frequency) experimental values; wavelength not stated in the compiling table",
-          "source_read": "M. Veithen, X. Gonze, Ph. Ghosez, 'First-principles study of the electrooptic effect in ferroelectric oxides', arXiv:cond-mat/0311240v1 (2003)",
-          "locator": "Table I (p.3), row 'Unclamped / Exp. [22]': r13 10.0, r33 32.2, r22 6.8, r51 32.6",
-          "primary_cited": "A. Rauber 1978 (ref. [22] of the source; not read)",
-          "verification": "secondary_open_access",
-          "verified_on": "2026-10-14",
-          "use": "not applied by `library:`; copy into a config r_pm_per_v override with provenance when the unclamped condition applies"
-        },
-        "eps_r_unclamped_vendor": {
-          "value": {
-            "perp": 85.0,
-            "par": 28.7
-          },
-          "condition": "unclamped, 'v < 500 kHz', 25 C (data sheet wording); congruent composition",
-          "source_read": "Crystal Technology, Inc. (an EPCOS company), 'Lithium Niobate optical crystals' data sheet DC-12 8/99, hosted at https://sphotonics.ru/LNmatProperties.pdf",
-          "locator": "p.2 'Dielectric Constants (@ 25 C)': unclamped (v < 500 kHz) eps11 = 85, eps33 = 28.7; clamped (v > 10 MHz) eps11 = 44, eps33 = 27.9; read from the rendered page image 2026-10-15",
-          "primary_cited": "the data sheet lists as sources: Properties of Lithium Niobate, EMIS Data Reviews No. 5 (INSPEC 1989); Weis and Gaylord, Appl. Phys. A 37, 191-203 (1985); Rauber 1978; Landolt-Bornstein III/16, III/28a (none read)",
-          "verification": "secondary_vendor",
+          "condition": "unclamped (r^T, constant stress, static or low-frequency field, p.199), 633 nm; composite of two rows: r22, r13, r33 from [37], r51 from [41] (the only r^T row with r51)",
+          "source_read": "R. S. Weis, T. K. Gaylord, Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817",
+          "locator": "Table 4, p.199, rows r^T 633 nm Ref. [37]: r22 6.81, r13 +10.0, r33 +32.2 (footnote a: 'These values were incorrect in [34]'); Ref. [41]: r51 32, r22 3.3 (footnote a); other r^T r22 rows: [40] 6.7, [42] 6.7 (633 nm), 5.4 (1150 nm), 3.1 (3390 nm); read from the rendered page image 2026-10-15",
+          "primary_cited": "[37] J. D. Zook, D. Chen, G. N. Otto, Appl. Phys. Lett. 11, 159-161 (1967); [41] E. Bernal, G. D. Chen, T. C. Lee, Phys. Lett. 21, 259-260 (1966); neither read",
+          "verification": "primary",
           "verified_on": "2026-10-15",
-          "use": "not applied by library:; low-frequency Vpi diagnostic and config overrides with provenance",
-          "source_copy": {
-            "url": "https://sphotonics.ru/LNmatProperties.pdf",
-            "accessed": "2026-10-15",
-            "sha256": "a83393d0ef69c9a92133668b5a9b1a47fe6a83f80300156ece57cfe6338e384d",
-            "bytes": 50022,
-            "server_last_modified": "2026-08-10",
-            "document": "Crystal Technology, Inc. data sheet DC-12 8/99, 2 pages",
-            "retained": "no local copy kept (redistribution rights not established); re-fetch and compare the sha256 to check",
-            "how_read": "page 2 rendered to an image (macOS sips) and read by L-PARAM on 2026-10-15 (DevLog-026 round 5); not independently re-read by an auditor (round-6 audit G11)"
-          },
-          "verification_note": "single reading by the library author; no independent audit reading; values not applied by library:"
+          "use": "not applied by library:; low-frequency Vpi diagnostic (r33 bracket, run.mjs lowFrequencyRange) and config overrides with provenance",
+          "replaces": "Veithen et al. Table I 'Unclamped Exp.' (secondary_open_access: r13 10.0, r22 6.8, r33 32.2, r51 32.6) and r_pm_per_v_unclamped_vendor (data sheet DC-12 8/99, secondary_vendor: r13 10, r22 7, r33 33, r51 33); both removed 2026-10-15 (DevLog-038)"
         },
-        "r_pm_per_v_unclamped_vendor": {
+        "r_pm_per_v_unclamped_smakula1967": {
           "value": {
-            "r13": 10.0,
-            "r22": 7.0,
-            "r33": 33.0,
-            "r51": 33.0
+            "r13": 10.9,
+            "r22": 6.7,
+            "r33": 34.0
           },
-          "condition": "unclamped, 633 nm (data sheet: 'Electro-optic Coefficients (pm/V @ 633 nm)'); the same table lists clamped r13 9, r22 3, r33 31, r51 28",
-          "source_read": "Crystal Technology, Inc. (an EPCOS company), 'Lithium Niobate optical crystals' data sheet DC-12 8/99, hosted at https://sphotonics.ru/LNmatProperties.pdf",
-          "locator": "p.2 'Electro-optic Coefficients (pm/V @ 633 nm)' table, rows unclamped / clamped; read from the rendered page image 2026-10-15",
-          "primary_cited": "the data sheet lists as sources: Properties of Lithium Niobate, EMIS Data Reviews No. 5 (INSPEC 1989); Weis and Gaylord, Appl. Phys. A 37, 191-203 (1985); Rauber 1978; Landolt-Bornstein III/16, III/28a (none read)",
-          "verification": "secondary_vendor",
+          "condition": "unclamped (r^T), 633 nm; r51 not given in this row set",
+          "source_read": "R. S. Weis, T. K. Gaylord, Appl. Phys. A 37, 191-203 (1985), doi:10.1007/BF00614817",
+          "locator": "Table 4, p.199, rows r^T 633 nm Ref. [42]: r22 6.7 (4th row); r13 10.9, r33 34.0 (7th row); read from the rendered page image 2026-10-15",
+          "primary_cited": "[42] P. H. Smakula, P. C. Claspy, Trans. Metall. Soc. AIME 239, 421-424 (1967) (not read)",
+          "verification": "primary",
           "verified_on": "2026-10-15",
-          "use": "not applied by library:; low-frequency Vpi diagnostic (r33 bracket)",
-          "source_copy": {
-            "url": "https://sphotonics.ru/LNmatProperties.pdf",
-            "accessed": "2026-10-15",
-            "sha256": "a83393d0ef69c9a92133668b5a9b1a47fe6a83f80300156ece57cfe6338e384d",
-            "bytes": 50022,
-            "server_last_modified": "2026-08-10",
-            "document": "Crystal Technology, Inc. data sheet DC-12 8/99, 2 pages",
-            "retained": "no local copy kept (redistribution rights not established); re-fetch and compare the sha256 to check",
-            "how_read": "page 2 rendered to an image (macOS sips) and read by L-PARAM on 2026-10-15 (DevLog-026 round 5); not independently re-read by an auditor (round-6 audit G11)"
-          },
-          "verification_note": "single reading by the library author; no independent audit reading; values not applied by library:"
+          "use": "not applied by library:; upper end of the unclamped r33 bracket (run.mjs lowFrequencyRange takes the largest unclamped r33)"
         }
       }
     },
@@ -246,5 +261,5 @@
       }
     }
   },
-  "verified_on_rf_eo": "2026-10-14"
+  "verified_on_rf_eo": "2026-10-15"
 }

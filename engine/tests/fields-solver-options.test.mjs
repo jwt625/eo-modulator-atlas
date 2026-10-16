@@ -5,6 +5,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { runCrossSection } from '../src/run.mjs';
+import { MATERIAL_LIBRARY } from '../src/materials.mjs';
 import { parseConfig, opticalOptions } from '../src/config.mjs';
 import { buildSectionMesh } from '../src/mesh-entry.mjs';
 import { getIn, setIn, applyOverrides, deleteIn } from '../src/yaml-edit.mjs';
@@ -221,7 +222,11 @@ test('round 6: low-frequency range, window-edge label, solver-aware scalar label
   const t = r.targets.find((x) => x.metric === 'vpi_l_dc_vcm');
   assert.equal(t.lowFrequencyRange.driveFrequencyHz, 1e5);
   assert.equal(t.lowFrequencyRange.r33UsedPmPerV, 30);
-  assert.ok(Math.abs(t.lowFrequencyRange.unclampedEstimate / (t.actual * 30 / 33) - 1) < 1e-12);
+  // Largest unclamped r33 among the library alternatives (Weis and Gaylord 1985 Table 4: 34.0, DevLog-038).
+  const rMax = Math.max(...Object.entries(MATERIAL_LIBRARY.library.lithium_niobate_congruent.alternatives)
+    .filter(([k, v]) => k.startsWith('r_pm_per_v_unclamped') && Number.isFinite(v.value?.r33)).map(([, v]) => v.value.r33));
+  assert.equal(rMax, 34.0);
+  assert.ok(Math.abs(t.lowFrequencyRange.unclampedEstimate / (t.actual * 30 / rMax) - 1) < 1e-12);
   assert.equal(t.lowFrequencyRange.affectsStatus, false);
   assert.equal(runCrossSection(fixture, { stages: ['eo_overlap'] }).targets.find((x) => x.metric === 'vpi_l_dc_vcm').lowFrequencyRange, undefined);
   // The fixture's vector TE mode fills the PEC box laterally: power at the window edge, label present.
