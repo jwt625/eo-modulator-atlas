@@ -4,8 +4,9 @@ Contract between three parties: the distillation skill (writes configs), the bro
 
 **Implemented subset:** electrostatics (P2 default), full-vector optical modes (default; scalar selectable), DC EO overlap with
 explicit arm windows (`eo_overlap`) and the uniform RF line with explicit loss
-declarations (`rf_line`); see "Stage contract (E2i.2, E3i, U3)" below. Loaded-line
-cascades and the EO response are recognised but not implemented. The example uses
+declarations (`rf_line`); see "Stage contract (E2i.2, E3i, U3)" below; the periodic
+loaded line (`loaded_line`) and the traveling-wave EO response (`eo_response`) since
+2026-10-15, see "S7: loaded line and EO response" below. The example uses
 placeholder coordinates and is not itself a runnable config.
 
 Rules
@@ -230,8 +231,8 @@ Result and target semantics:
 ## Stage contract (E2i.2, E3i, U3; 2026-10-07)
 
 Stage selection. `stages` is a subset of `electrostatics, optical_mode, eo_overlap,
-rf_line` (run in that order; electrostatics always). `loaded_line` and `eo_response`
-error as not implemented. Every requested stage's inputs are checked before any solve.
+rf_line, loaded_line, eo_response` (run in that order; electrostatics always; before
+2026-10-15 the last two errored as not implemented). Every requested stage's inputs are checked before any solve.
 `inspectConfig` returns `stageErrors` (per stage: `null` or the blocking input
 message); the CLI prints it with `--check` and runs stages with `--stages a,b`. A
 `null` readiness means the input boundary passed, not that meshing, metal handling,
@@ -311,7 +312,7 @@ No loss is ever defaulted; unknown is not zero.
   (`line.loading.loaded_cross_section`, default `geometry`): its T-rail conductors carry no
   line current in a 2D section, so a uniform-line L', R' and loss of that cut are not
   meaningful and the Wheeler recess would treat the pads as current-carrying surfaces.
-  Run it on the unloaded cut; the loaded line needs `loaded_line` (Q2 C2).
+  Run it on the unloaded cut; the loaded line is the `loaded_line` stage (Q2 C2).
 - Wheeler details: the reference frequency ignores `source.comparable: false` targets but
   still depends on the sweep end (R' at a fixed frequency moves by about the step-check
   spread, Q2 M1); recessed solves are vacuum-only and keep the nominal section's
@@ -336,7 +337,7 @@ No loss is ever defaulted; unknown is not zero.
   `line.loading.type: none` and the loss is an independent model (not
   `from_paper_alpha`, not `rprime_reference`); `rf_loss_db_per_cm` additionally needs a
   conductor model other than `none`. Response metrics (`eo_rolloff_db`, `bw3db_ghz`,
-  `bw6db_ghz`, RF Vpi) stay `not_evaluated` until `eo_response` exists.
+  `bw6db_ghz`) follow the `eo_response` rules below; periodic-line RF targets the `loaded_line` rules.
 
 ## Parameters, templates, studies, material library (DevLog-026, 2026-10-14)
 
@@ -519,7 +520,187 @@ integrated).
   element-side values), `everywhere`; applied to the displayed real value. Helpers `refinePattern`, `latticeIndex`,
   `refinedPoints`, `interpolateRefined` (drawn value: linear on the sub-triangle) are shared with the UI.
 
+## S7: loaded line and EO response (DevLog-036, 2026-10-15)
+
+Conventions and model in full: `DevLog/DevLog-036-s7-eo-response-loaded-line.md`; code `engine/src/eo-response.mjs`,
+`engine/src/loaded-line.mjs`, stage runners in `engine/src/stages.mjs`.
+
+`eo_response` (traveling-wave small-signal response):
+
+- Inputs (never defaulted): `line.length_mm` (electrode length per arm), `line.source_ohm`, `line.load_ohm`, `sweep`
+  (response grid and bandwidth search range), the optical group index (`optical_mode`) and an RF line: `rf_line` for
+  `line.loading.type: none` or unspecified, `loaded_line` with a complete loss declaration for `periodic_t_rail`.
+  Requesting `eo_response` adds `optical_mode` and `rf_line` or `loaded_line` to the run.
+- Model: Thevenin source V_s, Z_s at z = 0, load Z_L at z = L; forward and reflected waves of the line (gamma, Z0 from
+  `rf_line`, or the Bloch gamma_B, Z_B); phase integral int_0^L V(z) exp(+j 2 pi f n_g z / c) dz (optical group
+  index); H(f) normalized to its DC limit L V_s Z_L / (Z_s + Z_L) (Alferness, IEEE TMTT 30, 1121 (1982), Sec. VI.B,
+  eqs. (18)-(22)).
+- dB: S21_EO = 20 log10 |H(f) / H(f_ref)| (electrical dB); f_ref = DC limit unless the target gives `reference_ghz`
+  (the paper's normalization frequency, devices.csv `bw3db_reference`). `bw3db_ghz` / `bw6db_ghz`: first frequency at
+  or below -3 / -6 dB on the sweep grid, refined by bisection; `eo_rolloff_db` (needs `at_ghz`): signed S21_EO
+  (negative = drop; the database stores the positive drop, convention (g)). RF Vpi(f) = Vpi_DC / |H(f)| in amplitude
+  of V_s Z_L / (Z_s + Z_L) (= the incident voltage V_s / 2 for Z_L = Z_s); needs `eo_overlap` and `line.length_mm`.
+- `result.response`: sweep (`fGhz`, `s21EoDb`, `hRe`, `hIm`, `vpiRfV`), `bw3dbGhz`, `bw6dbGhz` (also metrics
+  `bw3db_ghz`, `bw6db_ghz` when a crossing exists), bandwidth search status and bound, per-target values.
+- Targets: evaluated on section `geometry` with an explicit topology, an independent loss model (not
+  `from_paper_alpha`, not `rprime_reference`, conductor model not `none`), a computed group index (not `fixed`) and
+  `comparable` not false. A bandwidth without a crossing up to the sweep end is `not_evaluated` with the bound, or
+  `fail` (`actualBound: {gt}`) when the sweep end already exceeds value + tolerance.
+
+`loaded_line` (periodic T-rail, `line.loading.type: periodic_t_rail`):
+
+- Both cuts (`loaded_cross_section`, default `geometry`, and `unloaded_cross_section`) are solved by the 2D
+  electrostatics (the run section is reused). Cell: symmetric [U(l_U/2)] [L(l_L)] [U(l_U/2)], l_L =
+  `loaded_length_um`, l_U = `period_um` - l_L, each section an exact distributed uniform line; Bloch
+  cosh(gamma_B p) = (A + D)/2 (principal branch, Re >= 0), Z_B = sqrt(B/C); Bragg frequency of the lossless cell
+  (beta_B p = pi); values at or above it are not reported.
+- Sections: unloaded C'_U, L'_U = 1/(c^2 C0'_U), R'_U; loaded C'_L; with loading conductors (loaded-cut electrodes
+  absent from the unloaded cut) L'_L = L'_U and R'_L = R'_U (Shin, Sakamoto, Dagli, JLT 29, 48 (2011), Sec. II),
+  otherwise the loaded cut's own L' and conductor model; G' from each cut's energy fractions.
+- The lossless Bloch quantities need only the two cuts; the lossy line needs a complete loss declaration on both cuts
+  (`from_paper_alpha` gives none). Static `n_rf` and `z0_ohm` targets of a periodic line are compared with the
+  quasi-static limits c sqrt(L'_avg C'_avg) and sqrt(L'_avg / C'_avg); periodic `at_ghz` RF targets with the lossy
+  Bloch values.
+- `result.loaded`: cuts, loading conductors, per-length values per section and average, `quasiStatic`, `braggGhz`,
+  lossless and lossy Bloch sweeps, `loss` (null with `lossReason`), formulas. Limits: 2D cuts only, no 3D fringing of
+  T segments or stems, pads held at electrode potentials by the config weights, stem inductance and T-rail resistance
+  neglected, Bloch line used as an effective uniform line (cell-averaged).
+- Postprocessing dataset `rf` adds `rf.nB`, `rf.ZB`, `rf.alphaB`, `rf.alphaB_dB`, `rf.S21EO`, `rf.S21EO_dB`,
+  `rf.VpiRF`; globals `bw3dB`, `bw6dB`, `fBragg`, `nB0`, `ZB0`.
+- Target key `reference_ghz` (response metrics only); `eo_rolloff_db` requires `at_ghz`, bandwidth metrics reject it.
+
+Round 2 (DevLog-036, 2026-10-16; audit `DevLog/audits/simulator-s7-audit-2026-10-16.md`):
+
+- Target key `reference: dc | low_freq_unstated | unspecified` (response metrics, excludes `reference_ghz`; the data
+  enum `bw3db_reference`). `low_freq_unstated` / `unspecified` targets are `not_evaluated`; the reason and
+  `referenceSensitivity` give the engine values with the reference at DC, 1 GHz and 3 GHz.
+- Bandwidth search starts at the reference (f_ref, or DC with 0 dB) and brackets the interval up to the first sweep
+  point (no "below the search start" case).
+- Periodic lines: `line.loading.response_model: exact_cascade` (default; per-section V = a e^{-gamma s} + b e^{gamma s}
+  over the cell sections U(l_U/2) L(l_L) U(l_U/2) repeated and cut at L, input impedances from the load, valid also
+  near and above Bragg) or `bloch_homogenised` (round-1 effective line, values at or above Bragg omitted). Warning
+  `bragg_frequency_within_3x_of_highest_evaluated_frequency`; periodic RF Vpi carries
+  `vpi_rf_uses_run_section_eo_overlap_over_full_length`. EO weight per length is uniform along the line.
+- `line.conductor_thickness_model: semi_infinite | slab_one_sided | slab_symmetric` (skin_effect_* models; default
+  semi_infinite = round 1). Slab: Z_s = (k/sigma) coth(k t_eff), k = (1 + j)/delta, t_eff = t or t/2,
+  R' = K Re Z_s, internal inductance K Im Z_s / omega; t = smallest electrode bounding-box dimension.
+  Guidance (round 3, audit R2-2): coplanar electrodes (CPW, GSG, GS strips on one plane; all current
+  skin_effect_wheeler configs, which declare it) use `slab_symmetric` (equal top and bottom face currents);
+  `slab_one_sided` only where a config declares single-face current (parallel plates, microstrip-like strip or
+  electrode over a nearby ground or conductive layer). Remaining limits (diagnostic `slab_model_limits` on every
+  response target of a slab line): the geometry factor K is frozen at the high-frequency current distribution, and
+  sidewall surfaces also get coth(k t_eff). `result.rf.dcResistance` lists the model f -> 0 limit K/(sigma t_eff) next
+  to the uniform-current R_DC from the electrode areas: a reported comparison, not a validity test of the face model
+  (the frozen K is not a DC prediction).
+- Normalization (round 3, R2-4): with a slab model R'(0) > 0, and H is normalized by the model's own f -> 0 limit,
+  the DC circuit Phi_0 = I (Z_L L + int_0^L z R'(z) dz), I = V_s / (Z_s + Z_L + R_0) (equal to the lossless Phi_DC for
+  Z_s = Z_L); `result.response.normalization`, `seriesResistanceDcOhm`, `normalizationOffsetDb`. RF Vpi is then in
+  amplitude of the mean DC line voltage of the model, V_s Phi_0 / L (`result.response.vRefDefinition`; equal to
+  V_s Z_L / (Z_s + Z_L) for Z_s = Z_L or R'(0) = 0).
+- Diagnostic `band_below_lateral_current_relaxation_estimate` (any skin-effect model; round 5: also on the DC-referenced
+  `result.response.bandwidth` entries, `metricDiagnostics` for metrics bw3db_ghz / bw6db_ghz, and each reference entry
+  of `referenceSensitivity`; the stage warning stands whenever the estimate exists, since the sweep is DC-referenced): the band from the reference
+  reaches below f_lat ~ 1/(pi mu0 sigma t w) (narrowest signal strip; order-of-magnitude estimate where the
+  thin-sheet diffusion length delta^2/t equals w), below which the current spreads across the strip towards R_DC;
+  `result.response.lateralRelaxationGhz`.
+- Response-target diagnostics (evaluated, counted in `targetSummary.flagged`, codes in `diagnosticCodes`):
+  `assumption_dielectric_loss_none` (dielectric loss declared none), `thin_conductor_semi_infinite_surface_impedance_in_band`
+  (semi-infinite model and the band from the reference to the evaluated frequency reaches below the frequency where
+  t = 3 delta, `result.response.thinConductorBelowGhz`), `wheeler_step_check_spread_above_1e-2`.
+
+S7 x S8: Si phase-shifter traveling-wave response (DevLog-036 rounds 4-5, 2026-10-16):
+
+- `stages: [semiconductor, eo_response]`. Inputs: the electrode cross-section of the line `line.rf_section` and the
+  operating DC bias `semiconductor.operating_bias_v` (one of `semiconductor.bias.values`); the run options
+  `rfSection` / `biasV` override them; no default. The semiconductor stage runs first on the run section; then
+  `rf_line` on the electrode section (the config's `line` block and loss declaration) and `eo_response`.
+- Circuit (Shin, Sakamoto, Dagli, JLT 29, 48 (2011), Fig. 2, eqs. (1)-(5), p. 49; p. 50, end of Sec. II, for
+  semiconductor-junction loading): electrode R' + j w L' in series, G' + j w C' in shunt, plus the junction branch per
+  length Y'_j = (G'_j + j w C'_j) / (1 + R'_j (G'_j + j w C'_j)) (series R'_j with G'_j || C'_j; the semiconductor
+  stage's `perLength` rOhmM, gSPerM (null = 0), cFPerM at the operating bias). The phase follows the junction voltage
+  V_j = V_line / (1 + R'_j (G'_j + j w C'_j)) with the stage's small-signal dn_eff/dV at that bias
+  (`perLength.dneffPerV`); H_Si = H_line(junction-loaded gamma, Z0) x that divider, normalized by its DC limit (with
+  G'_j > 0 the DC line has the shunt G'_j / (1 + R'_j G'_j), `normalization: model_dc_with_junction_conductance`).
+  Vpi_DC = lambda / (2 L |dn_eff/dV|) (single arm, swept-contact volts); RF Vpi = Vpi_DC / |H| in amplitude of the
+  mean DC junction voltage of the model (`vRefDefinition`).
+- Forward-bias operating points are rejected: their C' is the quasi-static diffusion capacitance, valid only for
+  omega tau << 1, so the circuit does not hold in the GHz band.
+- C'_j is the terminal-charge capacitance of the device cut (D1), so any contact-to-contact capacitance of that domain
+  sits behind R'_j in the branch and the divider; the electrode cross-section must not contain the junction (its C' is
+  the electrode capacitance alone; a label, not enforced). The thin-conductor and lateral-relaxation diagnostics apply
+  as on the cross-section path. `result.response.lineKind: junction_loaded_rf_line`, `junction`, `junctionLine` (n, Z,
+  alpha of the loaded line), `semiconductor` (bias, dn_eff/dV, G'_j, f_RC, flags).
+
+## S8: silicon drift-diffusion and plasma dispersion (DevLog-039, 2026-10-16)
+
+Entry: `runCrossSection(text, {stages: ['semiconductor'], section, meshScale, keep, fields})` (CLI
+`--stages semiconductor [--section NAME]`); the stage runs alone (own device mesh and Poisson solve; config `targets`
+are reported not_evaluated). Direct entry `runSemiconductor(text | parseConfig(), {section, meshScale, params, optics,
+datasets, keep, meshCheck})` in `engine/src/semi-stage.mjs`; studies `runSemiconductorSweepPoint(text, index)`.
+Input block `semiconductor` (full example in DevLog-039):
+
+- `materials.<m>`: geometry material solved as semiconductor (`semiconductor: silicon`; one material per section);
+  `intrinsic_density` (`sproul_green_1991` default, 275-375 K, or `{ni_cm3}`), `mobility` (`doping:
+  masetti_1983 | caughey_thomas_1967 | constant`, `donor: phosphorus | arsenic`, `field: caughey_thomas_1967 | none`),
+  `recombination.srh {tau_n_s, tau_p_s, trap_level_ev}` (inputs, no default lifetime). RF `eps_r` of the region
+  materials is the Poisson permittivity; `poisson_domain: all (default) | semiconductor` (insulators removed, zero
+  flux on silicon surfaces: the Si-only C').
+- `doping[]`: `species`, `profile: uniform {concentration_cm3} | gaussian {peak_cm3, vertical {surface_y_um,
+  range_um, straggle_um}} | erfc {peak_cm3, vertical {surface_y_um, depth_um}}`, optional `lateral {x_um,
+  straggle_um}` (mask window with erf edges) and `within {regions | material | rect | polygon_um}`. Contributions add.
+- `contacts[]`: ohmic, `bias_v`; either `{electrode}` (every geometry electrode must be listed and touch the
+  semiconductor) or `{name, segment: {x_um, y_um}}` (bare semiconductor face; the nodes on the straight segment are
+  pinned; geometries without metal may then have `electrodes: []`). `bias`: sweep of one contact (`values_v` or
+  `start_v/stop_v/step_v`, `reference_v`). `numerics`, `small_signal {dv_v}`, `mesh {semiconductor_edge_um,
+  junction_edge_um, max_vertices}`. Outer boundaries must be zero-flux (`geometry.boundary` dirichlet is rejected).
+- `operating_bias_v`: DC bias of the swept contact (one of the bias values) for `eo_response` after the semiconductor
+  stage, with `line.rf_section` (electrode cross-section of the TWE); run options `biasV` / `rfSection` override.
+  `small_signal.capacitance` requires exactly two contacts of opposite doping type (two-terminal C').
+- `optics {plasma_dispersion: nedeljkovic_2011 (Table 1 rows 1.3-14 um, nearest row within 0.05 um, mismatch effect
+  estimated against the neighbouring row and labelled) |
+  soref_bennett_1987 (1.3, 1.55 um), wavelength_nm, drive, density_basis: absolute | change, delta_eps:
+  first_order | exact}` with the config `optics` block (vector solver). `absolute` (default): dn(V) = f(N(V), P(V)) -
+  f(N(V0), P(V0)); `first_order` (default): delta eps = 2 n_Si (dn + i dk).
+- `targets[]`: `{metric, at_bias_v, value, tol_abs | tol_rel, vpi_convention, reference, source}`; honours
+  `source.comparable: false`; VpiL by `vpi_convention`: per_arm_phase_shifter / mzm_single_arm -> single-arm secant
+  (vpil_vcm) or differential, mzm_push_pull -> push-pull differential; others not_evaluated.
+
+Output per bias point: contact currents (A/m, into the device; majority-carrier values from conservation, flagged
+`contact_current_below_residual_floor` when the Newton residual is not small against them) and charges; C' = d(terminal
+charge)/dV by central difference, terminal charge = metal (Poisson-residual) charge of the contact + the free carriers
+that enter only through it (-q int n for an n-type contact, +q int p for p-type); forward bias includes the stored
+diffusion charge (flag); R' (quasi-neutral conduction, depleted region shorted), f_RC = 1/(2 pi R' C'); dn_eff,
+d alpha, loss (dB/cm); G' = dI/dV (null below the residual floor); small-signal dn_eff/dV and d alpha/dV (central over
++-dv/2); VpiL: single-arm secant from `reference_v` (large signal), single-arm differential lambda / (2 |dn_eff/dV|),
+push-pull lambda / (4 |dn_eff/dV|) only at a reverse DC bias (null with a reason at 0 V or forward); checks (charge
+neutrality, direct vs conservation majority residual, null when unresolved), flags, timing; `perLength` (C', R', G',
+dn_eff/dV, flags; branch Y' = (G' + j w C') / (1 + R' (G' + j w C'))) for the TWE line; `meshCheck` (option)
+per-point differences to a refined run.
+Postproc store (keep: true): datasets `semi` (reference bias) and `semi:<k>` (bias point k), variables `semi.psi`,
+`semi.phin`, `semi.phip`, `semi.n`, `semi.p`, `semi.ND`, `semi.NA`, `semi.Nnet`, `semi.rho`, `semi.dN`, `semi.dP`,
+`semi.delta_n`, `semi.delta_alpha` (SI units, P1 interpolation); the optical mode as `opt`. Labels state the model
+limits: Boltzmann statistics, full ionisation, no bandgap narrowing, no Auger, ideal ohmic contacts, no interface
+charge. `symmetry` must be `none`. References: S8 cases K10-K12 in `npm run test:reference`.
+
 ## Changelog
+- 2026-10-16 DevLog-039 round 3: G' and small-signal dn_eff/dV in `perLength`; push-pull only at reverse DC bias;
+  two-terminal C' rule; `semiconductor.operating_bias_v`, `line.rf_section`; Nedeljkovic row-mismatch estimate; default
+  mesh grading and explicit `far_edge_um` scale with meshScale < 1 (meshScale 1 unchanged); schema mirrored
+  (`geometry.electrodes` may be empty only with a semiconductor block).
+- 2026-10-16 DevLog-036 round 5: junction G' branch, forward-bias rejection, config keys line.rf_section /
+  semiconductor.operating_bias_v, DC-referenced diagnostics, RF Vpi reference wording.
+- 2026-10-16 DevLog-036 round 4: junction-loaded Si TWE response after the semiconductor stage (S7 x S8).
+- 2026-10-16 DevLog-039 round 2: `semiconductor` stage in the runner and CLI; segment contacts, `poisson_domain`,
+  `delta_eps`, target `vpi_convention` / `reference` / `comparable`; C' terminal-charge definition (audit D1); push-pull
+  VpiL (D4); semi postproc datasets; default far-field mesh cap scales with meshScale (D11; meshScale 1 unchanged).
+- 2026-10-16 DevLog-036 round 2: target `reference`; exact cascade response for periodic lines (`response_model`);
+  `conductor_thickness_model` slab surface impedance; response diagnostics and Bragg warning; bandwidth bracket from the
+  reference. Schema mirrored.
+- 2026-10-16 DevLog-039: `semiconductor` block and `runSemiconductor` (section S8 above); schema `$defs/semiconductor`
+  and property `semiconductor`.
+- 2026-10-15 DevLog-036: `loaded_line` and `eo_response` implemented (section S7 above); target key `reference_ghz`;
+  `eo_response` adds its dependency stages; periodic static `n_rf` / `z0_ohm` targets use the quasi-static Bloch
+  limits. Schema mirrored (`reference_ghz`, description).
 - 2026-10-15 DevLog-034: `evaluatePlot` location `refined` (resolution, smoothing, sub-triangle cap) and the refine
   helpers; location `p2nodes` removed.
 - 2026-10-15 DevLog-031: `optics.num_modes`; `keep` internals; postprocessing engine (`engine/src/postproc/`);

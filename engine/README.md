@@ -36,9 +36,28 @@ vacuum-only solves with a step check (spread above 1e-2 flags the evaluated RF t
 no line current in 2D); run it on the unloaded cut. EO arm windows refine the
 electrostatic mesh like `optical_window`. `mzm_differential` targets follow data schema
 convention (q): V_pi against V+ - V-, the engine V_t. Material and target keys are strict.
-Q2 corrections of 2026-10-07 are listed in DevLog-012. Periodic-cell ABCD (`loaded_line`) and
-traveling-wave EO response (`eo_response`) are not implemented and error when
-requested. `chain` never causes a stage to execute.
+Q2 corrections of 2026-10-07 are listed in DevLog-012. Since 2026-10-15 (DevLog-036) the
+periodic loaded line (`loaded_line`: exact distributed Bloch cell of the loaded and unloaded
+cuts, Bragg frequency, quasi-static limits; `src/loaded-line.mjs`) and the traveling-wave EO
+response (`eo_response`: forward and reflected waves, source and load, optical group index,
+S21_EO, 3 dB / 6 dB bandwidths, RF Vpi; exact section cascade on periodic lines;
+`src/eo-response.mjs`) are implemented; `eo_response` adds `optical_mode` and `rf_line` or
+`loaded_line` to the run. Conventions: sims/SPEC.md section S7. `chain` never causes a stage
+to execute.
+
+Silicon PN/PIN phase shifters (DevLog-039; conventions sims/SPEC.md section S8): the `semiconductor` stage
+(`src/semi-stage.mjs`, `src/semi/`) solves 2D steady-state drift-diffusion (Scharfetter-Gummel box method, Newton with
+a Cholesky-preconditioned GMRES, Gummel warm start, bias ramp; Sproul-Green n_i, Masetti / Caughey-Thomas mobility,
+SRH) on its own device mesh, then C'(V), G'(V), R', f_RC, and with `semiconductor.optics` the plasma-dispersion
+response of the vector mode (Nedeljkovic 2011 or Soref-Bennett): dn_eff(V), d alpha(V), loss, VpiL (single-arm secant,
+small-signal, push-pull at a reverse DC bias). It runs alone: `runCrossSection(text, {stages: ['semiconductor'],
+section})` or `node cli.mjs CONFIG.yaml --stages semiconductor [--section NAME]`; with `eo_response` added it drives
+the junction-loaded traveling-wave response on the electrode cross-section `line.rf_section` at
+`semiconductor.operating_bias_v` (run options rfSection / biasV override). Inputs: the `semiconductor` block
+(materials, doping profiles, ohmic contacts on electrodes or bare-face segments, bias sweep, numerics, small signal,
+mesh, optics, targets). `result.semiconductor.perLength` exports C', R', G' and dn_eff/dV per bias for the line model;
+`keep: true` adds the postproc datasets `semi` / `semi:<k>` (nodal `semi.*` fields and per-point globals). References:
+the S8 cases K10-K12 in `npm run test:reference`.
 
 Optical solver (DevLog-026 round 2): `optics.solver: vector` (or the run option `solver`) routes the optical and EO
 stages through the full-vector FEM of `src/vector-mode.mjs` (`src/optical-stage.mjs` dispatches; default scalar).

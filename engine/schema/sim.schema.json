@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://eo-atlas.local/schema/sim.schema.json",
   "title": "EO atlas simulation inputs v1",
-  "description": "Cross-section input structure. Runtime validation additionally checks positive material tensors, geometry coverage, references, voltage normalization, numerical limits, model/field consistency of the line block and stage completeness (EO arm windows, RF loss declarations) when a stage is requested. loaded_line and eo_response are recognised but not implemented. Since 2026-10-14 (DevLog-026): params with '=' expressions, template (generates geometry), study/studies (parametric sweeps), materials.<m>.library.",
+  "description": "Cross-section input structure. Runtime validation additionally checks positive material tensors, geometry coverage, references, voltage normalization, numerical limits, model/field consistency of the line block and stage completeness (EO arm windows, RF loss declarations) when a stage is requested. loaded_line (periodic T-rail Bloch cell) and eo_response (traveling-wave EO response) are implemented since 2026-10-15 (DevLog-036). Since 2026-10-14 (DevLog-026): params with '=' expressions, template (generates geometry), study/studies (parametric sweeps), materials.<m>.library.",
   "type": "object",
   "required": [
     "schema",
@@ -49,7 +49,8 @@
           "eo_overlap",
           "rf_line",
           "loaded_line",
-          "eo_response"
+          "eo_response",
+          "semiconductor"
         ]
       }
     },
@@ -420,6 +421,13 @@
                 "null"
               ]
             },
+            "response_model": {
+              "enum": [
+                "exact_cascade",
+                "bloch_homogenised"
+              ],
+              "description": "eo_response on a periodic line (DevLog-036 round 2): exact section cascade (default) or the Bloch gamma_B, Z_B as an effective uniform line"
+            },
             "unloaded_cross_section": {
               "type": [
                 "string",
@@ -534,6 +542,14 @@
         "include_internal_inductance": {
           "type": "boolean"
         },
+        "conductor_thickness_model": {
+          "enum": [
+            "semi_infinite",
+            "slab_one_sided",
+            "slab_symmetric"
+          ],
+          "description": "Surface internal impedance of the skin_effect_* models (DevLog-036 round 2): semi_infinite R_s (1 + j) (default), or the slab (k/sigma) coth(k t_eff) with t_eff = t (one-sided) or t/2 (symmetric, both faces); t = smallest electrode bounding-box dimension"
+        },
         "r_pul_ref_ohm_per_m": {
           "minimum": 0,
           "anyOf": [
@@ -614,6 +630,10 @@
             }
           ],
           "description": "Paper attenuation input (from_paper_alpha); never an independent prediction; needs a provenance locator."
+        },
+        "rf_section": {
+          "type": "string",
+          "description": "electrode cross-section (geometry or alt_geometries name) of the junction-loaded TWE response after the semiconductor stage (DevLog-039 round 3); the run option rfSection overrides it"
         },
         "rf_loss_law": {
           "anyOf": [
@@ -743,9 +763,748 @@
       "additionalProperties": {
         "$ref": "#/$defs/study"
       }
+    },
+    "semiconductor": {
+      "$ref": "#/$defs/semiconductor"
     }
   },
   "$defs": {
+    "semiconductor": {
+      "type": "object",
+      "description": "S8 silicon drift-diffusion input (DevLog-039, engine/src/semi-stage.mjs runSemiconductor). Models: intrinsic density Sproul-Green 1991 eq. 14 (275-375 K), mobility Masetti 1983 (doping) and Caughey-Thomas 1967 (field), SRH with configured lifetimes, ohmic contacts, plasma dispersion Nedeljkovic 2011 (1.3/1.55 um) or Soref-Bennett 1987. Contacts name geometry electrodes that touch semiconductor; targets here are compared by the semiconductor stage, not by config.targets.",
+      "required": [
+        "materials",
+        "doping",
+        "contacts"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "temperature_k": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 275,
+              "maximum": 375
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
+        },
+        "materials": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "semiconductor"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "semiconductor": {
+                "enum": [
+                  "silicon"
+                ]
+              },
+              "intrinsic_density": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "sproul_green_1991"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "ni_cm3"
+                    ],
+                    "properties": {
+                      "ni_cm3": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          },
+                          {
+                            "$ref": "#/$defs/expression"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "mobility": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "doping": {
+                    "enum": [
+                      "masetti_1983",
+                      "caughey_thomas_1967",
+                      "constant"
+                    ]
+                  },
+                  "donor": {
+                    "enum": [
+                      "phosphorus",
+                      "arsenic"
+                    ]
+                  },
+                  "field": {
+                    "enum": [
+                      "caughey_thomas_1967",
+                      "none"
+                    ]
+                  },
+                  "mu_n_cm2_per_vs": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
+                  },
+                  "mu_p_cm2_per_vs": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
+                  }
+                }
+              },
+              "recombination": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "srh": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "tau_n_s",
+                      "tau_p_s"
+                    ],
+                    "properties": {
+                      "tau_n_s": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          },
+                          {
+                            "$ref": "#/$defs/expression"
+                          }
+                        ]
+                      },
+                      "tau_p_s": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          },
+                          {
+                            "$ref": "#/$defs/expression"
+                          }
+                        ]
+                      },
+                      "trap_level_ev": {
+                        "anyOf": [
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "$ref": "#/$defs/expression"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "doping": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "species",
+              "profile"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "species": {
+                "enum": [
+                  "donor",
+                  "acceptor"
+                ]
+              },
+              "profile": {
+                "enum": [
+                  "uniform",
+                  "gaussian",
+                  "erfc"
+                ]
+              },
+              "concentration_cm3": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "$ref": "#/$defs/expression"
+                  }
+                ]
+              },
+              "peak_cm3": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "$ref": "#/$defs/expression"
+                  }
+                ]
+              },
+              "vertical": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "surface_y_um"
+                ],
+                "properties": {
+                  "surface_y_um": {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
+                  },
+                  "range_um": {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
+                  },
+                  "straggle_um": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
+                  },
+                  "depth_um": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
+                  }
+                }
+              },
+              "lateral": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "x_um"
+                ],
+                "properties": {
+                  "x_um": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "$ref": "#/$defs/expression"
+                        }
+                      ]
+                    }
+                  },
+                  "straggle_um": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "$ref": "#/$defs/expression"
+                      }
+                    ]
+                  }
+                }
+              },
+              "within": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "regions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1
+                  },
+                  "material": {
+                    "type": "string"
+                  },
+                  "rect": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "x_um",
+                      "y_um"
+                    ],
+                    "properties": {
+                      "x_um": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "anyOf": [
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "$ref": "#/$defs/expression"
+                            }
+                          ]
+                        }
+                      },
+                      "y_um": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "anyOf": [
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "$ref": "#/$defs/expression"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "polygon_um": {
+                    "type": "array",
+                    "minItems": 3,
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "maxItems": 2,
+                      "items": {
+                        "anyOf": [
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "$ref": "#/$defs/expression"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "give electrode (a geometry electrode touching the semiconductor) or name + segment (bare semiconductor face; straight segment, equal x or equal y)",
+            "properties": {
+              "electrode": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "segment": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "x_um",
+                  "y_um"
+                ],
+                "properties": {
+                  "x_um": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "$ref": "#/$defs/expression"
+                        }
+                      ]
+                    }
+                  },
+                  "y_um": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "$ref": "#/$defs/expression"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "type": {
+                "enum": [
+                  "ohmic"
+                ]
+              },
+              "bias_v": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "$ref": "#/$defs/expression"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "operating_bias_v": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ],
+          "description": "operating DC bias of the swept contact (one of the bias values) for the junction-loaded TWE response (eo_response after the semiconductor stage)"
+        },
+        "poisson_domain": {
+          "enum": [
+            "all",
+            "semiconductor"
+          ],
+          "description": "semiconductor: insulators removed from the electrostatics (Si-only C')"
+        },
+        "bias": {
+          "type": "object",
+          "required": [
+            "contact"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "contact": {
+              "type": "string"
+            },
+            "values_v": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "$ref": "#/$defs/expression"
+                  }
+                ]
+              }
+            },
+            "start_v": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "stop_v": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "step_v": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "reference_v": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            }
+          }
+        },
+        "numerics": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ramp_step_v": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "forward_ramp_step_v": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "update_tol_vt": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "max_newton": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "small_signal": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "dv_v": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "capacitance": {
+              "type": "boolean"
+            },
+            "series_resistance": {
+              "type": "boolean"
+            }
+          }
+        },
+        "mesh": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "semiconductor_edge_um": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "junction_edge_um": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "max_vertices": {
+              "type": "integer",
+              "minimum": 100
+            }
+          }
+        },
+        "optics": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "plasma_dispersion": {
+              "enum": [
+                "nedeljkovic_2011",
+                "soref_bennett_1987"
+              ]
+            },
+            "wavelength_nm": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "$ref": "#/$defs/expression"
+                }
+              ]
+            },
+            "drive": {
+              "enum": [
+                "single_arm",
+                "push_pull"
+              ]
+            },
+            "density_basis": {
+              "enum": [
+                "absolute",
+                "change"
+              ],
+              "description": "absolute (default): dn(V) = f(N(V), P(V)) - f(N(V0), P(V0)); change: f applied to N(V) - N(V0)"
+            },
+            "delta_eps": {
+              "enum": [
+                "first_order",
+                "exact"
+              ],
+              "description": "first_order (default): 2 n (dn + i dk); exact: (n + dn + i dk)^2 - n^2"
+            }
+          }
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "metric",
+              "value",
+              "at_bias_v"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "metric": {
+                "enum": [
+                  "vpil_vcm",
+                  "vpil_differential_vcm",
+                  "dneff",
+                  "dalpha_db_per_cm",
+                  "loss_db_per_cm",
+                  "c_pf_per_mm",
+                  "r_ohm_mm",
+                  "f_rc_ghz"
+                ]
+              },
+              "value": {
+                "type": "number"
+              },
+              "at_bias_v": {
+                "type": "number"
+              },
+              "tol_abs": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tol_rel": {
+                "type": "number",
+                "minimum": 0
+              },
+              "vpi_convention": {
+                "enum": [
+                  "per_arm_phase_shifter",
+                  "mzm_push_pull",
+                  "mzm_series_push_pull",
+                  "mzm_differential",
+                  "mzm_single_arm",
+                  "resonance_tuning_derived",
+                  "unspecified"
+                ]
+              },
+              "reference": {
+                "enum": [
+                  "dc",
+                  "low_freq_unstated",
+                  "unspecified"
+                ]
+              },
+              "source": {}
+            }
+          }
+        }
+      }
+    },
     "interval": {
       "type": "array",
       "minItems": 2,
@@ -863,7 +1622,7 @@
         },
         "electrodes": {
           "type": "array",
-          "minItems": 1,
+          "description": "at least one electrode, except for a semiconductor-only cross-section (semiconductor block with bare-face segment contacts; top-level allOf rule)",
           "items": {
             "allOf": [
               {
@@ -1332,6 +2091,26 @@
         },
         "at_ghz": {
           "exclusiveMinimum": 0,
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "#/$defs/expression"
+            }
+          ]
+        },
+        "reference": {
+          "enum": [
+            "dc",
+            "low_freq_unstated",
+            "unspecified"
+          ],
+          "description": "Response targets (DevLog-036 round 2): the paper's normalization when it has no stated frequency (devices.csv bw3db_reference); low_freq_unstated / unspecified are reported at the DC, 1 GHz and 3 GHz references and not compared; excludes reference_ghz"
+        },
+        "reference_ghz": {
+          "exclusiveMinimum": 0,
+          "description": "eo_rolloff_db, bw3db_ghz, bw6db_ghz only (DevLog-036): frequency the paper's EO response is normalized to (devices.csv bw3db_reference); absent = DC limit of the model",
           "anyOf": [
             {
               "type": "number"
@@ -2054,6 +2833,17 @@
                 "type": "number",
                 "exclusiveMinimum": 0
               },
+              "reference_ghz": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "reference": {
+                "enum": [
+                  "dc",
+                  "low_freq_unstated",
+                  "unspecified"
+                ]
+              },
               "source": {
                 "type": "object",
                 "properties": {
@@ -2103,6 +2893,36 @@
     }
   },
   "allOf": [
+    {
+      "description": "geometry.electrodes (and every alt geometry) need at least one electrode unless a semiconductor block is present (DevLog-039 round 3)",
+      "if": {
+        "not": {
+          "required": [
+            "semiconductor"
+          ]
+        }
+      },
+      "then": {
+        "properties": {
+          "geometry": {
+            "properties": {
+              "electrodes": {
+                "minItems": 1
+              }
+            }
+          },
+          "alt_geometries": {
+            "additionalProperties": {
+              "properties": {
+                "electrodes": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     {
       "anyOf": [
         {

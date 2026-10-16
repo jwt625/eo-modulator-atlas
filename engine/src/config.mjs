@@ -1,5 +1,6 @@
 // Shared browser/CLI input boundary. Physical inputs are never silently filled in.
 // Numerical meshing defaults are documented in sims/SPEC.md. GPL-3.0-or-later.
+import { semiconductorOptions } from './semi/config.mjs';
 import { parseDocument } from 'yaml';
 import { rectToPolygon } from './geometry.mjs';
 import { resolveMaterial, MATERIAL_LIBRARY } from './materials.mjs';
@@ -9,9 +10,11 @@ import { normalizeWeights } from './electrostatics.mjs';
 import { CrossSection } from './section.mjs';
 
 export const MAX_VERTICES = 80000;
-export const STAGES = ['electrostatics', 'optical_mode', 'eo_overlap', 'rf_line', 'loaded_line', 'eo_response'];
-/** Stages runCrossSection can execute; the remaining STAGES are recognised but not implemented. */
-export const IMPLEMENTED_STAGES = ['electrostatics', 'optical_mode', 'eo_overlap', 'rf_line'];
+export const STAGES = ['electrostatics', 'optical_mode', 'eo_overlap', 'rf_line', 'loaded_line', 'eo_response', 'semiconductor'];
+/** Stages runCrossSection can execute (all STAGES since DevLog-036; semiconductor since DevLog-039 round 2, run alone). */
+export const IMPLEMENTED_STAGES = ['electrostatics', 'optical_mode', 'eo_overlap', 'rf_line', 'loaded_line', 'eo_response', 'semiconductor'];
+/** Frequency-response target metrics (eo_response stage, DevLog-036). */
+export const RESPONSE_METRICS = ['eo_rolloff_db', 'bw3db_ghz', 'bw6db_ghz'];
 export const TARGET_METRICS = ['vpi_l_dc_vcm', 'vpi_dc_v', 'n_eff', 'ng_opt', 'n_rf', 'z0_ohm', 'c_pul_pf_per_m', 'c0_pul_pf_per_m', 'l_pul_nh_per_m', 'rf_loss_db_per_cm', 'eo_rolloff_db', 'bw3db_ghz', 'bw6db_ghz', 'optical_confinement_in_region'];
 /** data/schema/devices.schema.yaml vpi_convention enum (copied, not imported: the engine has no data/ dependency). */
 export const VPI_CONVENTIONS = ['per_arm_phase_shifter', 'mzm_push_pull', 'mzm_series_push_pull', 'mzm_differential', 'mzm_single_arm', 'resonance_tuning_derived', 'unspecified'];
@@ -39,12 +42,19 @@ export const DEFAULT_ELEMENT_ORDER = 2;
 /** Electrostatic mesh-scale factor applied with P2 (mesh.p2_mesh_factor; DevLog-026 round 5, audit F4). P1 uses 1. */
 export const DEFAULT_P2_MESH_FACTOR = 2;
 const LINE_KEYS = ['length_mm', 'conductor_loss_model', 'dielectric_loss_model', 'include_internal_inductance', 'r_pul_ref_ohm_per_m', 'r_pul_ref_ghz',
-  'conductor_k_per_m', 'perimeters_cover_carrying_surfaces', 'rf_loss_table', 'rf_loss_law', 'source_ohm', 'load_ohm', 'differential', 'loading'];
+  'conductor_k_per_m', 'perimeters_cover_carrying_surfaces', 'rf_loss_table', 'rf_loss_law', 'source_ohm', 'load_ohm', 'differential', 'loading',
+  'conductor_thickness_model', 'rf_section'];
+/** line.conductor_thickness_model (DevLog-036 round 2, S2); semi_infinite is the round-1 surface-resistance model. */
+export const CONDUCTOR_THICKNESS_MODELS = ['semi_infinite', 'slab_one_sided', 'slab_symmetric'];
+/** line.loading.response_model for periodic lines (DevLog-036 round 2, S5). */
+export const PERIODIC_RESPONSE_MODELS = ['exact_cascade', 'bloch_homogenised'];
+/** Target `reference` values (data/schema bw_reference subset without a frequency; numeric references use reference_ghz). */
+export const TARGET_REFERENCES = ['dc', 'low_freq_unstated', 'unspecified'];
 const POCKELS_KEYS = ['r13', 'r22', 'r33', 'r51', 'voigt'];
 /** Material keys read by the solver boundary (Q2 M4: a typo such as r_pm_per_V must not silently drop a tensor). */
 const MATERIAL_KEYS = ['conductor', 'eps_r', 'n', 'n_o', 'n_e', 'sigma_Sm', 'crystal', 'r_pm_per_v', 'tan_delta_rf', 'dispersion', 'thickness_um', 'n_complex'];
 /** Target keys (Q2 M4: a typo such as at_GHz must not turn a frequency target into a static one). `source` stays open. */
-const TARGET_KEYS = ['metric', 'value', 'tol_abs', 'tol_rel', 'at_ghz', 'vpi_convention', 'source'];
+const TARGET_KEYS = ['metric', 'value', 'tol_abs', 'tol_rel', 'at_ghz', 'vpi_convention', 'reference_ghz', 'reference', 'source'];
 
 /** Never expanded as expressions (audit A13): metadata and free-text blocks at the top level, and free-text keys at any depth. */
 export const FREE_TEXT_TOP_LEVEL = ['schema', 'id', 'title', 'paper_id', 'device_id', 'repro_grade', 'validation_status', 'chain', 'params', 'study', 'studies', 'provenance', 'missing', 'limitations', 'reported_curves'];
@@ -97,13 +107,15 @@ function shape(v, p) {
   return poly;
 }
 
-export function normalizeGeometry(raw, materials, path = 'geometry') {
+export function normalizeGeometry(raw, materials, path = 'geometry', { allowNoElectrodes = false } = {}) {
   keys(raw, ['symmetry', 'mirror_x_um', 'domain', 'regions', 'electrodes', 'optical_window', 'mesh', 'boundary'], path);
   const domain = window(raw.domain, `${path}.domain`);
   const symmetry = oneOf(raw.symmetry ?? 'none', ['none', 'x_mirror_odd', 'x_mirror_even'], `${path}.symmetry`);
   const mirror = number(raw.mirror_x_um ?? 0, `${path}.mirror_x_um`);
   if (symmetry !== 'none' && (mirror < domain.x[0] || mirror > domain.x[1])) fail(path, 'mirror plane must meet the domain');
   const entities = (rows, kind) => {
+    // S8 (DevLog-039 round 2): a semiconductor-only cross-section may have no metal (bare-face segment contacts)
+    if (kind === 'electrodes' && allowNoElectrodes && Array.isArray(rows) && !rows.length) return [];
     if (!Array.isArray(rows) || !rows.length) fail(`${path}.${kind}`, 'expected a non-empty array');
     const names = new Set();
     return rows.map((r, i) => {
@@ -136,7 +148,7 @@ export function normalizeGeometry(raw, materials, path = 'geometry') {
   if (optical_window && ['x', 'y'].some((k) => optical_window[k][0] < domain[k][0] || optical_window[k][1] > domain[k][1])) fail(path, 'optical_window must lie within the domain');
   const regions = entities(raw.regions, 'regions');
   const electrodes = entities(raw.electrodes, 'electrodes');
-  normalizeWeights(electrodes, symmetry);
+  if (electrodes.length) normalizeWeights(electrodes, symmetry);
   for (const name of Object.keys(mesh.regions ?? {})) if (!regions.some(r => r.name === name)) fail(`${path}.mesh.regions`, `unknown region ${name}`);
   return { domain, symmetry, mirror_x_um: mirror, regions, electrodes, optical_window, mesh, boundary };
 }
@@ -263,10 +275,11 @@ function materialDeclarations(raw) {
 
 function normalizeGeometries(raw, materials) {
   const geometries = Object.create(null);
-  geometries.geometry = normalizeGeometry(raw.geometry, materials);
+  const gopt = { allowNoElectrodes: raw.semiconductor != null };
+  geometries.geometry = normalizeGeometry(raw.geometry, materials, 'geometry', gopt);
   for (const [name, g] of Object.entries(object(raw.alt_geometries ?? {}, 'alt_geometries'))) {
     if (name === 'geometry' || name === '__proto__') fail('alt_geometries', 'reserved geometry name');
-    geometries[name] = normalizeGeometry(g, materials, `alt_geometries.${name}`);
+    geometries[name] = normalizeGeometry(g, materials, `alt_geometries.${name}`, gopt);
   }
   return geometries;
 }
@@ -313,6 +326,8 @@ export function normalizeConfig(raw) {
     keys(raw.line, LINE_KEYS, 'line');
     if (raw.line.differential != null && typeof raw.line.differential !== 'boolean') fail('line.differential', 'expected a boolean');
     lineFields(raw.line);
+    // DevLog-039 round 3: electrode cross-section of the junction-loaded TWE response (semiconductor + eo_response)
+    if (raw.line.rf_section != null && (typeof raw.line.rf_section !== 'string' || !Object.hasOwn(geometries, raw.line.rf_section))) fail('line.rf_section', 'must name an existing cross-section (geometry or alt_geometries)');
     const loading = raw.line.loading;
     if (loading != null) {
       object(loading, 'line.loading');
@@ -320,6 +335,7 @@ export function normalizeConfig(raw) {
       if (loading.type === 'periodic_t_rail') {
         number(loading.period_um, 'line.loading.period_um', true);
         number(loading.loaded_length_um, 'line.loading.loaded_length_um', true);
+        if (loading.response_model != null) oneOf(loading.response_model, PERIODIC_RESPONSE_MODELS, 'line.loading.response_model');
         if (loading.loaded_length_um > loading.period_um) fail('line.loading.loaded_length_um', 'cannot exceed the period');
         for (const k of ['loaded_cross_section', 'unloaded_cross_section']) {
           const name = k === 'loaded_cross_section' ? loading[k] ?? 'geometry' : loading[k];
@@ -353,6 +369,18 @@ export function validateTarget(t, p) {
     if (t.source.comparable != null && typeof t.source.comparable !== 'boolean') fail(`${p}.source.comparable`, 'expected a boolean');
   }
   if (t.at_ghz != null) number(t.at_ghz, `${p}.at_ghz`, true);
+  if (t.metric === 'eo_rolloff_db' && t.at_ghz == null) fail(`${p}.at_ghz`, 'eo_rolloff_db needs the frequency of the roll-off (at_ghz)');
+  if (['bw3db_ghz', 'bw6db_ghz'].includes(t.metric) && t.at_ghz != null) fail(`${p}.at_ghz`, `${t.metric} is a frequency; at_ghz is not meaningful`);
+  if (t.reference_ghz != null) {
+    if (!RESPONSE_METRICS.includes(t.metric)) fail(`${p}.reference_ghz`, `only meaningful for ${RESPONSE_METRICS.join(', ')}`);
+    number(t.reference_ghz, `${p}.reference_ghz`, true);
+    if (t.metric === 'eo_rolloff_db' && !(t.reference_ghz < t.at_ghz)) fail(`${p}.reference_ghz`, 'must lie below at_ghz');
+  }
+  if (t.reference != null) {
+    if (!RESPONSE_METRICS.includes(t.metric)) fail(`${p}.reference`, `only meaningful for ${RESPONSE_METRICS.join(', ')}`);
+    oneOf(t.reference, TARGET_REFERENCES, `${p}.reference`);
+    if (t.reference_ghz != null) fail(`${p}.reference`, 'give either reference (dc, low_freq_unstated, unspecified) or reference_ghz, not both');
+  }
   if (t.tol_abs == null && t.tol_rel == null) fail(p, 'tolerance is required');
   for (const k of ['tol_abs', 'tol_rel']) if (t[k] != null && number(t[k], `${p}.${k}`) < 0) fail(p, 'tolerance cannot be negative');
   if (!Number.isFinite(Math.max(t.tol_abs ?? 0, Math.abs(t.value) * (t.tol_rel ?? 0)))) fail(p, 'tolerance must remain finite');
@@ -572,6 +600,10 @@ function lineFields(line) {
     fail('line.include_internal_inductance', 'only used by the rprime_reference and skin_effect_* conductor models');
   if (cm === 'from_paper_alpha' && line.dielectric_loss_model != null) fail('line.dielectric_loss_model', 'from_paper_alpha is a total-attenuation input; a dielectric model would double count loss');
   if (line.rf_loss_table != null && line.rf_loss_law != null) fail('line', 'give either rf_loss_table or rf_loss_law, not both');
+  if (line.conductor_thickness_model != null) {
+    oneOf(line.conductor_thickness_model, CONDUCTOR_THICKNESS_MODELS, 'line.conductor_thickness_model');
+    if (!['skin_effect_geometry_factor', 'skin_effect_perimeter', 'skin_effect_wheeler'].includes(cm)) fail('line.conductor_thickness_model', 'only used by the skin_effect_* conductor models');
+  }
 }
 
 /** Validated sweep frequencies in GHz (inclusive linear grid). */
@@ -598,15 +630,16 @@ const citationOf = (raw, key) => {
  * @returns {{conductorModel:string, dielectricModel:string|null, conductor:any, dielectricLoss:Record<string, any>|null,
  *   paper:any, sweepGhz:number[]|null, thicknessUm:number|null}}
  */
-export function rfOptions(raw, materials, geometry, sectionName = 'geometry') {
+export function rfOptions(raw, materials, geometry, sectionName = 'geometry', { allowLoadedCut = false } = {}) {
   const line = raw.line;
   if (line == null) fail('line', 'the rf_line stage requires a line block');
   const loading = line.loading;
   // Q2 C2: the loaded cut of a T-rail line holds conductors (the T pads) that carry no line current in the 2D section;
   // a uniform-line L', R' and loss of that cut are not meaningful, and the Wheeler recess would treat the pads as
   // current-carrying surfaces. Blocked until the loaded_line stage exists.
-  if (loading?.type === 'periodic_t_rail' && sectionName === (loading.loaded_cross_section ?? 'geometry'))
-    fail('rf_line', `cross-section ${sectionName} is the loaded cut of a periodic_t_rail line; its T-rail conductors carry no line current in a 2D section, so a uniform-line model of it is not meaningful. Run rf_line on the unloaded cross-section (${loading.unloaded_cross_section}); the loaded line needs the loaded_line stage (not implemented)`);
+  // allowLoadedCut: the loaded_line stage reads the loss declaration of the loaded cut for its own section model.
+  if (!allowLoadedCut && loading?.type === 'periodic_t_rail' && sectionName === (loading.loaded_cross_section ?? 'geometry'))
+    fail('rf_line', `cross-section ${sectionName} is the loaded cut of a periodic_t_rail line; its T-rail conductors carry no line current in a 2D section, so a uniform-line model of it is not meaningful. Run rf_line on the unloaded cross-section (${loading.unloaded_cross_section}); the loaded line is the loaded_line stage`);
   const cm = line.conductor_loss_model;
   if (cm == null) fail('line.conductor_loss_model', 'required for rf_line; unknown conductor loss is not zero (declare none explicitly)');
   const sweepGhz = raw.sweep == null ? null : sweepFrequencies(raw.sweep);
@@ -638,7 +671,7 @@ export function rfOptions(raw, materials, geometry, sectionName = 'geometry') {
         const xs = e.poly.map((q) => q[0]), ys = e.poly.map((q) => q[1]);
         return Math.min(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys));
       }));
-      const base = { sigmaSm: sigmas[0], thicknessM: thicknessUm * 1e-6, includeInternalInductance: internal };
+      const base = { sigmaSm: sigmas[0], thicknessM: thicknessUm * 1e-6, includeInternalInductance: internal, thicknessModel: line.conductor_thickness_model ?? 'semi_infinite' };
       if (cm === 'skin_effect_wheeler') {
         // Reference frequency of the recessed solves: the highest requested frequency (smallest skin depth); R' then scales
         // with R_s. A numerical choice derived from the inputs, not a physical constant.
@@ -674,6 +707,62 @@ export function rfOptions(raw, materials, geometry, sectionName = 'geometry') {
   return { conductorModel: cm, dielectricModel: dm, conductor, dielectricLoss, paper: null, sweepGhz, thicknessUm, dirichletSides };
 }
 
+// ---- loaded line and EO response stage inputs (DevLog-036) ----------------------------------------------------
+
+/**
+ * Validated periodic-line inputs of the loaded_line stage. The loss part (lossError null) needs a complete loss
+ * declaration on both cuts (conductor model on the unloaded cut, dielectric model on both); without it only the lossless
+ * Bloch quantities are computed. from_paper_alpha describes the whole line and gives no per-section loss.
+ * @returns {{periodM:number, loadedLengthM:number, loadedName:string, unloadedName:string, lossError:string|null,
+ *   rfUnloaded:any, rfLoaded:any}}
+ */
+export function loadedLineOptions(raw, materials, geometries) {
+  const loading = raw.line?.loading;
+  if (loading?.type !== 'periodic_t_rail') fail('line.loading.type', 'the loaded_line stage needs line.loading.type: periodic_t_rail');
+  const loadedName = loading.loaded_cross_section ?? 'geometry';
+  const unloadedName = loading.unloaded_cross_section;
+  if (loadedName === unloadedName) fail('line.loading', 'loaded and unloaded cross-sections must differ');
+  for (const n of [loadedName, unloadedName]) if (!Object.hasOwn(geometries, n)) fail('line.loading', `unknown cross-section ${n}`);
+  let lossError = null;
+  let rfUnloaded = null;
+  let rfLoaded = null;
+  try {
+    if (raw.line.conductor_loss_model === 'from_paper_alpha') fail('line.conductor_loss_model', 'from_paper_alpha is a whole-line attenuation; the loaded line needs per-section conductor and dielectric models');
+    rfUnloaded = rfOptions(raw, materials, geometries[unloadedName], unloadedName);
+    rfLoaded = rfOptions(raw, materials, geometries[loadedName], loadedName, { allowLoadedCut: true });
+  } catch (e) { lossError = e instanceof Error ? e.message : String(e); rfUnloaded = rfLoaded = null; }
+  return { periodM: loading.period_um * 1e-6, loadedLengthM: loading.loaded_length_um * 1e-6, periodUm: loading.period_um, loadedLengthUm: loading.loaded_length_um, loadedName, unloadedName, lossError, rfUnloaded, rfLoaded };
+}
+
+/**
+ * Validated eo_response inputs: line.length_mm (electrode length per arm, data convention (q)), source and load
+ * impedance, and a frequency sweep (the response grid and the bandwidth search range). Nothing is defaulted.
+ * @returns {{lengthM:number, zs:number, zl:number, sweepGhz:number[]}}
+ */
+export function eoResponseOptions(raw) {
+  const line = raw.line;
+  if (line == null) fail('line', 'the eo_response stage requires a line block');
+  for (const k of ['length_mm', 'source_ohm', 'load_ohm']) if (line[k] == null) fail(`line.${k}`, `required by eo_response (no default)`);
+  if (raw.sweep == null) fail('sweep', 'eo_response needs a frequency sweep (response grid and bandwidth search range)');
+  return { lengthM: line.length_mm * 1e-3, zs: line.source_ohm, zl: line.load_ohm, sweepGhz: sweepFrequencies(raw.sweep) };
+}
+
+/** Topology of the RF line: 'none' (uniform), 'periodic_t_rail' or 'unspecified'. */
+export const lineTopology = (raw) => raw.line?.loading?.type ?? 'unspecified';
+
+/**
+ * Stages added by a request (DevLog-036): eo_response needs the optical group index (optical_mode) and an RF line
+ * (rf_line for a uniform line, loaded_line for periodic_t_rail). Returned in STAGES order.
+ */
+export function withStageDependencies(stages, raw) {
+  const s = new Set(stages);
+  if (s.has('eo_response')) {
+    s.add('optical_mode');
+    s.add(lineTopology(raw) === 'periodic_t_rail' ? 'loaded_line' : 'rf_line');
+  }
+  return STAGES.filter((x) => s.has(x));
+}
+
 /**
  * Per-stage readiness of a parsed config for one cross-section: null when the stage's inputs pass the input boundary,
  * otherwise the blocking message. Uses the same checks as runCrossSection (cross-section construction, arm windows
@@ -705,6 +794,20 @@ export function stageErrors(config, sectionName = 'geometry', { solver = null } 
     if (!Object.values(materials).some((m) => m.r)) fail('materials', 'no material has Pockels coefficients (r_pm_per_v)');
   });
   check('rf_line', () => rfOptions(raw, materials, g, sectionName));
+  check('loaded_line', () => loadedLineOptions(raw, materials, geometries));
+  check('eo_response', () => {
+    eoResponseOptions(raw);
+    if (out.optical_mode) fail('eo_response', `needs the optical group index: ${out.optical_mode}`);
+    if (lineTopology(raw) === 'periodic_t_rail') {
+      const lo = loadedLineOptions(raw, materials, geometries);
+      if (lo.lossError) fail('eo_response', `the loaded line has no complete loss declaration: ${lo.lossError}`);
+    } else if (out.rf_line) fail('eo_response', `needs the rf_line stage: ${out.rf_line}`);
+  });
+  // S8 (DevLog-039): the semiconductor block validated against this cross-section
+  check('semiconductor', () => {
+    if (raw.semiconductor == null) fail('semiconductor', 'the semiconductor stage needs a semiconductor block');
+    semiconductorOptions(raw, g, materials);
+  });
   for (const s of STAGES) if (!IMPLEMENTED_STAGES.includes(s)) out[s] = `${s} is not implemented in this engine`;
   return out;
 }

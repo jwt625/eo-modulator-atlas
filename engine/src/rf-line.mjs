@@ -15,7 +15,7 @@
 //   - Frequency independent C' and L' (quasi-TEM limit, L' = 1 / (c^2 C0')): no dispersion, no radiation,
 //     no surface roughness.  Missing loss inputs are errors, never material defaults.
 
-import { cx, cmul, cdiv, csqrt } from './complex.mjs';
+import { cx, cadd, cmul, cdiv, csqrt } from './complex.mjs';
 
 // Same values as electrostatics.mjs (tests assert equality); duplicated so this module has no solver import.
 export const C_LIGHT = 299792458;
@@ -62,6 +62,39 @@ export function surfaceResistanceOhm(fHz, sigmaSm) {
   positive(fHz, 'frequency (Hz)');
   positive(sigmaSm, 'conductivity sigma (S/m)');
   return Math.sqrt((Math.PI * fHz * MU0) / sigmaSm);
+}
+
+/** Conductor thickness models of the surface internal impedance (DevLog-036 round 2, S2). */
+export const CONDUCTOR_THICKNESS_MODELS = ['semi_infinite', 'slab_one_sided', 'slab_symmetric'];
+
+/**
+ * Internal surface impedance per square (ohm) of a conductor slab, phasor exp(+j omega t):
+ * Z_s = (k / sigma) coth(k t_eff), k = (1 + j) / delta, from d^2E/dx^2 = j omega mu0 sigma E with no field at the far
+ * face (derivation in DevLog-036, round 2). t_eff = t (slab_one_sided: current on one face) or t / 2 (slab_symmetric:
+ * both faces driven, per-face impedance); semi_infinite: Z_s = R_s (1 + j). Limits: t >> delta -> R_s (1 + j);
+ * t << delta -> 1 / (sigma t_eff) + j omega mu0 t_eff / 3.
+ * @returns {{re:number, im:number}}
+ */
+export function slabSurfaceImpedance(fHz, sigmaSm, thicknessM, model = 'slab_one_sided') {
+  positive(fHz, 'frequency (Hz)');
+  positive(sigmaSm, 'conductivity sigma (S/m)');
+  const rs = surfaceResistanceOhm(fHz, sigmaSm);
+  if (model === 'semi_infinite') return { re: rs, im: rs };
+  if (model !== 'slab_one_sided' && model !== 'slab_symmetric') fail(`unknown conductor thickness model "${model}"`);
+  const t = positive(thicknessM, 'conductor thickness (m)') * (model === 'slab_symmetric' ? 0.5 : 1);
+  const d = skinDepthM(fHz, sigmaSm);
+  const x = t / d; // k t = (1 + j) x
+  if (x < 1e-3) {
+    // coth(z) = 1/z + z/3 - z^3/45, z = (1 + j) x: Z = (k/sigma)(1/z + z/3 - z^3/45) = 1/(sigma t) + k z/(3 sigma) - k z^3/(45 sigma)
+    // k z = (1+j)^2 x / delta = 2j x / delta; k z^3 = (1+j)^4 x^3 / delta = -4 x^3 / delta
+    return { re: 1 / (sigmaSm * t) + (4 * x ** 3) / (45 * sigmaSm * d), im: (2 * x) / (3 * sigmaSm * d) };
+  }
+  // coth((1+j) x) = (sinh 2x - j sin 2x) / (cosh 2x - cos 2x)
+  const den = Math.cosh(2 * x) - Math.cos(2 * x);
+  const cr = Math.sinh(2 * x) / den;
+  const ci = -Math.sin(2 * x) / den;
+  // (1 + j)(cr + j ci) / (sigma delta)
+  return { re: (cr - ci) / (sigmaSm * d), im: (cr + ci) / (sigmaSm * d) };
 }
 
 /** Lossless TEM inductance L' = 1 / (c^2 C0') [H/m] from the air-filled (all eps_r = 1) capacitance. */
@@ -214,9 +247,18 @@ function buildConductor(c) {
         covers ? 'lower_bound_only_under_caller_declared_perimeter_coverage_not_an_estimate' : 'perimeter_coverage_not_declared_estimate_is_not_a_bound'];
     }
     const t = c.thicknessM == null ? null : positive(c.thicknessM, 'conductor.thicknessM');
+    const tm = c.thicknessModel ?? 'semi_infinite';
+    if (!CONDUCTOR_THICKNESS_MODELS.includes(tm)) fail(`unknown conductor.thicknessModel "${tm}"`);
+    if (tm !== 'semi_infinite' && t == null) fail(`conductor.thicknessModel ${tm} needs conductor.thicknessM`);
+    const slab = tm !== 'semi_infinite';
     const warn = (f) => (t == null ? ['conductor_thickness_not_checked_skin_effect_validity_unknown']
-      : t < 3 * skinDepthM(f, sigma) ? ['conductor_thickness_below_3_skin_depths_surface_resistance_invalid'] : []);
-    return { model, label: labels[0], labels, kPerM: k, sigmaSm: sigma, rAt: (f) => surfaceResistanceOhm(f, sigma) * k, internal, warn };
+      : !slab && t < 3 * skinDepthM(f, sigma) ? ['conductor_thickness_below_3_skin_depths_surface_resistance_invalid'] : []);
+    if (slab) labels = [...labels, `finite_thickness_${tm}_surface_impedance`];
+    // zAt: internal impedance per unit length K Z_s(f) (ohm/m); rAt its real part. The semi-infinite model keeps the
+    // round-1 form (R' = K R_s, L_int = R'/omega when includeInternalInductance).
+    const zAt = slab ? (f) => { const z = slabSurfaceImpedance(f, sigma, t, tm); return { re: z.re * k, im: z.im * k }; } : null;
+    return { model, label: labels[0], labels, kPerM: k, sigmaSm: sigma, thicknessModel: tm, thicknessM: t,
+      rAt: slab ? (f) => zAt(f).re : (f) => surfaceResistanceOhm(f, sigma) * k, xAt: zAt ? (f) => zAt(f).im : null, internal, warn };
   }
   return fail('unreachable');
 }
@@ -348,7 +390,8 @@ export function rlgcAt(line, fHz) {
     G = 0;
   } else {
     R = line.conductor.rAt(fHz);
-    if (line.conductor.internal) Lser += R / w;
+    // internal inductance: X_int / omega (slab models), R'/omega (semi-infinite surface: X_s = R_s)
+    if (line.conductor.internal) Lser += (line.conductor.xAt ? line.conductor.xAt(fHz) : R) / w;
     if (line.conductor.warn) warnings.push(...line.conductor.warn(fHz));
     G = w * line.cPul * line.dielectric.tanAt(fHz);
   }
@@ -407,4 +450,33 @@ export function linspaceGhz(startGhz, stopGhz, n) {
   if (!Number.isInteger(n) || n < 1) fail('n must be a positive integer');
   if (n === 1) return [startGhz];
   return Array.from({ length: n }, (_, i) => startGhz + ((stopGhz - startGhz) * i) / (n - 1));
+}
+
+// ---- junction-loaded line (Si phase shifter TWE, DevLog-036 rounds 4-5) ---------------------------------------------
+
+/**
+ * Propagation of an electrode line loaded per length by a junction branch: series R'_j (ohm m) with the shunt
+ * G'_j || C'_j (S/m, F/m) of the junction, Y'_j = 1 / (R'_j + 1/(G'_j + j omega C'_j)) = (G'_j + j omega C'_j) /
+ * (1 + R'_j (G'_j + j omega C'_j)) (the semiconductor stage's branch formula, DevLog-039 round 3), added to
+ * G' + j omega C' of the electrodes (Shin, Sakamoto, Dagli, J. Lightwave Technol. 29, 48 (2011), Fig. 2 and
+ * eqs. (1)-(5), p. 49: loading branch R_1 + 1/(j omega 2 dC) in parallel with G_0 + j omega C_0; p. 50, end of Sec. II:
+ * the same equivalent circuit applies when doped semiconductor junctions are the loading elements). Returns gamma, Z0
+ * (principal roots) and the divider V_j / V_line = 1 / (1 + R'_j (G'_j + j omega C'_j)).
+ */
+export function junctionPropagationAt(line, junction, fHz) {
+  const { rOhmM, cFPerM } = junction ?? {};
+  const gSPerM = junction?.gSPerM ?? 0;
+  nonNegative(rOhmM, "junction R'_j (ohm m)");
+  nonNegative(cFPerM, "junction C'_j (F/m)");
+  nonNegative(gSPerM, "junction G'_j (S/m)");
+  const p = rlgcAt(line, fHz);
+  const w = 2 * Math.PI * fHz;
+  const Z = cx(p.R, w * p.L);
+  const yb = cx(gSPerM, w * cFPerM); // G'_j + j w C'_j
+  const den = cadd(cx(1), cmul(cx(rOhmM), yb));
+  const yj = cdiv(yb, den);
+  const Y = cx(p.G + yj.re, w * p.C + yj.im);
+  const gamma = csqrt(cmul(Z, Y));
+  const z0 = csqrt(cdiv(Z, Y));
+  return { fHz, gamma, z0, yJunction: yj, junctionFactor: cdiv(cx(1), den), alphaDbPerCm: npPerMToDbPerCm(gamma.re), nRf: (C_LIGHT * gamma.im) / w, warnings: p.warnings };
 }

@@ -360,16 +360,17 @@ test('E3i loss declarations are explicit: every missing or ambiguous input is an
 
 // ---- item 3: stage selection and readiness ---------------------------------------------------------------------
 
-test('U3 stage selection: electrostatics always, STAGES order, legacy optical flag, unknown and unimplemented stages rejected', () => {
+test('U3 stage selection: electrostatics always, STAGES order, legacy optical flag, unknown stages rejected', () => {
   assert.deepEqual(resolveStages(), ['electrostatics']);
   assert.deepEqual(resolveStages({ optical: true }), ['electrostatics', 'optical_mode']);
   assert.deepEqual(resolveStages({ stages: ['rf_line', 'eo_overlap'] }), ['electrostatics', 'eo_overlap', 'rf_line']);
   assert.deepEqual(resolveStages({ stages: ['optical_mode'], optical: true }), ['electrostatics', 'optical_mode']);
-  assert.throws(() => resolveStages({ stages: ['eo_response'] }), /not implemented/);
-  assert.throws(() => resolveStages({ stages: ['loaded_line'] }), /not implemented/);
+  // DevLog-036: loaded_line and eo_response are implemented (eo_response dependencies are added by the run).
+  assert.deepEqual(resolveStages({ stages: ['eo_response'] }), ['electrostatics', 'eo_response']);
+  assert.deepEqual(resolveStages({ stages: ['loaded_line'] }), ['electrostatics', 'loaded_line']);
   assert.throws(() => resolveStages({ stages: ['bogus'] }), /Unknown stage: bogus/);
   assert.throws(() => resolveStages({ stages: 'rf_line' }), /array/);
-  assert.deepEqual(IMPLEMENTED_STAGES, STAGES.slice(0, 4));
+  assert.deepEqual(IMPLEMENTED_STAGES, STAGES);
   const r = run(fixture, ['rf_line', 'eo_overlap', 'optical_mode']);
   assert.deepEqual(r.stages, ['electrostatics', 'optical_mode', 'eo_overlap', 'rf_line']);
   assert.deepEqual(r.pendingStages, []);
@@ -383,8 +384,10 @@ test('U3 stage selection: electrostatics always, STAGES order, legacy optical fl
 test('U3 readiness: inspectConfig reports per-stage blocking inputs for the fixture, a paper config and an invalid draft', () => {
   const ok = inspectConfig(fixture);
   assert.equal(ok.solveError, '');
-  for (const s of IMPLEMENTED_STAGES) assert.equal(ok.stageErrors[s], null, s);
-  assert.match(ok.stageErrors.eo_response, /not implemented/);
+  for (const s of IMPLEMENTED_STAGES.slice(0, 4)) assert.equal(ok.stageErrors[s], null, s);
+  // DevLog-036: the fixture is a uniform line without source/load impedance
+  assert.match(ok.stageErrors.loaded_line, /periodic_t_rail/);
+  assert.match(ok.stageErrors.eo_response, /line.source_ohm: required by eo_response/);
   const paper = inspectConfig(chen).stageErrors;
   assert.equal(paper.electrostatics, null);
   assert.match(paper.eo_overlap, /optics.eo/);
@@ -414,10 +417,10 @@ test('U3 CLI --stages and --check', () => {
     const check = JSON.parse(out.stdout);
     assert.equal(check.solveError, null);
     assert.equal(check.stages.rf_line, null);
-    assert.match(check.stages.loaded_line, /not implemented/);
+    assert.match(check.stages.loaded_line, /periodic_t_rail/);
     out = call('--stages', 'eo_response');
     assert.equal(out.status, 1);
-    assert.match(out.stderr, /not implemented/);
+    assert.match(out.stderr, /source_ohm: required by eo_response/);
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 

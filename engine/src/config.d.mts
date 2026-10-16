@@ -23,6 +23,13 @@ export interface ParsedConfig {
 export function parseConfig(text: string, options?: { params?: Record<string, number> }): ParsedConfig;
 export const STAGES: string[];
 export const IMPLEMENTED_STAGES: string[];
+/** Frequency-response target metrics (eo_response, DevLog-036). */
+export const RESPONSE_METRICS: string[];
+export const CONDUCTOR_THICKNESS_MODELS: string[];
+export const PERIODIC_RESPONSE_MODELS: string[];
+export const TARGET_REFERENCES: string[];
+export function withStageDependencies(stages: string[], raw: Record<string, unknown>): string[];
+export function lineTopology(raw: Record<string, unknown>): string;
 /** Per stage: null when its inputs pass the input boundary, else the blocking message. */
 export type StageErrors = Record<string, string | null>;
 /** Geometry and disclosures only; never use preview as solver input. */

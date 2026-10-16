@@ -2,7 +2,7 @@
   "name": "eo-atlas-engine",
   "version": "0.1.0",
   "private": true,
-  "description": "Browser-runnable 2D quasi-static EO modulator simulation chain (electrostatics P1/P2, full-vector and scalar optical modes, EO overlap, RF line; loaded line and EO response recognised, not implemented)",
+  "description": "Browser-runnable 2D quasi-static EO modulator simulation chain (electrostatics P1/P2, full-vector and scalar optical modes, EO overlap, RF line, periodic loaded line, traveling-wave EO response; silicon PN/PIN drift-diffusion with plasma-dispersion EO coupling and the junction-loaded response)",
   "type": "module",
   "license": "GPL-3.0-or-later",
   "scripts": {

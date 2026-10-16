@@ -1,5 +1,13 @@
 export interface TargetResult {
-  metric: string; value: number; at_ghz?: number; vpi_convention?: string; actual: number | null;
+  metric: string; value: number; at_ghz?: number; vpi_convention?: string; reference_ghz?: number; actual: number | null;
+  /** Bandwidth targets without a crossing in the sweep (DevLog-036): the bandwidth exceeds gt (GHz). */
+  actualBound?: { gt: number };
+  /** Response targets: 'dc' | 'low_freq_unstated' | 'unspecified' (DevLog-036 round 2, S1). */
+  reference?: string;
+  /** Machine-readable codes of `diagnostic` (e.g. assumption_dielectric_loss_none). */
+  diagnosticCodes?: string[];
+  /** Unstated-reference targets: engine values at the DC, 1 GHz and 3 GHz references (not compared). */
+  referenceSensitivity?: { referenceGhz: number | null; status: string; value: number | null; boundGhz?: number }[];
   tolerance: number; status: 'pass' | 'fail' | 'not_evaluated'; reason: string | null;
   /** Evaluated but numerically flagged (Wheeler step-check spread above 1e-2); null otherwise. */
   diagnostic: string | null;
@@ -16,6 +24,10 @@ export interface SimulationResult {
   optical: OpticalDiagnostics | null;
   eo: EoResult | null;
   rf: RfResult | null;
+  /** loaded_line stage (DevLog-036). */
+  loaded?: LoadedLineResult | null;
+  /** eo_response stage (DevLog-036). */
+  response?: EoResponseResult | null;
   /** Resolved `params` values (DevLog-026). */
   params: Record<string, number>;
   /** Library-backed materials: which fields came from engine/data/materials.json and their citations. */
@@ -29,7 +41,8 @@ export interface SimulationResult {
   timing: {
     electrostatics: Record<string, unknown> | null; opticalModel: Record<string, unknown> | null;
     modes: Record<string, unknown> | null; groupIndex: Record<string, unknown> | null;
-    eo: Record<string, unknown> | null; rf: { wheelerSolves: Record<string, unknown>[] } | null; total_ms: number;
+    eo: Record<string, unknown> | null; rf: { wheelerSolves: Record<string, unknown>[] } | null;
+    loadedLine?: { wheelerSolves: Record<string, unknown>[] } | null; total_ms: number;
   };
   /** Present only with options.fields: true (DevLog-023 O4). */
   fields?: SimulationFields;
@@ -179,6 +192,8 @@ export interface RfResult {
   lossSource: 'model' | 'paper_input'; independentPrediction: boolean;
   conductorModel: string; dielectricModel: string | null; lossLabels: string[];
   sigmaSm: number | null; thicknessUm: number | null; kPerM: number | null;
+  /** semi_infinite | slab_one_sided | slab_symmetric (skin_effect_* models), null otherwise. */
+  thicknessModel?: string | null;
   wheeler: { fRefGhz: number; halfSkinDepthUm: number; rPrimeOhmPerM: number; scales: number[]; rPrimeByScaleOhmPerM: number[]; maxRelativeSpread: number; spreadWarningLevel: number } | null;
   perimetersM: { signal: number; ground: number } | null;
   regions: { name: string; material: string; energyFraction: number; loss: number | { sigmaSm: number; epsR: number } | null }[];
@@ -186,6 +201,38 @@ export interface RfResult {
   lPulNhPerM: number; cPulPfPerM: number;
   sweep: { fGhz: number[]; alphaDbPerCm: number[]; nRf: number[]; z0ReOhm: number[]; z0ImOhm: number[] } | null;
   atTargets: RfPoint[];
+}
+/** Bloch sweep of the loaded line; null entries at or above the Bragg frequency. */
+export interface BlochSweep { fGhz: number[]; alphaDbPerCm: (number | null)[]; nRf: (number | null)[]; zReOhm: (number | null)[]; zImOhm: (number | null)[] }
+export interface LoadedLineResult {
+  cuts: { loaded: string; unloaded: string; solvedLoaded: boolean; solvedUnloaded: boolean };
+  periodUm: number; loadedLengthUm: number; unloadedLengthUm: number;
+  loadingConductors: string[]; railsIdentical: boolean; sectionModel: 't_rail_capacitive_loading' | 'reshaped_rails';
+  perLength: Record<'unloaded' | 'loaded', { cPfPerM: number; c0PfPerM: number; lNhPerM: number }> & { average: { cPfPerM: number; lNhPerM: number } };
+  quasiStatic: { nRf: number; zOhm: number };
+  braggGhz: number; braggGap: boolean; braggEstimateGhz: number;
+  lossless: { sweep: BlochSweep | null };
+  loss: null | {
+    lossSource: 'model'; independentPrediction: boolean; conductorModel: string; dielectricModel: string | null; lossLabels: string[];
+    loadedSectionConductor: string; wheeler: RfResult['wheeler']; wheelerLoaded: RfResult['wheeler']; maxWheelerSpread: number;
+    sections: Record<'unloaded' | 'loaded', { regions: RfResult['regions'] }>;
+    sweep: BlochSweep | null; atTargets: { fGhz: number; alphaDbPerCm?: number; nRf?: number; z0ReOhm?: number; z0ImOhm?: number; aboveBragg?: boolean }[];
+  };
+  lossReason: string | null; reference: string; formulas: Record<string, string>;
+}
+export interface BandwidthSearch { status: 'found' | 'no_crossing' | 'invalid_reference' | 'reference_above_sweep'; fGhz?: number; boundGhz?: number; referenceGhz: number | null; invalidFromGhz?: number }
+export interface EoResponseResult {
+  convention: Record<string, unknown>; lineKind: 'uniform_rf_line' | 'loaded_line_bloch' | 'loaded_line_exact_cascade';
+  responseModel: 'exact_cascade' | 'bloch_homogenised' | null; nSections: number | null;
+  braggGhz: number | null; highestEvaluatedGhz: number; braggWithin3x: boolean;
+  /** Frequency below which the conductor is thinner than 3 skin depths (semi-infinite surface model); null otherwise. */
+  thinConductorBelowGhz?: number | null;
+  lengthMm: number; sourceOhm: number; loadOhm: number; ngOpt: number; ngSource: string; vpiDcV: number | null;
+  reference: 'dc_limit'; fLimitGhz: number | null;
+  sweep: { fGhz: number[]; s21EoDb: (number | null)[]; hRe: (number | null)[]; hIm: (number | null)[]; vpiRfV: (number | null)[] | null };
+  bw3dbGhz: number | null; bw6dbGhz: number | null;
+  bandwidth: { bw3db_ghz: BandwidthSearch; bw6db_ghz: BandwidthSearch };
+  byTarget: ({ key: string; metric: string; status: string; valueDb?: number; error?: string; reference?: string; byReference?: Record<string, unknown>[] } & Partial<BandwidthSearch>)[];
 }
 export function resolveStages(options?: { stages?: string[] | null; optical?: boolean }): string[];
 export interface RunOptions {
