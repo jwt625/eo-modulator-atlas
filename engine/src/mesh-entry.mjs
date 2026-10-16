@@ -27,6 +27,7 @@ export function buildSectionMesh(text, { section = 'geometry', meshScale = 1, pa
     geometry = preview.geometries[section];
     sec = new CrossSection(geometry, section);
   }
+  sec.farScale = meshScale; // R7 (DevLog-039): the preview meshes the far field as the solve does
   const t0 = performance.now();
   const mesh = sec.buildMesh({ scale: meshScale });
   return {

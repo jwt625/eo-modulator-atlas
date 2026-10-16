@@ -12,6 +12,7 @@ import { modeIdentity } from '../optical-stage.mjs';
 import { compileExpression, ExpressionError } from './expr.mjs';
 import { DIMLESS, formatUnit, parseUnit } from './units.mjs';
 import { refinePattern, edgeNeighbours, smoothingSlots } from './refine.mjs';
+import { SEMI_VARIABLES, SEMI_GLOBALS } from '../semi/dataset.mjs';
 
 const ETA0 = MU0 * C_LIGHT;
 export const DEFAULT_CACHE_BYTES = 128 * 1024 * 1024;
@@ -29,6 +30,11 @@ const DIM = {
 };
 
 // ---- static registries -------------------------------------------------------------------------------------------
+
+/** semi.* variables (S8, engine/src/semi/dataset.mjs SEMI_VARIABLES with SI dimensions). */
+const SEMI_VARS = Object.freeze(SEMI_VARIABLES.map((v) => Object.freeze({ ...v, dim: parseUnit(v.unit).dim })));
+/** semi.* per-bias-point globals (dn_eff_per_v, G, operating_bias). */
+const SEMI_GLOBAL_VARS = Object.freeze(SEMI_GLOBALS.map((v) => Object.freeze({ ...v, dim: parseUnit(v.unit).dim })));
 
 /** Run globals (unprefixed names; SI values from runGlobals). */
 export const GLOBAL_VARIABLES = Object.freeze([
@@ -51,6 +57,11 @@ export const GLOBAL_VARIABLES = Object.freeze([
   ['gapB', DIM.m, 'um', 'electrode gap of arm B from the geometry'],
   ['VpiLtextbook', DIM.Vm1, 'V*cm', 'implied textbook VpiL lambda / (n_e^3 r33 |Ebar_A - Ebar_B|)'],
   ['balance', DIM.one, '1', 'push-pull balance dn_B / dn_A'],
+  ['bw3dB', DIM.Hz, 'GHz', 'EO 3 dB bandwidth (first -3 dB crossing of 20 log10 |H| vs the DC limit; eo_response)'],
+  ['bw6dB', DIM.Hz, 'GHz', 'EO 6 dB bandwidth (first -6 dB crossing; eo_response)'],
+  ['fBragg', DIM.Hz, 'GHz', 'Bragg frequency of the periodic loaded line (lossless cell, beta_B p = pi)'],
+  ['nB0', DIM.one, '1', 'quasi-static Bloch index of the loaded line c sqrt(L_avg C_avg)'],
+  ['ZB0', DIM.ohm, 'ohm', 'quasi-static Bloch impedance of the loaded line sqrt(L_avg / C_avg)'],
   ['t_total', DIM.s, 's', 'wall time of the run'],
 ].map(([name, dim, displayUnit, description]) => Object.freeze({ name, unit: formatUnit(dim), displayUnit, dim, description, location: 'global', complex: false, continuous: true, group: 'global' })));
 
@@ -76,6 +87,10 @@ export function runGlobals(result, { lambdaUm = null } = {}) {
     put('VpiLtextbook', eo.conventional?.vpiLVcmTextbook == null ? null : eo.conventional.vpiLVcmTextbook * 1e-2);
   }
   put('VpiL', m.vpi_l_dc_vcm * 1e-2); put('Vpi', m.vpi_dc_v);
+  const resp = result?.response ?? null;
+  if (resp) { put('bw3dB', resp.bw3dbGhz == null ? null : resp.bw3dbGhz * 1e9); put('bw6dB', resp.bw6dbGhz == null ? null : resp.bw6dbGhz * 1e9); }
+  const ll = result?.loaded ?? null;
+  if (ll) { put('fBragg', ll.braggGhz * 1e9); put('nB0', ll.quasiStatic?.nRf); put('ZB0', ll.quasiStatic?.zOhm); }
   put('t_total', result?.elapsed_ms / 1000);
   // vacuum wavelength (m), for lambda0 / k0 / f0 in global expressions over sweep points (not a listed variable)
   put('lambda0', lambdaUm == null ? null : lambdaUm * 1e-6);
@@ -155,13 +170,42 @@ const EO_VARS = [
   ['integrand', DIM.perVm2, '1/(V*um^2)', 'd(n_eff)/dV per area; its integral over the arm window is the engine dn_eff/V'],
   ...POCKELS_COMPONENTS.map((c) => [`integrand_${c}`, DIM.perVm2, '1/(V*um^2)', `integrand with only the ${c} Pockels entries`]),
 ];
+// [name, dim, display unit, description, column source] (DevLog-036: Bloch and EO response columns)
 const RF_VARS = [
-  ['f', DIM.Hz, 'GHz', 'RF frequency of the sweep point'],
-  ['alpha', DIM.perM, '1/m', 'RF attenuation in nepers per metre (field), alpha_dB ln(10) / 20'],
-  ['alpha_dB', DIM.perM, 'dB/cm', 'RF attenuation in decibels per metre (dB is a label with factor 1: display unit dB/cm gives dB per cm)'],
-  ['nRF', DIM.one, '1', 'RF effective index of the line at this frequency'],
-  ['Z0', DIM.ohm, 'ohm', 'complex characteristic impedance of the line'],
+  ['f', DIM.Hz, 'GHz', 'RF frequency of the sweep point', 'f'],
+  ['alpha', DIM.perM, '1/m', 'RF attenuation in nepers per metre (field), alpha_dB ln(10) / 20', 'line'],
+  ['alpha_dB', DIM.perM, 'dB/cm', 'RF attenuation in decibels per metre (dB is a label with factor 1: display unit dB/cm gives dB per cm)', 'line'],
+  ['nRF', DIM.one, '1', 'RF effective index of the line at this frequency', 'line'],
+  ['Z0', DIM.ohm, 'ohm', 'complex characteristic impedance of the line', 'line'],
+  ['nB', DIM.one, '1', 'Bloch RF index of the periodic loaded line, c Im(gamma_B) / omega (lossy when the loss is declared, else lossless)', 'bloch'],
+  ['ZB', DIM.ohm, 'ohm', 'complex Bloch impedance of the loaded line at the middle of the unloaded section', 'bloch'],
+  ['alphaB', DIM.perM, '1/m', 'Bloch attenuation Re(gamma_B) in nepers per metre (lossy loaded line only)', 'blochLoss'],
+  ['alphaB_dB', DIM.perM, 'dB/cm', 'Bloch attenuation in decibels per metre (dB label with factor 1)', 'blochLoss'],
+  ['S21EO', DIM.one, '1', 'complex normalized EO response H(f) = Phi(f) / Phi_DC (eo_response)', 'resp'],
+  ['S21EO_dB', DIM.one, 'dB', 'EO response 20 log10 |H(f)| relative to the DC limit (dB is a label with factor 1)', 'resp'],
+  ['VpiRF', DIM.V, 'V', 'RF half-wave voltage Vpi_DC / |H(f)| (amplitude of V_s Z_L / (Z_s + Z_L))', 'vpi'],
 ];
+
+/** Columns of dataset rf from the serializable result (all on the config sweep grid); null when nothing ran. */
+function rfColumns(result) {
+  const sw = result.rf?.sweep ?? null;
+  const ll = result.loaded ?? null;
+  const bl = ll?.loss?.sweep ?? ll?.lossless?.sweep ?? null;
+  const rs = result.response?.sweep ?? null;
+  const fGhz = sw?.fGhz ?? bl?.fGhz ?? rs?.fGhz ?? null;
+  if (!fGhz?.length) return null;
+  const col = (a) => Float64Array.from(a, (v) => (v == null ? NaN : v));
+  const out = { fGhz: Float64Array.from(fGhz), has: new Set(['f']) };
+  if (sw) { Object.assign(out, { alphaDbPerCm: col(sw.alphaDbPerCm), nRf: col(sw.nRf), z0Re: col(sw.z0ReOhm), z0Im: col(sw.z0ImOhm) }); out.has.add('line'); }
+  if (bl && bl.fGhz.length === fGhz.length) { Object.assign(out, { nB: col(bl.nRf), zBRe: col(bl.zReOhm), zBIm: col(bl.zImOhm) }); out.has.add('bloch'); }
+  if (ll?.loss?.sweep && bl.fGhz.length === fGhz.length) { out.alphaBDbPerCm = col(ll.loss.sweep.alphaDbPerCm); out.has.add('blochLoss'); }
+  if (rs && rs.fGhz.length === fGhz.length) {
+    Object.assign(out, { hRe: col(rs.hRe), hIm: col(rs.hIm), s21Db: col(rs.s21EoDb) });
+    out.has.add('resp');
+    if (rs.vpiRfV) { out.vpiRf = col(rs.vpiRfV); out.has.add('vpi'); }
+  }
+  return out;
+}
 const CONSTANTS = [
   ['pi', Math.PI, DIM.one, 'pi'], ['eps0', EPS0, DIM.Fm, 'vacuum permittivity'], ['mu0', MU0, DIM.Hm, 'vacuum permeability'],
   ['c_const', C_LIGHT, U('m/s'), 'speed of light in vacuum'],
@@ -273,11 +317,19 @@ class SolutionStore {
     this.seq = 0;
     this.dsSeq = 0;
     this.globals = result.globals ?? runGlobals(result, { lambdaUm: I.lambdaUm });
-    // RF line frequency sweep (serializable result.rf.sweep), dataset 'rf' (R-UI request, round 2)
-    const sw = result.rf?.sweep ?? null;
-    this.rf = sw && sw.fGhz?.length ? { fGhz: Float64Array.from(sw.fGhz), alphaDbPerCm: Float64Array.from(sw.alphaDbPerCm), nRf: Float64Array.from(sw.nRf), z0Re: Float64Array.from(sw.z0ReOhm), z0Im: Float64Array.from(sw.z0ImOhm) } : null;
+    // RF line frequency sweep (result.rf.sweep), dataset 'rf' (R-UI request, round 2); DevLog-036 adds the loaded-line
+    // Bloch sweep (result.loaded) and the EO response (result.response) on the same grid.
+    this.rf = rfColumns(result);
     this.es = null;
     if (I.es) this.initEs(I.es);
+    // S8 semiconductor datasets (DevLog-039 round 2): nodal P1 fields of the reference bias and of every bias point
+    this.semi = null;
+    if (I.semi) {
+      const m = I.semi.mesh;
+      const rec = { id: 'semi', kind: 'semi', mesh: m, geo: I.semi.geo, absArea: Float64Array.from(I.semi.geo.area, Math.abs), nNodes: m.nNodes, nTris: m.nTris, regionNames: I.semi.regionNames, regionMaterials: I.semi.regionMaterials, locator: null };
+      this.meshes.set('semi', rec);
+      this.semi = { rec, datasetAt: I.semi.datasetAt, globalsAt: I.semi.globalsAt ?? null, nPoints: I.semi.nPoints, biasV: I.semi.biasV, referenceBiasV: I.semi.referenceBiasV };
+    }
     const models = new Map();
     const addFamily = (name, solved, arm) => {
       if (!solved) return;
@@ -350,7 +402,11 @@ class SolutionStore {
       const f = this.families.get(`arm${a}`);
       if (f && this.es) out.push({ id: `eo${a}`, kind: 'eo', label: `EO overlap arm ${a}`, section: this.sectionName, mesh: f.rec.id, arm: a, mode: f.rec.selected, selected: true });
     }
-    if (this.rf) out.push({ id: 'rf', kind: 'rf', label: 'RF line (frequency sweep)', section: this.sectionName, mesh: null, n: this.rf.fGhz.length });
+    if (this.rf) out.push({ id: 'rf', kind: 'rf', label: `RF line (frequency sweep${this.rf.has.has('bloch') ? ', Bloch' : ''}${this.rf.has.has('resp') ? ', EO response' : ''})`, section: this.sectionName, mesh: null, n: this.rf.fGhz.length });
+    if (this.semi) {
+      out.push({ id: 'semi', kind: 'semi', label: `Semiconductor, reference bias (${this.semi.referenceBiasV.join(', ')} V)`, section: this.sectionName, mesh: 'semi', point: -1, biasV: this.semi.referenceBiasV });
+      for (let k = 0; k < this.semi.nPoints; k++) out.push({ id: `semi:${k}`, kind: 'semi', label: `Semiconductor, bias point ${k} (${this.semi.biasV[k].join(', ')} V)`, section: this.sectionName, mesh: 'semi', point: k, biasV: this.semi.biasV[k] });
+    }
     for (const d of this.extra.values()) out.push(d.info);
     return out;
   }
@@ -358,7 +414,14 @@ class SolutionStore {
   dataset(id) {
     if (this.disposed) throw new Error('solution store disposed');
     if (id === 'es') { if (!this.es) throw new Error('dataset es: no electrostatic solution in this run'); return { id, kind: 'es', mesh: 'es', family: null, mode: null, arm: null }; }
-    if (id === 'rf') { if (!this.rf) throw new Error('dataset rf: the rf_line stage did not run with a frequency sweep'); return { id, kind: 'rf', mesh: null, family: null, mode: null, arm: null }; }
+    if (id === 'rf') { if (!this.rf) throw new Error('dataset rf: no rf_line, loaded_line or eo_response stage ran with a frequency sweep'); return { id, kind: 'rf', mesh: null, family: null, mode: null, arm: null }; }
+    const sm = /^semi(?::(\d+))?$/.exec(id ?? '');
+    if (sm) {
+      if (!this.semi) throw new Error(`dataset ${id}: the semiconductor stage did not run`);
+      const point = sm[1] == null ? -1 : Number(sm[1]);
+      if (point >= this.semi.nPoints) throw new Error(`dataset ${id}: bias point outside 0..${this.semi.nPoints - 1}`);
+      return { id, kind: 'semi', mesh: 'semi', family: null, mode: null, arm: null, point };
+    }
     const ex = this.extra.get(id);
     if (ex) return { ...this.dataset(ex.info.parent), id, kind: ex.info.kind, extra: ex };
     const m = /^(opt|armA|armB|eoA|eoB)(?::(\d+))?$/.exec(id ?? '');
@@ -401,7 +464,7 @@ class SolutionStore {
   }
 
   removeDataset(id) { this.extra.delete(id); }
-  defaultParent() { return this.es ? 'es' : this.families.has('opt') ? 'opt' : [...this.families.keys()][0]; }
+  defaultParent() { return this.es ? 'es' : this.semi ? 'semi' : this.families.has('opt') ? 'opt' : [...this.families.keys()][0]; }
   memory() {
     let storeBytes = 0;
     for (const r of this.meshes.values()) {
@@ -434,7 +497,9 @@ class SolutionStore {
       for (const [n, dim, du, d] of EO_VARS) out.push(varInfo(`eo${a}.${n}`, dim, du, d, 'point', false, false, `eo${a}`));
     }
     if (this.es && ds.arm) for (const [n, dim, du, d] of EO_VARS) out.push(varInfo(`eo.${n}`, dim, du, d, 'point', false, false, 'eo'));
-    if (this.rf && ds.kind === 'rf') for (const [n, dim, du, d] of RF_VARS) out.push(varInfo(`rf.${n}`, dim, du, d, 'point', n === 'Z0', true, 'rf'));
+    if (this.semi) for (const v of SEMI_VARS) out.push(varInfo(`semi.${v.name}`, v.dim, v.displayUnit, `${v.description}${ds.kind === 'semi' ? '' : ' (reference bias)'}`, 'point', false, true, 'semi'));
+    if (this.semi?.globalsAt) for (const v of SEMI_GLOBAL_VARS) out.push(varInfo(`semi.${v.name}`, v.dim, v.displayUnit, `${v.description}${ds.kind === 'semi' ? '' : ' (reference bias)'}`, 'global', false, true, 'semi'));
+    if (this.rf && ds.kind === 'rf') for (const [n, dim, du, d, src] of RF_VARS) if (this.rf.has.has(src)) out.push(varInfo(`rf.${n}`, dim, du, d, 'point', n === 'Z0' || n === 'ZB' || n === 'S21EO', true, 'rf'));
     return out;
   }
 
@@ -468,6 +533,7 @@ class SolutionStore {
     if (dot < 0) return null;
     const pre = name.slice(0, dot), v = name.slice(dot + 1);
     if (pre === 'es') return this.esVar(v);
+    if (pre === 'semi') return this.semiVar(v, ds);
     if (pre === 'rf') {
       if (!this.rf) return null;
       if (ds.kind !== 'rf') throw new ExpressionError(`'${name}': rf.* variables are evaluated on the rf dataset (one value per sweep frequency)`);
@@ -491,8 +557,9 @@ class SolutionStore {
 
   rfVar(v) {
     const def = RF_VARS.find((q) => q[0] === v);
-    if (!def) return null;
     const rf = this.rf;
+    if (!def || !rf.has.has(def[4])) return null;
+    const NP = Math.LN10 / 20;
     const get = () => {
       const n = rf.fGhz.length, re = new Float64Array(n);
       let im = null;
@@ -500,14 +567,50 @@ class SolutionStore {
         switch (v) {
           case 'f': re[i] = rf.fGhz[i] * 1e9; break;
           case 'alpha_dB': re[i] = rf.alphaDbPerCm[i] * 100; break;
-          case 'alpha': re[i] = rf.alphaDbPerCm[i] * 100 * (Math.LN10 / 20); break;
+          case 'alpha': re[i] = rf.alphaDbPerCm[i] * 100 * NP; break;
           case 'nRF': re[i] = rf.nRf[i]; break;
-          default: re[i] = rf.z0Re[i]; (im ??= new Float64Array(n))[i] = rf.z0Im[i];
+          case 'Z0': re[i] = rf.z0Re[i]; (im ??= new Float64Array(n))[i] = rf.z0Im[i]; break;
+          case 'nB': re[i] = rf.nB[i]; break;
+          case 'ZB': re[i] = rf.zBRe[i]; (im ??= new Float64Array(n))[i] = rf.zBIm[i]; break;
+          case 'alphaB_dB': re[i] = rf.alphaBDbPerCm[i] * 100; break;
+          case 'alphaB': re[i] = rf.alphaBDbPerCm[i] * 100 * NP; break;
+          case 'S21EO': re[i] = rf.hRe[i]; (im ??= new Float64Array(n))[i] = rf.hIm[i]; break;
+          case 'S21EO_dB': re[i] = rf.s21Db[i]; break;
+          default: re[i] = rf.vpiRf[i];
         }
       }
       return { re, im };
     };
-    return { kind: 'field', key: `rf.${v}`, dim: def[1], complex: v === 'Z0', continuous: true, mesh: null, get };
+    return { kind: 'field', key: `rf.${v}`, dim: def[1], complex: v === 'Z0' || v === 'ZB' || v === 'S21EO', continuous: true, mesh: null, get };
+  }
+
+  /** semi.<name>: P1 interpolation of the nodal field of the dataset's bias point (reference bias on other datasets). */
+  semiVar(v, ds) {
+    const gdef = SEMI_GLOBAL_VARS.find((q) => q.name === v);
+    if (gdef && this.semi?.globalsAt) return { kind: 'const', re: this.semi.globalsAt(ds.kind === 'semi' ? ds.point : -1)[v], dim: gdef.dim, global: true };
+    const def = SEMI_VARS.find((q) => q.name === v);
+    if (!def || !this.semi) return null;
+    const point = ds.kind === 'semi' ? ds.point : -1;
+    return { kind: 'field', key: `semi.${point}.${v}`, dim: def.dim, complex: false, continuous: true, mesh: 'semi', get: (ps) => this.semiValue(ps, point, v) };
+  }
+
+  semiFields(point) {
+    const k = `semids:${point}`;
+    const hit = this.cache.get(k);
+    if (hit) return hit;
+    const ds = this.semi.datasetAt(point);
+    return this.cache.set(k, Object.fromEntries(ds.variables.map((x) => [x.name, x.values])));
+  }
+
+  semiValue(ps, point, v) {
+    return this.cached(`semi.${point}.${v}`, ps, () => {
+      const vals = this.semiFields(point)[v];
+      const loc = this.locate(ps, 'semi');
+      const tri = this.semi.rec.mesh.tri;
+      const out = new Float64Array(ps.n);
+      each(loc, (i, t, l0, l1, l2) => { out[i] = t < 0 ? NaN : l0 * vals[tri[3 * t]] + l1 * vals[tri[3 * t + 1]] + l2 * vals[tri[3 * t + 2]]; });
+      return { re: out, im: null };
+    });
   }
 
   esVar(v) {

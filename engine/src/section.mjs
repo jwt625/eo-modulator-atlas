@@ -27,8 +27,10 @@ export class CrossSection {
    *   optical_window; windows that miss the solved domain are ignored. thicknessUm: pins the electrode-thickness mesh
    *   hint (used by the Wheeler recessed sections so their meshes follow the nominal section, Q2 M8).
    */
-  constructor(geom, name = 'geometry', { refineWindows = [], thicknessUm = null } = {}) {
+  constructor(geom, name = 'geometry', { refineWindows = [], thicknessUm = null, farScale = null } = {}) {
     this.name = name;
+    // DevLog-039 round 2-3 (audits D11, R1): user mesh scale for the far-field cap and the default grading (null = 1)
+    this.farScale = farScale;
     this.geom = geom;
     this.thicknessHintUm = thicknessUm;
     this.regions = geom.regions.map((r) => ({ ...r, bbox: polygonBBox(r.poly) }));
@@ -109,9 +111,15 @@ export class CrossSection {
     const maxEdge = (h.max_edge_um ?? diag / 40) * scale;
     const corner = (h.electrode_edge_um ?? Math.min(maxEdge, thick / 6)) * scale;
     const face = Math.min(maxEdge, (h.electrode_face_um ?? 8 * (h.electrode_edge_um ?? thick / 6)) * scale);
-    const grade = h.grade ?? 0.4;
-    const gFar = h.grade_far ?? 0.6;
-    const farEdge = opts.sourcesOnly ? maxEdge : Math.max(maxEdge, h.far_edge_um ?? diag / 12);
+    // audit R1: the size growth rates follow the user mesh scale below 1 (refinement), as grade_corner follows scale;
+    // meshScale 1 (farScale 1 or unset) is unchanged
+    const fs = opts.farScale ?? this.farScale ?? 1;
+    const gradeScale = Math.min(1, fs);
+    const grade = (h.grade ?? 0.4) * gradeScale;
+    const gFar = (h.grade_far ?? 0.6) * gradeScale;
+    // audit D11: the default far-field cap diag / 12 follows the user mesh scale (opts.farScale, else the section's
+    // farScale set by the runners; 1 when unset, so meshScale = 1 meshes are unchanged)
+    const farEdge = opts.sourcesOnly ? maxEdge : Math.max(maxEdge, (h.far_edge_um ?? diag / 12) * fs);
     const sources = [];
     if (!opts.sourcesOnly)
     for (const e of this.electrodes) {
