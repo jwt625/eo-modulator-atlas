@@ -7,7 +7,8 @@
 	import { linearTicks, tickLabel } from './ticks';
 	import { downloadDataUrl } from './exportUtil';
 	import { drawLegend, legendTip, LEGEND_W, type LegendSpec } from './colorbar';
-	import { arrowGrid, atOf, autoTitle, contourLevels, contourValues, featureRange, meshIndex, regionMask, sampleAt, smoothed, type ArrowGrid } from './layers';
+	import { arrowGrid, autoTitle, contourLevels, featureRange, meshIndex, regionMask, type ArrowGrid } from './layers';
+	import { drawnAt, perElement } from './refined';
 	import type { Entry } from './plots.svelte';
 	import type { Feature } from './results.svelte';
 	import type { DerivedResult, ModeRow, PlotResult } from './post/contract';
@@ -135,10 +136,14 @@
 
 	// Mesh view (Mesh node): material, element size or minimum angle.
 	const meshView = $derived(wb.view === 'mesh' ? (wb.meshes.es ?? wb.mesh) : null);
-	const meshStatMemo = new WeakMap<FieldMesh, { size: Float64Array; angle: Float64Array }>();
+	const meshStatMemo = new WeakMap<FieldMesh, { size: Float64Array; angle: Float64Array; size3: Float64Array; angle3: Float64Array }>();
 	function meshStat(m: FieldMesh) {
 		let s = meshStatMemo.get(m);
-		if (!s) meshStatMemo.set(m, (s = { size: triSize(m), angle: triMinAngle(m) }));
+		if (!s) {
+			const size = triSize(m), angle = triMinAngle(m);
+			// per element values drawn as level-1 lattice values (3 equal corners per element)
+			meshStatMemo.set(m, (s = { size, angle, size3: perElement(size), angle3: perElement(angle) }));
+		}
 		return s;
 	}
 
@@ -146,7 +151,7 @@
 		layers: Layer[];
 		arrows: { f: Feature; mesh: FieldMesh; x: PlotResult; y: PlotResult; mask: Uint8Array | null; color: string; heads: boolean }[];
 		legends: LegendSpec[];
-		markers: { x: number; y: number; text: string; kind: 'max' | 'min' }[];
+		markers: { x: number; y: number; text: string; kind: 'max' | 'min'; value: number }[];
 		lines: { regions: string[] | null; color: string }[];
 		nTris: number;
 		ranges: Record<string, { min: number; max: number }>;
@@ -158,9 +163,10 @@
 			out.nTris = meshView.tri.length / 3;
 			if (wb.meshColor === 'material') out.layers.push({ kind: 'region', mesh: meshView, regionColors: regionColors(meshView), wire: true, wireColor: dark ? '#e8e8e8' : '#202020' });
 			else {
-				const v = meshStat(meshView)[wb.meshColor === 'size' ? 'size' : 'angle'];
+				const st = meshStat(meshView);
+				const v = wb.meshColor === 'size' ? st.size : st.angle;
 				const range = autoRange(v, 'linear');
-				out.layers.push({ kind: 'surface', mesh: meshView, values: v, at: 'tri', scaleMode: 'linear', range, colormap: 'Viridis', wire: true, wireColor: dark ? '#e8e8e8' : '#202020' });
+				out.layers.push({ kind: 'surface', mesh: meshView, r: 1, values: wb.meshColor === 'size' ? st.size3 : st.angle3, scaleMode: 'linear', range, colormap: 'Viridis', wire: true, wireColor: dark ? '#e8e8e8' : '#202020' });
 				out.legends.push({ title: wb.meshColor === 'size' ? 'Element size' : 'Min angle', unit: wb.meshColor === 'size' ? 'µm' : 'deg', range, scale: 'linear', table: 'Viridis', reverse: false });
 			}
 			return out;
@@ -182,30 +188,31 @@
 			}
 			const d = p.main?.data;
 			if (!d) continue;
-			// The plot values refer to their own display mesh (P2: the refined mesh), not necessarily the dataset mesh.
+			// Element-local lattice values of level d.r on the parent mesh named by the reply (DevLog-034).
 			const mesh = wb.meshes[d.mesh] ?? p.mesh;
-			if (!out.nTris) out.nTris = mesh.tri.length / 3;
+			const lev = d.r ?? 1;
+			if (!out.nTris) out.nTris = (mesh.tri.length / 3) * lev * lev;
 			const range = featureRange(f, d);
 			out.ranges[f.id] = range;
 			const mask = regionMask(mesh, p.regions);
 			const dataRange = f.dataRange.manual && f.dataRange.max > f.dataRange.min ? { min: f.dataRange.min, max: f.dataRange.max } : null;
 			const legendTitle = f.description || f.expr;
 			const sampler = (x: number, y: number) => {
-				const loc = locate(mesh, meshIndex(mesh), x, y);
-				return loc ? { v: sampleAt(mesh, d, x, y), region: mesh.triRegion[loc.t] } : null;
+				const h = drawnAt(mesh, d.values, lev, x, y);
+				return h ? { v: h.v, region: mesh.triRegion[h.t] } : null;
 			};
 			if (f.type === 'surface') {
-				const sv = f.smoothing === 'nodal' ? smoothed(mesh, d) : { values: d.values, at: atOf(d.location) };
-				out.layers.push({ kind: 'surface', mesh, values: sv.values, at: sv.at, scaleMode: f.range.scale, range, colormap: f.table, reverse: f.reverse, regionMask: mask, dataRange, sampler, wire: wb.wire, wireColor: dark ? '#e8e8e8' : '#202020' });
+				out.layers.push({ kind: 'surface', mesh, r: lev, values: d.values, scaleMode: f.range.scale, range, colormap: f.table, reverse: f.reverse, regionMask: mask, dataRange, sampler, wire: wb.wire, wireColor: dark ? '#e8e8e8' : '#202020' });
 				if (f.legend) out.legends.push({ title: legendTitle, unit: prettyUnit(d.unit), range, scale: f.range.scale, table: f.table, reverse: f.reverse });
 			} else if (f.type === 'contour') {
-				const cv = contourValues(mesh, d);
-				out.layers.push({ kind: 'contour', mesh, values: cv.values, at: cv.at, scaleMode: f.range.scale, range, colormap: f.table, reverse: f.reverse, levels: contourLevels(f, range), uniform: f.coloring === 'uniform' ? f.color : null, regionMask: mask, dataRange });
+				out.layers.push({ kind: 'contour', mesh, r: lev, values: d.values, scaleMode: f.range.scale, range, colormap: f.table, reverse: f.reverse, levels: contourLevels(f, range), uniform: f.coloring === 'uniform' ? f.color : null, regionMask: mask, dataRange });
 				if (f.legend && f.coloring === 'table') out.legends.push({ title: legendTitle, unit: prettyUnit(d.unit), range, scale: f.range.scale, table: f.table, reverse: f.reverse });
 			} else if (f.type === 'maxmin') {
 				const u = prettyUnit(d.unit);
-				if (f.show !== 'min' && d.maxAt) out.markers.push({ x: d.maxAt[0], y: d.maxAt[1], kind: 'max', text: `max ${tickLabel(Number(d.max.toPrecision(4)))} ${u}` });
-				if (f.show !== 'max' && d.minAt) out.markers.push({ x: d.minAt[0], y: d.minAt[1], kind: 'min', text: `min ${tickLabel(Number(d.min.toPrecision(4)))} ${u}` });
+				// F1: unsmoothed lattice extremum, labelled with the exact point value at its location (= the probe there).
+				const mx = d.maxAtValue ?? d.max, mn = d.minAtValue ?? d.min;
+				if (f.show !== 'min' && d.maxAt) out.markers.push({ x: d.maxAt[0], y: d.maxAt[1], kind: 'max', value: mx, text: `max ${tickLabel(Number(mx.toPrecision(4)))} ${u}` });
+				if (f.show !== 'max' && d.minAt) out.markers.push({ x: d.minAt[0], y: d.minAt[1], kind: 'min', value: mn, text: `min ${tickLabel(Number(mn.toPrecision(4)))} ${u}` });
 			}
 		}
 		return out;
@@ -438,11 +445,13 @@
 					const px = Xf(cx), py = Yf(cy);
 					if (px < 0 || px > w || py < 0 || py > h) continue;
 					ctx.lineWidth = 3;
+					ctx.lineJoin = 'round';
 					ctx.strokeStyle = dark ? 'rgba(0,0,0,0.7)' : 'rgba(255,255,255,0.8)';
 					ctx.strokeText(r.name, px, py);
 					ctx.fillStyle = dark ? '#f2f1ec' : '#0b0b0b';
 					ctx.fillText(r.name, px, py);
 				}
+				ctx.lineJoin = 'miter';
 				ctx.textAlign = 'left';
 			}
 		}
@@ -476,7 +485,9 @@
 			ctx.beginPath(); ctx.moveTo(px, py - 6); ctx.lineTo(px + 5, py + 3); ctx.lineTo(px - 5, py + 3); ctx.closePath(); ctx.fill(); ctx.stroke();
 			ctx.font = '10px system-ui, sans-serif';
 			ctx.lineWidth = 3;
+			ctx.lineJoin = 'round';
 			ctx.strokeText(m.text, px + 7, py - 4);
+			ctx.lineJoin = 'miter';
 			ctx.fillText(m.text, px + 7, py - 4);
 		}
 		// Ruler (measure) and the rubber band of the active tool.
@@ -514,6 +525,7 @@
 		const label = (t: string, x: number, y: number) => {
 			ctx.save();
 			ctx.lineWidth = 3;
+			ctx.lineJoin = 'round';
 			ctx.strokeStyle = dark ? 'rgba(0,0,0,0.75)' : 'rgba(255,255,255,0.85)';
 			ctx.strokeText(t, x, y);
 			ctx.restore();
@@ -732,7 +744,7 @@
 			.request<DerivedResult>(probeRequest(R, group!, p.f, x, y), 'probe')
 			.then((r) => {
 				// F1: the probe evaluates the solution the group shows and names a sweep point.
-				probe = Number.isFinite(r.value) ? `${base}  ${p.f.expr} ${tickLabel(Number(r.value.toPrecision(5)))}${r.unit === '1' ? '' : ` ${prettyUnit(r.unit)}`}${pointText ? ` [${pointText}]` : ''}` : base;
+				probe = Number.isFinite(r.value) ? `${base}  ${p.f.expr} ${tickLabel(Number(r.value.toPrecision(5)))}${r.unit === '1' ? '' : ` ${prettyUnit(r.unit)}`}${drawnNote(p, x, y, r.value)}${pointText ? ` [${pointText}]` : ''}` : base;
 			})
 			.catch((e) => {
 				if (!(e instanceof StaleError)) probe = base;
@@ -745,6 +757,16 @@
 					runProbe(n.x, n.y, n.text);
 				}
 			});
+	}
+
+	/** DevLog-034: with smoothing, the drawn value can differ from the exact point value; say so when it does. */
+	function drawnNote(p: Planned, x: number, y: number, exact: number): string {
+		const d = p.main?.data;
+		if (!d || !d.smoothing || d.smoothing === 'none' || !p.mesh) return '';
+		const h = drawnAt(wb.meshes[d.mesh] ?? p.mesh, d.values, d.r ?? 1, x, y);
+		const rg = built.ranges[p.f.id];
+		if (!h || !rg || !(Math.abs(h.v - exact) > 1e-3 * (rg.max - rg.min))) return '';
+		return ` (drawn ${tickLabel(Number(h.v.toPrecision(5)))}, smoothed)`;
 	}
 
 	function updateProbe(px: number, py: number) {
@@ -864,6 +886,15 @@
 				return Number.isFinite(r.value) ? { value: r.value, label: `${p.f.expr} [${R.dsLabel(p.ds)}]`, unit: r.unit, dataset: p.ds, sol: solOf(group) ?? 'main' } : null;
 			};
 			w.__simView = () => ({ ...view, W, H });
+			w.__simMarkers = () => built.markers.map((m) => ({ ...m }));
+			// DevLog-034 smoke: drawn lattice values of the top feature (all, or at chosen indices), with level and smoothing.
+			w.__simDrawn = (idx: number[] | null) => {
+				const p = probeFeature;
+				const d = p?.main?.data;
+				if (!p || !d || !p.mesh) return null;
+				const mesh = wb.meshes[d.mesh] ?? p.mesh;
+				return { r: d.r, smoothing: d.smoothing, n: d.values.length, nT: mesh.tri.length / 3, values: idx ? idx.map((i) => d.values[i]) : Array.from(d.values), min: d.min, max: d.max, expr: p.f.expr, dataset: p.ds, unit: d.unit };
+			};
 		}
 		const force = params.get('renderer') === 'canvas';
 		renderer = createRenderer(glCanvas, force);

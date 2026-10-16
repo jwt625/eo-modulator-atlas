@@ -1,14 +1,12 @@
 // Pure helpers turning plot features + evaluated arrays into renderer layers: ranges, contour levels, region masks,
 // arrow grids, auto titles. Unit-tested in sim.test.ts.
-import { autoRange, buildTriIndex, locate, meshBBox, triToNode, type Range, type TriIndex } from './fieldmath';
+import { autoRange, indexFor, locate, meshBBox, type Range, type TriIndex } from './fieldmath';
 import type { Feature, PlotGroup } from './results.svelte';
 import { FEATURE_LABEL } from './results.svelte';
 import type { PlotResult } from './post/contract';
 import type { FieldMesh, ScaleMode } from './types';
-import type { ValueAt } from './renderer';
+import { interpolateRefined } from '../../../../engine/src/postproc/index.mjs';
 import { prettyUnit } from './post/ui';
-
-export const atOf = (loc: PlotResult['location']): ValueAt => (loc === 'element' ? 'tri' : loc === 'sweep' ? 'node' : loc);
 
 /** Display range of a feature: manual, else automatic from the evaluated min/max (log: positive |v| range). */
 export function featureRange(f: Feature, p: PlotResult): Range {
@@ -42,39 +40,6 @@ export function contourLevels(f: Feature, r: Range): number[] {
 	return out;
 }
 
-const smoothMemo = new WeakMap<Float64Array, Float64Array>();
-/** Area-weighted nodal average of per-element or per-corner values (display smoothing). */
-export function smoothed(mesh: FieldMesh, p: { values: Float64Array; location: PlotResult['location'] }): { values: Float64Array; at: ValueAt } {
-	if (p.location !== 'element' && p.location !== 'corner') return { values: p.values, at: atOf(p.location) };
-	let v = smoothMemo.get(p.values);
-	if (!v) {
-		if (p.location === 'element') v = triToNode(mesh, p.values);
-		else {
-			const nN = mesh.x.length, acc = new Float64Array(nN), w = new Float64Array(nN);
-			const { x, y, tri } = mesh;
-			for (let t = 0; t < tri.length / 3; t++) {
-				const a = tri[3 * t], b = tri[3 * t + 1], c = tri[3 * t + 2];
-				const area = Math.abs((x[b] - x[a]) * (y[c] - y[a]) - (x[c] - x[a]) * (y[b] - y[a])) / 2;
-				for (let k = 0; k < 3; k++) {
-					const val = p.values[3 * t + k];
-					if (!Number.isFinite(val)) continue;
-					acc[tri[3 * t + k]] += area * val;
-					w[tri[3 * t + k]] += area;
-				}
-			}
-			for (let i = 0; i < nN; i++) acc[i] = w[i] > 0 ? acc[i] / w[i] : NaN;
-			v = acc;
-		}
-		smoothMemo.set(p.values, v);
-	}
-	return { values: v, at: 'node' };
-}
-/** Contours need continuous values: element values are averaged onto nodes (display only). */
-export function contourValues(mesh: FieldMesh, p: PlotResult): { values: Float64Array; at: ValueAt } {
-	if (p.location !== 'element') return { values: p.values, at: atOf(p.location) };
-	return smoothed(mesh, p);
-}
-
 /** Allowed regions of a mesh for a selection (region names); null = all. */
 export function regionMask(mesh: FieldMesh, regions: string[] | null): Uint8Array | null {
 	if (!regions) return null;
@@ -86,22 +51,8 @@ export function regionMask(mesh: FieldMesh, regions: string[] | null): Uint8Arra
 	return m;
 }
 
-const idxMemo = new WeakMap<FieldMesh, TriIndex>();
 export function meshIndex(m: FieldMesh): TriIndex {
-	if (m.index) return m.index;
-	let i = idxMemo.get(m);
-	if (!i) idxMemo.set(m, (i = buildTriIndex(m)));
-	return i;
-}
-
-/** Interpolated value of a plotted array at a world point (µm); NaN outside. */
-export function sampleAt(mesh: FieldMesh, p: { values: Float64Array; location: PlotResult['location'] }, x: number, y: number): number {
-	const loc = locate(mesh, meshIndex(mesh), x, y);
-	if (!loc) return NaN;
-	const t = loc.t, a = p.values;
-	if (p.location === 'element') return a[t];
-	if (p.location === 'corner') return loc.w0 * a[3 * t] + loc.w1 * a[3 * t + 1] + loc.w2 * a[3 * t + 2];
-	return loc.w0 * a[mesh.tri[3 * t]] + loc.w1 * a[mesh.tri[3 * t + 1]] + loc.w2 * a[mesh.tri[3 * t + 2]];
+	return indexFor(m);
 }
 
 export interface ArrowGrid {
@@ -128,7 +79,7 @@ export function arrowGrid(mesh: FieldMesh, px: PlotResult, py: PlotResult, f: Fe
 			const x = b.x0 + (i + 0.5) * dx, y = b.y0 + (j + 0.5) * dy;
 			const loc = locate(mesh, idx, x, y);
 			if (!loc || (mask && !mask[mesh.triRegion[loc.t]])) continue;
-			const vx = sampleAt(mesh, px, x, y), vy = sampleAt(mesh, py, x, y);
+			const vx = interpolateRefined(px.values, px.r ?? 1, loc.t, loc.w0, loc.w1), vy = interpolateRefined(py.values, py.r ?? 1, loc.t, loc.w0, loc.w1);
 			const m = Math.hypot(vx, vy);
 			if (!(m > 0)) continue;
 			vmax = Math.max(vmax, m);

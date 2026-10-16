@@ -10,7 +10,7 @@ import { chromium } from 'playwright-core';
 import { runCrossSection } from '../../engine/src/run.mjs';
 import { parseConfig } from '../../engine/src/config.mjs';
 import { setIn as yamlSetIn } from '../../engine/src/yaml-edit.mjs';
-import { createSolutionStore, evaluateDerived, evaluatePlot, modeTable } from '../../engine/src/postproc/index.mjs';
+import { createSolutionStore, evaluateAtPoints, evaluateDerived, evaluatePlot, latticeIndex, modeTable, refinedPoints, refinePattern } from '../../engine/src/postproc/index.mjs';
 
 const appDir = fileURLToPath(new URL('../', import.meta.url));
 const base = process.env.BASE_PATH ?? '';
@@ -286,9 +286,9 @@ try {
   for (const v of ['Electric Field', 'Mesh', 'Electric Potential']) await showView(v);
   await page.getByLabel('Mesh coloring').waitFor({ state: 'detached' });
   await screenshot('sim-desktop');
-  // Element order (U2): a P2 potential is drawn on elements split into 4 (exact values at the refined nodes).
+  // Refined display (DevLog-034): the default Normal resolution splits every element into 3 x 3 sub-triangles.
+  assert.equal(Number(await gfx.getAttribute('data-ntris')), 9 * (chenFields.tri.length / 3), 'refined display (Normal, r = 3)');
   if (chenFields.elementOrder === 2) {
-    assert.equal(Number(await gfx.getAttribute('data-ntris')), 4 * (chenFields.tri.length / 3), 'P2 refined display mesh');
     await node('results.derived'); await settingsTab();
     assert.match(await page.locator('[data-run-solver]').innerText(), /P2 electrostatics/);
   }
@@ -683,6 +683,95 @@ try {
   assert.equal(await page.locator('header [title]').count(), 0, 'no native title tooltips in the app shell');
   console.log('PASS custom tooltip (no native title attributes in the sim UI)');
 
+  // DevLog-034 refined field plots: Resolution and Smoothing switch; every drawn lattice value equals the Node engine
+  // (vector optical mode and P2 potential); interior lattice values equal exact point evaluation; no faceting: with
+  // smoothing inside material domains the drawn field is continuous across element edges, and the largest color step
+  // inside one sub-triangle shrinks with the resolution.
+  {
+    const gsgVec = yamlSetIn(gsg, 'optics.solver', 'vector');
+    const vecStore = createSolutionStore(runCrossSection(gsgVec, { stages: ['optical_mode', 'eo_overlap'], keep: true }));
+    await loadSim('id=chen2022-c&debug=1');
+    await yaml();
+    await editor.fill(gsgVec);
+    await page.getByLabel('Optical mode', { exact: true }).check();
+    await page.getByLabel('EO overlap', { exact: true }).check();
+    await runButton.click(); await complete();
+    const facets = {};
+    for (const view of ['Mode, optical', 'Electric Potential']) {
+      const gid = await showView(view);
+      await page.locator(`[data-node^="pf:${gid}:"]`).first().click();
+      await settingsTab();
+      for (const [res, sm, r] of [['normal', 'material', 3], ['fine', 'none', 4], ['coarse', 'everywhere', 2], ['none', 'none', 1], ['normal', 'none', 3]]) {
+        await page.getByLabel('Resolution', { exact: true }).selectOption(res);
+        await page.getByLabel('Smoothing', { exact: true }).selectOption(sm);
+        await until(async () => { const d = await page.evaluate(() => window.__simDrawn([])); return d && d.r === r && d.smoothing === sm; }, `${view} ${res} ${sm}`);
+        await settled();
+        const d = await page.evaluate(() => window.__simDrawn(null));
+        const want = evaluatePlot(vecStore, { dataset: d.dataset, expr: d.expr, unit: d.unit, location: 'refined', resolution: res, smoothing: sm });
+        const m = vecStore.mesh(want.mesh);
+        assert.equal(d.n, want.values.length);
+        assert.equal(Number(await gfx.getAttribute('data-ntris')), m.nTris * r * r, `${view} drawn sub-triangles at r = ${r}`);
+        const scale = Math.max(Math.abs(want.min), Math.abs(want.max)) || 1;
+        let worst = 0;
+        for (let i = 0; i < d.n; i++) worst = Math.max(worst, Math.abs(d.values[i] - want.values[i]));
+        assert.ok(worst <= 1e-12 * scale, `${view} ${res}/${sm}: browser drawn values vs Node max diff ${worst}`);
+        const { np, sub, nSub } = refinePattern(r);
+        // interior lattice points (r >= 3): drawn value = exact point evaluation
+        if (r >= 3 && sm === 'none') {
+          const pts = refinedPoints(m, r);
+          const idx = [];
+          for (let t = 0; t < m.nTris; t += Math.max(1, Math.floor(m.nTris / 50))) idx.push(t * np + latticeIndex(r, 1, 1));
+          const ex = evaluateAtPoints(vecStore, { dataset: d.dataset, expr: d.expr, unit: d.unit, x: idx.map((i) => pts.x[i]), y: idx.map((i) => pts.y[i]) }).values;
+          idx.forEach((i, k) => assert.ok(Math.abs(d.values[i] - ex[k]) <= 1e-9 * scale, `${view}: drawn ${d.values[i]} vs exact ${ex[k]} at lattice point ${i}`));
+        }
+        // faceting proxies: largest value step inside one sub-triangle (fraction of the color range) and the largest
+        // jump between coincident points of elements of the same material (0 when smoothed inside material domains)
+        let step = 0;
+        for (let t = 0; t < m.nTris; t++) for (let q = 0; q < nSub; q++) {
+          const a = d.values[t * np + sub[3 * q]], b = d.values[t * np + sub[3 * q + 1]], c = d.values[t * np + sub[3 * q + 2]];
+          step = Math.max(step, (Math.max(a, b, c) - Math.min(a, b, c)) / (d.max - d.min));
+        }
+        const pts = refinedPoints(m, r), seen = new Map();
+        let jump = 0;
+        for (let i = 0; i < d.n; i++) {
+          const key = `${pts.x[i]},${pts.y[i]},${m.regionMaterials[m.triRegion[Math.floor(i / np)]]}`;
+          if (seen.has(key)) jump = Math.max(jump, Math.abs(d.values[i] - seen.get(key)) / (d.max - d.min)); else seen.set(key, d.values[i]);
+        }
+        if (sm !== 'none') assert.ok(jump <= 1e-12, `${view} ${res}/${sm}: drawn field continuous across element edges (jump ${jump})`);
+        facets[`${view} r${r} ${sm}`] = { step: Number(step.toPrecision(3)), jump: Number(jump.toPrecision(3)) };
+      }
+      // the largest color step of one sub-triangle at Normal is at most half of the unrefined (per-element) one
+      assert.ok(facets[`${view} r3 material`].step <= 0.5 * facets[`${view} r1 none`].step, `${view}: faceting proxy ${JSON.stringify(facets)}`);
+    }
+    assert.ok(facets['Mode, optical r3 material'].step < 0.05, `optical mode faceting proxy ${facets['Mode, optical r3 material'].step}`);
+    // F1 (audit 2026-10-15): a Max/Min Marker is the unsmoothed lattice extremum, labelled with the exact point value at
+    // its location (= the probe there), whatever the smoothing of the surface.
+    const optView = await showView('Mode, optical');
+    await page.locator(`[data-node^="pf:${optView}:"]`).first().click();
+    await page.getByLabel('Smoothing', { exact: true }).selectOption('material');
+    await node(`pg:${optView}`); await settingsTab();
+    await page.getByRole('button', { name: '+ Max/Min Marker', exact: true }).click();
+    await page.getByText('Smoothing: None (exact extrema)').waitFor();
+    await settled();
+    await until(async () => (await page.evaluate(() => window.__simMarkers())).length === 2, 'max and min markers');
+    const marks = await page.evaluate(() => window.__simMarkers());
+    const dOpt = await page.evaluate(() => window.__simDrawn([]));
+    const raw = evaluatePlot(vecStore, { dataset: dOpt.dataset, expr: dOpt.expr, unit: dOpt.unit, location: 'refined', resolution: 'normal', smoothing: 'none' });
+    const mOpt = vecStore.mesh(raw.mesh), ptsOpt = refinedPoints(mOpt, 3);
+    let iMax = 0;
+    for (let i = 1; i < raw.values.length; i++) if (raw.values[i] > raw.values[iMax]) iMax = i;
+    const mk = marks.find((q) => q.kind === 'max');
+    assert.ok(Math.abs(mk.x - ptsOpt.x[iMax]) <= 1e-12 && Math.abs(mk.y - ptsOpt.y[iMax]) <= 1e-12, `max marker at (${mk.x}, ${mk.y}) vs Node lattice argmax (${ptsOpt.x[iMax]}, ${ptsOpt.y[iMax]})`);
+    const exactAt = evaluateAtPoints(vecStore, { dataset: dOpt.dataset, expr: dOpt.expr, unit: dOpt.unit, points: [[mk.x, mk.y]] }).values[0];
+    assert.ok(Math.abs(mk.value - exactAt) <= 1e-12 * Math.abs(exactAt), `max marker ${mk.value} vs exact ${exactAt}`);
+    const probeAt = await page.evaluate(([x, y]) => window.__simProbe(x, y), [mk.x, mk.y]);
+    assert.ok(Math.abs(probeAt.value - mk.value) <= 1e-12 * Math.abs(mk.value), `max marker ${mk.value} vs probe ${probeAt.value}`);
+    const smoothedMax = evaluatePlot(vecStore, { dataset: dOpt.dataset, expr: dOpt.expr, unit: dOpt.unit, location: 'refined', resolution: 'normal', smoothing: 'material' }).max;
+    console.log(`INFO Max/Min marker ${mk.value} = exact = probe; lattice max (None) ${raw.values[iMax]}, smoothed surface max ${smoothedMax}`);
+    console.log(`INFO refined display faceting proxies (max step per sub-triangle / range, max same-material jump / range): ${JSON.stringify(facets)}`);
+    console.log('PASS refined field plots: Resolution and Smoothing switch, browser drawn values = Node engine, interior points = exact evaluation, continuous within material domains, Max/Min marker = exact value = probe at its point (DevLog-034, audit F1)');
+  }
+
   // W2: on a template config the element order is written to template.mesh (not to the generated geometry).
   await loadSim('id=renaud2023-3um-738');
   await node('mesh'); await settingsTab();
@@ -802,8 +891,8 @@ try {
   assert.match(dl3.suggestedFilename(), /-p3-materials\.eo_medium\.eps_r=40\.csv$/);
   const csv3 = await readFile(await dl3.path(), 'utf8');
   assert.match(csv3.split('\n')[0], /sweep point 3 \(materials\.eo_medium\.eps_r = 40\)/);
-  const nP2 = evaluatePlot(store40, { dataset: 'es', expr: 'es.V', unit: 'V', location: 'p2nodes' }).values.length;
-  assert.equal(csv3.trim().split('\n').length - 2, nP2, 'one row per P2 node of the sweep point solution');
+  const nDrawn = evaluatePlot(store40, { dataset: 'es', expr: 'es.V', unit: 'V', location: 'refined' }).values.length;
+  assert.equal(csv3.trim().split('\n').length - 2, nDrawn, 'one row per drawn lattice point of the sweep point solution');
   await dl3.delete();
   console.log('PASS sweep-point probe equals Node (F1) and Export > Data of the sweep point (F2)');
   // G1: a cut line drawn on the sweep-point view samples that point; Line Integration there equals Node; tables carry the solution.

@@ -14,11 +14,11 @@ export function solOf(g: PlotGroup | null): string | undefined {
 }
 const withSol = <T extends object>(r: T, sol: string | undefined) => (sol ? { ...r, sol } : r);
 
-/** Plot request of a feature expression (also the cache key of its values). */
+/** Plot request of a feature expression (also the cache key of its values). Max/Min markers use unsmoothed values (exact extrema). */
 export function plotRequest(R: Results, g: PlotGroup, f: Feature, expr: string, unit: string): PostRequest {
 	const ds = f.dataset || g.dataset;
 	const sol = solOf(g);
-	const req: PlotRequest = { dataset: ds, expr, unit, mode: R.modeFor(ds, sol), selection: R.selectionRegions(f.selection), ...(f.resolution === 'normal' ? { resolution: 'normal' as const } : {}) };
+	const req: PlotRequest = { dataset: ds, expr, unit, mode: R.modeFor(ds, sol), selection: R.selectionRegions(f.selection), resolution: f.resolution, smoothing: f.type === 'maxmin' ? 'none' : f.smoothing };
 	return withSol({ op: 'plot' as const, req }, sol);
 }
 

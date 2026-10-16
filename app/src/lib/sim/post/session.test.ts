@@ -4,22 +4,20 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { runCrossSection } from '../../../../../engine/src/run.mjs';
 import { setIn } from '../../../../../engine/src/yaml-edit.mjs';
-import { createSolutionStore } from '../../../../../engine/src/postproc/index.mjs';
+import { createSolutionStore, latticeIndex, refinedPoints } from '../../../../../engine/src/postproc/index.mjs';
 import { PostSession } from './session';
 import { sweepValues, prettyUnit } from './ui';
-import type { FieldMesh } from '../types';
 
 const gsg = readFileSync(new URL('../../../../../engine/tests/fixtures/gsg-eo-rf.yaml', import.meta.url), 'utf8');
 
 function session(text: string, numModes?: number) {
 	const result = runCrossSection(text, { stages: ['optical_mode', 'eo_overlap'], keep: true, ...(numModes ? { numModes } : {}) });
 	const s = new PostSession(createSolutionStore(result));
-	const p2: FieldMesh | null = s.meshes()['es.p2'] ?? null;
-	return { s, result, p2 };
+	return { s, result };
 }
 
 describe('PostSession (engine store, DevLog-031)', () => {
-	const { s, result, p2 } = session(gsg);
+	const { s, result } = session(gsg);
 	it('exposes base datasets only, with display meshes', () => {
 		const ids = s.datasets().map((d) => d.id);
 		expect(ids).toContain('es');
@@ -27,7 +25,7 @@ describe('PostSession (engine store, DevLog-031)', () => {
 		expect(ids.some((i) => i.includes(':'))).toBe(false);
 		const m = s.meshes();
 		expect(Object.keys(m)).toContain('es');
-		if (p2) expect(m['es.p2'].tri.length).toBe(p2.tri.length);
+		expect(Object.keys(m).some((k) => k.includes('p2'))).toBe(false);
 	});
 	it('evaluates the uniform gap field and the potential difference', () => {
 		expect(s.derived({ kind: 'point', dataset: 'es', expr: 'es.Ex', unit: 'V/um', selection: [2, 0] }).value).toBeCloseTo(0.5, 9);
@@ -36,14 +34,23 @@ describe('PostSession (engine store, DevLog-031)', () => {
 		expect(p.max).toBeCloseTo(1, 9);
 		expect(p.min).toBeCloseTo(0, 9);
 		expect(p.maxAt).not.toBeNull();
-		if (p2) expect(p.mesh).toBe('es.p2');
-		if (p2) {
-			// P2 display: refined node values equal the engine point values (vertices and edge midpoints).
-			const pts = [5, p2.x.length - 3, Math.floor(p2.x.length / 2)];
-			for (const i of pts) expect(p.values[i]).toBeCloseTo(s.derived({ kind: 'point', dataset: 'es', expr: 'es.V', unit: 'V', selection: [p2.x[i], p2.y[i]] }).value, 10);
+		// refined element-local lattice (DevLog-034): default Normal (r = 3), smoothing inside material domains
+		expect(p.location).toBe('refined');
+		expect(p.mesh).toBe('es');
+		expect(p.r).toBe(3);
+		expect(p.smoothing).toBe('material');
+		const es = s.meshes().es;
+		expect(p.values.length).toBe((es.tri.length / 3) * 10);
+		// interior lattice points: drawn value = exact point value
+		const { x, y } = refinedPoints(es, 3);
+		for (const t of [0, 7, Math.floor(es.tri.length / 6)]) {
+			const i = t * 10 + latticeIndex(3, 1, 1);
+			expect(p.values[i]).toBeCloseTo(s.derived({ kind: 'point', dataset: 'es', expr: 'es.V', unit: 'V', selection: [x[i], y[i]] }).value, 10);
 		}
-		const e = s.plot({ dataset: 'es', expr: 'es.Ex', unit: 'V/um' });
-		expect(e.location).toBe(p2 ? 'corner' : 'element');
+		const e = s.plot({ dataset: 'es', expr: 'es.Ex', unit: 'V/um', resolution: 'fine', smoothing: 'none' });
+		expect(e.r).toBe(4);
+		expect(e.smoothing).toBe('none');
+		expect(e.values.length).toBe((es.tri.length / 3) * 15);
 	});
 	it('integrates the EO integrand to the engine dn_eff/V', () => {
 		const dn = result.eo!.arms.A.dnEffPerV;

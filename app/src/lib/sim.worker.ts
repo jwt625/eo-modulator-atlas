@@ -144,7 +144,7 @@ self.onmessage = (event: MessageEvent<WorkerIn>) => {
 		const fields = result.fields ?? null;
 		delete result.fields;
 		if (keep) {
-			// The solution stays here; the main thread receives display meshes (P2: refined from the engine p2nodes) and datasets.
+			// The solution stays here; the main thread receives the display meshes (refined per plot from the engine lattice values, DevLog-034) and datasets.
 			sessions.get('main')?.dispose();
 			const s = new PostSession(createSolutionStore(result));
 			sessions.set('main', s);

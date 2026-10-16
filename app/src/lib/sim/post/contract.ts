@@ -2,8 +2,8 @@
 // (engine/src/postproc, DevLog-031 API v1) and maps these requests onto it: the UI addresses base datasets ('es',
 // 'opt', 'armA', 'armB', 'eoA', 'eoB') plus a mode index, region-name selections, and cut lines/points by geometry.
 // Coordinates in requests are µm; expressions are SI.
-import type { DatasetInfo, DerivedKind, ModeRow, VariableInfo } from '../../../../../engine/src/postproc/index.mjs';
-export type { DatasetInfo, DerivedKind, ModeRow, VariableInfo };
+import type { DatasetInfo, DerivedKind, ModeRow, ResolutionName, Smoothing, VariableInfo } from '../../../../../engine/src/postproc/index.mjs';
+export type { DatasetInfo, DerivedKind, ModeRow, ResolutionName, Smoothing, VariableInfo };
 
 export interface LineSpec {
 	ax: number;
@@ -21,20 +21,29 @@ export interface PlotRequest {
 	mode?: number;
 	/** Region names (filter and min/max); null = all domains. */
 	selection?: string[] | null;
-	/** Quality: P2 continuous expressions at the P2 nodes ('fine', default) or at the element vertices ('normal'). */
-	resolution?: 'fine' | 'normal';
+	/** Quality (DevLog-034): resolution level of the element-local sampling (default 'normal') and smoothing (default 'material'). */
+	resolution?: ResolutionName;
+	smoothing?: Smoothing;
 }
 
-/** Plot values on a display mesh, with min/max (of the selection) and their locations (µm). */
+/** Plot values with min/max (of the selection) and their locations (µm). */
 export interface PlotResult {
+	/** refined: one value per element-local lattice point of level `r` of the parent mesh `mesh`, element-major; sweep: per frequency. */
 	values: Float64Array;
-	location: 'node' | 'element' | 'corner' | 'sweep';
+	location: 'refined' | 'sweep';
 	mesh: string;
+	/** refined: level drawn, level asked (lowered when the 2.5M sub-triangle cap applies), smoothing applied. */
+	r?: number;
+	requestedR?: number;
+	smoothing?: Smoothing;
 	unit: string;
 	min: number;
 	max: number;
 	minAt: [number, number] | null;
 	maxAt: [number, number] | null;
+	/** refined: exact point value (engine point evaluation, as the probe) at minAt / maxAt. */
+	minAtValue?: number;
+	maxAtValue?: number;
 	/** Engine evaluation time (ms). */
 	ms?: number;
 	/** rf dataset: frequencies (GHz) of the values. */

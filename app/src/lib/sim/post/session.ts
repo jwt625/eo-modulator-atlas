@@ -1,20 +1,15 @@
 // Worker side of the Results protocol (DevLog-032) over one engine solution store (DevLog-031 API, public entries
 // only). Maps base dataset + mode to engine ids ('opt' + mode k -> 'opt:k'), region-name selections, cut lines by
-// geometry (engine cut-line datasets, cached), the P2 display (engine `p2nodes` values on the refined display mesh),
-// the RF frequency sweep (`rf` dataset), and min/max with locations for Max/Min markers. `prefix` namespaces the mesh
-// ids of sweep-point solutions ('sweep:3/es').
-import { evaluateAtPoints, evaluateDerived, evaluatePlot, modeTable, parseExpression, referencedNames, type SolutionStore } from '../../../../../engine/src/postproc/index.mjs';
-import { buildTriIndex } from '../fieldmath';
+// geometry (engine cut-line datasets, cached), field plots as refined element-local lattice values with smoothing
+// (engine `location: 'refined'`, DevLog-034), the RF frequency sweep (`rf` dataset), and min/max with locations for
+// Max/Min markers. `prefix` namespaces the mesh ids of sweep-point solutions ('sweep:3/es').
+import { evaluateAtPoints, evaluateDerived, evaluatePlot, modeTable, parseExpression, referencedNames, refinePattern, type SolutionStore } from '../../../../../engine/src/postproc/index.mjs';
 import type { FieldMesh } from '../types';
 import type { CheckResult, DatasetInfo, DerivedRequest, DerivedResult, LineResult, LineSpec, ModeRow, PlotRequest, PlotResult, VariableInfo } from './contract';
-
-// Sub-triangles of a P2 element in local DOF numbers (vertices 0..2, midpoints 3 = m01, 4 = m12, 5 = m20).
-const SUB = [[0, 3, 5], [3, 1, 4], [5, 4, 2], [3, 4, 5]] as const;
 
 export class PostSession {
 	private base: DatasetInfo[];
 	private cutLines = new Map<string, string>();
-	private p2: FieldMesh | null | undefined;
 	private vars = new Map<string, VariableInfo[]>();
 
 	constructor(readonly store: SolutionStore, private prefix = '') {
@@ -32,32 +27,6 @@ export class PostSession {
 		return this.base;
 	}
 
-	/** Refined P2 display mesh (DOF coordinates as nodes, 4 sub-triangles per element) or null for P1. */
-	private p2Mesh(): FieldMesh | null {
-		if (this.p2 !== undefined) return this.p2;
-		this.p2 = null;
-		if (!this.base.some((d) => d.id === 'es')) return null;
-		let r;
-		try {
-			r = evaluatePlot(this.store, { dataset: 'es', expr: 'es.V', location: 'p2nodes' });
-		} catch {
-			return null; // P1 solution
-		}
-		if (!r.x || !r.y || !r.elem) return null;
-		const es = this.store.mesh('es');
-		const nT = r.elem.length / 6;
-		const tri = new Int32Array(12 * nT), triRegion = new Int32Array(4 * nT);
-		for (let t = 0; t < nT; t++)
-			for (let s = 0; s < 4; s++) {
-				triRegion[4 * t + s] = es.triRegion[t];
-				for (let c = 0; c < 3; c++) tri[3 * (4 * t + s) + c] = r.elem[6 * t + SUB[s][c]];
-			}
-		const mesh: FieldMesh = { x: Float64Array.from(r.x), y: Float64Array.from(r.y), tri, triRegion, regionNames: es.regionNames, regionMaterials: es.regionMaterials };
-		mesh.index = buildTriIndex(mesh);
-		this.p2 = mesh;
-		return mesh;
-	}
-
 	private mid(id: string): string {
 		return `${this.prefix}${id}`;
 	}
@@ -69,8 +38,6 @@ export class PostSession {
 			const m = this.store.mesh(id);
 			out[this.mid(id)] = { x: m.x, y: m.y, tri: m.tri, triRegion: m.triRegion, regionNames: m.regionNames, regionMaterials: m.regionMaterials };
 		}
-		const p2 = this.p2Mesh();
-		if (p2) out[this.mid('es.p2')] = p2;
 		return out;
 	}
 
@@ -90,15 +57,6 @@ export class PostSession {
 
 	modes(dataset: string): ModeRow[] {
 		return modeTable(this.store, dataset);
-	}
-
-	/** Continuity of an expression from the registry (no evaluation): every referenced field variable continuous. */
-	private continuous(dataset: string, expr: string): boolean {
-		const vars = this.variables(dataset);
-		return referencedNames(parseExpression(expr)).every((n) => {
-			const v = vars.find((x) => x.name === n);
-			return !v || v.location === 'global' || v.continuous;
-		});
 	}
 
 	/** Unit, continuity and globality of an expression on a dataset (public entries only). */
@@ -129,25 +87,16 @@ export class PostSession {
 			const r = evaluatePlot(this.store, { dataset: 'rf', expr: req.expr, unit });
 			return { values: r.values, location: 'sweep', mesh: '', unit: r.unit, ms: r.ms, min: r.min, max: r.max, minAt: null, maxAt: null, x: r.fGhz ?? new Float64Array(0) };
 		}
-		const p2 = info?.kind === 'es' ? this.p2Mesh() : null;
-		let values: Float64Array, location: PlotResult['location'], meshId: string, outUnit: string, ms: number;
-		if (p2 && req.resolution !== 'normal' && this.continuous(req.dataset, req.expr)) {
-			// P2: exact values at the P2 DOFs = the nodes of the refined display mesh.
-			const r = evaluatePlot(this.store, { dataset: 'es', expr: req.expr, unit, location: 'p2nodes' });
-			({ values, ms } = r);
-			outUnit = r.unit;
-			location = 'node';
-			meshId = 'es.p2';
-		} else {
-			// P2 fields: exact corner values (linear per element); P1 and optical: node or element (engine continuity rule).
-			const r = evaluatePlot(this.store, { dataset: ds, expr: req.expr, unit, location: p2 || (info?.kind === 'es' && req.resolution === 'normal') ? 'corner' : 'auto' });
-			({ values, ms } = r);
-			outUnit = r.unit;
-			location = r.location === 'corner' ? 'corner' : r.location === 'element' ? 'element' : 'node';
-			meshId = r.mesh ?? info?.mesh ?? '';
-		}
-		const mesh = meshId === 'es.p2' ? p2! : this.store.mesh(meshId);
-		return { values, location, mesh: this.mid(meshId), unit: outUnit, ms, ...extrema(mesh, values, location, req.selection ?? null) };
+		// Element-local lattice of the requested resolution, exact per element, smoothed as requested (DevLog-034).
+		const r = evaluatePlot(this.store, { dataset: ds, expr: req.expr, unit, location: 'refined', resolution: req.resolution ?? 'normal', smoothing: req.smoothing ?? 'material' });
+		const meshId = r.mesh ?? info?.mesh ?? '';
+		const lev = r.resolution ?? 1;
+		const ex = extrema(this.store.mesh(meshId), r.values, lev, req.selection ?? null);
+		// Exact point values at the extremum locations (same evaluation as the probe), for Max/Min markers.
+		const at = [ex.maxAt, ex.minAt].filter((p): p is [number, number] => !!p);
+		const pv = at.length ? evaluateAtPoints(this.store, { dataset: ds, expr: req.expr, unit, points: at }).values : null;
+		const atValues = pv ? { maxAtValue: ex.maxAt ? pv[0] : undefined, minAtValue: ex.minAt ? pv[ex.maxAt ? 1 : 0] : undefined } : {};
+		return { values: r.values, location: 'refined', mesh: this.mid(meshId), unit: r.unit, ms: r.ms, r: lev, requestedR: r.requestedResolution, smoothing: r.smoothing, ...ex, ...atValues };
 	}
 
 	derived(req: DerivedRequest): DerivedResult {
@@ -191,9 +140,10 @@ export class PostSession {
 	}
 }
 
-/** Min and max over the selection (by element region) with their locations. */
-function extrema(mesh: FieldMesh, values: Float64Array, loc: PlotResult['location'], sel: string[] | null) {
+/** Min and max of refined lattice values over the selection (by element region) with their locations. */
+function extrema(mesh: FieldMesh, values: Float64Array, r: number, sel: string[] | null) {
 	const nT = mesh.tri.length / 3;
+	const { np, L } = refinePattern(r);
 	let mask: Uint8Array | null = null;
 	if (sel) {
 		mask = new Uint8Array(mesh.regionNames.length);
@@ -203,25 +153,21 @@ function extrema(mesh: FieldMesh, values: Float64Array, loc: PlotResult['locatio
 		}
 	}
 	let min = Infinity, max = -Infinity, iMin = -1, iMax = -1;
-	const take = (i: number) => {
-		const x = values[i];
-		if (!(x === x)) return;
-		if (x < min) { min = x; iMin = i; }
-		if (x > max) { max = x; iMax = i; }
-	};
-	if (loc === 'element') {
-		for (let t = 0; t < nT; t++) if (!mask || mask[mesh.triRegion[t]]) take(t);
-	} else if (loc === 'corner') {
-		for (let t = 0; t < nT; t++) if (!mask || mask[mesh.triRegion[t]]) { take(3 * t); take(3 * t + 1); take(3 * t + 2); }
-	} else if (mask) {
-		for (let t = 0; t < nT; t++) if (mask[mesh.triRegion[t]]) for (let k = 0; k < 3; k++) take(mesh.tri[3 * t + k]);
-	} else for (let i = 0; i < values.length; i++) take(i);
+	for (let t = 0; t < nT; t++) {
+		if (mask && !mask[mesh.triRegion[t]]) continue;
+		for (let i = t * np; i < (t + 1) * np; i++) {
+			const x = values[i];
+			if (!(x === x)) continue;
+			if (x < min) { min = x; iMin = i; }
+			if (x > max) { max = x; iMax = i; }
+		}
+	}
 	const pos = (i: number): [number, number] | null => {
 		if (i < 0) return null;
-		if (loc === 'node') return [mesh.x[i], mesh.y[i]];
-		if (loc === 'corner') return [mesh.x[mesh.tri[i]], mesh.y[mesh.tri[i]]];
-		const a = mesh.tri[3 * i], b = mesh.tri[3 * i + 1], c = mesh.tri[3 * i + 2];
-		return [(mesh.x[a] + mesh.x[b] + mesh.x[c]) / 3, (mesh.y[a] + mesh.y[b] + mesh.y[c]) / 3];
+		const t = Math.floor(i / np), p = i - t * np;
+		const a = mesh.tri[3 * t], b = mesh.tri[3 * t + 1], c = mesh.tri[3 * t + 2];
+		const l0 = L[3 * p], l1 = L[3 * p + 1], l2 = L[3 * p + 2];
+		return [l0 * mesh.x[a] + l1 * mesh.x[b] + l2 * mesh.x[c], l0 * mesh.y[a] + l1 * mesh.y[b] + l2 * mesh.y[c]];
 	};
 	return { min: iMin >= 0 ? min : NaN, max: iMax >= 0 ? max : NaN, minAt: pos(iMin), maxAt: pos(iMax) };
 }

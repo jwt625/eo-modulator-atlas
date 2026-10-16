@@ -1,10 +1,14 @@
-// Field renderer (DevLog-023 D8, DevLog-032 layers): WebGL2, one de-indexed draw call per layer. A frame is an ordered
-// list of layers (COMSOL plot features): surface (color table fill), contour (iso-lines in the fragment shader at up to
-// 64 levels, color table or uniform), region (material colors, mesh view), each on its own mesh with an optional
-// region mask (selection filter); then instanced arrows. Mesh buffers are cached per mesh (LRU), value buffers per
-// values array. Canvas2DRenderer is the fallback when WebGL2 is unavailable.
+// Field renderer (DevLog-023 D8, DevLog-032 layers, DevLog-034 refined display): WebGL2, one indexed draw call per
+// layer. A frame is an ordered list of layers (COMSOL plot features): surface (color table fill), contour (iso-lines in
+// the fragment shader at up to 64 levels, color table or uniform), region (material colors, mesh view), each on its own
+// mesh with an optional region mask (selection filter); then instanced arrows. Every layer is drawn on the refined
+// display of its mesh at level r (r^2 sub-triangles per element, values per element-local lattice point, Gouraud
+// shading inside sub-triangles; contours therefore follow the refined values); the wireframe draws the parent elements.
+// Buffers are cached per (mesh, r) (LRU), value buffers per values array. Canvas2DRenderer is the fallback when WebGL2
+// is unavailable.
 import { colormapLut, hexToRgb, type ColormapName } from './colormap';
 import { scaleT, type Range } from './fieldmath';
+import { refinedDisplay, type RefinedDisplay } from './refined';
 import type { FieldMesh, ScaleMode } from './types';
 
 export interface View {
@@ -15,13 +19,13 @@ export interface View {
 	scale: number;
 }
 
-export type ValueAt = 'node' | 'tri' | 'corner';
-
 export interface Layer {
 	kind: 'surface' | 'contour' | 'region';
 	mesh: FieldMesh;
+	/** Refinement level of the values (default 1 = element corners). */
+	r?: number;
+	/** One value per element-local lattice point of level r, element-major (engine `location: 'refined'`). */
 	values?: ArrayLike<number> | null;
-	at?: ValueAt;
 	scaleMode?: ScaleMode;
 	range?: Range;
 	colormap?: ColormapName;
@@ -68,6 +72,7 @@ const MAX_LEVELS = 64;
 
 const VS = `#version 300 es
 in vec2 aPos;
+in vec2 aBary;
 in float aVal;
 in float aReg;
 uniform vec2 uScale;
@@ -76,8 +81,7 @@ out float vVal;
 out vec3 vBary;
 flat out int vReg;
 void main() {
-	int k = gl_VertexID % 3;
-	vBary = vec3(k == 0 ? 1.0 : 0.0, k == 1 ? 1.0 : 0.0, k == 2 ? 1.0 : 0.0);
+	vBary = vec3(aBary, 1.0 - aBary.x - aBary.y);
 	vVal = aVal;
 	vReg = int(aReg + 0.5);
 	gl_Position = vec4(aPos * uScale + uOffset, 0.0, 1.0);
@@ -199,14 +203,9 @@ function centreOf(mesh: FieldMesh): [number, number] {
 	return [(x0 + x1) / 2, (y0 + y1) / 2];
 }
 
-/** Per-vertex (3 per triangle) values of a node, tri or corner field. */
-export function deindex(mesh: FieldMesh, values: ArrayLike<number>, at: ValueAt): Float32Array {
-	const nT = mesh.tri.length / 3;
-	const v = new Float32Array(3 * nT);
-	if (at === 'tri') for (let t = 0; t < nT; t++) v[3 * t] = v[3 * t + 1] = v[3 * t + 2] = values[t];
-	else if (at === 'corner') for (let i = 0; i < 3 * nT; i++) v[i] = values[i];
-	else for (let i = 0; i < 3 * nT; i++) v[i] = values[mesh.tri[i]];
-	return v;
+/** Lattice values of a layer, checked against its refined display (a wrong length draws nothing). */
+function layerValues(L: Layer, d: { nT: number; np: number }): ArrayLike<number> | null {
+	return L.values && L.values.length === d.nT * d.np ? L.values : null;
 }
 
 /** Contour levels mapped to the color coordinate t of the shader (linear or log). */
@@ -219,10 +218,15 @@ function levelT(levels: number[], mode: ScaleMode, r: Range): number[] {
 
 interface MeshEntry {
 	pos: WebGLBuffer;
+	bary: WebGLBuffer;
 	reg: WebGLBuffer;
+	idx: WebGLBuffer;
+	/** Index count (3 per sub-triangle). */
 	n: number;
+	/** Elements and lattice points per element (the display arrays themselves are not retained, F2). */
+	disp: { nT: number; np: number };
 	c0: [number, number];
-	vals: Map<ArrayLike<number>, { buf: WebGLBuffer; at: ValueAt }>;
+	vals: Map<ArrayLike<number>, WebGLBuffer>;
 	used: number;
 }
 
@@ -241,7 +245,9 @@ export class GlRenderer implements FieldRenderer {
 	private maskTex: WebGLTexture;
 	private lutKey = '';
 	private regKey = '';
-	private meshes = new Map<FieldMesh, MeshEntry>();
+	private meshes = new Map<string, MeshEntry>();
+	private meshKeys = new WeakMap<FieldMesh, number>();
+	private meshSeq = 0;
 	private frame = 0;
 	private u: Record<string, WebGLUniformLocation | null> = {};
 	private au: Record<string, WebGLUniformLocation | null> = {};
@@ -266,7 +272,7 @@ export class GlRenderer implements FieldRenderer {
 		for (const n of ['uScale', 'uOffset', 'uMode', 'uLog', 'uMin', 'uMax', 'uLut', 'uRegions', 'uMask', 'uUseMask', 'uWire', 'uWireColor', 'uNLevels', 'uLevels', 'uUniform', 'uUniformColor', 'uUseData', 'uDataMin', 'uDataMax'])
 			this.u[n] = gl.getUniformLocation(this.prog, n);
 		for (const n of ['uScale', 'uOffset', 'uPx', 'uColor']) this.au[n] = gl.getUniformLocation(this.aprog, n);
-		for (const n of ['aPos', 'aVal', 'aReg']) this.loc[n] = gl.getAttribLocation(this.prog, n);
+		for (const n of ['aPos', 'aBary', 'aVal', 'aReg']) this.loc[n] = gl.getAttribLocation(this.prog, n);
 		this.vao = gl.createVertexArray()!;
 		this.zeroBuf = gl.createBuffer()!;
 		this.instBuf = gl.createBuffer()!;
@@ -327,60 +333,71 @@ export class GlRenderer implements FieldRenderer {
 		}
 	}
 
-	private entry(mesh: FieldMesh): MeshEntry {
-		let e = this.meshes.get(mesh);
+	private key(mesh: FieldMesh, r: number): string {
+		let k = this.meshKeys.get(mesh);
+		if (k === undefined) this.meshKeys.set(mesh, (k = ++this.meshSeq));
+		return `${k}:${r}`;
+	}
+
+	private entry(mesh: FieldMesh, r: number): MeshEntry {
+		const key = this.key(mesh, r);
+		let e = this.meshes.get(key);
 		if (!e) {
 			const gl = this.gl;
-			const nT = mesh.tri.length / 3;
+			const d = refinedDisplay(mesh, r);
 			const c0 = centreOf(mesh);
-			const pos = new Float32Array(6 * nT);
-			const reg = new Float32Array(3 * nT);
-			for (let t = 0; t < nT; t++)
-				for (let k = 0; k < 3; k++) {
-					const n = mesh.tri[3 * t + k];
-					pos[6 * t + 2 * k] = mesh.x[n] - c0[0];
-					pos[6 * t + 2 * k + 1] = mesh.y[n] - c0[1];
-					reg[3 * t + k] = mesh.triRegion[t];
-				}
-			const pb = gl.createBuffer()!, rb = gl.createBuffer()!;
-			gl.bindBuffer(gl.ARRAY_BUFFER, pb);
-			gl.bufferData(gl.ARRAY_BUFFER, pos, gl.STATIC_DRAW);
-			gl.bindBuffer(gl.ARRAY_BUFFER, rb);
-			gl.bufferData(gl.ARRAY_BUFFER, reg, gl.STATIC_DRAW);
-			e = { pos: pb, reg: rb, n: 3 * nT, c0, vals: new Map(), used: 0 };
-			this.meshes.set(mesh, e);
+			const n = d.x.length;
+			const pos = new Float32Array(2 * n);
+			const reg = new Float32Array(n);
+			for (let i = 0; i < n; i++) {
+				pos[2 * i] = d.x[i] - c0[0];
+				pos[2 * i + 1] = d.y[i] - c0[1];
+			}
+			for (let t = 0; t < d.nT; t++) reg.fill(mesh.triRegion[t], t * d.np, (t + 1) * d.np);
+			const buf = (data: ArrayBufferView<ArrayBuffer>, target: number = gl.ARRAY_BUFFER) => {
+				const b = gl.createBuffer()!;
+				gl.bindBuffer(target, b);
+				gl.bufferData(target, data, gl.STATIC_DRAW);
+				return b;
+			};
+			gl.bindVertexArray(this.vao);
+			e = { pos: buf(pos), bary: buf(d.bary), reg: buf(reg), idx: buf(d.sub, gl.ELEMENT_ARRAY_BUFFER), n: d.sub.length, disp: { nT: d.nT, np: d.np }, c0, vals: new Map(), used: 0 };
+			this.meshes.set(key, e);
 		}
 		e.used = this.frame;
 		return e;
 	}
 
-	private valueBuf(e: MeshEntry, mesh: FieldMesh, values: ArrayLike<number>, at: ValueAt): WebGLBuffer {
+	private valueBuf(e: MeshEntry, values: ArrayLike<number>): WebGLBuffer {
 		const hit = e.vals.get(values);
-		if (hit && hit.at === at) return hit.buf;
+		if (hit) return hit;
 		const gl = this.gl;
-		const buf = hit?.buf ?? gl.createBuffer()!;
+		const buf = gl.createBuffer()!;
 		gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-		gl.bufferData(gl.ARRAY_BUFFER, deindex(mesh, values, at), gl.STATIC_DRAW);
+		gl.bufferData(gl.ARRAY_BUFFER, values instanceof Float32Array ? values : Float32Array.from(values), gl.STATIC_DRAW);
 		// keep a few value arrays per mesh (layer switching without re-upload)
-		if (e.vals.size >= 6 && !hit) {
+		if (e.vals.size >= 6) {
 			const [k, old] = e.vals.entries().next().value!;
-			gl.deleteBuffer(old.buf);
+			gl.deleteBuffer(old);
 			e.vals.delete(k);
 		}
-		e.vals.set(values, { buf, at });
+		e.vals.set(values, buf);
 		return buf;
 	}
 
-	private evict(keep: Set<FieldMesh>) {
-		if (this.meshes.size <= 4) return;
+	private release(e: MeshEntry) {
 		const gl = this.gl;
-		const old = [...this.meshes.entries()].filter(([m]) => !keep.has(m)).sort((a, b) => a[1].used - b[1].used);
+		for (const b of [e.pos, e.bary, e.reg, e.idx]) gl.deleteBuffer(b);
+		for (const v of e.vals.values()) gl.deleteBuffer(v);
+	}
+
+	private evict(keep: Set<string>) {
+		if (this.meshes.size <= 4) return;
+		const old = [...this.meshes.entries()].filter(([k]) => !keep.has(k)).sort((a, b) => a[1].used - b[1].used);
 		while (this.meshes.size > 4 && old.length) {
-			const [m, e] = old.shift()!;
-			gl.deleteBuffer(e.pos);
-			gl.deleteBuffer(e.reg);
-			for (const v of e.vals.values()) gl.deleteBuffer(v.buf);
-			this.meshes.delete(m);
+			const [k, e] = old.shift()!;
+			this.release(e);
+			this.meshes.delete(k);
 		}
 	}
 
@@ -431,22 +448,25 @@ export class GlRenderer implements FieldRenderer {
 		gl.bindVertexArray(this.vao);
 		gl.enable(gl.BLEND);
 		gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-		const used = new Set<FieldMesh>();
+		const used = new Set<string>();
 		for (const L of s.layers) {
-			const e = this.entry(L.mesh);
-			used.add(L.mesh);
+			const lev = L.r ?? 1;
+			const e = this.entry(L.mesh, lev);
+			used.add(this.key(L.mesh, lev));
 			const scalar = L.kind !== 'region';
-			if (scalar && !L.values) continue;
+			const vals = scalar ? layerValues(L, e.disp) : null;
+			if (scalar && !vals) continue;
 			gl.uniform2f(u.uScale, sx, sy);
 			gl.uniform2f(u.uOffset, (e.c0[0] - s.view.cx) * sx, (e.c0[1] - s.view.cy) * sy);
 			const bind = (buf: WebGLBuffer, name: string) => {
 				gl.bindBuffer(gl.ARRAY_BUFFER, buf);
 				gl.enableVertexAttribArray(this.loc[name]);
-				gl.vertexAttribPointer(this.loc[name], name === 'aPos' ? 2 : 1, gl.FLOAT, false, 0, 0);
+				gl.vertexAttribPointer(this.loc[name], name === 'aPos' || name === 'aBary' ? 2 : 1, gl.FLOAT, false, 0, 0);
 			};
 			bind(e.pos, 'aPos');
+			bind(e.bary, 'aBary');
 			bind(e.reg, 'aReg');
-			if (scalar) bind(this.valueBuf(e, L.mesh, L.values!, L.at ?? 'node'), 'aVal');
+			if (vals) bind(this.valueBuf(e, vals), 'aVal');
 			else {
 				gl.disableVertexAttribArray(this.loc.aVal);
 				gl.vertexAttrib1f(this.loc.aVal, 0);
@@ -479,7 +499,8 @@ export class GlRenderer implements FieldRenderer {
 			gl.uniform1f(u.uDataMax, L.dataRange?.max ?? 0);
 			gl.uniform1i(u.uUniform, L.uniform ? 1 : 0);
 			gl.uniform3fv(u.uUniformColor, rgb01(L.uniform ?? '#ffffff'));
-			gl.drawArrays(gl.TRIANGLES, 0, e.n);
+			gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, e.idx);
+			gl.drawElements(gl.TRIANGLES, e.n, gl.UNSIGNED_INT, 0);
 		}
 		gl.disable(gl.BLEND);
 		for (const a of s.arrows) {
@@ -508,11 +529,7 @@ export class GlRenderer implements FieldRenderer {
 
 	dispose(): void {
 		const gl = this.gl;
-		for (const e of this.meshes.values()) {
-			gl.deleteBuffer(e.pos);
-			gl.deleteBuffer(e.reg);
-			for (const v of e.vals.values()) gl.deleteBuffer(v.buf);
-		}
+		for (const e of this.meshes.values()) this.release(e);
 		this.meshes.clear();
 		for (const b of [this.instBuf, this.zeroBuf]) gl.deleteBuffer(b);
 		for (const t of [this.lutTex, this.regTex, this.maskTex]) gl.deleteTexture(t);
@@ -522,7 +539,7 @@ export class GlRenderer implements FieldRenderer {
 	}
 }
 
-/** Canvas 2D fallback: flat triangles with viewport culling, or a gap-free raster over budget (W4); marching-triangle contours. */
+/** Canvas 2D fallback: flat sub-triangles with viewport culling, or a gap-free raster over budget (W4); marching-triangle contours on the sub-triangles. */
 export class Canvas2DRenderer implements FieldRenderer {
 	readonly kind = 'canvas2d' as const;
 	private ctx: CanvasRenderingContext2D;
@@ -530,7 +547,6 @@ export class Canvas2DRenderer implements FieldRenderer {
 	private cssH = 1;
 	private dpr = 1;
 	budget = 60000;
-	private cache = new WeakMap<ArrayLike<number>, { tri: Float64Array; corner: Float64Array | null }>();
 
 	constructor(canvas: HTMLCanvasElement) {
 		this.ctx = canvas.getContext('2d')!;
@@ -553,22 +569,6 @@ export class Canvas2DRenderer implements FieldRenderer {
 		c.height = Math.max(1, Math.round(cssH * dpr));
 	}
 
-	private perTri(m: FieldMesh, values: ArrayLike<number>, at: ValueAt) {
-		let hit = this.cache.get(values);
-		if (hit) return hit;
-		const nT = m.tri.length / 3;
-		const tri = new Float64Array(nT);
-		const corner = at === 'tri' ? null : new Float64Array(3 * nT);
-		for (let t = 0; t < nT; t++) {
-			if (at === 'tri') { tri[t] = values[t]; continue; }
-			for (let k = 0; k < 3; k++) corner![3 * t + k] = at === 'corner' ? values[3 * t + k] : values[m.tri[3 * t + k]];
-			tri[t] = (corner![3 * t] + corner![3 * t + 1] + corner![3 * t + 2]) / 3;
-		}
-		hit = { tri, corner };
-		this.cache.set(values, hit);
-		return hit;
-	}
-
 	draw(s: DrawState): void {
 		const { ctx } = this;
 		ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
@@ -582,51 +582,70 @@ export class Canvas2DRenderer implements FieldRenderer {
 			const m = L.mesh;
 			const nT = m.tri.length / 3;
 			const scalar = L.kind !== 'region';
-			if (scalar && !L.values) continue;
-			const pt = scalar ? this.perTri(m, L.values!, L.at ?? 'node') : null;
+			const d = refinedDisplay(m, L.r ?? 1);
+			const vals = scalar ? layerValues(L, d) : null;
+			if (scalar && !vals) continue;
 			const r = L.range ?? { min: 0, max: 1 };
 			const mode = L.scaleMode ?? 'linear';
 			const lut = colormapLut(L.colormap ?? 'Rainbow', !!L.reverse);
 			const dr = L.dataRange;
-			const ok = (t: number) => (!L.regionMask || !!L.regionMask[m.triRegion[t]]) && (!dr || !pt || (pt.tri[t] >= dr.min && pt.tri[t] <= dr.max));
+			const ns = d.r * d.r;
 			const visible: number[] = [];
 			for (let t = 0; t < nT; t++) {
-				if (!ok(t)) continue;
+				if (L.regionMask && !L.regionMask[m.triRegion[t]]) continue;
 				const a = m.tri[3 * t], b = m.tri[3 * t + 1], c = m.tri[3 * t + 2];
 				const x0 = Math.min(X(m.x[a]), X(m.x[b]), X(m.x[c])), x1 = Math.max(X(m.x[a]), X(m.x[b]), X(m.x[c]));
 				const y0 = Math.min(Y(m.y[a]), Y(m.y[b]), Y(m.y[c])), y1 = Math.max(Y(m.y[a]), Y(m.y[b]), Y(m.y[c]));
 				if (x1 >= 0 && x0 <= W && y1 >= 0 && y0 <= H) visible.push(t);
 			}
 			if (L.kind === 'contour') {
-				if (pt?.corner) this.contours(L, m, pt.corner, visible, X, Y, mode, r, lut);
+				this.contours(L, d, vals!, visible, X, Y, mode, r, lut);
 				continue;
 			}
-			const raster = visible.length > this.budget && !!L.sampler;
-			if (raster) {
+			if (visible.length * ns > this.budget && L.sampler) {
 				this.raster(L, s.view, mode, r, lut);
 				continue;
 			}
-			const stride = Math.max(1, Math.ceil(visible.length / this.budget));
-			const wire = L.wire && visible.length / stride < 20000;
-			ctx.lineWidth = 0.5;
-			for (let k = 0; k < visible.length; k += stride) {
-				const t = visible[k];
-				const a = m.tri[3 * t], b = m.tri[3 * t + 1], c = m.tri[3 * t + 2];
-				let fill: string;
-				if (scalar) {
-					const u = scaleT(pt!.tri[t], mode, r);
-					const i = Math.round((Number.isFinite(u) ? u : 0) * 255);
-					fill = `rgb(${lut[4 * i]},${lut[4 * i + 1]},${lut[4 * i + 2]})`;
-				} else fill = L.regionColors?.[m.triRegion[t]] ?? '#808080';
-				ctx.beginPath();
-				ctx.moveTo(X(m.x[a]), Y(m.y[a]));
-				ctx.lineTo(X(m.x[b]), Y(m.y[b]));
-				ctx.lineTo(X(m.x[c]), Y(m.y[c]));
-				ctx.closePath();
-				ctx.fillStyle = fill;
-				ctx.fill();
-				ctx.strokeStyle = wire ? (L.wireColor ?? '#e8e8e8') : fill;
-				ctx.stroke();
+			const stride = Math.max(1, Math.ceil((visible.length * ns) / this.budget));
+			const wire = L.wire && visible.length < 20000;
+			// F3: each flat sub-triangle is stroked 1 px wide in its own color (slight overdraw hides anti-aliasing seams)
+			ctx.lineWidth = 1;
+			let k = 0;
+			for (const t of visible) {
+				for (let q = 0; q < ns; q++, k++) {
+					if (k % stride) continue;
+					const o = 3 * (t * ns + q);
+					const i0 = d.sub[o], i1 = d.sub[o + 1], i2 = d.sub[o + 2];
+					let fill: string;
+					if (vals) {
+						const v = (vals[i0] + vals[i1] + vals[i2]) / 3;
+						if (dr && !(v >= dr.min && v <= dr.max)) continue;
+						const u = scaleT(v, mode, r);
+						const i = Math.round((Number.isFinite(u) ? u : 0) * 255);
+						fill = `rgb(${lut[4 * i]},${lut[4 * i + 1]},${lut[4 * i + 2]})`;
+					} else fill = L.regionColors?.[m.triRegion[t]] ?? '#808080';
+					ctx.beginPath();
+					ctx.moveTo(X(d.x[i0]), Y(d.y[i0]));
+					ctx.lineTo(X(d.x[i1]), Y(d.y[i1]));
+					ctx.lineTo(X(d.x[i2]), Y(d.y[i2]));
+					ctx.closePath();
+					ctx.fillStyle = fill;
+					ctx.fill();
+					ctx.strokeStyle = fill;
+					ctx.stroke();
+				}
+				if (wire) {
+					ctx.lineWidth = 0.5;
+					const a = m.tri[3 * t], b = m.tri[3 * t + 1], c = m.tri[3 * t + 2];
+					ctx.beginPath();
+					ctx.moveTo(X(m.x[a]), Y(m.y[a]));
+					ctx.lineTo(X(m.x[b]), Y(m.y[b]));
+					ctx.lineTo(X(m.x[c]), Y(m.y[c]));
+					ctx.closePath();
+					ctx.strokeStyle = L.wireColor ?? '#e8e8e8';
+					ctx.stroke();
+					ctx.lineWidth = 1;
+				}
 			}
 		}
 		for (const a of s.arrows) {
@@ -683,32 +702,40 @@ export class Canvas2DRenderer implements FieldRenderer {
 		ctx.drawImage(off, 0, 0, nx * cell, ny * cell);
 	}
 
-	private contours(L: Layer, m: FieldMesh, cv: Float64Array, visible: number[], X: (x: number) => number, Y: (y: number) => number, mode: ScaleMode, r: Range, lut: Uint8Array) {
+	private contours(L: Layer, d: RefinedDisplay, cv: ArrayLike<number>, visible: number[], X: (x: number) => number, Y: (y: number) => number, mode: ScaleMode, r: Range, lut: Uint8Array) {
 		const { ctx } = this;
 		const levels = (L.levels ?? []).slice(0, MAX_LEVELS);
+		const ns = d.r * d.r;
 		ctx.lineWidth = 1;
+		const u = [0, 0, 0], px = [0, 0, 0], py = [0, 0, 0];
 		for (const lev of levels) {
 			const tl = scaleT(lev, mode, r);
 			const k = Math.round(tl * 255);
 			ctx.strokeStyle = L.uniform ?? `rgb(${lut[4 * k]},${lut[4 * k + 1]},${lut[4 * k + 2]})`;
 			ctx.beginPath();
-			for (const t of visible) {
-				const u = [cv[3 * t], cv[3 * t + 1], cv[3 * t + 2]];
-				if (u.some((x) => !Number.isFinite(x))) continue;
-				if (lev < Math.min(u[0], u[1], u[2]) || lev > Math.max(u[0], u[1], u[2])) continue;
-				const px = [0, 1, 2].map((i) => X(m.x[m.tri[3 * t + i]])), py = [0, 1, 2].map((i) => Y(m.y[m.tri[3 * t + i]]));
-				const pts: [number, number][] = [];
-				for (const [a, b] of [[0, 1], [1, 2], [2, 0]]) {
-					if ((u[a] - lev) * (u[b] - lev) < 0) {
-						const f = (lev - u[a]) / (u[b] - u[a]);
-						pts.push([px[a] + f * (px[b] - px[a]), py[a] + f * (py[b] - py[a])]);
+			for (const t of visible)
+				for (let q = 0; q < ns; q++) {
+					const o = 3 * (t * ns + q);
+					for (let c = 0; c < 3; c++) {
+						const i = d.sub[o + c];
+						u[c] = cv[i];
+						px[c] = X(d.x[i]);
+						py[c] = Y(d.y[i]);
+					}
+					if (!(Number.isFinite(u[0]) && Number.isFinite(u[1]) && Number.isFinite(u[2]))) continue;
+					if (lev < Math.min(u[0], u[1], u[2]) || lev > Math.max(u[0], u[1], u[2])) continue;
+					const pts: [number, number][] = [];
+					for (const [a, b] of [[0, 1], [1, 2], [2, 0]]) {
+						if ((u[a] - lev) * (u[b] - lev) < 0) {
+							const f = (lev - u[a]) / (u[b] - u[a]);
+							pts.push([px[a] + f * (px[b] - px[a]), py[a] + f * (py[b] - py[a])]);
+						}
+					}
+					if (pts.length >= 2) {
+						ctx.moveTo(pts[0][0], pts[0][1]);
+						ctx.lineTo(pts[1][0], pts[1][1]);
 					}
 				}
-				if (pts.length >= 2) {
-					ctx.moveTo(pts[0][0], pts[0][1]);
-					ctx.lineTo(pts[1][0], pts[1][1]);
-				}
-			}
 			ctx.stroke();
 		}
 	}

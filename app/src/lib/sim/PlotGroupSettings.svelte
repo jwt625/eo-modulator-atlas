@@ -5,11 +5,12 @@
 	import { FEATURE_LABEL, FEATURES_1D, FEATURES_2D, type Feature, type FeatureType } from './results.svelte';
 	import { COLORMAPS, COLORMAP_TIPS } from './colormap';
 	import { GLOBAL_VARIABLES } from './post/ui';
-	import type { ModeRow, VariableInfo } from './post/contract';
+	import type { ModeRow, PlotResult, VariableInfo } from './post/contract';
+	import { MAX_SUBTRIANGLES, RESOLUTIONS } from '../../../../engine/src/postproc/index.mjs';
 	import ExprInput from './ExprInput.svelte';
 	import SolutionSelect from './SolutionSelect.svelte';
 	import { oneDSolutions } from './solutions1d';
-	import { modesRequest } from './requests';
+	import { modesRequest, plotRequest } from './requests';
 	import UnitInput from './UnitInput.svelte';
 	import { fmt } from '../logic';
 
@@ -36,6 +37,7 @@
 		return GLOBAL_VARIABLES.filter((v) => !gl || v.name in gl);
 	});
 	const rfVars: VariableInfo[] = $derived(wb.vars.rf ?? []);
+	const RES: [Feature['resolution'], string][] = [['none', 'No refinement'], ['coarse', 'Coarse'], ['normal', 'Normal'], ['fine', 'Fine'], ['finer', 'Finer'], ['extra', 'Extra fine']];
 	const tbl = $derived(f?.type === 'tablegraph' ? R.tables.find((t) => t.id === f.tableId) : null);
 	const numericCols = $derived(tbl ? tbl.columns.filter((c, i) => tbl.rows.some((r) => typeof r[i] === 'number')) : []);
 	const num = (v: string, d: number) => (Number.isFinite(Number(v)) && v.trim() !== '' ? Number(v) : d);
@@ -117,16 +119,20 @@
 	<label class="f" data-tip="Color legend in the graphics (right gutter)"><span>Color legend</span><input type="checkbox" bind:checked={feat.legend} /></label>
 {/snippet}
 
-{#snippet qualityFields(feat: Feature)}
+{#snippet qualityFields(feat: Feature, smoothing = true)}
+	{@const shown = g ? wb.cache.peek<PlotResult>(feat.type === 'arrow' ? plotRequest(R, g, feat, feat.xExpr, '') : plotRequest(R, g, feat, feat.expr, feat.unit))?.data : null}
 	<h4>Quality</h4>
-	<label class="f" data-tip="Per-element values: none = flat per element; nodal = area-weighted average onto the nodes (display only)">Smoothing
-		<select value={feat.smoothing} onchange={(e) => (feat.smoothing = e.currentTarget.value as Feature['smoothing'])}><option value="none">none</option><option value="nodal">nodal average</option></select>
+	<label class="f" data-tip={`Elements split into r x r sub-triangles; every sub-triangle corner is evaluated exactly from the element's own basis and shaded linearly between (r: ${RES.map(([k, l]) => `${l} ${RESOLUTIONS[k]}`).join(', ')}; at most ${(MAX_SUBTRIANGLES / 1e6).toFixed(1)}M sub-triangles)`}>Resolution
+		<select aria-label="Resolution" value={feat.resolution} onchange={(e) => (feat.resolution = e.currentTarget.value as Feature['resolution'])}>{#each RES as [k, l]}<option value={k}>{l}</option>{/each}</select>
 	</label>
-	{#if R.dataset(ds)?.kind === 'es' && wb.meshes['es.p2']}
-		<label class="f" data-tip="P2 solution: fine = exact values at the P2 nodes (elements split into 4); normal = element vertices only">Resolution
-			<select value={feat.resolution} onchange={(e) => (feat.resolution = e.currentTarget.value as Feature['resolution'])}><option value="fine">fine (P2 nodes)</option><option value="normal">normal (vertices)</option></select>
+	{#if smoothing}
+		<label class="f" data-tip="Coincident element-side values (element vertices and edges) replaced by their mean: None draws every element discontinuity; Inside material domains keeps the jumps at material interfaces; Everywhere averages across them too. The color range follows the smoothed (drawn) values; the probe shows the exact value.">Smoothing
+			<select aria-label="Smoothing" value={feat.smoothing} onchange={(e) => (feat.smoothing = e.currentTarget.value as Feature['smoothing'])}><option value="none">None</option><option value="material">Inside material domains</option><option value="everywhere">Everywhere</option></select>
 		</label>
+	{:else}
+		<p class="muted small" data-tip="Markers search the unsmoothed element-local values at the lattice points of the resolution and show the exact value at the marker (as the probe)">Smoothing: None (exact extrema)</p>
 	{/if}
+	{#if shown?.r && shown.requestedR && shown.r < shown.requestedR}<p class="warn small" data-resolution-capped={shown.r}>Resolution lowered to r = {shown.r} (cap {(MAX_SUBTRIANGLES / 1e6).toFixed(1)}M sub-triangles).</p>{/if}
 {/snippet}
 
 {#if !g}
@@ -236,6 +242,7 @@
 		<label class="f"><span>Arrow heads</span><input type="checkbox" bind:checked={f.heads} /></label>
 		<label class="f" data-tip="Theme color: the ink color of the current theme (light arrows in dark, dark arrows in light)"><span>Theme color</span><input type="checkbox" aria-label="Arrow theme color" checked={!f.color} onchange={(e) => (f.color = e.currentTarget.checked ? '' : '#ff8c00')} /></label>
 		{#if f.color}<label class="f">Color <input type="color" bind:value={f.color} /></label>{/if}
+		{@render qualityFields(f)}
 	{:else if f.type === 'line'}
 		{@render selectionField(f)}
 		<p class="muted small">Region boundaries of the solved geometry (all domains, or those of the selection).</p>
@@ -244,6 +251,7 @@
 	{:else if f.type === 'maxmin'}
 		<h4>Display</h4>
 		<label class="f">Display <select value={f.show} onchange={(e) => (f.show = e.currentTarget.value as Feature['show'])}><option value="both">max and min</option><option value="max">max</option><option value="min">min</option></select></label>
+		{@render qualityFields(f, false)}
 	{:else if f.type === 'linegraph'}
 		<h4>Data</h4>
 		<label class="f" data-tip="Cut Line 2D dataset (Datasets, or the Cut line tool)">Dataset

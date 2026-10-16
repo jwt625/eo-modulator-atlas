@@ -13,6 +13,7 @@
 	import ModeTable from './ModeTable.svelte';
 	import UnitInput from './UnitInput.svelte';
 	import { plotRequest } from './requests';
+	import { refinedPoints } from '../../../../engine/src/postproc/index.mjs';
 	import { fmt } from '../logic';
 
 	let { wb, node }: { wb: Workbench; node: string } = $props();
@@ -115,16 +116,12 @@
 			setMsg('No display mesh for this plot.');
 			return;
 		}
+		// The plotted (drawn) values: element-local lattice points of the plot resolution, after smoothing (DevLog-034).
 		const rows: (number | string)[][] = [];
-		const nT = mesh.tri.length / 3;
-		if (p.location === 'node') for (let i = 0; i < mesh.x.length; i++) rows.push([mesh.x[i], mesh.y[i], p.values[i]]);
-		else if (p.location === 'element')
-			for (let t = 0; t < nT; t++) {
-				const a = mesh.tri[3 * t], b = mesh.tri[3 * t + 1], c = mesh.tri[3 * t + 2];
-				rows.push([(mesh.x[a] + mesh.x[b] + mesh.x[c]) / 3, (mesh.y[a] + mesh.y[b] + mesh.y[c]) / 3, p.values[t]]);
-			}
-		else for (let i = 0; i < 3 * nT; i++) rows.push([mesh.x[mesh.tri[i]], mesh.y[mesh.tri[i]], p.values[i]]);
-		const where = p.location === 'node' ? 'mesh nodes' : p.location === 'element' ? 'element centroids' : 'element corners';
+		const lev = p.r ?? 1;
+		const pts = refinedPoints(mesh, lev);
+		for (let i = 0; i < p.values.length; i++) rows.push([pts.x[i], pts.y[i], p.values[i]]);
+		const where = `element-local sample points (r = ${lev}, smoothing ${p.smoothing ?? 'none'})`;
 		const point = g.point >= 0 ? Object.entries(wb.sweepRows[g.point]?.values ?? {}).map(([k, v]) => `${wb.axisLabel(k).replace(/ \(.*\)$/, '')} = ${v}`).join(', ') : '';
 		const solText = point ? `sweep point ${g.point + 1} (${point})` : 'last Compute';
 		const safe = (t: string) => t.replace(/[^\w.=-]+/g, '_');

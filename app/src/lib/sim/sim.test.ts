@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { autoRange, buildTriIndex, locate, meshBBox, pointInPoly, sampleLine, scaleT, triMinAngle, triSize, triToNode, valueAt } from './fieldmath';
+import { autoRange, buildTriIndex, locate, meshBBox, pointInPoly, sampleLine, scaleT, triMinAngle, triSize, valueAt } from './fieldmath';
 import { colormapLut } from './colormap';
 import { linearTicks, logTicks, tickLabel } from './ticks';
 import { applyOverrides, deleteIn, getIn, numericLeaves, setIn, splitPath } from './yamlEdit';
@@ -7,7 +7,7 @@ import { readFileSync } from 'node:fs';
 import { parseSweepValues, guessDeviceX } from './sweepValues';
 import { readUrlState, writeUrlState } from './urlState';
 import type { EsFields, FieldMesh, ScalarField } from './types';
-import { p2Display } from './p2';
+import { drawnAt, perElement, refinedDisplay } from './refined';
 import { contourLevels, featureRange } from './layers';
 import { newFeature, nextName, Results } from './results.svelte';
 
@@ -52,9 +52,7 @@ describe('mesh index and probe', () => {
 		const outside = sampleLine(f, idx, -1, 0.5, -0.5, 0.5, 3);
 		expect(outside.v.every(Number.isNaN)).toBe(true);
 	});
-	it('averages per-triangle values onto nodes and reports size and quality', () => {
-		const ones = new Float64Array(m.tri.length / 3).fill(3);
-		expect(Array.from(triToNode(m, ones)).every((v) => Math.abs(v - 3) < 1e-12)).toBe(true);
+	it('reports element size and quality', () => {
 		expect(triSize(m)[0]).toBeCloseTo(Math.SQRT2 / 20, 12);
 		expect(triMinAngle(m)[0]).toBeCloseTo(45, 9);
 		expect(meshBBox(m)).toEqual({ x0: 0, x1: 1, y0: 0, y1: 1 });
@@ -162,35 +160,45 @@ describe('sweep values and URL state', () => {
 	});
 });
 
-describe('P2 display (U2)', () => {
-	// Two triangles on the unit square, P2 DOFs = vertices then edge midpoints; phi = x^2 + x*y - 2y (quadratic).
-	const x = new Float64Array([0, 1, 1, 0]), y = new Float64Array([0, 0, 1, 1]);
-	const tri = new Int32Array([0, 1, 2, 0, 2, 3]);
-	const f = (px: number, py: number) => px * px + px * py - 2 * py;
-	// midpoints: 4 = (0,1), 5 = (1,2), 6 = (2,0) shared with tri 2 as (2,0), 7 = (2,3), 8 = (3,0)
-	const mids: [number, number][] = [[0, 1], [1, 2], [2, 0], [2, 3], [3, 0]];
-	const dofX = [...x, ...mids.map(([a, b]) => (x[a] + x[b]) / 2)], dofY = [...y, ...mids.map(([a, b]) => (y[a] + y[b]) / 2)];
-	const phiDof = Float64Array.from(dofX.map((px, i) => f(px, dofY[i])));
-	const elem = new Int32Array([0, 1, 2, 4, 5, 6, 0, 2, 3, 6, 7, 8]);
-	const es: EsFields = { x, y, tri, triRegion: new Int32Array(2), regionNames: ['r'], phi: phiDof.slice(0, 4), ex: new Float64Array(2), ey: new Float64Array(2), elementOrder: 2, p2: { phiDof, elem } };
-	it('splits elements at the edge midpoints and keeps the exact quadratic potential at the refined nodes', () => {
-		const d = p2Display(es)!;
-		expect(d.mesh.tri.length).toBe(24);
-		for (let i = 0; i < d.mesh.x.length; i++) expect(d.phi[i]).toBeCloseTo(f(d.mesh.x[i], d.mesh.y[i]), 12);
-		const idx = buildTriIndex(d.mesh);
-		for (const [px, py] of [[0.3, 0.1], [0.8, 0.45], [0.2, 0.9], [0.55, 0.5]]) {
-			const loc = locate(d.mesh, idx, px, py)!;
-			expect(d.phiAt(loc.t, px, py)).toBeCloseTo(f(px, py), 12);
-			// E_x = -(2x + y), linear per element: exact by corner interpolation
-			expect(loc.w0 * d.ex[3 * loc.t] + loc.w1 * d.ex[3 * loc.t + 1] + loc.w2 * d.ex[3 * loc.t + 2]).toBeCloseTo(-(2 * px + py), 12);
+describe('refined display (DevLog-034)', () => {
+	const m = grid(3);
+	it('splits every element into r^2 sub-triangles on the element-local lattice', () => {
+		const nT = m.tri.length / 3;
+		for (const r of [1, 2, 3, 5]) {
+			const d = refinedDisplay(m, r);
+			const np = ((r + 1) * (r + 2)) / 2;
+			expect(d.np).toBe(np);
+			expect(d.x.length).toBe(nT * np);
+			expect(d.sub.length).toBe(3 * r * r * nT);
+			// sub-triangles of element t only reference its own lattice points; their areas add up to the element area
+			for (let t = 0; t < nT; t++) {
+				let area = 0;
+				for (let q = 0; q < r * r; q++) {
+					const [a, b, c] = [0, 1, 2].map((k) => d.sub[3 * (t * r * r + q) + k]);
+					for (const i of [a, b, c]) expect(Math.floor(i / np)).toBe(t);
+					area += Math.abs((d.x[b] - d.x[a]) * (d.y[c] - d.y[a]) - (d.x[c] - d.x[a]) * (d.y[b] - d.y[a])) / 2;
+				}
+				expect(area).toBeCloseTo(1 / (2 * 9), 12);
+			}
 		}
+		expect(refinedDisplay(m, 3)).toBe(refinedDisplay(m, 3));
+	});
+	it('draws the linear interpolation of the lattice values and reproduces lattice values exactly', () => {
+		const r = 4, d = refinedDisplay(m, r);
+		const f = (x: number, y: number) => x * x - 2 * x * y + 0.5 * y;
+		const values = Float64Array.from(d.x, (x, i) => f(x, d.y[i]));
+		for (const i of [0, 7, 33, values.length - 1]) expect(drawnAt(m, values, r, d.x[i], d.y[i])!.v).toBeCloseTo(values[i], 12);
+		// quadratic field: interpolation error bounded by h^2 / 8 |f''| with h = 1 / (3 r)
+		for (const [x, y] of [[0.11, 0.42], [0.5, 0.5], [0.93, 0.07], [0.31, 0.77]]) expect(Math.abs(drawnAt(m, values, r, x, y)!.v - f(x, y))).toBeLessThan(((1 / 12) ** 2 / 8) * 6);
+		expect(drawnAt(m, values, r, 1.5, 0.5)).toBeNull();
+		expect(Array.from(perElement([2, 5]))).toEqual([2, 2, 2, 5, 5, 5]);
 	});
 });
 
 describe('plot feature layers', () => {
 	it('computes ranges and contour levels', () => {
 		const f = newFeature('contour', { count: 4 });
-		const p = { values: Float64Array.of(-2, 1, 3), location: 'node' as const, mesh: 'm', unit: 'V', min: -2, max: 3, minAt: null, maxAt: null };
+		const p = { values: Float64Array.of(-2, 1, 3), location: 'refined' as const, mesh: 'm', unit: 'V', min: -2, max: 3, minAt: null, maxAt: null };
 		expect(featureRange(f, p)).toEqual({ min: -2, max: 3 });
 		f.range.scale = 'symmetric';
 		expect(featureRange(f, p)).toEqual({ min: -3, max: 3 });

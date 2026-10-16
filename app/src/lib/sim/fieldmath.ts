@@ -136,23 +136,6 @@ export function sampleLine(f: ScalarField, idx: TriIndex, ax: number, ay: number
 	return out;
 }
 
-/** Area-weighted average of a per-triangle quantity onto the nodes (display smoothing only). */
-export function triToNode(m: FieldMesh, v: ArrayLike<number>): Float64Array {
-	const nN = m.x.length;
-	const acc = new Float64Array(nN), wsum = new Float64Array(nN);
-	const { x, y, tri } = m;
-	for (let t = 0; t < tri.length / 3; t++) {
-		const a = tri[3 * t], b = tri[3 * t + 1], c = tri[3 * t + 2];
-		const area = Math.abs((x[b] - x[a]) * (y[c] - y[a]) - (x[c] - x[a]) * (y[b] - y[a])) / 2;
-		for (const n of [a, b, c]) {
-			acc[n] += area * v[t];
-			wsum[n] += area;
-		}
-	}
-	for (let i = 0; i < nN; i++) acc[i] = wsum[i] > 0 ? acc[i] / wsum[i] : NaN;
-	return acc;
-}
-
 /** Longest edge per triangle (um). */
 export function triSize(m: FieldMesh): Float64Array {
 	const nT = m.tri.length / 3;

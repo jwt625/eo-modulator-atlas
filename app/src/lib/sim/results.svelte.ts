@@ -2,7 +2,7 @@
 // value nodes and tables, plus an undo/redo history of the edits. Pure state + editing; evaluation goes through the
 // workbench's PostClient.
 import type { ColormapName } from './colormap';
-import type { DatasetInfo, DerivedKind, LineSpec } from './post/contract';
+import type { DatasetInfo, DerivedKind, LineSpec, ResolutionName, Smoothing } from './post/contract';
 import type { ScaleMode } from './types';
 
 export type FeatureType = 'surface' | 'contour' | 'arrow' | 'line' | 'maxmin' | 'linegraph' | 'global' | 'tablegraph';
@@ -37,9 +37,9 @@ export interface Feature {
 	legend: boolean;
 	/** Selection id (filter); '' = all domains. */
 	selection: string;
-	/** Quality: smoothing of per-element values (area-weighted nodal average) and P2 resolution. */
-	smoothing: 'none' | 'nodal';
-	resolution: 'fine' | 'normal';
+	/** Quality (COMSOL, DevLog-034): element subdivision of the drawn values and smoothing of coincident element-side values. */
+	resolution: ResolutionName;
+	smoothing: Smoothing;
 	// contour
 	levelsMode: 'count' | 'list';
 	count: number;
@@ -161,7 +161,7 @@ export function newFeature(type: FeatureType, over: Partial<Feature> = {}): Feat
 	return {
 		id: uid('f'), type, name: FEATURE_LABEL[type], visible: true, dataset: '', expr: '', unit: '', description: '',
 		titleMode: 'auto', title: '', range: { manual: false, min: 0, max: 1, scale: 'linear' }, dataRange: { manual: false, min: 0, max: 1 },
-		table: 'Rainbow', reverse: false, legend: true, selection: '', smoothing: 'none', resolution: 'fine',
+		table: 'Rainbow', reverse: false, legend: true, selection: '', resolution: 'normal', smoothing: 'material',
 		levelsMode: 'count', count: 10, list: '', coloring: 'table', color: '#ffffff',
 		xExpr: '', yExpr: '', placement: 'view', gridX: 25, gridY: 25, lengthMode: 'proportional', scaleFactor: 1, heads: true,
 		show: 'both', exprs: '', yAxis: 'left', tableId: '', xCol: '', yCols: '',
