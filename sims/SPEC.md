@@ -504,11 +504,24 @@ integrated).
   `--modes DATASET`. A failing expression is reported as `{expr, error}` and the exit status is 1.
 - Round 2 (audit 2026-10-15): point location is deterministic and equals the engine sampling (ties on element edges go
   to the engine grid locator, lowest triangle index); run-time complex operands of comparisons, min, max, atan2 and if
-  are errors; `evaluateAtPoints`, `location: 'p2nodes'`, dataset `rf` (`rf.alpha_dB` in dB/m, `dB`/`Np` are unit labels
+  are errors; `evaluateAtPoints`, dataset `rf` (`rf.alpha_dB` in dB/m, `dB`/`Np` are unit labels
   with factor 1), `aliasOf`, `storeForSweepPoint`; the gap ignores electrodes outside the arm window height
-  (`gapIgnoredElectrodes`); `result.eo.accuracyNote`.
+  (`gapIgnoredElectrodes`); `result.eo.accuracyNote`. (`location: 'p2nodes'` of round 2 was removed by DevLog-034;
+  `location: 'refined'` with resolution 2 holds the P2 nodes.)
+- Refined field plots (DevLog-034, 2026-10-15): `evaluatePlot(store, {location: 'refined', resolution, smoothing})` on
+  mesh datasets returns one value per element-local lattice point (barycentric (n0, n1, n2) / r, n0 outer, n1 inner;
+  (r+1)(r+2)/2 points and r^2 sub-triangles per element; layout element-major), each evaluated exactly from that
+  element's own basis (no point location for fields of the dataset mesh; fields of another mesh are located there as
+  for any point). `resolution`: `none` 1, `coarse` 2, `normal` 3 (default), `fine` 4, `finer` 6, `extra` 8, or an
+  integer 1..16; lowered to fit `maxSubTriangles` (default 2.5M, nTris r^2), reported as `resolution`,
+  `requestedResolution`, `capped`. `smoothing`: `none` (element-local values), `material` (default; coincident vertex
+  and edge lattice points of elements whose regions share a material name get the arithmetic mean of the finite
+  element-side values), `everywhere`; applied to the displayed real value. Helpers `refinePattern`, `latticeIndex`,
+  `refinedPoints`, `interpolateRefined` (drawn value: linear on the sub-triangle) are shared with the UI.
 
 ## Changelog
+- 2026-10-15 DevLog-034: `evaluatePlot` location `refined` (resolution, smoothing, sub-triangle cap) and the refine
+  helpers; location `p2nodes` removed.
 - 2026-10-15 DevLog-031: `optics.num_modes`; `keep` internals; postprocessing engine (`engine/src/postproc/`);
   `result.eo` breakdown, conventional Gamma, implied textbook VpiL and formulas; sweep `globals`; CLI `--eval`,
   `--list-vars`, `--modes`, `--num-modes`. Schema mirrored (`optics.num_modes`).

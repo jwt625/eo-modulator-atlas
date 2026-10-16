@@ -9,7 +9,7 @@ import { parseConfig, opticalOptions } from '../src/config.mjs';
 import {
   createSolutionStore, evaluatePlot, evaluateDerived, modeTable, evaluateGlobals, createSweepStore, runGlobals,
   compileExpression, parseExpression, parseUnit, formatUnit, displayConversion, ExpressionError,
-  evaluateAtPoints, storeForSweepPoint, armElectrodeGap,
+  evaluateAtPoints, storeForSweepPoint, armElectrodeGap, latticeIndex,
 } from '../src/postproc/index.mjs';
 import { DIMLESS } from '../src/postproc/units.mjs';
 
@@ -306,15 +306,18 @@ test('E9: electrodes outside the arm window height do not set the gap', () => {
   assert.match(h.reason, /spans the arm centre/);
 });
 
-test('round 2 additions: p2nodes, rf dataset, alias, accuracy note, refined max, dispose, sweep point store', () => {
+test('round 2 additions: refined P2 corners, rf dataset, alias, accuracy note, refined max, dispose, sweep point store', () => {
   const r = runCrossSection(fixture, { stages: ['optical_mode', 'eo_overlap', 'rf_line'], solver: 'vector', keep: true });
   assert.match(r.eo.accuracyNote, /1.4e-3 to 3.5e-3/);
   const st = createSolutionStore(r);
-  const p2 = evaluatePlot(st, { dataset: 'es', expr: 'es.V', location: 'p2nodes' });
+  // refined level 2 holds the P2 nodes (DevLog-034; replaces the removed 'p2nodes' location): corner values = node values
+  const p2 = evaluatePlot(st, { dataset: 'es', expr: 'es.V', location: 'refined', resolution: 2, smoothing: 'none' });
   const nodes = evaluatePlot(st, { dataset: 'es', expr: 'es.V' });
-  assert.ok(p2.n > nodes.n && p2.elem.length === 6 * st.mesh('es').nTris && p2.x.length === p2.n);
-  for (let i = 0; i < nodes.n; i++) assert.equal(p2.values[i], nodes.values[i]);
-  assert.equal(evaluatePlot(st, { dataset: 'es', expr: 'es.normE', location: 'p2nodes' }).n, p2.n);
+  const esm = st.mesh('es');
+  assert.equal(p2.n, 6 * esm.nTris);
+  const corners = [latticeIndex(2, 2, 0), latticeIndex(2, 0, 2), latticeIndex(2, 0, 0)];
+  for (let t = 0; t < esm.nTris; t++) for (let k = 0; k < 3; k++) assert.equal(p2.values[6 * t + corners[k]], nodes.values[esm.tri[3 * t + k]]);
+  assert.throws(() => evaluatePlot(st, { dataset: 'es', expr: 'es.V', location: 'p2nodes' }), /location must be one of/);
   const rf = evaluatePlot(st, { dataset: 'rf', expr: 'rf.alpha_dB', unit: 'dB/cm' });
   assert.equal(rf.location, 'sweep');
   assert.deepEqual(Array.from(rf.values), r.rf.sweep.alphaDbPerCm);

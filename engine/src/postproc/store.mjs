@@ -11,11 +11,15 @@ import { regionOpticalData, POCKELS_COMPONENTS, armElectrodeGap } from './eo-ana
 import { modeIdentity } from '../optical-stage.mjs';
 import { compileExpression, ExpressionError } from './expr.mjs';
 import { DIMLESS, formatUnit, parseUnit } from './units.mjs';
+import { refinePattern, edgeNeighbours, smoothingSlots } from './refine.mjs';
 
 const ETA0 = MU0 * C_LIGHT;
 export const DEFAULT_CACHE_BYTES = 128 * 1024 * 1024;
 /** Above this many points a quadrature evaluation runs in element chunks and is not cached. */
 export const MAX_CACHED_POINTS = 1 << 20;
+/** Refined plot point sets (DevLog-034) are cached up to this size (the LRU byte bound still applies). */
+export const MAX_CACHED_REFINED_POINTS = 1 << 22;
+const cacheable = (ps) => ps.n <= (ps.kind?.startsWith('refine') ? MAX_CACHED_REFINED_POINTS : MAX_CACHED_POINTS);
 
 const U = (s) => parseUnit(s).dim;
 const DIM = {
@@ -196,6 +200,7 @@ class Lru {
     const b = bytesOf(v);
     const old = this.map.get(k);
     if (old) { this.bytes -= old.b; this.map.delete(k); }
+    if (b > this.max) return v; // larger than the whole cache: not kept
     this.map.set(k, { v, b });
     this.bytes += b;
     while (this.bytes > this.max && this.map.size > 1) {
@@ -217,8 +222,6 @@ const PATTERNS = {
   quad: Float64Array.from(Q4.flatMap((q) => [q[0], q[1], q[2]])),
   // edge midpoints in the P2 local order m01, m12, m20
   edge: Float64Array.of(0.5, 0.5, 0, 0, 0.5, 0.5, 0.5, 0, 0.5),
-  // P2 Lagrange points: vertices then edge midpoints (fem.p2Space local order)
-  p2: Float64Array.of(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0, 0, 0.5, 0.5, 0.5, 0, 0.5),
   // barycentric lattice of order 8 (45 points), used to refine a surface max/min inside the best element
   lattice: (() => { const a = []; for (let i = 0; i <= 8; i++) for (let j = 0; j <= 8 - i; j++) a.push(i / 8, j / 8, (8 - i - j) / 8); return Float64Array.from(a); })(),
 };
@@ -545,7 +548,7 @@ class SolutionStore {
   }
 
   // ---- point sets ----
-  /** Structured point set on a mesh: kind node | centroid | corner | quad, optional element subset. */
+  /** Structured point set on a mesh: kind node | centroid | corner | quad | edge | lattice | refine<r>, optional element subset. */
   pointSet(meshId, kind, elems = null, elemKey = '') {
     const id = `${meshId}/${kind}/${elemKey}`;
     const hit = this.cache.get(`ps:${id}`);
@@ -556,42 +559,17 @@ class SolutionStore {
       const { tri: T, L, n } = this.nodeLocation(rec);
       ps = { id, meshId, kind, n, loc: { tri: T, L, n } };
     } else {
-      const P = PATTERNS[kind];
+      const P = kind.startsWith('refine') ? refinePattern(Number(kind.slice(6))).L : PATTERNS[kind];
       const nEl = elems ? elems.length : rec.nTris;
       ps = { id, meshId, kind, n: nEl * (P.length / 3), loc: { pattern: P, elems, nEl, n: nEl * (P.length / 3) } };
     }
-    if (ps.n <= MAX_CACHED_POINTS) this.cache.set(`ps:${id}`, ps);
+    if (cacheable(ps)) this.cache.set(`ps:${id}`, ps);
     return ps;
   }
 
   /** Arbitrary point set (um coordinates); optional line data {t1x, t1y, s, w}. */
   xyPointSet(x, y, extra = {}) {
     return { id: `xy${++this.seq}`, meshId: null, kind: 'xy', n: x.length, x, y, ...extra };
-  }
-
-  /** Point set of the P2 electrostatic DOFs (vertices first, then edge midpoints; fem.p2Space order). */
-  p2DofPointSet() {
-    const k = 'ps:es/p2dof/';
-    const hit = this.cache.get(k);
-    if (hit) return hit;
-    if (!this.es || this.es.order !== 2) throw new Error("location 'p2nodes' needs a P2 electrostatic solution (dataset es, mesh.element_order 2)");
-    const { elem } = this.es;
-    const { mesh } = this.es.rec;
-    let nDof = 0;
-    for (let q = 0; q < elem.length; q++) if (elem[q] + 1 > nDof) nDof = elem[q] + 1;
-    const T = new Int32Array(nDof).fill(-1), L = new Float64Array(3 * nDof), x = new Float64Array(nDof), y = new Float64Array(nDof);
-    const P = PATTERNS.p2;
-    for (let t = 0; t < mesh.nTris; t++) for (let a = 0; a < 6; a++) {
-      const d = elem[6 * t + a];
-      if (T[d] >= 0) continue;
-      T[d] = t;
-      const l0 = P[3 * a], l1 = P[3 * a + 1], l2 = P[3 * a + 2];
-      L[3 * d] = l0; L[3 * d + 1] = l1; L[3 * d + 2] = l2;
-      const i0 = mesh.tri[3 * t], i1 = mesh.tri[3 * t + 1], i2 = mesh.tri[3 * t + 2];
-      x[d] = l0 * mesh.x[i0] + l1 * mesh.x[i1] + l2 * mesh.x[i2];
-      y[d] = l0 * mesh.y[i0] + l1 * mesh.y[i1] + l2 * mesh.y[i2];
-    }
-    return this.cache.set(k, { id: 'es/p2dof/', meshId: 'es', kind: 'p2dof', n: nDof, loc: { tri: T, L, n: nDof }, x, y, elem });
   }
 
   /** Point set of the rf dataset (one point per sweep frequency; no coordinates). */
@@ -629,12 +607,37 @@ class SolutionStore {
       y[i] = l0 * Y[a] + l1 * Y[b] + l2 * Y[c];
     });
     const out = { x, y };
-    if (ps.n <= MAX_CACHED_POINTS) this.cache.set(k, out);
+    if (cacheable(ps)) this.cache.set(k, out);
     return out;
   }
 
   locator(rec) {
-    return (rec.locator ??= new WalkLocator(rec.mesh, rec.geo));
+    return (rec.locator ??= new WalkLocator(rec.mesh, rec.geo, this.neighbours(rec)));
+  }
+
+  /** Neighbour of every element across each local edge (edge k opposite vertex k), -1 on the boundary. */
+  neighbours(rec) {
+    return (rec.nb ??= edgeNeighbours(rec.mesh));
+  }
+
+  /**
+   * Coincident lattice-point groups of a mesh at level r for smoothing (DevLog-034): mode 'everywhere' shares every
+   * element vertex and edge point; 'material' only between elements whose regions have the same material name.
+   */
+  smoothingSlots(meshId, r, mode) {
+    const k = `slots:${meshId}:${r}:${mode}`;
+    const hit = this.cache.get(k);
+    if (hit) return hit;
+    const rec = this.meshes.get(meshId);
+    let group = null;
+    if (mode === 'material') {
+      const ids = new Map();
+      const matId = rec.regionMaterials.map((m) => { if (!ids.has(m)) ids.set(m, ids.size); return ids.get(m); });
+      const tr = rec.mesh.triRegion;
+      group = new Int32Array(rec.nTris);
+      for (let t = 0; t < rec.nTris; t++) group[t] = matId[tr[t]] ?? matId.length;
+    }
+    return this.cache.set(k, smoothingSlots(rec.mesh, this.neighbours(rec), r, group));
   }
 
   /** Location of the points of `ps` in mesh `meshId`: {tri, L, n} (tri -1 outside; -2-e inside electrode e, es only). */
@@ -645,7 +648,7 @@ class SolutionStore {
     if (hit) return hit;
     const rec = this.meshes.get(meshId);
     const loc = this.locatePoints(rec, this.coords(ps));
-    if (ps.n <= MAX_CACHED_POINTS) this.cache.set(k, loc);
+    if (cacheable(ps)) this.cache.set(k, loc);
     return loc;
   }
 
@@ -679,7 +682,7 @@ class SolutionStore {
     const hit = this.cache.get(k);
     if (hit) return hit;
     const v = compute();
-    if (ps.n <= MAX_CACHED_POINTS) this.cache.set(k, v);
+    if (cacheable(ps)) this.cache.set(k, v);
     return v;
   }
 
@@ -925,25 +928,11 @@ export const TIE_BARYCENTRIC = 1e-9;
  * uses for the same point.
  */
 class WalkLocator {
-  constructor(mesh, geo) {
+  constructor(mesh, geo, nb) {
     this.mesh = mesh;
     this.geo = geo;
     this.grid = new TriLocator(mesh, geo);
-    const nT = mesh.nTris, tri = mesh.tri;
     // neighbour across local edge k (opposite vertex k): edge (k+1, k+2)
-    const nb = new Int32Array(3 * nT).fill(-1);
-    const keys = new Float64Array(3 * nT), idx = new Int32Array(3 * nT);
-    const nN = mesh.nNodes;
-    for (let t = 0; t < nT; t++) for (let k = 0; k < 3; k++) {
-      const a = tri[3 * t + ((k + 1) % 3)], b = tri[3 * t + ((k + 2) % 3)];
-      keys[3 * t + k] = a < b ? a * nN + b : b * nN + a;
-      idx[3 * t + k] = 3 * t + k;
-    }
-    idx.sort((p, q) => keys[p] - keys[q]);
-    for (let j = 0; j + 1 < idx.length; j++) {
-      const p = idx[j], q = idx[j + 1];
-      if (keys[p] === keys[q]) { nb[p] = (q / 3) | 0; nb[q] = (p / 3) | 0; j++; }
-    }
     this.nb = nb;
     this.last = -1;
   }

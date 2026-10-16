@@ -1,5 +1,6 @@
 // Plot and derived-value evaluation over a solution store (DevLog-030 contract, DevLog-031): evaluatePlot (values on
-// nodes, element centroids, element corners, quadrature points, cut lines and cut points), evaluateDerived (global,
+// nodes, element centroids, element corners, quadrature points, refined element-local lattices with smoothing
+// (DevLog-034), cut lines and cut points), evaluateDerived (global,
 // surface integral / average / max / min over region selections, line integral / average along polylines, point
 // evaluation), modeTable and global expressions over sweep points. Integrals use the solver's 6-point degree-4 rule
 // on the dataset mesh; line integrals split every segment at the element crossings of each mesh the expression reads
@@ -8,8 +9,9 @@
 import { QUAD_WEIGHTS, MAX_CACHED_POINTS, GLOBAL_VARIABLES, PATTERN_SIZES, resolveConstant } from './store.mjs';
 import { compileExpression, ExpressionError } from './expr.mjs';
 import { displayConversion, formatUnit, dimMul, parseUnit } from './units.mjs';
+import { resolutionLevel, cappedLevel, refinePattern, smoothValues, MAX_SUBTRIANGLES, SMOOTHING } from './refine.mjs';
 
-const LOCATIONS = ['auto', 'node', 'element', 'corner', 'quad', 'p2nodes'];
+const LOCATIONS = ['auto', 'node', 'element', 'corner', 'quad', 'refined'];
 const PARTS = ['real', 'imag', 'abs'];
 const M2 = parseUnit('m^2').dim, M1 = parseUnit('m').dim;
 
@@ -66,7 +68,8 @@ function lineData(s, tx, ty) {
 /**
  * Plot values of an expression on a dataset.
  * @param {any} store createSolutionStore result
- * @param {{dataset:string, expr:string, unit?:string, location?:'auto'|'node'|'element'|'corner'|'quad', part?:'real'|'imag'|'abs'}} req
+ * @param {{dataset:string, expr:string, unit?:string, location?:'auto'|'node'|'element'|'corner'|'quad'|'refined', part?:'real'|'imag'|'abs',
+ *   resolution?:string|number, smoothing?:'none'|'material'|'everywhere', maxSubTriangles?:number}} req
  */
 export function evaluatePlot(store, req) {
   const t0 = performance.now();
@@ -98,14 +101,20 @@ export function evaluatePlot(store, req) {
     if (location === 'auto') location = compiled.continuous ? 'node' : 'element';
     mesh = ds.mesh;
   }
-  let v;
-  if (location === 'p2nodes') {
-    // P2 electrostatic DOF points (vertices, then edge midpoints): exact values for continuous expressions, else the
-    // area-weighted mean of the element-side values at each DOF (round 2, R-UI request)
-    if (mesh !== 'es') throw new Error("location 'p2nodes' is defined on the es dataset only");
-    const dps = store.p2DofPointSet();
-    v = compiled.continuous ? store.run(compiled, dps) : smoothToP2(store, dps, store.run(compiled, store.pointSet('es', 'p2')));
-    Object.assign(extra, { x: Float64Array.from(dps.x), y: Float64Array.from(dps.y), elem: Int32Array.from(dps.elem) });
+  if (location !== 'refined' && (req.resolution != null || req.smoothing != null)) throw new Error("resolution and smoothing apply to location 'refined' only");
+  let v, smoothing = null;
+  if (location === 'refined') {
+    // element-local lattice of level r (DevLog-034): exact values from each element's own basis, then smoothing of
+    // coincident points (none, inside material domains, everywhere)
+    smoothing = req.smoothing ?? 'material';
+    if (!SMOOTHING.includes(smoothing)) throw new Error(`smoothing must be one of ${SMOOTHING.join(', ')}`);
+    const rec = store.meshes.get(mesh);
+    const want = resolutionLevel(req.resolution ?? 'normal');
+    const cap = req.maxSubTriangles ?? MAX_SUBTRIANGLES;
+    const r = cappedLevel(rec.nTris, want, cap);
+    const pat = refinePattern(r);
+    v = store.run(compiled, store.pointSet(mesh, `refine${r}`));
+    Object.assign(extra, { resolution: r, requestedResolution: want, capped: r < want, np: pat.np, nSub: rec.nTris * pat.nSub, smoothing });
   } else if (location === 'node' && !compiled.continuous) {
     // smoothing: area-weighted mean of the corner values of every element sharing the node
     const corner = store.run(compiled, store.pointSet(mesh, 'corner'));
@@ -114,29 +123,11 @@ export function evaluatePlot(store, req) {
     if (!ps) ps = store.pointSet(mesh, location === 'element' ? 'centroid' : location);
     v = store.run(compiled, ps);
   }
-  const values = pick(v, part, conv.factor);
+  let values = pick(v, part, conv.factor);
+  if (smoothing && smoothing !== 'none') values = smoothValues(values, store.smoothingSlots(mesh, extra.resolution, smoothing));
   const st = stats(values);
   return { values, location, mesh, n: values.length, unit: conv.unit, siUnit: compiled.unit, dim: compiled.dim, ...st,
     complex: isComplex(v), part, ...extra, ms: performance.now() - t0 };
-}
-
-function smoothToP2(store, dps, v) {
-  const rec = store.meshes.get('es');
-  const n = dps.n, elem = dps.elem;
-  const sr = new Float64Array(n), si = v.im ? new Float64Array(n) : null, w = new Float64Array(n);
-  for (let t = 0; t < rec.nTris; t++) {
-    const a = rec.absArea[t];
-    for (let k = 0; k < 6; k++) {
-      const i = 6 * t + k, x = v.re[i];
-      if (Number.isNaN(x)) continue;
-      const d = elem[i];
-      sr[d] += a * x;
-      if (si) si[d] += a * v.im[i];
-      w[d] += a;
-    }
-  }
-  for (let i = 0; i < n; i++) { sr[i] = w[i] > 0 ? sr[i] / w[i] : NaN; if (si) si[i] = w[i] > 0 ? si[i] / w[i] : NaN; }
-  return { re: sr, im: si };
 }
 
 function smoothToNodes(store, meshId, v) {

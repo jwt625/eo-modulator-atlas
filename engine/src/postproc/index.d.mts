@@ -4,7 +4,11 @@ import type { SimulationResult } from '../run.d.mts';
 
 export type Dim = [number, number, number, number]; // exponents of m, kg, s, A
 export type MeshId = string; // 'es' | 'opt' | 'armA' | 'armB'
-export type PlotLocation = 'auto' | 'node' | 'element' | 'corner' | 'quad' | 'p2nodes';
+export type PlotLocation = 'auto' | 'node' | 'element' | 'corner' | 'quad' | 'refined';
+/** Plot resolution (DevLog-034): subdivision level r of every element (r^2 sub-triangles, (r+1)(r+2)/2 lattice points). */
+export type ResolutionName = 'none' | 'coarse' | 'normal' | 'fine' | 'finer' | 'extra';
+/** Smoothing of coincident lattice points: none, inside material domains (same material name), everywhere. */
+export type Smoothing = 'none' | 'material' | 'everywhere';
 export type Part = 'real' | 'imag' | 'abs';
 export type DerivedKind = 'global' | 'surface_int' | 'surface_avg' | 'surface_max' | 'surface_min' | 'line_int' | 'line_avg' | 'point';
 export type XY = [number, number];
@@ -43,17 +47,24 @@ export interface SolutionStore {
 export function createSolutionStore(result: SimulationResult, options?: { cacheBytes?: number }): SolutionStore;
 export const DEFAULT_CACHE_BYTES: number;
 
-export interface PlotRequest { dataset: string; expr: string; unit?: string; location?: PlotLocation; part?: Part }
+export interface PlotRequest { dataset: string; expr: string; unit?: string; location?: PlotLocation; part?: Part;
+  /** location 'refined' only: level name or integer 1..16 (default 'normal' = 3) */
+  resolution?: ResolutionName | number;
+  /** location 'refined' only (default 'material') */
+  smoothing?: Smoothing;
+  /** location 'refined' only: cap on nTris r^2 (default MAX_SUBTRIANGLES); r is lowered to fit */
+  maxSubTriangles?: number }
 export interface PlotResult {
-  /** Fresh array (transferable). Layout: node -> nNodes; element -> nTris; corner -> 3 nTris; quad -> 6 nTris; line/point -> samples. */
+  /** Fresh array (transferable). Layout: node -> nNodes; element -> nTris; corner -> 3 nTris; quad -> 6 nTris;
+   * refined -> np nTris (element-major lattice points, refinePattern order); line/point -> samples. */
   values: Float64Array;
-  location: 'node' | 'element' | 'corner' | 'quad' | 'line' | 'point' | 'p2nodes' | 'sweep';
+  location: 'node' | 'element' | 'corner' | 'quad' | 'refined' | 'line' | 'point' | 'sweep';
   mesh: MeshId | null; n: number; unit: string; siUnit: string; dim: Dim; min: number; max: number; nNaN: number;
   complex: boolean; part: Part; ms: number;
   /** cut lines: arc length (um) and coordinates (um); cut points: coordinates */
   s?: Float64Array; x?: Float64Array; y?: Float64Array;
-  /** p2nodes: 6 DOF indices per triangle (vertices, then midpoints m01 m12 m20); x, y are the DOF coordinates */
-  elem?: Int32Array;
+  /** refined: level used, level asked, whether the sub-triangle cap lowered it, points per element, sub-triangles, smoothing */
+  resolution?: number; requestedResolution?: number; capped?: boolean; np?: number; nSub?: number; smoothing?: Smoothing;
   /** rf dataset: sweep frequencies (GHz) */
   fGhz?: Float64Array;
 }
@@ -128,3 +139,17 @@ export function displayConversion(dim: Dim | number[], unit?: string | null): { 
 export const EO_FORMULAS: Readonly<Record<string, string>>;
 export const POCKELS_COMPONENTS: readonly ['r33', 'r13', 'r22', 'r51', 'other'];
 export function armElectrodeGap(section: unknown, window: { x: number[]; y: number[] }, potentials: number[]): { gapUm: number | null; left: string | null; right: string | null; vGap: number | null; reason: string | null };
+
+export const RESOLUTIONS: Readonly<Record<ResolutionName, number>>;
+export const MAX_RESOLUTION: number;
+export const MAX_SUBTRIANGLES: number;
+export const SMOOTHING: readonly Smoothing[];
+/** Lattice of level r: barycentrics L (3 per point), np points, r^2 sub-triangles (`sub`, local point indices). */
+export function refinePattern(r: number): { r: number; np: number; nSub: number; L: Float64Array; sub: Int32Array };
+export function latticeIndex(r: number, n0: number, n1: number): number;
+/** Coordinates (um) of every element's lattice points, element-major (same arithmetic as the store). */
+export function refinedPoints(mesh: { x: ArrayLike<number>; y: ArrayLike<number>; tri: ArrayLike<number> }, r: number): { x: Float64Array; y: Float64Array };
+/** Drawn value inside element t at barycentrics (L0, L1, 1 - L0 - L1): linear on the containing sub-triangle. */
+export function interpolateRefined(values: ArrayLike<number>, r: number, t: number, L0: number, L1: number): number;
+export function cappedLevel(nTris: number, r: number, cap?: number): number;
+export function resolutionLevel(res?: ResolutionName | number): number;
