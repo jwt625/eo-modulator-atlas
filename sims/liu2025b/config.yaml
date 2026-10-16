@@ -66,6 +66,7 @@ geometry:                          # LOADED cross-section: T-bars present
 line:
   length_mm: 10
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -128,6 +129,7 @@ provenance:
   line.load_ohm: {class: project_inference, note: "chip-level EO measurement terminated by a 50 ohm probe load assumed; an on-chip NiCr terminator exists (p.3) but its value is not stated"}
   line.differential: {class: project_inference, note: "single-ended GSG probe on the centre signal line with one arm in each gap (Fig. 1(a)); the paper does not state the drive"}
   line.conductor_loss_model: {class: project_inference, note: "paper simulates 4.4 dB/cm at 110 GHz; loss model left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: paper_exact, locator: "p.2 Sec. Design and fabrication (r = 50 um)"}
   line.loading.loaded_length_um: {class: project_inference, locator: "p.2 Fig. 1(a) (c = 5 um gap between segments)", note: "segment length r - c = 45 um; each segment has one centred 2.3 um stem (Fig. 1(a)), not representable in 2D"}
   geometry.regions.ln_slab: {class: paper_exact, locator: "p.3 Sec. Design and fabrication (360 nm film, 180 nm slab, 180 nm rib height)"}

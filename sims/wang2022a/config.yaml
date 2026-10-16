@@ -58,6 +58,7 @@ geometry:
 line:
   length_mm: 12
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -70,7 +71,7 @@ alt_geometries: {}
 
 targets:
   - {metric: vpi_l_dc_vcm, value: 2.6, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: wang2022a-a, field: vpil_dc_vcm, comparable: false, note: "NON-COMPARABLE until LN constants, rib width definition and the cladding stack are known"}}
-  - {metric: eo_rolloff_db, at_ghz: 67, value: -5, tol_abs: 1.0, source: {device_id: wang2022a-a, field: eo_rolloff_db, comparable: false, note: "includes RF probe effects; reference frequency not stated"}}
+  - {metric: eo_rolloff_db, at_ghz: 67, value: -5, tol_abs: 1.0, reference: low_freq_unstated, source: {device_id: wang2022a-a, field: eo_rolloff_db, comparable: false, note: "includes RF probe effects; reference frequency not stated"}}
 reported_curves: []
 
 provenance:
@@ -94,6 +95,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.3 Sec. 2 (38 ohm termination resistor)", note: "38 ohm termination resistor stated for the packaged chip, placed at the end of the electrode"}
   line.differential: {class: project_inference, note: "G-S-G with one arm per gap (Fig. 1(b)); the paper says push-pull mode (p.2) but not the drive form"}
   line.conductor_loss_model: {class: project_inference, note: "no RF loss coefficient stated"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.2 Sec. 2 (500 um silicon; clipped to the domain)"}
   geometry.regions.box: {class: paper_exact, locator: "p.2 Sec. 2 (4.7 um buried oxide)"}
   geometry.regions.ln_slab: {class: paper_exact, locator: "p.2 Sec. 2 (500 nm film, 260 nm etch)", note: "slab 240 nm = 500 - 260"}

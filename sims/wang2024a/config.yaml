@@ -57,6 +57,7 @@ geometry:
 line:
   length_mm: 6
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -72,7 +73,7 @@ targets:
   - {metric: vpi_l_dc_vcm, value: 2.8, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: wang2024a-a, field: vpil_dc_vcm, comparable: false, note: "author-stated from V_pi 4.8 V x 6 mm; NON-COMPARABLE until rib width definition, etch depth, cladding/electrode stack and LT constants are confirmed"}}
   - {metric: n_rf, value: 2.22, tol_abs: 0.10, source: {device_id: wang2024a-a, field: n_rf, comparable: false, note: "measured at 50 GHz on the SiO2-clad device; the static section solve is quasi-static"}}
   - {metric: ng_opt, value: 2.25, tol_abs: 0.05, source: {device_id: wang2024a-a, field: ng_opt, basis: simulated, note: "paper's own simulated group index"}}
-  - {metric: bw3db_ghz, value: 110, tol_rel: 0.15, source: {device_id: wang2024a-a, field: bw3db_ghz, comparable: false, note: "authors' stated approximate 110 GHz, claimed crossing at the measurement limit; referenced to 10 MHz. Measured S21 first dips below -3 dB near 90 GHz (Fig. 2(c), approx. reading); 110 GHz matches the EE-derived simulated curve."}}
+  - {metric: bw3db_ghz, value: 110, tol_rel: 0.15, reference_ghz: 0.01, source: {device_id: wang2024a-a, field: bw3db_ghz, comparable: false, note: "authors' stated approximate 110 GHz, claimed crossing at the measurement limit; referenced to 10 MHz. Measured S21 first dips below -3 dB near 90 GHz (Fig. 2(c), approx. reading); 110 GHz matches the EE-derived simulated curve."}}
 reported_curves: []
 
 provenance:
@@ -96,6 +97,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.4 text (second probe with bias-T followed by a 50 ohm resistor)", note: "termination stated for the data-transmission setup; S21 measurement setup not described"}
   line.differential: {class: project_inference, note: "G-S-G with one arm per gap (Fig. 1(b) inset); the paper says push-pull arms (p.2) but not the drive form"}
   line.conductor_loss_model: {class: project_inference, note: "paper reports alpha_RF,Ag = 0.58 dB/cm/GHz^0.5 on test CPWs (Fig. 1(c)); loss model left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.2 text (525 um high-resistivity Si carrier; region clipped to the domain)"}
   geometry.regions.box: {class: paper_exact, locator: "p.2 text; Fig. 1(b) caption (4.7 um)"}
   geometry.regions.lt_slab: {class: project_inference, locator: "Fig. 1(b) caption (LT thickness half-etched: 600 nm); Fig. 1(a) SEM inset", note: "slab 300 nm assumed from 'half-etched'; the SEM inset (600 nm scale bar) reads a slab of about 280 nm and a rib height of about 270 nm"}

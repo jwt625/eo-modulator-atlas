@@ -60,6 +60,7 @@ geometry:                          # LOADED cross-section: loading heads present
 line:
   length_mm: 8
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -122,6 +123,7 @@ provenance:
   line.load_ohm: {class: project_inference, note: "50 ohm termination assumed (Fig. 3(a) shows 50 ohm termination)"}
   line.differential: {class: project_inference, note: "GSG with one waveguide in each gap, single-ended drive, push-pull by geometry (p.3 states push-pull)"}
   line.conductor_loss_model: {class: project_inference, note: "paper fits alpha_c 0.264 and alpha_d 0.028 (p.5); model choice left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: paper_exact, locator: "p.4 (capacitive loading period of 20 um); p.16 SI Table 1 (slot period P = 20 um)"}
   line.loading.loaded_length_um: {class: project_inference, locator: "p.16 SI Table 1 (P = 20, T = 2 um); Fig. 1(f)", note: "head length P - T = 18 um; stem width and position not stated"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.11 Methods; p.16 SI Table 1 (500 um quartz; region clipped to the domain)"}

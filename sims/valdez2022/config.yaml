@@ -91,6 +91,7 @@ geometry:
 line:
   length_mm: 5
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -185,7 +186,7 @@ targets:
   source: {paper_id: valdez2022, locator: p.8 Sec. High-Speed Measurements, basis: unspecified, note: paper does not say whether simulated or measured}
 reported_curves: []
 provenance:
-  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r: Zhu et al. 2021 Table 1, clamped; r: Veithen et al. arXiv:cond-mat/0311240 Table I, clamped, citing Rauber 1978)", note: "the paper states no LN RF permittivity or Pockels tensor; library values added 2026-10-14 (DevLog-026) so the config parses"}
+  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r: Weis and Gaylord, Appl. Phys. A 37, 191 (1985), Table 1 p.197 row [23] eps^S, clamped; r: Weis and Gaylord 1985 Table 4 p.199 r^S 633 nm row [45], clamped)", note: "the paper states no LN RF permittivity or Pockels tensor; library values added 2026-10-14 (DevLog-026) so the config parses"}
   materials.silicon_dioxide.library: {class: standard_reference, citation: "engine/data/materials.json library silicon_dioxide (eps_r 3.9: Zhu et al. 2021 Table 1; optical: Malitson 1965)"}
   materials.silicon.library: {class: standard_reference, citation: "engine/data/materials.json library silicon (eps_r 11.7: Zhu et al. 2021 Table 1)"}
   optics.wavelength_nm: {class: paper_exact, locator: p.1 abstract}
@@ -208,6 +209,8 @@ provenance:
   line.load_ohm: {class: project_inference, locator: p.8; p.4 Eq. (4), note: 50 ohm load implied by the discussion of impedance mismatch to a 50 ohm load}
   line.source_ohm: {class: project_inference, note: 50 ohm instrument source assumed}
   line.differential: {class: project_inference, locator: p.2 Fig. 1(a); p.6 Fig. 3(c), note: 'GSG with one waveguide per gap: single-ended feed, push-pull arms by geometry; authors do not state it'}
+  line.conductor_loss_model: {class: project_inference, note: "engine conductor-loss model choice (Wheeler incremental inductance from the electrode geometry), not a paper input; added DevLog-036 round 5 (audit R34-3)"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes of the run and unloaded cuts on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2), provenance added round 5 (R34-3)"}
   line.loading.period_um: {class: paper_exact, locator: p.6 (period of 25 um)}
   line.loading.loaded_length_um: {class: paper_exact, locator: 'p.6 (slot 5 um wide, w)', note: 'treated as the length of the slotted (recessed-electrode) section along propagation; periodic_t_rail used as the closest valid form, see SPEC_PROPOSALS'}
   geometry.optical_window: {class: project_inference, note: crop around the right-hand Si waveguide}

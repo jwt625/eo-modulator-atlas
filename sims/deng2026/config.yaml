@@ -52,6 +52,7 @@ geometry:
 line:
   length_mm: 1
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -65,8 +66,8 @@ alt_geometries: {}
 targets:
   # Measured (devices.csv row deng2026-a); single-arm convention, engine push-pull factor not defined
   - {metric: vpi_l_dc_vcm, value: 0.7, tol_rel: 0.15, source: {device_id: deng2026-a, field: vpil_dc_vcm}}
-  - {metric: bw3db_ghz, value: 12, tol_abs: 3.0, source: {device_id: deng2026-a, field: bw3db_ghz}}
-  - {metric: bw6db_ghz, value: 28, tol_rel: 0.15, source: {device_id: deng2026-a, field: bw6db_ghz}}
+  - {metric: bw3db_ghz, value: 12, tol_abs: 3.0, reference: low_freq_unstated, source: {device_id: deng2026-a, field: bw3db_ghz}}
+  - {metric: bw6db_ghz, value: 28, tol_rel: 0.15, reference: low_freq_unstated, source: {device_id: deng2026-a, field: bw6db_ghz}}
   # Paper's own finite-element result; compare as cross-solver reference, not as measurement
   - {metric: vpi_l_dc_vcm, value: 0.73, tol_rel: 0.1, source: {paper_id: deng2026, locator: "p.7 Sec. On-chip EO modulator (EO overlap 45%)", basis: simulated}}
 reported_curves: []
@@ -85,6 +86,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.9 Methods (output terminated with a 50 ohm load)"}
   line.differential: {class: paper_exact, locator: "p.7 (RF on one arm GSG; other arm GS capacitive electrode with DC bias only)"}
   line.conductor_loss_model: {class: project_inference, note: "no RF loss reported"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.bto_film: {class: paper_exact, locator: "p.7 (300-nm-thick BTO film in the modulator)"}
   geometry.regions.sin_strip: {class: figure_digitized, locator: "p.9 Methods (260 nm Si3N4); Fig. 4(b) SEM; Fig. 4(c)", note: "thickness 0.26 um from text; width 1.6 um taken as the middle of the 1.4-1.7 um range: about 1.65 um from the Fig. 4(b) SEM top width against its 1 um scale bar (tilted view), about 1.6 um from Fig. 4(c) with the 5.5 um gap as scale; the 300 nm BTO layer as scale gives 1.4-1.6 um; rectangular cross-section assumed (walls slightly slanted)"}
   geometry.regions.lsat_substrate: {class: paper_exact, locator: "p.9 Methods ((001) LSAT)", note: "material and orientation stated; substrate thickness not stated, region clipped to the domain"}

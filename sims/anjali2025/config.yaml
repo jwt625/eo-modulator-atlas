@@ -1,0 +1,137 @@
+schema: eo-atlas.sim/v1
+id: anjali2025-c
+paper_id: anjali2025
+device_id: anjali2025-c
+title: Anjali 2025, substrate III design (220 nm SOI lateral PN rib phase shifter, 1e17 cm^-3), cross-solver comparison with the authors' Lumerical CHARGE/MODE results
+repro_grade: B
+validation_status: unvalidated
+chain: [semiconductor]
+
+# S8 semiconductor config (DevLog-039, DevLog-041). Run: node engine/cli.mjs sims/anjali2025/config.yaml --stages semiconductor
+# The paper is a simulation design study (Lumerical MODE + CHARGE + INTERCONNECT); all targets are simulated values.
+# Coordinate frame: x lateral (P side at x < 0, Fig. 2(b) source left), y up, z propagation; y = 0 at the BOX top.
+# Origin x = 0 on the rib centre = metallurgical junction (Fig. 2(b): p and n halves of width w/2).
+params:
+  si_um: {value: 0.22, unit: um, description: "Si device layer thickness H (Table 1, substrate III)"}
+  rib_half_um: {value: 0.25, unit: um, description: "half of the 500 nm rib width w (Table 1)"}
+  slab_um: {value: 0.09, unit: um, description: "slab thickness H - h = 220 - 130 nm (Table 1 etch depth)"}
+  box_um: {value: 2.0, unit: um, description: "BOX thickness (Fig. 2(b) label)"}
+  clad_um: {value: 1.5, unit: um, description: "SiO2 cladding kept above the BOX top (thickness not stated; truncated)"}
+  gap_half_um: {value: 3.0, unit: um, description: "half of the 6 um electrode gap g between the via inner edges (p.6)"}
+  via_w_um: {value: 1.25, unit: um, description: "via width w_e (digitized from Fig. 2(b), within the stated 1-2 um range)"}
+  via_top_um: {value: 0.6, unit: um, description: "top of the modelled via stub (via depth stated as the rib height; truncated)"}
+  p_pp_inner_um: {value: 2.36, unit: um, description: "P++ inner edge distance from the centre (digitized, Fig. 2(b), scale from g)"}
+  p_pp_outer_um: {value: 4.95, unit: um, description: "P++ outer edge (digitized, Fig. 2(b))"}
+  n_pp_inner_um: {value: 2.23, unit: um, description: "N++ inner edge (digitized, Fig. 2(b))"}
+  n_pp_outer_um: {value: 5.02, unit: um, description: "N++ outer edge (digitized, Fig. 2(b))"}
+  slab_left_um: {value: 5.91, unit: um, description: "slab end on the P side (digitized, Fig. 2(b))"}
+  slab_right_um: {value: 5.84, unit: um, description: "slab end on the N side (digitized, Fig. 2(b))"}
+
+optics:
+  solver: vector
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: perturbation
+  ng_fixed: null
+
+materials:
+  silicon: {library: silicon, n: 3.475}
+  silicon_dioxide: {library: silicon_dioxide, n: 1.4447}
+  via_metal: {conductor: true}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-6.2, 6.2], y_um: ["=-box_um", "=clad_um"]}
+  regions:
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-6.2, 6.2], y_um: ["=-box_um", 0]}}
+    - {name: clad, material: silicon_dioxide, rect: {x_um: [-6.2, 6.2], y_um: [0, "=clad_um"]}}
+    - {name: slab_p, material: silicon, rect: {x_um: ["=-slab_left_um", 0], y_um: [0, "=slab_um"]}}
+    - {name: slab_n, material: silicon, rect: {x_um: [0, "=slab_right_um"], y_um: [0, "=slab_um"]}}
+    - {name: rib_p, material: silicon, rect: {x_um: ["=-rib_half_um", 0], y_um: ["=slab_um", "=si_um"]}}
+    - {name: rib_n, material: silicon, rect: {x_um: [0, "=rib_half_um"], y_um: ["=slab_um", "=si_um"]}}
+  electrodes:
+    - {name: source, material: via_metal, weight: 0, rect: {x_um: ["=-gap_half_um - via_w_um", "=-gap_half_um"], y_um: ["=slab_um", "=via_top_um"]}}
+    - {name: drain, material: via_metal, weight: 1, rect: {x_um: ["=gap_half_um", "=gap_half_um + via_w_um"], y_um: ["=slab_um", "=via_top_um"]}}
+  optical_window: {x_um: [-1.6, 1.6], y_um: [-0.9, 1.1]}
+  mesh: {max_edge_um: 0.25, electrode_edge_um: 0.05, window_edge_um: 0.03}
+
+semiconductor:
+  materials:
+    silicon:
+      semiconductor: silicon
+      mobility: {doping: masetti_1983, donor: phosphorus, field: caughey_thomas_1967}
+  doping:
+    - {name: background_p, species: acceptor, profile: uniform, concentration_cm3: 1.0e+15, within: {material: silicon}}
+    - {name: p_moderate, species: acceptor, profile: uniform, concentration_cm3: 1.0e+17, within: {rect: {x_um: ["=-p_pp_inner_um", 0], y_um: [0, "=si_um"]}}}
+    - {name: n_moderate, species: donor, profile: uniform, concentration_cm3: 1.0e+17, within: {rect: {x_um: [0, "=n_pp_inner_um"], y_um: [0, "=si_um"]}}}
+    - {name: p_plusplus, species: acceptor, profile: uniform, concentration_cm3: 1.0e+20, within: {rect: {x_um: ["=-p_pp_outer_um", "=-p_pp_inner_um"], y_um: [0, "=si_um"]}}}
+    - {name: n_plusplus, species: donor, profile: uniform, concentration_cm3: 1.0e+20, within: {rect: {x_um: ["=n_pp_inner_um", "=n_pp_outer_um"], y_um: [0, "=si_um"]}}}
+  contacts:
+    - {electrode: source, type: ohmic, bias_v: 0}
+    - {electrode: drain, type: ohmic, bias_v: 0}
+  bias: {contact: drain, values_v: [0, 1, 2, 3, 4, 5], reference_v: 0}   # positive drain (n side) = reverse bias
+  small_signal: {dv_v: 0.01, capacitance: true, series_resistance: true}
+  mesh: {semiconductor_edge_um: 0.01}
+  optics: {plasma_dispersion: nedeljkovic_2011, wavelength_nm: 1550, drive: single_arm, density_basis: absolute}
+  targets:
+    - {metric: dneff, at_bias_v: 5, value: 1.1e-4, tol_rel: 0.15, source: {device_id: anjali2025-c, basis: simulated, locator: "p.6 (dn_eff of the fundamental TE mode 1.1e-4 for substrate III, 0 to 5 V reverse)", note: "authors' Lumerical CHARGE + MODE; plasma-dispersion model not stated by the authors"}}
+    - {metric: vpil_vcm, at_bias_v: 5, value: 3.17, tol_rel: 0.15, source: {device_id: anjali2025-c, field: vpil_dc_vcm, basis: simulated, locator: "Table 2 (p.7)", note: "single phase shifter (per arm); lambda/(2 dn_eff) x 5 V with dn_eff 1.1e-4 gives 3.52 V cm and the Fig. 9(c) phase gives about 3.5 V cm (source inconsistency, devices.csv note)"}}
+
+targets:
+  - {metric: bw3db_ghz, value: 9.5, tol_rel: 0.15, source: {device_id: anjali2025-c, field: bw3db_ghz, comparable: false, note: "INTERCONNECT S21 of the 6.45 mm MZM (simulated); no line or RC model in this config"}}
+reported_curves: []
+
+provenance:
+  params.si_um: {class: paper_exact, locator: "p.2 Table 1 (substrate III, H 220 nm)"}
+  params.rib_half_um: {class: paper_exact, locator: "p.2 Table 1 (w 500 nm)"}
+  params.slab_um: {class: paper_exact, locator: "p.2 Table 1 (etch depth h 130 nm)", note: "90 nm = 220 - 130 nm"}
+  params.box_um: {class: paper_exact, locator: "Fig. 2(b) (2 um BOX layer)"}
+  params.clad_um: {class: project_inference, note: "SiO2 cladding over the rib (p.2, Fig. 2(b)); thickness not stated; truncated at 1.5 um"}
+  params.gap_half_um: {class: paper_exact, locator: "p.6 (electrode gap 6 um for substrate III)", note: "g measured between the via inner edges as drawn in Fig. 2(b)"}
+  params.via_w_um: {class: figure_digitized, locator: "Fig. 2(b) (page 3 image img_p03_1.png)", note: "source via x 701-756 px, drain 1021-1076 px; scale from g = 264 px (756-1020) = 6 um, 22.7 nm/px; 1.25 um; p.6 states the width was chosen within 1-2 um (value not given)"}
+  params.via_top_um: {class: project_inference, locator: "p.8 (via depth equal to the rib height; 2 um pads above)", note: "pads omitted; via stub to 0.6 um"}
+  params.p_pp_inner_um: {class: figure_digitized, locator: "Fig. 2(b)", note: "P++ x 670-784 px, junction / gap centre 888 px; 104 px x 22.7 nm/px; the schematic is not to scale near the rib (rib drawn about 1.2 um wide at this scale), low confidence; w_low and w_high are labelled but their values are not stated; sensitivity run with 3.0 um in DevLog-041"}
+  params.p_pp_outer_um: {class: figure_digitized, locator: "Fig. 2(b)", note: "218 px from the centre; low confidence"}
+  params.n_pp_inner_um: {class: figure_digitized, locator: "Fig. 2(b)", note: "N++ x 986-1109 px; 98 px from the centre; low confidence"}
+  params.n_pp_outer_um: {class: figure_digitized, locator: "Fig. 2(b)", note: "221 px from the centre; low confidence"}
+  params.slab_left_um: {class: figure_digitized, locator: "Fig. 2(b)", note: "slab end 628 px, 260 px from the centre; low confidence"}
+  params.slab_right_um: {class: figure_digitized, locator: "Fig. 2(b)", note: "slab end 1145 px, 257 px from the centre; low confidence"}
+  geometry.regions: {class: paper_exact, locator: "Table 1, Fig. 2(b)", note: "rectangular rib (sidewall angle not stated); junction at the rib centre (Fig. 2(b) w/2 labels, symmetric design p.4); handle silicon below the BOX omitted"}
+  optics.wavelength_nm: {class: paper_exact, locator: "p.2 (targeted wavelength 1550 nm)"}
+  optics.polarization: {class: paper_exact, locator: "p.2 (fundamental TE mode)"}
+  optics.solver: {class: project_inference, note: "vector solver required by the semiconductor optics coupling"}
+  optics.group_index_from: {class: project_inference, note: "engine default; not a target"}
+  materials.silicon: {class: paper_exact, locator: "p.2 (n_Si 3.475 at 1550 nm)", note: "RF permittivity 11.7 from the engine library (standard_reference; not stated by the paper)"}
+  materials.silicon_dioxide: {class: paper_exact, locator: "p.2 (n_SiO2 1.4447)", note: "RF permittivity 3.9 from the engine library (standard_reference)"}
+  materials.via_metal: {class: project_inference, note: "ideal conductor for the Al via (p.8 Al vias and pads)"}
+  semiconductor.doping.background_p: {class: paper_exact, locator: "p.4 (slightly p-doped device layer 1e15 cm^-3)"}
+  semiconductor.doping.p_moderate: {class: paper_exact, locator: "p.4-5 (1e17 cm^-3 chosen for substrate III; entire device layer doped; symmetric p and n)", note: "extent to the P++ inner edge (Fig. 2(b), digitized)"}
+  semiconductor.doping.n_moderate: {class: paper_exact, locator: "p.4-5 (1e17 cm^-3; symmetric doping p.4)"}
+  semiconductor.doping.p_plusplus: {class: paper_exact, locator: "p.4 (p++ and n++ 1e20 cm^-3 in the slab)"}
+  semiconductor.doping.n_plusplus: {class: paper_exact, locator: "p.4 (p++ and n++ 1e20 cm^-3 in the slab)"}
+  semiconductor.doping.profile: {class: project_inference, note: "uniform boxes through the full silicon thickness (entire device layer doped for substrate III, p.4); abrupt edges; implant conditions not given (design study)"}
+  semiconductor.materials.silicon.mobility: {class: project_inference, note: "engine defaults (Masetti 1983, Caughey-Thomas 1967); the authors' CHARGE mobility model is not stated; boron and phosphorus named as examples (p.4)"}
+  semiconductor.materials.silicon.recombination: {class: project_inference, note: "lifetimes not stated; SRH omitted (reverse-bias depletion only)"}
+  semiconductor.temperature_k: {class: project_inference, note: "not stated; 300 K"}
+  semiconductor.contacts: {class: project_inference, locator: "Fig. 2(b) (source on P++, drain on N++)", note: "ideal ohmic contacts at the via feet"}
+  semiconductor.bias: {class: paper_exact, locator: "p.6 (0 V to 5 V reverse bias)"}
+  semiconductor.optics: {class: project_inference, note: "Nedeljkovic 2011 1.55 um row (engine default, absolute basis); single phase shifter in one MZM arm (p.8), so single_arm"}
+  semiconductor.mesh: {class: project_inference, note: "10 nm semiconductor edge (DevLog-039 G6)"}
+  semiconductor.small_signal: {class: project_inference, note: "engine default"}
+  geometry.mesh: {class: project_inference}
+  geometry.domain: {class: project_inference, note: "lateral +-6.2 um (slab ends at about +-5.9 um), BOX bottom to 1.5 um cladding"}
+
+missing:
+  - "w_low and w_high (moderate and heavy doping widths in the slab, labelled in Fig. 2(b) but not given); P++ / N++ edges digitized from an unscaled schematic"
+  - "electrode (via) width for substrate III (chosen within 1-2 um, value not stated)"
+  - "cladding thickness, handle silicon"
+  - "the authors' CHARGE models (mobility, recombination, statistics) and plasma-dispersion coefficients"
+  - "lifetimes, temperature"
+limitations:
+  - "Cross-solver comparison only: the targets are the authors' simulated dn_eff and VpiL, not measurements"
+  - "Table 2 VpiL 3.17 V cm is not consistent with the stated dn_eff 1.1e-4 (lambda/(2 dn_eff) x 5 V = 3.52 V cm); both are kept as separate targets"
+  - "P++ / N++ placement from an unscaled schematic; the authors report that dn_eff of substrate III barely depends on the electrode gap and width (p.6)"
+  - "Uniform abrupt doping boxes; Boltzmann statistics, full ionisation, no bandgap narrowing, no Auger, ideal ohmic contacts (DevLog-039 labels)"
+  - "Substrates I and II (5 um and 3 um SOI p-i-n designs) are not configured: the chosen doping depth d and the w_low / w_high widths are not stated"
+  - rectangular_or_polygon_sidewalls_only

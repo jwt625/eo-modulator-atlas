@@ -89,6 +89,7 @@ geometry:
 line:
   length_mm: 9.9
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -140,6 +141,7 @@ provenance:
   line.load_ohm: {class: project_inference, note: 50 ohm termination assumed; not stated for the device}
   line.differential: {class: project_inference, note: GSG on the signal line with one arm in each gap; push-pull stated by the authors (p.5)}
   line.conductor_loss_model: {class: project_inference, note: no RF loss values reported; the 1-20 ohm cm Si substrate loss (p.6) cannot be represented by the quasi-static 2D electrostatics}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.box: {class: paper_exact, locator: p.5 Sec. 2 (3 um thermal oxide on the Si target substrate)}
   geometry.regions.substrate: {class: project_inference, note: Si thickness not stated; region ends at the domain bottom; low-resistivity (1-20 ohm cm) behaviour not modelled (treated as lossless eps_r 11.7)}
   geometry.regions.ln_slab: {class: figure_digitized, locator: p.7 Fig. 5(c), note: film 600 nm from p.4 Sec. 2; slab top at y = 0.2 um read from the axis of the simulation sketch}

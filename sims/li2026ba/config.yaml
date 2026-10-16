@@ -52,6 +52,7 @@ geometry:                          # LOADED cut: through the T-bars (stems are o
 line:
   length_mm: 18
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -108,6 +109,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.5, termination with a 50 ohm resistor"}
   line.differential: {class: project_inference, note: "single GSG probe on the centre signal line, one waveguide in each gap; push-pull by geometry (OFC version li2026a states push-pull)"}
   line.conductor_loss_model: {class: project_inference, note: "paper reports 4.6 dB/cm at 120 GHz from S21; loss model left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: paper_exact, locator: "p.4 electrode parameters, P = 35 um; Fig. 3(a)"}
   line.loading.loaded_length_um: {class: project_inference, locator: "p.4 (LT = 32 um); Fig. 3(a)", note: "bar length LT used; the 2 um stem (metal bridge from body to bar) is not representable and is lumped into the loaded cut"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.3, 500 um fused silica (clipped to the domain)"}

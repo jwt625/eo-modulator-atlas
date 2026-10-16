@@ -83,6 +83,7 @@ geometry:
 line:
   length_mm: 8
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -116,6 +117,7 @@ provenance:
   line.load_ohm: {class: project_inference, note: 50 ohm assumed; termination is not stated}
   line.differential: {class: project_inference, note: 'GSG from the Fig. 1(a) SEM (three electrodes, arm in each gap); push-pull stated (p.1)'}
   line.conductor_loss_model: {class: project_inference, note: paper reports no RF loss; left to the engine}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.insulating_substrate: {class: project_inference, note: BOX thickness and substrate not stated (Fig. 1(d) inset labels SiO2 below the film); modelled as a thick SiO2 half-space}
   geometry.regions.ln_slab: {class: paper_exact, locator: 'p.1 text (300 nm film, 180 nm etch)', note: slab 120 nm is the arithmetic 300 - 180}
   geometry.regions.ln_rib_r: {class: figure_digitized, locator: p.1 text (width 1 um); Fig. 1(d) inset, note: 'top width 1.0 um from the text; bottom width about 1.09 um from the inset trapezoid (34 px excess over a 373 px top, scaled to 1 um); schematic, not an SEM'}

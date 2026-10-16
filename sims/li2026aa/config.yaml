@@ -58,6 +58,7 @@ geometry:                          # uniform cross-section (plain CPW, no loadin
 line:
   length_mm: 9
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -82,7 +83,7 @@ targets:
   - {metric: z0_ohm, value: 42, tol_abs: 3.0, source: {device_id: li2026aa-d, field: z0_ohm}}
   - {metric: n_rf, value: 2.13, tol_abs: 0.1, source: {device_id: li2026aa-d, field: n_rf, note: "paper value is the plateau at 50 GHz (Fig. 2(g)); static section value compared"}}
   - {metric: ng_opt, value: 2.13, tol_abs: 0.05, source: {device_id: li2026aa-d, field: ng_opt}}
-  - {metric: bw3db_ghz, value: 100, tol_rel: 0.2, source: {device_id: li2026aa-d, field: bw3db_ghz}}
+  - {metric: bw3db_ghz, value: 100, tol_rel: 0.2, reference: low_freq_unstated, source: {device_id: li2026aa-d, field: bw3db_ghz}}
 reported_curves: []
 
 provenance:
@@ -105,6 +106,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.3 (ZL = 38 ohm, intentionally below Z0); p.5"}
   line.differential: {class: project_inference, note: "G-S-G with one arm per gap and a push-pull configuration stated on p.3; drive modelled single-ended on the centre line, push-pull by arm placement"}
   line.conductor_loss_model: {class: project_inference, note: "paper reports no electrode loss coefficient in the main text; loss model left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.type: {class: paper_exact, locator: "p.3 (plain coplanar waveguide; no loaded or periodic electrode described)"}
   geometry.regions.ambient: {class: project_inference, note: "air above the cladding; domain extent is an engine choice"}
   geometry.regions.substrate: {class: project_inference, locator: "p.2 (silicon base)", note: "silicon thickness not stated; region clipped to the domain, 500 um nominal"}

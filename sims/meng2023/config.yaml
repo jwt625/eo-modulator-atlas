@@ -112,10 +112,11 @@ targets:
 - metric: bw3db_ghz
   value: 108
   tol_rel: 0.2
+  reference: low_freq_unstated
   source: {device_id: meng2023-a, field: bw3db_ghz}
 reported_curves: []
 provenance:
-  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r: Zhu et al. 2021 Table 1, clamped; r: Veithen et al. arXiv:cond-mat/0311240 Table I, clamped, citing Rauber 1978)", note: "the paper states no LN RF permittivity and only r33; library values added 2026-10-14 (DevLog-026) so the config parses: eps_r 44 / 27.9 and r13 8.6, r22 3.4, r51 28 (clamped) come from the library; r33 stays the paper value (listed 2026-10-15, round-6 audit G4)"}
+  materials.lithium_niobate.library: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (eps_r: Weis and Gaylord, Appl. Phys. A 37, 191 (1985), Table 1 p.197 row [23] eps^S, clamped; r: Weis and Gaylord 1985 Table 4 p.199 r^S 633 nm row [45], clamped)", note: "the paper states no LN RF permittivity and only r33; library values added 2026-10-14 (DevLog-026) so the config parses: eps_r 44.3 / 27.9 and r13 8.6, r22 3.4, r51 28 (clamped) come from the library; r33 stays the paper value (listed 2026-10-15, round-6 audit G4)"}
   materials.silicon_dioxide.library: {class: standard_reference, citation: "engine/data/materials.json library silicon_dioxide (eps_r 3.9: Zhu et al. 2021 Table 1; optical: Malitson 1965)"}
   materials.silicon.library: {class: standard_reference, citation: "engine/data/materials.json library silicon (eps_r 11.7: Zhu et al. 2021 Table 1)"}
   optics.wavelength_nm: {class: paper_exact, locator: p.9 (IL at 1310 nm); p.5 (ITO index at 1310 nm)}

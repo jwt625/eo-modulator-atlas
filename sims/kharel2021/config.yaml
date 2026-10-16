@@ -56,6 +56,7 @@ geometry:                          # LOADED cross-section: segment fingers prese
 line:
   length_mm: 20
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -63,7 +64,7 @@ line:
   loading:
     type: periodic_t_rail          # closest valid value for the finger-and-stem segments
     period_um: 50                  # r + c = 45 + 5; project_inference (period not named in the paper)
-    loaded_length_um: 39           # finger length r minus the stem width t (45 - 6); the stem is assumed centred on the finger
+    loaded_length_um: 45           # finger (T-head) length r (Shin 2011 definition; 2026-10-16, was 39 = 45 - 6)
     unloaded_cross_section: unloaded
     loaded_cross_section: null     # null = top-level `geometry`
 sweep: {f_start_ghz: 0.1, f_stop_ghz: 200, n_points: 400}
@@ -90,7 +91,7 @@ targets:
   # Targets whose prediction depends on the placeholder ridge width (1.0 um, no source) or on UNVERIFIED material constants carry comparable: false in `source`.
   # Measured, 20 mm device (devices.csv row kharel2021-b)
   - {metric: vpi_dc_v, value: 1.35, tol_rel: 0.15, source: {device_id: kharel2021-b, field: vpi_dc_v, comparable: false, note: "NON-COMPARABLE until the ridge width is known: the solve uses a 1.0 um placeholder ridge and UNVERIFIED LN constants"}}
-  - {metric: eo_rolloff_db, at_ghz: 50, value: -1.8, tol_abs: 0.5, source: {device_id: kharel2021-b, field: eo_rolloff_db, comparable: false, note: "depends on the placeholder ridge width and UNVERIFIED gold sigma and eps_r"}}
+  - {metric: eo_rolloff_db, at_ghz: 50, value: -1.8, tol_abs: 0.5, reference_ghz: 1, source: {device_id: kharel2021-b, field: eo_rolloff_db, comparable: false, note: "depends on the placeholder ridge width and UNVERIFIED gold sigma and eps_r"}}
   # Measured RF line (Fig. 2 caption names a 10-mm electrode; the 2.23 index is not attributed to a device in the text)
   - {metric: rf_loss_db_per_cm, at_ghz: 50, value: 2.0, tol_rel: 0.2, source: {device_id: kharel2021-a, field: rf_loss_db_per_cm, note: "depends on UNVERIFIED gold sigma and eps_r placeholders"}}
   - {metric: n_rf, value: 2.23, tol_abs: 0.1, source: {paper_id: kharel2021, locator: "p.4 Sec. III", basis: measured, note: "device not named in the text; no devices.csv row carries it; depends on UNVERIFIED eps_r placeholders"}}
@@ -99,7 +100,7 @@ targets:
   - {metric: z0_ohm, value: 42, tol_abs: 3.0, source: {paper_id: kharel2021, locator: "p.3 Table I", basis: simulated, note: "depends on UNVERIFIED eps_r placeholders and on the assumed signal width"}}
   - {metric: rf_loss_db_per_cm, at_ghz: 50, value: 1.485, tol_rel: 0.2, source: {paper_id: kharel2021, locator: "p.3 Table I: 0.21 dB/cm/GHz^0.5 times sqrt(50 GHz)", basis: derived, note: "depends on UNVERIFIED gold sigma and eps_r placeholders"}}
   # Authors' prediction for the 20 mm device (extrapolated from measured loss; not a measurement)
-  - {metric: bw3db_ghz, value: 180, tol_rel: 0.15, source: {paper_id: kharel2021, locator: "p.5 Discussion; Fig. 4(a)", basis: predicted, comparable: false, note: "conductor-loss-limited 3 dB bandwidth relative to 1 GHz, 20 mm electrode; depends on placeholders"}}
+  - {metric: bw3db_ghz, value: 180, tol_rel: 0.15, reference_ghz: 1, source: {paper_id: kharel2021, locator: "p.5 Discussion; Fig. 4(a)", basis: predicted, comparable: false, note: "conductor-loss-limited 3 dB bandwidth relative to 1 GHz, 20 mm electrode; depends on placeholders"}}
 reported_curves: []
 
 provenance:
@@ -120,8 +121,9 @@ provenance:
   line.load_ohm: {class: project_inference, note: "50 ohm termination assumed; not stated"}
   line.differential: {class: project_inference, note: "single-drive G-S-G with one arm per gap (Fig. 1(a)); paper states push-pull operation (p.2)"}
   line.conductor_loss_model: {class: project_inference, note: "paper fits alpha = 0.26 dB/cm/GHz^0.5 (p.4); model choice left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: project_inference, locator: "p.2 Fig. 1 caption (r = 45, c = 5 um)", note: "period = finger length r + gap c = 50 um; the word period is not used in the paper"}
-  line.loading.loaded_length_um: {class: project_inference, locator: "Fig. 1(a) top view; p.2 caption (r = 45, t = 6)", note: "stem width t = 6 um read as the stem (Fig. 1(a) arrows); 45 - 6 = 39 um of finger-plus-slot per period; stem centred on the finger is a figure reading"}
+  line.loading.loaded_length_um: {class: project_inference, locator: "Fig. 1(a) top view; p.2 caption (r = 45, t = 6)", note: "finger length r = 45 um (caption parameter set (g, h, s, t, r, c) = (5, 6, 2, 6, 45, 5) um; symbol roles read from Fig. 1(a)). Shin, Sakamoto, Dagli, JLT 29, 48 (2011), Sec. II: l = length of the T-rail; the cuts differ only by the pads, so the stem region is part of the loaded section (stem capacitance not modelled); DevLog-036 round 2 (audit S4), was 45 - 6 = 39 (stem width t subtracted)"}
   geometry.regions.ambient: {class: project_inference, note: "air above the cladding; no top cladding other than the 1 um oxide is described"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.3 Sec. III (500 um quartz handle; region clipped to the domain)"}
   geometry.regions.ln_slab: {class: paper_exact, locator: "p.3 Sec. III (600 nm film, 350 nm etch)", note: "slab 250 nm = 600 - 350"}

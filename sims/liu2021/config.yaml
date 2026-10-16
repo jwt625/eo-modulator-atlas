@@ -59,6 +59,7 @@ geometry:                          # LOADED cross-section: T-rails present (rail
 line:
   length_mm: 5
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -66,7 +67,7 @@ line:
   loading:
     type: periodic_t_rail
     period_um: 50                  # Lp, journal p.3 / Fig. 3(a) (paper_exact)
-    loaded_length_um: 40           # rail length 45 (Fig. 3(a) inset label) minus the 5 um stem (arXiv supplement Table S1; also read from the Fig. 4(a) SEM); stem assumed centred
+    loaded_length_um: 45           # T-rail length 45 (Fig. 3(a) inset label; Shin 2011 definition; 2026-10-16, was 40 = 45 - 5 um stem)
     unloaded_cross_section: unloaded
     loaded_cross_section: null     # null = top-level `geometry`
 sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
@@ -97,7 +98,7 @@ targets:
   - {metric: vpi_l_dc_vcm, value: 1.7, tol_rel: 0.15, source: {device_id: liu2021-a, field: vpil_dc_vcm, comparable: false, note: "NON-COMPARABLE until the fabricated ridge width and sidewall angle are known (1 um top width, 68 deg are placeholders)"}}
   - {metric: n_rf, value: 2.3, tol_abs: 0.1, source: {device_id: liu2021-a, field: n_rf, note: "depends on the assumed rail thickness and ground width"}}
   - {metric: ng_opt, value: 2.25, tol_abs: 0.05, source: {device_id: liu2021-a, field: ng_opt, comparable: false, note: "NON-COMPARABLE: depends on the placeholder ridge width/sidewall angle and the truncated optical window"}}
-  - {metric: eo_rolloff_db, at_ghz: 67, value: -1.3, tol_abs: 0.5, source: {device_id: liu2021-a, field: eo_rolloff_db, comparable: false, note: "depends on placeholders (rail thickness, ridge)"}}
+  - {metric: eo_rolloff_db, at_ghz: 67, value: -1.3, tol_abs: 0.5, reference: low_freq_unstated, source: {device_id: liu2021-a, field: eo_rolloff_db, comparable: false, note: "depends on placeholders (rail thickness, ridge)"}}
   # Not targets: 3 dB EO bandwidth over 110 GHz is a prediction (bound-type)
 reported_curves: []
 
@@ -120,8 +121,9 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.5 (another microwave probe provides a 50 ohm termination)"}
   line.differential: {class: project_inference, note: "G-S-G with one arm per gap (Fig. 3(a)); drive single-ended, arms push-pull by geometry; the paper never states push-pull"}
   line.conductor_loss_model: {class: project_inference, note: "no RF loss coefficient is stated; model choice left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: paper_exact, locator: "p.3 text; p.3 Fig. 3(a) inset (50 um); p.4 Fig. 4 caption (50 um period)"}
-  line.loading.loaded_length_um: {class: project_inference, locator: "p.3 Fig. 3(a) inset (45 um rail, 50 um period); p.3 text (90 percent duty cycle); p.4 Fig. 4(a) SEM inset; references/liu2021/arxiv/text.md p.6 Table S1 (stem LT = 5 um)", note: "45 um rail and 50 um period are labelled in the Fig. 3(a) inset; the 5 um stem is from the arXiv supplement Table S1 and the SEM: 45 - 5 = 40 um of rail-plus-slot per period; stem centred assumed; the 90 percent duty cycle of p.3 corresponds to the 45 um rail"}
+  line.loading.loaded_length_um: {class: project_inference, locator: "p.3 Fig. 3(a) inset (45 um rail, 50 um period); p.3 text (90 percent duty cycle); p.4 Fig. 4(a) SEM inset; references/liu2021/arxiv/text.md p.6 Table S1 (stem LT = 5 um)", note: "45 um rail and 50 um period are labelled in the Fig. 3(a) inset; the 90 percent duty cycle of p.3 corresponds to the 45 um rail. Shin, Sakamoto, Dagli, JLT 29, 48 (2011), Sec. II: l = length of the T-rail; the cuts differ only by the pads, so the stem region is part of the loaded section (stem capacitance not modelled); DevLog-036 round 2 (audit S4), was 45 - 5 = 40 (5 um stem from the arXiv supplement Table S1 subtracted)"}
   geometry.regions.ambient: {class: project_inference, note: "air above the modulation region; BCB cladding only under the CPW feed bends (p.5)"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.4 fabrication paragraph (500 um quartz; region clipped to the domain)"}
   geometry.regions.box: {class: paper_exact, locator: "p.4 fabrication paragraph (2 um SiO2 bonding layer)"}

@@ -58,6 +58,7 @@ geometry:
 line:
   length_mm: 0.37
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -96,6 +97,7 @@ provenance:
   line.load_ohm: {class: project_inference, note: "termination not stated"}
   line.differential: {class: project_inference, note: "GSG with one arm per gap; push-pull stated on p.2 Sec. 2 (electrode configuration)"}
   line.conductor_loss_model: {class: project_inference, note: "no RF loss coefficient stated; authors quote metal absorption loss below 0.01 dB/cm for the design"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.ln_slab: {class: paper_exact, locator: "p.4 Sec. 3 (400 nm film); p.5 Sec. 3 (200 nm etched, 200 nm slab)"}
   geometry.regions.box: {class: paper_exact, locator: "p.4 Sec. 3 (3 um buried oxide)"}
   geometry.regions.substrate: {class: project_inference, note: "silicon handle thickness not stated; clipped to 97 um below the BOX"}

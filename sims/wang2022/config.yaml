@@ -69,6 +69,7 @@ geometry:                          # LOADED cross-section: slots + undercut + T-
 line:
   length_mm: 12.5
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -144,6 +145,7 @@ provenance:
   line.load_ohm: {class: project_inference, note: "off-chip 50 ohm termination through a second probe (supplement p.5 describes it for the data runs); assumed for the S21 as well"}
   line.differential: {class: project_inference, note: "single G-S-G probe on the centre signal line, one waveguide in each gap (Fig. 1(a)); supplement p.3 calls the device push-pull"}
   line.conductor_loss_model: {class: project_inference, note: "paper reports alpha0 simulated 0.21 and measured 0.49 dB/cm/GHz^0.5; loss model left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: paper_exact, locator: "supplement p.3 (duty cycle r/(r+c) = 47/50, r = 47 um, c = 3 um, p.3)"}
   line.loading.loaded_length_um: {class: project_inference, locator: "p.3 (r, c, L) = (47, 3, 36) um; Fig. 1(c)", note: "Fig. 1(c) shows the hole L centred on the gap c between the T-bars of one period r + c = 50 um, so slot and T-bar pads coexist over L - c = 36 - 3 = 33 um; the remaining 17 um of the period are the c = 3 um gap (slot without bar, equals the unloaded cut) and the 14 um stem region (T-bar without slot, not representable in the two-cross-section cascade and approximated by the unloaded cut); an earlier draft used L = 36 as the coexistence length (2 x 18 = 36 holds for chen2022, not here)"}
   geometry.regions.substrate: {class: project_inference, locator: "p.2 (SOI wafer)", note: "thickness not stated; region cut at the domain bottom"}

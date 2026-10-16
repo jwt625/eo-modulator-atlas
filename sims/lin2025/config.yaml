@@ -56,6 +56,7 @@ geometry:
 line:
   length_mm: 16
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -98,6 +99,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.13 Methods"}
   line.differential: {class: project_inference, note: "single GSG probe on the signal line, one waveguide in each 6 um gap; push-pull stated on p.6, arm placement inferred"}
   line.conductor_loss_model: {class: project_inference, note: "loss model left to the engine; measured test-CPW loss ~5.3 dB/cm at 67 GHz"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.5, 525 um high-resistivity silicon (clipped to the domain)"}
   geometry.regions.box: {class: paper_exact, locator: "p.5, 4.7 um SiO2; Fig. 2(d) inset"}
   geometry.regions.lt_slab: {class: paper_exact, locator: "p.5, 600 nm film, 320 nm etch, 280 nm slab; Fig. 2(d) inset"}

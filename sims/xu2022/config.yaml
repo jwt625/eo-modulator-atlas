@@ -58,6 +58,7 @@ geometry:
 line:
   length_mm: 23.5
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -72,7 +73,7 @@ targets:
   # Measured headline values for the four sub-MZMs (devices.csv row xu2022-a). All carry comparable: false because the solve depends on placeholder material constants, rib sidewalls, electrode widths and the unmodelled capacitive loading.
   - {metric: vpi_dc_v, value: 1.0, tol_rel: 0.15, vpi_convention: mzm_push_pull, source: {device_id: xu2022-a, field: vpi_dc_v, comparable: false, note: "NON-COMPARABLE: UNVERIFIED LN constants, vertical rib sidewalls and assumed electrode widths; Vpi frequency and wavelength not stated"}}
   - {metric: vpi_l_dc_vcm, value: 2.4, tol_rel: 0.1, vpi_convention: mzm_push_pull, source: {paper_id: xu2022, locator: "p.2", comparable: false, basis: simulated, note: "Authors' own simulated efficiency of the design (text p.2); NON-COMPARABLE until LN constants and the optical wavelength are known; not a devices.csv value (vpil_dc_vcm of xu2022-a is empty)"}}
-  - {metric: bw3db_ghz, value: 110, tol_rel: 0.15, source: {device_id: xu2022-a, field: bw3db_ghz, comparable: false, note: "Paper states >110 GHz (lower bound, traces end near 110 GHz); the uniform-line model omits the capacitive loading that the design relies on"}}
+  - {metric: bw3db_ghz, value: 110, tol_rel: 0.15, reference_ghz: 1.5, source: {device_id: xu2022-a, field: bw3db_ghz, comparable: false, note: "Paper states >110 GHz (lower bound, traces end near 110 GHz); the uniform-line model omits the capacitive loading that the design relies on"}}
 reported_curves: []
 
 provenance:
@@ -96,6 +97,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.2 (flip-chip bonded 50 ohm terminators at the end of each CL-TWE)"}
   line.differential: {class: project_inference, note: "single G-S-G with one arm per gap (Fig. 1(a),(b)); the paper does not state push-pull or the drive form"}
   line.conductor_loss_model: {class: project_inference, note: "paper quotes a simulated 0.21 dB/cm/GHz^0.5 (p.2); model choice left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading: {class: project_inference, locator: "p.1 Fig. 1(b) (period 50 um, segment gap c = 5 um)", note: "loading type none: finger width and which conductor each finger belongs to are not given, so no loaded cross-section can be built; the real device is capacitance-loaded"}
   geometry.regions.ambient: {class: project_inference, locator: "p.1 Fig. 1(c) (Air label)", note: "air above the electrodes"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.1 (500 um quartz substrate; region clipped to the domain)"}

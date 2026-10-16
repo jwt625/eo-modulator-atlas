@@ -54,6 +54,7 @@ geometry:
 line:
   length_mm: 8
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -120,6 +121,7 @@ provenance:
   line.source_ohm: {class: project_inference, note: "50 ohm assumed for the probe"}
   line.differential: {class: project_inference, locator: "p.5 Sec. IV.A (push-pull stated), Fig. 1(a)", note: "single-ended GSG feed; arms in opposite fields by geometry"}
   line.conductor_loss_model: {class: project_inference, note: "loss model left to the engine; no RF loss curve is reported"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: project_inference, locator: "p.2 Sec. I (L = 20 um), Fig. 1(f)", note: "L read as the unit-cell period"}
   line.loading.loaded_length_um: {class: project_inference, locator: "p.2 Sec. I (t = 15 um), Fig. 1(f)", note: "t read as the length of the protruding head along z, leaving c = L - t = 5 um recessed; w and c are not stated and the drawing is a photograph"}
   alt_geometries.recessed: {class: project_inference, locator: "p.2 Sec. I (h = 2 um: distance between the inner electrode edge and the inner T-rail edge), Fig. 1(f)", note: "inner electrode edges recessed by h on both sides of each gap; signal narrowed to 51 um, ground widths kept at 100 um"}

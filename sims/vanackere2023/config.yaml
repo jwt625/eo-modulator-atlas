@@ -51,6 +51,7 @@ geometry:
 line:
   length_mm: 2
   conductor_loss_model: skin_effect_wheeler   # paper reports about 2 dB/mm dominated by substrate ohmic loss, not representable here
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -80,6 +81,7 @@ provenance:
   line.length_mm: {class: paper_exact, locator: "p.3 Sec. I; p.4 Sec. IV (2 mm)"}
   line.differential: {class: project_inference, note: "single phase section carrying the full voltage across the gap, matching the paper's per-phase-section VpiL; the real device is driven differentially (GSSG)"}
   line.conductor_loss_model: {class: project_inference, note: "paper's loss is mostly substrate ohmic; engine skin-effect model will not reproduce it"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
 
 missing:
   - "lithium_niobate RF permittivity (anisotropic) and Pockels tensor (not stated; omitted, not filled from memory)"

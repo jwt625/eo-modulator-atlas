@@ -60,6 +60,7 @@ geometry:                          # LOADED cross-section: T-rail heads present
 line:
   length_mm: 7
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -67,7 +68,7 @@ line:
   loading:
     type: periodic_t_rail
     period_um: 50                  # R + C = 45 + 5
-    loaded_length_um: 40           # head length R = 45 minus the 5 um stem T (stem not representable in 2D)
+    loaded_length_um: 45           # T-head length R = 45 (Shin 2011 definition; 2026-10-16, was 40 = R - T)
     unloaded_cross_section: unloaded
     loaded_cross_section: null     # null = top-level `geometry`
 sweep: {f_start_ghz: 0.1, f_stop_ghz: 110, n_points: 220}
@@ -99,7 +100,7 @@ targets:
   - {metric: n_rf, value: 2.26, tol_abs: 0.1, source: {device_id: xue2026-b, field: n_rf, note: "LOW CONFIDENCE until the Fig. 1 symbol roles H and S are confirmed (loaded capacitance depends on them)"}}
   - {metric: z0_ohm, value: 46, tol_abs: 3.0, source: {device_id: xue2026-b, field: z0_ohm, comparable: false, note: "NON-COMPARABLE: the authors state the extracted value encompasses contributions from all output ports, microwave cables and RF probes (p.7)"}}
   - {metric: ng_opt, value: 2.26, tol_abs: 0.05, source: {device_id: xue2026-b, field: ng_opt}}
-  - {metric: eo_rolloff_db, at_ghz: 67, value: -1.3, tol_abs: 0.5, source: {device_id: xue2026-b, field: eo_rolloff_db}}
+  - {metric: eo_rolloff_db, at_ghz: 67, value: -1.3, tol_abs: 0.5, reference: low_freq_unstated, source: {device_id: xue2026-b, field: eo_rolloff_db}}
   # Paper's own design calculation (p.6), cross-solver reference
   - {metric: vpi_l_dc_vcm, value: 1.20, tol_rel: 0.10, source: {paper_id: xue2026, locator: "p.6 text", basis: simulated, note: "calculated modulation efficiency at 1550 nm"}}
   # Not a target: 3 dB bandwidth over 67 GHz is a bound (see SPEC_PROPOSALS)
@@ -124,8 +125,9 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.7 (50 ohm termination through a second probe)"}
   line.differential: {class: project_inference, note: "G-S-G with one waveguide in each gap; single-ended drive, push-pull by geometry (p.2 states push-pull)"}
   line.conductor_loss_model: {class: project_inference, note: "paper quotes 0.74 dB/cm/GHz^0.5 measured (Fig. 4(d)); model choice left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: paper_exact, locator: "p.3 Fig. 1 caption (R = 45, C = 5 um)", note: "period = R + C = 50 um; period itself not stated"}
-  line.loading.loaded_length_um: {class: project_inference, locator: "p.3 Fig. 1(a); Fig. 1 caption (R = 45, T = 5)", note: "head length R minus stem width T; symbol roles read from the schematic; stem centred on the head assumed"}
+  line.loading.loaded_length_um: {class: project_inference, locator: "p.3 Fig. 1(a); Fig. 1 caption (R = 45, T = 5)", note: "head length R = 45 um (caption (W, g, H, S, T, R, C) = (50, 5, 5.2, 2, 5, 45, 5) um; symbol roles read from the schematic). Shin, Sakamoto, Dagli, JLT 29, 48 (2011), Sec. II: l = length of the T-rail; the cuts differ only by the pads, so the stem region is part of the loaded section (stem capacitance not modelled); DevLog-036 round 2 (audit S4), was R - T = 40"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.3 (500 um Si; region clipped to the domain)"}
   geometry.regions.box: {class: paper_exact, locator: "p.2-3 (12 um silica buffer)"}
   geometry.regions.ln_slab: {class: paper_exact, locator: "p.3 (360 nm film, 260 nm etch depth)", note: "slab 100 nm = 360 - 260"}

@@ -59,6 +59,7 @@ geometry:                          # LOADED cross-section (T-bars present, backs
 line:
   length_mm: 7
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   rf_loss_table: null
   source_ohm: 50
   load_ohm: 50
@@ -100,7 +101,7 @@ targets:
   # Measured, 7 mm device (devices.csv row wang2025-a)
   - {metric: vpi_l_dc_vcm, value: 3.22, tol_rel: 0.15, source: {device_id: wang2025-a, field: vpil_dc_vcm, comparable: false, note: "measured along the rotated 112 deg Y axis; NON-COMPARABLE with an x-cut/y-propagation model"}}
   - {metric: n_rf, value: 2.25, tol_abs: 0.05, source: {device_id: wang2025-a, field: n_rf, comparable: false, note: "deduced from measured S-parameters of the fabricated device (residual silicon, hole-width errors); design value is near ng = 2.19"}}
-  - {metric: bw3db_ghz, value: 55, tol_rel: 0.15, source: {device_id: wang2025-a, field: bw3db_ghz, comparable: false, note: "authors: around 55 GHz (conclusion: exceeding 55); EO traces first reach -3 dB near 50-51 GHz and oscillate about -3 dB to 63 GHz (Fig. 4(c), approx. reading); not an engine-evaluated crossing"}}
+  - {metric: bw3db_ghz, value: 55, tol_rel: 0.15, reference: low_freq_unstated, source: {device_id: wang2025-a, field: bw3db_ghz, comparable: false, note: "authors: around 55 GHz (conclusion: exceeding 55); EO traces first reach -3 dB near 50-51 GHz and oscillate about -3 dB to 63 GHz (Fig. 4(c), approx. reading); not an engine-evaluated crossing"}}
 reported_curves: []
 
 provenance:
@@ -121,6 +122,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.5 Methods (off-chip 50 ohm termination via second probe)"}
   line.differential: {class: project_inference, note: "G-S-G with one arm per gap (Fig. 1(c)); the paper never says push-pull"}
   line.conductor_loss_model: {class: project_inference, note: "paper reports simulated alpha0 = 0.194 dB/cm/GHz^0.5; loss model left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   line.loading.period_um: {class: project_inference, locator: "p.2 Design text (a, b, c, d, e) = (15.3, 3, 2, 47, 5) um; Fig. 1(a)", note: "period = T-bar length d + gap b = 50 um; the period itself is not stated"}
   line.loading.loaded_length_um: {class: project_inference, locator: "p.2 Design text; Fig. 1(a)", note: "T-bar length d = 47 um; backside holes are continuous so no slot-limited loaded length exists, unlike chen2022"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.5 Methods (thinned to approximately 250 um)", note: "thickness approximate; holes cut through to the BOX"}

@@ -39,7 +39,7 @@ optics:
 
 materials:
   lithium_niobate:
-    library: lithium_niobate_congruent   # eps_r 44.0/27.9 (clamped), r13 8.6, r22 3.4, r33 30.8, r51 28.0 (clamped), Zelmon dispersion
+    library: lithium_niobate_congruent   # eps_r 44.3/27.9 (clamped), r13 8.6, r22 3.4, r33 30.8, r51 28.0 (clamped), Zelmon dispersion
     crystal: {cut: x, propagation: y}
   silicon_dioxide: {library: silicon_dioxide}
   silicon: {library: silicon}
@@ -64,6 +64,7 @@ template:
 line:
   length_mm: 5
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   source_ohm: 50
@@ -79,11 +80,11 @@ targets:
   - {metric: n_rf, value: 2.2, tol_abs: 0.1, source: {device_id: arabjuneghani2022-b, field: n_rf, note: "extracted from measured S-parameters to 67 GHz"}}
   - {metric: rf_loss_db_per_cm, at_ghz: 67, value: 3.6, tol_rel: 0.2, source: {device_id: arabjuneghani2022-b, field: rf_loss_db_per_cm}}
   - {metric: z0_ohm, value: 50.5, tol_abs: 1.5, source: {paper_id: arabjuneghani2022, locator: "p.3 Sec. 3.2, Fig. 4", basis: derived, note: "paper states Zm in 49-52 ohm over the spectrum; target is the midpoint with a tolerance covering the stated range"}}
-  - {metric: eo_rolloff_db, at_ghz: 100, value: -2.0, tol_abs: 0.5, source: {device_id: arabjuneghani2022-b, field: eo_rolloff_db, note: "no devices.csv sign convention: negative here per SPEC"}}
+  - {metric: eo_rolloff_db, at_ghz: 100, value: -2.0, tol_abs: 0.5, reference: low_freq_unstated, source: {device_id: arabjuneghani2022-b, field: eo_rolloff_db, note: "no devices.csv sign convention: negative here per SPEC"}}
   # Paper-simulated optical group index (Fig. 1(a) inset); compare as cross-solver reference
   - {metric: ng_opt, value: 2.23, tol_abs: 0.05, source: {device_id: arabjuneghani2022-b, field: ng_opt}}
   # Authors' extrapolation beyond the 100 GHz measurement limit, not a measurement
-  - {metric: bw3db_ghz, value: 170, tol_rel: 0.2, source: {paper_id: arabjuneghani2022, locator: "p.1 abstract; p.4 Sec. 3.3, Fig. 5(b)", basis: predicted, note: "authors' analytical-model extrapolation beyond the 100 GHz measurement limit; devices.csv holds the measured bound 100 (gt)"}}
+  - {metric: bw3db_ghz, value: 170, tol_rel: 0.2, reference: unspecified, source: {paper_id: arabjuneghani2022, locator: "p.1 abstract; p.4 Sec. 3.3, Fig. 5(b)", basis: predicted, note: "authors' analytical-model extrapolation beyond the 100 GHz measurement limit; devices.csv holds the measured bound 100 (gt)"}}
 reported_curves: []
 
 studies:
@@ -115,7 +116,7 @@ provenance:
   optics.polarization: {class: project_inference, note: "TE assumed for an x-cut rib with r33 along z; the paper does not state the polarization"}
   optics.group_index_from: {class: project_inference, note: "paper quotes ng = 2.23 (Fig. 1(a) inset, simulated); engine derives it and compares as a target; changed 2026-10-15 from finite_difference_wavelength (written when it was the only computed group index, meaning computed by the model, not fixed) to perturbation, the engine default; FD stays selectable (DevLog-026 round 4)"}
   materials.lithium_niobate.crystal: {class: paper_exact, locator: "p.2 Sec. 2 (X-cut LN)", note: "propagation along crystal y inferred from the axes of Fig. 1 (project_inference)"}
-  materials.lithium_niobate: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (optical: Zelmon et al. 1997; eps_r: Zhu et al. 2021 Table 1, clamped; r: Veithen et al. arXiv:cond-mat/0311240 Table I, clamped, citing Rauber 1978)", note: "the paper states no LN constants; replaced unverified placeholders (n 2.211/2.138, eps 43/28, r 8.6/3.4/30.8/28) on 2026-10-14"}
+  materials.lithium_niobate: {class: standard_reference, citation: "engine/data/materials.json library lithium_niobate_congruent (optical: Zelmon et al. 1997; eps_r: Weis and Gaylord, Appl. Phys. A 37, 191 (1985), Table 1 p.197 row [23] eps^S, clamped; r: Weis and Gaylord 1985 Table 4 p.199 r^S 633 nm row [45], clamped)", note: "the paper states no LN constants; replaced unverified placeholders (n 2.211/2.138, eps 43/28, r 8.6/3.4/30.8/28) on 2026-10-14"}
   materials.silicon_dioxide: {class: standard_reference, citation: "engine/data/materials.json library silicon_dioxide (optical: Malitson 1965; eps_r 3.9: Zhu et al. 2021 Table 1)", note: "the paper states neither; replaced the unverified placeholder n = 1.444, eps_r = 3.9 on 2026-10-14"}
   materials.silicon: {class: standard_reference, citation: "engine/data/materials.json library silicon (eps_r 11.7: Zhu et al. 2021 Table 1)", note: "the paper states no silicon constants"}
   materials.gold.sigma_Sm: {class: standard_reference, citation: "engine/data/materials.json library gold_bulk_293k (Matula 1979, Table 5, 293 K)", note: "bulk annealed gold 4.5167e7 S/m; film conductivity not stated and generally lower (was placeholder 4.1e7)"}
@@ -128,6 +129,7 @@ provenance:
   line.dielectric_loss_model: {class: project_inference, note: "no loss tangent stated; dielectric loss declared none (assumption, see limitations)"}
   optics.eo: {class: project_inference, note: "arm windows from the rib polygons (A = optical_window on the right rib, B mirrored about the signal centre on the left rib); single-ended G-S-G drive"}
   line.conductor_loss_model: {class: project_inference, note: "paper reports alpha_m = 3.6 dB/cm at 67 GHz (0.44 dB/cm/GHz^0.5) from measured S-parameters; loss model left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   params.film_um: {class: paper_exact, locator: "p.2 Sec. 2 (500 nm LN)"}
   params.sidewall_deg: {class: unknown, note: "sidewall angle not stated; vertical walls used"}
   params.gap_um: {class: paper_exact, locator: "p.2 Table 1 (G = 10 um)"}

@@ -59,6 +59,7 @@ geometry:
 line:
   length_mm: 5.8
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: tan_delta_regions
   rf_loss_table: null
@@ -74,8 +75,8 @@ targets:
   - {metric: z0_ohm, at_ghz: 250, value: 41.5, tol_abs: 2.0, source: {device_id: zhang2022-a, field: z0_ohm, note: "text value 41.5 ohm; Fig. 2(b) measured markers read about 43.4 ohm at 250 GHz, inside the +/- 2 ohm band"}}
   - {metric: ng_opt, value: 2.26, tol_abs: 0.05, source: {device_id: zhang2022-a, field: ng_opt, comparable: false, note: "paper-simulated (Lumerical MODE); sidewall angle is a placeholder and LN indices are UNVERIFIED"}}
   - {metric: rf_loss_db_per_cm, at_ghz: 250, value: 13, tol_rel: 0.2, source: {device_id: zhang2022-a, field: rf_loss_db_per_cm}}
-  - {metric: bw3db_ghz, value: 170, tol_rel: 0.15, source: {device_id: zhang2022-a, field: bw3db_ghz}}
-  - {metric: bw6db_ghz, value: 295, tol_rel: 0.15, source: {device_id: zhang2022-a, field: bw6db_ghz}}
+  - {metric: bw3db_ghz, value: 170, tol_rel: 0.15, reference_ghz: 1, source: {device_id: zhang2022-a, field: bw3db_ghz}}
+  - {metric: bw6db_ghz, value: 295, tol_rel: 0.15, reference_ghz: 1, source: {device_id: zhang2022-a, field: bw6db_ghz}}
 reported_curves: []
 
 provenance:
@@ -103,6 +104,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: "p.6 Sec. 3.C (50 ohm load on the output probe)"}
   line.differential: {class: project_inference, note: "x-cut G-S-G with one arm per gap (Fig. 1(b)); drive single-ended, arms push-pull by geometry; the paper never states the drive"}
   line.conductor_loss_model: {class: project_inference, note: "paper fits alpha_c = 0.42 dB/cm/GHz^0.5 and alpha_d = 0.025 dB/cm/GHz (Fig. 3(b)); loss model left to the engine"}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.substrate: {class: paper_exact, locator: "p.4 Sec. 3.A (500 um silicon; clipped to the domain)"}
   geometry.regions.box: {class: paper_exact, locator: "p.4 Sec. 3.A (2 um thermal oxide)"}
   geometry.regions.ln_slab: {class: paper_exact, locator: "p.4 Sec. 3.A (600 nm film, 300 nm etch, 300 nm slab)"}

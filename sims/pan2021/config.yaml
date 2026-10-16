@@ -89,6 +89,7 @@ geometry:
 line:
   length_mm: 5
   conductor_loss_model: skin_effect_wheeler
+  conductor_thickness_model: slab_symmetric   # coplanar electrodes, both faces carry current (DevLog-036 round 3, audit R2-2)
   include_internal_inductance: true
   dielectric_loss_model: none
   rf_loss_table: null
@@ -136,6 +137,7 @@ provenance:
   line.load_ohm: {class: paper_exact, locator: p.2 Fig. 1(a) (50 ohm load); p.3 Sec. 2}
   line.differential: {class: project_inference, note: single GSG probe; push-pull is produced by the arm placement; paper states 'driven with the push-pull configuration' (p.3)}
   line.conductor_loss_model: {class: project_inference, note: paper calculates alpha_m below 9 dB/cm to 100 GHz (Fig. 4(b)); loss model left to the engine}
+  line.conductor_thickness_model: {class: project_inference, note: "coplanar electrodes (all electrodes on one plane, no nearby ground plane): top and bottom faces carry equal quasi-TEM current, so the symmetric slab Z_s = (k/sigma) coth(k t/2) per face; t = smallest electrode bounding-box dimension; DevLog-036 round 3 (audit R2-2)"}
   geometry.regions.box: {class: paper_exact, locator: p.4 Sec. 2 (2 um silica)}
   geometry.regions.substrate: {class: paper_exact, locator: p.4 Sec. 2 (0.4 mm Si; region clipped to the domain)}
   geometry.regions.ln_slab: {class: paper_exact, locator: 'p.3-4 Sec. 2 (600 nm film, rib height h = 300 nm)', note: slab 300 nm is the arithmetic 600 - 300}

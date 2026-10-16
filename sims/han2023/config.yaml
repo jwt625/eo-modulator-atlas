@@ -1,0 +1,165 @@
+schema: eo-atlas.sim/v1
+id: han2023-a
+paper_id: han2023
+device_id: han2023-a
+title: Han 2023, lateral PN rib cross-sections of the corrugated (fishbone) slow-light Si MZM arm on 220 nm SOI (2D straight-waveguide cuts)
+repro_grade: B
+validation_status: unvalidated
+chain: [semiconductor]
+
+# S8 semiconductor config (DevLog-039, DevLog-041). Run: node engine/cli.mjs sims/han2023/config.yaml --stages semiconductor
+# (cut 2 through the fingers: add --section cut2; also node engine/src/semi/run-cli.mjs).
+# Coordinate frame: x lateral (P side at x < 0, paper Fig. 2(A) cross section 1 left = P++), y up, z propagation.
+# y = 0 at the BOX top; 90 nm slab, 220 nm core; origin x = 0 on the core centre (= metallurgical junction, Fig. 2(A)).
+# The device is a 3D periodic structure (300 nm period, 190 nm sidewall fingers, Np 20, Nr 10): each cut is solved as
+# a uniform straight waveguide; the slow-light enhancement (ng 6.1) and the cut average are not modelled.
+params:
+  core_half_um: {value: 0.2275, unit: um, description: "half of the 455 nm core width (cut 1, between fingers)"}
+  finger_um: {value: 0.19, unit: um, description: "sidewall corrugation (finger) depth per side; cut 2 width 835 nm"}
+  si_um: {value: 0.22, unit: um, description: "silicon device layer thickness"}
+  slab_um: {value: 0.09, unit: um, description: "partially etched slab thickness"}
+  box_um: {value: 2.0, unit: um, description: "buried oxide thickness"}
+  clad_um: {value: 1.5, unit: um, description: "SiO2 cladding kept above the BOX top (truncated; thickness not stated)"}
+  p_plus_edge_um: {value: -0.54, unit: um, description: "P / P+ boundary (digitized, Fig. 2(A) top view)"}
+  p_pp_edge_um: {value: -0.85, unit: um, description: "P+ / P++ boundary (digitized, Fig. 2(A) top view)"}
+  n_plus_edge_um: {value: 0.52, unit: um, description: "N / N+ boundary (digitized, Fig. 2(A) top view)"}
+  n_pp_edge_um: {value: 0.83, unit: um, description: "N+ / N++ boundary (digitized, Fig. 2(A) top view)"}
+  slab_end_um: {value: 2.84, unit: um, description: "outer end of the P++ / N++ slab (digitized, Fig. 2(A) cross section 1 schematic)"}
+  via_c_um: {value: 2.46, unit: um, description: "via centre distance from the core centre (digitized, cross section 1 schematic)"}
+  via_w_um: {value: 0.16, unit: um, description: "via width at the silicon (digitized, cross section 1 schematic)"}
+  via_top_um: {value: 0.6, unit: um, description: "top of the modelled via stub (not stated; truncated)"}
+
+optics:
+  solver: vector
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  group_index_from: perturbation
+  ng_fixed: null
+
+materials:
+  silicon: {library: silicon}
+  silicon_dioxide: {library: silicon_dioxide}
+  via_metal: {conductor: true}
+
+geometry:
+  symmetry: none
+  domain: {x_um: [-3.2, 3.2], y_um: ["=-box_um", "=clad_um"]}
+  regions:
+    - {name: box, material: silicon_dioxide, rect: {x_um: [-3.2, 3.2], y_um: ["=-box_um", 0]}}
+    - {name: clad, material: silicon_dioxide, rect: {x_um: [-3.2, 3.2], y_um: [0, "=clad_um"]}}
+    - {name: slab_p, material: silicon, rect: {x_um: ["=-slab_end_um", 0], y_um: [0, "=slab_um"]}}
+    - {name: slab_n, material: silicon, rect: {x_um: [0, "=slab_end_um"], y_um: [0, "=slab_um"]}}
+    - {name: core_p, material: silicon, rect: {x_um: ["=-core_half_um", 0], y_um: ["=slab_um", "=si_um"]}}
+    - {name: core_n, material: silicon, rect: {x_um: [0, "=core_half_um"], y_um: ["=slab_um", "=si_um"]}}
+  electrodes:
+    - {name: anode, material: via_metal, weight: 0, rect: {x_um: ["=-via_c_um - via_w_um / 2", "=-via_c_um + via_w_um / 2"], y_um: ["=slab_um", "=via_top_um"]}}
+    - {name: cathode, material: via_metal, weight: 1, rect: {x_um: ["=via_c_um - via_w_um / 2", "=via_c_um + via_w_um / 2"], y_um: ["=slab_um", "=via_top_um"]}}
+  optical_window: {x_um: [-1.6, 1.6], y_um: [-0.9, 1.1]}
+  mesh: {max_edge_um: 0.2, electrode_edge_um: 0.05, window_edge_um: 0.03}
+
+alt_geometries:
+  cut2:   # cross section 2 of Fig. 2(A): through a finger pair, full-height silicon 835 nm wide
+    symmetry: none
+    domain: {x_um: [-3.2, 3.2], y_um: ["=-box_um", "=clad_um"]}
+    regions:
+      - {name: box, material: silicon_dioxide, rect: {x_um: [-3.2, 3.2], y_um: ["=-box_um", 0]}}
+      - {name: clad, material: silicon_dioxide, rect: {x_um: [-3.2, 3.2], y_um: [0, "=clad_um"]}}
+      - {name: slab_p, material: silicon, rect: {x_um: ["=-slab_end_um", 0], y_um: [0, "=slab_um"]}}
+      - {name: slab_n, material: silicon, rect: {x_um: [0, "=slab_end_um"], y_um: [0, "=slab_um"]}}
+      - {name: core_p, material: silicon, rect: {x_um: ["=-core_half_um - finger_um", 0], y_um: ["=slab_um", "=si_um"]}}
+      - {name: core_n, material: silicon, rect: {x_um: [0, "=core_half_um + finger_um"], y_um: ["=slab_um", "=si_um"]}}
+    electrodes:
+      - {name: anode, material: via_metal, weight: 0, rect: {x_um: ["=-via_c_um - via_w_um / 2", "=-via_c_um + via_w_um / 2"], y_um: ["=slab_um", "=via_top_um"]}}
+      - {name: cathode, material: via_metal, weight: 1, rect: {x_um: ["=via_c_um - via_w_um / 2", "=via_c_um + via_w_um / 2"], y_um: ["=slab_um", "=via_top_um"]}}
+    optical_window: {x_um: [-1.6, 1.6], y_um: [-0.9, 1.1]}
+    mesh: {max_edge_um: 0.2, electrode_edge_um: 0.05, window_edge_um: 0.03}
+
+semiconductor:
+  materials:
+    silicon:
+      semiconductor: silicon
+      mobility: {doping: masetti_1983, donor: phosphorus, field: caughey_thomas_1967}
+  doping:
+    - {name: p_core, species: acceptor, profile: uniform, concentration_cm3: 5.0e+17, within: {rect: {x_um: ["=p_plus_edge_um", 0], y_um: [0, "=si_um"]}}}
+    - {name: n_core, species: donor, profile: uniform, concentration_cm3: 5.0e+17, within: {rect: {x_um: [0, "=n_plus_edge_um"], y_um: [0, "=si_um"]}}}
+    - {name: p_plus, species: acceptor, profile: uniform, concentration_cm3: 2.0e+18, within: {rect: {x_um: ["=p_pp_edge_um", "=p_plus_edge_um"], y_um: [0, "=si_um"]}}}
+    - {name: n_plus, species: donor, profile: uniform, concentration_cm3: 2.0e+18, within: {rect: {x_um: ["=n_plus_edge_um", "=n_pp_edge_um"], y_um: [0, "=si_um"]}}}
+    - {name: p_plusplus, species: acceptor, profile: uniform, concentration_cm3: 4.0e+20, within: {rect: {x_um: ["=-slab_end_um", "=p_pp_edge_um"], y_um: [0, "=si_um"]}}}
+    - {name: n_plusplus, species: donor, profile: uniform, concentration_cm3: 4.0e+20, within: {rect: {x_um: ["=n_pp_edge_um", "=slab_end_um"], y_um: [0, "=si_um"]}}}
+  contacts:
+    - {electrode: anode, type: ohmic, bias_v: 0}
+    - {electrode: cathode, type: ohmic, bias_v: 0}
+  bias: {contact: cathode, values_v: [0, 1, 2, 3, 3.5, 4, 5], reference_v: 0}   # positive cathode = reverse bias
+  small_signal: {dv_v: 0.01, capacitance: true, series_resistance: true}
+  mesh: {semiconductor_edge_um: 0.01}
+  optics: {plasma_dispersion: nedeljkovic_2011, wavelength_nm: 1550, drive: single_arm, density_basis: absolute}
+  targets:
+    - {metric: c_pf_per_mm, at_bias_v: 3.5, value: 0.15, tol_rel: 0.15, source: {device_id: han2023-a, basis: simulated, comparable: false, locator: "supplement p.13 (PN junction model: 1.5 pF/cm at 3.5 V bias)", note: "definition mismatch: equals the 1D depletion capacitance (N_A = N_D = 5e17, 0.22 um junction height: 0.152 pF/mm at 3.5 V, DevLog-041 derived check), while the engine value is the 2D terminal C' including the oxide and slab fringe field; kept for the record, not a pass/fail target (comparable: false; the semiconductor stage honours it since DevLog-039 round 2); devices.csv capacitance_ff 18.6 fF is this value x 124 um"}}
+
+targets:
+  # Measured on the slow-light (ng 6.1) corrugated device; not comparable with a straight 2D cut (kept for the record).
+  - {metric: vpi_l_dc_vcm, value: 0.96, tol_rel: 0.15, vpi_convention: unspecified, source: {device_id: han2023-a, field: vpil_dc_vcm, comparable: false, note: "Vpi 78 V x 124 um from a sinusoidal fit to a ~10 percent transmission change over 0-5 V (supplement p.8, Fig. S4); slow-light enhanced, push-pull GSGSG drive, convention not stated"}}
+  - {metric: bw3db_ghz, value: 110, tol_rel: 0.15, reference: low_freq_unstated, source: {device_id: han2023-a, field: bw3db_ghz, comparable: false, note: "EO S21 fit crossing at 3.5 V (Fig. 4(D)); set by the CROW optical bandwidth, electrode loss and RC; no TWE or optical-cavity model in this config"}}
+reported_curves: []
+
+provenance:
+  params.si_um: {class: paper_exact, locator: "p.7 Materials and Methods (220 nm silicon layer)"}
+  params.slab_um: {class: paper_exact, locator: "p.7 Materials and Methods (90-nm-thick partially etched rib area)"}
+  params.box_um: {class: paper_exact, locator: "p.7 Materials and Methods (2 um buried oxide)"}
+  params.core_half_um: {class: paper_exact, locator: "p.7 Materials and Methods (core width 455 nm); Fig. 2(A) cross section 1"}
+  params.finger_um: {class: paper_exact, locator: "p.5 Sample fabrication (side wall corrugation depth 190 nm); Fig. 2(A) cross section 2 (835 nm)"}
+  params.clad_um: {class: project_inference, note: "SiO2 cladding shown (Fig. 2(A)); thickness not stated; truncated at 1.5 um above the BOX top (mode and junction fields decay well inside)"}
+  params.p_plus_edge_um: {class: figure_digitized, locator: "Fig. 2(A) top view (page 4 image), 500 nm scale bar = 43 px, core 455 nm = 39 px, 11.65 nm/px", note: "P slab / P+ colour edge 46.5 px from the core centre = 0.542 um, rounded to 0.54; +- 1 px (12 nm) reading; schematic colour bands, implant lateral straggle not shown (DevLog-041)"}
+  params.p_pp_edge_um: {class: figure_digitized, locator: "Fig. 2(A) top view", note: "P+ / P++ colour edge 72.5 px = 0.845 um, rounded to 0.85; +- 12 nm"}
+  params.n_plus_edge_um: {class: figure_digitized, locator: "Fig. 2(A) top view", note: "N slab / N+ colour edge 45 px = 0.524 um, rounded to 0.52; +- 12 nm"}
+  params.n_pp_edge_um: {class: figure_digitized, locator: "Fig. 2(A) top view", note: "N+ / N++ colour edge 71.5 px = 0.833 um, rounded to 0.83; +- 12 nm"}
+  params.slab_end_um: {class: figure_digitized, locator: "Fig. 2(A) cross section 1 schematic (page 4 image)", note: "slab outer ends 229 px from the core centre at 12.4 nm/px; scale from the P+ ... N+ span (135 px) matched to the top-view value 1.678 um (P+ and N+ widths agree within ~5 percent between the two panels); schematic, low confidence"}
+  params.via_c_um: {class: figure_digitized, locator: "Fig. 2(A) cross section 1 schematic", note: "via centres 198 / 197.5 px from the core centre at 12.4 nm/px = 2.46 um; schematic, low confidence; sets the P++ / N++ access length (4e20 cm^-3, small series contribution)"}
+  params.via_w_um: {class: figure_digitized, locator: "Fig. 2(A) cross section 1 schematic", note: "via foot 13 px = 0.16 um; schematic"}
+  params.via_top_um: {class: project_inference, note: "via drawn up to the Cu electrode (height not stated); modelled as a stub to 0.6 um; only the terminal contact on the P++ / N++ slab and a small oxide fringe depend on it"}
+  geometry.regions: {class: project_inference, locator: "Fig. 2(A) cross sections 1 and 2", note: "rectangular rib and slab (sidewall angle not stated); junction at the core centre (top view P/N edge 186 px vs core centre 186.5 px); handle silicon below the BOX omitted"}
+  alt_geometries.cut2: {class: paper_exact, locator: "Fig. 2(A) cross section 2 (835 nm across a finger pair); p.5 (190 nm corrugation)", note: "fingers drawn full height (220 nm, Fig. 2(A) cross section 2); within the P / N 5e17 bands of the top view"}
+  optics.wavelength_nm: {class: paper_exact, locator: "p.5 (passband around 1550 nm); Fig. 4(C)"}
+  optics.polarization: {class: paper_exact, locator: "p.2 (TE bands, mid-gap TE mode)"}
+  optics.solver: {class: project_inference, note: "vector solver required by the semiconductor optics coupling"}
+  optics.group_index_from: {class: project_inference, note: "engine default; the straight-cut group index is not the paper's slow-light ng 6.1 and is not a target"}
+  materials.silicon: {class: standard_reference, citation: "engine/data/materials.json library silicon (optical: Salzberg and Villa 1957; eps_r 11.7)"}
+  materials.silicon_dioxide: {class: standard_reference, citation: "engine/data/materials.json library silicon_dioxide (optical: Malitson 1965; eps_r 3.9)"}
+  materials.via_metal: {class: project_inference, note: "ideal conductor for the W/Cu via at the ohmic contact; metal stack not modelled"}
+  semiconductor.doping.p_core: {class: paper_exact, locator: "p.7 Materials and Methods (P-type 5.0e17 cm^-3 at the core); Fig. 2(A) legend"}
+  semiconductor.doping.n_core: {class: paper_exact, locator: "p.7 Materials and Methods (N-type 5.0e17 cm^-3 at the core); Fig. 2(A) legend"}
+  semiconductor.doping.p_plus: {class: paper_exact, locator: "p.7 Materials and Methods (intermediate P+ and N+ 2.0e18 cm^-3)"}
+  semiconductor.doping.n_plus: {class: paper_exact, locator: "p.7 Materials and Methods (intermediate P+ and N+ 2.0e18 cm^-3)"}
+  semiconductor.doping.p_plusplus: {class: paper_exact, locator: "p.7 Materials and Methods (P++ and N++ 4.0e20 cm^-3 for ohmic contact)"}
+  semiconductor.doping.n_plusplus: {class: paper_exact, locator: "p.7 Materials and Methods (P++ and N++ 4.0e20 cm^-3 for ohmic contact)"}
+  semiconductor.doping.profile: {class: project_inference, note: "uniform through the silicon thickness with abrupt lateral edges at the digitized positions; implant energies, anneal and vertical profiles not stated"}
+  semiconductor.materials.silicon.mobility: {class: project_inference, note: "engine defaults (Masetti 1983 doping, Caughey-Thomas 1967 field); donor species not stated by the paper (phosphorus row chosen)"}
+  semiconductor.materials.silicon.recombination: {class: project_inference, note: "no lifetimes stated; SRH omitted (reverse-bias depletion only; no effect on C and dn_eff, leakage not modelled)"}
+  semiconductor.temperature_k: {class: project_inference, note: "not stated; engine default 300 K"}
+  semiconductor.contacts: {class: project_inference, locator: "Fig. 2(A) (vias on P++ and N++)", note: "ideal ohmic contacts at the via feet"}
+  semiconductor.bias: {class: project_inference, locator: "p.5 and supplement p.11-13 (3.5 V operating bias, 4 V in Fig. S11, 0-5 V Vpi fit, Fig. 2(E,F) to 10 V)", note: "reverse-bias list covering the stated operating points"}
+  semiconductor.optics: {class: project_inference, note: "Nedeljkovic 2011 1.55 um row (engine default, absolute-density basis); single-arm per-phase-shifter result; the stage also reports the push-pull VpiL (half the differential value) only when both arms stay reverse biased (DevLog-039 round 2-3)"}
+  semiconductor.mesh: {class: project_inference, note: "10 nm semiconductor edge (DevLog-039 G6: C' and dn_eff converged to ~1e-3 at this size on the canonical rib)"}
+  semiconductor.small_signal: {class: project_inference, note: "engine default 10 mV central difference"}
+  geometry.mesh: {class: project_inference}
+  geometry.domain: {class: project_inference, note: "lateral +-3.2 um (slab ends at +-2.84 um), BOX bottom to 1.5 um cladding; open-boundary effects on C' small"}
+
+missing:
+  - "lateral positions of the P+/P++ and N+/N++ edges in nm (only the Fig. 2(A) top-view colour bands; digitized, +-12 nm reading, schematic)"
+  - "via positions, via width and slab end (only the unscaled Fig. 2(A) cross section 1 schematic; digitized, low confidence)"
+  - "implant species and conditions, anneal, vertical doping profiles (only target concentrations stated)"
+  - "carrier lifetimes, temperature"
+  - "SiO2 cladding thickness; handle silicon resistivity"
+  - "signal / ground widths and the height of the Cu electrode above the silicon (gap 6.4 um and Cu 1.2 um stated): no RF line block"
+  - "Vpi drive convention (push-pull GSGSG; per-arm definition not stated)"
+  - "finger length along z (Fig. 2(A) labels 250 nm and 300 nm; 300 nm is the period, the 250 nm dimension is not identified in the text; digitized finger width about 105 nm, gap about 195 nm)"
+limitations:
+  - "2D straight-waveguide cuts of a 3D periodic CROW: no slow-light enhancement (paper ng 6.1), no cut averaging; per-length C' of the real device lies between the cut 1 and cut 2 values only approximately (finger fill factor unresolved)"
+  - "Measured VpiL 0.96 V cm and bandwidth 110 GHz are slow-light device metrics and are marked comparable: false"
+  - "The paper's C' 1.5 pF/cm at 3.5 V (authors' junction model) matches a 1D parallel-plate depletion estimate; the engine reports the 2D terminal C' with oxide and slab fringing (0.2285 / 0.2296 pF/mm, cut 1 / cut 2), so the target is marked comparable: false (definition mismatch)"
+  - "Measured phase-shifter propagation loss 29.8 dB/mm (supplement p.7, includes scattering and reflection) is not a target: the stage gives free-carrier loss only"
+  - "Uniform abrupt doping boxes at digitized positions; no implant straggle, no diffusion"
+  - "Boltzmann statistics, full ionisation, no bandgap narrowing, no Auger, ideal ohmic contacts, no interface charge (DevLog-039 labels)"
+  - "Handle silicon below the 2 um BOX omitted"
+  - rectangular_or_polygon_sidewalls_only
