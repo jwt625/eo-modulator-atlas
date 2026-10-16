@@ -21,6 +21,23 @@ export const WINDOW_MARGIN_WARNING = 1e-2;
 export const DEFAULT_MAX_METAL_POWER_FRACTION = 0.05;
 
 const familyOf = (opts) => (opts.polarization === 'TM' ? 'TM' : 'TE');
+
+/**
+ * Identity of a mode in the solved mode list (UX review X3, DevLog-031 round 3): raw index k (n_eff descending, the
+ * mode table order), polarisation family ('TE' when the TE fraction >= 0.5), index within that family, and a label
+ * such as 'k=1 (TE0)'. Scalar solves have one family (the configured polarisation), so familyIndex = k.
+ * @param {{teFraction?:number}[]|null} modes vector mode list (res.modes) or null for a scalar solve
+ * @param {number} k raw index
+ * @param {'TE'|'TM'} [scalarFamily]
+ */
+export function modeIdentity(modes, k, scalarFamily = 'TE') {
+  if (!modes) return { k, family: scalarFamily, familyIndex: k, label: `k=${k} (${scalarFamily}${k})` };
+  const fam = (m) => (m.teFraction >= 0.5 ? 'TE' : 'TM');
+  const family = fam(modes[k]);
+  let familyIndex = 0;
+  for (let j = 0; j < k; j++) if (fam(modes[j]) === family) familyIndex++;
+  return { k, family, familyIndex, label: `k=${k} (${family}${familyIndex})` };
+}
 const criterionOf = (family) => (family === 'TE' ? 'TE fraction >= 0.5' : 'TE fraction < 0.5');
 
 /** Mode of the requested family: by n_eff order (default, te_fraction), by power in a region, or nearest a reference index. */
@@ -43,7 +60,7 @@ function solveVectorFamily(model, lambdaUm, opts, warm = null, { nTarget = null,
   const family = familyOf(opts);
   // DevLog-025 round 3 request (adopted 2026-10-15): start with 2 (mode_index + 1) modes; F7 (round 5): keep doubling
   // up to VECTOR_MAX_DOUBLINGS times until the family index is found.
-  let numModes = 2 * (opts.modeIndex + 1);
+  let numModes = Math.max(2 * (opts.modeIndex + 1), opts.numModes ?? 0);
   for (let attempt = 0; attempt <= VECTOR_MAX_DOUBLINGS; attempt++) {
     const res = solveVectorModes(model, lambdaUm, { numModes, warm, ...(nTarget != null ? { nTarget } : {}),
       ...(opts.metalPermittivity ? { metalPermittivity: opts.metalPermittivity } : {}) });
@@ -101,11 +118,14 @@ export function solveOptical(section, materials, opts, { meshScale = 1, window =
     const model = buildOpticalModel(section, materials, { ...opts, ...(window ? { window } : {}), meshScale });
     let base, ng = null, gTiming = null;
     if (wantNg) {
-      const g = groupIndex(model, lambda, idx, { delta: fdDelta(lambda), method: opts.groupIndex === 'finite_difference_wavelength' ? 'finite_difference' : 'perturbation' });
+      const fd = opts.groupIndex === 'finite_difference_wavelength';
+      // optics.num_modes (DevLog-031): more modes for the mode table; convergence is still required of the selected index only
+      const more = opts.numModes ? { numModes: Math.max(opts.numModes, idx + (fd ? 2 : 1)), residualModes: idx + 1 } : {};
+      const g = groupIndex(model, lambda, idx, { delta: fdDelta(lambda), method: fd ? 'finite_difference' : 'perturbation', ...more });
       // DevLog-024 request 3: g.converged covers both methods.
       if (![g.base, g.lo, g.hi].every((r) => scalarModeConverged(r, idx))) throw new Error('Optical group-index solves did not converge (mode index ' + idx + ')');
       base = g.base; ng = g.ng; gTiming = g.timing ?? null;
-    } else base = solveModesAt(model, lambda, { numModes: idx + 1 });
+    } else base = solveModesAt(model, lambda, opts.numModes ? { numModes: Math.max(opts.numModes, idx + 1), residualModes: idx + 1 } : { numModes: idx + 1 });
     if (!scalarModeConverged(base, idx)) throw new Error(`Optical mode solve did not converge (mode index ${idx})`);
     // F1 (round 5): vector is the default; a scalar result is labelled approximate.
     const sLabels = [...base.labels, 'scalar_optical_approximate'];
@@ -115,6 +135,7 @@ export function solveOptical(section, materials, opts, { meshScale = 1, window =
       timing: { opticalModel: model.timing ?? null, modes: base.timing ?? null, groupIndex: gTiming },
       diagnostics: {
         solver: 'scalar', nNodes: model.mesh.nNodes, nTris: model.mesh.nTris, iterations: base.iterations,
+        mode: { ...modeIdentity(null, idx, model.polarization), selected: true },
         form: base.form, modeIndex: idx, converged: scalarModeConverged(base, idx), residual: base.residual?.[idx] ?? null, metal: base.metal, labels: sLabels, limitations: base.limitations,
         boundaryMarginFraction: { marginUm: base.boundaryMarginFraction.marginUm, value: base.boundaryMarginFraction.perMode[idx] },
         groupIndexMethod: withGroupIndex ? opts.groupIndex : null,
@@ -165,7 +186,8 @@ export function solveOptical(section, materials, opts, { meshScale = 1, window =
     timing: { opticalModel: model.timing ?? null, modes: res.timing ?? null, groupIndex: gTiming },
     diagnostics: {
       solver: 'vector', order: model.order, nNodes: model.mesh.nNodes, nTris: model.mesh.nTris, nDof: model.dof.n,
-      modeIndex: idx, polarizationFamily: opts.polarization, converged: res.converged, teFraction: mode.teFraction,
+      modeIndex: idx, mode: { ...modeIdentity(res.modes, res.modes.indexOf(mode)), selected: true },
+      polarizationFamily: opts.polarization, converged: res.converged, teFraction: mode.teFraction,
       residual: mode.residual, effectiveAreaUm2: mode.effectiveAreaUm2 ?? null, metal: model.metal, labels,
       limitations: [], solverWarnings: res.warnings, nModesComputed: res.modes.length,
       ...(mode.lossDbPerCm != null ? { lossDbPerCm: mode.lossDbPerCm } : {}),
@@ -198,6 +220,8 @@ export function armOverlap(es, solved, name, lambdaUm) {
     form: 'vector', lambdaUm, converged: solved.res.converged === true, labels: ov.labels, limitations: [], metal: solved.model.metal,
     boundaryMarginFraction: null, byRegion, convention: EO_CONVENTIONS, assumptions: VECTOR_ARM_ASSUMPTIONS, staticFieldSampling: 'six_point_quadrature_per_optical_triangle',
     dAlphaPerUmPerV: ov.dAlphaPerUmPerV,
+    // static field at the quadrature points (internal; reused by the EO breakdown, never serialized)
+    staticFieldQ: F,
   };
 }
 

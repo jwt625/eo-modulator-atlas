@@ -9,6 +9,7 @@ import { solveElectrostatics } from './electrostatics.mjs';
 import { CrossSection } from './section.mjs';
 import { recessGeometry } from './recess.mjs';
 import { RF_FREQUENCY_METRICS, checkArmWindows } from './config.mjs';
+import { vectorEoBreakdown, scalarEoBreakdown, armElectrodeGap, armConventional, combinedConventional, breakdownSummary, EO_FORMULAS, EO_ACCURACY_NOTE } from './postproc/eo-analysis.mjs';
 
 export { RF_FREQUENCY_METRICS };
 /** Recess scales (multiples of delta/2) of the Wheeler step check; scale 1 is the Wheeler value (DevLog-008 guidance). */
@@ -76,16 +77,23 @@ export function runEoStage({ config, section, es, eo, opts, meshScale, onProgres
     const solved = reused ? reuse.solved : solveOptical(section, config.materials, opts, { meshScale, window: w, warm: warmGet(cache, wk) });
     if (!reused && solved.res?.warm) warmSet(cache, wk, solved.res.warm);
     if (solved.kind === 'scalar' ? !scalarModeConverged(solved.mode, modeIndex) : !solved.res.converged) throw new Error(`Optical mode solve of arm ${name} did not converge`);
-    timing[name] = reused ? { reusedOpticalStage: true } : solved.timing;
     const arm = armOverlap(es, solved, name, lambda);
     const d = solved.diagnostics;
+    // DevLog-031 phase 2: integrand split by Pockels coefficient and region, conventional overlap (same quadrature and
+    // static-field sampling as the overlap above; the engine dn_eff/V stays primary).
+    const tB = performance.now();
+    const bd = solved.kind === 'vector' ? vectorEoBreakdown(solved.model, solved.mode, arm.staticFieldQ, lambda) : scalarEoBreakdown(es, solved.model, solved.mode, d.modeIndex);
+    const conventional = armConventional(bd, armElectrodeGap(section, w, es.electrodePotentials), lambda, arm.neff, arm.dnEffPerV);
+    const breakdownMs = performance.now() - tB;
+    timing[name] = reused ? { reusedOpticalStage: true } : solved.timing;
     arms[name] = {
       arm, solved,
       diagnostics: {
         window: { x_um: [...w.x], y_um: [...w.y] }, neff: arm.neff, dnEffPerV: arm.dnEffPerV, phasePerVPerM: arm.phasePerVPerM,
-        form: arm.form, modeIndex, converged: arm.converged, iterations: d.iterations ?? null, nNodes: d.nNodes, nTris: d.nTris,
+        form: arm.form, modeIndex, mode: d.mode, converged: arm.converged, iterations: d.iterations ?? null, nNodes: d.nNodes, nTris: d.nTris,
         boundaryMarginFraction: arm.boundaryMarginFraction, metal: arm.metal, byRegion: arm.byRegion,
         solver: solved.kind, ...(solved.kind === 'vector' ? { order: d.order, nDof: d.nDof, teFraction: d.teFraction, residual: d.residual } : {}),
+        breakdown: { ...breakdownSummary(bd, arm.dnEffPerV), ms: breakdownMs }, conventional,
       },
     };
   }
@@ -112,6 +120,9 @@ export function runEoStage({ config, section, es, eo, opts, meshScale, onProgres
       vpiLVcm: combined.vpiLVcm, vpiDcV, lengthMm, compatibleVpiConventions: compatible,
       converged: combined.converged, labels: combined.labels, limitations: combined.limitations,
       assumptions: arms.A.arm.assumptions, convention: EO_CONVENTIONS.id, solver: opts.solver,
+      conventional: combinedConventional(arms.A.diagnostics.conventional, arms.B?.diagnostics.conventional ?? null, lambda, combined.vpiLVcm),
+      formulas: EO_FORMULAS,
+      accuracyNote: EO_ACCURACY_NOTE,
     },
   };
 }

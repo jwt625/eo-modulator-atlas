@@ -90,6 +90,8 @@ export function resolveStages({ stages = null, optical = false } = {}) {
  *   params: overrides of `params` values; fields: true adds typed-array field export (`result.fields`, DevLog-023 O4);
  *   cache: an object kept by the caller across runs (sweeps) to reuse the electrostatic mesh / solution when the
  *   geometry hash (and the RF material hash) are unchanged.
+ *   keep: true attaches the solver internals as the non-enumerable `result.internals` (postprocessing store, DevLog-031);
+ *   numModes: compute at least this many optical modes per solve (overrides optics.num_modes; mode table).
  */
 export function runCrossSection(text, options = {}) {
   const config = parseConfig(text, { params: options.params ?? {} });
@@ -100,8 +102,9 @@ export function runCrossSection(text, options = {}) {
  * Run a parsed config (parseConfig). Same options as runCrossSection; `targets` replaces the config targets in the
  * comparison (sweep points compare their own sweep_targets).
  */
-export function runConfig(config, { section: name = 'geometry', stages: requested = null, optical = false, meshScale = 1, onProgress = () => {}, fields = false, cache = null, targets: targetOverride = null, solver = null, elementOrder: orderOverride = null, p2MeshFactor = null, modeOnly = false } = {}) {
-  if (modeOnly) return runModeOnly(config, { section: name, stages: requested, meshScale, onProgress, fields, cache, targets: targetOverride, solver });
+export function runConfig(config, { section: name = 'geometry', stages: requested = null, optical = false, meshScale = 1, onProgress = () => {}, fields = false, cache = null, targets: targetOverride = null, solver = null, elementOrder: orderOverride = null, p2MeshFactor = null, modeOnly = false, keep = false, numModes = null } = {}) {
+  if (typeof keep !== 'boolean') throw new Error('keep must be a boolean');
+  if (modeOnly) return runModeOnly(config, { section: name, stages: requested, meshScale, onProgress, fields, cache, targets: targetOverride, solver, keep, numModes });
   const run = resolveStages({ stages: requested, optical });
   if (typeof meshScale !== 'number' || !Number.isFinite(meshScale) || meshScale < 0.5 || meshScale > 4) throw new Error('meshScale must be between 0.5 and 4');
   if (typeof fields !== 'boolean') throw new Error('fields must be a boolean');
@@ -109,7 +112,7 @@ export function runConfig(config, { section: name = 'geometry', stages: requeste
   const section = crossSectionOf(config, name);
   const wants = (s) => run.includes(s);
   // Input checks of every requested stage happen before any solve.
-  const opts = wants('optical_mode') || wants('eo_overlap') ? opticalOptions(config.raw, { solver }) : null;
+  const opts = wants('optical_mode') || wants('eo_overlap') ? opticalOptions(config.raw, { solver, numModes }) : null;
   if (wants('eo_overlap')) checkEoSolver(opts);
   const eo = wants('eo_overlap') ? eoOptions(config.raw, config.geometries) : null;
   if (eo) checkArmWindows(eo, section);
@@ -205,20 +208,29 @@ export function runConfig(config, { section: name = 'geometry', stages: requeste
     if (reuse) result.fields.optical = withPockels(reuse.solved);
     if (armModels) result.fields.arms = Object.fromEntries(Object.entries(armModels).map(([k, v]) => [k, v ? (reuse && v === reuse.solved ? result.fields.optical : withPockels(v)) : null]));
   }
+  if (keep) keepInternals(result, { config, section, sectionName: name, es, opts, eo, optical: reuse?.solved ?? null, arms: armModels });
   return result;
+}
+
+/**
+ * DevLog-031: attach the solver internals a postprocessing store needs (postproc/store.mjs createSolutionStore) as a
+ * NON-enumerable property, so JSON serialisation and structured clone (worker postMessage) of the result are unchanged.
+ */
+function keepInternals(result, internals) {
+  Object.defineProperty(result, 'internals', { value: Object.freeze({ ...internals, lambdaUm: internals.opts?.lambda0Um ?? null }), enumerable: false, configurable: true, writable: false });
 }
 
 /**
  * Optical-only run (audit F10): the optical_mode stage without electrostatics, for mode-only cases (validation K1-K3)
  * whose electrostatic mesh is not needed. Only n_eff / ng targets can be evaluated.
  */
-function runModeOnly(config, { section: name = 'geometry', stages = null, meshScale = 1, onProgress = () => {}, fields = false, cache = null, targets: targetOverride = null, solver = null } = {}) {
+function runModeOnly(config, { section: name = 'geometry', stages = null, meshScale = 1, onProgress = () => {}, fields = false, cache = null, targets: targetOverride = null, solver = null, keep = false, numModes = null } = {}) {
   const wanted = (stages ?? ['optical_mode']).filter((x) => x !== 'electrostatics');
   if (wanted.length !== 1 || wanted[0] !== 'optical_mode') throw new Error('modeOnly runs the optical_mode stage only (stages: [optical_mode])');
   if (typeof meshScale !== 'number' || !Number.isFinite(meshScale) || meshScale < 0.5 || meshScale > 4) throw new Error('meshScale must be between 0.5 and 4');
   if (!Object.hasOwn(config.geometries, name)) throw new Error(`Unknown cross-section: ${name}`);
   const section = crossSectionOf(config, name);
-  const opts = opticalOptions(config.raw, { solver });
+  const opts = opticalOptions(config.raw, { solver, numModes });
   const started = performance.now();
   onProgress(`Meshing and solving the ${opts.solver} optical mode (mode only)`);
   const warmKey = `${opts.solver}:optical_window`;
@@ -238,6 +250,7 @@ function runModeOnly(config, { section: name = 'geometry', stages = null, meshSc
     reused: { mesh: false, electrostatics: false }, timing: { electrostatics: null, ...solved.timing, eo: null, rf: null, total_ms: elapsed },
     opticalSolver: opts.solver, elementOrder: null, electrostaticMeshScale: null, p2MeshFactor: null, modeOnly: true };
   if (fields) result.fields = { es: null, optical: solvedFields(solved, opts), arms: null };
+  if (keep) keepInternals(result, { config, section, sectionName: name, es: null, opts, eo: null, optical: solved, arms: null });
   return result;
 }
 

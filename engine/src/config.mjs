@@ -23,7 +23,7 @@ export const DIELECTRIC_LOSS_MODELS = ['none', 'tan_delta_regions'];
 export const MAX_SWEEP_POINTS = 4001;
 /** Metrics whose frequency-specific (at_ghz) targets the rf_line stage evaluates. */
 export const RF_FREQUENCY_METRICS = ['rf_loss_db_per_cm', 'n_rf', 'z0_ohm'];
-const OPTICS_KEYS = ['wavelength_nm', 'polarization', 'mode_index', 'group_index_from', 'ng_fixed', 'eo_axis', 'metal_in_window', 'eo', 'solver', 'vector_order', 'metal_permittivity', 'mode_select', 'max_metal_power_fraction'];
+const OPTICS_KEYS = ['wavelength_nm', 'polarization', 'mode_index', 'group_index_from', 'ng_fixed', 'eo_axis', 'metal_in_window', 'eo', 'solver', 'vector_order', 'metal_permittivity', 'mode_select', 'max_metal_power_fraction', 'num_modes'];
 /** Optical solver switch: vector (default since DevLog-026 round 5, audit F1) or the approximate scalar FEM. */
 export const OPTICAL_SOLVERS = ['scalar', 'vector'];
 export const DEFAULT_OPTICAL_SOLVER = 'vector';
@@ -363,6 +363,9 @@ export function validateTarget(t, p) {
  * @returns {{polarization:string, lambda0Um:number, modeIndex:number, metal:string, solver:'scalar'|'vector',
  *   vectorOrder:1|2, groupIndex:'perturbation'|'finite_difference_wavelength'|'fixed', metalPermittivity:Record<string,[number,number]>|null}}
  */
+/** Upper bound of optics.num_modes / the numModes run option (DevLog-031). */
+export const MAX_NUM_MODES = 24;
+
 export function opticalOptions(raw, override = {}) {
   const o = object(raw.optics, 'optics');
   keys(o, OPTICS_KEYS, 'optics');
@@ -414,7 +417,14 @@ export function opticalOptions(raw, override = {}) {
     maxMetalPowerFraction = number(o.max_metal_power_fraction, 'optics.max_metal_power_fraction', true);
     if (maxMetalPowerFraction > 1) fail('optics.max_metal_power_fraction', 'expected a fraction in (0, 1]');
   }
-  return { polarization, lambda0Um: o.wavelength_nm / 1000, modeIndex, metal, solver, vectorOrder, groupIndex, metalPermittivity, modeSelect, maxMetalPowerFraction };
+  // DevLog-031: compute at least this many modes per optical solve (mode table); the selection rule is unchanged.
+  const nmRaw = override.numModes ?? o.num_modes ?? null;
+  let numModes = null;
+  if (nmRaw != null) {
+    if (!Number.isInteger(nmRaw) || nmRaw < 1 || nmRaw > MAX_NUM_MODES) fail(override.numModes != null ? 'numModes (run option)' : 'optics.num_modes', `expected an integer from 1 to ${MAX_NUM_MODES}`);
+    numModes = nmRaw;
+  }
+  return { polarization, lambda0Um: o.wavelength_nm / 1000, modeIndex, metal, solver, vectorOrder, groupIndex, metalPermittivity, modeSelect, maxMetalPowerFraction, numModes };
 }
 
 /**

@@ -14,11 +14,19 @@ export interface SweepPoint {
   reused: { mesh: boolean; electrostatics: boolean } | null;
   eo?: { pushPullBalance: number | null; armNeff: { A: number; B: number | null } } | null;
   elapsed_ms: number; error: string | null; fields?: import('./run.d.mts').SimulationFields;
+  /** SI values of the run globals (postproc GLOBAL_VARIABLES; DevLog-031); null for a failed point. */
+  globals: Record<string, number> | null;
+  /** Non-enumerable; with options.keep (createSweepStore().addPoint retains a store). */
+  readonly internals?: unknown;
 }
 export interface SweepOptions {
   study?: string | null; params?: Record<string, number>; stages?: string[] | null; section?: string | null; meshScale?: number;
   fields?: boolean; cache?: Record<string, unknown>; onProgress?: (message: string) => void;
   solver?: 'scalar' | 'vector' | null;
+  /** Keep solver internals on each point (non-enumerable `internals`; DevLog-031). */
+  keep?: boolean;
+  /** Compute at least this many optical modes per solve. */
+  numModes?: number | null;
 }
 export function enumerateSweep(text: string, options?: { study?: string | null; params?: Record<string, number> }): SweepEnumeration;
 export function runSweepPoint(text: string, index: number, options?: SweepOptions): SweepPoint;

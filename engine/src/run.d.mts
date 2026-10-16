@@ -42,6 +42,8 @@ export interface SimulationResult {
   p2MeshFactor: number | null;
   /** true for an optical-only run (no electrostatics). */
   modeOnly: boolean;
+  /** Non-enumerable; present only with options.keep (solver internals for postproc/createSolutionStore). */
+  readonly internals?: unknown;
 }
 export interface MaterialSource {
   library: string; provenanceClass: 'standard_reference'; fromLibrary: string[];
@@ -73,6 +75,8 @@ export interface OpticalMetal {
 export interface OpticalDiagnostics {
   solver: 'scalar' | 'vector';
   nNodes: number; nTris: number; modeIndex: number; converged: boolean; labels: string[]; limitations: string[];
+  /** The solved mode in the mode-table index space (round 3, X3); modeIndex is the config mode_index within the family. */
+  mode: ModeIdentity;
   metal: OpticalMetal | null;
   /** perturbation | finite_difference_wavelength | fixed; null when no group index was computed */
   groupIndexMethod: 'perturbation' | 'finite_difference_wavelength' | 'fixed' | null;
@@ -115,7 +119,11 @@ export interface OpticalFields {
 export interface SimulationFields {
   es: EsFields; optical: OpticalFields | null; arms: { A: OpticalFields; B: OpticalFields | null } | null;
 }
+/** Mode identity (round 3): raw index k in the solved list (n_eff descending), family, index within the family, label 'k=1 (TE0)'. */
+export interface ModeIdentity { k: number; family: 'TE' | 'TM'; familyIndex: number; label: string; selected: boolean }
 export interface EoArm {
+  /** the arm's solved mode (same index space as the mode table) */
+  mode: ModeIdentity;
   window: { x_um: number[]; y_um: number[] }; neff: number; dnEffPerV: number; phasePerVPerM: number;
   form: string; modeIndex: number; converged: boolean | null; iterations: number; nNodes: number; nTris: number;
   boundaryMarginFraction: { marginUm: number; value: number } | null;
@@ -124,6 +132,27 @@ export interface EoArm {
   solver: 'scalar' | 'vector';
   /** vector only */
   order?: 1 | 2; nDof?: number; teFraction?: number; residual?: number;
+  /** DevLog-031: integrand split (same quadrature as the overlap; sums to dnEffPerV). */
+  breakdown: EoBreakdown;
+  /** DevLog-031: conventional overlap of this arm (formulas in EoResult.formulas). */
+  conventional: EoArmConventional;
+}
+export interface EoBreakdown {
+  dnEffPerV: number; byComponent: Record<'r33' | 'r13' | 'r22' | 'r51' | 'other', number>; componentSum: number;
+  byTensorTerm: Record<'xx' | 'yy' | 'zz' | 'xy', number>; relativeDifferenceVsEngine: number | null;
+  byRegion: Record<string, Record<'all' | 'r33' | 'r13' | 'r22' | 'r51' | 'other', number>>; method: string;
+  /** wall time of the breakdown and conventional overlap of this arm */
+  ms: number;
+}
+export interface EoArmConventional {
+  gapUm: number | null; gapElectrodes: { left: string | null; right: string | null } | null; gapVoltagePerVt: number | null; gapReason: string | null;
+  /** electrodes spanning the arm centre but outside the window height, ignored for g */
+  gapIgnoredElectrodes: string[];
+  /** V/m per terminal volt */
+  ebarVPerMPerV: number | null; ebarExVPerMPerV: number | null;
+  gamma: number | null; gammaEx: number | null; gammaByRegion: Record<string, number> | null; gammaEquiv: number | null;
+  eoRegion: string | null; eoMaterial: string | null; ne: number | null; r33PmPerV: number | null; cAxisLab: number[] | null; neff: number;
+  vpiLVcmTextbook: number | null; vpiLVcmNeffFactor: number | null; reason: string | null;
 }
 export interface EoResult {
   status: string; drive: 'single_arm' | 'two_arm_field_resolved'; terminalDrive: 'single_ended' | 'differential';
@@ -135,6 +164,12 @@ export interface EoResult {
   vpiLVcm: number; vpiDcV: number | null; lengthMm: number | null; compatibleVpiConventions: string[];
   converged: { A: boolean | null; B: boolean | null; all: boolean | null };
   labels: string[]; limitations: string[]; assumptions: string[]; convention: string;
+  /** DevLog-031: implied textbook VpiL (push-pull or single arm) next to the engine value. */
+  conventional: { vpiLVcmTextbook: number | null; vpiLVcmTextbookEx: number | null; vpiLVcmNeffFactor: number | null; engineVpiLVcm: number; engineOverTextbook: number | null; materialNote: string | null };
+  /** Formula strings of the engine overlap, integrand, splits, gap, Gamma and textbook VpiL. */
+  formulas: Record<string, string>;
+  /** Default-mesh accuracy of the EO outputs vs the independent references (audit E13). */
+  accuracyNote: string;
 }
 export interface RfPoint {
   fGhz: number; alphaDbPerCm: number; alphaNpPerM: number; nRf: number; z0ReOhm: number; z0ImOhm: number;
@@ -169,6 +204,10 @@ export interface RunOptions {
   modeOnly?: boolean;
   /** Caller-owned reuse cache (sweeps). */
   cache?: Record<string, unknown>;
+  /** Attach solver internals as the non-enumerable `result.internals` for createSolutionStore (DevLog-031). */
+  keep?: boolean;
+  /** Compute at least this many optical modes per solve (overrides optics.num_modes, 1..24; DevLog-031). */
+  numModes?: number | null;
 }
 export function runCrossSection(text: string, options?: RunOptions): SimulationResult;
 export function runConfig(config: import('./config.d.mts').ParsedConfig, options?: RunOptions & { targets?: Record<string, unknown>[] }): SimulationResult;

@@ -281,6 +281,12 @@
           "maximum": 1,
           "default": 0.05,
           "description": "lossy metal only: largest power fraction in conductor regions accepted for the selected mode; above it (or when the mode is closer to a planar surface-plasmon index than to the metal-absent mode) the run fails"
+        },
+        "num_modes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24,
+          "description": "compute at least this many modes per optical solve for the mode table (DevLog-031); the selected mode and its selection rule are unchanged"
         }
       },
       "required": [

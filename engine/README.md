@@ -60,6 +60,16 @@ names the source actually read, its locator, condition and verification level). 
 `runCrossSection(text, {fields: true})` adds typed-array meshes, potential, per-triangle E and
 optical mode fields; `result.timing` passes the solver timing objects through.
 
+Postprocessing (DevLog-031): `runCrossSection(text, {keep: true})` keeps the solver internals (non-enumerable
+`result.internals`; JSON and structured clone unchanged) for `src/postproc/index.mjs`: `createSolutionStore`,
+`evaluatePlot` (node / element / corner / quadrature values, cut lines and points), `evaluateDerived` (global, surface
+integral / average / max / min over regions, line integral / average, point), `modeTable`, `createSweepStore` and
+`evaluateGlobals`. Expressions (`es.normE`, `abs(opt.Ex)^2`, `eo.integrand`, `2[um]`, ...) are parsed by an own
+recursive-descent parser with SI units and complex values (no eval). `result.eo` adds the integrand split by Pockels
+coefficient, tensor term and region, the conventional Gamma with the electrode gap from the geometry and the implied
+textbook VpiL, with formula strings. `optics.num_modes` / `numModes` sets the mode count. CLI `--eval`, `--list-vars`,
+`--modes`, `--num-modes`; `bench/postproc-bench.mjs` times the evaluations.
+
 `rotation_deg` is a CCW rotation of the lab frame about the propagation axis
 (`x' = cos t x + sin t y`); the code applied the opposite sense before 2026-10-07
 (audit Q2 F6). `tests/fixtures/gsg-eo-rf.yaml` is a synthetic analytic input for the

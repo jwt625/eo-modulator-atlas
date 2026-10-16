@@ -1859,3 +1859,10 @@ export function sampleStaticFieldQ(es, model) {
   }
   return out;
 }
+
+/**
+ * Element kernels for the postprocessing engine (engine/src/postproc, DevLog-031): the solver's own 6-point
+ * quadrature rule, basis evaluation, local DOF gather and point fields, exported so derived quantities use exactly the
+ * solver interpolation. Read-only; no solver behaviour depends on this export.
+ */
+export const VECTOR_KERNELS = Object.freeze({ Q4, NLOC, ETA0, newBasisBuffers, evalBasis, gatherLocal, pointFields, newPoint });

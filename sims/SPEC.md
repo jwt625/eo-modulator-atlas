@@ -475,7 +475,43 @@ integrated).
   `target.lowFrequencyRange`, an r33-scaled VpiL range from the clamped value used to the unclamped library alternatives
   (diagnostic only; pass/fail unchanged).
 
+## Postprocessing and EO analysis (DevLog-031, 2026-10-15)
+
+- `optics.num_modes` (integer 1..24; run option `numModes`, CLI `--num-modes`): every optical solve computes at least
+  this many modes (mode table). The selected mode and its selection rule are unchanged.
+- `runCrossSection(text, {keep: true})` attaches the solver internals as the non-enumerable `result.internals`; the
+  enumerable result, its JSON and its structured clone are unchanged. `engine/src/postproc/index.mjs`
+  (`createSolutionStore`, `evaluatePlot`, `evaluateDerived`, `modeTable`, `createSweepStore`, `evaluateGlobals`,
+  `runGlobals`) evaluates expressions with units on datasets `es`, `opt[:k]`, `armA[:k]`, `armB[:k]`, `eoA`, `eoB`,
+  cut lines and cut points; API and namespace in DevLog-031 (types `postproc/index.d.mts`). Exact point evaluation
+  (P1/P2 electrostatics, vector Nedelec/Lagrange or scalar P1 modes); optical fields power-normalised to 1 W;
+  electrostatic fields per volt of terminal voltage; points outside a mesh are NaN (electrostatics inside an electrode:
+  V = electrode potential, E = 0). Surface integrals use the solver 6-point rule; line integrals split at element
+  crossings (3-point Gauss per piece).
+- `result.eo.arms.<A|B>.breakdown`: the engine dn_eff/V split by Pockels coefficient (`byComponent`: r33, r13, r22, r51,
+  other; Voigt-entry masks, any orientation), by lab tensor term (`byTensorTerm`: xx, yy, zz, xy) and by region
+  (`byRegion`), computed with the overlap's own quadrature and static-field sampling (`relativeDifferenceVsEngine`).
+- `result.eo.arms.<A|B>.conventional`: electrode gap of the arm from the geometry (`gapUm`, rule in
+  `result.eo.formulas.gap`; null with `gapReason` when an electrode spans the arm centre or a side has none), signed
+  `gamma` = (g / V_gap) int_EO E_c |E|^2 / int |E|^2, `gammaEx` (|E_x|^2 variant), `gammaByRegion`, `gammaEquiv`,
+  `ebarVPerMPerV`, n_e and r33 of the dominant EO material. `result.eo.conventional`: implied textbook push-pull VpiL
+  lambda / (n_e^3 r33 |Ebar_A - Ebar_B|) (`vpiLVcmTextbook`, `vpiLVcmTextbookEx`) and the variant times n_eff,A / n_e,
+  next to the engine value. The perturbation result stays primary; `result.eo.formulas` holds every definition.
+- Sweep points carry `globals` (SI values of the run globals); `runSweepPoint(..., {keep: true})` adds non-enumerable
+  internals for `createSweepStore` (bounded LRU of retained stores, default 2 and 512 MiB).
+- CLI: `--eval EXPR` (repeatable; `--eval=-...` for a leading minus) with `--dataset`, `--kind`, `--over REGION,...`,
+  `--point X,Y` (repeatable), `--line X0,Y0,X1,Y1[,...]`, `--unit` (repeatable, one per `--eval`); `--list-vars`;
+  `--modes DATASET`. A failing expression is reported as `{expr, error}` and the exit status is 1.
+- Round 2 (audit 2026-10-15): point location is deterministic and equals the engine sampling (ties on element edges go
+  to the engine grid locator, lowest triangle index); run-time complex operands of comparisons, min, max, atan2 and if
+  are errors; `evaluateAtPoints`, `location: 'p2nodes'`, dataset `rf` (`rf.alpha_dB` in dB/m, `dB`/`Np` are unit labels
+  with factor 1), `aliasOf`, `storeForSweepPoint`; the gap ignores electrodes outside the arm window height
+  (`gapIgnoredElectrodes`); `result.eo.accuracyNote`.
+
 ## Changelog
+- 2026-10-15 DevLog-031: `optics.num_modes`; `keep` internals; postprocessing engine (`engine/src/postproc/`);
+  `result.eo` breakdown, conventional Gamma, implied textbook VpiL and formulas; sweep `globals`; CLI `--eval`,
+  `--list-vars`, `--modes`, `--num-modes`. Schema mirrored (`optics.num_modes`).
 - 2026-10-15 DevLog-026 round 5: vector solver default; scalar TM EO rejected; mode_select, lossy anchoring and
   surface-plasmon guard; `mesh.p2_mesh_factor` (default 2); `modeOnly`; bounded warm cache; low-frequency Vpi range
   diagnostic; schema mirrored.

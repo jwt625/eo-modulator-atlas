@@ -7,6 +7,7 @@ import { parseDocument } from 'yaml';
 import { parseConfig, validateTarget, STAGES } from './config.mjs';
 import { runConfig } from './run.mjs';
 import { resolveParams } from './params.mjs';
+import { runGlobals } from './postproc/store.mjs';
 
 export const MAX_STUDY_POINTS = 2000;
 const STUDY_KEYS = ['type', 'description', 'sweep', 'stages', 'outputs', 'sweep_targets', 'section'];
@@ -162,22 +163,26 @@ export function runSweepPoint(text, index, options = {}) {
   return runPoint(text, s, index, options);
 }
 
-function runPoint(text, s, index, { params = {}, stages = null, section = null, meshScale = 1, fields = false, cache = null, onProgress = () => {}, solver = null, elementOrder = null, p2MeshFactor = null } = {}) {
+function runPoint(text, s, index, { params = {}, stages = null, section = null, meshScale = 1, fields = false, cache = null, onProgress = () => {}, solver = null, elementOrder = null, p2MeshFactor = null, keep = false, numModes = null } = {}) {
   const values = pointValues(s, index);
   const t0 = performance.now();
   try {
     const config = parseConfig(text, { params: { ...params, ...values } });
     const all = config.params.values;
     const targets = s.targets.filter((t) => Object.entries(t.at).every(([k, v]) => near(all[k], v))).map((t) => ({ ...t.target, at: { ...t.at } }));
-    const result = runConfig(config, { stages: stages ?? s.stages, section: section ?? s.section ?? 'geometry', meshScale, fields, cache, onProgress, targets, solver, elementOrder, p2MeshFactor });
+    const result = runConfig(config, { stages: stages ?? s.stages, section: section ?? s.section ?? 'geometry', meshScale, fields, cache, onProgress, targets, solver, elementOrder, p2MeshFactor, keep, numModes });
     const outputs = s.outputs ? Object.fromEntries(s.outputs.map((k) => [k, Object.hasOwn(result.metrics, k) ? result.metrics[k] : null])) : null;
-    return { index, values, params: all, metrics: result.metrics, outputs, targets: result.targets, targetSummary: result.targetSummary,
+    const point = { index, values, params: all, metrics: result.metrics, outputs, targets: result.targets, targetSummary: result.targetSummary,
       warnings: result.warnings, timing: result.timing, geometryHash: result.geometryHash, materialHash: result.materialHash,
       reused: result.reused, eo: result.eo ? { pushPullBalance: result.eo.pushPullBalance, armNeff: { A: result.eo.arms.A.neff, B: result.eo.arms.B?.neff ?? null } } : null,
+      // DevLog-031: SI values of the run globals (postproc GLOBAL_VARIABLES) for global expressions over sweep points
+      globals: runGlobals(result, { lambdaUm: config.raw.optics?.wavelength_nm != null ? config.raw.optics.wavelength_nm / 1000 : null }),
       elapsed_ms: performance.now() - t0, error: null, ...(fields ? { fields: result.fields } : {}) };
+    if (keep) Object.defineProperty(point, 'internals', { value: result.internals, enumerable: false, configurable: true });
+    return point;
   } catch (e) {
     return { index, values, metrics: null, outputs: null, targets: [], targetSummary: null, warnings: [], timing: null, geometryHash: null,
-      materialHash: null, reused: null, elapsed_ms: performance.now() - t0, error: e instanceof Error ? e.message : String(e) };
+      materialHash: null, reused: null, globals: null, elapsed_ms: performance.now() - t0, error: e instanceof Error ? e.message : String(e) };
   }
 }
 
