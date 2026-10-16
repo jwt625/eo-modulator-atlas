@@ -1,0 +1,32 @@
+# Canonical case K12 (DevLog-035 T5, DevLog-040): 1D Si PIN diode under forward bias, 300 K. Illustrative case inputs.
+# Schema eo-atlas.validation.semi/v1 (see K10.yaml header). Isothermal; no Auger, no bandgap narrowing,
+# no carrier-carrier scattering, low-field mobility (field factor reported as a post-hoc check only).
+schema: eo-atlas.validation.semi/v1
+id: K12
+title: 'Canonical K12: 1D Si PIN, p+ 1e+19 0.5 um / i (p 1e+15) 1.0 um / n+ 1e+19 0.5 um, tau 1 ns, forward bias'
+status: illustrative_case_inputs
+dimension: 1
+temperature_K: 300
+materials:
+  silicon: {eps_r: 11.7, eps_r_source: 'engine/data/materials.json silicon eps_r (Zhu et al. 2021 Table 1)'}
+models:
+  statistics: boltzmann
+  ionization: complete
+  bandgap_narrowing: none
+  intrinsic_density: {model: constant, n_i_cm3: 1.0e+10, source: 'Sproul and Green 1991, Introduction p. 846, Table II p. 852 (300 K, 1.00(3)e10), conclusions p. 853'}
+  mobility: {model: masetti_1983_low_field, electrons: phosphorus_column, holes: boron_column, doping_argument: N_A_plus_N_D,
+    note: 'boron mu0, mumax, C_r, alpha, P_c confirmed in Thurber et al. NBS SP 400-64 (1981) Table 13, 300 K; beta 2.00 read from a partly damaged scan glyph'}
+  recombination: {model: srh_midgap, tau_n_s: 1.0e-9, tau_p_s: 1.0e-9}
+  auger: none
+geometry_1d:
+  segments:
+  - {name: pplus, x_um: [-1.0, -0.5], acceptor_cm3: 1.0e+19, donor_cm3: 0.0}
+  - {name: i, x_um: [-0.5, 0.5], acceptor_cm3: 1.0e+15, donor_cm3: 0.0}
+  - {name: nplus, x_um: [0.5, 1.0], acceptor_cm3: 0.0, donor_cm3: 1.0e+19}
+  contacts:
+  - {name: anode, x_um: -1.0, type: ohmic}
+  - {name: cathode, x_um: 1.0, type: ohmic}
+bias:
+  quantity: V_pn
+  values_V: [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+outputs: [J_total_A_cm2, n_p_at_i_centre, n_p_mean_over_i, injected_sheet_density_i]

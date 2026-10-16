@@ -1,0 +1,34 @@
+# Canonical case K10 (DevLog-035 T5, DevLog-040): 1D abrupt Si PN junction, 300 K. Illustrative case inputs.
+# Schema eo-atlas.validation.semi/v1 (lane T5; the engine config schema may differ, a later audit maps it):
+#   lengths in um, doping in cm^-3, temperature in K, voltages in V, lifetimes in s.
+#   segments: ordered, contiguous 1D pieces with uniform doping; contacts: ohmic, at the segment ends.
+#   bias: V_pn = V(anode, p side) - V(cathode, n side); reverse bias < 0. Cathode is the 0 V reference.
+#   models: names refer to eoref/semi.py, which carries the reference locators (Sproul-Green n_i, Masetti, SRH).
+schema: eo-atlas.validation.semi/v1
+id: K10
+title: 'Canonical K10: 1D abrupt Si PN junction, N_A 1e+17 / N_D 5e+17 cm^-3, 300 K'
+status: illustrative_case_inputs
+dimension: 1
+temperature_K: 300
+materials:
+  silicon: {eps_r: 11.7, eps_r_source: 'engine/data/materials.json silicon eps_r (Zhu et al. 2021 Table 1)'}
+models:
+  statistics: boltzmann
+  ionization: complete
+  bandgap_narrowing: none
+  intrinsic_density: {model: constant, n_i_cm3: 1.0e+10, source: 'Sproul and Green 1991, Introduction p. 846, Table II p. 852 (300 K, 1.00(3)e10), conclusions p. 853'}
+  mobility: {model: masetti_1983_low_field, electrons: phosphorus_column, holes: boron_column, doping_argument: N_A_plus_N_D,
+    note: 'boron mu0, mumax, C_r, alpha, P_c confirmed in Thurber et al. NBS SP 400-64 (1981) Table 13, 300 K; beta 2.00 read from a partly damaged scan glyph'}
+  recombination: {model: srh_midgap, tau_n_s: 1.0e-5, tau_p_s: 1.0e-5}
+  auger: none
+geometry_1d:
+  segments:
+  - {name: p, x_um: [-1.0, 0.0], acceptor_cm3: 1.0e+17, donor_cm3: 0.0}
+  - {name: n, x_um: [0.0, 1.0], acceptor_cm3: 0.0, donor_cm3: 5.0e+17}
+  contacts:
+  - {name: anode, x_um: -1.0, type: ohmic}
+  - {name: cathode, x_um: 1.0, type: ohmic}
+bias:
+  quantity: V_pn
+  values_V: [0.0, -0.5, -1.0, -1.5, -2.0, -2.5, -3.0, -3.5, -4.0]
+outputs: [V_bi, W_depletion_closed_form, C_per_area_vs_V]

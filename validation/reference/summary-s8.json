@@ -1,0 +1,698 @@
+{
+ "date": "2026-10-16",
+ "lane": "T5 S8-REF (DevLog-040)",
+ "units": {
+  "C_K10": "F/cm^2",
+  "C_K11": "F/cm",
+  "J": "A/cm^2",
+  "densities": "cm^-3",
+  "alpha": "cm^-1",
+  "VpiL": "V cm"
+ },
+ "K10": {
+  "case_sha256": "83c735ceba7e1802ee2e453433bf82a3bb91231c9f6f55773212fe6088bb8ec9",
+  "gate_roles": {
+   "C_F_cm2": "primary",
+   "Vbi": "primary"
+  },
+  "comparison_conditions": "ideal ohmic contacts at both device ends (x = -1 um anode, x = +1 um cathode): charge-neutral equilibrium n, p and psi = V + V_t ln(n_eq/n_i) pinned at the end node; K12: 0.5 um of p+ / n+ between each contact and the i region; K10: 1 um of p / n",
+  "Vbi_V": 0.8749771992211716,
+  "rows": [
+   {
+    "V_pn": 0.0,
+    "C_F_cm2": {
+     "value": 9.165691292799035e-08,
+     "U": 2.6238549782023373e-12
+    },
+    "C_closed_form_2Vt_F_cm2": 9.165261973272297e-08
+   },
+   {
+    "V_pn": -0.5,
+    "C_F_cm2": {
+     "value": 7.22923580050338e-08,
+     "U": 1.3113774720338276e-12
+    },
+    "C_closed_form_2Vt_F_cm2": 7.229231188715793e-08
+   },
+   {
+    "V_pn": -1.0,
+    "C_F_cm2": {
+     "value": 6.158725659678572e-08,
+     "U": 8.23436825213408e-13
+    },
+    "C_closed_form_2Vt_F_cm2": 6.158727629965986e-08
+   },
+   {
+    "V_pn": -1.5,
+    "C_F_cm2": {
+     "value": 5.455902508036279e-08,
+     "U": 5.811689221210682e-13
+    },
+    "C_closed_form_2Vt_F_cm2": 5.455904133624616e-08
+   },
+   {
+    "V_pn": -2.0,
+    "C_F_cm2": {
+     "value": 4.949260424758264e-08,
+     "U": 4.4031616747976955e-13
+    },
+    "C_closed_form_2Vt_F_cm2": 4.949261708858574e-08
+   },
+   {
+    "V_pn": -2.5,
+    "C_F_cm2": {
+     "value": 4.561773837641833e-08,
+     "U": 3.498617562124163e-13
+    },
+    "C_closed_form_2Vt_F_cm2": 4.561774879813927e-08
+   },
+   {
+    "V_pn": -3.0,
+    "C_F_cm2": {
+     "value": 4.253036571764785e-08,
+     "U": 2.876398043318275e-13
+    },
+    "C_closed_form_2Vt_F_cm2": 4.253037438454021e-08
+   },
+   {
+    "V_pn": -3.5,
+    "C_F_cm2": {
+     "value": 3.999543750518487e-08,
+     "U": 2.426345581948663e-13
+    },
+    "C_closed_form_2Vt_F_cm2": 3.999544485347272e-08
+   },
+   {
+    "V_pn": -4.0,
+    "C_F_cm2": {
+     "value": 3.7865689418290777e-08,
+     "U": 2.088046587005279e-13
+    },
+    "C_closed_form_2Vt_F_cm2": 3.786569574946512e-08
+   }
+  ]
+ },
+ "K12": {
+  "case_sha256": "f53335d5b7880c6c6ef2f903dbe115d995d8f7d2f5322de1173eab24ad6c0330",
+  "gate_roles": {
+   "J_A_cm2": "primary at 0.5-0.9 V; 1.0 V only with identical ideal ohmic contacts",
+   "n_p_centre": "primary",
+   "n_p_mean_central_i": "primary"
+  },
+  "comparison_conditions": "ideal ohmic contacts at both device ends (x = -1 um anode, x = +1 um cathode): charge-neutral equilibrium n, p and psi = V + V_t ln(n_eq/n_i) pinned at the end node; K12: 0.5 um of p+ / n+ between each contact and the i region; K10: 1 um of p / n",
+  "rows": [
+   {
+    "V_pn": 0.5,
+    "J_A_cm2": {
+     "value": 0.4476294154663433,
+     "U": 4.8828194472924635e-05
+    },
+    "n_centre_cm3": {
+     "value": 30933601965917.18,
+     "U": 3705403481.4257812
+    },
+    "p_centre_cm3": {
+     "value": 791305312443293.2,
+     "U": 87023264318.28125
+    },
+    "n_mean_i_cm3": {
+     "value": 145316565921739.03,
+     "U": 156592872586.79688
+    },
+    "p_mean_i_cm3": {
+     "value": 925482598826179.2,
+     "U": 187558946009.84375
+    },
+    "contact_loss_fraction": 7.179930702638782e-05
+   },
+   {
+    "V_pn": 0.6,
+    "J_A_cm2": {
+     "value": 6.208341103811872,
+     "U": 0.0008391613082137095
+    },
+    "n_centre_cm3": {
+     "value": 666836829162959.9,
+     "U": 16483367074.53125
+    },
+    "p_centre_cm3": {
+     "value": 1650668316909714.8,
+     "U": 6553627474.6875
+    },
+    "n_mean_i_cm3": {
+     "value": 786529216865140.9,
+     "U": 173623436336.71875
+    },
+    "p_mean_i_cm3": {
+     "value": 1695645722642192.0,
+     "U": 154176199672.5
+    },
+    "contact_loss_fraction": 0.0002407458511166638
+   },
+   {
+    "V_pn": 0.7,
+    "J_A_cm2": {
+     "value": 52.0846444869951,
+     "U": 0.005465146634779927
+    },
+    "n_centre_cm3": {
+     "value": 6514826181055316.0,
+     "U": 148817703795.0
+    },
+    "p_centre_cm3": {
+     "value": 7512630351921825.0,
+     "U": 148778947031.25
+    },
+    "n_mean_i_cm3": {
+     "value": 6577423243580532.0,
+     "U": 180955506150.0
+    },
+    "p_mean_i_cm3": {
+     "value": 7560874985194391.0,
+     "U": 163172443743.75
+    },
+    "contact_loss_fraction": 0.0013254004859631907
+   },
+   {
+    "V_pn": 0.8,
+    "J_A_cm2": {
+     "value": 378.672653386419,
+     "U": 0.02986819095603721
+    },
+    "n_centre_cm3": {
+     "value": 4.690360200729241e+16,
+     "U": 987053200660.0
+    },
+    "p_centre_cm3": {
+     "value": 4.790143405459704e+16,
+     "U": 987024182330.0
+    },
+    "n_mean_i_cm3": {
+     "value": 4.725774860709684e+16,
+     "U": 997011396070.0
+    },
+    "p_mean_i_cm3": {
+     "value": 4.825510601352213e+16,
+     "U": 994387874430.0
+    },
+    "contact_loss_fraction": 0.008525519495520162
+   },
+   {
+    "V_pn": 0.9,
+    "J_A_cm2": {
+     "value": 2756.314765191942,
+     "U": 0.0984335554971949
+    },
+    "n_centre_cm3": {
+     "value": 3.1410992904155245e+17,
+     "U": 1719500679280.0
+    },
+    "p_centre_cm3": {
+     "value": 3.151077867423608e+17,
+     "U": 1719485104560.0
+    },
+    "n_mean_i_cm3": {
+     "value": 3.164688368907221e+17,
+     "U": 1740704688800.0
+    },
+    "p_mean_i_cm3": {
+     "value": 3.1746672149434566e+17,
+     "U": 1740689179440.0
+    },
+    "contact_loss_fraction": 0.05276701826148478
+   },
+   {
+    "V_pn": 1.0,
+    "J_A_cm2": {
+     "value": 21117.09288188031,
+     "U": 0.4361637456668177
+    },
+    "n_centre_cm3": {
+     "value": 1.723485509130387e+18,
+     "U": 111229608202560.0
+    },
+    "p_centre_cm3": {
+     "value": 1.7244834747641544e+18,
+     "U": 111229586510080.0
+    },
+    "n_mean_i_cm3": {
+     "value": 1.736419600983187e+18,
+     "U": 112024609526400.0
+    },
+    "p_mean_i_cm3": {
+     "value": 1.737417589419154e+18,
+     "U": 112024588546880.0
+    },
+    "contact_loss_fraction": 0.22768446715058221
+   }
+  ]
+ },
+ "K11": {
+  "case_sha256": "043e1f725b44f7d07f9f9fa7eeaab6cd47708ca684990fa5eaa463deb8c5b21b",
+  "gate_roles": {
+   "C_si_only_F_cm": "primary C' gate (no oxide; insensitive to the electrostatic domain)",
+   "C_F_cm": "secondary C' gate, valid only on the identical electrostatic domain (comparison_conditions); +1.3 % (0 V) to +2.6 % (-4 V) for BOX bottom -4 um / cladding top 4.22 um (audit Q2, K = 35)",
+   "dneff_re, dalpha_mode_cm, alpha_mode_cm, VpiL_V_cm": "primary optical gates (primary dn_Si definition); domain sensitivity ~2-3e-4 relative (audit Q2)",
+   "secondary definition (fit on density changes)": "informational only, do not gate"
+  },
+  "comparison_conditions": {
+   "electrostatic_domain_um": {
+    "x": [
+     -2.5,
+     2.5
+    ],
+    "y": [
+     -2.0,
+     2.22
+    ]
+   },
+   "outer_boundary": "zero normal flux (homogeneous Neumann) on all four outer edges, oxide and silicon",
+   "substrate": "not modelled (no silicon below the BOX, no ground plane)",
+   "metal": "none; ohmic contacts only",
+   "contacts": "anode on the silicon slab end face x = -2.5 um, y in [0, 0.09] um (p+); cathode on x = +2.5 um, y in [0, 0.09] um (n+); ideal ohmic (charge-neutral equilibrium n, p; psi = V + V_t ln(n_eq/n_i)); 1.25 um of p+ / n+ between each contact and the p / n edge (x = -+1.25 um)",
+   "contact_corner_nodes": "the 4 oxide nodes at the contact corners are not tied to silicon (DEVSIM keeps contact nodes out of interfaces); effect <= 1.6e-5 relative on C' (audit Q7)",
+   "bias": "anode swept, cathode at the 0 V reference (plus the constant gauge offset), V_pn = V_anode",
+   "optics": "same geometry, PEC window x in [-2.5, 2.5], y in [-1.5, 1.72] um, half window with TE mirror"
+  },
+  "n_eff_TE0": 2.5690948883452767,
+  "rows": [
+   {
+    "V_pn": 0.0,
+    "C_si_only_F_cm": {
+     "value": 3.407145215831354e-12,
+     "U": 1.6563503714094764e-15
+    },
+    "C_F_cm": {
+     "value": 4.376257388848553e-12,
+     "U": 1.0585719251816029e-15
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 0.0,
+      "U": 0.0
+     },
+     "dalpha_mode_cm": {
+      "value": 0.0,
+      "U": 0.0
+     },
+     "alpha_mode_cm": {
+      "value": 3.0080575477624314,
+      "U": 0.015221054456436622
+     },
+     "VpiL_V_cm": null
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 0.0,
+      "U": 0.0
+     },
+     "dalpha_mode_cm": {
+      "value": 0.0,
+      "U": 0.0
+     },
+     "alpha_mode_cm": {
+      "value": 2.676607241617911,
+      "U": 0.014388257053510434
+     },
+     "VpiL_V_cm": null
+    }
+   },
+   {
+    "V_pn": -0.5,
+    "C_si_only_F_cm": {
+     "value": 2.71238285435991e-12,
+     "U": 9.780406415135952e-16
+    },
+    "C_F_cm": {
+     "value": 3.63420825650002e-12,
+     "U": 4.453290257431387e-16
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 3.844753398206045e-05,
+      "U": 4.9151187831411494e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.16796794733850304,
+      "U": 0.000176517070077431
+     },
+     "alpha_mode_cm": {
+      "value": 2.8401177044991153,
+      "U": 0.015127012938132012
+     },
+     "VpiL_V_cm": {
+      "value": 1.0078669809637382,
+      "U": 0.0012884534886825406
+     }
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 3.375070357760225e-05,
+      "U": 4.177291325614495e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.1509435107727216,
+      "U": 0.00013718500640996778
+     },
+     "alpha_mode_cm": {
+      "value": 2.5256899602950207,
+      "U": 0.014324280831464975
+     },
+     "VpiL_V_cm": {
+      "value": 1.1481242134968528,
+      "U": 0.001421022026027077
+     }
+    }
+   },
+   {
+    "V_pn": -1.0,
+    "C_si_only_F_cm": {
+     "value": 2.320451298233407e-12,
+     "U": 6.073719358727479e-16
+    },
+    "C_F_cm": {
+     "value": 3.209338140440491e-12,
+     "U": 1.5750229985925474e-16
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 7.022716070742047e-05,
+      "U": 6.01841580817787e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.3067292959290785,
+      "U": 0.00019148761737808329
+     },
+     "alpha_mode_cm": {
+      "value": 2.7013794166985936,
+      "U": 0.015163658608171371
+     },
+     "VpiL_V_cm": {
+      "value": 1.1035616308464975,
+      "U": 0.0009457441675672536
+     }
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 6.164440080871621e-05,
+      "U": 5.069391025492762e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.2755745815665648,
+      "U": 0.00013242497279342125
+     },
+     "alpha_mode_cm": {
+      "value": 2.401081124147546,
+      "U": 0.014376288478644916
+     },
+     "VpiL_V_cm": {
+      "value": 1.2572106952662907,
+      "U": 0.001033880211685876
+     }
+    }
+   },
+   {
+    "V_pn": -1.5,
+    "C_si_only_F_cm": {
+     "value": 2.060543734382415e-12,
+     "U": 3.545706239744084e-16
+    },
+    "C_F_cm": {
+     "value": 2.9240737330458653e-12,
+     "U": 3.78670770608033e-16
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 9.785353644110646e-05,
+      "U": 5.978785970753504e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.42728563403619774,
+      "U": 0.0001595523331230364
+     },
+     "alpha_mode_cm": {
+      "value": 2.5808370839335093,
+      "U": 0.015222620124369812
+     },
+     "VpiL_V_cm": {
+      "value": 1.1879999867962414,
+      "U": 0.0007258600877023553
+     }
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 8.588927232215692e-05,
+      "U": 4.949879593262995e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.3837932814640405,
+      "U": 8.873353424099228e-05
+     },
+     "alpha_mode_cm": {
+      "value": 2.292875635795076,
+      "U": 0.014443670590650881
+     },
+     "VpiL_V_cm": {
+      "value": 1.3534868425007125,
+      "U": 0.0007800272048312536
+     }
+    }
+   },
+   {
+    "V_pn": -2.0,
+    "C_si_only_F_cm": {
+     "value": 1.8721202984722185e-12,
+     "U": 2.5633724052296084e-16
+    },
+    "C_F_cm": {
+     "value": 2.7150087406936024e-12,
+     "U": 4.773055928231362e-16
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 0.00012255156635667574,
+      "U": 5.4661688042014975e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.5349966516904086,
+      "U": 0.0001076554963314047
+     },
+     "alpha_mode_cm": {
+      "value": 2.4731367843768233,
+      "U": 0.015291852155093322
+     },
+     "VpiL_V_cm": {
+      "value": 1.2647737161423618,
+      "U": 0.0005641271537428033
+     }
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 0.00010756101720959392,
+      "U": 4.4198212600671943e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.48042466211068263,
+      "U": 8.762856714678025e-05
+     },
+     "alpha_mode_cm": {
+      "value": 2.1962553521637225,
+      "U": 0.014520611496118718
+     },
+     "VpiL_V_cm": {
+      "value": 1.4410425265685824,
+      "U": 0.0005921430050422271
+     }
+    }
+   },
+   {
+    "V_pn": -2.5,
+    "C_si_only_F_cm": {
+     "value": 1.7275478043684882e-12,
+     "U": 3.3051134515735756e-16
+    },
+    "C_F_cm": {
+     "value": 2.5530231519074944e-12,
+     "U": 4.079923497742624e-16
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 0.00014502909542905176,
+      "U": 4.904405473768079e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.6329641729776805,
+      "U": 9.97569417245936e-05
+     },
+     "alpha_mode_cm": {
+      "value": 2.3751813947854186,
+      "U": 0.015363902230617899
+     },
+     "VpiL_V_cm": {
+      "value": 1.3359388295625307,
+      "U": 0.0004517704319221262
+     }
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 0.00012728146264481824,
+      "U": 3.856824427552917e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.5682657609246229,
+      "U": 0.00013526014303799627
+     },
+     "alpha_mode_cm": {
+      "value": 2.108425522645714,
+      "U": 0.0145955364875191
+     },
+     "VpiL_V_cm": {
+      "value": 1.5222169511098698,
+      "U": 0.000461255189803924
+     }
+    }
+   },
+   {
+    "V_pn": -3.0,
+    "C_si_only_F_cm": {
+     "value": 1.6118824699410211e-12,
+     "U": 2.1489803881168452e-16
+    },
+    "C_F_cm": {
+     "value": 2.4223823325402252e-12,
+     "U": 4.116896415291845e-16
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 0.00016574095481813625,
+      "U": 4.399098918906469e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.7231832253887297,
+      "U": 0.00012776001012204663
+     },
+     "alpha_mode_cm": {
+      "value": 2.284971384858474,
+      "U": 0.015425191300666996
+     },
+     "VpiL_V_cm": {
+      "value": 1.4027914841875802,
+      "U": 0.0003723291269989425
+     }
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 0.00014545024257017118,
+      "U": 3.356429834706822e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.6491158237431957,
+      "U": 0.00020550598909907514
+     },
+     "alpha_mode_cm": {
+      "value": 2.0275839549035184,
+      "U": 0.014659253076416356
+     },
+     "VpiL_V_cm": {
+      "value": 1.598484786904583,
+      "U": 0.0003688685514912858
+     }
+    }
+   },
+   {
+    "V_pn": -3.5,
+    "C_si_only_F_cm": {
+     "value": 1.5167156595777655e-12,
+     "U": 1.3151937106863502e-16
+    },
+    "C_F_cm": {
+     "value": 2.3139370749377285e-12,
+     "U": 4.831229005084552e-16
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 0.00018499918164895172,
+      "U": 3.8420080642853453e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.8070227095735285,
+      "U": 0.00017508049074621557
+     },
+     "alpha_mode_cm": {
+      "value": 2.2011400340377243,
+      "U": 0.015485184426089704
+     },
+     "VpiL_V_cm": {
+      "value": 1.4662227020804608,
+      "U": 0.0003045007764478022
+     }
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 0.00016234152650410492,
+      "U": 2.8170327311127525e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.7242097019711345,
+      "U": 0.0002739853968449779
+     },
+     "alpha_mode_cm": {
+      "value": 1.9524992182252991,
+      "U": 0.014722889049255505
+     },
+     "VpiL_V_cm": {
+      "value": 1.670860228070735,
+      "U": 0.00028993616439049327
+     }
+    }
+   },
+   {
+    "V_pn": -4.0,
+    "C_si_only_F_cm": {
+     "value": 1.4367611188858267e-12,
+     "U": 2.3301921678538696e-16
+    },
+    "C_F_cm": {
+     "value": 2.2220415926599904e-12,
+     "U": 4.3862121925018297e-16
+    },
+    "soref_bennett_1550": {
+     "dneff_re": {
+      "value": 0.00020303008847760568,
+      "U": 3.4572921281292e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.8854768080733495,
+      "U": 0.00023408224685661505
+     },
+     "alpha_mode_cm": {
+      "value": 2.122698373811123,
+      "U": 0.015545914883019374
+     },
+     "VpiL_V_cm": {
+      "value": 1.526867285161988,
+      "U": 0.00026000216447084884
+     }
+    },
+    "nedeljkovic_1550": {
+     "dneff_re": {
+      "value": 0.00017815424455378602,
+      "U": 2.43604081997834e-08
+     },
+     "dalpha_mode_cm": {
+      "value": -0.794445818444303,
+      "U": 0.0003328265369889616
+     },
+     "alpha_mode_cm": {
+      "value": 1.8822745642922452,
+      "U": 0.014782224047271975
+     },
+     "VpiL_V_cm": {
+      "value": 1.7400651933746591,
+      "U": 0.00023793257640877753
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,63 @@
+# Canonical case K11 (DevLog-035 T5, DevLog-040): lateral PN rib phase shifter in SOI, 300 K, 1550 nm TE0.
+# Illustrative case inputs (not a specific paper's device).
+# Schema eo-atlas.validation.semi/v1 (see K10.yaml header), 2D: x lateral, y vertical (y = 0 at the BOX top), um.
+#   regions: rectangles, painter order (later wins); material silicon or silicon_dioxide.
+#   doping: uniform boxes inside silicon, half-open in x ([x0, x1)); net doping N_D - N_A.
+#   contacts: ohmic, on the silicon boundary segments given (slab end faces).
+#   electrostatics: oxide is a Poisson-only dielectric; zero normal flux on the outer boundary; substrate not modelled.
+#   variant si_only: oxide removed from the electrostatics (zero normal flux on every silicon surface).
+#   optics: vector mode, PEC on the optical window edge; Si and SiO2 n from engine/data/materials.json Sellmeier
+#     (Salzberg/Tatian Si, Malitson SiO2) at the stated wavelength; carriers perturb Si only (first order).
+schema: eo-atlas.validation.semi/v1
+id: K11
+title: 'Canonical K11: lateral PN rib 500 nm x 220 nm, 90 nm slab, SOI 2 um BOX, oxide clad, p/n 5e+17, p+/n+ 1e+20, 1550 nm TE'
+status: illustrative_case_inputs
+dimension: 2
+temperature_K: 300
+materials:
+  silicon: {eps_r: 11.7, eps_r_source: 'engine/data/materials.json silicon eps_r (Zhu et al. 2021 Table 1)'}
+  silicon_dioxide: {eps_r: 3.9, eps_r_source: 'engine/data/materials.json silicon_dioxide eps_r (Zhu et al. 2021 Table 1)'}
+models:
+  statistics: boltzmann
+  ionization: complete
+  bandgap_narrowing: none
+  intrinsic_density: {model: constant, n_i_cm3: 1.0e+10, source: 'Sproul and Green 1991, Introduction p. 846, Table II p. 852 (300 K, 1.00(3)e10), conclusions p. 853'}
+  mobility: {model: masetti_1983_low_field, electrons: phosphorus_column, holes: boron_column, doping_argument: N_A_plus_N_D,
+    note: 'boron mu0, mumax, C_r, alpha, P_c confirmed in Thurber et al. NBS SP 400-64 (1981) Table 13, 300 K; beta 2.00 read from a partly damaged scan glyph'}
+  recombination: {model: srh_midgap, tau_n_s: 1.0e-6, tau_p_s: 1.0e-6}
+  auger: none
+  plasma_dispersion: [soref_bennett_1550 (Reed 2010 p. 519), nedeljkovic_1550 (Nedeljkovic 2011 Table 1 p. 1178, 1.55 um row)]
+geometry_2d:
+  regions:
+  - {name: box, material: silicon_dioxide, x_um: [-2.5, 2.5], y_um: [-2.0, 0.0]}
+  - {name: cladding, material: silicon_dioxide, x_um: [-2.5, 2.5], y_um: [0.0, 2.22]}
+  - {name: slab, material: silicon, x_um: [-2.5, 2.5], y_um: [0.0, 0.09]}
+  - {name: rib, material: silicon, x_um: [-0.25, 0.25], y_um: [0.09, 0.22]}
+  doping:
+  - {name: pplus, acceptor_cm3: 1.0e+20, x_um: [-2.5, -1.25]}
+  - {name: p, acceptor_cm3: 5.0e+17, x_um: [-1.25, 0.0]}
+  - {name: n, donor_cm3: 5.0e+17, x_um: [0.0, 1.25]}
+  - {name: nplus, donor_cm3: 1.0e+20, x_um: [1.25, 2.5]}
+  contacts:
+  - {name: anode, type: ohmic, x_um: [-2.5, -2.5], y_um: [0.0, 0.09]}
+  - {name: cathode, type: ohmic, x_um: [2.5, 2.5], y_um: [0.0, 0.09]}
+electrostatics:
+  # comparison conditions (audit Q2): the engine must use this identical domain for the oxide C' gate
+  domain_um: {x: [-2.5, 2.5], y: [-2.0, 2.22]}
+  outer_boundary: zero_normal_flux_all_edges
+  substrate: none
+  metal: none
+  oxide: poisson_only_dielectric
+  contacts_note: 'ohmic, only on the slab end faces x = -2.5 um (anode, p+) and x = +2.5 um (cathode, n+), y in [0, 0.09] um'
+  gates: {primary_C: C_si_only (oxide removed, zero normal flux on all silicon surfaces), secondary_C: C_with_oxide (identical domain only)}
+bias:
+  quantity: V_pn
+  values_V: [0.0, -0.5, -1.0, -1.5, -2.0, -2.5, -3.0, -3.5, -4.0]
+optics:
+  wavelength_nm: 1550
+  polarization: TE
+  mode_index: 0
+  window_x_um: [-2.5, 2.5]
+  window_y_um: [-1.5, 1.72]
+  boundary: PEC
+outputs: [C_per_length_vs_V, C_per_length_si_only_vs_V, carrier_cuts, dneff_vs_V, dalpha_vs_V, alpha_vs_V, VpiL_vs_V]

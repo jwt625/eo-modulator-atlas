@@ -14,6 +14,7 @@ dependencies = [
   "tidy3d",
   "matplotlib",
   "pyamg",
+  "devsim==2.11.0",
 ]
 
 [tool.uv]
