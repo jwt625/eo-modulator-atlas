@@ -79,7 +79,7 @@ untracked entries, 144 files with `-uall`).
 
 | Scan (changed + untracked text files) | Result |
 |---|---|
-| `/Users/`, `wentaojiang`, `/home/<user>`, `/private/tmp`, `/var/folders` | 0 hits (untracked files; added lines of the tracked diff) |
+| `/Users/`, the local user name, `/home/<user>`, `/private/tmp`, `/var/folders` | 0 hits (untracked files; added lines of the tracked diff) |
 | Keys and tokens (`api_key`, `secret`, `token`, `password`, `bearer`, `sk-`, `ghp_`, `AKIA`, private-key headers, `xox`, `AIza`, `hf_`, `@gmail.com`) | 0 real hits; false positives only: `tokenize`/`tokens` in `engine/src/params.mjs`, the `secretstorage` package in `validation/uv.lock` |
 | Remote hosts, IPs, `ssh`/`scp`/`rsync`, private-project names | 0 hits (two "no API key" statements about the local tidy3d mode solver) |
 | Emoji | 0 hits |
