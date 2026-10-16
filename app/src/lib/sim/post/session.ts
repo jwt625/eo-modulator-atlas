@@ -2,7 +2,8 @@
 // only). Maps base dataset + mode to engine ids ('opt' + mode k -> 'opt:k'), region-name selections, cut lines by
 // geometry (engine cut-line datasets, cached), field plots as refined element-local lattice values with smoothing
 // (engine `location: 'refined'`, DevLog-034), the RF frequency sweep (`rf` dataset), and min/max with locations for
-// Max/Min markers. `prefix` namespaces the mesh ids of sweep-point solutions ('sweep:3/es').
+// Max/Min markers, and the S8 semiconductor datasets ('semi' + bias index, DevLog-042). `prefix` namespaces the mesh ids
+// of sweep-point solutions ('sweep:3/es').
 import { evaluateAtPoints, evaluateDerived, evaluatePlot, modeTable, parseExpression, referencedNames, refinePattern, type SolutionStore } from '../../../../../engine/src/postproc/index.mjs';
 import type { FieldMesh } from '../types';
 import type { CheckResult, DatasetInfo, DerivedRequest, DerivedResult, LineResult, LineSpec, ModeRow, PlotRequest, PlotResult, VariableInfo } from './contract';
@@ -14,12 +15,14 @@ export class PostSession {
 
 	constructor(readonly store: SolutionStore, private prefix = '') {
 		// Base datasets only (the mode is a UI selection); labels without the selected mode's n_eff.
-		this.base = this.store
-			.datasets()
+		const all = this.store.datasets() as DatasetInfo[];
+		this.base = all
 			.filter((d) => !d.id.includes(':'))
 			.map((d) => ({
 				...d,
-				label: d.kind === 'es' ? d.label : d.kind === 'opt' ? 'Optical mode' : d.kind === 'arm' ? `Arm ${d.arm} mode${d.aliasOf ? ' (= optical mode)' : ''}` : d.kind === 'eo' ? `EO overlap arm ${d.arm}` : d.kind === 'rf' ? 'RF frequency sweep' : d.label
+				label: d.kind === 'es' ? d.label : d.kind === 'opt' ? 'Optical mode' : d.kind === 'arm' ? `Arm ${d.arm} mode${d.aliasOf ? ' (= optical mode)' : ''}` : d.kind === 'eo' ? `EO overlap arm ${d.arm}` : d.kind === 'rf' ? 'RF frequency sweep' : d.kind === 'semi' ? 'Semiconductor' : d.label,
+				// S8 (DevLog-042): bias points of the semiconductor solution ('semi:<k>'), addressed like modes
+				...(d.kind === 'semi' ? { nBias: all.filter((x) => x.kind === 'semi' && x.id.startsWith('semi:')).length } : {})
 			}));
 	}
 
@@ -45,6 +48,8 @@ export class PostSession {
 	private id(dataset: string, mode?: number): string {
 		const d = this.base.find((x) => x.id === dataset);
 		if (!d) return dataset;
+		// S8: 'semi' + bias point k -> 'semi:k'; no index or -1 -> the reference bias ('semi').
+		if (d.kind === 'semi') return mode != null && mode >= 0 ? `${dataset}:${mode}` : dataset;
 		if (mode == null || d.nModes == null || d.kind === 'eo' || mode === d.mode) return dataset;
 		return `${dataset}:${mode}`;
 	}

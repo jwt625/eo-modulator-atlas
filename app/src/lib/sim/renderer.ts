@@ -111,6 +111,12 @@ uniform float uDataMin;
 uniform float uDataMax;
 out vec4 outColor;
 float mapT(float v) {
+	if (uLog == 2) {
+		float a = abs(v);
+		if (a < uMin) return 0.5;
+		float u = min(1.0, (log2(a) - log2(uMin)) / (log2(uMax) - log2(uMin)));
+		return 0.5 + 0.5 * sign(v) * u;
+	}
 	if (uLog == 1) {
 		float a = abs(v);
 		if (a <= 0.0) return -1.0;
@@ -208,9 +214,10 @@ function layerValues(L: Layer, d: { nT: number; np: number }): ArrayLike<number>
 	return L.values && L.values.length === d.nT * d.np ? L.values : null;
 }
 
-/** Contour levels mapped to the color coordinate t of the shader (linear or log). */
+/** Contour levels mapped to the color coordinate t of the shader (linear, log or symlog). */
 function levelT(levels: number[], mode: ScaleMode, r: Range): number[] {
 	return levels.slice(0, MAX_LEVELS).map((l) => {
+		if (mode === 'symlog') return scaleT(l, 'symlog', r);
 		if (mode === 'log') return l > 0 ? (Math.log10(l) - Math.log10(r.min)) / (Math.log10(r.max) - Math.log10(r.min)) : -10;
 		return (l - r.min) / (r.max - r.min);
 	});
@@ -473,7 +480,7 @@ export class GlRenderer implements FieldRenderer {
 			}
 			const r = L.range ?? { min: 0, max: 1 };
 			gl.uniform1i(u.uMode, L.kind === 'surface' ? 1 : L.kind === 'contour' ? 2 : 0);
-			gl.uniform1i(u.uLog, L.scaleMode === 'log' ? 1 : 0);
+			gl.uniform1i(u.uLog, L.scaleMode === 'log' ? 1 : L.scaleMode === 'symlog' ? 2 : 0);
 			gl.uniform1f(u.uMin, r.min);
 			gl.uniform1f(u.uMax, r.max === r.min ? r.min + 1 : r.max);
 			this.uploadLut(L.colormap ?? 'Rainbow', !!L.reverse);

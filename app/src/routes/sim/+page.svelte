@@ -87,6 +87,7 @@
 				if (st.section && wb.sections.includes(st.section)) wb.section = st.section;
 				if (st.mesh != null && MESH_LEVELS.some((m) => m.value === st.mesh)) wb.meshScale = st.mesh;
 				if (st.stages) wb.selected = st.stages.filter((s) => OPTIONAL.some((o) => o.id === s));
+				else wb.seedStages();
 				if (st.sweep?.path.startsWith('study:')) wb.sweepStudy = st.sweep.path.slice(6);
 				else if (st.sweep) {
 					wb.sweepPath = st.sweep.path;
@@ -147,15 +148,16 @@
 			<select aria-label="Mesh resolution" bind:value={wb.meshScale} disabled={!!wb.busy}>{#each MESH_LEVELS as m}<option value={m.value}>{m.label}</option>{/each}</select>
 		</label>
 		<fieldset class="stages" aria-label="Stages">
-			<label data-tip="Always runs"><input type="checkbox" checked disabled /> Electrostatics</label>
-			{#each OPTIONAL as s}
+			<label data-tip={wb.semiSelected ? 'Not run with the Semiconductor stage (it solves its own Poisson equation on the device mesh)' : 'Always runs'}><input type="checkbox" checked={!wb.semiSelected} disabled /> Electrostatics</label>
+			{#each wb.stageList as s}
 				{@const err = wb.stageError(s.id)}
-				<label data-tip={err ?? 'Inputs pass the input boundary'} class:blocked={!!err}><input type="checkbox" checked={wb.selected.includes(s.id)} disabled={!!wb.busy || (!!err && !wb.selected.includes(s.id))} onchange={(e) => wb.toggleStage(s.id, e.currentTarget.checked)} /> {s.label}</label>
+				{@const auto = wb.stageAuto(s.id)}
+				<label data-tip={auto ?? err ?? 'Inputs pass the input boundary'} class:blocked={!!err} data-stage-error={err ? s.id : undefined} data-stage-auto={auto ? s.id : undefined}><input type="checkbox" checked={wb.selected.includes(s.id) || !!auto} disabled={!!wb.busy || !!auto || (!!err && !wb.selected.includes(s.id))} onchange={(e) => wb.toggleStage(s.id, e.currentTarget.checked)} /> {s.label}</label>
 			{/each}
 		</fieldset>
 		<div class="acts">
 			<button onclick={() => wb.buildMesh()} disabled={!!wb.busy || wb.sweepRunning || wb.loading || !wb.geometry} data-tip="Build the electrostatic mesh only (Mesh node shows statistics)">Build mesh</button>
-			<button class="on" onclick={() => wb.compute()} disabled={!wb.canRun} data-tip="Run the study: electrostatics plus the selected stages">Compute</button>
+			<button class="on" onclick={() => wb.compute()} disabled={!wb.canRun} data-tip={wb.semiSelected ? 'Run the semiconductor stage (every bias point)' : 'Run the study: electrostatics plus the selected stages'}>Compute</button>
 			<button onclick={() => wb.cancel()} disabled={!wb.busy && !wb.sweepRunning} data-tip="Stop the running solve, mesh build or sweep">Cancel</button>
 			<button onclick={copyLink} disabled={!chosen} data-tip="Copy a link with config, section, mesh level, stages, form overrides and sweep. Free YAML-tab edits and removed keys are not encoded (a log warning says so when present).">Link</button>
 		</div>

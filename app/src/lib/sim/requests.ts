@@ -1,6 +1,7 @@
 // Every postprocessing request of the UI is built here, so each one addresses the solution its view selects (COMSOL:
 // every dataset-consuming view has a solution / parameter value): the last Compute, or a sweep point (`sol`), with the
-// mode chosen for that dataset in that solution (DevLog-032 F1/F2/G1/G2).
+// mode chosen for that dataset in that solution (DevLog-032 F1/F2/G1/G2). Semiconductor datasets are addressed with the
+// view's bias point instead of a mode (DevLog-042; `bias` null = last bias point).
 import type { DerivedRequest, LineSpec, PlotRequest, PostRequest } from './post/contract';
 import type { CutLine, DerivedNode, Feature, PlotGroup, Results } from './results.svelte';
 
@@ -18,7 +19,7 @@ const withSol = <T extends object>(r: T, sol: string | undefined) => (sol ? { ..
 export function plotRequest(R: Results, g: PlotGroup, f: Feature, expr: string, unit: string): PostRequest {
 	const ds = f.dataset || g.dataset;
 	const sol = solOf(g);
-	const req: PlotRequest = { dataset: ds, expr, unit, mode: R.modeFor(ds, sol), selection: R.selectionRegions(f.selection), resolution: f.resolution, smoothing: f.type === 'maxmin' ? 'none' : f.smoothing };
+	const req: PlotRequest = { dataset: ds, expr, unit, mode: R.indexFor(ds, sol, g.bias), selection: R.selectionRegions(f.selection), resolution: f.resolution, smoothing: f.type === 'maxmin' ? 'none' : f.smoothing };
 	return withSol({ op: 'plot' as const, req }, sol);
 }
 
@@ -26,7 +27,7 @@ export function plotRequest(R: Results, g: PlotGroup, f: Feature, expr: string, 
 export function probeRequest(R: Results, g: PlotGroup, f: Feature, x: number, y: number): PostRequest {
 	const ds = f.dataset || g.dataset;
 	const sol = solOf(g);
-	const req: DerivedRequest = { kind: 'point', dataset: ds, expr: f.expr, unit: f.unit, mode: R.modeFor(ds, sol), selection: [x, y] };
+	const req: DerivedRequest = { kind: 'point', dataset: ds, expr: f.expr, unit: f.unit, mode: R.indexFor(ds, sol, g.bias), selection: [x, y] };
 	return withSol({ op: 'derived' as const, req }, sol);
 }
 
@@ -34,7 +35,7 @@ export function probeRequest(R: Results, g: PlotGroup, f: Feature, x: number, y:
 export function lineRequest(R: Results, cl: CutLine, expr: string, unit: string): PostRequest {
 	const sol = solFor(cl.point);
 	const line: LineSpec = { ax: cl.ax, ay: cl.ay, bx: cl.bx, by: cl.by, n: cl.n };
-	return withSol({ op: 'line' as const, dataset: cl.source, mode: R.modeFor(cl.source, sol), exprs: [expr], units: [unit], line }, sol);
+	return withSol({ op: 'line' as const, dataset: cl.source, mode: R.indexFor(cl.source, sol, cl.bias), exprs: [expr], units: [unit], line }, sol);
 }
 
 /** Mode Analysis table of a dataset in a solution. */
@@ -69,7 +70,7 @@ export function derivedRequest(R: Results, d: DerivedNode): { post: PostRequest;
 	if (!d.expr.trim()) return 'empty expression';
 	const point = derivedPoint(R, d);
 	const sol = solFor(point);
-	const base: DerivedRequest = { kind: d.kind, dataset: d.dataset, expr: d.expr, unit: d.unit, mode: R.modeFor(d.dataset, sol) };
+	const base: DerivedRequest = { kind: d.kind, dataset: d.dataset, expr: d.expr, unit: d.unit, mode: R.indexFor(d.dataset, sol, d.bias) };
 	let req: DerivedRequest;
 	if (d.kind === 'global') req = base;
 	else if (d.kind.startsWith('surface')) {
@@ -79,11 +80,11 @@ export function derivedRequest(R: Results, d: DerivedNode): { post: PostRequest;
 	} else if (d.kind.startsWith('line')) {
 		const c = R.cutLines.find((x) => x.id === d.target);
 		if (!c) return 'choose a cut line dataset';
-		req = { ...base, dataset: c.source, mode: R.modeFor(c.source, sol), selection: { ax: c.ax, ay: c.ay, bx: c.bx, by: c.by, n: c.n } };
+		req = { ...base, dataset: c.source, mode: R.indexFor(c.source, sol, c.bias), selection: { ax: c.ax, ay: c.ay, bx: c.bx, by: c.by, n: c.n } };
 	} else {
 		const p = R.cutPoints.find((x) => x.id === d.target);
 		if (!p) return 'choose a cut point dataset';
-		req = { ...base, dataset: p.source, mode: R.modeFor(p.source, sol), selection: [p.x, p.y] };
+		req = { ...base, dataset: p.source, mode: R.indexFor(p.source, sol, p.bias), selection: [p.x, p.y] };
 	}
 	return { post: withSol({ op: 'derived' as const, req }, sol), req, point };
 }

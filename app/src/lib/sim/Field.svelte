@@ -21,7 +21,8 @@
 	const resolved = $derived(wb.rawAt(path));
 	const value = $derived(src !== undefined ? src : resolved);
 	const inherited = $derived(src === undefined && resolved !== undefined);
-	const shown = $derived(value == null ? '' : typeof value === 'object' ? JSON.stringify(value) : String(value));
+	// Large numbers (doping in cm^-3) in exponent form: 5e+17, not 500000000000000000.
+	const shown = $derived(value == null ? '' : typeof value === 'object' ? JSON.stringify(value) : typeof value === 'number' && Math.abs(value) >= 1e9 ? value.toExponential() : String(value));
 	const editable = $derived(!readonly && !wb.busy && (value == null || typeof value !== 'object'));
 	const note = $derived(
 		inherited ? `Resolved value (library or template); editing writes an override into the config.`

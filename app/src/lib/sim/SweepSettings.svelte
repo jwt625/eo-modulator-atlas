@@ -50,7 +50,7 @@
 {/if}
 <p class="small" class:crit={!!parsedValues.error} class:hidden={!!wb.sweepStudy} class:muted={!parsedValues.error}>{parsedValues.error || (parsedValues.values.length ? `${parsedValues.values.length} points: ${parsedValues.values.slice(0, 8).map((v) => fmt(v, 6)).join(', ')}${parsedValues.values.length > 8 ? ', ...' : ''}` : 'No values')}</p>
 <div class="actions">
-	<button class="on" onclick={() => { wb.runSweep(); if (wb.sweepRunning) wb.node = 'results.sweep'; }} disabled={wb.sweepRunning || !wb.canRun || (!wb.sweepStudy && (!parsedValues.values.length || !wb.sweepPath))}>Run sweep</button>
+	<button class="on" onclick={() => { wb.runSweep(); if (wb.sweepRunning) wb.node = 'results.sweep'; }} disabled={wb.sweepRunning || !wb.canRun || wb.semiSelected || (!wb.sweepStudy && (!parsedValues.values.length || !wb.sweepPath))} data-tip={wb.semiSelected ? 'Not available with the Semiconductor stage: its bias sweep runs in Compute (Study > Bias Sweep)' : undefined}>Run sweep</button>
 	<button onclick={() => wb.cancelSweep()} disabled={!wb.sweepRunning}>Cancel sweep</button>
 	{#if wb.sweepRows.length}<span class="muted num" data-sweep-progress={`${wb.sweepDone}/${wb.sweepRows.length}`}>{wb.sweepDone}/{wb.sweepRows.length}</span>{/if}
 </div>

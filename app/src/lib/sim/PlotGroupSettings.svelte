@@ -9,6 +9,8 @@
 	import { MAX_SUBTRIANGLES, RESOLUTIONS } from '../../../../engine/src/postproc/index.mjs';
 	import ExprInput from './ExprInput.svelte';
 	import SolutionSelect from './SolutionSelect.svelte';
+	import BiasSelect from './BiasSelect.svelte';
+	import { biasLabel, biasVariables } from './semi';
 	import { oneDSolutions } from './solutions1d';
 	import { modesRequest, plotRequest } from './requests';
 	import UnitInput from './UnitInput.svelte';
@@ -24,7 +26,7 @@
 	const modeRows = $derived(R.dataset(ds)?.nModes && (!g || g.point < 0 || wb.points[g.point]?.status === 'ready') ? (wb.cache.get<ModeRow[]>(wb.post, R.gen, modesRequest(ds, g?.point ?? -1))?.data ?? []) : []);
 
 	function add(t: FeatureType) {
-		const over: Partial<Feature> = t === 'arrow' ? { xExpr: 'es.Ex', yExpr: 'es.Ey' } : t === 'linegraph' ? { dataset: R.cutLines[0]?.id ?? '' } : t === 'global' ? { dataset: 'sweep', exprs: 'VpiL', unit: 'V*cm' } : t === 'tablegraph' ? { tableId: R.tables[0]?.id ?? '' } : {};
+		const over: Partial<Feature> = t === 'arrow' ? { xExpr: 'es.Ex', yExpr: 'es.Ey' } : t === 'linegraph' ? { dataset: R.cutLines[0]?.id ?? '' } : t === 'global' ? (wb.semi && !wb.sweepRows.length ? { dataset: 'bias', exprs: 'semi.C', unit: 'pF/mm' } : { dataset: 'sweep', exprs: 'VpiL', unit: 'V*cm' }) : t === 'tablegraph' ? { tableId: R.tables[0]?.id ?? '' } : {};
 		const nf = R.addFeature(gid, t, over);
 		if (nf) {
 			wb.node = `pf:${gid}:${nf.id}`;
@@ -37,6 +39,8 @@
 		return GLOBAL_VARIABLES.filter((v) => !gl || v.name in gl);
 	});
 	const rfVars: VariableInfo[] = $derived(wb.vars.rf ?? []);
+	/** Semiconductor dataset drawn by the group (its own or a feature's): the group's Bias selects the bias point. */
+	const semiDs = $derived(g ? [g.dataset, ...g.features.map((x) => x.dataset)].find((d) => d && R.isSemi(d)) ?? '' : '');
 	const RES: [Feature['resolution'], string][] = [['none', 'No refinement'], ['coarse', 'Coarse'], ['normal', 'Normal'], ['fine', 'Fine'], ['finer', 'Finer'], ['extra', 'Extra fine']];
 	const tbl = $derived(f?.type === 'tablegraph' ? R.tables.find((t) => t.id === f.tableId) : null);
 	const numericCols = $derived(tbl ? tbl.columns.filter((c, i) => tbl.rows.some((r) => typeof r[i] === 'number')) : []);
@@ -73,7 +77,7 @@
 		feat.selection = id;
 		wb.addLog(`${feat.name}: selection ${id ? (R.selections.find((s) => s.id === id)?.name ?? id) : 'all domains'}`);
 	}
-	const logInvalid = (feat: Feature) => feat.range.manual && feat.range.scale === 'log' && !(feat.range.min > 0 && feat.range.max > feat.range.min);
+	const logInvalid = (feat: Feature) => feat.range.manual && (feat.range.scale === 'log' || feat.range.scale === 'symlog') && !(feat.range.min > 0 && feat.range.max > feat.range.min);
 </script>
 
 {#snippet selectionField(feat: Feature)}
@@ -95,14 +99,21 @@
 
 {#snippet rangeFields(feat: Feature)}
 	<h4>Range</h4>
-	<label class="f" data-tip="linear; symmetric: +-max|v| around zero; log: log10 |v|">Scale
-		<select value={feat.range.scale} onchange={(e) => (feat.range.scale = e.currentTarget.value as Feature['range']['scale'])}><option value="linear">linear</option><option value="symmetric">linear symmetric</option><option value="log">log |value|</option></select>
+	<label class="f" data-tip="linear; symmetric: +-max|v| around zero; log: log10 |v|; log, signed: sign(v) log10 |v| (negative decades below the centre, positive above; |v| below the range min at the centre; range = |v| range)">Scale
+		<select value={feat.range.scale} onchange={(e) => (feat.range.scale = e.currentTarget.value as Feature['range']['scale'])}><option value="linear">linear</option><option value="symmetric">linear symmetric</option><option value="log">log |value|</option><option value="symlog">log, signed</option></select>
 	</label>
+	{@const optDs = R.datasets.find((d) => d.kind === 'opt')}
+	{@const mexpr = feat.modeExpr || (optDs ? R.intensityExpr(optDs.id, (d, v) => wb.has(d, v)) : '')}
+	{#if mexpr && wb.has(feat.dataset || g?.dataset || '', mexpr.replace(/\^2$/, ''))}
+		<label class="f" data-tip="Automatic color range from all displayed values, or from the optical-mode region only: lattice points where {mexpr} >= e^-2 of its peak (values outside are drawn at the end colours)">Automatic range
+			<select aria-label="Automatic range from" value={feat.rangeFrom ?? 'data'} onchange={(e) => { feat.rangeFrom = e.currentTarget.value as 'data' | 'mode'; if (feat.rangeFrom === 'mode') feat.modeExpr = mexpr; }}><option value="data">all values</option><option value="mode">optical-mode region</option></select>
+		</label>
+	{/if}
 	<label class="f" data-tip="Manual color range (prefilled with the range shown); off = range of the displayed values"><span>Manual color range</span><input type="checkbox" aria-label="Manual color range" checked={feat.range.manual} onchange={(e) => manualRange(feat, e.currentTarget.checked)} /></label>
 	{#if feat.range.manual}
 		<label class="f">min <input type="number" step="any" aria-label="Color range min" value={feat.range.min} onchange={(e) => (feat.range.min = num(e.currentTarget.value, feat.range.min))} /></label>
 		<label class="f">max <input type="number" step="any" aria-label="Color range max" value={feat.range.max} onchange={(e) => (feat.range.max = num(e.currentTarget.value, feat.range.max))} /></label>
-		{#if logInvalid(feat)}<p class="warn small" data-range-note>Log scale needs 0 &lt; min &lt; max; the automatic log range is used.</p>{/if}
+		{#if logInvalid(feat)}<p class="warn small" data-range-note>Log scales need 0 &lt; min &lt; max (|value| range); the automatic range is used.</p>{/if}
 	{/if}
 	<label class="f" data-tip="Values outside the data range are not drawn (COMSOL manual data range)"><span>Manual data range</span><input type="checkbox" aria-label="Manual data range" checked={feat.dataRange.manual} onchange={(e) => manualData(feat, e.currentTarget.checked)} /></label>
 	{#if feat.dataRange.manual}
@@ -148,6 +159,7 @@
 			</select>
 		</label>
 		<SolutionSelect {wb} value={g.point} onchange={(p) => { g.point = p; wb.addLog(`${g.name}: solution ${wb.solutionLabel(p)}`); }} />
+		{#if semiDs}<BiasSelect {wb} dataset={semiDs} value={g.bias} onchange={(b) => { g.bias = b; wb.addLog(`${g.name}: bias ${biasLabel(wb.semi, R.biasIndex(semiDs, b))}`); }} />{/if}
 		{#if R.dataset(g.dataset)?.nModes && modeRows.length}
 			{@const key = g.point >= 0 ? `sweep:${g.point}|${g.dataset}` : g.dataset}
 			<label class="f" data-tip="Mode of this dataset in every plot group showing this same solution (same as the Mode Analysis table row)">Mode
@@ -199,6 +211,7 @@
 			</select>
 		</label>
 		{#if R.dataset(ds)?.nModes}{@const mk = R.modeFor(ds, sol) ?? modeRows.find((m) => m.selected)?.k}<p class="muted small">Mode {modeRows.find((m) => m.k === mk)?.label ?? `k=${mk ?? 0}`} in {wb.solutionLabel(g.point)} (plot group Data, or Mode Analysis for this solution).</p>{/if}
+		{#if R.isSemi(ds)}<p class="muted small" data-feature-bias={R.biasIndex(ds, g.bias)}>Bias {biasLabel(wb.semi, R.biasIndex(ds, g.bias))} (plot group Data).</p>{/if}
 	{/if}
 	{#if f.type === 'surface' || f.type === 'contour' || f.type === 'maxmin'}
 		{@render selectionField(f)}
@@ -270,17 +283,19 @@
 	{:else if f.type === 'global'}
 		<h4>Data</h4>
 		<label class="f" data-tip="Parametric sweep points, or the RF frequency sweep of the solution">Dataset
-			<select aria-label="Global dataset" value={f.dataset} onchange={(e) => (f.dataset = e.currentTarget.value)}><option value="sweep">Parametric sweep</option><option value="rf" disabled={!R.dataset('rf')}>RF frequency sweep</option></select>
+			<select aria-label="Global dataset" value={f.dataset} onchange={(e) => (f.dataset = e.currentTarget.value)}><option value="sweep">Parametric sweep</option><option value="rf" disabled={!R.dataset('rf')}>RF frequency sweep</option><option value="bias" disabled={!wb.semi}>Bias sweep (semiconductor)</option></select>
 		</label>
 		<h4>y-axis data</h4>
 		{#if f.dataset === 'rf'}
 			<div class="f"><span>Expressions</span><ExprInput {wb} dataset="rf" value={f.exprs} unit={f.unit} label="Global expressions" extra={rfVars} onchange={(v) => (f.exprs = v)} /></div>
+		{:else if f.dataset === 'bias'}
+			<div class="f"><span>Expressions</span><ExprInput {wb} dataset="" local value={f.exprs} label="Global expressions" extra={biasVariables(wb.semi)} onchange={(v) => (f.exprs = v)} /></div>
 		{:else}
 			<div class="f"><span>Expressions</span><ExprInput {wb} dataset="" local value={f.exprs} label="Global expressions" extra={sweepVars} onchange={(v) => (f.exprs = v)} /></div>
 		{/if}
 		<div class="f"><span>Unit</span><UnitInput {wb} dataset={f.dataset === 'rf' ? 'rf' : ''} local={f.dataset !== 'rf'} expr={f.exprs.split(',')[0] ?? ''} value={f.unit} onchange={(v) => (f.unit = v)} /></div>
 		<label class="f" data-tip="Second y axis for quantities of another unit">y axis <select aria-label="y axis" value={f.yAxis} onchange={(e) => (f.yAxis = e.currentTarget.value as Feature['yAxis'])}><option value="left">left</option><option value="right">right</option></select></label>
-		<p class="muted small">Comma-separated expressions, one series each, vs {f.dataset === 'rf' ? 'frequency' : 'the first swept parameter'}; the study's sweep targets of a named quantity are overlaid.</p>
+		<p class="muted small">Comma-separated expressions, one series each, vs {f.dataset === 'rf' ? 'frequency' : f.dataset === 'bias' ? 'the bias of the swept contact (all bias points of the last Compute); the semiconductor targets of a named quantity are overlaid' : 'the first swept parameter'}{f.dataset === 'bias' ? '' : "; the study's sweep targets of a named quantity are overlaid"}.</p>
 	{:else if f.type === 'tablegraph'}
 		<h4>Data</h4>
 		<label class="f">Table <select aria-label="Table" value={f.tableId} onchange={(e) => (f.tableId = e.currentTarget.value)}><option value="">choose a table</option>{#each R.tables as t}<option value={t.id}>{t.name}</option>{/each}</select></label>

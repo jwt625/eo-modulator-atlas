@@ -32,6 +32,12 @@ export interface Feature {
 	range: RangeSpec;
 	/** Data range: values outside [min, max] are not drawn (COMSOL Range > Manual data range). */
 	dataRange: { manual: boolean; min: number; max: number };
+	/**
+	 * Automatic colour range from all values ('data') or from the optical-mode region ('mode': lattice points where
+	 * `modeExpr` >= e^-2 of its peak, evaluated on the feature's dataset; DevLog-042 round 2, audit F1).
+	 */
+	rangeFrom?: 'data' | 'mode';
+	modeExpr?: string;
 	table: ColormapName;
 	reverse: boolean;
 	legend: boolean;
@@ -75,6 +81,8 @@ export interface PlotGroup {
 	dataset: string;
 	/** Parameter value: -1 = the last Compute, else the sweep point index (Parametric dataset). */
 	point: number;
+	/** S8 bias point of semiconductor datasets (DevLog-042): null = last bias point, -1 = reference bias, k = point k. */
+	bias?: number | null;
 	features: Feature[];
 	titleMode: 'auto' | 'custom' | 'none';
 	title: string;
@@ -92,12 +100,15 @@ export interface CutLine extends LineSpec {
 	source: string;
 	/** Solution of the source: -1 = last Compute, else the sweep point index. */
 	point: number;
+	/** Bias point of a semiconductor source (null = last). */
+	bias?: number | null;
 }
 export interface CutPoint {
 	id: string;
 	name: string;
 	source: string;
 	point: number;
+	bias?: number | null;
 	x: number;
 	y: number;
 }
@@ -105,6 +116,8 @@ export interface Selection {
 	id: string;
 	name: string;
 	regions: string[];
+	/** Created by the default set (e.g. 'semiconductor'); re-created only when missing. */
+	auto?: string;
 }
 export interface DerivedNode {
 	id: string;
@@ -118,6 +131,8 @@ export interface DerivedNode {
 	tableId: string;
 	/** Parameter value (global and surface kinds; line/point kinds use their cut line/point's): -1 = last Compute. */
 	point: number;
+	/** Bias point of a semiconductor dataset (global and surface kinds; null = last). */
+	bias?: number | null;
 }
 /** Wide table: one row per evaluation; numeric parameter and value columns (headers carry the unit). */
 export interface Table {
@@ -233,6 +248,21 @@ export class Results {
 	mode(ds: string): number {
 		return this.modeOf[ds] ?? this.dataset(ds)?.mode ?? 0;
 	}
+	/** S8: a semiconductor dataset (addressed with a bias index instead of a mode). */
+	isSemi(ds: string): boolean {
+		return this.dataset(ds)?.kind === 'semi';
+	}
+	/** Bias point shown by a view (null = last point; clamped to the solution's bias points; -1 = reference bias). */
+	biasIndex(ds: string, bias: number | null | undefined): number {
+		const n = this.dataset(ds)?.nBias ?? 0;
+		if (!n) return -1;
+		if (bias == null || bias >= n || bias < -1) return n - 1;
+		return bias;
+	}
+	/** Mode (optical datasets) or bias index (semiconductor datasets) of a request from a view. */
+	indexFor(ds: string, sol: string | undefined, bias: number | null | undefined): number | undefined {
+		return this.isSemi(ds) ? this.biasIndex(ds, bias) : this.modeFor(ds, sol);
+	}
 	selectionRegions(id: string): string[] | null {
 		if (!id) return null;
 		return this.selections.find((s) => s.id === id)?.regions ?? null;
@@ -339,7 +369,7 @@ export class Results {
 	// ---- plot groups and features ----
 	addGroup(kind: '2d' | '1d', dataset = '', name?: string, features: Feature[] = [], auto = ''): PlotGroup {
 		this.breakStep();
-		const g: PlotGroup = { id: uid('pg'), name: name ?? nextName(`${kind === '2d' ? '2D' : '1D'} Plot Group`, this.groups.map((x) => x.name)), kind, dataset: dataset || (kind === '2d' ? (this.fieldSets[0]?.id ?? '') : ''), point: -1, features: [], titleMode: 'auto', title: '', edges: true, logX: false, logY: false, auto };
+		const g: PlotGroup = { id: uid('pg'), name: name ?? nextName(`${kind === '2d' ? '2D' : '1D'} Plot Group`, this.groups.map((x) => x.name)), kind, dataset: dataset || (kind === '2d' ? (this.fieldSets[0]?.id ?? '') : ''), point: -1, bias: null, features: [], titleMode: 'auto', title: '', edges: true, logX: false, logY: false, auto };
 		for (const f of features) g.features.push({ ...f, name: f.name === FEATURE_LABEL[f.type] ? nextName(FEATURE_LABEL[f.type], g.features.map((x) => x.name)) : f.name });
 		this.groups = [...this.groups, g];
 		return this.groups[this.groups.length - 1];
@@ -407,9 +437,9 @@ export class Results {
 		this.cutPoints = [...this.cutPoints, c];
 		return this.cutPoints[this.cutPoints.length - 1];
 	}
-	addSelection(regions: string[] = [], name?: string): Selection {
+	addSelection(regions: string[] = [], name?: string, auto?: string): Selection {
 		this.breakStep();
-		const s: Selection = { id: uid('sel'), name: name ?? nextName('Selection', this.selections.map((x) => x.name)), regions };
+		const s: Selection = { id: uid('sel'), name: name ?? nextName('Selection', this.selections.map((x) => x.name)), regions, ...(auto ? { auto } : {}) };
 		this.selections = [...this.selections, s];
 		return this.selections[this.selections.length - 1];
 	}
@@ -451,7 +481,7 @@ export class Results {
 	 * variables the solution registry provides; groups needing an absent variable are not created. Arm datasets that
 	 * alias the optical model get no groups of their own.
 	 */
-	defaults(has: (ds: string, v: string) => boolean, opts: { rf: boolean; sweep: Record<string, number> | null; sweepMetric?: { name: string; unit: string } | null }) {
+	defaults(has: (ds: string, v: string) => boolean, opts: { rf: boolean; response?: boolean; bloch?: boolean; sweep: Record<string, number> | null; sweepMetric?: { name: string; unit: string } | null; semi?: { regions: string[] } | null }) {
 		const ensure = (key: string, make: () => void) => {
 			if (!this.groups.some((g) => g.auto === key)) make();
 		};
@@ -490,6 +520,56 @@ export class Results {
 				newFeature('global', { dataset: 'rf', exprs: 'rf.alpha_dB', unit: 'dB/cm', name: 'Attenuation' }),
 				newFeature('global', { dataset: 'rf', exprs: 'rf.nRF', unit: '1', name: 'RF index', yAxis: 'right' })
 			], 'rf'));
+		// DevLog-036: traveling-wave EO response (paper targets overlaid by Plot1D) and the loaded-line Bloch quantities.
+		if (opts.response)
+			ensure('response', () => this.addGroup('1d', '', 'EO Response', [
+				newFeature('global', { dataset: 'rf', exprs: 'rf.S21EO_dB', unit: 'dB', name: 'S21 EO' })
+			], 'response'));
+		if (opts.bloch)
+			ensure('bloch', () => this.addGroup('1d', '', 'Loaded Line', [
+				newFeature('global', { dataset: 'rf', exprs: 'rf.nB', unit: '1', name: 'Bloch index' }),
+				newFeature('global', { dataset: 'rf', exprs: 'real(rf.ZB)', unit: 'ohm', name: 'Bloch impedance', yAxis: 'right' })
+			], 'bloch'));
+		// S8 (DevLog-042): semiconductor fields on the semiconductor domains (n, p are zero in insulators), the optical
+		// mode as a contour overlay, and the per-bias stage values on the Bias sweep dataset.
+		const sd = this.datasets.find((d) => d.kind === 'semi');
+		if (sd && opts.semi) {
+			let sel = this.selections.find((x) => x.auto === 'semiconductor');
+			if (!sel && opts.semi.regions.length) sel = this.addSelection([...opts.semi.regions], 'Semiconductor', 'semiconductor');
+			const only = sel?.id ?? '';
+			const opt = this.datasets.find((d) => d.kind === 'opt');
+			const mode = opt ? this.intensityExpr(opt.id, has) : '';
+			const overlay = () => (opt && mode ? [newFeature('contour', { name: 'Optical mode', dataset: opt.id, expr: mode, unit: '', count: 5, coloring: 'uniform', color: '#ffffff', legend: false, description: 'optical mode intensity' })] : []);
+			const surf = (expr: string, unit: string, over: Partial<Feature> = {}) => newFeature('surface', { expr, unit, table: 'Rainbow', selection: only, ...over });
+			if (has(sd.id, 'semi.Nnet'))
+				ensure('semi:doping', () => this.addGroup('2d', sd.id, 'Net Doping', [
+					surf('semi.Nnet', '1/cm^3', { table: 'Wave', description: 'N_D - N_A', range: { manual: false, min: 0, max: 1, scale: 'symlog' } }),
+					newFeature('contour', { name: 'Junction', expr: 'semi.Nnet', unit: '1/cm^3', levelsMode: 'list', list: '0', coloring: 'uniform', color: '#000000', legend: false, selection: only, description: 'N_D - N_A = 0' })
+				], 'semi:doping'));
+			if (has(sd.id, 'semi.n')) ensure('semi:n', () => this.addGroup('2d', sd.id, 'Electron Density', [surf('semi.n', '1/cm^3', { description: 'electron density n', range: { manual: false, min: 0, max: 1, scale: 'log' } })], 'semi:n'));
+			if (has(sd.id, 'semi.p')) ensure('semi:p', () => this.addGroup('2d', sd.id, 'Hole Density', [surf('semi.p', '1/cm^3', { description: 'hole density p', range: { manual: false, min: 0, max: 1, scale: 'log' } })], 'semi:p'));
+			if (has(sd.id, 'semi.psi'))
+				ensure('semi:psi', () => this.addGroup('2d', sd.id, 'Potential and Quasi-Fermi Levels', [
+					newFeature('surface', { expr: 'semi.psi', unit: 'V', table: 'Rainbow', description: 'potential psi' }),
+					...(has(sd.id, 'semi.phin') ? [newFeature('contour', { name: 'phi_n', expr: 'semi.phin', unit: 'V', count: 10, coloring: 'uniform', color: '#ffffff', legend: false, selection: only, description: 'electron quasi-Fermi potential' })] : []),
+					...(has(sd.id, 'semi.phip') ? [newFeature('contour', { name: 'phi_p', expr: 'semi.phip', unit: 'V', count: 10, coloring: 'uniform', color: '#000000', legend: false, selection: only, description: 'hole quasi-Fermi potential' })] : [])
+				], 'semi:psi'));
+			// Audit F1: the primary Delta groups show the bias-induced change (what dn_eff integrates; zero in the
+			// bias-independent contacts); the absolute fields vs undoped Si are secondary, ranged on the mode region.
+			const modeRange: Partial<Feature> = opt && mode && has(sd.id, mode.replace(/\^2$/, '')) ? { rangeFrom: 'mode', modeExpr: mode } : {};
+			if (has(sd.id, 'semi.dn_bias')) ensure('semi:dnb', () => this.addGroup('2d', sd.id, 'Delta n (bias)', [surf('semi.dn_bias', '1', { description: 'index change from the reference bias' }), ...overlay()], 'semi:dnb'));
+			if (has(sd.id, 'semi.dalpha_bias')) ensure('semi:dab', () => this.addGroup('2d', sd.id, 'Delta alpha (bias)', [surf('semi.dalpha_bias', '1/cm', { description: 'absorption change from the reference bias' }), ...overlay()], 'semi:dab'));
+			if (has(sd.id, 'semi.delta_n')) ensure('semi:dn', () => this.addGroup('2d', sd.id, 'Delta n vs undoped', [surf('semi.delta_n', '1', { description: 'free-carrier index change vs undoped Si', ...modeRange }), ...overlay()], 'semi:dn'));
+			if (has(sd.id, 'semi.delta_alpha')) ensure('semi:dalpha', () => this.addGroup('2d', sd.id, 'Delta alpha vs undoped', [surf('semi.delta_alpha', '1/cm', { description: 'free-carrier absorption vs undoped Si', ...modeRange, range: { manual: false, min: 0, max: 1, scale: 'log' } }), ...overlay()], 'semi:dalpha'));
+			const bias1d = (key: string, name: string, items: [string, string, string, ('left' | 'right')?][]) =>
+				ensure(key, () => this.addGroup('1d', '', name, items.map(([exprs, unit, n, yAxis]) => newFeature('global', { dataset: 'bias', exprs, unit, name: n, yAxis: yAxis ?? 'left' })), key));
+			bias1d('semi:C', "C'(V)", [['semi.C', 'pF/mm', "C'"]]);
+			bias1d('semi:R', "R'(V)", [['semi.R', 'ohm*mm', "R'"]]);
+			bias1d('semi:fRC', 'f_RC(V)', [['semi.fRC', 'GHz', 'f_RC']]);
+			bias1d('semi:dneff', 'dn_eff(V)', [['semi.dneff', '1', 'dn_eff']]);
+			bias1d('semi:dalpha1d', 'd alpha(V)', [['semi.dalpha_dB', '1', 'd alpha']]);
+			bias1d('semi:vpil', 'VpiL(V)', [['semi.VpiL', 'V*cm', 'single arm, secant'], ['semi.VpiL_diff', 'V*cm', 'single arm, small signal'], ['semi.VpiL_pp', 'V*cm', 'push-pull']]);
+		}
 		// Sweep: the study's targeted quantity (with its paper points), else the first of VpiL, Z0, C present.
 		const sw = opts.sweep;
 		const pick = opts.sweepMetric && sw && opts.sweepMetric.name in sw ? [opts.sweepMetric.name, opts.sweepMetric.unit] : sw ? ([['VpiL', 'V*cm'], ['Z0', 'ohm'], ['C', 'pF/m']] as const).find(([n]) => n in sw) : null;

@@ -90,4 +90,5 @@ export interface ScalarField {
 	signed: boolean;
 }
 
-export type ScaleMode = 'linear' | 'symmetric' | 'log';
+/** linear; symmetric (+-max|v|); log (log10 |v|); symlog: signed log, sign(v) log10 |v| over the decades of the range (DevLog-042). */
+export type ScaleMode = 'linear' | 'symmetric' | 'log' | 'symlog';

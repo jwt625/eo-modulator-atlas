@@ -9,12 +9,19 @@ import { interpolateRefined } from '../../../../engine/src/postproc/index.mjs';
 import { prettyUnit } from './post/ui';
 
 /** Display range of a feature: manual, else automatic from the evaluated min/max (log: positive |v| range). */
-export function featureRange(f: Feature, p: PlotResult): Range {
+export function featureRange(f: Feature, p: PlotResult, region?: Float64Array | null): Range {
 	const scale = f.range.scale;
-	if (f.range.manual && Number.isFinite(f.range.min) && Number.isFinite(f.range.max) && f.range.max > f.range.min && !(scale === 'log' && f.range.min <= 0))
+	const logLike = scale === 'log' || scale === 'symlog';
+	if (f.range.manual && Number.isFinite(f.range.min) && Number.isFinite(f.range.max) && f.range.max > f.range.min && !(logLike && f.range.min <= 0))
 		return { min: f.range.min, max: f.range.max };
-	if (scale === 'log') return autoRange(p.values, 'log');
+	// DevLog-042 round 2 (audit F1): automatic range over the optical-mode region only (values outside clamp to the ends)
+	const sub = f.rangeFrom === 'mode' && region && region.length === p.values.length ? modeRegionValues(p.values, region) : null;
+	if (logLike) return autoRange(sub ?? p.values, scale);
 	let { min, max } = p;
+	if (sub && sub.length) {
+		min = Infinity; max = -Infinity;
+		for (const v of sub) { if (v < min) min = v; if (v > max) max = v; }
+	}
 	if (!Number.isFinite(min) || !Number.isFinite(max)) return { min: 0, max: 1 };
 	if (scale === 'symmetric') {
 		const a = Math.max(Math.abs(min), Math.abs(max)) || 1;
@@ -27,6 +34,27 @@ export function featureRange(f: Feature, p: PlotResult): Range {
 	return { min, max };
 }
 
+/** Fraction of the peak of the mode intensity that bounds the mode region (|E|^2 >= e^-2 of the peak). */
+export const MODE_REGION_FRACTION = Math.exp(-2);
+
+/** Finite values at the lattice points where the region weight (mode intensity, same lattice) >= e^-2 of its peak. */
+export function modeRegionValues(values: ArrayLike<number>, weight: ArrayLike<number>): Float64Array {
+	let peak = 0;
+	for (let i = 0; i < weight.length; i++) { const w = weight[i]; if (w > peak) peak = w; }
+	const out: number[] = [];
+	if (!(peak > 0)) return Float64Array.from(out);
+	const thr = peak * MODE_REGION_FRACTION;
+	for (let i = 0; i < values.length; i++) if (weight[i] >= thr && Number.isFinite(values[i])) out.push(values[i]);
+	return Float64Array.from(out);
+}
+
+/** Count of finite values below the lower end of a log range (|v| > 0), i.e. drawn at the floor colour. */
+export function belowLogRange(values: ArrayLike<number>, r: Range): number {
+	let n = 0;
+	for (let i = 0; i < values.length; i++) { const a = Math.abs(values[i]); if (a > 0 && a < r.min) n++; }
+	return n;
+}
+
 /** Contour levels: N levels evenly inside the range (geometric for log), or an explicit list (display unit). */
 export function contourLevels(f: Feature, r: Range): number[] {
 	if (f.levelsMode === 'list')
@@ -35,7 +63,11 @@ export function contourLevels(f: Feature, r: Range): number[] {
 	const out: number[] = [];
 	for (let i = 1; i <= n; i++) {
 		const u = i / (n + 1);
-		out.push(f.range.scale === 'log' && r.min > 0 ? 10 ** (Math.log10(r.min) + u * (Math.log10(r.max) - Math.log10(r.min))) : r.min + u * (r.max - r.min));
+		if (f.range.scale === 'symlog' && r.min > 0) {
+			// evenly in the signed-log coordinate t = u: negative decades below the centre, positive above
+			const w = Math.abs(2 * u - 1);
+			out.push(Math.sign(2 * u - 1) * 10 ** (Math.log10(r.min) + w * (Math.log10(r.max) - Math.log10(r.min))));
+		} else out.push(f.range.scale === 'log' && r.min > 0 ? 10 ** (Math.log10(r.min) + u * (Math.log10(r.max) - Math.log10(r.min))) : r.min + u * (r.max - r.min));
 	}
 	return out;
 }

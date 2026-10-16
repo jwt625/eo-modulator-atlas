@@ -4,6 +4,7 @@
 	import { DERIVED_LABEL, FEATURE_LABEL, FEATURES_1D, FEATURES_2D, type FeatureType } from './results.svelte';
 	import type { DerivedKind } from './post/contract';
 	import Icon from './Icon.svelte';
+	import { cm3Label, dopingShapes, semiContacts } from './semiOverlay';
 
 	let { wb }: { wb: Workbench } = $props();
 	const R = $derived(wb.results);
@@ -21,7 +22,7 @@
 		hidden?: boolean;
 	}
 
-	let collapsed = $state<Record<string, boolean>>({ materials: false, geometry: true });
+	let collapsed = $state<Record<string, boolean>>({ materials: false, geometry: true, semi: false });
 	let renaming = $state<string | null>(null);
 	let renameText = $state('');
 	let menu = $state<{ id: string; x: number; y: number } | null>(null);
@@ -33,7 +34,7 @@
 		const stageTag = (id: string): Node['tag'] => {
 			const err = wb.stageError(id);
 			if (err) return { text: 'blocked', kind: 'crit' };
-			if (id !== 'electrostatics' && !wb.selected.includes(id)) return { text: 'off', kind: 'muted' };
+			if (id !== 'electrostatics' && !wb.selected.includes(id) && !wb.stageAuto(id)) return { text: 'off', kind: 'muted' };
 			return undefined;
 		};
 		const resTag: Node['tag'] = !wb.result ? { text: 'empty', kind: 'muted' } : wb.stale ? { text: 'stale', kind: 'warn' } : undefined;
@@ -49,12 +50,22 @@
 			g.electrodes.forEach((e, i) => out.push({ id: `electrode:${i}`, label: e.name, depth: 2, tip: `Electrode ${e.name}, weight ${e.weight}` }));
 		}
 		out.push({ id: 'mesh', label: 'Mesh', depth: 1, tip: 'Mesh hints, level, build and statistics', tag: wb.meshStale ? { text: 'stale', kind: 'warn' } : undefined });
-		out.push({ id: 'physics.es', label: 'Electrostatics', depth: 1, tip: 'Quasi-static electrostatics (always runs)', tag: wb.parsed.error ? { text: 'blocked', kind: 'crit' } : undefined });
+		out.push({ id: 'physics.es', label: 'Electrostatics', depth: 1, tip: wb.semiSelected ? 'Quasi-static electrostatics (not run with the Semiconductor stage, which solves its own Poisson equation)' : 'Quasi-static electrostatics (always runs)', tag: wb.parsed.error ? { text: 'blocked', kind: 'crit' } : wb.semiSelected ? { text: 'off', kind: 'muted' } : undefined });
 		out.push({ id: 'physics.mode', label: 'Mode Analysis', depth: 1, tip: wb.stageError('optical_mode') ?? `Optical eigenmode (${wb.raw?.optics?.solver ?? 'scalar'} solver)`, tag: stageTag('optical_mode') });
 		out.push({ id: 'physics.eo', label: 'EO Coupling', depth: 1, tip: wb.stageError('eo_overlap') ?? 'DC first-order Pockels overlap', tag: stageTag('eo_overlap') });
-		out.push({ id: 'physics.rf', label: 'RF Line', depth: 1, tip: wb.stageError('rf_line') ?? 'Uniform quasi-TEM line', tag: stageTag('rf_line') });
+		out.push({ id: 'physics.rf', label: 'RF Line', depth: 1, tip: wb.stageError('rf_line') ?? 'Uniform quasi-TEM line; loaded line and EO response on the same page', tag: stageTag('rf_line') });
+		// S8 (DevLog-042): drift-diffusion physics with doping regions and contacts (drawn on the geometry when selected)
+		const semi = raw?.semiconductor as Record<string, unknown> | undefined;
+		if (semi) {
+			out.push({ id: 'physics.semi', label: 'Semiconductor', depth: 1, group: 'semi', tip: wb.stageError('semiconductor') ?? '2D drift-diffusion (Poisson + continuity), plasma dispersion; doping windows and contacts drawn on the geometry', tag: stageTag('semiconductor') });
+			if (!collapsed.semi) {
+				for (const d of dopingShapes(semi, g)) out.push({ id: `semi.doping:${d.index}`, label: d.name, depth: 2, tip: `Doping ${d.name}: ${d.species}, ${d.profile}${d.cm3 != null ? `, ${cm3Label(d.cm3)}` : ''}` });
+				for (const c of semiContacts(semi)) out.push({ id: `semi.contact:${c.index}`, label: `Contact ${c.electrode}`, depth: 2, tip: `${c.type} contact on electrode ${c.electrode}${c.biasV != null ? `, bias ${c.biasV} V` : ''}` });
+			}
+		}
 		out.push({ id: 'study', label: 'Study', depth: 0, tip: 'Stationary electrostatics and mode analysis' });
 		out.push({ id: 'study.stationary', label: 'Stationary + Mode', depth: 1, tip: 'Stages, mesh level, Compute' });
+		if (semi) out.push({ id: 'study.bias', label: 'Bias Sweep', depth: 1, tip: 'Semiconductor bias sweep: swept contact, bias values, reference bias, small signal and optics', tag: stageTag('semiconductor') });
 		out.push({ id: 'study.sweep', label: 'Parametric Sweep', depth: 1, tip: 'Sweep a parameter or YAML path on a worker pool', tag: wb.sweepRunning ? { text: 'running', kind: 'warn' } : undefined });
 		// Results in COMSOL order: Datasets, Selections, Derived Values, Tables, Plot Groups, Export.
 		out.push({ id: 'results', label: 'Results', depth: 0, tip: 'Datasets, selections, derived values, tables, plot groups, export', menu: true, tag: resTag });
@@ -72,12 +83,13 @@
 			out.push({ id: 'res.modes', label: 'Mode Analysis', depth: 2, tip: 'Effective mode index table per optical dataset; a row sets the mode of every plot of that dataset', tag: R.datasets.some((d) => d.nModes) ? undefined : { text: 'empty', kind: 'muted' } });
 			out.push({ id: 'res.eo', label: 'EO Coupling', depth: 2, tip: 'Per-arm dn/V, push-pull balance, VpiL, conventional overlap, breakdown tables', tag: wb.result?.eo ? resTag : { text: 'empty', kind: 'muted' } });
 			out.push({ id: 'results.targets', label: 'Targets', depth: 2, tip: 'Paper targets and evaluation status', tag: resTag });
+			if (semi || wb.semi) out.push({ id: 'res.semi', label: 'Semiconductor', depth: 2, tip: "Per-bias C', R', f_RC, dn_eff, d alpha, loss, VpiL, convergence; models and coefficients", tag: wb.semi ? resTag : { text: 'empty', kind: 'muted' } });
 			for (const d of R.derived) out.push({ id: `dv:${d.id}`, label: d.name, depth: 2, tip: `${DERIVED_LABEL[d.kind]}: ${d.expr || 'no expression'}`, menu: true, renamable: true });
 		}
 		out.push({ id: 'res.tables', label: 'Tables', depth: 1, group: 'tables', menu: true, tip: 'Tables filled by Derived Values (CSV export, Table Graph)' });
 		if (!collapsed.tables) {
 			for (const t of R.tables) out.push({ id: `tbl:${t.id}`, label: t.name, depth: 2, tip: `${t.rows.length} row(s)`, menu: true, renamable: true });
-			out.push({ id: 'results.rf', label: 'RF Line', depth: 2, tip: 'RF line results and frequency sweep table', tag: wb.result?.rf ? resTag : { text: 'empty', kind: 'muted' } });
+			out.push({ id: 'results.rf', label: 'RF Line', depth: 2, tip: 'RF line, loaded line (Bloch) and EO response results', tag: wb.result?.rf || wb.result?.loaded || wb.result?.response ? resTag : { text: 'empty', kind: 'muted' } });
 		}
 		for (const pg of R.groups) {
 			out.push({ id: `pg:${pg.id}`, label: pg.name, depth: 1, group: `pg:${pg.id}`, menu: true, renamable: true, tip: `${pg.kind === '2d' ? '2D' : '1D'} Plot Group, ${pg.features.length} feature(s)${pg.dataset ? `, dataset ${R.dsLabel(pg.dataset)}` : ''}; click to plot` });
@@ -97,6 +109,10 @@
 		if (id.startsWith('region:')) return { regions: [g.regions[Number(id.slice(7))]?.name], electrodes: [] };
 		if (id.startsWith('electrode:')) return { regions: [], electrodes: [g.electrodes[Number(id.slice(10))]?.name] };
 		if (id.startsWith('sel:')) return { regions: R.selections.find((s) => s.id === id.slice(4))?.regions ?? [], electrodes: [] };
+		if (id.startsWith('semi.contact:')) {
+			const c = semiContacts(wb.raw?.semiconductor as Record<string, unknown> | undefined)[Number(id.slice(13))];
+			return c ? { regions: [], electrodes: [c.electrode] } : null;
+		}
 		return null;
 	}
 
@@ -108,8 +124,8 @@
 		// COMSOL: selecting a plot group (or one of its features) plots it; Geometry/Mesh nodes show their own views.
 		if (n.id.startsWith('pg:')) wb.view = n.id.slice(3);
 		else if (n.id.startsWith('pf:')) wb.view = n.id.split(':')[1];
-		else if (n.id === 'mesh' && (wb.mesh || wb.meshes.es)) wb.view = 'mesh';
-		else if (n.id === 'geometry' || n.id.startsWith('region:') || n.id.startsWith('electrode:')) wb.view = 'geometry';
+		else if (n.id === 'mesh' && (wb.mesh || wb.solvedMesh)) wb.view = 'mesh';
+		else if (n.id === 'geometry' || n.id.startsWith('region:') || n.id.startsWith('electrode:') || n.id === 'physics.semi' || n.id.startsWith('semi.')) wb.view = 'geometry';
 	}
 
 	function onKey(e: KeyboardEvent) {

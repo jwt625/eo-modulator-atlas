@@ -1,6 +1,6 @@
 // Solutions a 1D plot group draws (one statement for the settings page, the graphics header and the CSV): Line
 // Graphs use their cut line's solution, RF Global features the group's Parameter value, parametric Global features all
-// sweep points, Table Graphs the table rows (Solution column).
+// sweep points, Bias sweep Global features all bias points of the last Compute, Table Graphs the table rows.
 import type { Workbench } from './workbench.svelte';
 import type { PlotGroup } from './results.svelte';
 
@@ -22,7 +22,8 @@ export function oneDSolutions(wb: Workbench, g: PlotGroup): { labels: string[]; 
 		} else if (f.type === 'global' && f.dataset === 'rf') {
 			hasRf = true;
 			add(wb.solutionLabel(g.point), tagOf(g.point));
-		} else if (f.type === 'global') add('all sweep points', 'sweep');
+		} else if (f.type === 'global' && f.dataset === 'bias') add(`${wb.solutionLabel(-1)}, all bias points`, 'bias');
+		else if (f.type === 'global') add('all sweep points', 'sweep');
 		else if (f.type === 'tablegraph') {
 			const t = R.tables.find((x) => x.id === f.tableId);
 			if (t) add(`table ${t.name} (Solution column)`, 'table');

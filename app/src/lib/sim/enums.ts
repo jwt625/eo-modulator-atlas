@@ -25,5 +25,16 @@ export const ENUMS = {
 	conductorLoss: enumAt(['properties', 'line', 'properties', 'conductor_loss_model']),
 	dielectricLoss: enumAt(['properties', 'line', 'properties', 'dielectric_loss_model']),
 	symmetry: enumAt(['$defs', 'geometry', 'properties', 'symmetry']),
-	boundary: enumAt(['$defs', 'geometry', 'properties', 'boundary', 'properties', 'left'])
+	boundary: enumAt(['$defs', 'geometry', 'properties', 'boundary', 'properties', 'left']),
+	// S8 semiconductor block (DevLog-039 $defs/semiconductor)
+	semiMobility: enumAt(['$defs', 'semiconductor', 'properties', 'materials', 'additionalProperties', 'properties', 'mobility', 'properties', 'doping']),
+	semiDonor: enumAt(['$defs', 'semiconductor', 'properties', 'materials', 'additionalProperties', 'properties', 'mobility', 'properties', 'donor']),
+	semiField: enumAt(['$defs', 'semiconductor', 'properties', 'materials', 'additionalProperties', 'properties', 'mobility', 'properties', 'field']),
+	semiProfile: enumAt(['$defs', 'semiconductor', 'properties', 'doping', 'items', 'properties', 'profile']),
+	semiSpecies: enumAt(['$defs', 'semiconductor', 'properties', 'doping', 'items', 'properties', 'species']),
+	plasma: enumAt(['$defs', 'semiconductor', 'properties', 'optics', 'properties', 'plasma_dispersion']),
+	semiDrive: enumAt(['$defs', 'semiconductor', 'properties', 'optics', 'properties', 'drive']),
+	densityBasis: enumAt(['$defs', 'semiconductor', 'properties', 'optics', 'properties', 'density_basis']),
+	deltaEps: enumAt(['$defs', 'semiconductor', 'properties', 'optics', 'properties', 'delta_eps']),
+	poissonDomain: enumAt(['$defs', 'semiconductor', 'properties', 'poisson_domain'])
 };

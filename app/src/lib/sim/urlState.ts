@@ -34,7 +34,8 @@ export function writeUrlState(s: SimUrlState): string {
 	if (s.id) p.set('id', s.id);
 	if (s.section && s.section !== 'geometry') p.set('section', s.section);
 	if (s.mesh != null && s.mesh !== 1) p.set('mesh', String(s.mesh));
-	if (s.stages && s.stages.length) p.set('stages', s.stages.join(','));
+	// an empty list is written too, so a link with no stages does not reload with the config chain (DevLog-042 round 2)
+	if (s.stages) p.set('stages', s.stages.join(','));
 	for (const [k, v] of s.overrides) p.append('set', `${k}=${v}`);
 	if (s.sweep) {
 		p.set('sweep', s.sweep.path);

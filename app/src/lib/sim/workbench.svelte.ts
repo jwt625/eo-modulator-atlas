@@ -14,12 +14,23 @@ import { PostCache } from './plots.svelte';
 import { PostClient } from './post/client';
 import type { DatasetInfo, PointSolution, VariableInfo } from './post/contract';
 import { GLOBAL_VARIABLES, METRIC_GLOBAL } from './post/ui';
+import { semiOf, type SemiResult } from './semi';
 
 export const OPTIONAL = [
 	{ id: 'optical_mode', label: 'Optical mode' },
 	{ id: 'eo_overlap', label: 'EO overlap' },
-	{ id: 'rf_line', label: 'RF line' }
+	{ id: 'rf_line', label: 'RF line' },
+	{ id: 'loaded_line', label: 'Loaded line' },
+	{ id: 'eo_response', label: 'EO response' },
+	{ id: 'semiconductor', label: 'Semiconductor' }
 ] as const;
+
+/**
+ * S8 (DevLog-039, DevLog-042): the semiconductor stage runs on its own device mesh without the cross-section stages.
+ * Stages the engine runs after it (DevLog-036 round 4-5: eo_response with its rf_line on `line.rf_section` at
+ * `semiconductor.operating_bias_v`); `Workbench.semiCombinable` also requires both config keys.
+ */
+export const SEMI_COMBINABLE: readonly string[] = ['eo_response'];
 
 export const MESH_LEVELS = [
 	{ value: 4, label: 'Extra coarse (4x edge)' },
@@ -150,6 +161,12 @@ export class Workbench {
 	geometry: Geometry | null = $derived(this.parsed.config?.geometries[this.section] ?? null);
 	sections = $derived(Object.keys(this.parsed.config?.geometries ?? {}));
 	runStages = $derived(OPTIONAL.map((s) => s.id).filter((id) => this.selected.includes(id)) as string[]);
+	/** Optional stages offered for this config (the semiconductor stage only with a `semiconductor` block). */
+	stageList = $derived(OPTIONAL.filter((s) => s.id !== 'semiconductor' || this.raw?.semiconductor != null));
+	/** The semiconductor stage is selected (it runs alone: no electrostatics). */
+	semiSelected = $derived(this.selected.includes('semiconductor'));
+	/** Semiconductor stage result of the shown run (DevLog-039), or null. */
+	semi: SemiResult | null = $derived(semiOf(this.result));
 	currentKey = $derived(JSON.stringify([this.text, this.section, this.runStages, this.meshScale]));
 	stale = $derived(this.result !== null && this.currentKey !== this.runKey);
 	blocked = $derived(this.selected.filter((id) => this.stageError(id)));
@@ -199,6 +216,35 @@ export class Workbench {
 		return this.parsed.stages?.[id] ?? null;
 	}
 
+	/** A stage the engine can run after the semiconductor stage in one Compute (config keys present). */
+	semiCombinable(id: string): boolean {
+		return SEMI_COMBINABLE.includes(id) && this.raw?.line?.rf_section != null && this.raw?.semiconductor?.operating_bias_v != null;
+	}
+
+	/**
+	 * Stages of a freshly loaded config (no `stages` in the URL): the config `chain` when every optional stage of it
+	 * passes readiness (configs whose chain is partly blocked load with none, as before).
+	 */
+	seedStages() {
+		const chain = ((this.raw?.chain ?? []) as string[]).filter((s) => s !== 'electrostatics' && this.stageList.some((o) => o.id === s));
+		if (!chain.length || chain.some((s) => this.stageError(s))) return;
+		this.selected = chain;
+		this.addLog(`Stages from the config chain: ${chain.join(', ')}`);
+	}
+
+	/**
+	 * DevLog-036 round 2 (S9): a stage the engine adds as a dependency of a selected stage (eo_response adds
+	 * optical_mode and rf_line, or loaded_line on a periodic_t_rail line); null when not added.
+	 */
+	stageAuto(id: string): string | null {
+		if (!this.selected.includes('eo_response') || this.selected.includes(id)) return null;
+		// semiconductor + eo_response: the engine runs rf_line on line.rf_section; the optical mode is the stage's own
+		if (this.selected.includes('semiconductor')) return id === 'rf_line' ? `Runs on line.rf_section (${String(this.raw?.line?.rf_section ?? '-')}) as a dependency of EO response after the Semiconductor stage` : null;
+		const periodic = this.raw?.line?.loading?.type === 'periodic_t_rail';
+		const deps = ['optical_mode', periodic ? 'loaded_line' : 'rf_line'];
+		return deps.includes(id) ? 'Runs as a dependency of EO response (added by the engine)' : null;
+	}
+
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	rawAt(path: string, doc: unknown = this.raw): any {
 		let v: unknown = doc;
@@ -213,7 +259,14 @@ export class Workbench {
 	}
 
 	toggleStage(id: string, on: boolean) {
-		this.selected = on ? [...new Set([...this.selected, id])] : this.selected.filter((s) => s !== id);
+		let next = on ? [...new Set([...this.selected, id])] : this.selected.filter((s) => s !== id);
+		// The semiconductor stage runs without the cross-section stages (eo_response may follow it when the config has
+		// line.rf_section and semiconductor.operating_bias_v): selecting it clears the others, selecting another clears it.
+		if (on && id === 'semiconductor') next = next.filter((s) => s === 'semiconductor' || this.semiCombinable(s));
+		else if (on && !this.semiCombinable(id)) next = next.filter((s) => s !== 'semiconductor');
+		const dropped = this.selected.filter((s) => !next.includes(s) && s !== id);
+		if (dropped.length) this.addLog(`${id === 'semiconductor' ? 'Semiconductor stage runs alone' : 'Semiconductor stage deselected'}: ${dropped.join(', ')} ${dropped.length > 1 ? 'are' : 'is'} off`, 'warn');
+		this.selected = next;
 	}
 
 	/** Load a fetched config text and apply URL overrides. */
@@ -251,6 +304,16 @@ export class Workbench {
 			this.text = setIn(this.text, splitPath(path), value);
 			if (typeof value !== 'boolean') this.overrides = [...this.overrides.filter(([k]) => k !== path), [path, value]];
 			this.addLog(`Set ${path} = ${value}`);
+		} catch (e) {
+			this.addLog(`Edit of ${path} failed: ${e instanceof Error ? e.message : e}`, 'error');
+		}
+	}
+
+	/** Form edit of a numeric list (e.g. semiconductor.bias.values_v), written as a YAML sequence. */
+	editList(path: string, values: number[]) {
+		try {
+			this.text = setIn(this.text, splitPath(path), values);
+			this.addLog(`Set ${path} = [${values.join(', ')}]`);
 		} catch (e) {
 			this.addLog(`Edit of ${path} failed: ${e instanceof Error ? e.message : e}`, 'error');
 		}
@@ -422,6 +485,11 @@ export class Workbench {
 		return ds?.mesh ? (this.meshes[point >= 0 ? `sweep:${point}/${ds.mesh}` : ds.mesh] ?? null) : null;
 	}
 
+	/** Mesh of the shown solution for the Mesh view: electrostatic, else the semiconductor device mesh (S8). */
+	get solvedMesh(): FieldMesh | null {
+		return this.meshes.es ?? this.meshes.semi ?? null;
+	}
+
 	has(ds: string, name: string): boolean {
 		return !!this.vars[ds]?.some((v) => v.name === name);
 	}
@@ -529,7 +597,7 @@ export class Workbench {
 		const started = performance.now();
 		let last = started;
 		const stages = $state.snapshot(this.runStages) as string[];
-		this.progressRows = [{ t: Date.now(), level: 'info', msg: `Compute: ${this.section}, stages electrostatics${stages.length ? ', ' + stages.join(', ') : ''}, mesh level ${this.meshScale}` }];
+		this.progressRows = [{ t: Date.now(), level: 'info', msg: `Compute: ${this.section}, stages ${stages.includes('semiconductor') ? stages.join(', ') : `electrostatics${stages.length ? ', ' + stages.join(', ') : ''}`}, mesh level ${this.meshScale}` }];
 		this.addLog(this.progressRows[0].msg);
 		try {
 			const w = this.newWorker();
@@ -599,18 +667,29 @@ export class Workbench {
 			this.vars = Object.fromEntries(datasets.map((ds, i) => [ds.id, lists[i]]));
 			this.registryMs = performance.now() - t0;
 			const before = new Set(this.results.groups.map((g) => g.id));
-			this.results.defaults((ds, v) => this.has(ds, v), { rf: !!this.result?.rf?.sweep, sweep: this.sweepRows.find((r) => r.globals)?.globals ?? null, sweepMetric: this.sweepMetricGlobal });
+			this.results.defaults((ds, v) => this.has(ds, v), { rf: !!this.result?.rf?.sweep, response: !!this.result?.response, bloch: !!this.result?.loaded?.lossless?.sweep, sweep: this.sweepRows.find((r) => r.globals)?.globals ?? null, sweepMetric: this.sweepMetricGlobal, semi: this.semiDefaults() });
 			// F3: the defaults are part of the new solution's baseline, not an undo step.
 			this.results.rebase();
 			const added = this.results.groups.filter((g) => !before.has(g.id));
 			if (added.length) this.addLog(`Default plot groups: ${added.map((g) => g.name).join(', ')}`);
 			if (this.view === 'geometry' || this.view === 'mesh' || !this.results.group(this.view)) {
-				const first = this.results.groups.find((g) => g.kind === '2d');
+				// S8: a semiconductor solve opens on its first own group (Net Doping), not the optical mode
+				const first = (this.semi ? this.results.groups.find((g) => g.auto === 'semi:doping') : null) ?? this.results.groups.find((g) => g.kind === '2d');
 				if (first) this.view = first.id;
 			}
 		} catch (e) {
 			this.addLog(`Results registry failed: ${e instanceof Error ? e.message : e}`, 'error');
 		}
+	}
+
+	/** Semiconductor regions of the solved device mesh (materials of the `semiconductor` block), for the default selection. */
+	private semiDefaults(): { regions: string[] } | null {
+		if (!this.semi) return null;
+		const m = this.meshes.semi;
+		const mats = new Set(Object.keys((this.rawAt('semiconductor.materials') as Record<string, unknown> | undefined) ?? {}));
+		if (!m) return { regions: [] };
+		const mm = m.regionMaterials ?? [];
+		return { regions: m.regionNames.filter((_, i) => mats.has(mm[i] ?? '')) };
 	}
 
 	notePaint(quantity: string) {
@@ -638,6 +717,11 @@ export class Workbench {
 			this.addLog(m, 'error');
 		};
 		const stages = $state.snapshot(this.runStages) as string[];
+		// DevLog-042: sweep points report run globals, which the semiconductor stage does not produce; its bias sweep runs in Compute.
+		if (stages.includes('semiconductor')) {
+			fail('Sweep: parametric sweeps of the semiconductor stage are not available (its bias sweep runs in Compute; per-bias values are on the Bias sweep dataset)');
+			return;
+		}
 		const base = { section: this.section, meshScale: this.meshScale };
 		let jobs: SweepJob[] = [];
 		let axisValues: Record<string, number>[] = [];
@@ -701,7 +785,7 @@ export class Workbench {
 				this.pool = null;
 				this.progress = `Sweep complete (${this.sweepRows.filter((r) => r.status === 'done').length}/${n} points)`;
 				this.addLog(`Sweep finished in ${Math.round(performance.now() - this.sweepStarted)} ms wall`);
-				this.results.defaults((ds, v) => this.has(ds, v), { rf: !!this.result?.rf?.sweep, sweep: this.sweepRows.find((r) => r.globals)?.globals ?? null, sweepMetric: this.sweepMetricGlobal });
+				this.results.defaults((ds, v) => this.has(ds, v), { rf: !!this.result?.rf?.sweep, response: !!this.result?.response, bloch: !!this.result?.loaded?.lossless?.sweep, sweep: this.sweepRows.find((r) => r.globals)?.globals ?? null, sweepMetric: this.sweepMetricGlobal, semi: this.semiDefaults() });
 				this.results.rebase();
 			}
 		});

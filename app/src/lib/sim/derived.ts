@@ -54,6 +54,13 @@ export async function evaluateNode(wb: Workbench, d: DerivedNode): Promise<numbe
 	const { rec, roles } = solutionColumns(wb, r0.point);
 	rec.dataset = wb.results.dsLabel(r0.req.dataset);
 	roles.dataset = 'text';
+	// S8 (DevLog-042): the bias point of a semiconductor dataset as a parameter column (swept contact, V)
+	if (wb.results.isSemi(r0.req.dataset) && wb.semi) {
+		const k = r0.req.mode ?? -1;
+		const v = k < 0 ? wb.semi.sweep?.referenceV : wb.semi.points[k]?.sweptBiasV;
+		const col = `${wb.semi.sweep?.contact ?? 'bias'} bias (V)`;
+		if (typeof v === 'number') { rec[col] = v; roles[col] = 'param'; }
+	}
 	const at = d.kind === 'point' && Array.isArray(r0.req.selection) ? r0.req.selection : (d.kind === 'surface_max' || d.kind === 'surface_min') && r.at ? r.at : null;
 	if (at) Object.assign(rec, { 'x (µm)': at[0], 'y (µm)': at[1] }), Object.assign(roles, { 'x (µm)': 'coord', 'y (µm)': 'coord' });
 	const col = valueColumn(wb, d, r.unit);

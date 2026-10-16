@@ -1,9 +1,17 @@
 // Results protocol between the solution worker and the UI (DevLog-032). The worker holds the engine solution store
 // (engine/src/postproc, DevLog-031 API v1) and maps these requests onto it: the UI addresses base datasets ('es',
-// 'opt', 'armA', 'armB', 'eoA', 'eoB') plus a mode index, region-name selections, and cut lines/points by geometry.
+// 'opt', 'armA', 'armB', 'eoA', 'eoB', 'semi') plus a mode index (a bias index on 'semi'), region-name selections, and
+// cut lines/points by geometry.
 // Coordinates in requests are µm; expressions are SI.
-import type { DatasetInfo, DerivedKind, ModeRow, ResolutionName, Smoothing, VariableInfo } from '../../../../../engine/src/postproc/index.mjs';
-export type { DatasetInfo, DerivedKind, ModeRow, ResolutionName, Smoothing, VariableInfo };
+import type { DatasetInfo as EngineDatasetInfo, DerivedKind, ModeRow, ResolutionName, Smoothing, VariableInfo } from '../../../../../engine/src/postproc/index.mjs';
+export type { DerivedKind, ModeRow, ResolutionName, Smoothing, VariableInfo };
+
+/**
+ * Engine dataset info plus the S8 `semi` kind (store datasets `semi` = reference bias and `semi:<k>` = bias point k,
+ * DevLog-039; not yet in index.d.mts). The UI addresses `semi` with a bias index in place of a mode (DevLog-042):
+ * `nBias` bias points, `biasV` the contact biases of the reference.
+ */
+export type DatasetInfo = Omit<EngineDatasetInfo, 'kind'> & { kind: EngineDatasetInfo['kind'] | 'semi'; biasV?: number[]; nBias?: number };
 
 export interface LineSpec {
 	ax: number;

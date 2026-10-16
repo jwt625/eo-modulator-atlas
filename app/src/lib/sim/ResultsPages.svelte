@@ -7,6 +7,8 @@
 	import { evaluateNode, evaluateOverSweep } from './derived';
 	import { derivedPoint, derivedRequest } from './requests';
 	import SolutionSelect from './SolutionSelect.svelte';
+	import BiasSelect from './BiasSelect.svelte';
+	import { biasChoices, biasLabel } from './semi';
 	import { downloadText, toCsv } from './exportUtil';
 	import { GLOBAL_VARIABLES } from './post/ui';
 	import ExprInput from './ExprInput.svelte';
@@ -61,7 +63,7 @@
 		if (!c) return;
 		// N1: expression and unit of the shown feature on the cut line's dataset.
 		const shownF = R.groups.find((g) => g.id === wb.view)?.features.find((f) => f.expr && (f.dataset || R.group(wb.view)?.dataset) === c.source);
-		const expr = shownF?.expr ?? (wb.has(c.source, 'es.V') ? 'es.V' : R.intensityExpr(c.source, (d, v) => wb.has(d, v)) || (wb.vars[c.source]?.find((v) => v.location !== 'global' && v.name !== 'x' && v.name !== 'y')?.name ?? ''));
+		const expr = shownF?.expr ?? (wb.has(c.source, 'es.V') ? 'es.V' : R.isSemi(c.source) && wb.has(c.source, 'semi.psi') ? 'semi.psi' : R.intensityExpr(c.source, (d, v) => wb.has(d, v)) || (wb.vars[c.source]?.find((v) => v.location !== 'global' && v.name !== 'x' && v.name !== 'y')?.name ?? ''));
 		const g = R.addGroup('1d', '', `Line Graph: ${c.name}`, [newFeature('linegraph', { dataset: c.id, expr, unit: shownF?.unit ?? '' })]);
 		wb.view = g.id;
 		wb.node = `pg:${g.id}`;
@@ -83,6 +85,12 @@
 		const d = R.addDerived(k, { target, ...(src ? { dataset: src } : {}) });
 		wb.addLog(`${d.name} on ${R.dsLabel(target) || 'all domains'}`);
 		wb.node = `dv:${d.id}`;
+	}
+	/** Audit F9: a plain variable gets the plots' display unit (e.g. 1/cm^3) unless a unit is set; integrals keep SI (measure). */
+	function defaultUnit(d: DerivedNode, ds: string, expr: string) {
+		if (d.unit || d.kind.endsWith('_int')) return;
+		const v = wb.vars[ds]?.find((x) => x.name === expr.trim());
+		if (v && v.displayUnit && v.displayUnit !== v.unit) d.unit = v.displayUnit;
 	}
 	const sweepVars = $derived.by(() => {
 		const g = wb.sweepRows.find((r) => r.globals)?.globals ?? wb.runGlobals;
@@ -151,6 +159,11 @@
 	<dl class="kv"><dt>kind</dt><dd>{sol.kind}</dd><dt>section</dt><dd>{sol.section ?? ''}</dd>{#if sol.arm}<dt>arm</dt><dd>{sol.arm}</dd>{/if}<dt>display mesh</dt><dd class="mono">{sol.mesh} ({((wb.meshOf(sol)?.tri.length ?? 0) / 3).toLocaleString()} triangles)</dd></dl>
 	<p class="muted small" data-solution-label={wb.solutionLabel(-1)}>Solution: {wb.solutionLabel(-1)}</p>
 	{#if sol.nModes}<h4>Mode Analysis</h4><ModeTable {wb} dataset={sol.id} point={-1} />{/if}
+	{#if sol.kind === 'semi'}
+		<h4>Bias points</h4>
+		<p class="muted small" data-semi-biases={sol.nBias ?? 0}>{sol.nBias ?? 0} bias points of the semiconductor stage; each view selects one (Bias, in its Data section; default the last point).</p>
+		<table class="grid small"><tbody>{#each biasChoices(wb.semi) as c}<tr><td class="num">{c.k < 0 ? 'ref' : c.k + 1}</td><td>{c.label}</td></tr>{/each}</tbody></table>
+	{/if}
 	<h4>Variables</h4>
 	<table class="grid small"><thead><tr><th>Name</th><th>Unit</th><th>Location</th><th>Description</th></tr></thead><tbody>
 		{#each wb.vars[sol.id] ?? [] as v}<tr><td class="mono">{v.name}</td><td class="mono">{v.unit}</td><td>{v.location}</td><td class="muted">{v.description}</td></tr>{/each}
@@ -159,6 +172,7 @@
 	<label class="f">Label <input type="text" value={cl.name} onchange={(e) => (cl.name = e.currentTarget.value || cl.name)} /></label>
 	<SolutionSelect {wb} value={cl.point} onchange={(p) => { cl.point = p; wb.addLog(`${cl.name}: solution ${wb.solutionLabel(p)}`); }} />
 	<label class="f">Data <select aria-label="Cut line source" value={cl.source} onchange={(e) => (cl.source = e.currentTarget.value)}>{#each setsOf(cl.point) as d}<option value={d.id}>{d.label}</option>{/each}</select></label>
+	{#if R.isSemi(cl.source)}<BiasSelect {wb} dataset={cl.source} value={cl.bias} onchange={(b) => { cl.bias = b; wb.addLog(`${cl.name}: bias ${biasLabel(wb.semi, R.biasIndex(cl.source, b))}`); }} />{/if}
 	<div class="coords">
 		{#each [['ax', 'point 1 x'], ['ay', 'point 1 y'], ['bx', 'point 2 x'], ['by', 'point 2 y']] as [k, label]}
 			<label data-tip="µm">{label}<input type="number" step="any" value={Number(cl[k as 'ax'].toPrecision(6))} onchange={(e) => (cl[k as 'ax'] = num(e.currentTarget.value, cl[k as 'ax']))} /></label>
@@ -171,6 +185,7 @@
 	<label class="f">Label <input type="text" value={cp.name} onchange={(e) => (cp.name = e.currentTarget.value || cp.name)} /></label>
 	<SolutionSelect {wb} value={cp.point} onchange={(p) => { cp.point = p; wb.addLog(`${cp.name}: solution ${wb.solutionLabel(p)}`); }} />
 	<label class="f">Data <select aria-label="Cut point source" value={cp.source} onchange={(e) => (cp.source = e.currentTarget.value)}>{#each setsOf(cp.point) as d}<option value={d.id}>{d.label}</option>{/each}</select></label>
+	{#if R.isSemi(cp.source)}<BiasSelect {wb} dataset={cp.source} value={cp.bias} onchange={(b) => { cp.bias = b; wb.addLog(`${cp.name}: bias ${biasLabel(wb.semi, R.biasIndex(cp.source, b))}`); }} />{/if}
 	<label class="f">x (µm) <input type="number" step="any" value={cp.x} onchange={(e) => (cp.x = num(e.currentTarget.value, cp.x))} /></label>
 	<label class="f">y (µm) <input type="number" step="any" value={cp.y} onchange={(e) => (cp.y = num(e.currentTarget.value, cp.y))} /></label>
 	<div class="adds"><button onclick={() => addDerived('point', cp.id)}>+ Point Evaluation</button></div>
@@ -192,6 +207,7 @@
 	{#if dv.kind === 'global' || dv.kind.startsWith('surface')}
 		<SolutionSelect {wb} value={dv.point ?? -1} onchange={(p) => { dv.point = p; wb.addLog(`${dv.name}: solution ${wb.solutionLabel(p)}`); }} />
 		<label class="f">Dataset <select aria-label="Derived dataset" value={dv.dataset} onchange={(e) => (dv.dataset = e.currentTarget.value)}>{#each setsOf(dv.point ?? -1) as d}<option value={d.id}>{d.label}</option>{/each}</select></label>
+		{#if R.isSemi(dv.dataset)}<BiasSelect {wb} dataset={dv.dataset} value={dv.bias} onchange={(b) => { dv.bias = b; wb.addLog(`${dv.name}: bias ${biasLabel(wb.semi, R.biasIndex(dv.dataset, b))}`); }} />{/if}
 	{:else}
 		{@const pt = derivedPoint(R, dv)}
 		<p class="muted small" data-solution-label={wb.solutionLabel(pt)}>Solution: {wb.solutionLabel(pt)} (of the {dv.kind === 'point' ? 'cut point' : 'cut line'}; set it on that dataset).</p>
@@ -206,7 +222,7 @@
 	{@const req = derivedRequest(R, dv)}
 	{@const dsx = typeof req === 'string' ? dv.dataset : req.req.dataset}
 	{@const measure = dv.kind === 'surface_int' ? 'm^2' : dv.kind === 'line_int' ? 'm' : ''}
-	<div class="f"><span>Expression</span><ExprInput {wb} dataset={dsx} value={dv.expr} unit={dv.unit} {measure} label="Derived expression" extra={dv.kind === 'global' ? sweepVars : []} onchange={(v) => { dv.expr = v; wb.addLog(`${dv.name}: expression ${v}`); }} /></div>
+	<div class="f"><span>Expression</span><ExprInput {wb} dataset={dsx} value={dv.expr} unit={dv.unit} {measure} label="Derived expression" extra={dv.kind === 'global' ? sweepVars : []} onchange={(v) => { dv.expr = v; defaultUnit(dv, dsx, v); wb.addLog(`${dv.name}: expression ${v}`); }} /></div>
 	<div class="f"><span>Unit</span><UnitInput {wb} dataset={dsx} expr={dv.expr} value={dv.unit} {measure} label="Derived unit" onchange={(v) => (dv.unit = v)} /></div>
 	<label class="f">Table <select value={dv.tableId} onchange={(e) => (dv.tableId = e.currentTarget.value)}><option value="">new table</option>{#each R.tables as t}<option value={t.id}>{t.name}</option>{/each}</select></label>
 	<div class="adds">

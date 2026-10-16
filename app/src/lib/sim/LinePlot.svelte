@@ -14,6 +14,8 @@
 		y: number;
 		label: string;
 		detail?: string;
+		/** Not comparable with the curve (source.comparable: false): grey dashed marker, own legend key. */
+		muted?: boolean;
 	}
 	export const SERIES_COLORS = ['#3987e5', '#e0803a', '#3fae7a', '#c160c1', '#c9a227', '#5bb5c9'];
 </script>
@@ -176,15 +178,17 @@
 				ctx.fillRect(X(tx(s.x[i])) - 2.5, YY(ty(s.y[i])) - 2.5, 5, 5);
 			}
 		});
-		ctx.strokeStyle = css('--warn');
 		ctx.lineWidth = 1.5;
 		for (const p of points) {
 			if (!okX(p.x) || !okY(p.y)) continue;
 			const px = X(tx(p.x)), py = Y(ty(p.y));
+			ctx.strokeStyle = p.muted ? ink3 : css('--warn');
+			ctx.setLineDash(p.muted ? [2, 2] : []);
 			ctx.beginPath();
 			ctx.moveTo(px, py - 5); ctx.lineTo(px + 5, py); ctx.lineTo(px, py + 5); ctx.lineTo(px - 5, py); ctx.closePath();
 			ctx.stroke();
 		}
+		ctx.setLineDash([]);
 		ctx.restore();
 		if (hover) {
 			ctx.strokeStyle = ink3;
@@ -256,7 +260,8 @@
 			<label data-tip="Logarithmic y axis"><input type="checkbox" bind:checked={logY} /> log y</label>
 			<span class="grow"></span>
 			{#each series as s, k}<span class="key" data-tip="{s.name}{s.y2 ? ' (right axis, dashed)' : ''}"><i class:dash={s.y2} style:background={s.color ?? SERIES_COLORS[k % SERIES_COLORS.length]}></i>{s.name}</span>{/each}
-			{#if points.length}<span class="key" data-tip="Paper-reported points; hover a marker for its device_id"><i class="pt"></i>{pointsName}</span>{/if}
+			{#if points.some((p) => !p.muted)}<span class="key" data-tip="Paper-reported points; hover a marker for its device_id"><i class="pt"></i>{pointsName}</span>{/if}
+			{#if points.some((p) => p.muted)}<span class="key" data-key-muted data-tip="Paper points marked comparable: false in the config (different definition or device); shown for the record, not compared"><i class="pt muted"></i>{pointsName} (comparable: false)</span>{/if}
 			<button data-tip="Download the plotted data as CSV" onclick={exportCsv}>CSV</button>
 			<button data-tip="Download this plot as PNG" onclick={() => downloadDataUrl(`${filename}.png`, canvas.toDataURL('image/png'))}>PNG</button>
 		</div>
@@ -281,6 +286,7 @@
 	.key i { display: inline-block; width: 10px; height: 2px; }
 	.key i.dash { width: 4px; box-shadow: 6px 0 0 0 currentColor; }
 	.key i.pt { width: 7px; height: 7px; border: 1.5px solid var(--warn); transform: rotate(45deg); background: none; }
+	.key i.pt.muted { border: 1.5px dashed var(--ink-3); }
 	.cv { position: relative; }
 	canvas { display: block; touch-action: none; }
 	.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--line); padding: 4px 6px; font-size: 11px; white-space: nowrap; z-index: 2; border-radius: 0; }

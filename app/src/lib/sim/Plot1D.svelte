@@ -11,6 +11,9 @@
 	import { oneDSolutions } from './solutions1d';
 	import { store } from '../state.svelte';
 	import { guessDeviceX, METRIC_DEVICE_COLUMN } from './sweepValues';
+	import { responseNotices, responseTargetPoints } from './labels';
+	import { biasRecords, biasTargetPoints, biasValues, configVpiTargets, pushPullGaps } from './semi';
+	import type { ResponseNotice } from './labels';
 
 	let { wb, group, height = 360 }: { wb: Workbench; group: PlotGroup; height?: number } = $props();
 	const R = $derived(wb.results);
@@ -26,6 +29,8 @@
 		const series: Series[] = [];
 		const points: OverlayPoint[] = [];
 		const errs: string[] = [];
+		let response = false;
+		const biasNotes: ResponseNotice[] = [];
 		let xLabel = '';
 		const units: [Set<string>, Set<string>] = [new Set(), new Set()];
 		const names: [string[], string[]] = [[], []];
@@ -57,8 +62,33 @@
 					exprs.forEach((ex, i) => {
 						const e = wb.cache.get<PlotResult>(wb.post, R.gen, rfRequest(ex, f.unit, group.point), `rf:${f.id}:${i}`);
 						if (e?.status === 'error') errs.push(`${f.name}: ${e.error}`);
-						if (e?.data?.x) push({ name: `${ex} (${prettyUnit(e.data.unit)})`, x: e.data.x, y: e.data.values, markers: e.data.x.length <= 40 }, e.data.unit, right);
+						// S9 / DevLog-042: Bloch series are labelled lossless (no loss declaration) or lossy (declared loss model)
+						const bloch = /rf\.(nB|ZB)\b/.test(ex) && group.point < 0 && wb.has('rf', 'rf.nB');
+						const tag = bloch ? (wb.has('rf', 'rf.alphaB') ? ' lossy' : ' lossless') : '';
+						if (e?.data?.x) push({ name: `${ex} (${prettyUnit(e.data.unit)})${tag}`, x: e.data.x, y: e.data.values, markers: e.data.x.length <= 40 }, e.data.unit, right);
+						if (/rf\.S21EO/.test(ex) && group.point < 0) response = true;
+						// DevLog-036: paper response targets of the configured device (Compute solution only) on the S21 EO curve.
+						if (ex.trim() === 'rf.S21EO_dB' && group.point < 0 && f.unit === 'dB') points.push(...responseTargetPoints(wb.result?.targets ?? []));
 					});
+				} else if (f.dataset === 'bias') {
+					// S8 (DevLog-042): per-bias values of the semiconductor stage of the last Compute vs the swept contact bias.
+					const s = wb.semi;
+					if (!s) { errs.push(`${f.name}: no semiconductor result in the last Compute`); continue; }
+					const recs = biasRecords(s);
+					xLabel = `${s.sweep?.contact ?? 'contact'} bias (V)`;
+					for (const ex of exprs) {
+						try {
+							const ys = biasValues(ex, recs, f.unit);
+							const xs = recs.map((r) => r['semi.V'] ?? NaN);
+							const u = /_dB\b/.test(ex) && ys.unit === '1' ? 'dB/cm' : ys.unit;
+							push({ name: `${f.exprs.includes(',') || /^Global( \d+)?$/.test(f.name) ? ex : f.name} (${prettyUnit(u)})`, x: xs, y: ys.values, markers: true }, u, right);
+							points.push(...biasTargetPoints(s, ex, f.unit));
+							// audit F2: the engine's reason where the push-pull VpiL is not defined
+							if (/semi\.VpiL_pp\b/.test(ex)) for (const g of pushPullGaps(s)) biasNotes.push({ code: 'pushpull_gap', level: 'info', text: `push-pull VpiL not defined at ${g.label}: ${g.reason}`, tip: g.reason });
+							// audit F4: config VpiL targets have no bias (listed, not placed on a variant)
+							if (/semi\.VpiL/.test(ex) && !biasNotes.some((n) => n.code === 'config_vpi')) for (const t of configVpiTargets(wb.result)) biasNotes.push({ code: 'config_vpi', level: 'info', text: `config target ${t.metric} ${t.value} V cm (convention ${t.convention.replaceAll('_', ' ')}${t.comparable ? '' : ', comparable: false'}): no bias stated, not placed`, tip: [t.source, t.reason].filter(Boolean).join('\n') });
+						} catch (e) { errs.push(`${f.name}: ${e instanceof Error ? e.message : e}`); }
+					}
 				} else {
 					const rows = wb.sweepRows.filter((r) => r.status === 'done' && r.globals);
 					if (!rows.length) { errs.push(`${f.name}: no sweep results`); continue; }
@@ -105,14 +135,19 @@
 		}
 		const label = (k: 0 | 1) => (names[k].length === 1 ? names[k][0].replace(/ \[.*\]$/, '') : units[k].size === 1 ? `(${[...units[k]][0]})` : [...units[k]].map((u) => `(${u})`).join(', '));
 		const so = oneDSolutions(wb, group);
-		return { series, points, errs, xLabel, yLabel: label(0), y2Label: label(1), sols: so.labels.join('; '), tag: so.tag };
+		return { series, points, errs, xLabel, yLabel: label(0), y2Label: label(1), sols: so.labels.join('; '), tag: so.tag, notices: [...(response ? responseNotices(wb.result) : []), ...biasNotes] };
 	});
 </script>
 
 <div class="p1" data-series={out.series.length}>
 	{#if group.titleMode !== 'none'}<div class="t">{group.titleMode === 'custom' ? group.title : group.name}</div>{/if}
 	<div class="sol" data-solution-label={out.sols || 'none'}>Solution: {out.sols || 'none (no features)'}</div>
-	<LinePlot series={out.series} points={out.points} pointsName="paper" xLabel={out.xLabel} yLabel={out.yLabel} y2Label={out.y2Label} bind:logX={group.logX} bind:logY={group.logY} ariaLabel="1D plot group {group.name}" height={Math.max(160, height - (group.titleMode !== 'none' ? 20 : 0) - 26 - out.errs.length * 18)} filename="{wb.raw?.id ?? 'sim'}-{group.name.replace(/[^\w.-]+/g, '_')}{out.tag ? `-${out.tag}` : ''}" csvNote="Solution: {out.sols || 'none'}" />
+	{#if out.notices.length}
+		<ul class="notices" data-response-notices={out.notices.map((n) => n.code).join(' ')}>
+			{#each out.notices as n}<li class={n.level} data-notice={n.code} data-tip={n.tip || undefined}>{n.text}</li>{/each}
+		</ul>
+	{/if}
+	<LinePlot series={out.series} points={out.points} pointsName="paper" xLabel={out.xLabel} yLabel={out.yLabel} y2Label={out.y2Label} bind:logX={group.logX} bind:logY={group.logY} ariaLabel="1D plot group {group.name}" height={Math.max(160, height - (group.titleMode !== 'none' ? 20 : 0) - 26 - out.errs.length * 18 - out.notices.length * 16)} filename="{wb.raw?.id ?? 'sim'}-{group.name.replace(/[^\w.-]+/g, '_')}{out.tag ? `-${out.tag}` : ''}" csvNote="Solution: {out.sols || 'none'}" />
 	{#each out.errs as e}<p class="err">{e}</p>{/each}
 	{#if !group.features.length}<p class="muted">No plot features. Add a Line Graph, Global or Table Graph to this plot group.</p>{/if}
 </div>
@@ -122,5 +157,8 @@
 	.t { font-size: 12px; color: var(--ink); }
 	.sol { font-size: 11px; color: var(--ink-3); margin-bottom: 4px; }
 	.err { color: var(--crit); font-size: 11px; margin: 4px 0; }
+	.notices { list-style: none; margin: 0 0 4px; padding: 0; font-size: 11px; line-height: 16px; }
+	.notices li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink-3); padding-left: 6px; border-left: 2px solid var(--border); }
+	.notices li.warn { color: var(--warn); border-left-color: var(--warn); }
 	p { margin: 4px 0; }
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { OPTIONAL, clock, type Workbench } from './workbench.svelte';
+	import { clock, type Workbench } from './workbench.svelte';
 	import { METRIC_LABELS } from './labels';
 	import { downloadText, toCsv } from './exportUtil';
 	import { fmt } from '../logic';
@@ -9,7 +9,8 @@
 	let prevErrors = 0;
 
 	const p = $derived(wb.parsed);
-	const blockedStages = $derived(p.config && !p.error ? OPTIONAL.filter((s) => wb.stageError(s.id)) : []);
+	// Audit F12: readiness reasons of unselected stages are on their toolbar tooltips and Physics pages, not in Messages.
+	const blockedStages = $derived(p.config && !p.error ? wb.stageList.filter((s) => wb.selected.includes(s.id) && wb.stageError(s.id)) : []);
 	const nErrors = $derived((p.error ? 1 : 0) + (wb.missingConfig ? 1 : 0) + (wb.blocked.length ? 1 : 0) + (wb.error ? 1 : 0));
 	const policyNote = $derived((wb.selected.includes('optical_mode') || wb.selected.includes('eo_overlap')) && !!p.config);
 	// U13: every message row carries the time it first appeared (kept while the message persists).

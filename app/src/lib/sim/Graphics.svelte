@@ -7,7 +7,7 @@
 	import { linearTicks, tickLabel } from './ticks';
 	import { downloadDataUrl } from './exportUtil';
 	import { drawLegend, legendTip, LEGEND_W, type LegendSpec } from './colorbar';
-	import { arrowGrid, autoTitle, contourLevels, featureRange, meshIndex, regionMask, type ArrowGrid } from './layers';
+	import { arrowGrid, autoTitle, belowLogRange, contourLevels, featureRange, meshIndex, regionMask, type ArrowGrid } from './layers';
 	import { drawnAt, perElement } from './refined';
 	import type { Entry } from './plots.svelte';
 	import type { Feature } from './results.svelte';
@@ -19,6 +19,8 @@
 	import Plot1D from './Plot1D.svelte';
 	import Icon from './Icon.svelte';
 	import { modesRequest, plotRequest, probeRequest, solOf } from './requests';
+	import { biasLabel } from './semi';
+	import { cm3Label, dopingShapes, semiContacts } from './semiOverlay';
 
 	let { wb }: { wb: Workbench } = $props();
 
@@ -70,6 +72,8 @@
 		main: Entry<PlotResult> | null;
 		ax: Entry<PlotResult> | null;
 		ay: Entry<PlotResult> | null;
+		/** Mode intensity on the same lattice (automatic range from the optical-mode region, audit F1). */
+		region: Entry<PlotResult> | null;
 		regions: string[] | null;
 	}
 	const planned: Planned[] = $derived.by(() => {
@@ -89,7 +93,8 @@
 				f, ds, mesh, regions,
 				main: needsExpr ? plot(f.expr, f.unit, `plot:${f.id}`) : null,
 				ax: f.type === 'arrow' ? plot(f.xExpr, '', `plot:${f.id}:x`) : null,
-				ay: f.type === 'arrow' ? plot(f.yExpr, '', `plot:${f.id}:y`) : null
+				ay: f.type === 'arrow' ? plot(f.yExpr, '', `plot:${f.id}:y`) : null,
+				region: needsExpr && f.rangeFrom === 'mode' && f.modeExpr ? plot(f.modeExpr, '', `plot:${f.id}:mode`) : null
 			});
 		}
 		return out;
@@ -97,9 +102,11 @@
 	/** Display unit actually used per feature (worker reply), for titles and legends. */
 	const units = $derived(Object.fromEntries(planned.filter((p) => p.main?.data).map((p) => [p.f.id, p.main!.data!.unit])));
 	const errors = $derived(planned.flatMap((p) => [p.main, p.ax, p.ay].filter((e) => e?.status === 'error').map((e) => `${p.f.name}: ${e!.error}`)));
-	const pending = $derived(planned.some((p) => [p.main, p.ax, p.ay].some((e) => e?.status === 'pending')));
+	const pending = $derived(planned.some((p) => [p.main, p.ax, p.ay, p.region].some((e) => e?.status === 'pending')));
 	/** Mode label of an optical dataset ('k=1 (TE0), n_eff 1.96574', engine mode table labels). */
 	function modeText(ds: string): string {
+		// S8: the bias point of a semiconductor dataset in this view (DevLog-042)
+		if (R.isSemi(ds)) return biasLabel(wb.semi, R.biasIndex(ds, group?.bias));
 		const d = (point >= 0 ? wb.points[point]?.datasets?.find((x) => x.id === ds) : null) ?? R.dataset(ds);
 		if (!d?.nModes || !pointReady) return '';
 		// G3: the mode of this dataset in the shown solution (sweep points: chosen for that point, else its solved mode).
@@ -135,7 +142,7 @@
 	}
 
 	// Mesh view (Mesh node): material, element size or minimum angle.
-	const meshView = $derived(wb.view === 'mesh' ? (wb.meshes.es ?? wb.mesh) : null);
+	const meshView = $derived(wb.view === 'mesh' ? (wb.solvedMesh ?? wb.mesh) : null);
 	const meshStatMemo = new WeakMap<FieldMesh, { size: Float64Array; angle: Float64Array; size3: Float64Array; angle3: Float64Array }>();
 	function meshStat(m: FieldMesh) {
 		let s = meshStatMemo.get(m);
@@ -192,7 +199,17 @@
 			const mesh = wb.meshes[d.mesh] ?? p.mesh;
 			const lev = d.r ?? 1;
 			if (!out.nTris) out.nTris = (mesh.tri.length / 3) * lev * lev;
-			const range = featureRange(f, d);
+			const regionVals = p.region?.data?.values ?? null;
+			const range = featureRange(f, d, regionVals);
+			// legend tooltip notes (audit F6, F14, F1): range rule and values drawn at the end colours
+			const notes: string[] = [];
+			if (f.rangeFrom === 'mode' && regionVals && !f.range.manual) notes.push(`automatic range from the optical-mode region (${f.modeExpr} >= e^-2 of its peak); values outside it are drawn at the end colours`);
+			if ((f.range.scale === 'log' || f.range.scale === 'symlog') && !f.range.manual) {
+				const nb = belowLogRange(d.values, range);
+				if (nb) notes.push(`${f.range.scale === 'symlog' ? '|values|' : 'values'} below ${tickLabel(Number(range.min.toPrecision(3)))} ${prettyUnit(d.unit)} (${nb.toLocaleString()} sample points) are drawn at the ${f.range.scale === 'symlog' ? 'centre' : 'floor'} colour (8-decade clamp of the automatic log range)`);
+			}
+			if (f.range.scale === 'symlog') notes.unshift(`signed range ${tickLabel(Number((-range.max).toPrecision(3)))} to ${tickLabel(Number(range.max.toPrecision(3)))} ${prettyUnit(d.unit)} (|value| from ${tickLabel(Number(range.min.toPrecision(3)))})`);
+			const note = notes.join('; ');
 			out.ranges[f.id] = range;
 			const mask = regionMask(mesh, p.regions);
 			const dataRange = f.dataRange.manual && f.dataRange.max > f.dataRange.min ? { min: f.dataRange.min, max: f.dataRange.max } : null;
@@ -203,7 +220,7 @@
 			};
 			if (f.type === 'surface') {
 				out.layers.push({ kind: 'surface', mesh, r: lev, values: d.values, scaleMode: f.range.scale, range, colormap: f.table, reverse: f.reverse, regionMask: mask, dataRange, sampler, wire: wb.wire, wireColor: dark ? '#e8e8e8' : '#202020' });
-				if (f.legend) out.legends.push({ title: legendTitle, unit: prettyUnit(d.unit), range, scale: f.range.scale, table: f.table, reverse: f.reverse });
+				if (f.legend) out.legends.push({ title: legendTitle, unit: prettyUnit(d.unit), range, scale: f.range.scale, table: f.table, reverse: f.reverse, note });
 			} else if (f.type === 'contour') {
 				out.layers.push({ kind: 'contour', mesh, r: lev, values: d.values, scaleMode: f.range.scale, range, colormap: f.table, reverse: f.reverse, levels: contourLevels(f, range), uniform: f.coloring === 'uniform' ? f.color : null, regionMask: mask, dataRange });
 				if (f.legend && f.coloring === 'table') out.legends.push({ title: legendTitle, unit: prettyUnit(d.unit), range, scale: f.range.scale, table: f.table, reverse: f.reverse });
@@ -220,15 +237,15 @@
 
 	// U4: geometry drawn with a result is the geometry it was solved on.
 	const shown = $derived.by(() => {
-		if (wb.view === 'mesh' && !wb.meshes.es && wb.mesh && wb.meshGeometry) return wb.meshGeometry;
+		if (wb.view === 'mesh' && !wb.solvedMesh && wb.mesh && wb.meshGeometry) return wb.meshGeometry;
 		if (group && wb.result && wb.runGeometry) return wb.runGeometry;
 		return wb.geometry ? { geometry: wb.geometry, armWindows: (wb.raw?.optics?.eo?.arm_windows ?? null) as Record<string, { x_um: number[]; y_um: number[] }> | null } : null;
 	});
-	const staleTag = $derived((group && wb.stale) || (wb.view === 'mesh' && !wb.meshes.es && wb.meshStale) ? 'stale' : '');
+	const staleTag = $derived((group && wb.stale) || (wb.view === 'mesh' && !wb.solvedMesh && wb.meshStale) ? 'stale' : '');
 	const plotMs = $derived(planned.find((p) => p.main?.ms != null)?.main?.ms ?? null);
 	const viewChoices = $derived([
 		{ value: 'geometry', label: 'Geometry' },
-		...(wb.meshes.es || wb.mesh ? [{ value: 'mesh', label: 'Mesh' }] : []),
+		...(wb.solvedMesh || wb.mesh ? [{ value: 'mesh', label: 'Mesh' }] : []),
 		...R.groups.map((g) => ({ value: g.id, label: g.name }))
 	]);
 
@@ -250,15 +267,31 @@
 	}
 	/** Zoom extents: the union of the shown datasets' meshes (COMSOL: dataset extents), else the geometry domain. */
 	function zoomExtents() {
-		const ms = group && group.kind === '2d' ? planned.map((p) => p.mesh).filter((m): m is FieldMesh => !!m) : [];
+		const ms = group && group.kind === '2d' ? planned.filter((p) => p.mesh && p.f.type !== 'line') : [];
 		if (ms.length) {
 			let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
-			for (const m of ms) {
-				const b = meshBBox(m);
+			for (const p of ms) {
+				const m = p.mesh!;
+				// DevLog-042: a feature filtered by a selection zooms to the selected domains (e.g. the thin silicon layer)
+				const b = p.regions ? selectionBBox(m, p.regions) ?? meshBBox(m) : meshBBox(m);
 				x0 = Math.min(x0, b.x0); x1 = Math.max(x1, b.x1); y0 = Math.min(y0, b.y0); y1 = Math.max(y1, b.y1);
 			}
 			fit({ x: [x0, x1], y: [y0, y1] });
 		} else fit((shown?.geometry ?? wb.geometry)?.domain);
+	}
+	/** Bounding box of the triangles of the named regions, or null when none. */
+	function selectionBBox(m: FieldMesh, regions: string[]): { x0: number; x1: number; y0: number; y1: number } | null {
+		const mask = regionMask(m, regions);
+		if (!mask) return null;
+		let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+		for (let t = 0; t < m.triRegion.length; t++) {
+			if (!mask[m.triRegion[t]]) continue;
+			for (let k = 0; k < 3; k++) {
+				const i = m.tri[3 * t + k];
+				x0 = Math.min(x0, m.x[i]); x1 = Math.max(x1, m.x[i]); y0 = Math.min(y0, m.y[i]); y1 = Math.max(y1, m.y[i]);
+			}
+		}
+		return x0 <= x1 ? { x0, x1, y0, y1 } : null;
 	}
 	function zoomWindow() {
 		// The window of the first optical/arm dataset of the shown plot group, else the optical window.
@@ -351,6 +384,18 @@
 		}
 		return null;
 	});
+	/** Doping windows and contacts while the Semiconductor physics node (or one of its children) is selected. */
+	const semiOverlay = $derived.by(() => {
+		const n = wb.node;
+		if (n !== 'physics.semi' && !n.startsWith('semi.')) return null;
+		const semi = wb.raw?.semiconductor as Record<string, unknown> | undefined;
+		if (!semi) return null;
+		const geo = shown?.geometry ?? null;
+		return {
+			shapes: dopingShapes(semi, geo), contacts: semiContacts(semi),
+			focus: { doping: n.startsWith('semi.doping:') ? Number(n.slice(12)) : null, contact: n.startsWith('semi.contact:') ? Number(n.slice(13)) : null }
+		};
+	});
 	/** Cut lines / points of the active node (drawn emphasised) and all others (thin). */
 	const activeCut = $derived(wb.node.startsWith('ds:') ? wb.node.slice(3) : '');
 
@@ -375,7 +420,7 @@
 					ctx.lineWidth = 1;
 					ctx.stroke();
 				}
-				const esShown = wb.view === 'mesh' || planned.some((p) => R.dataset(p.ds)?.kind === 'es');
+				const esShown = wb.view === 'mesh' || planned.some((p) => R.dataset(p.ds)?.kind === 'es' || R.dataset(p.ds)?.kind === 'semi');
 				for (const e of g.electrodes) {
 					polyPath(ctx, e.poly, Xf, Yf);
 					if (geometryOnly || esShown) {
@@ -385,6 +430,53 @@
 					ctx.strokeStyle = '#f3d58f';
 					ctx.lineWidth = 1;
 					ctx.stroke();
+				}
+			}
+			// S8 (DevLog-042): doping windows and contacts of the semiconductor block while its Physics nodes are selected.
+			if (semiOverlay && geometryOnly) {
+				const { shapes, contacts, focus } = semiOverlay;
+				const none = focus.doping == null && focus.contact == null;
+				ctx.font = '10px system-ui, sans-serif';
+				const labels: { txt: string; x0: number; x1: number; yTop: number; yBot: number; color: string; prio: number }[] = [];
+				for (const s of shapes) {
+					const on = none || focus.doping === s.index;
+					const col = s.species === 'donor' ? [224, 96, 58] : [57, 135, 229];
+					ctx.strokeStyle = `rgba(${col.join(',')},${on ? 1 : 0.35})`;
+					ctx.fillStyle = `rgba(${col.join(',')},${on ? (focus.doping === s.index ? 0.38 : 0.2) : 0.06})`;
+					ctx.lineWidth = focus.doping === s.index ? 2 : 1;
+					if (s.dashed) ctx.setLineDash([4, 3]);
+					for (const poly of s.polys) { polyPath(ctx, poly, Xf, Yf); ctx.fill(); ctx.stroke(); }
+					ctx.setLineDash([]);
+					const xs = s.polys[0]?.map((p) => p[0]) ?? [], ys = s.polys[0]?.map((p) => p[1]) ?? [];
+					if (on && xs.length) labels.push({ txt: `${s.name} ${s.species === 'donor' ? 'N_D' : 'N_A'} ${cm3Label(s.cm3)}${s.profile !== 'uniform' ? ` (${s.profile})` : ''}`, x0: Xf(Math.min(...xs)), x1: Xf(Math.max(...xs)), yTop: Yf(Math.max(...ys)), yBot: Yf(Math.min(...ys)), color: `rgb(${col.join(',')})`, prio: focus.doping === s.index ? 0 : 2 });
+				}
+				for (const c of contacts) {
+					const e = g.electrodes.find((x) => x.name === c.electrode);
+					if (!e) continue;
+					const on = none || focus.contact === c.index;
+					polyPath(ctx, e.poly, Xf, Yf);
+					ctx.strokeStyle = on ? '#f3d58f' : 'rgba(243,213,143,0.4)';
+					ctx.lineWidth = focus.contact === c.index ? 3 : 2;
+					ctx.stroke();
+					const xs = e.poly.map((p) => p[0]), ys = e.poly.map((p) => p[1]);
+					if (on) labels.push({ txt: `${c.electrode} ${c.type}${c.biasV != null ? ` ${c.biasV} V` : ''}`, x0: Xf(Math.min(...xs)), x1: Xf(Math.max(...xs)), yTop: Yf(Math.max(...ys)), yBot: Yf(Math.min(...ys)), color: dark ? '#f3d58f' : '#8a6a12', prio: focus.contact === c.index ? 0 : 1 });
+				}
+				// audit F11: labels above their shape (else below), skipped when they would overlap a placed label;
+				// focused entries first, then contacts, then doping windows
+				const placed: [number, number, number, number][] = [];
+				const free = (b: [number, number, number, number]) => b[0] >= 0 && b[2] <= w && b[1] >= 0 && b[3] <= h && !placed.some((q) => b[0] < q[2] && b[2] > q[0] && b[1] < q[3] && b[3] > q[1]);
+				for (const l of labels.sort((a, b) => a.prio - b.prio)) {
+					const tw = ctx.measureText(l.txt).width + 4;
+					const lx = Math.max(2, Math.min(w - tw - 2, (l.x0 + l.x1) / 2 - tw / 2));
+					const box = [[lx, l.yTop - 15, lx + tw, l.yTop - 3], [lx, l.yBot + 3, lx + tw, l.yBot + 15]].find((b) => free(b as [number, number, number, number])) as [number, number, number, number] | undefined;
+					if (!box) continue;
+					placed.push(box);
+					ctx.lineWidth = 3; ctx.lineJoin = 'round';
+					ctx.strokeStyle = dark ? 'rgba(0,0,0,0.75)' : 'rgba(255,255,255,0.85)';
+					ctx.strokeText(l.txt, box[0] + 2, box[3] - 3);
+					ctx.fillStyle = l.color;
+					ctx.fillText(l.txt, box[0] + 2, box[3] - 3);
+					ctx.lineJoin = 'miter';
 				}
 			}
 			// Line features: region boundaries (all, or of the feature's selection).
@@ -688,6 +780,7 @@
 	}
 	function addCutLine(c: { ax: number; ay: number; bx: number; by: number }) {
 		const cl = R.addCutLine(sourceDataset(), { ...c, n: 500 }, undefined, point);
+		if (R.isSemi(cl.source)) cl.bias = group?.bias ?? null; // S8: the view's bias point
 		wb.tool = 'pan';
 		wb.node = `ds:${cl.id}`;
 		wb.settingsTab = 'settings';
@@ -695,6 +788,7 @@
 	}
 	function addCutPoint(x: number, y: number) {
 		const cp = R.addCutPoint(sourceDataset(), x, y, point);
+		if (R.isSemi(cp.source)) cp.bias = group?.bias ?? null;
 		wb.tool = 'pan';
 		wb.node = `ds:${cp.id}`;
 		wb.settingsTab = 'settings';
@@ -738,6 +832,14 @@
 		if (probeBusy) {
 			probeNext = { x, y, text: base };
 			return;
+		}
+		// audit F8: outside the feature's selection nothing is drawn; say so instead of the stored value (0 in the oxide)
+		if (p.regions && p.mesh) {
+			const loc = locate(p.mesh, meshIndex(p.mesh), x, y);
+			if (loc && !p.regions.includes(p.mesh.regionNames[p.mesh.triRegion[loc.t]])) {
+				probe = `${base}  ${p.f.expr}: outside selection`;
+				return;
+			}
 		}
 		probeBusy = true;
 		wb.post
@@ -883,7 +985,9 @@
 				if (!p || !wb.post) return null;
 				if (!group || !pointReady) return null;
 				const r = await wb.post.request<DerivedResult>(probeRequest(R, group, p.f, x, y));
-				return Number.isFinite(r.value) ? { value: r.value, label: `${p.f.expr} [${R.dsLabel(p.ds)}]`, unit: r.unit, dataset: p.ds, sol: solOf(group) ?? 'main' } : null;
+				const loc = p.regions && p.mesh ? locate(p.mesh, meshIndex(p.mesh), x, y) : null;
+				const outside = !!(loc && p.regions && p.mesh && !p.regions.includes(p.mesh.regionNames[p.mesh.triRegion[loc.t]]));
+				return Number.isFinite(r.value) ? { value: r.value, label: `${p.f.expr} [${R.dsLabel(p.ds)}]`, unit: r.unit, dataset: p.ds, sol: solOf(group) ?? 'main', outside } : null;
 			};
 			w.__simView = () => ({ ...view, W, H });
 			w.__simMarkers = () => built.markers.map((m) => ({ ...m }));
@@ -932,7 +1036,7 @@
 
 	// Redraw on any state the frame depends on.
 	$effect(() => {
-		void [built, shown, wb.highlight, wb.hoverHighlight, activeSel?.regions.length, activeSel?.regions.join(), R.cutLines.map((c) => [c.ax, c.ay, c.bx, c.by]), R.cutPoints.map((c) => [c.x, c.y]), activeCut, wb.showWindows, wb.domainLabels, wb.ruler, title, dark];
+		void [built, shown, semiOverlay, wb.highlight, wb.hoverHighlight, activeSel?.regions.length, activeSel?.regions.join(), R.cutLines.map((c) => [c.ax, c.ay, c.bx, c.by]), R.cutPoints.map((c) => [c.x, c.y]), activeCut, wb.showWindows, wb.domainLabels, wb.ruler, title, dark];
 		schedule();
 	});
 	$effect(() => {

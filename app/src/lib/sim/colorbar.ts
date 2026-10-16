@@ -1,7 +1,7 @@
 // Color legend drawing (one per color-table feature), shared by the graphics overlay and the image export.
 import { colormapLut, type ColormapName } from './colormap';
 import { linearTicks, logTicks, tickLabel } from './ticks';
-import type { Range } from './fieldmath';
+import { scaleT, type Range } from './fieldmath';
 import type { ScaleMode } from './types';
 
 export interface LegendSpec {
@@ -11,6 +11,8 @@ export interface LegendSpec {
 	scale: ScaleMode;
 	table: ColormapName;
 	reverse: boolean;
+	/** Extra tooltip text (range rule, clamped values, signed range). */
+	note?: string;
 }
 
 export const LEGEND_W = 78;
@@ -41,11 +43,15 @@ export function drawLegend(ctx: CanvasRenderingContext2D, x: number, y: number, 
 	};
 	const label = s.scale === 'log' ? `|${s.title}|` : s.title;
 	ctx.fillText(fit(label, w - 8), x + 4, y + 12);
-	ctx.fillText(fit(`(${s.unit})${s.scale === 'log' ? ' log' : ''}`, w - 8), x + 4, y + 24);
+	ctx.fillText(fit(`(${s.unit})${s.scale === 'log' ? ' log' : s.scale === 'symlog' ? ' signed log' : ''}`, w - 8), x + 4, y + 24);
 	const { min, max } = s.range;
-	const ticks = s.scale === 'log' ? logTicks(min, max) : linearTicks(min, max, 5);
+	// symlog: decades of |v| mirrored about the centre (|v| < min); fewer per side so the labels fit
+	// (decades too close to the centre are dropped so the +- labels do not collide)
+	const sym = s.scale === 'symlog' ? logTicks(min, max).filter((t) => Math.abs(Math.log10(t) - Math.round(Math.log10(t))) < 1e-9 && scaleT(t, 'symlog', s.range) >= 0.58) : [];
+	const symTicks = sym.length > 4 ? sym.filter((_, i) => i % Math.ceil(sym.length / 3) === 0 || i === sym.length - 1) : sym;
+	const ticks = s.scale === 'log' ? logTicks(min, max) : s.scale === 'symlog' ? [...symTicks.map((t) => -t).reverse(), ...symTicks] : linearTicks(min, max, 5);
 	for (const t of ticks) {
-		const u = s.scale === 'log' ? (Math.log10(t) - Math.log10(min)) / (Math.log10(max) - Math.log10(min)) : (t - min) / (max - min);
+		const u = s.scale === 'log' ? (Math.log10(t) - Math.log10(min)) / (Math.log10(max) - Math.log10(min)) : s.scale === 'symlog' ? scaleT(t, 'symlog', s.range) : (t - min) / (max - min);
 		if (!(u >= -1e-9 && u <= 1 + 1e-9)) continue;
 		const py = Math.round(bot - u * (bot - top - 1)) + 0.5;
 		ctx.fillRect(bx + bw, py, 3, 1);
@@ -55,5 +61,7 @@ export function drawLegend(ctx: CanvasRenderingContext2D, x: number, y: number, 
 }
 
 export function legendTip(s: LegendSpec): string {
-	return `${s.title} (${s.unit}), ${s.scale} scale, range ${tickLabel(Number(s.range.min.toPrecision(4)))} to ${tickLabel(Number(s.range.max.toPrecision(4)))}, ${s.table}${s.reverse ? ' reversed' : ''}`;
+	const scale = s.scale === 'symlog' ? 'signed log' : s.scale;
+	const range = s.scale === 'symlog' ? `|value| range ${tickLabel(Number(s.range.min.toPrecision(4)))} to ${tickLabel(Number(s.range.max.toPrecision(4)))}` : `range ${tickLabel(Number(s.range.min.toPrecision(4)))} to ${tickLabel(Number(s.range.max.toPrecision(4)))}`;
+	return `${s.title} (${s.unit}), ${scale} scale, ${range}, ${s.table}${s.reverse ? ' reversed' : ''}${s.note ? `. ${s.note}` : ''}`;
 }

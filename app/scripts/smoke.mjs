@@ -28,6 +28,45 @@ try { runCrossSection(chen, { stages: ['optical_mode'] }); } catch (e) { chenOpt
 if (!chenOpticalError) throw new Error('smoke precondition: chen2022 optical_mode is expected to stop on metal in the window');
 const expectedVector = runCrossSection(vectorText, { optical: true });
 const gsgFields = runCrossSection(gsg, { stages: ['optical_mode', 'eo_overlap'], fields: true }).fields;
+// DevLog-036: the analytic fixture with source and load impedance (illustrative) for the eo_response stage, and the
+// chen2022 loaded line (lossless Bloch quantities; its loss declaration is incomplete).
+const gsgResp = gsg.replace('  loading: {type: none}\n', '  loading: {type: none}\n  source_ohm: 50\n  load_ohm: 50\n');
+const expectedResp = runCrossSection(gsgResp, { stages: ['eo_overlap', 'eo_response'] });
+const expectedChenLoaded = runCrossSection(chen, { stages: ['loaded_line'] });
+// DevLog-042 (S8 UI): han2023 semiconductor stage at a coarse mesh (bias sweep of the config), kept for the store.
+const han = await readFile(new URL('../../sims/han2023/config.yaml', import.meta.url), 'utf8');
+const hanScale = 2;
+const expectedHan = runCrossSection(han, { stages: ['semiconductor'], meshScale: hanScale, keep: true });
+const hanStore = createSolutionStore(expectedHan);
+// DevLog-042 round 2: semiconductor + eo_response in one Compute (config keys line.rf_section and
+// semiconductor.operating_bias_v) on the engine's illustrative lateral PN rib fixture with an illustrative electrode cut.
+const { rib } = await import('../../engine/tests/semi-fixtures.mjs');
+const RIB_RF = `alt_geometries:
+  rf:
+    domain: {x_um: [-40, 40], y_um: [-10, 10]}
+    regions:
+      - {name: box, material: silicon_dioxide, rect: {x_um: [-40, 40], y_um: [-10, 0]}}
+      - {name: clad, material: silicon_dioxide, rect: {x_um: [-40, 40], y_um: [0, 10]}}
+    electrodes:
+      - {name: ground_l, role: ground, material: metal, weight: 0, rect: {x_um: [-30, -10], y_um: [1, 2]}}
+      - {name: signal, role: signal, material: metal, weight: 1, rect: {x_um: [-4, 4], y_um: [1, 2]}}
+      - {name: ground_r, role: ground, material: metal, weight: 0, rect: {x_um: [10, 30], y_um: [1, 2]}}
+    mesh: {max_edge_um: 2, electrode_edge_um: 0.25}
+line:
+  rf_section: rf
+  length_mm: 1
+  source_ohm: 50
+  load_ohm: 50
+  loading: {type: none}
+  conductor_loss_model: rprime_reference
+  r_pul_ref_ohm_per_m: 500
+  r_pul_ref_ghz: 10
+  include_internal_inductance: false
+  dielectric_loss_model: none
+sweep: {f_start_ghz: 1, f_stop_ghz: 80, n_points: 80}
+`;
+const ribTwe = rib({ edge: 0.02, values: '[0, 1, 2]', extraTop: RIB_RF }).replace('  mesh: {semiconductor_edge_um', '  operating_bias_v: 2\n  mesh: {semiconductor_edge_um');
+const expectedTwe = runCrossSection(ribTwe, { stages: ['semiconductor', 'eo_response'] });
 // Engine store in Node (DevLog-031) for browser/Node agreement of Results evaluations (R-UI, DevLog-032).
 const gsgKept = runCrossSection(gsg, { stages: ['optical_mode', 'eo_overlap'], keep: true });
 const gsgStore = createSolutionStore(gsgKept);
@@ -237,16 +276,18 @@ try {
   assert.doesNotMatch(page.url(), /#/, 'the table/explore hash is not written on /sim');
   // Stage readiness of a paper config: EO overlap needs explicit arm windows; RF line is blocked on the loaded T-rail cut
   // (Q2 C2) and needs an explicit dielectric loss model on the unloaded cut.
-  await page.locator('[data-stage-blocked="eo_overlap"]').filter({ hasText: 'optics.eo' }).waitFor();
-  await page.locator('[data-stage-blocked="rf_line"]').filter({ hasText: 'loaded cut of a periodic_t_rail line' }).waitFor();
+  // (DevLog-042 round 2, audit F12: unselected stages give their reason on the toolbar tooltip, not in Messages)
+  await page.locator('[data-stage-error="eo_overlap"][data-tip*="optics.eo"]').waitFor();
+  await page.locator('[data-stage-error="rf_line"][data-tip*="loaded cut of a periodic_t_rail line"]').waitFor();
+  assert.equal(await page.locator('[data-stage-blocked="eo_overlap"]').count(), 0, 'no Messages row for an unselected stage');
   assert.equal(await page.getByLabel('EO overlap', { exact: true }).isDisabled(), true);
   assert.equal(await page.getByLabel('RF line', { exact: true }).isDisabled(), true);
   assert.equal(await page.getByLabel('Optical mode', { exact: true }).isDisabled(), false);
   const sectionSelect = page.getByLabel('Cross-section', { exact: true });
   await sectionSelect.selectOption('unloaded');
-  await page.locator('[data-stage-blocked="rf_line"]').filter({ hasText: 'dielectric_loss_model' }).waitFor();
+  await page.locator('[data-stage-error="rf_line"][data-tip*="dielectric_loss_model"]').waitFor();
   await sectionSelect.selectOption('geometry');
-  await page.locator('[data-stage-blocked="rf_line"]').filter({ hasText: 'loaded cut of a periodic_t_rail line' }).waitFor();
+  await page.locator('[data-stage-error="rf_line"][data-tip*="loaded cut of a periodic_t_rail line"]').waitFor();
   console.log('PASS per-stage readiness of a paper config (loaded and unloaded cuts)');
 
   // Model Builder navigation: every node opens its settings; physics nodes carry the readiness reason.
@@ -475,6 +516,156 @@ try {
   await page.getByLabel('RF line', { exact: true }).uncheck();
   assert.equal(await runButton.isEnabled(), true);
   console.log('PASS EO overlap and RF line stages in the browser, Node agreement, convention gating, balance warning and blocked-stage guard');
+
+  // S7 (DevLog-036): EO response on the uniform fixture (dependencies added by the engine), RF Line page, EO Response
+  // plot group with the paper target point; loaded line of chen2022 (quasi-static Bloch values = Node).
+  assert.notEqual(gsgResp, gsg);
+  await yaml();
+  await editor.fill(gsgResp);
+  await page.getByLabel('EO response', { exact: true }).check();
+  // S9: the engine adds rf_line (and optical_mode) as dependencies; the toolbar shows them checked and disabled
+  await page.locator('[data-stage-auto="rf_line"] input:checked:disabled').waitFor();
+  await runButton.click(); await complete();
+  await node('results.derived'); await settingsTab();
+  await page.locator('[data-stages="electrostatics optical_mode eo_overlap rf_line eo_response"]').waitFor();
+  await node('results.rf');
+  await page.locator('[data-response-line="uniform_rf_line"]').waitFor();
+  // S8: a found bandwidth (the fixture crosses -3 dB between DC and the first sweep point; bracket from DC, audit S7)
+  assert.ok(expectedResp.response.bw3dbGhz > 0, 'fixture has a -3 dB crossing in Node');
+  const bw3 = Number(await page.locator('[data-bw3]').getAttribute('data-bw3'));
+  assert.ok(Math.abs(bw3 - expectedResp.response.bw3dbGhz) <= 1e-12 * bw3, `browser/Node 3 dB bandwidth ${bw3} vs ${expectedResp.response.bw3dbGhz}`);
+  await showView('EO Response');
+  await page.locator('.p1[data-series="1"]').waitFor();
+  await screenshot('sim-eo-response');
+  await page.getByLabel('EO response', { exact: true }).uncheck();
+  await loadSim();
+  await page.getByLabel('Loaded line', { exact: true }).check();
+  await node('physics.rf'); await settingsTab();
+  await page.locator('[data-readiness="eo_response"]').filter({ hasText: 'no complete loss declaration' }).waitFor();
+  await page.locator('[data-readiness="loaded_line"]').filter({ hasText: 'Inputs pass' }).waitFor();
+  await runButton.click(); await complete();
+  await node('results.rf'); await settingsTab();
+  const nB = Number(await page.locator('[data-bloch-qs]').getAttribute('data-bloch-qs'));
+  assert.ok(Math.abs(nB - expectedChenLoaded.loaded.quasiStatic.nRf) <= 1e-9 * nB, `browser/Node Bloch index ${nB}`);
+  await page.locator('[data-loaded-loss="none"]').waitFor();
+  await showView('Loaded Line');
+  await page.locator('.p1[data-series="2"]').waitFor();
+  await page.locator('.p1 .key').filter({ hasText: 'lossless' }).first().waitFor();
+  await screenshot('sim-loaded-line');
+  await page.getByLabel('Loaded line', { exact: true }).uncheck();
+  console.log(`PASS S7: EO response (3 dB ${bw3.toPrecision(6)} GHz) and chen2022 loaded line (n_B0 ${nB.toFixed(5)}) in the browser = Node; dependency stages shown`);
+
+  // S8 UI (DevLog-042): semiconductor stage on han2023 (YAML pasted: the atlas sim list predates the config), coarse
+  // mesh; stage exclusivity, doping table, default plot groups, carrier probe = Node store at points for two biases
+  // (Bias selector), C'(V) plot CSV = Node, Semiconductor page, Surface Integration of semi.n = Node.
+  await loadSim('id=chen2022-c&debug=1');
+  await yaml();
+  await editor.fill(han);
+  await settingsTab();
+  await page.getByLabel('Mesh resolution', { exact: true }).selectOption(String(hanScale));
+  await page.getByLabel('Optical mode', { exact: true }).check();
+  await page.getByLabel('Semiconductor', { exact: true }).check();
+  assert.equal(await page.getByLabel('Optical mode', { exact: true }).isChecked(), false, 'semiconductor stage runs alone');
+  assert.equal(await page.getByLabel('Electrostatics', { exact: true }).isChecked(), false, 'no electrostatics with the semiconductor stage');
+  await node('physics.semi');
+  await page.locator('[data-readiness="semiconductor"]').filter({ hasText: 'Inputs pass' }).waitFor();
+  assert.equal(Number(await page.locator('[data-semi-doping]').getAttribute('data-semi-doping')), parseConfig(han).raw.semiconductor.doping.length, 'doping entries listed');
+  await node('semi.doping:0');
+  await screenshot('sim-semi-doping');
+  await node('results');
+  await runButton.click(); await complete();
+  await until(async () => (await page.locator('.sim-page').getAttribute('data-registry')) === '1', 'semiconductor registry');
+  const hs = expectedHan.semiconductor;
+  const nBias = hs.points.length;
+  // Electron density at points of the junction region: the last bias (default) and bias point 0 (Bias selector).
+  const elec = await showView('Electron Density');
+  const hanPts = [[-0.1, 0.11], [-0.02, 0.15], [0.03, 0.05], [0.3, 0.11]];
+  const nodeN = (k, x, y) => evaluateDerived(hanStore, { kind: 'point', dataset: `semi:${k}`, expr: 'semi.n', unit: '1/cm^3', selection: { point: [x, y] } }).value;
+  const probeAll = async () => { const out = []; for (const [x, y] of hanPts) out.push(await page.evaluate(([x, y]) => window.__simProbe(x, y), [x, y])); return out; };
+  let got = await probeAll();
+  assert.equal(got[3].outside, true, '(0.3, 0.11) um lies in the oxide, outside the Semiconductor selection (audit F8)');
+  hanPts.forEach(([x, y], i) => {
+    const want = nodeN(nBias - 1, x, y);
+    assert.ok(got[i] && got[i].unit === '1/cm^3' && Math.abs(got[i].value - want) <= Math.abs(want) * 1e-9, `n at (${x}, ${y}), last bias: browser ${got[i]?.value} vs Node ${want}`);
+  });
+  await node(`pg:${elec}`); await settingsTab();
+  await page.getByLabel('Bias point', { exact: true }).selectOption('0');
+  await settled();
+  got = await probeAll();
+  let moved = false;
+  hanPts.forEach(([x, y], i) => {
+    const want = nodeN(0, x, y);
+    assert.ok(got[i] && Math.abs(got[i].value - want) <= Math.abs(want) * 1e-9, `n at (${x}, ${y}), bias point 0: browser ${got[i]?.value} vs Node ${want}`);
+    if (Math.abs(want - nodeN(nBias - 1, x, y)) > 1e-3 * Math.abs(want)) moved = true;
+  });
+  assert.ok(moved, 'the bias selector changes the plotted solution');
+  await screenshot('sim-semi-electron-density');
+  // Audit F1: the default Delta n group is the bias-induced change semi.dn_bias (engine round 4) = Node at the points.
+  await showView('Delta n (bias)');
+  for (const [x, y] of hanPts.slice(0, 3)) {
+    const g = await page.evaluate(([x, y]) => window.__simProbe(x, y), [x, y]);
+    const want = evaluateDerived(hanStore, { kind: 'point', dataset: `semi:${nBias - 1}`, expr: 'semi.dn_bias', selection: { point: [x, y] } }).value;
+    assert.ok(g && /semi\.dn_bias/.test(g.label) && Math.abs(g.value - want) <= Math.abs(want) * 1e-9 + 1e-18, `dn_bias at (${x}, ${y}): browser ${g?.value} vs Node ${want}`);
+  }
+  await screenshot('sim-semi-dn-bias');
+  // C'(V): the plotted series (CSV of the 1D plot) equals the Node stage values.
+  await showView("C'(V)");
+  await page.locator('.p1[data-series="1"]').waitFor();
+  const dlc = page.waitForEvent('download');
+  await page.locator('.p1 button', { hasText: 'CSV' }).click();
+  const dlC = await dlc;
+  // series rows (x, y); the paper-target rows of the overlay leave the series columns empty
+  const csvC = (await readFile(await dlC.path(), 'utf8')).trim().split('\n').filter(l => !l.startsWith('#')).slice(1).map(l => l.split(',')).filter(c => c[0] !== '' && c[0] !== '""').map(c => c.slice(0, 2).map(Number));
+  await dlC.delete();
+  assert.equal(csvC.length, nBias, "C'(V) has one row per bias point");
+  csvC.forEach(([v, c], k) => {
+    assert.ok(Math.abs(v - hs.points[k].sweptBiasV) <= 1e-12 && Math.abs(c - hs.points[k].capacitance.cPfPerMm) <= 1e-9 * c, `C'(${v} V) browser ${c} vs Node ${hs.points[k].capacitance.cPfPerMm} pF/mm`);
+  });
+  await screenshot('sim-semi-cv');
+  // Semiconductor results page: per-bias table and model labels.
+  await node('res.semi'); await settingsTab();
+  assert.equal(await page.locator('[data-semi-row]').count(), nBias);
+  assert.equal(Number(await page.locator('[data-semi-row="2"] td[data-col="2"]').getAttribute('data-value')), hs.points[2].capacitance.cPfPerMm);
+  await page.locator(`[data-density-basis="${hs.models.plasmaDispersion.densityBasis}"]`).waitFor();
+  await page.locator(`[data-delta-eps="${hs.models.plasmaDispersion.deltaEps}"]`).waitFor();
+  // Derived Values on semi: int(semi.n) over the automatic Semiconductor selection at the last bias = Node.
+  await node('results.derived'); await settingsTab();
+  await page.getByRole('button', { name: '+ Surface Integration', exact: true }).click();
+  await page.getByLabel('Derived dataset', { exact: true }).selectOption({ label: 'Semiconductor' });
+  await page.getByLabel('Derived selection', { exact: true }).selectOption({ label: 'Semiconductor (4)' });
+  const sExpr = page.getByLabel('Derived expression');
+  await sExpr.fill('semi.n'); await sExpr.press('Enter');
+  await page.getByRole('button', { name: 'Evaluate', exact: true }).click();
+  await page.locator('[data-eval-msg]').filter({ hasText: 'Evaluated' }).waitFor();
+  const siRegions = expectedHan.semiconductor && hanStore.mesh('semi').regionNames.filter((_, i) => hanStore.mesh('semi').regionMaterials[i] === 'silicon');
+  const wantInt = evaluateDerived(hanStore, { kind: 'surface_int', dataset: `semi:${nBias - 1}`, expr: 'semi.n', selection: { regions: siRegions } }).value;
+  const gotInt = Number(await page.locator('[data-bottom-table] td[data-value]').last().getAttribute('data-value'));
+  assert.ok(Math.abs(gotInt - wantInt) <= Math.abs(wantInt) * 1e-9, `int(semi.n) browser ${gotInt} vs Node ${wantInt} 1/m`);
+  // Semiconductor + EO response in one Compute (config keys present): junction-loaded line, bandwidth = Node.
+  await loadSim('id=chen2022-c&debug=1');
+  await yaml();
+  await editor.fill(ribTwe);
+  await settingsTab();
+  await page.getByLabel('Semiconductor', { exact: true }).check();
+  await page.getByLabel('EO response', { exact: true }).check();
+  assert.equal(await page.getByLabel('Semiconductor', { exact: true }).isChecked(), true, 'eo_response is combinable with the semiconductor stage');
+  await page.locator('[data-stage-auto="rf_line"] input:checked:disabled').waitFor();
+  await node('results');
+  await runButton.click(); await complete();
+  await node('results.derived'); await settingsTab();
+  await page.locator('[data-stages="semiconductor rf_line eo_response"]').waitFor();
+  await node('results.rf');
+  await page.locator('[data-response-line="junction_loaded_rf_line"]').waitFor();
+  const bwT = Number(await page.locator('[data-bw3]').getAttribute('data-bw3'));
+  assert.ok(expectedTwe.response.bw3dbGhz > 0 && Math.abs(bwT - expectedTwe.response.bw3dbGhz) <= 1e-9 * bwT, `junction-loaded 3 dB bandwidth browser ${bwT} vs Node ${expectedTwe.response.bw3dbGhz} GHz`);
+  await showView('EO Response');
+  await page.locator('.p1 [data-notice="junction"]').waitFor();
+  await screenshot('sim-semi-twe-response');
+  // Config chain seeding: yang2022-a (whole chain ready) loads with EO response selected.
+  await loadSim('id=yang2022-a');
+  assert.equal(await page.getByLabel('EO response', { exact: true }).isChecked(), true, 'stages seeded from the config chain');
+  console.log(`PASS S8 UI round 2: dn_bias plot = Node; oxide probe says outside selection; semiconductor + EO response (junction-loaded line, bw3 ${bwT.toPrecision(5)} GHz = Node); chain stages seeded`);
+  console.log(`PASS S8 UI: semiconductor stage alone, ${nBias} bias points; electron density probe = Node at 4 points for two biases (Bias selector); C'(V) CSV = Node; Semiconductor page; int(semi.n) over Semiconductor = Node (${wantInt.toPrecision(5)} 1/m)`);
 
   // Pockels delta n view (engine round 3): per-element values on the optical mesh, probed in the browser at Node
   // triangle centroids and compared with the Node export of the same tree.
@@ -773,7 +964,7 @@ try {
   }
 
   // W2: on a template config the element order is written to template.mesh (not to the generated geometry).
-  await loadSim('id=renaud2023-3um-738');
+  await loadSim('id=renaud2023-3um-738&stages=');
   await node('mesh'); await settingsTab();
   const orderSel = page.locator('.settings label.f').filter({ hasText: /^element order/ }).locator('select');
   assert.equal(await orderSel.isDisabled(), false, 'element order editable on a template config');
@@ -786,7 +977,7 @@ try {
   console.log('PASS template config: element order edits template.mesh');
 
   // W4: Canvas 2D fallback with a P2 mesh above the triangle budget draws gap-free (raster sampling, no speckle).
-  await loadSim('id=mao2022-a&renderer=canvas&debug=1');
+  await loadSim('id=mao2022-a&renderer=canvas&debug=1&stages=');
   await runButton.click(); await complete();
   await until(async () => (await gfx.getAttribute('data-renderer')) === 'canvas2d' && Number(await gfx.getAttribute('data-ntris')) > 60000, 'canvas fallback over budget');
   await page.getByRole('button', { name: 'Window', exact: true }).click();

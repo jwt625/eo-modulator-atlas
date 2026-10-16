@@ -2,11 +2,19 @@
 	import type { SimulationResult } from '../../../engine/src/run.mjs';
 	import LinePlot from './sim/LinePlot.svelte';
 	import { fmt } from './logic';
+	import { responseNotices } from './sim/labels';
 
 	let { result, part = 'all' }: { result: SimulationResult; part?: 'eo' | 'rf' | 'all' } = $props();
 	const eo = $derived(part !== 'rf' ? result.eo : null);
 	const rf = $derived(part !== 'eo' ? result.rf : null);
 	const sweep = $derived(rf?.sweep ?? null);
+	// DevLog-036: periodic loaded line (Bloch cell) and traveling-wave EO response.
+	const ll = $derived(part !== 'eo' ? (result.loaded ?? null) : null);
+	const resp = $derived(part !== 'eo' ? (result.response ?? null) : null);
+	// DevLog-042: reference / normalization and model diagnostics of the response (engine fields and target diagnostics)
+	const notices = $derived(resp ? responseNotices(result) : []);
+	const bwText = (b: { status: string; fGhz?: number; boundGhz?: number } | undefined) =>
+		!b ? '-' : b.status === 'found' ? `${fmt(b.fGhz ?? null, 4)} GHz` : b.status === 'no_crossing' ? `> ${fmt(b.boundGhz ?? null)} GHz (no crossing in the sweep)` : b.status.replaceAll('_', ' ');
 	const loss = (l: number | { sigmaSm: number; epsR: number } | null) =>
 		l == null ? 'none' : typeof l === 'number' ? `tan δ ${fmt(l)}` : `σ ${fmt(l.sigmaSm)} S/m, εr ${fmt(l.epsR)}`;
 	// Three small multiples sharing the frequency axis (one measure per axis, no dual y-scale).
@@ -76,6 +84,47 @@
 			<tbody>{#each rf.atTargets as p}<tr><td class="num">{fmt(p.fGhz, 5)}</td><td class="num" data-rf-alpha={p.fGhz} data-value={p.alphaDbPerCm}>{fmt(p.alphaDbPerCm, 5)}</td><td class="num">{fmt(p.nRf, 6)}</td><td class="num">{fmt(p.z0ReOhm, 5)}</td></tr>{/each}</tbody>
 		</table></div>
 	{/if}
+{/if}
+
+{#if ll}
+	<h3>Loaded line (periodic, exact distributed Bloch cell)</h3>
+	<p class="muted" data-loaded-model={ll.sectionModel}>
+		Period {fmt(ll.periodUm)} µm = loaded {fmt(ll.loadedLengthUm)} µm ({ll.cuts.loaded}) + unloaded {fmt(ll.unloadedLengthUm)} µm ({ll.cuts.unloaded})
+		· {ll.sectionModel === 't_rail_capacitive_loading' ? `loading conductors ${ll.loadingConductors.join(', ')}: L′ and R′ of the unloaded cut` : 'no loading conductors: each cut its own L′'}
+		{#if !ll.railsIdentical && ll.loadingConductors.length} · <span class="warn">rails differ between the cuts</span>{/if}
+	</p>
+	<div class="table-scroll"><table data-loaded-perlength>
+		<thead><tr><th>Section</th><th>C′ (pF/m)</th><th>C0′ (pF/m)</th><th>L′ (nH/m)</th></tr></thead>
+		<tbody>
+			<tr><td>unloaded</td><td class="num">{fmt(ll.perLength.unloaded.cPfPerM, 5)}</td><td class="num">{fmt(ll.perLength.unloaded.c0PfPerM, 5)}</td><td class="num">{fmt(ll.perLength.unloaded.lNhPerM, 5)}</td></tr>
+			<tr><td>loaded</td><td class="num">{fmt(ll.perLength.loaded.cPfPerM, 5)}</td><td class="num">{fmt(ll.perLength.loaded.c0PfPerM, 5)}</td><td class="num">{fmt(ll.perLength.loaded.lNhPerM, 5)}</td></tr>
+			<tr><td>period average</td><td class="num">{fmt(ll.perLength.average.cPfPerM, 5)}</td><td></td><td class="num">{fmt(ll.perLength.average.lNhPerM, 5)}</td></tr>
+		</tbody>
+	</table></div>
+	<p class="muted" data-bloch-qs={ll.quasiStatic.nRf} data-tip="f -> 0 lossless limits; compared with static n_rf and z0_ohm targets of the periodic line">
+		Quasi-static Bloch n {fmt(ll.quasiStatic.nRf, 5)} · Z {fmt(ll.quasiStatic.zOhm, 5)} Ω · Bragg {fmt(ll.braggGhz, 5)} GHz{ll.braggGap ? '' : ' (no stopband)'}
+	</p>
+	{#if ll.loss}<p class="muted" data-loaded-loss="declared">Lossy Bloch quantities (declared loss model). Loss: conductor {ll.loss.conductorModel.replaceAll('_', ' ')}, dielectric {(ll.loss.dielectricModel ?? '-').replaceAll('_', ' ')} · loaded-section R′ {ll.loss.loadedSectionConductor.replaceAll('_', ' ')}</p>
+	{:else}<p class="warn" data-loaded-loss="none">Lossless Bloch quantities only: {ll.lossReason}</p>{/if}
+	<p class="muted small">{ll.reference}</p>
+{/if}
+
+{#if resp}
+	<h3>EO response (traveling wave, small signal)</h3>
+	<p class="muted" data-response-line={resp.lineKind}>
+		{resp.lineKind === 'loaded_line_exact_cascade' ? `Loaded line, exact cascade of ${resp.nSections} sections` : resp.lineKind === 'loaded_line_bloch' ? 'Loaded line (Bloch γ, Z, homogenised)' : (resp.lineKind as string) === 'junction_loaded_rf_line' ? 'Junction-loaded RF line (semiconductor stage at the operating bias, Shin 2011 branch)' : 'Uniform RF line'} · L {fmt(resp.lengthMm)} mm · Z_s {fmt(resp.sourceOhm)} Ω · Z_L {fmt(resp.loadOhm)} Ω
+		· n_g {fmt(resp.ngOpt, 5)} ({resp.ngSource.replaceAll('_', ' ')}){#if resp.vpiDcV != null} · Vπ DC {fmt(resp.vpiDcV, 4)} V{/if}
+	</p>
+	<div class="table-scroll"><table data-response-bw>
+		<thead><tr><th data-tip="20 log10 |H| relative to the DC limit of the model">Bandwidth (DC reference)</th><th>Value</th></tr></thead>
+		<tbody>
+			<tr><td>-3 dB</td><td class="num" data-bw3={resp.bw3dbGhz ?? ''}>{bwText(resp.bandwidth.bw3db_ghz)}</td></tr>
+			<tr><td>-6 dB</td><td class="num" data-bw6={resp.bw6dbGhz ?? ''}>{bwText(resp.bandwidth.bw6db_ghz)}</td></tr>
+		</tbody>
+	</table></div>
+	{#if resp.braggWithin3x}<p class="warn" data-bragg-warning>Bragg frequency {fmt(resp.braggGhz, 5)} GHz is within 3x of the highest evaluated frequency ({fmt(resp.highestEvaluatedGhz, 4)} GHz).</p>{/if}
+	{#each notices as n}<p class={n.level === 'warn' ? 'warn' : 'muted'} data-notice={n.code} data-thin-conductor={n.code === 'thin_conductor' ? resp.thinConductorBelowGhz : undefined} data-tip={n.tip || undefined}>{n.text}</p>{/each}
+	<p class="muted small" data-tip={String(resp.convention.vpiRf ?? '')}>{String(resp.convention.db ?? '')}. RF Vπ(f) = Vπ DC / |H(f)| (amplitude of V_s Z_L / (Z_s + Z_L)). Plot: EO Response plot group.</p>
 {/if}
 
 <style>
