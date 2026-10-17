@@ -24,9 +24,11 @@ export const SEMI_LABELS = Object.freeze(['drift_diffusion_2d_steady_state', 'bo
  *   datasets: which bias points carry the `semi` dataset (typed arrays); keep: attach the solver (non-enumerable,
  *   `internals.semi.datasetAt(k)` builds the dataset of bias point k, -1 = reference); meshCheck: run the stage again
  *   at meshScale * meshCheck and report the per-point relative differences (mesh-uncertainty estimate, audit D8).
+ *   groupIndex: true computes the group index of the stage's mode also by finite difference when optics.group_index_from
+ *   asks for it (perturbation n_g is always reported: it comes with the solve).
  *   testHooks: test-only switches ({tangentFail: true} treats the tangent predictor as unconverged, audit R11).
  */
-export function runSemiconductor(input, { section: name = 'geometry', meshScale = 1, params = {}, optics: withOptics = true, datasets = 'none', onProgress = () => {}, keep = false, meshCheck = null, testHooks = {} } = {}) {
+export function runSemiconductor(input, { section: name = 'geometry', meshScale = 1, params = {}, optics: withOptics = true, datasets = 'none', onProgress = () => {}, keep = false, meshCheck = null, groupIndex = false, testHooks = {} } = {}) {
   const t0 = performance.now();
   const config = typeof input === 'string' ? parseConfig(input, { params }) : input;
   if (!Object.hasOwn(config.geometries, name)) throw new Error(`Unknown cross-section: ${name}`);
@@ -59,11 +61,13 @@ export function runSemiconductor(input, { section: name = 'geometry', meshScale 
     if (oo.solver !== 'vector') throw new Error('semiconductor optics needs optics.solver: vector');
     if (Math.abs(oo.lambda0Um - opts.optics.lambdaUm) > 1e-9) throw new Error('semiconductor.optics.wavelength_nm must equal optics.wavelength_nm (one mode solve per run)');
     const om = opticalMaterials(config);
-    solved = solveOptical(section, om.materials, oo, { meshScale });
+    // DevLog-043: the group index of this same solve (perturbation: mode.ng, no extra eigen solve; finite difference
+    // only when requested, groupIndex: true) is the n_g of the junction-loaded response and of optical_mode
+    solved = solveOptical(section, om.materials, oo, { meshScale, withGroupIndex: groupIndex || oo.groupIndex === 'perturbation' });
     opticalOverrides = om.overridden;
     coupling = prepareOpticalCoupling(dev, solved, opts.materialName);
     row = plasmaRow(opts.optics.model, opts.optics.lambdaUm);
-    opticalDiag = { neff: solved.neff, teFraction: solved.diagnostics.teFraction, nNodes: solved.diagnostics.nNodes, nTris: solved.diagnostics.nTris, nDof: solved.diagnostics.nDof, window: solved.window, nSiliconQuadraturePoints: coupling.nPoints, nSilicon: coupling.nSi, labels: solved.labels };
+    opticalDiag = { neff: solved.neff, ng: oo.groupIndex === 'fixed' ? null : solved.ng ?? null, groupIndexMethod: oo.groupIndex === 'fixed' ? 'fixed' : solved.ng != null ? oo.groupIndex : null, teFraction: solved.diagnostics.teFraction, nNodes: solved.diagnostics.nNodes, nTris: solved.diagnostics.nTris, nDof: solved.diagnostics.nDof, window: solved.window, nSiliconQuadraturePoints: coupling.nPoints, nSilicon: coupling.nSi, labels: solved.labels };
     timing.optical_ms = performance.now() - tt;
   }
   const base = opts.contacts.map((c) => c.biasV);

@@ -106,6 +106,8 @@ export interface OpticalDiagnostics {
   modeSelect?: { by: 'te_fraction' | 'confinement'; region?: string };
   /** lossy metal only */
   lossy?: { metalPowerFraction: number; metalAbsentReferenceNeff: number; sppIndices: { metal: string; eps_d: number; nSpp: number }[] };
+  /** 'semiconductor_stage' when the mode is the semiconductor stage's own solve (DevLog-043; that result has its own diagnostic fields). */
+  source?: 'semiconductor_stage';
 }
 /** Pockels index change per optical-mesh triangle, per volt of terminal voltage (round 3). */
 export interface PockelsField {

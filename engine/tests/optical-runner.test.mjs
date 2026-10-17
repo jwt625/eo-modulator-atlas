@@ -25,7 +25,8 @@ test('YAML/runtime/schema optical policy agrees and defaults to explicit rejecti
   for (const bad of [null, true, 0, 'gold', 'PEC']) {
     assert.throws(() => parseConfig(JSON.stringify(withMetal(bad))), /optics.metal_in_window/);
   }
-  assert.throws(() => runCrossSection(JSON.stringify(withMetal()), { optical: true }), /metal optical modes are unsupported/);
+  // DevLog-043 F3: the runner reports the readiness reason (same rule, before any solve); the solver message is tested in optics.test.mjs
+  assert.throws(() => runCrossSection(JSON.stringify(withMetal()), { optical: true }), /inside this mode window under optics\.metal_in_window: reject.*absent or pec_scalar/);
 });
 
 for (const policy of ['absent', 'pec_scalar']) {

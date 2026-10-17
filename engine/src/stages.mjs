@@ -597,13 +597,11 @@ export function runJunctionResponseStage({ config, semi, semiSection = 'geometry
   const es = solveElectrostatics(section, { resolvedMaterials: config.materials, meshScale: esScale, elementOrder: order });
   const rf = rfOptions(config.raw, config.materials, g, rfSection);
   const rfOut = runRfStage({ section, es, rf, targets, onProgress, meshScale: esScale, elementOrder: order });
-  // optical group index of the junction waveguide
-  onProgress('Optical group index of the junction waveguide');
+  // optical group index of the junction waveguide: the semiconductor stage's own mode (DevLog-043: same solve and
+  // materials, including an explicit-index override; no second mode solve)
   const oo = opticalOptions(config.raw);
-  const semiCut = crossSectionOf(config, semiSection);
-  semiCut.farScale = meshScale; // R7 (DevLog-039)
-  const solved = solveOptical(semiCut, config.materials, oo, { meshScale, withGroupIndex: true });
-  const ngOpt = oo.groupIndex === 'fixed' ? config.raw.optics.ng_fixed : solved.ng;
+  const ngOpt = oo.groupIndex === 'fixed' ? config.raw.optics.ng_fixed : semi.optical?.ng;
+  if (!(typeof ngOpt === 'number' && Number.isFinite(ngOpt) && ngOpt > 0)) throw new Error(`eo_response after the semiconductor stage needs the group index of the stage's optical mode (semiconductor.optics; got ${ngOpt})`);
   const lambdaM = oo.lambda0Um * 1e-6;
   const vpiDcV = lambdaM / (2 * ero.lengthM * Math.abs(dn));
   // G' null = below the residual floor (reverse bias): taken as 0 (semiconductor stage note)

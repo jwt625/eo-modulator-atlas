@@ -33,8 +33,20 @@ export function lineTopology(raw: Record<string, unknown>): string;
 /** Per stage: null when its inputs pass the input boundary, else the blocking message. */
 export type StageErrors = Record<string, string | null>;
 /** Geometry and disclosures only; never use preview as solver input. */
-export function inspectConfig(text: string, section?: string, options?: { params?: Record<string, number>; solver?: 'scalar' | 'vector' | null }): { preview: ParsedConfig; solveError: string; stageErrors: StageErrors };
+/** Input of stage-compat.mjs stageCompatibility (DevLog-043): readiness of the cross-section and semiconductor paths. */
+export interface StageContext {
+  hasSemiconductor: boolean;
+  /** The section's regions use a semiconductor-block material (no Laplace electrostatics there, F4b). */
+  semiSection: boolean;
+  topology: string;
+  readiness: StageErrors | null;
+  /** optical_mode / eo_response readiness with the semiconductor stage (null without a semiconductor block). */
+  semiReadiness: StageErrors | null;
+}
+export function inspectConfig(text: string, section?: string, options?: { params?: Record<string, number>; solver?: 'scalar' | 'vector' | null }): { preview: ParsedConfig; solveError: string; stageErrors: StageErrors; stageContext: StageContext };
 export function stageErrors(config: ParsedConfig, section?: string, options?: { solver?: 'scalar' | 'vector' | null }): StageErrors;
+export function semiconductorStageErrors(config: ParsedConfig, section?: string, overrides?: { rfSection?: string | null; biasV?: number | null }): StageErrors;
+export function semiconductorSection(raw: Record<string, unknown>, geometry: Geometry): boolean;
 export const GROUP_INDEX_METHODS: string[];
 export const METAL_POLICIES_ALL: string[];
 export const ELEMENT_ORDERS: number[];

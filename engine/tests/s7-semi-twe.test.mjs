@@ -86,8 +86,16 @@ test('runJunctionResponseStage plumbing on a synthetic semiconductor result: Vpi
   Object.assign(c.line, { source_ohm: 50, load_ohm: 50, length_mm: 2 });
   c.sweep = { f_start_ghz: 1, f_stop_ghz: 60, n_points: 60 };
   const config = parseConfig(JSON.stringify(c));
-  const semi = { perLength: [{ biasV: 2, cFPerM: J.cFPerM, rOhmM: J.rOhmM, flags: [] }], points: [{ sweptBiasV: 2, optics: { dneffPerV: 2e-5 } }] };
+  // DevLog-043: n_g comes from the semiconductor stage's own mode (semi.optical.ng; illustrative value here)
+  const semi = { perLength: [{ biasV: 2, cFPerM: J.cFPerM, rOhmM: J.rOhmM, flags: [] }], points: [{ sweptBiasV: 2, optics: { dneffPerV: 2e-5 } }], optical: { ng: 3.9 } };
   const out = runJunctionResponseStage({ config, semi, semiSection: 'geometry', rfSection: 'geometry', biasV: 2 });
+  assert.equal(out.ngOpt, 2.2, 'fixture: group_index_from fixed, ng_fixed 2.2');
+  const cp = structuredClone(c);
+  cp.optics.group_index_from = 'perturbation';
+  delete cp.optics.ng_fixed;
+  const configP = parseConfig(JSON.stringify(cp));
+  assert.equal(runJunctionResponseStage({ config: configP, semi, rfSection: 'geometry', biasV: 2 }).ngOpt, 3.9);
+  assert.throws(() => runJunctionResponseStage({ config: configP, semi: { ...semi, optical: null }, rfSection: 'geometry', biasV: 2 }), /group index of the stage's optical mode/);
   assert.ok(Math.abs(out.vpiDcV - 1.55e-6 / (2 * 2e-3 * 2e-5)) < 1e-9);
   assert.equal(out.response.lineKind, 'junction_loaded_rf_line');
   assert.ok(out.response.sweep.vpiRfV.every((v, i) => Math.abs(v - out.vpiDcV / Math.hypot(out.response.sweep.hRe[i], out.response.sweep.hIm[i])) < 1e-9 * v));

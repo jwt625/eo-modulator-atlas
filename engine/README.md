@@ -45,13 +45,20 @@ S21_EO, 3 dB / 6 dB bandwidths, RF Vpi; exact section cascade on periodic lines;
 `loaded_line` to the run. Conventions: sims/SPEC.md section S7. `chain` never causes a stage
 to execute.
 
+Stage rules (DevLog-043): `src/stage-compat.mjs` `stageCompatibility(selected, inspectConfig(text).stageContext)` is
+the one rule set of the runner and the /sim UI (per stage: runs, implied by, blocked reason, conflicts). With the
+semiconductor stage, `optical_mode` and `eo_response` (rf_line on `line.rf_section` implied) are allowed;
+`electrostatics`, `eo_overlap`, `loaded_line` and `rf_line` without `eo_response` are rejected with the reason (matrix
+in sims/SPEC.md, Stage contract).
+
 Silicon PN/PIN phase shifters (DevLog-039; conventions sims/SPEC.md section S8): the `semiconductor` stage
 (`src/semi-stage.mjs`, `src/semi/`) solves 2D steady-state drift-diffusion (Scharfetter-Gummel box method, Newton with
 a Cholesky-preconditioned GMRES, Gummel warm start, bias ramp; Sproul-Green n_i, Masetti / Caughey-Thomas mobility,
 SRH) on its own device mesh, then C'(V), G'(V), R', f_RC, and with `semiconductor.optics` the plasma-dispersion
 response of the vector mode (Nedeljkovic 2011 or Soref-Bennett): dn_eff(V), d alpha(V), loss, VpiL (single-arm secant,
-small-signal, push-pull at a reverse DC bias). It runs alone: `runCrossSection(text, {stages: ['semiconductor'],
-section})` or `node cli.mjs CONFIG.yaml --stages semiconductor [--section NAME]`; with `eo_response` added it drives
+small-signal, push-pull at a reverse DC bias). It runs without electrostatics: `runCrossSection(text, {stages:
+['semiconductor'], section})` or `node cli.mjs CONFIG.yaml --stages semiconductor [--section NAME]`; `optical_mode` may
+be added and reports the stage's own vector mode (no second solve); with `eo_response` added it drives
 the junction-loaded traveling-wave response on the electrode cross-section `line.rf_section` at
 `semiconductor.operating_bias_v` (run options rfSection / biasV override). Inputs: the `semiconductor` block
 (materials, doping profiles, ohmic contacts on electrodes or bare-face segments, bias sweep, numerics, small signal,

@@ -169,7 +169,8 @@ test('E2i.2 stage-time requirements: no optics.eo, arm on the discarded mirror h
   const passive = raw();
   delete passive.materials.eo_medium.r_pm_per_v;
   assert.match(stageErrors(normalizeConfig(passive)).eo_overlap, /no material has Pockels coefficients/);
-  assert.throws(() => run(passive, EO), /zero electro-optic phase difference/);
+  // DevLog-043 F3: the runner reports the readiness reason before any solve (was the solver's zero-phase error)
+  assert.throws(() => run(passive, EO), /no material has Pockels coefficients/);
 });
 
 test('E2i.2 target gating: missing convention and comparable: false are never evaluated', () => {

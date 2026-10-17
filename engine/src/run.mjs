@@ -1,11 +1,12 @@
 // Cross-section runner shared by Node and the browser worker. No results are persisted.
-import { parseConfig, opticalOptions, checkEoSolver, DEFAULT_ELEMENT_ORDER, DEFAULT_P2_MESH_FACTOR, eoOptions, rfOptions, checkArmWindows, crossSectionOf, STAGES, IMPLEMENTED_STAGES, VPI_METRICS, RESPONSE_METRICS, loadedLineOptions, eoResponseOptions, withStageDependencies, lineTopology, sweepFrequencies } from './config.mjs';
+import { parseConfig, opticalOptions, checkEoSolver, DEFAULT_ELEMENT_ORDER, DEFAULT_P2_MESH_FACTOR, eoOptions, rfOptions, checkArmWindows, crossSectionOf, STAGES, IMPLEMENTED_STAGES, VPI_METRICS, RESPONSE_METRICS, loadedLineOptions, eoResponseOptions, withStageDependencies, lineTopology, sweepFrequencies, stageErrors, semiconductorStageErrors, semiconductorSection } from './config.mjs';
 import { solveElectrostatics } from './electrostatics.mjs';
 import { geometryHash, esFields, pockelsDeltaN } from './fields.mjs';
 import { solveOptical, solvedFields, warmGet, warmSet } from './optical-stage.mjs';
 import { MATERIAL_LIBRARY } from './materials.mjs';
 import { MU0 } from './rf-line.mjs';
 import { runSemiconductor } from './semi-stage.mjs';
+import { checkStageSelection } from './stage-compat.mjs';
 import { runEoStage, runRfStage, runLoadedLineStage, runEoResponseStage, runJunctionResponseStage, responseTargetKey, RF_FREQUENCY_METRICS, WHEELER_SPREAD_WARNING } from './stages.mjs';
 
 const STATIC_RF = ['n_rf', 'z0_ohm', 'c_pul_pf_per_m', 'c0_pul_pf_per_m', 'l_pul_nh_per_m'];
@@ -181,11 +182,23 @@ export function runCrossSection(text, options = {}) {
 export function runConfig(config, { section: name = 'geometry', stages: requested = null, optical = false, meshScale = 1, onProgress = () => {}, fields = false, cache = null, targets: targetOverride = null, solver = null, elementOrder: orderOverride = null, p2MeshFactor = null, modeOnly = false, keep = false, numModes = null, rfSection = null, biasV = null } = {}) {
   if (typeof keep !== 'boolean') throw new Error('keep must be a boolean');
   if (modeOnly) return runModeOnly(config, { section: name, stages: requested, meshScale, onProgress, fields, cache, targets: targetOverride, solver, keep, numModes });
-  if (Array.isArray(requested) && requested.includes('semiconductor')) return runSemiconductorOnly(config, { section: name, stages: requested, meshScale, onProgress, fields, keep, targets: targetOverride, rfSection, biasV });
+  if (Array.isArray(requested) && requested.includes('semiconductor')) return runSemiconductorOnly(config, { section: name, stages: optical === true ? [...requested, 'optical_mode'] : requested, meshScale, onProgress, fields, keep, targets: targetOverride, rfSection, biasV });
+  // DevLog-043 F4b: a section with doped silicon of the semiconductor block has no Laplace electrostatics; without the
+  // semiconductor stage only optical_mode runs there (mode-only)
+  if (Object.hasOwn(config.geometries, name) && semiconductorSection(config.raw, config.geometries[name])) {
+    if (requested != null && !Array.isArray(requested)) throw new Error('stages must be an array of stage names');
+    checkStageSelection([...(requested ?? []), ...(optical === true ? ['optical_mode'] : [])], config.raw, { semiSection: true });
+    return runModeOnly(config, { section: name, stages: ['optical_mode'], meshScale, onProgress, fields, cache, targets: targetOverride, solver, keep, numModes });
+  }
   const run = withStageDependencies(resolveStages({ stages: requested, optical }), config.raw);
   if (typeof meshScale !== 'number' || !Number.isFinite(meshScale) || meshScale < 0.5 || meshScale > 4) throw new Error('meshScale must be between 0.5 and 4');
   if (typeof fields !== 'boolean') throw new Error('fields must be a boolean');
   if (!Object.hasOwn(config.geometries, name)) throw new Error(`Unknown cross-section: ${name}`);
+  // DevLog-043 F3: the readiness of every stage that will run (same input checks as the UI, incl. the static run-time
+  // rules) before any solve
+  const ready = stageErrors(config, name, { solver });
+  const notReady = run.find((s) => ready[s]);
+  if (notReady) throw new Error(ready[notReady]);
   const section = crossSectionOf(config, name);
   section.farScale = meshScale; // D11 (DevLog-039 round 2): the default far-field mesh cap follows the user mesh scale
   const wants = (s) => run.includes(s);
@@ -340,6 +353,8 @@ function runModeOnly(config, { section: name = 'geometry', stages = null, meshSc
   if (wanted.length !== 1 || wanted[0] !== 'optical_mode') throw new Error('modeOnly runs the optical_mode stage only (stages: [optical_mode])');
   if (typeof meshScale !== 'number' || !Number.isFinite(meshScale) || meshScale < 0.5 || meshScale > 4) throw new Error('meshScale must be between 0.5 and 4');
   if (!Object.hasOwn(config.geometries, name)) throw new Error(`Unknown cross-section: ${name}`);
+  const ready = stageErrors(config, name, { solver }).optical_mode; // DevLog-043 F3
+  if (ready) throw new Error(ready);
   const section = crossSectionOf(config, name);
   section.farScale = meshScale; // D11 (DevLog-039 round 2): the default far-field mesh cap follows the user mesh scale
   const opts = opticalOptions(config.raw, { solver, numModes });
@@ -393,35 +408,50 @@ function addLowFrequencyRange(t, metrics, config) {
 }
 
 /**
- * S8 semiconductor stage run through the runner (DevLog-039 round 2): `stages: ['semiconductor']` runs it alone (it
- * has its own device mesh and Poisson solve; electrostatics is not run). Config `targets` (ES / RF / EO metrics) are
- * reported not_evaluated; `semiconductor.targets` are compared by the stage. fields: true adds the `semi` dataset of
- * every bias point (result.semiconductor.datasets); keep: true attaches the internals for the postproc store.
+ * S8 semiconductor stage run through the runner (DevLog-039 round 2): `stages: ['semiconductor']` runs it on its own
+ * device mesh with its own Poisson solve (electrostatics is not run). Stage rules (DevLog-043, stage-compat.mjs):
+ * optical_mode may be added (the stage's own vector mode, no second solve; `metrics.n_eff`, `result.optical`), and
+ * eo_response (with its rf_line on line.rf_section, DevLog-036 round 4); electrostatics, eo_overlap, loaded_line and
+ * rf_line without eo_response are rejected with the reason. Config targets of metrics not computed here are reported
+ * not_evaluated; `semiconductor.targets` are compared by the stage. fields: true adds the `semi` dataset of every bias
+ * point (result.semiconductor.datasets) and, with optical_mode, the mode as `result.fields.optical`; keep: true
+ * attaches the internals for the postproc store.
  */
 function runSemiconductorOnly(config, { section: name = 'geometry', stages, meshScale = 1, onProgress = () => {}, fields = false, keep = false, targets: targetOverride = null, rfSection = null, biasV = null } = {}) {
-  // DevLog-036 round 4: eo_response (with its rf_line on rfSection) may follow the semiconductor stage
-  const others = stages.filter((x) => x !== 'semiconductor' && x !== 'electrostatics' && x !== 'eo_response' && x !== 'rf_line');
-  if (others.length) throw new Error(`the semiconductor stage runs alone (got ${others.join(', ')} as well)`);
+  const run = checkStageSelection(stages, config.raw).run;
+  const wantsOptical = run.includes('optical_mode');
+  // DevLog-043 F3: readiness of the stages that will run (config keys or the run options), before any solve
+  const semiReady = stageErrors(config, name).semiconductor;
+  if (semiReady) throw new Error(semiReady);
+  const companions = semiconductorStageErrors(config, name, { rfSection, biasV });
+  for (const s of ['optical_mode', 'eo_response']) if (run.includes(s) && companions[s]) throw new Error(`${s}: ${companions[s]}`);
   if (typeof meshScale !== 'number' || !Number.isFinite(meshScale) || meshScale < 0.3 || meshScale > 4) throw new Error('meshScale must be between 0.3 and 4');
   const started = performance.now();
-  const semi = runSemiconductor(config, { section: name, meshScale, onProgress, datasets: fields ? 'all' : 'none', keep });
+  const exportMode = fields && wantsOptical;
+  const semi = runSemiconductor(config, { section: name, meshScale, onProgress, datasets: fields ? 'all' : 'none', keep: keep || exportMode, groupIndex: wantsOptical || run.includes('eo_response') });
   // orchestrator decision (DevLog-039 round 3): config keys line.rf_section and semiconductor.operating_bias_v; the run
   // options rfSection / biasV override them
-  const twe = stages.includes('eo_response') ? runJunctionResponseStage({ config, semi, semiSection: name, rfSection: rfSection ?? config.raw.line?.rf_section ?? null, biasV: biasV ?? semi.operatingBiasV ?? null, meshScale, onProgress, targets: targetOverride ?? config.raw.targets ?? [] }) : null;
-  const tweTargets = twe ? compareTargets(targetOverride ?? config.raw.targets ?? [], {}, { topology: lineTopology(config.raw), section: name, fixedGroupIndex: config.raw.optics?.group_index_from === 'fixed', rf: twe.rf, response: twe.response }) : null;
-  const configTargets = (targetOverride ?? config.raw.targets ?? []).map((t, i) => (tweTargets && RESPONSE_METRICS.includes(t.metric) ? tweTargets[i] : { ...t, computed: null, status: 'not_evaluated', reason: t.source?.comparable === false ? 'The config marks this target comparable: false (source.comparable).' : 'Not computed by the semiconductor stage (run the cross-section stages for ES / optical / RF metrics).' }));
+  const twe = run.includes('eo_response') ? runJunctionResponseStage({ config, semi, semiSection: name, rfSection: rfSection ?? config.raw.line?.rf_section ?? null, biasV: biasV ?? semi.operatingBiasV ?? null, meshScale, onProgress, targets: targetOverride ?? config.raw.targets ?? [] }) : null;
+  const metrics = wantsOptical && semi.optical ? { n_eff: semi.optical.neff } : {};
+  const fixedNg = config.raw.optics?.group_index_from === 'fixed';
+  if (wantsOptical && semi.optical) { const ng = fixedNg ? config.raw.optics.ng_fixed : semi.optical.ng; if (Number.isFinite(ng)) metrics.ng_opt = ng; }
+  const targetList = targetOverride ?? config.raw.targets ?? [];
+  const compared = twe || Object.keys(metrics).length ? compareTargets(targetList, metrics, { topology: lineTopology(config.raw), section: name, fixedGroupIndex: config.raw.optics?.group_index_from === 'fixed', rf: twe?.rf ?? null, response: twe?.response ?? null }) : null;
+  const configTargets = targetList.map((t, i) => (compared && ((twe && RESPONSE_METRICS.includes(t.metric)) || Object.hasOwn(metrics, t.metric)) ? compared[i] : { ...t, computed: null, status: 'not_evaluated', reason: t.source?.comparable === false ? 'The config marks this target comparable: false (source.comparable).' : 'Not computed by the semiconductor stage (run the cross-section stages for ES / optical / RF metrics).' }));
   const semiTargets = semi.targets.map((t) => ({ ...t, stage: 'semiconductor' }));
   const targets = [...semiTargets, ...configTargets];
+  const ran = ['semiconductor', ...(wantsOptical ? ['optical_mode'] : []), ...(twe ? ['rf_line', 'eo_response'] : [])];
   const elapsed = performance.now() - started;
   const result = {
-    id: config.raw.id, section: name, scope: 'cross_section', stages: twe ? ['semiconductor', 'rf_line', 'eo_response'] : ['semiconductor'], metrics: {}, targets,
+    id: config.raw.id, section: name, scope: 'cross_section', stages: ran, metrics, targets,
     targetSummary: { total: targets.length, evaluated: targets.filter((t) => t.status !== 'not_evaluated').length, passed: targets.filter((t) => t.status === 'pass').length, failed: targets.filter((t) => t.status === 'fail').length, flagged: targets.filter((t) => t.diagnostic).length },
-    pendingStages: (config.raw.chain ?? []).filter((x) => x !== 'semiconductor'), warnings: [...new Set([...semi.labels, ...(twe?.warnings ?? [])])], meshScale,
-    electrostatics: null, optical: semi.optical, eo: null, rf: twe?.rf ?? null, response: twe?.response ?? null, semiconductor: semi, elapsed_ms: elapsed,
+    pendingStages: (config.raw.chain ?? []).filter((x) => !ran.includes(x)), warnings: [...new Set([...semi.labels, ...(wantsOptical ? ['optical_mode_from_semiconductor_stage'] : []), ...(wantsOptical && fixedNg ? ['group_index_is_configured_not_predicted'] : []), ...(twe?.warnings ?? [])])], meshScale,
+    electrostatics: null, optical: semi.optical ? { ...semi.optical, source: 'semiconductor_stage' } : null, eo: null, rf: twe?.rf ?? null, response: twe?.response ?? null, semiconductor: semi, elapsed_ms: elapsed,
     params: config.params?.values ?? {}, materialSources: config.materialSources ?? {}, geometryHash: null, materialHash: null,
     reused: { mesh: false, electrostatics: false }, timing: { semiconductor: semi.timing, total_ms: elapsed }, opticalSolver: semi.optical ? 'vector' : null,
     elementOrder: null, electrostaticMeshScale: null, p2MeshFactor: null, modeOnly: false,
   };
+  if (exportMode && semi.internals?.solved) result.fields = { es: null, optical: solvedFields(semi.internals.solved, semi.internals.opticalOpts), arms: null };
   if (keep) {
     const si = semi.internals;
     keepInternals(result, { config, section: si.section, sectionName: name, es: null, opts: si.opticalOpts ?? null, eo: null, optical: si.solved ?? null, arms: null, semi: si.semi });

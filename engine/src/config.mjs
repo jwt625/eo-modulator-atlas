@@ -1,9 +1,9 @@
 // Shared browser/CLI input boundary. Physical inputs are never silently filled in.
 // Numerical meshing defaults are documented in sims/SPEC.md. GPL-3.0-or-later.
-import { semiconductorOptions } from './semi/config.mjs';
+import { semiconductorOptions, dopingAt } from './semi/config.mjs';
 import { parseDocument } from 'yaml';
-import { rectToPolygon } from './geometry.mjs';
-import { resolveMaterial, MATERIAL_LIBRARY } from './materials.mjs';
+import { rectToPolygon, polygonArea, distPointPolygon } from './geometry.mjs';
+import { resolveMaterial, MATERIAL_LIBRARY, libraryIndex } from './materials.mjs';
 import { resolveParams, substituteExpressions } from './params.mjs';
 import { expandTemplate } from './templates.mjs';
 import { normalizeWeights } from './electrostatics.mjs';
@@ -294,11 +294,20 @@ export function inspectConfig(text, section = 'geometry', { params = {}, solver 
   const preview = { raw, geometries: normalizeGeometries(raw, materialDeclarations(raw)), ...expanded.meta };
   let solveError = '';
   let stages = null;
-  try { stages = stageErrors({ ...normalizeConfig(raw), ...expanded.meta }, section, { solver }); }
-  catch (e) { solveError = e instanceof Error ? e.message : String(e); }
+  let semi = null;
+  const hasSemiconductor = raw.semiconductor != null;
+  try {
+    const config = { ...normalizeConfig(raw), ...expanded.meta };
+    stages = stageErrors(config, section, { solver });
+    if (hasSemiconductor) semi = semiconductorStageErrors(config, section);
+  } catch (e) { solveError = e instanceof Error ? e.message : String(e); }
   // When the input boundary fails, every stage is blocked by that same error.
   if (!stages) stages = Object.fromEntries(STAGES.map((s) => [s, IMPLEMENTED_STAGES.includes(s) ? solveError : `${s} is not implemented in this engine`]));
-  return { preview, solveError, stageErrors: stages };
+  if (hasSemiconductor && !semi) semi = { optical_mode: solveError, eo_response: solveError };
+  // DevLog-043: input of stage-compat.mjs stageCompatibility (readiness of both run paths for this section)
+  const g = preview.geometries?.[section];
+  const stageContext = { hasSemiconductor, semiSection: !!g && semiconductorSection(raw, g), topology: lineTopology(raw), readiness: stages, semiReadiness: semi };
+  return { preview, solveError, stageErrors: stages, stageContext };
 }
 
 export function normalizeConfig(raw) {
@@ -778,20 +787,26 @@ export function stageErrors(config, sectionName = 'geometry', { solver = null } 
   };
   if (!g) return Object.fromEntries(STAGES.map((s) => [s, `Unknown cross-section: ${sectionName}`]));
   let section;
-  try { section = crossSectionOf(config, sectionName); }
+  try { section = crossSectionOf(config, sectionName); sharedElectrodeEdgeCheck(g, sectionName); }
   catch (e) {
     const message = e instanceof Error ? e.message : String(e);
     return Object.fromEntries(STAGES.map((s) => [s, IMPLEMENTED_STAGES.includes(s) ? message : `${s} is not implemented in this engine`]));
   }
   out.electrostatics = null;
   check('optical_mode', () => {
-    opticalOptions(raw, { solver });
+    const oo = opticalOptions(raw, { solver });
     if (!g?.optical_window) fail(`${sectionName}.optical_window`, 'required for the optical mode stage');
+    metalWindowCheck(g, materials, oo, [['optical_window', g.optical_window]], sectionName);
+    dispersionAnchorCheck(g, materials, oo.lambda0Um, [g.optical_window]);
   });
   check('eo_overlap', () => {
-    checkEoSolver(opticalOptions(raw, { solver }));
-    checkArmWindows(eoOptions(raw, geometries), section);
+    const oo = opticalOptions(raw, { solver });
+    checkEoSolver(oo);
+    const eo = eoOptions(raw, geometries);
+    checkArmWindows(eo, section);
     if (!Object.values(materials).some((m) => m.r)) fail('materials', 'no material has Pockels coefficients (r_pm_per_v)');
+    metalWindowCheck(g, materials, oo, [['optics.eo.arm_windows.A', eo.windows.A], ...(eo.windows.B ? [['optics.eo.arm_windows.B', eo.windows.B]] : [])], sectionName);
+    dispersionAnchorCheck(g, materials, oo.lambda0Um, [eo.windows.A, ...(eo.windows.B ? [eo.windows.B] : [])]);
   });
   check('rf_line', () => rfOptions(raw, materials, g, sectionName));
   check('loaded_line', () => loadedLineOptions(raw, materials, geometries));
@@ -803,11 +818,195 @@ export function stageErrors(config, sectionName = 'geometry', { solver = null } 
       if (lo.lossError) fail('eo_response', `the loaded line has no complete loss declaration: ${lo.lossError}`);
     } else if (out.rf_line) fail('eo_response', `needs the rf_line stage: ${out.rf_line}`);
   });
-  // S8 (DevLog-039): the semiconductor block validated against this cross-section
+  // S8 (DevLog-039): the semiconductor block validated against this cross-section; DevLog-043: plus the run-time input
+  // checks of its optical solve (vector solver, one wavelength, optical window), so a ready stage is not rejected by them
   check('semiconductor', () => {
     if (raw.semiconductor == null) fail('semiconductor', 'the semiconductor stage needs a semiconductor block');
-    semiconductorOptions(raw, g, materials);
+    const so = semiconductorOptions(raw, g, materials);
+    if (so.optics) semiconductorOpticsCheck(raw, so, g, sectionName, materials);
   });
   for (const s of STAGES) if (!IMPLEMENTED_STAGES.includes(s)) out[s] = `${s} is not implemented in this engine`;
+  return out;
+}
+
+/**
+ * DevLog-043 F4b: a cross-section whose regions use a material of the `semiconductor` block (doped silicon solved by
+ * drift-diffusion). The Laplace electrostatics stage is not available there.
+ */
+export function semiconductorSection(raw, geometry) {
+  const mats = raw?.semiconductor?.materials;
+  return !!mats && typeof mats === 'object' && geometry.regions.some((r) => Object.hasOwn(mats, r.material));
+}
+
+/** Inputs of the semiconductor stage's own optical solve (semi-stage.mjs runSemiconductor), checked before any solve. */
+function semiconductorOpticsCheck(raw, so, g, sectionName, materials = null) {
+  const oo = opticalOptions(raw);
+  if (oo.solver !== 'vector') fail('optics.solver', 'semiconductor optics needs optics.solver: vector');
+  if (Math.abs(oo.lambda0Um - so.optics.lambdaUm) > 1e-9) fail('semiconductor.optics.wavelength_nm', 'must equal optics.wavelength_nm (one mode solve per run)');
+  if (!g.optical_window) fail(`${sectionName}.optical_window`, 'required for the optical mode of semiconductor.optics');
+  metalWindowCheck(g, materials, oo, [['optical_window', g.optical_window]], sectionName);
+  // semi-stage.mjs opticalMaterials: an explicit n with a provenance entry replaces the library dispersion
+  const overridden = new Set(Object.keys(materials ?? {}).filter((m) => raw.materials?.[m]?.n != null && (raw.provenance?.[`materials.${m}.n`] ?? raw.provenance?.[`materials.${m}`])));
+  if (materials) dispersionAnchorCheck(g, materials, oo.lambda0Um, [g.optical_window], overridden);
+}
+
+/**
+ * DevLog-043: the optical solvers reject a library dispersion whose validity range excludes the anchor wavelength
+ * (optics.mjs assertAnchorInRange, vector-mode.mjs anchorInRange) for every material meshed in a mode window.
+ */
+function dispersionAnchorCheck(g, materials, lambda0Um, windows, skip = new Set()) {
+  for (const w of windows) {
+    const area = (w.x[1] - w.x[0]) * (w.y[1] - w.y[0]);
+    for (const r of g.regions) {
+      const m = materials[r.material];
+      if (!m?.dispersionKey || m.conductor || skip.has(r.material) || !(windowOverlapArea(r.poly, w) > 1e-9 * area)) continue;
+      for (const comp of ['n', 'n_o', 'n_e']) {
+        const l = libraryIndex(m.dispersionKey, comp, lambda0Um);
+        if (l && !l.inRange) fail(`materials.${r.material}`, `library dispersion '${m.dispersionKey}' (${comp}) is not valid at the optical wavelength ${lambda0Um} um (outside its validity range); the optical solve rejects it`);
+      }
+    }
+  }
+}
+
+/**
+ * DevLog-043: the mesher rejects two electrodes that share a boundary segment (geometry.mjs buildPslg). Statically:
+ * collinear edges of two electrode polygons overlapping over a positive length (relative 1e-9 of the domain).
+ */
+function sharedElectrodeEdgeCheck(g, sectionName) {
+  const span = Math.hypot(g.domain.x[1] - g.domain.x[0], g.domain.y[1] - g.domain.y[0]);
+  const tol = 1e-9 * span;
+  const edges = (p) => p.map((a, i) => [a, p[(i + 1) % p.length]]);
+  const E = g.electrodes.map((e) => edges(e.poly));
+  for (let i = 0; i < E.length; i++) for (let j = i + 1; j < E.length; j++) {
+    for (const [a, b] of E[i]) {
+      const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy);
+      if (!(L > tol)) continue;
+      const ux = dx / L, uy = dy / L;
+      for (const [c, d] of E[j]) {
+        const off = (q) => Math.abs((q[0] - a[0]) * uy - (q[1] - a[1]) * ux);
+        if (off(c) > tol || off(d) > tol) continue;
+        const t = (q) => (q[0] - a[0]) * ux + (q[1] - a[1]) * uy;
+        const lo = Math.max(0, Math.min(t(c), t(d))), hi = Math.min(L, Math.max(t(c), t(d)));
+        if (hi - lo > tol) fail(`${sectionName}.electrodes`, `electrodes ${g.electrodes[i].name} and ${g.electrodes[j].name} share a boundary segment; the mesher rejects touching electrodes (merge them or separate them)`);
+      }
+    }
+  }
+}
+
+/** Area of a polygon inside an axis-aligned window {x:[a,b], y:[c,d]} (Sutherland-Hodgman clip). */
+function windowOverlapArea(poly, w) {
+  let pts = poly;
+  const edges = [[0, w.x[0], 1], [0, w.x[1], -1], [1, w.y[0], 1], [1, w.y[1], -1]];
+  for (const [axis, v, sign] of edges) {
+    const inside = (p) => sign * (p[axis] - v) >= 0;
+    const out = [];
+    for (let i = 0; i < pts.length; i++) {
+      const a = pts[i], b = pts[(i + 1) % pts.length];
+      const ia = inside(a), ib = inside(b);
+      if (ia) out.push(a);
+      if (ia !== ib) {
+        const t = (v - a[axis]) / (b[axis] - a[axis]);
+        out.push([a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])]);
+      }
+    }
+    pts = out;
+    if (!pts.length) return 0;
+  }
+  return Math.abs(polygonArea(pts));
+}
+
+/**
+ * DevLog-043: the optical solvers reject a conductor meshed inside a mode window under metal_in_window: reject (scalar
+ * optics.mjs, vector vector-mode.mjs). Statically: any electrode, or region of a conductor material, overlapping the
+ * window with positive area (relative 1e-9 of the window; edge contact meshes no conductor triangle).
+ */
+function metalWindowCheck(g, materials, oo, windows, sectionName) {
+  if (oo.metal !== 'reject') return;
+  const conductors = [...g.electrodes.map((e) => ({ name: e.name, poly: e.poly })), ...g.regions.filter((r) => materials?.[r.material]?.conductor).map((r) => ({ name: r.name, poly: r.poly }))];
+  for (const [path, w] of windows) {
+    const area = (w.x[1] - w.x[0]) * (w.y[1] - w.y[0]);
+    const hit = conductors.filter((c) => windowOverlapArea(c.poly, w) > 1e-9 * area).map((c) => c.name);
+    if (hit.length) fail(path === 'optical_window' ? `${sectionName}.optical_window` : path, `conductor ${hit.join(', ')} inside this mode window under optics.metal_in_window: reject (the default); metal optical modes are not computed unless a policy bounds the metal explicitly (${oo.solver === 'vector' ? 'absent, pec or lossy' : 'absent or pec_scalar'})`);
+  }
+}
+
+/**
+ * DevLog-043: doping type of each semiconductor contact from the doping on its boundary with the semiconductor (the
+ * device rule, semi/device.mjs: sign of the net doping averaged over the contact; here length-weighted samples of the
+ * contact edge instead of the contact control volumes). null for a contact that touches no semiconductor region.
+ */
+function contactDopingTypes(g, so) {
+  const semiRegions = g.regions.filter((r) => r.material === so.materialName);
+  const span = Math.max(g.domain.x[1] - g.domain.x[0], g.domain.y[1] - g.domain.y[0]);
+  const tol = 1e-9 * span;
+  const N = 16;
+  return so.contacts.map((c) => {
+    const edges = [];
+    if (c.segment) edges.push([[c.segment.x[0], c.segment.y[0]], [c.segment.x[1], c.segment.y[1]]]);
+    else { const p = g.electrodes[c.index].poly; for (let i = 0; i < p.length; i++) edges.push([p[i], p[(i + 1) % p.length]]); }
+    let s = 0, w = 0;
+    for (const [a, b] of edges) {
+      const len = Math.hypot(b[0] - a[0], b[1] - a[1]);
+      for (let k = 0; k < N; k++) {
+        const t = (k + 0.5) / N, x = a[0] + t * (b[0] - a[0]), y = a[1] + t * (b[1] - a[1]);
+        const r = semiRegions.find((q) => distPointPolygon(x, y, q.poly, true) <= tol);
+        if (!r) continue;
+        const [nd, na] = dopingAt(so.doping, x, y, { regionName: r.name, material: r.material });
+        s += (len / N) * (nd - na);
+        w += len / N;
+      }
+    }
+    return w > 0 ? (s >= 0 ? 'n' : 'p') : null;
+  });
+}
+
+/**
+ * DevLog-043: readiness of the stages that may run with the semiconductor stage (stage-compat.mjs), for one
+ * cross-section: optical_mode (the semiconductor stage's own vector mode, no second solve) and eo_response (the
+ * junction-loaded line on line.rf_section at semiconductor.operating_bias_v). null = inputs pass, else the message.
+ * Run-option overrides (rfSection, biasV) are not seen here; the UI has no such path.
+ */
+export function semiconductorStageErrors(config, sectionName = 'geometry', { rfSection = null, biasV = null } = {}) {
+  const { raw, materials, geometries } = config;
+  const g = Object.hasOwn(geometries, sectionName) ? geometries[sectionName] : null;
+  if (!g) return { optical_mode: `Unknown cross-section: ${sectionName}`, eo_response: `Unknown cross-section: ${sectionName}` };
+  let so = null;
+  let semiError = null;
+  try {
+    if (raw.semiconductor == null) fail('semiconductor', 'the semiconductor stage needs a semiconductor block');
+    crossSectionOf(config, sectionName);
+    sharedElectrodeEdgeCheck(g, sectionName);
+    so = semiconductorOptions(raw, g, materials);
+    if (so.optics) semiconductorOpticsCheck(raw, so, g, sectionName, materials);
+  } catch (e) { semiError = `the semiconductor stage is blocked: ${e instanceof Error ? e.message : String(e)}`; }
+  const out = {};
+  const check = (stage, f) => {
+    try { if (semiError) throw new Error(semiError); f(); out[stage] = null; } catch (e) { out[stage] = e instanceof Error ? e.message : String(e); }
+  };
+  check('optical_mode', () => {
+    if (!so.optics) fail('semiconductor.optics', "with the semiconductor stage the optical mode is the stage's own vector-mode solve, which needs semiconductor.optics");
+  });
+  check('eo_response', () => {
+    const rs = rfSection ?? raw.line?.rf_section ?? null;
+    const opBias = biasV ?? so.operatingBiasV;
+    if (rs == null) fail('line.rf_section', 'eo_response after the semiconductor stage needs the electrode cross-section of the line (line.rf_section, or the run option rfSection)');
+    if (typeof rs !== 'string' || !Object.hasOwn(geometries, rs)) fail('line.rf_section', `eo_response after the semiconductor stage needs the electrode cross-section of the line (got ${rs})`);
+    if (opBias == null) fail('semiconductor.operating_bias_v', 'eo_response after the semiconductor stage needs the operating DC bias (one of semiconductor.bias values; or the run option biasV)');
+    if (!so.bias || !so.bias.values.some((v) => Math.abs(v - opBias) < 1e-12)) fail('semiconductor.operating_bias_v', `no semiconductor bias point at ${opBias} V (bias values ${so.bias?.values.join(', ') ?? 'none'})`);
+    if (!so.optics) fail('semiconductor.optics', 'eo_response after the semiconductor stage needs dn_eff/dV (plasma-dispersion optics)');
+    if (!so.smallSignal.capacitance || !so.smallSignal.seriesResistance) fail('semiconductor.small_signal', "eo_response after the semiconductor stage needs the junction C' and R' (capacitance and series_resistance on)");
+    if (lineTopology(raw) === 'periodic_t_rail') fail('line.loading.type', 'the junction-loaded line is a uniform line (Shin 2011 Fig. 2 branch); periodic_t_rail with the semiconductor stage is not implemented');
+    // forward-bias operating point (run-time rule of stages.mjs runJunctionResponseStage), from the contact doping types
+    const types = contactDopingTypes(g, so);
+    if (so.bias && types.every((t) => t)) {
+      const b = so.contacts.map((c, k) => (k === so.bias.contact ? opBias : c.biasV));
+      const mean = (t) => { const v = b.filter((_, k) => types[k] === t); return v.length ? v.reduce((x, y) => x + y, 0) / v.length : null; };
+      const fwd = mean('p') != null && mean('n') != null ? mean('p') - mean('n') : 0;
+      if (fwd > 0) fail('semiconductor.operating_bias_v', `${opBias} V is a forward-bias point (forward ${fwd} V; contacts ${so.contacts.map((c, k) => `${c.electrode} ${types[k]}`).join(', ')}): its C' is the quasi-static diffusion capacitance (valid only for omega tau << 1), so the junction-loaded TWE circuit is not valid; use a reverse-bias (depletion) operating point`);
+    }
+    eoResponseOptions(raw);
+    crossSectionOf(config, rs);
+    rfOptions(raw, materials, geometries[rs], rs);
+  });
   return out;
 }

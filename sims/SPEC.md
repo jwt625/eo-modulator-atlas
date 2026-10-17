@@ -241,6 +241,40 @@ input checks (cross-section construction, arm windows against the selected secti
 its mirror-cropped half, `rf_line` on a loaded T-rail cut), so a stage reported ready is
 never rejected by them at run time.
 
+Stage rules (DevLog-043, 2026-10-16). `engine/src/stage-compat.mjs` is the one rule set of the runner and the /sim
+UI: `stageCompatibility(selected, inspectConfig().stageContext)` gives per stage `selected`, `runs`, `impliedBy`,
+`blocked` (readiness on the path it would run on, or a conflict, conflict first), `conflictsWith`, `note`, plus
+`path`, `run` and `invalid`; `sanitizeStages` keeps the candidates that can run together (semiconductor first, then
+eo_response, then STAGES order); `checkStageSelection` is the runner check. `inspectConfig` returns `stageContext`
+`{hasSemiconductor, topology, readiness (stageErrors), semiReadiness}`; `semiconductorStageErrors` gives the readiness
+of `optical_mode` and `eo_response` with the semiconductor stage. Matrix:
+
+| stage | cross-section path (no `semiconductor`) | with `semiconductor` selected |
+|---|---|---|
+| electrostatics | always runs (not available on a section with semiconductor-block material: mode-only) | rejected: Laplace solve with fixed permittivities; the doped silicon is a semiconductor (free carriers screen the field); the stage solves its own Poisson equation |
+| optical_mode | own solve | allowed: the semiconductor stage's own vector mode (`metrics.n_eff`, `result.optical.source: semiconductor_stage`, store dataset `opt`); no second solve; needs `semiconductor.optics` |
+| eo_overlap | readiness | rejected: needs the Laplace field and a Pockels tensor; the device cut modulates by plasma dispersion (dn_eff(V), VpiL of the stage) |
+| rf_line | readiness; implied by eo_response (uniform line) | only as the dependency of eo_response, on `line.rf_section`; alone rejected (the device-cut line would treat doped silicon as a dielectric) |
+| loaded_line | readiness; implied by eo_response (periodic_t_rail) | rejected: a junction-loaded periodic line is not implemented |
+| eo_response | readiness (adds optical_mode and rf_line or loaded_line) | allowed: junction-loaded uniform line; needs `line.rf_section`, `semiconductor.operating_bias_v`, `semiconductor.optics`, C' and R' on, a non-periodic line |
+| semiconductor | not offered without a `semiconductor` block | runs on its device mesh |
+
+`stageErrors.semiconductor` also checks the inputs of the stage's optical solve (`optics.solver: vector`,
+`semiconductor.optics.wavelength_nm` = `optics.wavelength_nm`, an optical window). Run options `rfSection` / `biasV`
+remain a runner path (readiness reads the config keys only). Readiness also covers the statically detectable
+run-time failures: a conductor overlapping a mode window (optical or EO arm window, positive area) under
+`metal_in_window: reject`; a library dispersion outside its validity range at the wavelength for a material in a mode
+window; electrodes sharing a boundary segment (blocks every stage of the section); a forward-bias
+`semiconductor.operating_bias_v` for eo_response (contact doping type from the doping along the contact boundary).
+Mesh- or solve-dependent failures (vertex budget, mode convergence, lossy-metal plasmon guard, Wheeler recess
+collapse, drift-diffusion convergence) remain run-time errors. eo_response after the semiconductor stage takes n_g
+from the stage's own mode (`result.semiconductor.optical.ng`, perturbation of the same solve; `ng_fixed` when fixed).
+The runner checks this readiness for every stage that will run before any solve (semiconductor path: with the
+`rfSection` / `biasV` overrides). On a cross-section whose regions use a `semiconductor` block material the Laplace
+`electrostatics` stage is not available, with or without the semiconductor stage (the doped silicon is not a
+dielectric); eo_overlap, rf_line, loaded_line and the cross-section eo_response are blocked there, and `optical_mode`
+alone runs mode-only (`result.modeOnly`, path `mode_only`).
+
 Strict keys. Material keys are `conductor, eps_r, n, n_o, n_e, sigma_Sm, crystal,
 r_pm_per_v, tan_delta_rf, dispersion, thickness_um, n_complex` (`n_complex` and
 `thickness_um` are accepted but not used by the solver); target keys are `metric, value,
@@ -634,8 +668,9 @@ S7 x S8: Si phase-shifter traveling-wave response (DevLog-036 rounds 4-5, 2026-1
 ## S8: silicon drift-diffusion and plasma dispersion (DevLog-039, 2026-10-16)
 
 Entry: `runCrossSection(text, {stages: ['semiconductor'], section, meshScale, keep, fields})` (CLI
-`--stages semiconductor [--section NAME]`); the stage runs alone (own device mesh and Poisson solve; config `targets`
-are reported not_evaluated). Direct entry `runSemiconductor(text | parseConfig(), {section, meshScale, params, optics,
+`--stages semiconductor [--section NAME]`); the stage runs on its own device mesh with its own Poisson solve (no
+electrostatics); `optical_mode` (the stage's own mode) and `eo_response` may be added (stage rules, DevLog-043); config
+`targets` of metrics it does not compute are reported not_evaluated. Direct entry `runSemiconductor(text | parseConfig(), {section, meshScale, params, optics,
 datasets, keep, meshCheck})` in `engine/src/semi-stage.mjs`; studies `runSemiconductorSweepPoint(text, index)`.
 Input block `semiconductor` (full example in DevLog-039):
 
@@ -683,6 +718,9 @@ limits: Boltzmann statistics, full ionisation, no bandgap narrowing, no Auger, i
 charge. `symmetry` must be `none`. References: S8 cases K10-K12 in `npm run test:reference`.
 
 ## Changelog
+- 2026-10-16 DevLog-043: stage rules in `engine/src/stage-compat.mjs` (runner and UI); semiconductor + optical_mode
+  (the stage's own mode) + eo_response; electrostatics, eo_overlap, loaded_line and rf_line without eo_response rejected
+  with the reason; `inspectConfig().stageContext`; semiconductor readiness includes its optical-solve inputs.
 - 2026-10-16 DevLog-039 round 3: G' and small-signal dn_eff/dV in `perLength`; push-pull only at reverse DC bias;
   two-terminal C' rule; `semiconductor.operating_bias_v`, `line.rf_section`; Nedeljkovic row-mismatch estimate; default
   mesh grading and explicit `far_edge_um` scale with meshScale < 1 (meshScale 1 unchanged); schema mirrored
