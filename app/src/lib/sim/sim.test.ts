@@ -5,7 +5,7 @@ import { linearTicks, logTicks, tickLabel } from './ticks';
 import { applyOverrides, deleteIn, getIn, numericLeaves, setIn, splitPath } from './yamlEdit';
 import { readFileSync } from 'node:fs';
 import { parseSweepValues, guessDeviceX } from './sweepValues';
-import { readUrlState, writeUrlState } from './urlState';
+import { readUrlState, writeUrlState, urlStagesFor } from './urlState';
 import type { EsFields, FieldMesh, ScalarField } from './types';
 import { drawnAt, perElement, refinedDisplay } from './refined';
 import { contourLevels, featureRange } from './layers';
@@ -157,6 +157,15 @@ describe('sweep values and URL state', () => {
 		const back = readUrlState(new URLSearchParams(writeUrlState(s)));
 		expect(back).toEqual(s);
 		expect(readUrlState(new URLSearchParams('config=sims/x/config.yaml')).id).toBe('sims/x/config.yaml');
+	});
+	it('scopes link stages to the config the link names (DevLog-043)', () => {
+		const sim = { id: 'han2023-a', path: 'sims/han2023/config.yaml' };
+		expect(urlStagesFor(readUrlState(new URLSearchParams('id=han2023-a&stages=semiconductor,optical_mode')), sim)).toEqual(['semiconductor', 'optical_mode']);
+		expect(urlStagesFor(readUrlState(new URLSearchParams('config=sims/han2023/config.yaml&stages=semiconductor')), sim)).toEqual(['semiconductor']);
+		expect(urlStagesFor(readUrlState(new URLSearchParams('stages=semiconductor')), sim)).toBeNull();
+		expect(urlStagesFor(readUrlState(new URLSearchParams('id=yang2022-a&stages=eo_overlap')), sim)).toBeNull();
+		expect(urlStagesFor(readUrlState(new URLSearchParams('id=han2023-a&stages=')), sim)).toEqual([]);
+		expect(urlStagesFor(readUrlState(new URLSearchParams('id=han2023-a')), sim)).toBeNull();
 	});
 });
 

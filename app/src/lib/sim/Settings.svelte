@@ -123,7 +123,13 @@
 {#snippet stageToggle(id: string, label: string)}
 	{@const err = wb.stageError(id)}
 	{@const auto = wb.stageAuto(id)}
-	<label class="toggle" data-tip={auto ?? err ?? (id === 'semiconductor' ? 'Include this stage in Compute; it runs alone (own device mesh and Poisson solve), so the cross-section stages are switched off' : 'Include this stage in Compute')}><input type="checkbox" checked={wb.selected.includes(id) || !!auto} disabled={!!wb.busy || !!auto || (!!err && !wb.selected.includes(id))} onchange={(e) => wb.toggleStage(id, e.currentTarget.checked)} /> Include {label} in Compute{auto ? ' (dependency of EO response)' : ''}</label>
+	<label class="toggle" data-tip={auto ?? err ?? wb.stageNote(id) ?? (id === 'semiconductor' ? 'Include this stage in Compute: own device mesh and Poisson solve (no electrostatics); Optical mode (its own vector mode) and EO response can run with it' : 'Include this stage in Compute')}><input type="checkbox" checked={wb.selected.includes(id) || !!auto} disabled={!!wb.busy || !!auto || (!!err && !wb.selected.includes(id))} onchange={(e) => { wb.toggleStage(id, e.currentTarget.checked); e.currentTarget.checked = wb.compat.stages[id]?.runs ?? false; }} /> Include {label} in Compute{auto ? ' (dependency of EO response)' : ''}</label>
+{/snippet}
+
+{#snippet semiCompanion(id: string, label: string)}
+	{@const why = wb.semiReadiness(id)}
+	{#if wb.semiSelected}{@render stageToggle(id, label)}{:else}<label class="toggle" data-tip="Include the Semiconductor stage first"><input type="checkbox" disabled /> Include {label} in Compute</label>{/if}
+	{#if why}<p class="crit small" data-semi-readiness={id}>With the Semiconductor stage: {why}</p>{:else}<p class="muted small" data-semi-readiness={id}>With the Semiconductor stage: inputs pass the input boundary{id === 'optical_mode' ? " (the stage's own vector mode; no second solve)" : ''}.</p>{/if}
 {/snippet}
 
 {#snippet rectFields(base: string, obj: Record<string, unknown> | undefined)}
@@ -148,7 +154,7 @@
 	</div>
 	<div class="body">
 		{#if wb.settingsTab === 'yaml'}
-			<textarea aria-label="Input YAML" spellcheck="false" bind:value={wb.text} disabled={!!wb.busy || wb.loading}></textarea>
+			<textarea aria-label="Input YAML" spellcheck="false" bind:value={wb.text} disabled={!!wb.busy || wb.loading} oninput={(e) => { const t = (e as unknown as InputEvent).inputType; if (t === 'historyUndo' || t === 'historyRedo') wb.noteYamlHistory(t === 'historyUndo' ? 'undo' : 'redo'); }}></textarea>
 		{:else if !raw}
 			<p class="muted">{wb.loading ? 'Loading config...' : wb.parsed.error ? 'Input does not parse; fix it in the YAML tab.' : 'No config loaded.'}</p>
 		{:else if node === 'model'}
@@ -375,8 +381,9 @@
 			<Field {wb} path="semiconductor.operating_bias_v" label="operating bias" unit="V" tip="DC bias of the swept contact for the traveling-wave line (one of the bias values; reverse bias only for the EO response)" />
 			<h4>Traveling-wave EO response</h4>
 			{#if raw.line}<Field {wb} path="line.rf_section" label="RF section" options={wb.sections} tip="Electrode cross-section of the TWE line (line.rf_section); the junction loads it at the operating bias" />{/if}
-			{#if wb.semiCombinable('eo_response')}{@render stageToggle('eo_response', 'EO response')}{@render readiness('eo_response')}
-			{:else}<p class="muted small" data-semi-twe="unavailable">EO response after the semiconductor stage needs <span class="mono">line.rf_section</span> and <span class="mono">semiconductor.operating_bias_v</span>{raw.line ? '' : ' and a line block'}.</p>{/if}
+			{@render semiCompanion('eo_response', 'EO response')}
+			<h4>Optical mode</h4>
+			{@render semiCompanion('optical_mode', 'Optical mode')}
 			<h4>Small signal</h4>
 			<Field {wb} path="semiconductor.small_signal.dv_v" label="dV" unit="V" tip="Central-difference step of C' (empty = 10 mV)" />
 			<Field {wb} path="semiconductor.small_signal.capacitance" label="C'" bool />
@@ -392,7 +399,7 @@
 		{:else if node === 'res.semi'}
 			<SemiResults {wb} />
 		{:else if node === 'study' || node === 'study.stationary'}
-			<p class="muted small">{wb.semiSelected ? 'Semiconductor stage selected: no electrostatics; only the EO response can follow it (config keys line.rf_section, semiconductor.operating_bias_v).' : 'Electrostatics always runs; optional stages run in order.'}</p>
+			<p class="muted small">{wb.semiSelected ? "Semiconductor stage selected: no electrostatics (the stage solves its own Poisson equation); Optical mode (the stage's own vector mode) and EO response (line.rf_section, semiconductor.operating_bias_v) can run with it." : 'Electrostatics always runs; optional stages run in order.'}</p>
 			{#each wb.stageList as s}{@render stageToggle(s.id, s.label)}{/each}
 			<label class="f2">Mesh level <select value={wb.meshScale} disabled={!!wb.busy} onchange={(e) => (wb.meshScale = Number(e.currentTarget.value))}>{#each MESH_LEVELS as m}<option value={m.value}>{m.label}</option>{/each}</select></label>
 			<div class="actions"><button class="on" onclick={() => wb.compute()} disabled={!wb.canRun}>Compute</button><button onclick={() => wb.cancel()} disabled={!wb.busy}>Cancel</button></div>

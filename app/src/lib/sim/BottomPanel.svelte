@@ -20,7 +20,10 @@
 		if (wb.missingConfig) out.push({ key: 'missing', kind: 'crit', alert: true, text: 'The requested config is not in this atlas.' });
 		if (p.error) out.push({ key: `parse:${p.error}`, kind: 'crit', alert: true, text: `${p.config ? 'Preview only. Solve blocked: ' : ''}${p.error}` });
 		for (const st of blockedStages) out.push({ key: `blocked:${st.id}:${wb.stageError(st.id)}`, kind: 'muted', stage: st.id, text: `${st.label} blocked: ${wb.stageError(st.id)}` });
-		if (wb.blocked.length) out.push({ key: `sel:${wb.blocked.join()}`, kind: 'crit', alert: true, text: `Selected stage blocked: ${wb.blocked.join(', ').replaceAll('_', ' ')}. Clear it or fix its inputs.` });
+		// DevLog-043 F4b: the implicit electrostatics stage cannot run (e.g. doped silicon of the semiconductor block)
+		if (wb.blocked.includes('electrostatics')) out.push({ key: `es:${wb.stageError('electrostatics')}`, kind: 'crit', alert: true, text: `Nothing to run: Electrostatics ${wb.stageError('electrostatics')}.${wb.parsed.context?.semiSection ? ' Select the Semiconductor stage or the Optical mode (mode only).' : ''}` });
+		const selBlocked = wb.blocked.filter((s) => s !== 'electrostatics');
+		if (selBlocked.length) out.push({ key: `sel:${selBlocked.join()}`, kind: 'crit', alert: true, text: `Selected stage blocked: ${selBlocked.join(', ').replaceAll('_', ' ')}. Clear it or fix its inputs.` });
 		if (wb.error) out.push({ key: `err:${wb.error}`, kind: 'crit', alert: true, text: wb.error });
 		if (wb.stale) out.push({ key: 'stale', kind: 'notice', text: 'Inputs changed. These results belong to the previous run.' });
 		if (wb.sweepStale) out.push({ key: 'sweepstale', kind: 'notice', text: 'Inputs changed since the sweep ran. Sweep results belong to the previous inputs.' });

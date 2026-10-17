@@ -52,12 +52,17 @@
 	</tbody></table>
 	{#if r.electrostatics}
 		<p class="muted small">{r.electrostatics.nNodes.toLocaleString()} nodes · {r.electrostatics.nTris.toLocaleString()} triangles · charge/energy relative difference {fmt(r.electrostatics.energyChargeRelativeError)}</p>
+	{:else if (r as { semiconductor?: unknown }).semiconductor}
+		<p class="muted small" data-semi-only>Semiconductor stage result: no Laplace electrostatics (the stage solves its own Poisson equation on the device mesh).</p>
 	{:else}
 		<p class="muted small" data-mode-only>Mode-only result: no electrostatic solve (no C', Z0, n_RF, potential or field views).</p>
 	{/if}
 	{#if r.optical}
 		{@const o = r.optical}
-		{#if r.opticalSolver === 'vector'}
+		{#if o.source === 'semiconductor_stage'}
+			{@const so = o as unknown as { neff?: number; teFraction?: number; nDof?: number; nNodes?: number }}
+			<p class="muted small" data-optical-source="semiconductor_stage" data-tip="DevLog-043: with the Semiconductor stage the optical mode is the stage's own solve (plasma-dispersion coupling); no second mode solve">Optical model: the semiconductor stage's own full-vector mode (n_eff {fmt(so.neff ?? null, 6)}, TE fraction {fmt(so.teFraction ?? null, 4)}, {so.nDof?.toLocaleString?.() ?? 'n/a'} DOF, {so.nNodes?.toLocaleString?.() ?? 'n/a'} nodes).</p>
+		{:else if r.opticalSolver === 'vector'}
 			<p class="muted small" data-optical-policy={o.metal?.policy}>Optical model: full-vector mode {o.modeIndex} (order {o.order ?? 'n/a'}, {o.nDof?.toLocaleString?.() ?? 'n/a'} DOF, {o.nNodes?.toLocaleString?.() ?? 'n/a'} nodes); metal policy {o.metal?.policy ?? 'reject'}; converged {o.converged ? 'yes' : 'no'}.</p>
 			<p class="muted small" data-vector-mode>TE fraction {fmt(o.teFraction ?? null, 4)} · effective area {fmt(o.effectiveAreaUm2 ?? null, 4)} µm² · residual {fmt(o.residual ?? null, 2)} · {o.nModesComputed ?? 'n/a'} modes computed{o.groupIndexMethod ? ` · n_g by ${o.groupIndexMethod}` : ''}.</p>
 			{#each o.solverWarnings ?? [] as w}<p class="notice small">{w}</p>{/each}

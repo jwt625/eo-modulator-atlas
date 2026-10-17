@@ -1,7 +1,8 @@
 // Workbench state (runes). One instance per /sim page. Holds the canonical YAML text, run/mesh/sweep jobs, results,
 // fields, graphics settings and the timestamped log. Large typed arrays live in $state.raw (never proxied).
 import { inspectConfig } from '../../../../engine/src/config.mjs';
-import type { Geometry, ParsedConfig } from '../../../../engine/src/config.mjs';
+import type { Geometry, ParsedConfig, StageContext } from '../../../../engine/src/config.mjs';
+import { stageCompatibility, sanitizeStages } from '../../../../engine/src/stage-compat.mjs';
 import type { SimulationResult } from '../../../../engine/src/run.mjs';
 import { applyOverrides, deleteIn, getIn, setIn, splitPath } from './yamlEdit';
 import { parseSweepValues } from './sweepValues';
@@ -25,12 +26,8 @@ export const OPTIONAL = [
 	{ id: 'semiconductor', label: 'Semiconductor' }
 ] as const;
 
-/**
- * S8 (DevLog-039, DevLog-042): the semiconductor stage runs on its own device mesh without the cross-section stages.
- * Stages the engine runs after it (DevLog-036 round 4-5: eo_response with its rf_line on `line.rf_section` at
- * `semiconductor.operating_bias_v`); `Workbench.semiCombinable` also requires both config keys.
- */
-export const SEMI_COMBINABLE: readonly string[] = ['eo_response'];
+/** Toolbar label of a stage id. */
+export const stageLabel = (id: string): string => (OPTIONAL as readonly { id: string; label: string }[]).find((s) => s.id === id)?.label ?? (id === 'electrostatics' ? 'Electrostatics' : id);
 
 export const MESH_LEVELS = [
 	{ value: 4, label: 'Extra coarse (4x edge)' },
@@ -68,7 +65,7 @@ export function clock(t: number): string {
 	return `${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}.${p(d.getMilliseconds(), 3)}`;
 }
 
-type Parsed = { config: ParsedConfig | null; error: string; stages: Record<string, string | null> | null };
+type Parsed = { config: ParsedConfig | null; error: string; stages: Record<string, string | null> | null; context: StageContext | null };
 
 export class Workbench {
 	text = $state('');
@@ -146,12 +143,12 @@ export class Workbench {
 	sweepKey = $state('');
 
 	parsed: Parsed = $derived.by(() => {
-		if (!this.text) return { config: null, error: '', stages: null };
+		if (!this.text) return { config: null, error: '', stages: null, context: null };
 		try {
-			const { preview, solveError, stageErrors } = inspectConfig(this.text, this.section);
-			return { config: preview, error: solveError, stages: stageErrors };
+			const { preview, solveError, stageErrors, stageContext } = inspectConfig(this.text, this.section);
+			return { config: preview, error: solveError, stages: stageErrors, context: stageContext };
 		} catch (e) {
-			return { config: null, error: e instanceof Error ? e.message : String(e), stages: null };
+			return { config: null, error: e instanceof Error ? e.message : String(e), stages: null, context: null };
 		}
 	});
 	raw = $derived((this.parsed.config?.raw ?? null) as Record<string, any> | null); // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -163,13 +160,18 @@ export class Workbench {
 	runStages = $derived(OPTIONAL.map((s) => s.id).filter((id) => this.selected.includes(id)) as string[]);
 	/** Optional stages offered for this config (the semiconductor stage only with a `semiconductor` block). */
 	stageList = $derived(OPTIONAL.filter((s) => s.id !== 'semiconductor' || this.raw?.semiconductor != null));
-	/** The semiconductor stage is selected (it runs alone: no electrostatics). */
+	/** The semiconductor stage is selected (no electrostatics; optical_mode and eo_response may run with it). */
 	semiSelected = $derived(this.selected.includes('semiconductor'));
+	/**
+	 * DevLog-043: per-stage state from the engine rule set (stage-compat.mjs) for the current selection, config and
+	 * section; the only source of the toolbar, Study, Bias Sweep and Model Builder stage states.
+	 */
+	compat = $derived(stageCompatibility(this.selected, this.parsed.context));
 	/** Semiconductor stage result of the shown run (DevLog-039), or null. */
 	semi: SemiResult | null = $derived(semiOf(this.result));
 	currentKey = $derived(JSON.stringify([this.text, this.section, this.runStages, this.meshScale]));
 	stale = $derived(this.result !== null && this.currentKey !== this.runKey);
-	blocked = $derived(this.selected.filter((id) => this.stageError(id)));
+	blocked = $derived(this.compat.invalid.map((x) => x.stage));
 	/** Raw geometry block path of the current section. */
 	geometryPath = $derived(this.section === 'geometry' ? 'geometry' : `alt_geometries.${this.section}`);
 	meshKey = $derived(
@@ -212,37 +214,87 @@ export class Workbench {
 	}
 	sweepDone = $derived(this.sweepRows.filter((r) => r.status !== 'pending' && r.status !== 'running').length);
 
+	/** Why a stage cannot be selected now (readiness on its run path or a conflict), or why a selected one cannot run. */
 	stageError(id: string): string | null {
-		return this.parsed.stages?.[id] ?? null;
+		return this.compat.stages[id]?.blocked ?? null;
 	}
 
-	/** A stage the engine can run after the semiconductor stage in one Compute (config keys present). */
-	semiCombinable(id: string): boolean {
-		return SEMI_COMBINABLE.includes(id) && this.raw?.line?.rf_section != null && this.raw?.semiconductor?.operating_bias_v != null;
+	/** What the stage is on the current path (e.g. the semiconductor stage's own optical mode), or null. */
+	stageNote(id: string): string | null {
+		return this.compat.stages[id]?.note ?? null;
+	}
+
+	/** Readiness of optical_mode / eo_response with the semiconductor stage (Bias Sweep page), or null. */
+	semiReadiness(id: string): string | null {
+		return this.parsed.context?.semiReadiness?.[id] ?? null;
 	}
 
 	/**
-	 * Stages of a freshly loaded config (no `stages` in the URL): the config `chain` when every optional stage of it
-	 * passes readiness (configs whose chain is partly blocked load with none, as before).
+	 * Stages of a freshly loaded config (no `stages` in the URL): the config `chain` stages that can run together
+	 * (engine sanitizeStages); the others are logged with their reason (DevLog-043).
 	 */
 	seedStages() {
-		const chain = ((this.raw?.chain ?? []) as string[]).filter((s) => s !== 'electrostatics' && this.stageList.some((o) => o.id === s));
-		if (!chain.length || chain.some((s) => this.stageError(s))) return;
-		this.selected = chain;
-		this.addLog(`Stages from the config chain: ${chain.join(', ')}`);
+		const chain = ((this.raw?.chain ?? []) as string[]).filter((s) => s !== 'electrostatics');
+		if (!chain.length || !this.parsed.context) return;
+		const { kept, dropped } = sanitizeStages(chain, this.parsed.context);
+		this.selected = kept;
+		if (kept.length) this.addLog(`Stages from the config chain: ${kept.join(', ')}`);
+		for (const d of dropped) this.addLog(`Config chain: ${stageLabel(d.stage)} not selected (${d.reason})`, 'warn');
+	}
+
+	/** Stages of a link (`stages=` scoped to this config): sanitized; the dropped ones are reported. Returns them. */
+	applyUrlStages(stages: string[]): string[] {
+		const ctx = this.parsed.context;
+		const { kept, dropped } = ctx ? sanitizeStages(stages, ctx) : { kept: [], dropped: stages.map((s) => ({ stage: s, reason: this.parsed.error || 'the config does not parse' })) };
+		this.selected = kept;
+		for (const d of dropped) this.addNotice(`Link stages: ${stageLabel(d.stage)} not selected (${d.reason})`);
+		return dropped.map((d) => d.stage);
+	}
+
+	/** Text and section the selection was last checked against (cause of a deselection in the log). */
+	private seenText = '';
+	private seenSection = 'geometry';
+
+	/**
+	 * DevLog-043 R2: after a YAML / form edit (including textarea undo and redo), a section change or a selection
+	 * change, deselect the stages that can no longer run, with a Messages entry naming the cause and reason. Skipped
+	 * while the whole input does not pass the input boundary (typing in the YAML tab does not clear the selection;
+	 * Compute is blocked then anyway).
+	 */
+	enforceCompatibility() {
+		const cause = this.text !== this.seenText ? 'YAML edit' : this.section !== this.seenSection ? `Section ${this.section}` : 'Stage selection';
+		this.seenText = this.text;
+		this.seenSection = this.section;
+		if (!this.parsed.config || this.parsed.error || !this.parsed.context) return;
+		const { kept, dropped } = sanitizeStages(this.selected, this.parsed.context);
+		if (!dropped.length) return;
+		this.selected = kept;
+		if (cause === 'YAML edit') this.editDeselected = [...new Set([...this.editDeselected, ...dropped.map((d) => d.stage)])];
+		for (const d of dropped) this.addNotice(`${cause}: ${stageLabel(d.stage)} deselected (${d.reason})`);
+	}
+
+	/** Stages deselected by YAML edits (F4a: an undo restores the text, not the selection; the undo says which can run again). */
+	private editDeselected: string[] = [];
+
+	/** YAML-tab undo / redo (native textarea history): logged, naming the stages that can run again but stay deselected. */
+	noteYamlHistory(kind: 'undo' | 'redo') {
+		queueMicrotask(() => {
+			const again = this.editDeselected.filter((s) => !this.selected.includes(s) && !this.stageError(s));
+			if (again.length) this.addNotice(`YAML ${kind}: text restored; ${again.map(stageLabel).join(', ')} can run again but ${again.length > 1 ? 'stay' : 'stays'} deselected (a deselection is not reversed; re-select to include)`);
+			else this.addLog(`YAML ${kind}`);
+		});
 	}
 
 	/**
 	 * DevLog-036 round 2 (S9): a stage the engine adds as a dependency of a selected stage (eo_response adds
-	 * optical_mode and rf_line, or loaded_line on a periodic_t_rail line); null when not added.
+	 * optical_mode and rf_line, or loaded_line on a periodic_t_rail line; with the semiconductor stage only rf_line on
+	 * line.rf_section); null when not added. From the engine rule set.
 	 */
 	stageAuto(id: string): string | null {
-		if (!this.selected.includes('eo_response') || this.selected.includes(id)) return null;
-		// semiconductor + eo_response: the engine runs rf_line on line.rf_section; the optical mode is the stage's own
-		if (this.selected.includes('semiconductor')) return id === 'rf_line' ? `Runs on line.rf_section (${String(this.raw?.line?.rf_section ?? '-')}) as a dependency of EO response after the Semiconductor stage` : null;
-		const periodic = this.raw?.line?.loading?.type === 'periodic_t_rail';
-		const deps = ['optical_mode', periodic ? 'loaded_line' : 'rf_line'];
-		return deps.includes(id) ? 'Runs as a dependency of EO response (added by the engine)' : null;
+		const st = this.compat.stages[id];
+		if (id === 'electrostatics' || !st?.impliedBy) return null;
+		if (this.compat.path === 'semiconductor') return `Runs on line.rf_section (${String(this.raw?.line?.rf_section ?? '-')}) as a dependency of EO response after the Semiconductor stage`;
+		return 'Runs as a dependency of EO response (added by the engine)';
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -258,29 +310,78 @@ export class Workbench {
 		if (level === 'error') this.bottomTab = 'messages';
 	}
 
+	/** Checkbox change: only a stage that is not blocked (readiness or conflict, engine rule set) can be added. */
 	toggleStage(id: string, on: boolean) {
-		let next = on ? [...new Set([...this.selected, id])] : this.selected.filter((s) => s !== id);
-		// The semiconductor stage runs without the cross-section stages (eo_response may follow it when the config has
-		// line.rf_section and semiconductor.operating_bias_v): selecting it clears the others, selecting another clears it.
-		if (on && id === 'semiconductor') next = next.filter((s) => s === 'semiconductor' || this.semiCombinable(s));
-		else if (on && !this.semiCombinable(id)) next = next.filter((s) => s !== 'semiconductor');
-		const dropped = this.selected.filter((s) => !next.includes(s) && s !== id);
-		if (dropped.length) this.addLog(`${id === 'semiconductor' ? 'Semiconductor stage runs alone' : 'Semiconductor stage deselected'}: ${dropped.join(', ')} ${dropped.length > 1 ? 'are' : 'is'} off`, 'warn');
-		this.selected = next;
+		if (!on) {
+			this.selected = this.selected.filter((s) => s !== id);
+			return;
+		}
+		const why = this.stageError(id);
+		if (why) {
+			this.addLog(`${stageLabel(id)} not selected: ${why}`, 'warn');
+			return;
+		}
+		this.selected = [...new Set([...this.selected, id])];
 	}
 
-	/** Load a fetched config text and apply URL overrides. */
-	load(text: string, overrides: [string, number | string][] = []) {
+	/**
+	 * DevLog-043 R3: reset every per-config state on a config switch (stage selection, mesh level, form overrides,
+	 * sweep definitions and rows, selections, plot groups, results, view and page pickers, messages). Kept as global
+	 * preferences: theme, renderer, worker pool, panel sizes, graphics display toggles, tree collapse state, the log.
+	 */
+	resetConfigState() {
 		this.stopAll();
+		this.text = '';
+		this.baseText = '';
+		this.section = 'geometry';
+		this.selected = [];
+		this.meshScale = 1;
+		this.node = 'model';
+		this.settingsTab = 'settings';
 		this.result = null;
 		this.mesh = null;
+		this.meshMs = null;
+		this.runKey = '';
+		this.builtMeshKey = '';
+		this.runWavelengthUm = null;
 		this.error = '';
 		this.progress = '';
+		this.progressRows = [];
+		this.notices = [];
 		this.overrides = [];
-		this.sweepRows = [];
+		this.view = 'geometry';
+		this.ruler = null;
+		this.highlight = null;
+		this.hoverHighlight = null;
+		this.paintInfo = null;
+		this.resultAt = 0;
 		this.results.reset();
 		this.clearSolution();
-		this.view = 'geometry';
+		this.ranges = {};
+		this.runGlobals = null;
+		this.runGeometry = null;
+		this.meshGeometry = null;
+		this.sweepStudy = '';
+		this.sweepAxis = '';
+		this.sweepTargets = [];
+		this.sweepPath = '';
+		this.sweepSpec = '';
+		this.sweepRows = [];
+		this.sweepKey = '';
+		this.sweepMetric = '';
+		this.overlayX = '';
+		this.overlayY = '';
+		this.sweepJobs = [];
+		this.points = {};
+		this.eoPoint = this.modesPoint = this.rfPoint = this.derivedPoint = -1;
+		this.seenText = '';
+		this.seenSection = 'geometry';
+		this.editDeselected = [];
+	}
+
+	/** Load a fetched config text (all per-config state reset first) and apply URL overrides. */
+	load(text: string, overrides: [string, number | string][] = []) {
+		this.resetConfigState();
 		let t = text;
 		if (overrides.length) {
 			try {
@@ -293,8 +394,7 @@ export class Workbench {
 		}
 		this.text = t;
 		this.baseText = t;
-		this.runGeometry = null;
-		this.meshGeometry = null;
+		this.seenText = t;
 		this.zoomRequest = { kind: 'extents', n: this.zoomRequest.n + 1 };
 	}
 
@@ -597,7 +697,7 @@ export class Workbench {
 		const started = performance.now();
 		let last = started;
 		const stages = $state.snapshot(this.runStages) as string[];
-		this.progressRows = [{ t: Date.now(), level: 'info', msg: `Compute: ${this.section}, stages ${stages.includes('semiconductor') ? stages.join(', ') : `electrostatics${stages.length ? ', ' + stages.join(', ') : ''}`}, mesh level ${this.meshScale}` }];
+		this.progressRows = [{ t: Date.now(), level: 'info', msg: `Compute: ${this.section}, stages ${this.compat.run.join(', ')}${this.compat.path === 'mode_only' ? ' (mode only)' : ''}, mesh level ${this.meshScale}` }];
 		this.addLog(this.progressRows[0].msg);
 		try {
 			const w = this.newWorker();

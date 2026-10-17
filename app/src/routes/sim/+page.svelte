@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { onDestroy, onMount, untrack } from 'svelte';
 	import { page } from '$app/state';
-	import { goto } from '$app/navigation';
+	import { goto, replaceState } from '$app/navigation';
 	import { store } from '../../lib/state.svelte';
 	import { staticUrl, link } from '../../lib/paths';
-	import { Workbench, OPTIONAL, MESH_LEVELS } from '../../lib/sim/workbench.svelte';
-	import { readUrlState, writeUrlState } from '../../lib/sim/urlState';
+	import { Workbench, MESH_LEVELS } from '../../lib/sim/workbench.svelte';
+	import { readUrlState, writeUrlState, urlStagesFor } from '../../lib/sim/urlState';
 	import ModelTree from '../../lib/sim/ModelTree.svelte';
 	import Settings from '../../lib/sim/Settings.svelte';
 	import Graphics from '../../lib/sim/Graphics.svelte';
@@ -59,18 +59,19 @@
 	$effect(() => {
 		wb.missingConfig = !!requested && !chosen && sims.length > 0;
 	});
+	// DevLog-043 R2: every change of the text (form, YAML tab, its undo / redo), the section or the selection
+	// re-evaluates the stage rules; stages that can no longer run are deselected with a Messages entry.
+	$effect(() => {
+		void wb.parsed;
+		void wb.selected;
+		untrack(() => wb.enforceCompatibility());
+	});
 
 	$effect(() => {
 		const sim = chosen;
 		const st = untrack(() => urlState);
-		untrack(() => {
-			wb.stopAll();
-			wb.text = '';
-			wb.result = null;
-			wb.error = '';
-			wb.section = 'geometry';
-			wb.progress = '';
-		});
+		// DevLog-043 R3: nothing of the previous config survives a switch (selection, forms, sweeps, results).
+		untrack(() => wb.resetConfigState());
 		if (!sim) return;
 		const controller = new AbortController();
 		wb.loading = true;
@@ -86,8 +87,17 @@
 				wb.addLog(`Loaded ${sim.id} (${sim.path})`);
 				if (st.section && wb.sections.includes(st.section)) wb.section = st.section;
 				if (st.mesh != null && MESH_LEVELS.some((m) => m.value === st.mesh)) wb.meshScale = st.mesh;
-				if (st.stages) wb.selected = st.stages.filter((s) => OPTIONAL.some((o) => o.id === s));
-				else wb.seedStages();
+				// `stages=` belongs to the config the link names; sanitized by the engine rules, the address bar rewritten
+				const own = urlStagesFor(st, sim);
+				if (st.stages && !own) wb.addLog('Link stages ignored: the link names no config (stages apply only to the config they were created for)', 'warn');
+				if (own) {
+					const dropped = wb.applyUrlStages(own);
+					if (dropped.length) {
+						const u = new URL(page.url.href);
+						u.searchParams.set('stages', wb.selected.join(','));
+						replaceState(`${u.pathname}${u.search}${u.hash}`, page.state);
+					}
+				} else wb.seedStages();
 				if (st.sweep?.path.startsWith('study:')) wb.sweepStudy = st.sweep.path.slice(6);
 				else if (st.sweep) {
 					wb.sweepPath = st.sweep.path;
@@ -148,11 +158,11 @@
 			<select aria-label="Mesh resolution" bind:value={wb.meshScale} disabled={!!wb.busy}>{#each MESH_LEVELS as m}<option value={m.value}>{m.label}</option>{/each}</select>
 		</label>
 		<fieldset class="stages" aria-label="Stages">
-			<label data-tip={wb.semiSelected ? 'Not run with the Semiconductor stage (it solves its own Poisson equation on the device mesh)' : 'Always runs'}><input type="checkbox" checked={!wb.semiSelected} disabled /> Electrostatics</label>
+			<label data-tip={wb.compat.stages.electrostatics.runs ? 'Always runs on this section' : wb.stageError('electrostatics') ?? 'Not run'} data-stage-error={wb.compat.stages.electrostatics.runs ? undefined : 'electrostatics'}><input type="checkbox" checked={wb.compat.stages.electrostatics.runs} disabled /> Electrostatics</label>
 			{#each wb.stageList as s}
 				{@const err = wb.stageError(s.id)}
 				{@const auto = wb.stageAuto(s.id)}
-				<label data-tip={auto ?? err ?? 'Inputs pass the input boundary'} class:blocked={!!err} data-stage-error={err ? s.id : undefined} data-stage-auto={auto ? s.id : undefined}><input type="checkbox" checked={wb.selected.includes(s.id) || !!auto} disabled={!!wb.busy || !!auto || (!!err && !wb.selected.includes(s.id))} onchange={(e) => wb.toggleStage(s.id, e.currentTarget.checked)} /> {s.label}</label>
+				<label data-tip={auto ?? err ?? wb.stageNote(s.id) ?? 'Inputs pass the input boundary'} class:blocked={!!err} data-stage-error={err ? s.id : undefined} data-stage-auto={auto ? s.id : undefined}><input type="checkbox" checked={wb.selected.includes(s.id) || !!auto} disabled={!!wb.busy || !!auto || (!!err && !wb.selected.includes(s.id))} onchange={(e) => { wb.toggleStage(s.id, e.currentTarget.checked); e.currentTarget.checked = wb.compat.stages[s.id]?.runs ?? false; }} /> {s.label}</label>
 			{/each}
 		</fieldset>
 		<div class="acts">

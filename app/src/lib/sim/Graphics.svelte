@@ -1018,7 +1018,10 @@
 			overlay.height = Math.round(H * dpr);
 			if (first) zoomExtents();
 			drawLegends();
-			schedule();
+			// DevLog-043 F2: setting canvas.width clears the WebGL buffer; ResizeObserver callbacks run after this frame's
+			// rAF callbacks, so a scheduled redraw would present one black frame. Draw in the same task instead.
+			if (raf) cancelAnimationFrame(raf);
+			frame();
 		});
 		ro.observe(box);
 		box.addEventListener('wheel', onWheel, { passive: false });

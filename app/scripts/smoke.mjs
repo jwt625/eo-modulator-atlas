@@ -26,6 +26,11 @@ const vectorText = yamlSetIn(analytic, 'optics.solver', 'vector'); // engine hel
 let chenOpticalError = '';
 try { runCrossSection(chen, { stages: ['optical_mode'] }); } catch (e) { chenOpticalError = e.message; }
 if (!chenOpticalError) throw new Error('smoke precondition: chen2022 optical_mode is expected to stop on metal in the window');
+// DevLog-043: that failure is now caught by readiness; a mesh-dependent failure (vertex budget) is only found at run time.
+const chenTiny = yamlSetIn(chen, 'geometry.mesh.max_vertices', 200);
+let chenRunError = '';
+try { runCrossSection(chenTiny); } catch (e) { chenRunError = e.message; }
+if (!chenRunError) throw new Error('smoke precondition: chen2022 with a 200-vertex budget is expected to stop in the mesher');
 const expectedVector = runCrossSection(vectorText, { optical: true });
 const gsgFields = runCrossSection(gsg, { stages: ['optical_mode', 'eo_overlap'], fields: true }).fields;
 // DevLog-036: the analytic fixture with source and load impedance (illustrative) for the eo_response stage, and the
@@ -67,6 +72,12 @@ sweep: {f_start_ghz: 1, f_stop_ghz: 80, n_points: 80}
 `;
 const ribTwe = rib({ edge: 0.02, values: '[0, 1, 2]', extraTop: RIB_RF }).replace('  mesh: {semiconductor_edge_um', '  operating_bias_v: 2\n  mesh: {semiconductor_edge_um');
 const expectedTwe = runCrossSection(ribTwe, { stages: ['semiconductor', 'eo_response'] });
+// DevLog-043 F4b: han2023 optical mode alone runs mode-only (no Laplace electrostatics on its doped silicon)
+const expectedHanMode = runCrossSection(han, { stages: ['optical_mode'], meshScale: hanScale });
+if (!expectedHanMode.modeOnly) throw new Error('smoke precondition: han2023 optical_mode alone is mode-only');
+// F3: the runner rejects a statically known missing key before the semiconductor solve
+{ const t0 = performance.now(); let msg = ''; try { runCrossSection(han, { stages: ['semiconductor', 'eo_response'] }); } catch (e) { msg = e.message; }
+  if (!/line\.rf_section/.test(msg) || performance.now() - t0 > 1500) throw new Error(`smoke precondition F3: ${msg} after ${performance.now() - t0} ms`); }
 // Engine store in Node (DevLog-031) for browser/Node agreement of Results evaluations (R-UI, DevLog-032).
 const gsgKept = runCrossSection(gsg, { stages: ['optical_mode', 'eo_overlap'], keep: true });
 const gsgStore = createSolutionStore(gsgKept);
@@ -124,7 +135,9 @@ try {
     return v[0];
   };
   const workersBesidesSolution = async () => page.workers().length - Number(await page.locator('.sim-page').getAttribute('data-solution') ?? 0);
-  const loadSim = async (query = 'id=chen2022-c') => {
+  // DevLog-043: chen2022 seeds its available chain stages (optical_mode, loaded_line); `stages=` keeps the
+  // electrostatics-only baseline of the steps below.
+  const loadSim = async (query = 'id=chen2022-c&stages=') => {
     await page.goto(url(`sim?${query}${query.includes('pool=') ? '' : '&pool=2'}`));
     await until(() => runButton.isEnabled(), 'config loaded');
   };
@@ -282,7 +295,9 @@ try {
   assert.equal(await page.locator('[data-stage-blocked="eo_overlap"]').count(), 0, 'no Messages row for an unselected stage');
   assert.equal(await page.getByLabel('EO overlap', { exact: true }).isDisabled(), true);
   assert.equal(await page.getByLabel('RF line', { exact: true }).isDisabled(), true);
-  assert.equal(await page.getByLabel('Optical mode', { exact: true }).isDisabled(), false);
+  // DevLog-043: metal in the optical window under the reject policy is a readiness reason (no run-time surprise)
+  assert.equal(await page.getByLabel('Optical mode', { exact: true }).isDisabled(), true);
+  await page.locator('[data-stage-error="optical_mode"][data-tip*="inside this mode window under optics.metal_in_window: reject"]').waitFor();
   const sectionSelect = page.getByLabel('Cross-section', { exact: true });
   await sectionSelect.selectOption('unloaded');
   await page.locator('[data-stage-error="rf_line"][data-tip*="dielectric_loss_model"]').waitFor();
@@ -324,8 +339,13 @@ try {
   await page.mouse.move(sb.x + sb.width / 2, sb.y + sb.height / 2);
   await page.mouse.move(sb.x + sb.width / 2 + 3, sb.y + sb.height / 2 + 2);
   await until(async () => /es\.V -?[\d.e-]+ V/.test(await page.locator('.probe').getAttribute('data-probe') ?? ''), 'probe shows the potential');
+  const paints0 = Number(await gfx.getAttribute('data-paints'));
   for (const v of ['Electric Field', 'Mesh', 'Electric Potential']) await showView(v);
+  await until(async () => Number(await gfx.getAttribute('data-paints')) > paints0, 'painted after the view changes');
   await page.getByLabel('Mesh coloring').waitFor({ state: 'detached' });
+  // DevLog-043 F2: the canvas backing store matches its CSS size and the last resize was painted (no cleared frame)
+  await until(async () => page.locator('.gfx canvas.gl').evaluate((c) => Math.abs(c.width - Math.round(c.clientWidth * (window.devicePixelRatio || 1))) <= 1), 'canvas resized');
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
   await screenshot('sim-desktop');
   // Refined display (DevLog-034): the default Normal resolution splits every element into 3 x 3 sub-triangles.
   assert.equal(Number(await gfx.getAttribute('data-ntris')), 9 * (chenFields.tri.length / 3), 'refined display (Normal, r = 3)');
@@ -398,18 +418,20 @@ try {
   assert.ok(await runButton.isEnabled());
   console.log('PASS cancellation clears the active worker and discards the run');
 
-  await page.getByLabel('Optical mode', { exact: true }).check();
+  await yaml();
+  await editor.fill(chenTiny);
   await runButton.click();
-  await page.getByRole('alert').filter({ hasText: chenOpticalError.slice(0, 80) }).waitFor(); // engine's own message
+  await page.getByRole('alert').filter({ hasText: chenRunError.slice(0, 80) }).waitFor(); // engine's own run-time message
   await until(() => page.workers().length === 0, 'failed worker terminated');
   assert.equal(await page.locator('[data-metric]').count(), 0);
   await yaml();
   await editor.fill('schema: invalid');
   await page.getByRole('alert').filter({ hasText: 'expected eo-atlas.sim/v1' }).waitFor();
   assert.equal(await runButton.isEnabled(), false);
-  console.log('PASS unsupported optical error and invalid-input guard');
+  console.log('PASS run-time solver error (engine message, worker terminated) and invalid-input guard');
 
   await editor.fill(analytic);
+  await page.getByLabel('Optical mode', { exact: true }).check();
   await runButton.click(); await complete();
   const neff = await metric('n_eff');
   assert.ok(Math.abs(neff - expectedOptical.metrics.n_eff) < 1e-8);
@@ -507,13 +529,15 @@ try {
   await node('res.eo'); await settingsTab();
   await page.locator('[data-balance-warning]').waitFor();
   await page.locator('[data-eo-convention="mzm_push_pull"]').waitFor();
-  // Breaking an RF input blocks the selected stage before any worker starts.
+  // Breaking an RF input: the YAML edit re-evaluates the stage rules and deselects the now blocked stage with a
+  // Messages entry (DevLog-043 R2); a blocked stage never stays selected, so Compute stays available without it.
   await yaml();
   await editor.fill(gsg.replace('  dielectric_loss_model: tan_delta_regions\n', ''));
   await bottom('Messages');
-  await page.locator('[data-stage-blocked="rf_line"]').filter({ hasText: 'dielectric_loss_model' }).waitFor();
-  assert.equal(await runButton.isEnabled(), false);
-  await page.getByLabel('RF line', { exact: true }).uncheck();
+  await page.locator('.row.msg').filter({ hasText: 'YAML edit: RF line deselected' }).filter({ hasText: 'dielectric_loss_model' }).waitFor();
+  assert.equal(await page.getByLabel('RF line', { exact: true }).isChecked(), false);
+  assert.equal(await page.getByLabel('RF line', { exact: true }).isDisabled(), true);
+  assert.equal(await page.locator('[data-stage-blocked]').count(), 0, 'no selected blocked stage');
   assert.equal(await runButton.isEnabled(), true);
   console.log('PASS EO overlap and RF line stages in the browser, Node agreement, convention gating, balance warning and blocked-stage guard');
 
@@ -541,7 +565,7 @@ try {
   await loadSim();
   await page.getByLabel('Loaded line', { exact: true }).check();
   await node('physics.rf'); await settingsTab();
-  await page.locator('[data-readiness="eo_response"]').filter({ hasText: 'no complete loss declaration' }).waitFor();
+  await page.locator('[data-readiness="eo_response"]').filter({ hasText: /needs the optical group index: .*inside this mode window/ }).waitFor(); // DevLog-043: the optical mode (metal in the window) is reported first
   await page.locator('[data-readiness="loaded_line"]').filter({ hasText: 'Inputs pass' }).waitFor();
   await runButton.click(); await complete();
   await node('results.rf'); await settingsTab();
@@ -558,14 +582,17 @@ try {
   // S8 UI (DevLog-042): semiconductor stage on han2023 (YAML pasted: the atlas sim list predates the config), coarse
   // mesh; stage exclusivity, doping table, default plot groups, carrier probe = Node store at points for two biases
   // (Bias selector), C'(V) plot CSV = Node, Semiconductor page, Surface Integration of semi.n = Node.
-  await loadSim('id=chen2022-c&debug=1');
+  await loadSim('id=chen2022-c&debug=1&stages=');
   await yaml();
   await editor.fill(han);
   await settingsTab();
   await page.getByLabel('Mesh resolution', { exact: true }).selectOption(String(hanScale));
   await page.getByLabel('Optical mode', { exact: true }).check();
   await page.getByLabel('Semiconductor', { exact: true }).check();
-  assert.equal(await page.getByLabel('Optical mode', { exact: true }).isChecked(), false, 'semiconductor stage runs alone');
+  // DevLog-043: the optical mode stays selected with the semiconductor stage (its own vector mode, no second solve)
+  assert.equal(await page.getByLabel('Optical mode', { exact: true }).isChecked(), true, 'optical mode combinable with the semiconductor stage');
+  assert.equal(await page.getByLabel('EO overlap', { exact: true }).isDisabled(), true);
+  await page.locator('[data-stage-error="eo_overlap"][data-tip*="conflicts with semiconductor"]').waitFor();
   assert.equal(await page.getByLabel('Electrostatics', { exact: true }).isChecked(), false, 'no electrostatics with the semiconductor stage');
   await node('physics.semi');
   await page.locator('[data-readiness="semiconductor"]').filter({ hasText: 'Inputs pass' }).waitFor();
@@ -576,6 +603,18 @@ try {
   await runButton.click(); await complete();
   await until(async () => (await page.locator('.sim-page').getAttribute('data-registry')) === '1', 'semiconductor registry');
   const hs = expectedHan.semiconductor;
+  // semiconductor + optical_mode: the reported mode is the semiconductor stage's own solve = Node
+  await node('results.derived'); await settingsTab();
+  await page.locator('[data-stages="semiconductor optical_mode"]').waitFor();
+  const hanNeff = Number(await page.locator('[data-metric="n_eff"]').getAttribute('data-value'));
+  assert.ok(Math.abs(hanNeff - hs.optical.neff) <= 1e-12 * hanNeff, `n_eff (semiconductor stage mode) browser ${hanNeff} vs Node ${hs.optical.neff}`);
+  await page.locator('[data-optical-source="semiconductor_stage"]').waitFor();
+  // dataset opt (Mode Analysis table, solved row) is the same mode
+  await node('res.modes'); await settingsTab();
+  const optSolved = page.locator('[data-mode-table="opt"] tbody tr', { hasText: 'solved' }).first();
+  const optNeff = Number(await optSolved.locator('td').nth(2).innerText());
+  assert.ok(Math.abs(optNeff - hs.optical.neff) <= 1e-5, `dataset opt solved n_eff ${optNeff} vs Node semiconductor-stage mode ${hs.optical.neff}`);
+  await node('results');
   const nBias = hs.points.length;
   // Electron density at points of the junction region: the last bias (default) and bias point 0 (Bias selector).
   const elec = await showView('Electron Density');
@@ -642,7 +681,7 @@ try {
   const gotInt = Number(await page.locator('[data-bottom-table] td[data-value]').last().getAttribute('data-value'));
   assert.ok(Math.abs(gotInt - wantInt) <= Math.abs(wantInt) * 1e-9, `int(semi.n) browser ${gotInt} vs Node ${wantInt} 1/m`);
   // Semiconductor + EO response in one Compute (config keys present): junction-loaded line, bandwidth = Node.
-  await loadSim('id=chen2022-c&debug=1');
+  await loadSim('id=chen2022-c&debug=1&stages=');
   await yaml();
   await editor.fill(ribTwe);
   await settingsTab();
@@ -665,11 +704,108 @@ try {
   await loadSim('id=yang2022-a');
   assert.equal(await page.getByLabel('EO response', { exact: true }).isChecked(), true, 'stages seeded from the config chain');
   console.log(`PASS S8 UI round 2: dn_bias plot = Node; oxide probe says outside selection; semiconductor + EO response (junction-loaded line, bw3 ${bwT.toPrecision(5)} GHz = Node); chain stages seeded`);
-  console.log(`PASS S8 UI: semiconductor stage alone, ${nBias} bias points; electron density probe = Node at 4 points for two biases (Bias selector); C'(V) CSV = Node; Semiconductor page; int(semi.n) over Semiconductor = Node (${wantInt.toPrecision(5)} 1/m)`);
+  console.log(`PASS S8 UI: semiconductor stage with the optical mode (stage mode n_eff = Node), ${nBias} bias points; electron density probe = Node at 4 points for two biases (Bias selector); C'(V) CSV = Node; Semiconductor page; int(semi.n) over Semiconductor = Node (${wantInt.toPrecision(5)} 1/m)`);
+
+  // DevLog-043: stage rules from the engine (stage-compat.mjs) on the toolbar, Bias Sweep page and Model Builder;
+  // per-config state on config switch (A = yang2022-a TFLN, B = han2023-a semiconductor); sanitized link stages.
+  {
+    const configSelect = page.getByLabel('Simulation config', { exact: true });
+    const box = (label) => page.getByLabel(label, { exact: true });
+    const switchTo = async (id) => {
+      await configSelect.selectOption(id);
+      await until(async () => page.url().includes(`id=${id}`) && (await runButton.isEnabled()) && (await page.locator('[data-node="model"]').innerText()).trim() === id, `switched to ${id}`);
+    };
+    await loadSim('id=yang2022-a');
+    assert.equal(await box('EO overlap').isChecked(), true, 'A: chain seeded');
+    await box('EO overlap').uncheck();
+    await page.getByLabel('Mesh resolution', { exact: true }).selectOption('2');
+    await switchTo('han2023-a');
+    assert.equal(await box('Semiconductor').isChecked(), true, 'B: its own chain');
+    for (const l of ['Optical mode', 'EO overlap', 'RF line', 'Loaded line', 'EO response']) assert.equal(await box(l).isChecked(), false, `B: ${l} not inherited from A`);
+    assert.equal(await page.getByLabel('Mesh resolution', { exact: true }).inputValue(), '1', 'B: mesh level reset');
+    assert.equal(await box('EO overlap').isDisabled(), true);
+    await page.locator('[data-stage-error="eo_overlap"][data-tip*="conflicts with semiconductor"][data-tip*="Pockels"]').waitFor();
+    await page.locator('[data-stage-error="electrostatics"][data-tip*="own Poisson equation"]').waitFor();
+    assert.equal(await box('Optical mode').isDisabled(), false, 'B: optical mode allowed with the semiconductor stage');
+    await box('Optical mode').check();
+    await node('study.bias'); await settingsTab();
+    await page.locator('[data-semi-readiness="optical_mode"]').filter({ hasText: 'inputs pass' }).waitFor();
+    await page.locator('[data-semi-readiness="eo_response"]').filter({ hasText: 'line.rf_section' }).waitFor();
+    assert.equal(await page.locator('[data-node="physics.eo"] .tag').innerText(), 'blocked');
+    assert.equal(await page.locator('[data-node="physics.mode"] .tag').count(), 0, 'Mode Analysis on (not off, not blocked)');
+    await screenshot('sim-stage-rules-semi');
+    // Model Builder Study page: same rules (conflicting stage disabled with the reason)
+    await node('study.stationary'); await settingsTab();
+    assert.equal(await page.locator('.settings label.toggle', { hasText: 'Include EO overlap' }).locator('input').isDisabled(), true);
+    // F4b: without the semiconductor stage the doped-silicon section still has no Laplace electrostatics; the
+    // Laplace stages say so, Compute is blocked until Optical mode (mode only) or Semiconductor is selected
+    await node('model'); // one Compute button (the Study page has its own)
+    await box('Optical mode').uncheck();
+    await box('Semiconductor').uncheck();
+    assert.equal(await page.locator('[data-stage-error="eo_overlap"][data-tip*="conflicts with"]').count(), 0);
+    await page.locator('[data-stage-error="eo_overlap"][data-tip*="needs the Laplace electrostatics stage"]').waitFor();
+    await page.locator('[data-stage-error="rf_line"][data-tip*="needs the Laplace electrostatics stage"]').waitFor();
+    await page.locator('[data-stage-error="electrostatics"][data-tip*="doped silicon"]').waitFor();
+    assert.equal(await box('Electrostatics').isChecked(), false);
+    assert.equal(await runButton.isEnabled(), false, 'nothing runnable on the section');
+    await bottom('Messages');
+    await page.locator('.row.msg').filter({ hasText: 'Nothing to run: Electrostatics not available' }).waitFor();
+    await page.getByLabel('Mesh resolution', { exact: true }).selectOption(String(hanScale));
+    await box('Optical mode').check();
+    assert.equal(await runButton.isEnabled(), true);
+    await runButton.click(); await complete();
+    await node('results.derived'); await settingsTab();
+    await page.locator('[data-stages="optical_mode"]').waitFor();
+    await page.locator('[data-mode-only]').waitFor();
+    const hm = Number(await page.locator('[data-metric="n_eff"]').getAttribute('data-value'));
+    assert.ok(Math.abs(hm - expectedHanMode.metrics.n_eff) <= 1e-12 * hm, `mode-only n_eff browser ${hm} vs Node ${expectedHanMode.metrics.n_eff}`);
+    await switchTo('yang2022-a');
+    assert.equal(await box('EO overlap').isChecked(), true, 'back to A: chain seeded again; the change made on A before is not kept');
+    assert.equal(await page.locator('.stages label', { hasText: 'Semiconductor' }).count(), 0, 'A offers no semiconductor stage');
+    assert.equal(await page.getByLabel('Mesh resolution', { exact: true }).inputValue(), '1');
+    // a link with blocked / conflicting / unknown stages: sanitized selection, address bar rewritten, Messages entry
+    await loadSim('id=han2023-a&stages=semiconductor,eo_overlap,optical_mode,bogus');
+    assert.equal(await box('Semiconductor').isChecked(), true);
+    assert.equal(await box('Optical mode').isChecked(), true);
+    assert.equal(await box('EO overlap').isChecked(), false);
+    await until(async () => /[?&]stages=optical_mode%2Csemiconductor(&|$)/.test(page.url()), 'sanitized link stages in the address bar');
+    await bottom('Messages');
+    await page.locator('.row.msg').filter({ hasText: 'Link stages: EO overlap not selected' }).waitFor();
+    await page.locator('.row.msg').filter({ hasText: 'Link stages: bogus not selected' }).waitFor();
+    await screenshot('sim-stage-rules-link');
+    // F1: a stage implied by EO response is checked and disabled while implied, shows its own state otherwise and is
+    // re-selectable; the checkbox always equals what runs (toolbar and Study page)
+    await loadSim('id=yang2022-a');
+    const st = async (l) => [await box(l).isChecked(), await box(l).isDisabled()];
+    assert.deepEqual(await st('Optical mode'), [true, true], 'implied: checked, disabled');
+    await page.locator('[data-stage-auto="optical_mode"][data-tip*="dependency of EO response"]').waitFor();
+    assert.deepEqual(await st('RF line'), [true, true]);
+    await box('EO response').uncheck();
+    assert.deepEqual(await st('Optical mode'), [true, false], 'explicit selection shown once no longer implied');
+    await box('Optical mode').uncheck();
+    assert.deepEqual(await st('Optical mode'), [false, false]);
+    await box('EO response').check();
+    assert.deepEqual(await st('Optical mode'), [true, true], 'implied again');
+    await node('study.stationary'); await settingsTab();
+    const studyBox = page.locator('.settings label.toggle', { hasText: 'Include Optical mode' }).locator('input');
+    assert.deepEqual([await studyBox.isChecked(), await studyBox.isDisabled()], [true, true], 'Study page agrees');
+    await box('EO response').uncheck();
+    assert.deepEqual(await st('Optical mode'), [false, false], 'not implied, not selected');
+    assert.deepEqual([await studyBox.isChecked(), await studyBox.isDisabled()], [false, false]);
+    await box('Optical mode').check();
+    assert.deepEqual(await st('Optical mode'), [true, false], 're-selectable');
+    // F5: an implicit / unavailable stage in a link is dropped with a Messages entry and the address bar rewritten
+    await loadSim('id=yang2022-a&stages=electrostatics,optical_mode');
+    await until(async () => /[?&]stages=optical_mode(&|$)/.test(page.url()), 'link without electrostatics');
+    await bottom('Messages');
+    await page.locator('.row.msg').filter({ hasText: 'Link stages: Electrostatics not selected (implicit' }).waitFor();
+    console.log('PASS DevLog-043 round 3: implied stages checked + disabled while implied and re-selectable (toolbar, Study); doped-silicon section without the semiconductor stage: no Laplace stages, Compute blocked, optical mode mode-only = Node; implicit electrostatics in a link dropped and rewritten');
+    console.log('PASS DevLog-043: config switch A -> B -> A without inheritance (stages, mesh level); conflicting stages disabled with the physics reason on toolbar, Bias Sweep and Study pages; link stages sanitized and rewritten');
+  }
 
   // Pockels delta n view (engine round 3): per-element values on the optical mesh, probed in the browser at Node
   // triangle centroids and compared with the Node export of the same tree.
-  await loadSim('id=chen2022-c&debug=1');
+  await loadSim('id=chen2022-c&debug=1&stages=');
   await yaml();
   await editor.fill(gsg);
   await page.getByLabel('Optical mode', { exact: true }).check();
@@ -818,7 +954,7 @@ try {
   await node('res.modes');
   const labels = await page.locator('[data-mode-table="opt"] [data-mode-label]').allInnerTexts();
   assert.ok(labels.every(l => /^k=\d/.test(l)), `mode labels ${labels.join(', ')}`);
-  const solvedLabel = await page.locator('[data-mode-table="opt"] tr', { hasText: 'solved' }).locator('[data-mode-label]').innerText();
+  const solvedLabel = await page.locator('[data-mode-table="opt"] tbody tr', { hasText: 'solved' }).locator('[data-mode-label]').innerText();
   await node('res.eo');
   assert.ok((await page.locator('[data-arm-mode="A"]').innerText()).startsWith(solvedLabel), 'EO page names the solved mode as the mode table');
   // X8: the title states the mode of an optical dataset.
@@ -881,7 +1017,7 @@ try {
   {
     const gsgVec = yamlSetIn(gsg, 'optics.solver', 'vector');
     const vecStore = createSolutionStore(runCrossSection(gsgVec, { stages: ['optical_mode', 'eo_overlap'], keep: true }));
-    await loadSim('id=chen2022-c&debug=1');
+    await loadSim('id=chen2022-c&debug=1&stages=');
     await yaml();
     await editor.fill(gsgVec);
     await page.getByLabel('Optical mode', { exact: true }).check();

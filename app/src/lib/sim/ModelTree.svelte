@@ -50,8 +50,8 @@
 			g.electrodes.forEach((e, i) => out.push({ id: `electrode:${i}`, label: e.name, depth: 2, tip: `Electrode ${e.name}, weight ${e.weight}` }));
 		}
 		out.push({ id: 'mesh', label: 'Mesh', depth: 1, tip: 'Mesh hints, level, build and statistics', tag: wb.meshStale ? { text: 'stale', kind: 'warn' } : undefined });
-		out.push({ id: 'physics.es', label: 'Electrostatics', depth: 1, tip: wb.semiSelected ? 'Quasi-static electrostatics (not run with the Semiconductor stage, which solves its own Poisson equation)' : 'Quasi-static electrostatics (always runs)', tag: wb.parsed.error ? { text: 'blocked', kind: 'crit' } : wb.semiSelected ? { text: 'off', kind: 'muted' } : undefined });
-		out.push({ id: 'physics.mode', label: 'Mode Analysis', depth: 1, tip: wb.stageError('optical_mode') ?? `Optical eigenmode (${wb.raw?.optics?.solver ?? 'scalar'} solver)`, tag: stageTag('optical_mode') });
+		out.push({ id: 'physics.es', label: 'Electrostatics', depth: 1, tip: wb.compat.stages.electrostatics.runs ? 'Quasi-static electrostatics (always runs on this section)' : `Quasi-static electrostatics, not run: ${wb.stageError('electrostatics')}`, tag: wb.parsed.error ? { text: 'blocked', kind: 'crit' } : !wb.compat.stages.electrostatics.runs ? { text: 'off', kind: 'muted' } : undefined });
+		out.push({ id: 'physics.mode', label: 'Mode Analysis', depth: 1, tip: wb.stageError('optical_mode') ?? (wb.stageNote('optical_mode') ? `Optical eigenmode: ${wb.stageNote('optical_mode')}` : `Optical eigenmode (${wb.raw?.optics?.solver ?? 'scalar'} solver)`), tag: stageTag('optical_mode') });
 		out.push({ id: 'physics.eo', label: 'EO Coupling', depth: 1, tip: wb.stageError('eo_overlap') ?? 'DC first-order Pockels overlap', tag: stageTag('eo_overlap') });
 		out.push({ id: 'physics.rf', label: 'RF Line', depth: 1, tip: wb.stageError('rf_line') ?? 'Uniform quasi-TEM line; loaded line and EO response on the same page', tag: stageTag('rf_line') });
 		// S8 (DevLog-042): drift-diffusion physics with doping regions and contacts (drawn on the geometry when selected)

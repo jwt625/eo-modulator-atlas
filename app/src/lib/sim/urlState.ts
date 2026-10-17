@@ -43,3 +43,12 @@ export function writeUrlState(s: SimUrlState): string {
 	}
 	return p.toString();
 }
+
+/**
+ * DevLog-043: `stages=` applies only to the config the link names (its `id`, or `config` path). Null when the link
+ * has no stages or names no config (a bare `/sim?stages=...` would otherwise apply to whichever config loads).
+ */
+export function urlStagesFor(s: SimUrlState, sim: { id: string; path: string }): string[] | null {
+	if (!s.stages || !s.id) return null;
+	return s.id === sim.id || s.id === sim.path ? s.stages : null;
+}
